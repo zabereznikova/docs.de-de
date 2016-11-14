@@ -1,6 +1,6 @@
 ---
 layout: HubPage
-title: .NET Core-Dokumentation
+title: .NET-Dokumentation
 description: 
 keywords: 
 author: 
@@ -13,195 +13,651 @@ ms.technology:
 ms.suite: 
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 1c68e4bcceffb895a758a6f8abdda41cdafc3590
-ms.openlocfilehash: b9abce6984193957930ebf1ba74822b4cdfe6789
+ms.sourcegitcommit: 86a7089d110ace6ff2ac627659aa9a5e2416d601
+ms.openlocfilehash: 3e10bcf4d8244be16739c1f1e6db4ea8ce175b89
 
 ---
-
-<article id="main">
-    <section id="hero-content" class="graph">
-        <h1>.NET-Dokumentation</h1>
-        <h2>Willkommen bei .NET! Dies ist die Startseite der technischen Dokumentation für .NET Core, C#, F# und Visual Basic, einschließlich grundlegender Konzepte, Anweisungen zu den ersten Schritten und Beispielen. Sie können nach Antworten für ein kniffliges Problem suchen, oder .NET erst einmal kennenlernen.</h2>
-    </section>
-    <aside class="alert section-border">
-        <p>Laden Sie .NET Core noch heute herunter</p>
-        <ol class="action-list">
-            <li><a href="https://dot.net/core" class="button-bordered button-translucent">Herunterladen!</a></li>
-        </ol>
-    </aside>
-    <section id="featured" class="container">
-        <h2 class="section-heading"><span class="icon icon-lightbulb-checked"></span> Präsentierter Inhalt</h2>
-        <div class="features row">
-            <ul class="column-half">
-                <li><a href="docs/core/index.md">Erste Schritte mit .NET Core</a></li>
-            </ul>
-            <ul class="column-half">
-                <li><a href="https://docs.asp.net">Erste Schritte mit ASP.NET Core</a></li>
-            </ul>
-        </div>
-    </section>
-    <div id="journeys">
-        <section class="container">
-            <ul class="journeys-list">
-                <li class="journey-step">
-                    <header class="journey-step-header row">
-                        <div class="title column-third">
-                            <span class="icon icon-tip"></span>
-                            <p>Kennenlernen der Plattform</p>
+<div id="main" class="v2">
+    <div class="container">
+        <ul class="cardsY panelContent featuredContent">
+            <li>
+                <a href="https://www.microsoft.com/net/tutorials/csharp/getting-started">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="./docs/images/hub/featured-1.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <h3>Erste Schritte mit C#</h3>
+                                </div>
+                            </div>
                         </div>
-                        <p class="description column-two-thirds">
-Beginnen Sie mit .NET Core, und lernen Sie die Grundlagen der .NET-Plattform kennen.
-                        </p>
-                    </header>
-                    <section class="journey-step-elements content">
-                        <ul class="row">
-                            <li class="column column-third">
-                                <a href="docs/welcome.md">
-                                    <h3>.NET Core-Dokumentation</h3>
-                                    <p>Erfahren Sie mehr über .NET Core-Konzepte und Sprachsyntax.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="api/index.md">
-                                    <h3>API-Referenz</h3>
-                                    <p>Durchsuchen Sie die .NET API, sortiert nach Namespace.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="docs/core/index.md">
-                                    <h3>Erste Schritte mit .NET Core</h3>
-                                    <p>Erfahren Sie, wie Sie .NET Core-Konsolen-Apps in der Befehlszeile oder in Visual Studio erstellen.</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li class="journey-step">
-                    <header class="journey-step-header row">
-                        <div class="title column-third">
-                            <span class="icon icon-tip"></span>
-                            <p>Web &amp; Cloud</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/dotnet/core/api/">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="./docs/images/hub/featured-2.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <h3>API-Referenz für .NET Core</h3>
+                                </div>
+                            </div>
                         </div>
-                        <p class="description column-two-thirds">
-Erfahren Sie, wie Sie skalierbare Web-Apps mit ASP.NET Core erstellen können, einschließlich der Bereitstellung unter Microsoft Azure.
-                        </p>
-                    </header>
-                    <section class="journey-step-elements content">
-                        <ul class="row">
-                            <li class="column column-third">
-                                <a href="https://docs.asp.net">
-                                    <h3>ASP.NET Core</h3>
-                                    <p>Erfahren Sie, wie Sie Websites und Dienste mithilfe von ASP.NET Core erstellen können.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="https://docs.asp.net/en/latest/data">
-                                    <h3>Datenzugriff</h3>
-                                    <p>Erfahren Sie mehr über Entity Framework für das Modellieren Ihrer Datenbanken, oder wie Sie auf SQL Server und andere Datenbanken mithilfe von .NET zugreifen können.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="https://www.visualstudio.com/features/azure-tools-vs">
-                                    <h3>Microsoft Azure</h3>
-                                    <p>Lernen Sie, wie Sie Anwendungen mithilfe von Microsoft Azure entwickeln.</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li class="journey-step">
-                    <header class="journey-step-header row">
-                        <div class="title column-third">
-                            <span class="icon icon-tip"></span>
-                            <p>mobil</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://msdn.microsoft.com/en-us/library/mt472912(v=vs.110).aspx">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="./docs/images/hub/featured-3.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <h3>API-Referenz für .NET Framework</h3>
+                                </div>
+                            </div>
                         </div>
-                        <p class="description column-two-thirds">
-Erfahren Sie, wie .NET Core und Xamarin Ihnen ermöglichen kann, für iOS und Android mithilfe von C# zu entwickeln, oder wie Sie Anwendungen mithilfe der Universellen Windows-Plattform (Universal Windows Platform, UWP) für Windows 10-Geräte erstellen können.
-                        </p>
-                    </header>
-                    <section class="journey-step-elements content">
-                        <ul class="row">
-                            <li class="column column-third">
-                                <a href="https://developer.xamarin.com/guides/ios/getting_started/">
-                                    <h3>Apps für Android und iOS</h3>
-                                    <p>Erfahren Sie, wie Sie mit Xamarin native Apps für iOS und Android erstellen können.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="https://developer.microsoft.com/en-us/windows/getstarted">
-                                    <h3>Universelle Windows-Plattform</h3>
-                                    <p>Erfahren Sie, wie Sie UWP-Apps für Windows 10 erstellen, die auf allen Windows 10-Geräten ausgeführt werden können.</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li class="journey-step">
-                    <header class="journey-step-header row">
-                        <div class="title column-third">
-                            <span class="icon icon-tip"></span>
-                            <p>Desktop</p>
-                        </div>
-                        <p class="description column-two-thirds">
-Erfahren Sie, wie Sie Desktopanwendungen für Windows und macOS erstellen können.
-                        </p>
-                    </header>
-                    <section class="journey-step-elements content">
-                        <ul class="row">
-                            <li class="column column-third">
-                                <a href="https://msdn.microsoft.com/library/54xbah2z.aspx">
-                                    <h3>Windows-Desktop</h3>
-                                    <p>Erfahren Sie, wie Sie Windows-Desktopanwendungen mit Windows Forms oder Windows Presentation Framework (WPF) erstellen können.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="https://developer.xamarin.com/guides/cross-platform/macios/">
-                                    <h3>macOS-Desktop</h3>
-                                    <p>Erfahren Sie, wie Sie macOS-Desktopanwendungen mit Xamarin erstellen können.</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li class="journey-step">
-                    <header class="journey-step-header row">
-                        <div class="title column-third">
-                            <span class="icon icon-tip"></span>
-                            <p>Spiele</p>
-                        </div>
-                        <p class="description column-two-thirds">
-Erfahren Sie, wie Sie Spiele mithilfe von .NET erstellen können. </p>
-                    </header>
-                    <section class="journey-step-elements content">
-                        <ul class="row">
-                            <li class="column column-third">
-                                <a href="http://docs.cryengine.com/display/CEPROG/CE%23+Programming">
-                                    <h3>CRYENGINE</h3>
-                                    <p>Erstellen Sie Spiele für Desktop, Konsole und mobile Geräte in C# mithilfe von CRYENGINE.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="http://www.monogame.net/documentation/?page=main">
-                                    <h3>MonoGame</h3>
-                                    <p>Erstellen Sie Spiele für Desktop, Konsole und mobile Geräte in C# mithilfe von MonoGame.</p>
-                                </a>
-                            </li>
-                            <li class="column column-third">
-                                <a href="http://docs.unity3d.com/Manual/index.html">
-                                    <h3>Unity</h3>
-                                    <p>Erstellen Sie Spiele für Desktop, Konsole und mobile Geräte in C# mithilfe von Unity.</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-            </ul>
-        </section>
+                    </div>
+                </a>
+            </li>
+        </ul>
     </div>
-</article>
+    <div class="container">
+        <h1>.NET-Dokumentation</h1>
+        <ul class="pivots">
+            <li>
+                <a data-default="true" href="#docs">Docs</a>
+                <ul id="docs">
+                    <li>
+                        <a href="#getstarted">Erste Schritte</a>
+                        <ul id="getstarted" class="cardsF">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-1.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://docs.microsoft.com/en-us/dotnet/articles/welcome">Was ist .NET?</a></h3>
+                                                <p><a href="https://www.microsoft.com/net">Erste Schritte</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/standard/#a-stroll-through-net">Einführung in .NET</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/about/products">.NET-Konzepte</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://docs.microsoft.com/en-us/dotnet/articles/core">Leitfaden für .NET Core</a></h3>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/core/getting-started">Erste Schritte</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials">Lernprogramme</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/core/porting">Portieren aus .NET Framework</a></p>
+                                                <p><a href="https://docs.asp.net/en/latest/getting-started.html">ASP.NET Core</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://msdn.microsoft.com/en-us/library/zw4w595w(v=vs.110).aspx">.NET Framework – Leitfaden</a></h3>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/hh425099(v=vs.110).aspx">Erste Schritte</a></p>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/hh156542(v=vs.110).aspx">Lernprogramme</a></p>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/54xbah2z(v=vs.110).aspx">Cliententwicklung</a></p>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/bb400852(v=vs.110).aspx">ASP.NET</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-7.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Xamarin</a></h3>
+                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Erste Schritte</a></p>
+                                                <p><a href="https://developer.xamarin.com/guides/ios">Leitfaden für Xamarin.iOS</a></p>
+                                                <p><a href="https://developer.xamarin.com/guides/android/getting_started">Leitfaden für Xamarin.Android</a></p>
+                                                <p><a href="https://developer.xamarin.com/guides/xamarin-forms">Leitfaden für Xamarin.Forms</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-4.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://docs.microsoft.com/en-us/dotnet/articles/csharp">Leitfaden für C#</a></h3>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/csharp/getting-started">Erste Schritte</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/csharp/tour-of-csharp">Einführung in C#</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/csharp/concepts">C#-Konzepte</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-5.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://docs.microsoft.com/en-us/dotnet/articles/fsharp">Leitfaden für F#</a></h3>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/fsharp/tutorials/getting-started">Erste Schritte</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/fsharp/tour">Einführung in F#</a></p>
+                                                <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference">F#-Sprachreferenz</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="./docs/images/hub/net-gs-6.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="https://msdn.microsoft.com/en-us/library/2x7h1hfk.aspx">Leitfaden für Visual Basic</a></h3>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/8hb2a397.aspx">Erste Schritte</a></p>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/9a4y3z34.aspx">Einführung in Visual Basic</a></p>
+                                                <p><a href="https://msdn.microsoft.com/en-us/library/sh9ywfdk.aspx">Sprachreferenz zu Visual Basic</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#web">Web</a>
+                        <ul id="web" class="cardsG">
+                            <li>
+                                <a href="https://www.asp.net/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Erstellen Ihrer ersten Web-App</h3>
+                                                    <p>Erfahren Sie, wie Sie Ihre erste ASP.NET Core-Web-App erstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/aspnet/core/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Verwenden von ASP.NET Core</h3>
+                                                    <p>Erfahren Sie, wie Sie moderne Web-Apps mit ASP.NET Core erstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.asp.net/learn">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Was ist ASP.NET?</h3>
+                                                    <p>Erfahren Sie mehr über die ASP.NET-Webplattform.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>ASP.NET Core in Visual Studio</h3>
+                                                    <p>Informieren Sie sich über die Grundlagen zum Erstellen einer ASP.NET Core MVC-Web-App mithilfe von Visual Studio 2015.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-5.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>ASP.NET-Apps in Containern</h3>
+                                                    <p>Erfahren Sie, wie Sie ASP.NET-Apps mit Docker bereitstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/your-first-mac-aspnet">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-web-6.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>ASP.NET für macOS mit VS Code</h3>
+                                                    <p>Erfahren Sie, wie Sie ASP.NET Core-Apps unter macOS mithilfe von Visual Studio Code einrichten, erstellen und bereitstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#cloud">Cloud</a>
+                        <ul id="cloud" class="cardsG">
+                            <li>
+                                <a href="https://azure.microsoft.com/en-us/develop/net">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-cloud-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET Azure-Dokumentation</h3>
+                                                    <p>Erfahren Sie mehr über Azure-Dienste wie z.B. Web-Apps, WebJobs, Cloud Services und VMs.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://azure.microsoft.com/en-us/documentation/articles/cloud-services-dotnet-get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Azure Cloud Services und ASP.NET</h3>
+                                                    <p>Erfahren Sie, wie Sie Ihre Clouddienste in Azure konfigurieren, überwachen und skalieren.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/dotnet/articles/fsharp/using-fsharp-on-azure">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-cloud-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Verwenden von F# in Azure</h3>
+                                                    <p>Erfahren Sie mehr über die verschiedenen Azure-Dienste in F# wie z.B. Azure Storage, Cloud Services und Azure Functions.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://azure.microsoft.com/en-us/documentation/services/storage/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-cloud-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Azure Storage</h3>
+                                                    <p>Erfahren Sie mehr über Azure Storage und darüber, wie Sie Anwendungen mithilfe von Azure-Blobs, -Tabellen, -Warteschlangen und -Dateien erstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#mobile">Mobile</a>
+                        <ul id="mobile" class="cardsG">
+                            <li>
+                                <a href="https://developer.xamarin.com/guides/ios/getting_started/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-mobile-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin.iOS</h3>
+                                                    <p>Erstellen Sie native iOS-Apps unter Verwendung von C# und F# mit Xamarin.iOS.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.xamarin.com/guides/android/getting_started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-mobile-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin.Android</h3>
+                                                    <p>Erstellen Sie native Android-Apps unter Verwendung von C# und F# mit Xamarin.Android.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.xamarin.com/guides/xamarin-forms">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-mobile-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin.Forms</h3>
+                                                    <p>Erstellen Sie plattformübergreifende mobile Benutzerschnittstellen unter Verwendung von C# und F# mit Xamarin.Forms.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#desktop">Desktop</a>
+                        <ul id="desktop" class="cardsG">
+                            <li>
+                                <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-desktop-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Universelle Windows-Apps</h3>
+                                                    <p>Erfahren Sie, wie Sie universelle Windows-Apps erstellen, die auf allen Windows 10-Geräten ausgeführt werden können.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Windows Presentation Foundation (WPF)</h3>
+                                                    <p>WPF stellt Entwicklern ein XAML-basiertes Modell bereit, mit dem sie Desktopanwendungen unter Windows erstellen können.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-desktop-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Windows Forms</h3>
+                                                    <p>Entwickeln Sie im Handumdrehen branchenspezifische Apps für den Windows-Desktop.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://developer.xamarin.com/guides/mac/getting_started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-desktop-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin für macOS</h3>
+                                                    <p>Erstellen Sie Apps für macOS unter Verwendung von C# und F# mit Xamarin.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#gaming">Gaming</a>
+                        <ul id="gaming" class="cardsG">
+                            <li>
+                                <a href="https://www.visualstudio.com/vs/game-development">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-gaming-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Spieleentwicklung mit Visual Studio</h3>
+                                                    <p>Schreiben und debuggen Sie Spiele unter Verwendung des Spielmoduls Ihrer Wahl mit Visual Studio.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://docs.cryengine.com/display/CEPROG/CE%23+Programming">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-gaming-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>CRYENGINE</h3>
+                                                    <p>Erfahren Sie, wie Sie CRYENGINE verwenden, um mit C# Spiele zu erstellen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.monogame.net/documentation/?page=main">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-gaming-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>MonoGame</h3>
+                                                    <p>Erstellen Sie Spiele mit C#, indem Sie die Tutorials und Setupanweisungen im Dokumentations-Hub der MonoGame-Bibliothek nutzen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.unity3d.com/Manual/index.html">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="./docs/images/hub/net-docs-gaming-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Unity</h3>
+                                                    <p>Erfahren Sie im Unity-Leitfaden, wie Sie Unity nutzen, um 2D- und 3D-Spiele mit C# zu erstellen.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
