@@ -26,6 +26,6 @@ Die folgenden Tutorials sind verfügbar, um etwas über die Verwendung von Docke
 Wenn Sie Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen suchen, gehen Sie unter [ASP.NET Core documentation (Dokumentation zu ASP.NET Core)](https://docs.asp.net).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

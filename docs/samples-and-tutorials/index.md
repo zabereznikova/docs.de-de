@@ -99,6 +99,6 @@ Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im core-doc
 Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen Konsolenanwendung in einem Windows-Container. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im core-docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
