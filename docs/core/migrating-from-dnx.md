@@ -12,15 +12,15 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: c86f277a4c6fd6e6713da2b5f59eb171900190df
+ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
+ms.openlocfilehash: e79746734c179c3f7797a10bdcd79606b818afea
 
 ---
 
 # <a name="migrating-from-dnx-to-net-core-cli"></a>Migrieren von DNX zur .Net Core-CLI
 
 ## <a name="overview"></a>Übersicht
-Mit dem RC1-Release von .NET Core und ASP.NET Core 1.0 wurden DNX-Tools eingeführt. Mit dem RC2-Release von .NET Core und ASP.NET Core 1.0 haben wir auf die .NET Core-CLI gewechselt.
+Im RC1-Release von .NET Core und ASP.NET Core 1.0 wurde DNX eingeführt. Im RC2-Release von .NET Core und ASP.NET Core 1.0 wurde der Wechsel von DNX auf die NET Core-CLI vollzogen.
 
 Lassen Sie uns als kurze Auffrischung noch einmal zusammenfassen, worum es bei DNX ging. DNX war eine Laufzeit und ein Toolset, das zum Erstellen von .NET Core und, genauer gesagt, ASP.NET Core 1.0-Anwendungen verwendet wurde. DNX bestand aus 3 Hauptteilen:
 
@@ -147,6 +147,6 @@ Das Ausführen von `dotnet build` zeigt mögliche Buildfehler an, auch wenn es n
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
