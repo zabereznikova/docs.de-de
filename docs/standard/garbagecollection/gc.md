@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 translationtype: Human Translation
 ms.sourcegitcommit: b022f5b9e8ac81c00a6e5aa189feab4e7157dfd4
-ms.openlocfilehash: 644fd73e79e0b6059991e1fb2e37c2d6bc812d7c
+ms.openlocfilehash: 0734347048742657b8e33a1fffae15448ecad4f3
 
 ---
 
@@ -59,6 +59,6 @@ Für die meisten von einer Anwendung erzeugten Objekte führt der Garbage Colle
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

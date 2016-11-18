@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
 ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
-ms.openlocfilehash: 72022e09f7604c80b45c4aac001daaad41fe24af
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
@@ -61,6 +61,6 @@ Sie können mithilfe der langen oder kurzen Form der Framework-ID auf eine Frame
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
