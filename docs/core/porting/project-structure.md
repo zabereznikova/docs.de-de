@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
+ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 ---
 
@@ -33,13 +33,13 @@ Dieser Artikel soll Projektbesitzer unterstützen, die Ihre eigene Lösung paral
   * Das Teilen von .NET Core-Bibliotheken zwischen verschiedenen Projekttypen in der gleichen Lösungsdatei ist nicht möglich. Es ist eine bessere Option, [eine Portable Klassenbibliothek zu erstellen](#support-pcl), um dies zu unterstützen.
   * Änderungen des Build- und Ladeprozesses des Projekts, die von MSBuild Ziele und Aufgaben unterstützt werden, sind nicht möglich. Es ist eine bessere Option, [eine Portable Klassenbibliothek zu erstellen](#support-pcl), um dies zu unterstützen.
 
-* [**Keep existing projects and new .NET Core projects separate (Trennen vorhandener und neuer .NET Core-Projekte)**][option-xproj-folder]
+* <a name="support-vs"></a>[**Trennen vorhandener und neuer .NET Core-Projekte**][option-xproj-folder]
   
   *Es dient folgenden Zwecken:*
   * Entwicklung in bereits erstellten Projekten wird weiterhin unterstützt. Entwickler oder Mitwirkende, die eventuell nicht über Visual Studio 2015 verfügen, müssen kein Upgrade durchführen.
   * Minimieren der Möglichkeit, neue Probleme in vorhandenen Projekten zu erstellen, da in diesen Projekten keine Codeänderung erforderlich ist.
 
-* [**Keep existing projects and create Portable Class Libraries (PCLs) targeting .NET Core (Behalten bestehender Projekte, und Erstellen Portabler Klassenbibliotheken (Portable Class Libraries, PCLs) mit .NET Core als Ziel)**][option-plc]
+* <a name="support-pcl"></a>[**Behalten bestehender Projekte, und Erstellen Portabler Klassenbibliotheken **][option-plc]
 
   *Es dient folgenden Zwecken:*
   * Verweist auf Ihre .NET Core-Bibliotheken in Desktop und/oder Webprojekten, die das komplette .NET Framework in derselben Lösung als Ziel haben.
@@ -58,7 +58,7 @@ Betrachten Sie das folgende Repository:
 
 Es gibt verschiedene Arten, Unterstützung für .NET Core für dieses Repository hinzuzufügen. Dies ist abhängig von den Einschränkungen und der Komplexität bestehender Projekte, die im Folgenden beschrieben werden.
 
-## <a name="replace-existing-projects-with-a-multitargeted-net-core-project-xproj"></a>Ersetzen von vorhandenen Projekten mit mehrfachzielorientierten .NET Core Projekten (xproj)
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>Ersetzen von vorhandenen Projekten mit mehrfachzielorientierten .NET Core Projekten (xproj)
 
 Das Repository kann neu organisiert werden, sodass alle vorhandenen `*.csproj`-Dateien entfernt werden, und eine einzelne `*.xproj`-Datei erstellt wird, die mehrere Frameworks als Ziel hat.  Dies ist eine hervorragende Option, da ein einzelnes Projekt für andere Frameworks kompilieren kann.  Außerdem kann die Option verschiedene Kompilierungsoptionen, Abhängigkeiten usw. pro Zielframework behandeln.
 
@@ -125,6 +125,6 @@ Weitere Anleitungen zum Wechsel auf „project.json“ und „xproj“ finden Si
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
