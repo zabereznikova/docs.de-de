@@ -45,7 +45,7 @@ Die folgenden Abschnitte enthalten ausführliche Informationen zu den einzelnen 
 
 Der benutzerdefinierte Formatbezeichner "0" dient als 0-Platzhalterzeichen. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der die Ziffer 0 in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert; andernfalls erscheint die Ziffer 0 in der Ergebniszeichenfolge. Die Positionen der Ziffer 0, die am weitesten links vor dem Dezimaltrennzeichen steht, und die Position der Ziffer 0, die am weitesten rechts hinter dem Dezimaltrennzeichen steht, bestimmen den Bereich der Ziffern, die immer in der Ergebniszeichenfolge enthalten sind. 
 
-Mit dem Bezeichner "00" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "00" ergibt z. B. den Wert 35.
+Mit dem Bezeichner "00" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "00" ergibt z. B. den Wert 35.
 
 Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen 0-Platzhalter enthalten sind.
 
@@ -160,7 +160,7 @@ Der benutzerdefinierte Bezeichner "#" dient als Platzhaltersymbol für Ziffern. 
 
 Beachten Sie, dass dieser Bezeichner nie die Ziffer 0 anzeigt, wenn es sich nicht um eine signifikante Ziffer handelt, auch wenn die Ziffer 0 die einzige Ziffer in der Zeichenfolge ist. Die Ziffer 0 wird nur angezeigt, wenn es sich um eine signifikante Ziffer in der angezeigten Zahl handelt. 
 
-Mit der Formatzeichenfolge "##" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "##" ergibt z. B. den Wert 35.
+Mit der Formatzeichenfolge "##" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "##" ergibt z. B. den Wert 35.
 
 Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen Ziffernplatzhalter enthalten sind.
 
@@ -332,11 +332,11 @@ Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch al
 
 * Bezeichner für Gruppentrennzeichen: Wenn eines oder mehrere Kommas zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben sind, die die ganzzahligen Ziffern einer Zahl formatieren, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt. 
 
-  Die Eigenschaften [NumberGroupSeparator](xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator) und [NumberGroupSizes](xref:System.Globalization.NumberFormatInfo.NumberGroupSizes) des aktuellen [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekts bestimmen das als Zahlengruppentrennzeichen verwendete Zeichen und die Größe der einzelnen Zahlengruppen. Wenn z. B. zum Formatieren der Zahl 1000 die Zeichenfolge "#,#" und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".
+  Die Eigenschaften [NumberGroupSeparator](xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator) und [NumberGroupSizes](xref:System.Globalization.NumberFormatInfo.NumberGroupSizes) des aktuellen [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekts bestimmen das als Zahlengruppentrennzeichen verwendete Zeichen und die Größe der einzelnen Zahlengruppen. Wenn z. B. zum Formatieren der Zahl 1000 die Zeichenfolge "#,#" und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".
   
-* Bezeichner für Zahlenskalierung: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen eines oder mehrere Kommas angegeben sind, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100". 
+* Bezeichner für Zahlenskalierung: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen eines oder mehrere Kommas angegeben sind, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100". 
 
-Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl 1 Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000". 
+Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl 1 Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000". 
 
 Im folgenden Beispiel wird die Verwendung des Kommas als Gruppentrennzeichen veranschaulicht.
 
@@ -550,7 +550,7 @@ Ein Abschnitt | Die Formatzeichenfolge gilt für alle Werte.
 Zwei Abschnitte | Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte. Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem ersten Abschnitt formatiert.
 Drei Abschnitte | Der erste Abschnitt gilt für positive Werte, der zweite Abschnitt für negative Werte und der dritte Abschnitt für Nullen. Wenn der zweite Abschnitt leer ist (zwischen den Semikolons wird nichts angegeben), wird der erste Abschnitt auf alle Werte angewendet, die nicht 0 (null) sind. Wenn die zu formatierende Zahl nicht 0 ist, aber nach dem Runden entsprechend dem Format im ersten oder im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem dritten Abschnitt formatiert.
 
-Abschnittstrennzeichen ignorieren alle bereits vorhandenen Formatierungen für Zahlen, wenn der letzte Wert formatiert wird. Negative Werte werden z. B. immer ohne Minuszeichen angezeigt, wenn Abschnittstrennzeichen verwendet werden. Wenn der letzte formatierte Wert ein Minuszeichen aufweisen soll, muss das Minuszeichen explizit als Teil des benutzerdefinierten Formatbezeichners aufgenommen werden. 
+Abschnittstrennzeichen ignorieren alle bereits vorhandenen Formatierungen für Zahlen, wenn der letzte Wert formatiert wird. Negative Werte werden z. B. immer ohne Minuszeichen angezeigt, wenn Abschnittstrennzeichen verwendet werden. Wenn der letzte formatierte Wert ein Minuszeichen aufweisen soll, muss das Minuszeichen explizit als Teil des benutzerdefinierten Formatbezeichners aufgenommen werden. 
 
 Im folgenden Beispiel wird der Formatbezeichner ";" verwendet, um positive und negative Zahlen sowie Nullen unterschiedlich zu formatieren.
 
@@ -598,13 +598,13 @@ Console.WriteLine(String.Format("{0:" + fmt3 + "}", zeroValue))
 
 ## <a name="notes"></a>Notizen
 
-### <a name="floatingpoint-infinities-and-nan"></a>Unendlichkeiten und NaN bei Gleitkommawerten
+### <a name="floating-point-infinities-and-nan"></a>Unendlichkeiten und NaN bei Gleitkommawerten
 
 Wenn der Wert eines [Single](xref:System.Single)- oder [Double](xref:System.Double)-Gleitkommatyps positiv unendlich, negativ unendlich oder keine Zahl (Not a Number, NaN) ist, handelt es sich bei der formatierten Zeichenfolge unabhängig von der Formatzeichenfolge um den Wert der entsprechenden [PositiveInfinitySymbol](xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol)-, [NegativeInfinitySymbol](xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol)- oder [NaNSymbol](xref:System.Globalization.NumberFormatInfo.NaNSymbol)-Eigenschaft, die durch das derzeit gültige [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekt angegeben wird. 
 
-### <a name="rounding-and-fixedpoint-format-strings"></a>Rundung bei Formatzeichenfolgen mit Festkomma
+### <a name="rounding-and-fixed-point-format-strings"></a>Rundung bei Formatzeichenfolgen mit Festkomma
 
-Bei Formatzeichenfolgen mit Festkomma (d. h. Formatzeichenfolgen, die keine Zeichen im wissenschaftlichen Notationsformat enthalten) werden die Zahlen auf die Anzahl von Dezimalstellen gerundet, die rechts neben dem Dezimaltrennzeichen als Ziffernplatzhalter vorhanden sind. Wenn die Formatzeichenfolge kein Dezimaltrennzeichen enthält, wird die Zahl auf die nächste ganze Zahl gerundet. Wenn die Zahl über mehr Ziffern verfügt, als Ziffernplatzhalter links neben dem Dezimaltrennzeichen stehen, werden die zusätzlichen Ziffern direkt vor dem ersten Ziffernplatzhalter in die Ergebniszeichenfolge kopiert.
+Bei Formatzeichenfolgen mit Festkomma (d. h. Formatzeichenfolgen, die keine Zeichen im wissenschaftlichen Notationsformat enthalten) werden die Zahlen auf die Anzahl von Dezimalstellen gerundet, die rechts neben dem Dezimaltrennzeichen als Ziffernplatzhalter vorhanden sind. Wenn die Formatzeichenfolge kein Dezimaltrennzeichen enthält, wird die Zahl auf die nächste ganze Zahl gerundet. Wenn die Zahl über mehr Ziffern verfügt, als Ziffernplatzhalter links neben dem Dezimaltrennzeichen stehen, werden die zusätzlichen Ziffern direkt vor dem ersten Ziffernplatzhalter in die Ergebniszeichenfolge kopiert.
 
 ## <a name="example"></a>Beispiel
 
