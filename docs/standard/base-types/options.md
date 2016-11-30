@@ -211,11 +211,11 @@ Die [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None)-O
 * Erfassungsgruppen im Muster eines regulären Ausdrucks sind implizit und explizit. 
 
 > [!NOTE]
-> Die Option [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) besitzt keine Inlineentsprechung. Wenn reguläre Ausdrucksoptionen inline übernommen werden, wird das Standardverhalten auf optionsweiser Basis durch Deaktivieren einer bestimmten Option wiederhergestellt. `(?i)` aktiviert z. B. Vergleiche, bei denen nicht zwischen Groß- und Kleinschreibung unterschieden wird, und `(?-i)` stellt das Standardverhalten mit Beachtung der Groß-/Kleinschreibung wieder her.
+> Die Option [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) besitzt keine Inlineentsprechung. Wenn reguläre Ausdrucksoptionen inline übernommen werden, wird das Standardverhalten auf optionsweiser Basis durch Deaktivieren einer bestimmten Option wiederhergestellt. `(?i)` aktiviert z. B. Vergleiche, bei denen nicht zwischen Groß- und Kleinschreibung unterschieden wird, und `(?-i)` stellt das Standardverhalten mit Beachtung der Groß-/Kleinschreibung wieder her.
  
 Da die Option [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) das Standardverhalten des Moduls für reguläre Ausdrücke darstellt, wird sie selten explizit in einem Methodenaufruf angegeben. Stattdessen wird ein Konstruktor oder eine statische Mustervergleichsmethode ohne options-Parameter aufgerufen.
 
-## <a name="caseinsensitive-matching"></a>Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung
+## <a name="case-insensitive-matching"></a>Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung
 
 Die Option [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) oder die Inlineoption **i** stellt die Suche nach Übereinstimmungen ohne Berücksichtigung von Groß-/Kleinschreibung bereit. Standardmäßig werden die Groß-/Kleinschreibungskonventionen der aktuellen Kultur verwendet.
 
@@ -543,7 +543,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>Einzeilenmodus
+## <a name="single-line-mode"></a>Einzeilenmodus
 
 Die Option [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) bzw. die Inlineoption „s“ sorgt dafür, dass das Modul für reguläre Ausdrücke die Eingabezeichenfolge so behandelt, als ob sie aus einer einzigen Zeile besteht. Hierzu wird das Verhalten des Sprachelements Punkt (**.**) geändert, sodass dieser jedem Zeichen entspricht, anstatt jedem Zeichen außer dem Zeilenumbruchzeichen **\n** oder \u000A.
 
@@ -1121,7 +1121,7 @@ Die Option [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpres
 
 In den folgenden Fällen werden Leerzeichen in regulären Ausdrücken jedoch nicht ignoriert, auch wenn Sie die Option [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) verwenden: 
 
-* Leerzeichen in einer Zeichenklasse werden stets literal interpretiert. Der reguläre Ausdruck `[ .,;:]` findet z. B. ein einzelnes Leerstellenzeichen, Punkt, Komma, Semikolon oder einen Doppelpunkt. 
+* Leerzeichen in einer Zeichenklasse werden stets literal interpretiert. Der reguläre Ausdruck `[ .,;:]` findet z. B. ein einzelnes Leerstellenzeichen, Punkt, Komma, Semikolon oder einen Doppelpunkt. 
 
 * Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie **{**_n_**}**, **{**_n_**,}** und **{**_n_**,**_m_**}** nicht zulässig. Das Muster für reguläre Ausdrücke **\d{1. 3}** findet z.B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält. 
 
@@ -1233,7 +1233,7 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>Rechts-nach-links-Modus
+## <a name="right-to-left-mode"></a>Rechts-nach-links-Modus
 
 Standardmäßig sucht das Modul für reguläre Ausdrücke von links nach rechts. Sie können mit der Option [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) die Suchrichtung umkehren. Die Suche startet automatisch bei der Position des letzten Zeichens der Zeichenfolge. Bei Mustervergleichsmethoden, die einen Parameter für die Anfangsposition enthalten, wie z.B. [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)), ist die Anfangsposition der Index der am weitesten rechts stehenden Zeichenposition, bei der die Suche beginnt. 
 
@@ -1241,7 +1241,7 @@ Standardmäßig sucht das Modul für reguläre Ausdrücke von links nach rechts.
 > Der Mustermodus von rechts nach links ist nur verfügbar, wenn der [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft)-Wert an den options-Parameter eines [Regex](xref:System.Text.RegularExpressions.Regex)-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption. 
  
 
-Die [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft)-Option ändert nur die Suchrichtung; sie interpretiert das Muster für reguläre Ausdrücke nicht von rechts nach links. Der reguläre Ausdruck `\bb\w+\s` findet z. B. eine Entsprechung für Wörter, die mit dem Buchstaben "b" beginnen und von einem Leerstellenzeichen gefolgt sind. Im folgenden Beispiel besteht die Eingabezeichenfolge aus drei Wörtern, die ein oder mehrere "b"-Zeichen enthalten. Das erste Wort beginnt mit "b", das zweite endet mit "b", und das dritte enthält zwei "b"-Zeichen im Wortinnern. Wie die Ausgabe des Beispiels zeigt, stimmt nur das erste Wort mit dem Muster des regulären Ausdrucks überein. 
+Die [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft)-Option ändert nur die Suchrichtung; sie interpretiert das Muster für reguläre Ausdrücke nicht von rechts nach links. Der reguläre Ausdruck `\bb\w+\s` findet z. B. eine Entsprechung für Wörter, die mit dem Buchstaben "b" beginnen und von einem Leerstellenzeichen gefolgt sind. Im folgenden Beispiel besteht die Eingabezeichenfolge aus drei Wörtern, die ein oder mehrere "b"-Zeichen enthalten. Das erste Wort beginnt mit "b", das zweite endet mit "b", und das dritte enthält zwei "b"-Zeichen im Wortinnern. Wie die Ausgabe des Beispiels zeigt, stimmt nur das erste Wort mit dem Muster des regulären Ausdrucks überein. 
 
 ```csharp
 using System;
@@ -1277,7 +1277,7 @@ End Module
 '       'builder ' found at position 0.
 ```
 
-Beachten Sie auch, dass die Lookaheadassertion (das **(?**=_teilausdruck_**)**-Sprachelement) und die Lookbehindassertion (das **(?<**=_subexpression_**)**-Sprachelement) die Richtung nicht ändern. Die Lookaheadassertionen prüfen nach rechts, die Lookbehindassertionen nach links. Der reguläre Ausdruck `(?<=\d{1,2}\s)\w+,?\s\d{4}` testet z. B. mithilfe der Lookbehindassertion auf ein Datum, das einem Monatsnamen vorausgeht. Der reguläre Ausdruck gleicht dann Monat und Jahr ab. Informationen zu Lookahead- und Lookbehindassertionen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping.md).
+Beachten Sie auch, dass die Lookaheadassertion (das **(?**=_teilausdruck_**)**-Sprachelement) und die Lookbehindassertion (das **(?<**=_subexpression_**)**-Sprachelement) die Richtung nicht ändern. Die Lookaheadassertionen prüfen nach rechts, die Lookbehindassertionen nach links. Der reguläre Ausdruck `(?<=\d{1,2}\s)\w+,?\s\d{4}` testet z. B. mithilfe der Lookbehindassertion auf ein Datum, das einem Monatsnamen vorausgeht. Der reguläre Ausdruck gleicht dann Monat und Jahr ab. Informationen zu Lookahead- und Lookbehindassertionen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping.md).
 
 ```csharp
 using System;
