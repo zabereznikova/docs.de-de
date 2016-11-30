@@ -26,7 +26,7 @@ Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verh
 
 In .NET stellt eine Ausnahme ein Objekt dar, das von der [System.Exception](xref:System.Exception)-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
 
-## <a name="exceptions-vs-traditional-errorhandling-methods"></a>Ausnahmen im Vergleich zu herkömmlichen Fehlerbehandlungsmethoden
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen im Vergleich zu herkömmlichen Fehlerbehandlungsmethoden
 
 Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und -behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems. Die Art und Weise, in der die Ausnahmebehandlung in .NET implementiert ist, bietet folgende Vorteile:
 
@@ -247,7 +247,7 @@ public class ProcessFile
 }
 ```
 
-## <a name="how-to-create-userdefined-exceptions"></a>Erstellen benutzerdefinierter Ausnahmen
+## <a name="how-to-create-user-defined-exceptions"></a>Erstellen benutzerdefinierter Ausnahmen
 
 .NET stellt eine Hierarchie aus Ausnahmeklassen bereit, die letztendlich von der @System.Exception.-Basisklasse abgeleitet werden. Wenn keine der vordefinierten Ausnahmen Ihre Anforderungen erfüllt, können Sie durch Ableiten von der @System.Exception-Klasse eigene Ausnahmeklassen erstellen.
 
