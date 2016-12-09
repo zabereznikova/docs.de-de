@@ -4,11 +4,10 @@ description: "Gruppierungskonstrukte in regulären Ausdrücken"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
@@ -613,7 +612,7 @@ Next
 '    'decidedly ' found at index 9. 
 ```
 
-## <a name="zerowidth-positive-lookahead-assertions"></a>Positive Lookaheadassertionen mit einer Breite von Null
+## <a name="zero-width-positive-lookahead-assertions"></a>Positive Lookaheadassertionen mit einer Breite von Null
 
 Das folgende Gruppierungskonstrukt definiert eine positive Lookaheadassertion mit einer Breite von Null:
 
@@ -692,7 +691,7 @@ Muster | Beschreibung
 `\w+` | Übereinstimmung mit mindestens einem Wortzeichen.
 `(?=\sis\b)` | Bestimmen Sie, ob den Wortzeichen ein Leerstellenzeichen und die Zeichenfolge "is" folgt, die bei einer Wortgrenze endet. Trifft dies zu, ist die Übereinstimmung erfolgreich.
 
-## <a name="zerowidth-negative-lookahead-assertions"></a>Negative Lookaheadassertionen mit einer Breite von Null
+## <a name="zero-width-negative-lookahead-assertions"></a>Negative Lookaheadassertionen mit einer Breite von Null
 
 Das folgende Gruppierungskonstrukt definiert eine negative Lookaheadassertion mit einer Breite von Null:
 
@@ -806,7 +805,7 @@ Muster | Beschreibung
 `\b` | Der Vergleich endet an einer Wortgrenze.
 `\p{P})` | Wenn das nächste Zeichen kein Interpunktionszeichen (z. B. ein Punkt oder ein Komma) ist, ist die Übereinstimmung erfolgreich.
  
-## <a name="zerowidth-positive-lookbehind-assertions"></a>Positive Lookbehindassertionen mit einer Breite von Null
+## <a name="zero-width-positive-lookbehind-assertions"></a>Positive Lookbehindassertionen mit einer Breite von Null
 
 Das folgende Gruppierungskonstrukt definiert eine positive Lookbehindassertion mit einer Breite von Null:
 
@@ -866,7 +865,7 @@ Muster | Beschreibung
  
 Positive Lookbehindassertions mit einer Breite von Null werden auch verwendet, um das Zurückverfolgen einzuschränken, wenn die letzten Zeichen in einer Erfassungsgruppe eine Teilmenge der Zeichen sein müssen, die dem Muster eines regulären Ausdrucks dieser Gruppe entsprechen. Wenn beispielsweise eine Gruppe alle aufeinander folgenden Wortzeichen erfasst, können Sie mit einer positiven Lookaheadassertion mit einer Breite von Null anfordern, dass das letzte Zeichen alphabetisch ist. 
 
-## <a name="zerowidth-negative-lookbehind-assertions"></a>Negative Lookbehindassertionen mit einer Breite von Null
+## <a name="zero-width-negative-lookbehind-assertions"></a>Negative Lookbehindassertionen mit einer Breite von Null
 
 Das folgende Gruppierungskonstrukt definiert eine negative Lookbehindassertion mit einer Breite von Null:
 

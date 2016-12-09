@@ -4,11 +4,10 @@ description: "Verschiedene Konstrukte in regulären Ausdrücken"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 478901dc-db6c-4d90-9d3b-f5cfdca2cbf5
 translationtype: Human Translation
@@ -228,7 +227,7 @@ End Module
 '       Group 1: Dreaded
 ```
 
-## <a name="endofline-comment"></a>Zeilenendekommentar
+## <a name="end-of-line-comment"></a>Zeilenendekommentar
 
 Ein Nummernzeichen (**#**) markiert einen x-Modus-Kommentar, der bei dem #-Zeichen ohne Escapezeichen am Ende des Musters für reguläre Ausdrücke beginnt und bis zum Zeilenende fortgesetzt wird. Um dieses Konstrukt zu verwenden, müssen Sie entweder die **x**-Option (durch Inlineoptionen) aktivieren oder beim Instanziieren des [Regex](xref:System.Text.RegularExpressions.Regex)-Objekts bzw. beim Aufrufen einer statischen [Regex](xref:System.Text.RegularExpressions.Regex)-Methode den Wert [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) an den *option*-Parameter übergeben. 
 

@@ -3,11 +3,11 @@ title: "Numerische Ausdrücke in .NET Core"
 description: "Numerische Ausdrücke in .NET Core"
 keywords: .NET, .NET Core
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
@@ -39,7 +39,7 @@ Jeder ganzzahlige Typ unterstützt einen Standardsatz an Operatoren (arithmetisc
      
 Beachten Sie das ganzzahlige Typen ohne Vorzeichen nicht CLS-kompatibel sind. Weitere Informationen hierzu finden Sie unter [Allgemeines .NET-Typsystem und Common Language Specification](common-type-system.md).
 
-## <a name="floatingpoint-types"></a>Gleitkommatypen
+## <a name="floating-point-types"></a>Gleitkommatypen
 
 .NET Core enthält drei primitive Gleitkommatypen, die in der folgenden Tabelle aufgeführt sind. 
 
@@ -61,7 +61,7 @@ Die Typen `Double` und `Single` sind dazu gedacht, für Werte verwendet zu werde
 
 Der Typ [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) steht für eine komplexe Zahl, d.h. für eine Zahl mit einem reellen und einem imaginären Teil. Er unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung) sowie mathematische, algebraische und trigonometrische Methoden. 
 
-## <a name="simdenabled-vector-types"></a>SIMD-fähige Vektortypen
+## <a name="simd-enabled-vector-types"></a>SIMD-fähige Vektortypen
 
 Der `System.Numerics`-Namespace umfasst einen Satz von SIMD-fähigen Vektortypen für .NET Core. Anhand von SIMD-Operationen können einige Operationen auf der Hardwareebene parallelisiert werden, was in mathematischen, wissenschaftlichen und grafischen Apps, die Berechnungen über Vektoren ausführen, zu einer enormen Leistungsverbesserung führt. 
 

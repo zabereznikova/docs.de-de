@@ -4,11 +4,10 @@ description: "Standardformatzeichenfolgen für Datum und Uhrzeit"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: be239871-10cc-4949-b548-200bb260630a
 translationtype: Human Translation
@@ -376,7 +375,7 @@ Console.WriteLine(date1.ToString("m", _
 ' Displays 10 April
 ```
 
-## <a name="the-roundtrip-o-o-format-specifier"></a>Die Formatbezeichner „O“, „o“ für Roundtrips
+## <a name="the-round-trip-o-o-format-specifier"></a>Die Formatbezeichner „O“, „o“ für Roundtrips
 
 Der Standardformatbezeichner "O" oder "o" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit unter Verwendung eines Musters dar, bei dem die Zeitzoneninformationen beibehalten werden, und gibt eine Ergebniszeichenfolge aus, die die Anforderungen von ISO 8601 erfüllt. Für [DateTime](xref:System.DateTime)-Werte wurde diese Formatzeichenfolge entwickelt, um Datums- und Uhrzeitwerte zusammen mit der [DateTime.Kind](xref:System.DateTime.Kind)-Eigenschaft in Text beizubehalten. Die formatierte Zeichenfolge kann mithilfe der Methoden [DateTime.Parse(String, IFormatProvider, DateTimeStyles)](xref:System.DateTime.Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) oder [DateTime.ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) analysiert werden, wenn der styles-Parameter auf [DateTimeStyles.RoundtripKind](xref:System.Globalization.DateTimeStyles.RoundtripKind) festgelegt ist. 
 

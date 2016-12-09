@@ -4,11 +4,10 @@ description: "Sprachelemente für reguläre Ausdrücke – Kurzübersicht"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c5dee8c-7bc7-4e6e-aff1-986965c4d98e
 translationtype: Human Translation
@@ -17,7 +16,7 @@ ms.openlocfilehash: f4319de43043605da63f469b59a5dfdb28badc8e
 
 ---
 
-# <a name="regular-expression-language-quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
+# <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 
 Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen. Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke in .NET](regular-expressions.md). 
 

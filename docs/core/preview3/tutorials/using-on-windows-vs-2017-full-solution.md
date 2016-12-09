@@ -3,11 +3,10 @@ title: "Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visua
 description: "Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ Visual Studio 2017 bietet eine umfassende Entwicklungsumgebung für die Entwickl
 
 Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten](../windows-prerequisites.md), um Ihre Umgebung anzupassen.
 
-# <a name="a-solution-using-only-net-core-projects"></a>Eine Projektmappe nur mit .NET Core-Projekten
+## <a name="a-solution-using-only-net-core-projects"></a>Eine Projektmappe nur mit .NET Core-Projekten
 
-## <a name="writing-the-library"></a>Schreiben der Bibliothek
+### <a name="writing-the-library"></a>Schreiben der Bibliothek
 
 1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#**. Wählen Sie den Knoten **.NET Core** und anschließend den Knoten **Klassenbibliothek (.NET Standard)** aus. 
 

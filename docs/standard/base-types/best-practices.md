@@ -4,11 +4,10 @@ description: "Empfohlene Vorgehensweisen für die Verwendung von regulären Ausd
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
@@ -37,7 +36,7 @@ In diesem Thema werden einige Best Practices erläutert, mit denen Entwickler si
 
 ## <a name="consider-the-input-source"></a>Bedenken der Eingabequelle
 
-Im Allgemeinen können reguläre Ausdrücke zwei Arten von Eingaben annehmen: eingeschränkte und nicht eingeschränkte. Bei eingeschränkten Eingaben handelt es sich um Text, der aus einer bekannten oder verlässlichen Quelle stammt und einem vordefinierten Format folgt. Eine nicht eingeschränkte Eingabe ist Text, der aus einer unzuverlässigen Quelle stammt, z. B. von einem Webbenutzer, und keinem vordefinierten oder erwarteten Format folgt.
+Im Allgemeinen können reguläre Ausdrücke zwei Arten von Eingaben annehmen: eingeschränkte und nicht eingeschränkte. Bei eingeschränkten Eingaben handelt es sich um Text, der aus einer bekannten oder verlässlichen Quelle stammt und einem vordefinierten Format folgt. Eine nicht eingeschränkte Eingabe ist Text, der aus einer unzuverlässigen Quelle stammt, z. B. von einem Webbenutzer, und keinem vordefinierten oder erwarteten Format folgt.
 
 Muster regulärer Ausdrücke werden in der Regel für die Übereinstimmung mit gültigen Eingaben konzipiert. Das bedeutet, dass ein Entwickler den Text überprüft, mit dem eine Übereinstimmung erzielt werden soll, und anschließend ein entsprechendes Muster für reguläre Ausdrücke erstellt. Dann ermittelt der Entwickler, ob dieses Muster Korrekturen oder Ausarbeitungen erfordert, indem er es mit mehreren gültigen Eingabeelementen testet. Wenn das Muster mit allen als gültig geltenden Eingaben übereinstimmt, gilt es als einsatzbereit und kann in eine veröffentlichte Anwendung eingeschlossen werden. Somit ist das Muster für reguläre Ausdrücke geeignet für Übereinstimmungen mit eingeschränkten Eingaben. Allerdings ist es nicht geeignet für die Übereinstimmung mit nicht eingeschränkten Eingaben.
 
@@ -609,7 +608,7 @@ In vielen Fällen ist das Zurückverfolgen wichtig, um ein Muster für reguläre
  
 Beispielsweise soll das Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` einer Teilenummer entsprechen, die aus mindestens einem alphanumerischen Zeichen besteht. Alle zusätzlichen Zeichen können aus einem alphanumerischen Zeichen, einem Bindestrich, einem Unterstrich oder einem Punkt bestehen. Das letzte Zeichen muss jedoch alphanumerisch sein. Ein Dollarzeichen beendet die Teilenummer. In einigen Fällen kann dieses Muster für reguläre Ausdrücke eine sehr schlechte Leistung aufweisen, da die Quantifizierer geschachtelt sind und der Teilausdruck `[0-9A-Z]` eine Teilmenge des Teilausdrucks `[-.\w]*` ist.
 
-In diesen Fällen können Sie die Leistung regulärer Ausdrücke optimieren, indem Sie die geschachtelten Quantifizierer entfernen und den äußeren Teilausdruck durch eine Lookahead- oder Lookbehindassertion mit einer Breite von 0 ersetzen. Lookahead- und Lookbehindassertionen sind Anker, d. h., sie bewegen nicht den Mauszeiger in der Eingabezeichenfolge, sondern überprüfen in Vorwärts- bzw. Rückwärtsrichtung, ob eine bestimmte Bedingung erfüllt ist. Beispielsweise kann der reguläre Ausdruck für die Teilenummer wie folgt umgeschrieben werden: `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Dieses Muster für den regulären Ausdruck wird entsprechend der folgenden Tabelle definiert.
+In diesen Fällen können Sie die Leistung regulärer Ausdrücke optimieren, indem Sie die geschachtelten Quantifizierer entfernen und den äußeren Teilausdruck durch eine Lookahead- oder Lookbehindassertion mit einer Breite von 0 ersetzen. Lookahead- und Lookbehindassertionen sind Anker, d. h., sie bewegen nicht den Mauszeiger in der Eingabezeichenfolge, sondern überprüfen in Vorwärts- bzw. Rückwärtsrichtung, ob eine bestimmte Bedingung erfüllt ist. Beispielsweise kann der reguläre Ausdruck für die Teilenummer wie folgt umgeschrieben werden: `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Dieses Muster für den regulären Ausdruck wird entsprechend der folgenden Tabelle definiert.
 
 Muster | Beschreibung
 ------- | -----------

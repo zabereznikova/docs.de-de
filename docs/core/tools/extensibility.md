@@ -2,12 +2,12 @@
 title: .NET Core-CLI-Erweiterbarkeitsmodell
 description: .NET Core-CLI-Erweiterbarkeitsmodell
 keywords: CLI, Erweiterbarkeit, benutzerdefinierte Befehle, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
@@ -29,14 +29,14 @@ Die CLI-Tools können auf zwei Arten erweitert werden:
 
 Die beiden oben beschriebenen Erweiterbarkeitsmechanismen schließen sich nicht gegenseitig aus; Sie können beide oder nur einen verwenden. Welchen Sie auswählen, hängt größtenteils davon ab, welches Ziel Sie mit der Erweiterung erreichen möchten.
 
-## <a name="perproject-based-extensibility"></a>Erweiterbarkeit pro Projekt
+## <a name="per-project-based-extensibility"></a>Erweiterbarkeit pro Projekt
 Tools pro Projekt sind [tragbare Konsolenanwendungen](../deploying/index.md), die als NuGet-Pakete verteilt werden. Tools sind nur im Kontext des Projekts, das auf sie verweist, und für das sie wiederhergestellt werden, verfügbar. Ein Aufruf außerhalb des Projektkontexts (beispielsweise außerhalb des Verzeichnisses, das das Projekt enthält) schlägt fehl, da der Befehl nicht gefunden werden kann.
 
 Diese Tools sind auch ideal für Buildserver, da außer `project.json` nichts erforderlich ist. Der Buildprozess führt die Wiederherstellung für das Projekt, das es erstellt, aus, und die Tools stehen zur Verfügung. Sprachprojekte, wie F#, befinden sich auch in dieser Kategorie. Immerhin kann jedes Projekt nur in einer bestimmten Sprache geschrieben werden. 
 
 Schließlich bietet dieses Erweiterbarkeitsmodell Unterstützung für die Erstellung von Tools, die Zugriff auf die Buildausgabe des Projekts benötigen. Verschiedene Razor-Ansicht-Tools in [ASP.NET](https://www.asp.net/)-MVC-Anwendungen fallen z.B. in diese Kategorie. 
 
-### <a name="consuming-perproject-tools"></a>Tools pro Projekt verwenden
+### <a name="consuming-per-project-tools"></a>Tools pro Projekt verwenden
 Wenn Sie diese Tools verwenden, müssen Sie einen `tools`-Knoten zu Ihrem `project.json` hinzufügen. Innerhalb des `tools`-Knotens verweisen Sie auf das Paket, in dem sich das Tool befindet. Nach der Ausführung von `dotnet restore` werden das Tool und die zugehörigen Abhängigkeiten wiederhergestellt. 
 
 Für Tools, die die Buildausgabe des Projekts zur Ausführung laden müssen, gibt es normalerweise eine andere Abhängigkeit, die unter den regulären Abhängigkeiten in der Projektdatei angezeigt wird. Dies bedeutet, dass Tools, mit denen Projektcodes geladen werden, zwei Komponenten haben: 
@@ -101,7 +101,7 @@ Ein gutes Beispiel für diesen Ansatz finden Sie im [.NET Core-CLI-Repository](h
 * [Implementierung der Framework-spezifischen Abhängigkeit](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-desktop-and-portable)
 
 
-### <a name="pathbased-extensibility"></a>PFAD-basierte Erweiterbarkeit
+### <a name="path-based-extensibility"></a>PFAD-basierte Erweiterbarkeit
 Die PFAD-basierte Erweiterbarkeit wird in der Regel für Entwicklungscomputer verwendet, bei denen Sie ein Tool brauchen, das konzeptionell mehr als ein einzelnes Projekt abdeckt. Der größte Nachteil dieses Extensionsmechanismus ist, dass es mit dem Computer verknüpft ist, auf dem das Tool existiert. Wenn Sie ihn auf einem anderen Computer benötigen, müssten Sie ihn bereitstellen.
 
 Dieses Muster der Erweiterbarkeit des CLI-Toolsets ist sehr einfach. Wie in der [Übersicht über die .NET Core-CLI](index.md) beschrieben, kann der `dotnet`-Treiber jeden Befehl ausführen, der nach der `dotnet-<command>`-Konvention benannt ist. Die Standardaufkösungslogik wird zuerst mehrere Speicherorte überprüfen und schließlich an den SYSTEMPFAD fallen. Wenn der angeforderte Befehl im SYSTEMPFAD vorhanden und eine Binärdatei ist, die aufgerufen werden kann, wird sie der `dotnet`-Treiber aufrufen. 

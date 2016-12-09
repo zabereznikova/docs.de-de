@@ -3,11 +3,11 @@ title: Verwendung einer threadsicheren Auflistung
 description: Verwendung einer threadsicheren Auflistung
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a2a42d44-f6a5-4f16-9000-026221d66349
 translationtype: Human Translation
@@ -16,7 +16,7 @@ ms.openlocfilehash: 05f692a1a58c0c653e14993cafd61a0711ebf9f8
 
 ---
 
-# <a name="when-to-use-a-threadsafe-collection"></a>Verwendung einer threadsicheren Auflistung
+# <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
 
 Die Sammlungstypen `ConcurrentQueue`, `ConcurrentStack`, `ConcurrentDictionary`, `ConcurrentBag` und `BlockingCollection` sind speziell für die Unterstützung von multithreadbezogenen Hinzufüge- und Entfernungsvorgängen konzipiert. Zur Gewährleistung von Threadsicherheit verwenden diese neuen Typen unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.
 

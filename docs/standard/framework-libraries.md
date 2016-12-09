@@ -3,11 +3,11 @@ title: Frameworkbibliotheken
 description: Frameworkbibliotheken
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
@@ -58,7 +58,7 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx): Eine API zum Laden und Abfragen von XML-Dokumenten mit LINQ.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx): Eine API zum Lesen von Dateien ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)). Kann zum Schreiben von Dateien verwendet werden.
 
-## <a name="appmodel-apis"></a>App-Modell-APIs
+## <a name="app-model-apis"></a>App-Modell-APIs
 
 Es gibt viele App-Modelle von unterschiedlichen Herstellern, die mit .NET verwendet werden können.
 

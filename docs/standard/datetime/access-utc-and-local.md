@@ -3,11 +3,11 @@ title: 'Gewusst wie: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobj
 description: 'Gewusst wie: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte'
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 13454d47-d957-421b-9ecd-940058b8835e
 translationtype: Human Translation

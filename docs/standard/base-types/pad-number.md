@@ -3,11 +3,11 @@ title: "Gewusst wie: Auffüllen einer Zahl mit führenden Nullen"
 description: "Auffüllen einer Zahl mit führenden Nullen"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a517c066-b11e-4815-826b-9262611eac40
 translationtype: Human Translation

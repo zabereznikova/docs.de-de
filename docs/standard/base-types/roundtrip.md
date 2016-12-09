@@ -3,11 +3,11 @@ title: 'Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte'
 description: Roundtrip-Datums- und -Uhrzeitwerte
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
@@ -16,11 +16,11 @@ ms.openlocfilehash: b4bf747faff171e4a90a897e5f7ef442012e7699
 
 ---
 
-# <a name="how-to-roundtrip-date-and-time-values"></a>Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte
+# <a name="how-to-round-trip-date-and-time-values"></a>Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte
 
 In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. In diesem Thema wird gezeigt, wie ein [DateTime](xref:System.DateTime)-Wert und ein [DateTimeOffset](xref:System.DateTimeOffset)-Wert so gespeichert und wiederhergestellt werden, dass der wiederhergestellte Wert denselben Zeitpunkt bezeichnet wie der gespeicherte Wert.
 
-## <a name="to-roundtrip-a-datetime-value"></a>So führen Sie einen Roundtrip für einen DateTime-Wert durch
+## <a name="to-round-trip-a-datetime-value"></a>So führen Sie einen Roundtrip für einen DateTime-Wert durch
 
 1. Konvertieren Sie den [DateTime](xref:System.DateTime)-Wert in seine Zeichenfolgendarstellung, indem Sie die [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String))-Methode mit dem Formatbezeichner „o“ aufrufen.
 
@@ -97,7 +97,7 @@ Console.WriteLine("Read {0} ({2}) from {1}.", restoredDate.ToString(), _
 
 Beim Roundtrip eines [DateTime](xref:System.DateTime)-Werts wird durch diese Technik erfolgreich die Uhrzeit für alle Orts- und Weltzeiten beibehalten. Wenn beispielsweise ein lokaler [DateTime](xref:System.DateTime)-Wert auf einem System in der US-Zeitzone Pacific Standard Time gespeichert und auf einem System in der US-Zeitzone Central Standard Time wiederhergestellt wird, liegen das wiederhergestellte Datum und die Uhrzeit zwei Stunden hinter der ursprünglichen Zeit, was dem Zeitunterschied zwischen den beiden Zeitzonen entspricht. Dieses Verfahren ist für nicht spezifizierte Zeiten jedoch nicht notwendigerweise genau. Alle [DateTime](xref:System.DateTime)-Werte, deren [Kind](xref:System.DateTime.Kind)-Eigenschaft [Unspecified](xref:System.DateTimeKind.Unspecified) lautet, werden als lokale Zeiten behandelt. Wenn dies nicht korrekt ist, kann der richtige Zeitpunkt durch [DateTime](xref:System.DateTime) nicht erfolgreich identifiziert werden. Die Umgehung für diese Einschränkung besteht darin, einen Datums- und Zeitwert für den Speicher- und Wiederherstellungsvorgang eng an die entsprechende Zeitzone zu koppeln.
 
-## <a name="to-roundtrip-a-datetimeoffset-value"></a>So führen Sie einen Roundtrip für einen DateTimeOffset-Wert durch
+## <a name="to-round-trip-a-datetimeoffset-value"></a>So führen Sie einen Roundtrip für einen DateTimeOffset-Wert durch
 
 Konvertieren Sie den [DateTimeOffset](xref:System.DateTimeOffset)-Wert in seine Zeichenfolgendarstellung, indem Sie die [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String))-Methode mit dem Formatbezeichner „o“ aufrufen.
 

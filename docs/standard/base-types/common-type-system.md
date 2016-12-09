@@ -4,11 +4,10 @@ description: "Ausführliche Informationen zum allgemeinen Typsystem"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: b5482a1d-7bdc-40fe-aa45-10df930ceb5b
 translationtype: Human Translation
@@ -52,7 +51,7 @@ Das allgemeine Typsystem in .NET unterstützt die folgenden fünf Typkategorien:
 
 ### <a name="classes"></a>Klassen
 
-Eine Klasse ist ein Referenztyp, der direkt von einer anderen Klasse abgeleitet werden kann und der implizit von [System.Object](xref:System.Object) abgeleitet ist. Die Klasse definiert die Vorgänge, die ein Objekt (d. h. eine Instanz der Klasse) ausführen kann (Methoden, Ereignisse oder Eigenschaften), sowie die Daten, die das Objekt enthält (Felder). Obwohl eine Klasse im Allgemeinen sowohl Definition als auch Implementierung enthält (im Gegensatz zu Schnittstellen, die z. B. nur eine Definition ohne Implementierung enthalten), kann sie über einen oder mehrere Member ohne Implementierung verfügen.
+Eine Klasse ist ein Referenztyp, der direkt von einer anderen Klasse abgeleitet werden kann und der implizit von [System.Object](xref:System.Object) abgeleitet ist. Die Klasse definiert die Vorgänge, die ein Objekt (d. h. eine Instanz der Klasse) ausführen kann (Methoden, Ereignisse oder Eigenschaften), sowie die Daten, die das Objekt enthält (Felder). Obwohl eine Klasse im Allgemeinen sowohl Definition als auch Implementierung enthält (im Gegensatz zu Schnittstellen, die z. B. nur eine Definition ohne Implementierung enthalten), kann sie über einen oder mehrere Member ohne Implementierung verfügen.
 
 In der folgenden Tabelle werden einige Eigenschaften beschrieben, über die eine Klasse verfügen kann. Jede für Laufzeitunterstützung ausgelegte Sprache bietet eine Möglichkeit, eines oder mehrere Merkmale für eine Klasse oder einen Klassenmember festzulegen. In einzelnen Programmiersprachen, die .NET als Ziel haben, sind jedoch möglicherweise nicht alle dieser Eigenschaften verfügbar.
 
@@ -79,7 +78,7 @@ Wie Klassen definieren Strukturen sowohl Daten (die Felder der Struktur) als auc
 
 Werttypen unterscheiden sich in mehreren Punkten auch von Klassen. Zunächst können sie nicht direkt von einem Typ erben, obwohl sie implizit von [System.ValueType](xref:System.ValueType) erben. Ebenso sind alle Werttypen versiegelt, was bedeutet, dass kein anderer Typ von ihnen abgeleitet werden kann. Außerdem benötigen sie keine Konstruktoren.
 
-Die Common Language Runtime stellt für jeden Werttyp einen entsprechenden geschachtelten Werttyp bereit, der eine Klasse darstellt, die denselben Zustand und dasselbe Verhalten wie der Werttyp aufweist. Eine Instanz eines Werttyps wird beim Übergeben an eine Methode geschachtelt, die einen Parameter vom Typ [System.Object](xref:System.Object) annimmt. Sie wird mittels Unboxing konvertiert (d. h. aus einer Instanz einer Klasse zurück in die Instanz eines Werttyps konvertiert), wenn ein Steuerelement aus einem Methodenaufruf zurückgegeben wird, in dem ein Werttyp als Parameter als Verweis angenommen wird. In einigen Sprachen muss eine spezielle Syntax verwendet werden, wenn ein mittels Boxing gepackter Typ erforderlich ist; in anderen Sprachen wird der mittels Boxing gepackte Typ bei Bedarf automatisch verwendet. Die Definition eines Werttyps schließt sowohl den mittels Boxing gepackten als auch den mittels Unboxing entpackten Typ ein.
+Die Common Language Runtime stellt für jeden Werttyp einen entsprechenden geschachtelten Werttyp bereit, der eine Klasse darstellt, die denselben Zustand und dasselbe Verhalten wie der Werttyp aufweist. Eine Instanz eines Werttyps wird beim Übergeben an eine Methode geschachtelt, die einen Parameter vom Typ [System.Object](xref:System.Object) annimmt. Sie wird mittels Unboxing konvertiert (d. h. aus einer Instanz einer Klasse zurück in die Instanz eines Werttyps konvertiert), wenn ein Steuerelement aus einem Methodenaufruf zurückgegeben wird, in dem ein Werttyp als Parameter als Verweis angenommen wird. In einigen Sprachen muss eine spezielle Syntax verwendet werden, wenn ein mittels Boxing gepackter Typ erforderlich ist; in anderen Sprachen wird der mittels Boxing gepackte Typ bei Bedarf automatisch verwendet. Die Definition eines Werttyps schließt sowohl den mittels Boxing gepackten als auch den mittels Unboxing entpackten Typ ein.
 
 ### <a name="enumerations"></a>Enumerationen
 
@@ -100,7 +99,7 @@ Für Enumerationen gelten die folgenden zusätzlichen Beschränkungen:
 > [!NOTE]
 > Geschachtelte Typen (z.B. Enumerationen), die mit C# erstellt wurden, enthalten die Typparameter aller einschließenden generischen Typen und sind daher generisch, auch wenn sie über keine eigenen Typparameter verfügen. Weitere Informationen finden Sie im Referenzthema [Type.MakeGenericType](xref:System.Type.MakeGenericType(System.Type[])). 
 
-Durch das [FlagsAttribute](xref:System.FlagsAttribute)-Attribut wird eine spezielle Art von Enumeration, das so genannte Bitfeld, ausgewiesen. Von der Laufzeit selbst wird nicht zwischen herkömmlichen Enumerationen und Bitfeldern unterschieden, in Ihrer Programmiersprache könnte dies jedoch der Fall sein. Wird diese Unterscheidung getroffen, können zum Generieren nicht benannter Werte zwar bitweise Operatoren für Bitfelder, jedoch nicht für Enumerationen verwendet werden. Enumerationen werden im Allgemeinen für Listen eindeutiger Elemente verwendet, z. B. für Wochentage bzw. Namen für Regionen oder Länder usw. Bitfelder werden in der Regel für Listen verwendet, in denen Qualitätsmerkmale oder Mengen definiert sind, die kombiniert auftreten können, z. B. `Red And Big And Fast`.
+Durch das [FlagsAttribute](xref:System.FlagsAttribute)-Attribut wird eine spezielle Art von Enumeration, das so genannte Bitfeld, ausgewiesen. Von der Laufzeit selbst wird nicht zwischen herkömmlichen Enumerationen und Bitfeldern unterschieden, in Ihrer Programmiersprache könnte dies jedoch der Fall sein. Wird diese Unterscheidung getroffen, können zum Generieren nicht benannter Werte zwar bitweise Operatoren für Bitfelder, jedoch nicht für Enumerationen verwendet werden. Enumerationen werden im Allgemeinen für Listen eindeutiger Elemente verwendet, z. B. für Wochentage bzw. Namen für Regionen oder Länder usw. Bitfelder werden in der Regel für Listen verwendet, in denen Qualitätsmerkmale oder Mengen definiert sind, die kombiniert auftreten können, z. B. `Red And Big And Fast`.
 
 Das folgende Beispiel zeigt, wie Bitfelder und herkömmliche Enumerationen in Kombination verwendet werden können.
 
@@ -273,7 +272,7 @@ Beispielsweise kann ein Delegat mit einem Parameter des Typs [IEnumerable](xref:
 > [!NOTE]
 > Der Rückgabewert von Delegaten mit mehr als einer Methode in der Aufrufliste ist nicht definiert, selbst wenn diese über einen Rückgabetyp verfügen.
 
-In vielen Fällen (z. B. bei Rückrufmethoden) stellt ein Delegat nur eine Methode dar. Sie müssen den Delegaten lediglich erstellen und aufrufen. 
+In vielen Fällen (z. B. bei Rückrufmethoden) stellt ein Delegat nur eine Methode dar. Sie müssen den Delegaten lediglich erstellen und aufrufen. 
 
 Für Delegaten, die mehrere Methoden darstellen, enthält .NET Methoden der [Delegate](xref:System.Delegate)-Delegatklasse und [MulticastDelegate](xref:System.MulticastDelegate)-Delegatklasse, um verschiedene Vorgänge zu unterstützen. Dazu gehören das Hinzufügen einer Methode zur Aufrufliste eines Delegaten (die [Delegate.Combine](xref:System.Delegate.Combine(System.Delegate,System.Delegate))-Methode), das Entfernen einer Methode (die [Delegate.Remove](xref:System.Delegate.Remove(System.Delegate,System.Delegate))-Methode) und das Abrufen der Aufrufliste (die [Delegate.GetInvocationList](xref:System.Delegate.GetInvocationList)-Methode).
 
@@ -331,7 +330,7 @@ Das allgemeine Typsystem sieht lediglich zwei Namenseinschränkungen vor:
 
 * Alle Namen werden als Unicode-Zeichenfolgen (16-Bit-Zeichen) codiert.
 
-* Ein eingebetteter Wert von 0x0000 (16 Bits) ist für Namen nicht zulässig.
+* Ein eingebetteter Wert von 0x0000 (16 Bits) ist für Namen nicht zulässig.
 
 In den meisten Sprachen gelten jedoch möglicherweise zusätzliche Beschränkungen für Typnamen. Alle Vergleiche erfolgen byteweise, sie berücksichtigen daher die Groß-/Kleinschreibung und sind unabhängig vom Gebietsschema.
 
@@ -423,7 +422,7 @@ End Module
 
 ### <a name="properties"></a>Eigenschaften
 
-Eine Eigenschaft benennt einen Wert oder Zustand des Typs und definiert Methoden zum Abrufen oder Festlegen des Eigenschaftswerts. Eigenschaften können primitive Typen, Auflistungen primitiver Typen, benutzerdefinierte Typen oder Auflistungen benutzerdefinierter Typen sein. Eigenschaften werden häufig verwendet, um die Unabhängigkeit der öffentlichen Schnittstelle eines Typs von seiner tatsächlichen Darstellung zu gewährleisten. So können Eigenschaften Werte reflektieren, die nicht direkt in der Klasse gespeichert sind (z. B., wenn eine Eigenschaft einen berechneten Wert zurückgibt), oder eine Validierung ausführen, bevor privaten Feldern Werte zugewiesen werden. Im folgenden Codebeispiel wird das zweite Schema veranschaulicht.
+Eine Eigenschaft benennt einen Wert oder Zustand des Typs und definiert Methoden zum Abrufen oder Festlegen des Eigenschaftswerts. Eigenschaften können primitive Typen, Auflistungen primitiver Typen, benutzerdefinierte Typen oder Auflistungen benutzerdefinierter Typen sein. Eigenschaften werden häufig verwendet, um die Unabhängigkeit der öffentlichen Schnittstelle eines Typs von seiner tatsächlichen Darstellung zu gewährleisten. So können Eigenschaften Werte reflektieren, die nicht direkt in der Klasse gespeichert sind (z. B., wenn eine Eigenschaft einen berechneten Wert zurückgibt), oder eine Validierung ausführen, bevor privaten Feldern Werte zugewiesen werden. Im folgenden Codebeispiel wird das zweite Schema veranschaulicht.
 
 ```csharp
 using System;
@@ -474,15 +473,15 @@ Die Microsoft Intermediate Language (MSIL) schließt nicht nur die Eigenschaft e
 
 Eine Methode beschreibt Vorgänge, die für den Typ verfügbar sind. Eine Methodensignatur gibt die zulässigen Typen aller Parameter sowie des Rückgabewerts der Methode an.
 
-Obwohl die meisten Methoden die erforderliche Anzahl von Parametern für Methodenaufrufe genau definieren, unterstützen einige Methoden eine variable Anzahl von Parametern. Der letzte deklarierte Parameter dieser Methoden wird mit dem [ParamArrayAttribute](xref:System.ParamArrayAttribute)-Attribut markiert. Sprachcompiler stellen in der Regel ein Schlüsselwort bereit, z.B. `params` in C# und `ParamArray` in Visual Basic, das die explizite Verwendung von [ParamArrayAttribute](xref:System.ParamArrayAttribute) unnötig macht.
+Obwohl die meisten Methoden die erforderliche Anzahl von Parametern für Methodenaufrufe genau definieren, unterstützen einige Methoden eine variable Anzahl von Parametern. Der letzte deklarierte Parameter dieser Methoden wird mit dem [ParamArrayAttribute](xref:System.ParamArrayAttribute)-Attribut markiert. Sprachcompiler stellen in der Regel ein Schlüsselwort bereit, z.B. `params` in C# und `ParamArray` in Visual Basic, das die explizite Verwendung von [ParamArrayAttribute](xref:System.ParamArrayAttribute) unnötig macht.
 
 ### <a name="constructors"></a>Konstruktoren
 
-Ein Konstruktor ist eine spezielle Methodenform, durch die neue Instanzen einer Klasse oder Struktur erstellt werden. Wie jede andere Methode kann ein Konstruktor Parameter einschließen. Konstruktoren verfügen jedoch nicht über einen Rückgabewert (d. h., sie geben `void` zurück). 
+Ein Konstruktor ist eine spezielle Methodenform, durch die neue Instanzen einer Klasse oder Struktur erstellt werden. Wie jede andere Methode kann ein Konstruktor Parameter einschließen. Konstruktoren verfügen jedoch nicht über einen Rückgabewert (d. h., sie geben `void` zurück). 
 
 Wenn der Quellcode für eine Klasse nicht explizit einen Konstruktor definiert, schließt der Compiler einen Standardkonstruktor (ohne Parameter) ein. Wenn der Quellcode für eine Klasse jedoch nur parametrisierte Konstruktoren definiert, generiert der C#-Compiler keinen parameterlosen Konstruktor.
 
-Wenn der Quellcode für eine Struktur Konstruktoren definiert, müssen diese parametrisiert werden. Eine Struktur kann keinen Standardkonstruktor (parameterlos) definieren, und Compiler generieren keine parameterlosen Konstruktoren für Strukturen oder andere Werttypen. Alle Werttypen verfügen über einen impliziten Standardkonstruktor. Dieser Konstruktor wird von der Common Language Runtime implementiert und initialisiert alle Felder der Struktur mit ihren Standardwerten. 
+Wenn der Quellcode für eine Struktur Konstruktoren definiert, müssen diese parametrisiert werden. Eine Struktur kann keinen Standardkonstruktor (parameterlos) definieren, und Compiler generieren keine parameterlosen Konstruktoren für Strukturen oder andere Werttypen. Alle Werttypen verfügen über einen impliziten Standardkonstruktor. Dieser Konstruktor wird von der Common Language Runtime implementiert und initialisiert alle Felder der Struktur mit ihren Standardwerten. 
 
 ### <a name="events"></a>Ereignisse
 
@@ -509,11 +508,11 @@ family oder assembly | Alle | Zugriff nur von Typen möglich, die über den Zugr
 public | Alle | Zugriff von jedem Typ möglich.
 final | Methoden, Eigenschaften und Ereignisse | Die virtuelle Methode kann in einem abgeleiteten Typ nicht überschrieben werden.
 initialize-only | Felder | Der Wert kann lediglich initialisiert werden. Nach der Initialisierung ist kein Schreibzugriff möglich.
-instance | Felder, Methoden, Eigenschaften und Ereignisse | Wenn ein Member nicht als `static` (C#), `Shared` (Visual Basic), `virtual` (C#) oder `Overridable` (Visual Basic) gekennzeichnet ist, handelt es sich um einen Instanzmember (es ist kein instance-Schlüsselwort vorhanden). Im Arbeitsspeicher befinden sich so viele Kopien dieser Member wie Objekte, von denen sie verwendet werden.
+instance | Felder, Methoden, Eigenschaften und Ereignisse | Wenn ein Member nicht als `static` (C#), `Shared` (Visual Basic), `virtual` (C#) oder `Overridable` (Visual Basic) gekennzeichnet ist, handelt es sich um einen Instanzmember (es ist kein instance-Schlüsselwort vorhanden). Im Arbeitsspeicher befinden sich so viele Kopien dieser Member wie Objekte, von denen sie verwendet werden.
 literal | Felder | Der dem Feld zugewiesene Wert ist ein fester, zur Kompilierungszeit bekannter Wert eines integrierten Werttyps. Literalfelder werden zeitweise auch als Konstanten bezeichnet.
 newslot oder override | Alle | Definiert, wie der Member mit geerbten Membern mit identischer Signatur interagiert: `newslot` blendet Member mit identischer Signatur aus; `override` ersetzt die Definition einer geerbten virtuellen Methode. Der Standardwert ist newslot.
 static | Felder, Methoden, Eigenschaften und Ereignisse | Der Member gehört dem Typ an, mit dem er definiert wurde, und keiner bestimmten Instanz des Typs. Der Member existiert selbst dann, wenn keine Instanz des Typs erstellt wird, und wird von allen Instanzen des Typs gemeinsam genutzt.
-virtual | Methoden, Eigenschaften und Ereignisse | Die Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden. Beim dynamischen Aufruf bestimmt der Typ der Instanz, durch die der Aufruf zur Laufzeit ausgeführt wird (und nicht der zur Kompilierungszeit bekannte Typ), welche Implementierung der Methode aufgerufen wird. Um eine Methode vom Typ virtual statisch aufzurufen, muss die Variable u. U. in einen Typ umgewandelt werden, der die gewünschte Methodenversion verwendet.
+virtual | Methoden, Eigenschaften und Ereignisse | Die Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden. Beim dynamischen Aufruf bestimmt der Typ der Instanz, durch die der Aufruf zur Laufzeit ausgeführt wird (und nicht der zur Kompilierungszeit bekannte Typ), welche Implementierung der Methode aufgerufen wird. Um eine Methode vom Typ virtual statisch aufzurufen, muss die Variable u. U. in einen Typ umgewandelt werden, der die gewünschte Methodenversion verwendet.
 
 ### <a name="overloading"></a>Überladen
 
@@ -526,7 +525,7 @@ Jeder Typmember verfügt über eine eindeutige Signatur. Methodensignaturen best
 
 Ein abgeleiteter Typ erbt alle Member seines Basistyps. Dies bedeutet, dass diese Member für den abgeleiteten Typ definiert und verfügbar sind. Das Verhalten oder die Merkmale geerbter Member können auf zwei Weisen geändert werden: 
 
-* Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.
+* Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.
 
 * Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.
 

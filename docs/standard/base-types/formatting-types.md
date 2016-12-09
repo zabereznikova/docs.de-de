@@ -4,11 +4,10 @@ description: Formatierung von Typen
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
@@ -666,7 +665,7 @@ Titel | Definition
 [Enumerationsformatzeichenfolgen](enumeration-format.md) | Beschreibt als Standard verwendete Formatzeichenfolgen, mit denen Zeichenfolgenentsprechungen von Enumerationswerten erstellt werden.
 [Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | Beschreibt Standardformatzeichenfolgen für [Guid](xref:System.Guid)-Werte.
 
-## <a name="culturesensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Kulturabhängige Formatierung mit Formatanbietern und der IFormatProvider-Schnittstelle
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Kulturabhängige Formatierung mit Formatanbietern und der IFormatProvider-Schnittstelle
 
 Obwohl Sie mit Formatbezeichnern die Formatierung von Objekten anpassen können, sind für eine sinnvolle Zeichenfolgendarstellung von Objekten oft zusätzliche Formatierungsinformationen erforderlich. Beispielsweise ist für das Formatieren einer Zahl als Währungswert mit der Standardformatzeichenfolge "C" oder mit einer benutzerdefinierten Formatzeichenfolge wie "$ #,#.00" mindestens erforderlich, dass Informationen über das richtige Währungssymbol, das richtige Gruppentrennzeichen und das richtige Dezimaltrennzeichen verfügbar sind, um in die formatierte Zeichenfolge eingeschlossen zu werden. In .NET werden diese zusätzlichen Formatierungsinformationen durch die [IFormatProvider](xref:System.IFormatProvider)-Schnittstelle verfügbar gemacht. Diese wird als Parameter für eine oder mehrere Überladungen der `ToString`-Methode von numerischen Typen sowie von Datums- und Uhrzeittypen bereitgestellt. [IFormatProvider](xref:System.IFormatProvider)-Implementierungen werden in .NET verwendet, um eine kulturabhängige Formatierung zu unterstützen. Das folgende Beispiel veranschaulicht, wie sich die Zeichenfolgendarstellung eines Objekts ändert, wenn die Formatierung mit drei [IFormatProvider](xref:System.IFormatProvider)-Objekten erfolgt, die verschiedene Kulturen darstellen.
 
@@ -730,7 +729,7 @@ Methode | Typ des *formatType*-Parameters
 
 Sie können auch einen eigenen Formatanbieter implementieren, um eine dieser Klassen zu ersetzen. Die `GetFormat`-Methode Ihrer Implementierung muss jedoch ein Objekt eines in der vorangehenden Tabelle aufgeführten Typs zurückgeben, um Formatierungsinformationen für die `ToString`-Methode bereitzustellen.
 
-### <a name="culturesensitive-formatting-of-numeric-values"></a>Kulturabhängige Formatierung von numerischen Werten
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>Kulturabhängige Formatierung von numerischen Werten
 
 Standardmäßig ist die Formatierung von numerischen Werten kulturabhängig. Wenn Sie beim Aufrufen einer Formatierungsmethode keine Kultur angeben, werden die Formatierungskonventionen der aktuellen Threadkultur verwendet. Dies wird im folgenden Beispiel veranschaulicht, das die aktuelle Threadkultur viermal ändert und anschließend die [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String))-Methode aufruft. In allen Fällen gibt die Ergebniszeichenfolge die Formatierungskonventionen der aktuellen Kultur wieder. Dies liegt daran, dass die `ToString`- und `ToString(String)`-Methoden die Aufrufe der `ToString(String, IFormatProvider)`-Methode jedes numerischen Typs umschließen. 
 
@@ -856,7 +855,7 @@ End Module
 '       fr:    1 043,630
 ```
 
-### <a name="culturesensitive-formatting-of-date-and-time-values"></a>Kulturabhängige Formatierung von Datums- und Uhrzeitwerten
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Kulturabhängige Formatierung von Datums- und Uhrzeitwerten
 
 Standardmäßig ist die Formatierung von Daten- und Uhrzeitwerten kulturabhängig. Wenn Sie beim Aufrufen einer Formatierungsmethode keine Kultur angeben, werden die Formatierungskonventionen der aktuellen Threadkultur verwendet. Dies wird im folgenden Beispiel veranschaulicht, das die aktuelle Threadkultur viermal ändert und anschließend die [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String))-Methode aufruft. In allen Fällen gibt die Ergebniszeichenfolge die Formatierungskonventionen der aktuellen Kultur wieder. Dies liegt daran, dass die Methoden [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) und [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) Aufrufe der Methoden [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) und [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) umschließen.
 

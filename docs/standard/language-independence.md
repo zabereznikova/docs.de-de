@@ -4,11 +4,10 @@ description: "Sprachunabhängigkeit und sprachunabhängige Komponenten"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
@@ -17,7 +16,7 @@ ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
 
 ---
 
-# <a name="language-independence-and-languageindependent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
+# <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
 Die .NET-Plattform ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Plattform entwickeln können, beispielweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Plattform entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
 
@@ -2816,7 +2815,7 @@ End Class
 
 Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie keine Typen oder Member verfügbar machen, die von anderen App-Entwicklern genutzt werden können), ist die CLS-Kompatibilität der Programmelemente, die von der App genutzt werden, nur relevant, wenn sie von Ihrer Sprache nicht unterstützt werden. In diesem Fall generiert der Sprachcompiler einen Fehler, wenn Sie versuchen, ein nicht CLS-kompatibles Element zu verwenden. 
 
-## <a name="crosslanguage-interoperability"></a>Sprachübergreifende Interoperabilität
+## <a name="cross-language-interoperability"></a>Sprachübergreifende Interoperabilität
 
 Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung umfasst die nahtlose Nutzung von Typen, die in einer Sprache geschrieben werden, in einer App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly. 
 

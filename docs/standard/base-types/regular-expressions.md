@@ -3,11 +3,11 @@ title: "Reguläre Ausdrücke in .NET"
 description: "Reguläre Ausdrücke in .NET"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
@@ -150,7 +150,7 @@ Die [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.Str
 
 Beachten Sie, dass die Eingabezeichenfolge die Teilzeichenfolge "this? This" enthält. Aufgrund des dazwischenliegenden Satzzeichens wird diese jedoch nicht als Duplikat identifiziert.
 
-### <a name="example-3-dynamically-building-a-culturesensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks
 
 Das folgende Beispiel veranschaulicht die Leistungsfähigkeit regulärer Ausdrücke in Kombination mit der Flexibilität der .NET-Globalisierungsfunktionen. Mit dem [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekt wird das Format von Währungswerten in der aktuellen Kultur des Systems bestimmt. Anschließend wird anhand dieser Informationen dynamisch ein regulärer Ausdruck erstellt, der Währungswerte aus dem Text extrahiert. Für jede Übereinstimmung wird die Untergruppe extrahiert, die nur die numerische Zeichenfolge enthält. Diese wird in einen [Decimal](xref:System.Decimal)-Wert konvertiert, und dann wird ein laufender Gesamtbetrag berechnet. 
 
