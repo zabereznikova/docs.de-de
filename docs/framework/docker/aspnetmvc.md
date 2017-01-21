@@ -3,16 +3,16 @@ title: Migrieren von ASP.NET MVC-Anwendungen zu Windows-Containern
 description: "Erfahren Sie, wie Sie eine vorhandene ASP.NET MVC-Anwendung in einem Windows Docker-Container ausführen können."
 keywords: Windows-Container, Docker, ASP.NET MVC
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: dotnet-mvc
 ms.devlang: dotnet
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 3e8a8a953cbb3dde6ddf386f8c3b3a1fd4c549f1
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c81e9783499ede9a612969f16a7e85d77fa921c4
 
 ---
 
@@ -42,7 +42,7 @@ Zumindest auf Ihrem Entwicklungscomputer muss [Windows 10 Anniversary Update](ht
 Bevor Sie beginnen, müssen Sie [Docker für Windows](https://docs.docker.com/docker-for-windows/), Version 1.12 Beta 26 oder höher installieren. Unterstützung für Windows-Container ist zu diesem Zeitpunkt nur im Beta-Kanal verfügbar.
 
 > [!IMPORTANT]
-> Wenn Sie Windows Server 2016 verwenden, müssen Sie die Anweisungen unter [Containerhostbereitstellung: Windows Server](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment) befolgen, bevor Sie Docker-Container ausführen können.
+> Wenn Sie Windows Server 2016 verwenden, müssen Sie die Anweisungen unter [Containerhostbereitstellung: Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) befolgen, bevor Sie Docker-Container ausführen können.
 
 Nachdem Sie Docker installiert und gestartet haben, müssen Sie mit der rechten Maustaste auf das Taskleistensymbol klicken und **Switch to Windows containers** (Zu Windows-Containern wechseln) wählen, um Docker-Images auf Windows-Basis auszuführen. Die Ausführung dieses Befehls dauert ein paar Sekunden:
 
@@ -175,12 +175,12 @@ docker rm randomanswers
 
 In diesem Thema haben Sie die Schritte zum Verschieben einer vorhandenen ASP.NET MVC-Anwendung in einen Windows Server-Container und zum dortigen Ausführen kennen gelernt. Das Ausführen einer vorhandenen Anwendung erfordert keine Änderungen Ihrer Anwendung. Sie müssen die Aufgaben zum Veröffentlichen der Anwendung, Erstellen eines Docker-Images und Starten des Images in einem neuen Container ausführen. Die Nutzung von Windows Server-Containern ist der einfachste Weg, um Ihre vorhandenen Anwendungen zu dieser Umgebung zu migrieren.
 
-[Windows-Container]: media/aspnetmvc/SwitchContainer.png "Wechseln zum Windows-Container"
-[publish-connection]: media/aspnetmvc/PublishConnection.png "Veröffentlichen im Dateisystem"
+[windows-container]: media/aspnetmvc/SwitchContainer.png "Wechseln zu Windows-Container"
+[publish-connection]: media/aspnetmvc/PublishConnection.png "Im Dateisystem veröffentlichen"
 [publish-settings]: media/aspnetmvc/PublishSettings.png "Veröffentlichungseinstellungen"
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

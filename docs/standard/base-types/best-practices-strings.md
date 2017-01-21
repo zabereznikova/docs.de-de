@@ -4,24 +4,23 @@ description: "Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: b3cefaa4-0a3f-4a96-aba9-1de30fb07c29
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3efd30bade564fe1b7dbf93237a9ff40c58c5f1e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 057faa0ad78dfb0a600dad2a1f0aeea240f33282
 
 ---
 
 # <a name="best-practices-for-using-strings"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen
 
-.NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Operationen das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.
+.NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Operationen das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.
 
-In diesem Artikel werden die Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen in .NET untersucht. Darüber hinaus werden Empfehlungen zum Auswählen einer entsprechenden Zeichenfolgen-Behandlungsmethode gegeben und weitere Informationen dazu bereitgestellt. Er wird außerdem untersucht, wie formatierte Daten, z. B. numerische Daten und Datums-/Uhrzeitdaten, für die Anzeige und Speicherung behandelt werden. 
+In diesem Artikel werden die Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen in .NET untersucht. Darüber hinaus werden Empfehlungen zum Auswählen einer entsprechenden Zeichenfolgen-Behandlungsmethode gegeben und weitere Informationen dazu bereitgestellt. Er wird außerdem untersucht, wie formatierte Daten, z. B. numerische Daten und Datums-/Uhrzeitdaten, für die Anzeige und Speicherung behandelt werden. 
 
 Dieser Artikel enthält folgende Abschnitte:
 
@@ -59,7 +58,7 @@ Beachten Sie folgende grundlegende Empfehlungen zur Verwendung von Zeichenfolgen
 
 * Verwenden Sie eine Überladung von der [String](xref:System.String)`Compare`- und [String.CompareTo](xref:System.String.CompareTo(System.String))-Methode zum Sortieren von Zeichenfolgen, nicht zur Überprüfung auf Gleichheit.
 
-* Verwenden Sie kulturabhängige Formatierung, um Daten, die keine Zeichenfolge sind, z. B. Zahlen und Datumsangaben, auf einer Benutzeroberfläche anzuzeigen. Verwenden Sie Formatierung mit der invarianten Kultur, um Daten, die keine Zeichenfolge sind, im Zeichenfolgenformat beizubehalten.
+* Verwenden Sie kulturabhängige Formatierung, um Daten, die keine Zeichenfolge sind, z. B. Zahlen und Datumsangaben, auf einer Benutzeroberfläche anzuzeigen. Verwenden Sie Formatierung mit der invarianten Kultur, um Daten, die keine Zeichenfolge sind, im Zeichenfolgenformat beizubehalten.
 
 Vermeiden Sie folgende Vorgehensweisen bei der Verwendung von Zeichenfolgen:
 
@@ -94,24 +93,24 @@ Aus den folgenden Gründen wird empfohlen, eine Überladung ohne Standardwerte a
 
 * Der Zweck des Codes, der Standardwerte für Methodenaufrufe verwendet, ist nicht klar. Im folgenden Beispiel werden Standardwerte verwendet. Dabei ist nicht klar, ob der Entwickler tatsächlich einen ordinalen oder linguistischen Vergleich zweier Zeichenfolgen durchführen wollte oder ob der Unterschied in der Groß- und Kleinschreibung zwischen `protocol` und "http" möglicherweise dazu führt, dass bei einer Überprüfung auf Gleichheit `false` zurückgegeben wird.
 
-  ```csharp
-  string protocol = GetProtocol(url);       
-  if (String.Equals(protocol, "http", StringComparison.OrdinalIgnoreCase)) {
-     // ...Code to handle HTTP protocol.
-  }
-  else {
-     throw new InvalidOperationException();
-  }
-  ```
+```csharp
+string protocol = GetProtocol(url);       
+if (String.Equals(protocol, "http", StringComparison.OrdinalIgnoreCase)) {
+   // ...Code to handle HTTP protocol.
+}
+else {
+   throw new InvalidOperationException();
+}
+```
 
-  ```vb
-  Dim protocol As String = GetProtocol(url)       
-  If String.Equals(protocol, "http") Then
-    ' ...Code to handle HTTP protocol.
-  Else
-     Throw New InvalidOperationException()
-  End If
-  ```
+```vb
+Dim protocol As String = GetProtocol(url)       
+If String.Equals(protocol, "http") Then
+  ' ...Code to handle HTTP protocol.
+Else
+   Throw New InvalidOperationException()
+End If
+```
 
 Im Allgemeinen empfiehlt es sich, eine Methode aufzurufen, die keine Standardwerte verwendet, da der Zweck des Codes andernfalls möglicherweise nicht eindeutig ist. Dies erleichtert wiederum das Lesen, Verwalten und Debuggen des Codes. Im folgenden Beispiel wird auf die Fragen eingegangen, die sich zum vorherigen Beispiel stellen. Es wird deutlich gemacht, dass der Ordinalvergleich verwendet wird und dass Unterschiede in der Groß- und Kleinschreibung ignoriert werden. 
 
@@ -136,7 +135,7 @@ End If
 
 ## <a name="the-details-of-string-comparison"></a>Details zum Zeichenfolgenvergleich
 
-Zeichenfolgenvergleiche bilden den Kern zahlreicher Operationen, die sich auf Zeichenfolgen beziehen; dies gilt insbesondere für Sortierungen und Überprüfungen auf Gleichheit. Zeichenfolgen werden in einer bestimmten Reihenfolge sortiert: Wenn "my" in einer sortierten Zeichenfolgenliste vor "string" angezeigt wird, muss "my" bei einem Vergleich einen kleineren oder gleichen Wert wie "string" haben. Darüber hinaus wird beim Vergleich implizit Gleichheit definiert. Die Vergleichsoperation gibt 0 (null) für Zeichenfolgen zurück, die als gleich betrachtet werden. Dies kann so interpretiert werden, dass keine Zeichenfolge kleiner ist als die andere. Sinnvolle Operationen mit Zeichenfolgen schließen i. d. R. mindestens eines der folgenden Verfahren ein: Vergleich mit einer anderen Zeichenfolge und Ausführen eines genau definierten Sortiervorgangs.
+Zeichenfolgenvergleiche bilden den Kern zahlreicher Operationen, die sich auf Zeichenfolgen beziehen; dies gilt insbesondere für Sortierungen und Überprüfungen auf Gleichheit. Zeichenfolgen werden in einer bestimmten Reihenfolge sortiert: Wenn "my" in einer sortierten Zeichenfolgenliste vor "string" angezeigt wird, muss "my" bei einem Vergleich einen kleineren oder gleichen Wert wie "string" haben. Darüber hinaus wird beim Vergleich implizit Gleichheit definiert. Die Vergleichsoperation gibt 0 (null) für Zeichenfolgen zurück, die als gleich betrachtet werden. Dies kann so interpretiert werden, dass keine Zeichenfolge kleiner ist als die andere. Sinnvolle Operationen mit Zeichenfolgen schließen i. d. R. mindestens eines der folgenden Verfahren ein: Vergleich mit einer anderen Zeichenfolge und Ausführen eines genau definierten Sortiervorgangs.
 
 Die Überprüfung der Sortierreihenfolge zweier Zeichenfolgen oder ihre Überprüfung auf Gleichheit ergibt jedoch nicht ein einzelnes richtiges Ergebnis. Das Ergebnis ist vielmehr abhängig von den Kriterien, die dem Zeichenfolgenvergleich zugrunde liegen. Insbesondere können Zeichenfolgenvergleiche zu unterschiedlichen Ergebnissen führen, die Ordinalvergleiche darstellen oder auf der Schreibweise und den Sortierungskonventionen der aktuellen oder der invarianten Kultur (eine auf der englischen Sprache basierende Kultur, die nicht von einem Gebietsschema abhängig ist) basieren.
 
@@ -264,7 +263,7 @@ Vergleiche mit der Semantik der aktuellen Kultur werden standardmäßig für fol
 
 In jedem Fall sollten Sie eine Überladung mit einem [StringComparison](xref:System.StringComparison)-Parameter aufrufen, um den Zweck des Methodenaufrufs eindeutig anzugeben. 
 
-Wenn nicht linguistische Zeichenfolgendaten linguistisch interpretiert werden, oder wenn Zeichenfolgendaten in einer bestimmten Kultur mit den Konventionen einer anderen Kultur interpretiert werden, können offensichtliche und nur schwer erkennbare Fehler auftreten. Kanonisches Beispiel ist das Problem mit dem Zeichen "I" im Türkischen.
+Wenn nicht linguistische Zeichenfolgendaten linguistisch interpretiert werden, oder wenn Zeichenfolgendaten in einer bestimmten Kultur mit den Konventionen einer anderen Kultur interpretiert werden, können offensichtliche und nur schwer erkennbare Fehler auftreten. Kanonisches Beispiel ist das Problem mit dem Zeichen "I" im Türkischen.
 
 In beinahe allen lateinischen Alphabetarten,  einschließlich des englischen (USA) Alphabets, ist das Zeichen "i" (\u0069) die Kleinschreibungsvariante des Zeichens "I" (\u0049). Diese Regel zur Groß- und Kleinschreibung wird von Entwicklern, die in den entsprechenden Kulturen programmieren, leicht als Standard zugrunde gelegt. Das türkische Alphabet („tr-TR“) enthält jedoch ein „I“ mit einem Punkt („İ“ bzw. \u0130), welches den Großbuchstaben des Zeichens „i“ darstellt. Ferner verfügt Türkisch auch über ein kleines „i ohne Punkt“ („ı“ bzw. \u0131), dessen Entsprechung als Großbuchstabe das Zeichen „I“ ist. Die Kultur Aserbaidschanisch (az-AZ) weist ein analoges Verhalten auf.
 
@@ -365,7 +364,7 @@ End Function
 
 Der [StringComparison.Ordinal](xref:System.StringComparison.Ordinal)- oder [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase)-Wert in einem Methodenaufruf kennzeichnet einen nicht linguistischen Vergleich, in dem die Features von natürlichen Sprachen ignoriert werden. Bei Methoden, die mit diesen [StringComparison](xref:System.StringComparison)-Werten aufgerufen werden, werden für Entscheidungen bezüglich Zeichenfolgenoperation einfache Bytevergleiche anstelle von Groß- und Kleinschreibung oder nach Kultur parametrisierten Entsprechungstabellen zugrunde gelegt. In aller Regel ist diese Vorgehensweise am besten für die beabsichtigte Interpretation von Zeichenfolgen geeignet und macht den Code sicherer und zuverlässiger. 
 
-Ordinalvergleiche sind Zeichenfolgenvergleiche, in denen die einzelnen Bytes einer Zeichenfolge ohne linguistische Interpretation verglichen werden, z. B. entspricht "windows" nicht "Windows". Verwenden Sie diesen Vergleich, wenn der Kontext eine exakte Entsprechung von Zeichenfolgen oder eine konservative Entsprechungsrichtlinie verlangt. Darüber hinaus werden Ordinalvergleiche am schnellsten durchgeführt, da beim Bestimmen eines Ergebnisses keine linguistischen Regeln verwendet werden.
+Ordinalvergleiche sind Zeichenfolgenvergleiche, in denen die einzelnen Bytes einer Zeichenfolge ohne linguistische Interpretation verglichen werden, z. B. entspricht "windows" nicht "Windows". Verwenden Sie diesen Vergleich, wenn der Kontext eine exakte Entsprechung von Zeichenfolgen oder eine konservative Entsprechungsrichtlinie verlangt. Darüber hinaus werden Ordinalvergleiche am schnellsten durchgeführt, da beim Bestimmen eines Ergebnisses keine linguistischen Regeln verwendet werden.
 
 Zeichenfolgen in .NET können eingebettete NULL-Zeichen aufweisen. Einer der auffälligsten Unterschiede zwischen einem ordinalen und einem kulturabhängigen Vergleich (einschließlich Vergleichen, die die invariante Kultur verwenden) betrifft die Behandlung von eingebetteten NULL-Zeichen in einer Zeichenfolge. Wenn Sie die [String](xref:System.String)`Compare`-Methode und die [String](xref:System.String)`Equals`-Methode verwenden, um kulturabhängige Vergleiche (einschließlich Vergleichen, die die invariante Kultur verwenden) durchzuführen, werden diese Zeichen ignoriert. Bei kulturabhängigen Vergleichen können Zeichenfolgen mit eingebetteten NULL-Zeichen daher als gleichwertig mit Zeichenfolgen ohne diese Zeichen angesehen werden. 
 
@@ -492,7 +491,7 @@ Console.WriteLine("      Ordinal: {0}", _
 '          Ordinal: False
 ```
 
-Ordinalvergleiche, bei denen die Groß- und Kleinschreibung nicht beachtet wird, folgen als nächster konservativer Ansatz. Diese Vergleichen ignorieren die Groß- und Kleinschreibung i. d. R.; "windows" entspricht dann beispielsweise "Windows". Im Hinblick auf ASCII-Zeichen entspricht diese Richtlinie [StringComparison.Ordinal](xref:System.StringComparison.Ordinal), mit der Ausnahme, dass die üblichen ASCII-Schreibungsregeln nicht beachtet werden. Ein beliebiges Zeichen in [A, Z] (\u0041-\u005A) entspricht daher dem zugehörigen Zeichen in [a,z] (\u0061-\007A). Die Groß- und Kleinschreibung außerhalb des ASCII-Bereichs verwendet die Tabellen der invarianten Kultur. Daher entspricht der folgende Vergleich
+Ordinalvergleiche, bei denen die Groß- und Kleinschreibung nicht beachtet wird, folgen als nächster konservativer Ansatz. Diese Vergleichen ignorieren die Groß- und Kleinschreibung i. d. R.; "windows" entspricht dann beispielsweise "Windows". Im Hinblick auf ASCII-Zeichen entspricht diese Richtlinie [StringComparison.Ordinal](xref:System.StringComparison.Ordinal), mit der Ausnahme, dass die üblichen ASCII-Schreibungsregeln nicht beachtet werden. Ein beliebiges Zeichen in \[A, Z\] (\u0041-\u005A) entspricht daher dem zugehörigen Zeichen in \[a, z\] (\u0061-\007A). Die Groß- und Kleinschreibung außerhalb des ASCII-Bereichs verwendet die Tabellen der invarianten Kultur. Daher entspricht der folgende Vergleich
 
 ```csharp
 String.Compare(strA, strB, StringComparison.OrdinalIgnoreCase);
@@ -931,7 +930,7 @@ End Sub
 
 ## <a name="displaying-and-persisting-formatted-data"></a>Anzeigen und Beibehalten von formatierten Daten
 
-Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. Standardmäßig verwenden die [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))-Methode und die `ToString`-Methoden der numerischen Typen und der Datums- und Uhrzeittypen die aktuelle Threadkultur für Formatierungsvorgänge. Um explizit anzugeben, dass die Formatierungsmethode die aktuelle Kultur verwenden soll, können Sie eine Überladung einer Formatierungsmethode mit einem Provider-Parameter aufrufen, wie z.B. [String.Format(IFormatProvider, String, Object[])](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) oder [DateTime.ToString(IFormatProvider)](xref:System.DateTime.ToString(System.IFormatProvider)), und ihr die [CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture)-Eigenschaft übergeben. 
+Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. Standardmäßig verwenden die [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))-Methode und die `ToString`-Methoden der numerischen Typen und der Datums- und Uhrzeittypen die aktuelle Threadkultur für Formatierungsvorgänge. Um explizit anzugeben, dass die Formatierungsmethode die aktuelle Kultur verwenden soll, können Sie eine Überladung einer Formatierungsmethode mit einem Provider-Parameter aufrufen, wie z.B. [String.Format(IFormatProvider, String, Object[])](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) oder [DateTime.ToString(IFormatProvider)](xref:System.DateTime.ToString(System.IFormatProvider)), und ihr die [CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture)-Eigenschaft übergeben. 
 
 Sie können Daten, die keine Zeichenfolge sind, entweder als Binärdaten oder als formatierte Daten beibehalten. Wenn Sie möchten, dass sie als formatierte Daten gespeichert werden, sollten Sie eine Überladung einer Formatierungsmethode aufrufen, die einen *Provider*-Parameter einschließt, und ihr die [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture)-Eigenschaft übergeben. Die invariante Kultur stellt ein konsistentes Format für formatierte Daten bereit, das unabhängig von der Kultur und dem Computers ist. Im Gegensatz dazu bringt das Beibehalten von Daten, die mit anderen Kulturen als der invarianten Kultur formatiert werden, einige Einschränkungen mit sich: 
 
@@ -1101,6 +1100,6 @@ Wenn Sie jedoch die [CultureInfo.CurrentCulture](xref:System.Globalization.Cultu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -2,17 +2,17 @@
 title: Dotnet-new-Befehl | .NET Core
 description: Der dotnet-new-Befehl erstellt neue .NET Core-Projekte im aktuellen Verzeichnis.
 keywords: dotnet-new, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 49f0a5e9b385c09a31cc463a77a74894b4304792
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7483dc92bec60f3ce97242dceb26abec829fdca1
 
 ---
 
@@ -40,9 +40,9 @@ Danach kann das Projekt kompiliert und/oder weiter bearbeitet werden.
 
 Druckt eine kurze Hilfe für den Befehl.  
 
-`-l|--lang <C#|F#>`
+`-l|--lang C#`
 
-Die Sprache des Projekts. Wird standardmäßig auf `C#` festgelegt. Weitere gültige Werte sind `csharp`, `fsharp`, `cs` und `fs`.
+Die Sprache des Projekts. Wird standardmäßig auf `C#` festgelegt. Weitere gültige Werte sind `csharp` und `cs`.
 
 `-t|--type`
 
@@ -54,15 +54,12 @@ Erstellen Sie ein C#-Konsolenanwendungsprojekt im aktuellen Verzeichnis:
 
 `dotnet new` oder `dotnet new --lang c#` 
    
-Erstellen Sie ein F#-Konsolenanwendungsprojekt im aktuellen Verzeichnis:
-
-`dotnet new --lang f#`
-  
 Erstellen Sie ein neues ASP.NET Core C#-Anwendungsprojekt im aktuellen Verzeichnis:
 
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 
