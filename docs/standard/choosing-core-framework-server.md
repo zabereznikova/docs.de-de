@@ -3,17 +3,16 @@ title: "Wahl zwischen .NET Core und .NET Framework für Server-Apps"
 description: "Ein Leitfaden für die Auswahl der NET-Konfiguration für die Erstellung einer Server-App in .NET."
 keywords: .NET, .NET Core, .NET Framework
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: d6ce9e3dd3c1189f35d147d140bb45095b3d77a5
-ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
+ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
+ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
 
 ---
 
@@ -50,13 +49,13 @@ Wenn eine Anwendung (Web/Dienst) plattformübergreifend (Windows, Linux und macO
 
 .NET Core ist die beste Wahl, wenn Sie ein microservicezentriertes System aufbauen möchten, das aus mehreren unabhängigen, dynamisch skalierbaren, zustandsbehafteten oder zustandslosen Microservices besteht. .NET Core benötigt nur wenig Ressourcen, und die API-Oberfläche kann auf den Umfang des jeweiligen Microservice minimiert werden. Mit einer Microservicearchitektur können Sie außerdem Technologien dienstübergreifend miteinander kombinieren. So ermöglichen Sie eine graduelle Übernahme von .NET Core für neue Microservices, die in Verbindung mit anderen mithilfe von .NET Framework, Java, Ruby oder anderen monolithischen Technologien entwickelten Microservices oder Diensten verwendet werden.
 
-Ihnen steht eine Vielzahl verschiedener Infrastrukturplattformen zur Verfügung. Für große und komplexe Microservicesysteme können Sie [Azure Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) verwenden. Für zustandslose Microservices können Sie auch andere Produkte verwenden, z.B. [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/). Auf Docker basierende Alternativen zu Microservices sind – wie nachstehend erläutert – mit allen Arten von Microservice-Implementierungen kompatibel. All diese Plattformen unterstützen .NET Core und eignen sich daher ideal zum Hosten Ihrer Microservices.
+Ihnen steht eine Vielzahl verschiedener Infrastrukturplattformen zur Verfügung. Für große und komplexe Microservicesysteme können Sie [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) verwenden. Für zustandslose Microservices können Sie auch andere Produkte verwenden, z.B. [Azure App Service](https://azure.microsoft.com/services/app-service/). Auf Docker basierende Alternativen zu Microservices sind – wie nachstehend erläutert – mit allen Arten von Microservice-Implementierungen kompatibel. All diese Plattformen unterstützen .NET Core und eignen sich daher ideal zum Hosten Ihrer Microservices.
 
 ### <a name="containers"></a>Container
 
 Container werden häufig in Verbindung mit einer Microservicearchitektur eingesetzt, obwohl sie auch für Web-Apps oder Dienste mit jedem beliebigen Architekturmuster verwendet werden können. .NET Framework lässt sich auch für Windows-Container verwenden, allerdings eignet sich .NET Core durch die Modularität und den einfachen Aufbau ideal für Container.  Die Imagegröße eines mit .NET Core erstellten und bereitgestellten Containers ist wesentlich kleiner als bei .NET Framework.  Aufgrund der plattformübergreifenden Struktur können Sie Server-Apps zum Beispiel in Linux-Docker-Containern bereitstellen.
 
-Sie können dann Ihre Docker-Container in Ihrer eigenen Linux- oder Windows-Infrastruktur hosten oder einen Clouddienst nutzen, z.B. [Azure Container Service](https://azure.microsoft.com/en-us/services/container-service/), mit dem Ihre containerbasierte Anwendung in der Cloud verwaltet, orchestriert und skaliert werden kann.
+Sie können dann Ihre Docker-Container in Ihrer eigenen Linux- oder Windows-Infrastruktur hosten oder einen Clouddienst nutzen, z.B. [Azure Container Service](https://azure.microsoft.com/services/container-service/), mit dem Ihre containerbasierte Anwendung in der Cloud verwaltet, orchestriert und skaliert werden kann.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Bedarf an skalierbaren Hochleistungssystemen
 
@@ -110,6 +109,7 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 * [.NET-Komponenten – Übersicht](components.md)
 
 
-<!--HONumber=Nov16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 

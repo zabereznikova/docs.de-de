@@ -4,16 +4,15 @@ description: "Dies ist ein Überblick über die Befehlszeilenschnittstelle (CLI)
 keywords: CLI, CLI-Tools, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d9e689524a3100f1c5c129bdf13ed691a850ad2e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: be8fbdf806a3e27923f01b015de87c3fc1be7a7d
 
 ---
 
@@ -36,6 +35,7 @@ Standardmäßig wird die CLI parallel installiert (SxS). Das bedeutet, dass mehr
 Die folgenden Befehle werden standardmäßig erstellt:
 
 * [new](dotnet-new.md)
+* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -89,7 +89,8 @@ Erfahren Sie mehr über diese beiden Möglichkeiten im Thema [.NET Core applicat
 ## <a name="migration-from-preview-3projectjson"></a>Migration von „project.json“ zu Preview 3
 Wenn Sie Preview 2-Tools und „project.json“-Projekte genutzt haben, können Sie die Dokumentation zum Befehl [dotnet migrate](dotnet-migrate.md) konsultieren, um sich mit dem Befehl vertraut zu machen und Ihr Projekt zu migrieren. 
 
-> **Hinweis:** Der Befehl `dotnet migrate` eignet sich derzeit nicht zum Migrieren von „project.json“-Dateien vor Preview 2. 
+> [!NOTE]
+> Der Befehl `dotnet migrate` eignet sich derzeit nicht zum Migrieren von „project.json“-Dateien vor Preview 2. 
 
 ## <a name="extensibility"></a>Erweiterungen
 Natürlich ist nicht jedes Tool, das Sie in Ihren Workflows verwenden können, Teil der CLI-Tools von .NET Core. Jedoch verfügt die .NET Core-CLI über ein Erweiterbarkeitsmodell, mit dem Sie zusätzliche Tools für Ihre Projekte angeben können. Weitere Informationen finden Sie im Thema [.NET Core CLI extensibility model (.NET Core-CLI-Erweiterbarkeitsmodell)](extensibility.md).
@@ -101,6 +102,6 @@ Dies wer ein kurzer Überblick über die wichtigsten Funktionen der CLI. Mithilf
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

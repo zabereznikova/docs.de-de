@@ -1,4 +1,4 @@
-# <a name="using-the-cli-preview3-folder-and-sub-folders"></a>Verwenden des Ordners „cli-preview3“ und der Unterordner
+# <a name="using-the-preview3-folder-and-sub-folders"></a>Verwenden des Ordners „preview3“ und der Unterordner
 
 Dieser Ordner ist der Knoten der obersten Ebene, der mit dem Toolsordner übereinstimmt, er enthält aber Deltas für .NET Core-Tools der Version Preview 3.
 
@@ -37,6 +37,6 @@ Unser Ziel ist es, verschiedene Versionen als Zweige im [Dokumentrepository](htt
 Zu gegebener Zeit können wir jede aktuelle Version im Hauptordner [docs](../docs) zusammenführen, die Knoten des Inhaltsverzeichnisses zusammenführen und eine separate Reihe von Dokumenten veröffentlichen. Möglicherweise müssen Änderungen an der LTS-Version einer Datei und der aktuellen Version einer Datei zusammengeführt werden. Wir sollten diese Änderungen jedoch relativ leicht finden können.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

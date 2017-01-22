@@ -2,17 +2,17 @@
 title: dotnet-msbuild-Befehl | .NET Core SDK
 description: "Der dotnet-msmsbuild-Befehl ermöglicht den Zugriff auf die MSmsbuild-Befehlszeile"
 keywords: dotnet-msmsbuild, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
 translationtype: Human Translation
-ms.sourcegitcommit: cde9d9577246a9025d646ce2a6d574a18512146e
-ms.openlocfilehash: 51a3afdcf591b8147790d78471c6fee63ceb7f2d
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2d024911ae3c24b5e48889dc0b4777cff08643de
 
 ---
 
@@ -28,7 +28,7 @@ dotnet-msbuild – Erstellt ein Projekt und alle seine Abhängigkeiten
 ## <a name="description"></a>Beschreibung
 Der `dotnet msbuild`-Befehl ermöglicht den Zugriff auf eine voll funktionsfähige MSBuild-Instanz 
 
-Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Sie können die [vorhandene Dokumentation](https://msdn.microsoft.com/en-us/library/ms164311.aspx) nutzen, um sich mit der Befehlsreferenz vertraut zu machen. 
+Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Sie können sich mithilfe der [MSBuild-Befehlszeilenreferenz](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference) mit den Optionen vertraut machen. 
 
 ## <a name="examples"></a>Beispiele
 
@@ -46,6 +46,6 @@ Führt das Veröffentlichungsziel aus und veröffentlicht für die RID `osx.10.1
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

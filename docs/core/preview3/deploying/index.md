@@ -3,16 +3,15 @@ title: .NET Core Anwendungsbereitstellung
 description: .NET Core Anwendungsbereitstellung
 keywords: .NET, .NET Core, .NET Core Bereitstellung
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 83caccd3c0ca10b8f02828d4bf375ecca3d87c54
 
 ---
 
@@ -122,7 +121,7 @@ Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehr
       </ItemGroup>
     ```
 
-Beachten Sie, dass die SDK-Abhängigkeit im obigen Beispiel bestehen bleibt. Dies ist beabsichtigt, da diese Abhängigkeit zum Wiederherstellen aller erforderlichen Ziele erforderlich ist, damit die Befehlszeilentools funktionieren.  
+ Beachten Sie, dass die SDK-Abhängigkeit im obigen Beispiel bestehen bleibt. Dies ist beabsichtigt, da diese Abhängigkeit zum Wiederherstellen aller erforderlichen Ziele erforderlich ist, damit die Befehlszeilentools funktionieren.  
 
 2. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit herunter. Um das Paket herunterzuladen, führen Sie nach dem Hinzufügen der Abhängigkeit den `dotnet restore`-Befehl aus. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
 
@@ -190,7 +189,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
     }
     ```
 
-3. Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei `csproj`, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../../rid-catalog.md). Der folgende Abschnitt `runtimes` gibt z.B. an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
+3. Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei `csproj`, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../../rid-catalog.md). Das folgende Beispiel gibt an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
     ```xml
         <PropertyGroup>
@@ -320,16 +319,14 @@ Wenn die Verfügbarkeit von ausreichend Speicherplatz auf den Zielsystemen ein P
 
 Befolgen Sie die ersten beiden Schritte für die Erstellung einer eigenständigen Bereitstellung, um eine eigenständigen Bereitstellung mit weniger Speicherbedarf zu erstellen. Nachdem Sie den `dotnet new`-Befehl ausgeführt und den C#-Quellcode für Ihre Anwendung hinzugefügt haben, gehen Sie folgendermaßen vor:
 
-1. Öffnen Sie die `csproj`-Datei und ersetzen Sie den `frameworks`-Abschnitt folgendermaßen:
+1. Öffnen Sie die `csproj`-Datei und ersetzen Sie das `<TargetFramework>`-Element folgendermaßen:
 
     ```xml
-    <PropertyGroup>
       <TargetFramework>netstandard1.6</TargetFramework>
-  </PropertyGroup>
   ```
 Dieser Vorgang gibt an, dass unsere App nur die .NET-Standardbibliothek verwendet, anstatt des gesamten `netcoreapp1.0`-Frameworks einschließlich .NET Core-CLR, der .NET Core-Bibliothek und zahlreicher anderer Systemkomponenten.
 
-2. Ersetzen Sie den Abschnitt `dependencies` durch Folgendes:
+2. Ersetzen Sie die `<ItemGroup>`, die Paketverweise enthält, durch Folgendes:
 
     ```xml
     <ItemGroup>
@@ -360,7 +357,7 @@ Dieser Vorgang gibt an, dass unsere App nur die .NET-Standardbibliothek verwende
     ```
     
 
-Eine vollständige `csproj`-Beispieldatei wird später in diesem Abschnitt angezeigt.
+ Eine vollständige `csproj`-Beispieldatei wird später in diesem Abschnitt angezeigt.
 
 4. Führen Sie den `dotnet restore`-Befehl aus, um die in Ihrem Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
@@ -390,7 +387,7 @@ Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
@@ -422,6 +419,6 @@ Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
