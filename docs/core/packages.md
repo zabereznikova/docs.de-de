@@ -4,16 +4,14 @@ description: Pakete, Metapakete und Frameworks
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
 ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
+ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
 
 ---
 
@@ -126,7 +124,7 @@ Das Framework `.NETFramework,Version=4.6` stellt die in .NET Framework 4.6 verf�
 
 Das Framework `.NETStandard,Version=1.3` ist ein paketbasiertes Framework. Es verlässt sich auf Pakete, die das Framework als Ziel haben, um APIs zu definieren und in Bezug auf das Framework verfügbar zu machen.
 
-## <a name="packagebased-frameworks"></a>Paketbasierte Frameworks
+## <a name="package-based-frameworks"></a>Paketbasierte Frameworks
 
 Es besteht eine bidirektionale Beziehung zwischen Frameworks und Paketen. Der erste Teil definiert die APIs, die für ein angegebenes Framework verfügbar sind, z.B. `netstandard1.3`. Pakete, die `netstandard1.3` (oder kompatible Frameworks wie `netstandard1.0`) als Ziel haben, definieren die APIs, die für `netstandard1.3` verfügbar sind. Das hört sich möglicherweise wie eine zirkuläre Definition an, das ist aber nicht der Fall. Aufgrund ihrer Eigenschaft „paketbasiert“ stammt die API-Definition für das Framework aus Paketen. Das Framework selbst definiert keine APIs.
 
@@ -188,6 +186,6 @@ Das Metapaket `Microsoft.NETCore.App` hat das Framework `netcoreapp` als Ziel. E
 Die meisten der zusätzlichen Bibliotheken, die von `Microsoft.NETCore.App` bereitgestellt werden, haben ebenfalls `netstandard` als Ziel, vorausgesetzt, dass ihre Abhängigkeiten von anderen `netstandard`-Bibliotheken erfüllt werden. Dies bedeutet, dass `netstandard`-Bibliotheken auch auf diese Pakete als Abhängigkeiten verweisen können. 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

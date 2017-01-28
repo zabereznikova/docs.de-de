@@ -1,33 +1,17 @@
 ---
-title: Entwickeln von .NET Core-Bibliotheken mithilfe von Visual Studio
-description: Entwickeln von .NET Core-Bibliotheken mithilfe von Visual Studio
-keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 01b988ed-583f-48c8-a016-caeee282e0a6
+redirect_url: /dotnet/articles/csharp/getting-started/library-with-visual-studio-2017
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: dfb2fa67b59d3da7ce8afc6dd1065d65bfb0e4d6
+ms.sourcegitcommit: 2bd5d04cf896db6f74a4e0651fb7bd6315e1af4a
+ms.openlocfilehash: a97c7fbefcab04ac817b77405755250079d6756b
 
 ---
 
-# <a name="-developing-net-core-libraries-using-visual-studio"></a>Entwickeln von .NET Core-Bibliotheken mithilfe von Visual Studio
+# <a name="-developing-net-core-libraries-using-visual-studio"></a>🔧 Entwickeln von .NET Core-Bibliotheken mithilfe von Visual Studio
 
-> **Hinweis**
-> 
-> Zu diesem Thema wurde noch nichts geschrieben. 
->
-> Wir freuen uns auf Ihre Ideen zur Gestaltung des Umfangs und der Herangehensweise.
-> 
-> Erfahren Sie auf [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) mehr darüber, wie Sie hierzu beitragen können.
->
+## <a name="content-moved"></a>Inhalt verschoben.
+Dieser Artikel wurde zu dem Thema [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017 RC](../../csharp/getting-started/library-with-visual-studio-2017.md) verschoben.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

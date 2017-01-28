@@ -3,16 +3,16 @@ title: Frameworks und Ziele
 description: "Erläutert die Konzepte von Framework abzielt, beim Schreiben von Code für .NET."
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 09/19/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
 ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
-ms.openlocfilehash: 72022e09f7604c80b45c4aac001daaad41fe24af
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
@@ -61,6 +61,6 @@ Sie können mithilfe der langen oder kurzen Form der Framework-ID auf eine Frame
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

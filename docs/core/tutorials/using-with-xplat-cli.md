@@ -3,32 +3,32 @@ title: Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung 
 description: Erste Schritte mit .NET Core unter Windows, Linux oder Mac OS unter Verwendung der .NET Core-Befehlszeilenschnittstelle (CLI)
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: aafa0c110dc3a2820f7e050d70b9450af1db35d8
+ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
+ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile
 
-In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolenanwendungen erstellen können.  Dabei wird mit einer ganz einfachen Konsolen-App begonnen, die immer mehr erweitert wird und sich über mehrere Projekte einschließlich Tests erstreckt. Die einzelnen Funktionen werden schrittweise hinzugefügt, wobei die einzelnen Schritte aufeinander aufbauen.
+In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle einfache plattformübergreifende Konsolen-Apps erstellen können.
 
 Wenn Sie mit dem Toolset der .NET Core-Befehlszeilenschnittstelle nicht vertraut sind, finden Sie entsprechende Informationen in der [Übersicht über das .NET Core SDK](../sdk.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Stellen Sie vor Beginn sicher, dass die [aktuellsten Tools der .NET Core-CLI](https://www.microsoft.com/net/core) installiert sind.  Außerdem benötigen Sie einen Text-Editor.
+Stellen Sie vor Beginn sicher, dass die [aktuellsten Tools der .NET Core-CLI](https://www.microsoft.com/net/core) installiert sind. Außerdem benötigen Sie einen Text-Editor.
 
 ## <a name="hello-console-app"></a>Hallo Konsolenanwendung!
 
-Erstellen Sie zunächst einen Ordner mit einem beliebigen Namen.  Wir haben den Namen „Hello“ für den Beispielcode verwendet, der [hier](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello) zu finden ist.
+Navigieren Sie zu einem Ordner mit einem beliebigen Namen, oder erstellen Sie diesen. Wir haben den Namen „Hello“ für den Beispielcode verwendet, der [hier](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello) zu finden ist.
 
 Öffnen Sie die Eingabeaufforderung, und geben Sie folgenden Befehl ein:
 
@@ -82,7 +82,7 @@ Hier eine kurze Beschreibung der Schritte:
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) führt einen Aufruf in NuGet aus, um die Abhängigkeitenstruktur wiederherzustellen. NuGet analysiert die Datei `project.json`, lädt die in der Datei angegebenen Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die Datei `project.lock.json`.  Die Datei `project.lock.json` ist zum Kompilieren und Ausführen erforderlich.
+   [`dotnet restore`](../tools/dotnet-restore.md) führt einen Aufruf in NuGet aus, um die Struktur der Abhängigkeiten wiederherzustellen. NuGet analysiert die Datei `project.json`, lädt die in der Datei angegebenen Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die Datei `project.lock.json`.  Die Datei `project.lock.json` ist zum Kompilieren und Ausführen erforderlich.
    
    Bei der Datei `project.lock.json` handelt es sich um eine persistente und umfassende Gruppe des Diagramms von NuGet-Abhängigkeiten und anderen Informationen, die eine Anwendung beschreiben.  Diese Datei wird von anderen Tools wie `dotnet build` und `dotnet run` gelesen, die dadurch in die Lage versetzt werden, den Quellcode mit einer vorschriftsmäßigen Menge von NuGet-Abhängigkeiten und Bindungsauflösungen zu verarbeiten.
    
@@ -97,7 +97,7 @@ Hello, World!
 
 Sie können auch [`dotnet build`](../tools/dotnet-build.md) ausführen, um den Code zu kompilieren, ohne die Konsolenanwendungen des Builds auszuführen.
 
-### <a name="building-a-selfcontained-application"></a>Erstellen einer eigenständigen Anwendung
+### <a name="building-a-self-contained-application"></a>Erstellen einer eigenständigen Anwendung
 
 Versuchen wir, anstelle einer portierbaren Anwendung eine eigenständige Anwendung zu kompilieren. Weitere Informationen zu den Arten der Portierbarkeit in .NET Core sowie zu deren Bereitstellung finden Sie [hier](../deploying/index.md).
 
@@ -647,6 +647,6 @@ Wenn Sie Interesse an einem komplexeren Beispiel für eine Konsolenanwendung hab
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

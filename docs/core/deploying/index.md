@@ -3,16 +3,15 @@ title: .NET Core Anwendungsbereitstellung
 description: .NET Core Anwendungsbereitstellung
 keywords: .NET, .NET Core, .NET Core Bereitstellung
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 09/08/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
 ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 96eb2cc7ca948b3e372fa1363b1741624d791d27
+ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
 
 ---
 
@@ -24,11 +23,11 @@ Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen
 
 - Eigenständige Bereitstellung. Im Gegensatz zu FDD müssen bei einer eigenständigen Bereitstellung (SCD) die freigegebenen Komponenten nicht auf dem Zielsystem vorhanden sein. Alle Komponenten, einschließlich .NET Core-Bibliotheken und die .NET Core Runtime sind in der Anwendung enthalten und von anderen .NET Core-Anwendungen isoliert. SCDs enthalten eine ausführbare Datei (z.B. `app.exe` auf Windows-Plattformen für eine Anwendung namens `app`), die eine umbenannte Version des plattformspezifischen .NET Core-Host darstellt, und eine DLL-Datei (z.B. `app.dll`), die die eigentliche Anwendung ist.
 
-## <a name="frameworkdependent-deployments-fdd"></a>Framework-abhängige Bereitstellungen (FDD) ##
+## <a name="framework-dependent-deployments-fdd"></a>Framework-abhängige Bereitstellungen (FDD) ##
 
 Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwenden wird, die auf dem Zielsystem vorhanden ist. Dies ist das Standard-Bereitstellungsmodell für .NET Core-Anwendungen.
 
-### <a name="why-create-a-frameworkdependent-deployment"></a>Warum eine Framework-abhängige Bereitstellung erstellen? ###
+### <a name="why-create-a-framework-dependent-deployment"></a>Warum eine Framework-abhängige Bereitstellung erstellen? ###
 
 Die Bereitstellung einer FDD hat eine Reihe von Vorteilen:
 
@@ -44,7 +43,7 @@ Es gibt auch einige Nachteile:
 
 - Es ist möglich, dass die .NET Core Runtime und die Bibliotheken ohne Ihr Wissen in zukünftigen Versionen geändert werden. In seltenen Fällen kann dies das Verhalten Ihrer Anwendung ändern.
 
-### <a name="deploying-a-frameworkdependent-deployment"></a>Bereitstellen einer Framework-abhängigen Bereitstellung ###
+### <a name="deploying-a-framework-dependent-deployment"></a>Bereitstellen einer Framework-abhängigen Bereitstellung ###
 
 Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das [Dotnet-Dienstprogramm](../tools/dotnet.md) über die Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung wie Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, zu testen und zu veröffentlichen.
 
@@ -101,7 +100,7 @@ Der vollständige Satz von Anwendungsdateien kann so bereitgestellt werden, wie 
 
 Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung das freigegebene Framework-Installationsprogramm bündeln, oder als erforderliche Komponente im Rahmen der Anwendungsinstallation überprüfen.  Die Installation des gemeinsam genutzten Frameworks erfordert Administrator-/Root-Zugriff, da es sich um eine computerweite Installation handelt.
 
-### <a name="deploying-a-frameworkdependent-deployment-with-thirdparty-dependencies"></a>Bereitstellen einer Framework-abhängigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
+### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>Bereitstellen einer Framework-abhängigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
 
 Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst drei zusätzliche Schritte vor dem Ausführen des `dotnet restore`-Befehls:
 
@@ -121,11 +120,11 @@ Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehr
 
 Beachten Sie, dass eine Framework-abhängige Bereitstellung mit Drittanbieter-Abhängigkeiten nur so tragbar wie ihre Drittanbieter-Abhängigkeiten ist. Falls eine Drittanbieter-Bibliothek nur Mac OS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel hierfür ist der Kestrel-Server. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md#what-are-rids), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
 
-## <a name="selfcontained-deployments-scd"></a>Eigenständige Bereitstellungen (Self-contained deployments, SCD) ##
+## <a name="self-contained-deployments-scd"></a>Eigenständige Bereitstellungen (Self-contained deployments, SCD) ##
 
 Bei einer eigenständigen Bereitstellung stellen Sie nicht nur Ihre Anwendung und jegliche Drittanbieter-Abhängigkeiten, sondern die .NET Core-Version, die Sie mit Ihrer Anwendung erstellen, bereit. Das Erstellen einer eigenständigen Bereitstellung schließt allerdings nicht die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) selbst auf verschiedenen Plattformen mit ein (z.B. OpenSSL auf Mac OS). Diese müssen demnach vor dem Ausführen der Anwendung installiert werden. 
 
-### <a name="why-deploy-a-selfcontained-deployment"></a>Warum eine eigenständige Bereitstellung? ###
+### <a name="why-deploy-a-self-contained-deployment"></a>Warum eine eigenständige Bereitstellung? ###
 
 Das Bereitstellen einer eigenständigen Bereitstellung hat zwei wesentliche Vorteile:
 
@@ -141,7 +140,7 @@ Es hat auch einige Nachteile:
 
 - Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-selfcontained-deployment"></a> Bereitstellen einer einfachen eigenständigen Bereitstellung ###
+### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> Bereitstellen einer einfachen eigenständigen Bereitstellung ###
 
 Das Bereitstellen einer eigenständigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst das Erstellen des Projekts, das Ändern der Datei project.json, und das Erstellen, Testen und Veröffentlichen der Anwendung.  Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das `dotnet`-Dienstprogramm von der Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung, wie z.B. Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, testen und veröffentlichen.
 
@@ -262,7 +261,7 @@ Nachfolgend ist die vollständige `project.json`-Datei für dieses Projekt angeg
 }
 ```
 
-### <a name="deploying-a-selfcontained-deployment-with-thirdparty-dependencies"></a>Bereitstellen einer eigenständigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
+### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>Bereitstellen einer eigenständigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
 
 Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst das Hinzufügen der Drittanbieter-Abhängigkeit:
 
@@ -304,7 +303,7 @@ Wenn Sie Ihre Anwendung bereitstellen, sind die Drittanbieter-Abhängigkeiten, d
 
 Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbieter-Bibliothek nur auf von dieser Bibliothek unterstützten Plattformen bereitstellen können. Dies ist vergleichbar mit Drittanbieter-Abhängigkeiten mit systemeigenen Abhängigkeiten in Ihrer Framework-abhängigen Bereitstellung. 
 
-### <a name="deploying-a-selfcontained-deployment-with-a-smaller-footprint"></a>Bereitstellen einer eigenständigen Bereitstellung mit weniger Speicherbedarf ###
+### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>Bereitstellen einer eigenständigen Bereitstellung mit weniger Speicherbedarf ###
 
 Wenn die Verfügbarkeit von ausreichend Speicherplatz auf den Zielsystemen ein Problem sein könnte, können Sie den allgemeinen Speicherbedarf Ihrer Anwendung durch Ausschließen einiger Systemkomponenten reduzieren. Zu diesem Zweck definieren Sie explizit die .NET Core-Komponenten, die Ihre Anwendung in der Datei project.json enthält.
 

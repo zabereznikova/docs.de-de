@@ -3,16 +3,16 @@ title: "Entwickeln von Bibliotheken mit plattformübergreifenden Tools"
 description: "Entwickeln von Bibliotheken mit plattformübergreifenden Tools"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
 ms.sourcegitcommit: 0882a5ca2f7814e2fd168dce40705d11b199f102
-ms.openlocfilehash: caf72bec4a5d3276d1fdeafc4fa3816e5f00c296
+ms.openlocfilehash: de44f103bef6006dd1a952c48c1e172f6277a95b
 
 ---
 
@@ -485,7 +485,7 @@ Solche Nutzungsszenarios bedeuten, dass die APIs, auf die zugegriffen wird, eine
 * **AwesomeLibrary.CSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in C vorgesehen sind#
 * **AwesomeLibrary.FSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in F vorgesehen sind#
 
-### <a name="projecttoproject-referencing"></a>Projekt-zu-Projekt-Verweise
+### <a name="project-to-project-referencing"></a>Projekt-zu-Projekt-Verweise
 
 Die beste Möglichkeit, auf ein Projekt zu verweisen, ist wie folgt:
 
@@ -579,6 +579,6 @@ Und das ist schon alles!
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

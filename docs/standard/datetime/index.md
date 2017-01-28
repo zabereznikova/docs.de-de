@@ -3,16 +3,16 @@ title: Datumsangaben, Uhrzeiten und Zeitzonen
 description: Datumsangaben, Uhrzeiten und Zeitzonen
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 76e6cacc-1c0c-4a71-8cb8-018c112385ba
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: a4d0a68ac32c3d722a1479ca2b067892fd88bf52
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bfbeae49fa3528bb46abee4fa823b7c819d832d8
 
 ---
 
@@ -26,7 +26,7 @@ Zusätzlich zur grundlegenden [System.DateTime](xref:System.DateTime)-Struktur b
   
 * [System.DateTimeOffset](xref:System.DateTimeOffset)  
 
-  Verwenden Sie diese Struktur, um Datumsangaben und Uhrzeiten zu verarbeiten, deren Abweichung von der UTC bekannt ist. Die [DateTimeOffset](xref:System.DateTimeOffset)]-Struktur kombiniert einen Datums- und Uhrzeitwert mit der Abweichung dieser Uhrzeit von der UTC. Aufgrund der Beziehung zur UTC kann ein einzelner Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. Daher lassen sich [DateTimeOffset](xref:System.DateTimeOffset)]-Werte einfacher von einem Computer auf einen anderen übertragen als [DateTime](xref:System.DateTime)]-Werte. 
+  Verwenden Sie diese Struktur, um Datumsangaben und Uhrzeiten zu verarbeiten, deren Abweichung von der UTC bekannt ist. Die [DateTimeOffset](xref:System.DateTimeOffset)-Struktur kombiniert einen Datums- und Uhrzeitwert mit der Abweichung dieser Uhrzeit von der UTC. Aufgrund der Beziehung zur UTC kann ein einzelner Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. Daher lassen sich [DateTimeOffset](xref:System.DateTimeOffset)-Werte einfacher von einem Computer auf einen anderen übertragen als [DateTime](xref:System.DateTime)-Werte. 
   
 In diesem Abschnitt der Dokumentation erhalten Sie die Informationen, die Sie benötigen, um mit Zeitzonen zu arbeiten und zeitzonenkompatible Anwendungen zu erstellen, die Datumsangaben und Uhrzeiten zwischen verschiedenen Zeitzonen konvertieren können.
 
@@ -68,6 +68,6 @@ In diesem Abschnitt der Dokumentation erhalten Sie die Informationen, die Sie be
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
