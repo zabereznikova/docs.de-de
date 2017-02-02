@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 title: .NET-Dokumentation
 translationtype: Human Translation
-ms.sourcegitcommit: c8b9e166a49c86dcabfa89887db1dce3a8e45f4f
-ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 44b21665593717023aef7a85fe88a60d07519327
 
 ---
 <div id="main" class="v2">
@@ -86,7 +86,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/welcome">Was ist .NET?</a></h3>
-                                                <p><a href="https://www.microsoft.com/net">Erste Schritte</a></p>
+                                                <p><a href="/dotnet/articles/standard/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/articles/standard/tour">Einführung in .NET</a></p>
                                                 <p><a href="/dotnet/articles/standard/components">.NET-Architekturkonzepte</a></p>
                                             </div>
@@ -106,9 +106,9 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/core">Leitfaden für .NET Core</a></h3>
                                                 <p><a href="/dotnet/articles/core/getting-started">Erste Schritte</a></p>
-                                                <p><a href="/dotnet/articles/core/tutorials">Lernprogramme</a></p>
+                                                <p><a href="/dotnet/articles/core/tutorials">Tutorials</a></p>
                                                 <p><a href="/dotnet/articles/core/porting">Portieren aus .NET Framework</a></p>
-                                                <p><a href="https://docs.asp.net/en/latest/getting-started.html">ASP.NET Core</a></p>
+                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -124,9 +124,9 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx">.NET Framework – Leitfaden</a></h3>
+                                                <h3><a href="https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx">Leitfaden für .NET Framework</a></h3>
                                                 <p><a href="https://msdn.microsoft.com/library/hh425099(v=vs.110).aspx">Erste Schritte</a></p>
-                                                <p><a href="https://msdn.microsoft.com/library/hh156542(v=vs.110).aspx">Lernprogramme</a></p>
+                                                <p><a href="https://msdn.microsoft.com/library/hh156542(v=vs.110).aspx">Tutorials</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/54xbah2z(v=vs.110).aspx">Cliententwicklung</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/bb400852(v=vs.110).aspx">ASP.NET</a></p>
                                             </div>
@@ -205,7 +205,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 <h3><a href="/dotnet/articles/visual-basic">Leitfaden für Visual Basic</a></h3>
                                                 <p><a href="/dotnet/articles/visual-basic/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/articles/visual-basic/walkthroughs">Einführung in Visual Basic</a></p>
-                                                <p><a href="/dotnet/articles/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
+                                                <p><a href="/dotnet/articles/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
