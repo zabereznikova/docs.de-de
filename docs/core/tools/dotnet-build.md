@@ -1,25 +1,28 @@
 ---
-title: Dotnet-build-Befehl | .NET Core SDK
+title: Befehl dotnet-build | Microsoft-Dokumentation
 description: "Der dotnet-build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten."
 keywords: dotnet-build, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
-#<a name="dotnetbuild"></a>dotnet-build
+#<a name="dotnet-build"></a>dotnet-build
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-build (.NET Core Tools RC4)](../preview3/tools/dotnet-build.md).
 
 ## <a name="name"></a>Name 
-dotnet-build – Erstellt ein Projekt und alle seine Abhängigkeiten 
+`dotnet-build`: Erstellt ein Projekt und alle seine Abhängigkeiten 
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -76,11 +79,11 @@ Kompilierungen für ein bestimmtes Framework. Das Framework muss in der Datei [p
 
 Definiert eine Konfiguration für die Erstellung.  Wenn kein Wert angegeben ist, wird als Standardwert `Debug` verwendet.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 Ziellaufzeit für die Erstellung. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 Definiert, durch was `*` im Versionsfeld der Datei [project.json](project-json.md#version) ersetzt werden sollte. Das Format entspricht den NuGet-Versionsrichtlinien. 
 
@@ -111,6 +114,6 @@ Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in 
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

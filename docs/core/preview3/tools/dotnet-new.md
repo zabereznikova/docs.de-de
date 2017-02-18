@@ -1,65 +1,116 @@
 ---
-title: Dotnet-new-Befehl | .NET Core
+title: Befehl dotnet-new | Microsoft-Dokumentation
 description: Der dotnet-new-Befehl erstellt neue .NET Core-Projekte im aktuellen Verzeichnis.
 keywords: dotnet-new, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
+ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 7483dc92bec60f3ce97242dceb26abec829fdca1
+ms.sourcegitcommit: 96fd8ea3e55ea33e0bdd0bf3c50a10d0de6db1a1
+ms.openlocfilehash: f0c62647c5817db2057c60a7a95a62f08f7889a5
 
 ---
+#<a name="dotnet-new-net-core-tools-rc4"></a>dotnet-new (.NET Core Tools RC4)
 
-#<a name="dotnet-new"></a>dotnet-new
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-new](../../tools/dotnet-new.md).
 
 ## <a name="name"></a>Name
-dotnet-new – Erstellt neue .NET Core-Projekte im aktuellen Verzeichnis
+dotnet-new: Erstellt ein neues .NET Core-Projekt im aktuellen Verzeichnis
 
 ## <a name="synopsis"></a>Übersicht
-`dotnet new [--help] [--type] [--lang]`
+```
+dotnet new [template] [-lang|--language] [-n|--name] [-o|--output] [-h|--help]
+dotnet new [template] [-l|--list]
+dotnet new [-all|--show-all]
+dotnet new [-h|--help]
+```
 
 ## <a name="description"></a>Beschreibung
 Der Befehl `dotnet new` bietet eine bequeme Möglichkeit, ein gültiges .NET Core-Projekt und Beispielquellcode zum Ausprobieren des Befehlszeilenschnittstellen-Toolsets (CLI) zu initialisieren. 
 
-Dieser Befehl wird im Kontext eines Verzeichnisses aufgerufen. Wenn er aufgerufen wird, führt der Befehl dazu, dass zwei wichtige Elemente im aktuellen Verzeichnis abgelegt werden: 
-
-1. Eine Datei `Program.cs` (oder `Program.fs`) mit einem „Hello World“-Beispielprogramm.
-2. Eine gültige CSPROJ-Projektdatei.
+Dieser Befehl wird im Kontext eines Verzeichnisses aufgerufen. Sobald der Befehl aufgerufen wurde, richtet er die Ressourcen und Dateien entsprechend der Vorlage und den Optionen ein, die an den Befehl übergeben wurden. 
 
 Danach kann das Projekt kompiliert und/oder weiter bearbeitet werden. 
 
+## <a name="arguments"></a>Argumente
+template: Die Vorlage, die instanziiert werden soll, wenn der Befehl aufgerufen wird.
+
+Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new --help`. 
+
 ## <a name="options"></a>Optionen
+
+`-l|--list`         
+
+Listet Vorlagen auf, die den angegebenen Namen enthalten.
+
+`-lang|--language`  
+
+Gibt die Sprache der zu erstellenden Vorlage an.
+
+`-n|--name`         
+
+Der Name für die Ausgabe, die erstellt wird. Wird kein Name angegeben , wird der Name des aktuellen Verzeichnisses verwendet.
+
+`-o|--output`       
+
+Speicherort für die generierte Ausgabe.
+
+`-all|--show-all`   
+
+Zeigt alle Vorlagen für einen bestimmten Projekttyp an.
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
+Druckt Hilfe für den Befehl.
 
-`-l|--lang C#`
+## <a name="template-options"></a>Vorlagenoptionen
+Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen haben z. B. die folgenden Optionen:
 
-Die Sprache des Projekts. Wird standardmäßig auf `C#` festgelegt. Weitere gültige Werte sind `csharp` und `cs`.
+**console, xunit, mstest**
 
-`-t|--type`
+`-f|--framework`: Gibt an, welches Framework verwendet werden soll. Werte: „netcoreapp1.0“ oder „netcoreapp1.1“ (Standard: „netcoreapp1.0“)
 
-Der Typ des Projekts. Gültige Werte für C# sind `console`, `web`, `lib` und `xunittest`, und für F# nur `console`. 
+**web, webapi**
+
+`-f|--framework`: Gibt an, welches Framework verwendet werden soll. Werte: „netcoreapp1.0“ oder „netcoreapp1.1“ (Standard: „netcoreapp1.0“)
+ 
+**mvc**
+
+`-f|--framework`: Gibt an, welches Framework verwendet werden soll. Werte: „netcoreapp1.0“ oder „netcoreapp1.1“ (Standard: „netcoreapp1.0“)
+
+`-au|--authentication`: Der zu verwendende Authentifizierungstyp. Werte: „None“ oder „Individual“ (Standard: „None“)
+
+`-uld|--use-local-db`: Gibt an, ob LocalDB anstelle von SQLite verwendet werden soll. Werte: „true“ oder „false“ (Standard: „false“)
+
+**classlib**
+
+`-f|--framework`: Gibt an, welches Framework verwendet werden soll. Werte: „netcoreapp1.0“, „netcoreapp1.1“ und „netstandard1.0 - 1.6“ (Standard: „netstandard1.4“).
 
 ## <a name="examples"></a>Beispiele
 
-Erstellen Sie ein C#-Konsolenanwendungsprojekt im aktuellen Verzeichnis:
+Erstellen Sie ein F#-Konsolenanwendungsprojekt im aktuellen Verzeichnis:
 
-`dotnet new` oder `dotnet new --lang c#` 
+`dotnet new console -lang f#` 
    
-Erstellen Sie ein neues ASP.NET Core C#-Anwendungsprojekt im aktuellen Verzeichnis:
+Erstellen Sie ein neues ASP.NET Core C# MVC-Anwendungsprojekt im aktuellen Verzeichnis ohne Authentifizierung, wobei .NET Core 1.0 verwendet werden soll:  
 
-`dotnet new -t web`
+`dotnet new mvc -au None -f netcoreapp1.0`
+ 
+Erstellen Sie eine neue xUnit-Anwendung, die für .NET Core 1.1 vorgesehen ist:
+
+`dotnet new xunit --Framework netcoreapp1.1`
+
+Liste Sie alle für MVC verfügbaren Vorlagen auf:
+
+`dotnet new mvc -l`
 
 
-
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

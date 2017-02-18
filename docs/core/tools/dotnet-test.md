@@ -1,26 +1,29 @@
 ---
-title: Dotnet-Test-Befehl | .NET Core SDK
-description: "Der Befehl „dotnet-Test“ wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
+title: Befehl dotnet-test | Microsoft-Dokumentation
+description: "Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
 keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
 
 ---
 
-#<a name="dotnettest"></a>Dotnet-Test
+#<a name="dotnet-test"></a>Dotnet-Test
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-test (.NET Core Tools RC4)](../preview3/tools/dotnet-test.md).
 
 ## <a name="name"></a>Name
 
-`dotnet-test` – Führt Komponententests mit konfiguriertem Test Runner durch
+`dotnet-test`: Führt Komponententests mit konfiguriertem Test Runner durch
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -132,6 +135,6 @@ Führen Sie die Tests im Projekt test1 durch:
 [Runtime-ID-Katalog (RID)](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

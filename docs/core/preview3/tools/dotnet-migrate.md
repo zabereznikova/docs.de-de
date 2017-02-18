@@ -1,5 +1,5 @@
 ---
-title: dotnet-migrate-Befehl | .NET Core SDK
+title: Befehl dotnet-migrate | Microsoft-Dokumentation
 description: "Der dotnet-migrate-Befehl migriert ein Projekt und alle seine Abhängigkeiten."
 keywords: dotnet-migrate, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -9,17 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 150d70e3f0a80f7f6e733abee3691a0fe420919f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 57ae01419c6f7a75970816e1245094c38c5247fa
 
 ---
 
 #<a name="dotnet-migrate"></a>dotnet-migrate
 
+[!INCLUDE[preview-warning](../../../includes/warning.md)]
+
 ## <a name="name"></a>Name 
-dotnet-migrate – Migriert ein .NET Core-Projekt von Preview 2 in ein .NET Core-Projekt von Preview 3.
+dotnet-migrate: Migriert ein .NET Core-Projekt von Preview 2 in ein .NET Core-Projekt von RC 4.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -30,7 +32,7 @@ dotnet-migrate – Migriert ein .NET Core-Projekt von Preview 2 in ein .NET Core
     [<arguments>]`
 
 ## <a name="description"></a>Beschreibung
-Der `dotnet migrate`-Befehl migriert ein gültiges `project.json`-basiertes Projekt von Preview 2 in ein gültiges `csproj`-Projekt von Preview 3. Standardmäßig migriert der Befehl das Stammprojekt und alle Projektverweise, die das Stammprojekt enthält. Dieses Verhalten kann mithilfe der `--skip-project-references`-Option zur Laufzeit deaktiviert werden. 
+Der `dotnet migrate`-Befehl migriert ein gültiges `project.json`-basiertes Projekt von Preview 2 in ein gültiges `csproj`-Projekt von RC 4. Standardmäßig migriert der Befehl das Stammprojekt und alle Projektverweise, die das Stammprojekt enthält. Dieses Verhalten kann mithilfe der `--skip-project-references`-Option zur Laufzeit deaktiviert werden. 
 
 Die Migration kann für Folgendes ausgeführt werden:
 
@@ -42,7 +44,7 @@ Der Migrationsbefehl speichert die migrierte `project.json`-Datei in einem `back
 
 Standardmäßig gibt der Migrationsvorgang den Status der Migration in die Standardausgabe (STDOUT) aus. Bei Verwendung der `--report-file`-Option wird die Ausgabe auch in einer Datei gespeichert, die Sie angeben. 
 
-Ab Preview 3 unterstützt der `dotnet migrate`-Befehl nur gültige `project.json`-Dateien von Preview 2. Dies bedeutet, dass damit keine alten DNX-Dateien oder `project.json`-Dateien von Preview 1 direkt in CSPROJ migriert werden können. Sie müssen zunächst eine Migration in project.json-Dateien von Preview 2 und dann in CSPROJ-Dateien ausführen. In Zukunft wird Unterstützung für Preview 1-Projekte hinzugefügt. 
+Ab RC4 unterstützt der `dotnet migrate`-Befehl nur gültige `project.json`-Dateien von Preview 2. Dies bedeutet, dass damit keine alten DNX-Dateien oder `project.json`-Dateien von Preview 1 direkt in CSPROJ migriert werden können. Sie müssen zunächst eine Migration in project.json-Dateien von Preview 2 und dann in CSPROJ-Dateien ausführen. In Zukunft wird Unterstützung für Preview 1-Projekte hinzugefügt. 
 
 ## <a name="options"></a>Optionen
 
@@ -90,11 +92,9 @@ Migrieren Sie alle Projekte, auf die die Datei `global.json` verweist:
 
 Migrieren Sie nur das aktuelle Projekt und keine Abhängigkeiten des Projekts mit anderen Projekten, und verwenden Sie eine bestimmte SDK-Version:
 
-`dotnet migrate -s -v 1.0.0-preview3`
+`dotnet migrate -s -v 1.0.0-preview4`
 
 
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

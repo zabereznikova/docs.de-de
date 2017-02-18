@@ -1,5 +1,5 @@
 ---
-title: Dotnet-pack-Befehl | .NET Core SDK
+title: Befehl dotnet-pack | Microsoft-Dokumentation
 description: "Der dotnet-pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt."
 keywords: dotnet-pack, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
+ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8e266f9b34923b0ab69140d78a20afeca00e0b7c
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+#<a name="dotnet-pack-net-core-tools-rc4"></a>dotnet-pack (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-pack](../../tools/dotnet-pack.md).
 
 ## <a name="name"></a>Name
 
-`dotnet-pack` – Packt den Code in ein NuGet-Paket
+`dotnet-pack`: Packt den Code in ein NuGet-Paket
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -34,7 +37,7 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket. Wenn die `--include-symbols`-Option vorhanden ist, wird ein anderes Paket mit den Debugsymbolen erstellt. 
 
-NuGet-Abhängigkeiten des gepackten Projekts werden der Datei „nuspec“ hinzugefügt. Sie werden aufgelöst, wenn das Paket installiert wird. Verweise zwischen Projekten werden innerhalb des Projekts nicht gepackt. Derzeit benötigen Sie ein Paket pro Projekt, wenn Sie Abhängigkeiten zwischen Projekten haben.
+NuGet-Abhängigkeiten des gepackten Projekts werden der Datei `nuspec` hinzugefügt. Sie werden aufgelöst, wenn das Paket installiert wird. Verweise zwischen Projekten werden innerhalb des Projekts nicht gepackt. Derzeit benötigen Sie ein Paket pro Projekt, wenn Sie Abhängigkeiten zwischen Projekten haben.
 
 `dotnet pack` erstellt standardmäßig zuerst das Projekt. Wenn Sie dies vermeiden möchten, übergeben Sie die Option `--no-build`. Dies kann bei fortlaufenden Integrations-Buildszenarios (CI) hilfreich sein, indem Sie beispielsweise wissen, dass der Code erst kürzlich erstellt wurde. 
 
@@ -58,7 +61,7 @@ Das Projekt wird vor dem Packen nicht erstellt.
 
 `--include-source`
 
-Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im NuGet-Paket. 
+Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`. 
 
 `--include-symbols`
 
@@ -95,7 +98,6 @@ Packt das aktuelle Projekt und aktualisiert die resultierende Paketversion mit d
 `dotnet pack --version-suffix "ci-1234"`
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

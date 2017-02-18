@@ -1,5 +1,5 @@
 ---
-title: Dotnet-publish-Befehl | .NET Core-SDK
+title: Befehl dotnet-publish | Microsoft-Dokumentation
 description: "Der dotnet-publish-Befehl veröffentlicht ein .NET Core-Projekt in ein Verzeichnis."
 keywords: dotnet-publish, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
+ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0d222382640fc239760f8f51c69f1f306674d7ca
 
 ---
 
-#<a name="dotnet-publish"></a>dotnet-publish
+#<a name="dotnet-publish-net-core-tools-rc4"></a>dotnet-publish (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-publish](../../tools/dotnet-publish.md).
 
 ## <a name="name"></a>Name
 
-`dotnet-publish` – Packt die Anwendung und alle ihre Abhängigkeiten in einen Ordner, bereit für die Veröffentlichung
+`dotnet-publish`: Packt die Anwendung und alle ihre Abhängigkeiten in einen Ordner, bereit für die Veröffentlichung
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -94,6 +97,6 @@ Veröffentlichen der aktuellen Anwendung mithilfe des Frameworks `netcoreapp1.0`
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

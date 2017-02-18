@@ -1,26 +1,29 @@
 ---
-title: Dotnet-run-Befehl | .NET Core-SDK
+title: Befehl dotnet-run | Microsoft-Dokumentation
 description: "Der dotnet-run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode."
 keywords: dotnet-run, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 18731d9fcc190371d908779a69a81114e0685aba
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ---
 
-#<a name="dotnetrun"></a>dotnet-run
+#<a name="dotnet-run"></a>dotnet-run
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-run (.NET Core Tools RC4)](../preview3/tools/dotnet-run.md).
 
 ## <a name="name"></a>Name 
 
-dotnet-run – Führt Quellcode "in-Place" ohne explizite Kompilierung oder Startbefehle aus
+`dotnet-run`: Führt Quellcode „in-place“ (direkt) ohne explizite Kompilierungs- oder Startbefehle aus
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -77,6 +80,6 @@ Führt das Projekt im aktuellen Verzeichnis aus (das Argument `--help` in diesem
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,25 +1,28 @@
 ---
-title: Dotnet-new-Befehl | .NET Core
+title: Befehl dotnet-new | Microsoft-Dokumentation
 description: Der dotnet-new-Befehl erstellt neue .NET Core-Projekte im aktuellen Verzeichnis.
 keywords: dotnet-new, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 29ccc12ff893d316c816d22da862f90bfc9334ff
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a49fe94ca8f678c614fb7f58767693c73e34c737
 
 ---
 
-#<a name="dotnetnew"></a>dotnet-new
+#<a name="dotnet-new"></a>dotnet-new
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-new (.NET Core Tools RC4)](../preview3/tools/dotnet-new.md).
 
 ## <a name="name"></a>Name
-dotnet-new – Erstellt neue .NET Core-Projekte im aktuellen Verzeichnis
+`dotnet-new`: Erstellt neue .NET Core-Projekte im aktuellen Verzeichnis
 
 ## <a name="synopsis"></a>Übersicht
 `dotnet new [--help] [--type] [--lang]`
@@ -63,6 +66,6 @@ Erstellen Sie ein neues ASP.NET Core C#-Anwendungsprojekt im aktuellen Verzeichn
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

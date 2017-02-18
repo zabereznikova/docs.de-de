@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a01efc8f-c242-4535-bd32-acd0032d9590
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
+ms.sourcegitcommit: 90ade65e167770bdbcbbf79707fe48e6fbc030c0
+ms.openlocfilehash: 5b61b4736880d57f02070150d8613d860505b268
 
 ---
 
@@ -24,7 +24,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 
 * [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)), die eine formatierte Ergebniszeichenfolge zurückgibt. 
 
-* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider, System.String, System.Object), die eine formatierte Ergebniszeichenfolge einem [StringBuilder](xref:System.Text.StringBuilder)-Objekt anfügt.
+* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)), die eine formatierte Ergebniszeichenfolge an ein [StringBuilder](xref:System.Text.StringBuilder)-Objekt anfügt.
 
 * Einige Überladungen der [Console](xref:System.Console)`WriteLine`-Methode, die eine formatierte Ergebniszeichenfolge in der Konsole anzeigen.  
 
@@ -38,9 +38,9 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 
 ## <a name="composite-format-string"></a>Kombinierte Formatzeichenfolge
 
-Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Die Funktion für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.
+Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus&0; (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Die Funktion für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.
 
-Berücksichtigen Sie das folgende [Format](xref:System.String.Format(System.String.Format(System.IFormatProvider,System.String,System.Object))-Codefragment.
+Betrachten Sie das folgende [Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))-Codefragment.
 
 ```csharp
 string name = "Fred";
@@ -231,7 +231,7 @@ Jeder Wert in der Parameterliste, der einem Formatelement entspricht, wird anhan
 
     *   Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem [IFormatProvider](xref:System.IFormatProvider)-Argument ungleich NULL aufgerufen wird, ein [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekt von ihrer [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type))-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen [IFormatProvider](xref:System.IFormatProvider)-Parameter hat, wird das [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekt für die aktuelle Threadkultur verwendet. 
     
-    * Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem [IFormatProvider](xref:System.IFormatProvider)-Argument ungleich NULL aufgerufen wird, ein [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt von ihrer [IFormatProvider.GetFormat](xref:System.IFormatProvider._GetFormat(System.Type)-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen [IFormatProvider](xref:System.IFormatProvider)-Parameter hat, wird das [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt für die aktuelle Threadkultur verwendet. 
+    * Bei einem Datums- und Uhrzeitwert fordert die Runtime im Fall, dass eine Methode zur kombinierten Formatierung mit einem [IFormatProvider](xref:System.IFormatProvider)-Argument ungleich NULL aufgerufen wird, ein [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt von ihrer [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type))-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen [IFormatProvider](xref:System.IFormatProvider)-Parameter hat, wird das [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt für die aktuelle Threadkultur verwendet. 
     
     * Bei Objekten anderer Typen wird im Fall, dass eine kombinierte Formatierung mit einem [IFormatProvider](xref:System.IFormatProvider)-Argument aufgerufen wird, der Wert (einschließlich `null`, wenn kein [IFormatProvider](xref:System.IFormatProvider)-Objekt bereitgestellt wird) direkt an die [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider))-Implementierung übergeben. Andernfalls wird ein [CultureInfo](xref:System.Globalization.CultureInfo)-Objekt, das die aktuelle Threadkultur darstellt, an die [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider))-Implementierung übergeben. 
     
@@ -376,6 +376,6 @@ Console.WriteLine(FormatPrice)
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

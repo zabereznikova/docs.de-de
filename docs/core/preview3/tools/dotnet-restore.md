@@ -1,26 +1,29 @@
 ---
-title: Dotnet-restore-Befehl | .NET Core-SDK
-description: "Informationen zum Wiederherstellen von Abhängigkeiten und projektspezifische Tools zum dotnet-restore-Befehl"
+title: Befehl dotnet-restore | Microsoft-Dokumentation
+description: "Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore."
 keywords: dotnet-restore, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 594956488dee39903feba44e10d6bb81801412a4
 
 ---
 
-#<a name="dotnet-restore"></a>dotnet-restore
+#<a name="dotnet-restore-net-core-tools-rc4"></a>dotnet-restore (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-restore](../../tools/dotnet-restore.md).
 
 ## <a name="name"></a>Name
 
-`dotnet-restore` – Stellt die Abhängigkeiten und Tools eines Projekts wieder her
+`dotnet-restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -84,7 +87,7 @@ Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Ver
 
 Wiederherstellen von Abhängigkeiten und Tools für das Projekt `app1` im vorgegebenen Pfad:
 
-`dotnet restore ~/projects/app1/app1.csproj``
+`dotnet restore ~/projects/app1/app1.csproj`
     
 Wiederherstellen der Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis, mit dem bereitgestellten Dateipfad als Fallbackquelle:
 
@@ -100,6 +103,6 @@ Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Ver
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

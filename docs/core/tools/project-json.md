@@ -1,5 +1,5 @@
 ---
-title: project.json-Verweis
+title: project.json-Referenz | Microsoft-Dokumentation
 description: project.json-Verweis
 keywords: .NET, .NET Core, project.json
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
-ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>project.json-Verweis
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Die Dokumentation zu .NET Core Tools RC4 finden Sie im Abschnitt [Tools für die .NET Core-Befehlszeilenschnittstelle (.NET Core Tools RC4)](../preview3/tools/index.md).
 
 Die Datei „project.json“ wird auf Projekten unter .NET Core verwendet, um Projektmetadaten, Kompilierungsinformationen und Abhängigkeiten zu definieren. In diesem Referenzthema finden Sie die Liste aller Eigenschaften, die Sie in der Datei „project.json“ definieren können.
 
@@ -322,7 +325,7 @@ Zum Beispiel:
 Typ: Objekt
 
 Ein Objekt, das die Abhängigkeiten des Projekts definiert. Jeder Schlüssel dieses Objekts ist der Name eines Pakets, und jeder Wert enthält Versionsinformationen.
-Weitere Informationen finden Sie im Artikel [Dependency resolution (Abhängigkeitsauflösung)](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3-x) auf der NuGet-Dokumentationswebsite.
+Weitere Informationen finden Sie im Artikel [Dependency resolution (Abhängigkeitsauflösung)](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3x) auf der NuGet-Dokumentationswebsite.
 
 Zum Beispiel:
 
@@ -344,7 +347,7 @@ Zum Beispiel:
 ### <a name="version"></a>Version
 Typ: Zeichenfolge
 
-Gibt die Version oder den Versionsbereich der Abhängigkeit an. Verwenden des Platzhalters \*, um eine [floating dependency version](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#floating-versions) (unverankerte Abhängigkeitsversion) zu definieren.
+Gibt die Version oder den Versionsbereich der Abhängigkeit an. Verwenden des Platzhalters \*, um eine [floating dependency version](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#floating-versions) (unverankerte Abhängigkeitsversion) zu definieren.
 
 Zum Beispiel:
 
@@ -1643,7 +1646,7 @@ Zum Beispiel:
 ## <a name="usersecretsid"></a>userSecretsId
 Typ: Zeichenfolge
 
-Gibt eine geheime Benutzer-ID an, die zum Zeitpunkt der Entwicklung verwendet wird. Weitere Informationen finden Sie im Dokument [Safe storage of app secrets during development (Sicheres Speichern geheimer App-Daten während der Entwicklung)](https://docs.asp.net/en/latest/security/app-secrets.html).
+Gibt eine geheime Benutzer-ID an, die zum Zeitpunkt der Entwicklung verwendet wird. Weitere Informationen finden Sie im Dokument [Safe storage of app secrets during development (Sicheres Speichern geheimer App-Daten während der Entwicklung)](https://docs.microsoft.com/aspnet/core/security/app-secrets).
 
 Zum Beispiel:
 
@@ -1655,6 +1658,6 @@ Zum Beispiel:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

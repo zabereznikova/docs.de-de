@@ -1,5 +1,5 @@
 ---
-title: Dotnet-Installationsskripts | .NET Core SDK
+title: dotnet-Installationsskripts | Microsoft-Dokumentation
 description: Informationen zu Dotnet-Installationsskripts zur Installation von .NET Core CLI-Tools und freigegebener Laufzeit.
 keywords: Dotnet-Installation, Dotnet-Installationsskripts, .NET Core
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
-ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-install-Skriptsreferenz (.NET Core Tools RC4)](../preview3/tools/dotnet-install-script.md).
 
 ## <a name="name"></a>Name
 `dotnet-install.ps1` | `dotnet-install.sh` – Skript, mit dem die Befehlszeilenschnittstellen-Tools (CLI) und die freigegebene Laufzeit installiert werden.
@@ -126,6 +129,6 @@ Mac OS/Linux:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
