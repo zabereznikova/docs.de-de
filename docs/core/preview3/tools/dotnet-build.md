@@ -13,6 +13,7 @@ ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
 ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
 ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
@@ -53,7 +54,7 @@ Um eine ausführbare Anwendung statt einer Bibliothek zu erstellen, müssen Sie 
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
+Druckt eine kurze Hilfe für den Befehl.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ Definiert eine Konfiguration für die Erstellung.  Wenn kein Wert angegeben ist,
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-Ziellaufzeit für die Erstellung. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../../rid-catalog.md). 
+Ziellaufzeit für die Erstellung. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../../rid-catalog.md).
 
 `--version-suffix [VERSION_SUFFIX]`
 
-Definiert, durch was `*` im Versionsfeld der Projektdatei ersetzt werden soll. Das Format entspricht den NuGet-Versionsrichtlinien. 
+Definiert, durch was `*` im Versionsfeld der Projektdatei ersetzt werden soll. Das Format entspricht den NuGet-Versionsrichtlinien.
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguratio
 Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in diesem Beispiel Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
