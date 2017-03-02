@@ -1108,8 +1108,3 @@
 <!-- End of VB Content -->
 
 # [Beispiele und Tutorials](samples-and-tutorials/index.md)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
