@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d92549bf46f1c7a728bc6e2ac7cb183251115084
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf9c83de791fa4990a991689a26d4bbdd84cfe7d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -296,7 +297,7 @@ Der in diesem Beispiel verwendete reguläre Ausdruck `\p{Sc}+\s*\d+` überprüft
 Muster | Beschreibung
 ------- | -----------
 `\p{Sc}+` | Übereinstimmung mit mindestens einem Zeichen aus der Unicode-Kategorie Symbol, Währung.
-`\s*` | Sucht nach 0 (null) oder mehr Leerzeichen.
+`\s*` | Sucht nach&0; (null) oder mehr Leerzeichen.
 `\d+` | Entsprechung für mindestens eine Dezimalstelle finden.
  
 ### <a name="interpreted-vs-compiled-regular-expressions"></a>Interpretierte im Vergleich zu kompilierten regulären Ausdrücken
@@ -608,7 +609,7 @@ In vielen Fällen ist das Zurückverfolgen wichtig, um ein Muster für reguläre
  
 Beispielsweise soll das Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` einer Teilenummer entsprechen, die aus mindestens einem alphanumerischen Zeichen besteht. Alle zusätzlichen Zeichen können aus einem alphanumerischen Zeichen, einem Bindestrich, einem Unterstrich oder einem Punkt bestehen. Das letzte Zeichen muss jedoch alphanumerisch sein. Ein Dollarzeichen beendet die Teilenummer. In einigen Fällen kann dieses Muster für reguläre Ausdrücke eine sehr schlechte Leistung aufweisen, da die Quantifizierer geschachtelt sind und der Teilausdruck `[0-9A-Z]` eine Teilmenge des Teilausdrucks `[-.\w]*` ist.
 
-In diesen Fällen können Sie die Leistung regulärer Ausdrücke optimieren, indem Sie die geschachtelten Quantifizierer entfernen und den äußeren Teilausdruck durch eine Lookahead- oder Lookbehindassertion mit einer Breite von 0 ersetzen. Lookahead- und Lookbehindassertionen sind Anker, d. h., sie bewegen nicht den Mauszeiger in der Eingabezeichenfolge, sondern überprüfen in Vorwärts- bzw. Rückwärtsrichtung, ob eine bestimmte Bedingung erfüllt ist. Beispielsweise kann der reguläre Ausdruck für die Teilenummer wie folgt umgeschrieben werden: `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Dieses Muster für den regulären Ausdruck wird entsprechend der folgenden Tabelle definiert.
+In diesen Fällen können Sie die Leistung regulärer Ausdrücke optimieren, indem Sie die geschachtelten Quantifizierer entfernen und den äußeren Teilausdruck durch eine Lookahead- oder Lookbehindassertion mit einer Breite von&0; ersetzen. Lookahead- und Lookbehindassertionen sind Anker, d. h., sie bewegen nicht den Mauszeiger in der Eingabezeichenfolge, sondern überprüfen in Vorwärts- bzw. Rückwärtsrichtung, ob eine bestimmte Bedingung erfüllt ist. Beispielsweise kann der reguläre Ausdruck für die Teilenummer wie folgt umgeschrieben werden: `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Dieses Muster für den regulären Ausdruck wird entsprechend der folgenden Tabelle definiert.
 
 Muster | Beschreibung
 ------- | -----------
@@ -680,10 +681,10 @@ Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachele
 
 Sprachelement | Beschreibung
 ---------------- | ----------- 
-**(?**=_Teilausdruck_**)** | Positives Lookahead mit einer Breite von 0. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* mit der Eingabezeichenfolge übereinstimmt.
-**(?!**_Teilausdruck_**)** | Negatives Lookahead mit einer Breite von 0. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* nicht mit der Eingabezeichenfolge übereinstimmt.
-**(?<**=_Teilausdruck_**)** | Positives Lookbehind mit einer Breite von 0. Lookbehind-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* mit der Eingabezeichenfolge übereinstimmt.
-**(?<!**_Teilausdruck_**)** | Negatives Lookbehind mit einer Breite von 0. Lookbehind-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* nicht mit der Eingabezeichenfolge übereinstimmt.
+**(?**=_Teilausdruck_**)** | Positives Lookahead mit einer Breite von&0;. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* mit der Eingabezeichenfolge übereinstimmt.
+**(?!**_Teilausdruck_**)** | Negatives Lookahead mit einer Breite von&0;. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* nicht mit der Eingabezeichenfolge übereinstimmt.
+**(?<**=_Teilausdruck_**)** | Positives Lookbehind mit einer Breite von&0;. Lookbehind-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* mit der Eingabezeichenfolge übereinstimmt.
+**(?<!**_Teilausdruck_**)** | Negatives Lookbehind mit einer Breite von&0;. Lookbehind-Überprüfung für die aktuelle Position, um zu ermitteln, ob *Teilausdruck* nicht mit der Eingabezeichenfolge übereinstimmt.
  
 ## <a name="use-time-out-values"></a>Verwenden von Timeoutwerten
 
@@ -1101,10 +1102,5 @@ Titel | Beschreibung
 [Backtracking in regulären Ausdrücken](backtracking.md) | Erläutert die Rückverfolgung und deren Auswirkungen auf die Leistung von regulären Ausdrücken. Zudem werden Sprachelemente beschrieben, die Alternativen zum Zurückverfolgen bieten.
 [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](quick-ref.md) | Beschreibt die Elemente der Sprache für reguläre Ausdrücke in .NET und enthält Links zu ausführlichen Dokumentationen für jedes Sprachelement.
  
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

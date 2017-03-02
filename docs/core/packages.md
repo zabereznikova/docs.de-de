@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -145,7 +146,7 @@ Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwende
 
 Das Framework .NET Standard (TFM: `netstandard`) stellt die APIs dar, die von der [.NET Standardbibliothek](../standard/library.md) definiert werden und auf dieser basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z.B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren. 
 
-Das Metapaket `NETStandard.Library` hat das Framework `netstandard` als Ziel. Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die die .NET-Standardbibliothek definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel haben, um Zugriff auf zusätzliche APIs zu erhalten.
+Das Metapaket `NETStandard.Library` hat das Framework `netstandard` als Ziel. Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa&40; .NET-Bibliotheken und zugehörige APIs, die die .NET-Standardbibliothek definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel haben, um Zugriff auf zusätzliche APIs zu erhalten.
 
 Eine [NETStandard.Library-Version](versions/index.md) entspricht der höchsten `netstandard`-Version, die sie (über dessen Abschluss) verfügbar macht. Die Framework-Referenz in „project.json“ wird verwendet, um die richtigen Ressourcen aus den zugrunde liegenden Paketen auszuwählen. In diesem Fall werden die Ressourcen `netstandard1.6` benötigt, im Gegensatz zu z.B. `netstandard1.4` oder `net46`. 
 
@@ -184,8 +185,3 @@ Das Framework der .NET Core-Anwendung (TFM: `netcoreapp`) stellt die Pakete und 
 Das Metapaket `Microsoft.NETCore.App` hat das Framework `netcoreapp` als Ziel. Es bietet Zugriff auf ~60-Bibliotheken, ~40 werden durch das `NETStandard.Library`-Paket bereitgestellt, und ~20 weitere werden zusätzlich bereitgestellt. Sie können auf zusätzliche Bibliotheken verweisen, die `netcoreapp` oder kompatible Frameworks wie z.B. `netstandard` als Ziel haben, um den Zugriff auf zusätzliche APIs zu erhalten. 
 
 Die meisten der zusätzlichen Bibliotheken, die von `Microsoft.NETCore.App` bereitgestellt werden, haben ebenfalls `netstandard` als Ziel, vorausgesetzt, dass ihre Abhängigkeiten von anderen `netstandard`-Bibliotheken erfüllt werden. Dies bedeutet, dass `netstandard`-Bibliotheken auch auf diese Pakete als Abhängigkeiten verweisen können. 
-
-
-<!--HONumber=Nov16_HO3-->
-
-

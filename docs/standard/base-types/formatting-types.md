@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2dc4d1deff8d1b72cbe433c45dda873e9caa26fb
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: dc0693c2e2c034c4c71b4270ef2812be4af72e72
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -1162,7 +1163,7 @@ End Module
 
 ## <a name="composite-formatting"></a>Kombinierte Formatierung
 
-Einige Methoden wie `String.Format` und `StringBuilder.AppendFormat` unterstützen die kombinierte Formatierung. Eine kombinierte Formatzeichenfolge ist eine Vorlage, die verwendet wird, um eine einzelne Zeichenfolge zurückzugeben, die die Zeichenfolgendarstellung von 0 (null), einem oder mehreren Objekten beinhaltet. Jedes Objekt wird in der kombinierten Formatzeichenfolge durch ein indiziertes Formatelement dargestellt. Der Index des Formatelements entspricht der Position des Objekts, das es in der Parameterliste der Methode darstellt. Indizes sind nullbasiert. Beispielsweise wird im folgenden Aufruf der `String.Format`-Methode das erste Formatelement `{0:D}` durch die Zeichenfolgendarstellung von `thatDate` ersetzt. Das zweite Formatelement `{1}` wird durch die Zeichenfolgendarstellung `item1` ersetzt, und das dritte Formatelement `{2:C2}` wird durch die Zeichenfolgendarstellung von `item1.Value` ersetzt.
+Einige Methoden wie `String.Format` und `StringBuilder.AppendFormat` unterstützen die kombinierte Formatierung. Eine kombinierte Formatzeichenfolge ist eine Vorlage, die verwendet wird, um eine einzelne Zeichenfolge zurückzugeben, die die Zeichenfolgendarstellung von&0; (null), einem oder mehreren Objekten beinhaltet. Jedes Objekt wird in der kombinierten Formatzeichenfolge durch ein indiziertes Formatelement dargestellt. Der Index des Formatelements entspricht der Position des Objekts, das es in der Parameterliste der Methode darstellt. Indizes sind nullbasiert. Beispielsweise wird im folgenden Aufruf der `String.Format`-Methode das erste Formatelement `{0:D}` durch die Zeichenfolgendarstellung von `thatDate` ersetzt. Das zweite Formatelement `{1}` wird durch die Zeichenfolgendarstellung `item1` ersetzt, und das dritte Formatelement `{2:C2}` wird durch die Zeichenfolgendarstellung von `item1.Value` ersetzt.
 
 ```csharp
 result = String.Format("On {0:d}, the inventory of {1} was worth {2:C2}.", 
@@ -1400,9 +1401,4 @@ Titel | Definition
 [System.IFormatProvider](xref:System.IFormatProvider)
 
 [System.ICustomFormatter](xref:System.ICustomFormatter)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2d5a051efd074d02f2a5e9ff03c11e1d9a202d7f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 017ee2b6feb87841f31660fe6cb76ccbefd5c83b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -26,7 +27,7 @@ Die folgenden Tabelle beschreibt die benutzerdefinierten Zahlenformatbezeichner 
 
 Formatbezeichner | Name | Beschreibung | Beispiele
 ---------------- | ---- | ----------- | --------
-"0" | 0-Platzhalter | Ersetzt die Ziffer 0 ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird die Ziffer 0 in der Ergebniszeichenfolge angezeigt. | `1234.5678 ("00000") -> 01235`; `0.45678 ("0.00", en-US) -> 0.46`; `0.45678 ("0.00", fr-FR) -> 0,46`
+"0" | 0-Platzhalter | Ersetzt die Ziffer&0; ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird die Ziffer&0; in der Ergebniszeichenfolge angezeigt. | `1234.5678 ("00000") -> 01235`; `0.45678 ("0.00", en-US) -> 0.46`; `0.45678 ("0.00", fr-FR) -> 0,46`
 "#" | Ziffernplatzhalter | Ersetzt das "#"-Symbol ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird keine Ziffer in der Ergebniszeichenfolge angezeigt. Beachten Sie, dass keine Ziffer in der Ergebniszeichenfolge angezeigt wird, wenn die entsprechende Ziffer in der Eingabezeichenfolge eine nicht signifikante 0 ist. Zum Beispiel: 0003 ("####") -> 3. | `1234.5678 ("#####") -> 1235`; `0.45678 ("#.##", en-US) -> .46`; `0.45678 ("#.##", fr-FR) -> ,46`
 "." | Dezimaltrennzeichen | Bestimmt die Position des Dezimaltrennzeichens in der Ergebniszeichenfolge. | `0.45678 ("0.00", en-US) -> 0.46`; `0.45678 ("0.00", fr-FR) -> 0,46`
 "," | Gruppentrennzeichen und Zahlenskalierung | Das Zeichen wird sowohl als Bezeichner für Gruppentrennzeichen als auch als Bezeichner für Zahlenskalierung verwendet. Bei einer Verwendung als Bezeichner für Gruppentrennzeichen wird ein lokalisiertes Trennzeichen zwischen die einzelnen Gruppen eingefügt. Bei einer Verwendung als Bezeichner für Zahlenskalierung wird eine Zahl für jedes angegebene Zeichen durch 1000 geteilt. | Bezeichner für Gruppentrennzeichen: `2147483647 ("##,#", en-US) -> 2,147,483,647`;`2147483647 ("##,#", es-ES) -> 2.147.483.647`. Bezeichner für Skalierung: `2147483647 ("#,#,,", en-US) -> 2,147`; `2147483647 ("#,#,,", es-ES) -> 2.147`
@@ -42,11 +43,11 @@ Die folgenden Abschnitte enthalten ausführliche Informationen zu den einzelnen 
 
 ## <a name="the-0-custom-specifier"></a>Der benutzerdefinierte Bezeichner "0"
 
-Der benutzerdefinierte Formatbezeichner "0" dient als 0-Platzhalterzeichen. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der die Ziffer 0 in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert; andernfalls erscheint die Ziffer 0 in der Ergebniszeichenfolge. Die Positionen der Ziffer 0, die am weitesten links vor dem Dezimaltrennzeichen steht, und die Position der Ziffer 0, die am weitesten rechts hinter dem Dezimaltrennzeichen steht, bestimmen den Bereich der Ziffern, die immer in der Ergebniszeichenfolge enthalten sind. 
+Der benutzerdefinierte Formatbezeichner "0" dient als&0;-Platzhalterzeichen. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der die Ziffer&0; in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert; andernfalls erscheint die Ziffer&0; in der Ergebniszeichenfolge. Die Positionen der Ziffer&0;, die am weitesten links vor dem Dezimaltrennzeichen steht, und die Position der Ziffer&0;, die am weitesten rechts hinter dem Dezimaltrennzeichen steht, bestimmen den Bereich der Ziffern, die immer in der Ergebniszeichenfolge enthalten sind. 
 
 Mit dem Bezeichner "00" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "00" ergibt z. B. den Wert 35.
 
-Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen 0-Platzhalter enthalten sind.
+Im folgenden Beispiel werden mehrere Werte angezeigt, die mit benutzerdefinierten Formatzeichenfolgen formatiert werden, in denen&0;-Platzhalter enthalten sind.
 
 ```csharp
 double value;
@@ -79,26 +80,26 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 // Displays 0.6
 
 value = 1234567890;
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value)); 
+                                "{0:0,0}", value));    
 // Displays 1,234,567,890      
 
 CultureInfo elGR = CultureInfo.CreateSpecificCulture("el-GR");
-Console.WriteLine(value.ToString("0,0", elGR)); 
-Console.WriteLine(String.Format(elGR, "{0:0,0}", value));   
+Console.WriteLine(value.ToString("0,0", elGR));    
+Console.WriteLine(String.Format(elGR, "{0:0,0}", value));    
 // Displays 1.234.567.890
 
 value = 1234567890.123456;
-Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));   
+Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.0}", value));   
+                                "{0:0,0.0}", value));    
 // Displays 1,234,567,890.1  
 
 value = 1234.567890;
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));  
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value));  
+                                "{0:0,0.00}", value));    
 // Displays 1,234.57
 ```
 
@@ -131,9 +132,9 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 0.6
 
 value = 1234567890
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))  
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value))  
+                                "{0:0,0}", value))    
 ' Displays 1,234,567,890      
 Dim elGR As CultureInfo = CultureInfo.CreateSpecificCulture("el-GR")
 Console.WriteLine(value.ToString("0,0", elGR))
@@ -147,17 +148,17 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 1,234,567,890.1  
 
 value = 1234.567890
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))   
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value))   
+                                "{0:0,0.00}", value))    
 ' Displays 1,234.57
 ```
 
-## <a name="the-custom-specifier"></a>Der benutzerdefinierte Bezeichner "#"
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "#"
 
 Der benutzerdefinierte Bezeichner "#" dient als Platzhaltersymbol für Ziffern. Wenn der zu formatierende Wert über eine Ziffer an der Stelle verfügt, an der das "#"-Symbol in der Formatzeichenfolge steht, wird diese Ziffer in die Ergebniszeichenfolge kopiert. Andernfalls wird an dieser Position nichts in der Ergebniszeichenfolge gespeichert. 
 
-Beachten Sie, dass dieser Bezeichner nie die Ziffer 0 anzeigt, wenn es sich nicht um eine signifikante Ziffer handelt, auch wenn die Ziffer 0 die einzige Ziffer in der Zeichenfolge ist. Die Ziffer 0 wird nur angezeigt, wenn es sich um eine signifikante Ziffer in der angezeigten Zahl handelt. 
+Beachten Sie, dass dieser Bezeichner nie die Ziffer&0; anzeigt, wenn es sich nicht um eine signifikante Ziffer handelt, auch wenn die Ziffer&0; die einzige Ziffer in der Zeichenfolge ist. Die Ziffer&0; wird nur angezeigt, wenn es sich um eine signifikante Ziffer in der angezeigten Zahl handelt. 
 
 Mit der Formatzeichenfolge "##" wird der Wert immer auf die direkt dem Dezimaltrennzeichen vorausgehende Zahl aufgerundet. Eine Formatierung des Werts 34.5 mit "##" ergibt z. B. den Wert 35.
 
@@ -251,7 +252,7 @@ End Module
 '      The value is: ' .324'
 ```
 
-## <a name="the-custom-specifier"></a>Der benutzerdefinierte Bezeichner  ".".
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner  ".".
 
 Der benutzerdefinierte Formatbezeichner "." fügt ein lokalisiertes Dezimaltrennzeichen in die Ergebniszeichenfolge ein. Der erste Punkt in der Formatzeichenfolge bestimmt die Position des Dezimaltrennzeichens im formatierten Wert; alle weiteren Punkte werden ignoriert. 
 
@@ -325,7 +326,7 @@ Dim value As Double
 ' Displays 8.6E+4
 ```
 
-## <a name="the-custom-specifier"></a>Der benutzerdefinierte Bezeichner ","
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner ","
 
 Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch als Bezeichner für Zahlenskalierung. 
 
@@ -335,7 +336,7 @@ Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch al
   
 * Bezeichner für Zahlenskalierung: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen eines oder mehrere Kommas angegeben sind, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100". 
 
-Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl 1 Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000". 
+Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl&1; Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000". 
 
 Im folgenden Beispiel wird die Verwendung des Kommas als Gruppentrennzeichen veranschaulicht.
 
@@ -369,9 +370,9 @@ Das folgende Beispiel veranschaulicht der Verwendung des Kommas als Bezeichner f
 
 ```csharp
 double value = 1234567890;
-Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:#,,}", value)); 
+                                "{0:#,,}", value));    
 // Displays 1235   
 
 Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture));
@@ -388,7 +389,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ```vb
 Dim value As Double = 1234567890
   Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture))    
-  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))  
+  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))    
   ' Displays 1235   
 
   Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture))
@@ -402,7 +403,7 @@ Dim value As Double = 1234567890
 ' Displays 1,235
 ```
 
-## <a name="the-custom-specifier"></a>Der benutzerdefinierte Bezeichner "%"
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "%"
 
 Wenn eine Formatzeichenfolge ein Prozentzeichen (%) enthält, wird die Zahl vor dem Formatieren mit 100 multipliziert. Das lokalisierte Prozentzeichen wird in der Zahl an der Stelle eingefügt, an der % in der Formatzeichenfolge steht. Das verwendete Prozentzeichen wird von der [PercentSymbol](xref:System.Globalization.NumberFormatInfo.PercentSymbol)-Eigenschaft des aktuellen [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekts definiert.
 
@@ -424,7 +425,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6% 
 ```
 
-## <a name="the-custom-specifier"></a>Der benutzerdefinierte Bezeichner "‰"
+## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner "‰"
 
 Wenn eine Formatzeichenfolge ein Promillezeichen (‰ oder \u2030) enthält, wird die Zahl vor dem Formatieren mit 1.000 multipliziert. Das entsprechende Promillesymbol wird in der Rückgabezeichenfolge an der Stelle eingefügt, an der das Symbol ‰ in der Formatzeichenfolge steht. Das verwendete Promillezeichen wird von der [NumberFormatInfo.PerMilleSymbol](xref:System.Globalization.NumberFormatInfo.PerMilleSymbol)-Eigenschaft des Objekts definiert, das kulturspezifische Formatierungsinformationen zur Verfügung stellt.
 
@@ -450,7 +451,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 
 ## <a name="the-e-and-e-custom-specifiers"></a>Die benutzerdefinierten Bezeichner "E" und "e"
 
-Wenn die Formatzeichenfolge die Zeichenfolge "E", "E+", "E-", "e", "e+" oder "e-" enthält und direkt danach mindestens einmal die Ziffer 0, wird die Zahl mit der wissenschaftlichen Notation formatiert und ein "E" bzw. "e" zwischen der Zahl und dem Exponenten eingefügt. Die Anzahl der Nullen nach dem Bezeichner für die wissenschaftliche Notation bestimmt die Mindestanzahl der Ziffern, die für den Exponenten ausgegeben werden. Das "E+"-Format und das "e+"-Format geben an, dass immer ein Vorzeichen (Plus oder Minus) vor dem Exponenten steht. Die Formate "E", "E-", "e" oder "e-" geben an, dass nur vor negativen Exponenten ein Vorzeichen steht.
+Wenn die Formatzeichenfolge die Zeichenfolge "E", "E+", "E-", "e", "e+" oder "e-" enthält und direkt danach mindestens einmal die Ziffer&0;, wird die Zahl mit der wissenschaftlichen Notation formatiert und ein "E" bzw. "e" zwischen der Zahl und dem Exponenten eingefügt. Die Anzahl der Nullen nach dem Bezeichner für die wissenschaftliche Notation bestimmt die Mindestanzahl der Ziffern, die für den Exponenten ausgegeben werden. Das "E+"-Format und das "e+"-Format geben an, dass immer ein Vorzeichen (Plus oder Minus) vor dem Exponenten steht. Die Formate "E", "E-", "e" oder "e-" geben an, dass nur vor negativen Exponenten ein Vorzeichen steht.
 
 Im folgenden Beispiel werden mehrere numerische Werte mit den Bezeichnern für die wissenschaftliche Notation formatiert.
 
@@ -490,7 +491,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6E004
 ```
 
-## <a name="the-escape-character"></a>Das "\"-Escapezeichen
+## <a name="the--escape-character"></a>Das "\"-Escapezeichen
 
 Die Symbole "#", "0", ".", ",", "%" und "‰" in einer Formatzeichenfolge werden als Formatbezeichner und nicht als Literalzeichen interpretiert. Je nach Position in einer benutzerdefinierten Formatzeichenfolge können das Zeichen "E" bzw. "e" und die Symbole "+" und "-" auch als Formatbezeichner interpretiert werden. 
 
@@ -539,15 +540,15 @@ Console.WriteLine(String.Format("{0:\\\\\\ ##0 dollars and \0\0 cents \\\\\\}",
 ' Displays \\\ 123 dollars and 00 cents \\\
 ```
 
-## <a name="the-section-separator"></a>Das Abschnittstrennzeichen ";"
+## <a name="the--section-separator"></a>Das Abschnittstrennzeichen ";"
 
-Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder 0 (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben. 
+Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder&0; (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben. 
 
 Anzahl der Abschnitte | Beschreibung
 ------------------ | -----------
 Ein Abschnitt | Die Formatzeichenfolge gilt für alle Werte.
-Zwei Abschnitte | Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte. Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem ersten Abschnitt formatiert.
-Drei Abschnitte | Der erste Abschnitt gilt für positive Werte, der zweite Abschnitt für negative Werte und der dritte Abschnitt für Nullen. Wenn der zweite Abschnitt leer ist (zwischen den Semikolons wird nichts angegeben), wird der erste Abschnitt auf alle Werte angewendet, die nicht 0 (null) sind. Wenn die zu formatierende Zahl nicht 0 ist, aber nach dem Runden entsprechend dem Format im ersten oder im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem dritten Abschnitt formatiert.
+Zwei Abschnitte | Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte. Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt&0; ist, wird die resultierende&0; entsprechend dem ersten Abschnitt formatiert.
+Drei Abschnitte | Der erste Abschnitt gilt für positive Werte, der zweite Abschnitt für negative Werte und der dritte Abschnitt für Nullen. Wenn der zweite Abschnitt leer ist (zwischen den Semikolons wird nichts angegeben), wird der erste Abschnitt auf alle Werte angewendet, die nicht&0; (null) sind. Wenn die zu formatierende Zahl nicht&0; ist, aber nach dem Runden entsprechend dem Format im ersten oder im zweiten Abschnitt&0; ist, wird die resultierende&0; entsprechend dem dritten Abschnitt formatiert.
 
 Abschnittstrennzeichen ignorieren alle bereits vorhandenen Formatierungen für Zahlen, wenn der letzte Wert formatiert wird. Negative Werte werden z. B. immer ohne Minuszeichen angezeigt, wenn Abschnittstrennzeichen verwendet werden. Wenn der letzte formatierte Wert ein Minuszeichen aufweisen soll, muss das Minuszeichen explizit als Teil des benutzerdefinierten Formatbezeichners aufgenommen werden. 
 
@@ -646,10 +647,5 @@ Console.WriteLine(value2)
 [Gewusst wie: Auffüllen einer Zahl mit führenden Nullen](pad-number.md)
 
 [Kombinierte Formatierung](composite-format.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

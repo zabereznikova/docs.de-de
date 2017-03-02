@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 05fcdadee5d932a53941386f97971c24cc912fd8
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -335,7 +336,7 @@ Die Ausgleichsgruppendefinition verwendet *name2* als Stapel. Das Anfangszeichen
 > [!NOTE]
 > Nachdem Sie den regulären Ausdruck im folgenden Beispiel geändert haben, sodass er die entsprechenden öffnenden und schließenden Zeichen eines geschachtelten Konstrukts enthält, können Sie diesen zur Behandlung der meisten geschachtelten Konstrukte verwenden, z. B. für mathematische Ausdrücke oder Programmcodezeilen, die mehrere geschachtelte Methodenaufrufe enthalten. 
  
-Das folgende Codebeispiel verwendet eine Ausgleichsgruppendefinition, um in einer Eingabezeichenfolge nach öffnenden und schließenden spitzen Klammern (<>) zu suchen. Im Beispiel werden zwei benannte Gruppen, `Open` und `Close`, definiert, die wie ein Stapel verwendet werden, um übereinstimmende Paare von spitzen Klammern nachzuverfolgen. Jede erfasste öffnende spitze Klammer wird in die Erfassungsauflistung der `Open`-Gruppe eingefügt, und jede erfasste schließende spitze Klammer wird in die Erfassungsauflistung der `Close`-Gruppe eingefügt. Die Ausgleichsgruppendefinition stellt sicher, dass es eine entsprechende schließende spitze Klammer für jede öffnende spitze Klammer gibt. Trifft dies nicht zu, wird das abschließende Teilmuster, `(?(Open)(?!))`, nur ausgewertet, wenn die `Open`-Gruppe nicht leer ist (und wenn alle geschachtelten Konstrukte nicht geschlossen wurden). Wenn das endgültige Teilmuster ausgewertet wird, schlägt die Übereinstimmung fehl, da das `(?!)` Teilmuster eine negative Lookaheadassertion mit einer Breite von 0 (null) ist, die immer fehlschlägt. 
+Das folgende Codebeispiel verwendet eine Ausgleichsgruppendefinition, um in einer Eingabezeichenfolge nach öffnenden und schließenden spitzen Klammern (<>) zu suchen. Im Beispiel werden zwei benannte Gruppen, `Open` und `Close`, definiert, die wie ein Stapel verwendet werden, um übereinstimmende Paare von spitzen Klammern nachzuverfolgen. Jede erfasste öffnende spitze Klammer wird in die Erfassungsauflistung der `Open`-Gruppe eingefügt, und jede erfasste schließende spitze Klammer wird in die Erfassungsauflistung der `Close`-Gruppe eingefügt. Die Ausgleichsgruppendefinition stellt sicher, dass es eine entsprechende schließende spitze Klammer für jede öffnende spitze Klammer gibt. Trifft dies nicht zu, wird das abschließende Teilmuster, `(?(Open)(?!))`, nur ausgewertet, wenn die `Open`-Gruppe nicht leer ist (und wenn alle geschachtelten Konstrukte nicht geschlossen wurden). Wenn das endgültige Teilmuster ausgewertet wird, schlägt die Übereinstimmung fehl, da das `(?!)` Teilmuster eine negative Lookaheadassertion mit einer Breite von&0; (null) ist, die immer fehlschlägt. 
 
 ```csharp
 using System;
@@ -815,7 +816,7 @@ Hierbei ist *subexpression* ein beliebiges Muster für reguläre Ausdrücke. Dam
 
 Positive Lookbehindassertionen mit einer Breite von Null werden in der Regel entweder am Anfang oder am Ende von regulären Ausdrücken verwendet. Das Muster, das sie definieren, ist eine Vorbedingung für eine Übereinstimmung, obwohl es kein Teil des Übereinstimmungsergebnisses ist. 
 
-Im folgenden Beispiel wird eine Entsprechung für die letzten zwei Ziffern des Jahres für das 21. Jahrhundert (das heißt, es ist erforderlich, dass die Ziffern "20" der entsprechenden Zeichenfolge vorausgehen) gefunden.
+Im folgenden Beispiel wird eine Entsprechung für die letzten zwei Ziffern des Jahres für das&21;. Jahrhundert (das heißt, es ist erforderlich, dass die Ziffern "20" der entsprechenden Zeichenfolge vorausgehen) gefunden.
 
 ```csharp
 using System;
@@ -1058,7 +1059,7 @@ Muster | Beschreibung
 
 Teilzeichenfolgen, die von einer Gruppe zur Erfassung von regulären Ausdrücken abgeglichen werden, werden durch [System.Text.RegularExpressions.Group](xref:System.Text.RegularExpressions.Group)-Objekte dargestellt, die aus dem von der [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups)-Eigenschaft zurückgegebenen [System.Text.RegularExpressions.GroupCollection](xref:System.Text.RegularExpressions.GroupCollection)-Objekt abgerufen werden können. Das [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection)-Objekt wird folgendermaßen aufgefüllt:
 
-* Das erste [Group](xref:System.Text.RegularExpressions.Group)-Objekt in der Auflistung (das Objekt bei Index 0) stellt die gesamte Übereinstimmung dar.
+* Das erste [Group](xref:System.Text.RegularExpressions.Group)-Objekt in der Auflistung (das Objekt bei Index&0;) stellt die gesamte Übereinstimmung dar.
 
 * Der nächste Satz von [Group](xref:System.Text.RegularExpressions.Group)-Objekten stellt unbenannte (nummerierte) Erfassungsgruppen dar. Sie werden in der Reihenfolge angezeigt, in der sie im regulären Ausdruck definiert sind (von links nach rechts). Die Indexwerte dieser Gruppen reichen von 1 bis zur Anzahl unbenannter Erfassungsgruppen in der Auflistung. (Der Index einer bestimmten Gruppe entspricht seinem nummerierten Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte in regulären Ausdrücken](backreference.md).
 
@@ -1160,9 +1161,4 @@ Die erste Erfassungsgruppe stimmt mit jedem Wort des Satzes überein. Die zweite
 [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](quick-ref.md)
 
 [Backtracking in regulären Ausdrücken](backtracking.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

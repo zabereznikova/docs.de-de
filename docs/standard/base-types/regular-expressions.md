@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 1fc1edd64c330fe579f389750432665ed982976e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ac26821819b22aa3ea47e6945bb5c8575dcd9807
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -285,14 +286,14 @@ Im Beispiel wird dynamisch der reguläre Ausdruck `\$\s*[-+]?([0-9]{0,3}(,[0-9]{
 Syntax | Bedeutung
 ------ | -------
 `\$` | Suche nach einem einzelnen Vorkommen des Dollarsymbols ($) in der Eingabezeichenfolge. Die Musterzeichenfolge des regulären Ausdrucks schließt einen umgekehrten Schrägstrich ein, der angibt, dass das Dollarsymbol nicht als Anchor des regulären Ausdrucks, sondern wörtlich interpretiert werden soll. (Das $-Symbol allein würde angeben, dass das Modul für reguläre Ausdrücke versuchen soll, mit der Suche nach Übereinstimmungen am Ende einer Zeichenfolge zu beginnen.) Um sicherzustellen, dass das Währungssymbol der aktuellen Kultur nicht als reguläres Ausdruckssymbol fehlinterpretiert wird, wird im Beispiel die [Escape](xref:System.Text.RegularExpressions.Regex.Escape(System.String))-Methode aufgerufen, um das Zeichen mit Escapezeichen zu versehen.
-`\s*` | Suche nach 0 (null) oder mehr Vorkommen eines Leerstellenzeichens.
-`[-+]?` | Suche nach 0 (null) oder einem Vorkommen entweder eines positiven oder eines negativen Vorzeichens.
+`\s*` | Suche nach&0; (null) oder mehr Vorkommen eines Leerstellenzeichens.
+`[-+]?` | Suche nach&0; (null) oder einem Vorkommen entweder eines positiven oder eines negativen Vorzeichens.
 `([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` | Die äußeren Klammern um diesen Ausdruck definieren ihn als Erfassungsgruppe oder Teilausdruck. Wenn eine Übereinstimmung gefunden wird, können Informationen über diesen Teil der übereinstimmenden Zeichenfolge aus dem zweiten [Group](xref:System.Text.RegularExpressions.Group)-Objekt in dem [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection)-Objekt abgerufen werden, das von der [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups)-Eigenschaft zurückgegeben wird. (Das erste Element in der Auflistung stellt die gesamte Übereinstimmung dar.)
 `[0-9]{0,3}` | Suche nach 0 (null) bis drei Vorkommen der Dezimalstellen 0 bis 9.
-`(,[0-9]{3})*` | Suche nach 0 (null) oder mehr Vorkommen eines Gruppentrennzeichens gefolgt von drei Dezimalstellen.
+`(,[0-9]{3})*` | Suche nach&0; (null) oder mehr Vorkommen eines Gruppentrennzeichens gefolgt von drei Dezimalstellen.
 `\.` | Suche nach einem einzelnen Vorkommen des Dezimaltrennzeichens.
 `[0-9]+` | Suche nach einer oder mehr Dezimalstellen.
-`(\.[0-9]+)?` | Suche nach 0 (null) oder einem Vorkommen des Dezimaltrennzeichens, auf das mindestens eine Dezimalstelle folgt.
+`(\.[0-9]+)?` | Suche nach&0; (null) oder einem Vorkommen des Dezimaltrennzeichens, auf das mindestens eine Dezimalstelle folgt.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -309,10 +310,5 @@ Titel | Beschreibung
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions)
 
 [System.Text.RegularExpressions.Regex](xref:System.Text.RegularExpressions.Regex)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -186,7 +187,7 @@ Schnittstellen | [Schnittstellen](#interfaces) | CLS-kompatible Schnittstellen d
 Mitglieder | [Typmember im Allgemeinen](#type-members-in-general) | Globale static-Felder und Methoden sind nicht CLS-kompatibel. | 36
 Mitglieder | -- | Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist). | 13
 Mitglieder | [Typmember im Allgemeinen](#type-members-in-general) | Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention. | 15
-Namenskonventionen  | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](http://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
+Namenskonventionen  | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](http://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen&1;:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
 Überladen | [Namenskonventionen](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
 Überladen | [Namenskonventionen](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
 Überladen | [Überladungen](#overloads) | Nur Eigenschaften und Methoden können überladen werden. | 37
@@ -320,8 +321,8 @@ Das [allgemeine Typsystem](common-type-system.md) von .NET enthält verschiedene
 
 CLS-kompatibler Typ | Beschreibung
 ------------------ | -----------
-[Byte](xref:System.Byte) | Ganze 8-Bit-Zahl ohne Vorzeichen 
-[Int16](xref:System.Int16) | Ganze 16-Bit-Zahl mit Vorzeichen 
+[Byte](xref:System.Byte) | Ganze&8;-Bit-Zahl ohne Vorzeichen 
+[Int16](xref:System.Int16) | Ganze&16;-Bit-Zahl mit Vorzeichen 
 [Int32](xref:System.Int32) | 32-Bit-Ganzzahl mit Vorzeichen 
 [Int64](xref:System.Int64) | 64-Bit-Ganzzahl mit Vorzeichen
 [Single](xref:System.Single) | Gleitkommawert mit einfacher Genauigkeit
@@ -337,7 +338,7 @@ Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-k
 
 Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | Ganzzahliger 8-Bit-Datentyp mit Vorzeichen | [Int16](xref:System.Int16)
+[SByte](xref:System.SByte) | Ganzzahliger&8;-Bit-Datentyp mit Vorzeichen | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16-Bit-Ganzzahl ohne Vorzeichen | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | 32-Bit-Ganzzahl ohne Vorzeichen | [Int64](xref:System.Int64)
 [UInt64](xref:System.UInt64) | 64-Bit-Ganzzahl ohne Vorzeichen | [Int64](xref:System.Int64) (kann überlaufen), [BigInteger](xref:System.Numerics.BigInteger) oder [Double](xref:System.Double)
@@ -781,7 +782,7 @@ Public Class [case]
 End Class
 ```
 
-Im folgenden C#-Beispiel kann die `case`-Klasse instanziiert werden, indem das @ Symbol verwendet wird, um den Bezeichner eindeutig vom Schlüsselwort zu unterscheiden. Ohne dieses Zeichen würde der C#-Compiler zwei Fehlermeldungen anzeigen:"Typ erwartet" und "Ungültiger Ausdruck 'case'". 
+Im folgenden C#-Beispiel kann die `case`-Klasse instanziiert werden, indem das @-Symbol verwendet wird, um den Bezeichner eindeutig vom Schlüsselwort zu unterscheiden. Ohne dieses Zeichen würde der C#-Compiler zwei Fehlermeldungen anzeigen:"Typ erwartet" und "Ungültiger Ausdruck 'case'". 
 
 ```csharp
 using System;
@@ -953,7 +954,7 @@ End Structure
 
 CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel: 
 
-* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attributs nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist. 
+* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich&0; sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attributs nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist. 
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -2951,10 +2952,5 @@ Zum Kompilieren mit C# ändern Sie den Namen des Compilers von vbc in csc und di
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

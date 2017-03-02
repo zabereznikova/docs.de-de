@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
-ms.openlocfilehash: f01c6521becb930923693a6b6867479f3b5d6df9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b752e23f37f83a68ef4a7a97108479f7736d53cd
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -53,17 +54,17 @@ Wenn Sie DNX verwendet haben, haben Sie bisher einige Befehle aus einem der drei
 Die folgende Tabelle stellt die Zuordnung zwischen DNX-/DNU-Befehlen und ihren CLI-Gegenstücken dar.
 
 
-| DNX-Befehl                       | CLI-Befehl       | Beschreibung                                                                                                       |
-|--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
-| dnx run                           | dotnet run        | Code aus Quelle ausführen.                                                                                             |
-| dnu build                         | dotnet build      | Erstellen einer IL-Binärdatei des Codes.                                                                                  |
-| dnu pack                          | dotnet pack       | Verpacken eines NuGet-Pakets Ihres Codes.                                                                          |
-| dnx \[command] (z.B. „dnx web“)   | NICHT VERFÜGBAR\*             | In DNX, Ausführen eines Befehls wie in der Datei „project.json“ definiert.                                                       |
-| dnu install                       | NICHT VERFÜGBAR\*             | In DNX, Installieren eines Pakets als Abhängigkeit.                                                              |
-| dnu restore                       | dotnet restore    | Wiederherstellen von Abhängigkeiten, die in der Datei „project.json“ angegeben sind.                                                              |
-| dnu publish                       | dotnet publish    | Veröffentlichen Ihrer Anwendung für die Bereitstellung in einer der drei Formen (portabel, portabel-nativ und eigenständig).    |
-| dnu wrap                          | NICHT VERFÜGBAR\*             | In DNX, Umschließen von „project.json“ in „csproj“.                                                                      |
-| dnu commands                      | NICHT VERFÜGBAR\*             | In DNX, Verwalten der global installierten Befehle.                                                             |
+| DNX-Befehl                        | CLI-Befehl        | Beschreibung                                                                                                         |
+|--------------------------------    |----------------    |-----------------------------------------------------------------------------------------------------------------    |
+| dnx run                            | dotnet run         | Code aus Quelle ausführen.                                                                                               |
+| dnu build                          | dotnet build       | Erstellen einer IL-Binärdatei des Codes.                                                                                    |
+| dnu pack                           | dotnet pack        | Verpacken eines NuGet-Pakets Ihres Codes.                                                                            |
+| dnx \[command] (z.B. „dnx web“)     | NICHT VERFÜGBAR\*              | In DNX, Ausführen eines Befehls wie in der Datei „project.json“ definiert.                                                         |
+| dnu install                        | NICHT VERFÜGBAR\*              | In DNX, Installieren eines Pakets als Abhängigkeit.                                                                |
+| dnu restore                        | dotnet restore     | Wiederherstellen von Abhängigkeiten, die in der Datei „project.json“ angegeben sind.                                                                |
+| dnu publish                        | dotnet publish     | Veröffentlichen Ihrer Anwendung für die Bereitstellung in einer der drei Formen (portabel, portabel-nativ und eigenständig).     |
+| dnu wrap                           | NICHT VERFÜGBAR\*              | In DNX, Umschließen von „project.json“ in „csproj“.                                                                        |
+| dnu commands                       | NICHT VERFÜGBAR\*              | In DNX, Verwalten der global installierten Befehle.                                                               |
 
 (\*) – diese Features werden in der CLI nicht unterstützt (dies ist beabsichtigt). 
 
@@ -141,10 +142,5 @@ Sobald Sie bereit sind, können Sie eine Wiederherstellung mit `dotnet restore` 
 
 Das Ausführen von `dotnet build` zeigt mögliche Buildfehler an, auch wenn es nicht zu viele geben sollte. Wenn Ihr Code ordnungsgemäß erstellt und ausgeführt wird, können Sie ihn ohne Runner testen. Führen Sie `dotnet <path-to-your-assembly>` aus, und beobachten Sie die Ausführung.
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

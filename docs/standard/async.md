@@ -3,22 +3,23 @@ title: "Async (Übersicht)"
 description: "Async (Übersicht)"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 9abc4879533074e6830a7343123b139e912d239b
-ms.openlocfilehash: 39dc9e8599daea86b48d864179c13c5ae965876b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fb9940e56b5d0e8f4474584102f2e6167a79f291
+ms.lasthandoff: 03/02/2017
 
 ---
 
 # <a name="async-overview"></a>Async (Übersicht)
 
-Es ist noch nicht lange her, da wurden Apps einfach durch die Ausführung auf einem aktuelleren PC oder Server schneller, und dann endete dieser Trend. In der Tat hat er sich umgekehrt. Mobiltelefone mit 1-GHz-Single Core-ARM-Chips erschienen auf dem Markt, und Serverarbeitsauslastungen wurden VMs übertragen. Benutzer wünschen immer noch reaktionsfähige Benutzeroberflächen, und Geschäftsinhaber wünschen sich Server, die sich ihren Unternehmen anpassen können. Aus dem Übergang zu Mobilgeräten und zur Cloud und mehr als 3 Mrd. Internetbenutzern resultiert eine neue Gruppe von Softwaremustern. 
+Es ist noch nicht lange her, da wurden Apps einfach durch die Ausführung auf einem aktuelleren PC oder Server schneller, und dann endete dieser Trend. In der Tat hat er sich umgekehrt. Mobiltelefone mit 1-GHz-Single Core-ARM-Chips erschienen auf dem Markt, und Serverarbeitsauslastungen wurden VMs übertragen. Benutzer wünschen immer noch reaktionsfähige Benutzeroberflächen, und Geschäftsinhaber wünschen sich Server, die sich ihren Unternehmen anpassen können. Aus dem Übergang zu Mobilgeräten und zur Cloud und mehr als&3; Mrd. Internetbenutzern resultiert eine neue Gruppe von Softwaremustern. 
 
 * Clientanwendungen sollen Always On/Always Connected sein und ständig auf Benutzerinteraktionen reagieren (z.B. Berühren) – mit hohen App Store-Bewertungen!
 * Dienste sollen Verkehrsspitzen durch ordnungsgemäßes zentrales Hoch- und Herunterskalieren behandeln. 
@@ -39,10 +40,5 @@ Async-Code weist folgende Merkmale auf:
 ## <a name="whats-next"></a>Weitere Informationen?
 
 Tiefe Einblicke in asynchrone Konzepte und Programmierung finden Sie unter [Async ausführlich](async-in-depth.md) .
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

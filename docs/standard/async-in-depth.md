@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -44,7 +45,7 @@ Im ersten Beispiel wird eine asynchrone Methode aufgerufen und ein aktiver Task 
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-    // Execution is synchronous here
+     // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -146,8 +147,3 @@ Sobald `await` festgestellt wird, wird die Ausführung von `CalculateResult()` a
 ### <a name="why-does-async-help-here"></a>Warum ist Async hier hilfreich?
 
 `async` und `await` stellen die Best Practice zum Verwalten von CPU-gebundener Arbeit dar, wenn Sie Wert auf Reaktionsfähigkeit legen. Es gibt mehrere Muster zur Async-Verwendung mit CPU-gebundener Arbeit. Sie sollten unbedingt beachten, dass die Async-Verwendung mit geringem Kostenaufwand verbunden ist und nicht für enge Schleifen empfohlen wird.  Sie entscheiden, wie Sie diese neue Funktion in Ihren Code einbringen.
-
-
-<!--HONumber=Nov16_HO3-->
-
-
