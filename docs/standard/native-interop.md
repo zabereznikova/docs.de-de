@@ -13,6 +13,7 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 translationtype: Human Translation
 ms.sourcegitcommit: 3aeaba5c8cf800c652941b5e6c2bc9f072849893
 ms.openlocfilehash: 36041eda54290484741c375ae776b7bf1a74d7a1
+ms.lasthandoff: 11/16/2016
 
 ---
 
@@ -273,7 +274,7 @@ Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht ve
 
 ```cs
 [DllImport("somenativelibrary.dll"]
-static extern int MethodA([MarshalAs(UnmanagedType.LPStr) string parameter);
+static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 ```
 
@@ -350,9 +351,4 @@ Die `StatClass`-Klasse stellt eine Struktur dar, die vom `stat`-Systemaufruf auf
 *   [PInvoke.NET-Wiki](http://www.pinvoke.net) ist eine ausgezeichnete Wiki-Seite mit Informationen zu gängigen Win32-APIs und deren Aufruf.
 *   [P/Invoke auf MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [Mono-Dokumentation zu P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
