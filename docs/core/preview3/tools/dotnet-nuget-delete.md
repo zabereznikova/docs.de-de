@@ -1,5 +1,5 @@
 ---
-title: dotnet-nuget-delete-Befehl | .NET Core SDK
+title: Befehl dotnet-nuget-delete | Microsoft-Dokumentation
 description: "Der dotnet-nuget-delete-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf."
 keywords: dotnet-nuget-delete, CLI, CLI-Befehl, .NET Core
 author: karann-msft
@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 787b1427b1064943570cbc361042ab2f20d11088
+ms.lasthandoff: 01/21/2017
 
 ---
 
@@ -62,7 +63,7 @@ Zeigt diesen Umfang an Details in der Ausgabe an. „Level“ kann `normal`, `qu
 `--config-file <FILE>`
 
 Eine NuGet-Konfigurationsdatei, die speziell für diesen Befehl verwendet wird. Sie ersetzt andere Konfigurationsdateien, die vom standardmäßigen Vorgang zur Ermittlung und Verkettung von Konfigurationsdateien gefunden wurden. Der Pfad kann absolut oder relativ sein.
-Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet). 
+Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet).
 
 ## <a name="examples"></a>Beispiele
 
@@ -81,9 +82,4 @@ Löscht Version 1.0 des Pakets „MyPackage“, dabei wird die benutzerdefiniert
 Löscht Version 1.0 des Pakets „MyPackage“ mit einem maximalen Grad an Ausführlichkeit:
 
 `dotnet nuget delete MyPackage 1.0 --verbosity detailed`
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
