@@ -4,16 +4,16 @@ description: "Zeichenklassen in regulären Ausdrücken"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c7a9305f-7144-4fe8-80e8-a727bf7d223f
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f8ebb1db670669e2e8666cd5ef90f72237c105e4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ae677af2590636fd144d8978a3500c37f9d33615
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -46,7 +46,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
 
 .NET unterstützt Zeichenklassensubtraktions-Ausdrücke. Hierdurch können Sie einen Zeichensatz definieren, der das Ergebnis des Ausschlusses einer Zeichenklasse von einer anderen darstellt. Weitere Informationen finden Sie unter [Zeichenklassensubtraktion](#character-class-subtraction).
 
-## <a name="positive-character-group-"></a>Positive Zeichengruppe: [ ]
+## <a name="positive-character-group--"></a>Positive Zeichengruppe: [ ]
 
 In einer positiven Zeichengruppe wird eine Liste von Zeichen festgelegt. Wenn eine Eingabezeichenfolge eines dieser Zeichen aufweist, liegt eine Übereinstimmung vor. Diese Zeichenliste kann einzeln, als Bereich oder beides angegeben werden. 
 
@@ -261,35 +261,35 @@ Das Punktzeichen (.) stimmt mit Ausnahme von **\n** (dem Zeichen für einen Zeil
 
   Das folgende Beispiel veranschaulicht das unterschiedliche Verhalten der  .-Zeichenklasse im Standardfall und mit der Option [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline). Der reguläre `^.+`-Ausdruck beginnt am Anfang der Zeichenfolge und stimmt mit jedem Zeichen überein. Standardmäßig endet die Übereinstimmung am Ende der ersten Zeile. Das Muster für den regulären Ausdruck stimmt mit dem Wagenrücklaufzeichen (**\r** oder **\u000D**), jedoch nicht mit **\n** überein. Da die gesamte Eingabezeichenfolge von der Option [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) als einzelne Zeile interpretiert wird, wird für jedes enthaltene Zeichen ein Abgleich vorgenommen, einschließlich **\n**.
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = "^.+";
-        string input = "This is one line and" + Environment.NewLine + "this is the second.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(Regex.Escape(match.Value));
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = "^.+";
+      string input = "This is one line and" + Environment.NewLine + "this is the second.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(Regex.Escape(match.Value));
 
-        Console.WriteLine();
-        foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
-           Console.WriteLine(Regex.Escape(match.Value));
-     }
-  }
-  // The example displays the following output:
-  //       This\ is\ one\ line\ and\r
-  //       
-  //       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+      Console.WriteLine();
+      foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
+         Console.WriteLine(Regex.Escape(match.Value));
+   }
+}
+// The example displays the following output:
+//       This\ is\ one\ line\ and\r
+//       
+//       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
+Module Example
+    Public Sub Main()
         Dim pattern As String = "^.+"
         Dim input As String = "This is one line and" + vbCrLf + "this is the second."
         For Each match As Match In Regex.Matches(input, pattern)
@@ -305,46 +305,46 @@ Das Punktzeichen (.) stimmt mit Ausnahme von **\n** (dem Zeichen für einen Zeil
   '       This\ is\ one\ line\ and\r
   '       
   '       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+```
 
   > [!NOTE]
   > Da sie mit jedem Zeichen außer **\n** übereinstimmt, stimmt die  .-Zeichenklasse auch mit **\r** überein (Wagenrücklaufzeichen, **\u000D**).
  
 * In einer positiven oder negativen Zeichengruppe wird ein Punkt anstatt einer Zeichenklasse als Literalzeichen behandelt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Positive Zeichengruppe](#positive-character-group--) und [Negative Zeichengruppe](#negative-character-group-). Im folgenden Beispiel wird zur Veranschaulichung ein regulärer Ausdruck definiert, der das Punktzeichen (**.**) sowohl als Zeichenklasse als auch als Mitglied einer positiven Zeichengruppe aufweist. Der reguläre Ausdruck `\b.*[.?!;:](\s|\z)` beginnt an einer Wortgrenze und stimmt bis zum Erreichen eines von vier Interpunktionszeichen (einschließlich eines Punkts) mit jedem Zeichen überein. Anschließend liegt entweder eine Übereinstimmung mit einem Leerzeichen oder dem Ende der Zeichenfolge vor.
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = @"\b.*[.?!;:](\s|\z)";
-        string input = "this. what: is? go, thing.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(match.Value);
-     }
-  }
-  // The example displays the following output:
-  //       this. what: is? go, thing.
-  ```
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = @"\b.*[.?!;:](\s|\z)";
+      string input = "this. what: is? go, thing.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(match.Value);
+   }
+}
+// The example displays the following output:
+//       this. what: is? go, thing.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
-        Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
-        Dim input As String = "this. what: is? go, thing."
-        For Each match As Match In Regex.Matches(input, pattern)
-           Console.WriteLine(match.Value)
-        Next   
-     End Sub
-  End Module
-  ' The example displays the following output:
-  '       this. what: is? go, thing.
-  ```
+Module Example
+   Public Sub Main()
+      Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
+      Dim input As String = "this. what: is? go, thing."
+      For Each match As Match In Regex.Matches(input, pattern)
+         Console.WriteLine(match.Value)
+      Next   
+   End Sub
+End Module
+' The example displays the following output:
+'       this. what: is? go, thing.
+```
 
   > [!NOTE]
   > Da es mit jedem Zeichen übereinstimmt, wird das  .-Sprachelement häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung mit einem bestimmten Zeichen ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers.md). 
@@ -576,7 +576,7 @@ Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht **\w** `[^a-zA-Z_0-9]
 > [!NOTE]
 > Aufgrund der Übereinstimmung des \w-Sprachelements mit jedem Wortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines von einem bestimmten Wortzeichen gefolgten Wortzeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers.md). 
 
-Das folgende Beispiel veranschaulicht die **\W**-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.
+Das folgende Beispiel veranschaulicht die **\W**-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.
 
 Element | Beschreibung
 ------- | ----------- 
@@ -928,7 +928,7 @@ End Module
 
 Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht **\D** `[^0-9]`. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt [ECMAScript-Vergleichsverhalten](options.md#ecmascript-matching-behavior) unter [Optionen für reguläre Ausdrücke](options.md).
 
-Im folgenden Beispiel wird das **\D**-Sprachelement veranschaulicht. Anhand eines Tests wird ermittelt, ob eine Zeichenfolge (z. B. eine Teilenummer) aus der gewünschten Kombination von Dezimalzahlen und Nicht-Dezimalzahlen besteht. Das Muster für reguläre Ausdrücke `^\D\d{1,5}\D*$` wird entsprechend der folgenden Tabelle definiert:
+Im folgenden Beispiel wird das **\D**-Sprachelement veranschaulicht. Anhand eines Tests wird ermittelt, ob eine Zeichenfolge (z. B. eine Teilenummer) aus der gewünschten Kombination von Dezimalzahlen und Nicht-Dezimalzahlen besteht. Das Muster für reguläre Ausdrücke `^\D\d{1,5}\D*$` wird entsprechend der folgenden Tabelle definiert:
 
 Element | Beschreibung
 ------- | ----------- 
@@ -1031,7 +1031,7 @@ Kategorie | Beschreibung
  
 ##<a name="supported-named-blocks"></a>Unterstützte benannte Blöcke
 
-In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke aufgelistet. Der Satz von unterstützten benannten Blöcke basiert auf Unicode 4.0 und Perl 5.6.
+In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke aufgelistet. Der Satz von unterstützten benannten Blöcke basiert auf Unicode 4.0 und Perl 5.6.
 
 Codepunktbereich | Blockname
 ---------------- | ---------- 
@@ -1214,8 +1214,3 @@ End Module
 ## <a name="see-also"></a>Siehe auch
 
 [Optionen für reguläre Ausdrücke](options.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-
