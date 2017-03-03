@@ -4,16 +4,16 @@ description: "Standardmäßige Zahlenformatzeichenfolgen"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 285faf73-466a-4af0-8eba-7e509958f240
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 4887a55690e47f7867cee28ab9b9fe258b208e54
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: d38b5bdfb8429b917e19d74b36f2e33cea49dbca
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -42,7 +42,7 @@ Die folgenden Tabelle beschreibt die standardmäßigen Zahlenformatbezeichner un
 |"F" oder "f"|Festkomma|Ergebnis: Ganze Zahlen und Dezimalzahlen mit optionalem Minuszeichen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der Dezimalstellen.<br /><br /> Standardmäßiger Genauigkeitsspezifizierer: Definiert von [NumberFormatInfo.NumberDecimalDigits](xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits).<br /><br /> |1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" oder "g"|Allgemein|Ergebnis: Die kompaktere Festkomma- oder wissenschaftliche Schreibweise.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der signifikanten Stellen.<br /><br /> Standardmäßige Genauigkeitsangabe: Abhängig vom numerischen Typ.<br /><br /> |-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" oder "n"|Nummer|Ergebnis: Ganze Zahlen und Dezimalzahlen, Gruppentrennzeichen und ein Dezimaltrennzeichen mit optionalem Minuszeichen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: gewünschte Anzahl der Dezimalstellen.<br /><br /> Standardmäßiger Genauigkeitsspezifizierer: Definiert von [NumberFormatInfo.NumberDecimalDigits](xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits).<br /><br /> |1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
-|"P" oder "p"|Prozent|Ergebnis: Die Zahl multipliziert mit 100 und mit einem Prozentzeichen versehen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: gewünschte Anzahl der Dezimalstellen.<br /><br /> Standardmäßiger Genauigkeitsspezifizierer: Definiert von [NumberFormatInfo.PercentDecimalDigits](assetId:///P:System.Globalization.NumberFormatInfo.PercentDecimalDigits?qualifyHint=True&autoUpgrade=True).<br /><br /> |1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
+|"P" oder "p"|Prozent|Ergebnis: Die Zahl multipliziert mit 100 und mit einem Prozentzeichen versehen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: gewünschte Anzahl der Dezimalstellen.<br /><br /> Standardmäßiger Genauigkeitsspezifizierer: Definiert von [NumberFormatInfo.PercentDecimalDigits](xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits).<br /><br /> |1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
 |"R" oder "r"|Schleife|Ergebnis: Eine Zeichenfolge, die eine Schleife zu einem identischen Wert ausführen kann.<br /><br /> Unterstützt von: [Single](xref:System.Single), [Double](xref:System.Double) und [BigInteger](xref:System.Numerics.BigInteger).<br /><br /> Genauigkeitsangabe: Wird ignoriert.<br /><br /> |123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" oder "x"|Hexadezimal|Ergebnis: Eine Hexadezimalzeichenfolge.<br /><br /> Unterstützt von: Nur ganzzahlige Typen.<br /><br /> Genauigkeitsangabe: Anzahl von Ziffern in der Ergebniszeichenfolge.<br /><br /> |255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Jedes andere einzelne Zeichen|Unbekannter Bezeichner|Ergebnis: Löst zur Laufzeit eine [FormatException](xref:System.FormatException) aus.|| 
@@ -248,7 +248,7 @@ Console.WriteLine(value.ToString("E", _
 ' Displays 1,234568E+004
 ```
 
-## <a name="the-fixedpoint-f-format-specifier"></a>Der Bezeichner „F“ für Festkommaformat
+## <a name="the-fixed-point-f-format-specifier"></a>Der Bezeichner „F“ für Festkommaformat
 
 Der Festkommaformatbezeichner "F" konvertiert eine Zahl in eine Zeichenfolge, die folgende Form aufweist: "-ddd.ddd…". Jedes "d" steht dabei für eine Ziffer (0-9). Die Zeichenfolge beginnt mit einem Minuszeichen, wenn die Zahl negativ ist. 
 
@@ -502,7 +502,7 @@ Console.WriteLine(number.ToString("P1", CultureInfo.InvariantCulture))
 ' Displays 24.7 %
 ```
 
-## <a name="the-roundtrip-r-format-specifier"></a>Der Bezeichner „R“ für Roundtripformat
+## <a name="the-round-trip-r-format-specifier"></a>Der Bezeichner „R“ für Roundtripformat
 
 Der Schleifenformatbezeichner "R" wird verwendet, um sicherzustellen, dass ein in eine Zeichenfolge konvertierter numerischer Wert wieder in denselben numerischen Wert rückkonvertiert wird. Dieses Format wird nur für folgende Typen unterstützt: [Single](xref:System.Single), [Double](xref:System.Double) und [BigInteger](xref:System.Numerics.BigInteger). 
 
@@ -600,11 +600,11 @@ Console.WriteLine(value.ToString("X2"))
 
 Die Formatierung wird durch die Eigenschaften des aktuellen [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den [IFormatProvider](xref:System.IFormatProvider)-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Geben Sie ein [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)- oder ein [CultureInfo](xref:System.Globalization.CultureInfo)-Objekt für diesen Parameter an. 
 
-### <a name="integral-and-floatingpoint-numeric-types"></a>Ganzzahlige numerische Typen und numerische Gleitkommatypen
+### <a name="integral-and-floating-point-numeric-types"></a>Ganzzahlige numerische Typen und numerische Gleitkommatypen
 
 Einige Beschreibungen standardmäßiger Zahlenformatbezeichner verweisen auf ganzzahlige numerische Typen oder numerische Gleitkommatypen. Die ganzzahligen numerischen Typen sind [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [Int32](xref:System.Int32), [Int64](xref:System.Int64), [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32), [UInt64](xref:System.UInt64) und [BigInteger](xref:System.Numerics.BigInteger). Die numerischen Gleitkommatypen sind [Decimal](xref:System.Decimal), [Single](xref:System.Single) und [Double](xref:System.Double). 
 
-### <a name="floatingpoint-infinities-and-nan"></a>Unendlichkeiten und NaN bei Gleitkommawerten
+### <a name="floating-point-infinities-and-nan"></a>Unendlichkeiten und NaN bei Gleitkommawerten
 
 Wenn der Wert eines [Single](xref:System.Single)- oder [Double](xref:System.Double)-Gleitkommatyps positiv unendlich, negativ unendlich oder keine Zahl (Not a Number, NaN) ist, handelt es sich bei der formatierten Zeichenfolge unabhängig von der Formatzeichenfolge um den Wert der entsprechenden [PositiveInfinitySymbol](xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol)-, [NegativeInfinitySymbol](xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol)- oder [NaNSymbol](xref:System.Globalization.NumberFormatInfo.NaNSymbol)-Eigenschaft, die durch das derzeit gültige [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)-Objekt angegeben wird.
 
@@ -728,9 +728,4 @@ End Module
 [Gewusst wie: Auffüllen einer Zahl mit führenden Nullen](pad-number.md)
 
 [Kombinierte Formatierung](composite-format.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

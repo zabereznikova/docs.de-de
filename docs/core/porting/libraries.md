@@ -3,20 +3,20 @@ title: "Portieren auf .NET Core – Bibliotheken"
 description: "Portieren auf .NET Core – Bibliotheken"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 translationtype: Human Translation
-ms.sourcegitcommit: 46061efa8e33c6a73befa5181eb33b8deb2fa637
-ms.openlocfilehash: 503cf3628ee317f701f467bddc4bcb5998b82af4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 0e4b755a9ea795b5b10d7aab19de754b85776353
+ms.lasthandoff: 01/18/2017
 
 ---
 
-# <a name="porting-to-net-core-libraries"></a>Portieren auf .NET Core – Bibliotheken
+# <a name="porting-to-net-core---libraries"></a>Portieren auf .NET Core – Bibliotheken
 
 Mit dem Release von .NET Core 1.0 gibt es die Möglichkeit, vorhandenen Bibliothekscode zu portieren, sodass er plattformübergreifend ausgeführt werden kann.  Dieser Artikel behandelt die .NET-Standardbibliothek, nicht verfügbare Technologien, wie Sie die kleinere Anzahl der verfügbaren APIS auf .NET Core 1.0 belegen, und wie Sie die Tools verwenden, die mit .NET Core SDK Preview 2 versendet werden, sowie empfohlene Vorgehensweisen zum Portieren Ihres Codes.
 
@@ -331,7 +331,7 @@ Es ist wahrscheinlich, dass Sie die oben genannten Vorgehensweisen jeweils pro P
 Die beste Möglichkeit, um sicherzustellen, dass alles funktioniert, wenn Sie Ihren Code importiert haben, ist das Testen Ihres Codes beim Portieren auf .NET Core.  Zu diesem Zweck müssen Sie ein Test-Framework verwenden, das Tests für .NET Core erstellt und ausführt.  Derzeit stehen Ihnen drei Optionen zur Verfügung:
 
 * [xUnit](https://xunit.github.io/)
-   - [Erste Schritte](http://xunit.github.io/docs/getting-started-dnx.html)
+   - [Erste Schritte](http://xunit.github.io/docs/getting-started-dotnet-core.html)
    - [Tool zum Konvertieren eines MSTest-Projekts zu xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 * [NUnit](http://www.nunit.org/)
   - [Erste Schritte](https://github.com/nunit/docs/wiki/Installation)
@@ -351,9 +351,4 @@ Eine gute Möglichkeit, Ihren Code zu portieren, ist es, mit der „Basis“ Ihr
 5. Wählen Sie die nächste Codeebene aus, die portiert werden soll, und wiederholen Sie die Schritte 2 und 3.
 
 Wenn Sie sich methodisch von der Basis Ihrer Bibliothek aus nach außen bewegen, und jede Ebene wie erforderlich testen, wird die Portierung ein schematischer Prozess sein, bei dem Probleme jeweils auf einer Codeebene isoliert werden.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

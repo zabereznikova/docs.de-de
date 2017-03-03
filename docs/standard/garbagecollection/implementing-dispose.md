@@ -4,16 +4,16 @@ description: Implementieren einer Dispose-Methode
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: eca6cdc3-6a14-4296-86fb-1eb2f21455b0
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: fcb7944a7a9cce1cf23b42790133ee051c0e05f0
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c1e06872017eb06c52b5da62b2382398451a13bd
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -415,7 +415,7 @@ Von der [System.Runtime.InteropServices.SafeHandle](xref:System.Runtime.InteropS
 
 * Die [SafeMemoryMappedViewHandle](xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle)-Klasse für Speicheransichten. 
 
-* Die Klassen [SafeNCryptKeyHandle](https://msdn.microsoft.com/en-us/library/microsoft.win32.safehandles.safencryptkeyhandle(v=vs.110).aspx), [SafeNCryptProviderHandle](https://msdn.microsoft.com/en-us/library/microsoft.win32.safehandles.safencryptproviderhandle(v=vs.110).aspx) und [SafeNCryptSecretHandle](https://msdn.microsoft.com/en-us/library/microsoft.win32.safehandles.safencryptsecrethandle(v=vs.110).aspx) für Kryptografiekonstrukte.
+* Die Klassen [SafeNCryptKeyHandle](https://msdn.microsoft.com/library/microsoft.win32.safehandles.safencryptkeyhandle(v=vs.110).aspx), [SafeNCryptProviderHandle](https://msdn.microsoft.com/library/microsoft.win32.safehandles.safencryptproviderhandle(v=vs.110).aspx) und [SafeNCryptSecretHandle](https://msdn.microsoft.com/library/microsoft.win32.safehandles.safencryptsecrethandle(v=vs.110).aspx) für Kryptografiekonstrukte.
 
 * Die [SafeRegistryHandle](xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle)-Klasse für Registrierungsschlüssel. 
 
@@ -730,9 +730,4 @@ End Class
 [System.Runtime.InteropServices.SafeHandle](xref:System.Runtime.InteropServices.SafeHandle)
 
 [IDisposable.Dispose](xref:System.IDisposable.Dispose)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
