@@ -3,22 +3,22 @@ title: Erste Schritte mit .NET Core unter Windows
 description: Erste Schritte mit .NET Core unter Windows mit Visual Studio 2015
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: 299d479ce74a0e1f41ff42a0e6619f4964788194
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 29019587d2d847c5184d07024fa763c8af805d50
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>Erste Schritte mit .NET Core unter Windows mit Visual Studio 2015
 
-von [Bertrand Le Roy](https://github.com/bleroy) und [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> Dieses Thema bezieht sich auf die .NET Core Preview 2-Tools für Visual Studio 2015. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [Erste Schritte mit .NET Core unter Windows mit Visual Studio 2017](../preview3/tutorials/using-on-windows-vs-2017.md).
 
 Visual Studio 2015 bietet eine umfassende Entwicklungsumgebung für die Entwicklung von .NET Core-Anwendungen. Mit den Verfahren in diesem Dokument werden die erforderlichen Schritte zum Erstellen einer Reihe von typischen .NET Core-Projektmappen oder Projektmappen, die .NET Core-Komponenten enthalten, mithilfe von Visual Studio beschrieben. Die Szenarios enthalten Tests. Zudem werden Bibliotheken von Drittanbietern verwendet, die nicht explizit für die neueste Version von .NET Core erstellt wurden. 
 
@@ -229,11 +229,11 @@ Falls die vorherige Projektmappe geöffnet ist, schließen Sie sie. In diesem Ab
 -------------------------------------
 Das Tool für portable Klassenbibliotheken kann Ihre portable Klassenbibliothek automatisch an .NET Standard anpassen. 
 
-1.  Doppelklicken Sie auf den Knoten „Eigenschaften“, um die Seite „Projekteigenschaften“ zu öffnen.
+1.    Doppelklicken Sie auf den Knoten „Eigenschaften“, um die Seite „Projekteigenschaften“ zu öffnen.
 
-2.  Klicken Sie unter dem „Zielheader“ auf den Hyperlink „Ziel: .NET-Plattform (Standard)“.
+2.    Klicken Sie unter dem „Zielheader“ auf den Hyperlink „Ziel: .NET-Plattform (Standard)“.
 
-3.  Klicken Sie auf „Ja“, wenn Sie zur Bestätigung aufgefordert werden.
+3.    Klicken Sie auf „Ja“, wenn Sie zur Bestätigung aufgefordert werden.
 
 Das Tool wählt automatisch die Version von .NET Standard aus, die alle von Ihrer portablen Klassenbibliothek ursprünglich als Ziel verwendeten Ziele enthält. Über das Dropdownmenü „.NET Standard“ auf der Seite „Projekteigenschaften“ können Sie auch eine andere Version von .NET Standard auswählen.
  
@@ -241,17 +241,17 @@ Das Tool wählt automatisch die Version von .NET Standard aus, die alle von Ihre
 
 ### <a name="manually-edit-projectjson-to-target-net-standard-from-an-existing-portable-class-library"></a>Bearbeiten Sie „project.json“ so, dass .NET Standard aus einer vorhandenen portablen Klassenbibliothek als Ziel verwendet wird.
 
-1.  Wenn „project.json“ im „supports“-Element „dnxcore50“ enthält, entfernen Sie es.
+1.    Wenn „project.json“ im „supports“-Element „dnxcore50“ enthält, entfernen Sie es.
 
-2.  Entfernen Sie die Abhängigkeit von „Microsoft.NETCore“.
+2.    Entfernen Sie die Abhängigkeit von „Microsoft.NETCore“.
 
-3.  Ändern Sie die Abhängigkeit von „Microsoft.NETCore.Portable.Compatibility“ Version „1.0.0“ in Version „1.0.1“.
+3.    Ändern Sie die Abhängigkeit von „Microsoft.NETCore.Portable.Compatibility“ Version „1.0.0“ in Version „1.0.1“.
 
-4.  Fügen Sie eine Abhängigkeit von „NETStandard.Library“ Version „1.6.0“ hinzu.
+4.    Fügen Sie eine Abhängigkeit von „NETStandard.Library“ Version „1.6.0“ hinzu.
 
-5.  Entfernen Sie im „frameworks“-Element das „dotnet“-Framework (und das darin enthaltene „imports“-Element).
+5.    Entfernen Sie im „frameworks“-Element das „dotnet“-Framework (und das darin enthaltene „imports“-Element).
 
-6.  Fügen Sie ` "netstandard1.x” : { } ` zum „frameworks“-Element hinzu. Ersetzen Sie dabei x durch die Version von .NET Standard, die Sie als Ziel verwenden möchten.
+6.    Fügen Sie ` "netstandard1.x” : { } ` zum „frameworks“-Element hinzu. Ersetzen Sie dabei x durch die Version von .NET Standard, die Sie als Ziel verwenden möchten.
 
 ### <a name="example-projectjson"></a>Beispiel für „project.json“
 
@@ -276,6 +276,6 @@ Diese „project.json“-Datei enthält „supports“-Klauseln für UWP und .NE
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

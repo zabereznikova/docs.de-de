@@ -3,16 +3,17 @@ title: .NET-Klassenbibliotheken
 description: .NET-Klassenbibliotheken
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -26,7 +27,7 @@ Es gibt drei Arten von Klassenbibliotheken, die Sie verwenden können:
 *   **Portable** Klassenbibliotheken haben Zugriff auf eine Teilmenge der APIs und können von Apps und Bibliotheken verwendet werden, deren Ziel mehrere Plattformen sind.
 *   **.NET Core**-Klassenbibliotheken führen das plattformspezifische und Portable-Bibliotheken-Konzept in einem einzelnen Modell zusammen, das das Beste von beidem bietet.
 
-## <a name="platformspecific-class-libraries"></a>Plattformspezifische Klassenbibliotheken
+## <a name="platform-specific-class-libraries"></a>Plattformspezifische Klassenbibliotheken
 
 Plattformspezifische Bibliotheken sind an eine einzige .NET-Plattform gebunden (z.B. .NET Framework unter Windows) und können daher wichtige Abhängigkeiten von einer bekannten Ausführungsumgebung annehmen. Eine solche Umgebung stellt einen bekannten Satz von APIs (.NET- und BS-APIs) bereit, verwaltet den erwarteten Status (z.B. Windows-Registrierung) und macht ihn verfügbar.
 
@@ -61,9 +62,4 @@ Die folgenden Plattformen unterstützen .NET Core-Klassenbibliotheken:
 ### <a name="mono-class-libraries"></a>Mono-Klassenbibliotheken
 
 Klassenbibliotheken, einschließlich der drei oben beschriebenen Typen von Bibliotheken, werden unter Mono unterstützt. Mono ist häufig (richtigerweise) als eine plattformübergreifende Implementierung von Microsoft .NET Framework angesehen worden. Dies lag teilweise daran, dass plattformspezifische .NET Framework-Bibliotheken in der Mono-Runtime ohne Änderung oder erneute Kompilierung ausgeführt werden konnten. Dieses Merkmal existierte vor der Erstellung portabler Klassenbibliotheken, und es war naheliegend, so binäre Portabilität zwischen .NET Framework und Mono zu ermöglichen (obwohl es nur in einer Richtung funktionierte).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

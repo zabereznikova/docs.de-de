@@ -1,22 +1,25 @@
 ---
-title: Verwenden des .NET Core SDK und der entsprechenden Tools in Continuous Integration (CI)
+title: Verwenden des .NET Core SDKs und der entsprechenden Tools in Continuous Integration (CI) | Microsoft-Dokumentation
 description: Verwenden des .NET Core SDK und der entsprechenden Tools in Continuous Integration (CI)
 keywords: .NET, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 2ceb14c2d9ea990037d5c14a295cac02a0c44e48
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0363bdfcb75f51789393e1459d23fcb644c7fb11
 
 ---
 
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der entsprechenden Tools in Continuous Integration (CI)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [Verwenden des .NET Core SDKs und der entsprechenden Tools in Continuous Integration (CI) (.NET Core Tools RC4)](../preview3/tools/using-ci-with-cli.md).
 
 ## <a name="overview"></a>Übersicht
 In diesem Dokument wird die Verwendung des .NET Core SDK und der entsprechenden Tools auf dem Buildserver beschrieben. Im Allgemeinen soll die Installation auf einem CI-Buildserver auf eine beliebige Weise automatisiert werden. Für die Automatisierung sollten im Idealfall möglichst keine Administratorrechte erforderlich sein. 
@@ -90,6 +93,6 @@ install:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

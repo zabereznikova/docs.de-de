@@ -3,17 +3,17 @@ title: "Einführung in .NET"
 description: "Eine Einführung in einige der wichtigsten Features der .NET-Plattform."
 keywords: ".NET, .NET Core, Einführung, Programmiersprachen, unsicher, Speicherverwaltung, Typsicherheit, asynchron"
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: wiwagn
 ms.date: 11/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 2c57b5cebd63b1d94b127cd269e3b319fb24dd97
-ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: adb5cbc4cbaa6f25f77ec24e4dd5d37a022234ef
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -34,7 +34,7 @@ Zukünftig wird diese Dokumentationswebsite die Möglichkeit bieten, diese Codeb
 
 ## <a name="programming-languages"></a>Programmiersprachen
 
-.NET unterstützt mehrere Programmiersprachen.  .NET-Runtimes implementieren die [Common Language Infrastructure (CLI)](https://www.visualstudio.com/en-us/mt639507), die (unter anderem) eine sprachunabhängige Runtime und Spracheninteroperabilität angibt.  Dies bedeutet, dass Sie zum Erstellen von Apps und Diensten in .NET eine beliebige .NET-Sprache auswählen können.
+.NET unterstützt mehrere Programmiersprachen.  .NET-Runtimes implementieren die [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), die (unter anderem) eine sprachunabhängige Runtime und Spracheninteroperabilität angibt.  Dies bedeutet, dass Sie zum Erstellen von Apps und Diensten in .NET eine beliebige .NET-Sprache auswählen können.
 
 Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic .NET. 
 
@@ -147,8 +147,4 @@ Wenn Sie sich für eine Einführung in die F#-Features interessieren, lesen Sie 
 Wenn Sie damit beginnen möchten, eigenen Code zu schreiben, lesen Sie [Erste Schritte](getting-started.md).
 
 Weitere Informationen zu wichtigen Komponenten von .NET finden Sie unter [.NET-Architekturkomponenten](components.md).
-
-
-<!--HONumber=Nov16_HO3-->
-
 

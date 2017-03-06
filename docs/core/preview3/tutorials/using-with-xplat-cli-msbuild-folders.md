@@ -1,6 +1,6 @@
 ---
-title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (SDK Preview 3)
-description: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (SDK Preview 3)
+title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (.NET Core Tools RC4) | Microsoft-Dokumentation
+description: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (.NET Core Tools RC4)
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 0a3122a3c10838b74801bcc910070745cb9bf0d5
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb5ce9772ca2f3e35ebd7ec948d011ec04296e0
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-3"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (SDK Preview 3)
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line-net-core-tools-rc4"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (.NET Core Tools RC4)
 
-Dieses Tutorial folgt auf [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile (SDK Preview 3)](./using-with-xplat-cli-msbuild.md), um zu zeigen, wie Sie über einfache „hello World“-Szenarien hinaus anspruchsvolleren und überlegt organisierten Anwendungen den Weg ebnen.
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile](../../tutorials/using-with-xplat-cli.md) Thema.
+
+Dieses Tutorial folgt auf [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile (.NET Core Tools RC4)](./using-with-xplat-cli-msbuild.md), um zu zeigen, wie Sie über einfache „hello world“-Szenarios hinaus anspruchsvolleren und überlegt organisierten Anwendungen den Weg ebnen.
 
 ## <a name="using-folders-to-organize-code"></a>Verwenden von Ordnern zum Strukturieren von Code
 
@@ -322,6 +325,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

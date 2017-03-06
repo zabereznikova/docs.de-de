@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 59ffac4d-fc6e-461f-8783-d9f8dc88ce2c
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2c31622ff97f30e565ed2cd82128518d04d5d1dc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fa2a880e5bcc36354bd59d3dc032180c89984f1d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -100,7 +101,7 @@ Muster | Beschreibung
 `\b` | An einer Wortgrenze beginnen.
 `gr` | Übereinstimmung mit den Zeichen "gr".
 `(a|e)` | Übereinstimmung mit entweder "a" oder "e".
-`y\b` | Übereinstimmung mit "y" an einer Wortgrenze.
+`y\b` |    Übereinstimmung mit "y" an einer Wortgrenze.
 
 
 Das |-Zeichen kann auch verwendet werden, um einen Entweder-Oder-Vergleich mit mehreren Zeichen oder Teilausdrücken durchzuführen, wobei eine beliebige Kombination von Zeichenliteralen und Sprachelementen für reguläre Ausdrücke enthalten sein kann. (Die Zeichenklasse stellt diese Funktionalität nicht bereit.) Im folgenden Beispiel wird das |-Zeichen verwendet, um entweder eine Sozialversicherungsnummer in den USA, also eine neunstellige Zahl mit dem Format *ddd-dd-dddd*, oder eine Identifikationsnummer des Arbeitgebers in den USA (EIN, Employer Identification Number), also eine neunstellige Zahl mit dem Format *dd-ddddddd*, zu extrahieren.
@@ -278,7 +279,7 @@ Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d
 Muster | Beschreibung
 ------- | -----------
 `\b` | An einer Wortgrenze beginnen.
-`(?<n2>\d{2}-)*` | Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2` als Namen an.
+`(?<n2>\d{2}-)*` | Entspricht&0; (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2` als Namen an.
 `(?(n2)` | Prüfen, ob `n2` in der Eingabezeichenfolge abgeglichen wurde. 
 `)\d{7}` | Wenn `n2` abgeglichen wurde, stimmen sieben Dezimalstellen überein.
 `|;\d{3}-\d{2}-\d{4}` | Wenn `n2` nicht abgeglichen wurde, stimmen drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen überein. 
@@ -329,10 +330,5 @@ End Module
 Siehe auch
 
 [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

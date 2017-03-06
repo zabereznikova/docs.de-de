@@ -4,16 +4,16 @@ description: "Einzelheiten zum Verhalten regulärer Ausdrücke"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6f11047f-45a4-4caf-a259-18abe08cc0d2
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b217b59874ceafbb0e5e410878cc434974c5a863
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 5656cabb708dcfc311ac7a709446003951b97aa6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -234,7 +234,7 @@ Weitere Informationen zu negativen Lookaheadassertionen finden Sie unter [Gruppi
 
 ### <a name="conditional-evaluation"></a>Bedingte Auswertung
 
-Bedingte Auswertung: **(?(**_ausdruck_**)**_ja_&#124;_nein_**)** und **(?(**_name_**)**_ja_&#124;_nein_**)**, wobei *ausdruck* ein zu suchender Teilausdruck ist, *name* der Name einer Erfassungsgruppe, *ja* die zu suchende Zeichenfolge, wenn *ausdruck* gefunden wurde oder *name* eine gültige, nicht leere Erfassungsgruppe ist, und *nein* der zu suchende Teilausdruck ist, wenn *ausdruck* nicht gefunden wurde oder *name* keine gültige, nicht leere Erfassungsgruppe ist. Mit dieser Funktion kann das Modul je nach Ergebnis eines vorherigen Teilausdrucksabgleichs oder je nach Ergebnis einer Assertion mit einer Breite von 0 (null) anhand mehrerer Alternativmuster suchen. Dies lässt eine leistungsstärkere Form von Rückverfolgung zu, die es beispielsweise erlaubt, einen Teilausdruck auf der Grundlage davon zu suchen, ob eine Übereinstimmung mit einem vorherigen Teilausdruck gefunden wurde. Der reguläre Ausdruck im folgenden Beispiel gleicht Absätze ab, die sowohl für die öffentliche als auch für die interne Verwendung vorgesehen sind. Absätze, die nur für die interne Verwendung vorgesehen sind, beginnen mit einem `<PRIVATE>`-Tag. Das Muster für reguläre Ausdrücke `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` weist den Inhalt von Absätzen, die für die öffentliche und interne Verwendung vorgesehen sind, mithilfe einer bedingten Auswertung zu, um Erfassungsgruppen zu trennen. Diese Absätze können dann unterschiedlich behandelt werden.
+Bedingte Auswertung: **(?(**_ausdruck_**)**_ja_&#124;_nein_**)** und **(?(**_name_**)**_ja_&#124;_nein_**)**, wobei *ausdruck* ein zu suchender Teilausdruck ist, *name* der Name einer Erfassungsgruppe, *ja* die zu suchende Zeichenfolge, wenn *ausdruck* gefunden wurde oder *name* eine gültige, nicht leere Erfassungsgruppe ist, und *nein* der zu suchende Teilausdruck ist, wenn *ausdruck* nicht gefunden wurde oder *name* keine gültige, nicht leere Erfassungsgruppe ist. Mit dieser Funktion kann das Modul je nach Ergebnis eines vorherigen Teilausdrucksabgleichs oder je nach Ergebnis einer Assertion mit einer Breite von&0; (null) anhand mehrerer Alternativmuster suchen. Dies lässt eine leistungsstärkere Form von Rückverfolgung zu, die es beispielsweise erlaubt, einen Teilausdruck auf der Grundlage davon zu suchen, ob eine Übereinstimmung mit einem vorherigen Teilausdruck gefunden wurde. Der reguläre Ausdruck im folgenden Beispiel gleicht Absätze ab, die sowohl für die öffentliche als auch für die interne Verwendung vorgesehen sind. Absätze, die nur für die interne Verwendung vorgesehen sind, beginnen mit einem `<PRIVATE>`-Tag. Das Muster für reguläre Ausdrücke `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` weist den Inhalt von Absätzen, die für die öffentliche und interne Verwendung vorgesehen sind, mithilfe einer bedingten Auswertung zu, um Erfassungsgruppen zu trennen. Diese Absätze können dann unterschiedlich behandelt werden.
 
 ```csharp
 using System;
@@ -319,9 +319,9 @@ Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt de
 Muster | Beschreibung
 ------- | -----------
 `^` | Beginnt den Abgleich am Anfang einer Zeile.
-`(?<Pvt>\<PRIVATE\>\s)?` | Sucht nach 0 oder 1 Vorkommen der Zeichenfolge `<PRIVATE>`, gefolgt von einem Leerzeichen. Weist die Übereinstimmung der Erfassungsgruppe „Pvt“ zu.
-`(?(Pvt)((\w+\p{P}?\s)+)` | Wenn die Erfassungsgruppe `Pvt` vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der ersten Erfassungsgruppe zu.
-`&#124;((\w+\p{P}?\s)+))` | Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.
+`(?<Pvt>\<PRIVATE\>\s)?` | Sucht nach&0; oder&1; Vorkommen der Zeichenfolge `<PRIVATE>`, gefolgt von einem Leerzeichen. Weist die Übereinstimmung der Erfassungsgruppe „Pvt“ zu.
+`(?(Pvt)((\w+\p{P}?\s)+)` | Wenn die Erfassungsgruppe `Pvt` vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen&0; oder&1; Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der ersten Erfassungsgruppe zu.
+`&#124;((\w+\p{P}?\s)+))` | Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen&0; oder&1; Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.
 `\r?$` | Gleicht das Ende einer Zeile oder das Ende der Zeichenfolge ab.
  
 Weitere Informationen zur bedingten Auswertung finden Sie unter [Alternierungskonstrukte in regulären Ausdrücken](alternation.md).
@@ -480,7 +480,7 @@ End Module
 
 Weitere Informationen zu Teilausdrücken ohne Rückverfolgung finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping.md).
 
-### <a name="righttoleft-matching"></a>Abgleich von rechts nach links
+### <a name="right-to-left-matching"></a>Abgleich von rechts nach links
 
 Der Abgleich von rechts nach links, der durch Festlegen der [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft)-Option für eine Suchmethode für [Regex](xref:System.Text.RegularExpressions.Regex)-Klassenkonstruktoren oder statische Instanzen angegeben wird. Diese Funktion eignet sich für die Suche von rechts nach links (statt von links nach rechts) oder in Fällen, in denen es effektiver ist, auf der rechten Seite eines Musters mit der Suche zu beginnen. Wie im folgenden Beispiel veranschaulicht, kann mit dem Abgleich von rechts nach links das Verhalten gieriger Quantifizierer geändert werden. Im Beispiel werden zwei Suchen nach einem Satz ausgeführt, der auf eine Zahl endet. Mit der Suche von links nach rechts, für die der gierige Quantifizierer `+` verwendet wird, wird eine der sechs Ziffern im Satz gefunden. Hingegen werden bei der Suche von rechts nach links alle sechs Ziffern gefunden. Eine Beschreibung des Musters für reguläre Ausdrücke finden Sie weiter oben in diesem Abschnitt im Beispiel zur Veranschaulichung träger Quantifizierer.
 
@@ -637,10 +637,5 @@ Titel | Beschreibung
 ## <a name="reference"></a>Verweis
 
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

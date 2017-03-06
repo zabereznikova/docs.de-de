@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a1e611ec-c6a2-48c6-9c52-0ed845787621
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: becfe2624ad1ee1d03707ef48c780f518eb8eb28
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4e8744c6c7a42c3803bf9716a3ae271b7284be3d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -415,7 +416,7 @@ End Module
 
 Die [Match](xref:System.Text.RegularExpressions.Match)-Klasse stellt das Ergebnis einer einzelnen Übereinstimmung eines regulären Ausdrucks dar. Es gibt zwei Möglichkeiten für den Zugriff auf [Match](xref:System.Text.RegularExpressions.Match)-Objekte:
 
-* Sie können von dem [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection)-Objekt abgerufen werden, das von der Regex.Matches-Methode zurückgegeben wird. Um einzelne [Match](xref:System.Text.RegularExpressions.Match)-Objekte abzurufen, durchlaufen Sie die Sammlung über ein `foreach`-Konstrukt (in C#) oder ein `For Each...Next`-Konstrukt (in Visual Basic), oder rufen Sie mithilfe der [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item`-Eigenschaft ein bestimmtes [Match](xref:System.Text.RegularExpressions.Match)-Objekt nach Index oder nach Name ab. Sie können auch einzelne [Match](xref:System.Text.RegularExpressions.Match)-Objekte aus der Sammlung abrufen, indem Sie die Sammlung nach Index durchlaufen, von 0 (null) bis eins weniger, als es der Anzahl der Objekte in der Sammlung entspricht. Bei dieser Methode wird jedoch keine verzögerte Auswertung genutzt, weil dabei auf die [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count)-Eigenschaft zugegriffen wird. 
+* Sie können von dem [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection)-Objekt abgerufen werden, das von der Regex.Matches-Methode zurückgegeben wird. Um einzelne [Match](xref:System.Text.RegularExpressions.Match)-Objekte abzurufen, durchlaufen Sie die Sammlung über ein `foreach`-Konstrukt (in C#) oder ein `For Each...Next`-Konstrukt (in Visual Basic), oder rufen Sie mithilfe der [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item`-Eigenschaft ein bestimmtes [Match](xref:System.Text.RegularExpressions.Match)-Objekt nach Index oder nach Name ab. Sie können auch einzelne [Match](xref:System.Text.RegularExpressions.Match)-Objekte aus der Sammlung abrufen, indem Sie die Sammlung nach Index durchlaufen, von&0; (null) bis eins weniger, als es der Anzahl der Objekte in der Sammlung entspricht. Bei dieser Methode wird jedoch keine verzögerte Auswertung genutzt, weil dabei auf die [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count)-Eigenschaft zugegriffen wird. 
 
   Im folgenden Beispiel werden einzelne [Match](xref:System.Text.RegularExpressions.Match)-Objekte aus einem [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection)-Objekt abgerufen, indem die Sammlung mit dem `foreach`-Konstrukt durchlaufen wird. Der reguläre Ausdruck stimmt mit der Zeichenfolge "abc" in der Eingabezeichenfolge überein.
 
@@ -1116,10 +1117,5 @@ Muster | Beschreibung
 [Reguläre Ausdrücke in .NET](regular-expressions.md)
 
 [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

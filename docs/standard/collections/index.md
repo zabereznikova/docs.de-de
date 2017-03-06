@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9e70255a-c02a-4046-86b7-10c84bab2d38
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: a6ebc7bfcd42b93505a2e5c2c460f4f2cbe618a0
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 30e53c38bd58e15668e01f2af79defb0a0918192
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -34,7 +35,7 @@ Alle Auflistungen bieten Methoden zum Hinzufügen, Entfernen oder Suchen von Ele
     
 * **Die Möglichkeit, den Inhalt der Auflistung in ein Array zu kopieren**
 
-   Alle Auflistungen können mit der `CopyTo`-Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von 0 (Null).
+   Alle Auflistungen können mit der `CopyTo`-Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von&0; (Null).
     
 Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
 
@@ -95,9 +96,4 @@ Titel | Beschreibung
 
 [System.Linq](https://docs.microsoft.com/dotnet/core/api/System.Linq)
   
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

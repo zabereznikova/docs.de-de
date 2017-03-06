@@ -1,22 +1,25 @@
 ---
-title: Dotnet-Befehl | .NET Core-SDK
+title: Befehl dotnet | Microsoft-Dokumentation
 description: "Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung."
 keywords: dotnet, CLI, CLI-Befehle, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 77c37ac3d4d0ba9ad1feac539debe40b0ee31161
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6a4bc5dad16bb1455fd8f7bc6a5c3609a06b88a
 
 ---
 
 #<a name="dotnet-command"></a>dotnet-Befehl
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-Befehl (.NET Core Tools RC4)](../preview3/tools/dotnet.md).
 
 ## <a name="name"></a>Name
 
@@ -84,7 +87,9 @@ Erstellen eines Projekts und seiner Abhängigkeiten in einem vorgegebenen Verzei
 
 `dotnet build`
 
-Ausführen einer portablen App namens `myapp.dll`: `dotnet myapp.dll`
+Ausführen einer portablen App namens `myapp.dll`:
+
+`dotnet myapp.dll`
 
 ## <a name="environment"></a>Umgebung 
 
@@ -101,6 +106,6 @@ Gibt den Speicherort des Wartungsindex an, der vom freigegebenen Host verwendet 
 Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft gesendet werden. `true`zum Deaktivieren der Telemetriefunktion (Werte „true“, „1“ oder „yes“ akzeptiert); andernfalls `false` (Werte „false“, „0“ oder „no“ akzeptiert). Wenn nicht festgelegt, gilt standardmäßig `false`, d.h. die Telemetriefunktion ist aktiviert.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

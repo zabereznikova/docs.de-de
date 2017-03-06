@@ -1,22 +1,26 @@
 ---
-title: Dotnet-build-Befehl | .NET Core SDK
+title: Befehl dotnet-build | Microsoft-Dokumentation
 description: "Der dotnet-build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten."
 keywords: dotnet-build, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04c4d77b31bf4a1bdb425d837c490440e7312e57
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
-#<a name="dotnet-build"></a>dotnet-build
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-build](../../tools/dotnet-build.md).
 
 ## <a name="name"></a>Name 
 dotnet-build – Erstellt ein Projekt und alle seine Abhängigkeiten 
@@ -31,7 +35,7 @@ dotnet-build – Erstellt ein Projekt und alle seine Abhängigkeiten
 ## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet build` erstellt aus mehreren Quelldateien eines Quellprojekts und seinen Abhängigkeiten eine Binärdatei. Standardmäßig ist die resultierende Binärdatei in Intermediate Language (IL) und hat eine DLL-Erweiterung. 
-`dotnet build` ergibt auch eine `\*.deps`-Datei, die beschreibt, wie der Host die Anwendung auszuführen hat.  
+`dotnet build` ergibt auch eine `*.deps`-Datei, die beschreibt, wie der Host die Anwendung auszuführen hat.  
 
 Zum Erstellen muss eine Ressourcendatei vorhanden sein (eine Datei, die alle Abhängigkeiten Ihrer Anwendung auflistet). Das bedeutet, dass Sie [`dotnet restore`](dotnet-restore.md) vor dem Erstellen von Code ausführen müssen.
 
@@ -50,7 +54,7 @@ Um eine ausführbare Anwendung statt einer Bibliothek zu erstellen, müssen Sie 
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
+Druckt eine kurze Hilfe für den Befehl.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -66,11 +70,11 @@ Definiert eine Konfiguration für die Erstellung.  Wenn kein Wert angegeben ist,
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-Ziellaufzeit für die Erstellung. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../../rid-catalog.md). 
+Ziellaufzeit für die Erstellung. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../../rid-catalog.md).
 
 `--version-suffix [VERSION_SUFFIX]`
 
-Definiert, durch was `*` im Versionsfeld der Projektdatei ersetzt werden soll. Das Format entspricht den NuGet-Versionsrichtlinien. 
+Definiert, durch was `*` im Versionsfeld der Projektdatei ersetzt werden soll. Das Format entspricht den NuGet-Versionsrichtlinien.
 
 `--build-profile`
 
@@ -97,9 +101,4 @@ Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguratio
 Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in diesem Beispiel Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

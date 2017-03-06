@@ -3,7 +3,6 @@ title: "Ausführen von Konsolenanwendungen in Docker"
 description: "Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwendung in einem Windows Docker-Container ausführen können."
 author: spboyer
 keywords: .NET, Container, Konsole, Anwendungen
-manager: wpickett
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework-4.6
@@ -11,8 +10,9 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 6d311674cc50c8a86128cf88c39e3044f70ba183
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 42a7ca49641c6a3c029aa5feef5705bb5cfc5863
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -51,7 +51,7 @@ Die Verlagerung Ihrer Konsolenanwendung erfordert nur einige wenige Schritte.
 Windows-Container werden unter [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) oder [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) unterstützt.
 
 > [!NOTE]
->Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert. Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment), um die Container und Docker-Funktionen zu installieren.
+>Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert. Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), um die Container und Docker-Funktionen zu installieren.
 
 Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfügen, um Windows-Container zu unterstützen. Standardmäßig arbeitet Docker mit Linux-basierten Containern. Wechseln Sie zu Windows-Containern, indem Sie in der Taskleiste mit der rechten Maustaste auf das Docker-Symbol klicken und **Zu Windows-Containern wechseln** auswählen. Docker führt den Änderungsprozess aus. Möglicherweise ist ein Neustart erforderlich.
 
@@ -60,7 +60,7 @@ Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfüg
 ## <a name="building-the-application"></a>Erstellen der Anwendung
 Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt. Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.
 
-In *build.ps1* verwendet das Skript [MSBuild](https://msdn.microsoft.com/en-us/library/dd393574.aspx), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
+In *build.ps1* verwendet das Skript [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
 
 Im Aufruf von `Invoke-MSBuild` ist der `OutputPath` auf **publish** festgelegt und die `Configuration` auf **Release**. 
 
@@ -144,9 +144,4 @@ Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden B
 
 ## <a name="summary"></a>Zusammenfassung
 Sie können Ihre .NET Framework-Konsolenanwendungen in Containern ausführen, indem Sie einfach eine Dockerfile-Datei hinzufügen und die Anwendung veröffentlichen. So können Sie mehrere Instanzen ausführen, sauber starten und beenden und von mehr Windows Server 2016-Funktionen profitieren, ohne den Anwendungscode selbst in irgendeiner Weise zu ändern.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

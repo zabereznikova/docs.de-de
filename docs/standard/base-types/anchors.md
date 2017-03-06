@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ef2a63115f1efbe2418c348a3379fe7dd2face86
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 53345ba6ffda09a21cf4c626124797a3818aa504
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -182,14 +183,14 @@ Das Muster für reguläre Ausdrücke `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(
 Muster | Beschreibung
 ------- | ----------- 
 `^` | Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der `RegexOptions.Multiline`-Option aufgerufen wird).
-`((\w+(\s?)){2,}` | Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das genau zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Durch diesen Ausdruck werden auch eine zweite und dritte Erfassungsgruppe definiert: Die zweite Gruppe besteht aus dem erfassten Wort, die dritte aus den erfassten Leerzeichen. 
+`((\w+(\s?)){2,}` | Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das genau zwei Mal eine&0; (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Durch diesen Ausdruck werden auch eine zweite und dritte Erfassungsgruppe definiert: Die zweite Gruppe besteht aus dem erfassten Wort, die dritte aus den erfassten Leerzeichen. 
 `,\s` | Suchen Sie nach einer Übereinstimmung mit einem Komma gefolgt von einem Leerzeichen.
 `(\w+\s\w+)` | Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von mindestens einem Wortzeichen. Dies ist die vierte Erfassungsgruppe.
 `,` | Entsprechung für ein Komma finden.
 `\s\d{4}` | Suchen Sie nach einer Übereinstimmung mit einem von vier Dezimalzahlen gefolgten Leerzeichen.
-`(-(\d{4}`&#124;`present))?` |  Suchen Sie nach einer Übereinstimmung mit 0 (Null) oder einem Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present". Dies ist die sechste Erfassungsgruppe. Diese Gruppe enthält auch eine siebte Erfassungsgruppe. 
-`,?` | Suchen Sie nach einer Übereinstimmung mit 0 (null) oder einem Komma.
-`(\s\d{4}(-(\d{4}`&#124;`present))?,?)+` | Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen, 0 (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie 0 (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.
+`(-(\d{4}`&#124;`present))?` |    Suchen Sie nach einer Übereinstimmung mit&0; (Null) oder einem Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present". Dies ist die sechste Erfassungsgruppe. Diese Gruppe enthält auch eine siebte Erfassungsgruppe. 
+`,?` | Suchen Sie nach einer Übereinstimmung mit&0; (null) oder einem Komma.
+`(\s\d{4}(-(\d{4}`&#124;`present))?,?)+` | Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen,&0; (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie&0; (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.
  
 ## <a name="end-of-string-or-line-"></a>Ende der Zeichenfolge oder Zeile: $
 
@@ -772,10 +773,10 @@ Muster | Beschreibung
 ------- | ----------- 
 `\G` | Beginnt die Übereinstimmung am Ende der vorherigen.
 `\w+` | Übereinstimmung mit mindestens einem Wortzeichen.
-`\s?` | Übereinstimmung mit 0 (Null) oder einem Leerzeichen.
+`\s?` | Übereinstimmung mit&0; (Null) oder einem Leerzeichen.
 `\w*` | Übereinstimmung mit keinem oder mehreren Wortzeichen.
-`(\w+\s?\w*)` | Übereinstimmung mit mindestens einem Wortzeichen gefolgt von 0 (Null) oder einem Leerzeichen, gefolgt von 0 (Null) oder weiteren Wortzeichen. Dies ist die erste Erfassungsgruppe.
-`,?` | Übereinstimmung mit 0 (Null) oder einem Literal-Kommazeichen.
+`(\w+\s?\w*)` | Übereinstimmung mit mindestens einem Wortzeichen gefolgt von&0; (Null) oder einem Leerzeichen, gefolgt von&0; (Null) oder weiteren Wortzeichen. Dies ist die erste Erfassungsgruppe.
+`,?` | Übereinstimmung mit&0; (Null) oder einem Literal-Kommazeichen.
  
 ## <a name="word-boundary-b"></a>Wortgrenze: \b
 
@@ -894,9 +895,4 @@ Muster | Beschreibung
 
 [Optionen für reguläre Ausdrücke](options.md)
  
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

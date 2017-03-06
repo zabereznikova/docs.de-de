@@ -3,16 +3,17 @@ title: .NET-Assemblydateiformat
 description: .NET-Assemblydateiformat
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 translationtype: Human Translation
-ms.sourcegitcommit: 30175813af95911c8ab4f2f0e39c40bed49a23b3
-ms.openlocfilehash: edd6975fe4acdba3e75084f10b4d71efebe42a4d
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ec5619e164be44205060d790ba1dc66e261faf92
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,9 +40,4 @@ Assemblyheader aus ECMA 335 II.25.1, „Structure of the runtime file format“ 
 ## <a name="processing-the-assemblies"></a>Verarbeiten der Assemblys
 
 Es ist möglich, Tools oder APIs zum Verarbeiten von Assemblys zu schreiben. Assemblyinformationen ermöglichen programmatische Entscheidungen zur Laufzeit, das Umschreiben von Assemblys, Bereitstellen von API-IntelliSense in einem Editor und Generieren von Dokumentation. [System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx) und [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sind gute Beispiele für Tools, die häufig für diesen Zweck verwendet werden.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

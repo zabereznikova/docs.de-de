@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: b4bf747faff171e4a90a897e5f7ef442012e7699
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 79c4da0cc6b4436fcbd5b345e23b387f2ad933d1
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -175,10 +176,5 @@ Durch diese Technik wird ein [DateTimeOffset](xref:System.DateTimeOffset)-Wert i
 [Durchführen von Formatierungsvorgängen](performing-formatting-operations.md)
 
 [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

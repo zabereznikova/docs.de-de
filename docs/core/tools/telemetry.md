@@ -1,22 +1,25 @@
 ---
-title: .NET Core-Tools-Telemetrie
+title: .NET Core-Tools-Telemetrie | Microsoft-Dokumentation
 description: .NET Core
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: c53c7d3b5733e15e066fd975bf3fa414ee96bbd1
-ms.openlocfilehash: 4717b1f608051dc748ba3f1ceb94d6ddd94250bb
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: f19efabc4330682ebfe6e38384086e2338cd6264
 
 ---
 
 # <a name="net-core-tools-telemetry"></a>.NET Core-Tools-Telemetrie
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [.NET Core Tools-Telemetrie (.NET Core Tools RC4)](../preview3/tools/telemetry.md).
 
 Die .NET Core-Tools beinhalten eine [Telemetriefunktion](https://github.com/dotnet/cli/pull/2145), die Benutzerinformationen sammelt. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit sie verbessert werden können.
 
@@ -105,6 +108,6 @@ a minute to complete and will only happen once.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

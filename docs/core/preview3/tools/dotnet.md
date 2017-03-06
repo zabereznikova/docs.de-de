@@ -1,5 +1,5 @@
 ---
-title: Dotnet-Befehl | .NET Core-SDK
+title: Befehl dotnet | Microsoft-Dokumentation
 description: "Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung."
 keywords: dotnet, CLI, CLI-Befehle, .NET Core
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
+ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: bbc13c8cca82e660f0f8ccf7d88c0340d9c06e68
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c80b5e7e26366b5253816e81a8203f90690eec1e
 
 ---
 
-#<a name="dotnet-command"></a>dotnet-Befehl
+#<a name="dotnet-command-net-core-tools-rc4"></a>dotnet-Befehl (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [Befehl dotnet](../../tools/dotnet.md).
 
 ## <a name="name"></a>Name
 
@@ -70,7 +73,7 @@ Die folgenden Befehle sind für dotnet vorhanden:
 * [dotnet-pack](dotnet-pack.md)
    * Erstellt ein NuGet-Paket aus Ihrem Code.
 * [dotnet-migrate](dotnet-migrate.md)
-   * Migriert ein gültiges Preview 2-Projekt in ein Preview 3-Projekt
+   * Migriert ein gültiges Preview 2-Projekt in ein RC4-Projekt.
 * [dotnet-msbuild](dotnet-msbuild.md)
    * Ermöglicht den Zugriff auf die MSBuild-Befehlszeile
 
@@ -107,6 +110,6 @@ Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft ges
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

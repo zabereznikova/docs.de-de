@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c97c3e2-8619-47ce-ae29-d6a3140bfa83
 translationtype: Human Translation
-ms.sourcegitcommit: 213ce098bcc2b5e31c55e759d895254d5ca33caa
-ms.openlocfilehash: c0600eb27c27261f6496fb45310514f7f716b3b3
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 43ad8829de51775b23d1e00d9b4e2a4f4b240e94
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -47,9 +48,4 @@ Consumer Ihres Typs können dann die [IDisposable.Dispose](xref:System.IDisposab
 [Object.Finalize](xref:System.Object.Finalize): Ermöglicht den Objektabschluss, wenn nicht verwaltete Ressourcen nicht durch die `Dispose`-Methode freigegeben werden. 
 
 [GC. SuppressFinalize](xref:System.GC#System_GC_SuppressFinalize_System_Object_): Unterdrückt einen Abschluss. Diese Methode wird normalerweise von einer `Dispose`-Methode aufgerufen, um zu verhindern, dass ein Finalizer ausgeführt wird. 
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

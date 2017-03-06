@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile (SDK Preview 3)
+title: "Erste Schritte mit .NET Core unter Windows/Linux/macOS über die Befehlszeile (.NET Core Tools RC4) | Microsoft-Dokumentation"
 description: Erste Schritte mit .NET Core unter Windows, Linux oder Mac OS unter Verwendung der .NET Core-Befehlszeilenschnittstelle (CLI)
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: ab71aab99505f211fe4adc86957eda4707761f1c
-ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 4c17da61f492e17edf4d69d79be430ead3dd0cc6
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-sdk-preview-3"></a>Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile (SDK Preview 3)
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-net-core-tools-rc4"></a>Erste Schritte mit .NET Core unter Windows/Linux/macOS über die Befehlszeile (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile](../../tutorials/using-with-xplat-cli.md) Thema.
 
 In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können.  Dabei wird mit einer ganz einfachen Konsolen-App begonnen, die immer mehr erweitert wird und sich über mehrere Projekte einschließlich Tests erstreckt. Die einzelnen Funktionen werden schrittweise hinzugefügt, wobei die einzelnen Schritte aufeinander aufbauen.
 
@@ -24,7 +27,7 @@ Wenn Sie mit dem Toolset der .NET Core-Befehlszeilenschnittstelle nicht vertraut
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Stellen Sie vor Beginn sicher, dass die [Tools der .NET Core-CLI der Preview 3-Version](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md) installiert sind.  Außerdem benötigen Sie einen Text-Editor.
+Stellen Sie vor Beginn sicher, dass die [.NET Core-CLI RC4-Tools (oder höher) ](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md) installiert sind.  Außerdem benötigen Sie einen Text-Editor.
 
 ## <a name="hello-console-app"></a>Hallo Konsolenanwendung!
 
@@ -314,10 +317,10 @@ Und das ist schon alles!
  
 In dieser Anleitung wurde beschrieben, wie eine .NET Core-Konsolenanwendung erstellt wird. Dabei wurde mit einer einfachen Konsolenanwendung begonnen, die schrittweise zu einem System mit mehreren Projekten und Unittests erweitert wurde.  Im nächsten Schritt erstellen Sie eigene beeindruckende Konsolenanwendungen.
  
-Wenn Sie an einem komplexeres Beispiel der Konsolen-App interessiert sind, sehen Sie sich das nächste Tutorial über das [Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (SDK Preview 3)](using-with-xplat-cli-msbuild-folders.md) an.
+Wenn Sie an einem komplexeren Beispiel der Konsolen-App interessiert sind, sehen Sie sich das nächste Tutorial über das [Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile (.NET Core Tools RC4)](using-with-xplat-cli-msbuild-folders.md) an.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

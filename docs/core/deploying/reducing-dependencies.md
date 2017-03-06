@@ -3,16 +3,16 @@ title: "Reduzieren von Paketabhängigkeiten mit „project.json“"
 description: "Reduzieren von Paketabhängigkeiten mit „project.json“"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: caae9f0a32c4378488329fd6d88c1dc7bf96ae9a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -156,9 +156,4 @@ So könnte ein eingeschränktes Paket aussehen:
 ```
 
 Nun hat es einen geringeren Speicherbedarf als wenn es vom `NETStandard.Library`-Metapaket abhängen würde.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

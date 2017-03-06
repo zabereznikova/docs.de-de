@@ -1,5 +1,5 @@
 ---
-title: "Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)"
+title: "Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI) | Microsoft-Dokumentation"
 description: "Dies ist ein Überblick über die Befehlszeilenschnittstelle (CLI) und deren wesentliche Funktionen"
 keywords: CLI, CLI-Tools, .NET, .NET Core
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: be8fbdf806a3e27923f01b015de87c3fc1be7a7d
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb9e39ed400ad93ae9b38890caa6c579f4a1594
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle
+# <a name="net-core-command-line-interface-tools-net-core-tools-rc4"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [Tools für die .NET Core-Befehlszeilenschnittstelle](../../tools/index.md).
 
 Die .NET Core-Befehlszeilenschnittstelle (CLI) ist eine neue, grundlegende plattformübergreifende Toolkette zur Entwicklung von .NET Core-Anwendungen. Sie ist wichtig, da dies die erste Ebene ist, auf der weitere Tools auf höherer Ebene aufbauen können, wie z.B. integrierte Entwicklungsumgebungen (Integrated Development Environments, IDEs), Editoren und Build-Koordinatoren. 
 
@@ -86,7 +89,7 @@ CLI ermöglicht, dass Anwendungen auf zwei Arten portiert werden können:
 
 Erfahren Sie mehr über diese beiden Möglichkeiten im Thema [.NET Core application deployment (.NET Core-Anwendungsbereitstellung)](../deploying/index.md). 
 
-## <a name="migration-from-preview-3projectjson"></a>Migration von „project.json“ zu Preview 3
+## <a name="migration-from-rc4projectjson"></a>Migration von RC4/project.json
 Wenn Sie Preview 2-Tools und „project.json“-Projekte genutzt haben, können Sie die Dokumentation zum Befehl [dotnet migrate](dotnet-migrate.md) konsultieren, um sich mit dem Befehl vertraut zu machen und Ihr Projekt zu migrieren. 
 
 > [!NOTE]
@@ -102,6 +105,6 @@ Dies wer ein kurzer Überblick über die wichtigsten Funktionen der CLI. Mithilf
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

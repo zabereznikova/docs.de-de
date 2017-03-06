@@ -1,5 +1,5 @@
 ---
-title: .NET Core-CLI-Erweiterbarkeitsmodell
+title: .NET Core-CLI-Erweiterbarkeitsmodell | Microsoft-Dokumentation
 description: .NET Core-CLI-Erweiterbarkeitsmodell
 keywords: CLI, Erweiterbarkeit, benutzerdefinierte Befehle, .NET Core
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: 4223f296224c9b62c88b72f0f643c8b8b6fc9f6b
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>.NET Core-CLI-Erweiterbarkeitsmodell 
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [.NET Core-CLI-Erweiterbarkeitsmodell (.NET Core Tools RC4)](../preview3/tools/extensibility.md).
 
 ## <a name="overview"></a>Übersicht
 In diesem Dokument werden die Hauptverfahren beschrieben, mit denen die CLI-Tools erweitert werden, und die Szenarios erläutert, die jedes dieser Tools antreiben. Es wird dargestellt, wie die Tools genutzt werden sollen und wie beide Arten der Tools erstellt werden. 
@@ -132,6 +135,6 @@ Die .NET Core CLI-Tools lassen zwei wichtige Erweiterungspunkte zu. Die Tools pr
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

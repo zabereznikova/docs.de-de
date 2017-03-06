@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 254e89abefd28419bd2f36a047e4df939f7ff8da
-ms.openlocfilehash: 8eb9274def2683fae20765cbf701b706293744fc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: be44dce8181be45f6d73fcf498a873fb94aa56a6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -79,10 +80,5 @@ Diese Runtimes für allgemeine Zwecke können als Basis für akademische Forschu
 ------------
 
 .NET wird über offene [ECMA-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) spezifiziert, die die Funktionalität von .NET beschreiben und zum Erstellen neuer Implementierungen verwendet werden können. Es gibt auch andere .NET-Implementierungen – hier sind Mono und Unity neben den Microsoft-Implementierungen die beliebtesten.
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

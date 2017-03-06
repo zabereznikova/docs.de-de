@@ -4,16 +4,16 @@ description: Konvertieren von Uhrzeiten zwischen Zeitzonen
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf8f74e6-e7f2-4c2a-a04c-57db0e28dd36
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: c2baa48c3b79dfbc5d39652cc57fe015a2313d6e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b53e6ee3c437ce76eb4d1d45f1898d513598f786
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -28,7 +28,7 @@ Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atom
 > [!NOTE]
 > Sie können auch eine [DateTimeOffset](xref:System.DateTimeOffset)-Struktur serialisieren, um einen bestimmten Zeitpunkt eindeutig darzustellen. Da [DateTimeOffset](xref:System.DateTimeOffset)-Objekte einen Datums- und Uhrzeitwert sowie die zugehörige Abweichung von der UTC speichern, stellen sie immer einen bestimmten Zeitpunkt in Relation zur UTC dar.
 
-Die einfachste Möglichkeit, eine Uhrzeit in die UTC zu konvertieren, ist der Aufruf der `static`-Methode (`Shared` in Visual Basic) [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx). 
+Die einfachste Möglichkeit, eine Uhrzeit in die UTC zu konvertieren, ist der Aufruf der `static`-Methode (`Shared` in Visual Basic) [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/library/bb381744(v=vs.110).aspx). 
 
 > [!IMPORTANT]
 > Die `TimeZoneInfo.ConvertTimeToUtc(DateTime)`-Methode ist derzeit in .NET Core nicht verfügbar. 
@@ -56,9 +56,9 @@ Console.WriteLine("The date and time are {0} UTC.", _
 ```
 
 > [!NOTE]
->Die [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx)-Methode erzeugt nicht notwendigerweise Ergebnisse, die mit den Ergebnissen der Methoden [TimeZone.ToUniversalTime](https://msdn.microsoft.com/en-us/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx) und [DateTime.ToUniversalTime](xref:System.DateTime.ToUniversalTime) identisch sind. Wenn die lokale Zeitzone des Hostsystems mehrere Anpassungsregeln enthält, wendet [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/en-us/library/System.TimeZone.ConvertTimeToUtc(v=vs.110).aspx) die geeignete Regel auf ein bestimmtes Datum und eine bestimmte Uhrzeit an. Die anderen beiden Methoden wenden immer die jüngste Anpassungsregel an.
+>Die [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/library/bb381744(v=vs.110).aspx)-Methode erzeugt nicht notwendigerweise Ergebnisse, die mit den Ergebnissen der Methoden [TimeZone.ToUniversalTime](https://msdn.microsoft.com/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx) und [DateTime.ToUniversalTime](xref:System.DateTime.ToUniversalTime) identisch sind. Wenn die lokale Zeitzone des Hostsystems mehrere Anpassungsregeln enthält, wendet [TimeZoneInfo.ConvertTimeToUtc(DateTime)](https://msdn.microsoft.com/library/System.TimeZone.ConvertTimeToUtc(v=vs.110).aspx) die geeignete Regel auf ein bestimmtes Datum und eine bestimmte Uhrzeit an. Die anderen beiden Methoden wenden immer die jüngste Anpassungsregel an.
 
-Wenn der Datums- und Uhrzeitwert weder die lokale Zeit noch die UTC-Zeit darstellt, gibt die [ToUniversalTime](https://msdn.microsoft.com/en-us/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx)-Methode wahrscheinlich ein falsches Ergebnis zurück. Sie können jedoch die [TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx)-Methode verwenden, um das Datum und die Uhrzeit aus einer angegebenen Zeitzone zu konvertieren. (Weitere Informationen zum Abrufen eines TimeZoneInfo-Objekts, das die Zielzeitzone darstellt, finden Sie unter [Suchen der in einem lokalen System definierten Zeitzonen](finding-the-time-zones-on-local-system.md).) Der folgende Code verwendet die [TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/en-us/library/bb381744(v=vs.110).aspx)-Methode, um die Eastern Standard Time in die UTC zu konvertieren.
+Wenn der Datums- und Uhrzeitwert weder die lokale Zeit noch die UTC-Zeit darstellt, gibt die [ToUniversalTime](https://msdn.microsoft.com/library/System.TimeZone.ToUniversalTime(v=vs.110).aspx)-Methode wahrscheinlich ein falsches Ergebnis zurück. Sie können jedoch die [TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/library/bb381744(v=vs.110).aspx)-Methode verwenden, um das Datum und die Uhrzeit aus einer angegebenen Zeitzone zu konvertieren. (Weitere Informationen zum Abrufen eines TimeZoneInfo-Objekts, das die Zielzeitzone darstellt, finden Sie unter [Suchen der in einem lokalen System definierten Zeitzonen](finding-the-time-zones-on-local-system.md).) Der folgende Code verwendet die [TimeZoneInfo.ConvertTimeToUtc](https://msdn.microsoft.com/library/bb381744(v=vs.110).aspx)-Methode, um die Eastern Standard Time in die UTC zu konvertieren.
 
 ```csharp
 DateTime easternTime = new DateTime(2007, 01, 02, 12, 16, 00);
@@ -187,7 +187,7 @@ Console.WriteLine()
 
 Informationen zum Konvertieren der UTC in eine lokale Uhrzeit finden Sie im nächsten Abschnitt, [Konvertieren der UTC in eine lokale Zeit](#converting-utc-to-local-time). 
 
-Um die UTC in die Uhrzeit einer von Ihnen festgelegten Zeitzone zu konvertieren, rufen Sie die [ConvertTimeFromUtc](https://msdn.microsoft.com/en-us/library/System.TimeZoneInfo.converttimefromutc(v=vs.110).aspx)-Methode auf. 
+Um die UTC in die Uhrzeit einer von Ihnen festgelegten Zeitzone zu konvertieren, rufen Sie die [ConvertTimeFromUtc](https://msdn.microsoft.com/library/System.TimeZoneInfo.converttimefromutc(v=vs.110).aspx)-Methode auf. 
 
 > [!IMPORTANT]
 > Die Methode „TimeZoneInfo.ConvertTimeFromUtc“ ist in .NET Core zurzeit nicht verfügbar. 
@@ -376,10 +376,5 @@ End Function
 
 [Suchen der in einem lokalen System definierten Zeitzonen](finding-the-time-zones-on-local-system.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

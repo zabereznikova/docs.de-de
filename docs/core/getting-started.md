@@ -10,8 +10,8 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 5fa4fd69c6f5c427cb60af71b6c608975a8b36c7
+ms.sourcegitcommit: 13ce9816570d47600556392b945578c487a1f03b
+ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
 
 ---
 
@@ -39,12 +39,12 @@ Finden Sie unter dem Thema [Prerequisites for Windows development (erforderliche
 
 Installieren Sie .NET Core auf Ihrer Verteilung/Version:
 
-* [Red Hat Enterprise Linux 7 Server](https://www.microsoft.com/net/core#redhat)
-* [Ubuntu 14.04, 16.04 & Linux Mint 17](https://www.microsoft.com/net/core#ubuntu)
-* [Debian 8.2](https://www.microsoft.com/net/core#debian)
-* [Fedora 23](https://www.microsoft.com/net/core#fedora)
-* [CentOS 7.1 & Oracle Linux 7.1](https://www.microsoft.com/net/core#centos)
-* [openSUSE 13.2](https://www.microsoft.com/net/core#opensuse)
+* [Red Hat Enterprise Linux 7 Server](https://www.microsoft.com/net/core#linuxredhat)
+* [Ubuntu 14.04, 16.04 & Linux Mint 17](https://www.microsoft.com/net/core#linuxubuntu)
+* [Debian 8.2](https://www.microsoft.com/net/core#linuxdebian)
+* [Fedora 23](https://www.microsoft.com/net/core#linuxfedora)
+* [CentOS 7.1 & Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
+* [openSUSE 13.2](https://www.microsoft.com/net/core#linuxopensuse)
 
 Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schritt-Tutorials befolgen.
 
@@ -66,6 +66,6 @@ Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schri
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

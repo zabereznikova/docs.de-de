@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d6484880-bdac-47cd-b5e5-9419c9ed14cd
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 494ceeb2cc3bbf77098d2b6145690e7229ed3b9f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7dfc48e03a275522a48a49dbb44ce1d0f8b05e75
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -110,9 +111,9 @@ Das Muster für reguläre Ausdrücke `href\s*=\s*(?:["']&#40;?<1>[^"']*)["']|(?<
 Muster | Beschreibung
 ------- | ----------- 
 `href` | Sucht nach der Literalzeichenfolge „href“. Die Groß- und Kleinschreibung wird bei der Übereinstimmung nicht berücksichtigt.
-`\s*` | Sucht nach 0 (null) oder mehr Leerzeichen.
+`\s*` | Sucht nach&0; (null) oder mehr Leerzeichen.
 `=` |Sucht nach dem Gleichheitszeichen.
-`\s*` | Sucht nach 0 (null) oder mehr Leerzeichen.
+`\s*` | Sucht nach&0; (null) oder mehr Leerzeichen.
 `(?:["']&#40;?<1>[^"']*)"&#124;(?<1>\S+))` | Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen: Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph, gefolgt von einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten. – oder – Ein oder mehr Nicht-Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.
 `(?<1>[^"']*)` | Weist der Erfassungsgruppe namens `1` null oder mehr Vorkommen eines beliebigen Zeichens außer Anführungszeichen oder Apostroph zu.
 `"(?<1>\S+)` | Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.
@@ -132,10 +133,5 @@ Um diesen Schwierigkeiten zu begegnen, unterstützt die [Regex](xref:System.Text
 [Reguläre Ausdrücke in .NET](regular-expressions.md)
 
 [Beispiele für reguläre Ausdrücke](regex-examples.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

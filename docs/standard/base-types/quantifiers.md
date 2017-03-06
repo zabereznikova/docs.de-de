@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8e5124c4-20b5-4c57-ab68-301d1d7311c4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 79637972770d3ab5d954d40285dc4f07e58d233f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cd47cc351fb926bcf444bdcbd12f3cd61d9fb327
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -249,7 +250,7 @@ Muster | Beschreibung
 
 Der **{**_n_**,**_m_**}**-Quantifizierer gleicht das vorangehende Element mindestens *n*-mal, aber nicht mehr als *m*-mal ab, wobei *n* und *m* ganze Zahlen sind. **{**_n_**,**_m_**}** ist ein gieriger Quantifizierer, dessen träges Äquivalent **{**_n_**,**_m_**}?** lautet.
 
-Im folgenden Beispiel versucht der reguläre Ausdruck `(00\s){2,4}`, zwei bis vier Vorkommen zweier 0-Ziffern, gefolgt von einem Leerzeichen, abzugleichen. Beachten Sie, dass der letzte Teil der Eingabezeichenfolge dieses Muster fünfmal enthält und damit das Maximum von vier überschreitet. Allerdings stimmt nur der erste Teil dieser Teilzeichenfolge (bis zum Leerzeichen und fünften Nullpaar) mit dem Muster für reguläre Ausdrücke überein.
+Im folgenden Beispiel versucht der reguläre Ausdruck `(00\s){2,4}`, zwei bis vier Vorkommen zweier&0;-Ziffern, gefolgt von einem Leerzeichen, abzugleichen. Beachten Sie, dass der letzte Teil der Eingabezeichenfolge dieses Muster fünfmal enthält und damit das Maximum von vier überschreitet. Allerdings stimmt nur der erste Teil dieser Teilzeichenfolge (bis zum Leerzeichen und fünften Nullpaar) mit dem Muster für reguläre Ausdrücke überein.
 
 ```csharp
 string pattern = @"(00\s){2,4}";
@@ -404,7 +405,7 @@ Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt de
 Muster | Beschreibung
 ------- | ----------- 
 `^` | Übereinstimmung mit dem Beginn des Eingabestreams.
-`\s*` | Sucht nach 0 (null) oder mehr Leerzeichen.
+`\s*` | Sucht nach&0; (null) oder mehr Leerzeichen.
 `(System.)??` | Übereinstimmung mit null oder einem Vorkommen der Zeichenfolge „System.“.
 `Console.Write` | Übereinstimmung mit der Zeichenfolge „Console.Write“.
 `(Line)??` | Übereinstimmung mit null oder einem Vorkommen der Zeichenfolge „Line“.
@@ -787,10 +788,5 @@ End Module
 [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](quick-ref.md)
 
 [Backtracking in regulären Ausdrücken](backtracking.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

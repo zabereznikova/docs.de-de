@@ -3,16 +3,17 @@ title: "Visual Studio-Tools für Docker"
 description: "Verwenden von Visual Studio-Tools für Docker"
 keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio 2015
 author: spboyer
-manager: wpickett
+ms.author: shboyer
 ms.date: 09/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 translationtype: Human Translation
-ms.sourcegitcommit: 03193513706967a46f74bccdba08a56946dd67df
-ms.openlocfilehash: f2792154a2f231fffc8e6f79c32b96e05edc71fa
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -123,9 +124,4 @@ microsoft/aspnetcore       1.0.1               189ad4312ce7        5 days ago   
 ```
 
 Man würde möglicherweise erwarten, dass das Produktions- oder Release-Image aufgrund der Volumezuordnung im Vergleich zum **Entwicklungsimage** kleiner ist. Debugger und Anwendung werden jedoch auf dem lokalen Computer und nicht im Container ausgeführt. Beim **neuesten** Image wurde der gesamte Anwendungscode, der zum Ausführen der Anwendung auf einem Hostcomputer benötigt wird, gepackt. Daher entspricht die Größe der Deltaversion der Größe des Anwendungscodes.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

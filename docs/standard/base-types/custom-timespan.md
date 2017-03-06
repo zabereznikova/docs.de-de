@@ -4,16 +4,16 @@ description: Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e79745eb-6ebd-4e62-85c4-4f2830c27285
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 168bd497891ead884413fad4542943a24de7a7f4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bec60437d4345decaf38f2bbb9434922ac889683
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -153,12 +153,12 @@ Formatbezeichner | Beschreibung | Beispiele
 ---------------- | ----------- | --------
 "d", "%d" | Die Anzahl ganzer Tage im Zeitintervall. | `new TimeSpan(6, 14, 32, 17, 685):` `%d --> "6"`;  `d\.hh\:mm --> "6.14:32"`
 „dd“, „dddddddd“ | Die Anzahl ganzer Tage im Zeitintervall, bei Bedarf mit führenden Nullen aufgefüllt. | `new TimeSpan(6, 14, 32, 17, 685):` `ddd --> "006"`; `dd\.hh\:mm --> "06.14:32"`
-"h", "%h" | Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen keine führende 0 auf. | `new TimeSpan(6, 14, 32, 17, 685):` `%h --> "14"`; `hh\:mm --> "14:32"`
-"hh" | Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen eine führende 0 auf. | `new TimeSpan(6, 14, 32, 17, 685):` `hh --> "14"`  `new TimeSpan(6, 8, 32, 17, 685):` `hh --> 08`
-"m", "%m" | Die Anzahl ganzer Minuten im Zeitintervall, die nicht als Teil von Stunden oder Tagen gezählt werden. Einstellige Minutenangaben weisen keine führende 0 auf. | `new TimeSpan(6, 14, 8, 17, 685):` `%m --> "8"`; `h\:m --> "14:8"`
-"mm" | Die Anzahl ganzer Minuten im Zeitintervall, die nicht als Teil von Stunden oder Tagen gezählt werden. Einstellige Minutenangaben weisen eine führende 0 auf. | `new TimeSpan(6, 14, 8, 17, 685):` `mm --> "08"` `new TimeSpan(6, 8, 5, 17, 685):` `d\.hh\:mm\:ss --> 6.08:05:17`
-"s", "%s" | Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden. Einstellige Sekundenangaben weisen keine führende 0 auf. | `TimeSpan.FromSeconds(12.965):` `%s --> 12`; `s\.fff --> 12.965`
-"ss" | Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden. Einstellige Sekundenangaben weisen eine führende 0 auf. | `TimeSpan.FromSeconds(6.965):` `ss --> 06`; `ss\.fff --> 06.965`
+"h", "%h" | Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen keine führende&0; auf. | `new TimeSpan(6, 14, 32, 17, 685):` `%h --> "14"`; `hh\:mm --> "14:32"`
+"hh" | Die Anzahl ganzer Stunden im Zeitintervall, die nicht als Teil von Tagen gezählt werden. Einstellige Stundenangaben weisen eine führende&0; auf. | `new TimeSpan(6, 14, 32, 17, 685):` `hh --> "14"`  `new TimeSpan(6, 8, 32, 17, 685):` `hh --> 08`
+"m", "%m" | Die Anzahl ganzer Minuten im Zeitintervall, die nicht als Teil von Stunden oder Tagen gezählt werden. Einstellige Minutenangaben weisen keine führende&0; auf. | `new TimeSpan(6, 14, 8, 17, 685):` `%m --> "8"`; `h\:m --> "14:8"`
+"mm" | Die Anzahl ganzer Minuten im Zeitintervall, die nicht als Teil von Stunden oder Tagen gezählt werden. Einstellige Minutenangaben weisen eine führende&0; auf. | `new TimeSpan(6, 14, 8, 17, 685):` `mm --> "08"` `new TimeSpan(6, 8, 5, 17, 685):` `d\.hh\:mm\:ss --> 6.08:05:17`
+"s", "%s" | Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden. Einstellige Sekundenangaben weisen keine führende&0; auf. | `TimeSpan.FromSeconds(12.965):` `%s --> 12`; `s\.fff --> 12.965`
+"ss" | Die Anzahl ganzer Sekunden im Zeitintervall, die nicht als Teil von Stunden, Tagen oder Minuten gezählt werden. Einstellige Sekundenangaben weisen eine führende&0; auf. | `TimeSpan.FromSeconds(6.965):` `ss --> 06`; `ss\.fff --> 06.965`
 "f", "%f" | Die Zehntelsekunden in einem Zeitintervall. | `TimeSpan.FromSeconds(6.895):` `f --> 8`; `ss\.f --> 06.8`
 "ff" | Die Hundertstelsekunden in einem Zeitintervall. | `TimeSpan.FromSeconds(6.895):` `ff --> 89`; `ss\.ff --> 06.89`
 "fff" | Die Millisekunden in einem Zeitintervall. | `TimeSpan.FromSeconds(6.895):` `fff --> 895`; `ss\.fff --> 06.895`
@@ -166,7 +166,7 @@ Formatbezeichner | Beschreibung | Beispiele
 "fffff" | Die Hunderttausendstelsekunden in einem Zeitintervall. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 89543`; `ss\.ffff --> 06.89543`
 "ffffff" | Die Millionstelsekunden in einem Zeitintervall. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 895432`; `ss\.ffff --> 06.895432`
 "fffffff" | Die Zehnmillionstelsekunden (oder Sekundenbruchteile) in einem Zeitintervall. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 8954321`; `ss\.ffff --> 06.8954321`
-"F", "%F" | Die Zehntelsekunden in einem Zeitintervall. Es wird nichts angezeigt, wenn die Ziffer 0 (null) ist. | `TimeSpan.Parse("00:00:06.32"):` `%F: 3`  `TimeSpan.Parse("0:0:3.091"):` `ss\.F: 03.`
+"F", "%F" | Die Zehntelsekunden in einem Zeitintervall. Es wird nichts angezeigt, wenn die Ziffer&0; (null) ist. | `TimeSpan.Parse("00:00:06.32"):` `%F: 3`  `TimeSpan.Parse("0:0:3.091"):` `ss\.F: 03.`
 "FF" | Die Hundertstelsekunden in einem Zeitintervall. Nachkommanullen oder zwei Nullstellen nach dem Komma werden nicht eingeschlossen. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 32`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
 "FFF" | Die Millisekunden in einem Zeitintervall. Nachkommanullen werden nicht eingeschlossen. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 329`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
 "FFFF" | Die Zehntausendstelsekunden in einem Zeitintervall. Nachkommanullen werden nicht eingeschlossen. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 3291`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
@@ -179,7 +179,7 @@ Jedes andere Zeichen | Alle anderen Zeichen ohne Escapezeichen werden als benutz
 
 ## <a name="the-d-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner „d“
 
-Der benutzerdefinierte Formatbezeichner „d“ gibt den Wert der [TimeSpan.Days](xref:System.TimeSpan.Days)-Eigenschaft aus, der die Anzahl ganzer Tage im Zeitintervall darstellt. Er gibt auch dann die volle Anzahl von Tagen in einem [TimeSpan](xref:System.TimeSpan)-Wert aus, wenn der Wert aus mehreren Ziffern besteht. Wenn der Wert der [TimeSpan.Days](xref:System.TimeSpan.Days)-Eigenschaft 0 (null) ist, gibt der Bezeichner „0“ aus.
+Der benutzerdefinierte Formatbezeichner „d“ gibt den Wert der [TimeSpan.Days](xref:System.TimeSpan.Days)-Eigenschaft aus, der die Anzahl ganzer Tage im Zeitintervall darstellt. Er gibt auch dann die volle Anzahl von Tagen in einem [TimeSpan](xref:System.TimeSpan)-Wert aus, wenn der Wert aus mehreren Ziffern besteht. Wenn der Wert der [TimeSpan.Days](xref:System.TimeSpan.Days)-Eigenschaft&0; (null) ist, gibt der Bezeichner „0“ aus.
 
 Wenn der benutzerdefinierte Formatbezeichner "d" allein verwendet wird, geben Sie "%d" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.
 
@@ -1206,7 +1206,7 @@ Next
 
 ## <a name="the-f-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner „F“
 
-Der benutzerdefinierte Formatbezeichner "F" gibt die Zehntelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn der Wert der Zehntelsekunden des Zeitintervalls 0 (null) ist, wird er nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider))-Methode oder die [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@))-Methode aufgerufen wird, ist das Vorhandensein der Zehntelsekundenstelle optional.
+Der benutzerdefinierte Formatbezeichner "F" gibt die Zehntelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn der Wert der Zehntelsekunden des Zeitintervalls&0; (null) ist, wird er nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider))-Methode oder die [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@))-Methode aufgerufen wird, ist das Vorhandensein der Zehntelsekundenstelle optional.
 
 Wenn der benutzerdefinierte Formatbezeichner "F" allein verwendet wird, geben Sie "%F" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird.
 
@@ -1711,43 +1711,43 @@ Zum Einschließen von Literalzeichen in eine Formatzeichenfolge stehen zwei Meth
 
 * Schließen Sie das Literalzeichen in einfache Anführungszeichen ein (Trennzeichen für Literalzeichenfolgen). 
 
-* Stellen Sie dem Literalzeichen einen umgekehrten Schrägstrich ("\") voran, der als Escapezeichen interpretiert wird. In C# muss die Formatzeichenfolge folglich @-quoted, entsprechen, oder dem Literalzeichen muss ein zusätzlicher umgekehrter Schrägstrich vorangestellt werden.
+* Stellen Sie dem Literalzeichen einen umgekehrten Schrägstrich ("\") voran, der als Escapezeichen interpretiert wird. In C# muss die Formatzeichenfolge folglich @-quoted entsprechen, oder dem Literalzeichen muss ein zusätzlicher umgekehrter Schrägstrich vorangestellt werden.
 
   In einigen Fällen müssen Sie möglicherweise bedingte Logik verwenden, um ein Literal mit Escapezeichen einer Formatzeichenfolge hinzuzufügen. Im folgenden Beispiel wird bedingte Logik verwendet, um ein Vorzeichensymbol für negative Zeitintervalle hinzuzufügen. 
   
-  ```csharp
-  using System;
+```csharp
+using System;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
-        String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
+public class Example
+{
+   public static void Main()
+   {
+      TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
+      String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
 
-        Console.WriteLine(result.ToString(fmt));
-        Console.WriteLine("Interval: {0:" + fmt + "}", result);
-     }
-  }
-  // The example displays output like the following:
-  //       -1291.10:54
-  //       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt));
+      Console.WriteLine("Interval: {0:" + fmt + "}", result);
+   }
+}
+// The example displays output like the following:
+//       -1291.10:54
+//       Interval: -1291.10:54
+```
 
-  ```vb
-  Module Example
-     Public Sub Main()
-        Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
-        Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
+```vb
+Module Example
+   Public Sub Main()
+      Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
+      Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
 
-        Console.WriteLine(result.ToString(fmt))
-        Console.WriteLine("Interval: {0:" + fmt + "}", result)
-     End Sub
-  End Module
-  ' The example displays output like the following:
-  '       -1291.10:54
-  '       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt))
+      Console.WriteLine("Interval: {0:" + fmt + "}", result)
+   End Sub
+End Module
+' The example displays output like the following:
+'       -1291.10:54
+'       Interval: -1291.10:54
+```
   
 .NET definiert keine Grammatik für Trennzeichen in Zeitintervallen. Dies bedeutet, dass die Trennzeichen zwischen Tagen und Stunden, Stunden und Minuten, Minuten und Sekunden und Sekunden und Sekundenbruchteilen in einer Formatzeichenfolge als Zeichenliterale behandelt werden müssen.
 
@@ -1784,10 +1784,5 @@ Console.WriteLine(interval.ToString(fmt))
 [Formatierung von Typen](formatting-types.md)
 
 [TimeSpan-Standardformatzeichenfolgen](standard-timespan.md)  
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

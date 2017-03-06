@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017"
+title: "Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017 | Microsoft-Dokumentation"
 description: "Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
@@ -8,16 +8,17 @@ ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 9e65979d2f41e39e89109c2c5480acaebbef757f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 04f5264eaaa16be299e0d72f587ee232a5e61ca9
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017 (.NET Core Tools RC4)
 
-von [Bertrand Le Roy](https://github.com/bleroy) und [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [Erste Schritte mit .NET Core unter Windows mit Visual Studio 2015](../../tutorials/using-on-windows.md) Thema.
 
 Visual Studio 2017 bietet eine umfassende Entwicklungsumgebung für die Entwicklung von .NET Core-Anwendungen. Die Verfahren in diesem Dokument beschreiben die erforderlichen Schritte zum Erstellen einer herkömmlichen .NET Core-Lösung, die wiederverwendbare Bibliotheken, Tests und das Verwenden von Bibliotheken von Drittanbietern vorsieht. 
 
@@ -66,7 +67,7 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 
 ### <a name="writing-the-console-app"></a>Schreiben der Konsolenanwendung
 
-1. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für die Projektmappe, und fügen Sie ein neues Projekt des Typs **Konsolen-App (.NET Core)** hinzu. Geben Sie ihm den Namen „App“, und legen Sie `Golden\src` als Speicherort fest.
+1. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für die Projektmappe, und fügen Sie ein neues Projekt des Typs **Konsolen-App (.NET Core)** hinzu. Nennen Sie es „App“.
 
 2. Öffnen Sie im Projekt **App** das Kontextmenü des Knotens **Abhängigkeiten**, und wählen Sie **Hinzufügen** > **Verweis** aus. 
 
@@ -74,7 +75,7 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 
 6. Öffnen Sie das Kontextmenü für den Knoten **App**, und wählen Sie **Als Startprojekt festlegen** aus. Dadurch wird sichergestellt, dass bei Drücken von F5 oder STRG+F5 die Konsolen-App gestartet wird.
 
-7. Öffnen Sie die Datei `Program.cs`, fügen Sie am Anfang der Datei eine `using Library;`-Anweisung und anschließend `Console.WriteLine($"The answer is {new Thing().Get(42)}");` zur `Main`-Methode hinzu.
+7. Öffnen Sie die Datei `Program.cs`, fügen Sie am Anfang der Datei eine `using Library;`-Anweisung und anschließend `Console.WriteLine($"The answer is {new Thing().Get(42)}.");` zur `Main`-Methode hinzu.
 
 8. Legen Sie am Ende der hinzugefügten Zeile einen Haltepunkt fest.
 
@@ -84,6 +85,6 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

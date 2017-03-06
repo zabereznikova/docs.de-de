@@ -10,12 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 ---
 
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung #
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [.NET Core-Anwendungsbereitstellung (.NET Core Tools RC4)](../preview3/deploying/index.md).
 
 Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen: 
 
@@ -391,6 +394,6 @@ Nachfolgend ist die vollständige `project.json`-Datei für dieses Projekt angeg
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

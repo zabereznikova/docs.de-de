@@ -1,26 +1,29 @@
 ---
-title: Dotnet-pack-Befehl | .NET Core SDK
+title: Befehl dotnet-pack | Microsoft-Dokumentation
 description: "Der dotnet-pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt."
 keywords: dotnet-pack, CLI, CLI-Befehl, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: d439dc83cc4538b44634197f3dce1bf7ad2ad6c7
 
 ---
 
-#<a name="dotnetpack"></a>dotnet-pack
+#<a name="dotnet-pack"></a>dotnet-pack
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-pack (.NET Core Tools RC4)](../preview3/tools/dotnet-pack.md).
 
 ## <a name="name"></a>Name
 
-`dotnet-pack` – Packt den Code in ein NuGet-Paket
+`dotnet-pack`: Packt den Code in ein NuGet-Paket
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -90,6 +93,6 @@ Packt das aktuelle Projekt und aktualisiert die resultierende Paketversion mit d
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

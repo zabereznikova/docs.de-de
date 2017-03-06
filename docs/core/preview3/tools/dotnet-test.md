@@ -1,22 +1,25 @@
 ---
-title: Dotnet-Test-Befehl | .NET Core SDK
-description: "Der Befehl „dotnet-Test“ wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
+title: Befehl dotnet-test | Microsoft-Dokumentation
+description: "Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
 keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
+ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
+ms.sourcegitcommit: 02f39bc959a56ab0fc2cfa57ce13f300a8a46107
+ms.openlocfilehash: 204ebdb5a945dcd0c9277f1d95c113e829303b32
 
 ---
 
-#<a name="dotnet-test"></a>Dotnet-Test
+#<a name="dotnet-test-net-core-tools-rc4"></a>dotnet-test (.NET Core Tools RC4)
+
+> [!WARNING]
+> Dieses Thema gilt für .NET Core Tools RC4. Informationen zu .NET Core Preview 2-Tools finden Sie im Thema [dotnet-test](../../tools/dotnet-test.md).
 
 ## <a name="name"></a>Name
 
@@ -25,10 +28,10 @@ ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
 ## <a name="synopsis"></a>Übersicht
 
 `dotnet test [project] [--help] 
-    [--settings] [--listTests] [--testCaseFilter] 
-    [--testAdapterPath] [--logger] 
-    [--configuration] [--output] [--framework] [--diag]
-    [--noBuild]`  
+    [--settings] [--list-tests] [--filter] 
+    [--test-adapter-path] [--logger] 
+    [--configuration] [--framework] [--output] [--diag]
+    [--no-build] [--verbosity]`
 
 ## <a name="description"></a>Beschreibung
 
@@ -36,42 +39,7 @@ Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem besti
 
 Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normalen `<PackageReference>`-Element angegeben, wie in der folgenden Beispielprojektdatei gezeigt:
 
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>15.0.0-preview-20161024-02</Version>
-    </PackageReference>
-    <PackageReference Include="xunit">
-      <Version>2.2.0-beta3-build3402</Version>
-    </PackageReference>
-    <PackageReference Include="xunit.runner.visualstudio">
-      <Version>2.2.0-beta4-build1188</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
+[!code-xml[XUnit Basic Template](../../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Optionen
 
@@ -83,49 +51,49 @@ Gibt den Pfad des Testprojekts an. Wenn nicht angegeben, wird standardmäßig da
 
 Druckt eine kurze Hilfe für den Befehl.
 
-`-s | --settings <SETTINGS_FILE>`
+`-s|--settings <SETTINGS_FILE>`
 
 Einstellungen, die beim Ausführen von Tests verwendet werden. 
 
-`-lt | --listTests`
+`-t|--list-tests`
 
 Listen Sie alle ermittelten Tests im aktuellen Projekt auf. 
 
-`-tcf | --testCaseFilter <EXPRESSION>`
+`--filter <EXPRESSION>`
 
-Filtern Sie Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks. 
+Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen zur Filterungsunterstützung finden Sie unter [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering).
 
-`-tap | --testAdapterPath <TEST_ADAPTER_PATH>`
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad in diesem Testlauf. 
+Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf. 
 
-`--logger <LOGGER>`
+`-l|--logger <LoggerUri/FriendlyName>`
 
-Geben Sie eine Protokollierung für die Testergebnisse an. 
+Gibt eine Protokollierung für die Testergebnisse an. 
 
 `-c|--configuration <Debug|Release>`
 
-Konfiguration für die Erstellung. Der Standardwert ist `Release`. 
+Konfiguration für die Erstellung. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 Sucht nach Testbinärdateien für ein bestimmtes Framework.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Suchen Sie nach den Testbinärdateien für die angegebene Laufzeit.
+Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
 
-`--noBuild` 
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-Erstellt das Testprojekt nicht vor der Ausführung. 
+Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei. 
 
-`-d | --diag <DIAGNOSTICS_FILE>`
+`--no-build` 
 
-Aktivieren Sie den Diagnosemodus für die Testplattform, und schreiben Sie Diagnosemeldungen in die angegebene Datei. 
+Erstellt das Testprojekt nicht vor der Ausführung.
+
+`-v|--verbosity [quiet|minimal|normal|diagnostic]`
+
+Legen Sie den Ausführlichkeitsgrad für den Befehl fest. Sie können die folgenden Ausführlichkeitsgrade angeben: q[uiet], m[inimal], n[ormal], d[etailed] und diag[nostic]. 
 
 ## <a name="examples"></a>Beispiele
 
@@ -145,6 +113,6 @@ Führen Sie die Tests im Projekt test1 durch:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
