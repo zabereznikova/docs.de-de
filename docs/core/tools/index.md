@@ -4,22 +4,20 @@ description: "Dies ist ein Überblick über die Befehlszeilenschnittstelle (CLI)
 keywords: CLI, CLI-Tools, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/06/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 4e3137d8506342662d145481d5e9fde1d53b9ba3
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle
-
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [Tools für die .NET Core-Befehlszeilenschnittstelle (.NET Core Tools RC4)](../preview3/tools/index.md).
+# <a name="net-core-command-line-interface-tools-net-core-sdk-10-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (.NET Core SDK 1.0-Tools)
 
 Die .NET Core-Befehlszeilenschnittstelle (CLI) ist eine neue, grundlegende plattformübergreifende Toolkette zur Entwicklung von .NET Core-Anwendungen. Sie ist wichtig, da dies die erste Ebene ist, auf der weitere Tools auf höherer Ebene aufbauen können, wie z.B. integrierte Entwicklungsumgebungen (Integrated Development Environments, IDEs), Editoren und Build-Koordinatoren. 
 
@@ -38,6 +36,7 @@ Standardmäßig wird die CLI parallel installiert (SxS). Das bedeutet, dass mehr
 Die folgenden Befehle werden standardmäßig erstellt:
 
 * [new](dotnet-new.md)
+* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -52,7 +51,7 @@ Es gibt auch eine Möglichkeit, mehrere Befehle auf einer Pro-Projekt-Basis zu i
 Bevor wir weiter ins Detail gehen, sehen wir uns an, wie das Arbeiten mit der CLI aus 10.000 Fuß Höhe aussieht. Im folgenden Beispiel werden mehrere Befehle aus der CLI-Standardinstallation verwendet, um eine neue, einfache Konsolenanwendung zu initialisieren, die Abhängigkeiten wiederherzustellen und um die Anwendung zu erstellen und dann auszuführen. 
 
 ```console
-dotnet new
+dotnet new console
 dotnet restore
 dotnet build --output /stuff
 dotnet /stuff/new.dll
@@ -88,8 +87,11 @@ CLI ermöglicht, dass Anwendungen auf zwei Arten portiert werden können:
 
 Erfahren Sie mehr über diese beiden Möglichkeiten im Thema [.NET Core application deployment (.NET Core-Anwendungsbereitstellung)](../deploying/index.md). 
 
-## <a name="migration-from-dnx"></a>Migration von DNX
-Wenn Sie DNX in .NEt Core 1.0 RC1 verwendet haben, fragen Sie sich vielleicht, was damit passiert ist, und wie diese neuen Tools mit den DNX-Tools in Verbindung stehen. Die DNX-Tools wurden einfach mit den CLI-Tools von .NET Core ersetzt. Wenn Sie über vorhandene Projekte verfügen, oder sich nur fragen, wie die Befehle zuzuordnen sind, lesen Sie das Thema [Migrieren von DNX zur .NET Core-CLI](../migrating-from-dnx.md), um weitere Informationen zu erhalten. 
+## <a name="migration-from-projectjson"></a>Migration von project.json
+Wenn Sie Preview 2-Tools und *project.json*-Projekte genutzt haben, können Sie die Dokumentation zum Befehl [dotnet migrate](dotnet-migrate.md) konsultieren, um sich mit dem Befehl vertraut zu machen und Ihr Projekt zu migrieren. 
+
+> [!NOTE]
+> Der Befehl `dotnet migrate` eignet sich derzeit nicht zum Migrieren von *project.json*-Dateien vor Preview 2. 
 
 ## <a name="extensibility"></a>Erweiterungen
 Natürlich ist nicht jedes Tool, das Sie in Ihren Workflows verwenden können, Teil der CLI-Tools von .NET Core. Jedoch verfügt die .NET Core-CLI über ein Erweiterbarkeitsmodell, mit dem Sie zusätzliche Tools für Ihre Projekte angeben können. Weitere Informationen finden Sie im Thema [.NET Core CLI extensibility model (.NET Core-CLI-Erweiterbarkeitsmodell)](extensibility.md).
@@ -98,9 +100,4 @@ Natürlich ist nicht jedes Tool, das Sie in Ihren Workflows verwenden können, T
 Dies wer ein kurzer Überblick über die wichtigsten Funktionen der CLI. Mithilfe der Referenz- und Konzeptthemen auf dieser Website können Sie mehr erfahren. Es gibt natürlich auch andere Ressourcen, die Sie nutzen können:
 * [dotnet/cli](https://github.com/dotnet/cli/) auf GitHub (in englischer Sprache)
 * [Anleitung zu den ersten Schritten mit .NET Core](https://aka.ms/dotnetcoregs/)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
