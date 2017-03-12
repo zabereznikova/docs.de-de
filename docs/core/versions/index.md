@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ Im folgenden project.json-Beispiel werden Patchupdates dargestellt.
 
 Nach der Auslieferung einer stabilen NET Core v1.0.0-Version, werden neue APIs den .NET Core-Bibliotheken hinzugefügt, sodass neue Szenarios aktiviert werden. Die verschiedenen Metapakete werden aktualisiert, um auf die aktualisierten .NET Core-Bibliothekspakete zu verweisen. Die Metapakete werden als Patchupdates (x.y) versioniert, um mit den höheren Frameworkversionen übereinzustimmen. Die verschiedenen Frameworks werden aktualisiert, um die neuen APIs zu beschreiben. Eine neue .NET Core-Verteilung wird mit einer übereinstimmenden Versionsnummer für das Metapaket `Microsoft.NETCore.App` freigegeben.
 
-In den folgenden Beispielen wird gezeigt, wie geringfügige Updates in der Datei „project.json“ veranschaulicht werden.
+In der folgenden Projektdatei werden geringfügige Updates veranschaulicht:
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>Versenden einer Hauptversion
 
 Mit einer stabilen NET Core v1.y.z-Version werden neue APIs den .NET Core-Bibliotheken hinzugefügt, sodass umfangreiche neue Szenarios aktiviert werden. Möglicherweise wird die Unterstützung für eine Plattform verworfen. Die verschiedenen Metapakete werden aktualisiert, um auf die aktualisierten .NET Core-Bibliothekspakete zu verweisen. Das Metapaket `Microsoft.NETCore.App` und das `netcore`-Framework werden als wichtiges Update (x) versioniert. Das Metapaket `NETStandard.Library` wird wahrscheinlich als geringfügiges Update (x.y) versioniert, da es für mehrere .NET-Implementierungen gilt. Eine neue .NET Core-Verteilung würde mit einer übereinstimmenden Versionsnummer für das Metapaket `Microsoft.NETCore.App` freigegeben werden.
 
-Im Beispiel unten werden wichtige Updates gezeigt, die in der „project.json“-Metapaketreferenz dargestellt sind.
+In der folgenden Projektdatei werden größere Updates veranschaulicht. (Beachten Sie, dass `netcoreapp2.0` nicht freigegeben wurde.)
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 
