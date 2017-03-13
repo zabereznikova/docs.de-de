@@ -17,14 +17,14 @@ Der Group Join ist nützlich, um hierarchische Datenstrukturen zu erzeugen.  Sie
 ### Beispiel für Group Join  
  Im folgenden Beispiel wird ein Group Join von Objekten des Typs `Person` und `Pet` basierend auf der `Person`, die mit der `Pet.Owner`\-Eigenschaft übereinstimmt, durchgeführt.  Anders als bei einem Nicht\-Group Join, bei dem ein Elementenpaar für jede Übereinstimmung erzeugt werden würde, erstellt der Group Join nur ein Objekt für jedes Element der ersten Auflistung, in diesem Beispiel ein `Person`\-Objekt.  Die entsprechenden Elemente aus der zweiten Auflistung, bei denen es sich in diesem Beispiel um `Pet`\-Objekte handelt, werden in einer Auflistung gruppiert.  Die Ergebnisauswahlfunktion erstellt dann einen anonymen Typ für jede Übereinstimmung, der aus `Person.FirstName` und einer Auflistung von `Pet`\-Objekten besteht.  
   
- [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#5)]  
+ [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_1.cs)]  
   
 ## Beispiel  
   
 ### Beispiel für einen Group Join zum Erstellen von XML  
  Group Joins sind ideal zum Erstellen von XML mit [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Das folgende Beispiel ähnelt dem vorherigen Beispiel mit der Ausnahme, dass die Ergebnisauswahlfunktion XML\-Elemente anstelle eines anonymen Typs erstellt, die die verknüpften Objekte darstellen.  Weitere Informationen über [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] finden Sie unter [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
- [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#6)]  
+ [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_2.cs)]  
   
 ## Kompilieren des Codes  
   

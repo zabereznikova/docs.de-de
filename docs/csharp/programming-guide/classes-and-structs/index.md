@@ -37,7 +37,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
 ## Beispiel  
  Im folgenden Beispiel wird `MyCustomClass` mit drei Membern auf der obersten Ebene des `ProgrammingGuide`\-Namespace definiert.  Eine Instanz \(ein Objekt\) von `MyCustomClass` wird in der `Main`\-Methode in der `Program`\-Klasse erstellt. Auf die Methoden und Eigenschaften des Objekts wird mit der Punktnotation zugegriffen.  
   
- [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 ## Kapselung  
  *Kapselung* wird gelegentlich als erster Pfeiler oder als Prinzip der objektorientierten Programmierung bezeichnet.  Dem Prinzip der Kapselung zufolge kann eine Klasse oder Struktur festlegen, inwieweit Code außerhalb der Klasse oder Struktur auf deren Member zugreifen kann.  Nicht für die Verwendung von außerhalb der Klasse oder Assembly vorgesehene Methoden und Variablen können versteckt werden, um die Wahrscheinlichkeit von Programmierfehlern und böswilligen Angriffen zu verringern.  

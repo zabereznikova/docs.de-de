@@ -56,7 +56,7 @@ variableorproperty \= expression
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `\=` verwendet, um eine `Integer`\-Variable durch eine andere zu dividieren und das ganzzahlige Ergebnis der ersten Variablen zuzuweisen.  
   
- [!code-vb[VbVbalrOperators#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/subtraction-assignment-o_2_1.vb)]  
+ [!code-vb[VbVbalrOperators#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-assignment-operator_1.vb)]  
   
 ## Siehe auch  
  [\\ Operator](../../../visual-basic/language-reference/operators/integer-division-operator.md)   

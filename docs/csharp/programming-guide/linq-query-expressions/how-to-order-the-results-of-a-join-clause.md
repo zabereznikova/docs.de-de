@@ -8,7 +8,7 @@ In diesem Beispiel wird gezeigt, wie die Ergebnisse einer Joinoperation sortiert
 ## Beispiel  
  Diese Abfrage erstellt einen Group Join und sortiert die Gruppen dann auf Basis des Kategorieelements, das sich noch im Gültigkeitsbereich befindet.  Im anonymen Typinitialisierer werden alle übereinstimmenden Elemente aus der Produktsequenz durch eine Unterabfrage sortiert.  
   
- [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#81)]  
+ [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-order-the-results-of-a-join-clause_1.cs)]  
   
 ## Kompilieren des Codes  
   

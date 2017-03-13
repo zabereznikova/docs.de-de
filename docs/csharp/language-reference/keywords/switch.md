@@ -28,7 +28,7 @@ Die `switch`\-Anweisung ist eine Steuerungsanweisung, die einen auszuführenden 
   
  Eine `switch`\-Anweisung enthält eine oder mehrere switch\-Abschnitte.  Jeder switch\-Abschnitt enthält eine oder mehrere *case\-Bezeichnungen* und eine Liste mit mindestens einer Anweisung.  Das folgende Beispiel zeigt eine einfache `switch`\-Anweisung, die über drei switch\-Abschnitte verfügt.  Jeder switch\-Abschnitt enthält eine case\-Bezeichnung, z. B. `case 1`, und zwei Anweisungen.  
   
- [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_1.cs)]  
   
 ## Hinweise  
  Jede case\-Bezeichnung gibt einen konstanten Wert an.  Mit der switch\-Anweisung wird die Steuerung an den switch\-Abschnitt übergeben, dessen case\-Bezeichnung dem Wert im *switch\-Ausdruck* \(in diesem Beispiel `caseSwitch`\) entspricht.  Wenn keine case\-Bezeichnung einen übereinstimmenden Wert enthält, wird die Steuerung an den `default`\-Abschnitt übertragen, falls vorhanden.  Wenn kein `default`\-Abschnitt vorhanden ist, wird keine Aktion ausgeführt, und der `switch`\-Anweisung wird die Steuerung entzogen.  Im vorherigen Beispiel werden die Anweisungen im ersten switch\-Abschnitt ausgeführt, da `case 1` dem Wert von `caseSwitch` entspricht.  
@@ -63,12 +63,12 @@ case 4:
 ## Beispiel  
  Das folgende Beispiel veranschaulicht die Anforderungen und Funktionen einer `switch`\-Anweisung.  
   
- [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_2.cs)]  
   
 ## Beispiel  
  Im abschließenden Beispiel steuern die Zeichenfolgenvariable, `str` und die case\-Bezeichnungen für Zeichenfolgen den Ausführungsablauf.  
   
- [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -35,7 +35,7 @@ Im folgenden Beispiel wird gezeigt, wie Elemente in Ausschnitte gruppiert werden
 ## Beispiel  
  Im folgenden Beispiel werden sowohl die Erweiterungsmethode als auch der Clientcode, in denen sie verwendet wird, veranschaulicht.  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/how-to-group-results-by-_1.cs)]  
+ [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  Um die Erweiterungsmethode in Ihrem Projekt zu verwenden, kopieren Sie die statische `MyExtensions`\-Klasse in eine neue oder bereits vorhandene Quellcodedatei und fügen Sie ggf. eine `using`\-Direktive für den Namespace an der Stelle hinzu, an der er sich befindet.  
   

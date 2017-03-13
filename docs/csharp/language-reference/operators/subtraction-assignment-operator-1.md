@@ -45,7 +45,7 @@ x = x - y
  Der Operator \-\= wird auch in C\# verwendet, um das Abonnement eines Ereignisses zu kündigen.  Weitere Informationen finden Sie unter [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
 ## Beispiel  
- [!code-cs[csRefOperators#6](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#6)]  
+ [!code-cs[csRefOperators#6](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator-1_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

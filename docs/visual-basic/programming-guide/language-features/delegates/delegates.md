@@ -30,14 +30,14 @@ Delegaten sind Objekte, die auf Methoden verweisen.  Sie werden mitunter als *ty
   
  Sie können zwar auch eigene Delegaten erstellen, doch in den meisten Fällen generiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Delegaten und verarbeitet die Details.  Eine `Event`\-Anweisung definiert z. B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`\-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis.  Die `AddressOf`\-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist.  Die folgenden zwei Codezeilen sind gleichwertig.  In der ersten Zeile wird die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`\-Methode angezeigt, die als Argument gesendet wird.  Die zweite Zeile ist eine zweckmäßigere Möglichkeit, den gleichen Schritt auszuführen.  
   
- [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegates_1.vb)]  
+ [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
  Die schnelle Methode zum Erstellen von Delegaten können Sie immer dort verwenden, wo der Compiler den Delegattyp anhand des Kontexts erkennen kann.  
   
 ## Deklarieren von Ereignissen, die einen vorhandenen Delegattyp verwenden  
  In manchen Situationen empfiehlt es sich, ein Ereignis so zu deklarieren, dass es einen vorhandenen Delegattyp als zugrunde liegenden Delegaten verwendet.  Die folgende Syntax veranschaulicht dies:  
   
- [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegates_2.vb)]  
+ [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
   
  Dies ist nützlich, wenn mehrere Ereignisse an den gleichen Handler weitergeleitet werden sollen.  
   
@@ -63,7 +63,7 @@ Delegaten sind Objekte, die auf Methoden verweisen.  Sie werden mitunter als *ty
   
  Im folgenden Beispiel werden sowohl `AddressOf`\- als auch Lambda\-Ausdrücke angezeigt, mit denen der Verweis für einen Delegaten angegeben wird.  
   
- [!code-vb[VbVbalrDelegates#15](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegates_3.vb)]  
+ [!code-vb[VbVbalrDelegates#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_3.vb)]  
   
  Die Signatur der Funktion muss mit dem Delegattyp übereinstimmen.  Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  Weitere Beispiele für Lambda\-Ausdrücke und `AddressOf`\-Zuweisungen zu Delegaten finden Sie unter [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   

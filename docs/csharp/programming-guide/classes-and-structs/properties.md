@@ -24,7 +24,7 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
  In diesem Beispiel speichert die `TimePeriod`\-Klasse einen Zeitraum.  Intern speichert die Klasse die Zeit in Sekunden, jedoch ermöglicht eine Eigenschaft mit dem Namen `Hours` die Angabe einer Zeit in Stunden durch den Client.  Die Accessoren für die `Hours`\-Eigenschaft führen die Konvertierung zwischen Stunden und Sekunden durch.  
   
 ## Beispiel  
- [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/properties_1.cs)]  
   
 ## Ausdruckstextdefinitionen  
  Es ist üblich, Eigenschaften zu verwenden, die umgehend das Ergebnis des Ausdrucks zurückgeben.  Es ist eine Syntaxabkürzung zur Definition dieser Eigenschaften mithilfe von `=>` verfügbar:  

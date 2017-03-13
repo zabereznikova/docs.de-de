@@ -9,7 +9,7 @@ Die Features zur Ausnahmebehandlung in C\# helfen Ihnen, wenn bei der Ausführun
   
  In diesem Beispiel testet eine Methode auf eine Division durch 0 und fängt den Fehler ab.  Ohne diese Ausnahmebehandlung würde das Programm mit der Fehlermeldung **DivideByZeroException wurde nicht behandelt** beendet werden.  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exceptions-and-exception_1.cs)]  
+ [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## Übersicht über Ausnahmen  
  Ausnahmen verfügen über folgende Eigenschaften:  

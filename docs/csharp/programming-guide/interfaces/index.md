@@ -23,7 +23,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
  Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [interface](../../../csharp/language-reference/keywords/interface.md), wie dies im folgenden Beispiel gezeigt wird.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
  Jede die <xref:System.IEquatable%601>\-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>\-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird.  Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`\-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   
@@ -39,7 +39,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
  Im folgenden Beispiel wird eine Implementierung der IEquatable\<T\>\-Schnittstelle gezeigt.  Die Implementierungsklasse `Car` muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>\-Methode bereitstellen.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_2.cs)]  
   
  Eigenschaften und Indexer einer Klasse können zusätzliche Accessoren für eine Eigenschaft oder einen in einer Schnittstelle definierten Indexer definieren.  Beispielsweise kann eine Schnittstelle eine Eigenschaft deklarieren, die einen [get](../../../csharp/language-reference/keywords/get.md)\-Accessor aufweist.  Die die Schnittstelle implementierende Klasse kann dieselbe Eigenschaft mit einem `get`\- und [set](../../../csharp/language-reference/keywords/set.md)\-Accessor deklarieren.  Wenn die Eigenschaft oder der Indexer jedoch die explizite Implementierung verwendet, müssen die Accessoren übereinstimmen.  Weitere Informationen über die explizite Implementierung finden Sie unter [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) und [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   

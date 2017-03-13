@@ -33,12 +33,12 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)
 ### Deklarieren von Ereignissen  
  Ereignisse werden innerhalb von Klassen, Strukturen, Modulen und Schnittstellen mithilfe des `Event`\-Schlüsselworts deklariert, wie im folgenden Beispiel dargestellt:  
   
- [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#24)]  
+ [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### Auslösen von Ereignissen  
  Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist.  Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet.  In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] lösen Sie Ereignisse mit der `RaiseEvent`\-Anweisung aus, wie im folgenden Beispiel veranschaulicht:  
   
- [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#25)]  
+ [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
  Ereignisse müssen im Gültigkeitsbereich der Klasse, des Moduls oder der Struktur ausgelöst werden, in der sie deklariert wurden.  So kann beispielsweise eine abgeleitete Klasse keine Ereignisse auslösen, die von einer Basisklasse geerbt wurden.  
   
@@ -59,7 +59,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)
 ### WithEvents und die Handles\-Klausel  
  Die `WithEvents`\-Anweisung und die `Handles`\-Klausel bieten die Möglichkeit, Ereignishandler per Deklaration festzulegen.  Ein Ereignis, das durch ein Objekt ausgelöst wird, das mit dem `WithEvents`\-Schlüsselwort deklariert wurde, kann von einer beliebigen Prozedur mit einer `Handles`\-Anweisung für dieses Ereignis behandelt werden \(siehe folgendes Beispiel\):  
   
- [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#1)]  
+ [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
   
  Die `WithEvents`\-Anweisung und die `Handles`\-Klausel sind häufig die beste Kombination für Ereignishandler, da die hier verwendete Deklarationssyntax das Kodieren, Lesen und Debuggen der Ereignisbehandlung vereinfacht.  Beachten Sie jedoch die folgenden Beschränkungen bei der Verwendung von `WithEvents`\-Variablen:  
   
@@ -75,18 +75,18 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)
   
  In einigen Fällen, z. B. bei Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] automatisch einen Stub für einen leeren Ereignishandler und ordnet ihn einem Ereignis zu.  Wenn Sie z. B. im Entwurfsmodus auf eine Befehlsschaltfläche doppelklicken, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen leeren Ereignishandler und eine `WithEvents`\-Variable für die Befehlsschaltfläche \(siehe folgenden Code\):  
   
- [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#26)]  
+ [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
 ### "AddHandler" und "RemoveHandler"  
  Die `AddHandler`\-Anweisung ähnelt der `Handles`\-Klausel insofern, als Sie mit beiden einen Ereignishandler angeben können.  `AddHandler` bietet Ihnen jedoch zusammen mit `RemoveHandler` mehr Flexibilität als die `Handles`\-Klausel, da es ein dynamisches Hinzufügen, Entfernen und Ändern des einem Ereignis zugeordneten Ereignishandlers ermöglicht.  Wenn Sie freigegebene Ereignisse oder Ereignisse aus einer Struktur behandeln möchten, müssen Sie `AddHandler` verwenden.  
   
  `AddHandler` benötigt zwei Argumente: den Namen eines Ereignisses von einem Ereignissender \(z. B. einem Steuerelement\) und einen Ausdruck, der einen Delegaten ergibt.  Wenn Sie `AddHandler` verwenden, müssen Sie die Delegatklasse nicht explizit angeben, da die `AddressOf`\-Anweisung stets einen Verweis auf den Delegaten zurückgibt.  Im folgenden Beispiel wird ein Ereignishandler mit einem Ereignis verknüpft, das durch ein Objekt ausgelöst wird:  
   
- [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#28)]  
+ [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
  Für `RemoveHandler`, der ein Ereignis von einem Ereignishandler trennt, wird die gleiche Syntax verwendet wie für `AddHandler`.  Beispiele:  
   
- [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#29)]  
+ [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
  Im folgenden Beispiel ist einem Ereignis ein Ereignishandler zugeordnet, und das Ereignis wird ausgelöst.  Der Ereignishandler fängt das Ereignis ab und zeigt eine Meldung an.  
   
@@ -94,7 +94,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)
   
  Schließlich wird der zweite Ereignishandler entfernt, und das Ereignis wird zum dritten Mal ausgelöst.  Da dem Ereignis kein Ereignishandler mehr zugeordnet ist, wird keine Aktion ausgeführt.  
   
- [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class2.vb#38)]  
+ [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
 ## Behandeln von Ereignissen, die aus einer Basisklasse geerbt wurden  
  *Abgeleitete Klassen* sind Klassen, die Merkmale von einer Basisklasse erben. Sie können mithilfe der `Handles` `MyBase`\-Anweisung Ereignisse behandeln, die von ihrer Basisklasse ausgelöst wurden.  
@@ -103,7 +103,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)
   
 -   Deklarieren Sie einen Ereignishandler in der abgeleiteten Klasse, indem Sie der Deklarationszeile der Prozedur für den Ereignishandler eine `Handles MyBase.`*Ereignisname*\-Anweisung hinzufügen. Dabei ist *Ereignisname* der Name des zu behandelnden Ereignisses in der Basisklasse.  Beispiele:  
   
-     [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#12)]  
+     [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
 ## Verwandte Abschnitte  
   

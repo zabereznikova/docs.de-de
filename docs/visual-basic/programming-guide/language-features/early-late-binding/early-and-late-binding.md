@@ -33,13 +33,13 @@ manager: "wpickett"
 
 Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler führt einen als `binding` bezeichneten Vorgang aus, wenn ein Objekt einer Objektvariablen zugewiesen wird.  Ein Objekt wird *früh gebunden*, wenn es einer Variablen zugeordnet wird, für die ein spezifischer Objekttyp deklariert wurde.  Früh gebundene Objekte ermöglichen es dem Compiler, die Speicherbelegung und andere Optimierungen vor der Ausführung einer Anwendung durchzuführen.  Im folgenden Codefragment wird beispielsweise eine Variable des Typs <xref:System.IO.FileStream> deklariert:  
   
- [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#90)]  
+ [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
   
  Da <xref:System.IO.FileStream> ein spezifischer Objekttyp ist, handelt es sich bei der Zuweisung der Instanz zu `FS` um eine frühe Bindung.  
   
  Im Gegensatz dazu wird ein Objekt *spät gebunden*, wenn es einer Variablen zugeordnet wird, für die der Typ `Object` deklariert wurde.  Objekte dieses Typs können Verweise zu allen Objekten beinhalten, jedoch gehen einige der Vorteile früh gebundener Objekte verloren.  Das folgende Codefragment deklariert beispielsweise eine Objektvariable, die ein von der `CreateObject`\-Funktion zurückgegebenes Objekt aufnimmt:  
   
- [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/LateBinding.vb#91)]  
+ [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
 ## Vorteile der frühen Bindung  
  Sie sollten soweit möglich früh gebundene Objekte verwenden, da diese dem Compiler wichtige Optimierungen ermöglichen, die zu effizienteren Anwendungen führen.  Früh gebundene Objekte sind bedeutend schneller als spät gebundene Objekte, verbessern die Lesbarkeit des Codes und erleichtern dessen Verwaltung, weil sie die Art der verwendeten Objekte genau angeben.  Ein weiterer Vorteil der frühen Bindung besteht in der Aktivierung nützlicher Funktionen, z. B. der automatischen Codevervollständigung und der dynamischen Hilfe, da die integrierte Entwicklungsumgebung \(Integrated Development Environment, IDE\) von [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)] genau ermitteln kann, welchen Objekttyp Sie während der Bearbeitung des Codes verwenden.  Die frühe Bindung reduziert die Anzahl und den Schweregrad der Laufzeitfehler, da sie dem Compiler die Ausgabe von Fehlern während der Programmkompilierung ermöglicht.  

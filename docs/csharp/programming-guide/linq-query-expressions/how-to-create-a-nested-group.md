@@ -6,7 +6,7 @@ caps.handback.revision: 12
 Im folgenden Beispiel wird gezeigt, wie geschachtelte Gruppen in einem [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdruck erstellt werden.  Jede Gruppe, die in Abhängigkeit vom Studienjahr oder Notenniveau erstellt wird, wird anschließend anhand der Namen der einzelnen Personen weiter in Gruppen unterteilt.  
   
 ## Beispiel  
- [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#24)]  
+ [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-create-a-nested-group_1.cs)]  
   
  Beachten Sie, dass zum Durchlaufen der inneren Elemente einer geschachtelten Gruppe drei geschachtelte `foreach`\-Schleifen erforderlich sind.  
   

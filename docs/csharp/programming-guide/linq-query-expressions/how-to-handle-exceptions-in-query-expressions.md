@@ -10,14 +10,14 @@ Es ist möglich, eine Methode im Kontext eines Abfrageausdrucks aufzurufen.  Sie
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Ausnahmebehandlungscode außerhalb eines Abfrageausdrucks verschoben wird.  Dies ist nur möglich, wenn die Methode von keiner für die Abfrage lokalen Variablen abhängig ist.  
   
- [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#10)]  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## Beispiel  
  In einigen Fällen ist die beste Antwort auf eine Ausnahme, die in einer Abfrage ausgelöst wird, das unmittelbare Anhalten des Abfragevorgangs.  Im folgenden Beispiel wird gezeigt, wie Ausnahmen, die in einem Abfragetext ausgelöst werden könnten, behandelt werden.  Annahme: `SomeMethodThatMightThrow` kann potenziell eine Ausnahme auslösen, woraufhin die Ausführung der Abfrage beendet werden muss.  
   
  Beachten Sie, dass der `try`\-Block die `foreach`\-Schleife einschließt, und nicht die Abfrage selbst.  Das liegt daran, dass die `foreach`\-Schleife der Punkt ist, an dem die Abfrage eigentlich ausgeführt wird.  Weitere Informationen hierzu finden Sie unter [Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#12)]  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 ## Kompilieren des Codes  
   

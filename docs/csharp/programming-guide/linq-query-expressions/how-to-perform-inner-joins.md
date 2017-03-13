@@ -20,7 +20,7 @@ Bei relationalen Datenbanken erstellt ein *innerer Join* einen Ergebnissatz, in 
 ## Beispiel für Join mit einfachem Schlüssel  
  Im folgenden Beispiel werden zwei Auflistungen erstellt, die Objekte von zwei benutzerdefinierten Typen, `Person` und `Pet`, enthalten.  Die Abfrage verwendet die `join`\-Klausel in C\#, um die `Person`\-Objekte mit `Pet`\-Objekten abzugleichen, deren `Owner` diese `Person` ist.  Die `select`\-Klausel in C\# definiert die Darstellung der resultierenden Objekte.  In diesem Beispiel handelt es sich bei den erstellten Objekten um anonyme Typen, die aus dem Vornamen des Besitzers und dem Namen des Tiers bestehen.  
   
- [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#1)]  
+ [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_1.cs)]  
   
  Beachten Sie, dass das `Person`\-Objekt, dessen `LastName` "Huff" ist, nicht im Ergebnissatz angezeigt wird, da es kein `Pet`\-Objekt gibt, bei dem `Pet.Owner` dieser `Person` entspricht.  
   
@@ -31,7 +31,7 @@ Bei relationalen Datenbanken erstellt ein *innerer Join* einen Ergebnissatz, in 
   
  Im folgenden Beispiel wird mit einer Liste von `Employee`\-Objekten und einer Liste von `Student`\-Objekten festgelegt, welche Angestellten ebenfalls Studenten sind.  Beide Typen verfügen über eine `FirstName`\-Eigenschaft und eine `LastName`\-Eigenschaft des Typs <xref:System.String>.  Die Funktionen, mit denen die Joinschlüssel aus den Elementen jeder Liste erstellt werden, geben einen anonymen Typ zurück, der aus der `FirstName`\-Eigenschaft und der `LastName`\-Eigenschaft jedes Elements besteht.  Die Joinoperation vergleicht diese zusammengesetzten Schlüssel auf Gleichheit und gibt Objektpaare aus jeder Liste zurück, wenn der Vor\- und Nachname übereinstimmen.  
   
- [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#2)]  
+ [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_2.cs)]  
   
 ## Beispiel  
   
@@ -44,7 +44,7 @@ Bei relationalen Datenbanken erstellt ein *innerer Join* einen Ergebnissatz, in 
   
  Die zweite `join`\-Klausel in C\# verknüpft die anonymen Typen, die vom ersten Join mit `Dog`\-Objekten in der angegebenen Liste mit Hunden zurückgegeben wurden, anhand eines zusammengesetzten Schlüssels, der aus der `Owner`\-Eigenschaft des Typs `Person` und dem ersten Buchstaben des Tiernamens besteht.  Es wird eine Sequenz anonymer Typen zurückgegeben, die die `Cat.Name`\-Eigenschaft und die `Dog.Name`\-Eigenschaft jedes übereinstimmenden Paars enthält.  Da es sich hierbei um einen inneren Join handelt, werden nur die Objekte aus der ersten Datenquelle, für die es eine Übereinstimmung in der zweiten Datenquelle gibt, zurückgegeben.  
   
- [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#3)]  
+ [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_3.cs)]  
   
 ## Beispiel  
   
@@ -57,7 +57,7 @@ Bei relationalen Datenbanken erstellt ein *innerer Join* einen Ergebnissatz, in 
   
  Das Ergebnis von `query1` entspricht dem Resultset, das zum Ausführen eines inneren Joins mit der `join`\-Klausel ohne die `into`\-Klausel zurückgegeben wird.  Die `query2`\-Variable veranschaulicht diese entsprechende Abfrage.  
   
- [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#4)]  
+ [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_4.cs)]  
   
 ## Kompilieren des Codes  
   

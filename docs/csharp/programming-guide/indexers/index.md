@@ -23,7 +23,7 @@ Indexer ermöglichen, dass Instanzen einer Klasse oder Struktur wie Arrays indiz
   
  Im folgenden Beispiel wird eine generische Klasse definiert und mit einfachen [get](../../../csharp/language-reference/keywords/get.md)\- und [set](../../../csharp/language-reference/keywords/set.md)\-Accessormethoden für das Zuweisen und Abrufen von Werten bereitgestellt.  Die `Program`\-Klasse erstellt eine Instanz dieser Klasse für das Speichern von Zeichenfolgen.  
   
- [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  Links zu den Beispielen finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  

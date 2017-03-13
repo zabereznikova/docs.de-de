@@ -23,11 +23,11 @@ Das `set`\-Schlüsselwort definiert eine *accessor*\-Methode in einer Eigenschaf
   
  Dies ist ein Beispiel für einen `set`\-Accessor für eine Eigenschaft mit dem Namen `Seconds`:  
   
- [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/csharp/set_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/set_1.cs)]  
   
  Dies ist ein Beispiel für einen `set`\-Accessor in einer automatisch implementierten Eigenschaft:  
   
- [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/csharp/set_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/set_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
