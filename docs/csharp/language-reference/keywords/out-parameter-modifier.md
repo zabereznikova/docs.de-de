@@ -29,7 +29,7 @@ Das `out`\-Schlüsselwort bewirkt, dass Argumente als Verweis übergeben werden.
   
  Die Überladung ist jedoch möglich, wenn eine Methode ein `ref`\-Argument oder ein `out`\-Argument annimmt und die andere Methode keines der beiden Argumente verwendet. Beispiel:  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../../samples/snippets/csharp/language-reference/keywords/out/out-3.cs)]  
   
  Eigenschaften sind keine Variablen und können daher nicht als `out`\-Parameter übergeben werden.  
   
@@ -44,7 +44,7 @@ Das `out`\-Schlüsselwort bewirkt, dass Argumente als Verweis übergeben werden.
 ## Beispiel  
  Das Deklarieren einer `out`\-Methode ist nützlich, wenn eine Methode mehrere Werte zurückgeben soll.  Im folgenden Beispiel wird `out` verwendet, um mit einem Methodenaufruf drei Variablen zurückzugeben.  Beachten Sie, dass das dritte Argument NULL zugewiesen wird.  Auf diese Weise können Methoden Werte optional zurückgeben.  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
