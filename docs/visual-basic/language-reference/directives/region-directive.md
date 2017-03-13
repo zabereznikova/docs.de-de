@@ -49,7 +49,7 @@ Reduziert Codeabschnitte in Visual Basic\-Dateien und blendet sie aus.
 ## Beispiel  
  Dieses Beispiel verwendet die `#Region`\-Direktive.  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
   
 ## Siehe auch  
  [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   

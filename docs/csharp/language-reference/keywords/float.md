@@ -58,7 +58,7 @@ float x = 3.5F;
 ## Beispiel  
  Im folgenden Beispiel enthält der mathematische Ausdruck, der ein `float`\-Ergebnis liefert, einen [int](../../../csharp/language-reference/keywords/int.md)\-Wert, einen [short](../../../csharp/language-reference/keywords/short.md)\-Wert und einen `float`\-Wert.  \(Beachten Sie, dass `float` ein Alias für den <xref:System.Single?displayProperty=fullName>\-Typ ist.\) Beachten Sie, dass kein [double](../../../csharp/language-reference/keywords/double.md)\-Wert im Ausdruck enthalten ist.  
   
- [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/csharp/float_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

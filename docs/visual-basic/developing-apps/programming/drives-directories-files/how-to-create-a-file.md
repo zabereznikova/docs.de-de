@@ -25,7 +25,7 @@ caps.handback.revision: 15
 In diesem Beispiel wird unter Verwendung der <xref:System.IO.File.Create%2A>\-Methode in der <xref:System.IO.File>\-Klasse eine Textdatei im angegebenen Pfad erstellt.  
   
 ## Beispiel  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-file_1.vb)]  
+ [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
   
 ## Kompilieren des Codes  
  Verwenden Sie zum Schreiben in die Datei die `file`\-Variable.  

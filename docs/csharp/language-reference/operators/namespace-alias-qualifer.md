@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # Operator :: (C#-Referenz)
 Der Namespacealiasqualifizierer \(`::`\) wird verwendet, um nach Bezeichnern zu suchen.  Er wird immer zwischen zwei Bezeichnern angeordnet, wie in diesem Beispiel:  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#27)]  
+ [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## Hinweise  
  Der Namespacealiasqualifizierer kann `global` sein.  Dies ruft eine Suche im globalen Namespace auf statt in einem Aliasnamespace.  

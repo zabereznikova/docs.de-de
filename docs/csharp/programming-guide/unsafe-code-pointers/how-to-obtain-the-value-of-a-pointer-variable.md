@@ -32,9 +32,9 @@ Verwenden Sie den Zeigerdereferenzierungsoperator, um die Variable an dem Speich
 ## Beispiel  
  Im folgenden Beispiel wird mit Zeigern verschiedener Typen auf eine Variable vom Typ `char` zugegriffen.  Beachten Sie, dass die Adresse von `theChar` von Ausführung zu Ausführung variiert, da die für eine Variable reservierte physikalische Speicheradresse nicht immer dieselbe ist.  
   
- [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#5)]  
+ [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#6)]  
+ [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
   **Value of theChar \= Z**   
 **Address of theChar \= 12F718**  

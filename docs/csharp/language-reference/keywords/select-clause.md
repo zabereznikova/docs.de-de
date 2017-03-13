@@ -24,14 +24,14 @@ In einem Abfrageausdruck gibt die `select`\-Klausel den Typ der Werte an, die er
   
  Im folgenden Beispiel wird eine einfache `select`\-Klausel in einem Abfrageausdruck veranschaulicht.  
   
- [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#8)]  
+ [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
   
  Der Typ der mit der `select`\-Klausel erstellten Sequenz, bestimmt den Typ der Abfragevariablen `queryHighScores`.  Im einfachsten Fall legt die `select`\-Klausel nur die Bereichsvariable fest.  Dies bewirkt, dass die zurückgegebene Sequenz Elemente des gleichen Typs wie die Datenquelle enthält.  Weitere Informationen finden Sie unter [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  Die `select`\-Klausel bietet jedoch auch einen leistungsstarken Mechanismus zum Transformieren \(oder *Projizieren*\) von Quelldaten in neue Typen.  Weitere Informationen finden Sie unter [Datentransformationen mit LINQ \(C\#\)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).  
   
 ## Beispiel  
  Im folgenden Beispiel werden alle unterschiedlichen Formate, die eine `select`\-Klausel möglicherweise annehmen kann, veranschaulicht.  Beachten Sie in jeder Abfrage die Beziehung zwischen der `select`\-Klausel und dem Typ der *Abfragevariablen* \(`studentQuery1`, `studentQuery2` usw.\).  
   
- [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#9)]  
+ [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
   
  Wie in `studentQuery8` im vorherigen Beispiel gezeigt, ist es manchmal erwünschenswert, dass die Elemente der zurückgegebenen Sequenz nur eine Teilmenge der Eigenschaften der Quellelemente enthalten.  Indem Sie die zurückgegebene Sequenz so klein wie möglich halten, können Sie die Speicherplatzanforderung senken und die Geschwindigkeit der Abfrageausführung erhöhen.  Erstellen Sie dazu einen anonymen Typ in der `select`\-Klausel, und verwenden Sie einen Objektinitialisierer, um sie mit den entsprechenden Eigenschaften aus dem Quellelement zu initialisieren.  Ein Beispiel dazu finden Sie unter [Objekt\- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   

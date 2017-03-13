@@ -24,7 +24,7 @@ Verwenden Sie das `operator`\-Schlüsselwort, um einen integrierten Operator zu 
 ## Beispiel  
  Im Folgenden handelt es sich um eine stark vereinfachte Klasse für Dezimalzahlen.  Der Operator \+ und der Operator \* werden überladen, um Addition und Multiplikation von Brüchen durchzuführen. Weiterhin wird ein Konvertierungsoperator bereitgestellt, der Brüche in Werte vom Typ double konvertiert.  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/csharp/operator_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

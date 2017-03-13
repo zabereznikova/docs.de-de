@@ -31,11 +31,11 @@ private fixed char name[30];
   
  Zum Beispiel wäre vor C\# 2.0 die folgende `struct` 8 Bytes groß.  Das `pathName`\-Array ist ein Verweis auf das Heap\-zugeordnete Array:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#19)]  
+ [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  Beginnend mit C\# 2.0 kann `struct` einen eingebetteten Array enthalten.  Im folgenden Beispiel hat der `fixedBuffer`\-Array eine feste Größe.  Um auf die Elemente des Arrays zuzugreifen, legen Sie mit einer `fixed`\-Anweisung einen Zeiger auf das erste Element fest.  Die `fixed`\-Anweisung fixiert eine Instanz von `fixedBuffer` an einer bestimmten Position im Arbeitsspeicher.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#20)]  
+ [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  Die Größe des 128 Elemente umfassenden `char`\-Arrays beträgt 256 Bytes.  [char](../../../csharp/language-reference/keywords/char.md)\-Puffer fester Größe beanspruchen ungeachtet der Codierung immer zwei Bytes pro Zeichen.  Dies gilt selbst dann, wenn char\-Puffer mit `CharSet = CharSet.Auto` oder `CharSet = CharSet.Ansi` zu API\-Methoden oder Strukturen gemarshallt werden.  Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.CharSet>.  
   

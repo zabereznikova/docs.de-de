@@ -76,12 +76,12 @@ Unter dem *Überladen* einer Prozedur versteht man die Definition mehrerer Proze
 ## Mehrere Versionen einer Prozedur  
  Angenommen, Sie schreiben eine `Sub`\-Prozedur zum Ausführen einer Transaktion mit Auswirkung auf das Kundenguthaben und möchten sich sowohl über den Namen als auch über die Kontonummer auf den Kunden beziehen können.  Dies können Sie durch die Definition zweier unterschiedlicher `Sub`\-Prozeduren erreichen, wie im folgenden Beispiel gezeigt:  
   
- [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### Überladene Versionen  
  Eine Alternative stellt das Überladen eines einzelnen Prozedurnamens dar.  Um für jede Parameterliste eine Version der Prozedur zu definieren, wird das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)\-Schlüsselwort folgendermaßen verwendet:  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### Zusätzliche Überladungen  
  Wenn auch ein Transaktionswert in `Decimal` oder `Single` akzeptiert werden soll, können Sie darüber hinaus noch `post` überladen.  Wenn Sie dies in jeder Überladung im obigen Beispiel durchgeführt hätten, hätte dies vier `Sub`\-Prozeduren gleichen Namens mit vier unterschiedlichen Signaturen ergeben.  
@@ -89,9 +89,9 @@ Unter dem *Überladen* einer Prozedur versteht man die Definition mehrerer Proze
 ## Vorteile des Überladens  
  Der Vorteil der Prozedurüberladung liegt in der Flexibilität des Aufrufs.  Um die im letzten Beispiel deklarierte `post`\-Prozedur zu verwenden, kann der Aufrufcode die Kundenkennung entweder als `String` oder als `Integer` abrufen; in beiden Fällen wird anschließend dieselbe Prozedur aufgerufen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
- [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

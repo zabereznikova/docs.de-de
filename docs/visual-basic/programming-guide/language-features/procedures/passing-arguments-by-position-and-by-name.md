@@ -45,28 +45,28 @@ Wenn Sie eine `Sub`\- oder `Function`\-Prozedur aufrufen, können Sie Argumente 
   
  Die `Sub`\-Prozedur im folgenden Beispiel übernimmt z. B. drei Argumente:  
   
- [!code-vb[VbVbcnProcedures#41](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_1.vb)]  
+ [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
   
  Bei Aufrufen dieser Prozedur können Sie die Argumente durch Position, durch Namen oder unter Verwendung beider Methoden bereitstellen.  
   
 ## Übergeben von Argumenten durch Position  
  Die `studentInfo` \-Prozedur kann, wie im folgenden Beispiel gezeigt, mit durch Position übergebenen, durch Kommas getrennten Argumenten aufgerufen werden:  
   
- [!code-vb[VbVbcnProcedures#42](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_2.vb)]  
+ [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
   
  Wenn Sie ein optionales Argument in einer positionellen Argumentliste auslassen, müssen Sie seinen Platz mit einem Komma freihalten.  Im folgenden Beispiel wird `studentInfo` ohne das `age` \-Argument aufgerufen:  
   
- [!code-vb[VbVbcnProcedures#43](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_3.vb)]  
+ [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
   
 ## Übergeben von Argumenten durch Namen  
  Die `studentInfo` \-Prozedur kann auch, wie im folgenden Beispiel gezeigt, mit durch Namen übergebenen, durch Kommas getrennten Argumenten aufgerufen werden:  
   
- [!code-vb[VbVbcnProcedures#44](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_4.vb)]  
+ [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
   
 ## Mischen von Argumenten durch Position und durch Namen  
  In ein und demselben Prozeduraufruf können Sie Argumente sowohl durch Position als auch durch Namen angeben, wie im folgenden Beispiel gezeigt:  
   
- [!code-vb[VbVbcnProcedures#45](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_5.vb)]  
+ [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
   
  Im vorhergehenden Beispiel muss der Platz des ausgelassenen `age` \-Arguments nicht durch ein zusätzliches Komma freigehalten werden, da `birth` durch Namen übergeben wird.  
   

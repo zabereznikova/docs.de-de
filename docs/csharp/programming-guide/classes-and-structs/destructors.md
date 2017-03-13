@@ -34,7 +34,7 @@ Destruktoren werden zur Zerstörung von Klasseninstanzen verwendet.
   
  Im Folgenden sehen Sie beispielsweise die Deklaration eines Destruktors für die `Car`\-Klasse:  
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
  Der Destruktor ruft implizit <xref:System.Object.Finalize%2A> für die Basisklasse des Objekts auf.  Daher wird der vorige Destruktorcode implizit in den folgenden Code übersetzt:  
   
@@ -78,7 +78,7 @@ protected override void Finalize()
 ## Beispiel  
  Im folgenden Beispiel werden drei Klassen erstellt, die eine Vererbungskette bilden.  Die `First`\-Klasse ist die Basisklasse, `Second` ist von `First` abgeleitet und `Third` von `Second`.  Alle drei Klassen besitzen Destruktoren.  In `Main()` wird eine Instanz der am meisten abgeleiteten Klasse erstellt.  Beachten Sie, dass die Destruktoren der drei Klassen bei Ausführung des Programms automatisch aufgerufen werden, und zwar in der Reihenfolge von der am meisten zu der am wenigsten abgeleiteten Klasse.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -19,7 +19,7 @@ caps.handback.revision: 31
 # Strukturen (C#-Programmierhandbuch)
 Strukturen werden mithilfe des [struct](../../../csharp/language-reference/keywords/struct.md)\-Schlüsselworts definiert. Beispiel:  
   
- [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/structs_1.cs)]  
   
  Strukturen haben fast die gleiche Syntax wie Klassen, unterliegen jedoch mehr Beschränkungen als Klassen:  
   

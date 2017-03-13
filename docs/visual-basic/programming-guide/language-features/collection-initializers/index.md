@@ -29,7 +29,7 @@ caps.handback.revision: 23
   
  Ein Auflistungsinitialisierer wird mit dem `From`\-Schlüsselwort gefolgt von geschweiften Klammern \(`{}`\) bezeichnet.  Dies ähnelt der Arrayliteralsyntax, die in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md) beschrieben wird.  In den folgenden Beispielen werden verschiedene Möglichkeiten der Verwendung von Auflistungsinitialisierern zum Erstellen von Auflistungen gezeigt.  
   
- [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  Auch in C\# werden Auflistungsinitialisierer bereitgestellt.  C\#\-Auflistungsinitialisierer stellen dieselben Funktionen wie Visual Basic\-Auflistungsinitialisierer bereit.  Weitere Informationen über C\#\-Auflistungsinitialisierer finden Sie unter [Objekt\- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
@@ -37,11 +37,11 @@ caps.handback.revision: 23
 ## Syntax  
  Ein Auflistungsinitialisierer besteht aus einer Liste von durch Trennzeichen getrennten Werten, die in geschweifte Klammern \(`{}`\) eingeschlossen werden, wobei das `From`\-Schlüsselwort vorangestellt wird, wie im folgenden Code gezeigt.  
   
- [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  Wenn Sie eine Auflistung wie <xref:System.Collections.Generic.List%601> oder <xref:System.Collections.Generic.Dictionary%602> erstellen, müssen Sie den Auflistungstyp vor dem Auflistungsinitialisierer angeben, wie im folgenden Code gezeigt.  
   
- [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
 > [!NOTE]
 >  Sie können zum Initialisieren des gleichen Auflistungsobjekts nicht beides kombinieren, einen Auflistungsinitialisierer und einen Objektinitialisierer.  Mit Objektinitialisierern können Sie Objekte in einem Auflistungsinitialisierer initialisieren.  
@@ -57,11 +57,11 @@ caps.handback.revision: 23
   
  Im folgenden Codebeispiel wird gezeigt, wie eine `List(Of Customer)`\-Auflistung mit einem Auflistungsinitialisierer erstellt wird.  Bei Ausführung des Codes wird jedes `Customer`\-Objekt an die `Add(Customer)`\-Methode der generischen Liste übergeben.  
   
- [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  Im folgenden Codebeispiel wird entsprechender Code gezeigt, in dem kein Auflistungsinitialisierer verwendet wird.  
   
- [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  Wenn die Auflistung über eine `Add`\-Methode mit Parametern verfügt, die dem Konstruktor für das `Customer`\-Objekt entsprechen, können Sie Parameterwerte für die `Add`\-Methode innerhalb der Auflistungsinitialisierer schachteln, wie im nächsten Abschnitt erläutert.  Enthält die Auflistung keine derartige `Add`\-Methode, können Sie diese als Erweiterungsmethode erstellen.  Ein Beispiel für das Erstellen einer `Add`\-Methode als Erweiterungsmethode für eine Auflistung finden Sie unter [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md).  Ein Beispiel für das Erstellen einer benutzerdefinierten Auflistung, die mit einem Auflistungsinitialisierer verwendet werden kann, finden Sie unter [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
@@ -70,11 +70,11 @@ caps.handback.revision: 23
   
  Wenn Sie eine Auflistung mit geschachtelten Werten erstellen, wird jedes Element der geschachtelten Werteliste als Argument an die `Add`\-Methode übergeben, die den Elementtypen entspricht.  Im folgenden Codebeispiel wird z. B. ein <xref:System.Collections.Generic.Dictionary%602> mit Schlüsseln des Typs `Integer` und Werten des Typs `String` erstellt.  Jede der geschachtelten Wertelisten wird der <xref:System.Collections.Generic.Dictionary%602.Add%2A>\-Methode für das `Dictionary` zugeordnet.  
   
- [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  Das vorangegangene Codebeispiel entspricht folgendem Code.  
   
- [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
  Nur geschachtelte Wertelisten der ersten Schachtelungsebene werden an die `Add`\-Methode für den Auflistungstyp gesendet.  Tiefere Schachtelungsebenen werden wie Arrayliterale behandelt, und die geschachtelten Wertelisten werden nicht der `Add`\-Methode einer Auflistung zugeordnet.  
   

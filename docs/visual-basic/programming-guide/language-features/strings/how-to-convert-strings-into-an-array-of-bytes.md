@@ -30,7 +30,7 @@ In diesem Thema wird dargestellt, wie eine Zeichenfolge in ein Bytearray konvert
 ## Beispiel  
  Im folgenden Beispiel wird die <xref:System.Text.Encoding.GetBytes%2A>\-Methode der <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName>\-Codierungsklasse verwendet, um eine Zeichenfolge in ein Bytearray zu konvertieren.  
   
- [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-strings-i_1.vb)]  
+ [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
   
  Sie können unter mehreren Codierungsoptionen wählen, um eine Zeichenfolge in ein Bytearray zu konvertieren:  
   

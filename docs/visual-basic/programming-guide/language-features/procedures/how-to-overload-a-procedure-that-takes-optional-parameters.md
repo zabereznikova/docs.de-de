@@ -47,11 +47,11 @@ Wenn eine Prozedur einen oder mehrere [Optional](../../../../visual-basic/langua
   
      Das folgende Beispiel veranschaulicht eine Prozedur, die mit einem optionalen Parameter definiert ist, eine äquivalente Gruppe mit zwei überladenen Prozeduren sowie Beispiele für ungültige und gültige überladene Versionen.  
   
-     [!code-vb[VbVbcnProcedures#59](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
   
-     [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
 ## Mehrere optionale Parameter  
  Für eine Prozedur mit mehreren optionalen Parametern benötigen Sie normalerweise mehr als zwei überladene Versionen.  Wenn eine Prozedur beispielsweise zwei optionale Parameter enthält und im Aufrufcode jeder dieser Parameter unabhängig voneinander angegeben oder nicht angegeben werden kann, dann sind vier überladene Versionen erforderlich, nämlich eine Version für jede mögliche Kombination angegebener Argumente.  

@@ -21,7 +21,7 @@ caps.handback.revision: 17
 # Enumerationstypen (C#-Programmierhandbuch)
 Ein Enumerationstyp \(auch als Enumeration bezeichnet\) bietet eine effiziente Möglichkeit, einen Satz benannter integraler Konstanten zu definieren, die einer Variablen zugewiesen werden können.  Angenommen, Sie müssen eine Variable definieren, deren Wert einen Wochentag darstellt.  Es gibt nur sieben sinnvolle Werte, die diese Variable speichern kann.  Um diese Werte zu definieren, können Sie einen Enumerationstyp verwenden, der durch die Verwendung des [enum](../../csharp/language-reference/keywords/enum.md)\-Schlüsselworts deklariert wird.  
   
- [!code-cs[csProgGuideEnums#1](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_1.cs)]  
+ [!code-cs[csProgGuideEnums#1](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_1.cs)]  
   
  Der zugrunde liegende Standardtyp aller Elemente in der Enumeration lautet [int](../../csharp/language-reference/keywords/int.md).  Sie können mit einem Doppelpunkt einen anderen ganzzahligen numerischen Typ angeben, wie im vorherigen Beispiel dargestellt.  Eine vollständige Liste möglicher Typen finden Sie in [Enumeration \(C\#\-Referenz\)](../../csharp/language-reference/keywords/enum.md).  
   
@@ -51,14 +51,14 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  Falls die Variable `meetingDay` vom Typ `Days` ist, können Sie ihr \(ohne eine explizite Umwandlung\) lediglich einen der von `Days` definierten Werte zuweisen.  Und wenn sich der Besprechungstag ändert, können Sie `meetingDay` einen neuen Wert von `Days` zuweisen:  
   
- [!code-cs[csProgGuideEnums#4](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_2.cs)]  
+ [!code-cs[csProgGuideEnums#4](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_2.cs)]  
   
 > [!NOTE]
 >  Es ist möglich, `meetingDay` einen beliebigen ganzzahligen Wert zuzuweisen.  Zum Beispiel erzeugt diese Codezeile keinen Fehler: `meetingDay = (Days) 42`.  Sie sollten dies jedoch nicht tun, weil die damit einhergehende Erwartung darin besteht, dass eine Enumerationsvariable nur einen der vom Enumerator definierten Werte enthält.  Einer Variablen eines Enumerationstyps einen willkürlich gewählten Wert zuzuweisen, führt zu einem hohen Fehlerrisiko.  
   
  Sie können den Elementen in der Enumeratorliste, die einen Enumerationstyp aufweisen, beliebige Werte zuweisen und auch berechnete Werte verwenden:  
   
- [!code-cs[csProgGuideEnums#3](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_3.cs)]  
+ [!code-cs[csProgGuideEnums#3](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_3.cs)]  
   
 ## Enumerationstypen als Bitflags  
  Sie können einen Enumerationstyp verwenden, um Bitflags zu definieren. Dadurch kann eine Instanz des Enumerationstyps eine Kombination aus den Werten speichern, die in der Enumeratorliste definiert sind.  \(Selbstverständlich sind einige Kombinationen möglicherweise im Programmcode nicht sinnvoll oder zulässig.\)  
@@ -67,22 +67,22 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  Im folgenden Beispiel wird eine andere Version der `Days`\-Enumeration mit dem Namen `Days2` definiert.  `Days2` weist das `Flags`\-Attribut auf, und jedem Wert wird die nächste höhere Potenz von 2 zugewiesen.  So können Sie eine `Days2`\-Variable mit dem Wert `Days2.Tuesday` und `Days2.Thursday` erstellen.  
   
- [!code-cs[csProgGuideEnums#2](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_4.cs)]  
+ [!code-cs[csProgGuideEnums#2](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_4.cs)]  
   
  Um ein Flag für einen Enumerator festzulegen, verwenden Sie den bitweisen `OR`\-Operator, wie im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideEnums#6](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_5.cs)]  
+ [!code-cs[csProgGuideEnums#6](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_5.cs)]  
   
  Um zu ermittln, ob ein bestimmtes Flag festgelegt ist, verwenden Sie eine bitweise `AND`\-Operation, wie im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_6.cs)]  
+ [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
  Weitere Informationen zum Definieren von Enumerationstypen mit dem <xref:System.FlagsAttribute?displayProperty=fullName>\-Attribut finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
   
 ## Verwenden der System.Enum\-Methoden zur Ermittlung und Behandlung von Enumerationswerten  
  Alle Enumerationen sind Instanzen des <xref:System.Enum?displayProperty=fullName>\-Typs.  Sie können von <xref:System.Enum?displayProperty=fullName> keine neuen Klassen ableiten. Sie können jedoch seine Methoden verwenden, um Informationen darüber zu erhalten und Werte in einer Enumerationsinstanz zu bearbeiten.  
   
- [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/csharp/enumeration-types_7.cs)]  
+ [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
  Weitere Informationen hierzu finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
   

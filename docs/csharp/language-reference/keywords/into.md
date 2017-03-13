@@ -24,7 +24,7 @@ Das `into`\-Kontextschlüsselwort kann zum Erstellen eines temporären Bezeichne
 ## Beispiel  
  Das folgende Beispiel zeigt, wie Sie das `into`\-Schlüsselwort verwenden, um einen temporären Bezeichner `fruitGroup` zu aktivieren, der über einen abgeleiteten Typ `IGrouping` verfügt.  Durch den Einsatz des Bezeichners können Sie die <xref:System.Linq.Enumerable.Count%2A>\-Methode für jede Gruppe aufrufen und nur die Gruppen auswählen, die zwei oder mehr Wörter enthalten.  
   
- [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Into.cs#18)]  
+ [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/into_1.cs)]  
   
  Der Einsatz von `into` in einer `group`\-Klausel ist nur dann notwendig, wenn Sie zusätzliche Abfrageoperationen für jede Gruppe ausführen möchten.  Weitere Informationen finden Sie unter [group\-Klausel](../../../csharp/language-reference/keywords/group-clause.md).  
   

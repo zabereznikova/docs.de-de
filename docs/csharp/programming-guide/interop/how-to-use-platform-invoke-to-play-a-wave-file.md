@@ -26,9 +26,9 @@ Das folgende C\#\-Codebeispiel veranschaulicht die Verwendung von Plattformaufru
   
  Im Dialogfeld **Geöffnete Dateien** wird ein Filter angewendet, sodass nur Dateien mit der Erweiterung .wav angezeigt werden:  
   
- [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_1.cs)]  
+ [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
   
- [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_2.cs)]  
+ [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
   
 ## Kompilieren des Codes  
   
@@ -40,7 +40,7 @@ Das folgende C\#\-Codebeispiel veranschaulicht die Verwendung von Plattformaufru
   
 3.  Kopieren Sie den folgenden Code, und fügen Sie ihn in die Datei `Form1.Designer.cs` in der `InitializeComponent()`\-Methode nach dem vorhandenen Code ein.  
   
-     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_3.cs)]  
+     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
   
 4.  Kompilieren Sie den Code, und führen Sie ihn aus.  
   

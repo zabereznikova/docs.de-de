@@ -52,7 +52,7 @@ Mithilfe der `Const`\-Anweisung wird eine Konstante deklariert und ihr Wert fest
   
 -   Schreiben Sie eine Deklaration, die einen Zugriffsspezifizierer, das `Const`\-Schlüsselwort und einen Ausdruck enthält. Beispiel:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#8)]  
+     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      Wenn [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) `Off` und [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On` ist, müssen Konstanten explizit durch Angabe eines Datentyps \(`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single` oder `String`\) deklariert werden.  
   
@@ -62,7 +62,7 @@ Mithilfe der `Const`\-Anweisung wird eine Konstante deklariert und ihr Wert fest
   
 -   Schreiben Sie eine Deklaration, die das `As`\-Schlüsselwort und einen expliziten Datentyp enthält \(siehe folgende Beispiele\):  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#9)]  
+     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
      Sie können mehrere Konstanten in einer einzelnen Zeile deklarieren. Der Code ist jedoch besser lesbar, wenn Sie pro Zeile nur eine Konstante deklarieren.  Wenn Sie mehrere Konstanten auf einer Zeile deklarieren, müssen alle die gleiche Zugriffsebene aufweisen \(`Public`, `Private`, `Friend`, `Protected` oder `Protected Friend`\).  
   

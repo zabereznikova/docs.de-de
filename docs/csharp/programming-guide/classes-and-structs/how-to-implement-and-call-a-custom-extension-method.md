@@ -37,7 +37,7 @@ In diesem Thema wird gezeigt, wie für Erweiterungsmethoden implementiert, besit
 ## Beispiel  
  Im folgenden Beispiel wird eine Erweiterungsmethode mit dem Namen `WordCount` in der `CustomExtensions.StringExtension`\-Klasse implementiert.  Die Methode gilt für die <xref:System.String>\-Klasse, die als erster Methodenparameter angegeben wird.  Der `CustomExtensions`\-Namespace wird in den Anwendungs\-Namespace importiert, und die Methode wird in der `Main`\-Methode aufgerufen.  
   
- [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-and-cal_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## Kompilieren des Codes  
  Um diesen Code auszuführen, kopieren Sie ihn, und fügen Sie ihn in ein Visual C\#\-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)] erstellt wurde.  Dieses Projekt gilt standardmäßig für [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] Version 3.5 und hat einen Verweis auf System.Core.dll sowie eine `using`\-Direktive für System.Linq.  Wenn eine oder mehrere dieser Anforderungen im Projekt fehlen, können Sie sie manuell hinzufügen.  Weitere Informationen hierzu finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  

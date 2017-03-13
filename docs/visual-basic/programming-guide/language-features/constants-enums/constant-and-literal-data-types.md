@@ -30,7 +30,7 @@ Ein Literal ist ein Wert, der sich selbst ausdrückt und nicht als Wert einer Va
   
  Wenn die [Option "Infer"](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` und die [Option "Strict"](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On` ist, müssen alle Konstanten explizit mit einem Datentyp deklariert werden.  Im folgenden Beispiel wird der Datentyp von `MyByte` explizit als Datentyp `Byte` deklariert:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
  Wenn `Option Infer` `On` oder `Option Strict` is `Off` ist, können Sie eine Konstante ohne Angabe eines Datentyps mit einer `As`\-Klausel deklarieren.  Der Compiler bestimmt den Typ der Konstante anhand des Ausdruckstyps.  Ein numerisches Ganzzahlliteral wird standardmäßig in den Datentyp `Integer` umgewandelt.  Der Standarddatentyp für Gleitkommazahlen lautet `Double`, und die Schlüsselwörter `True` sowie `False` geben eine `Boolean`\-Konstante an.  
   
@@ -48,11 +48,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  Zur Korrektur des vorherigen Beispiels hängen Sie das Typzeichen `D` an das Literal an. Dadurch wird das Literal als `Decimal` dargestellt:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
  Das folgende Beispiel demonstriert die richtige Verwendung von Typzeichen und umschließenden Zeichen:  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
  In der folgenden Tabelle finden Sie die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zur Verfügung stehenden umschließenden Zeichen und Typzeichen.  
   

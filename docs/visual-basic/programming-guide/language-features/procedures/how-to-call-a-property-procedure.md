@@ -39,7 +39,7 @@ Eine Eigenschaftenprozedur wird aufgerufen, wenn Sie in der Eigenschaft einen We
   
      Im folgenden Beispiel wird der Wert der <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>\-Eigenschaft gelesen, und die zugehörige `Get`\-Prozedur wird implizit aufgerufen.  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-call-a-property-procedure_1.vb)]  
   
 2.  Wenn die Eigenschaft Argumente annimmt, fügen Sie nach dem Eigenschaftennamen runde Klammern ein, die die Argumentliste einschließen.  Wenn keine Argumente vorliegen, können Sie die Klammern auch weglassen.  
   
@@ -53,7 +53,7 @@ Eine Eigenschaftenprozedur wird aufgerufen, wenn Sie in der Eigenschaft einen We
   
      Im folgenden Beispiel wird der Wert der <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>\-Eigenschaft festgelegt, wobei die `Set`\-Prozedur implizit aufgerufen wird.  
   
-     [!code-vb[VbVbcnProcedures#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-property-p_2.vb)]  
+     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-call-a-property-procedure_2.vb)]  
   
 2.  Wenn die Eigenschaft Argumente annimmt, fügen Sie nach dem Eigenschaftennamen runde Klammern ein, die die Argumentliste einschließen.  Wenn keine Argumente vorliegen, können Sie die Klammern auch weglassen.  
   

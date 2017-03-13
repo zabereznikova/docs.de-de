@@ -35,7 +35,7 @@ Sie können XML\-Literale mit eingebetteten Ausdrücken kombinieren, um ein XML\
   
 -   Im folgenden Beispiel wird gezeigt, wie der in der `contactName`\-Variable enthaltene Text zwischen dem ersten und dem letzten Nameelement eingefügt wird.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_1.vb)]  
+     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
      Dieses Beispiel erzeugt folgende Ausgabe:  
   
@@ -49,7 +49,7 @@ Sie können XML\-Literale mit eingebetteten Ausdrücken kombinieren, um ein XML\
   
 -   Im folgenden Beispiel wird gezeigt, wie der in der `phoneType`\-Variable enthaltene Text als Wert des `type`\-Attributs eingefügt wird.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_2.vb)]  
+     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
      Dieses Beispiel erzeugt folgende Ausgabe:  
   
@@ -65,7 +65,7 @@ Sie können XML\-Literale mit eingebetteten Ausdrücken kombinieren, um ein XML\
   
      Wenn Sie Elemente auf diese Weise erstellen, müssen Sie sie mit dem \<\/\>\-Tag schließen.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_3.vb)]  
+     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
      Dieses Beispiel erzeugt folgende Ausgabe:  
   

@@ -19,17 +19,17 @@ caps.handback.revision: 16
 In diesem Beispiel werden die [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) `IDimensions` und die Klasse `Box` deklariert, womit die Schnittstellenmember `getLength` und `getWidth` explizit implementiert werden.  Auf die Member wird über die `dimensions`\-Schnittstelleninstanz zugegriffen.  
   
 ## Beispiel  
- [!code-cs[csProgGuideInheritance#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_1.cs)]  
+ [!code-cs[csProgGuideInheritance#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_1.cs)]  
   
 ## Robuste Programmierung  
   
 -   Beachten Sie, dass die folgenden Zeilen in der `Main`\-Methode auskommentiert sind, da sie Kompilierungsfehler verursachen würden.  Auf einen explizit implementierten Schnittstellenmember kann nicht über eine [Klassen](../../../csharp/language-reference/keywords/class.md)\-Instanz zugegriffen werden:  
   
-     [!code-cs[csProgGuideInheritance#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_2.cs)]  
+     [!code-cs[csProgGuideInheritance#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_2.cs)]  
   
 -   Beachten Sie auch die folgenden Zeilen in der `Main`\-Methode. Durch diese Zeilen werden die Abmessungen des Felds erfolgreich ausgegeben, da die Methoden von einer Instanz der Schnittstelle aufgerufen werden:  
   
-     [!code-cs[csProgGuideInheritance#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_3.cs)]  
+     [!code-cs[csProgGuideInheritance#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_3.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

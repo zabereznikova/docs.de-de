@@ -24,7 +24,7 @@ Der `abstract`\-Modifizierer gibt an, dass die Implementierung des Elements, das
 ## Beispiel  
  In diesem Beispiel muss die Klasse `Square` eine Implementierung von `Area` bereitstellen, weil sie von `ShapesClass` abgeleitet ist:  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  Abstrakte Klassen weisen die nachstehenden Funktionen auf:  
   
@@ -66,12 +66,12 @@ Der `abstract`\-Modifizierer gibt an, dass die Implementierung des Elements, das
   
  Eine abstrakte Klasse, die eine Schnittstelle implementiert, ordnet die Schnittstellenmethoden möglicherweise abstrakten Methoden zu.  Beispiele:  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#2)]  
+ [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## Beispiel  
  In diesem Beispiel wird die `DerivedClass`\-Klasse von der abstrakten `BaseClass`\-Klasse abgeleitet.  Die abstrakte Klasse enthält eine abstrakte Methode \(`AbstractMethod`\) sowie zwei abstrakte Eigenschaften \(`X` und `Y`\).  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#3)]  
+ [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  Wenn Sie die abstrakte Klasse im voranstehenden Beispiel unter Verwendung einer Anweisung wie dieser instanziieren:  
   

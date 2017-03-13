@@ -24,7 +24,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie eine Zeichenfolge mithilfe d
  In diesem Beispiel werden Leerzeichen, Kommas, Punkte, Doppelpunkte und Tabstopps verwendet, die alle in einem Array, das diese Trennzeichen enthält, an <xref:System.String.Split%2A> übergeben werden.  Jedes Wort im Satz der Zielzeichenfolge wird getrennt vom resultierenden Zeichenfolgenarray angezeigt.  
   
 ## Beispiel  
- [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#16)]  
+ [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
   
 ## Beispiel  
  Standardmäßig gibt String.Split leere Zeichenfolgen zurück, wenn zwei Trennzeichen in der Zielzeichenfolge nacheinander angezeigt werden.  Sie können einen optionalen StringSplitOptions.RemoveEmptyEntries\-Parameter übergeben, um alle leeren Zeichenfolgen in der Ausgabe auszuschließen.  

@@ -66,7 +66,7 @@ Ein Literal, das ein <xref:System.Xml.Linq.XProcessingInstruction>\-Objekt darst
 ## Beispiel  
  Im folgenden Beispiel wird eine Verarbeitungsanweisung erstellt, die ein Stylesheet für ein XML\-Dokument identifiziert.  
   
- [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-processing-instructi_1.vb)]  
+ [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Xml.Linq.XProcessingInstruction>   

@@ -52,12 +52,12 @@ public const int c2 = c1 + 100;
 >  Das [readonly](../../../csharp/language-reference/keywords/readonly.md)\-Schlüsselwort unterscheidet sich vom `const`\-Schlüsselwort.  Ein `const`\-Feld kann nur bei der Deklaration des Felds initialisiert werden.  Ein `readonly`\-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden.  Daher können `readonly`\-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen.  Außerdem ist ein `const`\-Feld eine Kompilierzeitkonstante, während ein `readonly`\-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#5)]  
+ [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
   
 ## Beispiel  
  In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.  
   
- [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#6)]  
+ [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

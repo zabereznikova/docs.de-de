@@ -22,7 +22,7 @@ In C\# werden alle Zeichenfolgen im Arbeitsspeicher als Unicode \(UTF\-16\) codi
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie eine Textdatei, die in 8\-Bit\-ASCII codiert wurde, konvertiert und der Quelltext entsprechend der Windows\-Codeseite 737 interpretiert wird.  
   
- [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#34)]  
+ [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-between-legacy-encodings-and-unicode_1.cs)]  
   
 ## Siehe auch  
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)

@@ -30,7 +30,7 @@ Das `char`\-Schlüsselwort wird verwendet, um eine Instanz der <xref:System.Char
 ## Literale  
  Konstanten vom Typ `char` können als Zeichenliterale, als hexadezimale Escapesequenz oder in Unicode\-Darstellung geschrieben werden.  Sie können auch eine Typumwandlung der ganzzahligen Zeichencodes durchführen.  Im folgenden Beispiel werden vier `char`\-Variablen mit dem gleichen Zeichen `X` initialisiert:  
   
- [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/csharp/char_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/char_1.cs)]  
   
 ## Konvertierungen  
  Ein `char` kann implizit konvertiert werden in [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md).  Es finden jedoch keine impliziten Konvertierungen von anderen Datentypen in den `char`\-Typ statt.  

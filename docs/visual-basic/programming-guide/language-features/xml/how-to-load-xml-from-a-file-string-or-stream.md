@@ -33,7 +33,7 @@ Sie können [XML Literals](../../../../visual-basic/language-reference/xml-liter
   
      Im folgenden Codebeispiel ist dargestellt, wie mithilfe der <xref:System.Xml.Linq.XDocument.Load%28System.String%29>\-Methode ein <xref:System.Xml.Linq.XDocument>\-Objekt mit XML aus einer Textdatei aufgefüllt wird.  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_1.vb)]  
+     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
   
 ### So laden Sie XML aus einer Zeichenfolge  
   
@@ -41,7 +41,7 @@ Sie können [XML Literals](../../../../visual-basic/language-reference/xml-liter
   
      Im folgenden Codebeispiel ist dargestellt, wie mithilfe der <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=fullName>\-Methode ein <xref:System.Xml.Linq.XDocument>\-Objekt mit XML aus einer Zeichenfolge aufgefüllt wird.  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_2.vb)]  
+     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
   
 ### So laden Sie XML aus einem Stream  
   
@@ -49,7 +49,7 @@ Sie können [XML Literals](../../../../visual-basic/language-reference/xml-liter
   
  Im folgenden Codebeispiel ist dargestellt, wie mithilfe der <xref:System.Xml.Linq.XNode.ReadFrom%2A>\-Methode ein <xref:System.Xml.Linq.XDocument>\-Objekt mit XML aus einem XML\-Stream aufgefüllt wird.  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_3.vb)]  
+ [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
 ## Siehe auch  
  <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>   

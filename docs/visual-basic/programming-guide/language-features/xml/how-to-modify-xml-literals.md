@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
      Im folgenden Codebeispiel wird der Wert aller \<Price\>\-Elemente in einem XML\-Dokument aktualisiert.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#4)]  
+     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
      Im Folgenden werden Beispiele für ursprünglichen und geänderten XML\-Code aus diesem Codebeispiel dargestellt.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 11
   
 1.  Um einem XML\-Literal ein Attribut hinzuzufügen, rufen Sie zunächst einen Verweis auf dieses XML\-Literal ab.  Sie können dann durch Hinzufügen einer neuen XML\-Attributachseneigenschaft ein Attribut hinzufügen.  Sie können dem XML\-Literal auch ein neues <xref:System.Xml.Linq.XAttribute>\-Objekt hinzufügen, indem Sie die <xref:System.Xml.Linq.XContainer.Add%2A>\-Methode verwenden.  Im folgenden Beispiel werden beide Optionen veranschaulicht.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#5)]  
+     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
      Im Folgenden werden Beispiele für ursprünglichen und geänderten XML\-Code aus diesem Codebeispiel dargestellt.  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 11
   
      Im folgenden Beispiel werden beide Verfahren veranschaulicht.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#6)]  
+     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
      Im Folgenden werden Beispiele für ursprünglichen und geänderten XML\-Code aus diesem Codebeispiel dargestellt.  
   
@@ -165,7 +165,7 @@ caps.handback.revision: 11
   
 1.  Um ein Element oder ein Attribut aus einem XML\-Literal zu entfernen, rufen Sie einen Verweis auf das Element oder das Attribut ab, und rufen Sie die `Remove`\-Methode auf, wie im folgenden Beispiel gezeigt.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#7)]  
+     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
      Im Folgenden werden Beispiele für ursprünglichen und geänderten XML\-Code aus diesem Codebeispiel dargestellt.  
   
@@ -213,7 +213,7 @@ caps.handback.revision: 11
   
      Im folgenden Codebeispiel werden alle \<Description\>\-Elemente durch ein \<Abstract\>\-Element ersetzt.  Der Inhalt des \<Description\>\-Elements wird im neuen \<Abstract\>\-Element beibehalten, wenn die <xref:System.Xml.Linq.XContainer.Nodes%2A>\-Eigenschaft des \<Description\>\-<xref:System.Xml.Linq.XElement>\-Objekts verwendet wird.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#8)]  
+     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
      Im Folgenden werden Beispiele für ursprünglichen und geänderten XML\-Code aus diesem Codebeispiel dargestellt.  
   

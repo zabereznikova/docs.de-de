@@ -85,7 +85,7 @@ expression1 / expression2
 ## Beispiel  
  In diesem Beispiel wird der Operator `/` für Gleitkommadivisionen verwendet.  Das Ergebnis ist der Quotient der zwei Operanden.  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/floating-point-division-_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
  Die Ausdrücke im vorhergehenden Beispiel geben die Werte 2,5 und 3,333333 zurück.  Das Ergebnis ist stets ein Gleitkommawert \(`Double`\), obwohl beide Operanden ganzzahlige Konstanten sind.  
   

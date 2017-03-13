@@ -29,17 +29,17 @@ Wenn Sie Zeichenfolgen vergleichen, führt dies zu einem Ergebnis, das besagt, d
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen ordnungsgemäß verglichen werden, deren Werte sich nicht basierend auf dem Gebietsschema des Computers des Benutzers ändern.  Außerdem wird auch das C\#\-Feature *Internalisierung von Zeichenfolgen* erläutert.  Wenn ein Programm mehrere identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort.  Wenn Sie die <xref:System.Object.ReferenceEquals%2A>\-Methode aufrufen, sehen Sie, dass die beiden Zeichenfolgen auf dasselbe Objekt im Arbeitsspeicher verweisen.  Verwenden Sie die <xref:System.String.Copy%2A?displayProperty=fullName>\-Methode, um eine Internalisierung zu vermeiden, wie im folgenden Beispiel dargestellt.  
   
- [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#11)]  
+ [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen auf die bevorzugte Weise mithilfe der <xref:System.String?displayProperty=fullName>\-Methoden verglichen werden, die eine <xref:System.StringComparison>\-Enumeration akzeptieren.  Beachten Sie, dass die <xref:System.String.CompareTo%2A?displayProperty=fullName>\-Instanzenmethoden hier nicht verwendet werden, da keine der Überladungen einen <xref:System.StringComparison> akzeptiert.  
   
- [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#31)]  
+ [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen sortiert werden und in einem Array auf kulturabhängige Weise danach gesucht wird. Verwenden Sie dazu die statischen <xref:System.Array>\-Methoden, die einen <xref:System.StringComparer?displayProperty=fullName>\-Parameter akzeptieren.  
   
- [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#32)]  
+ [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
  Auflistungsklassen, wie z. B. <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> und <xref:System.Collections.Generic.List%601?displayProperty=fullName> verfügen über Konstruktoren, die einen <xref:System.StringComparer?displayProperty=fullName>\-Parameter akzeptieren, wenn der Typ der Elemente oder Schlüssel `string` lautet.  Im Allgemeinen sollten Sie wann immer möglich diese Konstruktoren verwenden und entweder `Ordinal` oder `OrdinalIgnoreCase` angeben.  
   

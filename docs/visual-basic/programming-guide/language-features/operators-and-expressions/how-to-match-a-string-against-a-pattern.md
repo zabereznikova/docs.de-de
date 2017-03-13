@@ -42,7 +42,7 @@ Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../
   
      Im folgenden Beispiel wird überprüft, ob `myString` genau aus dem einzelnen Zeichen `H` besteht.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einem Platzhalterzeichen  
   
@@ -50,7 +50,7 @@ Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../
   
      Im folgenden Beispiel wird überprüft, ob `myString` aus dem einzelnen Zeichen `W` gefolgt von zwei beliebigen Zeichen besteht.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen  
   
@@ -58,7 +58,7 @@ Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../
   
      Im folgenden Beispiel wird überprüft, ob `myString` aus einem beliebigen gültigen Zeichen gefolgt von einem der Zeichen `A`, `C` oder `E` besteht.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
      Beachten Sie, dass bei diesem Vergleich die Groß\-\/Kleinschreibung beachtet werden muss.  
   
@@ -68,7 +68,7 @@ Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../
   
      Im folgenden Beispiel wird überprüft, ob `myString` aus den Zeichen vom Typ `num` gefolgt von genau einem der Zeichen `i`, `j`, `k`, `l`, `m` oder `n` besteht.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
      Beachten Sie, dass bei diesem Vergleich die Groß\-\/Kleinschreibung beachtet werden muss.  
   
@@ -85,7 +85,7 @@ Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../
   
      Im folgenden Beispiel wird überprüft, ob die siebenstellige Telefonnummer `phoneNum` aus genau drei Ziffern, gefolgt von einem Leerzeichen, einem Bindestrich \(`–`\), einem Punkt \(`.`\) oder keinem Zeichen und genau vier numerischen Ziffern besteht.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## Siehe auch  
  [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   

@@ -84,11 +84,11 @@ IntelliSense für XML in Visual Basic stellt die Funktion der Wortvervollständi
   
 2.  Fügen Sie am Anfang der Codedatei eine `Imports`\-Anweisung für den XML\-Zielnamespace hinzu, wie im folgenden Beispiel gezeigt.  
   
-     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_1.vb)]  
+     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_1.vb)]  
   
      Fügen Sie für den standardmäßigen XML\-Zielnamespace eine `Imports`\-Anweisung hinzu, um einen XML\-Namespace als Standardnamespace zu importieren. Dieser Namespace wird auf XML\-Elemente und \-Attribute angewendet, die über kein Namespacepräfix verfügen.  Geben Sie kein Namespacepräfix an.  Das folgende Beispiel zeigt eine `Imports`\-Anweisung.  
   
-     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_2.vb)]  
+     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_2.vb)]  
   
 #### So importieren Sie einen XML\-Namespace für alle Dateien in einem Projekt  
   

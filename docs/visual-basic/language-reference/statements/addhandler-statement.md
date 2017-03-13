@@ -50,7 +50,7 @@ AddHandler event, AddressOf eventhandler
 >  Für benutzerdefinierte Ereignisse ruft die `AddHandler`\-Anweisung den `AddHandler`\-Accessor des Ereignisses auf.  Weitere Informationen über benutzerdefinierte Ereignisse finden Sie unter [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Beispiel  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
 ## Siehe auch  
  [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md)   

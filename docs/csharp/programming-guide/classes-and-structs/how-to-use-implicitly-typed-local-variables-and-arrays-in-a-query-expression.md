@@ -23,12 +23,12 @@ Sie können immer implizit typisierte lokale Variablen verwenden, wenn der Compi
 ## Beispiel  
  Das folgende Beispiel zeigt ein typisches Szenario, in dem das `var`\-Schlüsselwort erforderlich ist: Ein Abfrageausdruck, der eine Sequenz anonymer Typen erzeugt.  In diesem Szenario müssen die Abfragevariable und die Iterationsvariable in der `foreach`\-Anweisung mithilfe von `var` implizit typisiert werden, da Sie keinen Zugriff auf einen Typnamen für den anonymen Typ haben.  Weitere Informationen zu anonymen Typen finden Sie unter [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
- [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#32)]  
+ [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird das `var`\-Schlüsselwort in einer ähnlichen Situation verwendet, in der jedoch die Verwendung von `var` optional ist.  Da `student.LastName` eine Zeichenfolge ist, gibt die Ausführung der Abfrage eine Sequenz von Zeichenfolgen zurück.  Daher kann der Typ von `queryID` als `System.Collections.Generic.IEnumerable<string>` statt als `var` deklariert werden.  Das Schlüsselwort `var` wird aus praktischen Gründen verwendet.  Im Beispiel wird die Iterationsvariable in der `foreach`\-Anweisung explizit als string typisiert, sie kann jedoch stattdessen auch mit `var` deklariert werden.  Da der Typ der Iterationsvariablen kein anonymer Typ ist, ist die Verwendung von `var` optional und nicht erforderlich.  Denken Sie daran, dass `var` kein eigener Typ ist, sondern eine Anweisung an den Compiler, den Typ abzuleiten und zuzuweisen.  
   
- [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#33)]  
+ [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

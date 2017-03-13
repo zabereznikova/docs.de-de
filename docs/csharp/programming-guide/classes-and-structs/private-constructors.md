@@ -19,7 +19,7 @@ caps.handback.revision: 19
 # Private Konstruktoren (C#-Programmierhandbuch)
 Ein privater Konstruktor ist ein spezieller Instanzkonstruktor.  Er wird meistens für Klassen verwendet, die nur statische Member enthalten.  Wenn eine Klasse über einen oder mehrere private und keine öffentlichen Konstruktoren verfügt, können andere Klassen \(außer geschachtelte Klassen\) keine Instanzen dieser Klasse erstellen.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_1.cs)]  
   
  Die Deklaration des leeren Konstruktors verhindert die automatische Erstellung eines Standardkonstruktors.  Beachten Sie, dass bei nicht erfolgter Verwendung eines Zugriffsmodifizierers mit dem Konstruktor dieser standardmäßig weiterhin privat ist.  Der [private](../../../csharp/language-reference/keywords/private.md)\-Modifizierer wird jedoch in der Regel verwendet, um explizit festzulegen, dass die Klasse nicht instanziiert werden kann.  
   
@@ -28,11 +28,11 @@ Ein privater Konstruktor ist ein spezieller Instanzkonstruktor.  Er wird meisten
 ## Beispiel  
  Im Folgenden sehen Sie ein Beispiel für eine Klasse, die einen privaten Konstruktor verwendet.  
   
- [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
   
  Beachten Sie, dass das Auskommentieren der folgenden Anweisung aus dem Beispiel einen Fehler verursacht, da auf den Konstruktor aufgrund seiner Sicherheitsebene nicht zugegriffen werden kann:  
   
- [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -22,7 +22,7 @@ caps.handback.revision: 22
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
   
 ## Beispiel  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#10)]  
+ [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
  Falls der Ordner bereits vorhanden ist, führt <xref:System.IO.Directory.CreateDirectory%2A> keine Aktion aus, und es wird keine Ausnahme ausgelöst.  Allerdings wird mit <xref:System.IO.File.Create%2A?displayProperty=fullName> eine vorhandene Datei durch eine neue Datei ersetzt.  Im Beispiel wird eine `if`\-`else`\-Anweisung verwendet, um zu verhindern, dass eine vorhandene Datei ersetzt wird.  
   

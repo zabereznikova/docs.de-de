@@ -24,17 +24,17 @@ Mit der `break`\-Anweisung wird die direkt umschließende Schleife oder die [swi
 ## Beispiel  
  In diesem Beispiel enthält die Bedingungsanweisung einen Zähler, der von 1 bis 100 zählen soll. Die `break`\-Anweisung beendet die Schleife jedoch nach 4 Durchläufen.  
   
- [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/csharp/break_1.cs)]  
+ [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
   
 ## Beispiel  
  In diesem Beispiel wird die `break`\-Anweisung verwendet, um aus einer inneren geschachtelten Schleife auszubrechen und die Kontrolle an das Rückgabesteuerelement zurückzugeben.  
   
- [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/csharp/break_2.cs)]  
+ [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
   
 ## Beispiel  
  In diesem Beispiel wird die Verwendung von `break` in einer [switch](../../../csharp/language-reference/keywords/switch.md)\-Anweisung veranschaulicht.  
   
- [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/csharp/break_3.cs)]  
+ [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
   
  Bei Eingabe von `4` sähe die Ausgabe wie folgt aus:  
   

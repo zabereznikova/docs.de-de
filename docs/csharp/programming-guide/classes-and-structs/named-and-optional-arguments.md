@@ -55,7 +55,7 @@ caps.handback.revision: 43
 ## Beispiel  
  Mit dem folgenden Code werden die Beispiele aus diesem Abschnitt implementiert.  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/program.cs#1)]  
+ [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## Optionale Argumente  
  In der Definition einer Methode, eines Konstruktors, eines Indexers oder eines Delegaten kann angegeben sein, ob die Parameter erforderlich oder optional sind.  Bei jedem Aufruf müssen Argumente für alle erforderlichen Parameter bereitgestellt werden, Argumente für optionale Parameter können jedoch weggelassen werden.  
@@ -70,7 +70,7 @@ caps.handback.revision: 43
   
  Optionale Parameter werden am Ende der Parameterliste nach den erforderlichen Parametern definiert.  Wenn der Aufrufer ein Argument für einen Parameter in einer Folge von optionalen Parametern bereitstellt, müssen auch Argumente für alle vorangehenden optionalen Parameter bereitgestellt werden.  Durch Trennzeichen getrennte Lücken in der Argumentliste werden nicht unterstützt.  Im folgenden Code z. B. ist die `ExampleMethod`\-Instanzmethode durch einen erforderlichen und zwei optionale Parameter definiert.  
   
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#15)]  
+ [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
  Der folgende Aufruf von `ExampleMethod` verursacht einen Compilerfehler, da ein Argument zwar für den dritten, aber nicht für den zweiten Parameter bereitgestellt wird.  
   
@@ -91,7 +91,7 @@ Optionale Parameter in ExampleMethod
 ## Beispiel  
  Der Konstruktor für `ExampleClass` im folgenden Beispiel weist einen Parameter auf, der optional ist.  Die Instanzmethode `ExampleMethod` weist einen erforderlichen Parameter \(`required`\) und zwei optionale Parameter \(`optionalstr` und `optionalint`\) auf.  Der Code in `Main` veranschaulicht die unterschiedlichen Methoden, mit denen der Konstruktor und die Methode aufgerufen werden können.  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#2)]  
+ [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## COM\-Schnittstellen  
  Benannte und optionale Argumente sorgen wie auch die Unterstützung für dynamische Objekte und andere Erweiterungen für eine erhebliche Verbesserung der Interoperabilität mit COM\-APIs, wie z. B. Office\-Automatisierungs\-APIs.  
@@ -103,11 +103,11 @@ AutoFormat\-Parameter
   
  In C\# 3.0 und früheren Versionen ist ein Argument für jeden Parameter erforderlich, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#3)]  
+ [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
  Sie können den Aufruf von `AutoFormat` jedoch sehr vereinfachen, indem Sie benannte und optionale Argumente verwenden, die in C\# 4.0 eingeführt wurden.  Benannte und optionale Argumente ermöglichen Ihnen, das Argument für einen optionalen Parameter wegzulassen, wenn Sie den Standardwert des Parameters nicht ändern möchten.  Im folgenden Aufruf wird für nur einen der sieben Parameter ein Wert angegeben.  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#13)]  
+ [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
  Weitere Informationen und Beispiele finden Sie unter [Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office\-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) und [Gewusst wie: Zugreifen auf Office\-Interop\-Objekte mithilfe von Visual C\#\-Funktionen](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   

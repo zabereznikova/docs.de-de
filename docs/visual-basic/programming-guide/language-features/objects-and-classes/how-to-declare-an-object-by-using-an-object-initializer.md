@@ -30,7 +30,7 @@ Objektinitialisierer ermöglichen Ihnen, in einer einzelnen Anweisung eine Insta
   
  In der folgenden Prozedur wird dargestellt, wie eine Instanz einer `Student`\-Klasse auf drei verschiedene Weisen erstellt werden kann.  Die Klasse verfügt unter anderem über einen Vornamen, einen Nachnamen und Klassenjahreseigenschaften.  Jede dieser drei Deklarationen erstellt eine neue Instanz von `Student`, in der die `First`\-Eigenschaft auf "Michael", die `Last`\-Eigenschaft auf "Tucker" und die verbleibenden Member auf ihre Standardwerte festgelegt sind.  Das Ergebnis jeder Deklaration in der Prozedur entspricht dem folgenden Beispiel, in dem kein Objektinitialisierer verwendet wurde.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
  Weiter Informationen zur Implementierung der `Student`\-Klasse finden Sie unter [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  Sie können den Code dieses Themas kopieren, um die Klasse einzurichten und eine Liste von `Student`\-Objekten zum Arbeiten zu erstellen.  
   
@@ -46,7 +46,7 @@ Objektinitialisierer ermöglichen Ihnen, in einer einzelnen Anweisung eine Insta
   
 3.  Schließen Sie in die Initialisierungsliste sämtliche Eigenschaften ein, die initialisiert werden sollen, und weisen Sie ihnen einen Anfangswert zu.  Der Name der Eigenschaft wird von einem voranstehenden Punkt eingeleitet.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      Sie können einen oder mehrere Member der Klasse initialisieren.  
   
@@ -60,11 +60,11 @@ Objektinitialisierer ermöglichen Ihnen, in einer einzelnen Anweisung eine Insta
   
 6.  Geben Sie `With` gefolgt von einem Objektinitialisierer ein, um einen oder mehrere Member der neuen Instanz zu initialisieren.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
 7.  Sie können die Definition im vorherigen Schritt vereinfachen, indem Sie `As Student` auslassen.  In diesem Fall bestimmt der Compiler mithilfe des lokalen Typrückschlusses, dass `student3` eine Instanz von `Student` ist.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
      Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

@@ -40,11 +40,11 @@ caps.handback.revision: 15
 ## Verknüpfen mehrerer Eingaben in eine Ausgabesequenz  
  Sie können eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage zum Erstellen einer Ausgabesequenz verwenden, die Elemente von mehr als einer Eingabesequenz enthält.  Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Speicher kombiniert werden, aber die gleichen Prinzipien können für die Kombination von XML\- oder SQL\- oder DataSet\-Quellen angewendet werden.  Nehmen wir an, es liegen die folgenden beiden Klassentypen vor:  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#7)]  
+ [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  Im folgenden Beispiel wird die Abfrage gezeigt:  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#8)]  
+ [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Weitere Informationen finden Sie unter [join\-Klausel](../../../../csharp/language-reference/keywords/join-clause.md) und unter [select\-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 15
 ## Transformieren von Objekten im Speicher in XML  
  Mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen können Daten zwischen Datenstrukturen im Speicher, SQL\-Datenbanken, [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)]\-Datasets und XML\-Streams oder \-Dokumenten auf einfache Weise umgewandelt werden.  Im folgenden Beispiel werden Objekte in einer Datenstruktur im Speicher in XML\-Elemente umgewandelt.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#9)]  
+ [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  Der Code erzeugt die folgende XML\-Ausgabe:  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 15
 > [!NOTE]
 >  Das Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage für eine andere Domäne übersetzt wird.  Sie können beispielsweise keine normale C\#\-Methode in [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt.  Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen.  Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](../Topic/Stored%20Procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#10)]  
+ [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## Siehe auch  
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   

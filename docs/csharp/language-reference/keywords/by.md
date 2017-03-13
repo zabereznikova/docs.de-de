@@ -24,7 +24,7 @@ Das `by`\-Kontextschlüsselwort wird in der `group`\-Klausel in einem Abfrageaus
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie das `by`\-Kontextschlüsselwort in einer `group`\-Klausel verwendet wird, um anzugeben, dass die Kursteilnehmer anhand des ersten Buchstaben des Nachnamens gruppiert werden sollen.  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/csharp/by_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## Siehe auch  
  [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

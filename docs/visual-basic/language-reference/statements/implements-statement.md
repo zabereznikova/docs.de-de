@@ -54,14 +54,14 @@ Implements interfacename.interfacemember [, ...]
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `Implements`\-Anweisung verwendet wird, um Member einer Schnittstelle zu implementieren.  Im Beispiel wird die Schnittstelle `ICustomerInfo` mit einem Ereignis, einer Eigenschaft und einer Prozedur definiert.  Die `customerInfo`\-Klasse implementiert alle Member, die in der Schnittstelle definiert sind.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
  Beachten Sie, dass die `customerInfo`\-Klasse die `Implements`\-Anweisung in einer eigenen Quellcodezeile verwendet, um anzugeben, dass die Klasse alle Member der `ICustomerInfo`\-Schnittstelle implementiert.  Anschließend verwendet jeder Member der Klasse das `Implements`\-Schlüsselwort als Teil seiner Memberdeklaration, um anzugeben, dass er diesen Schnittstellenmember implementiert.  
   
 ## Beispiel  
  In den folgenden beiden Prozeduren wird veranschaulicht, wie Sie die im vorherigen Beispiel implementierte Schnittstelle verwenden können.  Zum Testen der Implementierung fügen Sie dem Projekt diese Prozeduren hinzu und rufen die `testImplements`\-Prozedur auf.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
 ## Siehe auch  
  [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   

@@ -29,7 +29,7 @@ In diesem Beispiel wird der Inhalt einer Textdatei, indem die statischen Methode
 >  Die Dateien, die in diesem Beispiel verwendet werden, werden im Thema [Gewusst wie: Schreiben in eine Textdatei](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md) erstellt.  
   
 ## Beispiel  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#4)]  
+ [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## Kompilieren des Codes  
  Kopieren Sie den Code und fügen Sie ihn in eine C\#\-Konsolenanwendung ein.  

@@ -51,7 +51,7 @@ Verweist auf eine andere Datei, in der die Typen und Member im Quellcode beschri
 ## Beispiel  
  In diesem Beispiel wird das `<include>`\-Tag verwendet, um Memberdokumentationskommentare aus einer Datei mit dem Namen `commentFile.xml` zu importieren.  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
  Die Datei `commentFile.xml` hat folgendes Format.  
   

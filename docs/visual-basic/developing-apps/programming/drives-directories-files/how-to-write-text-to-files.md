@@ -32,7 +32,7 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>\-Methode kann
   
 -   Verwenden Sie die `WriteAllText`\-Methode, um Text in eine Datei zu schreiben. Geben Sie dabei die Datei und den gewünschten Text an.  In diesem Beispiel wird die Zeile `"This is new text."` in die Datei mit dem Namen `test.txt` geschrieben, wobei der Text an bereits bestehenden Text in der Datei angehängt wird.  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
 #### So schreiben Sie eine Reihe von Zeichenfolgen in eine Datei  
   
@@ -40,7 +40,7 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>\-Methode kann
   
      In diesem Beispiel werden die Namen der Dateien im Verzeichnis `Documents and Settings` in die Datei `FileList.txt` geschrieben. Zur besseren Lesbarkeit wird jeweils ein Wagenrücklaufzeichen eingefügt.  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
 ## Robuste Programmierung  
  Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  

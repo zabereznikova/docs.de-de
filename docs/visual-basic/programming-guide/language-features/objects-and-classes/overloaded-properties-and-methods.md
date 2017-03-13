@@ -34,15 +34,15 @@ caps.handback.revision: 12
 ## Verwenden der Überladung  
  Eine Überladung ist besonders dann hilfreich, wenn es das Objektmodell erforderlich macht, identische Namen für Prozeduren zu vergeben, die auf verschiedene Datentypen angewendet werden.  So kann beispielsweise eine Klasse, die mehrere unterschiedliche Datentypen anzeigen kann, über `Display`\-Prozeduren verfügen, die folgendermaßen aussehen:  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#64)]  
+ [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
  Ohne die Überladung müssten Sie unterschiedliche Namen für jede Prozedur erstellen, auch wenn alle dieselben Funktionen haben, wie das folgende Beispiel zeigt:  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#65)]  
+ [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
  Durch die Überladung wird eine Reihe von optional verwendbaren Datentypen zur Verfügung gestellt, wodurch die Verwendung von Eigenschaften oder Methoden vereinfacht wird.  So kann beispielsweise die oben beschriebene überladene `Display`\-Methode durch eine der folgenden Codezeilen aufgerufen werden:  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#66)]  
+ [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
  Zur Laufzeit ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die richtige Prozedur auf Grundlage der Datentypen der von Ihnen angegebenen Parameter auf.  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 12
   
 2.  Fügen Sie der `TaxClass`\-Klasse den folgenden Code hinzu:  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#67)]  
+     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
 3.  Fügen Sie dem Formular die folgende Prozedur hinzu:  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#68)]  
+     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
 4.  Fügen Sie dem Formular eine Schaltfläche hinzu, und rufen Sie die `ShowTax`\-Prozedur über das `Button1_Click`\-Ereignis der Schaltfläche auf.  
   

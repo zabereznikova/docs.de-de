@@ -42,12 +42,12 @@ Das `volatile`\-Schlüsselwort gibt an, dass ein Feld von mehreren gleichzeitig 
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie eine public\-Feldvariable als `volatile` deklariert wird.  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#24)]  
+ [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs\- bzw. Arbeitsthread erstellt und für die Verarbeitung parallel zum primären Thread verwendet werden kann.  Hintergrundinformationen zum Multithreading finden Sie unter [Threading](../Topic/Managed%20Threading.md) und [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/csharp/volatile_2.cs)]  
+ [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -31,13 +31,13 @@ Die Zwischenablage kann zum Speichern von Daten wie Text und Bildern verwendet w
 ## Lesen aus der Zwischenablage  
  Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A>\-Methode, um Text in der Zwischenablage lesen.  Mit dem folgenden Code wird der Text gelesen und in einem Meldungsfeld angezeigt.  In der Zwischenablage muss Text gespeichert sein, damit das Beispiel fehlerfrei ausgeführt werden kann.  
   
- [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_1.vb)]  
+ [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
  Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms\-Anwendung \> Zwischenablage**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   
  Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A>\-Methode, um ein Bild aus der Zwischenablage abzurufen.  Mit diesem Beispiel wird überprüft, ob die Zwischenablage ein Bild enthält, bevor das Bild abgerufen und  `PictureBox1` zugewiesen wird.  
   
- [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_2.vb)]  
+ [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
  Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms\-Anwendung \> Zwischenablage**. Weitere Informationen dazu finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   
@@ -48,31 +48,31 @@ Die Zwischenablage kann zum Speichern von Daten wie Text und Bildern verwendet w
   
  Verwenden Sie die `ContainsImage`\-Funktion, um festzustellen, ob es sich bei den in der Zwischenablage enthaltenen Daten um ein Bild handelt.  Mit dem folgenden Code wird festgestellt, ob es sich bei den Daten um ein Bild handelt, und es wird eine entsprechende Meldung ausgegeben.  
   
- [!code-vb[VbResourceTasks#13](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_3.vb)]  
+ [!code-vb[VbResourceTasks#13](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_3.vb)]  
   
 ## Die Zwischenablage löschen  
  Mit der <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A>\-Methode wird die Zwischenablage gelöscht.  Da die Zwischenablage auch von anderen Prozessen verwendet wird, wirkt sich das Löschen der Zwischenablage unter Umständen auch auf diese Prozesse aus.  
   
  Im folgenden Beispiel wird die Verwendung der `Clear`\-Methode veranschaulicht.  
   
- [!code-vb[VbVbcnMyClipboard#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_4.vb)]  
+ [!code-vb[VbVbcnMyClipboard#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_4.vb)]  
   
 ## Schreiben in die Zwischenablage  
  Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A>\-Methode, um Text in die Zwischenablage zu schreiben.  Im folgenden Code wird die Zeichenfolge "This is a test string" in die Zwischenablage geschrieben.  
   
- [!code-vb[VbVbcnMyClipboard#1](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_5.vb)]  
+ [!code-vb[VbVbcnMyClipboard#1](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_5.vb)]  
   
  Die `SetText`\-Methode kann den Stilparameter akzeptieren, der einen primitiven Typ <xref:System.Windows.Forms.TextDataFormat>enthält.  Im folgenden Code wird die Zeichenfolge "This is a test string" als RTF\-Text in die Zwischenablage geschrieben.  
   
- [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_6.vb)]  
+ [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
  Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A>\-Methode, um Daten in die Zwischenablage zu schreiben.  In diesem Beispiel wird das `DataObject` `dataChunk` im benutzerdefinierten Format `specialFormat` in die Zwischenablage geschrieben.  
   
- [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_7.vb)]  
+ [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   
  Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A>\-Methode, um Audiodaten in die Zwischenablage zu schreiben.  In diesem Beispiel wird das `musicReader`\-Bytearray erstellt, die Datei `cool.wav` wird in dieses Array gelesen und anschließend in die Zwischenablage geschrieben.  
   
- [!code-vb[VbResourceTasks#5](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/storing-data-to-and-read_8.vb)]  
+ [!code-vb[VbResourceTasks#5](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_8.vb)]  
   
 > [!IMPORTANT]
 >  Da auch andere Benutzer auf die Zwischenablage zugreifen können, sollten Sie sie nicht für sicherheitsrelevante Informationen wie Kennwörter oder vertrauliche Daten verwenden.  

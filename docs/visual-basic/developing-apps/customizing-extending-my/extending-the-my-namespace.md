@@ -47,7 +47,7 @@ Der `My`\-Namespace in Visual Basic macht Eigenschaften und Methoden verfügbar,
   
  Angenommen, Sie verwenden häufig das `My.User`\-Objekt, um auf den aktuellen Sicherheitskontext für den Benutzer zuzugreifen, der Ihre Anwendung ausführt.  Ihr Unternehmen verwendet jedoch ein benutzerdefiniertes Objekt, um Benutzern innerhalb des Unternehmens zusätzliche Informationen und Funktionen zur Verfügung zu stellen.  In diesem Szenario können Sie den Standardwert der `My.User.CurrentPrincipal`\-Eigenschaft durch eine Instanz Ihres eigenen benutzerdefinierten Prinzipalobjekts ersetzen, wie das folgende Beispiel zeigt.  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
   
  Wenn die `CurrentPrincipal`\-Eigenschaft des `My.User`\-Objekts festgelegt wird, ändert sich die Identität, unter der die Anwendung ausgeführt wird.  Das `My.User`\-Objekt wiederum gibt Informationen über den neu angegebenen Benutzer zurück.  
   
@@ -56,7 +56,7 @@ Der `My`\-Namespace in Visual Basic macht Eigenschaften und Methoden verfügbar,
   
  Im folgenden Beispiel wird z. B. eine Eigenschaft mit dem Namen `DnsServerIPAddresses` zum `My.Computer`\-Objekt hinzugefügt.  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
   
 ##  <a name="addingcustom"></a> Hinzufügen von benutzerdefinierten Objekten zum My\-Namespace  
  Zwar stellt der `My`\-Namespace Lösungen für häufig auftretende Programmieraufgaben bereit, doch gibt es möglicherweise auch Aufgaben, für die der `My`\-Namespace keine Lösung bietet.  Ihre Anwendung greift z. B. auf benutzerdefinierte Verzeichnisdienste für Benutzerdaten zu, oder die Anwendung verwendet unter Umständen Assemblys, die nicht standardmäßig mit Visual Basis installiert werden.  Sie können den `My`\-Namespace um benutzerdefinierte Lösungen für häufige, speziell in Ihrer Umgebung auszuführende Aufgaben erweitern.  Der `My`\-Namespace kann problemlos um neue Member erweitert werden, um wachsenden Anwendungsanforderungen zu erfüllen.  Darüber hinaus können Sie Ihre `My`\-Namespaceerweiterungen anderen Entwicklern als Visual Basic\-Vorlage bereitstellen.  
@@ -64,20 +64,20 @@ Der `My`\-Namespace in Visual Basic macht Eigenschaften und Methoden verfügbar,
 ###  <a name="addingtonamespace"></a> Hinzufügen von Membern zum My\-Namespace  
  Da es sich beim `My`\-Namespace um einen gewöhnlichen Namespace handelt, können Sie ihm Eigenschaften der obersten Ebene hinzufügen. Dazu müssen Sie lediglich ein Modul hinzufügen und einen `Namespace` von `My` angeben.  Kommentieren Sie das Modul mit dem `HideModuleName`\-Attribut, wie im folgenden Beispiel gezeigt.  Das `HideModuleName`\-Attribut stellt sicher, dass der Modulname von IntelliSense nicht angezeigt wird, wenn die Member des `My`\-Namespaces angezeigt werden.  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
   
  Um dem `My`\-Namespace Member hinzuzufügen, fügen Sie dem Modul Eigenschaften je nach Bedarf hinzu.  Fügen Sie für jede dem `My`\-Namespace hinzugefügte Eigenschaft ein privates Feld vom Typ `ThreadSafeObjectProvider(Of T)` hinzu. Bei dem Typ handelt es sich dabei um den von der benutzerdefinierten Eigenschaft zurückgegebenen Typ.  Dieses Feld dient zum Erstellen threadsicherer Objektinstanzen, die von der Eigenschaft zurückgegeben werden sollen, indem die `GetInstance`\-Methode aufgerufen wird.  Daher empfängt jeder Thread, der auf die erweiterte Eigenschaft zugreift, seine eigene Instanz des zurückgegebenen Typs.  Im folgenden Beispiel wird eine Eigenschaft mit dem Namen `SampleExtension`, die dem Typ `SampleExtension` angehört, zum `My`\-Namespace hinzugefügt:  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
   
 ##  <a name="addingevents"></a> Hinzufügen von Ereignissen zu benutzerdefinierten My\-Objekten  
  Mit dem `My.Application`\-Objekt können Sie Ereignisse für Ihre benutzerdefinierten `My`\-Objekte verfügbar machen, indem Sie die partielle `MyApplication`\-Klasse im `My`\-Namespace erweitern.  Bei Windows\-basierten Projekten können Sie auf den Knoten **Mein Projekt** für das Projekt im **Projektmappen\-Explorer** doppelklicken.  Im Visual Basic\-**Projekt\-Designer** klicken Sie auf die Registerkarte `Application` und dann auf die Schaltfläche `View Application Events`.  Eine neue Datei mit dem Namen ApplicationEvents.vb wird erstellt.  Sie enthält den folgenden Code zum Erweitern der `MyApplication`\-Klasse.  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
   
  Sie können Ereignishandler für Ihre benutzerdefinierten `My`\-Objekte hinzufügen, indem Sie der `MyApplication`\-Klasse benutzerdefinierte Ereignishandler hinzufügen.  Mithilfe benutzerdefinierter Ereignisse können Sie Code hinzufügen, der ausgeführt wird, wenn ein Ereignishandler hinzugefügt oder entfernt wird bzw. wenn das Ereignis ausgelöst wird.  Der `AddHandler`\-Code für ein benutzerdefiniertes Ereignis wird allerdings nur ausgeführt, wenn Code zum Behandeln des Ereignisses von einem Benutzer hinzugefügt wird.  Berücksichtigen Sie beispielsweise, dass das `SampleExtension`\-Objekt im vorherigen Abschnitt ein `Load`\-Ereignis enthält, für das Sie einen benutzerdefinierten Ereignishandler hinzufügen sollten.  Das folgende Codebeispiel zeigt einen benutzerdefinierten Ereignishandler mit dem Namen `SampleExtensionLoad`, der beim Auftreten des `My.SampleExtension.Load`\-Ereignisses aufgerufen wird.  Wird Code zum Behandeln des neuen `My.SampleExtensionLoad`\-Ereignisses hinzugefügt, wird der `AddHandler`\-Teil dieses benutzerdefinierten Ereigniscodes ausgeführt.  Das Codebeispiel enthält die `MyApplication_SampleExtensionLoad`\-Methode, um ein Beispiel für einen Ereignishandler zu zeigen, der das `My.SampleExtensionLoad`\-Ereignis behandelt.  Beachten Sie, dass das `SampleExtensionLoad`\-Ereignis verfügbar ist, wenn Sie beim Bearbeiten der Datei ApplicationEvents.vb in der linken Dropdownliste oberhalb des Code\-Editors die Option **My Application Events** auswählen.  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
   
 ##  <a name="design"></a> Entwurfsrichtlinien  
  Wenn Sie Erweiterungen für den `My`\-Namespace entwickeln, können Sie die Kosten für die Wartung der Erweiterungskomponenten mithilfe der folgenden Richtlinien minimieren.  

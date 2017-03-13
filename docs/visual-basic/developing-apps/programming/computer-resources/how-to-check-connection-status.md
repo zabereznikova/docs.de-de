@@ -32,7 +32,7 @@ Mithilfe der <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A>\-Eigens
   
 -   Ermitteln Sie, ob die `IsAvailable`\-Eigenschaft `True` oder `False` ist.  Im folgenden Code wird der Status der Eigenschaft überprüft und ausgegeben:  
   
-     [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-check-connection-_1.vb)]  
+     [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
   
      Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Connectivity and Networking**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   

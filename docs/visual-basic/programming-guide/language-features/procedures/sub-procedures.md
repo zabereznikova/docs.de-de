@@ -75,11 +75,11 @@ Eine `Sub`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/pro
 ### Darstellung von Deklaration und Aufruf  
  Die folgende `Sub`\-Prozedur meldet den Computerbenutzern, welche Aufgabe die Anwendung als nächste ausführt. Außerdem wird ein Timestamp angezeigt.  Anstatt den Code zu Beginn jeder Aufgabe zu duplizieren, wird  `tellOperator` von verschiedenen Stellen durch die Anwendung aufgerufen.  Bei jedem Aufruf wird eine Zeichenfolge an das `task` \-Argument übergeben, die die gestartete Aufgabe identifiziert.  
   
- [!code-vb[VbVbcnProcedures#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
  Im folgenden Beispiel wird ein typischer Aufruf von `tellOperator` dargestellt.  
   
- [!code-vb[VbVbcnProcedures#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -32,7 +32,7 @@ Ruft das <xref:System.Web.HttpResponse>\-Objekt ab, das der <xref:System.Web.UI.
 ## Beispiel  
  Im folgenden Beispiel wird die Headerauflistung vom `My.Request`\-Objekt abgerufen, und das `My.Response`\-Objekt wird zum Schreiben der Auflistung in die ASP.NET\-Seite verwendet.  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-response-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
 ## Siehe auch  
  <xref:System.Web.HttpResponse>   

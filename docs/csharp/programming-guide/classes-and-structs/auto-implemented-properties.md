@@ -22,7 +22,7 @@ In C\# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch impleme
 ## Beispiel  
  Das folgende Beispiel zeigt eine einfache Klasse, die über einige automatisch implementierte Eigenschaften verfügt:  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#28)]  
+ [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  In C\#\-6 und höher können Sie automatisch implementierte Eigenschaften entsprechend auf Felder initialisieren:  
   

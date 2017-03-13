@@ -27,9 +27,9 @@ Das [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.
 ## Standardinstanzen  
  Eine Standardinstanz ist eine Instanz der Klasse, die von der Laufzeit bereitgestellt wird und nicht mithilfe der `Dim`\-Anweisung und der `New`\-Anweisung deklariert und instanziiert werden muss.  Das folgende Beispiel veranschaulicht eine Möglichkeit der Deklaration und Instanziierung einer <xref:System.Windows.Forms.Form>\-Klasse mit dem Namen `Form1` und den anschließenden Abruf einer Standardinstanz dieser <xref:System.Windows.Forms.Form>\-Klasse mithilfe von `My.Forms`.  
   
- [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/default-object-instances_1.vb)]  
+ [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_1.vb)]  
   
- [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/default-object-instances_2.vb)]  
+ [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_2.vb)]  
   
  Das `My.Forms`\-Objekt gibt eine Auflistung von Standardinstanzen für jede im Projekt vorhandene `Form`\-Klasse zurück.  Ebenso stellt `My.WebServices` eine Standardinstanz der Proxyklasse für jeden Webdienst bereit, der Ziel eines in der Anwendung enthaltenen Verweises ist.  
   

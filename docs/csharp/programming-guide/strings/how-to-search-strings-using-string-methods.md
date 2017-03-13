@@ -22,7 +22,7 @@ Der Zeichenfolgentyp, der ein Alias für die <xref:System.String?displayProperty
 ## Beispiel  
  Im folgenden Beispiel werden die Methoden <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, <xref:System.String.StartsWith%2A> und <xref:System.String.EndsWith%2A> zum Suchen der Zeichenfolgen verwendet.  
   
- [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#21)]  
+ [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-string-methods_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

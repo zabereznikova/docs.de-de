@@ -38,14 +38,14 @@ Sie können die Darstellung eines <xref:Microsoft.VisualBasic.PowerPacks.DataRep
   
 2.  Fügen Sie im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>\-Ereignishandler Code hinzu, um die Eigenschaften festzulegen:  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterAppearanceCS/VbPowerPacksDataRepeaterAppearance.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAppearance/VbPowerPacksDataRepeaterAppearance.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 ## Beispiel  
  Zu den häufigsten Anpassungen für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement gehören die Anzeige der Zeilen in unterschiedlichen Farben und die Änderung der Farbe eines Felds auf Basis einer Bedingung.  Das folgende Beispiel veranschaulicht, wie diese Anpassungen vorgenommen werden.  In diesem Beispiel wird davon ausgegangen, dass Sie über ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement verfügen, das an die Products\-Tabelle in der Datenbank Northwind gebunden ist.  
   
- [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAlternateBackColor/AlternateBackColor.vb#1)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPwrPacksDataRepeaterAltBColorCS/AlternateBackColor.cs#1)]  
+ [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
+ [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
  Beachten Sie, dass Sie für beide Anpassungen Code angeben müssen, um die Eigenschaften für beide Seiten der Bedingung festzulegen.  Wenn Sie die `Else`\-Bedingung nicht angeben, erhalten Sie zur Laufzeit unerwartete Ergebnisse.  
   

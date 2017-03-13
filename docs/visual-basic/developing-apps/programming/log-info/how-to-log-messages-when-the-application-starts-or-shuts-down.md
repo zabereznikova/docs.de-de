@@ -48,7 +48,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 3.  Fügen Sie die Methode `My.Application.Log.WriteEntry` zum `Startup`\-Ereignishandler hinzu.  
   
-     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#1)]  
+     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_1.vb)]  
   
 ### Protokollieren von Meldungen beim Herunterfahren der Anwendung  
   
@@ -60,12 +60,12 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 3.  Fügen Sie dem `Shutdown`\-Ereignishandler die Methode `My.Application.Log.WriteEntry` hinzu.  
   
-     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#2)]  
+     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
   
 ## Beispiel  
  Sie können den **Projekt\-Designer** verwenden, um auf die Anwendungsereignisse im Code\-Editor zuzugreifen. Weitere Informationen finden Sie unter [Seite "Anwendung", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
   
- [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#3)]  
+ [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

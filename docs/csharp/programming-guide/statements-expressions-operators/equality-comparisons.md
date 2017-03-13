@@ -21,7 +21,7 @@ Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu 
 ## Verweisgleichheit  
  Verweisgleichheit ist gegeben, wenn zwei Objektverweise auf dasselbe zugrunde liegende Objekt verweisen.  Die Ursache hierfür kann eine einfache Zuweisung sein, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/equality-comparisons_1.cs)]  
+ [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  In diesem Code werden zwei Objekte erstellt, nach der Zuweisungsanweisung verweisen jedoch beide Verweise auf das gleiche Objekt.  Es liegt eine Verweisgleichheit vor.  Verwenden Sie die <xref:System.Object.ReferenceEquals%2A>\-Methode, um zu ermitteln, ob zwei Verweise auf das gleiche Objekt verweisen.  
   

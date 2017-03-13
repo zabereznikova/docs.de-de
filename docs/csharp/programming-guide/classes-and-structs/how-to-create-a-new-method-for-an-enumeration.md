@@ -23,7 +23,7 @@ Mit Erweiterungsmethoden können Sie Funktionen hinzufügen, die für einen best
 ## Beispiel  
  Im folgenden Beispiel stellt die `Grades`\-Enumeration die möglichen Benotungen \(Buchstaben\) dar, die ein Student in einem Kurs erhalten kann.  Eine Erweiterungsmethode mit dem Namen `Passing` wird dem `Grades`\-Typ hinzugefügt, mit dem jede Instanz dieses Typs angewiesen wird, ob der Student mit dieser Benotung den Kurs besteht.  
   
- [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-create-a-new-meth_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-create-a-new-method-for-an-enumeration_1.cs)]  
   
  Beachten Sie, dass die `Extensions`\-Klasse ebenfalls eine statische Variable enthält, die dynamisch aktualisiert wird und dass der Rückgabewert der Erweiterungsmethode den aktuellen Wert dieser Variable darstellt.  Dies zeigt, dass Erweiterungsmethoden im Hintergrund direkt für die statische Klasse aufgerufen werden, in der sie definiert sind.  
   

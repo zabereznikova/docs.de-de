@@ -36,22 +36,22 @@ Die `CreateSubKey`\-Methode des `My.Computer.Registry`\-Objekts kann zum Erstell
   
 -   Verwenden Sie die `CreateSubKey`\-Methode, und geben Sie dort den Hive, in den der Schlüssel eingefügt werden soll, sowie den Namen des Schlüssels an.  Beim Parameter  `Subkey`  wird nicht zwischen Groß\-\/Kleinschreibung unterschieden.  In diesem Beispiel wird der Registrierungsschlüssel `MyTestKey` unter HKEY\_CURRENT\_USER erstellt.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 #### So erstellen Sie einen Registrierungsschlüssel und legen einen Wert dafür fest  
   
 1.  Verwenden Sie die `CreateSubkey`\-Methode, und geben Sie dort den Hive, in den der Schlüssel eingefügt werden soll, sowie den Namen des Schlüssels an.  In diesem Beispiel wird der Registrierungsschlüssel `MyTestKey` unter HKEY\_CURRENT\_USER erstellt.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 2.  Legen Sie den Wert mit der `SetValue`\-Methode fest.  In diesem Beispiel wird der Zeichenfolgenwert festgelegt. "  "MyTestKeyValue" wird "This is a test value" zugewiesen.  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_2.vb)]  
+     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird der Registrierungsschlüssel `MyTestKey` unter HKEY\_CURRENT\_USER erstellt und anschließend dem Zeichenfolgenwert `MyTestKeyValue` die Zeichenfolge `This is a test value` zugewiesen.  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_3.vb)]  
+ [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
 ## Robuste Programmierung  
  Untersuchen Sie die Registrierungsstruktur, um eine adäquate Position für den Schlüssel zu ermitteln.  Beispielsweise können Sie den Schlüssel HKEY\_CURRENT\_USER\\Software für den aktuellen Benutzer öffnen und einen Schlüssel mit dem Namen Ihrer Firma erstellen.  Anschließend fügen Sie die Registrierungswerte dem Schlüssel für das Unternehmen hinzu.  

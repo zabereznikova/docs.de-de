@@ -36,7 +36,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbe
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/troubleshooting-variables_2.vb)]  
+ [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
   
  In diesem Beispiel kann `p` nur die Mitglieder der <xref:System.Object>\-Klasse selbst verwenden, die nicht die `Left`\-Eigenschaft enthalten. Auf der anderen Seite wurde `q` als Typ <xref:System.Windows.Forms.Label> deklariert, sodass es alle Methoden und Eigenschaften der <xref:System.Windows.Forms.Label>\-Klasse im <xref:System.Windows.Forms>\-Namespace verwenden kann.  
   

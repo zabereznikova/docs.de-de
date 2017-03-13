@@ -49,7 +49,7 @@ Enthält Eigenschaften, mit denen eine Einzelinstanz jedes XML\-Webdiensts, mit 
 ## Beispiel  
  In diesem Beispiel wird die `FahrenheitToCelsius`\-Methode des `TemperatureConverter`\-XML\-Webdienstes aufgerufen und das Ergebnis zurückgegeben.  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/VbVbalrMyWebService/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
  Damit dieses Beispiel ausgeführt werden kann, muss das Projekt auf den Webdienst `Converter` verweisen, und dieser Webdienst muss die `ConvertTemperature`\-Methode verfügbar machen.  Weitere Informationen finden Sie unter [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   

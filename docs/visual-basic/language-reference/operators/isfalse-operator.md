@@ -35,7 +35,7 @@ Bestimmt, ob ein Ausdruck `False` ist.
 ## Beispiel  
  Im folgenden Codebeispiel wird das Gerüst für eine Struktur definiert, das Definitionen für den Operator `IsFalse` und den Operator `IsTrue` enthält.  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/isfalse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
 ## Siehe auch  
  [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   

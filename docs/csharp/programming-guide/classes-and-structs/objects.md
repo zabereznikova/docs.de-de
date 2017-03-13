@@ -27,11 +27,11 @@ Eine Klassen\- oder Strukturdefinition ist mit einer Blaupause vergleichbar, die
   
  Instanzen von Klassen werden mit dem [Operator "new"](../../../csharp/language-reference/keywords/new-operator.md) erstellt.  Im folgenden Beispiel stellt `Person` den Typ dar, und `person1` und `person 2` sind Instanzen bzw. Objekte dieses Typs.  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_1.cs)]  
+ [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
  Da es sich bei Strukturen um Werttypen handelt, enthält die Variable eines Strukturobjekts eine Kopie des gesamten Objekts.  Strukturinstanzen können daher mithilfe des Operators `new` erstellt werden. Dies ist jedoch, wie im folgenden Beispiel dargestellt, nicht erforderlich:  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_2.cs)]  
+ [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
  Der Arbeitsspeicher wird sowohl für `p1` als auch für `p2` auf dem Threadstapel belegt.  Dieser Arbeitsspeicher wird zusammen mit dem Typ oder der Methode wieder freigegeben, in dem bzw. der er deklariert ist.  Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden.  Im Gegensatz dazu wird der für eine Klasseninstanz belegte Speicher automatisch von der Common Language Runtime freigegeben \(mithilfe der Garbage Collection\), wenn alle Verweise auf das Objekt ungültig geworden sind.  Klassenobjekte können nicht deterministisch zerstört werden wie in C\+\+.  Weitere Informationen über Garbage Collection in [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] finden Sie unter [Garbage Collection](../Topic/Garbage%20Collection.md).  
   
@@ -45,7 +45,7 @@ Eine Klassen\- oder Strukturdefinition ist mit einer Blaupause vergleichbar, die
   
 -   Mit der <xref:System.ValueType.Equals%2A?displayProperty=fullName>\-Methode können Sie bestimmen, ob die Instanzfelder zweier Strukturinstanzen über dieselben Werte verfügen.  Da alle Strukturen implizit von <xref:System.ValueType?displayProperty=fullName> erben, wird die Methode für das Objekt direkt aufgerufen, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_3.cs)]  
+ [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
  Die <xref:System.ValueType?displayProperty=fullName>\-Implementierung von `Equals` verwendet Reflektion, da sie die Typen der Felder jeder Struktur ermitteln muss.  Wenn Sie eigene Strukturen erstellen, überschreiben Sie die `Equals`\-Methode, um einen effizienten, auf den von Ihnen verwendeten Typ zugeschnittenen Algorithmus zur Prüfung auf Gleichheit bereitzustellen.  
   

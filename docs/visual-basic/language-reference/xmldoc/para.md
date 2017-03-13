@@ -42,7 +42,7 @@ Gibt an, dass der Inhalt als Absatz formatiert wird.
 ## Beispiel  
  Im folgenden Beispiel wird mit dem `<para>`\-Tag der Anmerkungsabschnitt für die `UpdateRecord`\-Methode in zwei Absätze aufgeteilt.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/para_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -68,7 +68,7 @@ Gültige und ungültige Verzweigungen in Try\-Konstruktionen
 ## Beispiel  
  In folgendem Beispiel wird die `GoTo`\-Anweisung verwendet, um auf Zeilensprungmarken innerhalb einer Prozedur zu verzweigen.  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
 ## Siehe auch  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

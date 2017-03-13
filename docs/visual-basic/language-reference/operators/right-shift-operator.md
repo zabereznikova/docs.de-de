@@ -69,7 +69,7 @@ result = pattern >> amount
 ## Beispiel  
  In diesem Beispiel werden mit dem Operator `>>` arithmetische Verschiebungen nach rechts für ganzzahlige Werte ausgeführt.  Das Ergebnis hat immer den gleichen Datentyp wie der zu verschiebende Ausdruck.  
   
- [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
  Das vorangehende Beispiel hat folgende Ergebnisse:  
   
@@ -87,7 +87,7 @@ result = pattern >> amount
   
  Im folgenden Beispiel werden arithmetische Verschiebungen in einem negativen Wert veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
  Das vorangehende Beispiel hat folgende Ergebnisse:  
   

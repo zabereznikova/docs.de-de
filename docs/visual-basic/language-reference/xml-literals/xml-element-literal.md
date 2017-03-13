@@ -128,7 +128,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein einfaches XML-Element zu erstellen, die zwei geschachtelte leere Elemente.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
   
  Das Beispiel zeigt den folgenden Text. Beachten Sie, dass das Literal die Struktur der leeren Elemente beibehält.  
   
@@ -142,7 +142,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird das Verwenden von eingebetteter Ausdrücken erstellen Attribute und benennen ein Element veranschaulicht.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -153,7 +153,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. Anschließend wird das Namespacepräfix verwendet, zum Erstellen von XML-Literalen und abschließende Form des Elements anzeigt.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

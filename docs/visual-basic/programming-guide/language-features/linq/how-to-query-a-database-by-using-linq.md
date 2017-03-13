@@ -76,14 +76,14 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
      Fügen Sie dem `Load`\-Ereignis folgenden Code hinzu, um die als Eigenschaften des Datenkontexts verfügbar gemachten Tabellen abzufragen.  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#3)]  
+     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
   
 4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
 5.  Im Folgenden finden Sie weitere mögliche Abfragen:  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#4)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#5)]  
+     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
+    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
 ## Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

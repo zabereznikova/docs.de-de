@@ -23,7 +23,7 @@ Da Objekte polymorph sind, kann eine Variable eines Basisklassentyps einen abgel
 ## Beispiel  
  In den folgenden Beispielen wird dargestellt, wie die Operatoren `is` und `as` zum Umwandeln von einem Referenztyp in einen anderen verwendet werden, ohne dass eine Ausnahme ausgelöst wird.  Im Beispiel wird auch dargestellt, wie der `as`\-Operator mit auf NULL festlegbaren Werttypen verwendet wird.  
   
- [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-safely-cast-by-us_1.cs)]  
+ [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
 ## Siehe auch  
  [Typen](../../../csharp/programming-guide/types/index.md)   

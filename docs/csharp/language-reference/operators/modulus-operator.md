@@ -25,7 +25,7 @@ Der `%`\-Operator berechnet werden, nachdem er den Rest ersten Operanden durch s
  Benutzerdefinierte Typen können den Operator `%` überladen \(siehe [operator](../../../csharp/language-reference/keywords/operator.md)\).  Beim Überladen eines binären Operators wird implizit auch der zugehörige Zuweisungsoperator überladen, falls vorhanden.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#9)]  
+ [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
   
 ## Kommentare  
  Beachten Sie die mit dem Typ **double** verbundenen Rundungsfehler.  

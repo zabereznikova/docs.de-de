@@ -41,7 +41,7 @@ Kennzeichnet ein Argument, das so übergeben wird, dass der Wert einer Variablen
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung des Übergabemechanismus für den `ByVal`\-Parameter mit einem Referenztypargument veranschaulicht.  Im Beispiel ist das `c1`\-Argument eine Instanz der `Class1`\-Klasse.  `ByVal` verhindert, dass der zugrunde liegende Wert des `c1`\-Verweisarguments vom Code in den Prozeduren geändert wird, die Felder und Eigenschaften von `c1`, auf die zugegriffen werden kann, sind jedoch nicht geschützt.  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/visualbasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
 ## Siehe auch  
  [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   

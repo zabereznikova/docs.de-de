@@ -43,7 +43,7 @@ block = stackalloc int[100];
  Im folgenden Beispiel werden die ersten 20 Zahlen in der Fibonacci\-Sequenz berechnet und angezeigt.  Jede Zahl ist die Summe der vorherigen zwei Zahlen.  Im Code wird ein Speicherblock, der groß genug für 20 Elemente vom Typ `int` ist, auf dem Stapel reserviert, nicht auf dem Heap.  Die Adresse des Blocks wird im `fib`\-Zeiger gespeichert.  Dieser Speicher ist nicht der Garbage Collection unterworfen und muss daher nicht mit [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) fixiert werden.  Die Lebensdauer des Speicherblocks ist auf die Lebensdauer der Methode begrenzt, in der er definiert ist.  Sie können den Speicher nicht freigeben, bevor die Methode einen Wert zurückgibt.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#15)]  
+ [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
   
 ## Sicherheit  
  Unsicherer Code ist weniger sicher als sichere Alternativen.  Die Verwendung von `stackalloc` aktiviert jedoch automatisch Features zur Erkennung von Pufferüberläufen in der Common Language Runtime \(CLR\).  Wenn ein Pufferüberlauf festgestellt wird, wird der Prozess so schnell wie möglich beendet, um die Gefahr der Ausführung von bösartigem Code zu minimieren.  

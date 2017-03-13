@@ -20,7 +20,7 @@ caps.handback.revision: 44
 # Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
 Typen, die NULL\-Werte zulassen, sind Instanzen der <xref:System.Nullable%601?displayProperty=fullName>\-Struktur.  Ein Typ, der NULL\-Werte zulässt, kann für seinen zugrunde liegenden Werttyp den korrekten Wertebereich darstellen, darüber hinaus aber auch einen zusätzlichen `null`\-Wert.  Einem Typ `Nullable<Int32>`, gesprochen "Nullable of Int32", kann z. B. jeder Wert im Bereich von \-2147483648 bis 2147483647 oder der `null`\-Wert zugewiesen werden.  Einem `Nullable<bool>`\-Typ können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden.  Die Möglichkeit, numerischen und booleschen Typen `null`\-Werte zuzuweisen, ist besonders hilfreich beim Umgang mit Datenbanken und anderen Datentypen, die Elemente enthalten, denen unter Umständen kein Wert zugewiesen werden kann.  Ein boolesches Feld in einer Datenbank kann z. B. die Werte `true` oder `false` speichern, oder es wird nicht definiert.  
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
  Im Beispiel wird die Ausgabe angezeigt:  
   

@@ -42,7 +42,7 @@ Gibt ein Beispiel für den Member an.
 ## Beispiel  
  In diesem Beispiel wird das `<example>`\-Tag verwendet, um ein Beispiel für die Verwendung des `ID`\-Feldes einzufügen.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/example_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

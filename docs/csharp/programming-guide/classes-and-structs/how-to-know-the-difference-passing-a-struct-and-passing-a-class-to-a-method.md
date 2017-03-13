@@ -27,7 +27,7 @@ Im folgenden Beispiel wird veranschaulicht, wie die Übergabe von [Struktur](../
  Die Ausgabe des folgenden Beispiels veranschaulicht den Unterschied.  Der Wert des Felds `willIChange` der Klasseninstanz wird durch den Aufruf der Methode `ClassTaker` geändert, da die Methode die Adresse im Parameter verwendet wird, um das angegebene Feld der Klasseninstanz zu suchen.  Das `willIChange` Feld der Struktur in der aufrufenden Methode wird nicht durch den Aufruf der Methode `StructTaker` , da der Wert des Arguments eine Kopie der Struktur selbst ist keine Kopie der Adresse geändert.  `StructTaker` ändert die Kopie und die Kopie geht verloren, wenn durch Aufruf von `StructTaker` abgeschlossen ist.  
   
 ## Beispiel  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-know-the-differen_1.cs)]  
+ [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

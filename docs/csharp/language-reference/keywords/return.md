@@ -27,7 +27,7 @@ Mit der `return`\-Anweisung wird die Ausführung der Methode, in der sie auftrit
 ## Beispiel  
  Im folgenden Beispiel gibt die `A()`\-Methode die `Area`\-Variable als [double](../../../csharp/language-reference/keywords/double.md)\-Wert zurück.  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/csharp/return_1.cs)]  
+ [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

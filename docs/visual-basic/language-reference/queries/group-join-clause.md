@@ -62,7 +62,7 @@ Group Join element [As type] In collection _
 ## Beispiel  
  Im folgenden Codebeispiel werden mit der `Group Join`\-Klausel zwei Auflistungen miteinander verknüpft.  
   
- [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#14)]  
+ [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

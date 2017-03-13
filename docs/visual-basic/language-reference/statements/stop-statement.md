@@ -47,7 +47,7 @@ Stop
 ## Beispiel  
  In diesem Beispiel wird die `Stop`\-Anweisung verwendet, um die Ausführung bei jedem Durchlauf der `For...Next`\-Schleife anzuhalten.  
   
- [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/stop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## Siehe auch  
  [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)

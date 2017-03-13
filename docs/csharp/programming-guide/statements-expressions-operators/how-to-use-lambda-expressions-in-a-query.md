@@ -21,14 +21,14 @@ Sie verwenden zwar keine Lambda\-Ausdrücke direkt in der Abfragesyntax, aber in
 ## Beispiel  
  Im folgenden Beispiel wird der Umgang mit einem Lambda\-Ausdruck in einer methodenbasierten Abfrage veranschaulicht, indem der <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>\-Standardabfrageoperator verwendet wird.  Beachten Sie, dass die <xref:System.Linq.Enumerable.Where%2A>\-Methode in diesem Beispiel einen Eingabeparameter des Delegattyps <xref:System.Func%601> hat. Dieser Typ ist ein Delegat, der eine ganze Zahl als Eingabe erfordert und einen booleschen Wert zurückgibt.  Der Lambda\-Ausdruck kann in diesen Delegattyp konvertiert werden.  Wäre dies eine [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)]\-Abfrage, die die <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>\-Methode verwendet, wäre der Parameter vom Typ `Expression<Func\<int,bool>>`, aber der Lambda\-Ausdruck würde genau gleich aussehen.  Weitere Informationen über den Ausdruckstyp finden Sie unter <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
   
- [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#1)]  
+ [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung eines Lambda\-Ausdrucks in dem Methodenaufruf eines Abfrageausdrucks veranschaulicht.  Der Lambda\-Ausdruck ist erforderlich, da der <xref:System.Linq.Enumerable.Sum%2A>\-Standardabfrageoperator nicht mithilfe von Abfragesyntax aufgerufen werden kann.  
   
  Mit der Abfrage werden die Studierenden zunächst nach ihrer Jahrgangsstufe gruppiert, wie in der `GradeLevel`\-Enumeration definiert.  Dann werden für jede Gruppe die Ergebnisse pro Student addiert.  Dies erfordert zwei `Sum`\-Operationen.  Mit der inneren `Sum` wird das Gesamtergebnis für jeden Studenten berechnet, und mit der äußeren `Sum` wird eine kombinierte laufende Summe für alle Studenten in der Gruppe berechnet.  
   
- [!code-cs[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#2)]  
+ [!code-cs[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## Kompilieren des Codes  
  Um diesen Code auszuführen, kopieren Sie die Methode und fügen sie in die `StudentClass`\-Klasse ein, die in [Gewusst wie: Abfragen einer Auflistung von Objekten](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) bereitgestellt wird, und rufen sie über die `Main`\-Methode auf.  

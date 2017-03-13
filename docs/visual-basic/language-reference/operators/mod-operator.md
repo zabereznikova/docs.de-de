@@ -80,12 +80,12 @@ number1 Mod number2
 ## Beispiel  
  In diesem Beispiel werden mit dem Operator `Mod` zwei Zahlen dividiert und nur der Rest zurückgegeben.  Wenn es sich bei einer Zahl um eine Gleitkommazahl handelt, ist das Ergebnis eine Gleitkommazahl, die den Rest darstellt.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird die potenzielle Ungenauigkeit von Gleitkommaoperanden veranschaulicht.  In der ersten Anweisung sind die Operanden vom Typ `Double`, und 0,2 ist ein sich unendlich wiederholender Binärbruch, der im Speicher durch den Wert 0,20000000000000001 dargestellt wird.  In der zweiten Anweisung erzwingt das Literaltypzeichen `D`, dass beide Operanden den `Decimal`\-Datentyp haben. 0,2 wird präzise dargestellt.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>   

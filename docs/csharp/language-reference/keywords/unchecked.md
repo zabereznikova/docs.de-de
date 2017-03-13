@@ -23,7 +23,7 @@ Das `unchecked`\-Schlüsselwort wird verwendet, um die Überlaufprüfung für ar
   
  Wenn ein Ausdruck in einem nicht geprüften Kontext einen Wert erzeugt, der außerhalb des Gültigkeitsbereichs des Zieltyps liegt, wird der Überlauf nicht gekennzeichnet.  Da die Berechnung beispielsweise in einem `unchecked`\-Block oder \-Ausdruck erfolgt, wird die Tatsache ignoriert, dass das Ergebnis zu groß für eine ganze Zahl ist, und `int1` wird der Wert \-2,147,483,639 zugewiesen.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  Wenn die `unchecked`\-Umgebung entfernt wird, tritt ein Kompilierungsfehler auf.  Der Überlauf kann zur Kompilierzeit erkannt werden, da alle Begriffe des Ausdrucks Konstanten sind.  
   
@@ -34,7 +34,7 @@ Das `unchecked`\-Schlüsselwort wird verwendet, um die Überlaufprüfung für ar
 ## Beispiel  
  In diesem Beispiel wird veranschaulicht, wie das `unchecked`\-Schlüsselwort verwendet wird.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

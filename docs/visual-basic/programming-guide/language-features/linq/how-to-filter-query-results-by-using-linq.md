@@ -78,13 +78,13 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
      Fügen Sie dem `Load`\-Ereignis folgenden Code hinzu, um die als Eigenschaften des Datenkontexts verfügbar gemachten Tabellen abzufragen.  Die Abfrage filtert die Ergebnisse und gibt nur die Kunden zurück, deren Standort sich in `London` befindet.  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#11)]  
+     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
   
 4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
 5.  Im Folgenden finden Sie einige weitere Filter zum Ausprobieren.  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#12)]  
+     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
 ## Siehe auch  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

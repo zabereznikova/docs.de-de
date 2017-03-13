@@ -44,7 +44,7 @@ Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/include
 ## Beispiele  
  Das folgende Beispiel enthält zwei XML\-Elemente, ein äußeres und ein inneres.  Beide Elemente enthalten Leerzeichen im Textinhalt.  Die Leerzeichen im äußeren Element sind nicht signifikant, weil das Element nur Leerzeichen und ein XML\-Element enthält.  Die Leerzeichen im inneren Element sind signifikant, da das Element Leerzeichen und Text enthält.  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/white-space-in-xml-liter_1.vb)]  
+ [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
  Beim Ausführen zeigt dieser Code den folgenden Text an.  
   

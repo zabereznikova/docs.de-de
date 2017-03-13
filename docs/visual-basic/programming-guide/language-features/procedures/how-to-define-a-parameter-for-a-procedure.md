@@ -45,7 +45,7 @@ Ein *Parameter* ermöglicht es dem Aufrufcode, einen Wert an die Prozedur zu üb
   
      Im folgenden Beispiel wird die Gliederung einer `Sub`\-Prozedur mit drei Parametern definiert.  Die ersten beiden Parameter sind erforderlich, der dritte ist optional.  Die Parameterdeklarationen werden in der Parameterliste durch Kommas getrennt.  
   
-     [!code-vb[VbVbcnProcedures#33](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-paramete_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
      Der erste Parameter nimmt ein `customer` \-Objekt an, und `updateCustomer` kann die Variable, die an `c` übergeben wird, direkt aktualisieren, da das Argument mit [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) übergeben wird.  Die Prozedur kann die Werte der beiden letzten Argumente nicht ändern, da sie mit [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) übergeben werden.  
   

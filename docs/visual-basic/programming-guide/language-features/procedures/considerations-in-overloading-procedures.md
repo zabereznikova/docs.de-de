@@ -94,11 +94,11 @@ Wenn Sie eine Prozedur überladen, müssen Sie für jede überladene Version ein
 ## Implizite Überladungen für optionale Parameter  
  Eine Prozedur mit einem [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)\-Parameter entspricht zwei überladenen Prozeduren, einer mit dem optionalen Parameter und einer ohne.  Sie können eine solche Prozedur nicht mit einer Parameterliste überladen, die einer dieser beiden Prozeduren entspricht.  Die folgenden Deklarationen verdeutlichen dies.  
   
- [!code-vb[VbVbcnProcedures#58](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
  Bei einer Prozedur mit mehr als einem optionalen Parameter gibt es eine Reihe impliziter Überladungen, die sich aus einer dem vorhergehenden Beispiel ähnelnden Logik ergeben.  
   
@@ -113,13 +113,13 @@ Wenn Sie eine Prozedur überladen, müssen Sie für jede überladene Version ein
   
  Die folgenden Deklarationen verdeutlichen diese impliziten Überladungen.  
   
- [!code-vb[VbVbcnProcedures#68](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
  Sie können eine solche Prozedur nicht mit einer Parameterliste überladen, die ein eindimensionales Array für das Parameterarray akzeptiert.  Sie können jedoch die Signaturen der anderen impliziten Überladungen verwenden.  Die folgenden Deklarationen verdeutlichen dies.  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
 ## Programmierung ohne Datentypen als Alternative zur Überladung  
  Wenn Sie den Aufrufcode an verschiedene Datentypen übergeben Sie auf einen Parameter zulassen möchten, ist ein alternativer Ansatz typenloses Programmieren.  Mit der [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) oder der [\/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)\-Compileroption können Sie für die Typüberprüfung den Wert `Off` festlegen.  Danach müssen Sie den Datentyp des Parameters nicht deklarieren.  Im Vergleich zum Überladen hat dieser Ansatz jedoch folgende Nachteile:  

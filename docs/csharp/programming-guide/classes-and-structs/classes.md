@@ -24,7 +24,7 @@ Eine *Klasse* ist ein Konstrukt, mit dem benutzerdefinierte Typen erstellt werde
 ## Deklarieren von Klassen  
  Wie im folgenden Beispiel dargestellt, werden Klassen mit dem [class](../../../csharp/language-reference/keywords/class.md)\-Schlüsselwort deklariert:  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_1.cs)]  
+ [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
  Dem `class`\-Schlüsselwort wird die Zugriffsebene vorangestellt.  Da in diesem Fall [public](../../../csharp/language-reference/keywords/public.md) verwendet wird, können alle Benutzer Objekte von dieser Klasse erstellen.  Der Name der Klasse folgt auf das `class`\-Schlüsselwort.  Der Rest der Definition ist der Klassentext, in dem das Verhalten und die Daten definiert werden.  Die Felder, Eigenschaften, Methoden und Ereignisse für eine Klasse werden zusammen als *Klassenmember* bezeichnet.  
   
@@ -33,22 +33,22 @@ Eine *Klasse* ist ein Konstrukt, mit dem benutzerdefinierte Typen erstellt werde
   
  Objekte können mit dem [new](../../../csharp/language-reference/keywords/new.md)\-Schlüsselwort erstellt werden, an das der Name der Klasse angehängt wird, auf dem das Objekt basiert. Beispiel:  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_2.cs)]  
+ [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
  Beim Erstellen einer Klasseninstanz wird ein Verweis auf das Objekt an den Programmierer zurückgegeben.  Im vorherigen Beispiel ist `object1` ein Verweis auf ein Objekt, das auf `Customer` basiert.  Dieser Verweis verweist auf das neue Objekt, er enthält aber nicht die Objektdaten selbst.  In der Tat können Sie einen Objektverweis erstellen, ohne dabei ein Objekt zu erstellen:  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_3.cs)]  
+ [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
  Es wird davon abgeraten, Objektverweise wie diesen zu erstellen, der nicht auf ein Objekt verweist, da beim Zugriff auf ein Objekt über einen solchen Verweis zur Laufzeit ein Fehler auftritt.  Sie können einen solchen Verweis jedoch erstellen, um auf ein Objekt zu verweisen, indem Sie entweder ein neues Objekt erstellen oder es einem vorhandenen Objekt zuweisen. Beispiel:  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_4.cs)]  
+ [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
  In diesem Code werden zwei Objektverweise erstellt, die beide auf dasselbe Objekt verweisen.  Daher wirken sich durch `object3` am Objekt vorgenommene Änderungen auf nachfolgende Verwendungen von `object4` aus.  Da auf Objekte, die auf Klassen basieren, mit Verweisen verwiesen wird, werden Klassen auch als Referenztypen bezeichnet.  
   
 ## Klassenvererbung  
  Vererbung wird mithilfe einer *Ableitung* erreicht. Dies bedeutet, dass eine Klasse mit einer *Basisklasse* deklariert wird, von der sie Daten und Verhalten erbt.  Eine Basisklasse wird angegeben, indem wie im folgenden Beispiel ein Punkt und der Name der Basisklasse sowie der Name der abgeleiteten Klasse angehängt werden:  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_5.cs)]  
+ [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
  Wenn eine Klasse eine Basisklasse deklariert, erbt sie sämtliche Member der Basisklasse mit Ausnahme der Konstruktoren.  
   
@@ -62,7 +62,7 @@ Eine *Klasse* ist ein Konstrukt, mit dem benutzerdefinierte Typen erstellt werde
  Im folgenden Beispiel wird eine öffentliche Klasse definiert, die ein einzelnes Feld, eine Methode und eine spezielle, als Konstruktor bezeichnete Methode enthält.  Weitere Informationen finden Sie unter [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md).  Die Klasse wird dann mit dem `new`\-Schlüsselwort instanziiert.  
   
 ## Beispiel  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_6.cs)]  
+ [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

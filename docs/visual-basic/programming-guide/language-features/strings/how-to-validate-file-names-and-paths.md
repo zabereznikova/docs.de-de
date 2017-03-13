@@ -27,7 +27,7 @@ caps.handback.revision: 7
 In diesem Beispiel wird ein `Boolean`\-Wert zurückgegeben, der angibt, ob eine Zeichenfolge einen Dateinamen oder einen Pfad darstellt.  Bei der Validierung wird überprüft, ob der Name Zeichen enthält, die im Dateisystem nicht zulässig sind.  
   
 ## Beispiel  
- [!code-vb[VbVbcnRegEx#4](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-file-nam_1.vb)]  
+ [!code-vb[VbVbcnRegEx#4](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-file-names-and-paths_1.vb)]  
   
  In diesem Beispiel wird nicht überprüft, ob der Name Doppelpunkte an der falschen Position oder Verzeichnisse ohne einen Namen enthält oder ob die Länge des Namens die vom System definierte maximale Länge überschreitet.  Es wird auch nicht überprüft, ob die Anwendung über die Berechtigung für den Zugriff auf die Dateisystemressource mit dem angegebenen Namen verfügt.  
   

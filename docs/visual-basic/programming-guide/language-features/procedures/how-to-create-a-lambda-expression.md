@@ -36,15 +36,15 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen auf
   
 3.  Geben Sie nach der Parameterliste einen einzelnen Ausdruck als Text der Funktion ein.  Der Wert, den der Ausdruck ergibt, wird von der Funktion zurückgegeben.  Sie verwenden keine `As`\-Klausel, um den Rückgabetyp festzulegen.  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
      Sie rufen den Lambda\-Ausdruck auf, indem Sie ein Ganzzahlargument übergeben.  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
   
 4.  Das gleiche Ergebnis wird auch in folgendem Beispiel erreicht:  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
 ### So erstellen Sie eine einzeilige Unterroutine mit einem Lambda\-Ausdruck  
   
@@ -58,11 +58,11 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen auf
   
 3.  Geben Sie nach der Parameterliste eine einzelne Anweisung als Text der Unterroutine ein.  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#17)]  
+     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
      Sie rufen den Lambda\-Ausdruck auf, indem Sie ein Zeichenfolgenargument übergeben.  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#18)]  
+     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
 ### So erstellen Sie eine mehrzeilige Funktion mit einem Lambda\-Ausdruck  
   
@@ -78,11 +78,11 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen auf
   
 4.  Fügen Sie im Text der Funktion den folgenden Code hinzu, um einen Ausdruck zu erstellen und den Wert zurückzugeben.  Sie verwenden keine `As`\-Klausel, um den Rückgabetyp festzulegen.  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#19)]  
+     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
      Sie rufen den Lambda\-Ausdruck auf, indem Sie ein Ganzzahlargument übergeben.  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#20)]  
+     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
   
 ### So erstellen Sie eine mehrzeilige Unterroutine mit einem Lambda\-Ausdruck  
   
@@ -98,20 +98,20 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen auf
   
 4.  Fügen Sie im Text der Funktion den folgenden Code hinzu, der beim Aufrufen der Unterroutine ausgeführt werden soll.  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#21)]  
+     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
      Sie rufen den Lambda\-Ausdruck auf, indem Sie ein Zeichenfolgenargument übergeben.  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#22)]  
+     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## Beispiel  
  Eine häufige Verwendung von Lambda\-Ausdrücken ist das Definieren einer Funktion, die als Argument für einen Parameter vom Typ `Delegate` übergeben werden kann.  Im folgenden Beispiel wird von der <xref:System.Diagnostics.Process.GetProcesses%2A>\-Methode ein Array der Prozesse zurückgegeben, die auf dem lokalen Computer ausgeführt werden.  Für die <xref:System.Linq.Enumerable.Where%2A>\-Methode der <xref:System.Linq.Enumerable>\-Klasse ist ein `Boolean`\-Delegat als Argument erforderlich.  Zu diesem Zweck wird im Beispiel der Lambda\-Ausdruck verwendet.  Er gibt `True` für alle Prozesse mit nur einem Thread zurück, und diese werden in der `filteredList` ausgewählt.  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class4.vb#10)]  
+ [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
  Das vorherige Beispiel ist äquivalent zu folgendem, in [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Syntax geschriebenem Code:  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class5.vb#11)]  
+ [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
 ## Siehe auch  
  <xref:System.Linq.Enumerable>   

@@ -56,7 +56,7 @@ variableorproperty <<= amount
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `<<=` verwendet, um das Bitmuster einer `Integer`\-Variablen um den angegebenen Betrag nach links zu verschieben und der Variablen das Ergebnis zuzuweisen.  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-assignment-op_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
 ## Siehe auch  
  [\<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)   

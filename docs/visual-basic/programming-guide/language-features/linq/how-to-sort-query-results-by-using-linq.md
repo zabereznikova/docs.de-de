@@ -78,7 +78,7 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
      Fügen Sie folgenden Code zum `Load`\-Ereignis hinzu, um die als Eigenschaften des Datenkontexts verfügbar gemachten Tabellen abzufragen und die Ergebnisse zu sortieren.  Die Abfrage sortiert die Ergebnisse in absteigender Reihenfolge nach Anzahl der Kundenbestellungen.  Standardmäßig werden Kunden mit der gleichen Anzahl von Bestellungen in aufsteigender Reihenfolge nach Firmennamen sortiert.  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form4.vb#10)]  
+     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
   
 4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   

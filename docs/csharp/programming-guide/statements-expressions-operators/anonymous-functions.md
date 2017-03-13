@@ -34,7 +34,7 @@ Bei einer anonymen Funktion handelt es sich um eine "Inlineanweisung" bzw. einen
   
  Im folgenden Beispiel wird die Entwicklung der Delegaterstellung von C\# 1.0 bis C\# 3.0 veranschaulicht:  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#65)]  
+ [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

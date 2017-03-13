@@ -32,7 +32,7 @@ caps.handback.revision: 43
 
 Der Visual Basic \-Compiler ermittelt durch *Typrückschluss* die Datentypen lokaler Variablen, die ohne eine `As`\-Klausel deklariert werden.  Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab.  Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben, wie im folgenden Beispiel gezeigt. Im Ergebnis der Deklarationen sind sowohl `num1` als auch `num2` stark typisiert als ganze Zahlen.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
   
 > [!NOTE]
 >  Wenn Sie nicht möchten, dass `num2` im vorherigen Beispiel als `Integer` typisiert wird, können Sie mit einer Deklaration wie `Dim num3 As Object = 3` oder `Dim num4 As Double = 3` einen anderen Typ angeben.  
@@ -47,23 +47,23 @@ Der Visual Basic \-Compiler ermittelt durch *Typrückschluss* die Datentypen lok
 ## Beispiele  
  Ein Typrückschluss erfolgt beim Initialisieren einer lokalen Variablen, die ohne `As`\-Klausel deklariert wurde.  Der Compiler verwendet den Typ des zugewiesenen Anfangswerts als Typ der Variablen.  Beispielsweise wird in jeder der folgenden Codezeilen jeweils eine Variable vom Typ `String` deklariert.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
  Im folgenden Code werden zwei gleichwertige Möglichkeiten veranschaulicht, ein Array mit Ganzzahlen zu erstellen.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
   
  Mit Typrückschluss können Sie den Typ einer Schleifensteuerungsvariablen auf einfache Weise ermitteln.  Im folgenden Code wird vom Compiler mit Typrückschluss abgeleitet, dass `number` ein `Integer` ist, da `someNumbers2` aus dem vorherigen Beispiel ein Array mit Ganzzahlen ist.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
  Lokaler Typrückschluss kann in `Using`\-Anweisungen verwendet werden, um den Typ des Ressourcennamens festzulegen, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
  Der Typ einer Variablen kann auch aus den Rückgabewerten von Funktionen abgeleitet werden, wie im folgenden Beispiel veranschaulicht.  Sowohl `pList1` als auch `pList2` ist ein Array von Prozessen, da `Process.GetProcesses` ein Array von Prozessen zurückgibt.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## Option Infer  
  `Option Infer` können Sie angeben, ob lokaler Typrückschluss in einer bestimmten Datei zulässig ist.  Geben Sie am Anfang der Datei eine der folgenden Anweisungen ein, um die Option zu aktivieren oder zu sperren.  

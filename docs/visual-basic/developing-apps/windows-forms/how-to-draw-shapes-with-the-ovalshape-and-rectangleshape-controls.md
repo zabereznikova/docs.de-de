@@ -55,8 +55,8 @@ Sie können das <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Steuerelement 
   
 4.  Fügen Sie den folgenden Code in ein `Event`\-Verfahren ein:  
   
-     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerpacksShapeCS/VbPowerpacksShape.cs#1)]
-     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerpacksShape/VbPowerpacksShape.vb#1)]  
+     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs)]
+     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]  
   
 ## Anpassen von Formen  
  Wenn Sie die Standardeinstellungen verwenden, werden die <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> und <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>\-Steuerelemente mit einem durchgehenden schwarzen Rahmen mit einem Pixel Breite und einem transparenten Hintergrund angezeigt.  Sie können Breite, Stil und Farbe des Rahmens ändern, indem Sie Eigenschaften festlegen.  Zusätzliche Eigenschaften ermöglichen Ihnen, den Hintergrund einer Form zu einer Volltonfarbe, einem Muster, Farbverlauf oder einem Bild zu ändern.  

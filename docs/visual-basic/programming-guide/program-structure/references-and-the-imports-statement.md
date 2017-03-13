@@ -45,15 +45,15 @@ Mit dem Befehl **Verweis hinzufügen** aus dem Menü **Projekt** lassen sich ext
 ## Verwenden von Aliasen mit der Imports\-Anweisung  
  Die `Imports`\-Anweisung erleichtert den Zugriff auf Methoden in Klassen, denn sie macht die explizite Eingabe des vollgekennzeichneten Namens eines Verweises überflüssig.  Mit Aliasen können Sie bestimmten Teilen des Namespaces einen eingängigeren Namen zuweisen.  So ist z. B. die Sequenz für Wagenrücklauf\/Zeilenvorschub, die die Anzeige eines einzelnen Textelements in mehreren Zeilen bewirkt, Teil der <xref:Microsoft.VisualBasic.ControlChars>\-Klasse im <xref:Microsoft.VisualBasic?displayProperty=fullName>\-Namespace.  Ohne Alias müssten Sie folgenden Code eingeben, um diese Konstante in einem Programm zu verwenden:  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
  `Imports`\-Anweisungen müssen in einem Modul immer in den unmittelbar auf die `Option`\-Anweisungen folgenden Zeilen stehen.  Das folgende Codefragment zeigt, wie ein Alias für das <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>\-Modul importiert und zugewiesen wird:  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
  Zukünftige Verweise auf diesen Namespace fallen dann wesentlich kürzer aus:  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
  Wenn eine `Imports`\-Anweisung keinen Aliasnamen enthält, können im importierten Namespace definierte Elemente ohne Angabe des Namespacenamens im Modul verwendet werden.  Wenn ein Aliasname angegeben ist, müssen Namen innerhalb des betreffenden Namespaces mit ihm qualifiziert werden.  
   

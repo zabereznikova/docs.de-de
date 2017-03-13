@@ -36,11 +36,11 @@ Mit einem *XML\-Literal* kann XML direkt in den [!INCLUDE[vbprvb](../../../../cs
 ## Einfache Literale  
  Sie können ein [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Objekt in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code erstellen, indem Sie gültigen XML\-Code eingeben oder einfügen.  Ein XML\-Elementliteral gibt ein <xref:System.Xml.Linq.XElement>\-Objekt zurück.  Weitere Informationen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) und unter [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  Im folgenden Beispiel wird ein XML\-Element mit mehreren untergeordneten Elementen erstellt.  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
  Ein XML\-Dokument kann erstellt werden, indem einem XML\-Literal `<?xml version="1.0"?>` vorangestellt wird, wie im folgenden Beispiel gezeigt wird.  Ein XML\-Dokumentliteral gibt ein <xref:System.Xml.Linq.XDocument>\-Objekt zurück.  Weitere Informationen finden Sie unter [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
 >  Die XML\-Literalsyntax in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist nicht identisch mit der Syntax der XML 1.0\-Spezifikation.  Weitere Informationen finden Sie unter [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
@@ -57,12 +57,12 @@ Mit einem *XML\-Literal* kann XML direkt in den [!INCLUDE[vbprvb](../../../../cs
   
  Im folgenden Code wird zum Beispiel eine eingebettete Abfrage verwendet, um XML\-Elemente aus den Membern des `phoneNumbers2`\-Arrays zu erstellen und diese als untergeordnete Elemente von `contact2` hinzuzufügen.  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## So erzeugt der Compiler Objekte aus XML\-Literalen  
  Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler übersetzt XML\-Literale in Aufrufe der entsprechenden [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Konstruktoren, um das [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Objekt zu erstellen.  Das folgende Codebeispiel wird vom [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler beispielsweise in einen Aufruf des <xref:System.Xml.Linq.XProcessingInstruction>\-Konstruktors für die XML\-Versionsanweisung, in Aufrufe des <xref:System.Xml.Linq.XElement>\-Konstruktors für die Elemente `<contact>`, `<name>` und `<phone>` und in Aufrufe des <xref:System.Xml.Linq.XAttribute>\-Konstruktors für das `type`\-Attribut übersetzt.  Genauer gesagt, ruft der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler für die Attribute des folgenden Beispiels den <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>\-Konstruktor zweimal auf.  Der erste Aufruf übergibt den Wert `type` für den `name`\-Parameter und den Wert `home` für den `value`\-Parameter.  Der zweite Aufruf übergibt ebenfalls den Wert `type` für den `name`\-Parameter, jedoch den Wert `work` für den `value`\-Parameter.  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 ## Siehe auch  
  <xref:System.Xml.Linq.XElement>   

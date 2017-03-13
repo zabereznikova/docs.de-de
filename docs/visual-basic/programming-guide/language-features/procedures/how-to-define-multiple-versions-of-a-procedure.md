@@ -42,7 +42,7 @@ Sie können durch *Überladen* mehrere Versionen einer Prozedur definieren. Es w
 ## Beispiel  
  Im folgenden Beispiel wird eine `Sub`\-Prozedur definiert, die eine Transaktion übermittelt, die mit dem Kontostand eines Kunden verrechnet werden soll.  Hier werden mithilfe des `Overloads`\-Schlüsselworts zwei Versionen der Prozedur definiert; eine Version erwartet die Angabe des Namens des Kunden und die andere seine Kontonummer.  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-multiple-v_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
  Der Aufrufcode kann die Kundenkennung entweder als `String` oder als `Integer`\-Wert abrufen und dann in beiden Fällen dieselbe Aufrufanweisung verwenden.  
   

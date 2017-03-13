@@ -36,7 +36,7 @@ Die <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29>\-Methode 
   
 -   Verwenden Sie die `DeleteSubKey`\-Methode, um einen Registrierungsschlüssel zu löschen.  In diesem Beispiel wird der Schlüssel Software\/TestApp im CurrentUser\-Hive gelöscht.  Sie können im Code die entsprechende Zeichenfolge ändern oder die entsprechenden Informationen vom Benutzer eingeben lassen.  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-delete-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
 ## Robuste Programmierung  
  Die `DeleteSubKey`\-Methode gibt eine leere Zeichenfolge zurück, wenn das Schlüssel\/Wert\-Paar nicht vorhanden ist.  

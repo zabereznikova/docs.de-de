@@ -35,7 +35,7 @@ Um einen Wert in einer Eigenschaft zu speichern, fügen Sie den Namen der Eigens
   
      Im folgenden Beispiel wird der Wert der `TimeOfDay`\-Eigenschaft von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auf Mittag gesetzt, wobei deren `Set`\-Prozedur implizit aufgerufen wird.  
   
-     [!code-vb[VbVbcnProcedures#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-put-a-value-in-a-_1.vb)]  
+     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   
 2.  Wenn die Eigenschaft Argumente annimmt, fügen Sie nach dem Eigenschaftennamen runde Klammern ein, die die Argumentliste einschließen.  Wenn keine Argumente vorliegen, können Sie die Klammern auch weglassen.  
   

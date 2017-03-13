@@ -31,7 +31,7 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>\-Methode sch
   
 -   Verwenden Sie die `WriteAllBytes`\-Methode, und geben Sie dabei den Dateipfad und den Namen sowie die Bytes an, die geschrieben werden sollen.  In diesem Beispiel wird das Datenarray `CustomerData` an die Datei `CollectedData.dat` angefügt.  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-to-binary-f_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
   
 ## Robuste Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  

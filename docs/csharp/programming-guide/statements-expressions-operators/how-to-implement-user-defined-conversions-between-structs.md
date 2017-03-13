@@ -19,19 +19,19 @@ caps.handback.revision: 11
 In diesem Beispiel werden die beiden Strukturen `RomanNumeral` und `BinaryNumeral` definiert, und es werden die Konvertierungen zwischen diesen Strukturen veranschaulicht.  
   
 ## Beispiel  
- [!code-cs[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_1.cs)]  
+ [!code-cs[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
   
 ## Robuste Programmierung  
   
 -   Im vorherigen Beispiel wird durch die Anweisung  
   
-     [!code-cs[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_2.cs)]  
+     [!code-cs[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
   
      eine Konvertierung von `RomanNumeral` in `BinaryNumeral` durchgeführt.  Da es keine direkte Konvertierung von `RomanNumeral` in `BinaryNumeral` gibt, wird `RomanNumeral` mithilfe einer Typumwandlung in einen `int`\-Typ konvertiert und mit einer weiteren Typumwandlung von `int` in `BinaryNumeral` konvertiert.  
   
 -   Auch durch die Anweisung  
   
-     [!code-cs[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_3.cs)]  
+     [!code-cs[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
   
      wird eine Konvertierung von `BinaryNumeral` in `RomanNumeral` durchgeführt.  Da durch `RomanNumeral` eine implizite Konvertierung von `BinaryNumeral` definiert wird, ist keine Typumwandlung erforderlich.  
   

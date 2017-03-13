@@ -25,7 +25,7 @@ Für vordefinierte Werttypen gibt der Gleichheitsoperator \(`==`\) true zurück,
  Benutzerdefinierte Werttypen können den Operator `==` überladen \(siehe [operator](../../../csharp/language-reference/keywords/operator.md)\).  Dies ist auch bei benutzerdefinierten Referenztypen möglich, obwohl sich `==` standardmäßig sowohl bei vordefinierten als auch bei benutzerdefinierten Referenztypen wie oben beschrieben verhält.  Wenn `==` überladen wird, muss auch [\!\=](../../../csharp/language-reference/operators/not-equal-operator.md) überladen werden.  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#36)]  
+ [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

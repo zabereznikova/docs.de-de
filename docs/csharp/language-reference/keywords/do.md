@@ -24,7 +24,7 @@ Mit der `do`\-Anweisung wird eine Anweisung oder ein Anweisungsblock wiederholt 
 ## Beispiel  
  Im folgenden Beispiel werden die Anweisungen in der `do-while`\-Schleife solange ausgeführt, solange die Variable `x` kleiner als 5 ist.  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/csharp/do_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
   
  Im Gegensatz zur [while](../../../csharp/language-reference/keywords/while.md)\-Anweisung wird eine `do-while`\-Schleife einmal ausgeführt, bevor der bedingte Ausdruck ausgewertet wird.  
   

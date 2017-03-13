@@ -28,11 +28,11 @@ Mit dem `TextFieldParser`\-Objekt können Sie sehr große Dateien analysieren un
 ## Analysieren von verschiedenen Typen von Textdateien  
  Textdateien können Felder verschiedener Breite enthalten, die mit Trennzeichen wie Kommas oder Tabstoppzeichen getrennt sind.  Definieren Sie `TextFieldType` und das Trennzeichen, wie nachfolgend gezeigt. Im Beispiel wird die `SetDelimiters`\-Methode zum Definieren einer tabstoppgetrennten Textdatei verwendet:  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
  Textdateien können auch Felder mit fester Breite enthalten.  In solchen Fällen müssen Sie den `TextFieldType` als `FixedWidth` definieren und die Breite jedes einzelnen Feldes angeben, wie nachfolgend gezeigt.  Im Beispiel wird die `SetFieldWidths`\-Methode zum Definieren der Textspalten verwendet: die erste Spalte ist 5 Zeichen breit, die zweite 10, die dritte 11 und die vierte Spalte weist eine variable Breite auf.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
  Nach der Definition des Formats können Sie die Datei durchlaufen und mit der `ReadFields`\-Methode jede Zeile einzeln verarbeiten.  
   

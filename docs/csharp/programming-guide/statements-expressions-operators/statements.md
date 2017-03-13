@@ -21,15 +21,15 @@ Die Aktionen, die ein Programm ausführt, werden in Anweisungen ausgedrückt.  Z
   
  Eine Anweisung kann aus einer einzigen Codezeile mit Semikolon am Ende oder einer Folge von einzeiligen Anweisungen in einem Block bestehen.  Ein Anweisungsblock ist in geschweifte Klammern \({}\) eingeschlossen und kann geschachtelte Blöcke enthalten.  Im folgenden Code werden zwei Beispiele für einzeilige Anweisungen und ein mehrzeiliger Anweisungsblock dargestellt:  
   
- [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_1.cs)]  
+ [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
 ## Typen von Anweisungen  
  In der folgenden Tabelle sind die verschiedenen Typen von Anweisungen in C\# und deren zugehörige Schlüsselwörter sowie Links zu Themen aufgeführt, die weitere Informationen enthalten:  
   
 |Kategorie|C\#\-Schlüsselwörter\/Hinweise|  
 |---------------|------------------------------------|  
-|Deklarationsanweisungen|Mit einer Deklarationsanweisung wird eine neue Variable oder Konstante eingeführt.  In einer Variablendeklaration kann der Variable optional ein Wert zugewiesen werden.  In der Deklaration einer Konstanten ist die Zuweisung erforderlich.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_2.cs)]|  
-|Ausdrucksanweisungen|Ausdrucksanweisungen, mit denen ein Wert berechnet wird, müssen den Wert in einer Variablen speichern.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_3.cs)]|  
+|Deklarationsanweisungen|Mit einer Deklarationsanweisung wird eine neue Variable oder Konstante eingeführt.  In einer Variablendeklaration kann der Variable optional ein Wert zugewiesen werden.  In der Deklaration einer Konstanten ist die Zuweisung erforderlich.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
+|Ausdrucksanweisungen|Ausdrucksanweisungen, mit denen ein Wert berechnet wird, müssen den Wert in einer Variablen speichern.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
 |[Auswahlanweisungen](../../../csharp/language-reference/keywords/selection-statements.md)|Mithilfe von Auswahlanweisungen kann in Abhängigkeit von einer oder mehreren angegebenen Bedingungen in verschiedene Abschnitte im Code verzweigt werden.  Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> ["if"](../../../csharp/language-reference/keywords/if-else.md), ["else"](../../../csharp/language-reference/keywords/if-else.md), ["switch"](../../../csharp/language-reference/keywords/switch.md), ["case"](../../../csharp/language-reference/keywords/switch.md)|  
 |[Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)|Mit Iterationsanweisungen können Auflistungen wie Arrays durchlaufen oder dieselben Sätze von Anweisungen wiederholt ausgeführt werden, bis eine angegebene Bedingung erfüllt ist.  Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> ["do"](../../../csharp/language-reference/keywords/do.md), ["for"](../../../csharp/language-reference/keywords/for.md), ["foreach"](../../../csharp/language-reference/keywords/foreach-in.md), ["in"](../../../csharp/language-reference/keywords/foreach-in.md), ["while"](../../../csharp/language-reference/keywords/while.md)|  
 |[Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)|Sprunganweisungen übergeben die Steuerung an einen anderen Abschnitt im Code.  Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -40,30 +40,30 @@ Die Aktionen, die ein Programm ausführt, werden in Anweisungen ausgedrückt.  Z
 |Die `fixed`\-Anweisung|Mit der **fixed**\-Anweisung wird verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt.  Weitere Informationen finden Sie unter [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Die `lock`\-Anweisung|Mit der **lock**\-Anweisung kann der Zugriff auf Codeblöcke auf jeweils einen Thread eingeschränkt werden.  Weitere Informationen finden Sie unter [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Anweisungen mit Bezeichnung|Sie können eine Anweisung mit einer Bezeichnung versehen und mit dem [goto](../../../csharp/language-reference/keywords/goto.md)\-Schlüsselwort zu dieser Anweisung mit Bezeichnung springen.  \(Siehe das Beispiel in der folgenden Zeile.\)|  
-|Die leere Anweisung|Die leere Anweisung besteht aus einem einzelnen Semikolon.  Sie führt keine Aktionen aus und kann an Stellen verwendet werden, an denen eine Anweisung erforderlich ist, jedoch keine Aktion ausgeführt werden soll.  In den folgenden Beispielen werden zwei Verwendungen einer leeren Anweisung veranschaulicht:<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_4.cs)]|  
+|Die leere Anweisung|Die leere Anweisung besteht aus einem einzelnen Semikolon.  Sie führt keine Aktionen aus und kann an Stellen verwendet werden, an denen eine Anweisung erforderlich ist, jedoch keine Aktion ausgeführt werden soll.  In den folgenden Beispielen werden zwei Verwendungen einer leeren Anweisung veranschaulicht:<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## Eingebettete Anweisungen  
  Auf einige Anweisungen, einschließlich [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) und [foreach](../../../csharp/language-reference/keywords/foreach-in.md), folgt stets eine eingebettete Anweisung.  Diese eingebettete Anweisung kann entweder aus einer einzelnen Anweisung oder aus mehreren, mit geschweiften Klammern \({}\) in einen Anweisungsblock eingeschlossene Anweisungen bestehen.  Wie im folgenden Beispiel gezeigt, können auch einzeilige eingebettete Anweisungen in geschweifte Klammern \({}\) eingeschlossen werden:  
   
- [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_5.cs)]  
+ [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
  Bei einer nicht in geschweifte Klammern eingeschlossenen eingebetteten Anweisung darf es sich nicht um eine Deklarationsanweisung oder eine Anweisung mit Bezeichnung handeln.  Dies wird im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_6.cs)]  
+ [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
  Fügen Sie die eingebettete Anweisung in einen Block ein, um den Fehler zu beheben:  
   
- [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_7.cs)]  
+ [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
   
 ## Geschachtelte Anweisungsblöcke  
  Wie im folgenden Code dargestellt, können Anweisungsblöcke geschachtelt werden:  
   
- [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_8.cs)]  
+ [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
   
 ## Nicht erreichbare Anweisungen  
  Wenn der Compiler feststellt, dass die Ablaufsteuerung eine bestimmte Anweisung unter keinen Umständen erreichen kann, löst er die Warnung "CS0162" aus. Dies wird im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_9.cs)]  
+ [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
   
 ## Verwandte Abschnitte  
   

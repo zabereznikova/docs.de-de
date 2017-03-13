@@ -46,7 +46,7 @@ Leitet eine Typkonvertierungsoperation ein, die auf Vererbung oder Implementieru
 ## Beispiel  
  Im folgenden Beispiel wird `DirectCast` zweimal verwendet; einmal scheitert die Konvertierung zur Laufzeit und im anderen Fall wird sie erfolgreich ausgeführt.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/visualbasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
  Im vorangehenden Beispiel hat `q` zur Laufzeit den Typ `Double`.  `CType` wird erfolgreich ausgeführt, da `Double` in `Integer` konvertiert werden kann.  Der erste Aufruf von `DirectCast` schlägt fehl, weil zwischen dem Laufzeittyp `Double` und `Integer` keine Vererbungsbeziehung besteht, auch wenn eine Konvertierung möglich ist.  Der zweite Aufruf von `DirectCast` ist erfolgreich, da vom Typ <xref:System.Windows.Forms.Form> in den Typ <xref:System.Windows.Forms.Control>, der von <xref:System.Windows.Forms.Form> erbt, konvertiert wird.  
   

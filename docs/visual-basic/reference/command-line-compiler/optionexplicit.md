@@ -50,7 +50,7 @@ Bewirkt, dass der Compiler Fehler meldet, wenn Variablen vor der Verwendung nich
 ## Beispiel  
  Der folgende Code wird kompiliert, wenn `/optionexplicit-` angegeben wird.  
   
- [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
 ## Siehe auch  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

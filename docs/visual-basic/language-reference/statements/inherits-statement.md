@@ -63,12 +63,12 @@ Inherits basetypenames
 ## Beispiel  
  In diesem Beispiel wird die `Inherits`\-Anweisung verwendet, um zu zeigen, wie die Klasse `thisClass` alle Member der Basisklasse `anotherClass` erben kann.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird die Vererbung von mehreren Schnittstellen veranschaulicht.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
  Die Schnittstelle `thisInterface` enthält jetzt alle Definitionen in den Schnittstellen <xref:System.IComparable>, <xref:System.IDisposable> und <xref:System.IFormattable>. Die geerbten Member ermöglichen den typspezifischen Vergleich von zwei Objekten, die Freigabe reservierter Ressourcen bzw. die Darstellung des Werts eines Objekts als `String`.  Eine Klasse, die `thisInterface` implementiert, muss jeden Member jeder Basisschnittstelle implementieren.  
   

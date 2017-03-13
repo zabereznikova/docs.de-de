@@ -71,14 +71,14 @@ Mit der `Inherits`–Anweisung wird eine neue Klasse, eine so genannte *abgeleit
   
  Im folgenden Beispiel wird eine `Payroll,`\-Basisklasse sowie eine abgeleitete Klasse mit dem Namen `BonusPayroll` definiert, die eine geerbte `PayEmployee`\-Methode überschreibt.  Eine Prozedur mit dem Namen `RunPayroll` erstellt ein `Payroll`\-Objekt und leitet dieses zusammen mit einem `BonusPayroll`\-Objekt an die `Pay`\-Funktion weiter, die die `PayEmployee`\-Methode beider Objekte ausführt.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#28)]  
+ [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
   
 ## Das MyBase\-Schlüsselwort  
  Das `MyBase`\-Schlüsselwort verhält sich wie eine Objektvariable, die auf die Basisklasse der aktuellen Instanz einer Klasse verweist.  `MyBase` wird häufig für den Zugriff auf Basisklassenmember verwendet, die in einer abgeleiteten Klasse überschrieben werden oder für die ein Shadowing durchgeführt wird.  Insbesondere `MyBase.New` dient dazu, Basisklassenkonstruktoren aus einem abgeleiteten Klassenkonstruktor explizit aufzurufen.  
   
  Angenommen, Sie entwerfen z. B. eine abgeleitete Klasse, die eine aus einer Basisklasse geerbten Methode überschreibt.  Die überschriebene Methode kann die Methode in der Basisklasse aufrufen und den Rückgabewert wie im folgenden Codefragment ändern:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#109)]  
+ [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
   
  Die folgende Liste beschreibt die Einschränkungen bei der Verwendung von `MyBase`:  
   

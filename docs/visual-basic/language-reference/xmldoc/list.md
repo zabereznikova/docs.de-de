@@ -68,7 +68,7 @@ Definiert eine Liste oder Tabelle.
 ## Beispiel  
  Im folgenden Beispiel wird mit dem `<list>`\-Tag im Hinweisabschnitt eine Aufzählung definiert.  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

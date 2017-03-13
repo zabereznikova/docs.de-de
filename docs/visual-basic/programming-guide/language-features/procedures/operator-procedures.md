@@ -82,11 +82,11 @@ Eine Operatorprozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/pr
 ### Darstellung von Deklaration und Aufruf  
  Die folgende Struktur speichert einen ganzzahligen 128\-Bit\-Wert mit Vorzeichen als die konstituierenden höherwertigen und niedrigwertigen Teile.  Sie definiert den Operator `+`, mit dem zwei `veryLong` \-Werte hinzugefügt und ein resultierender `veryLong` \-Wert generiert werden.  
   
- [!code-vb[VbVbcnProcedures#23](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
  Das folgende Beispiel zeigt einen typischen Aufruf des als `veryLong` definierten Operators `+`.  
   
- [!code-vb[VbVbcnProcedures#24](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
  Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

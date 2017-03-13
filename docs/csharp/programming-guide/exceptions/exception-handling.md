@@ -21,11 +21,11 @@ Ein [try](../../../csharp/language-reference/keywords/try-catch.md)\-Block wird 
   
  Die folgenden Beispiele zeigen eine `try-catch`\-Anweisung, eine `try-finally`\-Anweisung und eine `try-catch-finally`\-Anweisung.  
   
- [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_1.cs)]  
+ [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
   
- [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_2.cs)]  
+ [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
   
- [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_3.cs)]  
+ [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
   
  Ein `try`\-Block ohne einen `catch`\- oder `finally`\-Block verursacht einen Compilerfehler.  
   
@@ -40,11 +40,11 @@ Ein [try](../../../csharp/language-reference/keywords/try-catch.md)\-Block wird 
   
 -   Sie können eine neue und spezifischere Ausnahme erstellen und auslösen.  
   
-     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_4.cs)]  
+     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
   
 -   Sie möchten eine Ausnahme teilweise behandeln, bevor Sie diese für zusätzliche Behandlung übergeben.  Im folgenden Beispiel wird ein `catch`\-Block verwendet, um einen Eintrag einem Fehlerprotokoll hinzuzufügen, bevor die Ausnahme erneut ausgelöst wird.  
   
-     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_5.cs)]  
+     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
   
 ## Finally\-Blöcke  
  Mithilfe eines `finally`\-Blocks können Sie Aktionen bereinigen, die in einem `try`\-Block ausgeführt werden.  Falls vorhanden, wird der `finally`\-Block zuletzt ausgeführt wird, nach dem `try`\-Block und einem entsprechenden `catch`\-Block.  Unabhängig davon, ob eine Ausnahme ausgelöst wurde oder ein mit dem Ausnahmetyp übereinstimmender `catch`\-Block gefunden wurde, wird ein `finally`\-Block immer ausgeführt.  
@@ -53,7 +53,7 @@ Ein [try](../../../csharp/language-reference/keywords/try-catch.md)\-Block wird 
   
  Im folgenden Beispiel wird der `finally`\-Block verwendet, um eine Datei zu schließen, die im `try`\-Block geöffnet wurde.  Beachten Sie, dass vor dem Schließen der Datei der Zustand des Dateihandles überprüft wird.  Wenn der `try`\-Block die Datei nicht öffnen kann, hat das Dateihandle weiterhin den Wert `null`, und der `finally`\-Block versucht nicht, sie zu schließen.  Wenn alternativ dazu die Datei erfolgreich im `try`\-Block geöffnet wird, schließt der `finally`\-Block die geöffnete Datei.  
   
- [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_6.cs)]  
+ [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

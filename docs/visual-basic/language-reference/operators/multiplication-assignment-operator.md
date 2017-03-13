@@ -53,7 +53,7 @@ variableorproperty *= expression
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `*=` verwendet, um eine `Integer`\-Variable mit einer anderen zu multiplizieren und das Ergebnis der ersten Variablen zuzuweisen.  
   
- [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-assignmen_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
 ## Siehe auch  
  [\* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md)   

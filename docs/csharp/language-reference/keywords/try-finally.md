@@ -29,11 +29,11 @@ Mit einem `finally`\-Block können Sie alle Ressourcen bereinigen, die in einem 
 ## Beispiel  
  Im folgenden Beispiel wird eine `System.InvalidCastException` Ausnahme durch eine ungültige Konvertierungsanweisung verursacht.  Die Ausnahme wird nicht behandelt.  
   
- [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
  Im folgenden Beispiel wird eine Ausnahme von der `TryCast`\-Methode in einer Methode weiter oben in der Aufrufliste abgefangen.  
   
- [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
  Weitere Informationen zu `finally` finden Sie unter [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   

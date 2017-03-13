@@ -19,19 +19,19 @@ caps.handback.revision: 27
 # Namespaces (C#-Programmierhandbuch)
 Bei der C\#\-Programmierung wird ausgiebig Gebrauch von Namespaces gemacht, wobei zwei Anwendungsfälle zu unterscheiden sind.  Zum einen werden Namespaces von .NET Framework zur Organisation seiner vielen Klassen verwendet. Beispiel:  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#22)]  
+ [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System` ist ein Namespace und `Console` ist eine in diesem Namespace enthaltene Klasse.  Das `using`\-Schlüsselwort kann verwendet werden, um nicht den ganzen Namen angeben zu müssen. Beispiel:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#25)]  
+ [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  Weitere Informationen finden Sie unter [using\-Direktive](../../../csharp/language-reference/keywords/using-directive.md).  
   
  Zum anderen können Sie durch die Definition eines eigenen Namespaces die Steuerung des Gültigkeitsbereiches von Klassen\- und Methodennamen in größeren Programmierprojekten unterstützen.  Verwenden Sie das [namespace](../../../csharp/language-reference/keywords/namespace.md)\-Schlüsselwort, um einen Namespace wie in folgendem Beispiel zu deklarieren:  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#6)]  
+ [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## Übersicht über Namespaces  
  Namespaces verfügen über folgende Eigenschaften:  

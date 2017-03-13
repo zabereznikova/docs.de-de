@@ -66,7 +66,7 @@ Arrays sind Gruppen von Werten, die logisch miteinander verknüpft sind, z. B. 
 ##  <a name="BKMK_ArrayElements"></a> Arrayelemente in einem einfachen Array  
  Im folgenden Beispiel wird eine Arrayvariable deklariert, die die Schüler der einzelnen Jahrgangsstufe einer Grundschule enthalten soll.  
   
- [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
  Das `students`\-Array im vorangehenden Beispiel enthält sieben Elemente. Die Indizes der Elemente reichen von 0 bis 6. Es ist einfacher, dieses Array zu verwenden, als sieben verschiedene Variablen zu deklarieren.  
   
@@ -81,7 +81,7 @@ Elemente des "students"\-Arrays
   
  Das folgende Beispiel zeigt, wie auf das erste, zweite und letzte Element des `students`\-Arrays verwiesen wird.  
   
- [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  Sie können auf das Array als Ganzes verweisen, indem Sie nur den Arrayvariablennamen ohne Indizes verwenden.  
   
@@ -90,55 +90,55 @@ Elemente des "students"\-Arrays
 ##  <a name="BKMK_CreatingAnArray"></a> Erstellen eines Arrays  
  Es gibt mehrere Möglichkeiten zum Definieren der Größe eines Arrays. Sie können die Größe beim Deklarieren des Arrays angeben, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
  Sie können die Größe eines Arrays bei seiner Erstellung auch mit einer `New`\-Klausel angeben, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  Die Größe eines vorhandenen Arrays kann mit der `Redim`\-Anweisung neu definiert werden. Sie können angeben, dass von der `Redim`\-Anweisung die derzeit im Array gespeicherten Werte beibehalten werden sollen, oder Sie können angeben, dass ein leeres Array erstellt wird. Im folgenden Beispiel werden andere Möglichkeiten veranschaulicht, um mit der `Redim`\-Anweisung die Größe eines vorhandenen Arrays zu ändern.  
   
- [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  Weitere Informationen finden Sie unter [ReDim Statement](../../../../visual-basic/language-reference/statements/redim-statement.md).  
   
 ##  <a name="BKMK_StoringValues"></a> Speichern von Werten in einem Array  
  Sie können mit einem Index vom Typ `Integer` auf die einzelnen Positionen in einem Array zugreifen. Die Werte in einem Array können gespeichert und abgerufen werden, indem mit dem entsprechenden in Klammern eingeschlossenen Index auf die einzelnen Arraypositionen verwiesen wird. Indizes für mehrdimensionale Arrays sind durch Kommas \(,\) getrennt. Sie benötigen einen Index für jede Arraydimension. Im folgenden Beispiel werden einige Anweisungen gezeigt, die Werte in Arrays speichern.  
   
- [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  Das folgende Beispiel enthält einige Anweisungen, die Werte aus Arrays abrufen.  
   
- [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
 ##  <a name="BKMK_Populating"></a> Auffüllen eines Arrays mit Anfangswerten  
  Mit einem Arrayliteral können Sie ein Array erstellen, das einen Anfangssatz von Werten enthält. Ein Arrayliteral besteht aus einer Liste von durch Trennzeichen getrennten Werten, die in geschweifte Klammern \(`{}`\) eingeschlossen sind.  
   
  Beim Erstellen eines Arrays mit einem Arrayliteral können Sie den Arraytyp entweder angeben oder mittels Typrückschluss bestimmen. Im folgenden Code werden beide Optionen veranschaulicht.  
   
- [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_8.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
  Beim Typrückschluss wird der Typ des Arrays anhand des bestimmenden Typs in der Liste der Werte bestimmt, die für das Arrayliteral angegeben wurden. Der bestimmende Typ ist ein eindeutiger Typ, auf den alle anderen Typen im Arrayliteral erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn die für das Arrayliteral angegebene Liste der Werte z. B. Werte vom Typ `Integer`, `Long` und `Double` enthält, weist das erhaltene Array den Typ `Double` auf. Sowohl `Integer` als auch `Long` können nur auf `Double` erweitert werden. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Diese Rückschlussregeln gelten für Typen, die für Arrays abgeleitet werden, die lokale, in einem Klassenmember definierte Variablen darstellen. Sie können zwar Arrayliterale beim Erstellen von Variablen auf Klassenebene verwenden, ein Typrückschluss auf Klassenebene ist jedoch nicht möglich. Daher leiten auf Klassenebene angegebene Arrayliterale die für das Arrayliteral bereitgestellten Werte als `Object`\-Typ ab.  
   
  In einem mit einem Arrayliteral erstellten Array kann der Typ der Elemente explizit angegeben werden. In diesem Fall müssen die Werte im Arrayliteral auf den Typ der Elemente des Arrays erweitert werden. Im folgenden Codebeispiel wird ein Array vom Typ `Double` aus einer Liste von ganzen Zahlen erstellt.  
   
- [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_9.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_9.vb)]  
   
 ###  <a name="BKMK_NestedArrayLiterals"></a> Geschachtelte Arrayliterale  
  Sie können ein mehrdimensionales Array mithilfe von geschachtelten Arrayliteralen erstellen. Geschachtelte Arrayliterale müssen über eine Dimension sowie eine Anzahl von Dimensionen \(bzw. einen Rang\) verfügen, der mit dem erhaltenen Array konsistent ist. Im folgenden Codebeispiel wird mit einem Arrayliteral ein zweidimensionales Array von ganzen Zahlen erstellt.  
   
- [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_10.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_10.vb)]  
   
  Im vorherigen Beispiel würde ein Fehler auftreten, wenn die Anzahl der Elemente in den geschachtelten Arrayliteralen nicht übereinstimmt. Ein Fehler würde auch auftreten, wenn die Arrayvariable explizit als nicht zweidimensional deklariert ist.  
   
 > [!NOTE]
 >  Sie können Fehler vermeiden, wenn Sie geschachtelte Arrayliterale anderer Dimensionen angeben, indem Sie die inneren Arrayliterale in Klammern einschließen. Die Klammern erzwingen die Auswertung des Literalausdrucks des Arrays, und die erhaltenen Werte werden mit dem äußeren Arrayliteral verwendet. Dies ist im folgenden Code veranschaulicht.  
   
- [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_11.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_11.vb)]  
   
  Mehrdimensionale Arrays können mit geschachtelten Arrayliteralen mithilfe des Typrückschlusses erstellt werden. Wenn Sie den Typrückschluss verwenden, ist der abgeleitete Typ der bestimmende Typ für sämtliche Werte in allen Arrayliteralen für eine Schachtelungsebene. Im folgenden Codebeispiel wird ein zweidimensionales Array vom Typ `Double` aus Werten erstellt, die vom Typ `Integer` und `Double` sind.  
   
- [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_12.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_12.vb)]  
   
  Weitere Beispiele finden Sie unter [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md).  
   
@@ -147,19 +147,19 @@ Elemente des "students"\-Arrays
   
  Im folgenden Beispiel wird ein eindimensionales Array mit dem [For...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md) durchlaufen. Die <xref:System.Array.GetUpperBound%2A>\-Methode gibt den höchsten Wert zurück, den der Index annehmen kann. Der niedrigste Indexwert ist immer 0.  
   
- [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_13.vb)]  
+ [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
  Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For...Next`\-Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A>\-Methode enthält einen Parameter, der die Dimension angibt.`GetUpperBound(0)` gibt den hohen Indexwert für die erste Dimension und `GetUpperBound(1)` gibt den hohen Indexwert für die zweite Dimension zurück.  
   
- [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_14.vb)]  
+ [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
  Im folgenden Beispiel wird ein eindimensionales Array mit einem [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) durchlaufen.  
   
- [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_15.vb)]  
+ [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_15.vb)]  
   
  Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For Each...Next`\-Anweisung durchlaufen. Sie haben jedoch mehr Kontrolle über die Elemente eines mehrdimensionalen Arrays, wenn Sie, wie im vorherigen Beispiel, eine geschachtelte `For…Next`\-Anweisung anstelle einer `For Each…Next`\-Anweisung verwenden.  
   
- [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_16.vb)]  
+ [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_16.vb)]  
   
 ##  <a name="BKMK_ReturnValues"></a> Arrays als Parameter und Rückgabewerte  
  Damit eine `Function`\-Prozedur ein Array zurückgibt, geben Sie den Arraydatentyp und die Anzahl der Dimensionen als Rückgabetyp für die [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md) an. Deklarieren Sie in der Funktion eine lokale Arrayvariable mit dem gleichen Datentyp und der gleichen Anzahl an Dimensionen. Schließen Sie die lokale Arrayvariable ohne Klammern in die [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md) ein.  
@@ -168,23 +168,23 @@ Elemente des "students"\-Arrays
   
  Im folgenden Beispiel gibt die Funktion `GetNumbers` einen `Integer()` zurück. Dieser Arraytyp ist ein eindimensionales Array vom Typ `Integer`. Die Prozedur `ShowNumbers` akzeptiert ein Argument `Integer()`.  
   
- [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_17.vb)]  
+ [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_17.vb)]  
   
  Im folgenden Beispiel gibt die Funktion `GetNumbersMultiDim` einen `Integer(,)` zurück. Dieser Arraytyp ist ein zweidimensionales Array vom Typ `Integer`.  Die Prozedur `ShowNumbersMultiDim` akzeptiert ein Argument `Integer(,)`.  
   
- [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_18.vb)]  
+ [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_18.vb)]  
   
 ##  <a name="BKMK_JaggedArrays"></a> Verzweigte Arrays  
  Ein Array, das andere Arrays als Elemente enthält, wird als Array von Arrays oder verzweigtes Array bezeichnet. Ein verzweigtes Array und jedes Element in einem verzweigten Array können über eine oder mehrere Dimensionen verfügen. In einigen Fällen ist die Datenstruktur in einer Anwendung zweidimensional, jedoch nicht rechteckig.  
   
  Im folgenden Beispiel wird ein Array von Monaten dargestellt, bei dem jedes Element ein Array von Tagen ist. Da die einzelnen Monate eine unterschiedliche Anzahl von Tagen haben, bilden die Elemente kein rechteckiges zweidimensionales Array. Deshalb wird ein verzweigtes Array anstelle eines mehrdimensionalen Arrays verwendet.  
   
- [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_19.vb)]  
+ [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_19.vb)]  
   
 ##  <a name="BKMK_ZeroLength"></a> Arrays mit der Länge 0 \(null\)  
  Ein Array ohne Elemente wird auch als Array der Länge Null bezeichnet. In einer Variablen mit einem Array der Länge Null kommt auch der Wert `Nothing` nicht vor. Wenn Sie ein Array ohne Elemente erstellen möchten, deklarieren Sie eine der Dimensionen des Arrays als \-1, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_20.vb)]  
+ [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_20.vb)]  
   
  Unter den folgenden Bedingungen müssen Sie eventuell ein Array der Länge 0 \(null\) erstellen:  
   
@@ -233,7 +233,7 @@ Dim prices(3, 4, 5) As Long
   
  Im folgenden Beispiel wird die `TypeName`\-Funktion aufgerufen, um den Typ des Arrays und den Typ der Elemente im Array zu bestimmen. Der Arraytyp ist `Integer(,)`, und die Elemente im Array sind vom Typ `Integer`.  
   
- [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_21.vb)]  
+ [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_21.vb)]  
   
 ##  <a name="BKMK_Collections"></a> Auflistungen als Alternative zu Arrays  
  Arrays eignen sich bestens zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ. Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Im Gegensatz zu Arrays kann sich die Gruppe von Objekten, mit denen Sie arbeiten, in Abhängigkeit von den sich ändernden Anforderungen der Anwendung dynamisch vergrößern bzw. verkleinern.  
@@ -249,7 +249,7 @@ Dim prices(3, 4, 5) As Long
 ### Beispiel  
  Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klasse <xref:System.Collections.Generic.List%601?displayProperty=fullName> eine Listenauflistung mit `Customer`\-Objekten erstellt.  
   
- [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_22.vb)]  
+ [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
  Die Deklaration der `CustomerFile`\-Auflistung gibt an, dass sie nur Elemente vom Typ `Customer` enthalten kann. Sie bietet außerdem eine Anfangskapazität von 200 Elementen. Die Prozedur `AddNewCustomer` überprüft das neue Element auf seine Gültigkeit und fügt es dann der Auflistung hinzu. Die Prozedur `PrintCustomers` verwendet zum Traversieren der Auflistung und zum Anzeigen ihrer Elemente eine `For Each`\-Schleife.  
   

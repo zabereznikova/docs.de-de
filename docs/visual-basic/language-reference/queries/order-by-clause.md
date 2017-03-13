@@ -46,17 +46,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From`\-Klausel zum Deklarieren einer Bereichsvariablen `book` für die `books`\-Auflistung.  Die `Order By`\-Klausel sortiert das Abfrageergebnis nach Preis in aufsteigender Reihenfolge \(Standard\).  Bücher mit dem gleichen Preis werden nach Titel in aufsteigender Reihenfolge sortiert.  Die `Select`\-Klausel wählt die `Title`\-Eigenschaft und die `Price`\-Eigenschaft als Rückgabewerte der Abfrage.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#24)]  
+ [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## Beispiel  
  Der folgende Abfrageausdruck verwendet die `Order By`\-Klausel zum Sortieren des Abfrageergebnisses nach Preis in absteigender Reihenfolge.  Bücher mit dem gleichen Preis werden nach Titel in aufsteigender Reihenfolge sortiert.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#25)]  
+ [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## Beispiel  
  Der folgende Abfrageausdruck verwendet eine `Select`\-Klausel, um Buchtitel, Preis, Veröffentlichungsdatum und Autor auszuwählen.  Dann werden das `Title`, `Price`, `PublishDate`\-Feld und das `Author`\-Feld der Bereichsvariablen für den neuen Bereich mit Daten gefüllt.  Die `Order By`\-Klausel sortiert die neue Bereichsvariable nach Autorennamen, Buchtitel und Preis.  Jede Spalte wird in der Standardreihenfolge \(aufsteigend\) sortiert.  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#26)]  
+ [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

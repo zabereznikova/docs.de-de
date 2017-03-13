@@ -30,7 +30,7 @@ caps.handback.revision: 19
 ## Beispiel  
  In diesem Beispiel werden die an eine Befehlszeilenanwendung übergebenen Befehlszeilenargumente angezeigt.  Die angezeigte Ausgabe betrifft den ersten Eintrag in der Tabelle oben.  
   
- [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-display-command-l_1.cs)]  
+ [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

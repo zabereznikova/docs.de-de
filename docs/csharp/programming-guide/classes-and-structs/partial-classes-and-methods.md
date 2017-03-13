@@ -29,7 +29,7 @@ Sie können die Definition einer [Klasse](../../../csharp/language-reference/key
   
 -   Um eine Klassendefinition aufzuteilen, verwenden Sie den Modifizierer des [partial](../../../csharp/language-reference/keywords/partial-type.md)\-Schlüsselworts, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_1.cs)]  
+ [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  Das `partial`\-Schlüsselwort gibt an, dass weitere Teile der Klasse, Struktur oder Schnittstelle im Namespace definiert werden können.  Alle Teile müssen das `partial`\-Schlüsselwort verwenden.  Alle Teile müssen beim Kompilieren verfügbar sein, um den Gesamttyp zu bilden.  Alle Teile müssen die gleiche Zugriffsebene haben, z. B. `public`, `private` usw.  
   
@@ -42,15 +42,15 @@ Sie können die Definition einer [Klasse](../../../csharp/language-reference/key
   
  Das folgende Beispiel zeigt, dass geschachtelte Typen partiell sein können, auch wenn der Typ, in dem sie geschachtelt sind, selbst nicht partiell ist.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_2.cs)]  
+ [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  Zur Kompilierzeit werden die Attribute der partiellen Typdefinitionen zusammengeführt.  Betrachten Sie beispielsweise die folgenden Deklarationen:  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_3.cs)]  
+ [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  Sie entsprechen den folgenden Deklarationen:  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_4.cs)]  
+ [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  Folgende Elemente werden aus allen Definitionen des partiellen Typs zusammengeführt:  
   
@@ -66,24 +66,24 @@ Sie können die Definition einer [Klasse](../../../csharp/language-reference/key
   
  Betrachten Sie beispielsweise die folgenden Deklarationen:  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_5.cs)]  
+ [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  Sie entsprechen den folgenden Deklarationen:  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_6.cs)]  
+ [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### Beschränkungen  
  Beim Arbeiten mit partiellen Klassendefinitionen sind mehrere Regeln zu beachten:  
   
 -   Alle partiellen Typdefinitionen, die als Teile des gleichen Typs vorgesehen sind, müssen mit `partial` bearbeitet werden.  Durch folgende Klassendeklarationen wird z. B. ein Fehler verursacht:  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_7.cs)]  
+     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   Der `partial`\-Modifizierer kann nur unmittelbar vor den Schlüsselwörtern `class`, `struct` oder `interface` stehen.  
   
 -   Geschachtelte partielle Typen sind in Definitionen des partiellen Typs zulässig, wie im folgenden Beispiel veranschaulicht:  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_8.cs)]  
+     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   Alle partiellen Typdefinitionen, die als Teile desselben Typs vorgesehen sind, müssen in derselben Assembly und demselben Modul \(EXE\- oder DLL\-Datei\) definiert sein.  Partielle Definitionen können sich nicht über mehrere Module erstrecken.  
   
@@ -117,7 +117,7 @@ Sie können die Definition einer [Klasse](../../../csharp/language-reference/key
  Im folgenden Beispiel sind die Felder und der Konstruktor der Klasse, `CoOrds`, in einer partiellen Klassendefinition deklariert, und der `PrintCoOrds`\-Member ist in einer anderen partiellen Klassendefinition deklariert.  
   
 ### Code  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_9.cs)]  
+ [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## Beispiel 2  
   
@@ -125,7 +125,7 @@ Sie können die Definition einer [Klasse](../../../csharp/language-reference/key
  Das folgende Beispiel zeigt, dass auch partielle Strukturen und Schnittstellen entwickelt werden können.  
   
 ### Code  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_10.cs)]  
+ [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## Partielle Methoden  
  Eine partielle Klasse oder Struktur kann eine partielle Methode enthalten.  Ein Teil der Klasse enthält die Signatur der Methode.  Eine optionale Implementierung kann im selben oder einem anderen Teil definiert sein.  Ist keine Implementierung angegeben, werden die Methode und alle Aufrufe der Methode beim Kompilieren entfernt.  

@@ -24,7 +24,7 @@ Der `override`\-Modifizierer wird benötigt, um die abstrakte oder virtuelle Imp
 ## Beispiel  
  In diesem Beispiel muss die `Square`\-Klasse eine überschriebene Implementierung von `Area` bereitstellen, da `Area` von der abstrakten `ShapesClass` geerbt wird:  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  Eine `override`\-Methode stellt eine neue Implementierung eines von einer Basisklasse geerbten Members bereit.  Die durch eine `override`\-Deklaration überschriebene Methode wird als überschriebene Basismethode bezeichnet.  Diese muss dieselbe Signatur wie die `override`\-Methode aufweisen.  Weitere Informationen über die Vererbung finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -41,7 +41,7 @@ Der `override`\-Modifizierer wird benötigt, um die abstrakte oder virtuelle Imp
 ## Beispiel  
  Im folgenden Beispiel werden die Basisklasse `Employee` und die abgeleitete Klasse `SalesEmployee` definiert.  Die `SalesEmployee`\-Klasse enthält die zusätzliche `salesbonus`\-Eigenschaft. Um diese zu berücksichtigen, überschreibt sie die `CalculatePay`\-Methode.  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#9)]  
+ [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

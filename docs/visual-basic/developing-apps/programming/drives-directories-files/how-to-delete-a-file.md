@@ -30,19 +30,19 @@ Mit der `DeleteFile`\-Methode des `My.Computer.FileSystem`\-Objekts können Sie 
   
 -   Verwenden Sie die `DeleteFile`\-Methode, um die Datei zu löschen.  Im folgenden Code wird das Löschen einer Datei mit dem Namen `test.txt` veranschaulicht.  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
 ### So löschen Sie eine Textdatei und zeigen eine Bestätigungsabfrage für das Löschen der Datei an  
   
 -   Verwenden Sie zum Löschen der Datei die `DeleteFile`\-Methode, und legen Sie `showUI` auf `AllDialogs` fest.  Im folgenden Code wird das Löschen einer Datei mit dem Namen `test.txt` nach dem Anzeigen einer Bestätigungsabfrage veranschaulicht.  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
 ### So löschen Sie eine Textdatei und verschieben diese in den Papierkorb  
   
 -   Verwenden Sie zum Löschen der Datei die `DeleteFile`\-Methode, und geben Sie für den `recycle`\-Parameter den Wert `SendToRecycleBin` an.  Im folgenden Code wird das Löschen einer Datei mit dem Namen `test.txt` und das Verschieben dieser Datei in den **Papierkorb** veranschaulicht.  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
 ## Robuste Programmierung  
  Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  

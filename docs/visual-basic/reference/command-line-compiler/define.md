@@ -58,7 +58,7 @@ Definiert Konstanten für die bedingte Kompilierung.
 ## Beispiel  
  Der folgende Code definiert zwei konditionelle Compilerkonstanten und verwendet sie anschließend.  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
 ## Siehe auch  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

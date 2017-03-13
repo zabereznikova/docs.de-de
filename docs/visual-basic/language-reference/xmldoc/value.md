@@ -42,7 +42,7 @@ Gibt die Beschreibung einer Eigenschaft an.
 ## Beispiel  
  In diesem Beispiel wird mithilfe des `<value>`\-Tags beschrieben, welchen Wert die `Counter`\-Eigenschaft enthält.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

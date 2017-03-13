@@ -62,7 +62,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 -   Fügen Sie die `Student`\-Klasse und die initialisierte Liste von Studenten der `Program`\-Klasse im Projekt hinzu.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#11)]  
+     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### So fügen Sie einen neuen Studenten der Liste der Studenten hinzu  
   
@@ -76,7 +76,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
      Die Bereichsvariable der Abfrage `student` dient als Verweis auf jeden `Student` in der Quelle und bietet Memberzugriff für jedes Objekt.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#12)]  
+ [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## Ausführen der Abfrage  
   
@@ -90,7 +90,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 2.  Nachdem Sie diesen Code hinzugefügt haben, erstellen Sie die Anwendung und führen sie aus, indem Sie STRG \+ F5 drücken, um die Ergebnisse im Fenster **Konsole** anzuzeigen.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#13)]  
+ [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### So fügen Sie eine weitere Filterbedingung hinzu  
   
@@ -130,11 +130,11 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 1.  Die Gruppierung ist eine leistungsstarke Fähigkeit in Abfrageausdrücken.  Eine Abfrage mit einer Gruppenklausel erzeugt eine Sequenz von Gruppen. Jede Gruppe selbst umfasst dabei einen `Key` und eine Sequenz, die aus allen Membern der Gruppe besteht.  Die folgende neue Abfrage gruppiert die Studenten unter Verwendung des Anfangsbuchstabens ihres Nachnamens als Schlüssel.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#14)]  
+     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  Beachten Sie, dass sich der Typ der Abfrage jetzt geändert hat.  Es wird nun eine Sequenz von Gruppen mit einem `char`\-Typ als Schlüssel und einer Sequenz von `Student`\-Objekten erzeugt.  Da sich der Typ der Abfrage geändert hat, ändert der folgende Code auch die `foreach`\-Ausführungsschleife:  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#15)]  
+     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  Drücken Sie STRG \+ F5, um die Anwendung auszuführen und die Ergebnisse im Fenster **Konsole** anzuzeigen.  
   
@@ -144,7 +144,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 1.  Das explizite `IEnumerables`\-Codieren von `IGroupings` kann rasch zu einer zeitraubenden Aufgabe werden.  Sie können die gleiche Abfrage und `foreach`\-Schleife mit weniger Aufwand schreiben, wenn Sie `var` verwenden.  Das `var`\-Schlüsselwort ändert die Typen ihrer Objekte nicht, sondern weist nur den Compiler an, die Typen abzuleiten.  Ändern Sie den Typ von `studentQuery` und die Iteration Variable `group` zu `var` und überprüfen Sie die Abfrage.  Wie Sie sehen, wird die Iterationsvariable in der inneren `foreach`\-Schleife weiterhin als `Student` typisiert, und die Abfrage funktioniert wie zuvor.  Ändern Sie die Iterationsvariable `s` in `var`, und führen Sie wieder die Abfrage aus.  Sie sehen, dass die Ergebnisse genau gleich sind.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#16)]  
+     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      Weitere Informationen über [var](../../../../csharp/language-reference/keywords/var.md) finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -152,7 +152,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 1.  Wenn Sie die vorherige Abfrage ausführen, stellen Sie fest, dass die Gruppen nicht in alphabetischer Reihenfolge aufgeführt werden.  Um dies zu ändern, müssen Sie nach der `group`\-Klausel eine `orderby`\-Klausel bereitstellen.  Um eine `orderby`\-Klausel verwenden zu können, benötigen Sie jedoch zuerst einen Bezeichner, der als Verweis auf die durch die `group`\-Klausel erstellten Gruppen dient.  Sie stellen den Bezeichner bereit, indem Sie das `into`\-Schlüsselwort wie folgt verwenden:  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#17)]  
+     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      Wenn Sie diese Abfrage ausführen, sehen Sie, dass die Gruppen jetzt in alphabetischer Reihenfolge sortiert sind.  
   
@@ -160,7 +160,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 1.  Sie können das Schlüsselwort `let` verwenden, um einen Bezeichner für ein Ausdrucksergebnis in den Abfrageausdruck einzubeziehen.  Dieser Bezeichner kann aus praktischen Gründen verwendet werden, wie im folgenden Beispiel, oder er kann die Leistung durch Speichern der Ergebnisse eines Ausdrucks verbessern, die ansonsten mehrmals berechnet werden müssten.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#18)]  
+     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      Weitere Informationen finden Sie unter [let\-Klausel](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -168,17 +168,17 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
   
 1.  Wie in [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) beschrieben, können einige Abfrageoperationen nur unter Verwendung von Methodensyntax ausgedrückt werden.  Der folgende Code berechnet das Gesamtergebnis für jeden `Student` in der Quellsequenz und ruft dann die `Average()`\-Methode für die Ergebnisse der Abfrage auf, um das Durchschnittsergebnis der Klasse zu berechnen.  Beachten Sie die Platzierung von Klammern rund um den Abfrageausdruck.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#19)]  
+     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### So transformieren oder projizieren Sie in die Select\-Klausel  
   
 1.  Es kommt sehr häufig vor, dass eine Abfrage eine Sequenz erzeugt, deren Elemente sich von den Elementen in den Quellsequenzen unterscheiden.  Löschen Sie ihre vorherige Abfrage und Ausführungsschleife, oder kommentieren Sie sie aus, und ersetzen Sie sie durch den folgenden Code.  Beachten Sie, dass die Abfrage eine Sequenz von Zeichenfolgen zurückgibt \(keine `Students`\) und dass sich diese Tatsache in der `foreach`\-Schleife widerspiegelt.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#20)]  
+     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  Der Code weiter oben in dieser exemplarischen Vorgehensweise hat gezeigt, dass das durchschnittliche Klassenergebnis 334 ist.  Um eine Sequenz von `Students` zu erzeugen, deren Ergebnis über dem Klassendurchschnitt liegt, zusammen mit der dazugehörigen `Student ID`, können Sie einen anonymen Typ in der `select`\-Anweisung verwenden:  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#21)]  
+     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## Nächste Schritte  
  Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C\# vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  

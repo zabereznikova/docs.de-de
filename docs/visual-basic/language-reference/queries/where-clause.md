@@ -46,12 +46,12 @@ Where condition
 ## Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From`\-Klausel zum Deklarieren einer Bereichsvariablen `cust` für jedes `Customer`\-Objekt in der `customers`\-Auflistung.  Die `Where`\-Klausel verwendet die Bereichsvariable, um die Ausgabe auf Kunden aus der angegebenen Region einzuschränken.  Die `For Each`\-Schleife zeigt den Namen des Unternehmens für jeden Kunden im Abfrageergebnis an.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird `And` und `Or` logische Operatoren in der `Where`\-Klausel.  
   
- [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#31)]  
+ [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

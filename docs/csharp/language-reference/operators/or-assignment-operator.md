@@ -39,7 +39,7 @@ x = x | y
  Der Operator `|=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den [Operator &#124;](../../../csharp/language-reference/operators/or-operator.md) überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Beispiel  
- [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#10)]  
+ [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

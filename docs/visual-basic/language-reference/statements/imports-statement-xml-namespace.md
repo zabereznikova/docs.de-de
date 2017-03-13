@@ -56,7 +56,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Beispiel  
  Im folgenden Beispiel werden ein XML\-Standardnamespace und ein mit dem Präfix `ns` gekennzeichneter XML\-Namespace importiert.  Anschließend werden XML\-Literale erstellt, die beide Namespaces verwenden.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_1.vb)]  
+ [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -72,7 +72,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Beispiel  
  Im folgenden Beispiel wird der XML\-Namespacepräfix `ns` importiert.  Anschließend wird ein XML\-Literal erstellt, das das Namespacepräfix verwendet und die abschließende Form des Elements anzeigt.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_2.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -90,7 +90,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Beispiel  
  Im folgenden Beispiel wird der XML\-Namespacepräfix `ns` importiert.  Anschließend wird mit dem Namespacepräfix ein XML\-Literal erstellt und auf den ersten untergeordneten Knoten mit dem qualifizierten Namen `ns:name` zugegriffen.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

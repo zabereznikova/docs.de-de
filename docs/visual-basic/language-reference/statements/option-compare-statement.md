@@ -89,12 +89,12 @@ Option Compare { Binary | Text }
 ## Beispiel  
  Das folgenden Beispiel verwendet die `Option Compare`\-Anweisung, um den binären Vergleich als die Standardzeichenfolgenvergleichsmethode festzulegen.  Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Binary`\-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird die `Option Compare`\-Anweisung verwendet, um die Textsortierreihenfolge als die Standardzeichenfolgenvergleichsmethode festzulegen.  Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Text`\-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

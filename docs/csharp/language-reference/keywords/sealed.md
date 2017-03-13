@@ -31,7 +31,7 @@ sealed class B : A {}
 ## Beispiel  
  Im folgenden Beispiel erbt `Z` von `Y`, `Z` kann jedoch nicht die virtuelle Funktion `F` überschreiben, die in `X` deklariert und in `Y` versiegelt wird.  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#16)]  
+ [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  Wenn Sie neue Methoden oder Eigenschaften in einer Klasse definieren, können Sie verhindern, dass diese durch abgeleitete Klassen überschrieben werden, indem Sie sie nicht als [virtual](../../../csharp/language-reference/keywords/virtual.md) deklarieren.  
   
@@ -46,7 +46,7 @@ sealed class B : A {}
  Weitere Beispiele finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#17)]  
+ [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  Im voranstehenden Beispiel können Sie versuchen, von der versiegelten Klasse zu erben, indem Sie folgende Anweisung verwenden:  
   

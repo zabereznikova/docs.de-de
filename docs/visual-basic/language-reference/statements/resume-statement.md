@@ -63,7 +63,7 @@ Resume [ Next | line ]
 ## Beispiel  
  In diesem Beispiel wird mithilfe der `Resume`\-Anweisung die Fehlerbehandlung in einer Prozedur beendet und dann die Ausführung mit der Anweisung fortgesetzt, die den Fehler verursacht hat.  Um die Verwendung der `Resume`\-Anweisung zu veranschaulichen, wird Fehler Nummer 55 generiert.  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## Anforderungen  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

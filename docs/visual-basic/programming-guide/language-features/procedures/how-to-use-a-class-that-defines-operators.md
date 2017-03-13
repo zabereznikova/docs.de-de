@@ -35,9 +35,9 @@ Wenn Sie eine Klasse oder Struktur verwenden, die ihre eigenen Operatoren defini
 ## Beispiel  
  Im folgenden Beispiel erfolgt ein Zugriff auf die SQL\-Struktur <xref:System.Data.SqlTypes.SqlString>, mit der die Operatoren \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)\) für die Konvertierung in beide Richtungen, nämlich zwischen einer SQL\-Zeichenfolge und einer [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Zeichenfolge, definiert werden.  Verwenden Sie `CType(`*SQL\-Zeichenfolgenausdruck*, `String)`, um eine SQL\-Zeichenfolge in eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Zeichenfolge zu konvertieren, und `CType(`*Visual Basic\-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString>`)` für die Konvertierung in die andere Richtung.  
   
- [!code-vb[VbVbcnProcedures#30](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
  Die <xref:System.Data.SqlTypes.SqlString>\-Struktur definiert einen Operator \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)\) für die Konvertierung von `String` in <xref:System.Data.SqlTypes.SqlString> und einen weiteren Operator für die die Konvertierung von <xref:System.Data.SqlTypes.SqlString> in `String`.  Die Anweisung, durch die `title` dem Objekt `jobTitle` zugewiesen wird, verwendet den ersten Operator, während im Aufruf der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Funktion der zweite Operator verwendet wird.  
   

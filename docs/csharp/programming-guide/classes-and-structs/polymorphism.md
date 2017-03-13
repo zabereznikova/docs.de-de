@@ -31,7 +31,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  Erstellen Sie zuerst eine Basisklasse namens `Shape` und abgeleitete Klassen, wie z. B. `Rectangle`, `Circle` und `Triangle`.  Geben Sie der `Shape`\-Klasse eine virtuelle Methode namens `Draw`, und überschreiben Sie sie in jeder abgeleiteten Klasse, um die jeweilige Form zu zeichnen, die die Klasse darstellt.  Erstellen Sie ein `List<Shape>`\-Objekt und fügen Sie einen Kreis, ein Dreieck und ein Rechteck hinzu.  Um die Zeichenoberfläche zu aktualisieren, verwenden Sie eine [foreach](../../../csharp/language-reference/keywords/foreach-in.md)\-Schleife, um durch die Liste zu durchlaufen, und die `Draw`\-Methode für jedes `Shape`\-Objekt in der Liste aufzurufen.  Obwohl jedes Objekt in der Liste einen deklarierten `Shape`\-Typ aufweist, wird der Laufzeittyp \(die überschriebene Version der Methode in jeder abgeleiteten Klasse\) aufgerufen.  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_1.cs)]  
+ [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
  In C\# ist jeder Typ polymorph, da alle Typen, einschließlich benutzerdefinierten Typen, von <xref:System.Object> erben.  
   
@@ -48,42 +48,42 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  Eine abgeleitete Klasse kann einen Basisklassenmember nur überschreiben, wenn der Basisklassenmember als [virtuell](../../../csharp/language-reference/keywords/virtual.md) oder [abstract](../../../csharp/language-reference/keywords/abstract.md) deklariert ist.  Der abgeleitete Member muss das [override](../../../csharp/language-reference/keywords/override.md)\-Schlüsselwort verwenden, um explizit anzugeben, dass die Methode an dem virtuellen Aufruf beteiligt sein soll.   Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_2.cs)]  
+ [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
  Felder können nicht virtuelle sein; nur Methoden, Eigenschaften, Ereignisse und Indexer können virtuell sein.  Wenn eine abgeleitete Klasse einen virtuellen Member überschreibt, wird dieser Member auch dann aufgerufen, wenn auf eine Instanz dieser Klasse als Instanz der Basisklasse zugegriffen wird.  Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_3.cs)]  
+ [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  Mithilfe virtueller Methoden und Eigenschaften können abgeleitete Klassen eine Basisklasse erweitern, ohne die Basisklassenimplementierung einer Methode verwenden zu müssen.  Weitere Informationen finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).  Eine Schnittstelle bietet eine weitere Möglichkeit zur Definition einer Methode bzw. einer Gruppe von Methoden, deren Implementierung von abgeleiteten Klassen übernommen wird.  Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### Ausblenden von Basisklassenmembern für neue Member  
  Wenn Sie möchten, dass der abgeleitete Member denselben Namen wie ein Member in einer Basisklasse aufweist, jedoch nicht möchten, dass dieser an dem virtuellen Aufruf beteiligt ist, können Sie das [new](../../../csharp/language-reference/keywords/new.md)\-Schlüsselwort verwenden.  Das `new`\-Schlüsselwort wird dem Rückgabetyp eines Klassenmembers vorangestellt, der ersetzt wird.  Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_4.cs)]  
+ [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
  Auf ausgeblendete Klassenmember kann vom Clientcode immer noch zugegriffen werden, indem die Instanz der abgeleiteten Klasse in eine Instanz der Basisklasse umgewandelt wird.  Beispiel:  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_5.cs)]  
+ [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
 ### Verhindern, dass abgeleitete Klassen virtuelle Member überschreiben  
  Virtuelle Member bleiben praktisch unendlich erhalten, unabhängig davon, wie viele Klassen zwischen dem virtuellen Member und der Klasse deklariert wurden, die diesen ursprünglich deklariert hat.  Wenn Klasse A einen virtuellen Member deklariert und Klasse B von A erbt und Klasse C von B erbt, so erbt C den virtuellen Member und hat die Option, diesen zu überschreiben, unabhängig davon, ob Klasse B das Überschreibung für diesen Member deklariert hat.  Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_6.cs)]  
+ [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
  Eine abgeleitete Klasse kann die virtuelle Vererbung stoppen, indem das Überschreiben als [sealed](../../../csharp/language-reference/keywords/sealed.md) deklariert wird.  Hierfür muss das `sealed`\-Schlüsselwort in der Klassenmemberdeklaration vor das `override`\-Schlüsselwort gestellt werden.  Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_7.cs)]  
+ [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
  Im vorherigen Beispiel ist die `DoWork`\-Methode für eine von C abgeleitete Klasse nicht mehr virtuell.  Sie ist für Instanzen von C noch virtuell, wenn diese in Typ B oder Typ A umgewandelt werden.  Versiegelte Methoden können durch abgeleitete Klassen durch Verwendung des `new`\-Schlüsselworts ersetzt werden, wie im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_8.cs)]  
+ [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
  In diesem Fall wird, wenn `DoWork` für D mithilfe einer Variablen vom Typ D aufgerufen wird, das neue `DoWork` aufgerufen.  Wenn eine Variable vom Typ C, B oder A zum Zugreifen auf eine Instanz von D verwendet wird, befolgt ein Aufruf von `DoWork` die Regeln der virtuellen Vererbung, und diese Aufrufe werden an die Implementierung von `DoWork` für Klasse C weitergeleitet.  
   
 ### Zugreifen auf virtuelle Basisklassenmember von abgeleiteten Klassen aus  
  Eine abgeleitete Klasse, die eine Methode oder Eigenschaft ersetzt oder überschrieben hat, kann immer noch auf die Methode oder Eigenschaft in der Basisklasse mithilfe des base\-Schlüsselworts zugreifen.  Der folgende Code veranschaulicht dies:  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_9.cs)]  
+ [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
  Weitere Informationen finden Sie unter [base](../../../csharp/language-reference/keywords/base.md).  
   

@@ -32,14 +32,14 @@ caps.handback.revision: 16
 ## IEnumerable\<T\>\-Variablen in LINQ\-Abfragen  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragevariablen werden als <xref:System.Collections.Generic.IEnumerable%601> typisiert oder als abgeleiteter Typ, wie zum Beispiel <xref:System.Linq.IQueryable%601>.  Wenn Sie eine Abfragevariable mit der Typisierung `IEnumerable<Customer>` sehen, so bedeutet dies lediglich, dass die Abfrage bei ihrer Ausführung eine Sequenz von keinen oder mehreren `Customer`\-Objekten erstellen wird.  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#34)]  
+ [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  Weitere Informationen finden Sie unter [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## Behandeln generischer Typdeklarationen mithilfe des Compilers  
  Auf Wunsch können Sie die generische Syntax auch vermeiden, indem Sie das [var](../../../../csharp/language-reference/keywords/var.md)\-Schlüsselwort verwenden.  Das `var`\-Schlüsselwort weist den Compiler an, den Typ einer Abfragevariablen abzuleiten, indem er sich nach der in der `from`\-Klausel angegebenen Datenquelle richtet.  Das folgende Beispiel erstellt den gleichen kompilierten Code wie das vorherige Beispiel:  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#35)]  
+ [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  Das `var`\-Schlüsselwort bietet sich besonders an, wenn der Variablentyp offensichtlich ist oder wenn die ausdrückliche Angabe von geschachtelten, generischen Typen, z. B. solche, die bei Gruppenabfragen erstellt werden, nicht so wichtig ist.  Allgemein möchten wir darauf hinweisen, dass Ihr Code durch Verwendung von `var` eventuell schlechter lesbar wird.  Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

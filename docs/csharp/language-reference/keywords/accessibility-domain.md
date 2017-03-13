@@ -23,7 +23,7 @@ Die Zugriffsdomäne eines Members gibt an, in welchen Programmabschnitten auf ei
 ## Beispiel  
  Dieses Beispiel beinhaltet einen Typ der obersten Ebene, `T1`, und zwei geschachtelte Klassen, `M1` und `M2`.  Die Klassen enthalten Felder mit unterschiedlichen deklarierten Zugriffen.  Bei der `Main`\-Methode folgt jeder Anweisung ein Kommentar, der die Zugriffsdomäne jedes Members angibt.  Beachten Sie, dass die Anweisungen, die auf die nicht zugreifbaren Member verweisen, auskommentiert sind.  Wenn Sie die Compilerfehler anzeigen möchten, die durch Verweisen auf nicht zugreifbare Member verursacht werden, entfernen Sie jeden Kommentar einzeln.  
   
- [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#4)]  
+ [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

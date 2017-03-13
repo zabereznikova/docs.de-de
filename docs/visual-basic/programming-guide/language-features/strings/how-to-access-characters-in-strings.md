@@ -27,7 +27,7 @@ In diesem Beispiel wird die Verwendung der <xref:System.String.Chars%2A>\-Eigens
 ## Beispiel  
  Zuweilen empfiehlt es sich, Daten über die Zeichen in der Zeichenfolge und über deren Position in der Zeichenfolge zu erlangen.  Sie können sich eine Zeichenfolge als ein Array von Zeichen \(`Char`\-Instanzen\) vorstellen. Sie können ein bestimmtes Zeichen abrufen, indem Sie mithilfe der <xref:System.String.Chars%2A>\-Eigenschaft auf den Index des Zeichens verweisen.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-access-characters_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
  Der `index`\-Parameter der <xref:System.String.Chars%2A>\-Eigenschaft ist nullbasiert.  
   

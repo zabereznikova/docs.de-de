@@ -24,7 +24,7 @@ Das `descending`\-Kontextschlüsselwort wird in der [orderby\-Klausel](../../../
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung von `descending` in einer [orderby\-Klausel](../../../csharp/language-reference/keywords/orderby-clause.md) veranschaulicht.  
   
- [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/csharp/descending_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

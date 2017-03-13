@@ -51,7 +51,7 @@ Definiert einen Parameternamen und eine Parameterbeschreibung.
 ## Beispiel  
  In diesem Beispiel wird das `<param>`\-Tag zur Beschreibung des `id`\-Parameters verwendet.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

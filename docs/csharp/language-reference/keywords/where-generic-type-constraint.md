@@ -27,17 +27,17 @@ In einer generischen Typdefinition wird die `where`\-Klausel verwendet, um Einsc
   
  Zusätzlich zu Schnittstelleneinschränkungen kann eine `where`\-Klausel eine Basisklasseneinschränkung einschließen, die bestimmt, dass ein Typ über die angegebene Klasse als Basisklasse verfügen muss \(oder diese selbst sein muss\), damit er als Typargument für diesen generischen Typ verwendet werden kann.  Wird eine solche Einschränkung verwendet, muss sie vor jeder anderen Einschränkung für diesen Typparameter stehen.  
   
- [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
  Die `where`\-Klausel kann auch eine Konstruktoreinschränkung einschließen.  Mit dem Operator "new" ist es möglich, eine Instanz eines Typparameters zu erstellen. Hierfür muss der Typparameter allerdings durch die Konstruktoreinschränkung `new()` eingeschränkt sein.  Die [new\(\)\-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md) informiert den Compiler, dass jedes Typargument, das übergeben wird, einen zugreifbaren, parameterlosen oder Standardkonstruktor aufweisen muss.  Beispiele:  
   
- [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
  Die `new()`\-Einschränkung ist an letzter Position in der `where`\-Klausel angegeben.  
   
  Verwenden Sie bei mehreren Typparametern eine `where`\-Klausel pro Typparameter, z. B.:  
   
- [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_3.cs)]  
+ [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
  Sie können auch Typparameter generischer Methoden mit Einschränkungen versehen, wie hier:  
   

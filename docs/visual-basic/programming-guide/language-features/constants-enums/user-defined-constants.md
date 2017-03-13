@@ -33,15 +33,15 @@ Eine Konstante ist ein aussagekräftiger Name, der anstelle einer unveränderlic
 ## Verwenden der Const\-Anweisung  
  Eine `Const`\-Anweisung stellt eine mathematische oder Datums\-\/Uhrzeitmenge dar:  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#10)]  
+ [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
   
  Es können auch `String`\-Konstanten definiert werden:  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#13)]  
+ [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
   
  Der Ausdruck auf der rechten Seite des Gleichheitszeichens \(`=`\) ist häufig eine Zahl oder Literalzeichenfolge. Es kann sich jedoch auch um einen Ausdruck handeln, der eine Zahl oder Zeichenfolge ergibt \(obwohl ein solcher Ausdruck keine Funktionsaufrufe enthalten darf\).  Sie können sogar Konstanten basierend auf zuvor definierten Konstanten definieren:  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#15)]  
+ [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
   
 ## Gültigkeitsbereich von benutzerdefinierten Konstanten  
  Der Gültigkeitsbereich einer `Const`\-Konstante entspricht dem einer an derselben Position deklarierten Variablen.  Sie haben folgende Möglichkeiten zum Festlegen des Gültigkeitsbereichs:  
@@ -59,8 +59,8 @@ Eine Konstante ist ein aussagekräftiger Name, der anstelle einer unveränderlic
 ### Vermeiden von zirkulären Verweisen  
  Da Konstanten mithilfe anderer Konstanten definiert werden können, kann es vorkommen, dass sich unbeabsichtigter Weise ein *zirkulärer Verweis* zwischen zwei oder mehr Konstanten ergibt.  Ein zirkulärer Verweis entsteht, wenn zwei oder mehr öffentliche Konstanten vorhanden sind, von denen jeweils die eine mithilfe der anderen definiert wurde. Beispiel:  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#16)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#17)]  
+ [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
+[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
  Im Fall eines zirkulären Verweises generiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Compilerfehler.  
   

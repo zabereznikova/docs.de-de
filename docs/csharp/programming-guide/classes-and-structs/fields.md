@@ -26,15 +26,15 @@ Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [Klasse]
   
  Felder werden im Klassenblock definiert, indem die Zugriffsstufe des Felds, gefolgt vom Typ und dem Namen des Felds, angegeben wird.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_1.cs)]  
+ [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt und den Feldnamen hinter dem Objektnamen hinzu, wie in `objectname.fieldname`.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_2.cs)]  
+ [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  Bei der Deklaration eines Felds kann diesem mithilfe des Zuweisungsoperators ein Anfangswert zugewiesen werden.  Um dem `day`\-Feld zum Beispiel automatisch den Wert `"Monday"` zuzuweisen, deklarieren Sie `day` wie im folgenden Beispiel:  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_3.cs)]  
+ [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  Felder werden sofort initialisiert, bevor der Konstruktor für die Objektinstanz aufgerufen wird.  Wenn der Konstruktor den Wert eines Felds zuweist, überschreibt er alle während der Felddeklaration angegebenen Werte.  Weitere Informationen finden Sie unter [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

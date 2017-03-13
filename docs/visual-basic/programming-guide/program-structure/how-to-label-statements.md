@@ -41,7 +41,7 @@ Anweisungsblöcke bestehen aus Codezeilen, in denen die Anweisungen durch Doppel
   
      Die folgenden Codezeilen sind z. B. mit `Jump` bzw. `120` bezeichnet:  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
 ## Siehe auch  
  [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   

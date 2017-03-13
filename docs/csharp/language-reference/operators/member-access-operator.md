@@ -22,29 +22,29 @@ caps.handback.revision: 21
 # . Operator (C#-Referenz)
 Der Punktoperator \(`.`\) wird für Memberzugriff verwendet.  Der Punktoperator gibt einen Member von einem Typ oder einem Namespace an.  Der Punktoperator wird beispielsweise verwendet, um auf bestimmte Methoden in .NET Framework\-Klassenbibliotheken zuzugreifen:  
   
- [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#16)]  
+ [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
  Betrachten Sie z. B. die folgende Klasse:  
   
- [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#17)]  
+ [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
   
- [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#18)]  
+ [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
   
  Die `s`\-Variable weist die beiden Member `a` und `b` auf. Um auf sie zuzugreifen, wird der Punktoperator verwendet:  
   
- [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#19)]  
+ [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
  Der Punkt wird auch dazu verwendet, gekennzeichnete Namen zu verwenden, also Namen, die z. B. den Namespace oder die Schnittstelle angeben, wozu sie gehören.  
   
- [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#20)]  
+ [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
  Durch die using\-Direktive wird ein Teil der Namenskennzeichnung optional:  
   
- [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#21)]  
+ [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
  Ist aber ein Bezeichner mehrdeutig, muss er gekennzeichnet werden:  
   
- [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#22)]  
+ [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

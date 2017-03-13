@@ -56,7 +56,7 @@ public int this [int index]   // Indexer declaration
  Beachten Sie, dass bei der Auswertung des Indexerzugriffs, z. B. in einer `Console.Write`\-Anweisung, der [get](../../../csharp/language-reference/keywords/get.md)\-Accessor aufgerufen wird.  Wenn kein `get`\-Accessor vorhanden ist, tritt daher während der Kompilierung ein Fehler auf.  
   
 ### Code  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_1.cs)]  
+ [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## Indizieren mit anderen Werten  
  C\# beschränkt den Indextyp nicht auf eine ganze Zahl.  Zum Beispiel kann es nützlich sein, eine Zeichenfolge mit einem Indexer zu verwenden.  Ein solcher Indexer kann implementiert werden, indem in der Auflistung nach der Zeichenfolge gesucht und der richtige Wert zurückgegeben wird.  Da Accessoren überladen werden können, können die Zeichenfolgenversion und die ganzzahlige Version zusammen verwendet werden.  
@@ -67,7 +67,7 @@ public int this [int index]   // Indexer declaration
  In diesem Beispiel wird eine Klasse deklariert, die die Wochentage speichert.  Ein `get`\-Accessor wird deklariert, der eine Zeichenfolge und den Namen des Tages annimmt sowie den dazugehörigen ganzzahligen Wert zurückgibt.  Zum Beispiel gibt Sonntag 0 zurück, Montag gibt 1 zurück usw.  
   
 ### Code  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_2.cs)]  
+ [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## Stabile Programmierung  
  Es gibt zwei grundlegende Möglichkeiten, mit denen die Sicherheit und die Zuverlässigkeit von Indexern verbessert werden kann:  

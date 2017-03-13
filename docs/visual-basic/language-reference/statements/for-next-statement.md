@@ -75,11 +75,11 @@ Next [ counter ]
   
  Im folgenden Beispiel wird die `index`\-Variablenanfänge mit einem Wert von 1 und bei jeder Iteration der Schleife erhöht und beendet nach dem Wert von `index` gezogene 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
  Im folgenden Beispiel wird die `number`\-Variablenbeginnung mit 2 und mit 0,25 für jede Iteration der Schleife reduziert und beendet nach dem Wert von `number` gezogene 0.  Das `Step`\-Argument von `-.25` reduziert den Wert von 0,25 für jede Iteration der Schleife.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
 >  Arbeiten [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) oder [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) gut, wenn Sie nicht vorhersagen, wie viele Male, die Anweisungen in der Schleife auszuführen.  Wenn die Schleife jedoch eine festgelegte Anzahl von Wiederholungen durchlaufen soll, eignet sich eine`For`...`Next`\-Schleife besser.  Sie bestimmen die Anzahl der Iterationen zu Beginn der Schleife.  
@@ -87,7 +87,7 @@ Next [ counter ]
 ## Schachteln von Schleifen  
  Sie können `For`\-Schleifen schachteln, indem Sie eine Schleife in eine andere einfügen.  Im folgenden Beispiel werden geschachtelte `For`...`Next`\-Strukturen mit unterschiedlichen Schrittwerten veranschaulicht.  Die äußere Schleife erstellt eine Zeichenfolge für jede Iteration der Schleife.  Die innere Schleife verringert eine Zählervariable der Schleife für jede Iteration der Schleife.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
  Wenn geschachtelte Schleifen, jede \- Schleife eine eindeutige `counter`\-Variable benötigen.  
   
@@ -100,7 +100,7 @@ Next [ counter ]
   
  Das folgende Beispiel veranschaulicht die Verwendung der `Continue For`\-Anweisung und der `Exit For`\-Anweisung.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
  Sie können eine beliebige Anzahl von `Exit For`\-Anweisungen in einer `For`...`Next`\-Schleife einfügen.  Bei Verwendung in geschachtelten `For`...`Next`\-Schleifen beendet `Exit For` die innerste Schleife und überträgt die Steuerung auf die nächsthöhere Schachtelungsebene.  
   
@@ -168,17 +168,17 @@ Next [ counter ]
 ## Beispiel  
  Das folgende Beispiel entfernt alle Elemente aus einer generischen Liste.  Anstatt [For Each...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md) zeigt das Beispiel eine Anweisung `For`...`Next` an, die in absteigender Reihenfolge durchlaufen wird.  Im Beispiel wird diese Technik, da die `removeAt`\-Methode Elemente nach dem entfernten Element bewirkt, dass einen niedrigeren Indexwert verfügen.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird durch eine Enumeration von, die deklariert wird, indem [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) verwendet.  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel verwenden die Anweisungsparameter eine Klasse mit Operatorüberladungen für die Operatoren `+`, `-`, `>=` und `<=`.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
 ## Siehe auch  
  <xref:System.Collections.Generic.List%601>   

@@ -22,21 +22,21 @@ In einer [Verweistypvariablen](../../../csharp/language-reference/keywords/refer
 ## Übergeben von Verweistypen als Wert  
  Im folgenden Beispiel wird der `arr`\-Verweistypparameter der `Change`\-Methode als Wert übergeben.  Da es sich bei dem Parameter um einen Verweis auf `arr` handelt, können die Werte der Arrayelemente geändert werden.  Der Versuch, den Parameter einer neuen Speicheradresse zuzuweisen, wirkt sich jedoch nur innerhalb der Methode aus und hat keinen Einfluss auf die ursprüngliche Variable `arr`.  
   
- [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_1.cs)]  
+ [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
   
  Im vorangegangenen Beispiel wird das Array `arr`, bei dem es sich um einen Verweistyp handelt, ohne den `ref`\-Parameter an die Methode übergeben.  In diesem Fall wird eine Kopie des Verweises, der auf `arr` zeigt, an die Methode übergeben.  Die Ausgabe zeigt, dass der Inhalt eines Arrayelements durch die Methode geändert werden kann, in diesem Fall von `1` bis `888`.  Da unter Verwendung des Operators [new](../../../csharp/language-reference/keywords/new.md) innerhalb der `Change`\-Methode ein neuer Speicherbereich belegt wird, verweist die Variable `pArray` jedoch auf ein neues Array.  Alle später vorgenommenen Änderungen haben daher keinen Einfluss auf das ursprüngliche Array `arr`, das innerhalb von `Main` erstellt wird.  Tatsächlich werden in diesem Beispiel zwei Arrays erstellt, das eine in `Main` und das andere in der `Change`\-Methode.  
   
 ## Übergeben von Verweistypen als Verweis  
  Das folgende Beispiel entspricht dem vorhergehenden Beispiel, mit der Ausnahme, dass das `ref`\-Schlüsselwort wird dem Header und der Aufruf Methoden hinzugefügt.  Alle Änderungen, die im Methoden affekt die ursprüngliche Variable im aufrufenden Programm stattfinden.  
   
- [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_2.cs)]  
+ [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
   
  Alle Änderungen, die innerhalb der Methode vorgenommen werden, haben Einfluss auf das ursprünglichen Array in `Main`.  Das ursprüngliche Array wird eigentlich mithilfe des Operators `new` neu zugeordnet.  Nach dem Aufrufen der `Change`\-Methode zeigt daher jeder Verweis auf `arr` auf das aus fünf Elementen bestehende Array, das in der `Change`\-Methode erstellt wird.  
   
 ## Vertauschen zweier Zeichenfolgen  
  Das Vertauschen von Zeichenfolgen ist ein gutes Beispiel dafür, wie Verweistypparameter als Verweis übergeben werden.  Im vorliegenden Beispiel werden zwei Zeichenfolgen, `str1` und `str2`, in `Main` initialisiert und als Parameter, die durch das `ref`\-Schlüsselwort geändert wurden, an die `SwapStrings`\-Methode übergeben.  Die beiden Zeichenfolgen werden sowohl innerhalb der Methode als auch innerhalb von `Main` vertauscht.  
   
- [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_3.cs)]  
+ [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
   
  In diesem Beispiel müssen die Parameter als Verweis übergeben werden, damit sich der Vorgang auf die Variablen im aufrufenden Programm auswirkt.  Wenn Sie das `ref`\-Schlüsselwort sowohl aus dem Header als auch aus dem Aufruf der Methode entfernen, werden im aufrufenden Programm keine Änderungen vorgenommen.  
   

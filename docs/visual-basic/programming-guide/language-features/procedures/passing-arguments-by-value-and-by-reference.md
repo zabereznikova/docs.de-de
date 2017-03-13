@@ -75,7 +75,7 @@ In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes
  Im folgenden Beispiel wird veranschaulicht, in welchen Fällen Argumente als Wert und in welchen Fällen als Verweis zu übergeben sind.  Die Prozedur `Calculate` verfügt über einen `ByVal`\-Parameter und einen `ByRef`\-Parameter.  Gegeben sind ein Zinssatz \(`rate`\) und ein Betrag \(`debt`\). Die Aufgabe der Prozedur besteht darin, einen neuen Wert für `debt` zu berechnen, der sich aus der Anwendung des Zinssatzes auf den Ursprungswert von `debt` ergibt.  Da `debt` ein `ByRef`\-Parameter ist, wird der neue Gesamtbetrag im Wert des Arguments im aufrufenden Code widergespiegelt, der `debt` entspricht.  Der Parameter `rate` ist ein `ByVal`\-Parameter, da sein Wert von `Calculate` nicht geändert werden darf.  
   
 ### Code  
- [!code-vb[VbVbcnProcedures#74](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-val_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

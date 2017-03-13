@@ -52,7 +52,7 @@ Sie können numerische Werte mithilfe von numerischen Ausdrücken berechnen.  Ei
   
 -   Sie können eine Zuweisungsanweisung verwenden, um den von einem numerischen Ausdruck dargestellten Wert einer Variablen zuzuweisen, wie im folgenden Beispiel dargestellt.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
      Im vorherigen Beispiel wird der Wert des Ausdrucks auf der rechten Seite des Gleichheitsoperators \(`=`\) der Variablen `j` auf der linken Seite des Operators zugewiesen, sodass `j` 276 ergibt.  
   
@@ -65,7 +65,7 @@ Sie können numerische Werte mithilfe von numerischen Ausdrücken berechnen.  Ei
   
 -   Schließen Sie die Operationen in Klammern ein, die zuerst ausgeführt werden sollen.  Im folgenden Beispiel werden zwei verschiedene, mit den gleichen Operanden und Operatoren erzielte Ergebnisse veranschaulicht.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
      Im vorhergehenden Beispiel wird in der Berechnung für `j` der Additionsoperator \(`+`\) zuerst ausgeführt, weil die Klammern um `(67 + i)` die normale Rangfolge überschreiben, und der `j` zugewiesene Wert ist 276 \(4 mal 69\).  Bei der Berechnung von `k` werden die Operatoren in der normalen Rangfolge \(`*` vor `+`\) ausgeführt, und der `k` zugewiesene Wert ist 270 \(268 plus 2\).  
   

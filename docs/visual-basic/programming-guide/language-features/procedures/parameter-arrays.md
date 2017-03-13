@@ -57,13 +57,13 @@ Normalerweise kann eine Prozedur nur mit der in der Prozedurdeklaration angegebe
 ## Beispiel  
  Das folgende Beispiel definiert und ruft die Funktion `calcSum`an.  Der `ParamArray`\-Modifizierer für den Parameter `args` aktiviert die Funktion eine variable Anzahl von Argumenten akzeptieren.  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
   
  Im folgenden Beispiel wird eine Prozedur mit einem Parameterarray definiert. Diese Prozedur gibt die Werte aller Arrayelemente zurück, die an das Parameterarray übergeben wurden.  
   
- [!code-vb[VbVbcnProcedures#48](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#49](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>   

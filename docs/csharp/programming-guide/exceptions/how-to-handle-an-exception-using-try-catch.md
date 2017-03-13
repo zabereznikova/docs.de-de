@@ -23,7 +23,7 @@ Der Zweck eines [try\-catch](../../../csharp/language-reference/keywords/try-cat
 ## Beispiel  
  In diesem Beispiel ist <xref:System.IndexOutOfRangeException> nicht die geeignetste Ausnahme: <xref:System.ArgumentOutOfRangeException> ist für die Methode sinnvoller, da der Fehler durch das vom Aufrufer übergebene `index`\-Argument verursacht wird.  
   
- [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-handle-an-excepti_1.cs)]  
+ [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## Kommentare  
  Der Code, der eine Ausnahme auslöst, ist im `try`\-Block eingeschlossen.  Eine `catch`\-Anweisung wird unmittelbar anschließend hinzugefügt, um `IndexOutOfRangeException` zu behandeln, wenn sie auftritt.  Der `catch`\-Block behandelt die `IndexOutOfRangeException` und löst stattdessen die passendere `ArgumentOutOfRangeException`\-Ausnahme aus.  Um dem Aufrufer möglichst viele Informationen bereitzustellen, sollten Sie die ursprüngliche Ausnahme als <xref:System.Exception.InnerException%2A> der neuen Ausnahme angeben.  Da die <xref:System.Exception.InnerException%2A>\-Eigenschaft [schreibgeschützt](../../../csharp/language-reference/keywords/readonly.md) ist, müssen Sie sie im Konstruktor der neuen Ausnahme zuweisen.  

@@ -26,7 +26,7 @@ Das `event`\-Schlüsselwort wird verwendet, um in einer Herausgeberklasse ein Er
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie ein Ereignis, das <xref:System.EventHandler> als zugrunde liegenden Delegattyp verwendet, deklariert und ausgelöst wird.  Das vollständige Codebeispiel, das zudem die Verwendung des generischen <xref:System.EventHandler%601>\-Delegattyps, das Abonnieren eines Ereignisses und das Erstellen einer Ereignishandlermethode veranschaulicht, finden Sie unter [Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework\-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#7)]  
+ [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  Ereignisse sind ein spezieller Typ von Multicastdelegaten, die nur innerhalb der Klasse oder Struktur aufgerufen werden können, in der sie deklariert wurden \(die Herausgeberklasse\).  Wenn andere Klassen oder Strukturen das Ereignis abonnieren, werden ihre Ereignishandlermethoden aufgerufen, wenn die Herausgeberklasse das Ereignis auslöst.  Weitere Informationen und Codebeispiele finden Sie unter [Ereignisse](../../../csharp/programming-guide/events/index.md) und [Delegaten](../../../csharp/programming-guide/delegates/index.md).  
   

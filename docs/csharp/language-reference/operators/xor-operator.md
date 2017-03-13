@@ -25,7 +25,7 @@ Binäre Operatoren `^` sind für Ganzzahltypen und `bool` vordefiniert.  Für Ga
  Benutzerdefinierte Typen können den Operator `^` überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#30)]  
+ [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
   
  Bei der Berechnung von `0xf8 ^ 0x3f` im vorherigen Beispiel wird ein bitweises XOR der folgenden zwei Binärwerte entsprechend den Hexadezimalwerten F8 und 3F ausgeführt:  
   

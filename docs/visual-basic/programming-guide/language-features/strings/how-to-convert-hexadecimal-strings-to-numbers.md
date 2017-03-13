@@ -33,7 +33,7 @@ In diesem Beispiel wird eine Hexadezimalzeichenfolge mit der <xref:System.Conver
   
      Das erste Argument der <xref:System.Convert.ToInt32%2A>\-Methode ist die zu konvertierende Zeichenfolge.  Das zweite Argument beschreibt, mit welcher Basis die Zahl ausgedrückt ist; bei hexadezimalen Zahlen ist der Basiswert 16.  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-hexadecim_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   

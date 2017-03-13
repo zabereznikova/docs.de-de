@@ -38,8 +38,8 @@ Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit dene
   
 2.  In den Beispielen dieses Themas werden die Typen `Person` und `Pet` und Daten aus den folgenden Codebeispielen verwendet.  Kopieren Sie diesen Code in das von Visual Basic erstellte Standardmodul `Module1`.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#1)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#2)]  
+     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
+    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
 ## Ausführen eines inneren Joins mithilfe der Join\-Klausel  
  Ein INNER JOIN kombiniert Daten aus zwei Auflistungen.  Es werden die Elemente eingeschlossen, bei denen die angegebenen Schlüsselwerte übereinstimmen.  Alle Elemente der beiden Auflistungen, für die es in der jeweils anderen Auflistung kein passendes Element gibt, werden ausgeschlossen.  
@@ -54,7 +54,7 @@ Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit dene
   
 1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele sowohl für einen impliziten als auch für einen expliziten inneren Join zu erhalten.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#4)]  
+     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
 ## Ausführen eines linken äußeren Joins mithilfe der Group Join\-Klausel  
  Mit LEFT OUTER JOIN werden alle Elemente der Auflistung auf der linken Seite des Joins und nur die passenden Werte der Auflistung auf der rechten Seite des Joins eingeschlossen.  Die Elemente der Auflistung auf der rechten Seite des Joins, für die es in der Auflistung auf der linken Seite des Joins kein passendes Element gibt, werden aus dem Abfrageergebnis ausgeschlossen.  
@@ -67,7 +67,7 @@ Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit dene
   
 1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele sowohl für einen gruppierten als auch für einen nicht gruppierten linken äußeren Join zu erhalten.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#3)]  
+     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
 ## Ausführen eines Joins mithilfe eines zusammengesetzten Schlüssels  
  Mit dem `And`\-Schlüsselwort können Sie in einer `Join`\-Klausel oder einer `Group Join`\-Klausel mehrere zu verwendende Schlüsselfelder zum Vergleichen der Werte aus den zu verknüpfenden Auflistungen festlegen.  Mit dem `And`\-Schlüsselwort geben Sie an, dass für die zu verknüpfenden Elemente alle angegebenen Schlüsselfelder übereinstimmen müssen.  
@@ -76,7 +76,7 @@ Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit dene
   
 1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele für einen Join anzuzeigen, der einen zusammengesetzten Schlüssel verwendet.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#5)]  
+     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
 ## Ausführen des Codes  
   
@@ -84,7 +84,7 @@ Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit dene
   
 1.  Ersetzen Sie in Ihrem Projekt im Modul `Module1` `Sub Main` durch den folgenden Code, um die Beispiele dieses Themas auszuführen.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#6)]  
+     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
 2.  Drücken Sie F5, um die Beispiele auszuführen.  
   

@@ -35,11 +35,11 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie für die Konvert
 ## Beispiel  
  Im folgenden Beispiel werden Operatoren für die Konvertierung zwischen einer Struktur mit dem Namen `digit` und einem `Byte` definiert.  
   
- [!code-vb[VbVbcnProcedures#27](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
   
  Sie können die Struktur `digit` mit dem folgenden Code testen.  
   
- [!code-vb[VbVbcnProcedures#28](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
   
 ## Siehe auch  
  [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   

@@ -39,7 +39,7 @@ In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
   
 3.  Um den Zugriff auf die Interop\-Assembly zu vereinfachen, fügen Sie am Anfang der Klasse oder des Moduls, in der bzw. dem Sie das COM\-Objekt verwenden, eine `Imports`\-Anweisung ein.  Im folgenden Codebeispiel wird z. B. der Namespace `INKEDLib` für Objekte importiert, auf die in der Bibliothek `Microsoft InkEdit Control 1.0` verwiesen wird.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#40)]  
+     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
 ### So erstellen Sie mit Tlbimp eine Interop\-Assembly  
   

@@ -23,20 +23,20 @@ Mit dem `checked`\-Schlüsselwort wird die Überlaufprüfung für arithmetische 
   
  Ausdrücke, die nur konstante Werte enthalten, verursachen standardmäßig einen Compilerfehler, wenn diese einen Wert außerhalb des Bereichs des Zieltyps erzeugen.  Wenn der Ausdruck einen oder mehrere nicht konstante Werte enthält, wird der Überlauf vom Compiler nicht erkannt.  Die Auswertung des Ausdrucks, der `i2` zugeordnet ist, im folgenden Beispiel erzeugt keinen Compilerfehler.  
   
- [!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/csharp/checked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]  
   
  Standardmäßig wird für nicht konstante Ausdrücke auch zur Laufzeit keine Überlaufprüfung durchgeführt, und es werden keine Überlaufausnahmen ausgelöst.  Im vorherigen Beispiel wird \-2,147,483,639 als Summe von zwei positiven ganzen Zahlen angezeigt.  
   
  Überlaufprüfungen können von Compileroptionen, Umgebungskonfiguration oder mit dem `checked`\-Schlüsselwort aktiviert werden.  In den folgenden Beispielen wird veranschaulicht, wie ein `checked`\-Ausdruck oder ein `checked`\-Block verwendet wird, um den Überlauf zu erkennen, der von der vorherigen Summe zur Laufzeit erzeugt wird.  In beiden Beispielen wird eine Überlaufausnahme ausgelöst.  
   
- [!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/csharp/checked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]  
   
  Mit dem [unchecked](../../../csharp/language-reference/keywords/unchecked.md)\-Schlüsselwort können Überlaufprüfungen verhindert werden.  
   
 ## Beispiel  
  In diesem Beispiel wird gezeigt, wie mit `checked` die Überlaufprüfung zur Laufzeit aktiviert wird.  
   
- [!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/csharp/checked_3.cs)]  
+ [!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

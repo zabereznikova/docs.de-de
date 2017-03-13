@@ -44,7 +44,7 @@ Speichert 8\-Bit\-\(1\-Byte\)\-Ganzzahlen ohne Vorzeichen, deren Werte im Bereic
 ## Beispiel  
  Im folgenden Beispiel ist `b` eine `Byte`\-Variable.  Die Anweisungen veranschaulichen den Bereich der Variablen und die Anwendung von Bitschiebeoperatoren auf die Variable.  
   
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Byte?displayProperty=fullName>   

@@ -62,7 +62,7 @@ Eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) k
   
  Durch das Bereitstellen Ihrer eigenen Accessoren können Sie festlegen, ob die beiden Ereignisse durch das gleiche Ereignis oder durch verschiedene Ereignisse in der Klasse dargestellt werden sollen.  Wenn z. B. die Ereignisse gemäß den Schnittstellenspezifikationen zu unterschiedlichen Zeiten ausgelöst werden sollen, können Sie jedes Ereignis mit einer separaten Implementierung in der Klasse verknüpfen.  Im folgenden Beispiel bestimmen Abonnenten, welches `OnDraw`\-Ereignis sie erhalten, indem Sie den Formverweis entweder in eine `IShape` oder ein `IDrawingObject` umwandeln.  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-implement-interfa_1.cs)]  
+ [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

@@ -27,7 +27,7 @@ Zum Analysieren und Bearbeiten von Zeichenfolgen gibt es verschiedene Möglichke
 ## Visual Basic und .NET Framework  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Methoden werden als inhärente Funktionen der Sprache verwendet.  Sie können im Code ohne Qualifizierung verwendet werden.  Im folgenden Beispiel wird die typische Verwendung eines [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehls zur Zeichenfolgenbearbeitung veranschaulicht:  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
  In diesem Beispiel führt die `Mid`\-Funktion eine direkte Operation an `aString` aus und weist dabei den Wert `bString` zu.  
   
@@ -39,14 +39,14 @@ Zum Analysieren und Bearbeiten von Zeichenfolgen gibt es verschiedene Möglichke
 #### Shared\-Methoden  
  Eine freigegebene Methode ist eine Methode, die von der `String`\-Klasse selbst abstammt und zur Ausführung keine Instanz dieser Klasse benötigt.  Diese Methoden können mit dem Namen der Klasse  \(`String`\) und nicht mit einer Instanz der `String`\-Klasse qualifiziert werden.  Beispiele:  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  Im oben stehenden Beispiel ist die <xref:System.String.Copy%2A?displayProperty=fullName>\-Methode eine statische Methode, die auf einen Ausdruck angewendet wird und `bString` den Ergebniswert zuweist.  
   
 #### Instanzmethoden  
  Instanzmethoden stammen dagegen von einer bestimmten Instanz von `String` und müssen mit dem Instanznamen qualifiziert werden.  Beispiele:  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   
  In diesem Beispiel ist die <xref:System.String.Substring%2A?displayProperty=fullName>\-Methode eine Methode der Instanz von `String` \(d. h. von `aString`\).  Sie führt eine Operation an `aString` aus und weist `bString` den Wert zu.  
   

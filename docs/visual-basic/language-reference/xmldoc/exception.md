@@ -45,7 +45,7 @@ Gibt an, welche Ausnahmen ausgelöst werden können.
 ## Beispiel  
  In diesem Beispiel wird mit dem `<exception>`\-Tag eine Ausnahme beschrieben, die von der `IntDivide`\-Funktion ausgelöst werden kann.  
   
- [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/exception_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -30,25 +30,25 @@ Sie können das `My.Application.Log`\-Objekt und das `My.Log`\-Objekt verwenden,
   
 1.  Erstellen Sie die Methode, die die Ausnahmeinformationen generiert.  
   
-     [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#9)]  
+     [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
   
 2.  Verwenden Sie einen `Try...Catch`\-Block, um die Ausnahme abzufangen.  
   
-     [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#6)]  
+     [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
   
 3.  Setzen Sie den Code, der eine Ausnahme generieren könnte, in den `Try`\-Block.  
   
      Heben Sie die Auskommentierung der Codezeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>\-Ausnahme zu verursachen.  
   
-     [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#7)]  
+     [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
 4.  Verwenden Sie im `Catch`\-Block die `My.Application.Log.WriteException`\-Methode, um die Ausnahmeinformationen zu schreiben.  
   
-     [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#8)]  
+     [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
   
      Im folgenden Beispiel wird der vollständige Code für die Protokollierung einer behandelten Ausnahme gezeigt.  
   
-     [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#10)]  
+     [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
   
 ### So protokollieren Sie eine nicht behandelte Ausnahme  
   
@@ -68,11 +68,11 @@ Sie können das `My.Application.Log`\-Objekt und das `My.Log`\-Objekt verwenden,
   
 6.  Fügen Sie im `UnhandledException`\-Ereignishandler die `My.Application.Log.WriteException`\-Methode hinzu.  
   
-     [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#4)]  
+     [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
   
      Im folgenden Beispiel wird der vollständige Code für die Protokollierung eines Ausnahmefehlers an.  
   
-     [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#5)]  
+     [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

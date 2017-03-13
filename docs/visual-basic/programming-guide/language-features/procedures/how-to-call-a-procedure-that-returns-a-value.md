@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## Beispiel  
  Im folgenden Beispiel wird die <xref:Microsoft.VisualBasic.Interaction.Environ%2A> von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] aufgerufen, um den Wert einer Umgebungsvariablen des Betriebssystems abzurufen.  Von der ersten Zeile wird `Environ` in einem Ausdruck aufgerufen, von der zweiten Zeile in einer Zuweisungsanweisung.  `Environ` erfordert als einziges Argument den Variablennamen.  Die Funktion gibt den Wert der Variablen an den Aufrufcode zurück.  
   
- [!code-vb[VbVbcnProcedures#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
 ## Siehe auch  
  [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   

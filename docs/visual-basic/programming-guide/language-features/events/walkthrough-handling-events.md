@@ -34,7 +34,7 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
 1.  Fügen Sie in `Form1` folgenden Code ein:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#4)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
      Das `WithEvents`\-Schlüsselwort legt fest, dass die Variable `mWidget` zur Behandlung von Objektereignissen verwendet wird.  Sie legen den Objekttyp fest, indem Sie den Namen der Klasse angeben, aus der das Objekt erstellt wird.  
   
@@ -56,13 +56,13 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
 3.  Fügen Sie dem `mWidget_PercentDone`\-Ereignishandler folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#5)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
      Bei jedem Auslösen des `PercentDone`\-Ereignisses zeigt die Ereignisprozedur den Prozentsatz der bereits erfolgten Verarbeitung in einem `Label`\-Steuerelement an.  Die `DoEvents`\-Methode bietet nicht nur die Möglichkeit, die Bezeichnung neu zu zeichnen, sondern ermöglicht es darüber hinaus dem Benutzer, auf die Schaltfläche **Abbrechen** zu klicken.  
   
 4.  Fügen Sie folgenden Code für den `Button2_Click`\-Ereignishandler hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#6)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
  Wenn der Benutzer während der Ausführung von `LongTask` auf die Schaltfläche **Abbrechen** klickt, wird das `Button2_Click`\-Ereignis ausgeführt, sobald die `DoEvents`\-Anweisung die Ereignisverarbeitung zulässt.  Die Variable `mblnCancel` auf Klassenebene wird auf `True` festgelegt und anschließend vom `mWidget_PercentDone`\-Ereignis überprüft, und das `ByRef Cancel`\-Argument wird auf `True` festgelegt.  
   
@@ -79,7 +79,7 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
 3.  Fügen Sie folgenden Code für die `Form1_Load`\-Ereignisprozedur hinzu, um das `Widget` zu erstellen:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#7)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
  Wenn dieser Code ausgeführt wird, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ein `Widget`\-Objekt und verbindet die zugehörigen Ereignisse mit den Ereignisprozeduren, die `mWidget` zugeordnet sind.  Von diesem Zeitpunkt an wird die `mWidget_PercentDone`\-Ereignisprozedur immer ausgeführt, wenn das `PercentDone`\-Ereignis vom `Widget` ausgelöst wird.  
   
@@ -87,7 +87,7 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
 -   Fügen Sie dem `Button1_Click`\-Ereignishandler folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#8)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
  Bevor die `LongTask`\-Methode aufgerufen wird, muss die Bezeichnung initialisiert werden, die den Prozentsatz der bereits erfolgten Verarbeitung anzeigt. Außerdem muss das auf Klassenebene deklarierte `Boolean`\-Flag zum Abbrechen der Methode auf `False` festgelegt werden.  
   
@@ -116,7 +116,7 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
 -   Fügen Sie der `Button1_Click`\-Prozedur die folgende Codezeile direkt vor der Zeile `mWidget.LongTask(12.2, 0.33)` hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#9)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
  Durch den oben stehenden Code wird bei jedem Klicken auf die Schaltfläche ein neues `Widget` erstellt.  Bei Abschluss der `LongTask`\-Methode wird der Verweis auf das `Widget` freigegeben und das `Widget` zerstört.  
   

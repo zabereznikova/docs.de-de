@@ -38,7 +38,7 @@ Eine *generische Prozedur* oder auch *generische Methode* ist eine Prozedur, die
 ## Typableitung  
  Sie können eine generische Prozedur ohne Angabe eines Typarguments aufrufen.  Bei dieser Art des Aufrufs versucht der Compiler, die richtigen Datentypen zu bestimmen, die für die Übergabe an die Typparameter der Prozedur benötigt werden.  Dies wird als *Typableitung* bezeichnet.  Das folgende Codebeispiel zeigt einen Aufruf, bei dem der Compiler ableitet, dass dem Typparameter `t` der Typ `String` übergeben werden muss.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
  Wenn der Compiler die Typargumente nicht aus dem Kontext des Aufrufs ableiten kann, wird ein Fehler erzeugt.  Eine mögliche Ursache für einen solchen Fehler ist beispielsweise die Nichtübereinstimmung eines Arrayrangs.  Angenommen, Sie haben einen normalen Parameter als Array eines Typparameters definiert.  Wenn Sie die generische Prozedur mit einem Array aufrufen, das über einen abweichenden Rang verfügt \(Anzahl der Dimensionen\), bewirkt die Nichtübereinstimmung, dass die Typableitung fehlschlägt.  Das folgende Codebeispiel zeigt einen Aufruf, bei dem einer Prozedur, die ein eindimensionales Array erwartet, ein zweidimensionales Array übergeben wird.  
   
@@ -64,14 +64,14 @@ Eine *generische Prozedur* oder auch *generische Methode* ist eine Prozedur, die
  Im folgenden Beispiel wird eine generische `Function`\-Prozedur definiert, um ein bestimmtes Element in einem Array zu suchen.  Sie definiert einen Typparameter und verwendet diesen zur Konstruktion der beiden Parameter in der Parameterliste.  
   
 ### Code  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### Kommentare  
  Für das vorangehende Beispiel ist die Möglichkeit erforderlich, `searchValue` mit jedem Element von `searchArray` zu vergleichen.  Um dies zu garantieren, wird der Typparameter `T` dahingehend eingeschränkt, dass die <xref:System.IComparable%601>\-Schnittstelle implementiert werden muss.  Im Code wird anstelle des Operators `=` die <xref:System.IComparable%601.CompareTo%2A>\-Methode verwendet, da nicht garantiert werden kann, dass das für `T` angegebene Typargument den Operator `=` unterstützt.  
   
  Sie können die `findElement`\-Prozedur mit folgendem Code testen.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
  Die vorangehenden Aufrufe von `MsgBox` bewirken nacheinander die Anzeige von "0", "1" und "\-1".  
   

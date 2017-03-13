@@ -61,29 +61,29 @@ Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendu
 ## Beispiel  
  In diesem Beispiel wird der Titel eines Formulars zur Zeichenfolgenressource fest, die `Form1Title` in der Anwendungsressourcendatei benannt ist.  Damit das Beispiel für die Anwendung ausgeführt werden kann, muss eine Zeichenfolge in der Ressourcendatei der `Form1Title` .  Weitere Informationen finden Sie unter [How to: Add or Remove Resources](http://msdn.microsoft.com/de-de/7b77bc06-3952-4799-b029-def3f8f7f88d).  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird das Symbol des Formulars auf das Symbol `Form1Icon` festgelegt, das in der Ressourcendatei der Anwendung gespeichert ist.  Damit das Beispiel für die Anwendung muss ein Symbol verfügen, das `Form1Icon` in der Ressourcendatei bezeichnet wird.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#2)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird das Hintergrundbild eines Formulars zur Bildressource fest, die `Form1Background`, die in der Anwendungsressourcendatei ist.  Für dieses Beispiel muss die Anwendung eine Bildressource verfügen, die `Form1Background` in der Ressourcendatei bezeichnet wird.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#3)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
 ## Beispiel  
  Dieses Beispiel gibt den Sound als Audiodaten Ressource gespeichert ist, die `Form1Greeting` in der Ressourcendatei der Anwendung.  Damit das Beispiel für die Anwendung muss eine Audio\- Ressource verfügen, die `Form1Greeting` in der Ressourcendatei bezeichnet wird.  Die `My.Computer.Audio.Play`\-Methode ist nur für Windows Forms\-Anwendungen verfügbar.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#4)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird die Französisch\-Kultur Version einer Zeichenfolgenressource der Anwendung ab.  Die Ressource wird `Message`benannt.  Um die Kultur zu ändern, die das `My.Resources`\-Objekt verwendet, wird im Beispiel <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Für dieses Beispiel muss die Anwendung über eine Zeichenfolge `Message` , die in der Ressourcendatei erstellt, und die Anwendung sollte die Französisch\-Kultur Version der Ressourcendatei, Resources.fr\-FR.resx haben.  Weitere Informationen finden Sie unter [How to: Add or Remove Resources](http://msdn.microsoft.com/de-de/7b77bc06-3952-4799-b029-def3f8f7f88d).  Wenn die Anwendung keine Französisch\-Kultur Version der Ressourcendatei verfügt, ruft das `My.Resource`\-Objekt die Ressource aus der Ressourcendatei ab. Kultur DEFAULT  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#10)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
 ## Siehe auch  
  [How to: Add or Remove Resources](http://msdn.microsoft.com/de-de/7b77bc06-3952-4799-b029-def3f8f7f88d)   

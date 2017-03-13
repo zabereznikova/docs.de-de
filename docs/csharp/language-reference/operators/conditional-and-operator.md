@@ -41,7 +41,7 @@ x & y
 ## Beispiel  
  Im folgenden Beispiel wird der bedingte Ausdruck in der zweiten `if`\-Anweisung nur den ersten Operanden aus, da der Operand `false`zurückgibt.  
   
- [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#48)]  
+ [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

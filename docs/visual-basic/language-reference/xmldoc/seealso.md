@@ -42,7 +42,7 @@ Gibt einen Link an, der im Abschnitt Siehe auch angezeigt wird.
 ## Beispiel  
  In diesem Beispiel verweist das `<seealso>`\-Tag im `DoesRecordExist`\-Hinweisabschnitt auf die `UpdateRecord`\-Methode.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/seealso_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

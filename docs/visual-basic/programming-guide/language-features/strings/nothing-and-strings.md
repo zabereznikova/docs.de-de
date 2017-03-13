@@ -26,7 +26,7 @@ Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/include
 ## Visual Basic\-Laufzeit und .NET Framework  
  Betrachten Sie das folgende Beispiel:  
   
- [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
  Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Laufzeit wertet `Nothing` normalerweise als leere Zeichenfolge \(""\) aus.  [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] tut dies jedoch nicht und löst eine Ausnahme aus, sobald versucht wird, eine Zeichenfolgenoperation an `Nothing` auszuführen.  
   

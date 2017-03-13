@@ -23,9 +23,9 @@ Sie können die folgenden Operatoren verwenden, um Zeigertypen zu vergleichen:
  Die Vergleichsoperatoren vergleichen die Adressen der beiden Operanden, als ob es sich um ganze Zahlen ohne Vorzeichen handelte.  
   
 ## Beispiel  
- [!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#16)]  
+ [!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]  
   
- [!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#17)]  
+ [!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]  
   
 ## Beispielausgabe  
  `True`  

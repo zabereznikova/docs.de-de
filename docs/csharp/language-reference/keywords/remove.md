@@ -23,7 +23,7 @@ Mit dem `remove`\-Kontextschlüsselwort wird ein benutzerdefinierter Ereignisacc
 ## Beispiel  
  Im folgenden Beispiel wird ein Ereignis mit einem benutzerdefinierten [add](../../../csharp/language-reference/keywords/add.md)\-Accessor und einem benutzerdefinierten `remove`\-Accessor veranschaulicht.  Das vollständige Beispiel finden Sie unter [Gewusst wie: Implementieren von Schnittstellenereignissen](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/csharp/remove_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
   
  Normalerweise müssen Sie keine eigenen benutzerdefinierten Ereignisaccessoren bereitstellen.  Die Accessoren, die vom Compiler beim Deklarieren eines Ereignisses automatisch generiert werden, sind in den meisten Szenarios ausreichend.  
   

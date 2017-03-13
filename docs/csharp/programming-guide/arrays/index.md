@@ -23,7 +23,7 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
  In den folgenden Beispielen werden ein eindimensionales, ein mehrdimensionales und ein verzweigtes Array erstellt:  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## Übersicht über Arrays  
  Ein Array verfügt über die folgenden Eigenschaften:  

@@ -90,17 +90,17 @@ Gibt die *Typparameter* für ein *generisches* Programmierelement an.  Mehrere P
 ## Beispiel  
  Das folgende Beispiel zeigt die Skelettdefinition einer generischen Wörterbuchklasse, einschließlich einer Skelettfunktion zum Hinzufügen eines neuen Eintrags zum Wörterbuch.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## Beispiel  
  Weil das `dictionary` generisch ist, kann der Code, der es verwendet, eine Vielzahl von Objekten daraus erstellen. Dabei haben alle diese Objekte die gleiche Funktionalität, werden aber auf verschiedene Datentypen angewendet.  Das folgende Beispiel zeigt eine Codezeile, die ein `dictionary`\-Objekt mit `String`\-Einträgen und `Integer`\-Schlüsseln erstellt.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel zeigt die entsprechende, vom vorangehenden Beispiel generierte Skelettdefinition.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## Siehe auch  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   

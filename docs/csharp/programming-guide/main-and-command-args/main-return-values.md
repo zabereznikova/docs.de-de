@@ -18,18 +18,18 @@ caps.handback.revision: 20
 # Main()-R&#252;ckgabewerte (C#-Programmierhandbuch)
 Die `Main`\-Methode kann `void` zurückgeben.  
   
- [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_1.cs)]  
+ [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]  
   
  Sie kann außerdem `int` zurückgeben:  
   
- [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_2.cs)]  
+ [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]  
   
  Wenn der Rückgabewert von `Main` nicht verwendet wird, kann der Code durch das Zurückgeben von `void` geringfügig vereinfacht werden.  Das Zurückgeben einer ganzen Zahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts weiterzugeben, von denen die ausführbare Datei aufgerufen wird.  Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.  
   
 ## Beispiel  
  In diesem Beispiel wird eine Batchdatei verwendet, um ein Programm auszuführen und den Rückgabewert der `Main`\-Funktion zu testen.  Beim Ausführen eines Programms unter Windows wird ein evtl. von der `Main`\-Funktion zurückgegebener Wert in einer Umgebungsvariablen mit dem Namen `ERRORLEVEL` gespeichert.  Batchdateien können das Ergebnis der Ausführung bestimmen, indem sie die `ERRORLEVEL`\-Variable überprüfen.  In der Regel signalisiert ein Rückgabewert von 0 \(null\) die erfolgreiche Ausführung.  Im folgenden Beispiel wird mit einem einfachen Programm der Wert \(null\) von der `Main`\-Funktion zurückgegeben.  Der Wert 0 \(null\) gibt an, dass das Programm erfolgreich ausgeführt wurde.  Speichern Sie das Programm unter den Namen MainReturnValTest.cs.  
   
- [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_3.cs)]  
+ [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]  
   
 ## Beispiel  
  Da in diesem Beispiel eine Batchdatei verwendet wird, empfiehlt es sich, den Code von einer Eingabeaufforderung aus zu kompilieren.  Folgen Sie den Anweisungen in [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md), um Befehlszeilenbuilds zu aktivieren, oder verwenden Sie die Visual Studio\-Eingabeaufforderung im Menü **Start** unter **Visual Studio Tools**.  Navigieren Sie von der Eingabeaufforderung zum Ordner, in dem Sie das Programm gespeichert haben.  Mit dem folgenden Befehl wird MainReturnValTest.cs kompiliert und die ausführbaren Datei MainReturnValTest.exe erzeugt.  

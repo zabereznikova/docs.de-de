@@ -26,7 +26,7 @@ caps.handback.revision: 11
 
 Jedes Programmelement \(z. B. Variablen, Klassen oder Member\) kann denselben Namen wie ein eingeschränktes Schlüsselwort haben.  Beispielsweise können Sie eine Variable mit dem Namen `Loop` erstellen.  Um jedoch auf diese Version der Variablen verweisen zu können, die denselben Namen wie das geschützte `Loop`\-Schlüsselwort aufweist, müssen Sie dem Namen entweder die vollständige qualifizierende Zeichenfolge voranstellen, oder ihn wie im folgenden Beispiel in eckige Klammern \(`[ ]`\) einschließen:  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/keywords-as-element-name_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
  Wenn Sie keinen der beiden Schritte ausführen, geht Visual Basic davon aus, dass das systeminterne `Loop`\-Schlüsselwort verwendet wurde, und erzeugt einen Fehler, wie im folgenden Beispiel gezeigt:  
   

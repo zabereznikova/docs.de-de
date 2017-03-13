@@ -71,7 +71,7 @@ End Function
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie eine Prozedur mit Argumenten aufruft, die durch Position übergeben werden und mit den Argumenten, die über den Namen übergeben werden.  Die Prozedur verfügt über zwei optionale Parameter.  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/visualbasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## Siehe auch  
  [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   

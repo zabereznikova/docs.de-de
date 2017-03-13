@@ -27,14 +27,14 @@ Indexer können für [Schnittstelle](../../../csharp/language-reference/keywords
   
  Das folgende Beispiel zeigt einen Accessor für einen Schnittstellenindexer:  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_1.cs)]  
+ [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  Die Signatur eines Indexers muss sich von den Signaturen aller anderen Indexer unterscheiden, die in derselben Schnittstelle deklariert sind.  
   
 ## Beispiel  
  Das folgende Beispiel demonstriert die Implementierung von Schnittstellenindexern:  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_2.cs)]  
+ [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  Um im vorangehenden Beispiel die explizite Implementierung des Schnittstellenmembers zu verwenden, geben Sie den vollqualifizierten Namen des Schnittstellenmembers an.  Beispiele:  
   

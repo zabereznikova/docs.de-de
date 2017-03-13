@@ -39,7 +39,7 @@ caps.handback.revision: 19
   
  Im folgenden Beispiel wird ein \<see\>\-Tag innerhalb eines zusammenfassenden Abschnitts dargestellt.  
   
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/see_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

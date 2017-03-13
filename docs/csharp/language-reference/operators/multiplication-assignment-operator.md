@@ -39,7 +39,7 @@ x = x * y
  Der Operator `*=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den [Operator \*](../../../csharp/language-reference/operators/multiplication-operator.md) überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Beispiel  
- [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#13)]  
+ [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

@@ -49,11 +49,11 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, sämtliche T
 ## Beispiel  
  Der folgende Code erstellt ein Modul.  
   
- [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
   
  Der folgende Code importiert die Typen des Moduls.  
   
- [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
  Wenn Sie `t1` ausführen, wird `802` ausgegeben.  
   

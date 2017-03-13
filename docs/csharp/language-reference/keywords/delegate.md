@@ -38,7 +38,7 @@ public delegate int TestDelegate(MyType m, long num);
  Der Delegat muss mit einer Methode oder einem Lambda\-Ausdruck instanziiert werden, der einen kompatiblen Rückgabewert und kompatible Eingabeparameter aufweist.  Weitere Informationen zum Grad der zulässigen Varianz bei der Methodensignatur finden Sie unter [Varianz bei Delegaten](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md).  Zur Verwendung mit anonymen Methoden werden der Delegat und der Code, dem er zugeordnet werden soll, zusammen deklariert.  Beide Methoden zur Instanziierung von Delegaten werden in diesem Abschnitt erläutert.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/csharp/delegate_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -58,27 +58,27 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 ## Beispiel  
  In diesem Beispiel wird die `UCase`\-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## Beispiel  
  In diesem Beispiel werden mit der `LTrim`\-Funktion führende Leerzeichen und mit der `RTrim`\-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt.  Mit der `Trim`\-Funktion werden beide Typen von Leerzeichen entfernt.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird die `Mid`\-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird mit der `Len`\-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## Beispiel  
  In diesem Beispiel wird die `InStr`\-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## Beispiel  
  Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`\-Funktion zur Formatierung von Werten mit `String`\-Formaten und benutzerdefinierten Formaten.  Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen \(`/`\), Trennzeichen für Zeitangaben \(`:`\) und AM\/PM\-Indikatoren \(`t` und `tt`\) richtet sich nach den Gebietsschemaeinstellungen des Codes.  Wenn Datums\- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24\-Stunden\-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
@@ -86,7 +86,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 > [!NOTE]
 >  Für Gebietsschemas, die das 24\-Stunden\-Format verwenden, zeigen die AM\/PM\-Indikatoren \(`t` und `tt`\) nichts an.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
 ## Siehe auch  
  [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   

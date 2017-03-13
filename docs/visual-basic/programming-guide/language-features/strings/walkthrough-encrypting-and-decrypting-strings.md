@@ -38,33 +38,33 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie die <xref:System.Secur
   
 1.  Erstellen Sie die `Simple3Des`\-Klasse, um die Verschlüsselungs\- und Entschlüsselungsmethode zu kapseln.  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
 2.  Fügen Sie einen Import des Kryptografienamespaces am Anfang der Datei hinzu, die die `Simple3Des`\-Klasse enthält.  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
 3.  In der `Simple3Des`\-Klasse fügen Sie ein privates Feld hinzu, um den 3DES\-Kryptografiedienstanbieter zu speichern.  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
 4.  Fügen Sie eine private Methode hinzu, die aus dem Hash des angegebenen Schlüssels ein Bytearray mit einer bestimmten Länge erstellt.  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
 5.  Fügen Sie einen Konstruktor hinzu, um den 3DES\-Kryptografiedienstanbieter zu initialisieren.  
   
      Der `key`\-Parameter steuert `EncryptData`\-Methode und die `DecryptData`\-Methode.  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
 6.  Fügen Sie eine öffentliche Methode hinzu, die eine Zeichenfolge verschlüsselt.  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
 7.  Fügen Sie eine öffentliche Methode hinzu, die eine Zeichenfolge entschlüsselt.  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
      Die Wrapperklasse kann jetzt zum Schützen von Benutzerdaten verwendet werden.  In diesem Beispiel wird sie verwendet, um private Benutzerdaten in einer Textdatei mit öffentlichem Zugriff sicher zu speichern.  
   
@@ -72,11 +72,11 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie die <xref:System.Secur
   
 1.  Fügen Sie in einer eigenen Klasse eine Methode hinzu, die die `EncryptData`\-Methode des Wrappers zum Verschlüsseln einer Zeichenfolge und zum Schreiben der Zeichenfolge in den Ordner Eigene Dateien des Benutzers verwendet.  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
 2.  Fügen Sie eine Methode hinzu, die die verschlüsselte Zeichenfolge aus dem Ordner Eigene Dokumente des Benutzers liest und sie mit der `DecryptData`\-Methode des Wrappers entschlüsselt.  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
 3.  Fügen Sie Benutzeroberflächencode hinzu, um die `TestEncoding`\-Methode und die `TestDecoding`\-Methode aufzurufen.  
   

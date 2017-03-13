@@ -18,16 +18,16 @@ caps.handback.revision: 27
 # Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`\- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_1.cs)]  
+ [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_2.cs)]  
+ [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
 >  Um in der `Main`\-Methode in einer Windows Forms\-Anwendung Befehlszeilenargumente zu aktivieren, müssen Sie die Signatur von `Main` in program.cs manuell ändern.  Im vom Windows Forms\-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt.  Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=fullName> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> verwenden, um von einem beliebigen Punkt in einer Konsolen\- oder Windows\-Anwendung auf die Befehlszeilenargumente zuzugreifen.  
   
  Der Parameter der `Main`\-Methode ist ein <xref:System.String>\-Array, das die Befehlszeilenargumente darstellt.  Normalerweise bestimmen Sie, ob Argumente vorhanden sind, indem Sie z. B. die `Length`\-Eigenschaft testen:  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_3.cs)]  
+ [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  Sie können die Zeichenfolgenargumente auch mit der <xref:System.Convert>\-Klasse oder der `Parse`\-Methode in numerische Typen konvertieren.  Die folgende Anweisung konvertiert z. B. `string` mithilfe der <xref:System.Int64.Parse%2A>\-Methode in eine `long`\-Zahl:  
   
@@ -56,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  Fügen Sie den folgenden Code in einem beliebigen Text\-Editor ein, und speichern Sie die Datei als Textdatei mit dem Namen `Factorial.cs`.  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_4.cs)]  
+     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  Öffnen Sie über den Bildschirm **Starten** oder das Menü **Starten** eine Visual Studio **Developer\-Eingabeaufforderung**, und navigieren Sie dann zu dem Ordner, der die Datei enthält, die Sie gerade erstellt haben.  
   

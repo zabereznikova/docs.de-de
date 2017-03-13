@@ -31,7 +31,7 @@ In dieser exemplarische Vorgehensweise wird erläutert, wie Sie einen benutzerde
   
 -   Erstellen Sie in der Anwendung eine Klasse mit dem Namen `SimpleListener`, die von <xref:System.Diagnostics.TraceListener> erbt.  
   
-     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#16)]  
+     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
      Die <xref:System.Diagnostics.TraceListener.Write%2A>\-Methode und die <xref:System.Diagnostics.TraceListener.WriteLine%2A>\-Methode, die für die Basisklasse erforderlich sind, rufen `MsgBox` auf, um die Eingaben für diese Methoden anzuzeigen.  
   
@@ -75,7 +75,7 @@ In dieser exemplarische Vorgehensweise wird erläutert, wie Sie einen benutzerde
   
 -   Im folgenden Code wird gezeigt, wie der Name des Typs mit starkem Namen für `SimpleListener` bestimmt wird.  
   
-     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#17)]  
+     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
      Der starke Name des Typs hängt vom Projekt ab.  
   

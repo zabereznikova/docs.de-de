@@ -45,7 +45,7 @@ Continue { Do | For | While }
 ## Beispiel  
  Im folgenden Codebeispiel wird die `Continue While`\-Anweisung verwendet, um zur nächsten Spalte eines Arrays zu springen, wenn ein Divisor 0 \(null\) ist.  `Continue While` befindet sich in einer `For`\-Schleife.  Die Steuerung wird an die `While col < lastcol`\-Anweisung übertragen, bei der es sich um die nächste Iteration der innersten `While`\-Schleife handelt, die die `For`\-Schleife enthält.  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## Siehe auch  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

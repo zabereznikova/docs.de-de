@@ -63,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## Beispiel  
  Das folgende Beispiel einer statischen Klasse enthält zwei Methoden, die die Temperatur von Grad Celsius in Grad Fahrenheit und umgekehrt umwandeln:  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_1.cs)]  
+ [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## Statische Member  
  Eine nicht statische Klasse kann statische Methoden, Felder, Eigenschaften oder Ereignisse enthalten.  Der statische Member ist in einer Klasse auch dann aufrufbar, wenn keine Instanz der Klasse erstellt wurde.  Auf den statischen Member wird immer anhand des Klassennamens anstelle des Instanznamens zugegriffen.  Von einem statischen Member existiert nur eine Kopie, unabhängig davon, wie viele Instanzen der Klasse erstellt werden.  Statische Methoden und Eigenschaften haben in ihrem enthaltenden Typ keinen Zugriff auf nicht statische Felder und Ereignisse, und sie können auf eine Instanzvariable eines Objekts nur zugreifen, wenn diese explizit in einem Methodenparameter übergeben wird.  
@@ -78,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Statische Klassenmember werden mit dem `static`\-Schlüsselwort vor dem Rückgabetyp des Members deklariert, wie im folgenden Beispiel erläutert:  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_2.cs)]  
+ [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  Statische Member werden vor dem ersten Zugriff auf den statischen Member und vor dem Aufruf des statischen Konstruktors, soweit vorhanden, initialisiert.  Sie können auf einen statischen Klassenmember zugreifen, indem Sie anstelle eines Variablennamens den Klassennamen verwenden, um den Speicherort des Members anzugeben, wie im folgenden Beispiel erläutert:  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_3.cs)]  
+ [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  Wenn die Klasse statische Felder enthält, geben Sie einen statischen Konstruktur an, der diese Felder beim Laden der Klasse initialisiert.  
   

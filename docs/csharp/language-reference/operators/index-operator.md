@@ -26,11 +26,11 @@ Eckige Klammern \(`[]`\) werden für Arrays, Indexer und Attribute verwendet.  S
 ## Hinweise  
  Ein Arraytyp ist ein Typ, auf den `[]` folgen.  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#43)]  
+ [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  Um auf ein Element eines Arrays zuzugreifen, wird der Index des gewünschten Elements in eckige Klammern eingeschlossen:  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#44)]  
+ [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  Eine Ausnahme wird ausgelöst, wenn sich ein Arrayindex außerhalb des gültigen Bereichs befindet.  
   
@@ -38,15 +38,15 @@ Eckige Klammern \(`[]`\) werden für Arrays, Indexer und Attribute verwendet.  S
   
  .NET Framework definiert z. B. einen `Hashtable`\-Typ, der Schlüssel und Werte beliebigen Typs verknüpft:  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#45)]  
+ [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  Eckige Klammern werden auch verwendet, um [Attribute](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md) anzugeben:  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#46)]  
+ [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  Sie können eckige Klammern verwenden, um die Indizierung eines Zeigers aufzuheben:  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#47)]  
+ [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  Es wird keine Überprüfung der Grenzen durchgeführt.  
   

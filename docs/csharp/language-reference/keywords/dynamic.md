@@ -25,7 +25,7 @@ Der `dynamic`\-Typ ermöglicht die Vorgänge, in denen die Überprüfung des Kom
   
  Im folgenden Beispiel wird eine Variable vom Typ `dynamic` einer Variable vom Typ `object` gegenüber gestellt.  Um zur Kompilierzeit den Typ jeder Variable zu überprüfen, setzen Sie den Mauszeiger in den `WriteLine`\-Anweisungen über `dyn` oder `obj`.  IntelliSense zeigt **dynamisch** für `dyn` und **Objekt** für `obj` an.  
   
- [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
  Die `WriteLine`\-Anweisungen zeigen die Laufzeittypen von `dyn` und `obj` an.  An diesem Punkt haben beide den gleichen Typ, ganze Zahl.  Die folgende Ausgabe wird generiert:  
   
@@ -48,20 +48,20 @@ obj = obj + 3;
   
 -   In Deklarationen als Typ einer Eigenschaft, eines Felds, eines Indexers, eines Parameters, eines Rückgabewerts, einer lokalen Variablen oder einer Typeinschränkung.  Die folgende Klassendefinition verwendet `dynamic` in mehreren anderen Deklarationen.  
   
-     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_2.cs)]  
+     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
 -   In expliziten Typkonvertierungen als Zieltyp einer Konvertierung.  
   
-     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_3.cs)]  
+     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
 -   In einem beliebigen Kontext, in dem Typen als Werte dienen, z. B. auf der rechten Seite eines `is`\-Operators oder eines `as`\-Operators, oder als Argument für `typeof` als Teil eines konstruierten Typs.  Beispielsweise kann `dynamic` in den folgenden Ausdrücken verwendet werden.  
   
-     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_4.cs)]  
+     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird `dynamic` in mehreren Deklarationen verwendet.  Die `Main`\-Methode stellt auch die Überprüfung von Kompilier\- und Laufzeittyp einander gegenüber.  
   
- [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_5.cs)]  
+ [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
  Weitere Informationen und Beispiele finden Sie unter [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   

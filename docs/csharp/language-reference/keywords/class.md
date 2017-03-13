@@ -79,7 +79,7 @@ Klassen werden wie im folgenden Beispiel mit dem `class`\-Schlüsselwort deklari
 ## Beispiel  
  Im folgenden Beispiel wird erläutert, wie Klassenfelder, Konstruktoren und Methoden deklariert werden.  Zusätzlich wird die Objektinstanziierung sowie die Ausgabe von Instanzdaten veranschaulicht.  In diesem Beispiel werden zwei Klassen deklariert: die Klasse `Child`, die zwei private Felder \(`name` und `age`\) sowie zwei öffentliche Methoden enthält,  Die zweite Klasse, `StringTest`, wird verwendet, da sie `Main` enthält.  
   
- [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/csharp/class_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
   
 ## Kommentare  
  Beachten Sie, dass auf die privaten Felder \(`name` und `age`\) im vorherigen Beispiel nur über die öffentlichen Methoden der `Child`\-Klasse zugegriffen werden kann.  Mit der folgenden Anweisung ist es z. B. nicht möglich, den Namen des Kindes über die `Main`\-Methode auszugeben:  

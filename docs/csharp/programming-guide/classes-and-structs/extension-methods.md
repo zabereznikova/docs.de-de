@@ -24,13 +24,13 @@ Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohn
   
  Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator\-Methode `OrderBy` für ein Ganzzahlarray aufrufen können.  Der Ausdruck in Klammern ist ein Lambda\-Ausdruck.  Viele Standardabfrageoperatoren verwenden Lambda\-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden.  Weitere Informationen finden Sie unter [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  Erweiterungsmethoden werden als statische Methoden definiert, jedoch mithilfe einer Instanzmethodensyntax aufgerufen.  Der erste Parameter bestimmt, für welchen Typ die Methode gilt, und vor dem Parameter steht der [this](../../../csharp/language-reference/keywords/this.md)\-Modifizierer.  Erweiterungsmethoden befinden sich nur dann im Bereich, wenn Sie den Namespace explizit mit einer `using`\-Direktive in Ihren Quellcode importieren.  
   
  Im folgenden Beispiel wird eine für die <xref:System.String?displayProperty=fullName>\-Klasse definierte Erweiterungsmethode veranschaulicht.  Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_2.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  Die `WordCount`\-Erweiterungsmethode kann mit dieser `using`\-Direktive eingebunden werden:  
   
@@ -70,7 +70,7 @@ using System.Linq;
   
  Wenn der Compiler keine Instanzmethode mit einer entsprechenden Signatur findet, stellt er ggf. eine Bindung mit einer entsprechenden Erweiterungsmethode her.  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_3.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## Allgemeine Richtlinien  
  Im Allgemeinen wird empfohlen, dass Sie Erweiterungsmethoden sparsam und nur wenn unbedingt notwendig implementieren.  Wenn möglich sollte der Clientcode, der einen vorhandenen Typ erweitern muss, dies durch die Erstellung eines neuen, vom vorhandenen Typ abgeleiteten Typs durchführen.  Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

@@ -60,7 +60,7 @@ object.Value
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie mit der <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft auf den ersten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten zugegriffen werden kann.  In diesem Beispiel wird mithilfe der untergeordneten Achseneigenschaft die Auflistung aller untergeordneten Knoten mit dem Namen `phone` abgerufen, die sich im `contact`\-Objekt befinden.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -69,7 +69,7 @@ object.Value
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie der Wert eines XML\-Attributs aus einer Auflistung von <xref:System.Xml.Linq.XAttribute>\-Objekten abgerufen wird.  In diesem Beispiel wird mithilfe der Attributachseneigenschaft der Wert des `type`\-Attributs für alle `phone`\-Elemente angezeigt.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

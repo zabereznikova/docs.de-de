@@ -81,12 +81,12 @@ End With
 ## Beispiel  
  Im folgenden Beispiel führt jeder `With`\-Block eine Reihe von Anweisungen für ein einzelnes Objekt aus.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#2)]  
+ [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel werden `With…End With`\-Anweisungen geschachtelt.  In der geschachtelten `With`\-Anweisung verweist die Syntax auf das innere Objekt.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#1)]  
+ [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
 ## Siehe auch  
  <xref:System.Collections.Generic.List%601>   

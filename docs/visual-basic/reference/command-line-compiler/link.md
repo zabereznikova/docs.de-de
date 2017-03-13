@@ -74,18 +74,18 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinfo
 ### Generische Schnittstellen  
  Generische Schnittstellen, die von einer Interopassembly eingebettet werden, können nicht verwendet werden.  Dies wird im folgenden Beispiel gezeigt.  
   
- [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#1)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
 ### Typen mit generischen Parametern  
  Typen mit einem generischen Parameter, dessen Typ von einer Interopassembly eingebettet wird, können nicht verwendet werden, wenn dieser Typ aus einer externen Assembly stammt.  Diese Einschränkung gilt nicht für Schnittstellen.  Betrachten Sie z. B. die <xref:Microsoft.Office.Interop.Excel.Range>\-Schnittstelle, die in der <xref:Microsoft.Office.Interop.Excel>\-Assembly definiert wird.  Wenn eine Bibliothek Interop\-Typen aus der <xref:Microsoft.Office.Interop.Excel>\-Assembly einbettet und eine Methode verfügbar macht, die einen generischen Typ mit einem Parameter zurückgibt, dessen Typ die <xref:Microsoft.Office.Interop.Excel.Range>\-Schnittstelle ist, muss diese Methode eine generische Schnittstelle zurückgeben, wie im folgenden Codebeispiel gezeigt.  
   
- [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#2)]  
-[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#3)]  
-[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#4)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
  Im folgenden Beispiel kann der Clientcode die Methode aufrufen, die die generische <xref:System.Collections.IList>\-Schnittstelle zurückgibt, ohne dass ein Fehler auftritt.  
   
- [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#5)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## Beispiel  
  Im folgenden Code werden die Quelldatei `OfficeApp.vb` und Verweisassemblys aus `COMData1.dll` und `COMData2.dll` kompiliert, um `OfficeApp.exe` zu erstellen.  

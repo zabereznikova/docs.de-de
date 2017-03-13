@@ -38,11 +38,11 @@ Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language
 ## Beispiel  
  Im folgenden Beispiel werden zwei Prozeduren gezeigt, die eine Arrayvariable übernehmen und auf deren Elemente anwenden.  Mit der `increase`\-Prozedur wird einfach 1 zu jedem Element addiert.  Mit der `replace`\-Prozedur wird dem Parameter `a()` ein neues Array zugewiesen und zu jedem Element 1 addiert.  Die Neuzuweisung wirkt sich jedoch nicht auf die zugrunde liegende Arrayvariable im Aufrufcode aus.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
  Beim ersten `MsgBox`\-Aufruf wird Folgendes angezeigt: "After increase\(n\): 11, 21, 31, 41".  Da das Array `n` ein Verweistyp ist, kann `replace` dessen Member ändern, obwohl der Übergabemechanismus `ByVal` ist.  
   

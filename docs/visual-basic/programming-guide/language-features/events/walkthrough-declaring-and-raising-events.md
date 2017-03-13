@@ -55,7 +55,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Ereignisse fü
   
 -   Verwenden Sie das `Event`\-Schlüsselwort, um in der `Widget`\-Klasse ein Ereignis zu deklarieren.  Ereignisse können über das `ByVal`\-Argument und das `ByRef`\-Argument verfügen. Dies wird im `PercentDone`\-Ereignis von `Widget` veranschaulicht:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#1)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
   
  Wenn das aufrufende Objekt ein `PercentDone`\-Ereignis erhält, enthält das `Percent`\-Argument den Prozentsatz der Aufgabe, die abgeschlossen wurde.  Um die Methode abzubrechen, die das Ereignis ausgelöst hat, kann für das `Cancel`\-Argument der Wert `True` festgelegt werden.  
   
@@ -68,11 +68,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Ereignisse fü
   
 1.  Um den Zugriff auf die von dieser Klasse verwendete `Timer`\-Eigenschaft zu vereinfachen, fügen Sie im oberen Bereich des Deklarationsabschnitts des Klassenmoduls über der `Class Widget`\-Anweisung eine `Imports`\-Anweisung ein.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#2)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
   
 2.  Fügen Sie der `Widget`\-Klasse folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#3)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
   
  Wenn die Anwendung die `LongTask`\-Methode aufruft, löst die `Widget`\-Klasse in einem Intervall, das mit `MinimumInterval` Sekunden angegeben wird, das `PercentDone`\-Ereignis aus.  Wenn das Ereignis beendet wird, überprüft `LongTask`, ob das `Cancel`\-Argument auf `True` festgelegt wurde.  
   

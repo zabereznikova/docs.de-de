@@ -67,7 +67,7 @@ object...<descendant>
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie auf den Wert des ersten untergeordneten Knotens mit dem Namen `name` und die Werte aller untergeordneten Knoten mit dem Namen `phone` aus dem `contacts`\-Objekt zugegriffen wird.  
   
- [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_1.vb)]  
+ [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -78,7 +78,7 @@ object...<descendant>
 ## Beispiel  
  Das folgende Beispiel deklariert `ns` als ein XML\-Namespacepräfix.  Anschließend wird das Namespacepräfix verwendet, um ein XML\-Literal zu erstellen und auf den ersten Wert des untergeordneten Knotens mit dem qualifizierten Namen `ns:name` zuzugreifen.  
   
- [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_2.vb)]  
+ [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

@@ -53,7 +53,7 @@ Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../cshar
   
  Um ein Datum in die Zeichenfolge der Kultur zu konvertieren, übergeben Sie das <xref:System.Globalization.CultureInfo>\-Objekt an die <xref:System.DateTime.ToString%28System.IFormatProvider%29>\-Methode des Datumsobjekts.  Beispielsweise wird im folgenden Code unabhängig von den Kultureinstellungen der Anwendung "07\/04\/2005 00:00:00" angezeigt.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/how-culture-affects-stri_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
 >  Datumsliterale werden immer entsprechend der Kultur Englisch interpretiert.  
@@ -69,11 +69,11 @@ Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../cshar
   
  Die `StrComp`\-Funktion gibt eine ganze Zahl zurück, die die Beziehung zwischen den zwei verglichenen Zeichenfolgen auf der Grundlage der Sortierreihenfolge angibt.  Ein positiver Ergebniswert weist darauf hin, dass die erste Zeichenfolge größer als die zweite ist.  Ein negatives Ergebnis zeigt an, dass die erste Zeichenfolge kleiner ist. 0 bedeutet, das beide Zeichenfolgen übereinstimmen.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
  Sie können auch die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Entsprechung der `StrComp`\-Funktion, die <xref:System.String.Compare%2A?displayProperty=fullName>\-Methode, verwenden.  Dabei handelt es sich um eine statische, überladene Methode der Basiszeichenfolgenklasse.  Das folgende Beispiel demonstriert die Verwendung der Methode:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
  Um die Ausführung der Vergleiche genauer zu steuern, können Sie zusätzliche Überladungen der <xref:System.String.Compare%2A>\-Methode verwenden.  Bei der <xref:System.String.Compare%2A?displayProperty=fullName>\-Methode können Sie mit dem `comparisonType`\-Argument angeben, welche Vergleichsart verwendet werden soll.  
   

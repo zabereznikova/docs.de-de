@@ -53,7 +53,7 @@ In den meisten Fällen benötigen Prozeduren einige Informationen zu den Umstän
 ## Parameterdatentyp  
  Der Datentyp eines Parameters wird mithilfe der `As`\-Klausel in seiner Deklaration definiert.  Die folgende Funktion akzeptiert z. B. eine Zeichenfolge und eine ganze Zahl.  
   
- [!code-vb[VbVbcnProcedures#32](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-parameters-and_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
  Wenn die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) den Wert `Off,` hat, ist die `As`\-Klausel optional, sofern sie nicht für einen Parameter angegeben wird. In diesem Fall gilt, dass sie für alle Parameter angegeben werden muss.  Wenn die Typüberprüfung den Wert `On` hat, muss die `As`\-Klausel für alle Prozedurparameter angegeben werden.  
   

@@ -34,7 +34,7 @@ Wenn bestimmte Bedingungen vorliegen, darf ein Ereignishandler nachfolgende Erei
   
  Wenn Code das `Click`\-Ereignis auslöst, ruft der `RaiseEvent`\-Accessor mit der <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>\-Methode alle Ereignishandlerdelegaten asynchron auf.  Diese Methode ruft jeden Handler in einem Arbeitsthread auf und wird sofort beendet, sodass Handler sich nicht gegenseitig blockieren können.  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#27)]  
+ [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Collections.ArrayList>   

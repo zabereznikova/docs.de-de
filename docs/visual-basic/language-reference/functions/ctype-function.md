@@ -64,7 +64,7 @@ CType(expression, typename)
 ## Beispiel  
  In diesem Beispiel wird die `CType`\-Funktion zum Konvertieren eines Ausdrucks in den `Single`\-Datentyp verwendet.  
   
- [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/ctype-function_1.vb)]  
+ [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
  Weitere Beispiele finden Sie unter [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   

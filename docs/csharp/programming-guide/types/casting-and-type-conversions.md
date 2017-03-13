@@ -41,7 +41,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## Implizite Konvertierungen  
  Für integrierte numerische Typen kann eine implizite Konvertierung durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder gerundet zu werden.  So kann z. B. eine Variable vom Typ [long](../../../csharp/language-reference/keywords/long.md) \(8\-Byte\-Ganzzahl\) jeden Wert speichern, der von einem [int](../../../csharp/language-reference/keywords/int.md) \(4 Byte auf einem 32\-Bit\-Computer\) gespeichert werden kann.  Im folgenden Beispiel konvertiert der Compiler implizit den Wert rechts in den Typ `long` und weist den Wert anschließend `bigNum` zu.  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_1.cs)]  
+ [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 ## Explizite Konvertierungen  
  Wenn jedoch eine Konvertierung nicht ohne das Risiko eines Datenverlusts durchgeführt werden kann, ist für den Compiler eine explizite Konvertierung erforderlich, die als *Umwandlung* bezeichnet werden kann.  Eine Umwandlung ist eine Möglichkeit, den Compiler darüber zu informieren, dass Sie die Konvertierung durchführen möchten und dass Ihnen klar ist, dass ein Datenverlust auftreten kann.  Um eine Umwandlung durchzuführen, legen Sie den Typ, in den Sie umwandeln, in Klammern vor dem zu konvertierenden Wert oder der zu konvertierenden Variablen fest.  Im folgenden Programm wird [double](../../../csharp/language-reference/keywords/double.md) in [int](../../../csharp/language-reference/keywords/int.md) umgewandelt.  Ohne die Typumwandlung kann das Programm nicht kompiliert werden.  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_2.cs)]  
+ [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  Eine Liste der expliziten numerischen Konvertierungen, die zulässig sind, finden Sie unter [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
@@ -80,7 +80,7 @@ Giraffe g2 = (Giraffe) a;
 ## Typkonvertierungsausnahmen zur Laufzeit  
  In einigen Referenztypkonvertierungen kann der Compiler nicht bestimmen, ob eine Umwandlung gültig ist.  Es ist möglich, dass eine Umwandlungsoperation, die ordnungsgemäß kompiliert, zur Laufzeit nicht ordnungsgemäß ausgeführt wird.  Wie im folgenden Beispiel dargestellt, führt eine Typumwandlung, die zur Laufzeit fehlschlägt, zm Auslösen einer <xref:System.InvalidCastException>.  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_3.cs)]  
+ [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C\# liefert die Operatoren [is](../../../csharp/language-reference/keywords/is.md) und [as](../../../csharp/language-reference/keywords/as.md), damit Sie die Kompatibilität testen können, bevor Sie die Typumwandlung durchführen.  Weitere Informationen finden Sie unter [Gewusst wie: Sichere Umwandlung mit den Operatoren "as" und "is"](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
   

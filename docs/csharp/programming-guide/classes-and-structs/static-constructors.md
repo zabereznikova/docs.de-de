@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # Statische Konstruktoren (C#-Programmierhandbuch)
 Ein statischer Konstruktor wird verwendet, um [static](../../../csharp/language-reference/keywords/static.md)\-Daten zu initialisieren oder um eine einmalige Handlung auszuführen.  Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf statische Member verwiesen wird.  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
  Statische Konstruktoren verfügen über die folgenden Eigenschaften:  
   
@@ -40,7 +40,7 @@ Ein statischer Konstruktor wird verwendet, um [static](../../../csharp/language-
 ## Beispiel  
  Die `Bus`\-Klasse in diesem Beispiel verfügt über einen statischen Konstruktor.  Wenn die erste Instanz von `Bus` \(`bus1`\) erstellt wird, wird der statische Konstruktor aufgerufen, um die Klasse zu initialisieren.  Die Beispielausgabe überprüft, ob der statische Konstruktor nur einmal ausgeführt wird, obwohl zwei Instanzen von `Bus` erstellt werden. Ferner wird überprüft, ob der Konstruktor vor dem Instanzenkonstruktor ausgeführt wird.  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

@@ -18,7 +18,7 @@ caps.handback.revision: 21
 # Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)
 C\#\-Programme können aus einer oder mehreren Dateien bestehen.  Jede Datei kann 0 oder mehr Namespaces enthalten.  Ein Namespace kann zusätzlich zu anderen Namespaces auch Typen, wie Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten, enthalten.  Das folgende Beispiel zeigt das Skelett eines C\#\-Programms, das alle diese Elemente enthält.  
   
- [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/class2.cs#34)]  
+ [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
   
 ## Verwandte Abschnitte  
  Weitere Informationen:  

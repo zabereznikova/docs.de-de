@@ -26,7 +26,7 @@ caps.handback.revision: 16
 Das nachfolgende Beispiel ruft die <xref:System.String.IndexOf%2A>\-Methode für ein <xref:System.String>\-Objekt auf, um den Index des ersten Auftretens einer Teilzeichenfolge wiederzugeben.  
   
 ## Beispiel  
- [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-search-within-a-s_1.vb)]  
+ [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-search-within-a-string_1.vb)]  
   
 ## Kompilieren des Codes  
  Dieses Beispiel setzt Folgendes voraus:  

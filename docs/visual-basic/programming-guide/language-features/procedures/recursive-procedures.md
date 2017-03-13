@@ -31,7 +31,7 @@ caps.handback.revision: 13
   
  Die folgende Prozedur berechnet die Fakultät ihres ursprünglichen Arguments mithilfe der Rekursion.  
   
- [!code-vb[VbVbcnProcedures#51](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
 ## Überlegungen hinsichtlich rekursiver Prozeduren  
  **Einschränkende Bedingungen**.  Sie müssen eine rekursive Prozedur so gestalten, dass sie mindestens eine Bedingung überprüft, mit der die Rekursion beendet wird. Berücksichtigen Sie auch den Fall, dass eine solche Bedingung auch nach einer hinlänglichen Anzahl rekursiver Aufrufe nicht erfüllt wird.  Wenn nicht mindestens eine Bedingung gegeben ist, die fehlerfrei erfüllt werden kann, dann besteht die Gefahr, dass die Prozedur in einer Endlosschleife ausgeführt wird.  

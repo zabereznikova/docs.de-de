@@ -39,7 +39,7 @@ x = x & y
  Der Operator `&=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den binären [Operator &](../../../csharp/language-reference/operators/and-operator.md) überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Beispiel  
- [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#34)]  
+ [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

@@ -178,73 +178,73 @@ CUShort(expression)
 ## Beispiel für CBool  
  In diesem Beispiel wird die `CBool`\-Funktion dazu verwendet, Ausdrücke in `Boolean`\-Werte zu konvertieren.  Wenn ein Ausdruck einen Wert ungleich 0 \(null\) ergibt, gibt `CBool` den Wert `True` zurück; andernfalls wird `False` zurückgegeben.  
   
- [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_1.vb)]  
+ [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
 ## Beispiel für CByte  
  Im folgenden Beispiel wird die `CByte`\-Funktion dazu verwendet, einen Ausdruck in `Byte` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_2.vb)]  
+ [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
 ## Beispiel für CChar  
  Im folgenden Beispiel wird die `CChar`\-Funktion dazu verwendet, das erste Zeichen eines `String`\-Ausdrucks in einen `Char`\-Typ zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_3.vb)]  
+ [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
  Das Eingabeargument für `CChar` muss dem Datentyp `Char` oder `String` angehören.  `CChar` kann nicht dazu verwendet werden, eine Zahl in ein Zeichen zu konvertieren, da `CChar` einen numerischen Datentyp nicht akzeptieren kann.  Im folgenden Beispiel wird eine Zahl abgerufen, die einen Codepunkt \(Zeichencode\) repräsentiert und anschließend in das entsprechende Zeichen konvertiert.  Dabei wird die <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>\-Funktion verwendet, um die Zeichenfolge von Ziffern zu erhalten; `CInt` wird eingesetzt, um die Zeichenfolge in den Typ `Integer` zu konvertieren, und `ChrW`, um die Zahl in den Typ `Char` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_4.vb)]  
+ [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## Beispiel für CDate  
  Im folgenden Beispiel wird die `CDate`\-Funktion dazu verwendet, Zeichenfolgen in `Date`\-Werte zu konvertieren.  Im Allgemeinen wird davon abgeraten, Datums\- und Zeitangaben fest als Zeichenfolgen zu programmieren \(siehe Beispiel\).  Verwenden Sie stattdessen Datums\- und Zeitliterale, wie \#Feb 12, 1969\# und \#4:45:23 PM\#.  
   
- [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_5.vb)]  
+ [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
 ## Beispiel für CDbl  
- [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_6.vb)]  
+ [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
 ## Beispiel für CDec  
  Im folgenden Beispiel wird die `CDec`\-Funktion dazu verwendet, einen numerischen Wert in `Decimal` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_7.vb)]  
+ [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
 ## Beispiel für CInt  
  Im folgenden Beispiel wird die `CInt`\-Funktion dazu verwendet, einen Wert in `Integer` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_8.vb)]  
+ [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
 ## Beispiel für CLng  
  Im folgenden Beispiel wird die `CLng`\-Funktion dazu verwendet, Werte in `Long` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_9.vb)]  
+ [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
 ## Beispiel für CObj  
  Im folgenden Beispiel wird die `CObj`\-Funktion dazu verwendet, einen numerischen Wert in `Object` zu konvertieren.  Die `Object`\-Variable selbst enthält nur einen 4\-Byte\-Zeiger, der auf den ihm zugewiesenen `Double`\-Wert zeigt.  
   
- [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_10.vb)]  
+ [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
 ## CSByte\-Beispiel  
  Im folgenden Beispiel wird die `CSByte`\-Funktion dazu verwendet, einen numerischen Wert in `SByte` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_11.vb)]  
+ [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
 ## Beispiel für CShort  
  Im folgenden Beispiel wird die `CShort`\-Funktion dazu verwendet, einen numerischen Wert in `Short` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_12.vb)]  
+ [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
 ## Beispiel für CSng  
  Im folgenden Beispiel wird die `CSng`\-Funktion dazu verwendet, Werte in `Single` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_13.vb)]  
+ [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
 ## Beispiel für CStr  
  Im folgenden Beispiel wird die `CStr`\-Funktion dazu verwendet, einen numerischen Wert in `String` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_14.vb)]  
+ [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
  Im folgenden Beispiel wird die `CStr`\-Funktion dazu verwendet, `Date`\-Werte in `String`\-Werte zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_15.vb)]  
+ [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
  `CStr` stellt einen `Date`\-Wert immer im standardmäßigen Kurzformat für das aktuelle Gebietsschema dar, z. B. "6\/15\/2003 4:35:47 PM".  `CStr` unterdrückt jedoch die *neutralen Werte* von 1\/1\/0001 für das Datum und 00:00:00 für die Zeit.  
   
@@ -253,17 +253,17 @@ CUShort(expression)
 ## CUInt\-Beispiel  
  Im folgenden Beispiel wird die `CUInt`\-Funktion dazu verwendet, einen numerischen Wert in `UInteger` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_16.vb)]  
+ [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
 ## CULng\-Beispiel  
  Im folgenden Beispiel wird die `CULng`\-Funktion dazu verwendet, einen numerischen Wert in `ULong` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_17.vb)]  
+ [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
 ## CUShort\-Beispiel  
  Im folgenden Beispiel wird die `CUShort`\-Funktion dazu verwendet, einen numerischen Wert in `UShort` zu konvertieren.  
   
- [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_18.vb)]  
+ [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>   

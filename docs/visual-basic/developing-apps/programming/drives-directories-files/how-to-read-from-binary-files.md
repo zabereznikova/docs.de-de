@@ -30,11 +30,11 @@ Das `My.Computer.FileSystem`\-Objekt stellt für das Lesen von Binärdateien die
   
 -   Verwenden Sie die `ReadAllBytes`\-Methode, die den Inhalt einer Datei als Bytearray zurückgibt.  In diesem Beispiel wird aus der Datei `C:/Documents and Settings/selfportrait.jpg` gelesen.  
   
-     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
   
 -   Für große Binärdateien können Sie mit der <xref:System.IO.FileStream.Read%2A>\-Methode des <xref:System.IO.FileStream>\-Objekts jeweils nur eine bestimmte Datenmenge aus der Datei lesen.  Anschließend können Sie einschränken, welcher Anteil der Datei pro Lesevorgang in den Arbeitsspeicher geladen werden soll.  Im folgenden Codebeispiel wird eine Datei kopiert, und der Aufrufer kann angeben, welche Datenmenge der Datei pro Lesevorgang in den Arbeitsspeicher eingelesen werden soll.  
   
-     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
   
 ## Robuste Programmierung  
  Die folgenden Bedingungen verursachen möglicherweise das Auslösen einer Ausnahme:  

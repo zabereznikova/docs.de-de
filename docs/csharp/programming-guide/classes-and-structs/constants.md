@@ -25,7 +25,7 @@ Konstanten sind unveränderliche Werte, die bei der Kompilierung bekannt sind un
   
  Konstanten müssen bereits bei der Deklaration initialisiert werden.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
  In diesem Beispiel hat die Konstante `months` stets den Wert 12. Der Wert kann auch durch die Klasse selbst nicht geändert werden.  Wenn der Compiler in C\#\-Quellcode auf einen Konstantenbezeichner trifft \(z. B. `months`\), ersetzt er den literalen Wert direkt in den von ihm erstellten Intermediate Language \(IL\)\-Code.  Da einer Konstanten zur Laufzeit keine Variablenadresse zugeordnet ist, können `const`\-Felder nicht als Verweis übergeben oder als L\-Wert in einem Ausdruck verwendet werden.  
   
@@ -34,17 +34,17 @@ Konstanten sind unveränderliche Werte, die bei der Kompilierung bekannt sind un
   
  Es ist möglich, mehrere Konstanten desselben Typs gleichzeitig zu deklarieren, zum Beispiel folgendermaßen:  
   
- [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_2.cs)]  
+ [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
   
  Der Ausdruck, der für die Initialisierung einer Konstante verwendet wird, kann auf eine andere Konstante verweisen, wenn dies nicht zu einem Zirkelverweis führt.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_3.cs)]  
+ [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
  Konstanten können als [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) oder `protected` `internal` gekennzeichnet werden.  Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Konstante zugreifen können.  Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Auf Konstanten wird wie auf [static](../../../csharp/language-reference/keywords/static.md)\-Felder zugegriffen, da der Wert der Konstanten für alle Instanzen des Typs derselbe ist.  Für ihre Deklaration wird nicht das `static`\-Schlüsselwort verwendet.  In Ausdrücken außerhalb der Klasse, in der die Konstante definiert wird, erfolgt der Zugriff auf die Konstante über den Klassennamen, gefolgt von einem Punkt und dem Namen der Konstante.  Beispiele:  
   
- [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_4.cs)]  
+ [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

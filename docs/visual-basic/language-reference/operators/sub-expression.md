@@ -63,7 +63,7 @@ End Sub
 ## Beispiel  
  Das folgende Beispiel zeigt einen Lambda\-Ausdruck, der einen Wert in die Konsole schreibt.  Dabei wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Unterroutine veranschaulicht.  Weitere Beispiele finden Sie unter [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
 ## Siehe auch  
  [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   

@@ -25,7 +25,7 @@ In diesen Beispielen werden verschiedene Möglichkeiten veranschaulicht, Text in
  In allen diesen Beispielen werden Zeichenfolgenliterale in Dateien geschrieben. Sie sollten jedoch eher die <xref:System.String.Format%2A>\-Methode verwenden, die viele Steuerelemente enthält, mit denen verschiedene Wertetypen rechts\- oder linksbündig mit oder ohne Abstand in ein Feld geschrieben werden können.  Sie können auch das Feature für die C\#\-[Zeichenfolgeninterpolierung](../../../csharp/language-reference/keywords/interpolated-strings.md) verwenden.  
   
 ## Beispiel  
- [!code-cs[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#3)]  
+ [!code-cs[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-write-to-a-text-file_1.cs)]  
   
  In allen diesen Beispielen werden Zeichenfolgenliterale in Dateien geschrieben. Sie sollten jedoch eher die <xref:System.String.Format%2A>\-Methode verwenden, die viele Steuerelemente enthält, mit denen verschiedene Wertetypen rechts\- oder linksbündig mit oder ohne Abstand in ein Feld geschrieben werden können.  Sie können auch das Feature für die C\#\-[Zeichenfolgeninterpolierung](../../../csharp/language-reference/keywords/interpolated-strings.md) verwenden.  
   

@@ -38,7 +38,7 @@ caps.handback.revision: 15
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  Zum Erstellen der endgültigen Dokumentation auf Grundlage der vom Compiler generierten Datei können Sie ein benutzerdefiniertes Tool erstellen oder ein Tool wie [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) verwenden.  
   
 ## Beispiel  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  Im vorherige Beispiel erzeugt die folgende XML\-Datei.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 15
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein `cref`\-Verweis auf einen generischen Typ erstellt wird.  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_2.cs)]  
+ [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  Im vorherige Beispiel erzeugt die folgende XML\-Datei.  
   

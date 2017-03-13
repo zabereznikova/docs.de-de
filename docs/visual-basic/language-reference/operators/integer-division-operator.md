@@ -73,7 +73,7 @@ expression1 \ expression2
 ## Beispiel  
  In diesem Beispiel wird mit dem Operator `\` eine Ganzzahldivision ausgeführt.  Das Ergebnis ist eine ganze Zahl, die den ganzzahligen Quotienten der beiden Operanden darstellt, wobei der Rest verworfen wird.  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  Die Ausdrücke im vorangehenden Beispiel geben die Werte 2, 3, 33 bzw. \-22 zurück.  
   

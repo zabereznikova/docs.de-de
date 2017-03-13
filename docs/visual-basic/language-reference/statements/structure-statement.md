@@ -111,7 +111,7 @@ End Structure
 ## Beispiel  
  Im folgenden Beispiel wird die `Structure`\-Anweisung für die Definition einer Gruppe verknüpfter Daten für einen Mitarbeiter verwendet.  Es veranschaulicht die Verwendung von Membern mit dem Zugriff `Public`, `Friend` und `Private`, um den Grad der Vertraulichkeit der Datenelemente anzugeben.  Es zeigt außerdem Prozedur\-, Eigenschaften\- und Ereignismember.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## Siehe auch  
  [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   

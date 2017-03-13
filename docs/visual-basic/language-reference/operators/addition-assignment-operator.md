@@ -60,9 +60,9 @@ variableorproperty += expression
 ## Beispiel  
  Im folgenden Beispielen wird der Operator `+=` verwendet, um die Werte zweier Variablen zu kombinieren.  Der erste Teil verwendet `+=` mit numerischen Variablen, um einen Wert zu einem anderen hinzuzuaddieren.  Der zweite Teil verwendet `+=` mit `String`\-Variablen, um einen Wert mit einem anderen Wert zu verketten.  In beiden Fällen wird das Ergebnis der ersten Variablen zugewiesen.  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
   
  Der Wert von `num1` ist jetzt 13, und der Wert von `str1` ist jetzt "103".  
   

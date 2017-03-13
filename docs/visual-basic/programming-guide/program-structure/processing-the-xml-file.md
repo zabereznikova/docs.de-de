@@ -49,7 +49,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 ## Beispiel  
  Im folgenden Codebeispiel wird die Generierung der ID\-Zeichenfolgen für eine Klasse und deren Member dargestellt:  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
 ## Siehe auch  
  [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   

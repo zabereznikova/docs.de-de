@@ -19,7 +19,7 @@ caps.handback.revision: 21
 # Gewusst wie: &#220;berschreiben der ToString-Methode (C#-Programmierhandbuch)
 Alle Klassen oder Strukturen in C\# erben implizit die <xref:System.Object>\-Klasse.  Alle Objekte in C\# rufen daher die <xref:System.Object.ToString%2A>\-Methode ab, die eine Zeichenfolgendarstellung des Objekts zurückgibt.  Zum Beispiel verfügen alle Variablen des `int`\-Typs über eine `ToString`\-Methode, mit der ihr Inhalt als Zeichenfolge zurückgegeben werden kann:  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_1.cs)]  
+ [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  Wenn Sie eine benutzerdefinierte Klasse oder Struktur erstellen, sollten Sie die <xref:System.Object.ToString%2A>\-Methode überschreiben, um dem Clientcode Informationen über den Typ bereitzustellen.  
   
@@ -40,11 +40,11 @@ Alle Klassen oder Strukturen in C\# erben implizit die <xref:System.Object>\-Kla
   
      Das folgende Codebeispiel gibt nicht nur den Namen der Klasse zurück, sondern auch die Daten für eine bestimmte Instanz der Klasse.  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_2.cs)]  
+     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      Im folgenden Codebeispiel wird die Verwendung der `ToString`\-Methode veranschaulicht.  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_3.cs)]  
+     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## Siehe auch  
  <xref:System.IFormattable>   

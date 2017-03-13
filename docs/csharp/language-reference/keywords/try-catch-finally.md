@@ -25,7 +25,7 @@ Häufig werden `catch` und `finally` zusammen verwendet, um Ressourcen in einem 
  Weitere Informationen und Beispiele für erneutes Auslösen von Ausnahmen finden Sie unter [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) und [Auslösen von Ausnahmen](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  Weitere Informationen zu den `finally`\-Block finden Sie unter [try\-finally](../../../csharp/language-reference/keywords/try-finally.md).  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -48,28 +48,28 @@ In dieser exemplarischen Vorgehensweise wird demonstriert, wie Klassen definiert
   
 5.  Nennen Sie die neue Klasse `UserNameInfo.vb`, und klicken Sie dann auf **Hinzufügen**, um den Code für die neue Klasse anzuzeigen.  
   
-     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#5)]  
+     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
   
     > [!NOTE]
     >  Mit dem **Code\-Editor** von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können Sie dem Startformular eine Klasse hinzufügen, indem Sie das `Class`\-Schlüsselwort und anschließend den Namen der neuen Klasse eingeben.  Der **Code\-Editor** fügt automatisch eine entsprechende `End Class`\-Anweisung hinzu.  
   
 6.  Definieren Sie ein privates Feld für die Klasse, indem Sie den folgenden Code zwischen die Anweisungen `Class` und `End Class` einfügen:  
   
-     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#7)]  
+     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_2.vb)]  
   
      Die Deklaration des Felds als `Private` bedeutet, dass es nur innerhalb der Klasse verwendet werden kann.  Um von außerhalb einer Klasse auf Felder zugreifen zu können, können Sie Zugriffsmodifizierer verwenden. Diese ermöglichen einen erweiterten Zugriff, z. B. `Public`.  Weitere Informationen finden Sie unter [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 7.  Definieren Sie für die Klasse eine Eigenschaft, indem Sie den folgenden Code hinzufügen:  
   
-     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#8)]  
+     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_3.vb)]  
   
 8.  Definieren Sie für die Klasse eine Methode, indem Sie den folgenden Code hinzufügen:  
   
-     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#9)]  
+     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_4.vb)]  
   
 9. Definieren Sie für die neue Klasse einen parametrisierten Konstruktor, indem Sie eine Prozedur mit der Bezeichnung `Sub New` hinzufügen:  
   
-     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#10)]  
+     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_5.vb)]  
   
      Der `Sub New`\-Konstruktor wird automatisch aufgerufen, wenn ein auf dieser Klasse basierendes Objekt erstellt wird.  Dieser Konstruktor legt den Wert des Felds fest, das den Benutzernamen enthält.  
   
@@ -79,7 +79,7 @@ In dieser exemplarischen Vorgehensweise wird demonstriert, wie Klassen definiert
   
 2.  Fügen Sie dem Hauptformular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um den Code für den `Button1_Click`\-Ereignishandler anzuzeigen.  Fügen Sie zum Aufrufen der Testprozedur den folgenden Code hinzu:  
   
-     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#12)]  
+     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_6.vb)]  
   
 ### So führen Sie die Anwendung aus  
   

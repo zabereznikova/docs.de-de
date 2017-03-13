@@ -49,7 +49,7 @@ Skip While expression
 ## Beispiel  
  Im folgenden Codebeispiel werden mit der `Skip While`\-Klausel Ergebnisse übersprungen, bis der erste Kunde aus den USA gefunden wird.  
   
- [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#3)]  
+ [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

@@ -35,21 +35,21 @@ Sie können eine Enumeration mithilfe der `Enum`\-Anweisung im Deklarationsabsch
   
 1.  Erstellen Sie eine Deklaration, die eine Codezugriffsebene, das Schlüsselwort `Enum` und einen gültigen Namen umfasst, wie in den folgenden Beispielen gezeigt, in denen mit `Enum` jeweils verschiedene Enumerationen deklariert werden.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#3)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
 2.  Definieren Sie die Konstanten der Enumeration.  Die erste Konstante einer Enumeration wird standardmäßig mit `0` initialisiert, für alle nachfolgenden Konstanten wird der Initialisierungswert jeweils um 1 erhöht.  Die folgende Enumeration \(`Days`\) enthält beispielsweise eine Konstante mit dem Namen `Sunday` mit dem Wert `0`, eine Konstante mit dem Namen `Monday` mit dem Wert `1`, eine Konstante mit dem Namen `Tuesday` mit dem Wert `2` usw.  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#4)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
 3.  Sie können Konstanten in einer Enumeration explizit Werte zuweisen, indem Sie eine Zuweisungsanweisung verwenden.  Es kann ein beliebiger ganzzahliger Wert \(auch negative Zahlen\) zugewiesen werden.  Konstanten mit Werten unter 0 können beispielsweise zur Darstellung von Fehlerbedingungen verwendet werden.  In der folgenden Enumeration wird der Konstanten `Invalid` explizit der Wert `–1` zugewiesen, und der Konstanten `Sunday` wird der Wert `0` zugewiesen.  Weil es sich um die erste Konstante der Enumeration handelt, wird `Saturday` zudem mit dem Wert `0` initialisiert.  Die Konstante `Monday` hat den Wert `1` \(der um eins höher ist als der Wert von `Sunday`\); die Konstante `Tuesday` hat den Wert `2` usw.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#5)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
 ### So deklarieren Sie eine Enumeration als expliziten Typ  
   
 -   Geben Sie den Typ der Enumeration mit der `As`\-Klausel an, wie im folgenden Beispiel gezeigt.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
 ## Siehe auch  
  [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

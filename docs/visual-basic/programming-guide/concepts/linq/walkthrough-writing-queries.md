@@ -66,11 +66,11 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
   
 1.  Suchen Sie die Stelle in der `Main`\-Methode des Projekts, die wie folgt markiert ist:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
      Kopieren Sie den folgenden Code, und fügen Sie ihn ein.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
 2.  Zeigen Sie mit der Maus auf `studentQuery` im Code, um zu überprüfen, dass der vom Compiler zugewiesene Typ `IEnumerable(Of Student)` lautet.  
   
@@ -81,7 +81,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
   
 1.  Fügen Sie die folgende `For Each`\-Schleife unter der Abfrage im Projekt hinzu.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
 2.  Zeigen Sie mit der Maus auf die `studentRecord`\-Schleifensteuerungsvariable, um den Datentyp festzustellen.  Der Typ von `studentRecord` wird als `Student` abgeleitet, da `studentQuery` eine Auflistung von `Student`\-Instanzen zurückgibt.  
   
@@ -112,7 +112,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
   
 1.  Fügen Sie den Code in diesem Abschnitt hinzu, um einen lokalen Bezeichner in den Abfrageausdruck einzuführen.  Der lokale Bezeichner enthält ein Zwischenergebnis.  Im folgenden Beispiel ist `name` ein Bezeichner, der eine Verkettung aus Vor\- und Nachname des Studierenden enthält.  Ein lokaler Bezeichner kann aus praktischen Gründen verwendet werden oder die Leistung durch Speichern der Ergebnisse eines Ausdrucks verbessern, die ansonsten mehrmals berechnet werden müssten.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
 2.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
   
@@ -120,7 +120,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
   
 1.  Fügen Sie die Abfrage und die `For Each`\-Schleife aus diesem Abschnitt hinzu, um eine Abfrage zu erstellen, die eine Sequenz erzeugt, die andere Elemente als die in der Quelle enthält.  Im folgenden Beispiel ist die Quelle eine Auflistung von `Student`\-Objekten, aber nur ein Member jedes Objekts wird zurückgegeben: der Vorname von Studenten mit dem Nachnamen Garcia.  Da `currentStudent.First` eine Zeichenfolge ist, lautet der Datentyp der von `studentQuery3` zurückgegebenen Sequenz `IEnumerable(Of String)` \(eine Zeichenfolgesequenz\).  Wie in früheren Beispielen wird die Zuordnung eines Datentyps für `studentQuery3` dem Compiler in Form eines lokalen Typrückschlusses überlassen.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
 2.  Zeigen Sie mit der Maus auf `studentQuery3` im Code, um zu überprüfen, dass der zugewiesene Typ `IEnumerable(Of String)` lautet.  
   
@@ -132,14 +132,14 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
   
      Im folgenden Beispiel wird eine Abfrage erstellt, die den Namen und den Rang von Studierenden höherer Semester mit einem akademischen Rang zwischen 1 und 10 nach Rang geordnet zurückgibt.  In diesem Beispiel muss der `studentQuery4`\-Typ abgeleitet werden, da die `Select`\-Klausel eine Instanz eines anonymen Typs zurückgibt und ein anonymer Typ keinen verwendbaren Namen hat.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
 2.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
   
 ## Weitere Beispiele  
  Nachdem Sie nun die Grundlagen kennen gelernt haben, finden Sie im Folgenden eine Liste zusätzlicher Beispiele, die die Flexibilität und Leistungsstärke von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen veranschaulichen.  Jedem Beispiel ist eine kurze Beschreibung vorangestellt.  Zeigen Sie mit der Abfrageergebnisvariable für jede Abfrage, um den abgeleiteten Typ zu finden. Verwenden Sie eine `For Each`\-Schleife, um die Ergebnisse zu erzeugen.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## Zusätzliche Informationen  
  Nachdem Sie nun mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  

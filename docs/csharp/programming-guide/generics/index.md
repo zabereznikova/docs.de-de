@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # Generika (C#-Programmierhandbuch)
 Generika wurden in Version 2.0 der Programmiersprache C\# und der Common Language Runtime \(CLR\) hinzugefügt.  Generika führen das Konzept der Typparameter in .NET Framework ein. Dadurch wird des möglich, Klassen und Methoden zu entwerfen, in denen die Angabe eines oder mehrerer Typen verzögert wird, bis die Klasse bzw. Methode durch Clientcode deklariert und instanziiert wird.  Indem Sie beispielsweise den generischen Typparameter T wie im folgenden Beispiel verwenden, können Sie eine einzelne Klasse schreiben, die von anderem Clientcode verwendet werden kann, ohne die damit verbundenen Kosten und Risiken von Boxingoperationen oder Umwandlungen zur Laufzeit:  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
 ## Übersicht über Generika  
   

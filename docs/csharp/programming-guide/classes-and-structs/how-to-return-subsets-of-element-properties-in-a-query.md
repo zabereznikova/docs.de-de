@@ -31,7 +31,7 @@ select student.ID;
 ## Beispiel  
  Das folgende Beispiel zeigt, wie Sie einen anonymen Typ verwenden können, um nur eine Teilmenge der Eigenschaften jedes Quellelements zurückzugeben, das der angegebenen Bedingung entspricht.  
   
- [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#31)]  
+ [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
  Beachten Sie, dass der anonyme Typ den Namen des Quellelements für seine Eigenschaften verwendet, wenn keine Namen angegeben werden.  Um den Eigenschaften im anonymen Typ neue Namen zu geben, schreiben Sie die `select`\-Anweisung wie folgt:  
   

@@ -50,7 +50,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
   
  Im folgenden Beispiel wird sowohl ein korrekter als auch ein fehlerhafter Vergleich zweier `Double`\-Werte veranschaulicht.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
  Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>\-Methode der <xref:System.Double>\-Struktur verwendet. So wird eine größere Genauigkeit als mit dem `CStr`\-Schlüsselwort erreicht.  Der Standardwert ist 15 Stellen, aber mit dem Format "G17" wird er auf 17 Stellen erweitert.  
   
@@ -66,7 +66,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
   
  Im folgenden Beispiel wird die potenzielle Ungenauigkeit von Gleitkommaoperanden veranschaulicht.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
  Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>\-Methode der <xref:System.Double>\-Struktur verwendet. So wird eine größere Genauigkeit als mit dem `CStr`\-Schlüsselwort erreicht.  Der Standardwert ist 15 Stellen, aber mit dem Format "G17" wird er auf 17 Stellen erweitert.  
   
@@ -103,7 +103,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
  Die Verwendung von Einschränkungskonvertierungen ist immer mit Risiken verbunden, weil sie zur Laufzeit fehlschlagen können.  Beispielsweise kann eine Konvertierung von `String` in `Char` fehlschlagen, wenn der `String`\-Wert mehrere Zeichen enthält.  In gut geschriebenen Programmen wird daher das `C`\-Typzeichen verwendet.  
   

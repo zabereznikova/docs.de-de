@@ -28,7 +28,7 @@ Verwenden Sie die `RenameFile`\-Methode des `My.Computer.FileSystem`\-Objekts zu
   
 -   Verwenden Sie zum Umbenennen einer Datei die `My.Computer.FileSystem.RenameFile`\-Methode.  In diesem Beispiel wird die Datei mit dem Namen `Test.txt` in `SecondTest.txt` umbenannt.  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
  Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  In der Codeausschnittauswahl finden Sie den Codeausschnitt unter **Dateisystem \- Verarbeiten von Laufwerken, Ordnern und Dateien**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   

@@ -25,12 +25,12 @@ In einem Abfrageausdruck bewirkt die `orderby`\-Klausel, dass die zurückgegeben
 ## Beispiel  
  Im folgenden Beispiel sortiert die erste Abfrage die Wörter in alphabetischer Reihenfolge beginnend bei A, und die zweite Abfrage sortiert die gleichen Wörter in absteigender Reihenfolge.  \(Das `ascending`\-Schlüsselwort ist der Standardsortierwert und muss nicht angegeben werden.\)  
   
- [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#20)]  
+ [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird eine primäre Sortierung der Nachnamen der Studenten und dann eine sekundäre Sortierung der Vornamen durchgeführt.  
   
- [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#22)]  
+ [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## Hinweise  
  Bei der Kompilierung übersetzt die `orderby`\-Klausel den Aufruf in die <xref:System.Linq.Enumerable.OrderBy%2A>\-Methode.  Mehrere Schlüssel in der `orderby`\-Klausel werden in <xref:System.Linq.Enumerable.ThenBy%2A>\-Methodenaufrufe übersetzt.  

@@ -22,15 +22,15 @@ In C\#\-Versionen vor 2.0 bestand die einzige Möglichkeit zum Deklarieren eines
   
  Anonyme Methoden bieten im Wesentlichen eine Möglichkeit, einen Codeblock als Delegatparameter zu übergeben.  Hier zwei Beispiele:  
   
- [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#6)]  
+ [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#5)]  
+ [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
  Durch anonyme Methoden wird der Codierungsaufwand des Instanziierens von Delegaten reduziert, weil keine separate Methode erstellt werden muss.  
   
  Beispielsweise kann die Angabe eines Codeblocks anstelle eines Delegaten in einer Situation nützlich sein, in der das Erstellen einer Methode als unnötiger Aufwand erscheinen würde.  Ein gutes Beispiel dafür wäre das Starten eines neuen Threads.  Diese Klasse erstellt einen Thread und enthält außerdem den Code, den der Thread ausführt, ohne dass eine zusätzliche Methode für den Delegaten erstellt werden muss.  
   
- [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#7)]  
+ [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
 ## Hinweise  
  Der Gültigkeitsbereich der Parameter einer anonymen Methode ist der *anonyme Methodenblock*.  
@@ -39,7 +39,7 @@ In C\#\-Versionen vor 2.0 bestand die einzige Möglichkeit zum Deklarieren eines
   
  Die lokalen Variablen und Parameter, in deren Gültigkeitsbereich eine anonyme Methodendeklaration enthalten ist, werden als *äußere* Variablen der anonymen Methode bezeichnet.  Zum Beispiel ist `n` im folgenden Codesegment eine äußere Variable:  
   
- [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#8)]  
+ [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
  Ein Verweis auf die äußere Variable `n` gilt als  *erfasst* Wenn der Delegat erstellt wird.  Im Gegensatz zu lokalen Variablen erstreckt sich die Lebensdauer einer erfassten Variablen, bis die Delegaten, die anonymen Methoden verweisen, für Garbagecollection freigegeben werden.  
   
@@ -58,7 +58,7 @@ In C\#\-Versionen vor 2.0 bestand die einzige Möglichkeit zum Deklarieren eines
   
  In beiden Fällen wird eine Meldung angezeigt, wenn der Delegat aufgerufen wird.  
   
- [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#4)]  
+ [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

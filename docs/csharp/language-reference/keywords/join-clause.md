@@ -33,14 +33,14 @@ Die `join`\-Klausel ist nützlich, um Elemente aus unterschiedlichen Quellsequen
 ## Innerer Join  
  Im folgenden Beispiel wird ein einfacher innerer Equijoin veranschaulicht.  Diese Abfrage erzeugt eine flache Sequenz von "Produktname\/Kategorie"\-Paaren.  Die gleiche Kategoriezeichenfolge wird in mehreren Elementen angezeigt.  Wenn ein Element aus `categories` nicht über entsprechende `products` verfügt, wird diese Kategorie nicht in den Ergebnissen angezeigt.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#24)]  
+ [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## Group Join  
  Eine `join`\-Klausel mit einem `into`\-Ausdruck wird als Group Join bezeichnet.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#25)]  
+ [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Ein Group Join erzeugt eine hierarchische Ergebnissequenz, in der Elemente in der linken Quellsequenz einem oder mehr entsprechenden Elementen in der rechten Quellsequenz zugeordnet werden.  Ein Group Join hat keine Entsprechung im relationalen Sinn; es ist im Grunde eine Sequenz von Objektarrays.  
   
@@ -50,14 +50,14 @@ Die `join`\-Klausel ist nützlich, um Elemente aus unterschiedlichen Quellsequen
   
  Sie können natürlich auch das Ergebnis eines Group Joins als Generator einer anderen Unterabfrage verwenden:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#26)]  
+ [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## Linker äußerer Join  
  In einem linken äußeren Join werden alle Elemente in der linken Quellsequenz zurückgegeben, selbst dann, wenn es keine entsprechenden Elemente in der rechten Sequenz gibt.  Um einen linken äußeren Join in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] durchzuführen, verwenden Sie die `DefaultIfEmpty`\-Methode zusammen mit einem Group Join, um ein rechtes Standardelement anzugeben, das erstellt wird, wenn es keine Entsprechung für ein linkes Element gibt.  Sie können `null` als Standardwert für einen beliebigen Referenztyp verwenden, oder Sie können einen benutzerdefinierten Standardtyp festlegen.  Im folgenden Beispiel wird ein benutzerdefinierter Standardtyp gezeigt:  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#27)]  
+ [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -78,7 +78,7 @@ Die `join`\-Klausel ist nützlich, um Elemente aus unterschiedlichen Quellsequen
 ## Beispiel  
  Im folgenden Beispiel werden die Ergebnisse eines inneren Joins, eines Group Joins und eines linken äußeren Joins der gleichen Datenquellen mit den gleichen übereinstimmenden Schlüsseln verglichen.  Diesen Beispielen wird zusätzlicher Code hinzugefügt, um die Ergebnisse in der Konsolenanzeige zu erläutern.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#23)]  
+ [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## Hinweise  
  Eine `join`\-Klausel, der nicht `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>\-Methodenaufruf übersetzt.  Eine `join`\-Klausel, der `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>\-Methodenaufruf übersetzt.  

@@ -29,7 +29,7 @@ Mit der <xref:System.Enum.GetValues%2A>\-Methode und der <xref:System.Enum.GetNa
   
 -   Rufen Sie mit der <xref:System.Enum.GetNames%2A>\-Methode die den Enumerationsmembern zugeordneten Zeichenfolgen ab.  In diesem Beispiel wird eine Enumeration, `flavorEnum`, deklariert. Anschließend werden mithilfe der <xref:System.Enum.GetNames%2A>\-Methode die Zeichenfolgen angezeigt, die den einzelnen Membern zugeordnet sind.  
   
-     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#2)]  
+     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Enum.GetValues%2A>   

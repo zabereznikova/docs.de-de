@@ -33,12 +33,12 @@ caps.handback.revision: 19
 
 Ein *boolescher Ausdruck* ist ein Ausdruck, der zu einem Wert mit dem [Boolean\-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ausgewertet wird: `True` oder `False`.  `Boolean`\-Ausdrücke können verschiedene Formen aufweisen.  Die einfachste Form ist der direkte Vergleich des Werts einer `Boolean`\-Variablen mit einem `Boolean`\-Literal, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
 ## Zwei Bedeutungen des Operators '\='  
  Beachten Sie, dass die Zuweisungsanweisung `newCustomer = True` wie der Ausdruck im vorherigen Beispiel aussieht. Sie führt jedoch eine andere Funktion aus und wird auf eine andere Art verwendet.  Im vorherigen Beispiel stellt der Ausdruck `newCustomer = True` einen booleschen Wert dar, und das Zeichen `=` wird als Vergleichsoperator interpretiert.  In einer eigenständigen Anweisung wird das Zeichen `=` als Zuweisungsoperator interpretiert, und der Wert auf der rechten Seite wird der Variablen auf der linken Seite zugewiesen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
   
  Weitere Informationen finden Sie unter [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) und unter [Statements](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -59,7 +59,7 @@ Ein *boolescher Ausdruck* ist ein Ausdruck, der zu einem Wert mit dem [Boolean\-
 ## Kurzschlussoperatoren  
  Das Verhalten der logischen Operatoren `AndAlso` und `OrElse` wird als *Kurzschluss* bezeichnet.  Ein Kurzschlussoperator wertet den linken Operanden zuerst aus.  Wenn der linke Operand den Wert des gesamten Ausdrucks bestimmt, wird die Ausführung des Programms fortgesetzt, ohne den rechten Ausdruck auszuwerten.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   
  Im vorangehenden Beispiel wertet der Operator den linken Ausdruck `45 < 12` aus.  Da der linke Ausdruck `False` ergibt, muss der gesamte logische Ausdruck `False` ergeben.  Das Programm überspringt daher die Ausführung des Codes im `If`\-Block, ohne den rechten Ausdruck `testFunction(3)` auszuwerten.  In diesem Beispiel wird `testFunction()` nicht aufgerufen, da der linke Ausdruck den gesamten Ausdruck als False bestimmt.  
   
@@ -68,7 +68,7 @@ Ein *boolescher Ausdruck* ist ein Ausdruck, der zu einem Wert mit dem [Boolean\-
 ### Vergleich mit Operatoren, die keine Kurzschlussoperatoren sind  
  Im Gegensatz dazu werden beide Seiten des logischen Operators ausgewertet, wenn die logischen Operatoren `And` und `Or` verwendet werden.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
   
  Im vorherigen Beispiel wird `testFunction()` aufgerufen, obwohl der linke Ausdruck `False` ergibt.  
   

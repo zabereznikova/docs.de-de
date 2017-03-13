@@ -31,7 +31,7 @@ Mit der <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>\-Methode 
   
      In diesem Beispiel wird die Zeichenfolge `"This is a test string."` in die Datei `Testfile.txt` geschrieben.  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-append-to-text-fi_1.vb)]  
+     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
   
 ## Robuste Programmierung  
  Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  

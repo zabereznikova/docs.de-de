@@ -24,7 +24,7 @@ Wenn Sie eine `for` Schleife verwenden, können Sie eine Anweisung oder einen An
 ## Beispiel  
  Im folgenden Beispiel wird der Wert von `i` in die Konsole geschrieben und erhöht durch 1 während jeder Iteration der Schleife.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/csharp/for_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  Die `for`\-Anweisung im vorherigen Beispiel führt die folgenden Aktionen aus.  
   
@@ -101,11 +101,11 @@ for (initializer; condition; iterator)
   
  Im folgenden Beispiel werden einige allgemeine weniger Möglichkeiten: einen Wert zu einer externen Schleifenvariable im Initialisiererabschnitt zuweisen, die `Console.WriteLine`\-Methode im Initialisierer und in den Iteratorabschnitten und das Ändern der Werte von zwei Variablen im Iteratorabschnitt aufgerufen.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/csharp/for_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  Alle Ausdrücke, die eine `for`\-Anweisung definieren, sind optional.  Beispielsweise erstellt die folgende Anweisung eine Endlosschleife.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/csharp/for_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

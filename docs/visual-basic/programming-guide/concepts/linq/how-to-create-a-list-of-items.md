@@ -28,7 +28,7 @@ Der Code in diesem Thema definiert eine `Student`\-Klasse und erstellt eine List
 ## Beispiel  
  Wenn Sie mit der exemplarischen Vorgehensweise arbeiten, können Sie diesen Code für die Datei "Module1.vb" des Projekts verwenden, die hier erstellt wird.  Ersetzen Sie einfach die mit \*\*\* markierten Zeilen in der `Main`\-Methode durch die Abfragen und Abfrageausführungen, die in der exemplarischen Vorgehensweise bereitgestellt werden.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/how-to-create-a-list-of-_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
 ## Siehe auch  
  [Gewusst\-wie\-Video: Schreiben von Abfragen in Visual Basic](http://msdn.microsoft.com/library/bb820884.aspx)   

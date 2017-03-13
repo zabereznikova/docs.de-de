@@ -59,7 +59,7 @@ object.<child>
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie auf die untergeordneten Knoten mit dem Namen `phone` aus dem `contact`\-Objekt zugegriffen werden kann.  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -68,7 +68,7 @@ object.<child>
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie auf die untergeordneten Knoten mit dem Namen `phone` aus der Auflistung zugegriffen werden kann, die von der untergeordneten `contact`\-Achseneigenschaft des `contacts`\-Objekts zurückgegeben wurde.  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -77,7 +77,7 @@ object.<child>
 ## Beispiel  
  Das folgende Beispiel deklariert `ns` als ein XML\-Namespacepräfix.  Anschließend wird mit dem Namespacepräfix ein XML\-Literal erstellt und auf den ersten untergeordneten Knoten mit dem qualifizierten Namen `ns:name` zugegriffen.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

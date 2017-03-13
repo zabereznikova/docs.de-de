@@ -46,13 +46,13 @@ Wenn eine Prozedur über einen [ParamArray](../../../../visual-basic/language-re
 ## Beispiel  
  Im folgenden Beispiel wird eine mit einem [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)\-Parameter definierte Prozedur gezeigt und danach ein entsprechender Satz überladener Prozeduren.  
   
- [!code-vb[VbVbcnProcedures#69](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
  Sie können eine solche Prozedur nicht mit einer Parameterliste überladen, die ein eindimensionales Array für das Parameterarray akzeptiert.  Sie können jedoch die Signaturen der anderen impliziten Überladungen verwenden.  Die folgenden Deklarationen verdeutlichen dies.  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
  Im Code der überladenen Versionen muss nicht überprüft werden, ob der Aufrufcode einen oder mehrere Werte für den `ParamArray`\-Parameter angegeben hat, und wenn dies der Fall war, wie viele Werte bereitgestellt wurden.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] übergibt die Steuerung der Version, zu der die angegebene Argumentliste passt.  
   

@@ -32,7 +32,7 @@ Wenn zwei auf Objekte verweisende Variablen vorhanden sind, können Sie mit dem 
   
 -   Verwenden Sie den [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) oder den [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) mit den zwei Variablen als Operanden.  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-test-whether-two-_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
  Möglicherweise soll eine bestimmte Aktion ausgeführt werden, je nachdem, ob zwei Objekte auf dieselbe Instanz verweisen.  Im vorherigen Beispiel wird das Steuerelement `c` mit dem aktiven Steuerelement in dem Formular `f` verglichen.  Wenn kein aktives Steuerelement vorhanden ist oder wenn ein aktives Steuerelement vorhanden ist, das jedoch nicht dieselbe Instanz wie `c` ist, schlägt die `If`\-Anweisung fehl, und die Prozedur wird ohne weitere Verarbeitung beendet.  
   

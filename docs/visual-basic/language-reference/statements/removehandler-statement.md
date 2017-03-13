@@ -48,7 +48,7 @@ RemoveHandler event, AddressOf eventhandler
 >  Für benutzerdefinierte Ereignisse ruft die `RemoveHandler`\-Anweisung den `RemoveHandler`\-Accessor des Ereignisses auf.  Weitere Informationen über benutzerdefinierte Ereignisse finden Sie unter [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Beispiel  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
   
 ## Siehe auch  
  [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md)   

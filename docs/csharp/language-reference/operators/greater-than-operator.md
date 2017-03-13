@@ -25,7 +25,7 @@ Alle numerischen Typen und Enumerationstypen definieren einen relationalen Opera
  Benutzerdefinierte Typen können den Operator `>` überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  Wenn `>` überladen wird, muss auch [\<](../../../csharp/language-reference/operators/less-than-operator.md) überladen werden.  Beim Überladen eines binären Operators wird implizit auch der zugehörige Zuweisungsoperator überladen, falls vorhanden.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#29)]  
+ [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

@@ -27,7 +27,7 @@ caps.handback.revision: 14
 Dieses Beispiel definiert die `MessageBox`\-Funktion in der Datei "user32.dll", ruft sie auf und fügt ihr anschließend eine Zeichenfolge hinzu.  
   
 ## Beispiel  
- [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#1)]  
+ [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
 ## Kompilieren des Codes  
  Dieses Beispiel setzt Folgendes voraus:  

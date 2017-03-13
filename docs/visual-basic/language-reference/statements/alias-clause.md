@@ -31,7 +31,7 @@ Gibt an, dass eine externe Prozedur in der DLL einen anderen Namen aufweist.
   
  Im folgenden Beispiel wird mit dem `Alias`\-Schlüsselwort der Name der Funktion in "advapi32.dll" \(`GetUserNameA`\) angegeben, der von `getUserName` in diesem Beispiel verwendet wird.  Die `getUserName`\-Funktion wird in Sub `getUser` aufgerufen, wodurch der Name des aktuellen Benutzers angezeigt wird.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
   
 ## Siehe auch  
  [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)

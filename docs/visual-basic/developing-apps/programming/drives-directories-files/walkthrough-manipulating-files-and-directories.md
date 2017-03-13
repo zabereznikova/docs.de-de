@@ -66,13 +66,13 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 2.  Fügen Sie dem `Click`\-Ereignishandler den folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
      Mit dem `FolderBrowserDialog1.ShowDialog`\-Aufruf wird das Dialogfeld **Ordner suchen** geöffnet.  Nach dem Klicken auf **OK** wird die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>\-Eigenschaft als Argument an die `ListFiles`\-Methode gesendet, die im nächsten Schritt hinzugefügt wird.  
   
 3.  Fügen Sie die folgende `ListFiles`\-Methode hinzu:  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
      Mit diesem Code wird zuerst **ListBox** gelöscht.  
   
@@ -92,7 +92,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 2.  Fügen Sie dem `Click`\-Ereignishandler den folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
      Der Code überprüft, ob ein Element in `ListBox` ausgewählt ist.  Anschließend wird der Dateipfadeintrag aus `ListBox` abgerufen.  Mithilfe der <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A>\-Methode wird überprüft, ob die Datei noch vorhanden ist.  
   
@@ -100,7 +100,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 3.  Fügen Sie die folgende `GetTextForOutput`\-Methode hinzu:  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
      Der Code ruft mithilfe der <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>\-Methode Dateiparameter ab.  Die Dateiparameter werden zu <xref:System.Text.StringBuilder> hinzugefügt.  
   
@@ -116,7 +116,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 1.  Fügen Sie am Ende des `examineButton_Click`\-Ereignishandlers folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
      Vom Code wird der Protokolldateipfad festgelegt, damit die Protokolldatei im selben Verzeichnis abgelegt wird wie die ausgewählte Datei.  Für den Text des Protokolleintrags wird das aktuelle Datum und die aktuelle Uhrzeit festgelegt, gefolgt von den Dateiinformationen.  
   
@@ -132,7 +132,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 2.  Fügen Sie dem Ereignishandler folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
      Mit diesem Code wird für das Standardverzeichnis des Ordnerbrowsers das aktuelle Verzeichnis festgelegt.  
   
@@ -144,7 +144,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 1.  Fügen Sie die folgende `SetEnabled`\-Methode hinzu:  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
      Die `SetEnabled`\-Methode aktiviert oder deaktiviert Steuerelemente abhängig davon, ob ein Element in `ListBox` ausgewählt wird.  
   
@@ -161,12 +161,12 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
 ## Vollständiges Beispiel für My.Computer.FileSystem  
  Nachfolgend ist das vollständige Beispiel angegeben:  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## Vollständiges Beispiel für System.IO  
  Im folgenden entsprechenden Beispiel werden Klassen vom <xref:System.IO>\-Namespace anstelle von `My.Computer.FileSystem`\-Objekten verwendet.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## Siehe auch  
  <xref:System.IO>   

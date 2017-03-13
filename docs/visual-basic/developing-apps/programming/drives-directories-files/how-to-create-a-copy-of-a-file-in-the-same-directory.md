@@ -32,13 +32,13 @@ Verwenden Sie die `My.Computer.FileSystem.CopyFile`\-Methode, um die Dateien zu 
   
 -   Verwenden Sie die `CopyFile`\-Methode, und geben Sie die Zieldatei und den Zielspeicherort an.  Im folgenden Beispiel wird eine Kopie von `test.txt` mit dem Namen `test2.txt` erstellt.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
 ### So erstellen Sie eine Kopie einer Datei im gleichen Ordner und überschreiben vorhandene Dateien  
   
 -   Verwenden Sie die `CopyFile`\-Methode. Geben Sie dabei die Zieldatei und den Speicherort an, und legen Sie `overwrite` auf `True` fest.  Im folgenden Beispiel wird eine Kopie von `test.txt` mit dem Namen `test2.txt` erstellt, wobei vorhandene Dateien mit diesem Namen überschrieben werden.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
 ## Robuste Programmierung  
  Die folgenden Bedingungen verursachen möglicherweise das Auslösen einer Ausnahme:  

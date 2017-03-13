@@ -108,11 +108,11 @@ End Property
 ### Darstellung von Deklaration und Aufruf  
  Die folgende Eigenschaft speichert einen vollständigen Namen als zwei konstituierende Namen, den Vornamen und den Nachnamen.  Wenn der Aufrufcode `fullName` liest, kombiniert die `Get`\-Prozedur die beiden konstituierenden Namen und gibt den vollständigen Namen zurück.  Wenn der Aufrufcode einen neuen vollständigen Namen zuweist, versucht die `Set`\-Prozedur, den Namen in zwei konstituierende Namen aufzulösen.  Wird kein Leerzeichen gefunden, wird der gesamte Name als Vorname gespeichert.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
  Im folgenden Beispiel werden typische Aufrufe der Eigenschaftenprozeduren von `fullName` dargestellt.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
