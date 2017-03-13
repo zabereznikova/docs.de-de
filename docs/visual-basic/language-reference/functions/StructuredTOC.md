@@ -1,7 +1,0 @@
-# [Funktionen](index.md)
-## [Conversion Functions](conversion-functions.md)
-## [Mathematische Funktionen](math-functions.md)
-## [String-Funktionen](string-functions.md)
-## [Type Conversion Functions](type-conversion-functions.md)
-### [Return Values for the CStr Function](return-values-for-the-cstr-function.md)
-## [CType-Funktion](ctype-function.md)

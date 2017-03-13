@@ -1,8 +1,0 @@
-# [Gewusst wie: Drucken eines Formulars mithilfe der PrintForm-Komponente](how-to-print-a-form-by-using-the-printform-component.md)
-# [Gewusst wie: Drucken des Clientbereichs eines Formulars](how-to-print-the-client-area-of-a-form.md)
-# [Deploying Applications That Reference the PrintForm Component](deploying-applications-that-reference-the-printform-component.md)
-# [Adding Printable Reports to Visual Studio Applications](adding-printable-reports-to-visual-studio-applications.md)
-# [Printing and Reporting](printing-and-reporting.md)
-# [Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars](how-to-print-client-and-non-client-areas-of-a-form.md)
-# [Gewusst wie: Drucken eines bildlauffähigen Formulars](how-to-print-a-scrollable-form.md)
-# [PrintForm Component](printform-component.md)

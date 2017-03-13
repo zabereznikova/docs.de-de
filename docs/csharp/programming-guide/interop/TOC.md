@@ -1,7 +1,0 @@
-# [Gewusst wie: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](how-to-use-platform-invoke-to-play-a-wave-file.md)
-# [Überblick über die Interoperabilität](interoperability-overview.md)
-# [Gewusst wie: Indizierte Eigenschaften bei der COM-Interop-Programmierung](how-to-use-indexed-properties-in-com-interop-rogramming.md)
-# [COM-Beispielklasse](example-com-class.md)
-# [Exemplarische Vorgehensweise: Office-Programmierung](walkthrough-office-programming.md)
-# [Interoperabilität](interoperability.md)
-# [Gewusst wie: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen](how-to-access-office-onterop-objects.md)
