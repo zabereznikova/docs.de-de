@@ -21,7 +21,7 @@ Ein <xref:System.Collections.Generic.Dictionary%602> enthält eine Auflistung vo
 ## Beispiel  
  Im folgenden Codebeispiel wird ein <xref:System.Collections.Generic.Dictionary%602> mit Instanzen vom Typ `StudentName` initialisiert.  
   
- [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#34)]  
+ [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
  Beachten Sie die zwei Paare geschweifter Klammern in jedem Element der Auflistung.  Die inneren Klammern schließen den Objektinitialisierer für `StudentName` ein, und die äußeren Klammern umfassen den Initialisierer für das Schlüssel\-Wert\-Paar, das dem `students` <xref:System.Collections.Generic.Dictionary%602> hinzugefügt wird.  Schließlich wird der ganze Auflistungsinitialisierer für das Wörterbuch in geschweifte Klammern eingeschlossen.  
   

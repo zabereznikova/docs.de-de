@@ -101,23 +101,23 @@ Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zur
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `+` verwendet, um Zahlen zu addieren.  Wenn beide Operanden numerisch sind, berechnet Visual Basic das arithmetische Ergebnis.  Das arithmetische Ergebnis stellt die Summe der beiden Operanden dar.  
   
- [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
  Sie können mit dem Operator `+` auch Zeichenfolgen verketten.  Wenn beide Operanden Zeichenfolgen sind, verkettet Visual Basic die Operanden.  Das Verkettungsergebnis ist eine einzige Zeichenfolge, bei der der Inhalt der beiden Operanden hintereinander angeordnet ist.  
   
  Wenn die Operanden unterschiedliche Typen sind, hängt das Ergebnis von der Einstellung der [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) ab.  Im folgenden Beispiel wird das Ergebnis veranschaulicht, wenn `Option Strict` auf `On` festgelegt ist.  
   
- [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_4.vb)]  
+ [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
+[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
  Im folgenden Beispiel wird das Ergebnis veranschaulicht, wenn `Option Strict` auf `Off` festgelegt ist.  
   
- [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_5.vb)]  
+ [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_6.vb)]  
+ [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
+[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
  Um Mehrdeutigkeiten zu vermeiden, sollten Sie für Verkettungen den Operator `&` anstelle von `+` verwenden.  
   

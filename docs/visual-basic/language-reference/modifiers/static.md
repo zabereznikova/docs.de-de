@@ -45,7 +45,7 @@ Legt fest, dass eine oder mehrere deklarierte lokale Variablen nach Beendigung d
 ## Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `Static`.  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/visualbasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
  Die `Static`\-Variable `totalSales` wird nur einmal mit dem Wert 0 \(null\) initialisiert.  Bei jeder Ausführung von `updateSales` enthält `totalSales` den zuletzt berechneten Wert.  
   

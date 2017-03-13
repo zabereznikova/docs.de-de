@@ -28,7 +28,7 @@ caps.handback.revision: 18
 In diesem Beispiel ist dargestellt, wie eine Attributachseneigenschaft verwendet wird, um auf XML\-Attribute in einem XML\-Element nach Namen zuzugreifen.  Insbesondere wird die Attributachseneigenschaft `type` verwendet, um auf das Attribut mit dem Namen `type` im `phone`\-Objekt zuzugreifen.  
   
 ## Beispiel  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-attrib_1.vb)]  
+ [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>   

@@ -23,17 +23,17 @@ In den folgenden Beispielen wird dargestellt, wie Dateien und Ordner synchron mi
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie Dateien und Verzeichnisse kopiert werden.  
   
- [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#7)]  
+ [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie Dateien und Verzeichnisse verschoben werden.  
   
- [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#8)]  
+ [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_2.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie Dateien und Verzeichnisse gelöscht werden.  
   
- [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#9)]  
+ [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_3.cs)]  
   
 ## Siehe auch  
  <xref:System.IO?displayProperty=fullName>   

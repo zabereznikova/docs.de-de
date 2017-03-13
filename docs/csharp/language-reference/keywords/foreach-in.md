@@ -44,7 +44,7 @@ Mit der `foreach`\-Anweisung wird eine Gruppe von eingebetteten Anweisungen für
   
 -   eine `foreach`\-Schleife, die die Anzahl von Elementen im Array enthält  
   
- [!code-cs[csrefKeywordsIteration#4](../../../csharp/language-reference/keywords/codesnippet/csharp/foreach-in_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/foreach-in_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

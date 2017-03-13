@@ -41,7 +41,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## Beispiel  
  Im folgenden Beispiel werden verschiedene Möglichkeiten veranschaulicht, auf Informationen über Dateien und Ordner zuzugreifen.  
   
- [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#6)]  
+ [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
   
 ## Robuste Programmierung  
  Wenn Sie vom Benutzer angegebene Pfadzeichenfolgen verarbeiten, sollten Sie auch Ausnahmen für die folgenden Bedingungen behandeln:  

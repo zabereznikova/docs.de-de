@@ -34,11 +34,11 @@ Führt eine `New`\-Klausel ein, um eine neue Objektinstanz zu erstellen, gibt ei
   
  Sie können eine `New`\-Klausel in Deklarationsanweisungen oder Zuweisungsanweisungen verwenden.  Bei der Ausführung der Anweisung wird der entsprechende Konstruktor der angegebenen Klasse aufgerufen, und die festgelegten Argumente werden übergeben.  Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Instanzen einer `Customer`\-Klasse mit zwei Konstruktoren erstellt, von denen einer keine Parameter und der andere einen Zeichenfolgenparameter annimmt.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
  Da Arrays Klassen sind, kann `New` eine neue Arrayinstanz erstellen, wie in den folgenden Beispielen veranschaulicht.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
  Die Common Language Runtime \(CLR\) löst einen <xref:System.OutOfMemoryException>\-Fehler aus, wenn nicht genügend Speicher für die Erstellung der neuen Instanz verfügbar ist.  
   

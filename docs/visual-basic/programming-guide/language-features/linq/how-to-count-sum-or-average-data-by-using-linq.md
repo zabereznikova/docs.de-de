@@ -82,7 +82,7 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
      Fügen Sie folgenden Code zum `Load`\-Ereignis hinzu, um die als Eigenschaften des <xref:System.Data.Linq.DataContext> verfügbar gemachten Tabellen abzufragen und Anzahl, Summen und Durchschnittwerte der Ergebnisse zu bestimmen.  In diesem Beispiel wird die `Aggregate`\-Klausel verwendet, um ein einzelnes Ergebnis abzufragen, und die `Group By`\-Klausel, um einen Durchschnittswert für gruppierte Ergebnisse anzuzeigen.  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form6.vb#13)]  
+     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
   
 4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   

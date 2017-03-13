@@ -74,7 +74,7 @@ object.@<attribute>
 ## Beispiel  
  Das folgende Beispiel zeigt, wie die Werte der XML\-Attribute mit dem Namen `type` aus einer Auflistung von XML\-Elementen mit dem Namen `phone` abgerufen werden.  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ## Beispiel  
  Das folgenden Beispiel zeigt, wie Attribute für ein XML\-Element erstellt werden, zum einen deklarativ als Teil des XML, zum anderen auch dynamisch, indem ein Attribut zu einer Instanz eines <xref:System.Xml.Linq.XElement>\-Objekts hinzugefügt wird.  Das `type`\-Attribut wird deklarativ erstellt, und das `owne`r\-Attribut wird dynamisch erstellt.  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## Beispiel  
  Das folgende Beispiel verwendet die Syntax mit spitzen Klammern zum Abrufen des Werts des XML\-Attributs mit dem Namen `number-type`, der in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kein gültiger Bezeichner ist.  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -109,7 +109,7 @@ object.@<attribute>
 ## Beispiel  
  Das folgende Beispiel deklariert `ns` als ein XML\-Namespacepräfix.  Anschließend wird das Namespacepräfix verwendet, um ein XML\-Literal zu erstellen und auf den ersten untergeordneten Knoten mit dem qualifizierten Namen "`ns:name`" zuzugreifen.  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

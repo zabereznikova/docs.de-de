@@ -27,7 +27,7 @@ Das `My.Resources`\-Objekt ermöglicht den Zugriff auf die Ressourcen der Anwend
 ## Abrufen von Ressourcen  
  Eine Reihe von Ressourcen wie Audiodateien, Symbole, Bilder und Zeichenfolgen kann mit dem `My.Resources`\-Objekt abgerufen werden.  So können Sie z. B. auf die kulturspezifischen Ressourcendateien der Anwendung zugreifen.  Im folgenden Beispiel wird das Symbol des Formulars auf das Symbol mit dem Namen `Form1Icon` festgelegt, das in der Ressourcendatei der Anwendung gespeichert ist.  
   
- [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/rapid-application-develo_1.vb)]  
+ [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
  Das `My.Resources`\-Objekt macht nur globale Ressourcen verfügbar.  Es stellt keinen Zugriff auf Formularen zugeordnete Ressourcendateien bereit.  Sie müssen auf die Formularressourcen vom Formular aus zugreifen.  Weitere Informationen finden Sie unter [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/de-de/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
   

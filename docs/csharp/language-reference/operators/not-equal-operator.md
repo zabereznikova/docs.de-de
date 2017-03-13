@@ -28,7 +28,7 @@ Der Ungleichheitsoperator \(`!=`\) gibt false zurück, wenn seine Operanden glei
  Benutzerdefinierte Werttypen können den Operator `!=` überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  Dies ist auch bei benutzerdefinierten Referenztypen möglich, obwohl sich `!=` standardmäßig sowohl für vordefinierte als auch für benutzerdefinierte Referenztypen wie oben beschrieben verhält.  Wenn `!=` überladen wird, muss auch [\=\=](../../../csharp/language-reference/operators/equality-comparison-operator.md) überladen werden.  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#33)]  
+ [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

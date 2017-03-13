@@ -50,7 +50,7 @@ Importiert Namespaces aus der angegebenen Assembly.
 ## Beispiel  
  Der folgende Code wird kompiliert, wenn `/imports:system` angegeben wird.  
   
- [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/imports_1.vb)]  
+ [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
   
 ## Siehe auch  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

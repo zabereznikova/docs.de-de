@@ -27,7 +27,7 @@ Die meisten Abfragen in der einführende Dokumentation Language Integrated Query
 ## Standardabfrageoperator\-Erweiterungsmethoden  
  Im folgenden Beispiel werden ein einfacher *Abfrageausdruck* und die semantisch ähnliche Abfrage gezeigt, die als *methodenbasierte Abfrage* geschrieben wird.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#22)]  
+ [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  Die Ausgabe der beiden Beispiele ist identisch.  Sie können sehen, dass der Typ der Abfragevariablen in beiden Fällen der gleiche ist: <xref:System.Collections.Generic.IEnumerable%601>.  
   

@@ -86,17 +86,17 @@ End Namespace
 ## Beispiel  
  Im folgenden Beispiel werden zwei ineinander geschachtelte Namespaces deklariert.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel werden mehrere geschachtelte Namespaces in einer einzigen Zeile deklariert. Dieses Beispiel entspricht dem vorherigen Beispiel.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird auf die in den vorherigen Beispielen definierte Klasse zugegriffen.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird das Skelett einer neuen generischen Listenklasse definiert und dem <xref:System.Collections.Generic?displayProperty=fullName>\-Namespace hinzugefügt.  

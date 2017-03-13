@@ -24,7 +24,7 @@ caps.handback.revision: 32
 # if-else (C#-Referenz)
 Eine `if`\-Anweisung ermittelt, welche Anweisung basierend auf dem Wert eines `Boolean`Ausdrucks auszuführen ist. Im folgenden Beispiel wird die `Boolean`Variable `result` auf `true` festgelegt und dann in der `if`Anweisung überprüft. Die Ausgabe lautet `The condition is true`.  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  Die können die Beispiele in diesem Thema ausführen, indem Sie sie in die `Main`\-Methode einer Konsolenanwendung platzieren.  
   
@@ -43,28 +43,28 @@ Eine `if`\-Anweisung ermittelt, welche Anweisung basierend auf dem Wert eines `B
   
  Die Anweisung bzw. die Anweisungen in `then-statement` und `else-statement` können von einer beliebigen Art sein und eine weitere `if`Anweisung enthalten, die in der ursprünglichen `if`\-Anweisung geschachtelt ist. In geschachtelten `if`Anweisungen gehört jede `else`\-Klausel zur letzten `if`\-Anweisung, die nicht über eine zugehörige `else`\-Anweisung verfügt. Im folgenden Beispiel wird `Result1` angezeigt, wenn `m > 10` und `n > 20` zu true ausgewertet werden. Wenn `m > 10` true ist, `n > 20` hingegen false, wird `Result2` angezeigt.  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  Wenn stattdessen `Result2` angezeigt werden soll, wenn `(m > 10)` false ist, können Sie diese Zuordnung mithilfe von Klammern festlegen, um den Beginn und das Ende der geschachtelten `if`Anweisung anzugeben, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  `Result2` wird angezeigt, wenn die Bedingung `(m > 10)` zu false ausgewertet wird.  
   
 ## Beispiel  
  Im folgenden Beispiel geben Sie ein Zeichen über die Tastatur ein. Das Programm verwendet eine geschachtelte `if`\-Anweisung, um zu bestimmen, ob das eingegebene Zeichen ein alphabetisches Zeichen ist. Wenn das eingegebene Zeichen ein alphabetisches Zeichen ist, überprüft das Programm, ob das eingegebene Zeichen in Groß\- oder in Kleinschreibung ist. In beiden Fällen wird eine Meldung angezeigt.  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_4.cs)]  
+ [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## Beispiel  
  Sie können eine `if`Anweisung auch in einem else\-Block schachteln, wie der folgende Codeausschnitt zeigt. Im Beispiel werden `if`Anweisungen in zwei else\-Blocks und einem then\-Block geschachtelt. In den Kommentaren ist angegeben, welche Bedingungen in jedem Block true oder false sind.  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_5.cs)]  
+ [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird bestimmt, ob ein eingegebenes Zeichen ein Kleinbuchstabe, ein Großbuchstabe oder eine Zahl ist. Wenn alle drei Bedingungen false sind, ist das Zeichen kein alphanumerisches Zeichen. Das Beispiel zeigt für jeden Fall eine Meldung an.  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_6.cs)]  
+ [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  So, wie eine Anweisung im else\-Block oder then\-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können logische Operatoren wie [&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) und [\!](../../../csharp/language-reference/operators/logical-negation-operator.md) verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.  
   

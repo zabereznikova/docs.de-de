@@ -30,7 +30,7 @@ Die `My.Computer.FileSystem.CopyFile`\-Methode ermöglicht das Kopieren von Date
   
 -   Verwenden Sie die `CopyFile`\-Methode, um eine Datei zu kopieren, und geben Sie dabei eine Quelldatei und das Zielverzeichnis an.  Mit dem`overwrite`\-Parameter können Sie angeben, ob vorhandene Dateien überschrieben werden sollen.  Im folgenden Codebeispielen wird die Verwendung von `CopyFile` veranschaulicht.  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_1_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
   
 ## Robuste Programmierung  
  Die folgenden Bedingungen verursachen möglicherweise das Auslösen einer Ausnahme:  

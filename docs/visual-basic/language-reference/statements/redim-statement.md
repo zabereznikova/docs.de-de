@@ -96,7 +96,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## Beispiel  
  Im folgenden Beispiel wird die Größe der letzten Dimension eines dynamischen Arrays erhöht, ohne dass vorhandene Daten im Array verloren gehen. Anschließend wird die Größe mit einem Teilverlust der Daten reduziert.  Zuletzt wird die Größe zurück auf den Originalwert reduziert, und alle Arrayelemente werden neu initialisiert.  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
  Mit der `Dim`\-Anweisung wird ein neues Array mit drei Dimensionen erstellt.  Jede Dimension wird mit einer Grenze von 10 deklariert, sodass der Arrayindex für jede Dimension von 0 bis 10 reichen kann.  Im folgenden Text werden die drei Dimensionen als Ebene \(Layer\), Zeile \(Row\) und Spalte \(Column\) bezeichnet.  
   

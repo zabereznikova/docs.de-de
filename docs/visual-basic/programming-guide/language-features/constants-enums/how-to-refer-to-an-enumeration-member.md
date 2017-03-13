@@ -32,7 +32,7 @@ Enumerationen sind eine praktische Möglichkeit, mit Gruppen von verwandten Kons
   
 -   Qualifizieren Sie den Membernamen mit der Enumeration.  Im folgenden Beispiel wird der `Saturday`\-Member der `FirstDayOfWeek`\-Enumeration der Variablen `DayValue` zugewiesen.  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#19)]  
+     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
   
 ## Siehe auch  
  [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

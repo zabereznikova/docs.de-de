@@ -38,7 +38,7 @@ In diesem Beispiel wird die <xref:System.BitConverter>\-Klasse zur Konvertierung
 > [!NOTE]
 >  Je nach Computerarchitektur und verwendeter Endian\-Reihenfolge kann das Ergebnis vom Beispiel abweichen.  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_1.cs)]  
+ [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## Beispiel  
  In diesem Beispiel wird die <xref:System.BitConverter.GetBytes%28System.Int32%29>\-Methode der <xref:System.BitConverter>\-Klasse aufgerufen, um einen `int`\-Typ in ein Bytearray zu konvertieren.  
@@ -46,7 +46,7 @@ In diesem Beispiel wird die <xref:System.BitConverter>\-Klasse zur Konvertierung
 > [!NOTE]
 >  Je nach Computerarchitektur und verwendeter Endian\-Reihenfolge kann das Ergebnis vom Beispiel abweichen.  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_2.cs)]  
+ [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## Siehe auch  
  <xref:System.BitConverter>   

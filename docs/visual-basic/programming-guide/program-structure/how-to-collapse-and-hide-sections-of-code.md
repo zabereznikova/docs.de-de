@@ -31,7 +31,7 @@ Mit der `#Region`\-Direktive können Sie Codeabschnitte aus [!INCLUDE[vbprvb](..
   
 -   Fügen Sie den Codeabschnitt zwischen die `#Region`\-Anweisung und die `#End Region`\-Anweisung ein \(siehe folgendes Beispiel\):  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/how-to-collapse-and-hide_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
      Der `#Region`\-Block kann in einer Codedatei mehrfach verwendet werden, d. h. Benutzer können eigene Prozeduren\- und Klassenblöcke definieren, die wiederum reduziert werden können.  `#Region`\-Blöcke können auch in anderen `#Region`\-Blöcken geschachtelt werden.  
   

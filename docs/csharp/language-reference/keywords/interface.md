@@ -23,7 +23,7 @@ Eine Schnittstelle enthält nur die Signaturen von [Methoden](../../../csharp/pr
  Weitere Informationen und Beispiele finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
   
  Eine Schnittstelle kann ein Member eines Namespaces oder einer Klasse sein und Signaturen der folgenden Member enthalten:  
   
@@ -46,7 +46,7 @@ Eine Schnittstelle enthält nur die Signaturen von [Methoden](../../../csharp/pr
 ## Beispiel  
  Das folgende Beispiel veranschaulicht die Schnittstellenimplementierung.  In diesem Beispiel enthält die Schnittstelle die Eigenschaftendeklaration, und die Klasse enthält die Implementierung.  Eine beliebige Instanz einer Klasse, die `IPoint` implementiert, hat die ganzzahligen Eigenschaften `x` und `y`.  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

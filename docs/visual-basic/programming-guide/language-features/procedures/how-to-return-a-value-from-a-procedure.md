@@ -35,11 +35,11 @@ Eine `Function`\-Prozedur gibt an den Aufrufcode einen Wert zurück. Dies geschi
   
      Mit der folgenden `Function`\-Prozedur wird die längste Seite \(die Hypotenuse\) eines rechtwinkligen Dreiecks berechnet und an den Aufrufcode zurückgegeben.  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
      Das folgende Beispiel enthält einen typischen Aufruf von `hypotenuse`, mit dem der zurückgegebene Wert gespeichert wird.  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### So geben Sie mithilfe der Exit\-Funktion oder der End\-Funktion einen Wert zurück  
   

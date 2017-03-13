@@ -26,12 +26,12 @@ Mit Objektinitialisierern können Sie Typobjekte deklarativ initialisieren, ohne
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie ein neuer `StudentName`\-Typ mit einem Objektinitialisierer initialisiert wird.  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#35)]  
+ [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie eine Auflistung von `StudentName`\-Typen mit einem Auflistungsinitialisierer initialisiert wird.  Beachten Sie, dass ein Auflistungsinitialisierer aus einer Reihe von durch Trennzeichen getrennten Objektinitialisierern besteht.  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#36)]  
+ [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## Kompilieren des Codes  
  Um diesen Code auszuführen, kopieren Sie die Klasse, und fügen Sie sie in ein Visual C\#\-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] erstellt wurde.  Weitere Informationen finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  

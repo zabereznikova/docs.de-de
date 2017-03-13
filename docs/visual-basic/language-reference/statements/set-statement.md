@@ -93,7 +93,7 @@ End Set
 ## Beispiel  
  Im folgenden Beispiel wird mit der `Set`\-Anweisung der Wert einer Eigenschaft festgelegt.  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## Siehe auch  
  [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)   

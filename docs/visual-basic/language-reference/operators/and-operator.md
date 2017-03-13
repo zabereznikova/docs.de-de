@@ -84,14 +84,14 @@ result = expression1 And expression2
 ## Beispiel  
  In diesem Beispiel wird mit dem Operator `And` eine logische Konjunktion zweier Ausdrücke ausgeführt.  Das Ergebnis ist ein `Boolean`\-Wert, der darstellt, ob beide Ausdrücke `True` sind.  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
   
  Im vorangehenden Beispiel werden die Ergebnisse `True` bzw. `False` berechnet.  
   
 ## Beispiel  
  Im folgenden Beispiel wird mit dem Operator `And` eine logische Konjunktion einzelner Bits zweier numerischer Ausdrücke ausgeführt.  Das Bit im Ergebnismuster wird gesetzt, wenn die beiden entsprechenden Bits in den Operanden auf 1 gesetzt sind.  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
   
  Im vorangehenden Beispiel werden die Ergebnisse 8, 2 bzw. 0 berechnet.  
   

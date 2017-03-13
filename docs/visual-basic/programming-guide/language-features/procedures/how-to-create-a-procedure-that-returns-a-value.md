@@ -39,11 +39,11 @@ Mit einer `Function`\-Prozedur geben Sie einen Wert an den Aufrufcode zurück.
   
      Mit der folgenden `Function`\-Prozedur wird die längste Seite \(die Hypotenuse\) eines rechtwinkligen Dreiecks anhand der Werte der beiden anderen Seiten berechnet.  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-procedur_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
   
      Im folgenden Beispiel wird ein typischer Aufruf von `hypotenuse` dargestellt.  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-procedur_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

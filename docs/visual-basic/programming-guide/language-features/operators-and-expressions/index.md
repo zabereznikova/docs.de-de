@@ -67,7 +67,7 @@ Ein *Operator* ist ein Codeelement, das eine Operation für ein oder mehrere Cod
   
  Aktionen können von mehrere Operatoren in einem einzigen Ausdruck oder einer einzigen Anweisung ausgeführt werden, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
  Im vorherigen Beispiel führt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die Operationen im Ausdruck auf der rechten Seite des Zuweisungsoperators \(`=`\) aus und weist dann der Variablen `x` auf der linken Seite den Ergebniswert zu.  Es gibt praktisch keine Begrenzung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Sie müssen jedoch die Regeln der [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
   

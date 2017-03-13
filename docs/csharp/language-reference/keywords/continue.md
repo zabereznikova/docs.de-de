@@ -24,7 +24,7 @@ Das `continue`\-Anweisung die Steuerung zur nächsten Iteration einschließenden
 ## Beispiel  
  In diesem Beispiel wird ein Indikator initialisiert, um von 1 bis 10 zu zählen.  Indem die `continue`\-Anweisung in Verbindung mit dem Ausdruck `(i < 9)` verwendet, werden die Anweisungen zwischen `continue` und dem Ende des `for` Text übersprungen.  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/csharp/continue_1.cs)]  
+ [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

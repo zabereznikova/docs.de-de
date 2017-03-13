@@ -65,7 +65,7 @@ result = pattern << amount
 ## Beispiel  
  Im folgenden Beispiel werden mit dem Operator `<<` arithmetische Verschiebungen nach links für ganzzahlige Werte ausgeführt.  Das Ergebnis hat immer den gleichen Datentyp wie der zu verschiebende Ausdruck.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
  Das vorangehende Beispiel hat folgende Ergebnisse:  
   

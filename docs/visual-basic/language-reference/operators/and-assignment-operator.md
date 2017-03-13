@@ -51,7 +51,7 @@ variableorproperty &= expression
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `&=` verwendet, um zwei `String`\-Variablen zu verketten und das Ergebnis der ersten Variablen zuzuweisen.  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
 ## Siehe auch  
  [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)   

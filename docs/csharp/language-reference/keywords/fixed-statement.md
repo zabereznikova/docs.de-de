@@ -23,11 +23,11 @@ Die `fixed`\-Anweisung verhindert, dass der Garbage Collector eine bewegliche V
   
  Die `fixed`\-Anweisung legt einen Zeiger auf eine verwaltete Variable fest und "fixiert" diese Variable während der Ausführung der Anweisung.  Zeiger auf bewegliche, verwaltete Variablen wären ohne `fixed` von geringem Nutzen, da Garbage Collection die Variablen auf unvorhersehbare Weise verschieben könnte.  Der C\#\-Compiler erlaubt die Zuweisung von Zeigern auf verwaltete Variablen nur in einer `fixed`\-Anweisung.  
   
- [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#1)]  
+ [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
   
  Sie können einen Zeiger initialisieren, indem Sie ein Array, eine Zeichenfolge, einen Puffer mit fester Größe oder die Adresse einer Variablen verwenden.  Das folgende Beispiel veranschaulicht die Verwendung von variablen Adressen, Arrays und Zeichenfolgen.  Weitere Informationen über Puffer mit fester Größe finden Sie unter [Puffer fester Größe](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
   
- [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#2)]  
+ [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
   
  Mehrere Zeiger können initialisiert werden, solange sie denselben Typ aufweisen.  
   
@@ -37,7 +37,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
   
  Um Zeiger verschiedener Typen zu initialisieren, verschachteln Sie einfach `fixed`\-Anweisungen, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#3)]  
+ [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
   
  Nach der Ausführung des Anweisungscodes können beliebige fixierte Variablen wieder gelöst und für Garbage Collection freigegeben werden.  Zeigen Sie daher nicht außerhalb der `fixed`\-Anweisung auf solche Variablen.  
   
@@ -47,7 +47,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  Im nicht sicheren Modus kann Speicher auf dem Stapel belegt werden. Dort unterliegt er nicht Garbage Collection und muss daher nicht fixiert werden.  Weitere Informationen finden Sie unter [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#4)]  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

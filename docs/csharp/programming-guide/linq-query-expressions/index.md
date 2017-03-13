@@ -9,7 +9,7 @@ caps.handback.revision: 21
   
  Das folgende Beispiel zeigt die vollständige Abfrageoperation.  Der vollständige Vorgang umfasst die Erstellung einer Datenquelle, die Definition des Abfrageausdrucks und die Ausführung der Abfrage in einer `foreach`\-Anweisung.  
   
- [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#11)]  
+ [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
  Weitere Informationen über die Grundlagen von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] in C\# finden Sie unter [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).  
   

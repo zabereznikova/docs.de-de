@@ -37,9 +37,9 @@ Der Vorteil der Prozedurüberladung liegt in der Flexibilität des Aufrufs.  Der
   
      Im folgenden Beispiel wird die in [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md) deklarierte `post`\-Prozedur aufgerufen.  Es wird die Kundenkennung abgerufen und dann ermittelt, ob es sich dabei um einen Wert vom Typ `String` oder `Integer` handelt. Anschließend wird in beiden Fällen die gleiche Prozedur aufgerufen.  
   
-     [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_1.vb)]  
+     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_2.vb)]  
+     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

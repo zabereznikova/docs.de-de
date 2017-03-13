@@ -24,17 +24,17 @@ Die `where`\-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welc
 ## Beispiel  
  Im folgenden Beispiel werden durch die `where`\-Klausel alle Zahlen herausgefiltert, die größer als fünf sind.  Wenn Sie die `where`\-Klausel entfernen, werden alle Zahlen aus der Datenquelle zurückgegeben.  Der Ausdruck `num < 5` ist das Prädikat, das auf jedes Element angewendet wird.  
   
- [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#5)]  
+ [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## Beispiel  
  Innerhalb einer einzelnen `where` \-Klausel können Sie mit dem Operator [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) und dem Operator [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) so viele Prädikate wie nötig angeben.  Im folgenden Beispiel gibt die Abfrage zwei Prädikate an, um nur die geraden Zahlen auszuwählen, die kleiner als fünf sind.  
   
- [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#6)]  
+ [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
 ## Beispiel  
  Eine `where`\-Klausel enthält möglicherweise eine oder mehrere Methoden, die boolesche Werte zurückgeben.  Im folgenden Beispiel wird mithilfe der `where`\-Klausel eine Methode verwendet, um zu bestimmen, ob der aktuelle Wert der Bereichsvariable gerade oder ungerade ist.  
   
- [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#7)]  
+ [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
 ## Hinweise  
  Die `where`\-Klausel ist ein Filtermechanismus.  Sie kann fast überall in einem Abfrageausdruck platziert werden, darf aber nicht die erste oder letzte Klausel sein.  Eine `where`\-Klausel kann entweder vor oder nach einer [group](../../../csharp/language-reference/keywords/group-clause.md)\-Klausel erscheinen, je nach dem, ob Sie die Quellelemente vor oder nach dem Gruppieren filtern müssen.  

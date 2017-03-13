@@ -38,7 +38,7 @@ Folgendes ist ein Beispiel einer Klasse, die Sie als COM\-Objekt verfügbar mach
  Die Klasse implementiert die Klassenschnittstelle; sie kann mehr als eine Schnittstelle implementieren, zuerst wird jedoch die standardmäßige Klassenschnittstelle implementiert.  Implementieren Sie hier die für COM verfügbar gemachten Methoden und Eigenschaften.  Sie müssen als öffentlich markiert sein und den Deklarationen in der Klassenschnittstelle entsprechen.  Deklarieren Sie hier darüber hinaus die durch die Klasse ausgelösten Ereignisse.  Sie müssen als öffentlich markiert sein und den Deklarationen in der Ereignisschnittstelle entsprechen.  
   
 ## Beispiel  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/csharp/example-com-class_1.cs)]  
+ [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

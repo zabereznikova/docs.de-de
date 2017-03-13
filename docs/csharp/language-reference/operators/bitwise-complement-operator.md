@@ -30,7 +30,7 @@ Der Operator `~` führt eine bitweise Komplementoperation für seine Operanden a
  Benutzerdefinierte Typen können den Operator `~`  überladen.  Weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md).  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#25)]  
+ [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

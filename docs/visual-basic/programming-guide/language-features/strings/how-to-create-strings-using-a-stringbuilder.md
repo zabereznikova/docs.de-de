@@ -27,7 +27,7 @@ In diesem Beispiel wird mit der <xref:System.Text.StringBuilder>\-Klasse aus vie
 ## Beispiel  
  Im folgenden Beispiel wird eine Instanz der <xref:System.Text.StringBuilder>\-Klasse erstellt, 1.000 Zeichenfolgen werden an diese Instanz angehängt, und dann wird die Zeichenfolgendarstellung der Instanz zurückgegeben.  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-strings-us_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
 ## Siehe auch  
  [Verwenden der StringBuilder\-Klasse](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   

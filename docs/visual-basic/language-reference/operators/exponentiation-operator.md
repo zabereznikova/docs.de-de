@@ -65,7 +65,7 @@ number ^ exponent
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `^` verwendet, um eine Zahl zur Potenz eines Exponenten zu erheben.  Das Ergebnis ist der erste Operand, mit dem der zweite potenziert wird.  
   
- [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
  Das vorhergehende Beispiel erzeugt folgende Ergebnisse:  
   

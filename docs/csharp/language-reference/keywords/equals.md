@@ -24,7 +24,7 @@ Das `equals`\-Kontextschlüsselwort wird in einer `join`\-Klausel in einem Abfra
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung des `equals`\-Schlüsselworts in einer `join`\-Klausel veranschaulicht.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/equals_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
   
 ## Siehe auch  
  [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -31,7 +31,7 @@ Der Linksschiebeoperator \(`<<`\) verschiebt seinen ersten Operanden um die durc
  Benutzerdefinierte Typen können den Operator `<<` überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\). Als Typ des ersten Operanden muss der benutzerdefinierte Typ verwendet werden, und als Typ des zweiten Operanden muss `int` verwendet werden.  Beim Überladen eines binären Operators wird implizit auch der zugehörige Zuweisungsoperator überladen, falls vorhanden.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#14)]  
+ [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## Kommentare  
  Beachten Sie, dass `i<<1` und `i<<33` das gleiche Ergebnis ausgeben, da die fünf niedrigwertigen Bits von 1 und 33 übereinstimmen.  

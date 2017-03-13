@@ -52,7 +52,7 @@ Return expression
 ## Beispiel  
  Im folgenden Beispiel kehrt die Prozedur mehrmals mit der `Return`\-Anweisung zum aufrufenden Code zurück, wenn keine weiteren Aufgaben auszuführen sind.  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
 ## Siehe auch  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

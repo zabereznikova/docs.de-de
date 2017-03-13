@@ -23,12 +23,12 @@ Im folgenden Codebeispiel wird das Erstellen einer nicht generischen Auflistungs
   
  Im Beispiel verwendet das folgende Codesegment die `Tokens`\-Klasse, um den Satz "This is a sample sentence." unter Verwendung von " " und "\-" als Trennzeichen in Tokens aufzulösen.  Anschließend werden diese Tokens mithilfe einer `foreach`\-Anweisung angezeigt.  
   
- [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_1.cs)]  
+ [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## Beispiel  
  Intern verwendet die `Tokens`\-Klasse ein Array, um die Tokens zu speichern.  Da Arrays <xref:System.Collections.IEnumerator> und <xref:System.Collections.IEnumerable> implementieren, hätten im Codebeispiel auch die Enumerationsmethoden \(<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.Current%2A>\) des Arrays verwendet werden können, statt sie in der `Tokens`\-Klasse zu definieren.  Die Methodendefinitionen wurden in das Beispiel aufgenommen, um zu erläutern, wie sie definiert werden und was die einzelnen Definitionen bewirken.  
   
- [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_2.cs)]  
+ [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
  In C\# muss eine Auflistungsklasse nicht <xref:System.Collections.IEnumerable> und <xref:System.Collections.IEnumerator> implementieren, um mit `foreach` kompatibel zu sein.  Wenn die Klasse über die erforderlichen Member <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.Current%2A> verfügt, ist sie mit `foreach` kompatibel.  Wenn Sie die Schnittstellen weglassen, hat dies den Vorteil, dass Sie einen Rückgabetyp für `Current` definieren können, der spezifischer als <xref:System.Object> ist.  Dies bietet Typsicherheit.  
   

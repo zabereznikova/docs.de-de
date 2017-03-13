@@ -75,7 +75,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine Liste von Kunden basierend auf ihrem Standort (Land) gruppiert und die Anzahl der Kunden in jeder Gruppe angegeben. Die Ergebnisse werden nach Ländernamen geordnet. Die gruppierten Ergebnisse sind nach Städtenamen geordnet.  
   
- [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#11)]  
+ [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

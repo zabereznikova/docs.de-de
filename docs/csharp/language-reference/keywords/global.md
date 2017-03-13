@@ -24,7 +24,7 @@ Wenn das `global`\-Kontextschlüsselwort dem [Operator "::"](../../../csharp/lan
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie mit dem `global`\-Kontextschlüsselwort angegeben wird, dass die `TestApp`\-Klasse im globalen Namespace definiert ist:  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/csharp/global_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
   
 ## Siehe auch  
  [Namespaces](../../../csharp/programming-guide/namespaces/index.md)

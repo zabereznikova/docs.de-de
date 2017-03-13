@@ -34,7 +34,7 @@ Sie können Benutzereinstellungen ändern, indem Sie der zugehörigen Eigenschaf
 ## Beispiel  
  Im nachfolgenden Beispiel wird der Wert der Benutzereinstellung `Nickname` geändert.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#7)]  
+ [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
   
  Für dieses Beispiel muss die Anwendung über eine `Nickname`\-Benutzereinstellung vom Typ `String` verfügen.  
   

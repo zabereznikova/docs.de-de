@@ -36,7 +36,7 @@ Alle Typen und Typmember verfügen über eine Zugriffsebene, durch die festgeleg
   
  In den folgenden Beispielen wird veranschaulicht, wie Zugriffsmodifizierer für einen Typ und einen Member festgelegt werden:  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_1.cs)]  
+ [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  Je nach Typ, Member und Kontext können nicht alle Zugriffsmodifizierer verwendet werden. In verschiedenen Fällen wird der Zugriff für einen Typmember durch die Zugriffmöglichkeiten des enthaltenen Typs eingeschränkt.  Die folgenden Abschnitte enthalten weitere Details zu Zugriffsmöglichkeiten.  
   
@@ -62,7 +62,7 @@ Alle Typen und Typmember verfügen über eine Zugriffsebene, durch die festgeleg
   
  Um die Zugriffsebene für einen Klassen\- oder Strukturmember festzulegen, fügen Sie das entsprechende Schlüsselwort der Memberdeklaration hinzu, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_2.cs)]  
+ [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
 >  Die Zugriffsebene protected internal bedeutet protected ODER internal, nicht protected UND internal.  Anders ausgedrückt kann auf einen geschützten internen Member aus einer Klasse in derselben Assembly, einschließlich abgeleiteter Klassen, zugegriffen werden.  Wenn Sie den Zugriff auf abgeleitete Klassen in derselben Assembly beschränken möchten, deklarieren Sie die Klasse selbst als internal und ihre Member als protected.  

@@ -22,11 +22,11 @@ In C\# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Opera
   
  Die folgende C\#\-Anweisung enthält einen einzelnen unären Operator und einen einzigen Operanden. Der Inkrementoperator `++` ändert den Wert des Operanden `y`.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  Die folgende C\#\-Anweisung enthält zwei binäre Operatoren mit jeweils zwei Operanden. Die Operanden des Zuweisungsoperators `=` sind die ganzzahlige Variable `y` und der Ausdruck `2 + 3`. Der Ausdruck `2 + 3` selbst besteht aus dem Additionsoperator und zwei Operanden: `2` und `3`.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## Operatoren, Evaluierung und Operatorrangfolge  
  Ein Operand kann ein gültiger Ausdruck sein, der aus beliebig langem Code zusammengesetzt ist, und kann eine beliebige Anzahl von Unterausdrücken enthalten. In einem Ausdruck mit mehreren Operatoren wird die Reihenfolge, in der die Operatoren angewendet werden, von der *Operatorrangfolge*, der *Assoziativität* und von Klammern bestimmt.  

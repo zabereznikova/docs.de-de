@@ -24,7 +24,7 @@ Der `object`\-Typ ist ein Alias für <xref:System.Object> in .NET Framework.  I
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie Variablen vom `object`\-Typ Werte eines beliebigen Datentyps annehmen und wie Variablen vom `object`\-Typ Methoden für <xref:System.Object> aus .NET Framework verwenden können.  
   
- [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/csharp/object_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -27,7 +27,7 @@ Der Divisionsoperator \(`/`\) dividiert seinen ersten Operanden durch seinen zwe
  Wenn Sie zwei ganze Zahlen teilen, ist das Ergebnis immer eine ganze Zahl.  Beispiel: Das Ergebnis von 7 \/ 3 ist 2.  Bestimmen Sie die restlichen 7 \/ 3, verwenden Sie den Restwertoperator \([%](../../../csharp/language-reference/operators/modulus-operator.md)\).  Um den Quotienten als rationale Zahl oder Bruch zu erhalten, legen Sie den Datentyp von Dividend und Divisor auf `float` oder auf `double` fest.  Sie können den Typ implizit zuweisen, wenn Sie eine Ziffer rechts vom Dezimalkomma, wie im folgenden Beispiel setzen der Dividend oder Divisor als Dezimalzahl Ausdrücken.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#42)]  
+ [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

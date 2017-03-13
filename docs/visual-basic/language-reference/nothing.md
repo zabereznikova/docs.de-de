@@ -36,11 +36,11 @@ Stellt den Standardwert jedes beliebigen Datentyps dar.  Bei Verweistypen lautet
   
  Wenn eine Variable von einem Werttyp ist, der keine NULL\-Werte zulässig sind, wird das Zuweisen von `Nothing` an den Standardwert für den deklarierten Typ fest.  Wenn der Typ Variablenmember enthält, werden für alle die jeweiligen Standardwerte festgelegt.  Im folgenden Beispiel wird dieses für skalare Typen veranschaulicht.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
  Wenn eine Variable von einem Referenztyp ist, und weist `Nothing` in den variablen oder legt sie auf einen `null` Verweis vom Typ der Variablen zu.  Eine Variable, die einem `null` Verweis festgelegt wird, ist keinem Objekt zugeordnet.  Das folgende Beispiel veranschaulicht dies.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
  Beim Überprüfen, ob eine Bezugs\- NULL\-Werte zulässt \(oder Werttyp\) \- Variable `null`ist, verwenden Sie nicht `= Nothing` oder `<> Nothing`.  Immer Verwendung `Is Nothing` oder `IsNot Nothing`.  
   
@@ -48,7 +48,7 @@ Stellt den Standardwert jedes beliebigen Datentyps dar.  Bei Verweistypen lautet
   
  Im folgenden Beispiel werden Vergleiche mithilfe des `Is`\-Operators und des `IsNot`\-Operators veranschaulicht.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
  Wenn Sie eine Variable ohne Verwendung einer `As`\-Klausel deklarieren und auf `Nothing` festlegen, ist die Variable vom Typ `Object`.  Ein Beispiel hierfür ist `Dim something = Nothing`.  In diesem Fall tritt ein Kompilierungsfehler auf, wenn `Option Strict` aktiviert ist und `Option Infer` deaktiviert ist.  
   

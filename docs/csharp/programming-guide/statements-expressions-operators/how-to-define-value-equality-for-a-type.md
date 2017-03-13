@@ -51,7 +51,7 @@ Wenn Sie eine Klasse oder eine Struktur definieren, entscheiden Sie, ob es Sinn 
 ## Beispiel  
  Im folgenden Beispiel wird die Implementierung der Gleichheitsprüfung in einer Klasse \(Verweistyp\) veranschaulicht.  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_1.cs)]  
+ [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
  Für Klassen \(Verweistypen\) führt die Standardimplementierung beider <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>\-Methoden eine Verweisgleichheitsprüfung aus, keine Wertgleichheitsprüfung.  Wenn ein Ausführender die virtuelle Methode überschreibt, ist der Zweck die Zuweisung von Wertgleichheitssemantik.  
   
@@ -60,7 +60,7 @@ Wenn Sie eine Klasse oder eine Struktur definieren, entscheiden Sie, ob es Sinn 
 ## Beispiel  
  Im folgenden Beispiel wird die Implementierung der Wertgleichheit in einer Struktur \(Werttyp\) veranschaulicht:  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_2.cs)]  
+ [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
  Für Strukturen führt die Standardimplementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> \(die überschriebene Version in <xref:System.ValueType?displayProperty=fullName>\) eine Wertgleichheitsprüfung durch, wobei die Werte jedes Feldes im Typ mithilfe von Reflektion verglichen werden.  Wenn ein Ausführender die virtuelle `Equals`\-Methode in einer Struktur überschreibt, dient dies zur Bereitstellung einer effizienteren Methode zur Ausführung der Wertgleichheitsprüfung und zur Verwendung einer Teilmenge der Felder und Eigenschaften der Struktur für den Vergleich \(optional\).  
   

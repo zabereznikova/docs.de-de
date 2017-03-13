@@ -28,7 +28,7 @@ Bei der *bedingten Kompilierung* werden besondere Codeblöcke in einem Programm 
   
  Sie geben Codeblöcke an, die mit der `#If...Then...#Else`\-Direktive bedingt kompiliert werden sollen.  Um beispielsweise Versionen einer Anwendung aus demselben Quellcode in französischer und deutscher Sprache zu erstellen, müssen Sie plattformspezifische Codesegmente unter Verwendung der vordefinierten Konstanten `FrenchVersion` und `GermanVersion` in `#If...Then`\-Anweisungen einbetten.  Dies wird im folgenden Beispiel veranschaulicht:  
   
- [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/conditional-compilation_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
  Wenn Sie den Wert der `FrenchVersion`\-Konstanten für bedingte Kompilierung während der Kompilierung auf `True` festlegen, wird der bedingte Code für die französische Version kompiliert.  Wenn Sie den Wert der `GermanVersion`\-Konstanten auf `True` festlegen, verwendet der Compiler die deutsche Version.  Wenn keine der Konstanten auf `True` festgelegt wurde, wird der Code aus dem letzten `Else`\-Block ausgeführt.  
   

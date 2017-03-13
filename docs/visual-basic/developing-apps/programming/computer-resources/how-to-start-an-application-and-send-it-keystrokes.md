@@ -27,7 +27,7 @@ caps.handback.revision: 15
 In diesem Beispiel wird die `Shell`\-Funktion verwendet, um die Rechneranwendung zu starten. Anschließend werden zwei Zahlen multipliziert, indem Tastatureingaben mithilfe der `My.Computer.Keyboard.SendKeys`\-Methode gesendet werden.  
   
 ## Beispiel  
- [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#25)]  
+ [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
 ## Robuste Programmierung  
  Eine <xref:System.ArgumentException>\-Ausnahme wird ausgelöst, wenn die Anwendung mit der angeforderten Prozess\-ID nicht gefunden werden kann.  

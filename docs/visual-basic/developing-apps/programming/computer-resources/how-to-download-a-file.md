@@ -46,19 +46,19 @@ Mit der <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>\-Methode ka
   
 -   Verwenden Sie die `DownloadFile`\-Methode zum Herunterladen der Datei, und geben Sie dabei den Speicherort der Ausgangsdatei als Zeichenfolge oder URI sowie den gewünschten Speicherort an.  In diesem Beispiel wird die Datei `WineList.txt` von `http://www.cohowinery.com/downloads` heruntergeladen und unter `C:\Documents and Settings\All Users\Documents` gespeichert:  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
 ### So laden Sie eine Datei unter Angabe eines Timeoutintervalls herunter  
   
 -   Verwenden Sie die `DownloadFile`\-Methode zum Herunterladen der Datei. Geben Sie dabei den Speicherort der Ausgangsdatei als Zeichenfolge oder URI, den gewünschten Speicherort und das Timeoutintervall in Millisekunden an \(der Standardwert ist 1000\).  In diesem Beispiel wird die Datei `WineList.txt` von `http://www.cohowinery.com/downloads` heruntergeladen und im Verzeichnis `C:\Documents and Settings\All Users\Documents` gespeichert, wobei ein Timeoutintervall von 500 Millisekunden angegeben wird:  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
 ### So laden Sie eine Datei unter Angabe eines Benutzernamens und eines Kennworts herunter  
   
 -   Verwenden Sie die `DownLoadFile`\-Methode zum Herunterladen der Datei. Geben Sie dabei den Speicherort der Ausgangsdatei als Zeichenfolge oder URI, den gewünschten Speicherort, den Benutzernamen und das Kennwort an.  In diesem Beispiel wird die Datei `WineList.txt` von `http://www.cohowinery.com/downloads` heruntergeladen und unter `C:\Documents and Settings\All Users\Documents` gespeichert, wobei der Benutzername `anonymous` und ein leeres Kennwort angegeben werden.  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
     >  Mit dem von der `DownLoadFile`\-Methode verwendeten FTP\-Protokoll werden Informationen, einschließlich Kennwörter, als Klartext gesendet. Es sollte daher nicht für die Übertragung vertraulicher Informationen verwendet werden.  

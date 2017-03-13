@@ -63,11 +63,11 @@ Eine Eigenschaftendefinition wird von einer `Property`\-Anweisung und einer `End
 ## Beispiel  
  Im folgenden Beispiel wird eine Lese\-Schreib\-Eigenschaft erstellt, die einen vollständigen Namen in Form zweier konstituierender Namen speichert, als Vorname und Nachname.  Wenn der Aufrufcode `fullName` liest, kombiniert die `Get`\-Prozedur die beiden konstituierenden Namen und gibt den vollständigen Namen zurück.  Wenn der Aufrufcode einen neuen vollständigen Namen zuweist, versucht die `Set`\-Prozedur, den Namen in zwei konstituierende Namen aufzulösen.  Wird kein Leerzeichen gefunden, wird der gesamte Name als Vorname gespeichert.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
  Im folgenden Beispiel werden typische Aufrufe der Eigenschaftenprozeduren von `fullName` dargestellt.  Mit dem ersten Aufruf wird der Eigenschaftswert festgelegt, mit dem zweiten Aufruf wird der Wert abgerufen.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

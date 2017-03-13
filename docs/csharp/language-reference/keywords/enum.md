@@ -74,17 +74,17 @@ int x = (int)Days.Sun;
 ## Beispiel  
  Im folgenden Beispiel wird die Enumeration `Days` deklariert. Zwei Enumeratoren werden explizit in ganze Zahlen konvertiert und „Integer“\-Variablen zugewiesen.  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird die Basistypoption verwendet, um ein `enum` zu deklarieren, dessen Member den Typ `long` haben. Beachten Sie, dass obwohl der Enumeration der Typ `long` zugrunde liegt, die Enumerationsmember noch explizit mithilfe einer Typumwandlung in den Typ `long` umgewandelt werden müssen.  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## Beispiel  
  Im folgenden Codebeispiel werden die Verwendung des <xref:System.FlagsAttribute?displayProperty=fullName>\-Attributs in einer `enum`\-Deklaration und seine Wirkung veranschaulicht.  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## Kommentare  
  Wenn Sie `Flags` entfernen, werden im Beispiel die folgenden Werte angezeigt:  

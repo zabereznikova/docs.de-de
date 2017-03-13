@@ -29,7 +29,7 @@ Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstante
   
 -   Deklarieren Sie ein Array, und konvertieren Sie die Enumeration mit der <xref:System.Enum.GetValues%2A>\-Methode in das Array, bevor Sie das Array wie eine Variable übergeben.  Im folgenden Beispiel werden die einzelnen Member der Enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> beim Durchlaufen der Enumeration gezeigt.  
   
-     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#7)]  
+     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
 ## Siehe auch  
  [Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   

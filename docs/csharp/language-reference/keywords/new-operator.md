@@ -54,7 +54,7 @@ int i = 0;
 ## Beispiel  
  Im folgenden Beispiel werden mit dem Operator `new` ein `struct`\-Objekt und ein Klassenobjekt erstellt und initialisiert, und dann werden ihnen Werte zugewiesen.  Die Standardwerte und die zugewiesenen Werte werden angezeigt.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#7)]  
+ [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  Beachten Sie bei dem Beispiel, dass es sich bei dem Standardwert einer Zeichenfolge um `null` handelt.  Aus diesem Grund wird er nicht angezeigt.  
   

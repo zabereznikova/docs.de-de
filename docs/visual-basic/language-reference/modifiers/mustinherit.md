@@ -43,7 +43,7 @@ Legt fest, dass eine Klasse lediglich als Basisklasse verwendet werden kann und 
 ## Beispiel  
  Im folgenden Beispiel werden sowohl die erzwungene Vererbung als auch das erzwungene Überschreiben veranschaulicht.  In der `shape`\-Basisklasse ist die `acrossLine`\-Variable definiert.  Die `circle`\-Klasse und die `square`\-Klasse sind von `shape` abgeleitet.  Sie erben die Definition von `acrossLine`, müssen jedoch die Funktion `area` definieren, weil diese Berechnung von der Art der Form abhängig ist.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/visualbasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
  Sie können `shape1` und `shape2` als Klassen vom Typ `shape` deklarieren.  Allerdings können Sie kein Objekt vom Typ `shape` erstellen, weil diese Klasse nicht über die Funktionalität der `area`\-Funktion verfügt und als `MustInherit` deklariert ist.  
   

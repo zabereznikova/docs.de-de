@@ -20,7 +20,7 @@ Wenn [\- Klasse](../../../csharp/language-reference/keywords/class.md) oder [Str
   
  Im folgenden Beispiel wird die Klasse `Taxi` durch einen einfachen Konstruktor definiert.  Anschließend wird diese Klasse mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) instanziiert.  Der Operator `new` ruft den `Taxi`\-Konstruktor unmittelbar nach der Belegung von Arbeitsspeicher für das neue Objekt auf.  
   
- [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
  Ein Konstruktor, der keine Parameter annimmt, wird als *Standardkonstruktor* bezeichnet.  Standardkonstruktoren werden immer dann aufgerufen, wenn ein Objekt mit dem Operator `new` instanziiert wird und keine Argumente für `new` bereitgestellt werden.  Weitere Informationen finden Sie unter [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -28,7 +28,7 @@ Wenn [\- Klasse](../../../csharp/language-reference/keywords/class.md) oder [Str
   
  Sie können verhindern, dass eine Klasse instanziiert wird, indem Sie den Konstruktor auf folgende Art und Weise privat machen:  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
  Weitere Informationen finden Sie unter [Private Konstruktoren](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
@@ -59,33 +59,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Sowohl in Klassen als auch in `structs` können Konstruktoren definiert werden, die Parameter entgegennehmen.  Konstruktoren, die Parameter annehmen, müssen durch eine `new`\-Anweisung oder eine [Basisanweisung](../../../csharp/language-reference/keywords/base.md) aufgerufen werden.  In Klassen und `structs` können auch mehrere Konstruktoren definiert werden, und es ist in beiden Fällen nicht erforderlich, einen Standardkonstruktor zu definieren.  Beispiel:  
   
- [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
  Diese Klasse kann mit einer der beiden folgenden Anweisungen erstellt werden:  
   
- [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_4.cs)]  
+ [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
  Mithilfe des `base`\-Schlüsselworts kann ein Konstruktor den Konstruktor einer Basisklasse aufrufen.  Beispiel:  
   
- [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_5.cs)]  
+ [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
  In diesem Beispiel wird der Konstruktor der Basisklasse aufgerufen, bevor der Konstruktorblock ausgeführt wird.  Das `base`\-Schlüsselwort kann mit oder ohne Parameter verwendet werden.  Alle Parameter, die dem Konstruktor übergeben wurden, können als Parameter für `base` oder als Teil eines Ausdrucks verwendet werden.  Weitere Informationen finden Sie unter [Basis](../../../csharp/language-reference/keywords/base.md).  
   
  Wenn ein Basisklassenkonstruktor in einer abgeleiteten Klasse nicht explizit mit dem `base`\-Schlüsselwort aufgerufen wird, wird implizit der Standardkonstruktor \(sofern vorhanden\) aufgerufen.  Dies bedeutet, dass die folgenden Konstruktordeklarationen dieselben Auswirkungen haben:  
   
- [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_6.cs)]  
+ [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
- [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_7.cs)]  
+ [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
  Wenn eine Basisklasse keinen Standardkonstruktor bereitstellt, muss die abgeleitete Klasse den Basiskonstruktor mithilfe von `base` explizit aufrufen.  
   
  Ein Konstruktor kann einen anderen Konstruktor in demselben Objekt aufrufen, indem er das [this](../../../csharp/language-reference/keywords/this.md)\-Schlüsselwort verwendet.  Wie `base` kann auch `this` mit oder ohne Parameter verwendet werden, und alle dem Konstruktor übergebenen Parameter können als Parameter für `this` oder als Teil eines Ausdrucks verwendet werden.  So kann zum Beispiel der zweite Konstruktor im vorigen Beispiel mit `this` umgeschrieben werden:  
   
- [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_8.cs)]  
+ [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
  Die Verwendung des `this`\-Schlüsselworts im vorherigen Beispiel bewirkt das Aufrufen dieses Konstruktors:  
   
- [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_9.cs)]  
+ [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
  Konstanten können als [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) oder `protected` `internal` gekennzeichnet werden.  Diese Zugriffsmodifizierer definieren, auf welche Weise Benutzer der Klasse die Klasse konstruieren können.  Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   

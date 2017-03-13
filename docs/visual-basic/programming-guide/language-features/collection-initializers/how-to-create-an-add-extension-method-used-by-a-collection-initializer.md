@@ -28,11 +28,11 @@ Wenn Sie eine Auflistung mithilfe eines Auflistungsinitialisierers erstellen, su
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie dem generischen <xref:System.Collections.Generic.List%601>\-Typ eine Erweiterungsmethode hinzugefügt wird, damit ein Auflistungsinitialisierer zum Hinzufügen von Objekten des Typs `Employee` verwendet werden kann.  Die Erweiterungsmethode ermöglicht es Ihnen, die gekürzte Auflistungsinitialisierersyntax zu verwenden.  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_1.vb)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_2.vb)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_3.vb)]  
   
 ## Siehe auch  
  [Collection Initializers](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   

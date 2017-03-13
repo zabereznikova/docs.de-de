@@ -76,7 +76,7 @@ Dim l, m As Long, x, y As Single
 ## Lokaler Typrückschluss  
  *Typrückschlüsse* dienen zur Bestimmung der Datentypen von lokalen Variablen, die ohne eine `As`\-Klausel deklariert wurden.  Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab.  Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben.  Im folgenden Beispiel sind `num1` und `num2` stark typisiert als ganze Zahlen.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
  Wenn Sie lokalen Typrückschluss verwenden möchten, müssen Sie `Option Infer` auf `On` festlegen.  Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

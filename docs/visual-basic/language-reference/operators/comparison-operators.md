@@ -155,7 +155,7 @@ result = string Like pattern
 ## Beispiel  
  Das folgende Beispiel zeigt unterschiedliche Verwendungsmöglichkeiten von relationalen Vergleichsoperatoren für den Vergleich von Ausdrücken.  Relationale Vergleichsoperatoren geben ein `Boolean`\-Ergebnis zurück, das darstellt, ob der angegebene Ausdruck `True` ergibt.  Wenn der Operator `>` und der Operator `<` auf Zeichenfolgen angewendet werden, wird der Vergleich mit der normalen alphabetischen Sortierreihenfolge der Zeichenfolgen ausgeführt.  Diese Reihenfolge kann von den Gebietsschemaeinstellungen abhängig sein.  Die Einstellung von [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) legt fest, ob beim Sortieren die Groß\- und Kleinschreibung berücksichtigt wird.  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  Im vorhergehenden Beispiel gibt der erste Vergleich `False` zurück; die übrigen Vergleiche geben dagegen `True` zurück.  
   

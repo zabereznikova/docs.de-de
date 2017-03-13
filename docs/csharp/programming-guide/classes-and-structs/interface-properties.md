@@ -19,7 +19,7 @@ caps.handback.revision: 13
 # Schnittstelleneigenschaften (C#-Programmierhandbuch)
 Eigenschaften können für [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) deklariert werden.  Das folgende Beispiel zeigt einen Accessor für einen Schnittstellenindexer:  
   
- [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
  Der Accessor einer Schnittstelleneigenschaft enthält keinen Text.  Ein Accessor wird also verwendet, um anzugeben, ob die Eigenschaft Lese\- und Schreibzugriffe gleichzeitig bzw. jeweils nur Schreib\- oder Lesezugriffe unterstützt.  
   
@@ -28,19 +28,19 @@ Eigenschaften können für [Schnittstelle](../../../csharp/language-reference/ke
   
  Sie könnten den vollqualifizierten Namen der Eigenschaft verwenden, die auf die Schnittstelle verweist, in der der Member deklariert ist.  Beispiele:  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  Dies wird als [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) bezeichnet.  Wenn beispielsweise zwei Schnittstellen, `ICitizen` und `IEmployee`, von der `Employee`\-Klasse implementiert sind und beide Schnittstellen über die `Name`\-Eigenschaft verfügen, muss der Schnittstellenmember explizit implementiert werden.  Mit der folgenden Eigenschaftendeklaration  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  wird die `Name`\-Eigenschaft für die `IEmployee`\-Schnittstelle implementiert, während mit der Deklaration  
   
- [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
  die `Name`\-Eigenschaft für die `ICitizen`\-Schnittstelle implementiert wird.  
   
- [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
 ## Beispielausgabe  

@@ -42,7 +42,7 @@ Gibt den Rückgabewert der Eigenschaft oder Funktion an.
 ## Beispiel  
  In diesem Beispiel wird mit dem `<returns>`\-Tag erläutert, was von der `DoesRecordExist`\-Funktion zurückgegeben wird.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/returns_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

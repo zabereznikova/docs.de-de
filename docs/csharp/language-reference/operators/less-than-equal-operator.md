@@ -25,7 +25,7 @@ Alle numerischen und Enumerationstypen definieren einen relationalen Operator "k
  Benutzerdefinierte Typen können den Operator `<=` überladen.  Weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md).  Wenn `<=` überladen wird, muss auch [\>\=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) überladen werden.  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#32)]  
+ [!code-cs[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

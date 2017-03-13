@@ -10,7 +10,7 @@ Dieses Beispiel zeigt, wie eine Abfrage von einer Methode als Rückgabewert und 
 ## Beispiel  
  Im folgenden Beispiel gibt die erste Methode eine Abfrage als Rückgabewert zurück, und die zweite Methode gibt eine Abfrage als `out`\-Parameter zurück.  Beachten Sie, dass in beiden Fällen keine Abfrageergebnisse zurückgegeben werden, sondern eine Abfrage zurückgegeben wird.  
   
- [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#80)]  
+ [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-a-query-from-a-method_1.cs)]  
   
 ## Kompilieren des Codes  
   

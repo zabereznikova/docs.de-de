@@ -30,7 +30,7 @@ Der Operator `??` wird NULL\-Sammeloperator genannt.  Der linke Operand wird zur
  Das Ergebnis eines ??\-Operators wird nicht als Konstante behandelt, auch wenn dessen zwei Argumente Konstanten sind.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#53)]  
+ [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

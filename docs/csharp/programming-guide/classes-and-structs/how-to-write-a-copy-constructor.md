@@ -22,7 +22,7 @@ C\# stellt keinen Kopierkonstruktor für Objekte bereit. Sie können jedoch selb
 ## Beispiel  
  Im folgenden Beispiel wird von der `Person`\-[Klasse](../../../csharp/language-reference/keywords/class.md) ein Kopierkonstruktor definiert, der eine Instanz von `Person` als sein Argument annimmt.  Die Werte der Eigenschaften des Arguments werden den Eigenschaften der neuen Instanz von `Person` zugewiesen.  Der Code enthält einen alternativen Kopierkonstruktor, der die `Name`\- und `Age`\-Eigenschaften der Instanz sendet, die Sie in den Instanzenkonstruktor der Klasse kopieren möchten.  
   
- [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-write-a-copy-cons_1.cs)]  
+ [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
   
 ## Siehe auch  
  <xref:System.ICloneable>   

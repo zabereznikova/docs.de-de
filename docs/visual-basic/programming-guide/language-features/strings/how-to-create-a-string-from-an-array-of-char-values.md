@@ -25,7 +25,7 @@ caps.handback.revision: 10
 Dieses Beispiel erstellt die Zeichenfolge "abcd" anhand von einzelnen Zeichen.  
   
 ## Beispiel  
- [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-a-string-f_1.vb)]  
+ [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
 ## Kompilieren des Codes  
  Für diese Methode gelten keine besonderen Voraussetzungen.  

@@ -41,43 +41,43 @@ Eine *Standardeigenschaft* ist eine Klassen\- oder Struktureigenschaft, auf die 
   
 3.  Geben Sie mindestens einen Parameter für die Eigenschaft an.  Sie können keine Standardeigenschaft definieren, die nicht wenigstens ein Argument annimmt.  
   
-     [!code-vb[VbVbcnProcedures#17](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
 ### So rufen Sie eine Standardeigenschaft auf  
   
 1.  Deklarieren Sie eine Variable der enthaltenden Klasse oder des Strukturtyps.  
   
-     [!code-vb[VbVbcnProcedures#16](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
 2.  Verwenden Sie den Variablennamen allein in einem Ausdruck, in den Sie normalerweise den Eigenschaftennamen einfügen würden.  
   
-     [!code-vb[VbVbcnProcedures#21](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
 3.  Geben Sie nach dem Variablennamen eine Argumentliste in runden Klammern ein.  Eine Standardeigenschaft muss mindestens ein Argument annehmen.  
   
-     [!code-vb[VbVbcnProcedures#20](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
 4.  Um den Wert der Standardeigenschaft abzurufen, verwenden Sie den Variablennamen mit einer Argumentliste in einem Ausdruck oder nach dem Gleichheitszeichen \(`=`\) in einer Zuweisungsanweisung.  
   
-     [!code-vb[VbVbcnProcedures#15](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
 5.  Um den Wert der Standardeigenschaft festzulegen, verwenden Sie den Variablennamen \(mit einer Argumentliste\) auf der linken Seite einer Zuweisungsanweisung.  
   
-     [!code-vb[VbVbcnProcedures#14](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
 6.  Ebenso wie beim Zugriff auf andere Eigenschaften können Sie den Namen der Standardeigenschaft stets zusammen mit dem Variablennamen angeben.  
   
-     [!code-vb[VbVbcnProcedures#19](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird eine Standardeigenschaft in einer Klasse deklariert.  
   
- [!code-vb[VbVbcnProcedures#12](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `myProperty`\-Standardeigenschaft in der `class1`\-Klasse aufgerufen wird.  Die drei Zuweisungsanweisungen speichern Werte in `myProperty`, und der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Aufruf liest die Werte.  
   
- [!code-vb[VbVbcnProcedures#13](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
  Am häufigsten wird die <xref:Microsoft.VisualBasic.Collection.Item%2A>\-Eigenschaft in verschiedenen Auflistungsklassen als Standardeigenschaft verwendet.  
   

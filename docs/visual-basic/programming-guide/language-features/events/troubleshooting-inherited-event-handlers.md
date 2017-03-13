@@ -33,7 +33,7 @@ Unter diesem Thema sind allgemeine Probleme aufgeführt, die sich bei Ereignisha
   
 -   Ein geerbter Ereignishandler darf keine [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)\-Klausel enthalten.  Die Methode in der Basisklasse ist bereits mit dem Ereignis verknüpft und wird entsprechend ausgelöst.  Entfernen Sie die `Handles`\-Klausel aus der geerbten Methode.  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#32)]  
+     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
 -   Wenn die geerbte Methode kein `Handles`\-Schlüsselwort enthält, darf der Code nicht zusätzlich eine [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) oder zusätzliche Methoden zum Behandeln desselben Ereignisses enthalten.  
   

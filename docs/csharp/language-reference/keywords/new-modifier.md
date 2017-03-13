@@ -20,7 +20,7 @@ Wenn das Schlüsselwort `new` als Deklarationsmodifizierer verwendet wird, blend
   
  Um einen geerbten Member auszublenden, deklarieren Sie ihn mit demselben Membernamen in der abgeleiteten Klasse und ändern ihn mit dem `new`\-Schlüsselwort.  Zum Beispiel:  
   
- [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#8)]  
+ [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
  In diesem Beispiel wird `BaseC.Invoke` durch `DerivedC.Invoke` ausgeblendet.  Der Vorgang wirkt sich nicht auf das Feld `x` aus, da es nicht mit einem ähnlichen Namen ausgeblendet wird.  
   
@@ -39,12 +39,12 @@ Wenn das Schlüsselwort `new` als Deklarationsmodifizierer verwendet wird, blend
 ## Beispiel  
  In diesem Beispiel wird von einer Basisklasse, `BaseC`, und einer abgeleiteten Klasse, `DerivedC`, der gleiche Feldname `x` verwendet. Auf diese Weise wird der Wert des geerbten Felds ausgeblendet.  Im Beispiel wird die Verwendung des `new`\-Modifizierers veranschaulicht.  Außerdem wird gezeigt, wie mit den voll qualifizierten Namen auf die ausgeblendeten Member der Basisklasse zugegriffen wird.  
   
- [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#9)]  
+ [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
 ## Beispiel  
  In diesem Beispiel blendet eine geschachtelte Klasse eine Klasse mit dem gleichen Namen in der Basisklasse aus.  Das Beispiel veranschaulicht, wie mit dem `new`\-Modifizierer die Warnmeldung vermieden wird und wie mit den voll qualifizierten Namen auf die ausgeblendeten Klassenmember zugegriffen wird.  
   
- [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#10)]  
+ [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
   
  Wenn der `new`\-Modifizierer entfernt wird, kann das Programm dennoch kompiliert und ausgeführt werden. Es wird jedoch folgende Warnung angezeigt:  
   

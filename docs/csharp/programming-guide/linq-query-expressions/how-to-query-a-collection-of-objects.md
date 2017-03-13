@@ -10,7 +10,7 @@ In diesem Beispiel wird gezeigt, wie eine einfache Abfrage für eine Liste von `
 ## Beispiel  
  Die folgende Abfrage gibt die Studenten zurück, die in der ersten Prüfung ein Testergebnis von 90 oder mehr erzielt haben.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-query-a-collection-of-objects_1.cs)]  
   
  Diese Abfrage wurde absichtlich einfach gehalten, damit Sie damit etwas üben können.  Sie können beispielsweise mehr Prädikate in der `where`\-Klausel angeben oder eine `orderby`\-Klausel zum Sortieren der Ergebnisse verwenden.  
   

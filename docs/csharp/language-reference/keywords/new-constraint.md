@@ -21,12 +21,12 @@ Die `new`\-Einschränkung gibt an, dass jedes Typargument in einer generischen K
 ## Beispiel  
  Wenden Sie `new`\-Einschränkung auf einen Typparameter an, wenn die generische Klasse wie im folgenden Beispiel neue Instanzen des Typs erstellt:  
   
- [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#5)]  
+ [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
   
 ## Beispiel  
  Wenn Sie die `new()`\-Einschränkung mit anderen Einschränkungen verwenden, muss sie zuletzt angegeben werden:  
   
- [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#6)]  
+ [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
  Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   

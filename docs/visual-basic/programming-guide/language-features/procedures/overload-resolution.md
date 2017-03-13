@@ -50,9 +50,9 @@ Auflösung bei überladenen Versionen
   
  Im folgenden Beispiel wird dieser Prozess der Überladungsauflösung dargestellt.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
  Im ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments \(`Short`\) auf den Typ des entsprechenden Parameters \(`Byte`\) eingeschränkt wird.  Anschließend wird die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung \(`Short` und `Single`\) in den entsprechenden Typ der dritten Überladung \(`Integer` und `Single`\) erweitert wird.  Da die zweite Überladung eine geringere Erweiterung erfordert, wird sie vom Compiler für den Aufruf verwendet.  
   

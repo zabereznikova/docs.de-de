@@ -58,7 +58,7 @@ int intSize = sizeof(int);
  Für alle Typen einschließlich Strukturen kann der Operator `sizeof` nur in nicht sicheren Codeblocks verwendet werden.  Sie können zwar die <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>\-Methode verwenden, jedoch stimmt der von dieser Methode zurückgegebene Wert nicht immer mit dem Wert überein, der von `sizeof` zurückgegeben wird.  <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> gibt die Größe des Typs nach dem Marshalling zurück. `sizeof` hingegen gibt die Größe des Typs nach Zuweisung durch die Common Language Runtime einschließlich Leerspeicher zurück.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#11)]  
+ [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -73,7 +73,7 @@ Kompiliert ausgewählte Blöcke von Visual Basic\-Code, wenn bestimmte Bedingun
 ## Beispiel  
  In diesem Beispiel wird mithilfe des `#If...Then...#Else`\-Konstrukts ermittelt, ob bestimmte Anweisungen kompiliert werden.  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## Siehe auch  
  [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   

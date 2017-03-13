@@ -39,7 +39,7 @@ Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftennamen in ein
   
      Im folgenden Beispiel wird der Wert der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] `Now`\-Eigenschaft gelesen und die `Get`\-Prozedur implizit aufgerufen.  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
 2.  Wenn die Eigenschaft Argumente annimmt, fügen Sie nach dem Eigenschaftennamen runde Klammern ein, die die Argumentliste einschließen.  Wenn keine Argumente vorliegen, können Sie die Klammern auch weglassen.  
   

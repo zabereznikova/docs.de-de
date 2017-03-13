@@ -103,15 +103,15 @@ Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleite
   
 6.  Fügen Sie folgenden Code am Anfang von `MathClass` ein, damit die Klasse von der COM\-Klasse erbt.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#31)]  
+     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
 7.  Überladen Sie die public\-Methode der Basisklasse, indem Sie `MathClass` den folgenden Code hinzufügen:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#32)]  
+     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
 8.  Erweitern Sie die geerbte Klasse, indem Sie `MathClass` den folgenden Code hinzufügen:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#33)]  
+     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
  Die neue Klasse erbt die Eigenschaften der Basisklasse im COM\-Objekt, überlädt eine Methode und definiert eine neue Methode, um die Klasse zu erweitern.  
   
@@ -121,7 +121,7 @@ Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleite
   
 2.  Fügen Sie der Ereignishandlerprozedur für das `Click`\-Ereignis der Schaltfläche folgenden Code hinzu, um eine Instanz von `MathClass` zu erstellen und die überladenen Methoden aufzurufen:  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#34)]  
+     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  Führen Sie das Projekt aus, indem Sie F5 drücken.  
   

@@ -28,7 +28,7 @@ caps.handback.revision: 19
 In diesem Beispiel wird gezeigt, wie mit einer untergeordneten Achseneigenschaft auf alle XML\-Elemente zugegriffen werden kann, die einen angegebenen Namen haben und einem XML\-Element untergeordnet sind.  Dabei wird mit der `Value`\-Eigenschaft der Wert des ersten Elements aus der Auflistung abgerufen, den die untergeordnete `name`\-Achseneigenschaft zurückgibt.  Die untergeordnete `name`\-Achseneigenschaft ruft alle Elemente mit dem Namen `name` ab, die im `contacts`\-Objekt enthalten sind.  In diesem Beispiel wird die untergeordnete `phone`\-Achseneigenschaft auch verwendet, um auf alle untergeordneten Elemente mit dem Namen `phone` zuzugreifen, die im `contacts`\-Objekt enthalten sind.  
   
 ## Beispiel  
- [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-descen_1.vb)]  
+ [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
   
 ## Kompilieren des Codes  
  Dieses Beispiel setzt Folgendes voraus:  

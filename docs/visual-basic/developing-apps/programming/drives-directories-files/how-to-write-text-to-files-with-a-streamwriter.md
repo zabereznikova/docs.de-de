@@ -26,7 +26,7 @@ caps.handback.revision: 14
 In diesem Beispiel wird mit der `My.Computer.FileSystem.OpenTextFileWriter`\-Methode ein <xref:System.IO.StreamWriter>\-Objekt geöffnet, und dieses wird zum Schreiben einer Zeichenfolge in eine Textdatei mithilfe der <xref:System.IO.TextWriter.WriteLine%2A>\-Methode der <xref:System.IO.StreamWriter>\-Klasse verwendet.  
   
 ## Beispiel  
- [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-fil_0_1.vb)]  
+ [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
   
 ## Robuste Programmierung  
  Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  

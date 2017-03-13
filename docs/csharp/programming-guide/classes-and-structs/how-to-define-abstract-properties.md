@@ -36,7 +36,7 @@ Im folgenden Beispiel wird die Definition [abstrakter](../../../csharp/language-
 ## Beispiel  
  Durch diese Datei wird die `Shape`\-Klasse deklariert, die die `Area`\-Eigenschaft vom Typ `double` enthält.  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_1.cs)]  
+ [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
 -   Modifizierer für die Eigenschaft werden in die Eigenschaftendeklaration selbst eingefügt.  Beispiele:  
   
@@ -49,12 +49,12 @@ Im folgenden Beispiel wird die Definition [abstrakter](../../../csharp/language-
 ## Beispiel  
  Im folgenden Code sind drei Unterklassen von `Shape` enthalten, die die `Area`\-Eigenschaft überschreiben, um ihre eigene Implementierung bereitzustellen.  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_2.cs)]  
+ [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
 ## Beispiel  
  Der folgende Code stellt ein Testprogramm dar, das einige von `Shape` abgeleitete Objekte erstellt und ihre Bereiche ausgibt.  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_3.cs)]  
+ [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

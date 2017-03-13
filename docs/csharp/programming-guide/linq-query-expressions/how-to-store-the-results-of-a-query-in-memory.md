@@ -16,7 +16,7 @@ Eine Abfrage ist im Grunde ein Satz von Anweisungen, wie Daten abgerufen und org
  Es wird empfohlen, das zurückgegebene Auflistungsobjekt beim Speichern der Abfrageergebnisse einer neuen Variable zuzuweisen, wie es im folgenden Beispiel dargestellt wird:  
   
 ## Beispiel  
- [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#25)]  
+ [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
   
 ## Kompilieren des Codes  
   

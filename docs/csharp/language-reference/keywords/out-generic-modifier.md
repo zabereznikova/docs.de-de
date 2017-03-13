@@ -30,7 +30,7 @@ Für generische Typparameter gibt das `out`\-Schlüsselwort an, dass der Typpara
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie eine kovariante generische Schnittstelle deklariert, erweitert und implementiert wird.  Außerdem wird gezeigt, wie die implizite Konvertierung für Klassen verwendet wird, die eine kovariante Schnittstelle implementieren.  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
  In einer generischen Schnittstelle kann ein Typparameter kovariant deklariert werden, wenn er die folgenden Bedingungen erfüllt:  
   
@@ -44,7 +44,7 @@ Für generische Typparameter gibt das `out`\-Schlüsselwort an, dass der Typpara
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein kovarianter generischer Delegat deklariert, instanziiert und aufgerufen wird.  Außerdem wird gezeigt, wie Delegattypen implizit konvertiert werden.  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
  In einem generischen Delegaten kann ein Typ kovariant deklariert werden, wenn er nur als Methodenrückgabetyp und nicht für Methodenargumente verwendet wird.  
   

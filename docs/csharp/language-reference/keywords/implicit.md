@@ -22,7 +22,7 @@ caps.handback.revision: 19
 Das `implicit`\-Schlüsselwort wird verwendet, um einen impliziten benutzerdefinierten Typkonvertierungsoperator zu deklarieren.  Wenn durch die Konvertierung kein Datenverlust zu befürchten ist, können Sie es verwenden, um implizite Konvertierungen zwischen einem benutzerdefinierten Typ und einem anderen Typ zu ermöglichen.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/csharp/implicit_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicit_1.cs)]  
   
  Durch implizite Konvertierungen kann die Lesbarkeit des Quellcodes verbessert werden, da nicht erforderliche Typumwandlungen entfernt werden.  Da implizite Konvertierungen jedoch keine explizite Umwandlung von einem Typ in einen anderen erfordern, ist Vorsicht angebracht, um unerwartete Ergebnisse zu vermeiden.  In der Regel sollten durch implizite Konvertierungsoperatoren keine Ausnahmen ausgelöst werden oder Informationen verloren gehen, sodass sie sicher verwendet werden können, ohne dass sich der Programmierer dessen bewusst ist.  Ein Konvertierungsoperator, der diese Kriterien nicht erfüllen kann, sollte als `explicit` markiert werden.  Weitere Informationen hierzu finden Sie unter [Verwenden von Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   

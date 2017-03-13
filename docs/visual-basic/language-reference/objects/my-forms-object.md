@@ -53,7 +53,7 @@ Stellt Eigenschaften für den Zugriff auf eine Instanz jedes im aktuellen Projek
 ## Beispiel  
  In diesem Beispiel wird der Titel des Standardformulars `SidebarMenu` geändert.  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
  Damit diese Beispiel ausgeführt werden kann, muss das Projekt das Formular `SidebarMenu` enthalten.  Weitere Informationen finden Sie unter [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/de-de/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   

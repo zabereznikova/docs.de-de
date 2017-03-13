@@ -33,7 +33,7 @@ In diesem Thema wird beschrieben, wie mithilfe von `My.Computer.Ports` die verf�
   
  Normalerweise w채hlt der Benutzer aus der Liste der verf체gbaren Anschl체sse den seriellen Anschluss aus, den die Anwendung verwenden soll.  In diesem Beispiel werden die Namen der seriellen Anschl체sse in einem <xref:System.Windows.Forms.ListBox>\-Steuerelement gespeichert.  Weitere Informationen finden Sie unter [ListBox\-Steuerelement](../Topic/ListBox%20Control%20\(Windows%20Forms\).md).  
   
- [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#45)]  
+ [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
  Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verf체gbar.  Sie finden das Element in der Codeausschnittauswahl unter **Connectivity and Networking**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   

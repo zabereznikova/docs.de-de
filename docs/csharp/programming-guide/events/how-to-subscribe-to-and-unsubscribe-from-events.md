@@ -30,7 +30,7 @@ Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu ab
   
      [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] erstellt eine leere Ereignishandlermethode und fügt diese dem Code hinzu.  Sie können den Code auch in der **Codeansicht** manuell hinzufügen.  Die folgenden Codezeilen deklarieren z. B. eine Ereignishandlermethode, die aufgerufen wird, wenn die `Form`\-Klasse das `Load`\-Ereignis auslöst.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-subscribe-to-and-_1.cs)]  
+     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      Die Codezeile, die zum Abonnieren des Ereignisses erforderlich ist, wird automatisch in der `InitializeComponent`\-Methode der Projektdatei Form1.Designer.cs generiert.  Sie sieht etwa so aus:  
   

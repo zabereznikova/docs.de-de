@@ -21,7 +21,7 @@ In C\# 2.0 oder höher implementieren eindimensionale Arrays, die als untere Gr
   
  Das folgende Codebeispiel veranschaulicht, wie eine einzelne generische Methode, die einen <xref:System.Collections.Generic.IList%601>\-Eingabeparameter verwendet, sowohl eine Liste als auch ein Array \(in diesem Fall ein Array mit ganzen Zahlen\) durchlaufen kann.  
   
- [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-arrays_1.cs)]  
+ [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
 ## Siehe auch  
  <xref:System.Collections.Generic>   

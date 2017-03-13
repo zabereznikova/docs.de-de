@@ -44,14 +44,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Die besonderen Ausnahmen für jede Datei und jeden Ordner und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden lediglich als Beispiel dargestellt.  Sie sollten diesen Code ändern, um Ihre speziellen Anforderungen zu erfüllen.  Weitere Informationen finden Sie in den Kommentaren im Code.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#1)]  
+ [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird dargestellt, wie Verzeichnisse und Ordner in einer Verzeichnisstruktur ohne Rekursion durchlaufen werden.  Bei dieser Methode wird der generische <xref:System.Collections.Generic.Stack%601>\-Auflistungstyp verwendet, bei dem es sich um einen LIFO\-Stapel handelt.  
   
  Die besonderen Ausnahmen für jede Datei und jeden Ordner und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden lediglich als Beispiel dargestellt.  Sie sollten diesen Code ändern, um Ihre speziellen Anforderungen zu erfüllen.  Weitere Informationen finden Sie in den Kommentaren im Code.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#2)]  
+ [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  In der Regel ist es zu zeitaufwändig, jeden Ordner zu testen, um zu ermitteln, ob Ihre Anwendung über die Berechtigungen zum Öffnen verfügt.  Im Codebeispiel wird deshalb nur dieser Teil der Operation in einen `try/catch`\-Block eingeschlossen.  Sie können den `catch`\-Block so ändern, dass Ihre Berechtigungen bei verweigertem Zugriff auf einen Ordner erhöht werden. Anschließend können Sie erneut darauf zugreifen.  Fangen Sie als Regel einfach die Ausnahmen ab, die Sie verarbeiten können, ohne Ihre Anwendung in einem unbekannten Zustand zu lassen.  
   

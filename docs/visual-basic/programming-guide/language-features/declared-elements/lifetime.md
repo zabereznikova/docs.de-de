@@ -67,7 +67,7 @@ Die *Lebensdauer* eines deklarierten Elements ist der Zeitraum, während dessen 
  Im folgenden Beispiel wird eine Variable mit dem [Static](../../../../visual-basic/language-reference/modifiers/static.md)\-Schlüsselwort deklariert.  \(Sie benötigen das `Dim`\-Schlüsselwort nicht, wenn in der [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) ein Modifizierer wie `Static` verwendet wird.\)  
   
 ### Code  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/visualbasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### Kommentare  
  Im vorhergehenden Beispiel existiert die Variable `applesSold` weiter, nachdem die `runningTotal`\-Prozedur zum aufrufenden Code zurückgekehrt ist.  Beim nächsten Aufruf von `runningTotal` bleibt der zuvor berechnete Wert von `applesSold` bestehen.  

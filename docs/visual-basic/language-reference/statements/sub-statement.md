@@ -225,14 +225,14 @@ End Sub
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Sub` Anweisung definieren den Namen, Parameter und Code, der den Text der form einer `Sub` Prozedur.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel `DelayAsync` ist ein einer `Async``Function` die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `Return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund der Deklaration des `DelayAsync` muss einen Rückgabetyp haben `Task(Of Integer)`. Da der Rückgabetyp ist `Task(Of Integer)`, die Auswertung der `Await` Ausdruck in `DoSomethingAsync` erzeugt eine ganze Zahl, wie in der folgenden Anweisung dargestellt: `Dim result As Integer = Await delayTask`.  
   
  Die `startButton_Click` Verfahren ist ein Beispiel für ein `Async Sub` Verfahren. Da `DoSomethingAsync` ist eine `Async` -Funktion, die die Aufgabe für den Aufruf von `DoSomethingAsync` gewartet werden muss, wie in der folgenden Anweisung dargestellt: `Await DoSomethingAsync()`. Die `startButton_Click``Sub` Prozedur muss definiert werden, mit der `Async` Modifizierer, weil sie verfügt über eine `Await` Ausdruck.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)   

@@ -25,7 +25,7 @@ caps.handback.revision: 11
 Im folgenden Codebeispiel wird ein `Boolean`\-Wert festgelegt, der angibt, ob eine Zeichenfolge ein gültiges Datum oder eine gültige Uhrzeit darstellt.  
   
 ## Beispiel  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-strings-_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
   
 ## Kompilieren des Codes  
  Ersetzen Sie `("01/01/03")` und `"9:30 PM"` durch die Werte für Datum und Uhrzeit, die Sie überprüfen möchten.  Sie können die Zeichenfolge durch eine andere hartcodierte Zeichenfolge, eine `String`\-Variable oder eine Methode ersetzen, die eine Zeichenfolge zurückgibt, z. B. `InputBox`.  

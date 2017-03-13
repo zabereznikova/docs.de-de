@@ -32,7 +32,7 @@ Verkettungsoperatoren verbinden mehrere Zeichenfolgen zu einer einzelnen Zeichen
   
  Diese Operatoren können auch `String`\-Variablen verketten, wie das folgende Beispiel zeigt.  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
   
 ## Unterschiede zwischen den beiden Verkettungsoperatoren  
  Der [\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) dient dem primären Zweck, zwei Zahlen zu addieren.  Damit können jedoch auch numerische Operanden mit Zeichenfolgenoperanden verkettet werden.  Der `+`\-Operator verfügt über einen komplexen Satz an Regeln, die bestimmen, ob eine Addition oder Verkettung stattfindet, ob ein Compilerfehler signalisiert wird oder ob eine <xref:System.InvalidCastException>\-Ausnahme bei Laufzeit ausgelöst wird.  

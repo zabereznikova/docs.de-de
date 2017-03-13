@@ -46,7 +46,7 @@ Gibt an, dass auf ein oder mehrere deklarierte Programmierelemente nur aus der A
 ## Beispiel  
  Die folgende Klasse ermöglicht anderen Programmierelementen innerhalb der gleichen Assembly, mithilfe des `Friend`\-Modifizierers auf bestimmte Member zuzugreifen.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## Verwendung  
  Sie können den `Friend`\-Modifizierer in diesen Kontexten verwenden:  

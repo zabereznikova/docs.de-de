@@ -27,19 +27,19 @@ Ausnahmen werden verwendet, um anzuzeigen, dass während der Programmausführung
   
      Wenn beispielsweise ein Parameter zu einer Methode einen ungültigen Wert hat:  
   
-     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_1.cs)]  
+     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
   
 -   Auf Grundlage des Objektzustands erfolgt ein unpassender Aufruf an ein Objekt.  
   
      Ein Beispiel wäre der Versuch, in eine schreibgeschützte Datei zu schreiben.  Lösen Sie in Fällen, in denen der Objektzustand einen bestimmten Vorgang nicht zulässt, eine Instanz von <xref:System.InvalidOperationException> oder ein auf einer Ableitung dieser Klasse basierendes Objekt aus.  Im folgenden Beispiel wird eine Methode veranschaulicht, die ein <xref:System.InvalidOperationException>\-Objekt auslöst:  
   
-     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_2.cs)]  
+     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   Wenn ein Argument einer Methode eine Ausnahme verursacht.  
   
      In diesem Fall sollte die ursprüngliche Ausnahme abgefangen werden, und es sollte eine <xref:System.ArgumentException>\-Instanz erstellt werden.  Die ursprüngliche Ausnahme sollte als <xref:System.Exception.InnerException%2A>\-Parameter an den Konstruktor von <xref:System.ArgumentException> übergeben werden:  
   
-     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_3.cs)]  
+     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  Ausnahmen enthalten eine Eigenschaft namens <xref:System.Exception.StackTrace%2A>.  Diese Zeichenfolge enthält die Namen der aktuell in der Aufrufliste befindlichen Methoden sowie den Dateinamen und die Zeilennummer der Stelle, an der die Ausnahme für die jeweilige Methode ausgelöst wurde.  Die Common Language Runtime \(CLR\) erstellt an der Position der `throw`\-Anweisung automatisch ein <xref:System.Exception.StackTrace%2A>\-Objekt. Ausnahmen müssen also an der Stelle ausgelöst werden, an der die Stapelüberwachung beginnen soll.  
   
@@ -61,7 +61,7 @@ Ausnahmen werden verwendet, um anzuzeigen, dass während der Programmausführung
 ## Definieren von Ausnahmeklassen  
  In Programmen kann eine vordefinierte Ausnahmeklasse \(mit Ausnahme der oben genannten\) im <xref:System>\-Namespace ausgelöst werden, oder es können eigene Ausnahmeklassen durch Ableiten von <xref:System.Exception> erstellt werden.  Die abgeleiteten Klassen müssen mindestens vier Konstruktoren definieren: einen Standardkonstruktor, einen zum Festlegen der message\-Eigenschaft und einen, der sowohl die <xref:System.Exception.Message%2A>\-Eigenschaft als auch die <xref:System.Exception.InnerException%2A>\-Eigenschaft festlegt.  Der vierte Konstruktor wird verwendet, um die Ausnahme zu serialisieren.  Neue Ausnahmeklassen sollten serialisierbar sein.  Beispiele:  
   
- [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_4.cs)]  
+ [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   
  Neue Eigenschaften sollten zur Ausnahmeklasse nur hinzugefügt werden, wenn die Daten, die durch sie bereitgestellt werden, zur Bearbeitung der Ausnahme benötigt werden.  Wenn der abgeleiteten Ausnahmeklasse neue Eigenschaften hinzugefügt werden, sollte `ToString()` überschrieben werden, um die ergänzenden Informationen zurückzugeben.  
   

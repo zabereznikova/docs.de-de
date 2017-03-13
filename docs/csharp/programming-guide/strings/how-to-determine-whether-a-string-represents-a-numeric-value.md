@@ -34,7 +34,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## Beispiel  
  In den folgenden Beispielen wird gezeigt, wie Sie `TryParse` mit Zeichenfolgenentsprechungen von `long`, `byte` und `decimal` verwenden können.  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#14)]  
+ [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## Robuste Programmierung  
  Primitive numerische Typen implementieren auch die statische `Parse`\-Methode, die eine Ausnahme auslöst, wenn die Zeichenfolge keine gültige Zahl ist.  `TryParse` ist im Allgemeinen effektiver, da es nur den Wert false zurückgibt, wenn die Zahl nicht gültig ist.  

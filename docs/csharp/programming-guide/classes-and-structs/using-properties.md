@@ -26,7 +26,7 @@ Eigenschaften beinhalten sowohl Aspekte von Feldern als auch von Methoden.  Dem 
   
  Eigenschaften werden innerhalb des Klassenblocks definiert, indem die Zugriffsebene des Felds angegeben wird, gefolgt vom Typ und dem Namen der Eigenschaft sowie von einem Codeblock, der einen `get`\-Accessor und\/oder einen `set`\-Accessor deklariert.  Beispiele:  
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  In diesem Beispiel wird `Month` als Eigenschaft deklariert, damit der `set`\-Accessor dafür sorgen kann, dass der `Month`\-Wert zwischen 1 und 12 festgelegt wird.  Die `Month`\-Eigenschaft verwendet ein privates Feld für die Nachverfolgung des tatsächlichen Werts.  Der tatsächliche Speicherort, an dem die Daten einer Eigenschaft gespeichert werden, wird oft als "Sicherungsspeicher" der Eigenschaft bezeichnet. Es ist üblich, dass Eigenschaften private Felder als Sicherungsspeicher verwenden.  Das Feld wird als privat gekennzeichnet, damit sichergestellt ist, dass eine Änderung des Felds nur durch Aufrufen der Eigenschaft durchgeführt werden kann.  Weitere Informationen über öffentliche und private Zugriffsbeschränkungen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -35,32 +35,32 @@ Eigenschaften beinhalten sowohl Aspekte von Feldern als auch von Methoden.  Dem 
 ## get\-Accessor  
  Der Text des `get`\-Accessors ähnelt dem Text einer Methode.  Er muss einen Wert des Eigenschaftentyps zurückgeben.  Die Ausführung des `get`\-Accessors entspricht dem Lesen des Feldwerts.  Wenn Sie z. B. die private Variable von dem `get`\-Accessor zurückgeben und Optimierungen aktiviert sind, wird der Aufruf an die `get`\-Accessormethode durch den Compiler eingebettet, damit kein zusätzlicher Aufwand an Methodenaufrufen entsteht.  Eine virtuelle `get`\-Accessormethode kann jedoch nicht eingebettet werden, da zur Kompilierzeit im Compiler nicht bekannt ist, welche Methode während der Laufzeit tatsächlich aufgerufen wird.  Das folgende Beispiel enthält einen `get`\-Accessor, der den Wert des privaten Felds `name` zurückgibt:  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  Wenn Sie auf die Eigenschaft verweisen \(außer als Ziel einer Anweisung\), wird der `get`\-Accessor aufgerufen, um den Wert der Eigenschaft zu lesen.  Beispiele:  
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  Der `get`\-Accessor muss mit einer [return](../../../csharp/language-reference/keywords/return.md)\-Anweisung oder einer [throw](../../../csharp/language-reference/keywords/throw.md)\-Anweisung enden, und die Steuerung darf nicht über den Accessortext hinausgehen.  
   
  Beim Programmieren sollte vermieden werden, den Zustand des Objekts mit dem `get`\-Accessor zu ändern.  Der folgende Accessor hat beispielsweise den Nebeneffekt, dass der Zustand des Objekts bei jedem Zugriff auf das `number`\-Feld geändert wird.  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  Der `get`\-Accessor kann verwendet werden, um entweder den Feldwert zurückzugeben oder um den Feldwert zu berechnen und zurückzugeben.  Beispiele:  
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_5.cs)]  
+ [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  Wenn Sie der `Name`\-Eigenschaft im vorangehenden Codesegment keinen Wert zuweisen, wird der Wert NA zurückgegeben.  
   
 ## set\-Accessor  
  Der `set`\-Accessor kann mit einer Methode verglichen werden, deren Rückgabetyp [void](../../../csharp/language-reference/keywords/void.md) ist.  Er verwendet einen impliziten Parameter mit der Bezeichnung `value`, dessen Typ dem Typ der Eigenschaft entspricht.  Im folgenden Beispiel wird ein `set`\-Accessor der `Name`\-Eigenschaft hinzugefügt:  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_6.cs)]  
+ [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  Wenn Sie der Eigenschaft einen Wert zuweisen, wird der `set`\-Accessor mit einem Argument aufgerufen, das den neuen Wert angibt.  Beispiele:  
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_7.cs)]  
+ [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  Es wäre falsch, den impliziten Parameternamen \(`value`\) für die Deklaration einer lokalen Variablen in einem `set`\-Accessor zu verwenden.  
   
@@ -79,29 +79,29 @@ Eigenschaften beinhalten sowohl Aspekte von Feldern als auch von Methoden.  Dem 
 ## Beispiel  
  Dieses Beispiel veranschaulicht die Verwendung von Instanzeigenschaften, statischen Eigenschaften und Nur\-Lesen\-Eigenschaften.  Die Eingabe des Mitarbeiternamens über die Tastatur wird akzeptiert, `NumberOfEmployees` wird um 1 erhöht, und der Name sowie die Nummer des Mitarbeiters werden angezeigt.  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_8.cs)]  
+ [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## Beispiel  
  Dieses Beispiel zeigt, wie auf eine Eigenschaft in einer Basisklasse zugegriffen wird, die durch eine andere Eigenschaft mit demselben Namen in einer abgeleiteten Klasse verborgen wird.  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_9.cs)]  
+ [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  Im Folgenden werden einige wichtige Aspekte erläutert, die im oben aufgeführten Beispiel enthalten sind:  
   
 -   Die `Name`\-Eigenschaft in der Basisklasse wird durch die `Name`\-Eigenschaft in der abgeleiteten Klasse verborgen.  In einem solchen Fall wird der `new`\-Modifizierer für die Deklaration der Eigenschaft in der abgeleiteten Klasse verwendet:  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_10.cs)]  
+     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   Die Umwandlung `(Employee)` wird verwendet, um auf die verborgene Eigenschaft in der Basisklasse zuzugreifen:  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_11.cs)]  
+     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      Weitere Informationen zum Ausblenden von Membern finden Sie unter [new\-Modifizierer](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## Beispiel  
  In diesem Beispiel wird durch die beiden Klassen `Cube` und `Square` die abstrakte `Shape`\-Klasse implementiert. Zusätzlich wird deren abstrakte `Area`\-Eigenschaft überschrieben.  Beachten Sie die Verwendung des [override](../../../csharp/language-reference/keywords/override.md)\-Modifizierers für die Eigenschaften.  Die Seitenlänge wird vom Programm als Eingabe akzeptiert, und die Oberfläche des Quadrats und des Würfels werden berechnet.  Auch die Oberfläche wird als Eingabe akzeptiert, und die entsprechende Seitenlänge des Quadrats und des Würfels wird berechnet.  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_12.cs)]  
+ [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

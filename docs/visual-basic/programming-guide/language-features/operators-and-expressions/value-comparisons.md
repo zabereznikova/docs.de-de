@@ -43,15 +43,15 @@ Vergleichsoperatoren können zum Erstellen von Ausdrücken verwendet werden, die
   
  Ausdrücke, die Werte vergleichen, werden häufig in `If...Then`\-Konstruktionen verwendet, wie im folgenden Beispiel.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
  Das Zeichen `=` ist sowohl ein Vergleichsoperator als auch ein Zuweisungsoperator.  Wenn Sie dieses Zeichen als Vergleichsoperator verwenden, wird ausgewertet, ob der Wert auf der linken Seite gleich dem Wert auf der rechten Seite ist, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
  Sie können einen Vergleichsausdruck auch überall dort verwenden, wo ein `Boolean`\-Wert erforderlich ist, z. B. in den Anweisungen `If`, `While`, `Loop` oder `ElseIf` oder beim Zuweisen oder Übergeben eines Werts an eine `Boolean`\-Variable.  Im folgenden Beispiel wird der von dem Vergleichsausdruck zurückgegebene Wert einer `Boolean`\-Variablen zugewiesen.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
 ## Siehe auch  
  [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   

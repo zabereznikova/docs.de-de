@@ -30,15 +30,15 @@ caps.handback.revision: 20
   
  Mit automatisch implementierten Eigenschaften kann eine Eigenschaft, einschließlich eines Standardwerts, in einer einzelnen Zeile deklariert werden.  Im folgenden Beispiel werden drei Eigenschaftendeklarationen gezeigt.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
  Eine automatisch implementierte Eigenschaft entspricht einer Eigenschaft, deren Eigenschaftswert in einem privaten Feld gespeichert wird.  Im folgenden Codebeispiel wird eine automatisch implementierte Eigenschaft veranschaulicht.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
  Im folgenden Codebeispiel wird der entsprechende Code für das vorherige Beispiel der automatisch implementierten Eigenschaft veranschaulicht.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
  Der folgende Code veranschaulicht die Implementierung von Readonly\-Eigenschaften:  
   
@@ -73,7 +73,7 @@ End Class
 ## So definieren Sie eine automatisch implementierte Eigenschaft  
  Jeder Ausdruck, der verwendet werden kann, um ein Feld zu initialisieren, ist gültig für die Initialisierung einer automatisch implementierte Eigenschaft.  Wenn Sie eine automatisch implementierte Eigenschaft initialisieren, wird der Ausdruck ausgewertet und der `Set` Prozedur für die Eigenschaft übergeben.  Die folgenden Codebeispiele zeigen einige automatisch implementierte Eigenschaften, die Anfangswerte enthalten.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
  Sie können eine automatisch implementierte Eigenschaft nicht initialisieren, wenn sie ein Member von `Interface` oder `MustOverride` gekennzeichnet ist.  
   
@@ -81,7 +81,7 @@ End Class
   
  Wenn Sie eine automatisch implementierte Eigenschaft als Array deklarieren, können keine expliziten Arraygrenzen festgelegt werden.  Allerdings können Sie einen Wert mit einem Arrayinitialisierer angeben, wie in den folgenden Beispielen gezeigt.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## Eigenschaftendefinitionen, die Standardsyntax erfordern  
  Automatisch implementierte Eigenschaften sind praktisch und unterstützen viele Programmierszenarien.  Es gibt jedoch Situationen, in denen Sie keine automatisch implementierte Eigenschaft verwenden können und stattdessen die Eigenschaftensyntax Standard oder *Erweitert* verwenden müssen.  

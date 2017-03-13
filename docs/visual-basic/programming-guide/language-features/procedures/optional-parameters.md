@@ -57,12 +57,12 @@ sub name(argument 1, , , argument 4)
   
  Beim ersten Aufruf von `MsgBox` werden alle drei Argumente in der Reihenfolge angegeben, in der sie von `MsgBox` definiert werden.  Beim zweiten Aufruf wird nur das erforderliche Argument angegeben.  Beim dritten und vierten Aufruf werden das erste und dritte Argument angegeben.  Im dritten Aufruf geschieht dies über die Position, im vierten Aufruf über den Namen.  
   
- [!code-vb[VbVbcnProcedures#47](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## Bestimmen, ob ein optionales Argument vorhanden ist  
  Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde.  Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen.  In der folgenden Prozedur wird der optionale  `office`\-Parameter definiert und anschließend überprüft, ob sein Standardwert  `QJZ` im Aufruf ausgelassen wurde:  
   
- [!code-vb[VbVbcnProcedures#46](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
  Wenn es sich beim optionalen Parameter um einen Verweistyp wie `String` handelt, kann `Nothing` als Standardwert verwendet werden, sofern dieser kein zu erwartender Wert für das Argument ist.  
   

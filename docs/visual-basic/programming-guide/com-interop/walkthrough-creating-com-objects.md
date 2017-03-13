@@ -71,28 +71,28 @@ Wenn Sie neue Anwendungen oder Komponenten erstellen, ist es am sinnvollsten, .N
   
 3.  Fügen Sie zu `ComClass1` die folgenden Konstanten hinzu.  Damit werden die Konstanten der global eindeutigen Bezeichner \(GUID – Globally Unique Identifier\) gespeichert, über die die COM\-Objekte verfügen müssen.  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#2)]  
+     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
   
 4.  Klicken Sie im Menü **Extras** auf **GUID erstellen**.  Klicken Sie im Dialogfeld **GUID erstellen** auf **Registrierungsformat** und anschließend auf **Kopieren**.  Klicken Sie auf **Beenden**.  
   
 5.  Ersetzen Sie die leere Zeichenfolge für die `ClassId` durch die GUID, und entfernen Sie die führende sowie die nachfolgende geschweifte Klammer.  Wenn die von Guidgen bereitgestellte GUID z. B. `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` lautet, muss der Code folgendermaßen lauten.  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#3)]  
+     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
   
 6.  Wiederholen Sie wie im folgenden Beispiel die vorherigen Schritte für die `InterfaceId`\-Konstante und die `EventsId`\-Konstante.  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#4)]  
+     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
   
     > [!NOTE]
     >  Stellen Sie sicher, dass die GUIDs neu und eindeutig sind; andernfalls erzeugt Ihre COM\-Komponente Konflikte mit anderen COM\-Komponenten.  
   
 7.  Fügen Sie `ComClass1` das `ComClass`\-Attribut hinzu, und geben Sie die GUIDs für die Klassen\-ID, die Schnittstellen\-ID und die Ereignis\-ID wie im folgenden Beispiel an:  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#5)]  
+     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
   
 8.  COM\-Klassen müssen über einen parameterlosen `Public Sub New()`\-Konstruktor verfügen. Andernfalls kann die Klasse nicht ordnungsgemäß registriert werden.  Fügen Sie der Klasse einen parameterlosen Konstruktor hinzu:  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#6)]  
+     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
 9. Fügen Sie der Klasse Eigenschaften, Methoden und Ereignisse hinzu, und beenden Sie die Eingabe mit einer `End Class`\-Anweisung.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellt die Assembly und registriert das COM\-Objekt im Betriebssystem.  
   

@@ -39,11 +39,11 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten ei
 ## Beispiel  
  Im folgenden Beispiel wird der Operator `+` für eine Struktur mit dem Namen `height`definiert.  Die Struktur verwendet in Fuß und Zoll gemessene Höhen.  Ein *Zoll* entspricht 2,54 Zentimetern, und ein *Fuß* ist 12 Zoll.  Um normalisierte Werte \(Zoll \< 12,0\) zu gewährleisten, führt der Konstruktor die *Modulo*\-12\-Arithmetik aus.  Der Operator `+` verwendet den Konstruktor, um normalisierte Werte zu generieren.  
   
- [!code-vb[VbVbcnProcedures#25](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
  Sie können die `height` \-Struktur mit dem folgenden Code testen.  
   
- [!code-vb[VbVbcnProcedures#26](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
  Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

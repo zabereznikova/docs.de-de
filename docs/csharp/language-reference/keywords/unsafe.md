@@ -51,7 +51,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  Zum Kompilieren von unsicherem Code muss die [\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)\-Compileroption angegeben werden.  Unsicherer Code kann nicht durch die Common Language Runtime überprüft werden.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#22)]  
+ [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

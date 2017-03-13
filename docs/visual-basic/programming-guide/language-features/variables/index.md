@@ -33,7 +33,7 @@ Beim Ausführen von Berechnungen mit [!INCLUDE[vbprvb](../../../../csharp/progra
 ## Zuweisen von Werten  
  Mit Zuweisungsanweisungen führen Sie Berechnungen durch und weisen das Ergebnis einer Variablen zu, wie im folgenden Beispiel gezeigt.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  Das Gleichheitszeichen \(`=`\) entspricht in diesem Beispiel einem Zuweisungsoperator, nicht einem Gleichheitsoperator.  Der Wert wird der Variablen `applesSold` zugewiesen.  

@@ -42,7 +42,7 @@ x | y
 ## Beispiel  
  In den folgenden Beispielen ergibt der Ausdruck, der verwendet wird, `||` nur den ersten Operanden aus.  Der Ausdruck, der verwendet `|`wertet beide Operanden aus.  Im zweiten Beispiel eine Laufzeitausnahme tritt auf, wenn beide Operanden ausgewertet werden.  
   
- [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#52)]  
+ [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

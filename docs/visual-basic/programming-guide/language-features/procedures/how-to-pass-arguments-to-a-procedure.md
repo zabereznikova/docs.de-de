@@ -48,7 +48,7 @@ Wenn Sie eine Prozedur aufrufen, geben Sie nach dem Prozedurnamen eine Argumentl
   
      Im folgenden Beispiel wird die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Funktion aufgerufen.  
   
-     [!code-vb[VbVbcnProcedures#34](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-pass-arguments-to_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
      Im vorangehenden Beispiel wird das erforderliche erste Argument angegeben, das der anzuzeigenden Meldungszeichenfolge entspricht.  Ausgelassen wird das Argument für den optionalen zweiten Parameter, der die Schaltflächen festlegt, die im Meldungsfeld angezeigt werden sollten.  Da im Aufruf kein Wert angegeben wird, verwendet `MsgBox` den Standardwert `MsgBoxStyle.OKOnly`, der bewirkt, dass nur die Schaltfläche **OK** angezeigt wird.  
   

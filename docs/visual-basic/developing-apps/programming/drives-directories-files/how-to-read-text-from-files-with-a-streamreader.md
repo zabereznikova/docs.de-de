@@ -30,7 +30,7 @@ Das `My.Computer.FileSystem`\-Objekt stellt Methoden bereit, mit denen ein <xref
   
 -   Verwenden Sie die `OpenTextFileReader`\-Methode, um den <xref:System.IO.TextReader> unter Angabe einer Datei zu öffnen.  In diesem Beispiel wird die Datei `testfile.txt` geöffnet, es wird eine Zeile aus der Datei gelesen, und die Zeile wird in einem Meldungsfeld angezeigt.  
   
-     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-text-from-fi_1.vb)]  
+     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
 ## Robuste Programmierung  
  Bei der zu lesenden Datei muss es sich um eine Textdatei handeln.  

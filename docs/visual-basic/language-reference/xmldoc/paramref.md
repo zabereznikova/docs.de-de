@@ -42,7 +42,7 @@ Formatiert ein Wort als Parameter.
 ## Beispiel  
  In diesem Beispiel wird mit dem `<paramref>`\-Tag auf den `id`\-Parameter verwiesen.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/paramref_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

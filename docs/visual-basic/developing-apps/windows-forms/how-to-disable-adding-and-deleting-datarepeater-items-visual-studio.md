@@ -53,8 +53,8 @@ Benutzer können standardmäßig Elemente in einem <xref:Microsoft.VisualBasic.P
   
 12. Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged`\-Ereignishandler folgenden Code hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
     >  Dieser Schritt ist erforderlich, da <xref:System.Windows.Forms.BindingSource> die **DeleteItem**\-Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  
@@ -65,13 +65,13 @@ Benutzer können standardmäßig Elemente in einem <xref:Microsoft.VisualBasic.P
   
 2.  Fügen Sie folgenden Code zum `Form_Load`\-Ereignis hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#2)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#2)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.vb)]  
   
 3.  Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged`\-Ereignishandler folgenden Code hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
     >  Dieser Schritt ist erforderlich, da <xref:System.Windows.Forms.BindingSource> die **DeleteItem**\-Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  

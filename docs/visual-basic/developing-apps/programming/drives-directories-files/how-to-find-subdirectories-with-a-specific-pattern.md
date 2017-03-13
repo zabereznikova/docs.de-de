@@ -30,7 +30,7 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>\-Methode gi
   
 -   Verwenden Sie die `GetDirectories`\-Methode, und geben Sie dabei den Namen und den Pfad des zu durchsuchenden Verzeichnisses an.  Im folgenden Beispiel werden alle Verzeichnisse in der Verzeichnisstruktur zurückgegeben, deren Name das Wort "Logs" enthält, und die Verzeichnisse werden `ListBox1` hinzugefügt.  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-subdirectori_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
 ## Robuste Programmierung  
  Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  

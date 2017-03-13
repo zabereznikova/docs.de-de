@@ -18,21 +18,21 @@ caps.handback.revision: 21
 # Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch)
 In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklariert werden.  
   
- [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#13)]  
+ [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#14)]  
+ [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
   
  C\# 2.0 bietet eine einfachere Möglichkeit zum Schreiben dieser Deklaration, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#32)]  
+ [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
   
  In C\# 2.0 und höher kann auch eine anonyme Methode verwendet werden, um einen [Delegaten](../../../csharp/language-reference/keywords/delegate.md) zu deklarieren und initialisieren, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#15)]  
+ [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
   
  In C\# 3.0 und höher können Delegaten auch mit einem Lambda\-Ausdruck deklariert und instanziiert werden, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#31)]  
+ [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
   
  Weitere Informationen finden Sie unter [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
@@ -41,7 +41,7 @@ In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklar
  Die Verwendung von Delegaten beinhaltet eine sinnvolle Trennung der Funktionalitäten von Buchhandlungsdatenbank und Clientcode.  Der Clientcode weiß nicht, wie die Bücher archiviert werden oder wie der Buchhandlungscode Taschenbücher sucht.  Der Buchhandlungscode wiederum weiß nicht, wie ein Taschenbuchtitel weiterverarbeitet wird, nachdem er gefunden wurde.  
   
 ## Beispiel  
- [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#12)]  
+ [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
 ## Robuste Programmierung  
   
@@ -49,7 +49,7 @@ In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklar
   
      Mit der folgenden Anweisung wird ein neuer Delegattyp deklariert.  
   
-     [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#16)]  
+     [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
   
      Durch die einzelnen Delegattypen werden Anzahl und Typen von Argumenten sowie Rückgabewerte von Methoden beschrieben, die gekapselt können.  Sobald neue Argumenttypen oder ein neuer Rückgabewerttyp erforderlich ist, muss ein neuer Delegattyp deklariert werden.  
   
@@ -57,11 +57,11 @@ In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklar
   
      Nachdem ein Delegattyp deklariert wurde, muss ein Delegatobjekt erstellt und mit einer bestimmten Methode verknüpft werden.  Im vorherigen Beispiel übergeben Sie dazu die `PrintTitle`\-Methode an die `ProcessPaperbackBooks`\-Methode, wie im folgenden Beispiel gezeigt:  
   
-     [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#17)]  
+     [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
   
      Hierdurch wird ein neues Delegatobjekt erstellt, das mit der [static](../../../csharp/language-reference/keywords/static.md)\-Methode verknüpft ist `Test.PrintTitle`.  Auf ähnliche Weise wird die nicht statische `AddBookToTotal`\-Methode für das `totaller`\-Objekt wie im folgenden Beispiel übergeben:  
   
-     [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#18)]  
+     [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
   
      In beiden Fällen wird ein neues Delegatobjekt an die `ProcessPaperbackBooks`\-Methode übergeben.  
   
@@ -71,7 +71,7 @@ In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklar
   
      Nachdem ein Delegatobjekt erstellt wurde, wird es normalerweise an anderen Code übergeben, durch den der Delegat aufgerufen wird.  Ein Delegatobjekt wird über seinen Namen aufgerufen. Auf den Namen folgen \(in Klammern gesetzte\) Argumente, die an den Delegaten übergeben werden sollen.  Es folgt ein Beispiel für einen Delegataufruf:  
   
-     [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#19)]  
+     [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
   
      Ein Delegat kann entweder \(wie in diesem Beispiel\) synchron oder mithilfe der `BeginInvoke`\-Methode und der `EndInvoke`\-Methode asynchron aufgerufen werden.  
   

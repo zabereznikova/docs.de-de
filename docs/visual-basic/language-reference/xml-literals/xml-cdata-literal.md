@@ -62,7 +62,7 @@ Ein Literal, das ein <xref:System.Xml.Linq.XCData>\-Objekt darstellt.
 ## Beispiel  
  Im folgenden Beispiel wird ein CDATA\-Abschnitt mit dem Text "Can contain literal \<XML\> Tags" erstellt.  
   
- [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-cdata-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Xml.Linq.XCData>   

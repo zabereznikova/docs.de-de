@@ -47,7 +47,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## Beispiel  
  Im folgenden Beispiel wird `ns` als ein XML\-Namespacepräfix importiert.  Anschließend wird das Namespacepräfix verwendet, um ein XML\-Literal zu erstellen und auf den ersten untergeordneten Knoten mit dem qualifizierten Namen `ns:phone` zuzugreifen.  Anschließend wird dieser untergeordnete Knoten an die `ShowName`\-Unterroutine übergeben, die einen qualifizierten Namen erstellt, indem der Operator `GetXmlNamespace` verwendet wird.  Die `ShowName`\-Unterroutine übergibt dann den qualifizierten Namen an die <xref:System.Xml.Linq.XNode.Ancestors%2A>\-Methode, um den übergeordneten `ns:contact`\-Knoten zu erhalten.  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
   
  Wenn `TestGetXmlNamespace.RunSample()` aufgerufen wird, wird ein Meldungsfeld mit dem folgenden Text angezeigt:  
   

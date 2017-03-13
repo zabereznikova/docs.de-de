@@ -36,7 +36,7 @@ In dieser exemplarischen Vorgehensweise veranschaulicht, wie das Protokoll für 
   
 3.  In der <xref:System.Windows.Forms.Control.Click> -Ereignishandler für Button1, fügen Sie folgenden Code:  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbcnMyApplicationLogFiltering/Form1.vb#1)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  Die Anwendung im Debugger auszuführen.  
   

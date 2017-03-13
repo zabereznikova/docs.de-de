@@ -43,7 +43,7 @@ Erase arraylist
 ## Beispiel  
  Im folgenden Beispiel werden mit der `Erase`\-Anweisung zwei Arrays gelöscht, und der von ihnen belegte Speicherplatz wird freigegeben \(jeweils 1000 bzw. 100 Speicherelemente\).  Anschließend weist die `ReDim`\-Anweisung dem dreidimensionalen Array eine neue Arrayinstanz zu.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
 ## Siehe auch  
  [Nothing](../../../visual-basic/language-reference/nothing.md)   

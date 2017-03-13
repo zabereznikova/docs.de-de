@@ -31,19 +31,19 @@ Mit der <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>\-Methode kann
   
 -   Verwenden Sie die `UploadFile`\-Methode zum Hochladen einer Datei. Geben Sie dabei den Speicherort der Quelldatei sowie das Zielverzeichnis als Zeichenfolge oder URI \(Uniform Resource Identifier\) an. In diesem Beispiel wird die Datei `Order.txt` auf `http://www.cohowinery.com/uploads.aspx` hochgeladen.  
   
-     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]  
   
 ### So laden Sie eine Datei hoch und zeigen den Fortschritt der Operation an  
   
 -   Verwenden Sie die `UploadFile`\-Methode zum Hochladen einer Datei, und geben Sie dabei den Speicherort der Quelldatei und das Zielverzeichnis als Zeichenfolge oder URI an.  In diesem Beispiel wird die Datei `Order.txt` auf `http://www.cohowinery.com/uploads.aspx` hochgeladen, ohne einen Benutzernamen oder ein Kennwort anzugeben. Der Status des Uploads wird angezeigt, und das Timeoutintervall beträgt 500 Millisekunden.  
   
-     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]  
   
 ### So laden Sie eine Datei unter Angabe eines Benutzernamens und eines Kennworts hoch  
   
 -   Verwenden Sie die `UploadFile`\-Methode zum Hochladen einer Datei. Geben Sie dabei den Speicherort der Quelldatei und das Zielverzeichnis als Zeichenfolge oder URI sowie den Benutzernamen und das Kennwort an.  In diesem Beispiel wird die Datei `Order.txt` unter Angabe des Benutzernamens `anonymous` und eines leeren Kennworts auf `http://www.cohowinery.com/uploads.aspx` hochgeladen.  
   
-     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]  
   
 ## Robuste Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  

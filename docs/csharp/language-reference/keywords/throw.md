@@ -36,7 +36,7 @@ throw new MyException();
 ## Beispiel  
  In diesem Beispiel wird veranschaulicht, wie mit der `throw`\-Anweisung eine Ausnahme ausgelöst wird.  
   
- [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/csharp/throw_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/throw_1.cs)]  
   
 ## Codebeispiel  
  Weitere Informationen finden Sie in den Beispielen in [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) und [Gewusst wie: Explizites Auslösen von Ausnahmen](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  

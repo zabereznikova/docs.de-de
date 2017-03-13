@@ -30,7 +30,7 @@ Ein Abfrageausdruck muss mit einer `from`\-Klausel beginnen.  Darüber hinaus ka
   
  Im folgenden Beispiel ist `numbers` die Datenquelle, und `num` ist die Bereichsvariable.  Beachten Sie, dass beide Variablen stark typisiert sind, obwohl sogar das [var](../../../csharp/language-reference/keywords/var.md)\-Schlüsselwort verwendet wird.  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#1)]  
+ [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## Die Bereichsvariable  
  Der Compiler leitet den Typ der Bereichsvariablen ab, wenn die Datenquelle <xref:System.Collections.Generic.IEnumerable%601> implementiert.  Wenn die Quelle beispielsweise vom Typ `IEnumerable<Customer>` ist, wird die Bereichsvariable als `Customer` abgeleitet.  Sie müssen den Typ nur explizit angeben, wenn die Quelle ein nicht\-generischer `IEnumerable`\-Typ wie z. B. <xref:System.Collections.ArrayList> ist.  Weitere Informationen hierzu finden Sie unter [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md).  
@@ -42,14 +42,14 @@ Ein Abfrageausdruck muss mit einer `from`\-Klausel beginnen.  Darüber hinaus ka
 ## Zusammengesetzte from\-Klauseln  
  In einigen Fällen kann jedes Element in der Quellsequenz selbst eine Sequenz sein oder eine Sequenz enthalten.  Ihre Datenquelle kann beispielsweise ein `IEnumerable<Student>` sein, wobei jedes Student\-Objekt in der Sequenz eine Liste der Testergebnisse enthält.  Um auf die innere Liste innerhalb jedes `Student`\-Elements zuzugreifen, können Sie zusammengesetzte `from`\-Klauseln verwenden.  Die Technik entspricht dem Verwenden von geschachtelten [foreach](../../../csharp/language-reference/keywords/foreach-in.md)\-Anweisungen.  Sie können die [where](../../../csharp/language-reference/keywords/partial-method.md)\-Klausel oder die [orderby](../../../csharp/language-reference/keywords/orderby-clause.md)\-Klausel zu einer der beiden `from`\-Klauseln hinzufügen, um die Ergebnisse zu filtern.  Das folgende Beispiel enthält eine Sequenz von `Student`\-Objekten, von denen jedes eine innere `List` mit Ganzzahlen enthält, die die Testergebnisse darstellen.  Um auf die innere Liste zuzugreifen, verwenden Sie eine zusammengesetzte `from`\-Klausel.  Bei Bedarf können Sie Klauseln zwischen den beiden `from`\-Klauseln einfügen.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#2)]  
+ [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## Verwenden von mehreren from\-Klauseln zum Ausführen von Joins  
  Eine zusammengesetzte `from`\-Klausel wird zum Zugriff auf innere Auflistungen in einer einzelnen Datenquelle verwendet.  Eine Abfrage kann jedoch auch mehrere `from`\-Klauseln enthalten, die ergänzende Abfragen aus unabhängigen Datenquellen generieren.  Mit dieser Technik können Sie bestimmte Typen von Joinoperationen durchführen, die beim Einsatz der [join\-Klausel](../../../csharp/language-reference/keywords/join-clause.md) nicht möglich sind.  
   
  Das folgende Beispiel veranschaulicht, wie zwei `from`\-Klauseln verwendet werden können, um einen vollständigen Cross Join zweier Datenquellen zu bilden.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#3)]  
+ [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  Weitere Informationen zu Joinoperationen mit mehreren `from`\-Klauseln finden Sie unter [Gewusst wie: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   

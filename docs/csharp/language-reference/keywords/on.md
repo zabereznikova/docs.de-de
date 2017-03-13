@@ -24,7 +24,7 @@ Das Kontextschlüsselwort `on` wird in der [join\-Klausel](../../../csharp/langu
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung von `on` in einer `join`\-Klausel gezeigt.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/on_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

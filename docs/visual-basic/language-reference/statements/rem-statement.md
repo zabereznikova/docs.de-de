@@ -53,7 +53,7 @@ REM comment
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung der `REM`\-Anweisung veranschaulicht, die für erläuternde Hinweise im Programm verwendet wird.  Es zeigt darüber hinaus, wie das einfache Anführungszeichen \(`'`\) anstelle von `REM` verwendet werden kann.  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
 ## Siehe auch  
  [Comments in Code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   

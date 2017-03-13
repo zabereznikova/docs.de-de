@@ -46,8 +46,8 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
  Sie beheben Probleme wie dieses, indem Sie die fehlenden Eigenschaften im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>\-Ereignis wiederherstellen, das nach dem standardmäßigen Klonvorgang ausgelöst wird.  Das folgende Beispiel veranschaulicht, wie Sie die <xref:System.Windows.Forms.ListBox.Items%2A>\-Auflistung eines <xref:System.Windows.Forms.ListBox>\-Steuerelements im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>\-Ereignishandler reparieren.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterItemClonedCS/ItemCloned.cs#1)]
- [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterItemCloned/ItemCloned.vb#1)]  
+ [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
 ## Das Auswahlsymbol auf dem Elementheader fehlt  
  Wenn Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>\-Eigenschaft des Elementheaders in ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement ändern, wird das Auswahlsymbol je nach Farbauswahl möglicherweise ausgeblendet.  Auch eine Änderung der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>\-Eigenschaft kann zur Folge haben, dass das Auswahlsymbol nicht mehr sichtbar ist.  

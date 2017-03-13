@@ -46,7 +46,7 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfrag
 > [!NOTE]
 >  Klicken Sie auf [Seite "Kompilieren", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic) stellen Sie sicher, dass **Option Infer** zu **Ein** festgelegt ist.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Ausgabe:  
   
@@ -59,7 +59,7 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfrag
   
  Wenn die Quelldaten nicht bereits <xref:System.Collections.Generic.IEnumerable%601> implementieren, wird ein [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] Anbieter erforderlich, um die Funktionen der *Standardabfrageoperatoren* für diese Datenquelle implementiert.  So übernimmt beispielsweise [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] die Aufgabe, ein XML\-Dokument in einen abfragbaren <xref:System.Xml.Linq.XElement>\-Typ zu laden, wie im folgenden Beispiel dargestellt.  Weitere Informationen über Standardabfrageoperatoren finden Sie unter [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
  Mit [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] erstellen Sie zuerst eine objektrelationale Zuordnung zur Entwurfszeit, entweder manuell oder über [Object Relational Designer \(O\/R\-Designer\)](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Sie schreiben die Abfragen anhand der Objekte, und zur Laufzeit übernimmt [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] die Kommunikation mit der Datenbank.  Im folgenden Beispiel stellt `customers` eine bestimmte Tabelle in der Datenbank dar, und <xref:System.Data.Linq.Table%601> unterstützt die generische <xref:System.Linq.IQueryable%601>.  
   
@@ -74,7 +74,7 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfrag
   
  Wenn die Abfrage im folgenden Beispiel ausgeführt wird, gibt sie alle geraden Zahlen aus einem Ganzzahlen\-Array, `numbers`, zurück.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Der Abfrageausdruck enthält drei Klauseln: `From`, `Where` und `Select`.  Die spezielle Funktion und der Zweck jeder Abfrageausdrucksklausel werden in [Grundlegende Abfrageoperationen \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) erläutert.  Weitere Informationen finden Sie unter [Queries](../../../../visual-basic/language-reference/queries/queries.md).  Beachten Sie, dass in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] eine Abfragedefinition häufig in einer Variablen gespeichert und später ausgeführt wird.  Die Abfragevariable, wie `evensQuery` im vorherigen Beispiel, muss ein abfragbarer Typ sein. Der Typ von `evensQuery` ist `IEnumerable(Of Integer)` zugewiesen, vom Compiler, der lokalen Typrückschlusses.  
   
@@ -86,13 +86,13 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfrag
 ### Verzögerte Ausführung  
  Eine typische [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage sieht ähnlich der Abfrage im vorherigen Beispiel aus, in dem `evensQuery` definiert wird.  Dabei wird die Abfrage erstellt, jedoch nicht sofort ausgeführt.  Stattdessen wird die Abfragedefinition in der Abfragevariablen `evensQuery` gespeichert.  Die Abfrage wird später ausgeführt, in der Regel unter Verwendung einer `For Each`\-Schleife, die eine Sequenz von Werten zurückgibt, oder durch Anwendung eines Standardabfrageoperators wie `Count` oder `Max`.  Dieser Vorgang wird als *verzögerte Ausführung* bezeichnet.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
  Bei einer Sequenz von Werten greifen Sie auf die abgerufenen Daten unter Verwendung der Iterationsvariablen in der `For Each`\-Schleife zu \(im vorherigen Beispiel `number`\).  Da die Abfragevariable `evensQuery` die Abfragedefinition und nicht die Abfrageergebnisse enthält, können Sie die Abfrage beliebig oft ausführen, indem Sie die Abfragevariable mehrfach verwenden.  Sie könnten beispielsweise über eine Datenbank in Ihrer Anwendung verfügen, die ständig durch eine separate Anwendung aktualisiert wird.  Nach Erstellen einer Abfrage, mit der Daten aus dieser Datenbank abgerufen werden, können Sie eine `For Each`\-Schleife verwenden, um die Abfrage wiederholt auszuführen, sodass jedes Mal die neuesten Daten abgerufen werden.  
   
  Das folgende Beispiel veranschaulicht die Funktionsweise der verzögerten Ausführung.  Nachdem `evensQuery2` definiert und mit einer `For Each`\-Schleife ausgeführt wurde, wie in den vorherigen Beispielen, ändern sich einige Elemente in der Datenquelle `numbers`.  Anschließend führt eine zweite `For Each`\-Schleife erneut `evensQuery2` aus.  Beim zweiten Mal sind die Ergebnisse anders, da die `For Each`\-Schleife die Abfrage erneut ausführt, und zwar unter Verwendung der neuen Werte in `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  Ausgabe:  
   
@@ -109,15 +109,15 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfrag
   
  Die folgende Abfrage gibt die Anzahl der geraden Zahlen in einem Ganzzahlen\-Array zurück.  Die Abfragedefinition wird nicht gespeichert, und `numEvens` ist eine einfache `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
  Das gleiche Ergebnis lässt sich mithilfe der `Aggregate`\-Methode erzielen.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
  Sie können die Ausführung einer Abfrage auch erzwingen, indem Sie die `ToList`\- oder die `ToArray`\-Methode für eine Abfrage \(unmittelbar\) oder eine Abfragevariable \(verzögert\) aufrufen, wie im folgenden Code gezeigt.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
  In den vorherigen Beispielen ist `evensQuery3` eine Abfragevariable, `evensList` ist jedoch eine Liste, und `evensArray` ist ein Array.  
   

@@ -77,7 +77,7 @@ class Program
  Das folgende Beispiel zeigt, wie Sie einen `using`\-Alias für einen Namespace definieren und verwenden:  
   
 ### Code  
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
 ### Kommentare  
  Eine using\-Aliasdirektive kann auf der rechten Seite nicht über einen offenen generischen Typen verfügen.  Sie können zum Beispiel keinen using\-Alias für „List\<T\>“ erstellen, jedoch für „List\<int\>“.  
@@ -88,7 +88,7 @@ class Program
  Das folgende Beispiel zeigt, wie Sie eine `using`\-Direktive und einen `using`\-Alias für eine Klasse definieren:  
   
 ### Code  
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

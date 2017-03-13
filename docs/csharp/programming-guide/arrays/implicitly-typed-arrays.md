@@ -24,14 +24,14 @@ Sie können ein implizit typisiertes Array erstellen, in das der Typ der Arrayin
   
  In den folgenden Beispielen wird gezeigt, wie ein implizit typisiertes Array erstellt wird:  
   
- [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#37)]  
+ [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
  Beachten Sie im vorherigen Beispiel, dass bei implizit typisierten Arrays keine rechteckigen Klammern links in der Initialisierungsanweisung verwendet werden.  Beachten Sie auch, dass verzweigte Arrays mit `new []` initialisiert werden, genau wie eindimensionale Arrays.  
   
 ## Implizit typisierte Arrays in Objektinitialisierern  
  Wenn Sie einen anonymen Typ erstellen, der ein Array enthält, muss das Array im Objektinitialisierer des Typs impliziert typisiert sein.  Im folgenden Beispiel ist `contacts` ein implizit typisiertes Array anonymer Typen, von denen jeder ein Array mit dem Namen `PhoneNumbers` enthält.  Beachten Sie, dass das `var`\-Schlüsselwort nicht in den Objektinitialisierern verwendet wird.  
   
- [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#38)]  
+ [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

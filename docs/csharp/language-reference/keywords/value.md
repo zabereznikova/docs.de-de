@@ -20,7 +20,7 @@ caps.handback.revision: 14
 # value (C#-Referenz)
 Das kontextbezogene Schlüsselwort `value` wird im set\-Accessor in herkömmlichen Eigenschaftendeklarationen verwendet.  Es ähnelt einem Eingabeparameter in einer Methode.  Das Wort `value` verweist auf den Wert, der der Eigenschaft vom Clientcode zugewiesen werden soll.  `MyDerivedClass` verfügt im folgenden Beispiel über die Eigenschaft `Name`, die dem Sicherungsspeicher `name` mit dem `value`\-Parameter eine neue Zeichenfolge zuweist.  Aus der Clientcodeperspektive wird der Vorgang als einfache Zuweisung geschrieben.  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#26)]  
+ [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
   
  Nähere Informationen zur Verwendung von `value` finden Sie unter [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md).  
   

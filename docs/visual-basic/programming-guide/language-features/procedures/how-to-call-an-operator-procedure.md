@@ -53,7 +53,7 @@ Zum Aufrufen einer Operatorprozedur verwenden Sie das Operatorsymbol in einem Au
 ## Beispiel  
  Im folgenden Beispiel werden zwei <xref:System.TimeSpan>\-Strukturen erstellt und zusammengefügt. Anschließend wird das Ergebnis in einer dritten <xref:System.TimeSpan>\-Struktur gespeichert.  Die <xref:System.TimeSpan>\-Struktur definiert Operatorprozeduren, die mehrere Standardoperatoren überladen.  
   
- [!code-vb[VbVbcnProcedures#29](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-operator-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
  Da <xref:System.TimeSpan> den standardmäßigen Operator `+` überlädt, wird im vorhergehenden Beispiel eine Operatorprozedur aufgerufen, wenn der Wert von `combinedSpan` berechnet wird.  
   

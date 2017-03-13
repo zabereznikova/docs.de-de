@@ -84,28 +84,28 @@ Imports [ aliasname = ] namespace.element
   
  Der Code enthält keine `Imports`\-Anweisungen am Anfang der Datei.  Daher sind die Verweise `DirectoryInfo`, <xref:System.Text.StringBuilder> und <xref:Microsoft.VisualBasic.ControlChars.CrLf> mit den Namespaces alle vollqualifiziert.  
   
- [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_1.vb)]  
+ [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel enthält Anweisungen, die `Imports` für die referenzierten Namespaces.  Daher müssen die Typen nicht mit den Namespaces vollqualifiziert werden.  
   
- [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_2.vb)]  
+ [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
   
- [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_3.vb)]  
+ [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel enthält `Imports`\-Anweisungen, die Aliase für die referenzierten Namespaces erstellen.  Die Typen werden mit den Aliasen qualifiziert.  
   
- [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_4.vb)]  
+ [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
   
- [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_5.vb)]  
+ [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel enthält `Imports`\-Anweisungen, die Aliase für die referenzierten Typen erstellen.  Aliase werden verwendet, um die Typen angeben.  
   
- [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_6.vb)]  
+ [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
   
- [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_7.vb)]  
+ [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
 ## Siehe auch  
  [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   

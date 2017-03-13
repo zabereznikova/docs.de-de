@@ -23,9 +23,9 @@ Im folgenden Beispiel werden Zeiger für das Kopieren von Bytes von einem Array 
  In diesem Beispiel wird das [unsafe](../../../csharp/language-reference/keywords/unsafe.md)\-Schlüsselwort verwendet, das es Ihnen ermöglicht, in der `Copy`\-Methode Zeiger zu nutzen.  Die [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)\-Anweisung wird zur Deklarierung von Zeigern auf das Quellarray und das Zielarray verwendet.  Dadurch wird die Position von Quell\- und Zielarray im Speicher *fixiert*, sodass diese von der Garbage Collection nicht verschoben werden.  Die Fixierung der Speicherblöcke für die Arrays wird aufgehoben, wenn der `fixed`\-Block abgeschlossen ist.  Da die `Copy`\-Methode in diesem Beispiel das `unsafe`\-Schlüsselwort verwendet, muss das Beispiel mit der **\/unsafe**\-Compileroption kompiliert werden.  Um in Visual Studio die Option festzulegen, klicken Sie mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Eigenschaften**.  Wählen Sie auf der Registerkarte **Erstellen** die Option **Unsicheren Code zulassen** aus.  
   
 ## Beispiel  
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_1.cs)]  
   
- [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#18)]  
+ [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

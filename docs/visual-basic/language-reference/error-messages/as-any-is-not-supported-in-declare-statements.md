@@ -30,11 +30,11 @@ Der `Any`\-Datentyp wurde in Visual Basic 6.0 und früheren Versionen in `Declar
   
 1.  Deklarieren Sie Parameter des jeweiligen Typs, den Sie verwenden möchten. Beispiel:  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
   
 2.  Verwenden Sie das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut, um `As Any` anzugeben, wenn von der aufgerufenen Prozedur `Void*` erwartet wird.  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
 ## Siehe auch  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   

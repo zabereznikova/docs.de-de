@@ -66,11 +66,11 @@ Bei der gemeinsamen Verwendung von COM und verwaltetem Code von [!INCLUDE[dnprdn
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Erstellen von Instanzen einer .NET Framework\-Klasse  
  Im Allgemeinen erstellen Sie eine Instanz einer [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klasse mithilfe der `New`\-Anweisung und einem Klassennamen.  Sie können die `New`\-Anweisung nur dann mit einer Schnittstelle verwenden, wenn Sie über eine durch eine Interop\-Assembly dargestellte COM\-Klasse verfügen.  Wenn Sie die COM\-Klasse nicht mit einer `Inherits`\-Anweisung verwenden, können Sie die Schnittstelle wie eine Klasse verwenden.  Der folgende Code demonstriert die Erstellung eines `Command`\-Objekts in einem Projekt, das über einen Verweis auf das COM\-Objekt der Microsoft ActiveX Data Objects 2.8\-Bibliothek verfügt:  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#20)]  
+ [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
  Bei Verwendung der COM\-Klasse als Basis für eine abgeleitete Klasse müssen Sie jedoch die Interop\-Klasse verwenden, die die COM\-Klasse darstellt, wie im folgenden Code gezeigt:  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#21)]  
+ [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
 >  Interop\-Assemblys implementieren implizit Schnittstellen, die COM\-Klassen darstellen.  Implementieren Sie diese Schnittstellen nicht mit der `Implements`\-Anweisung. Dies löst einen Fehler aus.  
@@ -90,19 +90,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  In [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] müssen immer zuerst Instanzen von COM\-Objekten erstellt werden, bevor Sie deren Methoden verwenden können.  Um diese Methoden in [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] zu verwenden, deklarieren Sie eine Variable der gewünschten Klasse und weisen das Objekt mit dem new\-Schlüsselwort der Objektvariable zu.  Das `Shared`\-Schlüsselwort können Sie verwenden, wenn Sie sicherstellen möchten, dass nur eine Instanz der Klasse erstellt wird.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#23)]  
+ [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Nicht behandelte Fehler in Ereignishandlern  
  Ein häufig vorkommendes Interop\-Problem hängt mit Fehlern in Ereignishandlern zusammen, die durch COM‑Objekte ausgelöste Ereignisse behandeln.  Solche Fehler werden ignoriert, es sei denn, Sie führen mit einer `On Error`\-Anweisung oder einer `Try...Catch...Finally`\-Anweisung explizit eine Fehlerprüfung durch.  Das folgende Beispiel stammt aus einem [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)]\-Projekt mit einem Verweis auf das COM\-Objekt der Microsoft ActiveX Data Objects 2.8\-Bibliothek.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#24)]  
+ [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
  In diesem Beispiel wird ein Fehler wie erwartet ausgelöst.  Wenn Sie den gleichen Beispielcode jedoch ohne den `Try...Catch...Finally`\-Block ausführen, wird der Fehler ignoriert, so als ob Sie die `OnError Resume Next`\-Anweisung verwendet hätten.  Ohne die Fehlerbehandlung schlägt die Division durch Null ohne weitere Meldung fehl.  Da diese Fehler zu keiner Zeit unbehandelte Ausnahmefehler auslösen, müssen Sie in Ereignishandlern für Ereignisse aus COM\-Objekten eine Form der Ausnahmebehandlung anwenden.  
   
 ### Untersuchen von COM‑Interop\-Fehlern  
  Ohne Fehlerbehandlung lösen Interop\-Aufrufe häufig Fehler aus, die nur wenig Hintergrundinformationen enthalten.  Verwenden Sie, wenn möglich, eine strukturierte Fehlerbehandlung, um mehr Informationen über die Probleme bereitzustellen, die eventuell auftreten.  Dies kann beim Debuggen von Anwendungen besonders hilfreich sein.  Beispiele:  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#25)]  
+ [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
  Sie können Informationen wie die Fehlerbeschreibung, HRESULT, und den Ursprung von COM\-Fehlern abrufen, indem Sie den Inhalt des Ausnahmeobjekts untersuchen.  
   
@@ -122,11 +122,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Wenn Sie Zugriff auf die aufzurufende Prozedur haben, können Sie diesen Fehler verhindern, indem Sie mit dem `ByVal`\-Schlüsselwort Parameter deklarieren, die `ReadOnly`\-Eigenschaften akzeptieren.  Beispiele:  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#26)]  
+ [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
  Wenn Sie keinen Zugriff auf den Quellcode für die aufzurufende Prozedur haben, können Sie die Übergabe der Eigenschaft nach Wert erzwingen, indem Sie ein zusätzliches Paar eckige Klammern um die aufrufende Prozedur herum einfügen.  So können Sie z. B. in einem Projekt mit einem Verweis auf das COM\-Objekt der Microsoft ActiveX Data Objects 2.8\-Bibliothek Folgendes verwenden:  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#27)]  
+ [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Bereitstellen von Assemblys, die Interop verfügbar machen  
  Beim Bereitstellen von Assemblys, die COM‑Schnittstellen verfügbar machen, sind einige besondere Herausforderungen zu bewältigen.  Beispielsweise entsteht ein potenzielles Problem, wenn separate Anwendungen auf die gleiche COM\-Assembly verweisen.  Diese Situation tritt häufig ein, wenn eine neue Version einer Assembly installiert wird und gleichzeitig eine andere Anwendung noch die alte Version der Assembly verwendet.  Wenn eine Assembly mit einer gemeinsam verwendeten DLL deinstalliert wird, steht diese DLL den anderen Assemblys möglicherweise nicht mehr zur Verfügung.  

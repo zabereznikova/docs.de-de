@@ -30,12 +30,12 @@ Zuweilen empfiehlt es sich, Daten über die Zeichen in der Zeichenfolge und übe
 ## Beispiel  
  In diesem Beispielen wird das Aufteilen einer Zeichenfolge in ein `Char`\-Array und das Aufteilen einer Zeichenfolge in ein `String`\-Array von Unicode\-Textzeichen veranschaulicht.  Diese Unterscheidung erfolgt, weil Unicode\-Textzeichen aus zwei oder mehr `Char`\-Zeichen \(z. B. einem Ersatzzeichenpaar oder einer Kombinationszeichenfolge\) bestehen können.  Weitere Informationen finden Sie unter <xref:System.Globalization.TextElementEnumerator> und in "The Unicode Standard" unter http:\/\/www.unicode.org.  
   
- [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_1.vb)]  
+ [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## Beispiel  
  Das Aufteilen einer Zeichenfolge in ihre Unicode\-Textzeichen ist schwieriger, doch erforderlich, wenn Sie Informationen über die visuelle Darstellung einer Zeichenfolge benötigen.  In diesem Beispiel wird die <xref:System.Globalization.StringInfo.SubstringByTextElements%2A>\-Methode zum Abrufen von Informationen über die Unicode\-Textzeichen verwendet, aus denen eine Zeichenfolge besteht.  
   
- [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_2.vb)]  
+ [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
 ## Siehe auch  
  <xref:System.String.Chars%2A>   

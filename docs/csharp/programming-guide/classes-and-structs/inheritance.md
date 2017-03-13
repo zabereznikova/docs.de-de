@@ -37,7 +37,7 @@ Klassenvererbung
   
  Im folgenden Beispiel wird dargestellt, wie die in der vorherigen Abbildung veranschaulichten Klassenbeziehungen in C\# ausgedrückt werden.  Das Beispiel zeigt auch, wie `WorkItem` die virtuelle Methode <xref:System.Object.ToString%2A?displayProperty=fullName> überschreibt, und wie die Klasse `ChangeRequest` die `WorkItem`\-Implementierung der Methode erbt.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/inheritance_1.cs)]  
+ [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## Abstrakte und virtuelle Methoden  
  Wenn in einer Basisklasse eine Methode als [virtuell](../../../csharp/language-reference/keywords/virtual.md) deklariert wird, kann die Methode in einer abgeleiteten Klasse mit einer eigenen Implementierung [überschrieben](../../../csharp/language-reference/keywords/override.md) werden.  Wenn in einer Basisklasse ein Member als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert wird, muss diese Methode in jeder nicht abstrakten Klasse, die direkt von dieser Klasse erbt, überschrieben werden.  Wenn eine abgeleitete Klasse selbst abstrakt ist, erbt diese abstrakte Member, ohne sie zu implementieren.  Abstrakte und virtuelle Member sind die Grundlage für Polymorphie, die das zweite primäre Merkmal der objektorientierten Programmierung darstellt.  Weitere Informationen finden Sie unter [Polymorphismus](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

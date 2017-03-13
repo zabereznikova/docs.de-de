@@ -82,7 +82,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 ## Beispiele  
  In den folgenden Beispielen wird eine mögliche Generierung von ID\-Zeichenfolgen für eine Klasse und ihre Member gezeigt:  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#21)]  
+ [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

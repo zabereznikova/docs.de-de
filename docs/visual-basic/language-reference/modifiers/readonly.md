@@ -60,7 +60,7 @@ Legt fest, dass eine Variable oder Eigenschaft schreibgeschützt ist, also nur g
 ## Beispiel  
  Im folgenden Beispiel wird eine `ReadOnly`\-Eigenschaft für das Einstellungsdatum eines Mitarbeiters definiert.  In der Klasse wird der Eigenschaftswert intern als `Private`\-Variable gespeichert, und nur Code innerhalb der Klasse kann diesen Wert ändern.  Die Eigenschaft ist jedoch als `Public` deklariert, und jeder Code, der auf die Klasse zugreifen kann, kann die Eigenschaft lesen.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/visualbasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
  Der `ReadOnly`\-Modifizierer kann in folgenden Kontexten verwendet werden:  
   

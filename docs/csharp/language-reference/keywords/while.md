@@ -22,17 +22,17 @@ caps.handback.revision: 22
 Mit der `while`\-Anweisung wird eine Anweisung oder ein Anweisungsblock ausgeführt, bis ein bestimmter Ausdruck den Wert `false` liefert.  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/csharp/while_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
   
 ## Beispiel  
- [!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/csharp/while_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
   
 ## Beispiel  
  Da der Test des `while`\-Ausdrucks jedes Mal stattfindet, bevor die Schleife durchlaufen wird, wird eine `while`\-Anweisung keinmal, einmal oder häufiger ausgeführt.  Hierbei besteht ein Unterschied zur [do](../../../csharp/language-reference/keywords/do.md)\-Schleife, die mindestens einmal ausgeführt wird.  
   
  Eine `while`\-Schleife kann beendet werden, wenn eine der Anweisungen [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md) der Schleife die Steuerung entzieht.  Verwenden Sie die [continue](../../../csharp/language-reference/keywords/continue.md)\-Anweisung, um die Steuerung an die nächste Iteration zu übergeben, ohne die Schleife zu verlassen.  Beachten Sie, wie sich die Ausgabe der drei oben gezeigten Beispiele abhängig davon unterscheidet, an welcher Stelle `int n` inkrementiert wird.  Im Beispiel unten wird keine Ausgabe generiert.  
   
- [!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/csharp/while_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

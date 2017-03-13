@@ -38,7 +38,7 @@ Distinct
 ## Beispiel  
  Der folgende Abfrageausdruck verknüpft eine Liste von Kunden mit einer Liste von Kundenbestellungen.  Die `Distinct`\-Klausel wird angegeben, um eine Liste von eindeutigen Kundennamen und Bestelldaten zurückzugeben.  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#20)]  
+ [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

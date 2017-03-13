@@ -34,9 +34,9 @@ int* p = &number; //address-of operator &
 ## Beispiel  
  In diesem Beispiel wird der Zeiger `p` deklariert, der auf `int` zeigt. Anschließend wird dem Zeiger die Adresse der ganzzahligen Variablen `number` zugewiesen.  Die Variable `number` wird als Resultat der Zuweisung zu \*p initialisiert.  Durch Auskommentieren dieser Zuweisung wird die Initialisierung der Variablen `number` entfernt, aber es wird kein Kompilierungsfehler ausgegeben.  Beachten Sie die Verwendung des Operators für den [Memberzugriff](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md) \(`->`\), um die im Zeiger gespeicherte Adresse abzurufen und anzuzeigen.  
   
- [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#7)]  
+ [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#8)]  
+ [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

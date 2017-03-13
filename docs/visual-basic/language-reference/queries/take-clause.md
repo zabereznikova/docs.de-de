@@ -48,7 +48,7 @@ Take count
 ## Beispiel  
  Im folgenden Codebeispiel wird die `Take`\-Klausel zusammen mit der `Skip`\-Klausel verwendet, um die Ergebnisse einer Abfrage seitenweise zurückzugeben.  Die `Skip`\-Klausel wird von der GetCustomers\-Funktion verwendet, um die Kunden in der Liste bis zum angegebenen Indexstartwert zu übergehen. Die `Take`\-Klausel wird verwendet, um eine Seite mit Kunden ab diesem Indexwert zurückzugeben.  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#1)]  
+ [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
 ## Siehe auch  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

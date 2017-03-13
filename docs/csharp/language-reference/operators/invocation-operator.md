@@ -24,11 +24,11 @@ Klammern werden nicht nur für die Angabe der Reihenfolge von Vorgängen in eine
   
 1.  Angeben von Typumwandlungen oder Konvertierungen.  
   
-     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#1)]  
+     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
 2.  Aufrufen von Methoden oder Delegaten.  
   
-     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#2)]  
+     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
 ## Hinweise  
  Eine Typumwandlung ruft explizit den Operator zum Konvertieren des Typs auf. Ist kein solcher Konvertierungsoperator vorhanden, tritt bei der Typumwandlung ein Fehler auf.  Informationen zur Definition eines Konvertierungsoperators finden Sie unter [explicit](../../../csharp/language-reference/keywords/explicit.md) und unter [implicit](../../../csharp/language-reference/keywords/implicit.md).  

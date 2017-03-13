@@ -37,7 +37,7 @@ Mit der `GetValue`\-Methode des `My.Computer.Registry`\-Objekts können Werte in
   
 -   Verwenden Sie die `GetValue`\-Methode, und geben Sie den Pfad und Namen an, um einen Wert aus einem Registrierungsschlüssel zu lesen.  Mit dem folgenden Beispielcode wird der Wert `Name` aus `HKEY_CURRENT_USER\Software\MyApp` gelesen und in einem Meldungsfeld angezeigt.  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_1.vb)]  
+     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
  Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows\-Betriebssystem \> Registrierung**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   
@@ -45,7 +45,7 @@ Mit der `GetValue`\-Methode des `My.Computer.Registry`\-Objekts können Werte in
   
 -   Verwenden Sie die `GetValue`\-Methode, um den Wert abzurufen.  Die folgenden Code überprüft, ob der Wert einer Nachricht vorhanden und zurückgibt, wenn dies nicht der Fall ist.  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_2.vb)]  
+     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
   
 ## Robuste Programmierung  
  Die Registrierung enthält Schlüssel der obersten Ebene \(auch: Stammschlüssel\), die zum Speichern von Daten verwendet werden.  Der Stammschlüssel HKEY\_LOCAL\_MACHINE dient z. B. zum Speichern von Einstellungen auf Computerebene, die für alle Benutzer gelten, während unter HKEY\_CURRENT\_USER  Daten gespeichert werden, die für einen einzelnen Benutzer gelten.  

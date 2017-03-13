@@ -37,14 +37,14 @@ Mit dem `base`\-Schlüsselwort kann innerhalb einer abgeleiteten Klasse auf Memb
 ## Beispiel  
  In diesem Beispiel verfügen sowohl die `Person`\-Basisklasse als auch die abgeleitete `Employee`\-Klasse über eine Methode mit der Bezeichnung `Getinfo`.  Mithilfe des `base`\-Schlüsselworts kann die `Getinfo`\-Methode für die Basisklasse aus der abgeleiteten Klasse aufgerufen werden.  
   
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/csharp/base_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
   
  Weitere Beispiele finden Sie unter [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) und [override](../../../csharp/language-reference/keywords/override.md).  
   
 ## Beispiel  
  In diesem Beispiel wird gezeigt, wie der aufgerufene Basisklassenkonstruktor angegeben werden kann, wenn Instanzen einer abgeleiteten Klasse erstellt werden.  
   
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/csharp/base_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

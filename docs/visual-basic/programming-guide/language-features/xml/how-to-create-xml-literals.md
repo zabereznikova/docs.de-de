@@ -30,7 +30,7 @@ Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-El
   
 -   Erstellen Sie XML inline, indem Sie die XML\-Literalsyntax verwenden, die der tatsächlichen XML\-Syntax entspricht.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
      Führen Sie den Code aus.  Ausgabe dieses Codes:  
   
@@ -48,7 +48,7 @@ Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-El
   
 -   Erstellen Sie das XML\-Dokument inline.  Mit dem folgenden Code wird ein XML\-Dokument mit Literalsyntax, einer XML\-Deklaration, einer Verarbeitungsanweisung, einem Kommentar und einem Element, das ein anderes Element enthält, erstellt.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
      Führen Sie den Code aus.  Ausgabe dieses Codes:  
   

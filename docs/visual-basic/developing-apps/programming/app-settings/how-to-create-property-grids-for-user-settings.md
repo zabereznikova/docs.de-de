@@ -46,11 +46,11 @@ Sie können ein Eigenschaftenraster für Benutzereinstellungen erstellen, indem 
   
 3.  Legen Sie das `My.Settings`\-Objekt als ausgewähltes Objekt für das Eigenschaftenraster fest.  
   
-     [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#11)]  
+     [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_1.vb)]  
   
 4.  Konfigurieren Sie das Eigenschaftenraster so, dass nur die Benutzereinstellungen angezeigt werden.  
   
-     [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#12)]  
+     [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_2.vb)]  
   
     > [!NOTE]
     >  Um nur die Einstellungen anzuzeigen, verwenden Sie das \- Attribut anstelle <xref:System.Configuration.ApplicationScopedSettingAttribute><xref:System.Configuration.UserScopedSettingAttribute>.  

@@ -72,8 +72,8 @@ Die sprachintegrierte Abfrage \(LINQ\) erleichtert den Zugriff auf Datenbankinfo
   
      Fügen Sie den folgenden Code zum `Load`\-Ereignis hinzu, um eine der gespeicherten Prozeduren aufzurufen, die als Methoden für Ihren Datenkontext verfügbar sind.  
   
-     [!code-vb[VbLINQtoSQLHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form3.vb#1)]  
-    [!code-vb[VbLINQtoSQLHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form3.vb#2)]  
+     [!code-vb[VbLINQtoSQLHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_1.vb)]  
+    [!code-vb[VbLINQtoSQLHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_2.vb)]  
   
 4.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   

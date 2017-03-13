@@ -49,7 +49,7 @@ Beim Schreiben von Code kommt es hin und wieder vor, dass Sie umfangreiche Anwei
   
      Im folgenden Beispiel wird die Anweisung in vier Zeilen aufgegliedert, wobei alle Zeilen bis auf die letzte mit Zeilenfortsetzungszeichen enden:  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
      Code ist durch die Verwendung dieser Zeichenfolge besser lesbar, sowohl online als auch in gedruckter Fassung.  
   
@@ -65,7 +65,7 @@ Beim Schreiben von Code kommt es hin und wieder vor, dass Sie umfangreiche Anwei
   
 -   Trennen Sie die Anweisungen mit einem Doppelpunkt \(`:`\). Beispiel:  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
 ## Siehe auch  
  [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   

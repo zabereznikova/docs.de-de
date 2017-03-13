@@ -96,12 +96,12 @@ IntelliSense, wenn Option Infer deaktiviert ist
 ## Beispiel  
  Die folgenden Beispiele veranschaulichen, wie die `Option Infer`\-Anweisung den lokalen Typrückschluss ermöglicht.  
   
- [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel veranschaulicht, dass der Laufzeittyp abweichen kann, wenn eine Variable als ein `Object` gekennzeichnet ist.  
   
- [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## Siehe auch  
  [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   

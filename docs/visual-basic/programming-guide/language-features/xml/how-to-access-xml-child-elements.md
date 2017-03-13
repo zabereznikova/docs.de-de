@@ -28,7 +28,7 @@ caps.handback.revision: 18
 In diesem Beispiel ist dargestellt, wie eine untergeordnete Achseneigenschaft verwendet wird, um auf alle untergeordneten XML\-Elemente zuzugreifen, die einen festgelegten Namen in einem XML\-Element haben.  Insbesondere wird die Eigenschaft <xref:System.Xml.Linq.XElement.Value%2A> verwendet, um den Wert des ersten Elements in der Sammlung abzurufen, der von der untergeordneten Achseneigenschaft `name` zurückgegeben wird.  Von der untergeordneten Achseneigenschaft `name` werden alle untergeordneten Elemente mit dem Namen `phone` im `contact`\-Objekt abgerufen.  In diesem Beispiel wird die untergeordnete Achseneigenschaft `phone` außerdem verwendet, um auf alle untergeordneten Elemente mit dem Namen `phone` zuzugreifen, die im `contact`\-Objekt enthalten sind.  
   
 ## Beispiel  
- [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-child-_1.vb)]  
+ [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-child-elements_1.vb)]  
   
 ## Kompilieren des Codes  
  Dieses Beispiel setzt Folgendes voraus:  

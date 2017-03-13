@@ -104,7 +104,7 @@ End Interface
   
      Wenn Sie einer Variablen eine Klasseninstanz zuweisen, kann die Zugriffsebene ihrer Member davon abhängen, ob der Datentyp der Variablen die zugrunde liegende Schnittstelle oder die implementierende Klasse ist.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
      Wenn Sie auf Klassenmember über `varAsInterface` zugreifen, weisen sie alle öffentlichen Zugriff auf.  Wenn Sie jedoch auf Member über `varAsClass` zugreifen, weist die `Sub`\-Prozedur `doSomething` privaten Zugriff auf.  
   
@@ -117,7 +117,7 @@ End Interface
 ## Beispiel  
  Im folgenden Beispiel wird mit der `Interface`\-Anweisung die Schnittstelle `thisInterface` definiert, die mit einer `Property`\-Anweisung und einer `Function`\-Anweisung implementiert werden muss.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
  Beachten Sie, dass die `Property`\-Anweisung und die `Function`\-Anweisung keine Blöcke in der Schnittstelle einführen, die mit `End Property` und `End Function` enden.  Die Schnittstelle definiert nur die Signatur ihrer Member.  Der vollständige `Property`\-Block und `Function`\-Block befinden sich in einer Klasse, die `thisInterface` implementiert.  
   

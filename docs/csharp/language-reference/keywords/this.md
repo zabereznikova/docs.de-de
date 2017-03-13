@@ -30,7 +30,7 @@ Das `this`\-Schlüsselwort verweist auf die aktuelle Instanz der Klasse und wird
   
 -   Kennzeichnen von Membern, die durch ähnliche Namen ausgeblendet sind, z. B.:  
   
- [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/csharp/this_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
 -   Übergeben eines Objekts als Parameter an andere Methoden, z. B.:  
   
@@ -40,14 +40,14 @@ Das `this`\-Schlüsselwort verweist auf die aktuelle Instanz der Klasse und wird
   
 -   Deklarieren von Indexern, z. B.:  
   
- [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/csharp/this_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
  Da statische Memberfunktionen auf der Klassenebene bestehen und nicht Teil eines Objekts sind, besitzen sie keinen `this`\-Zeiger.  Es ist nicht zulässig, in einer statischen Methode auf `this` zu verweisen.  
   
 ## Beispiel  
  In diesem Beispiel wird `this` zum Kennzeichnen der `Employee`\-Klassenmember `name` und `alias` verwendet, die durch ähnliche Namen ausgeblendet sind.  Es wird ebenfalls eingesetzt, um ein Objekt an die `CalcTax`\-Methode, die einer anderen Klasse angehört, zu übergeben.  
   
- [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/csharp/this_3.cs)]  
+ [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

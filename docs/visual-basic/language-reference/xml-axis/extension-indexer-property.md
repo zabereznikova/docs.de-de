@@ -59,7 +59,7 @@ object(index)
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie der Erweiterungsindexer für den Zugriff auf den zweiten untergeordneten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten verwendet werden kann.  Der Zugriff auf die Auflistung erfolgt mithilfe der untergeordneten Achseneigenschaft, die alle untergeordneten Elemente mit dem Namen `phone` im `contact`\-Objekt abruft.  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

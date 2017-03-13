@@ -24,13 +24,13 @@ Mit dem `static`\-Modifizierer kann ein statischer Member deklariert werden, der
 ## Beispiel  
  Die folgende Klasse ist zum Beispiel als `static` deklariert und enthält nur `static`\-Methoden:  
   
- [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#18)]  
+ [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
  Eine Konstanten\- oder Typdeklaration stellt implizit einen Member des Typs **static** dar.  
   
  Auf einen Member vom Typ **static** darf nicht über eine Instanz verwiesen werden.  Stattdessen geschieht dies über den Typnamen.  Betrachten Sie z. B. die folgende Klasse:  
   
- [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#19)]  
+ [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
  Verwenden Sie zum Verweisen auf den statischen Member `x` den vollqualifizierten Namen \(`MyBaseC.MyStruct.x`\), sofern nicht vom selben Projektumfang auf den Member zugegriffen werden kann:  
   
@@ -54,12 +54,12 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 ## Beispiel  
  In diesem Beispiel werden der Name und die ID eines neuen Angestellten eingelesen, der Angestelltenzähler wird um eins erhöht, und die Informationen für den neuen Angestellten sowie die neue Angestelltenzahl werden angezeigt.  Der Einfachheit halber wird bei diesem Beispiel die Angestelltenzahl über die Tastatur eingegeben.  In einer realen Anwendung sollten diese Informationen jedoch aus einer Datei eingelesen werden.  
   
- [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#20)]  
+ [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
 ## Beispiel  
  Dieses Beispiel zeigt, dass es zwar möglich ist, ein statisches Feld mit einem anderen statischen, noch nicht deklarierten Feld zu initialisieren, dass die Ergebnisse jedoch undefiniert bleiben, solange dem statischen Feld nicht explizit ein Wert zugewiesen wird.  
   
- [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#21)]  
+ [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

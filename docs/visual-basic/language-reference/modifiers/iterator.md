@@ -48,12 +48,12 @@ Gibt an, dass eine Funktion oder ein `Get` Accessor ein Iterator ist.
 ## Beispiel  
  Im folgenden Beispiel wird ein Iterator für Reservierungen.  Die Iterator `Yield`\-Funktion ist eine Anweisung, die innerhalb einer Schleife [Weitere… Next](../../../visual-basic/language-reference/statements/for-next-statement.md) ist.  Jede Iteration des Anweisungstexts [Für jedes](../../../visual-basic/language-reference/statements/for-each-next-statement.md) in `Main` erstellt einen Aufruf der `Power` Iterator für Reservierungen.  Jeder Aufruf der Iterator zur nächsten wechselt das Feature für die Ausführung der Anweisung über `Yield`, die während der nächsten Iteration der Schleife `For…Next` auftritt.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird ein `Get` Accessor, der einen Iterator ist.  Der `Iterator`\-Modifizierer ist in die Eigenschaftendeklaration.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
  Weitere Beispiele finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   

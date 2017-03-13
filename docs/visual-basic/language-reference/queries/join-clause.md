@@ -67,12 +67,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## Beispiel  
  Im folgenden Codebeispiel wird ein impliziter Join ausgeführt, um eine Liste von Kunden mit ihren Bestellungen zu kombinieren.  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#13)]  
+ [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
 ## Beispiel  
  Im folgenden Codebeispiel werden mit der `Join`\-Klausel zwei Auflistungen miteinander verknüpft.  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples2.vb#12)]  
+ [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
  Die in diesem Beispiel erzeugte Ausgabe sieht in etwa folgendermaßen aus:  
   
@@ -85,7 +85,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## Beispiel  
  Im folgenden Codebeispiel werden durch Verwendung der `Join`\-Klausel mit zwei Schlüsselspalten zwei Auflistungen miteinander verknüpft.  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples3.vb#17)]  
+ [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
  Die im Beispiel erzeugte Ausgabe sieht in etwa folgendermaßen aus:  
   

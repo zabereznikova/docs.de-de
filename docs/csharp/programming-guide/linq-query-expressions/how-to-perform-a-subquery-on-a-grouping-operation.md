@@ -10,7 +10,7 @@ Dieses Thema zeigt zwei verschiedene Wege, wie Sie eine Abfrage erstellen könne
  Weitere Informationen zu Fortsetzungen finden Sie unter [into](../../../csharp/language-reference/keywords/into.md).  Im folgenden Beispiel wird eine speicherinterne Datenstruktur als Datenquelle verwendet, die gleichen Prinzipien gelten jedoch auch für andere [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Datenquellen.  
   
 ## Beispiel  
- [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#23)]  
+ [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
   
 ## Kompilieren des Codes  
  Dieses Beispiel enthält Verweise auf Objekte, die in der Beispielanwendung in [Gewusst wie: Abfragen einer Auflistung von Objekten](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) definiert werden.  Um diese Methode zu kompilieren und auszuführen, fügen Sie sie in die `StudentClass`\-Klasse dieser Anwendung ein, und fügen Sie ihr von der `Main`\-Methode einen Aufruf hinzu.  

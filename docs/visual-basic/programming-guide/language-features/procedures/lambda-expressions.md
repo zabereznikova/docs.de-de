@@ -35,19 +35,19 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die Sie a
   
  Im folgenden Beispiel wird ein Lambda\-Ausdruck dargestellt, der das Argument inkrementiert und den Wert zurückgibt.  Im Beispiel wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Funktion veranschaulicht.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
  Das folgende Beispiel enthält einen Lambda\-Ausdruck, der einen Wert in die Konsole schreibt.  Dabei wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Unterroutine veranschaulicht.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
  Beachten Sie, dass in den vorherigen Beispielen die Lambda\-Ausdrücke einem Variablennamen zugewiesen wurden.  Bei jedem Verweis auf die Variable wird der Lambda\-Ausdruck aufgerufen.  Sie können einen Lambda\-Ausdruck auch deklarieren und gleichzeitig aufrufen, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
  Ein Lambda\-Ausdruck kann als Wert eines Funktionsaufrufs zurückgegeben \(dies wird weiter unten in diesem Thema im [Kontext](#context) als Beispiel dargestellt\) oder wie im folgenden Beispiel gezeigt als Argument an einen Parameter übergeben werden, der einen Delegattyp akzeptiert.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class2.vb#8)]  
+ [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## Lambda\-Ausdruckssyntax  
  Die Syntax eines Lambda\-Ausdrucks ähnelt der einer Standardfunktion oder \-unterroutine.  Die Unterschiede sind:  
@@ -125,7 +125,7 @@ End Class
   
  Der Zugriff auf lokale Variablen und Parameter im enthaltenden Bereich kann die Lebensdauer dieses Bereichs überdauern.  So lange wie ein auf einen Lambda\-Ausdruck verweisender Delegat nicht für die Garbage Collection freigegeben wird, bleibt der Zugriff auf die Variablen in der ursprünglichen Umgebung erhalten.  In dem folgenden Beispiel befindet sich die `target`\-Variable lokal zu `makeTheGame`, der Methode, in der der Lambda\-Ausdruck `playTheGame` definiert ist.  Beachten Sie, dass der zurückgegebene Lambda\-Ausdruck, der `takeAGuess` in `Main` zugewiesen wird, weiterhin über Zugriff auf die lokale `target`\-Variable verfügt.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class6.vb#12)]  
+ [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
  Im folgenden Beispiel wird der große Bereich der Zugriffsrechte des geschachtelten Lambda\-Ausdrucks veranschaulicht.  Wenn der zurückgegebene Lambda\-Ausdruck von `Main` als `aDel` ausgeführt wird, greift er auf diese Elemente zu:  
   
@@ -139,16 +139,16 @@ End Class
   
 -   Ein Parameter des Lambda\-Ausdrucks, in der er geschachtelt wird: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class3.vb#9)]  
+ [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
 ## Konvertieren in einen Delegattyp  
  Ein Lambda\-Ausdruck kann implizit in einen kompatiblen Delegattyp konvertiert werden.  Weitere Informationen über die allgemeinen Anforderungen an Kompatibilität finden Sie unter [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  Im folgenden Codebeispiel wird ein Lambda\-Ausdruck veranschaulicht, der implizit in `Func(Of Integer, Boolean)` oder eine entsprechende Delegatsignatur konvertiert wird.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#16)]  
+ [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
  Im folgenden Codebeispiel wird ein lambda\-Ausdruck veranschaulicht, der implizit in `Sub(Of Double, String, Double)` oder eine entsprechende Delegatsignatur konvertiert wird.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/class7.vb#23)]  
+ [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
  Wenn Lambda\-Ausdrücke Delegaten zugewiesen oder als Argumente an Prozeduren übergeben werden, können die Parameternamen angegeben werden. Die Datentypen müssen jedoch nicht angegeben werden, da sie von den Delegaten übernommen werden können.  
   
@@ -156,11 +156,11 @@ End Class
   
 -   Im folgenden Beispiel wird ein Lambda\-Ausdruck definiert, der `True` zurückgibt, wenn das Argument, das NULL\-Werte zulässt, über einen zugewiesenen Wert verfügt. Der Ausdruck gibt `False` zurück, wenn der Wert `Nothing` lautet.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#4)]  
+     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
 -   In folgenden Beispiel wird ein Lambda\-Ausdruck definiert, der den Index des letzten Elements in einem Array zurückgibt.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#5)]  
+     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

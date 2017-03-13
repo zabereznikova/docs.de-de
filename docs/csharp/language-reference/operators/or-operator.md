@@ -26,7 +26,7 @@ Binär        `|`  Operatoren sind für Ganzzahltypen und `bool` vordefiniert.  
  Benutzerdefinierte Typen können den Operator          `|` überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Beispiel  
- [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#31)]  
+ [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

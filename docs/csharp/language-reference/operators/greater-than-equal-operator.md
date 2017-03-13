@@ -25,7 +25,7 @@ Alle numerischen Typen und Enumerationstypen definieren einen relationalen Opera
  Benutzerdefinierte Typen können den Operator `>=` überladen.  Weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md).  Wenn `>=` überladen wird, muss auch [\<\=](../../../csharp/language-reference/operators/less-than-equal-operator.md) überladen werden.  Operationen mit Ganzzahltypen sind bei der Enumeration grundsätzlich zulässig.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#39)]  
+ [!code-cs[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-equal-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

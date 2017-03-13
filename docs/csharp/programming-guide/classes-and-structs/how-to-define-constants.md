@@ -27,7 +27,7 @@ Konstanten sind Felder, deren Werte bei der Kompilierung festgelegt werden und n
  Um nicht\-ganzzahlige Konstanten zu definieren, können Sie sie beispielsweise in einer einzelnen statischen Klasse mit dem Namen `Constants` gruppieren.  Dafür muss allen Verweisen auf die Konstanten der Klassenname vorangestellt werden, wie im folgenden Beispiel gezeigt wird.  
   
 ## Beispiel  
- [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
  Die Verwendung des Klassennamenqualifizierers stellt sicher, dass Sie und andere, die die Konstante verwenden, erkennen, dass es sich um eine Konstante handelt, die somit nicht geändert werden kann.  
   

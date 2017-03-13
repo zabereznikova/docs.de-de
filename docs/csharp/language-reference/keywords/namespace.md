@@ -22,7 +22,7 @@ caps.handback.revision: 28
 # Namespace (C#-Referenz)
 Das `namespace`\-Schlüsselwort wird verwendet, um einen Bereich zu deklarieren, der einen Satz von verknüpfte Objekte enthält.  Sie können einen Namespace verwenden, um Codeelemente zu organisieren und \- global eindeutige Typen zu erstellen.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## Hinweise  
  in einem Namespace mindestens eine Deklaration eines der folgenden Typen:  
@@ -45,12 +45,12 @@ Das `namespace`\-Schlüsselwort wird verwendet, um einen Bereich zu deklarieren,
   
  Ein Namespace kann in zwei oder mehr Deklarationen definiert werden.  Im folgenden Beispiel werden zwei Klassen als Teil des `MyCompany`\-Namespaces definiert:  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie eine statische Methode in einem geschachtelten Namespace aufgerufen wird.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## Weitere Informationen  
  Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden Themen:  

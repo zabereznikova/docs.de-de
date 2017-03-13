@@ -21,7 +21,7 @@ caps.handback.revision: 22
 # Konvertierungsoperatoren (C#-Programmierhandbuch)
 C\# bietet Programmierern die Möglichkeit, Konvertierungen für Klassen oder Strukturen zu deklarieren, sodass diese in andere bzw. aus anderen Klassen, Strukturen oder Basistypen konvertiert werden können.  Konvertierungen werden wie Operatoren definiert und nach dem Typ benannt, in den sie konvertiert werden.  Entweder das zu konvertierende Typargument oder der Typ des Ergebnisses der Konvertierung – nicht beides – muss der enthaltende Typ sein.  
   
- [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## Übersicht über Konvertierungsoperatoren  
  Konvertierungsoperatoren verfügen über die folgenden Eigenschaften:  

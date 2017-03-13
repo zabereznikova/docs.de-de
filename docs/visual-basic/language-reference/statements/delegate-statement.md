@@ -71,7 +71,7 @@ Wird zur Deklaration eines Delegaten verwendet.  Ein Delegat ist ein Referenztyp
 ## Beispiel  
  Im folgenden Beispiel wird mit der `Delegate`\-Anweisung ein Delegat deklariert, mit dem zwei Zahlen bearbeitet werden und eine Zahl zurückgegeben wird.  Die `DelegateTest`\-Methode verwendet eine Instanz eines Delegaten dieses Typs und bearbeitet damit Zahlenpaare.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## Siehe auch  
  [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   

@@ -43,7 +43,7 @@ Logische Operatoren vergleichen `Boolean`\-Ausdrücke und geben ein `Boolean`\-E
 ## Unärer logischer Operator  
  Der [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) führt eine logische *Negation* für einen `Boolean`\-Ausdruck aus.  Das Ergebnis ist das logische Gegenteil seines Operanden.  Wenn der Ausdruck `True` ergibt, gibt `Not` den Wert `False` zurück. Wenn der Ausdruck `False` ergibt, gibt `Not` den Wert `True` zurück.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
   
 ## Binäre logische Operatoren  
  Der [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) führt eine logische *Konjunktion* für zwei `Boolean`\-Ausdrücke aus.  Wenn beide Ausdrücke `True` ergeben, gibt `And` den Wert `True` zurück.  Wenn mindestens einer der Ausdrücke `False` ergibt, gibt `And` den Wert `False` zurück.  
@@ -54,7 +54,7 @@ Logische Operatoren vergleichen `Boolean`\-Ausdrücke und geben ein `Boolean`\-E
   
  Im folgenden Beispiel werden die Operatoren `And`, `Or` und `Xor` veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
   
 ## Logische Kurzschlussoperationen  
  Der [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)\- ist dem Operator `And` sehr ähnlich. Er führt ebenfalls eine logische Konjunktion für zwei `Boolean`\-Ausdrücke aus.  Der Hauptunterschied zwischen den beiden Operatoren ist, dass `AndAlso` *Kurzschlussverhalten* aufweist.  Wenn der erste Ausdruck in einem `AndAlso`\-Ausdruck `False` ist, wird der zweite Ausdruck nicht ausgewertet, weil das Ergebnis hierdurch nicht geändert wird, und `AndAlso` gibt `False` zurück.  
@@ -66,18 +66,18 @@ Logische Operatoren vergleichen `Boolean`\-Ausdrücke und geben ein `Boolean`\-E
   
  Im folgenden Beispiel wird der Unterschied zwischen `And`, `Or` und ihren entsprechenden Kurzschlussoperatoren veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
   
  Beachten Sie im vorhergehenden Beispiel, dass wichtiger Code in `checkIfValid()` nicht ausgeführt wird, wenn der Aufruf kurzgeschlossen wird.  Die erste `If`\-Anweisung ruft `checkIfValid()` auf, obwohl `12 > 45` `False` zurückgibt, da `And` keinen Kurzschluss ausführt.  Die zweite `If`\-Anweisung ruft `checkIfValid()` nicht auf, weil mit `AndAlso` der zweite Ausdruck kurzgeschlossen wird, wenn `12 > 45` `False` zurückgibt.  Die dritte `If`\-Anweisung ruft `checkIfValid()` auf, obwohl `12 < 45` `True` zurückgibt, da `Or` keinen Kurzschluss ausführt.  Die vierte `If`\-Anweisung ruft `checkIfValid()` nicht auf, weil mit `OrElse` der zweite Ausdruck kurzgeschlossen wird, wenn `12 < 45` `True` zurückgibt.  
   
 ## Bitweise Operationen  
  Bitweise Operationen werten zwei ganzzahlige Werte in binärer Form \(Basis 2\) aus.  Sie vergleichen die Bits an den entsprechenden Positionen und weisen dann auf dem Vergleich basierende Werte zu.  Im folgenden Beispiel wird der Operator `And` veranschaulicht.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/logical-and-bitwise-oper_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
   
  Im vorherigen Beispiel wird der Wert von `x` auf 1 festgelegt.  Dies geschieht aus den folgenden Gründen:  
   

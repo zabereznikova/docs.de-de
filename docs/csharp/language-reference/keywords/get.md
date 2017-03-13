@@ -23,11 +23,11 @@ Das `get`\-Schlüsselwort definiert eine *accessor*\-Methode in einer Eigenschaf
   
  Dies ist ein Beispiel für einen `get`\-Accessor in einer Eigenschaft mit dem Namen `Seconds`:  
   
- [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/csharp/get_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_1.cs)]  
   
  Dies ist ein Beispiel für einen `get`\-Accessor in einer automatisch implementierten Eigenschaft:  
   
- [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/csharp/get_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

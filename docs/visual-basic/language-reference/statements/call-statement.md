@@ -49,7 +49,7 @@ caps.handback.revision: 13
 ## Beispiel  
  Der folgende Code zeigt zwei Beispielen gezeigt, wobei das `Call`\-Schlüsselwort ist erforderlich, um eine Prozedur aufrufen.  In beiden Beispielen wird der aufgerufene Ausdruck nicht mit einem Bezeichner.  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
 ## Siehe auch  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

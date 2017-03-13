@@ -109,7 +109,7 @@ result = string Like pattern
 ## Beispiel  
  In diesem Beispiel wird der Operator `Like` verwendet, um eine Zeichenfolge mit verschiedenen Mustern zu vergleichen.  Die Ergebnisse werden in eine `Boolean`\-Variable geschrieben, die angibt, ob die einzelnen Zeichenfolgen dem Muster entsprechen.  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

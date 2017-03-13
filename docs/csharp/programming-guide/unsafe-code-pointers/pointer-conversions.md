@@ -38,9 +38,9 @@ Die folgende Tabelle zeigt die vordefinierten impliziten Zeigerkonvertierungen. 
 ## Beispiel  
  Im folgenden Beispiel wird ein Zeiger auf `int` in einen Zeiger auf `byte` konvertiert.  Beachten Sie, dass der Zeiger auf das niedrigste adressierte Byte der Variablen zeigt.  Wenn Sie das Ergebnis schrittweise auf die Größe von `int` \(4 Bytes\) erhöhen, können Sie die verbleibenden Bytes der Variablen anzeigen.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
- [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#4)]  
+ [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

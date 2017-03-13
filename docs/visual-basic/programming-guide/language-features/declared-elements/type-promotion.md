@@ -31,21 +31,21 @@ Wenn Sie in einem Modul ein Programmierelement deklarieren, wird dessen Gültigk
   
  Am folgenden Beispiel wird gezeigt, wie die Gerüstdefinition für ein Modul und zwei Member dieses Moduls erfolgt.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
  Innerhalb von `projModule` werden auf Modulebene deklarierte Programmierelemente auf `projNamespace` erweitert.  Im vorhergehenden Beispiel werden `basicEnum` und `innerClass` erweitert, `numberSub` dagegen nicht, da es auf Modulebene nicht deklariert ist.  
   
 ## Folgen der Typerweiterung  
  Aufgrund der Typerweiterung müssen Qualifikationspfade nicht den Modulnamen enthalten.  Im folgenden Beispiel wird die Prozedur aus dem obigen Beispiel zwei Mal aufgerufen.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
  Im vorhergehenden Beispiel werden im ersten Aufruf vollständige Qualifizierungspfade verwendet.  Dank der Typerweiterung ist dies jedoch nicht notwendig.  Im zweiten Aufruf erfolgt ebenfalls ein Zugriff auf die Member des Moduls, ohne dass `projModule` in die Qualifizierungspfade einbezogen wird.  
   
 ## Fehlschlagen der Typerweiterung  
  Wenn der Namespace bereits einen Member mit dem gleichen Namen als Modulmember enthält, ist eine Typerweiterung für den betreffenden Modulmember nicht möglich.  Im folgenden Beispiel wird gezeigt, wie die Gerüstdefinition für eine Enumeration und ein Modul innerhalb desselben Namespaces durchgeführt wird.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
  Im vorhergehenden Beispiel kann [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die `abc`\-Klasse nicht auf `thisNameSpace` erweitern, da dort bereits eine Enumeration mit dem gleichen Namen auf Namespaceebene vorhanden ist.  Wenn Sie auf `abcSub` zugreifen möchten, müssen Sie den vollständigen Qualifizierungspfad `thisNamespace.thisModule.abc.abcSub` verwenden.  Die `xyz`\-Klasse wird jedoch erweitert, und Sie können über den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub` auf `xyzSub` zugreifen.  
   
@@ -54,7 +54,7 @@ Wenn Sie in einem Modul ein Programmierelement deklarieren, wird dessen Gültigk
   
  **Folgen.** Das Fehlschlagen der Typerweiterung einer partiellen Definition kann unerwartete Ergebnisse und sogar Compilerfehler verursachen.  Im folgenden Beispiel werden partielle Gerüstdefinitionen einer Klasse dargestellt; eine dieser Definitionen befindet sich innerhalb eines Moduls.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
  Im vorhergehenden Beispiel erwartet der Entwickler möglicherweise, dass der Compiler die beiden partiellen Definitionen von `sampleClass` zusammenführt.  Der Compiler zieht jedoch keine Erweiterung der partiellen Definition in `sampleModule` in Betracht.  Daher versucht er, zwei separate Klassen zu kompilieren. Diese heißen zwar beide `sampleClass`, zeichnen sich aber durch unterschiedliche Qualifizierungspfade aus.  
   

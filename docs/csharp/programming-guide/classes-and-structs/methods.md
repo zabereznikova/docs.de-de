@@ -30,17 +30,17 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
   
  Methodenparameter werden in Klammern eingeschlossen und durch Kommas getrennt. Leere Klammern geben an, dass für die Methode keine Parameter erforderlich sind. Diese Klasse enthält drei Methoden:  
   
- [!code-cs[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_1.cs)]  
+ [!code-cs[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## Methodenzugriff  
  Das Aufrufen einer Methode für ein Objekt ähnelt dem Zugreifen auf ein Feld. Fügen Sie nach dem Objektnamen einen Punkt, den Namen der Methode und Klammern hinzu. Argumente werden innerhalb der Klammern aufgelistet und durch Kommas getrennt. Die Methoden der `Motorcycle`\-Klasse können also wie im folgenden Beispiel gezeigt aufgerufen werden:  
   
- [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_2.cs)]  
+ [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## Methodenparameter und Argumente  
  Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments \(sofern vorhanden\) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Zum Beispiel:  
   
- [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_3.cs)]  
+ [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
 ## Übergeben als Verweis und Übergeben als Wert  
  Wenn ein Werttyp an eine Methode übergeben wird, wird anstelle des eigentlichen Objekts standardmäßig eine Kopie übergeben. Änderungen am Argument haben daher keine Auswirkungen auf die ursprüngliche Kopie in der aufrufenden Methode. Sie können einen Werttyp als Verweis übergeben, indem Sie das ref\-Schlüsselwort verwenden. Weitere Informationen finden Sie unter [Übergeben von Werttypparametern](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Eine Liste der integrierten Werttypen finden Sie unter [Tabelle der Werttypen](../../../csharp/language-reference/keywords/value-types-table.md).  
@@ -49,11 +49,11 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
   
  Sie erstellen einen Verweistyp mithilfe des `class`\-Schlüsselworts, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_4.cs)]  
+ [!code-cs[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
   
  Wenn Sie jetzt ein Objekt, das auf diesem Typ basiert, an eine Methode übergeben, wird ein Verweis auf das Objekt übergeben. Das folgende Beispiel übergibt ein Objekt des `SampleRefType`\-Typs an die `ModifyObject`\-Methode.  
   
- [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_5.cs)]  
+ [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
   
  Das Beispiel entspricht im Wesentlichen dem vorherigen Beispiel und übergibt ein Argument als Wert an eine Methode. Aber da ein Verweistyp verwendet wird, unterscheidet sich das Ergebnis. Die Änderung, die in `ModifyObject` am `value`\-Feld des Parameters \(`obj`\) vorgenommen wird, ändert auch das `value`\-Feld des Arguments \(`rt`\) in der `TestRefType`\-Methode. Die `TestRefType`\-Methode zeigt 33 als Ausgabe an.  
   
@@ -62,13 +62,13 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 ## Rückgabewerte  
  Methoden können einen Wert an die aufrufende Funktion \(den Aufrufer\) zurückgeben. Wenn der Rückgabetyp – der vor dem Methodennamen aufgeführte Typ – nicht `void` ist, kann die Methode den Wert mithilfe des `return`\-Schlüsselworts zurückgeben. Eine Anweisung mit der `return`\-Schlüsselwort, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. Das `return`\-Schlüsselwort beendet außerdem die Ausführung der Methode. Wenn der Rückgabetyp `void` ist, ist eine `return`\-Anweisung ohne Wert immer noch nützlich, um die Ausführung der Methode zu beenden. Ohne das `return`\-Schlüsselwort wird die Ausführung der Methode beendet, wenn das Ende des Codeblocks erreicht ist. Methoden mit einem anderen Rückgabetyp als „void“ müssen das `return`\-Schlüsselwort verwenden, um einen Wert zurückzugeben. Die folgenden beiden Methoden verwenden z. B. das `return`\-Schlüsselwort, um ganze Zahlen zurückzugeben:  
   
- [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_6.cs)]  
+ [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
  Um einen von einer Methode zurückgegebenen Wert zu verwenden, kann die aufrufende Methode den Methodenaufruf selbst an jeder Stelle verwenden, an der ein Wert des gleichen Typs ausreichend ist. Sie können den Rückgabewert auch einer Variablen zuweisen. Beispielsweise wird mit den folgenden beiden Codebeispiele das gleiche Ergebnis erzielt:  
   
- [!code-cs[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_7.cs)]  
+ [!code-cs[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
   
- [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/methods_8.cs)]  
+ [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Die Verwendung einer lokalen Variablen, in diesem Fall `result`, zum Speichern eines Werts ist optional. Es kann die Lesbarkeit des Codes verbessern, oder es kann notwendig sein, wenn Sie den ursprünglichen Wert des Arguments für den gesamten Gültigkeitsbereich der Methode speichern müssen.  
   
@@ -95,7 +95,7 @@ static void Main(string[] args) { int[,] matrix = new int[2, 2]; FillMatrix(matr
   
  Die `startButton_Click`\-Methode ist ein Beispiel für eine asynchrone Methode mit void\-Rückgabetyp. Da `DoSomethingAsync` eine asynchrone Methode ist, muss die Aufgabe für den Aufruf von `DoSomethingAsync` abgewartet werden, wie in der folgenden Anweisung dargestellt: `await DoSomethingAsync();`. Die `startButton_Click`\-Methode muss mit dem `async`\-Modifizierer definiert werden, da die Methode über einen `await`\-Ausdruck verfügt.  
   
- [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/asyncmethodcs/mainwindow.xaml.cs#2)]  
+ [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
  Mit einer asynchronen Methode können keine [ref](../../../csharp/language-reference/keywords/ref.md)\- oder [out](../../../csharp/language-reference/keywords/out.md)\-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.  
   

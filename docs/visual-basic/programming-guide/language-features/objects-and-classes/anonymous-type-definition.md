@@ -26,7 +26,7 @@ Als Reaktion auf die Deklaration einer Instanz eines anonymen Typs erzeugt der C
 ## Vom Compiler generierter Code  
  Für die folgende Definition von `product` erzeugt der Compiler eine neue Klassendefinition, die die Eigenschaften `Name`, `Price` und `OnHand` enthält.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
  Die Klassendefinition enthält Eigenschaftendefinitionen, die den folgenden ähneln.  Beachten Sie, dass keine `Set`\-Methode für die Schlüsseleigenschaften vorhanden ist.  Die Werte von Schlüsseleigenschaften sind schreibgeschützt.  
   
@@ -75,13 +75,13 @@ End Class
   
      In den folgenden Beispielen gibt `Equals` nur für `employee01` und `employee08` den Wert `True` zurück.  Der Kommentar vor jeder Zeile gibt den Grund an, aus dem die neue Instanz nicht gleich `employee01` ist.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
 -   `GetHashcode` stellt einen ausreichend eindeutigen GetHashCode\-Algorithmus bereit.  Der Algorithmus verwendet zur Berechnung des Hashcodes nur die Schlüsseleigenschaften.  
   
 -   Wie im folgenden Beispiel gezeigt, gibt `ToString` eine Zeichenfolge verketteter Eigenschaftswerte zurück.  Sie enthält sowohl Schlüsseleigenschaften als auch Nicht\-Schlüsseleigenschaften.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  Explizit benannte Eigenschaften eines anonymen Typs dürfen keine Konflikte mit diesen erzeugten Methoden hervorrufen.  Das heißt, Sie können `.Equals`, `.GetHashCode` oder `.ToString` nicht verwenden, um eine Eigenschaft zu benennen.  
   

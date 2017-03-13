@@ -47,21 +47,21 @@ proceduredeclaration Handles eventlist
  Für benutzerdefinierte Ereignisse ruft die Anwendung den `AddHandler`\-Accessor des Ereignisses auf, wenn die Prozedur als ein Ereignishandler hinzugefügt wird.  Weitere Informationen über benutzerdefinierte Ereignisse finden Sie unter [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Beispiel  
- [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#2)]  
+ [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
   
  Im folgenden Beispiel wird gezeigt, wie eine abgeleitete Klasse die `Handles`\-Anweisung zum Verarbeiten eines Ereignisses aus einer Basisklasse verwenden kann.  
   
- [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#3)]  
+ [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel enthält zwei Tastenereignishandler für ein Projekt für eine **WPF\-Anwendung**.  
   
- [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/class3.vb#41)]  
+ [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel entspricht dem vorherigen Beispiel.  Die `eventlist` in der `Handles`\-Klausel enthält die Ereignisse für beide Tasten.  
   
- [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/class3.vb#42)]  
+ [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
 ## Siehe auch  
  [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)   

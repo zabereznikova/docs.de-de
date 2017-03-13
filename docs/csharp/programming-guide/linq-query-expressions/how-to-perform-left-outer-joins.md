@@ -15,7 +15,7 @@ Ein linker äußerer Join ist ein Join, in dem jedes Element aus der ersten Aufl
 > [!NOTE]
 >  Der Standardwert für einen Referenztyp ist `null`; daher nach als ein NULL\-Verweis, bevor auf jedes Element in jeder `Pet`\-Auflistung zugegriffen wird.  
   
- [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#7)]  
+ [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-left-outer-joins_1.cs)]  
   
 ## Kompilieren des Codes  
   

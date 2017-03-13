@@ -39,7 +39,7 @@ Wenn die `Get`\-Prozedur und die `Set`\-Prozedur einer Eigenschaft verschiedene 
   
 3.  Geben Sie für die andere Eigenschaftenprozedur keine Zugriffsebene an.  Dann wird die in der `Property`\-Anweisung deklarierte Zugriffsebene übernommen.  Sie können den Zugriff nur bei einer der Eigenschaftenprozeduren beschränken.  
   
-     [!code-vb[VbVbcnProcedures#10](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-a-propert_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
      Im vorhergehenden Beispiel hat die `Get`\-Prozedur den gleichen `Protected`\-Zugriff wie die Eigenschaft selbst. Die `Set`\-Prozedur hat dagegen `Private`\-Zugriff.  Eine von `employee` abgeleitete Klasse kann den `salary`\-Wert lesen, aber nur die `employee`\-Klasse kann ihn festlegen.  
   

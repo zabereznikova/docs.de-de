@@ -22,7 +22,7 @@ Gibt den [booleschen](../../../csharp/language-reference/keywords/bool.md) Wert 
   
  Bei auf NULL festlegbaren booleschen Werten ist der Ausdruck `a != b` nicht notwendigerweise gleich `!(a == b)`, da einer der Werte oder beide Werte NULL sein können.  Sie müssen den `true`\-Operator und den `false`\-Operator einzeln überladen, um die NULL\-Werte im Ausdruck ordnungsgemäß zu behandeln.  Das folgende Beispiel veranschaulicht die Überladung und Verwendung des `true`\-Operators und des `false`\-Operators.  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#16)]  
+ [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-operator_1.cs)]  
   
  Ein Typ, der den `true`\-Operator und den `false`\-Operator überlädt, kann für den steuernden Ausdruck in den Anweisungen [if](../../../csharp/language-reference/keywords/if-else.md), [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md) und [for](../../../csharp/language-reference/keywords/for.md) sowie in [bedingten Ausdrücken](../../../csharp/language-reference/operators/conditional-operator.md) verwendet werden.  
   

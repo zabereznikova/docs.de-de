@@ -92,7 +92,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## Beispiel  
  Das folgenden Beispiel zeigt eine `Function`\-Prozedur, die zwei Parameter definiert.  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
 ## Siehe auch  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   

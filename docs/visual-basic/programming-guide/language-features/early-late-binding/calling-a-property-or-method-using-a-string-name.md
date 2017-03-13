@@ -44,11 +44,11 @@ In den meisten Fällen können Sie die Eigenschaften und Methoden eines Objekts 
   
  Angenommen, Sie fügen einen Verweis auf eine Assembly hinzu, die eine Klasse mit der Bezeichnung `MathClass` enthält, welche wiederum eine neue Funktion mit der Bezeichnung `SquareRoot` beinhaltet. Beispiel:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#53)]  
+ [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
   
  Mittels Textfeld\-Steuerelementen kann festgelegt werden, welche Methode mit welchen Argumenten aufgerufen wird.  Wenn z. B. `TextBox1` den auszuwertenden Ausdruck enthält und in `TextBox2` der Funktionsname eingegeben wird, können Sie anhand des folgenden Codes die `SquareRoot`\-Funktion für den Ausdruck in `TextBox1` aufrufen:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#54)]  
+ [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
   
  Wenn Sie in `TextBox1` den Wert "64", in `TextBox2` "SquareRoot" eingeben und anschließend die `CallMath`\-Prozedur aufrufen, wird die Quadratwurzel der Zahl in `TextBox1` berechnet.  Der Beispielcode ruft die `SquareRoot`\-Funktion auf \(die als erforderliches Argument eine Zeichenfolge mit dem auszuwertenden Ausdruck enthält\) und gibt in `TextBox1` den Wert "8" \(die Quadratwurzel von 64\) zurück.  Wenn die Benutzer in `TextBox2` eine ungültige Zeichenfolge eingeben, die Zeichenfolge den Namen einer Eigenschaft anstelle einer Methode enthält oder die Methode ein weiteres erforderliches Argument aufweist, tritt ein Laufzeitfehler auf.  Um diese und andere Fehler bei der Arbeit mit `CallByName` zu vermeiden, müssen Sie einen zuverlässigen Fehlerbehandlungscode einfügen.  
   

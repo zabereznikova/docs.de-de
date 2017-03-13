@@ -29,7 +29,7 @@ Mithilfe des `params`\-Schlüsselworts kann ein [\-Methodenparameter](../../../c
 ## Beispiel  
  Im folgenden Beispiel werden verschiedene Methoden veranschaulicht, in denen Argumente an einen `params`\-Parameter gesendet werden können.  
   
- [!code-cs[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/csharp/params_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/params_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

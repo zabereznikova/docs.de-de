@@ -35,7 +35,7 @@ Mit der `My.Settings.Save`\-Methode können Sie Änderungen an den Benutzereinst
 ## Beispiel  
  In diesem Beispiel wird die `LastChanged`\-Benutzereinstellung geändert und diese Änderung durch Aufrufen der `My.Settings.Save`\-Methode gespeichert.  
   
- [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#5)]  
+ [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
   
  Für dieses Beispiel muss die Anwendung über eine `LastChanged`\-Benutzereinstellung vom Typ `Date` verfügen.  Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
   

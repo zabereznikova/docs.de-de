@@ -31,7 +31,7 @@ Der Rechtsschiebeoperator \(`>>`\) verschiebt den ersten Operanden um die durch 
  Benutzerdefinierte Typen können den Operator `>>` überladen. Als Typ des ersten Operanden muss der benutzerdefinierte Typ verwendet werden, und als Typ des zweiten Operanden muss [int](../../../csharp/language-reference/keywords/int.md) verwendet werden.  Weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md).  Beim Überladen eines binären Operators wird implizit auch der zugehörige Zuweisungsoperator überladen, falls vorhanden.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#26)]  
+ [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

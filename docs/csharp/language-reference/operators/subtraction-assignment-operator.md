@@ -39,7 +39,7 @@ x = x / y
  Der Operator `/=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den [Operator \/](../../../csharp/language-reference/operators/division-operator.md) überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  Bei allen Verbundzuweisungsoperatoren wird durch das Überladen des binären Operators die entsprechende Verbundzuweisung implizit überladen.  
   
 ## Beispiel  
- [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#5)]  
+ [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

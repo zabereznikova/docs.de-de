@@ -20,16 +20,16 @@ caps.handback.revision: 15
 Bei der expliziten [Schnittstellen](../../../csharp/language-reference/keywords/interface.md)\-Implementierung haben Programmierer außerdem die Möglichkeit, zwei Schnittstellen zu implementieren, die über identische Membernamen verfügen, und jeden Schnittstellenmember getrennt zu implementieren.  In diesem Beispiel werden die Abmessungen eines Felds sowohl in metrischen als auch in englischen Maßeinheiten ausgegeben.  Die Box\-[Klasse](../../../csharp/language-reference/keywords/class.md) implementiert die beiden Schnittstellen IEnglishDimensions und IMetricDimensions, die die unterschiedlichen Maßsysteme darstellen.  Beide Schnittstellen verfügen über die identischen Membernamen Length und Width.  
   
 ## Beispiel  
- [!code-cs[csProgGuideInheritance#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_1.cs)]  
+ [!code-cs[csProgGuideInheritance#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_1.cs)]  
   
 ## Robuste Programmierung  
  Wenn die englischen Maßeinheiten standardmäßig verwendet werden sollen, implementieren Sie die Length\-Methode und die Width\-Methode auf normale Weise und die Length\-Methode und Width\-Methode der IMetricDimensions\-Schnittstelle explizit:  
   
- [!code-cs[csProgGuideInheritance#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_2.cs)]  
+ [!code-cs[csProgGuideInheritance#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_2.cs)]  
   
  In diesem Fall kann über die Klasseninstanz auf die englischen Maßeinheiten und über die Schnittstelleninstanz auf die metrischen Einheiten zugegriffen werden:  
   
- [!code-cs[csProgGuideInheritance#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_3.cs)]  
+ [!code-cs[csProgGuideInheritance#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_3.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

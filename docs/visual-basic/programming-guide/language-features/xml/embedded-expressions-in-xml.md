@@ -30,7 +30,7 @@ Mit eingebetteten Ausdrücken können XML\-Literale erstellt werden, die Ausdrü
   
  Beispielsweise können XML\-Elementliterale erstellt und so eingebettete Ausdrücke mit Literaltextinhalt kombiniert werden.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_1.vb)]  
+ [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
  Wenn `isbnNumber` die ganze Zahl 12345 und `modifiedDate` das Datum 3\/5\/2006 enthält, hat `book` nach der Ausführung des Codes den folgenden Wert:  
   
@@ -55,27 +55,27 @@ Mit eingebetteten Ausdrücken können XML\-Literale erstellt werden, die Ausdrü
   
 -   Beispiel für einen eingebetteten Ausdruck in einem XML\-Elementnamen:  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_2.vb)]  
+     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
 -   Beispiel für einen eingebetteten Ausdruck im Inhalt eines XML\-Elements:  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_3.vb)]  
+     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
 -   Beispiel für einen eingebetteten Ausdruck in einem XML\-Element\-Attributnamen:  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_4.vb)]  
+     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
 -   Beispiel für einen eingebetteten Ausdruck in einem XML\-Element\-Attributwert:  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_5.vb)]  
+     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
 -   Beispiel für einen eingebetteten Ausdruck in einem XML\-Elementattribut:  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_6.vb)]  
+     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
 -   Beispiel für einen eingebetteten Ausdruck in einem XML\-Dokument\-Stammelement:  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_7.vb)]  
+     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
  Wenn `Option Strict` aktiviert ist, überprüft der Compiler, ob der Typ jedes eingebetteten Ausdrucks auf den erforderlichen Typ erweitert wird.  Die einzige Ausnahme davon ist das Stammelement eines XML\-Dokuments, das während der Ausführung des Codes überprüft wird.  Wenn ohne `Option Strict` kompiliert wird, können Ausdrücke vom Typ `Object` eingebettet werden, und deren Typ wird während der Laufzeit überprüft.  
   

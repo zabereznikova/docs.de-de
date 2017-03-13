@@ -62,7 +62,7 @@ Gibt die Attribute an, die auf ein deklariertes Programmierelement angewendet we
 ## Beispiel  
  Im folgenden Beispiel wird das <xref:System.Runtime.InteropServices.DllImportAttribute>\-Attribut auf eine Skelettdefinition einer `Function`\-Prozedur angewendet.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> gibt an, dass die attributierte Prozedur einen Einstiegspunkt in einer nicht verwalteten Dynamic Link Library \(DLL\) darstellt.  Das Attribut gibt den DLL\-Namen als Positionsargument und die anderen Informationen als Variableninitialisierungen an.  
   

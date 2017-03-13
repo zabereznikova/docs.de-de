@@ -28,11 +28,11 @@ Verwandte Konstanten lassen sich am besten mit Enumerationen gruppieren.  Sie k�
   
 1.  Schreiben Sie eine Deklaration mit einer Codezugriffsebene, dem `Enum`\-Schlüsselwort und einem gültigen Namen.  In diesem Beispiel wird die `Private`\-Enumeration `temperatureValues` erstellt.  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#21)]  
+     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
   
 2.  Definieren Sie die Konstanten der Enumeration.  In diesem Beispiel werden die `Public`\-Enumeration `temperatureValues` erstellt und die entsprechenden Werte zugewiesen.  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#1)]  
+     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
   
 ## Siehe auch  
  [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

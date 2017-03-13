@@ -49,11 +49,11 @@ From element [ As type ] In collection [ _ ]
   
  In einer Abfrage können mehrere `From`\-Klauseln angegeben werden, um anzugeben, dass mehrere Auflistungen verknüpft werden sollen.  Wenn mehrere Auflistungen angegeben werden, werden sie unabhängig voneinander durchlaufen. Verwandte Auflistungen können auch verknüpft werden.  Auflistungen können mit der `Select`\-Klausel implizit und mit der `Join`\-Klausel oder der `Group Join`\-Klausel explizit verknüpft werden.  Ebenso können mehrere Bereichsvariablen und Auflistungen in einer einzigen `From`\-Klausel angegeben werden, indem jede verknüpfte Bereichsvariable und Auflistung von den anderen durch ein Komma getrennt wird.  Im folgenden Codebeispiel werden beide Syntaxoptionen für die `From`\-Klausel dargestellt.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#21)]  
+ [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
  Die `From`\-Klausel definiert den Gültigkeitsbereich einer Abfrage. Dieser ähnelt dem Gültigkeitsbereich einer `For`\-Schleife.  Daher muss jede `element`\-Bereichsvariable im Gültigkeitsbereich einer Abfrage einen eindeutigen Namen haben.  Da mehrere `From`\-Klauseln für eine Abfrage angegeben werden können, können nachfolgende `From`\-Klauseln auf Bereichsvariablen in der `From`\-Klausel oder auf Bereichsvariablen einer vorhergehenden `From`\-Klausel verweisen.  Im folgenden Beispiel wird eine geschachtelte `From`\-Klausel gezeigt, in der die Auflistung in der zweiten Klausel auf einer Eigenschaft der Bereichsvariablen in der ersten Klausel basiert.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#22)]  
+ [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
  Jeder `From`\-Klausel kann eine beliebige Kombination weiterer Abfrageklauseln folgen, um die Abfrage zu verfeinern.  Die Abfrage kann folgendermaßen verfeinert werden:  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 ## Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From`\-Klausel zum Deklarieren einer Bereichsvariablen `cust` für jedes `Customer`\-Objekt in der `customers`\-Auflistung.  Die `Where`\-Klausel verwendet die Bereichsvariable, um die Ausgabe auf Kunden aus der angegebenen Region einzuschränken.  Die `For Each`\-Schleife zeigt den Namen des Unternehmens für jeden Kunden im Abfrageergebnis an.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## Siehe auch  
  [Queries](../../../visual-basic/language-reference/queries/queries.md)   

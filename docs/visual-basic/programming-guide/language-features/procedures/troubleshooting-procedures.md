@@ -50,7 +50,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
   
  **Richtige Vorgehensweise:** Um die Elemente eines zurückzugebenden Arrays ändern zu können, definieren Sie ein internes Array als lokale Variable.  Im folgenden Beispiel treten keine Compilerfehler auf.  
   
- [!code-vb[VbVbcnProcedures#66](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
 ## Argument, das vom Prozeduraufruf nicht geändert wird  
  Wenn Sie einer Prozedur gestatten möchten, ein Programmierelement zu ändern, das einem Argument im Aufrufcode zugrunde liegt, müssen Sie das Element als Verweis übergeben.  Eine Prozedur kann jedoch auch dann auf die Elemente eines Verweistyparguments zugreifen, wenn dieses als Wert übergeben wird.  
@@ -61,13 +61,13 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
   
  Im folgenden Beispiel werden zwei Prozeduren definiert, die eine Arrayvariable als Wert erwarten und auf deren Elemente anwenden.  Mit der `increase`\-Prozedur wird einfach zu jedem Element 1 addiert.  Mit der `replace`\-Prozedur wird dem `a()`\-Parameter ein neues Array zugewiesen und zu jedem Element 1 addiert.  Die Neuzuweisung wirkt sich jedoch nicht auf die zugrunde liegende Arrayvariable im Aufrufcode aus, da `a()` als `ByVal` deklariert ist.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
  Im folgenden Beispiel werden `increase` und `replace` aufgerufen.  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
  Beim ersten `MsgBox`\-Aufruf wird Folgendes angezeigt: "After increase\(n\): 11, 21, 31, 41".  Da `n` ein Verweistyp ist, kann `increase` seine Member ändern, obwohl es mit `ByVal` übergeben wird.  
   
@@ -75,7 +75,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
   
  **Richtige Vorgehensweise:** Um ein zugrunde liegendes Variablenelement selbst zu ändern, übergeben Sie es als Verweis.  Das folgende Beispiel zeigt die Änderung in der Deklaration von `replace`. Aufgrund dieser Änderung kann ein Array im Aufrufcode durch ein anderes ersetzt werden.  
   
- [!code-vb[VbVbcnProcedures#64](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
 ## Definieren einer Überladung nicht möglich  
  Wenn Sie eine überladene Version einer Prozedur definieren möchten, müssen Sie den gleichen Namen, jedoch eine andere Signatur verwenden.  Wenn der Compiler die Deklaration nicht von einer Überladung mit der gleichen Signatur unterscheiden kann, wird ein Fehler generiert.  
@@ -117,9 +117,9 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
   
  Im folgenden Beispiel wird der Prozess der Überladungsauflösung dargestellt.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
  Im ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments \(`Short`\) auf den Typ des entsprechenden Parameters \(`Byte`\) eingeschränkt wird.  Anschließend wird die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung \(`Short` und `Single`\) in den entsprechenden Typ der dritten Überladung \(`Integer` und `Single`\) erweitert wird.  Da die zweite Überladung eine geringere Erweiterung erfordert, wird sie vom Compiler für den Aufruf verwendet.  
   
@@ -127,7 +127,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
   
  **Richtige Vorgehensweise:** Um eine überladene Prozedur ohne Zweideutigkeit aufrufen zu können, verwenden Sie die [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), damit die Argumentdatentypen mit den Parametertypen übereinstimmen.  Im folgenden Beispiel wird ein Aufruf von `z` dargestellt, der die Auflösung in die zweite Überladung erzwingt.  
   
- [!code-vb[VbVbcnProcedures#65](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
 ### Überladungsauflösung mit den Argumenten Optional und ParamArray  
  Wenn die Signaturen von zwei Überladungen einer Prozedur sich nur darin unterscheiden, dass der letzte Parameter in der einen Prozedur als [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) und in der anderen als [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) deklariert ist, löst der Compiler einen Aufruf dieser Prozedur nach der größten Übereinstimmung auf.  Weitere Informationen finden Sie unter [Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md).  

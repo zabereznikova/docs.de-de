@@ -44,9 +44,9 @@ Der Übergabemechanismus richtet sich nach der Prozedurdeklaration.  Wenn ein Pa
 ## Beispiel  
  Im folgenden Beispiel wird eine `ByRef`\-Parameterdeklaration überschrieben.  Beachten Sie im Aufruf, mit dem `ByVal` erzwungen wird, die beiden Klammerebenen.  
   
- [!code-vb[VbVbcnProcedures#39](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#40](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
  Wenn `str` in der Argumentliste in zusätzlichen Klammern eingeschlossen ist, kann die `setNewString`\-Prozedur diesen Wert im Aufrufcode nicht ändern, und im `MsgBox` wird "Cannot be replaced if passed ByVal" angezeigt.  Wenn `str` nicht von zusätzlichen Klammern eingeschlossen ist, kann die Prozedur den Wert ändern. `MsgBox` zeigt daraufhin "This is a new value for the inString argument." an.  
   

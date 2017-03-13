@@ -41,7 +41,7 @@ Gibt an, dass der Text mehrere Codezeilen umfasst.
 ## Beispiel  
  Dieses Beispiel verwendet das \<code\>\-Tag, um Beispielcode für die Verwendung des `ID`\-Feldes einzufügen.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/code_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
 ## Siehe auch  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

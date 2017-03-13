@@ -22,11 +22,11 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  Angenommen, im Programmcode wurde ein Stapel deklariert, der aus ganzen Zahlen erstellt wurde:  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_1.cs)]  
+ [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  An diesem Punkt generiert die Laufzeit eine spezialisierte Version der <xref:System.Collections.Generic.Stack%601>\-Klasse, in der der Parameter durch die entsprechende ganze Zahl ersetzt wird.  Bei Verwendung eines Stapels aus ganzen Zahlen wird jetzt immer die generierte spezialisierte <xref:System.Collections.Generic.Stack%601>\-Klasse verwendet.  Im folgenden Beispiel werden zwei Instanzen eines Stapels aus ganzen Zahlen erstellt, die eine Instanz des `Stack<int>`\-Codes gemeinsam nutzen.  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_2.cs)]  
+ [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  Angenommen, dass an anderer Stelle im Code jedoch eine weitere <xref:System.Collections.Generic.Stack%601>\-Klasse erstellt wird, mit einem anderen Werttyp, z. B. `long`, oder einer benutzerdefinierten Struktur als Parameter.  Daraufhin generiert die Laufzeit eine andere Version des generischen Typs und ersetzt `long` an den entsprechenden Stellen in MSIL.  Konvertierungen sind nicht mehr notwendig, da jede spezialisierte generische Klasse den Werttyp systemeigen enthält.  
   
@@ -34,17 +34,17 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  Angenommen, Sie verfügen über zwei Referenztypen, eine `Customer`\-Klasse und eine `Order`\-Klasse, und Sie haben einen Stapel von `Customer`\-Typen erstellt:  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_3.cs)]  
+ [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_4.cs)]  
+ [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  An dieser Stelle generiert die Laufzeit eine spezialisierte Version der <xref:System.Collections.Generic.Stack%601>\-Klasse, die anstelle von Daten Objektverweise speichert, die zu einem späteren Zeitpunkt mit Daten gefüllt werden.  Angenommen, die nächste Codezeile erstellt einen Stapel eines anderen Referenztyps mit dem Namen `Order`:  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_5.cs)]  
+ [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  Anders als bei Werttypen wird für den `Order`\-Typ keine weitere spezialisierte Version der <xref:System.Collections.Generic.Stack%601>\-Klasse erstellt.  Stattdessen wird eine Instanz der spezialisierten Version der <xref:System.Collections.Generic.Stack%601>\-Klasse erstellt und die `orders`\-Variable so festgelegt, dass sie darauf verweist.  Angenommen, Sie würden dann auf eine Codezeile stoßen, die einen Stapel des Typs `Customer` erstellt:  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_6.cs)]  
+ [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  Wie auch bei der vorherigen Verwendung der mit dem `Order`\-Typ erstellten <xref:System.Collections.Generic.Stack%601>\-Klasse wird eine weitere Instanz der spezialisierten <xref:System.Collections.Generic.Stack%601>\-Klasse erstellt.  Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`\-Typs verweisen.  Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C\#\-Implementierung von Generika eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.  
   

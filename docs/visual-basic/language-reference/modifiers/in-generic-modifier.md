@@ -46,12 +46,12 @@ Für generische Typparameter gibt das `In`\-Schlüsselwort an, dass der Typparam
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie eine kontravariante generische Schnittstelle deklariert, erweitert und implementiert wird.  Außerdem wird gezeigt, wie Sie die implizite Konvertierung für Klassen verwenden können, die diese Schnittstelle implementieren.  
   
- [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein kontravarianter generischer Delegat deklariert, instanziiert und aufgerufen wird.  Darüber hinaus wird gezeigt, wie Sie einen Delegattyp implizit konvertieren können.  
   
- [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
 ## Siehe auch  
  [Abweichungen bei generischen Schnittstellen](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

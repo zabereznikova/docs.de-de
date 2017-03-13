@@ -28,11 +28,11 @@ Generische Klassen und Methoden kombinieren Wiederverwendbarkeit, Typsicherheit 
   
  Beachten Sie, dass T in der geschachtelten `Node`\-Klasse verfügbar ist.  Wenn `GenericList<T>` mit einem konkreten Typ instanziiert wird \(beispielsweise als `GenericList<int>`\), wird jedes Vorkommen von `T` durch `int` ersetzt.  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie in Clientcode mithilfe der generischen `GenericList<T>`\-Klasse eine Liste mit ganzen Zahlen erstellt wird.  Allein durch Änderung des Typarguments kann der folgende Code auf einfache Weise für die Erstellung von Zeichenfolgenlisten oder Listen beliebiger benutzerdefinierter Typen angepasst werden:  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## Siehe auch  
  <xref:System.Collections.Generic>   

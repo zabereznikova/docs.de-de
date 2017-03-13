@@ -53,7 +53,7 @@ Definiert Konstanten für die bedingte Kompilierung in Visual Basic.
 ## Beispiel  
  In diesem Beispiel wird die `#Const`\-Direktive verwendet.  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
 ## Siehe auch  
  [\/define](../../../visual-basic/reference/command-line-compiler/define.md)   

@@ -34,8 +34,8 @@ Wenn Sie ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement
   
 5.  Doppelklicken Sie auf das <xref:System.Windows.Forms.Button>\-Steuerelement, um den Code\-Editor zu öffnen, und fügen Sie dem `SearchButton_Click`\-Ereignishandler den folgenden Code hinzu.  
   
-     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterSearch/DataRepeaterSearch.vb#1)]
-     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterSearchCS/DataRepeaterSearch.cs#1)]  
+     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-search-data-in-a-datarepeater-control-visual-studio_1.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
   
      Ersetzen Sie *ProductsBindingSource* durch den Namen der <xref:System.Windows.Forms.BindingSource> für <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, und ersetzen Sie *ProductID* durch den Namen des Felds, das Sie durchsuchen möchten.  
   

@@ -58,7 +58,7 @@ End
 ## Beispiel  
  Im folgenden Beispiel wird mit der `End`\-Anweisung die Codeausführung beendet, wenn der Benutzer dies anfordert.  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVersHelp60Controls/Form1.vb#64)]  
+ [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
 ## Hinweise für Entwickler intelligenter Geräte  
  Diese Anweisung wird nicht unterstützt.  

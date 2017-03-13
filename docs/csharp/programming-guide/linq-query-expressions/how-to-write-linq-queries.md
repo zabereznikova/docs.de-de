@@ -21,7 +21,7 @@ Dieses Thema zeigt die drei Methoden, mit denen Sie eine [!INCLUDE[vbteclinq](..
 ## Abfragesyntax  
  Es wird empfohlen, die meisten Abfragen mit *Abfragesyntax* zu schreiben, um *Abfrageausdrücke* zu erstellen.  Im folgenden Beispiel werden drei Abfrageausdrücke veranschaulicht.  Der erste Abfrageausdruck zeigt, wie Ergebnisse gefiltert oder eingeschränkt werden, indem Sie Bedingungen mit einer `where`\-Klausel anwenden.  Er gibt alle Elemente in der Quellsequenz zurück, deren Werte größer als 7 oder kleiner als 3 sind.  Der zweite Ausdruck zeigt, wie die zurückgegebenen Ergebnisse sortiert werden.  Der dritte Ausdruck veranschaulicht, wie Ergebnisse anhand eines Schlüssels gruppiert werden.  Diese Abfrage gibt zwei Gruppen basierend auf dem Buchstaben des Worts zurück.  
   
- [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#5)]  
+ [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_1.cs)]  
   
  Beachten Sie, dass die Abfragen vom Typ <xref:System.Collections.Generic.IEnumerable%601> sind.  Alle diese Abfragen konnten mit `var` geschrieben werden, wie im folgenden Beispiel gezeigt:  
   
@@ -34,25 +34,25 @@ Dieses Thema zeigt die drei Methoden, mit denen Sie eine [!INCLUDE[vbteclinq](..
 ## Methodensyntax  
  Einige Abfrageoperationen müssen als Methodenaufruf ausgedrückt werden.  Die am häufigsten verwendeten Methoden sind jene, die einzelne numerische Werte zurückgeben, z. B. <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>.  Diese Methoden müssen immer zuletzt in einer Abfrage aufgerufen werden, da sie nur einen einzelnen Wert darstellen und nicht als Quelle für eine zusätzliche Abfrageoperation dienen.  Das folgende Beispiel zeigt einen Methodenaufruf in einem Abfrageausdruck:  
   
- [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#6)]  
+ [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_2.cs)]  
   
 ## Beispiel  
  Wenn die Methode über Parameter verfügt, werden diese in Form eines [Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)\-Ausdrucks bereitgestellt, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#7)]  
+ [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_3.cs)]  
   
  In den vorherigen Abfragen wird nur Abfrage 4 sofort ausgeführt.  Das liegt daran, dass sie einen einzelnen Wert und nicht eine generische <xref:System.Collections.Generic.IEnumerable%601>\-Auflistung zurückgibt.  Die Methode selbst muss `foreach` verwenden, um den Wert zu berechnen.  
   
  Alle diese vorherigen Abfragen können mithilfe der impliziten Typisierung mit [var](../../../csharp/language-reference/keywords/var.md) geschrieben werden, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#8)]  
+ [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_4.cs)]  
   
 ## Beispiel  
   
 ## Gemischte Abfrage und Methodensyntax  
  Dieses Beispiel zeigt, wie die Methodensyntax für Ergebnisse einer Abfrageklausel verwendet wird.  Schließen Sie den Abfrageausdruck in Klammern ein, wenden Sie dann den Punktoperator an, und rufen Sie die Methode auf.  Im folgenden Beispiel gibt Abfrage 7 eine Anzahl der Zahlen zurück, deren Wert zwischen 3 und 7 liegt.  Im Allgemeinen ist es jedoch besser, eine zweite Variable zum Speichern der Ergebnisse des Methodenaufrufs zu verwenden.  Auf diese Weise kann die Abfrage nicht so leicht mit den Ergebnissen der Abfrage verwechselt werden.  
   
- [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#9)]  
+ [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_5.cs)]  
   
  Da Abfrage 7 einen einzelnen Wert und keine Auflistung zurückgibt, wird die Abfrage sofort ausgeführt.  
   

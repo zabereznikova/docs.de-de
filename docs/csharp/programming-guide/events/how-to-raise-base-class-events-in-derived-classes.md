@@ -24,7 +24,7 @@ Das folgende einfache Beispiel veranschaulicht die herkömmliche Methode zum Dek
 >  Deklarieren Sie keine virtuellen Ereignisse in einer Basisklasse, und überschreiben Sie sie in einer abgeleiteten Klasse.  Der C\#\-Compiler verarbeitet diese nicht ordnungsgemäß, und er ist unvorhersehbar, ob ein Abonnent in den abgeleiteten Ereignisses tatsächlich in den Basisklassen Ereignis abonniert wird.  
   
 ## Beispiel  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-raise-base-class-_1.cs)]  
+ [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

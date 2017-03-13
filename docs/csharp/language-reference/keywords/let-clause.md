@@ -29,7 +29,7 @@ Bei Abfrageausdrücken ist es gelegentlich nützlich, das Ergebnis eines Unterau
   
 2.  Um es der Abfrage zu ermöglichen, `ToLower` nur ein Mal für die Bereichsvariable `word` aufzurufen.  Wenn Sie `let` nicht verwenden würden, müssten Sie `ToLower` in jedem Prädikat in der `where`\-Klausel aufrufen.  
   
- [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Let.cs#28)]  
+ [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

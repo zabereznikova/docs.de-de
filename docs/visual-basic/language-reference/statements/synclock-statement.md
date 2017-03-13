@@ -89,13 +89,13 @@ End SyncLock
  Würde die `simpleMessageList`\-Klasse in allen Instanzen nur eine gemeinsame Liste von Meldungen verwenden, würden die `messagesList`\-Variable und die `messagesLast`\-Variable als `Shared` deklariert werden.  In diesem Fall sollte die `messagesLock`\-Variable ebenfalls `Shared` sein, sodass von jeder Instanz ein einziges Sperrobjekt verwendet werden würde.  
   
 ### Code  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### Description  
  Im folgenden Beispiel werden Threads und `SyncLock` verwendet.  Solange die `SyncLock`\-Anweisung vorhanden ist, stellt der Anweisungsblock einen kritischen Abschnitt dar, und `balance` wird nie eine negative Zahl.  Sie können die Anweisungen `SyncLock` und `End SyncLock` auskommentieren, um die Folgen der Auslassung des `SyncLock`\-Schlüsselworts zu erkennen.  
   
 ### Code  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
 ### Kommentare  
   

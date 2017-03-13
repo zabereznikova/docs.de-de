@@ -7,7 +7,7 @@ Die `Main`\-Methode ist der Einstiegspunkt einer C\#\-Konsolenanwendung oder ein
   
  Es kann nur einen Einstiegspunkt in einem C\#\-Programm geben.  Wenn mehrere Klassen vorliegen, die eine `Main`\-Methode aufweisen, müssen Sie Ihr Programm mit der **\/main**\-Compileroption kompilieren, um festzulegen, welche `Main`\-Methode als Einstiegspunkt verwendet werden soll.  Weitere Informationen hierzu finden Sie unter [\/main \(Specify Location of Main Method\)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-and-command-line-ar_1.cs)]  
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
 ## Übersicht  
   

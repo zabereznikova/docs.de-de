@@ -31,7 +31,7 @@ int i = 10; //explicitly typed
 ## Beispiel  
  Im folgenden Beispiel werden zwei Abfrageausdrücke veranschaulicht.  Im ersten Ausdruck ist der Gebrauch von `var` zulässig, jedoch nicht erforderlich, da der Typ des Abfrageergebnisses explizit als `IEnumerable<string>` angegeben werden kann.  Im zweiten Ausdruck hingegen muss `var` verwendet werden, da das Ergebnis eine Auflistung von anonymen Typen ist und der Name des Typs nur für den Compiler selbst zugänglich ist.  Beachten Sie, dass in Beispiel 2 die `foreach`\-Iterationsvariable `item` ebenfalls implizit typisiert sein muss.  
   
- [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/csharp/var_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

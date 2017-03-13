@@ -33,7 +33,7 @@ Typen, die auf NULL festgelegt werden können, können alle Werte des zugrunde l
 ## Beispiele von Typen, die auf NULL festgelegt werden können  
  Jeder Werttyp kann als Grundlage für einen Typ verwenden werden, der auf NULL festgelegt werden kann.  Beispiele:  
   
- [!code-cs[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_1.cs)]  
+ [!code-cs[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
   
 ## Die Member der Typen, die auf NULL festgelegt werden können  
  Jede Instanz eines auf NULL festlegbaren Typs besitzt zwei öffentliche schreibgeschützte Eigenschaften:  
@@ -48,47 +48,47 @@ Typen, die auf NULL festgelegt werden können, können alle Werte des zugrunde l
   
  In diesem Beispiel wird mit dem `HasValue`\-Member getestet, ob die Variable einen Wert enthält, bevor versucht wird, diese anzuzeigen.  
   
- [!code-cs[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_2.cs)]  
+ [!code-cs[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
   
  Dieser Test kann auch wie in folgendem Beispiel ausgeführt werden:  
   
- [!code-cs[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_3.cs)]  
+ [!code-cs[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
   
 ## Explizite Konvertierungen  
  Ein auf NULL festlegbarer Typ kann in einen regulären Typ umgewandelt werden. Dies kann entweder explizit mit einer Umwandlung oder mit der `Value`\-Eigenschaft erfolgen.  Beispiele:  
   
- [!code-cs[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_4.cs)]  
+ [!code-cs[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
   
  Wenn eine benutzerdefinierte Konvertierung zwischen zwei Datentypen festgelegt wird, kann dieselbe Konvertierung auch für auf NULL festlegbare Versionen dieser Datentypen verwendet werden.  
   
 ## Implizite Konvertierungen  
  Eine Variable eines auf NULL festlegbaren Typs kann mit dem Schlüsselwort `null` auf NULL festgelegt werden, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_5.cs)]  
+ [!code-cs[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
   
  Die Konvertierung von einem gewöhnlichen Typ in einen auf NULL festlegbaren Typ ist implizit.  
   
- [!code-cs[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_6.cs)]  
+ [!code-cs[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
   
 ## Operatoren  
  Die vordefinierten unären und binären Operatoren sowie alle für Werttypen vorhandenen benutzerdefinierten Operatoren können auch von auf NULL festlegbaren Typen verwendet werden.  Diese Operatoren generieren einen NULL\-Wert, wenn die Operanden auf NULL festgelegt sind. Ansonsten verwendet der Operand den enthaltenen Wert, um das Ergebnis zu berechnen.  Beispiele:  
   
- [!code-cs[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_7.cs)]  
+ [!code-cs[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
   
  Wenn Sie Vergleiche mit Typen ausführen, die NULL\-Werte zulassen, und der Wert eines Typs NULL ist, der Wert des anderen Typs jedoch nicht, werden alle Vergleiche außer `!=` \(ungleich\) als `false` ausgewertet.  Daher sollt keinesfalls angenommen werden, dass wenn ein bestimmter Vergleich `false` zurückgibt, im entgegengesetzten Fall `true` zurückgegeben wird.  Im folgenden Beispiel ist 10 weder größer als noch kleiner als noch gleich NULL.  Nur `num1 != num2` wird als `true` ausgewertet.  
   
- [!code-cs[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_8.cs)]  
+ [!code-cs[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
   
  Ein Gleichheitsvergleich zweier Typen, die NULL\-Werte zulassen und beide NULL sind, wird als `true` ausgewertet.  
   
 ## Der ??Operator  
  Der Operator `??` definiert einen Standardwert, der zurückgegeben wird, wenn ein auf NULL festlegbarer Typ einem Typ zugewiesen wird, der nicht auf NULL festgelegt werden kann.  
   
- [!code-cs[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_9.cs)]  
+ [!code-cs[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
   
  Dieser Operator kann auch mit mehreren auf NULL festlegbaren Typen verwendet werden.  Beispiele:  
   
- [!code-cs[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_10.cs)]  
+ [!code-cs[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
   
 ## Der bool?\-type  
  Der auf NULL festlegbare `bool?`\-Typ kann drei verschiedene Werte enthalten: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) und [null](../../../csharp/language-reference/keywords/null.md).  Weitere Informationen zur Umwandlung von einem bool?\-Typ  in einen bool\-Typ finden Sie unter [Gewusst wie: Sichere Umwandlung von bool? in bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).  

@@ -67,19 +67,19 @@ End Function
 ## Beispiel  
  In den folgenden Beispielen werden zwei Möglichkeiten für die Erstellung einfacher Lambda\-Ausdrücke gezeigt.  Im ersten Beispiel wird mithilfe von `Dim` ein Name für die Funktion bereitgestellt.  Zum Aufrufen der Funktion übergeben Sie einen Wert als Parameter.  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+ [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+ [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## Beispiel  
  Alternativ kann die Funktion gleichzeitig deklariert und ausgeführt werden.  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## Beispiel  
  Das folgende Beispiel zeigt einen Lambda\-Ausdruck, der das übergebene Argument inkrementiert und den Wert zurückgibt.  Im Beispiel wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Funktion veranschaulicht.  Weitere Beispiele finden Sie unter [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## Beispiel  
  In [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)] liegen zahlreichen Abfrageoperatoren Lambda\-Ausdrücke zugrunde, die in methodenbasierten Abfragen explizit verwendet werden können.  Im folgenden Beispiel wird eine typische [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrage gefolgt von der Übersetzung der Abfrageinformationen in das Methodenformat dargestellt.  

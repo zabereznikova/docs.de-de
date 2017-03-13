@@ -25,15 +25,15 @@ Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../../cshar
   
  Im folgenden Beispiel wird die Ganzzahlvariable `i` mittels *Boxing* konvertiert und dem Objekt `o` zugewiesen.  
   
- [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_1.cs)]  
+ [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
  Das Objekt `o`  kann dann mittels Unboxing zurückkonvertiert und der Ganzzahlvariablen `i` zugewiesen werden:  
   
- [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_2.cs)]  
+ [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
  Die folgenden Beispiele veranschaulichen, wie Boxing in C\# verwendet wird.  
   
- [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_3.cs)]  
+ [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## Leistung  
  Im Verhältnis zu einfachen Zuweisungen sind Boxing und Unboxing rechentechnisch aufwändige Prozesse.  Wenn ein Werttyp mittels Boxing konvertiert wird, muss ein neues Objekt zugeordnet und erstellt werden.  Die für Unboxing erforderliche Umwandlung ist ebenfalls, jedoch in geringerem Maße rechentechnisch aufwändig.  Weitere Informationen finden Sie unter [Leistung](../Topic/.NET%20Performance%20Tips.md).  
@@ -43,11 +43,11 @@ Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../../cshar
   
  Beachten Sie die folgende Deklaration einer Werttypvariablen:  
   
- [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_4.cs)]  
+ [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
  Mit der folgenden Anweisung wird der Boxing\-Vorgang implizit auf die Variable `i` angewendet:  
   
- [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_5.cs)]  
+ [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
  Diese Anweisung bewirkt, dass der Objektverweis `o` auf dem Stapel erstellt wird, der auf einen Wert vom Typ `int` auf dem Heap verweist.  Dieser Wert ist eine Kopie des Werttyps, der der Variablen `i` zugewiesen ist.  In der folgenden Abbildung ist der Unterschied zwischen den Variablen `i` und `o` dargestellt.  
   
@@ -56,13 +56,13 @@ Boxing\-Konvertierung
   
  Es auch möglich, das Boxing wie im folgenden Beispiel explizit auszuführen. Explizites Boxing ist jedoch nie erforderlich:  
   
- [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_6.cs)]  
+ [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## Beschreibung  
  In diesem Beispiel wird die Ganzzahlvariable `i` mittels Boxing in das Objekt `o` konvertiert.  Anschließend wird der in der Variablen `i` gespeicherte Wert von `123` in `456` geändert.  Das Beispiel veranschaulicht, dass der ursprüngliche Werttyp und das durch Boxing entstehende Objekt unterschiedliche Speicherorte verwenden und daher verschiedene Werte speichern können.  
   
 ## Beispiel  
- [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_7.cs)]  
+ [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## Unboxing  
  Beim Unboxing handelt es sich um eine explizite Konvertierung vom `object`\-Typ in einen [Werttyp](../../../csharp/language-reference/keywords/value-types.md) bzw. von einem Schnittstellentyp in einen Werttyp, in dem die Schnittstelle implementiert wird.  Ein Unboxing\-Vorgang umfasst folgende Schritte:  
@@ -73,7 +73,7 @@ Boxing\-Konvertierung
   
  Anhand der folgenden Anweisungen werden sowohl Boxing\-Vorgänge als auch Unboxing\-Vorgänge veranschaulicht:  
   
- [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_8.cs)]  
+ [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
  In der folgenden Abbildung ist das Ergebnis der vorherigen Anweisungen dargestellt.  
   
@@ -85,7 +85,7 @@ Unboxing\-Konvertierung
 ## Beispiel  
  Im folgenden Beispiel wird ein Fall von ungültigem Unboxing und der sich daraus ergebenden `InvalidCastException` veranschaulicht.  Bei Verwendung von `try` und `catch` wird eine Fehlermeldung angezeigt, wenn der Fehler auftritt.  
   
- [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_9.cs)]  
+ [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
  Dieses Programm gibt Folgendes aus:  
   

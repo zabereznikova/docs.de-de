@@ -45,7 +45,7 @@ caps.handback.revision: 19
   
      Im folgenden Beispiel werden ein Ereignis und eine `WithEvents`\-Variable definiert, die auf die Klasse verweist, welche das Ereignis auslöst.  In der `Sub`\-Prozedur, die als Ereignishandler fungiert, wird eine `Handles`\-Klausel verwendet, um die Klasse und das Ereignis anzugeben, die verarbeitet werden.  
   
-     [!code-vb[VbVbcnProcedures#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
 ### So rufen Sie mit AddHandler einen Ereignishandler auf  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 19
   
      Im folgenden Beispiel wird eine `Sub`\-Prozedur definiert, die das <xref:System.Windows.Forms.Form.Closing>\-Ereignis eines Formulars behandelt.  Dann wird die `catchClose`\-Prozedur mithilfe der [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) als Ereignishandler für <xref:System.Windows.Forms.Form.Closing> zugeordnet.  
   
-     [!code-vb[VbVbcnProcedures#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
      Durch die Ausführung der [RemoveHandler Statement](../../../../visual-basic/language-reference/statements/removehandler-statement.md) kann die Zuordnung zwischen einem Ereignishandler und einem Ereignis aufgehoben werden.  
   

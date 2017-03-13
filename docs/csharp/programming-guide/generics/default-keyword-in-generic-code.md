@@ -27,7 +27,7 @@ Das Zuweisen eines Standardwerts zu einem parametrisierten Typ T wird bei generi
   
  Das folgende Beispiel aus der `GenericList<T>`\-Klasse demonstriert die Verwendung des `default`\-Schlüsselworts.  Weitere Informationen finden Sie unter [Übersicht über Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
   
- [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/csharp/default-keyword-in-gener_1.cs)]  
+ [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/CSharp/default-keyword-in-generic-code_1.cs)]  
   
 ## Siehe auch  
  <xref:System.Collections.Generic>   

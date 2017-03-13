@@ -24,7 +24,7 @@ In C\# können Argumente als Wert oder als Verweis an Parameter übergeben werde
   
  Im folgenden Beispiel werden die Unterschiede zwischen Wert\- und Verweisparametern veranschaulicht.  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-parameters_1.cs)]  
+ [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
   
  Weitere Informationen finden Sie unter den folgenden Themen:  
   

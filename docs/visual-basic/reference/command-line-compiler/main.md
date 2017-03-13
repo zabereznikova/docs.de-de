@@ -41,7 +41,7 @@ Gibt die Klasse oder das Modul an, die bzw. das die `Sub Main`\-Prozedur enthäl
   
  Wenn `location` eine Klasse ist, die von <xref:System.Windows.Forms.Form> erbt, stellt der Compiler eine `Main`\-Standardprozedur bereit, die die Anwendung startet, wenn die Klasse über keine `Main`\-Prozedur verfügt.  Dadurch können Sie Code in der Befehlszeile kompilieren, der in der Entwicklungsumgebung erstellt wurde.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
 ### So legen Sie \/main in der integrierten Entwicklungsumgebung von Visual Studio fest  
   

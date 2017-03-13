@@ -19,7 +19,7 @@ caps.handback.revision: 16
 Unter anderem können `accessor-declarations` auch verwendet werden, um viele Ereignisse verfügbar zu machen, ohne dass für jedes Ereignis ein Feld reserviert werden muss. Stattdessen werden die Ereignisinstanzen in einem Wörterbuch gespeichert.  Dies ist nur dann nützlich, wenn viele Ereignisse vorhanden sind, Sie jedoch davon ausgehen, dass die meisten Ereignisse nicht implementiert werden.  
   
 ## Beispiel  
- [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-use-a-dictionary-_1.cs)]  
+ [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-use-a-dictionary-to-store-event-instances_1.cs)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

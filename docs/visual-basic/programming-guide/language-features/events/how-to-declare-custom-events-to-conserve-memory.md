@@ -34,7 +34,7 @@ Unter gewissen Umständen muss die Speicherauslastung durch eine Anwendung gerin
   
  Alle Ereignisse in der Klasse verwenden das `Events`\-Feld, um nachzuverfolgen, welche Methoden jedes einzelne Ereignis behandeln.  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#22)]  
+ [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
 ## Siehe auch  
  <xref:System.ComponentModel.EventHandlerList>   

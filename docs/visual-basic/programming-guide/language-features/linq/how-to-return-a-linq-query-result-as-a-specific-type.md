@@ -72,7 +72,7 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
 3.  Fügen Sie nach der `End Class`\-Anweisung der Form1\-Klasse den folgenden Code hinzu, um einen `CustomerInfo`\-Typ zu erstellen, der die Abfrageergebnisse für dieses Beispiel enthält.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#16)]  
+     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
 4.  Wenn Sie dem O\/R\-Designer Tabellen hinzugefügt haben, wurde dem Projekt ein <xref:System.Data.Linq.DataContext>\-Objekt vom Designer hinzugefügt.  Dieses Objekt enthält den Code, der für den Zugriff auf diese Tabellen sowie auf einzelne Objekte und Aufzählungen jeder Tabelle benötigt wird.  Das <xref:System.Data.Linq.DataContext>\-Objekt des Projekts wird auf Grundlage des Namens der DBML\-Datei benannt.  Für dieses Projekt lautet der Name des <xref:System.Data.Linq.DataContext>\-Objekts `northwindDataContext`.  
   
@@ -80,7 +80,7 @@ Language\-Integrated Query \(LINQ\) vereinfacht den Zugriff auf Datenbankinforma
   
      Fügen Sie folgenden Code im `Load`\-Ereignis der Form1\-Klasse hinzu, um die als Eigenschaften des Datenkontexts verfügbar gemachten Tabellen abzufragen.  Die `Select`\-Klausel der Abfrage erstellt für jedes Element des Abfrageergebnisses einen neuen `CustomerInfo`\-Typ anstelle eines anonymen Typs.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#15)]  
+     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
 5.  Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   

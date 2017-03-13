@@ -28,12 +28,12 @@ Mit der `goto`\-Anweisung wird die Programmsteuerung direkt an eine Anweisung mi
 ## Beispiel  
  Im folgenden Beispiel wird die Verwendung von `goto` in einer [switch](../../../csharp/language-reference/keywords/switch.md)\-Anweisung veranschaulicht.  
   
- [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/csharp/goto_1.cs)]  
+ [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]  
   
 ## Beispiel  
  Im folgenden Beispiel wird demonstriert, wie `goto` verwendet werden kann, um geschachtelte Schleifen zu verlassen.  
   
- [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/csharp/goto_2.cs)]  
+ [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

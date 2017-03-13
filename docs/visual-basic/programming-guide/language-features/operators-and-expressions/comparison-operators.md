@@ -70,17 +70,17 @@ Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert
 ## Vergleichen von Objekten  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vergleicht zwei Objektverweisvariablen mit dem [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) und dem [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md).  Sie können mit beiden Operatoren bestimmen, ob zwei Verweisvariablen auf die gleiche Objektinstanz verweisen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  Im vorherigen Beispiel ergibt `x Is y` `True`, da beide Variablen auf dieselbe Instanz verweisen.  Vergleichen Sie dieses Ergebnis im Gegensatz dazu nun mit dem folgenden Beispiel.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
  Im vorherigen Beispiel ergibt `x Is y` `False`, da die Variablen zwar auf Objekte vom gleichen Typ, jedoch auf unterschiedliche Instanzen dieses Typs verweisen.  
   
  Wenn Sie sicherstellen möchten, dass zwei Objekte nicht auf dieselbe Instanz verweisen, können Sie mit dem Operator `IsNot` die umständliche Grammatik einer Kombination von `Not` und `Is` vermeiden.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  Im vorherigen Beispiel entsprechen sich `If a IsNot b` und `If Not a Is b`.  
   
@@ -91,7 +91,7 @@ Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert
   
  Wenn `typename` einen Schnittstellentyp angibt, gibt der `TypeOf`...`Is`\-Ausdruck `True` zurück, sofern das Objekt den Schnittstellentyp implementiert.  Wenn es sich bei `typename` um einen Klassentyp handelt, gibt der Ausdruck `True` zurück, sofern das Objekt eine Instanz der angegebenen Klasse oder einer Klasse ist, die von der angegebenen Klasse abgeleitet wird.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
  Im vorherigen Beispiel ergibt der `TypeOf x Is Control`\-Ausdruck `True`, weil `x` vom Typ `Button` ist, der von `Control` erbt.  
   

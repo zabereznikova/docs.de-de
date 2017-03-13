@@ -37,7 +37,7 @@ public virtual double Area()
   
  Der `virtual`\-Modifizierer kann nicht zusammen mit den Modifizierern `static`, `abstract, private` oder `override` verwendet werden.  Im folgenden Beispiel wird eine virtuelle Eigenschaft veranschaulicht:  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#26)]  
+ [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
  Virtuelle Eigenschaften verhalten sich wie abstrakte Methoden, mit Ausnahme der Unterschiede bei der Deklaration und der Syntax für den Aufruf.  
   
@@ -56,7 +56,7 @@ public Cylinder(double r, double h): base(r, h) {}
   
  Das folgende Programm berechnet und zeigt den entsprechenden Bereich für jede Figur an, indem er die entsprechende Implementierung der `Area()`\-Methode entsprechend dem Objekt aufruft, das mit der Methode zugeordnet ist.  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#23)]  
+ [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

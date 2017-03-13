@@ -42,13 +42,13 @@ System.Convert.ToInt32("35")
 ## Literale und einfache Namen  
  Die zwei einfachsten Typen von Ausdrücken sind Literale und einfache Namen.  Ein Literal ist ein konstanter Wert, der keinen Namen hat.  Im folgenden Codebeispiel sind sowohl `5` als auch `"Hello World"` literale Werte:  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_1.cs)]  
+ [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  Weitere Informationen zu literalen Werten finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).  
   
  Im vorhergehenden Beispiel sind sowohl `i` als auch `s` einfache Namen, die lokale Variablen identifizieren.  Wenn diese Variablen in einem Ausdruck verwendet werden, wird der Name der Variablen zum aktuell am Speicherort der Variablen gespeicherten Wert ausgewertet.  Dies wird im folgenden Beispiel dargestellt:  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_2.cs)]  
+ [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
   
 ## Aufrufausdrücke  
  Im folgenden Codebeispiel ist der Aufruf von `DoWork` ein Aufrufausdruck.  

@@ -21,7 +21,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben.  Ereignishandler sind nichts weiter als Methoden, die durch Delegaten aufgerufen werden.  Wenn Sie eine benutzerdefinierte Methode erstellen, kann eine Klasse wie das Windows\-Steuerelement diese Methode aufrufen, sobald ein bestimmtes Ereignis eintritt.  Das folgende Beispiel veranschaulicht die Deklaration eines Delegaten:  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#20)]  
+ [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  Jede Methode einer beliebigen verfügbaren Klasse oder Struktur, die mit dem Delegattyp übereinstimmt, kann dem Delegaten zugewiesen werden.  Bei der Methode kann es sich um eine statische Methode oder um eine Instanzenmethode handeln.  Dies ermöglicht das programmgesteuerte Ändern von Methodenaufrufen sowie die Integration von neuem Code in bereits vorhandene Klassen.  
   
