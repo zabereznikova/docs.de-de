@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # How to: Read From Text Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>\-Methode des `My.Computer.FileSystem`\-Objekts ermöglicht das Lesen aus einer Textdatei.  Die Dateicodierung kann angegeben werden, wenn beim Inhalt der Datei eine Codierung wie ASCII oder UTF\-8 verwendet wird.  
   
@@ -63,7 +63,7 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>\-Meth
   
 -   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades \(<xref:System.Security.SecurityException>\).  
   
- Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.  Bei der Datei Form1.vb handelt es sich zum Beispiel nicht unbedingt um eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Quelldatei.  
+ Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.  Bei der Datei Form1.vb handelt es sich zum Beispiel nicht unbedingt um eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Quelldatei.  
   
  Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  
   

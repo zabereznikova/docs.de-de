@@ -32,7 +32,7 @@ In diesem Beispiel wird gezeigt, wie Sie Joinoperationen, die mit der `join`\-Kl
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)]\-Konsolenanwendungsprojekt für [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 3.5 oder höher.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
+-   Erstellen Sie ein [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]\-Konsolenanwendungsprojekt für [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 oder höher.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
   
 -   Ersetzen Sie die `Program`\-Klasse durch den Code im vorherigen Beispiel.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # /= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dividiert den Wert einer Variablen oder Eigenschaft durch den Wert eines Ausdrucks und weist die sich daraus ergebende Gleitkommazahl der Variablen oder Eigenschaft zu.  
   

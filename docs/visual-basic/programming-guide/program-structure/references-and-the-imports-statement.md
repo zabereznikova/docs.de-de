@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # References and the Imports Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit dem Befehl **Verweis hinzufügen** aus dem Menü **Projekt** lassen sich externe Objekte in das Projekt einbinden.  Verweise in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können auf Assemblys zeigen, die mit Typbibliotheken vergleichbar sind, jedoch mehr Informationen enthalten.  
+Mit dem Befehl **Verweis hinzufügen** aus dem Menü **Projekt** lassen sich externe Objekte in das Projekt einbinden.  Verweise in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können auf Assemblys zeigen, die mit Typbibliotheken vergleichbar sind, jedoch mehr Informationen enthalten.  
   
 ## Die Imports\-Anweisung  
  Assemblys umfassen einen oder mehrere Namespaces.  Wenn Sie einen Verweis auf eine Assembly anlegen, können Sie auch eine `Imports`\-Anweisung zu einem Modul hinzufügen, die die Sichtbarkeit der Namespaces innerhalb des Moduls steuert.  Die `Imports`\-Anweisung stellt einen Kontextbereich bereit, in dem Sie gezielt den Teil des Namespaces nutzen können, der zur Erstellung eines eindeutigen Verweises nötig ist.  
@@ -40,7 +40,7 @@ Mit dem Befehl **Verweis hinzufügen** aus dem Menü **Projekt** lassen sich ext
  Ein Modul kann beliebig viele `Imports`\-Anweisungen enthalten.  Wenn vorhanden, müssen sie nach den `Option`\-Anweisungen, aber vor jeglichem anderen Code aufgeführt werden.  
   
 > [!NOTE]
->  Verwechseln Sie Projektverweise nicht mit der `Imports`\-Anweisung oder der `Declare`\-Anweisung.  Mit Projektverweisen werden externe Objekte, z. B. Objekte in Assemblys, für [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projekte verfügbar gemacht.  Die `Imports`\-Anweisung erleichtert zwar den Zugriff auf Projektverweise, stellt jedoch keinen Zugriff auf diese Objekte selbst bereit.  Mit der `Declare`\-Anweisung wird ein Verweis auf eine externe Prozedur in einer Dynamic Link Library \(DLL\) deklariert.  
+>  Verwechseln Sie Projektverweise nicht mit der `Imports`\-Anweisung oder der `Declare`\-Anweisung.  Mit Projektverweisen werden externe Objekte, z. B. Objekte in Assemblys, für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projekte verfügbar gemacht.  Die `Imports`\-Anweisung erleichtert zwar den Zugriff auf Projektverweise, stellt jedoch keinen Zugriff auf diese Objekte selbst bereit.  Mit der `Declare`\-Anweisung wird ein Verweis auf eine externe Prozedur in einer Dynamic Link Library \(DLL\) deklariert.  
   
 ## Verwenden von Aliasen mit der Imports\-Anweisung  
  Die `Imports`\-Anweisung erleichtert den Zugriff auf Methoden in Klassen, denn sie macht die explizite Eingabe des vollgekennzeichneten Namens eines Verweises überflüssig.  Mit Aliasen können Sie bestimmten Teilen des Namespaces einen eingängigeren Namen zuweisen.  So ist z. B. die Sequenz für Wagenrücklauf\/Zeilenvorschub, die die Anzeige eines einzelnen Textelements in mehreren Zeilen bewirkt, Teil der <xref:Microsoft.VisualBasic.ControlChars>\-Klasse im <xref:Microsoft.VisualBasic?displayProperty=fullName>\-Namespace.  Ohne Alias müssten Sie folgenden Code eingeben, um diese Konstante in einem Programm zu verwenden:  

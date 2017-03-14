@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Cannot refer to an instance member of a class from within a shared method or shared member initializer without an explicit instance of the class
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, aus einer freigegebenen Prozedur heraus auf einen nicht freigegebenen Member einer Klasse zu verweisen.  Im folgenden Beispiel wird eine solche Situation veranschaulicht.  
   

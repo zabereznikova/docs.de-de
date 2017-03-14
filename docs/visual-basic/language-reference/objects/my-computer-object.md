@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # My.Computer Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften zum Bearbeiten von Computerkomponenten bereit, z. B. Audio, Uhr, Tastatur, Dateisystem usw.  
   

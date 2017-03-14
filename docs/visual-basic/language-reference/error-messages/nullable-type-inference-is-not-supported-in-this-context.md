@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Nullable type inference is not supported in this context
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Werttypen und Strukturen können so deklariert werden, dass sie NULL\-Werte zulassen.  
   

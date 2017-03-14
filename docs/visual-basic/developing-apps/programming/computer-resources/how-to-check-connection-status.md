@@ -22,11 +22,11 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # How to: Check Connection Status in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mithilfe der <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A>\-Eigenschaft kann bestimmt werden, ob ein Computer über eine funktionierende Netzwerk\- oder Internetverbindung verfügt.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So überprüfen Sie, ob ein Computer über eine funktionierende Verbindung verfügt  
   

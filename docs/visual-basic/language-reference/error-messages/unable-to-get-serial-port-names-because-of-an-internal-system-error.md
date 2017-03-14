@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Unable to get serial port names because of an internal system error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Aufrufen der Eigenschaft `My.Computer.Ports.SerialPortNames` ist ein interner Fehler aufgetreten.  
   

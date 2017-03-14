@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # XML Axis Properties (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In den Themen in diesem Abschnitt wird die Syntax der XML\-Achseneigenschaften in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschrieben.  Die XML\-Achseneigenschaften vereinfachen den direkten Zugriff auf die XML im Code.  
+In den Themen in diesem Abschnitt wird die Syntax der XML\-Achseneigenschaften in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben.  Die XML\-Achseneigenschaften vereinfachen den direkten Zugriff auf die XML im Code.  
   
 ## In diesem Abschnitt  
   

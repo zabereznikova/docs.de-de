@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # XML Child Axis Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bietet Zugriff auf die untergeordneten Elemente eines <xref:System.Xml.Linq.XElement>\-Objekts, eines <xref:System.Xml.Linq.XDocument>\-Objekts, einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten oder einer Auflistung von <xref:System.Xml.Linq.XDocument>\-Objekten.  
   
@@ -51,7 +51,7 @@ object.<child>
 ## Hinweise  
  Sie können eine untergeordnete XML\-Achseneigenschaft verwenden, um auf untergeordnete Knoten eines <xref:System.Xml.Linq.XElement>\-Objekts oder eines <xref:System.Xml.Linq.XDocument>\-Objekts bzw. einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten oder <xref:System.Xml.Linq.XDocument>\-Objekten über den Namen zuzugreifen.  Verwenden Sie die XML\-`Value`\-Eigenschaft, um auf den Wert des ersten untergeordneten Knotens in der zurückgegebenen Auflistung zuzugreifen.  Weitere Informationen finden Sie unter [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert die untergeordneten Achseneigenschaften in Aufrufe an die <xref:System.Xml.Linq.XContainer.Elements%2A>\-Methode.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert die untergeordneten Achseneigenschaften in Aufrufe an die <xref:System.Xml.Linq.XContainer.Elements%2A>\-Methode.  
   
 ## XML\-Namespaces  
  Für den Namen in einer untergeordneten Achseneigenschaft können nur XML\-Namespacepräfixe verwendet werden, die mit der `Imports`\-Anweisung global deklariert wurden.  Es können keine XML\-Namespacepräfixe verwendet werden, die lokal innerhalb von XML\-Elementliteralen deklariert wurden.  Weitere Informationen finden Sie unter [Imports Statement \(XML Namespace\)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  

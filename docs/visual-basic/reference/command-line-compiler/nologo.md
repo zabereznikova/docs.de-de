@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /nologo (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Unterdrückt die Anzeige der Copyrightinformationen sowie der Informationsmeldungen während der Kompilierung.  
   

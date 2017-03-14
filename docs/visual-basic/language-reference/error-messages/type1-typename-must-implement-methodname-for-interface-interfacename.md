@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;methodname&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Klasse oder Struktur soll eine Schnittstelle implementieren. Dabei wird jedoch eine von der Schnittstelle definierte Prozedur nicht implementiert.  Jeder Member der Schnittstelle muss implementiert werden.  
   

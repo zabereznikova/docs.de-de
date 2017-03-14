@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # How to: Convert a String to an Array of Characters in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zuweilen empfiehlt es sich, Daten über die Zeichen in der Zeichenfolge und über deren Position in der Zeichenfolge zu erlangen, z. B. beim Analysieren einer Zeichenfolge.  In diesem Beispiel wird veranschaulicht, wie Sie ein Array von Zeichen in einer Zeichenfolge durch den Aufruf der <xref:System.String.ToCharArray%2A>\-Methode der Zeichenfolge abrufen.  
   

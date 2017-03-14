@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # String-Funktionen (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
   

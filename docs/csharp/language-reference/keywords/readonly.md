@@ -57,7 +57,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
  Hierbei handelt es sich um denselben Fehler, der beim Zuweisen eines Werts zu einer Konstante auftritt.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

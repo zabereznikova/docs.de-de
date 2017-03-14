@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # &#39;Sub Main&#39; was not found in &#39;&lt;name&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `Sub Main` fehlt, oder es wurde die falsche Position dafür angegeben.  
   

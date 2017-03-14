@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Constant and Literal Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal ist ein Wert, der sich selbst ausdrückt und nicht als Wert einer Variablen oder als Ergebnis eines Ausdrucks ausgedrückt wird, beispielsweise die Zahl 3 oder die Zeichenfolge "Hallo".  Eine Konstante ist ein aussagekräftiger Name, der anstelle eines Literals verwendet wird. Im Unterschied zu einer Variablen, deren Wert sich ändern kann, ist der Wert einer Konstante während der Ausführung des Programms unveränderlich.  
   
@@ -54,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- In der folgenden Tabelle finden Sie die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zur Verfügung stehenden umschließenden Zeichen und Typzeichen.  
+ In der folgenden Tabelle finden Sie die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zur Verfügung stehenden umschließenden Zeichen und Typzeichen.  
   
 ||||  
 |-|-|-|  

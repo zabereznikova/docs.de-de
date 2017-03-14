@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /baseaddress
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt beim Erstellen einer DLL eine Standardbasisadresse an.  
   
@@ -41,7 +41,7 @@ Gibt beim Erstellen einer DLL eine Standardbasisadresse an.
 |`address`|Erforderlich.  Die Basisadresse für die DLL.  Diese Adresse muss als Hexadezimalwert angegeben werden.|  
   
 ## Hinweise  
- Die Standardbasisadresse für eine DLL wird durch [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] festgelegt.  
+ Die Standardbasisadresse für eine DLL wird durch [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] festgelegt.  
   
  Beachten Sie, dass das niederwertige Wort in dieser Adresse gerundet wird.  Wenn Sie beispielsweise 0x11110001 angeben, wird dies auf 0x11110000 gerundet.  
   

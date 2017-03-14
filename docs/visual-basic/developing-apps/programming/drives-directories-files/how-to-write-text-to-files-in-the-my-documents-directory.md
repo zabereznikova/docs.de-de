@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Write Text to Files in the My Documents Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem `My.Computer.FileSystem.SpecialDirectories`\-Objekt können Sie auf besondere Verzeichnisse zugreifen, z. B. das Verzeichnis **Eigene Dateien**.  
   

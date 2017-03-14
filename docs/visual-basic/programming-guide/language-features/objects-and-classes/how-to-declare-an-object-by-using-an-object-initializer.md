@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Declare an Object by Using an Object Initializer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Objektinitialisierer ermöglichen Ihnen, in einer einzelnen Anweisung eine Instanz einer Klasse zu deklarieren und zu instanziieren.  Weiterhin können ein oder mehrere Member der Instanz gleichzeitig initialisiert werden, ohne einen parametrisierten Konstruktor aufzurufen.  
   

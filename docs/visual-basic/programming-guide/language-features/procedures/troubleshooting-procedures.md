@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Troubleshooting Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeiten mit Prozeduren auftreten können.  
   
@@ -100,7 +100,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgeführt, die beim Arbeite
  Wenn Sie eine Prozedur mit einem oder mehreren [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)\-Parametern oder mit einem [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)\-Parameter überladen, müssen Sie eine Duplizierung einer der *impliziten Überladungen* vermeiden.  Nähere Informationen finden Sie unter [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
   
 ## Aufrufen einer falschen Version einer überladenen Prozedur  
- Wenn es zu einer Prozedur mehrere überladene Versionen gibt, sollten Sie alle Parameterlisten dieser Versionen kennen und wissen, wie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Aufrufe zwischen den Überladungen auflöst.  Andernfalls rufen Sie eventuell nicht die beabsichtigte Überladung auf.  
+ Wenn es zu einer Prozedur mehrere überladene Versionen gibt, sollten Sie alle Parameterlisten dieser Versionen kennen und wissen, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Aufrufe zwischen den Überladungen auflöst.  Andernfalls rufen Sie eventuell nicht die beabsichtigte Überladung auf.  
   
  Wenn Sie festgelegt haben, welche Überladung aufgerufen werden soll, beachten Sie die folgenden Regeln:  
   

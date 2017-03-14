@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # /nowin32manifest (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Weist den Compiler an, kein Anwendungsmanifest in die ausführbare Datei einzubetten.  
   

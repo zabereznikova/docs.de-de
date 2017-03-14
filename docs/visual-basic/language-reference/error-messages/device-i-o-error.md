@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Device I/O error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Ein\- oder Ausgabefehler trat auf, während das Programm auf ein Gerät, wie einen Drucker oder ein Diskettenlaufwerk, zugegriffen hat.  
   

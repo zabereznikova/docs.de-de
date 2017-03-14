@@ -22,9 +22,9 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Show Available Serial Ports in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Thema wird beschrieben, wie mithilfe von `My.Computer.Ports` die verfügbaren seriellen Anschlüsse des Computers in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] angezeigt werden können.  
+In diesem Thema wird beschrieben, wie mithilfe von `My.Computer.Ports` die verfügbaren seriellen Anschlüsse des Computers in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] angezeigt werden können.  
   
  Um eine Benutzerauswahl des verwendeten Anschlusses zu ermöglichen, werden die Namen der seriellen Anschlüsse in einem <xref:System.Windows.Forms.ListBox>\-Steuerelement angezeigt.  
   

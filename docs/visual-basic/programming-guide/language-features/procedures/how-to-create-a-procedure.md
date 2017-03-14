@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # How to: Create a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Prozedur wird von einer einleitenden Deklarationsanweisung \(`Sub` oder `Function`\) und einer abschließenden Deklarationsanweisung \(`End Sub` oder `End Function`\) eingeschlossen.  Der gesamte Code der Prozedur befindet sich zwischen diesen Anweisungen.  
   

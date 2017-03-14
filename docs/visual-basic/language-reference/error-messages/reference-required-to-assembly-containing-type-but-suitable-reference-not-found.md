@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Es ist ein Verweis auf die Assembly „&lt;Assemblyidentit&#228;t&gt;“ erforderlich, die den Typ „&lt;Typname&gt;“ enth&#228;lt, , aber aufgrund der Mehrdeutigkeit der Projekte „&lt;Projektname1&gt;“ und „&lt;Projektname2&gt;“ wurde kein geeigneter Verweis gefunden.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Ausdruck verwendet einen Typ \(z. B. eine Klasse, eine Struktur, eine Schnittstelle, eine Enumeration oder einen Delegaten\), der außerhalb des Projekts definiert ist. Sie haben jedoch Projektverweise auf mehr als eine Assembly, die diesen Typ definiert.  
   
  Die genannten Projekte erzeugen Assemblys mit demselben Namen. Daher kann der Compiler nicht bestimmen, welche Assembly für den Typ, auf den Sie zugreifen, verwendet werden soll.  
   
- Für den Zugriff auf einen Typ in einer anderen Assembly benötigt der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler einen Verweis auf diese Assembly. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
+ Für den Zugriff auf einen Typ in einer anderen Assembly benötigt der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler einen Verweis auf diese Assembly. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
   
  **Fehler\-ID:** BC30969  
   

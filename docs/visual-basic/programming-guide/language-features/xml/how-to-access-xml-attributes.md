@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Access XML Attributes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel ist dargestellt, wie eine Attributachseneigenschaft verwendet wird, um auf XML\-Attribute in einem XML\-Element nach Namen zuzugreifen.  Insbesondere wird die Attributachseneigenschaft `type` verwendet, um auf das Attribut mit dem Namen `type` im `phone`\-Objekt zuzugreifen.  
   

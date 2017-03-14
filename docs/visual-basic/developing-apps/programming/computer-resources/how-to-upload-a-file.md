@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # How to: Upload a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>\-Methode kann eine Datei hochgeladen und an einem Remotespeicherort gespeichert werden.  Wenn der `ShowUI`\-Parameter auf `True` festgelegt ist, wird ein Dialogfeld mit dem Fortschritt des Downloads angezeigt. Über dieses Dialogfeld ist auch ein Benutzerabbruch des Vorgangs möglich.  
   

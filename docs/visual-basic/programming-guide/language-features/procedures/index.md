@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Procedures in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen, die von einer Deklarationsanweisung \(`Function`, `Sub`, `Operator`, `Get`, `Set`\) und einer übereinstimmenden `End`\-Deklaration eingeschlossen wird.  Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] müssen in einer Prozedur enthalten sein.  
+Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisungen, die von einer Deklarationsanweisung \(`Function`, `Sub`, `Operator`, `Get`, `Set`\) und einer übereinstimmenden `End`\-Deklaration eingeschlossen wird.  Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen in einer Prozedur enthalten sein.  
   
 ## Aufrufen einer Prozedur  
  Prozeduren werden an anderer Stelle im Code aufgerufen.  Dieser Vorgang wird als *Prozeduraufruf* bezeichnet.  Wenn die Prozedur ausgeführt wurde, wird die Steuerung an den Code zurückgegeben, der die Prozedur aufgerufen hat. Dieser Code wird als *aufrufender Code* bezeichnet.  Der Aufrufcode ist eine Anweisung oder ein Ausdruck in einer Anweisung. Er gibt die Prozedur anhand ihres Namens an und übergibt die Steuerung an die Prozedur.  
@@ -43,7 +43,7 @@ Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](../../../../csharp/programmi
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf auf andere Daten angewendet werden.  Sie können diese Informationen im Rahmen des Prozeduraufrufs an die Prozedur übergeben.  Die Prozedur definiert 0 \(null\) oder mehr *Parameter*, von denen jeder einen Wert darstellt, der an die Prozedur übergeben werden soll.  Jedem Parameter in der Prozedurdefinition entspricht ein *Argument* im Prozeduraufruf.  Ein Argument stellt den Wert dar, den Sie in einem bestimmten Prozeduraufruf an den entsprechenden Parameter übergeben.  
   
 ## Prozedurtypen  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] werden verschiedene Prozedurtypen verwendet:  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] werden verschiedene Prozedurtypen verwendet:  
   
 -   [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   

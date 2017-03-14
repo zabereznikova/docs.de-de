@@ -15,11 +15,11 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Die Klasse ist auf dem lokalen Computer nicht registriert.
-Dieser Fehler tritt in der Regel aufgrund einer beschädigten Datei aus. Sie müssen [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] möglicherweise neu installieren.  
+Dieser Fehler tritt in der Regel aufgrund einer beschädigten Datei aus. Sie müssen [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] möglicherweise neu installieren.  
   
 ### So beheben Sie diesen Fehler  
   
--   Installieren Sie [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] neu.  
+-   Installieren Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] neu.  
   
 ## Siehe auch  
  [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)   

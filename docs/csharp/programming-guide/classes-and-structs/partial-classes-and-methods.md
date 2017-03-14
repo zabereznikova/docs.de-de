@@ -162,7 +162,7 @@ partial void onNameChanged()
 -   Sie können einen [Delegaten](../../../csharp/language-reference/keywords/delegate.md) zu einer partiellen Methode machen, die definiert wurde und implementiert wurde, nicht jedoch zu einer partiellen Methode, die nur definiert wurde.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

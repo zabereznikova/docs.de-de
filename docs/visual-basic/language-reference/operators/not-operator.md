@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Not Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine logische Negation eines `Boolean`\-Ausdrucks oder eine bitweise Negation eines numerischen Ausdrucks aus.  
   

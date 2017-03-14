@@ -92,7 +92,7 @@ Console.WriteLine("{0}, {1}", a, b);
  Ein Konstruktor kann mithilfe des [static](../../../csharp/language-reference/keywords/static.md)\-Schlüsselworts als statisch deklariert werden.  Statische Konstruktoren werden unmittelbar vor dem Zugriff auf statische Felder automatisch aufgerufen. Im Allgemeinen werden mit ihrer Hilfe statische Klassenmember initialisiert.  Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

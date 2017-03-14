@@ -34,7 +34,7 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # Troubleshooting Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn Operationen mit systeminternen Datentypen ausgeführt werden.  
   
@@ -77,7 +77,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
  Beachten Sie, dass es nicht ausreicht, `decimalRemainder` als `Decimal` zu deklarieren.  Sie müssen außerdem für die Literale `Decimal` erzwingen. Andernfalls ist ihr Standarddatentyp `Double`, und `decimalRemainder` erhält denselben ungenauen Wert wie `doubleRemainder`.  
   
 ## Boolescher Typ wird nicht präzise in den numerischen Typ konvertiert  
- [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)\-Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht mit Zahlen gleichwertig sein.  Aus Gründen der Kompatibilität mit älteren Versionen stellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Konvertierungsschlüsselwörter \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt` usw.\) zum Konvertieren zwischen `Boolean`\-Typen und numerischen Typen bereit.  In anderen Sprachen werden diese Konvertierungen jedoch zuweilen anders ausgeführt als mit den [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Methoden.  
+ [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)\-Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht mit Zahlen gleichwertig sein.  Aus Gründen der Kompatibilität mit älteren Versionen stellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Konvertierungsschlüsselwörter \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt` usw.\) zum Konvertieren zwischen `Boolean`\-Typen und numerischen Typen bereit.  In anderen Sprachen werden diese Konvertierungen jedoch zuweilen anders ausgeführt als mit den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Methoden.  
   
  Sie sollten nie Code schreiben, der von entsprechenden numerischen Werten für `True` und `False` abhängt.  Beschränken Sie den Einsatz von `Boolean`\-Variablen auf die logischen Werte, für die sie entworfen wurden.  Wenn es erforderlich ist, `Boolean`\-Werte und numerische Werte zu mischen, müssen Sie wissen, wie die gewählte Konvertierungsmethode arbeitet.  
   
@@ -90,7 +90,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
  Achten Sie auf die verwendete Konvertierungsmethode, wenn Sie einen `Boolean`\-Wert in einen numerischen Datentyp konvertieren.  
   
 ## Zeichenliteral generiert Compilerfehler  
- Sind keine Typzeichen angeben, verwendet [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] für Literale Standarddatentypen.  Der Standardtyp für ein Zeichenliteral – in Anführungszeichen \(`" "`\) – ist `String`.  
+ Sind keine Typzeichen angeben, verwendet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] für Literale Standarddatentypen.  Der Standardtyp für ein Zeichenliteral – in Anführungszeichen \(`" "`\) – ist `String`.  
   
  Der `String`\-Datentyp wird nicht zum [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md) erweitert.  Wenn Sie einer `Char`\-Variablen ein Literal zuweisen möchten, müssen Sie daher entweder eine Einschränkungskonvertierung ausführen oder den `Char`\-Typ für das Literal erzwingen.  
   
@@ -110,7 +110,7 @@ Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn O
 ## Zeichenfolgenkonvertierung schlägt zur Laufzeit fehl  
  Der [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) ist an sehr wenigen Erweiterungskonvertierungen beteiligt.  `String` wird nur in sich selbst und zu `Object` erweitert, und nur `Char` und `Char()` \(ein `Char`\-Array\) werden zu `String` erweitert.  Der Grund hierfür ist, dass `String`\-Variablen und \-Konstanten Werte enthalten können, die andere Datentypen nicht behandeln können.  
   
- Wenn die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) den Wert `On` hat, lässt der Compiler keine impliziten einschränkenden Konvertierungen zu.  Das gilt auch für solche, die `String` betreffen.  Im Code können dennoch Konvertierungsschlüsselwörter wie `CStr` und [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) verwendet werden, die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] anweisen, die Konvertierung auszuführen.  
+ Wenn die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) den Wert `On` hat, lässt der Compiler keine impliziten einschränkenden Konvertierungen zu.  Das gilt auch für solche, die `String` betreffen.  Im Code können dennoch Konvertierungsschlüsselwörter wie `CStr` und [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) verwendet werden, die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] anweisen, die Konvertierung auszuführen.  
   
 > [!NOTE]
 >  Der Fehler für einschränkende Konvertierung wird unterdrückt für Konvertierungen von den Elementen in einer `For Each…Next`\-Auflistung zur Schleifensteuerungsvariable.  Weitere Informationen und Beispiele finden Sie im Abschnitt "Eingrenzende Konvertierungen" unter [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

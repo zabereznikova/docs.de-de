@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # /nostdlib (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass der Compiler nicht automatisch auf die Standardbibliotheken verweist.  
   
@@ -31,7 +31,7 @@ Bewirkt, dass der Compiler nicht automatisch auf die Standardbibliotheken verwei
 ```  
   
 ## Hinweise  
- Die Option `/nostdlib` entfernt den automatischen Verweis auf die Assembly System.dll und verhindert, dass der Compiler die Datei Vbc.rsp liest.  Die Datei Vbc.rsp \(befindet sich im selben Verzeichnis wie die Datei Vbc.exe\) verweist auf die häufig verwendeten [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys und importiert den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace.  
+ Die Option `/nostdlib` entfernt den automatischen Verweis auf die Assembly System.dll und verhindert, dass der Compiler die Datei Vbc.rsp liest.  Die Datei Vbc.rsp \(befindet sich im selben Verzeichnis wie die Datei Vbc.exe\) verweist auf die häufig verwendeten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys und importiert den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace.  
   
 > [!NOTE]
 >  Auf die Assembly Mscorlib.dll und auf die Assembly Microsoft.VisualBasic.dll wird immer verwiesen.  

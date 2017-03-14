@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Expression is a value and therefore cannot be the target of an assignment
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Anweisung versucht, einem Ausdruck einen Wert zuzuweisen.  Sie können einen Wert zur Laufzeit nur einer schreibbaren Variablen, einer Eigenschaft oder einem Arrayelement zuweisen.  Das folgende Beispiel zeigt, wie es zu diesem Fehler kommen kann.  
   

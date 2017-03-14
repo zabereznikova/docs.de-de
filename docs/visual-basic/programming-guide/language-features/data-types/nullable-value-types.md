@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Nullable Value Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zuweilen arbeiten Sie mit einem Werttyp, für den unter bestimmten Umständen kein Wert definiert ist.  Zum Beispiel muss für ein Feld in einer Datenbank möglicherweise unterschieden werden, ob ihm ein Wert zugewiesen ist, der eine Bedeutung hat, oder ob ihm kein Wert zugewiesen ist.  Werttypen können auf ihre normalen Werte oder einen NULL\-Wert erweitert werden.  Eine solche Erweiterung wird als *auf NULL festlegbarer Typ* bezeichnet.  
   
@@ -62,7 +62,7 @@ Zuweilen arbeiten Sie mit einem Werttyp, für den unter bestimmten Umständen ke
 >  Obwohl Sie einer Variablen eines auf NULL festlegbaren Typs `Nothing` zuweisen können, ist es nicht möglich, diese mittels Gleichheitszeichen auf `Nothing` zu überprüfen.  Der Vergleich mithilfe des Gleichheitszeichens, `someVar = Nothing`, ergibt immer `Nothing`.  Sie können die <xref:System.Nullable%601.HasValue%2A>\-Eigenschaft der Variablen auf `False` überprüfen oder eine Überprüfung mithilfe des Operators `Is` oder `IsNot` vornehmen.  
   
 ### Abrufen von Werten  
- Um den Wert einer Variablen mit auf NULL festlegbarem Typ abzurufen, überprüfen Sie zunächst ihre <xref:System.Nullable%601.HasValue%2A>\-Eigenschaft, um sicherzustellen, dass sie einen Wert aufweist.  Wenn Sie versuchen, den Wert zu lesen, und <xref:System.Nullable%601.HasValue%2A> ist `False`, wird von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] eine <xref:System.InvalidOperationException>\-Ausnahme ausgelöst.  Im folgenden Beispiel wird die empfohlene Vorgehensweise zum Lesen der Variablen `numberOfChildren` aus den vorhergehenden Beispielen veranschaulicht.  
+ Um den Wert einer Variablen mit auf NULL festlegbarem Typ abzurufen, überprüfen Sie zunächst ihre <xref:System.Nullable%601.HasValue%2A>\-Eigenschaft, um sicherzustellen, dass sie einen Wert aufweist.  Wenn Sie versuchen, den Wert zu lesen, und <xref:System.Nullable%601.HasValue%2A> ist `False`, wird von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] eine <xref:System.InvalidOperationException>\-Ausnahme ausgelöst.  Im folgenden Beispiel wird die empfohlene Vorgehensweise zum Lesen der Variablen `numberOfChildren` aus den vorhergehenden Beispielen veranschaulicht.  
   
  [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
   

@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # XML Literals (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In den Themen in diesem Abschnitt wird die Syntax für XML\-Literale in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschrieben.  Die Syntax für XML\-Literale ermöglicht das direkte Einfügen von XML in eigenen Code.  
+In den Themen in diesem Abschnitt wird die Syntax für XML\-Literale in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben.  Die Syntax für XML\-Literale ermöglicht das direkte Einfügen von XML in eigenen Code.  
   
 ## In diesem Abschnitt  
   

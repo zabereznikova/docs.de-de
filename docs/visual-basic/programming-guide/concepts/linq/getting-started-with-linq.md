@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Getting Started with LINQ in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)].  
+Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 ## In diesem Abschnitt  
  [Schreiben der ersten LINQ\-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
@@ -46,7 +46,7 @@ Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen z
   
 ## Verwandte Abschnitte  
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Enthält eine Übersicht der Abfragen in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] und stellt Links zu zusätzlichen Ressourcen bereit.  
+ Enthält eine Übersicht der Abfragen in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] und stellt Links zu zusätzlichen Ressourcen bereit.  
   
  [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  Beschreibt, wie Visual Basic LINQ to XML unterstützt.  
@@ -67,13 +67,13 @@ Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen z
  Beschreibt verfügbare Tools in der Visual Studio\-Umgebung zum Entwerfen, Codieren und Debuggen von LINQ\-fähigen Anwendungen.  
   
  [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- Umfasst eine Auswahl von Gewusst\-wie\-Themen zur Verwendung von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] mit Auflistungen im Arbeitsspeicher.  
+ Umfasst eine Auswahl von Gewusst\-wie\-Themen zur Verwendung von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] mit Auflistungen im Arbeitsspeicher.  
   
  [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
  Umfasst Links zu Themen, in denen die Verwendung von LINQ to XML erläutert wird, wodurch die speicherresidenten Dokumentänderungsfunktionen des Dokumentobjektmodells \(Document Object Model, DOM\) bereitgestellt werden, und unterstützt LINQ\-Abfrageausdrücke.  
   
  [LINQ\-Beispiele](../Topic/LINQ%20Samples.md)  
- Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Beispiele erläutert werden.  
+ Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Beispiele erläutert werden.  
   
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Technologien erläutert werden.
+ Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Technologien erläutert werden.

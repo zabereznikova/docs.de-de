@@ -62,7 +62,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
 -   [Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Enthaltene Buchkapitel  
  [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) in [C\# 3.0 Cookbook, Third Edition: More than 250 solutions for C\# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Troubleshooting Inherited Event Handlers in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Unter diesem Thema sind allgemeine Probleme aufgeführt, die sich bei Ereignishandlern in geerbten Komponenten ergeben.  
   

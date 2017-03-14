@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Delegate class &#39;&lt;classname&gt;&#39; has no Invoke method, so an expression of this type cannot be the target of a method call
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Aufruf von `Invoke` durch einen Delegaten ist fehlgeschlagen, weil `Invoke` nicht in der Delegatklasse implementiert ist.  
   

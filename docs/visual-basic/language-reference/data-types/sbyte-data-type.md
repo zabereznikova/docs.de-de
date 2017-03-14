@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # SByte Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 8\-Bit\-\(1\-Byte\-\)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von \-128 bis einschließlich 127 bewegen.  
   

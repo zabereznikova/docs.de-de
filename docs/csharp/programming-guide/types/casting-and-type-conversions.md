@@ -85,7 +85,7 @@ Giraffe g2 = (Giraffe) a;
  C\# liefert die Operatoren [is](../../../csharp/language-reference/keywords/is.md) und [as](../../../csharp/language-reference/keywords/as.md), damit Sie die Kompatibilität testen können, bevor Sie die Typumwandlung durchführen.  Weitere Informationen finden Sie unter [Gewusst wie: Sichere Umwandlung mit den Operatoren "as" und "is"](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Enthaltenes Buchkapitel  
  [More About Variables](http://go.microsoft.com/fwlink/?LinkId=221230) in [Beginning Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # /langversion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass der Compiler nur Syntax akzeptiert, die in der angegebenen Sprachversion von Visual Basic enthalten ist.  
   

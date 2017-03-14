@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Anonymous type member name can be inferred only from a simple or qualified name with no arguments
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können von einem komplexen Ausdruck keinen anonymen Typmembernamen ableiten.  
   

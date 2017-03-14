@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Accessing Application Forms (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Forms`\-Objekt stellt eine einfache Möglichkeit des Zugriffs auf eine Instanz jedes Windows\-Formulare bereit, das im Projekt der Anwendung deklariert ist.  Sie können auch mit den Eigenschaften des `My.Application`\-Objekts auf das Formular für den Begrüßungsbildschirm und das Hauptformular der Anwendung zugreifen und eine Liste der offenen Formulare der Anwendung abrufen.  
   

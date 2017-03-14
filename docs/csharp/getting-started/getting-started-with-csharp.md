@@ -31,7 +31,7 @@ Die folgenden Themen erleichtern Ihnen den Einstieg in die Entwicklung von Anwen
   
 ## Verwandte Abschnitte  
  [Using the Visual C\# Development Environment](/visual-studio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Enthält eine Anleitung zur Verwendung der integrierten Entwicklungsumgebung \(Integrated Development Environment, IDE\) von [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)].  
+ Enthält eine Anleitung zur Verwendung der integrierten Entwicklungsumgebung \(Integrated Development Environment, IDE\) von [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [C\#\-Programmierhandbuch](../../csharp/programming-guide/index.md)  
  Enthält Informationen über C\#\-Programmierkonzepte und beschreibt das Ausführen verschiedener Aufgaben in C\#.  

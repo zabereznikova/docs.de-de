@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # ULong Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 64\-Bit\-\(8\-Byte\-\)Ganzzahlen ohne Vorzeichen mit Werten zwischen 0 und 18.446.744.073.709.551.615 \(mehr als 1,84 Mal 10 ^ 19\).  
   

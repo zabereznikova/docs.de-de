@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 36
 ---
 # Getting Started with Visual Basic
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic\-Anwendungsentwicklung.  
   
@@ -39,22 +39,22 @@ Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der V
  Bietet Links zu Seiten mit Einführungen in die objektorientierte Programmierung und beschreibt das Erstellen eigener Objekte sowie das Verwenden der Objekte zum Vereinfachen der Codierung  
   
  [Samples](../../visual-basic/sample-applications.md)  
- Links zu Beispielcode in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Links zu Beispielcode in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Walkthroughs](../../visual-basic/walkthroughs.md)  
- Stellt eine Liste von Hilfeseiten bereit, die Aspekte der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprache veranschaulichen.  
+ Stellt eine Liste von Hilfeseiten bereit, die Aspekte der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprache veranschaulichen.  
   
  [Sprechen Sie mit uns](/visual-studio/ide/talk-to-us)  
  Erläutert, wie Sie Support erhalten und Feedback geben können  
   
  [Visual Studio](http://msdn.microsoft.com/de-de/06ddebea-2c83-4a45-bb48-6264c797ed93)  
- Links zur [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-Dokumentation.  
+ Links zur [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Dokumentation.  
   
  [C\#](../../csharp/csharp.md)  
- Links zur Dokumentation der Anwendungsentwicklung mit [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)].  
+ Links zur Dokumentation der Anwendungsentwicklung mit [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Visual C\+\+](/visual-cpp/top/visual-cpp-in-visual-studio-2015)  
  Enthält Links zur Visual C\+\+\-Dokumentation  
   
  [Office and SharePoint Development](/office-dev/office-dev/office-and-sharepoint-development-in-visual-studio)  
- Bietet Informationen zur Verwendung von Microsoft Office und [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] als Bestandteil einer Geschäftsanwendung.
+ Bietet Informationen zur Verwendung von Microsoft Office und [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] als Bestandteil einer Geschäftsanwendung.

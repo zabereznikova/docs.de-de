@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Declaration Contexts and Default Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema wird erläutert, welche Visual Basic\-Typen innerhalb welcher anderer Typen deklariert werden können und welche Zugriffsebenen standardmäßig für die Typen gelten, wenn sie nicht festgelegt werden.  
   

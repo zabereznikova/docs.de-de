@@ -49,7 +49,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Help for Event Handlers in Visual Basic Code
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Um die Hilfe für einen bestimmten Ereignishandler vom Code\-Editor aus aufzurufen, platzieren Sie den Cursor in der `Handles`\-Klausel am hinteren Ende der Ereignisprozedur, und drücken Sie anschließend F1.  Beispielsweise müsste der Cursor in der folgenden `Form1_Load`\-Anweisung in `MyBase.Load` platziert werden:  
   

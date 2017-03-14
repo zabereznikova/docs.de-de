@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Verweise auf deklarierte Elemente (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn der Code auf ein deklariertes Element verweist die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler mit dem Namen im Verweis der entsprechenden Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit dem gleichen Namen deklariert wird, können Sie steuern, welches dieser Elemente wird durch Verweise auf *qualifizierenden* seinen Namen.  
+Wenn der Code auf ein deklariertes Element verweist die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler mit dem Namen im Verweis der entsprechenden Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit dem gleichen Namen deklariert wird, können Sie steuern, welches dieser Elemente wird durch Verweise auf *qualifizierenden* seinen Namen.  
   
  Der Compiler versucht, einen Namensverweis einen Namen mit entsprechen den *engsten Gültigkeitsbereich*. Dies bedeutet, dass es beginnt mit dem Code, der den Verweis und arbeitet nach außen aufeinander folgende Ebenen der enthaltenden Elemente.  
   
- Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Bereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] löst der Compiler den Verweis in die Deklaration mit dem engsten Gültigkeitsbereich auf, nämlich die lokale Deklaration in `showCount`. Wenn qualifizierten `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis in die Deklaration mit einem größeren Bereich.  
+ Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Bereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst der Compiler den Verweis in die Deklaration mit dem engsten Gültigkeitsbereich auf, nämlich die lokale Deklaration in `showCount`. Wenn qualifizierten `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis in die Deklaration mit einem größeren Bereich.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -161,7 +161,7 @@ End Module
 ## <a name="references-to-projects"></a>Verweise auf Projekte  
  Verwenden [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf Assembly oder die Typbibliothek des Projekts. Um einen Verweis festlegen möchten, klicken Sie auf **Verweis hinzufügen** auf die **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilen-Compileroption.  
   
- Sie können z. B. das XML-Objektmodell der [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie eine der Klassen, wie z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
+ Sie können z. B. das XML-Objektmodell der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie eine der Klassen, wie z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -200,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  Mehrdeutigkeit bei Namen können Sie vermeiden, indem alle Elemente einen eindeutige Namen zuweisen. Anschließend können Sie auf jedes beliebige Element verweisen ohne seinen Namen mit einem Namespace, Modul oder Klasse zu qualifizieren. Sie reduzieren außerdem die Chancen, dass versehentlich auf das falsche Element verweisen.  
   
 ## <a name="shadowing"></a>Shadowing  
- Wenn zwei Programmierelemente denselben Namen haben, eine davon kann auszublenden, oder *Schatten*, eine. Ein gespiegeltes Element ist nicht verfügbar für Verweis. Stattdessen, wenn der Code verwendet den Namen gespiegelte Element der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler löst den Verweis in das spiegelnde Element. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Wenn zwei Programmierelemente denselben Namen haben, eine davon kann auszublenden, oder *Schatten*, eine. Ein gespiegeltes Element ist nicht verfügbar für Verweis. Stattdessen, wenn der Code verwendet den Namen gespiegelte Element der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler löst den Verweis in das spiegelnde Element. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   

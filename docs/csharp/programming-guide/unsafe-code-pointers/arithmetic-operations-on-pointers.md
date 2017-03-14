@@ -37,7 +37,7 @@ Dieses Thema behandelt die Bearbeitung von Zeigern mithilfe der arithmetischen O
  [!code-cs[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

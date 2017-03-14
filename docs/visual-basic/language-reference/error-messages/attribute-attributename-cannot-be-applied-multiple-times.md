@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das Attribut kann nur einmal angewendet werden.  Durch das `AttributeUsage`\-Attribut wird bestimmt, ob ein Attribut mehr als einmal angewendet werden kann.  
   

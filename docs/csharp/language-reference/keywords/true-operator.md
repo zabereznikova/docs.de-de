@@ -31,7 +31,7 @@ Gibt den [booleschen](../../../csharp/language-reference/keywords/bool.md) Wert 
  Die bedingten logischen Operatoren \([&&](../../../csharp/language-reference/operators/conditional-and-operator.md) und [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)\) können von einem Typ nicht direkt überladen werden. Eine vergleichbare Wirkung kann jedoch erzielt werden durch Überladung der regulären logischen Operatoren und der Operatoren `true` und `false`.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Pass Arguments to a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Prozedur aufrufen, geben Sie nach dem Prozedurnamen eine Argumentliste in runden Klammern an.  Stellen Sie für jeden erforderlichen Parameter der Prozedur ein Argument bereit, und geben Sie optional für die als `Optional` definierten Parameter Argumente an.  Wenn Sie im Aufruf einen als `Optional` definierten Parameter nicht angeben, müssen Sie ein Komma einfügen, um dessen Position in der Argumentliste zu markieren, falls Sie nachfolgende Argumente angeben.  
   
@@ -46,7 +46,7 @@ Wenn Sie eine Prozedur aufrufen, geben Sie nach dem Prozedurnamen eine Argumentl
   
 5.  Wenn Sie für einen als `Optional` definierten Parameter kein Argument angeben und in der Parameterliste diesem Parameter ein anderer folgt, können Sie die Position des ausgelassenen Arguments in der Argumentliste durch ein zusätzliches Komma markieren.  
   
-     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Funktion aufgerufen.  
+     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Funktion aufgerufen.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   

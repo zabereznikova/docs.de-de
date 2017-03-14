@@ -20,7 +20,7 @@ caps.handback.revision: 10
 Der Ausdruck "Durchlaufen einer Verzeichnisstruktur" bedeutet, auf jede Datei in einem verschachtelten Unterverzeichnis in einem angegebenen Stammordner zuzugreifen.  Sie müssen nicht unbedingt jede Datei öffnen.  Sie können einfach den Namen der Datei oder des Unterverzeichnisses als `string` oder zusätzliche Informationen in Form eines <xref:System.IO.FileInfo?displayProperty=fullName>\- Objekts oder <xref:System.IO.DirectoryInfo?displayProperty=fullName>\-Objekts abrufen.  
   
 > [!NOTE]
->  In Windows sind die Begriffe "Verzeichnis" und "Ordner" austauschbar.  In den meisten Dokumentationen und Benutzeroberflächentexten wird der Begriff "Ordner" verwendet, die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek verwendet jedoch den Begriff "Verzeichnis".  
+>  In Windows sind die Begriffe "Verzeichnis" und "Ordner" austauschbar.  In den meisten Dokumentationen und Benutzeroberflächentexten wird der Begriff "Ordner" verwendet, die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek verwendet jedoch den Begriff "Verzeichnis".  
   
  Im einfachsten Fall, bei dem Sie ganz sicher sind, dass Sie Zugriffsberechtigungen für alle Verzeichnisse in einem bestimmten Stammverzeichnis haben, können Sie das `System.IO.SearchOption.AllDirectories`\-Flag verwenden.  Dieses Flag gibt alle geschachtelten Unterverzeichnisse zurück, die mit dem angegebenen Muster übereinstimmen.  Im folgenden Beispiel wird die Verwendung dieses Flags dargestellt.  
   

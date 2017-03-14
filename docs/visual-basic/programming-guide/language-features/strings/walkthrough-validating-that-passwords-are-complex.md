@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Walkthrough: Validating That Passwords Are Complex (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Diese Methode überprüft einige Merkmale sicherer Kennwörter und aktualisiert einen Zeichenfolgenparameter mit den Informationen über die fehlgeschlagenen Kennwortüberprüfungen.  
   

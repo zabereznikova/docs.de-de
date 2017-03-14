@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Events of shared WithEvents variables cannot be handled by non-shared methods
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine mit dem `Shared`\-Modifizierer deklarierte Variable ist eine gemeinsam genutzte Variable.  Eine gemeinsam genutzte Variable kennzeichnet genau einen Speicherort.  Eine mit dem `WithEvents`\-Modifizierer deklarierte Variable gibt an, dass der zur Variablen gehörende Typ die Gruppe von Ereignissen verarbeitet, die von der Variablen ausgelöst werden.  Wenn der Variablen ein Wert zugewiesen wird, hebt die von der `WithEvents`\-Deklaration erstellte Eigenschaft die Zuordnung aller bestehenden Ereignishandler auf und ordnet über die `Add`\-Methode einen neuen Ereignishandler zu.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Type arguments could not be inferred from the delegate
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Zuweisungsanweisung verwendet `AddressOf` zum Zuweisen der Adresse einer generischen Prozedur an einen Delegaten, stellt jedoch keine Typargumente für die generische Prozedur bereit.  
   

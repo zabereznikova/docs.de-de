@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Call a Stored Procedure by Using LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die sprachintegrierte Abfrage \(LINQ\) erleichtert den Zugriff auf Datenbankinformationen, einschließlich Datenbankobjekten wie beispielsweise gespeicherten Prozeduren.  
   
@@ -30,7 +30,7 @@ Die sprachintegrierte Abfrage \(LINQ\) erleichtert den Zugriff auf Datenbankinfo
   
  In den Beispielen dieses Themas wird die Beispieldatenbank Northwind verwendet.  Wenn die Beispieldatenbank Northwind auf dem Entwicklungscomputer nicht installiert ist, können Sie sie von der Website [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) herunterladen.  Anweisungen dazu finden Sie unter [Herunterladen von Beispieldatenbanken](../Topic/Downloading%20Sample%20Databases.md).  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie eine Verbindung zu einer Datenbank  
   

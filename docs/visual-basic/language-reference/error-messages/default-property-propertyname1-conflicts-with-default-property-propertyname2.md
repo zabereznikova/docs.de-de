@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Default property &#39;&lt;propertyname1&gt;&#39; conflicts with default property &#39;&lt;propertyname2&gt;&#39; in &#39;&lt;classname&gt;&#39; and so should be declared &#39;Shadows&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es wurde eine Eigenschaft mit dem Namen einer Eigenschaft in der Basisklasse deklariert.  In dieser Situation muss die Eigenschaft in dieser Klasse ein Shadowing über die Eigenschaft der Basisklasse ausführen.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Generic parameters used as optional parameter types must be class constrained
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Prozedur wurde mit einem optionalen Parameter deklariert, der einen Typparameter verwendet, der nicht als Verweistyp eingeschränkt ist.  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Gewusst wie: Analysieren von Dateipfaden in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das <xref:Microsoft.VisualBasic.FileIO.FileSystem>\-Objekt bietet eine Reihe nützlicher Methoden für die Analyse von Dateipfaden.  
   

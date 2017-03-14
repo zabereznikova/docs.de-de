@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # How to: Invoke a Delegate Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Beispiel zeigt, wie Sie eine Methode einem Delegaten zuweisen und diese Methode anschließend über den Delegaten aufrufen.  
   

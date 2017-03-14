@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Then Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Leitet einen Anweisungsblock ein, der kompiliert oder ausgeführt werden soll, wenn eine getestete Bedingung wahr ist.  
   

@@ -18,7 +18,7 @@ Sie haben versucht, der `Picture`\-Eigenschaft eines Formulars oder Steuerelemen
   
 ### So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass die Datei, die Sie in die `Picture`\-Eigenschaft laden möchten, eine gültige, von [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützte Grafikdatei ist.  
+1.  Stellen Sie sicher, dass die Datei, die Sie in die `Picture`\-Eigenschaft laden möchten, eine gültige, von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützte Grafikdatei ist.  
   
 ## Siehe auch  
  [Graphics Changes in Visual Basic .NET](http://msdn.microsoft.com/de-de/24cd2d55-ebf1-42d6-b755-00e9001f1cb8)

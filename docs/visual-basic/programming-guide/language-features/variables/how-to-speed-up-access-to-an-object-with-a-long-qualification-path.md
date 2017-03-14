@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie häufig auf ein Objekt zugreifen, dessen vollständiger Name \(Qualifizierungspfad\) verschiedene Methoden und Eigenschaften umfasst, können Sie die Ausführungsgeschwindigkeit des Codes beschleunigen, indem Sie den Qualifizierungspfad nicht erneut angeben.  
   

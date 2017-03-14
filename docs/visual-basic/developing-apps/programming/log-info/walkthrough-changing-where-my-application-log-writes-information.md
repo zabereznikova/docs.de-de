@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Exemplarische Vorgehensweise: &#196;ndern des Orts, in den &quot;My.Application.Log&quot; Informationen schreibt (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Standardeinstellungen außer Kraft setzen und das `Log`\-Objekt dazu bringen können, in andere Protokolllistener zu schreiben.  
   

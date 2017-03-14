@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ```  
   
- Wie bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der CLR \(Common Language Runtime\) von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau festlegen, wann die Klasse geladen wird.  Mit Bestimmtheit wird sie jedoch geladen, die zugehörigen Felder werden initialisiert und der statische Konstruktor wird aufgerufen, bevor im Programm zum ersten Mal auf die Klasse verwiesen wird.  Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
+ Wie bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der CLR \(Common Language Runtime\) von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau festlegen, wann die Klasse geladen wird.  Mit Bestimmtheit wird sie jedoch geladen, die zugehörigen Felder werden initialisiert und der statische Konstruktor wird aufgerufen, bevor im Programm zum ersten Mal auf die Klasse verwiesen wird.  Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
   
 > [!NOTE]
 >  Informationen zum Erstellen einer nicht statischen Klasse, die nur die Erstellung einer einzigen Instanz von sich selbst zulässt, finden Sie unter [Implementing Singleton in C\#](http://go.microsoft.com/fwlink/?LinkID=100567).  
@@ -89,7 +89,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Ein Aufruf einer statischen Methode generiert in Microsoft Intermediate Language \(MSIL\) eine Aufrufanweisung, während ein Aufruf einer Instanzmethode eine `callvirt`\-Anweisung generiert, bei der auch eine Überprüfung auf NULL\-Objektverweise durchgeführt wird.  Meistens ist der Leistungsunterschied zwischen beiden jedoch nicht spürbar.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

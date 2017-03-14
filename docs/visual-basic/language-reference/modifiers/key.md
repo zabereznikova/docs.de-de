@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Key (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem `Key`\-Schlüsselwort kann das Verhalten von Eigenschaften anonymer Typen festgelegt werden.  In Gleichheitstests zwischen Instanzen anonymen Typs und bei der Berechnung von Hashcodewerten werden nur als Haupteigenschaften deklarierte Eigenschaften einbezogen.  Die Werte von Haupteigenschaften können nicht geändert werden.  
   

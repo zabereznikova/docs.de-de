@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Value Comparisons (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Vergleichsoperatoren können zum Erstellen von Ausdrücken verwendet werden, die die Werte von numerischen Variablen vergleichen.  Diese Ausdrücke geben einen `Boolean`\-Wert zurück, der darauf basiert, ob der Vergleich "True" oder "False" ist.  Ein solcher Ausdruck kann wie in den folgenden Beispielen angegeben werden.  
   

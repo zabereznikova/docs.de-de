@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # How to: Delete a Registry Key in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29>\-Methode und die <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29>\-Methode können zum Löschen von Registrierungsschlüsseln verwendet werden.  
   

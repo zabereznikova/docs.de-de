@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # My.Settings-Objekt
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften und Methoden für den Zugriff auf die Einstellungen der Anwendung.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Constants must be of an intrinsic or enumerated type, not a class, structure, type parameter, or array type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, eine Konstante als Klassen\-, Struktur\- oder Arraytyp zu deklarieren oder als Typparameter, der von einem enthaltenden generischen Typ definiert wird.  
   

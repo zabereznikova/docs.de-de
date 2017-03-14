@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # In (Generic Modifier) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Für generische Typparameter gibt das `In`\-Schlüsselwort an, dass der Typparameter kontravariant ist.  
   

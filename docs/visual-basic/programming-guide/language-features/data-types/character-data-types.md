@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Character Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt *Zeichendatentypen* für die Verarbeitung von Zeichen, die gedruckt und angezeigt werden können, zur Verfügung.  Beide Zeichendatentypen verarbeiten Unicode\-Zeichen. `Char` enthält jedoch ein einzelnes Zeichen, `String` dagegen eine unbestimmte Anzahl von Zeichen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt *Zeichendatentypen* für die Verarbeitung von Zeichen, die gedruckt und angezeigt werden können, zur Verfügung.  Beide Zeichendatentypen verarbeiten Unicode\-Zeichen. `Char` enthält jedoch ein einzelnes Zeichen, `String` dagegen eine unbestimmte Anzahl von Zeichen.  
   
- Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## Char\-Typ  
  Der Datentyp `Char` ist ein einzelnes 2\-Byte\-\(16\-Bit\-\)Unicode\-Zeichen.  Wenn eine Variable immer genau ein Zeichen speichert, deklarieren Sie sie als `Char`.  Beispiele:  

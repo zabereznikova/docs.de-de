@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Out of string space (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In Visual Basic können Sie sehr umfangreiche Zeichenfolgen verwenden.  Dieser Fehler kann jedoch weiterhin durch Anforderungen anderer Programme und die jeweilige Art der Zeichenfolgenbearbeitung verursacht werden.  
   

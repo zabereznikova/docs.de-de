@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # If Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verwendet eine Kurzschlussauswertung, um einen von zwei Werten in Abhängigkeit von Bedingungen zurückzugeben.  Der Operator `If` kann mit drei oder zwei Argumenten aufgerufen werden.  
   

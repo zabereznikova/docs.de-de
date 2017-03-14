@@ -45,7 +45,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   Sie geben eindeutig für Clientcode an, welche Werte für die Variable gültig sind.  
   
--   In [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] führt IntelliSense die definierten Werte auf.  
+-   In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] führt IntelliSense die definierten Werte auf.  
   
  Wenn Sie keine Werte für die Elemente in der Enumeratorliste angeben, werden die Werte automatisch um 1 erhöht.  Im vorhergehenden Beispiel hat `Days.Sunday` den Wert 0, `Days.Monday` den Wert 1 usw.  Wenn Sie ein neues `Days`\-Objekt erstellen, weist es den Standardwert `Days.Sunday` \(0\) auf, wenn Sie ihm nicht ausdrücklich einen Wert zuweisen.  Wenn Sie eine Enumeration erstellen, wählen Sie den Standardwert aus, der am logischsten ist und weisen Sie ihm den Wert Null zu.  Auf diese Weise erhalten alle Enumerationen diesen Standardwert, wenn ihnen nicht ausdrücklich beim Erstellen ein Wert zugewiesen wird.  
   

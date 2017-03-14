@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Mid Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ersetzt eine bestimmte Anzahl an Zeichen in einer `String`\-Variablen durch Zeichen aus einer anderen Zeichenfolge.  
   
@@ -75,7 +75,7 @@ Mid( _
   
  **Modul:** `Strings`  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Strings.Mid%2A>   

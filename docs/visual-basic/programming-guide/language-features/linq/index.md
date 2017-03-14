@@ -19,13 +19,13 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # LINQ in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)].  
+Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 ## In diesem Abschnitt  
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Bietet eine Einführung zu Anbietern, Operatoren, Abfragestruktur und Sprachfunktionen von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+ Bietet eine Einführung zu Anbietern, Operatoren, Abfragestruktur und Sprachfunktionen von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
  [How to: Query a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  Zeigt anhand eines Beispiels, wie mithilfe von LINQ eine Verbindung zu einer SQL Server\-Datenbank hergestellt und eine Abfrage ausgeführt wird.  

@@ -23,12 +23,12 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Object Variable Values (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Variable vom Typ [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) kann auf Daten beliebigen Typs verweisen.  Der in einer `Object`\-Variablen gespeicherte Wert befindet sich an einer anderen Speicherposition als die Variable, die lediglich einen Zeiger auf diesen Wert enthält.  
   
 ## Funktionen zur Objektklassifizierung  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] enthält Funktionen, die Informationen über das Objekt zurückgeben, auf das eine `Object`\-Variable verweist \(siehe folgende Tabelle\).  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enthält Funktionen, die Informationen über das Objekt zurückgeben, auf das eine `Object`\-Variable verweist \(siehe folgende Tabelle\).  
   
 |Funktion|Gibt "True" zurück, wenn die Objektvariable auf Folgendes verweist|  
 |--------------|------------------------------------------------------------------------|  

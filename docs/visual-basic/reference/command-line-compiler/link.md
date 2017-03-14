@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # /link (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinformationen in den angegebenen Assemblys bereitstellt.  
   
@@ -54,7 +54,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinfo
 > [!NOTE]
 >  Wenn Sie im Code eine Instanz eines eingebetteten COM\-Typs erstellen, müssen Sie die Instanz mit der entsprechenden Schnittstelle erstellen.  Der Versuch, mit CoClass eine Instanz eines eingebetteten COM\-Typs zu erstellen, führt zu einem Fehler.  
   
- Um die `/link`\-Option in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] festzulegen, fügen Sie einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`\-Eigenschaft auf **true** fest.  Der Standardwert für die `Embed Interop Types`\-Eigenschaft ist **false**.  
+ Um die `/link`\-Option in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] festzulegen, fügen Sie einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`\-Eigenschaft auf **true** fest.  Der Standardwert für die `Embed Interop Types`\-Eigenschaft ist **false**.  
   
  Wenn Sie eine Verknüpfung mit einer COM\-Assembly \(Assembly A\) herstellen, die wiederum auf eine andere COM\-Assembly \(Assembly B\) verweist, müssen Sie auch eine Verknüpfung mit Assembly B herstellen, wenn eine der folgenden Voraussetzungen erfüllt ist:  
   
@@ -64,7 +64,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinfo
   
  Verwenden Sie [\/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md), um das Verzeichnis anzugeben, in dem sich ein oder mehrere Assemblyverweise befinden.  
   
- Ebenso wie die [\/reference](../../../visual-basic/reference/command-line-compiler/reference.md)\-Compileroption verwendet die `/link`\-Compileroption die Antwortdatei Vbc.rsp, die auf häufig verwendete [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie die [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)\-Compileroption, wenn der Compiler die Datei Vbc.rsp nicht verwenden soll.  
+ Ebenso wie die [\/reference](../../../visual-basic/reference/command-line-compiler/reference.md)\-Compileroption verwendet die `/link`\-Compileroption die Antwortdatei Vbc.rsp, die auf häufig verwendete [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie die [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)\-Compileroption, wenn der Compiler die Datei Vbc.rsp nicht verwenden soll.  
   
  Die Kurzform von `/link` ist `/l`.  
   

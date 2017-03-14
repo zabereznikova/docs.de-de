@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # OrElse Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine inklusive logische Kurzschlussdisjunktion an zwei Ausdrücken aus.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Error Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Simuliert das Auftreten eines Fehlers.  
   

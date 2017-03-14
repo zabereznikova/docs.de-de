@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Efficient Combination of Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Komplexe Ausdrücke können viele verschiedene Operatoren enthalten.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   

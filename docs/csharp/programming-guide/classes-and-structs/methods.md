@@ -82,7 +82,7 @@ static void Main(string[] args) { int[,] matrix = new int[2, 2]; FillMatrix(matr
  Weitere Informationen finden Sie unter [return](../../../csharp/language-reference/keywords/return.md).  
   
 ## Asynchrone Methoden  
- Mithilfe der Async\-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda\-Ausdrücke teilen zu müssen. Die Async\-Funktion wurde in [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs-dev11-long-md.md)] eingeführt.  
+ Mithilfe der Async\-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda\-Ausdrücke teilen zu müssen. Die Async\-Funktion wurde in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)] eingeführt.  
   
  Wenn Sie eine Methode mit dem [async](../../../csharp/language-reference/keywords/async.md)\-Modifizierer kennzeichnen, können Sie den [await](../../../csharp/language-reference/keywords/await.md) Operator in der Methode verwenden. Wenn ein await\-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.  
   
@@ -120,7 +120,7 @@ public Point Move(int dx, int dy) => new Point(x + dx, y + dy); public void Prin
  Weitere Informationen finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

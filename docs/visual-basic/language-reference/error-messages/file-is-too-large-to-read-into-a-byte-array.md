@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # File is too large to read into a byte array
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Datei, die Sie in ein Bytearray zu lesen versuchen, ist größer als 4 GB.  Die `My.Computer.FileSystem.ReadAllBytes`\-Methode kann keine Dateien lesen, die diese Größe übersteigen.  
   

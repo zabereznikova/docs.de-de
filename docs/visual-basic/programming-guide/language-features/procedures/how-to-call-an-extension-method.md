@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Call an Extension Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen.  Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingebunden wurde, können Sie sie wie eine Instanzenmethode des Typs aufrufen, der von ihr erweitert wird.  Weitere Informationen über das Schreiben einer Erweiterungsmethode finden Sie unter [How to: Write an Extension Method](../../../../visual-basic/programming-guide/language-features/procedures/how-to-write-an-extension-method.md).  
   

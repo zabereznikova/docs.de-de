@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Long Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 64\-Bit\-\(8\-Byte\-\)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von \-9.223.372.036.854.775.808 bis einschließlich 9.223.372.036.854.775.807 \(9,2... E\+18\) bewegen.  
   

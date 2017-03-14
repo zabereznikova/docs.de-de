@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Gewusst wie: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>\-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen. Sie können den `wildCards`\-Parameter verwenden, um ein bestimmtes Muster anzugeben.  
   

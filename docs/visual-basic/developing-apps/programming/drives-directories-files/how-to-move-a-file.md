@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Gewusst wie: Verschieben von Dateien in Visual&#160;Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der `My.Computer.FileSystem.MoveFile`\-Methode kann eine Datei in einen anderen Ordner verschoben werden. Wenn die Zielstruktur nicht vorhanden ist, wird sie erstellt.  
   

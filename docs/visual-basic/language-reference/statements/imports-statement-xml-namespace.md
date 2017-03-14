@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Imports Statement (XML Namespace)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Importiert XML\-Namespacepräfixe zur Verwendung in XML\-Literalen und XML\-Achseneigenschaften.  
   

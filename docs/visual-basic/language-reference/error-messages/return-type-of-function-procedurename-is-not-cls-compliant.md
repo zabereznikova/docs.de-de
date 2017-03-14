@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Return type of function &#39;&lt;procedurename&gt;&#39; is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Function`\-Prozedur ist als `<CLSCompliant(True)>` markiert, gibt jedoch einen Typ zurück, der als `<CLSCompliant(False)>` markiert, nicht markiert oder nicht geeignet ist, da er nicht kompatibel ist.  
   
  Damit eine Prozedur mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel ist, darf sie nur CLS\-kompatible Typen verwenden.  Dies gilt für die Parametertypen, den Rückgabetyp und die Typen aller ihrer lokalen Variablen.  
   
- Die folgenden [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
+ Die folgenden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
   
 -   [SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -51,7 +51,7 @@ Eine `Function`\-Prozedur ist als `<CLSCompliant(True)>` markiert, gibt jedoch e
   
 -   Wenn die `Function`\-Prozedur CLS\-kompatibel sein muss, ändern Sie den Rückgabetyp in den ähnlichsten CLS\-kompatiblen Typ.  Möglicherweise können Sie z. B. `Integer` anstelle von `UInteger` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen.  Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long` ersetzen.  
   
--   Wenn Sie Verbindungen mit Automatisierungs\- oder COM\-Objekten verwenden, beachten Sie, dass einige Typen über andere Datenbreiten als in [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] verfügen.  Beispielsweise umfasst `int` in anderen Umgebungen oft 16 Bits.  Wenn Sie an eine solche Komponente eine 16\-Bit\-Ganzzahl zurückgeben, deklarieren Sie sie im verwalteten [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code als `Short` und nicht als `Integer`.  
+-   Wenn Sie Verbindungen mit Automatisierungs\- oder COM\-Objekten verwenden, beachten Sie, dass einige Typen über andere Datenbreiten als in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügen.  Beispielsweise umfasst `int` in anderen Umgebungen oft 16 Bits.  Wenn Sie an eine solche Komponente eine 16\-Bit\-Ganzzahl zurückgeben, deklarieren Sie sie im verwalteten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code als `Short` und nicht als `Integer`.  
   
 ## Siehe auch  
  [\<PAVE OVER\> Writing CLS\-Compliant Code](http://msdn.microsoft.com/de-de/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

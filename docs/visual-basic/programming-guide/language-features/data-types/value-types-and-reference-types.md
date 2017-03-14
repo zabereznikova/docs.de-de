@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Value Types and Reference Types
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In Visual Basic werden Datentypen auf Grundlage ihrer Klassifizierung implementiert.  Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen können in Abhängigkeit davon klassifiziert werden, ob von einer Variablen eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten gespeichert werden.  Wenn der Datentyp eigene Daten speichert, ist es ein *Werttyp*. Wenn er einen Zeiger auf die Daten an einer anderen Stelle im Speicher enthält, ist es ein *Verweistyp*.  
+In Visual Basic werden Datentypen auf Grundlage ihrer Klassifizierung implementiert.  Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen können in Abhängigkeit davon klassifiziert werden, ob von einer Variablen eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten gespeichert werden.  Wenn der Datentyp eigene Daten speichert, ist es ein *Werttyp*. Wenn er einen Zeiger auf die Daten an einer anderen Stelle im Speicher enthält, ist es ein *Verweistyp*.  
   
 ## Werttypen  
  Ein Datentyp ist dann ein *Werttyp*, wenn die Daten in der eigenen Speicherbelegung enthalten sind.  Werttypen umfassen Folgendes:  
@@ -55,7 +55,7 @@ In Visual Basic werden Datentypen auf Grundlage ihrer Klassifizierung implementi
   
 -   Delegaten  
   
- Eine Klasse ist ein *Verweistyp*.  Daher werden Verweistypen wie `Object` und `String` von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassen unterstützt.  Beachten Sie, dass jedes Array einen Referenztyp darstellt, auch wenn seine Member Werttypen sind.  
+ Eine Klasse ist ein *Verweistyp*.  Daher werden Verweistypen wie `Object` und `String` von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassen unterstützt.  Beachten Sie, dass jedes Array einen Referenztyp darstellt, auch wenn seine Member Werttypen sind.  
   
  Da jeder Referenztyp ein zugrunde liegendes .NET Framework\-Klasse dargestellt wird, müssen Sie das [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)\-Schlüsselwort verwenden, wenn Sie initialisieren.  Mit der folgenden Anweisung wird ein Array initialisiert.  
   

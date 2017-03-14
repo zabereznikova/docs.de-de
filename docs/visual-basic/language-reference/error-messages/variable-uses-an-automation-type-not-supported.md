@@ -18,13 +18,13 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Variable uses an Automation type not supported in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Sie haben versucht, eine Variable zu verwenden, die in einer Typ\- oder Objektbibliothek definiert ist und einen Datentyp aufweist, der von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nicht unterstützt wird.  
+Sie haben versucht, eine Variable zu verwenden, die in einer Typ\- oder Objektbibliothek definiert ist und einen Datentyp aufweist, der von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nicht unterstützt wird.  
   
 ### So beheben Sie diesen Fehler  
   
--   Verwenden Sie eine Variable eines Typs, der von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erkannt wird.  
+-   Verwenden Sie eine Variable eines Typs, der von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erkannt wird.  
   
      \- oder \-  
   

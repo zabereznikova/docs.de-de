@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # First operand in a binary &#39;If&#39; expression must be nullable or a reference type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein `If`\-Ausdruck kann entweder zwei oder drei Argumente verarbeiten.  Wenn Sie nur zwei Argumente verwenden, muss das erste Argument ein Referenztyp oder ein Typ sein, der NULL\-Werte zulässt.  Wenn die Auswertung des ersten Arguments etwas anderes als `Nothing` ergibt, wird der Wert zurückgegeben.  Wenn die Auswertung des ersten Arguments `Nothing` ergibt, wird das zweite Argument ausgewertet und zurückgegeben.  
   

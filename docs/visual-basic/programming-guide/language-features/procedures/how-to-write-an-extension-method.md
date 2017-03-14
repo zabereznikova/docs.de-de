@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Write an Extension Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen.  Die Erweiterungsmethode kann aufgerufen werden, als wäre sie eine Instanz dieser Klasse.  
   

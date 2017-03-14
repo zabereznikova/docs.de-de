@@ -66,7 +66,7 @@ Ausnahmen werden verwendet, um anzuzeigen, dass während der Programmausführung
  Neue Eigenschaften sollten zur Ausnahmeklasse nur hinzugefügt werden, wenn die Daten, die durch sie bereitgestellt werden, zur Bearbeitung der Ausnahme benötigt werden.  Wenn der abgeleiteten Ausnahmeklasse neue Eigenschaften hinzugefügt werden, sollte `ToString()` überschrieben werden, um die ergänzenden Informationen zurückzugeben.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

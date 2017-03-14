@@ -36,7 +36,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Schreiben von Code kommt es hin und wieder vor, dass Sie umfangreiche Anweisungen erstellen, die im Code\-Editor einen horizontalen Bildlauf erfordern.  Obwohl dies nicht die \- Methode auswirkt, wird der Code ausgeführt, können sie schwierig, damit Sie oder eine andere Person den Code liest, während er auf dem Bildschirm.  In diesem Fall empfiehlt es sich, die lange Anweisung auf mehrere Zeilen zu umbrechen.  
   
@@ -59,7 +59,7 @@ Beim Schreiben von Code kommt es hin und wieder vor, dass Sie umfangreiche Anwei
   
      Sie können einen Kommentar nicht fortsetzen, indem Sie ein Zeilenfortsetzungszeichen verwenden.  Der Compiler überprüft die Zeichen in einem Kommentar besondere Bedeutungen.  Bei einem mehrzeiligen Kommentar müssen Sie das Kommentarsymbol \(`'`\) in jeder Zeile erneut eingeben.  
   
- Obwohl, jede Anweisung in einer eigenen Zeile platziert die empfohlene Methode ist, ermöglicht [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Sie in auch mehrere Anweisungen in der gleichen Zeile unterbringen.  
+ Obwohl, jede Anweisung in einer eigenen Zeile platziert die empfohlene Methode ist, ermöglicht [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Sie in auch mehrere Anweisungen in der gleichen Zeile unterbringen.  
   
 ### So platzieren Sie mehrere Anweisungen in der gleichen Zeile  
   

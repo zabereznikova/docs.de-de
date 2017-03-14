@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Error creating assembly manifest: &lt;error message&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen.  Der Linker meldet einen Fehler in der Vorausgabestufe der Assemblyerstellung.  
+Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen.  Der Linker meldet einen Fehler in der Vorausgabestufe der Assemblyerstellung.  
   
  Zu diesem Fehler kann es kommen, wenn es Probleme mit der angegebenen Schlüsseldatei oder dem angegebenen Schlüsselcontainer gibt.  Um eine Assembly vollständig zu signieren, müssen Sie eine gültige Schlüsseldatei bereitstellen, die Informationen zu den öffentlichen und privaten Schlüsseln enthält.  Um das Signieren einer Assembly zu verzögern, müssen Sie das Kontrollkästchen **Nur verzögerte Signierung** aktivieren und eine gültige Schlüsseldatei angeben, die Informationen zum öffentlichen Schlüssel enthält.  Der private Schlüssel ist nicht erforderlich, wenn eine Assembly verzögert signiert wird.  Weitere Informationen finden Sie unter [How to: Sign an Assembly \(Visual Studio\)](http://msdn.microsoft.com/de-de/f468a7d3-234c-4353-924d-8e0ae5896564).  
   

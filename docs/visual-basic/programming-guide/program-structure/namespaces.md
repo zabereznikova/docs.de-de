@@ -31,18 +31,18 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Namespaces in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können. Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.  
   
- Zum Beispiel definiert [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] die <xref:System.Windows.Forms.ListBox>\-Klasse im <xref:System.Windows.Forms?displayProperty=fullName>\-Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
+ Zum Beispiel definiert [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] die <xref:System.Windows.Forms.ListBox>\-Klasse im <xref:System.Windows.Forms?displayProperty=fullName>\-Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## Vermeiden von Namenskonflikten  
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Namespaces beheben ein Problem, das manchmal als *Namespacekonflikte* bezeichnet wird. Dabei wird die Entwicklung einer Klassenbibliothek durch die Verwendung ähnlicher Namen in einer anderen Bibliothek beeinträchtigt. Diese Konflikte mit vorhandenen Komponenten werden auch als *Namenskonflikte* bezeichnet.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Namespaces beheben ein Problem, das manchmal als *Namespacekonflikte* bezeichnet wird. Dabei wird die Entwicklung einer Klassenbibliothek durch die Verwendung ähnlicher Namen in einer anderen Bibliothek beeinträchtigt. Diese Konflikte mit vorhandenen Komponenten werden auch als *Namenskonflikte* bezeichnet.  
   
- Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Sollten Sie jedoch die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox>\-Klasse im gleichen Projekt verwenden, müssen Sie einen vollqualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, meldet [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Fehler, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
+ Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Sollten Sie jedoch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox>\-Klasse im gleichen Projekt verwenden, müssen Sie einen vollqualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, meldet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Fehler, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  ![Namespacehierarchie](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.png "vaNamespaceHierarchy")  
   
- Standardmäßig enthält jede mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellte ausführbare Datei einen Namespace mit demselben Namen wie für das Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject` definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
+ Standardmäßig enthält jede mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellte ausführbare Datei einen Namespace mit demselben Namen wie für das Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject` definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
   
- Mehrere Assemblys können den gleichen Namen verwenden.[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] behandelt sie als einen einzigen Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1` definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
+ Mehrere Assemblys können den gleichen Namen verwenden.[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] behandelt sie als einen einzigen Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1` definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
   
 ## Vollqualifizierte Namen  
  Vollqualifizierte Namen sind Objektverweise, denen der Name des Namespace vorangestellt ist, in dem das Objekt definiert ist. Sie können in anderen Projekten definierte Objekte verwenden, wenn Sie einen Verweis auf die Klasse erstellen \(durch Auswahl von **Verweis hinzufügen** aus dem Menü **Projekt**\) und dann den vollqualifizierten Namen für das Objekt im Code verwenden. Das folgende Codefragment zeigt, wie Sie den vollqualifizierten Namen für ein Objekt aus dem Namespace eines anderen Projekts verwenden:  
@@ -69,7 +69,7 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Wenn Sie versuchen, `Class1` zu verwenden ohne diesen Namen voll zu qualifizieren, meldet [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Fehler, dass der Name `Class1` mehrdeutig ist.  
+ Wenn Sie versuchen, `Class1` zu verwenden ohne diesen Namen voll zu qualifizieren, meldet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Fehler, dass der Name `Class1` mehrdeutig ist.  
   
 ## Namespaceebenen\-Anweisungen  
  Innerhalb eines Namespace können Sie Elemente wie Module, Schnittstellen, Klassen, Delegaten, Enumerationen, Strukturen und andere Namespaces definieren. Sie können keine Elemente wie Eigenschaften, Prozeduren, Variablen und Ereignisse auf Namespaceebene definieren. Diese Elemente müssen in Containern, beispielsweise in Modulen, Strukturen oder Klassen deklariert werden.  

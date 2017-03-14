@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How My Depends on Project Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `My` macht nur Objekte verfügbar, die für einen bestimmten Projekttyp erforderlich sind.  So ist z. B. das `My.Forms`\-Objekt in einer Windows Forms\-Anwendung verfügbar, in einer Konsolenanwendung jedoch nicht.  In diesem Thema wird beschrieben, welche `My`\-Objekte in den einzelnen Projekttypen verfügbar sind.  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 18
 |`My.User`|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>7</sup>|**Ja** <sup>6</sup>|Nein|**Ja** <sup>7</sup>|  
 |`My.WebServices`|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|Nein|Nein|  
   
- <sup>1</sup> Windows Forms\-Version von `My.Application`.  Von der Konsolenversion abgeleitet \(siehe Fußnote 3\). Bietet zusätzlich Unterstützung für Interaktionen mit den Fenstern der Anwendung, und stellt das [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anwendungsmodell bereit.  
+ <sup>1</sup> Windows Forms\-Version von `My.Application`.  Von der Konsolenversion abgeleitet \(siehe Fußnote 3\). Bietet zusätzlich Unterstützung für Interaktionen mit den Fenstern der Anwendung, und stellt das [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anwendungsmodell bereit.  
   
  <sup>2</sup> Bibliotheksversion von `My.Application`.  Stellt die grundlegende Funktionalität für eine Anwendung bereit, insbesondere Member für das Schreiben in das Anwendungsprotokoll und den Zugriff auf Anwendungsinformationen.  
   

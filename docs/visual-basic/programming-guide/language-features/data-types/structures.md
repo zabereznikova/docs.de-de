@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs \(UDT, User\-Defined Type\), der in älteren Versionen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt wird.  Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen.  Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für die einzelnen Felder deklarieren.  
+Eine *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs \(UDT, User\-Defined Type\), der in älteren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt wird.  Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen.  Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für die einzelnen Felder deklarieren.  
   
  Sie können Datenelemente verschiedener Typen kombinieren, um eine Struktur zu erstellen.  In einer Struktur werden ein oder mehrere *Elemente* einander und der Struktur an sich zugeordnet.  Wenn Sie eine Struktur deklarieren, entsteht ein *zusammengesetzter Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
   
@@ -47,7 +47,7 @@ Eine *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs \(UDT, U
   
 ## Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Stellt die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
+ Stellt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
   
  [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Listet die elementaren Datentypen auf, die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellt werden.
+ Listet die elementaren Datentypen auf, die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellt werden.

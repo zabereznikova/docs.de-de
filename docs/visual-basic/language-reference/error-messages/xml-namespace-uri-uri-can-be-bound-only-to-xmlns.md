@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # XML namespace URI &#39;http://www.w3.org/XML/1998/namespace&#39; can be bound only to &#39;xmlns&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der URI http:\/\/www.w3.org\/XML\/1998\/namespace wurde in einer XML\-Namespacedeklaration verwendet.  Dieser URI ist ein reservierter Namespace und kann nicht in einer XML\-Namespacedeklaration enthalten sein.  
   

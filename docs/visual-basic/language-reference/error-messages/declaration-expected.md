@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Declaration expected
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine nicht deklarierte Anweisung, wie eine Zuweisung oder eine Schleifenanweisung, tritt außerhalb einer Prozedur auf.  Außerhalb von Prozeduren sind nur Deklarationen zulässig.  
   

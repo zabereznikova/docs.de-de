@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Underlying type &lt;typename&gt; of Enum is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der für diese Enumeration angegebene Datentyp ist nicht in der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) enthalten.  Dies ist kein Fehler in der Komponente, da [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] und [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] diesen Datentyp unterstützen.  Jedoch unterstützt möglicherweise eine andere, in grundsätzlich CLS\-kompatiblem Code geschriebene Komponente diesen Datentyp nicht.  Eine solche Komponente kann möglicherweise nicht erfolgreich mit Ihrer Komponente interagieren.  
+Der für diese Enumeration angegebene Datentyp ist nicht in der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) enthalten.  Dies ist kein Fehler in der Komponente, da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diesen Datentyp unterstützen.  Jedoch unterstützt möglicherweise eine andere, in grundsätzlich CLS\-kompatiblem Code geschriebene Komponente diesen Datentyp nicht.  Eine solche Komponente kann möglicherweise nicht erfolgreich mit Ihrer Komponente interagieren.  
   
- Die folgenden [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
+ Die folgenden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
   
 -   [SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -41,13 +41,13 @@ Der für diese Enumeration angegebene Datentyp ist nicht in der [Sprachenunabhä
   
 ### So beheben Sie diesen Fehler  
   
--   Wenn die Komponente nur mit anderen [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Komponenten oder mit keinen anderen Komponenten verbunden ist, müssen Sie nichts ändern.  
+-   Wenn die Komponente nur mit anderen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Komponenten oder mit keinen anderen Komponenten verbunden ist, müssen Sie nichts ändern.  
   
--   Wenn die Komponente mit einer nicht für [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] geschriebenen Komponente verbunden ist, können Sie eventuell über Reflektion oder anhand der Dokumentation bestimmen, ob sie diesen Datentyp unterstützt.  Wenn dies der Fall ist, müssen Sie nichts ändern.  
+-   Wenn die Komponente mit einer nicht für [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] geschriebenen Komponente verbunden ist, können Sie eventuell über Reflektion oder anhand der Dokumentation bestimmen, ob sie diesen Datentyp unterstützt.  Wenn dies der Fall ist, müssen Sie nichts ändern.  
   
 -   Wenn die Komponente mit einer Komponente verbunden ist, die diesen Datentyp nicht unterstützt, müssen Sie ihn durch den ähnlichsten CLS\-kompatiblen Typ ersetzen.  Möglicherweise können Sie z. B. `Integer` anstelle von `UInteger` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen.  Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long` ersetzen.  
   
--   Wenn Sie Verbindungen mit Automatisierungs\- oder COM\-Objekten verwenden, beachten Sie, dass einige Typen über andere Datenbreiten als in [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] verfügen.  Beispielsweise umfasst `uint` in anderen Umgebungen oft 16 Bits.  Wenn Sie ein 16\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie sie im verwalteten [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code als `UShort` und nicht als `UInteger`.  
+-   Wenn Sie Verbindungen mit Automatisierungs\- oder COM\-Objekten verwenden, beachten Sie, dass einige Typen über andere Datenbreiten als in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügen.  Beispielsweise umfasst `uint` in anderen Umgebungen oft 16 Bits.  Wenn Sie ein 16\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie sie im verwalteten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code als `UShort` und nicht als `UInteger`.  
   
 ## Siehe auch  
  [Reflektion](../Topic/Reflection%20\(C%23%20and%20Visual%20Basic\).md)   

@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Modify Data in a Database by Using LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit LINQ \(Language\-Integrated Query\) ist es einfach, auf Datenbankinformationen zuzugreifen und Werte in einer Datenbank zu ändern.  
   

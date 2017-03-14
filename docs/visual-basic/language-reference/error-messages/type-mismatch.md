@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Type mismatch (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, auf eine ungültige Art und Weise einen Wert in einen anderen Typ zu konvertieren.  
   

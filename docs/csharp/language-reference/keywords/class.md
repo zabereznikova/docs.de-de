@@ -95,7 +95,7 @@ Console.Write(child1.name);   // Error
  Beachten Sie schließlich, dass das Altersfeld für das mit dem Standardkonstruktor \(`child3`\) erstellte Objekt mit dem Wert 0 \(null\) initialisiert wurde.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

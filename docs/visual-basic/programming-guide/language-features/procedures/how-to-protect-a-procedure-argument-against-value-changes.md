@@ -29,9 +29,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Protect a Procedure Argument Against Value Changes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) deklariert, übergibt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt, an denProzedurcode.  Damit kann die Prozedur den Wert ändern, der dem Argument im Aufrufcode zugrunde liegt.  In bestimmten Fällen sollte der Aufrufcode eine solche Änderung verhindern.  
+Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) deklariert, übergibt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt, an denProzedurcode.  Damit kann die Prozedur den Wert ändern, der dem Argument im Aufrufcode zugrunde liegt.  In bestimmten Fällen sollte der Aufrufcode eine solche Änderung verhindern.  
   
  Sie können ein Argument stets vor einer Änderung schützen, indem Sie den entsprechenden Parameter in der Prozedur als [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) deklarieren.  Wenn Sie ein Argument nur in bestimmten Fällen ändern können möchten, deklarieren Sie es als `ByRef`, und lassen Sie den Übergabemechanismus in jedem Aufruf vom Aufrufcode festlegen.  Dabei wird das entsprechende Argument in runde Klammern eingeschlossen, um es als Wert zu übergeben, bzw. es wird nicht in Klammern eingeschlossen, um es als Verweis zu übergeben.  Weitere Informationen finden Sie unter [How to: Force an Argument to Be Passed by Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md).  
   
@@ -49,7 +49,7 @@ Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language
  Beim zweiten `MsgBox`\-Aufruf wird Folgendes angezeigt: "After replace\(n\): 11, 21, 31, 41".  Da `n` mit `ByVal` übergeben wird, kann `replace` die Variable `n` im Aufrufcode durch Zuweisen eines neuen Arrays nicht ändern.  Wenn `replace` die neue Arrayinstanz `k` erstellt und diese der lokalen Variablen `a`zuweist, geht der im Aufrufcode übergebene Verweis auf `n` verloren.  Wenn die Member von `a`geändert werden, wirkt sich dies nur auf das lokale Array `k` aus.  Deshalb inkrementiert `replace` die Werte von Array `n` im Aufrufcode nicht.  
   
 ## Kompilieren des Codes  
- Standardmäßig werden Argumente in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
+ Standardmäßig werden Argumente in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
   
 ## Siehe auch  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

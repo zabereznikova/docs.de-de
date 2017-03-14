@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Structures and Other Programming Elements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können Strukturen gemeinsam mit Arrays, Objekten und Prozeduren sowie miteinander verwenden.  Die Interaktionen verwenden dieselbe Syntax, die diese Elemente einzeln verwenden.  
   

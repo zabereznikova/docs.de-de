@@ -55,7 +55,7 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
 -   [Weitere Informationen zu Variablen](http://go.microsoft.com/fwlink/?LinkId=221230) im Buch zum [Einstieg in Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;Custom&#39; modifier is not valid on events declared without explicit delegate types
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Im Unterschied zu Ereignissen, die nicht benutzerdefiniert sind, erfordert eine `Custom Event`\-Deklaration eine `As`\-Klausel nach dem Ereignisnamen, die den Delegattyp für das Ereignis explizit angibt.  
   

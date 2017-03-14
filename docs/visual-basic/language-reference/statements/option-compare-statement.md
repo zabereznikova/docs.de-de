@@ -32,7 +32,7 @@ ms.author: "shoag"
 caps.handback.revision: 37
 ---
 # Option Compare Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert die Standardvergleichsmethode, die beim Vergleichen von Zeichenfolgendaten verwendet wird.  
   
@@ -70,7 +70,7 @@ Option Compare { Binary | Text }
 ## Wenn eine Option Compare\-Anweisung nicht vorhanden ist  
  Wenn der Quellcode keine `Option Compare`\-Anweisung enthält, wird die Einstellung **Option Compare** auf der [Seite "Kompilieren", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic) wird verwendet.  Wenn Sie den Befehlszeilencompiler verwenden, wird die Einstellung verwendet, die von der [\/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)\-Compileroption festgelegt wird.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### Festelegen der Option Compare in der IDE  
   

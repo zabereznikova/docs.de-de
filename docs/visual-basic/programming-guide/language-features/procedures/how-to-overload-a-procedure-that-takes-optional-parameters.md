@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Overload a Procedure that Takes Optional Parameters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn eine Prozedur einen oder mehrere [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)\-Parameter enthält, können Sie eine überladene Version definieren, die jeder der impliziten Überladungen entspricht.  Weitere Informationen finden Sie im Abschnitt "Implizite Überladungen für optionale Parameter" unter [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
   

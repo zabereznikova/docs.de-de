@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # &#39;Module&#39; statements can occur only at file or namespace level
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `Module`\-Anweisungen müssen am Anfang der Quelldatei direkt hinter den Anweisungen `Option` und `Imports` und hinter globalen Attributen und Namespacedeklarationen, jedoch vor allen anderen Deklarationen stehen.  
   

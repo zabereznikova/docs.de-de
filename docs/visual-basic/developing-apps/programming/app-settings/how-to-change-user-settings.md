@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Change User Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können Benutzereinstellungen ändern, indem Sie der zugehörigen Eigenschaft für die Einstellung im `My.Settings`\-Objekt einen neuen Wert zuweisen.  
   

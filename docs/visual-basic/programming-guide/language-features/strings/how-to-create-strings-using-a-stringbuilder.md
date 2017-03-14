@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # How to: Create Strings Using a StringBuilder in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird mit der <xref:System.Text.StringBuilder>\-Klasse aus vielen kleineren Zeichenfolgen eine lange Zeichenfolge erstellt.  Die Verkettung vieler Zeichenfolgen lässt sich mit der <xref:System.Text.StringBuilder>\-Klasse rationeller ausführen als mit dem Operator `&=`.  
   

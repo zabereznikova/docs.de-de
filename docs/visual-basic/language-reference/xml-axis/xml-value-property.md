@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # XML Value Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt den Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten bereit.  
   

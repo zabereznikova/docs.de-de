@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Additional Resources for Visual Basic Programmers
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.  
   
@@ -53,11 +53,11 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
   
 |Begriff|Definition|  
 |-------------|----------------|  
-|[Visual Basic\-Sprache](http://go.microsoft.com/fwlink/?LinkId=145963)|Erläutert die [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprachsyntax und den Compiler.|  
-|[Visual Basic\-Interop und \-Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)|Beschreibt das Upgrade auf [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] und die Arbeit mit Interoperabilitätsfunktionen.|  
-|[Visual Basic\-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|Erläutert die Arbeit in der integrierten [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-Entwicklungsumgebung.|  
+|[Visual Basic\-Sprache](http://go.microsoft.com/fwlink/?LinkId=145963)|Erläutert die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprachsyntax und den Compiler.|  
+|[Visual Basic\-Interop und \-Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)|Beschreibt das Upgrade auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und die Arbeit mit Interoperabilitätsfunktionen.|  
+|[Visual Basic\-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|Erläutert die Arbeit in der integrierten [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Entwicklungsumgebung.|  
 |[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Beschreibt die Add\-ins, Steuerelemente, Komponenten, Beispiele und Tools, die Teil der Visual Basic Power Packs sind.|  
-|[Visual Basic – Allgemein](http://go.microsoft.com/fwlink/?LinkId=145973)|Erläutert Probleme mit [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], die nicht in anderen Foren besprochen werden.|  
+|[Visual Basic – Allgemein](http://go.microsoft.com/fwlink/?LinkId=145973)|Erläutert Probleme mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die nicht in anderen Foren besprochen werden.|  
   
 ### Chats und Diskussionsgruppen  
   
@@ -86,7 +86,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 |Begriff|Definition|  
 |-------------|----------------|  
 |[DevX Visual Basic Zone](http://go.microsoft.com/fwlink/?LinkId=145978)|Bietet ausführliche technische Artikel für den Visual Basic\-Entwickler von heute.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Bietet ein Diskussionsforum für neue Funktionen in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] innerhalb der DevX\-Foren.|  
+|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Bietet ein Diskussionsforum für neue Funktionen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] innerhalb der DevX\-Foren.|  
   
 ## Siehe auch  
  [Getting Started](../../visual-basic/getting-started/index.md)   

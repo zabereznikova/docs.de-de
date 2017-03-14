@@ -51,14 +51,14 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Type Characters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Datentyp kann in einer Deklarationsanweisung angegeben werden. Darüber hinaus können Sie den Datentyp einiger Programmierelemente auch mit einem *Typzeichen* erzwingen.  Das Typzeichen muss unmittelbar auf das Element folgen; es darf kein Zeichen dazwischen stehen.  
   
  Das Typzeichen gehört nicht zum Namen des Elements.  Auf ein mit einem Typzeichen definiertes Element kann ohne das Typzeichen verwiesen werden.  
   
 ## Typkennzeichen  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stehen verschiedene *Typkennzeichen* zur Verfügung, mit deren Hilfe Sie in einer Deklaration den Datentyp einer Variablen oder einer Konstanten angeben können.  Die folgende Tabelle zeigt die verfügbaren Typkennzeichen und Beispiele für deren Verwendung.  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stehen verschiedene *Typkennzeichen* zur Verfügung, mit deren Hilfe Sie in einer Deklaration den Datentyp einer Variablen oder einer Konstanten angeben können.  Die folgende Tabelle zeigt die verfügbaren Typkennzeichen und Beispiele für deren Verwendung.  
   
 |Typkennzeichen|Datentyp|Beispiel|  
 |--------------------|--------------|--------------|  
@@ -71,7 +71,7 @@ Der Datentyp kann in einer Deklarationsanweisung angegeben werden. Darüber hina
   
  Für die Datentypen `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong` oder `UShort` sowie für zusammengesetzte Datentypen, wie etwa Arrays oder Strukturen, gibt es keine Typkennzeichen.  
   
- In einigen Fällen können Sie das `$`\-Zeichen an eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Funktion anhängen, beispielsweise `Left$` statt `Left`, um einen Rückgabewert vom Typ `String` zu erhalten.  
+ In einigen Fällen können Sie das `$`\-Zeichen an eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Funktion anhängen, beispielsweise `Left$` statt `Left`, um einen Rückgabewert vom Typ `String` zu erhalten.  
   
  Das Typkennzeichen muss jedoch immer unmittelbar auf den Bezeichner folgen.  
   
@@ -90,7 +90,7 @@ Der Datentyp kann in einer Deklarationsanweisung angegeben werden. Darüber hina
 |Eingeschlossen in Nummernzeichen|`Date`|`#5/17/1993 9:32 AM#`|  
   
 ### Erzwungene Literale  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stehen verschiedene *Literalzeichen* zur Verfügung, mit denen Sie erzwingen können, dass ein Literal einen anderen als den durch seine Form angezeigten Datentyp annimmt.  Dafür fügen Sie das Zeichen an das Ende des Literals an.  Die folgende Tabelle zeigt die verfügbaren Literalzeichen und Beispiele für deren Verwendung.  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stehen verschiedene *Literalzeichen* zur Verfügung, mit denen Sie erzwingen können, dass ein Literal einen anderen als den durch seine Form angezeigten Datentyp annimmt.  Dafür fügen Sie das Zeichen an das Ende des Literals an.  Die folgende Tabelle zeigt die verfügbaren Literalzeichen und Beispiele für deren Verwendung.  
   
 |Literalzeichen|Datentyp|Beispiel|  
 |--------------------|--------------|--------------|  

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Auto-Implemented Properties (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 *Automatisch implementierte Eigenschaften* ermöglichen es Ihnen, schnell eine Eigenschaft einer Klasse anzugeben, ohne Code für `Get` und `Set` der Eigenschaft schreiben zu müssen.  Wenn Sie Code für eine automatisch implementierte Eigenschaft schreiben, erstellt der Visual Basic\-Compiler automatisch ein privates Feld zum Speichern der Eigenschaftsvariablen zusätzlich zum Erstellen der zugeordneten `Get` und `Set` Prozeduren.  
   

@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # RemoveHandler Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Hebt die Verknüpfung zwischen einem Ereignis und einem Ereignishandler auf.  
   

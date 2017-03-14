@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # /quiet
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verhindert, dass der Compiler Code zu syntaxbezogenen Fehlern und Warnungen anzeigt.  
   

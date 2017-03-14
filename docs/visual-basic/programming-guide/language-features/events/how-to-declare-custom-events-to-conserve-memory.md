@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Declare Custom Events To Conserve Memory (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Unter gewissen Umständen muss die Speicherauslastung durch eine Anwendung gering gehalten werden.  Mit benutzerdefinierten Ereignissen wird es einer Anwendung ermöglicht, Speicher nur für die Ereignisse zu nutzen, die sie behandelt.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Storing Data to and Reading from the Clipboard (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Zwischenablage kann zum Speichern von Daten wie Text und Bildern verwendet werden.  Da die Zwischenablage von allen aktiven Prozessen genutzt wird, kann sie zur Übertragung von Daten zwischen den Prozessen verwendet werden.  Das `My.Computer.Clipboard`\-Objekt können Sie auf einfache Weise die Zwischenablage zuzugreifen und ihn zu lesen und zu schreiben.  
   

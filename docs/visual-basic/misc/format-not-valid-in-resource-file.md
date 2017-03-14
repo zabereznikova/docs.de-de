@@ -14,7 +14,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Die Ressourcendatei enth&#228;lt ein ung&#252;ltiges Format.
-Eine Ressourcendatei im Projekt befolgt nicht das Standardformat für eine Windows\-Ressourcendatei, oder es besteht ein Konflikt zwischen der Ressourcendatei und dem [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projekt.  
+Eine Ressourcendatei im Projekt befolgt nicht das Standardformat für eine Windows\-Ressourcendatei, oder es besteht ein Konflikt zwischen der Ressourcendatei und dem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projekt.  
   
 ### So beheben Sie diesen Fehler  
   

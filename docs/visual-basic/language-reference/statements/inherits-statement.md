@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Inherits Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass die aktuelle Klasse oder Schnittstelle Attribute, Variablen, Eigenschaften, Prozeduren und Ereignisse von einer anderen Klasse oder Gruppe von Schnittstellen erbt.  
   

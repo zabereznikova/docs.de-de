@@ -108,7 +108,7 @@ int j = (int) o;
  `Unboxing OK.`  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
@@ -118,7 +118,7 @@ int j = (int) o;
 -   [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)

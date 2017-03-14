@@ -49,7 +49,7 @@ block = stackalloc int[100];
  Unsicherer Code ist weniger sicher als sichere Alternativen.  Die Verwendung von `stackalloc` aktiviert jedoch automatisch Features zur Erkennung von Pufferüberläufen in der Common Language Runtime \(CLR\).  Wenn ein Pufferüberlauf festgestellt wird, wird der Prozess so schnell wie möglich beendet, um die Gefahr der Ausführung von bösartigem Code zu minimieren.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

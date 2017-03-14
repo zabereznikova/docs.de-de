@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # XML axis properties do not support late binding
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Für ein nicht typisiertes Objekt wurde auf eine XML\-Achseneigenschaft verwiesen.  
   

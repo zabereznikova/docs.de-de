@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Visual Basic Settings
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mithilfe der Visual Basic\-Einstellungen kann die Benutzerfreundlichkeit optimiert und die Produktivität der Visual Basic\-Entwickler maximal gesteigert werden.  Sie sind ein Bestandteil des Features [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3), mit dem Sie Ihre Einstellungen in der Visual Studio\-IDE \(Integrated Development Environment –integrierte Entwicklungsumgebung\) anpassen und speichern können.  
   

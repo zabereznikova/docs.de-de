@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Join Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen.  Die Joinoperation basiert auf übereinstimmenden Schlüsseln und verwendet den Operator `Equals`.  
   

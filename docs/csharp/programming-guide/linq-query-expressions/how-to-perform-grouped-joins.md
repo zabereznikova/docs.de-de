@@ -22,13 +22,13 @@ Der Group Join ist nützlich, um hierarchische Datenstrukturen zu erzeugen.  Sie
 ## Beispiel  
   
 ### Beispiel für einen Group Join zum Erstellen von XML  
- Group Joins sind ideal zum Erstellen von XML mit [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Das folgende Beispiel ähnelt dem vorherigen Beispiel mit der Ausnahme, dass die Ergebnisauswahlfunktion XML\-Elemente anstelle eines anonymen Typs erstellt, die die verknüpften Objekte darstellen.  Weitere Informationen über [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] finden Sie unter [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
+ Group Joins sind ideal zum Erstellen von XML mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  Das folgende Beispiel ähnelt dem vorherigen Beispiel mit der Ausnahme, dass die Ergebnisauswahlfunktion XML\-Elemente anstelle eines anonymen Typs erstellt, die die verknüpften Objekte darstellen.  Weitere Informationen über [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] finden Sie unter [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
  [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_2.cs)]  
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein neues **Konsolenanwendungsprojekt** in [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)].  
+-   Erstellen Sie ein neues **Konsolenanwendungsprojekt** in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)].  
   
 -   Fügen Sie einen Verweis auf System.Core.dll und System.Xml.Linq.dll hinzu, wenn nicht bereits auf sie verwiesen wird.  
   

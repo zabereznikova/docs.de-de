@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Events cannot be declared with a delegate type that has a return type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Delegat wurde für eine Funktionsprozedur angegeben.  
   

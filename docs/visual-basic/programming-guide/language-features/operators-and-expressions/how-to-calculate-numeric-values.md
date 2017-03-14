@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Calculate Numeric Values (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können numerische Werte mithilfe von numerischen Ausdrücken berechnen.  Ein *numerischer Ausdruck* ist ein Ausdruck, der Literale, Konstanten und Variablen enthält, die numerische Werte darstellen, sowie Operatoren, die diese Werte behandeln.  
   
@@ -46,7 +46,7 @@ Sie können numerische Werte mithilfe von numerischen Ausdrücken berechnen.  Ei
   
      Die ersten drei Zeilen enthalten ein Literal, eine Konstante bzw. eine Variable.  Jedes dieser Elemente an sich ist ein gültiger numerischer Ausdruck.  Die letzte Zeile enthält eine Variable mit zwei Literalen.  
   
-     Beachten Sie, dass ein numerischer Ausdruck an sich keine vollständige [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisung bildet.  Sie müssen den Ausdruck als Teil einer vollständigen Anweisung verwenden.  
+     Beachten Sie, dass ein numerischer Ausdruck an sich keine vollständige [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisung bildet.  Sie müssen den Ausdruck als Teil einer vollständigen Anweisung verwenden.  
   
 #### So speichern Sie einen numerischen Wert  
   

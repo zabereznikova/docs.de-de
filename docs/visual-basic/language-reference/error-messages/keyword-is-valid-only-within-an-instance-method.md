@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &#39;&lt;keyword&gt;&#39; is valid only within an instance method
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Schlüsselwörter `Me`, `MyClass` und `MyBase` beziehen sich auf bestimmte Klasseninstanzen.  Sie können sie innerhalb einer freigegebenen `Function`\- oder `Sub`\-Prozedur verwenden.  
   

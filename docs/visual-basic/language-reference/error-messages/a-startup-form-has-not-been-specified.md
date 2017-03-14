@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # A startup form has not been specified
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Anwendung verwendet die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Klasse, gibt jedoch kein Startformular an.  
   

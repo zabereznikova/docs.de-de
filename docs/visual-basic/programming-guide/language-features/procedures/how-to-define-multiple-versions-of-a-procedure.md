@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Define Multiple Versions of a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können durch *Überladen* mehrere Versionen einer Prozedur definieren. Es wird dann für jede Version der gleiche Name, jedoch eine andere Parameterliste verwendet.  Durch die Überladung können mehrere ähnliche Prozedurversionen definiert werden, ohne dass diese nach Namen voneinander unterschieden werden müssen.  
   
@@ -35,7 +35,7 @@ Sie können durch *Überladen* mehrere Versionen einer Prozedur definieren. Es w
   
 2.  Stellen Sie in jeder Deklaration das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)\-Schlüsselwort dem `Sub`\-Schlüsselwort bzw. dem `Function`\-Schlüsselwort voran.  Sie können das `Overloads`\-Schlüsselwort in den Deklarationen auch weglassen. Wenn Sie es aber in einer Deklaration angeben, müssen Sie es auch in allen anderen Deklarationen angeben.  
   
-3.  Fügen Sie nach der Deklarationsanweisung den Prozedurcode für den speziellen Fall ein, in dem der Aufrufcode Argumente für die Parameterliste der betreffenden Version angibt.  Sie müssen nicht überprüfen, welche Parameter der Aufrufcode angibt.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] übergibt die Steuerung an die passende Prozedurversion.  
+3.  Fügen Sie nach der Deklarationsanweisung den Prozedurcode für den speziellen Fall ein, in dem der Aufrufcode Argumente für die Parameterliste der betreffenden Version angibt.  Sie müssen nicht überprüfen, welche Parameter der Aufrufcode angibt.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt die Steuerung an die passende Prozedurversion.  
   
 4.  Beenden Sie jede Version der Prozedur je nach Bedarf mit einer `End Sub`\-Anweisung oder einer `End Function`\-Anweisung.  
   

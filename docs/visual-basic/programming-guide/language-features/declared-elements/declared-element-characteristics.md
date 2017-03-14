@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Declared Element Characteristics (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, der beeinflusst, wie der Code mit ihm interagieren kann.  Jedem deklarierten Element ist mindestens eines der folgenden Merkmale zugeordnet:  
   

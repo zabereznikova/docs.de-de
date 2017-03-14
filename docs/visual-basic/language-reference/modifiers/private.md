@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Private (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass ein Zugriff auf mindestens ein oder mehrere deklarierte Programmierelemente nur aus ihrem Deklarationskontext einschließlich darin enthaltener Typen heraus möglich ist.  
   

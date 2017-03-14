@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Create a Variable that Does Not Change in Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Variablen mit unveränderlichem Wert scheinen auf den ersten Blick widersinnig zu sein.  Es gibt jedoch Situationen, in denen eine Konstante nicht zulässig ist, während eine Variable mit einem festen Wert hilfreich ist.  In einem solchen Fall können Sie eine Membervariable mit dem [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)\-Schlüsselwort definieren.  
   

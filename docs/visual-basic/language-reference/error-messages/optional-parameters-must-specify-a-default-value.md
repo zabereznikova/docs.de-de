@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Optional parameters must specify a default value
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Optionale Parameter müssen Standardwerte bereitstellen, die verwendet werden können, wenn eine aufrufende Prozedur keinen Parameter zur Verfügung stellt.  
   

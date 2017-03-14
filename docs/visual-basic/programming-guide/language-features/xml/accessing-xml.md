@@ -24,11 +24,11 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Accessing XML in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann auf [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Strukturen zugegriffen und darin navigiert werden.  Diese Eigenschaften verwenden eine spezielle Syntax, um den Zugriff auf Elemente und Attribute durch Angabe von XML\-Namen zu ermöglichen.  
+Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann auf [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]\-Strukturen zugegriffen und darin navigiert werden.  Diese Eigenschaften verwenden eine spezielle Syntax, um den Zugriff auf Elemente und Attribute durch Angabe von XML\-Namen zu ermöglichen.  
   
- Die folgende Tabelle listet die Sprachfeatures auf, mit denen auf XML\-Elemente und \-Attribute in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zugegriffen werden kann.  
+ Die folgende Tabelle listet die Sprachfeatures auf, mit denen auf XML\-Elemente und \-Attribute in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zugegriffen werden kann.  
   
 ### XML\-Achseneigenschaften  
   
@@ -58,7 +58,7 @@ Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](../../../../csharp/progra
  Stellt Links auf Abschnitte bereit, in denen die verschiedenen XML\-Zugriffseigenschaften beschrieben werden.  
   
  [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Bietet eine Einführung in die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Bietet eine Einführung in die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  Bietet eine Einführung in die Verwendung von XML\-Literalen in Visual Basic.  
@@ -67,4 +67,4 @@ Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](../../../../csharp/progra
  Stellt Links zu Abschnitten bereit, in den das Laden und Ändern von XML in Visual Basic beschrieben wird.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Stellt Links zu Abschnitten bereit, in denen die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.
+ Stellt Links zu Abschnitten bereit, in denen die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.

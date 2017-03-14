@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Type Conversions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Prozess, bei dem ein Wert aus einem Datentyp in einen anderen umgewandelt wird, heißt *Konvertierung*.  Dabei handelt es sich, je nach Datenkapazität der betreffenden Typen, entweder um eine *Erweiterung* oder um eine *Einschränkung*.  Darüber hinaus sind Konvertierungen je nach Syntax im Quellcode *implizit* oder *explizit*.  
   
@@ -34,7 +34,7 @@ Der Prozess, bei dem ein Wert aus einem Datentyp in einen anderen umgewandelt wi
  Erläutert Konvertierungen, wobei dahingehend klassifiziert wird, ob der Zieltyp die Daten enthalten kann.  
   
  [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Erläutert Konvertierungen, die danach unterschieden werden, ob sie von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] automatisch ausgeführt werden.  
+ Erläutert Konvertierungen, die danach unterschieden werden, ob sie von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch ausgeführt werden.  
   
  [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Veranschaulicht die Konvertierung zwischen Zeichenfolgen und numerischen, `Boolean` oder Datum\-\/Uhrzeitwerten.  
@@ -47,10 +47,10 @@ Der Prozess, bei dem ein Wert aus einem Datentyp in einen anderen umgewandelt wi
   
 ## Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Stellt die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
+ Stellt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
   
  [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Listet die elementaren Datentypen auf, die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellt werden.  
+ Listet die elementaren Datentypen auf, die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellt werden.  
   
  [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  Erörtert einige allgemeine Probleme, die beim Arbeiten mit Datentypen auftreten können.

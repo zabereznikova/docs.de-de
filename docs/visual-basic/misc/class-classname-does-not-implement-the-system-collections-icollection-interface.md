@@ -15,11 +15,11 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Die Klasse &quot;&lt;Klassenname&gt;&quot; implementiert die System.Collections.ICollection-Schnittstelle nicht.
-Die Klasse implementiert die `System.Collections.ICollection`\-Schnittstelle nicht, die Größe, Enumeratoren und Synchronisierungsmethoden für alle Sammlungen definiert. Unter Umständen muss [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] neu installiert werden.  
+Die Klasse implementiert die `System.Collections.ICollection`\-Schnittstelle nicht, die Größe, Enumeratoren und Synchronisierungsmethoden für alle Sammlungen definiert. Unter Umständen muss [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] neu installiert werden.  
   
 ### So beheben Sie diesen Fehler  
   
-1.  Installieren Sie [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] neu.  
+1.  Installieren Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] neu.  
   
 ## Siehe auch  
  <xref:System.Collections.ICollection>

@@ -94,7 +94,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Type Conversion Functions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Diese Funktionen werden inline kompiliert. Dies bedeutet, dass der Konvertierungscode Bestandteil des Codes für die Auswertung des Ausdrucks ist.  Manchmal gibt es keinen Aufruf einer Prozedur zum Durchführen der Konvertierung. Das erhöht die Leistung.  Jede Funktion erzwingt für einen Ausdruck einen bestimmten Datentyp.  
   

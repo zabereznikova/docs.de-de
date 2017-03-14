@@ -45,7 +45,7 @@ In der folgenden Tabelle sehen Sie implizite numerische Konvertierungen, die vor
 -   Ein konstanter Ausdruck vom Typ `int` kann in `sbyte`, `byte`, `short`, `ushort`, `uint` oder `ulong` konvertiert werden, vorausgesetzt, der Wert des konstanten Ausdrucks liegt innerhalb des für den Zieltyp gültigen Wertebereichs.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

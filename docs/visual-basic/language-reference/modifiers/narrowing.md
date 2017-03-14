@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Narrowing (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass ein Konvertierungsoperator \(`CType`\) eine Klasse oder Struktur in einen Typ konvertiert, der unter Umständen einige der möglichen Werte der ursprünglichen Klasse oder Struktur nicht enthalten kann.  
   

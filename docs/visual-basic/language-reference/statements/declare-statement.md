@@ -41,7 +41,7 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # Declare Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert einen Verweis auf eine Prozedur, die in einer externen Datei implementiert ist.  
   

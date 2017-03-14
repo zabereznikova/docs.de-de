@@ -20,13 +20,13 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Visual Basic Language Features
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In den folgenden Themen werden die wesentlichen Komponenten der objektorientierten Programmiersprache [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vorgestellt und erläutert.  Nachdem Sie unter Verwendung von Formularen und Steuerelementen die Benutzeroberfläche der Anwendung erstellt haben, müssen Sie Code schreiben, der das Verhalten der Anwendung definiert.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt wie jede andere moderne Programmiersprache eine Reihe häufig verwendeter Programmierkonstrukte und Sprachelemente.  
+In den folgenden Themen werden die wesentlichen Komponenten der objektorientierten Programmiersprache [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vorgestellt und erläutert.  Nachdem Sie unter Verwendung von Formularen und Steuerelementen die Benutzeroberfläche der Anwendung erstellt haben, müssen Sie Code schreiben, der das Verhalten der Anwendung definiert.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt wie jede andere moderne Programmiersprache eine Reihe häufig verwendeter Programmierkonstrukte und Sprachelemente.  
   
- Wenn Sie über Programmiererfahrung in anderen Sprachen verfügen, werden Sie mit vielen der in diesem Abschnitt enthaltenen Informationen vertraut sein.  Während die Mehrzahl der Konstrukte mit denen anderer Sprachen übereinstimmt, gibt es einige feine Unterschiede, die auf dem ereignisgesteuerten Verhalten von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beruhen.  
+ Wenn Sie über Programmiererfahrung in anderen Sprachen verfügen, werden Sie mit vielen der in diesem Abschnitt enthaltenen Informationen vertraut sein.  Während die Mehrzahl der Konstrukte mit denen anderer Sprachen übereinstimmt, gibt es einige feine Unterschiede, die auf dem ereignisgesteuerten Verhalten von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beruhen.  
   
- Wenn Sie noch nicht über Erfahrungen im Programmieren verfügen, bietet Ihnen dieser Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code.  Sobald Sie die Grundlagen kennen, können Sie mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] leistungsstarke Anwendungen erstellen.  
+ Wenn Sie noch nicht über Erfahrungen im Programmieren verfügen, bietet Ihnen dieser Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code.  Sobald Sie die Grundlagen kennen, können Sie mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] leistungsstarke Anwendungen erstellen.  
   
 ## In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -63,7 +63,7 @@ In den folgenden Themen werden die wesentlichen Komponenten der objektorientiert
  Enthält eine Schnittstellendefinition und beschreibt die Verwendung von Schnittstellen in Anwendungen.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Enthält Links zu Themen mit einer Einführung in [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Funktionen und \-Programmierung.  
+ Enthält Links zu Themen mit einer Einführung in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Funktionen und \-Programmierung.  
   
  [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Enthält eine Übersicht über Objekte und Klassen, ihre Verwendung, ihre wechselseitigen Beziehungen sowie die von ihnen offen gelegten Eigenschaften, Methoden und Ereignisse.  
@@ -91,4 +91,4 @@ In den folgenden Themen werden die wesentlichen Komponenten der objektorientiert
  Beschreibt verschiedene Typen von Auflistungen, die von .NET Framework bereitgestellt werden.  Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel\-Wert\-Paaren verwendet.  
   
  [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmierung.
+ Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmierung.

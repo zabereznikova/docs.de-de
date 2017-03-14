@@ -45,9 +45,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Special Characters in Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Manchmal ist es erforderlich, im Code Sonderzeichen, also nicht alphanumerische Zeichen, zu verwenden.  Zeichensetzung und Sonderzeichen im Zeichensatz von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] haben verschiedene Funktionen. Diese reichen von der Strukturierung des Programmtexts bis zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführen.  Sie legen keine auszuführende Operation fest.  
+Manchmal ist es erforderlich, im Code Sonderzeichen, also nicht alphanumerische Zeichen, zu verwenden.  Zeichensetzung und Sonderzeichen im Zeichensatz von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] haben verschiedene Funktionen. Diese reichen von der Strukturierung des Programmtexts bis zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführen.  Sie legen keine auszuführende Operation fest.  
   
 ## Runde Klammern  
  Verwenden Sie Klammern zur Definition einer Prozedur, wie `Sub` oder `Function`.  Alle Prozedurargumentlisten müssen in Klammern stehen.  Sie verwenden auch Klammern, um Variablen oder Argumente in logischen Gruppen anzuordnen, insbesondere, um die Standardoperatorrangfolge in einem komplexen Ausdruck zu überschreiben.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
@@ -57,7 +57,7 @@ Manchmal ist es erforderlich, im Code Sonderzeichen, also nicht alphanumerische 
  Nach der Ausführung des vorangehenden Codes lautet der Wert von `d` "8.225" und der Wert von `e` "3".  In der Berechnung von `d` wird die Standardrangfolge von `/` vor `+` verwendet. Dies entspricht `d = b + (c / a)`.  Die Klammern in der Berechnung von `e` überschreiben die Standardrangfolge.  
   
 ## Trennzeichen  
- Wie der Name bereits verrät, haben Trennzeichen die Aufgabe, Codeabschnitte voneinander zu trennen.  Das Trennzeichen in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist der Doppelpunkt \(`:`\).  Verwenden Sie Trennzeichen, wenn Sie mehrere Anweisungen in dieselbe Zeile schreiben möchten.  Dies spart Platz und erhöht die Lesbarkeit des Codes.  Das folgende Beispiel besteht aus drei Anweisungen, die durch Doppelpunkte getrennt sind.  
+ Wie der Name bereits verrät, haben Trennzeichen die Aufgabe, Codeabschnitte voneinander zu trennen.  Das Trennzeichen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist der Doppelpunkt \(`:`\).  Verwenden Sie Trennzeichen, wenn Sie mehrere Anweisungen in dieselbe Zeile schreiben möchten.  Dies spart Platz und erhöht die Lesbarkeit des Codes.  Das folgende Beispiel besteht aus drei Anweisungen, die durch Doppelpunkte getrennt sind.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

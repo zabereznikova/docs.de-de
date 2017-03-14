@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &lt;Meldung&gt; Dieser Fehler k&#246;nnte auch auf das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly „&lt;Assemblyname&gt;“ zur&#252;ckzuf&#252;hren sein.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 \<Meldung\> Dieser Fehler könnte auch auf das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly „\<Assemblyname\>“ zurückzuführen sein. Ersetzen Sie in diesem Fall den Dateiverweis auf „\<Assemblydateiname\>“ in Projekt „\<Projektname1\>“ durch einen Projektverweis auf „\<Projektname2\>“.  
   
- Code in Ihrem Projekt greift auf einen Member eines anderen Projekts zu, aufgrund der Konfiguration Ihrer Projektmappe kann der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler den Verweis aber nicht auflösen.  
+ Code in Ihrem Projekt greift auf einen Member eines anderen Projekts zu, aufgrund der Konfiguration Ihrer Projektmappe kann der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler den Verweis aber nicht auflösen.  
   
- Für den Zugriff auf einen Typ in einer anderen Assembly benötigt der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler einen Verweis auf diese Assembly. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
+ Für den Zugriff auf einen Typ in einer anderen Assembly benötigt der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler einen Verweis auf diese Assembly. Dabei muss es sich um einen einzelnen, eindeutigen Verweis handeln, der keine Zirkelverweise in Projekten verursacht.  
   
  **Fehler\-ID:** BC30971  
   

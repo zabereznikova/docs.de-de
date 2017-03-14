@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Bad file mode
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zur Bearbeitung des Dateiinhalts verwendete Anweisungen müssen für den Modus, in dem die Datei geöffnet wurde, geeignet sein.  Mögliche Ursachen sind:  
   

@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Define an Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten eines Standardoperators \(z. B. `*`, `<>` oder `And`\) definieren, wenn einer oder beide der Operanden den Typ der Klasse bzw. Struktur aufweisen.  
   

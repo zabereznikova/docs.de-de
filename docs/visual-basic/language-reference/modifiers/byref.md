@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # ByRef (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass ein Argument so übergeben wird, dass der Wert einer Variablen, die dem Argument im Aufrufcode zugrunde liegt, von der aufgerufenen Prozedur geändert werden kann.  
   

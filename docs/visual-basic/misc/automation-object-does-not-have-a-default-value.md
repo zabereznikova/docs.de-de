@@ -14,7 +14,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Das Automatisierungsobjekt hat keinen Standardwert.
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann den Standardmember für das angegebene Objekt nicht ermitteln.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann den Standardmember für das angegebene Objekt nicht ermitteln.  
   
 ### So beheben Sie den Fehler  
   

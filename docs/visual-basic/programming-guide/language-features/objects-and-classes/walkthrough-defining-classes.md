@@ -30,17 +30,17 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Walkthrough: Defining Classes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In dieser exemplarischen Vorgehensweise wird demonstriert, wie Klassen definiert werden, die zum Erstellen von Objekten verwendet werden können.  Darüber hinaus werden das Hinzufügen von Eigenschaften und Methoden zur neuen Klasse und die Initialisierung von Objekten erläutert.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So definieren Sie eine Klasse  
   
 1.  Erstellen Sie ein Projekt, indem Sie im Menü **Datei** auf **Neues Projekt** klicken.  Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Wählen Sie Windows\-Anwendung aus der Liste mit [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projektvorlagen aus, um das neue Projekt anzuzeigen.  
+2.  Wählen Sie Windows\-Anwendung aus der Liste mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projektvorlagen aus, um das neue Projekt anzuzeigen.  
   
 3.  Fügen Sie dem Projekt eine neue Klasse hinzu, indem Sie im Menü **Projekt** auf **Klasse hinzufügen** klicken.  Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
@@ -51,7 +51,7 @@ In dieser exemplarischen Vorgehensweise wird demonstriert, wie Klassen definiert
      [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
   
     > [!NOTE]
-    >  Mit dem **Code\-Editor** von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können Sie dem Startformular eine Klasse hinzufügen, indem Sie das `Class`\-Schlüsselwort und anschließend den Namen der neuen Klasse eingeben.  Der **Code\-Editor** fügt automatisch eine entsprechende `End Class`\-Anweisung hinzu.  
+    >  Mit dem **Code\-Editor** von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können Sie dem Startformular eine Klasse hinzufügen, indem Sie das `Class`\-Schlüsselwort und anschließend den Namen der neuen Klasse eingeben.  Der **Code\-Editor** fügt automatisch eine entsprechende `End Class`\-Anweisung hinzu.  
   
 6.  Definieren Sie ein privates Feld für die Klasse, indem Sie den folgenden Code zwischen die Anweisungen `Class` und `End Class` einfügen:  
   

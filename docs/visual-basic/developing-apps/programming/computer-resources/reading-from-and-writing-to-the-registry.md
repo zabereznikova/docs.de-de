@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Reading from and Writing to the Registry (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Thema beschreibt Aufgabe und konzeptionelle Themen, die mit der Registrierung zugeordnet sind.  
   
- Beim Programmieren in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können Sie entweder mit den in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellten Funktionen oder mit den Registrierungsklassen von .NET Framework auf die Registrierung zugreifen.  Die Registrierung stellt Informationen aus dem Betriebssystem sowie aus Anwendungen bereit, die auf dem Computer verwendet werden.  Die Verwendung der Registrierung kann eine Beeinträchtigung der Sicherheit zur Folge haben, da hierdurch ungewollter Zugriff auf Systemressourcen oder geschützte Informationen möglich wird.  
+ Beim Programmieren in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können Sie entweder mit den in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellten Funktionen oder mit den Registrierungsklassen von .NET Framework auf die Registrierung zugreifen.  Die Registrierung stellt Informationen aus dem Betriebssystem sowie aus Anwendungen bereit, die auf dem Computer verwendet werden.  Die Verwendung der Registrierung kann eine Beeinträchtigung der Sicherheit zur Folge haben, da hierdurch ungewollter Zugriff auf Systemressourcen oder geschützte Informationen möglich wird.  
   
 ## In diesem Abschnitt  
  [How to: Create a Registry Key and Set Its Value](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
@@ -38,7 +38,7 @@ Dieses Thema beschreibt Aufgabe und konzeptionelle Themen, die mit der Registrie
  Beschreibt, wie die `DeleteSubKey`\-Methode der `My.Computer.Registry.CurrentUser`\-Eigenschaft verwendet, um einen Registrierungsschlüssel zu löschen.  
   
  [Lesen von der und Schreiben in die Registrierung mithilfe des Microsoft.Win32\-Namespaces](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Beschreibt, wie die `Registry` und `RegistryKey`\-Klassen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] verwendet, um die Registrierung zuzugreifen.  
+ Beschreibt, wie die `Registry` und `RegistryKey`\-Klassen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwendet, um die Registrierung zuzugreifen.  
   
  [Security and the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Behandelt Sicherheitsprobleme im Zusammenhang mit der Registrierung.  

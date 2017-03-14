@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Wert vom Typ '\<Typname1\>' kann nicht in '\<Typname2\>' konvertiert werden.Der Typenkonflikt könnte auf das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly "\<Assemblyname\>" zurückzuführen sein.Ersetzen Sie den Dateiverweis auf "\<Dateipfad\>" in Projekt "\<Projektname1\>" durch einen Projektverweis auf "\<Projektname2\>"'  
   

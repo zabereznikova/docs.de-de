@@ -21,12 +21,12 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Documenting Your Code with XML (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können Sie den Code mit XML dokumentieren.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können Sie den Code mit XML dokumentieren.  
   
 ## XML\-Dokumentationskommentare  
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erleichtert die automatische Erstellung der XML\-Dokumentation für Projekte.  Sie können für die Typen und Member automatisch ein XML\-Skelett generieren und anschließend Zusammenfassungen, eine erläuternde Dokumentation zu jedem Parameter und weitere Hinweise bereitstellen.  Mit der entsprechenden Konfiguration wird die XML\-Dokumentation automatisch in eine XML\-Datei ausgegeben, die den gleichen Namen wie das Projekt und die Erweiterung XML hat.  Weitere Informationen finden Sie unter [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert die automatische Erstellung der XML\-Dokumentation für Projekte.  Sie können für die Typen und Member automatisch ein XML\-Skelett generieren und anschließend Zusammenfassungen, eine erläuternde Dokumentation zu jedem Parameter und weitere Hinweise bereitstellen.  Mit der entsprechenden Konfiguration wird die XML\-Dokumentation automatisch in eine XML\-Datei ausgegeben, die den gleichen Namen wie das Projekt und die Erweiterung XML hat.  Weitere Informationen finden Sie unter [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
  Die XML\-Datei kann verwendet werden oder als XML\-Code bearbeitet werden.  Diese Datei befindet sich in demselben Verzeichnis wie die ausgegebene EXE\- oder DLL\-Datei des Projekts.  
   
@@ -40,7 +40,7 @@ In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
   
     -   Das `cref`\-Attribut kann an jedes Tag angefügt werden, um einen Verweis auf ein Codeelement bereitzustellen.  Der Compiler überprüft, ob dieses Codeelement vorhanden ist.  Falls die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus.  Bei der Suche nach einem im `cref`\-Attribut beschriebenen Typ akzeptiert der Compiler auch die Verwendung von `Imports`\-Anweisungen.  
   
-    -   Mithilfe des \<summary\>\-Tags werden von IntelliSense in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] zusätzliche Informationen über einen Typ oder einen Member angezeigt.  
+    -   Mithilfe des \<summary\>\-Tags werden von IntelliSense in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zusätzliche Informationen über einen Typ oder einen Member angezeigt.  
   
 ## Verwandte Abschnitte  
  Weitere Informationen über das Erstellen einer XML\-Datei mit Dokumentationskommentaren finden Sie unter den folgenden Themen:  

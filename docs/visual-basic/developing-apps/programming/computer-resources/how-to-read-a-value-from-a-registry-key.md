@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 31
 ---
 # How to: Read a Value from a Registry Key in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der `GetValue`\-Methode des `My.Computer.Registry`\-Objekts können Werte in der Windows\-Registrierung gelesen werden.  
   

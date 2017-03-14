@@ -26,11 +26,11 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Call an Operator Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zum Aufrufen einer Operatorprozedur verwenden Sie das Operatorsymbol in einem Ausdruck.  Im Fall eines Konvertierungsoperators rufen Sie die Prozedur [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) auf, um einen Wert in einen anderen Datentyp zu konvertieren.  
   
- Operatorprozeduren werden nicht explizit aufgerufen.  Der Operator oder die `CType`\-Funktion wird in einer Zuweisungsanweisung oder in einem Ausdruck auf die gleiche Art verwendet wie üblicherweise Operatoren.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ruft die Operatorprozedur auf.  
+ Operatorprozeduren werden nicht explizit aufgerufen.  Der Operator oder die `CType`\-Funktion wird in einer Zuweisungsanweisung oder in einem Ausdruck auf die gleiche Art verwendet wie üblicherweise Operatoren.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft die Operatorprozedur auf.  
   
  Das Definieren eines Operators für eine Klasse oder Struktur wird auch als *Überladen* bezeichnet.  
   

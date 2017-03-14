@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # How to: Convert Strings into an Array of Bytes in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema wird dargestellt, wie eine Zeichenfolge in ein Bytearray konvertiert wird.  
   

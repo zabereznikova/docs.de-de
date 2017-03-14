@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Move Data Into and Out of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Um einen Wert in einer Variablen zu speichern, fügen Sie den Variablennamen auf der linken Seite einer Zuweisungsanweisung ein.  
   

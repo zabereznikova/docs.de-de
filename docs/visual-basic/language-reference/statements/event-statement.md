@@ -32,7 +32,7 @@ ms.author: "shoag"
 caps.handback.revision: 33
 ---
 # Event Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert ein benutzerdefiniertes Ereignis.  
   

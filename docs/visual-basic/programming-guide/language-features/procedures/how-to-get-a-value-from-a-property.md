@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Get a Value from a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftennamen in einen Ausdruck einfügen.  
   
- Die `Get`\-Prozedur der Eigenschaft ruft den Wert ab, aber Sie rufen ihn nicht explizit über den Namen auf.  Sie verwenden die Eigenschaft wie eine Variable.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
+ Die `Get`\-Prozedur der Eigenschaft ruft den Wert ab, aber Sie rufen ihn nicht explizit über den Namen auf.  Sie verwenden die Eigenschaft wie eine Variable.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
   
 ### So rufen Sie einen Wert aus einer Eigenschaft ab  
   
@@ -37,7 +37,7 @@ Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftennamen in ein
   
      Fügen Sie den Eigenschaftennamen hinter dem Gleichheitszeichen \(`=`\) in einer Zuweisungsanweisung ein.  
   
-     Im folgenden Beispiel wird der Wert der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] `Now`\-Eigenschaft gelesen und die `Get`\-Prozedur implizit aufgerufen.  
+     Im folgenden Beispiel wird der Wert der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now`\-Eigenschaft gelesen und die `Get`\-Prozedur implizit aufgerufen.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

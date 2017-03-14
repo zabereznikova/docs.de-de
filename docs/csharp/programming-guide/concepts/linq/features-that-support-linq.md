@@ -19,10 +19,10 @@ ms.author: "wiwagn"
 caps.handback.revision: 21
 ---
 # C# Features That Support LINQ
-Der folgende Abschnitt gibt eine Einführung in die neuen Sprachkonstrukte in C\# 3.0.  Obwohl diese neuen Funktionen bis zu einem gewissen Grad alle mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen verwendet werden, sind sie nicht auf [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] beschränkt und können in jedem Kontext verwendet werden, den Sie als nützlich erachten.  
+Der folgende Abschnitt gibt eine Einführung in die neuen Sprachkonstrukte in C\# 3.0.  Obwohl diese neuen Funktionen bis zu einem gewissen Grad alle mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen verwendet werden, sind sie nicht auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] beschränkt und können in jedem Kontext verwendet werden, den Sie als nützlich erachten.  
   
 ## Abfrageausdrücke  
- Abfrageausdrücke verwenden ähnlich wie SQL oder XQuery eine deklarative Syntax für eine Abfrage über IEnumerable\-Auflistungen.  Eine Abfragesyntax zur Kompilierzeit wird in Methodenaufrufe für eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieterimplementierung der standardmäßigen Abfrageoperator\-Erweiterungsmethoden umgewandelt.  Anwendungen steuern standardmäßige Abfrageoperatoren innerhalb des Bereichs durch die Angabe des entsprechenden Namespaces mit einer `using`\-Direktive.  Beim folgenden Abfrageausdruck wird ein Zeichenfolgenarray verwendet, der anhand des ersten Zeichens in der Zeichenfolge gruppiert wird. Diese Gruppen werden dann sortiert.  
+ Abfrageausdrücke verwenden ähnlich wie SQL oder XQuery eine deklarative Syntax für eine Abfrage über IEnumerable\-Auflistungen.  Eine Abfragesyntax zur Kompilierzeit wird in Methodenaufrufe für eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbieterimplementierung der standardmäßigen Abfrageoperator\-Erweiterungsmethoden umgewandelt.  Anwendungen steuern standardmäßige Abfrageoperatoren innerhalb des Bereichs durch die Angabe des entsprechenden Namespaces mit einer `using`\-Direktive.  Beim folgenden Abfrageausdruck wird ein Zeichenfolgenarray verwendet, der anhand des ersten Zeichens in der Zeichenfolge gruppiert wird. Diese Gruppen werden dann sortiert.  
   
 ```  
 var query = from str in stringArray  
@@ -67,12 +67,12 @@ select new {name = cust.Name, phone = cust.Phone};
  Weitere Informationen finden Sie unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## Erweiterungsmethoden  
- Eine Erweiterungsmethode ist eine statische Methode, die mit einem Typ verknüpft werden kann, sodass sie wie eine Instanzenmethode des Typs aufgerufen werden kann.  Dieses Feature ermöglicht Ihnen im Prinzip, neue Methoden vorhandenen Typen "hinzuzufügen", ohne sie tatsächlich zu ändern.  Die standardmäßigen Abfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.  
+ Eine Erweiterungsmethode ist eine statische Methode, die mit einem Typ verknüpft werden kann, sodass sie wie eine Instanzenmethode des Typs aufgerufen werden kann.  Dieses Feature ermöglicht Ihnen im Prinzip, neue Methoden vorhandenen Typen "hinzuzufügen", ohne sie tatsächlich zu ändern.  Die standardmäßigen Abfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.  
   
  Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ## Lambda\-Ausdrücke  
- Ein Lambda\-Ausdruck ist eine Inline\-Funktion, die zum Trennen der Eingabeparameter aus dem Funktionstext den Operator \=\> verwendet und die beim Kompilieren in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann.  In der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Programmierung arbeiten Sie mit Lambda\-Ausdrücken, wenn Sie direkte Methodenaufrufe für die standardmäßigen Abfrageoperatoren vornehmen, aber nicht bei der Verwendung von Abfragesyntax.  
+ Ein Lambda\-Ausdruck ist eine Inline\-Funktion, die zum Trennen der Eingabeparameter aus dem Funktionstext den Operator \=\> verwendet und die beim Kompilieren in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann.  In der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Programmierung arbeiten Sie mit Lambda\-Ausdrücken, wenn Sie direkte Methodenaufrufe für die standardmäßigen Abfrageoperatoren vornehmen, aber nicht bei der Verwendung von Abfragesyntax.  
   
  Weitere Informationen finden Sie unter:  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Define a Conversion Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie für die Konvertierung vom Typ der Klasse bzw. Struktur in einen anderen Datentyp \(z. B. `Integer`, `Double` oder `String`\) einen Typkonvertierungsoperator definieren.  
   

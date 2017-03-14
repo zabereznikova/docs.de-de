@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # How to: Match a String against a Pattern (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, können Sie den [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) verwenden.  
   

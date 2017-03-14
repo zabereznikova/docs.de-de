@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Distinct Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Schränkt die Werte der aktuellen Bereichsvariable ein, um doppelte Werte in nachfolgenden Abfrageklauseln auszuschließen.  
   

@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Properties (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Auf dieser Seite sind die Eigenschaften aufgeführt, die Member der Visual Basic\-Module sind.  Weitere Eigenschaften, die Member bestimmter Visual Basic\-Objekte darstellen, sind in [Objects](../../visual-basic/language-reference/objects/index.md) aufgeführt.  
   

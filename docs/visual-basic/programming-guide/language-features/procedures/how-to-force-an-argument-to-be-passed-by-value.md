@@ -29,15 +29,15 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Force an Argument to Be Passed by Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der Übergabemechanismus richtet sich nach der Prozedurdeklaration.  Wenn ein Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) deklariert wird, geht [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] davon aus, dass das entsprechende Argument als Verweis zu übergeben ist.  Auf diese Weise kann die Prozedur den Wert des Programmierelements ändern, der dem Argument im Aufrufcode zugrunde liegt.  Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie den `ByRef`\-Übergabemechanismus im Prozeduraufruf überschreiben, indem Sie den Argumentnamen in Klammern einschließen.  Diese Klammern kommen zu den Klammern hinzu, von denen die Argumentliste im Aufruf eingeschlossen ist.  
+Der Übergabemechanismus richtet sich nach der Prozedurdeklaration.  Wenn ein Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) deklariert wird, geht [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] davon aus, dass das entsprechende Argument als Verweis zu übergeben ist.  Auf diese Weise kann die Prozedur den Wert des Programmierelements ändern, der dem Argument im Aufrufcode zugrunde liegt.  Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie den `ByRef`\-Übergabemechanismus im Prozeduraufruf überschreiben, indem Sie den Argumentnamen in Klammern einschließen.  Diese Klammern kommen zu den Klammern hinzu, von denen die Argumentliste im Aufruf eingeschlossen ist.  
   
  Der Aufrufcode kann einen [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Mechanismus nicht überschreiben.  
   
 ### So erzwingen Sie die Übergabe eines Arguments als Wert  
   
--   Wenn der entsprechende Parameter in der Prozedur als `ByVal` deklariert wird, müssen Sie keine zusätzlichen Schritte ausführen.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] geht bereits davon aus, dass das Argument als Wert übergeben wird.  
+-   Wenn der entsprechende Parameter in der Prozedur als `ByVal` deklariert wird, müssen Sie keine zusätzlichen Schritte ausführen.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] geht bereits davon aus, dass das Argument als Wert übergeben wird.  
   
 -   Wenn der entsprechende Parameter in der Prozedur als `ByRef` deklariert wird, schließen Sie das Argument im Prozeduraufruf in Klammern ein.  
   
@@ -53,7 +53,7 @@ Der Übergabemechanismus richtet sich nach der Prozedurdeklaration.  Wenn ein Pa
 ## Kompilieren des Codes  
  Die Variablenübergabe durch Verweis muss mit dem `ByRef`\-Schlüsselwort angegeben werden.  
   
- Standardmäßig werden Argumente in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
+ Standardmäßig werden Argumente in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
   
 ## Robuste Programmierung  
  Wenn eine Prozedur eine [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Parameterdeklaration verwendet, kann die richtige Ausführung des Codes davon abhängen, ob das zugrunde liegende Element im Aufrufcode geändert werden kann.  Wenn der Aufrufcode diesen Aufrufmechanismus überschreibt, indem das Argument in Klammern eingeschlossen wird, oder wenn der Code ein unveränderliches Argument übergibt, kann die Prozedur das zugrunde liegende Element nicht ändern.  Dies kann im Aufrufcode unerwartete Ergebnisse zur Folge haben.  

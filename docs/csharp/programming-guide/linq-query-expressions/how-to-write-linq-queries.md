@@ -3,7 +3,7 @@ redirect_url: /dotnet/articles/csharp/linq/write-linq-queries
 caps.handback.revision: 25
 ---
 # Gewusst wie: Schreiben von LINQ-Abfragen in C# #
-Dieses Thema zeigt die drei Methoden, mit denen Sie eine [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrage in C\# schreiben können:  
+Dieses Thema zeigt die drei Methoden, mit denen Sie eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage in C\# schreiben können:  
   
 1.  Verwenden Sie die Abfragesyntax.  
   
@@ -11,10 +11,10 @@ Dieses Thema zeigt die drei Methoden, mit denen Sie eine [!INCLUDE[vbteclinq](..
   
 3.  Verwenden Sie eine Kombination aus Abfragesyntax und Methodensyntax.  
   
- In den folgenden Beispielen werden einige einfache [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfragen veranschaulicht, indem sie jeden zuvor aufgelisteten Ansatz verwenden.  Im Allgemeinen muss die Regel wann immer möglich \(1\) verwenden und wann immer notwendig \(2\) und \(3\) verwenden.  
+ In den folgenden Beispielen werden einige einfache [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen veranschaulicht, indem sie jeden zuvor aufgelisteten Ansatz verwenden.  Im Allgemeinen muss die Regel wann immer möglich \(1\) verwenden und wann immer notwendig \(2\) und \(3\) verwenden.  
   
 > [!NOTE]
->  Diese Abfragen basieren auf einfachen speicherinternen Auflistungen; die grundlegende Syntax ist jedoch mit der in [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)] und [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] verwendeten identisch.  
+>  Diese Abfragen basieren auf einfachen speicherinternen Auflistungen; die grundlegende Syntax ist jedoch mit der in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwendeten identisch.  
   
 ## Beispiel  
   

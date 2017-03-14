@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Deploying Applications That Reference the PrintForm Component (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Anwendung bereitstellen möchten, die auf die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente verweist, muss die Komponente auf dem Zielcomputer installiert sein.  
   
@@ -26,12 +26,12 @@ Wenn Sie eine Anwendung bereitstellen möchten, die auf die <xref:Microsoft.Visu
 ## Installieren von PrintForm als erforderliche Komponente  
  Um eine Anwendung erfolgreich bereitzustellen, müssen auch alle Komponenten bereitgestellt werden, auf die die Anwendung verweist. Der Vorgang des Installierens von erforderlichen Komponenten wird als *Bootstrapping* bezeichnet.  
   
- Wenn die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente auf Ihrem Entwicklungscomputer installiert ist, wird dem [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Bootstrapperverzeichnis ein Microsoft Visual Basic Power Packs\-Bootstrapperpaket hinzugefügt. Dieses Paket steht dann beim Befolgen der Anweisungen zum Hinzufügen von erforderlichen Komponenten für die Bereitstellung mithilfe von [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)] oder eines Windows\-Installationsprogramms zur Verfügung.  
+ Wenn die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente auf Ihrem Entwicklungscomputer installiert ist, wird dem [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Bootstrapperverzeichnis ein Microsoft Visual Basic Power Packs\-Bootstrapperpaket hinzugefügt. Dieses Paket steht dann beim Befolgen der Anweisungen zum Hinzufügen von erforderlichen Komponenten für die Bereitstellung mithilfe von [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] oder eines Windows\-Installationsprogramms zur Verfügung.  
   
  Standardmäßig werden Bootstrappingkomponenten vom gleichen Speicherort wie das Installationspaket bereitgestellt. Alternativ können Sie die Komponenten über eine URL oder einen Dateifreigabe\-Speicherort bereitstellen und Benutzern so den Download bei Bedarf ermöglichen.  
   
 > [!NOTE]
->  Zum Installieren von Bootstrapperkomponenten benötigt der Benutzer möglicherweise Administrator\- oder ähnliche Benutzerberechtigungen auf dem Computer. Im Fall von [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]\-Anwendungen bedeutet dies, dass die Benutzer Administratorberechtigungen zum Installieren der Anwendung benötigen, unabhängig von der Sicherheitsstufe, die von der Anwendung vorgegeben ist. Nach der Installation können die Benutzer die Anwendung ohne Administratorberechtigungen ausführen.  
+>  Zum Installieren von Bootstrapperkomponenten benötigt der Benutzer möglicherweise Administrator\- oder ähnliche Benutzerberechtigungen auf dem Computer. Im Fall von [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]\-Anwendungen bedeutet dies, dass die Benutzer Administratorberechtigungen zum Installieren der Anwendung benötigen, unabhängig von der Sicherheitsstufe, die von der Anwendung vorgegeben ist. Nach der Installation können die Benutzer die Anwendung ohne Administratorberechtigungen ausführen.  
   
  Während der Installation werden die Benutzer zur Installation der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente aufgefordert, wenn sie auf dem Zielcomputer nicht vorhanden ist.  
   

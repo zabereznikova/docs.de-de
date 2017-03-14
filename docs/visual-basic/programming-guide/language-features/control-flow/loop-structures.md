@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Loop Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Schleifenstrukturen ermöglichen Ihnen, ein oder mehrere Zeilen Code wiederholt auszuführen.  Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung `True` oder `False` ist, Sie können eine definierte Anzahl von Wiederholungen abarbeiten lassen oder die Anweisung für jedes Auflistungselement einmal ausführen lassen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Schleifenstrukturen ermöglichen Ihnen, ein oder mehrere Zeilen Code wiederholt auszuführen.  Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung `True` oder `False` ist, Sie können eine definierte Anzahl von Wiederholungen abarbeiten lassen oder die Anweisung für jedes Auflistungselement einmal ausführen lassen.  
   
  Im folgenden Beispiel wird eine Schleifenstruktur veranschaulicht, die mehrere Anweisungen ausführt, bis eine Bedingung den Wert True annimmt.  
   

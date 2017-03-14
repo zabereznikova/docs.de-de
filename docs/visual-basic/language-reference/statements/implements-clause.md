@@ -31,7 +31,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Implements Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Kennzeichnet Klassen oder Strukturmember, die die Implementierung für einen in einer Schnittstelle definierten Member enthalten.  
   

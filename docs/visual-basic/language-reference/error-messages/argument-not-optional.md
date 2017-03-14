@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Argument not optional (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Argumentanzahl und \-typen müssen mit der erwarteten Anzahl bzw. den erwarteten Typen übereinstimmen.  Es gibt zwei Möglichkeiten: Die Anzahl der Argumente ist falsch, oder es wurde ein nicht optionales Argument ausgelassen.  Ein Argument kann nur dann in einem Aufruf einer benutzerdefinierten Prozedur ausgelassen werden, wenn es in der Prozedurdefinition als `Optional` deklariert wurde.  
   

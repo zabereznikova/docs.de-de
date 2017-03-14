@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Constructor &#39;&lt;name&gt;&#39; cannot call itself
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Sub New`\-Prozedur in einer Klasse oder Struktur ruft sich selbst auf.  
   

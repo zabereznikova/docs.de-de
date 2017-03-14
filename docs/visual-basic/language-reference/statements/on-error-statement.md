@@ -36,7 +36,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # On Error Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Aktiviert eine Fehlerbehandlungsroutine und gibt die Position der Routine innerhalb einer Prozedur an. Kann auch zum Deaktivieren einer Fehlerbehandlungsroutine verwendet werden.  
   

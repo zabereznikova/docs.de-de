@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Anonymous Type Definition (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Als Reaktion auf die Deklaration einer Instanz eines anonymen Typs erzeugt der Compiler eine neue Klassendefinition, die die angegebenen Eigenschaften für diesen Typ enthält.  
   

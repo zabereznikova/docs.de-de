@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;Optional&#39; expected
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Nach einem optionalen Argument in einer Prozedurdeklaration steht ein erforderliches Argument.  Jedes Argument, dass nach einem optionalen Argument steht, muss ebenfalls optional sein.  
   

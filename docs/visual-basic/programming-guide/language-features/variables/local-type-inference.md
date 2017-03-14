@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 43
 ---
 # Local Type Inference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Visual Basic \-Compiler ermittelt durch *Typrückschluss* die Datentypen lokaler Variablen, die ohne eine `As`\-Klausel deklariert werden.  Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab.  Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben, wie im folgenden Beispiel gezeigt. Im Ergebnis der Deklarationen sind sowohl `num1` als auch `num2` stark typisiert als ganze Zahlen.  
   
@@ -72,7 +72,7 @@ Der Visual Basic \-Compiler ermittelt durch *Typrückschluss* die Datentypen lok
   
  `Option Infer Off`  
   
- Wenn Sie in Ihrem Code keinen Wert für `Option Infer` angeben, ist die Standardeinstellung des Compilers `Option Infer On`.  Bei Projekten, die von [!INCLUDE[vb_orcas_long](../../../../visual-basic/misc/includes/vb-orcas-long-md.md)] oder einer früheren Version aktualisiert wurden, ist die Compilerstandardeinstellung `Option Infer Off`.  
+ Wenn Sie in Ihrem Code keinen Wert für `Option Infer` angeben, ist die Standardeinstellung des Compilers `Option Infer On`.  Bei Projekten, die von [!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)] oder einer früheren Version aktualisiert wurden, ist die Compilerstandardeinstellung `Option Infer Off`.  
   
  Wenn der für `Option Infer` in einer Datei festgelegte Wert dem in der IDE oder auf der Befehlszeile festgelegten Wert widerspricht, hat der Wert in der Datei Vorrang.  
   

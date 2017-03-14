@@ -61,7 +61,7 @@ Bei relationalen Datenbanken erstellt ein *innerer Join* einen Ergebnissatz, in 
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein neues Konsolenanwendungsprojekt in [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)].  
+-   Erstellen Sie ein neues Konsolenanwendungsprojekt in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)].  
   
 -   Fügen Sie einen Verweis auf System.Core.dll hinzu, wenn er noch nicht vorhanden ist.  
   

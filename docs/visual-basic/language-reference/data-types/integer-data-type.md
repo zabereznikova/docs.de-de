@@ -34,7 +34,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Integer Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 32\-Bit\-\(4\-Byte\-\)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von \-2.147.483.648 bis einschließlich 2.147.483.647 bewegen.  
   

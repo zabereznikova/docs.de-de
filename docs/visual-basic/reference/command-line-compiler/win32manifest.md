@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # /win32manifest (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Identifiziert eine benutzerdefinierte Win32\-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei \(Portable Executable, PE\) eines Projekts eingebettet werden soll.  
   
@@ -51,7 +51,7 @@ Identifiziert eine benutzerdefinierte Win32\-Anwendungsmanifestdatei, die in die
   
 2.  Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
   
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] erstellt eine Standardmanifestdatei und speichert diese zusammen mit der ausführbaren Datei in den Debug\- und Releaseverzeichnissen.  Sie können die Standarddatei app.manifest anzeigen oder bearbeiten, indem Sie im Projekt\-Designer auf der Registerkarte **Anwendung** auf **Einstellungen für die Benutzerkontensteuerung anzeigen** klicken. Weitere Informationen finden Sie unter [Seite "Anwendung", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erstellt eine Standardmanifestdatei und speichert diese zusammen mit der ausführbaren Datei in den Debug\- und Releaseverzeichnissen.  Sie können die Standarddatei app.manifest anzeigen oder bearbeiten, indem Sie im Projekt\-Designer auf der Registerkarte **Anwendung** auf **Einstellungen für die Benutzerkontensteuerung anzeigen** klicken. Weitere Informationen finden Sie unter [Seite "Anwendung", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
   
  Sie können das Anwendungsmanifest in einem benutzerdefinierten Postbuildschritt oder mit der `/nowin32manifest`\-Option als Teil einer Win32\-Ressourcendatei bereitstellen.  Verwenden Sie dieselbe Option, wenn Sie möchten, dass Ihre Anwendung auf Windows Vista der Datei\- oder Registrierungsvirtualisierung unterliegt.  Dadurch wird verhindert, dass der Compiler ein Standardmanifest erstellt und in die PE\-Datei einbettet.  
   

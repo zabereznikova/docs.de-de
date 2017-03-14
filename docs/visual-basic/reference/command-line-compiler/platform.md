@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 34
 ---
 # /platform (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, welche Plattformversion der common Language Runtime \(CLR\) die Ausgabedatei ausführen kann.  
   
@@ -40,7 +40,7 @@ Gibt an, welche Plattformversion der common Language Runtime \(CLR\) die Ausgabe
 |`Itanium`|Kompiliert Ihre Assembly für die Ausführung durch den 64\-Bit\-CLR auf einem Computer mit einem Itanium\-Prozessor.|  
 |`arm`|Kompiliert Ihre Assembly für die Ausführung auf einem Computer mit einem ARM\-Prozessor \(Advanced RISC\-Computer\).|  
 |`anycpu`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform.  Die Anwendung wird auf 32\-Bit\-Versionen von Windows als 32\-Bit\-Anwendung und auf 64\-Bit\-Versionen von Windows als 64\-Bit\-Anwendung ausgeführt.  Diese Meldung ist der Standardwert.|  
-|`anycpu32bitpreferred`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform.  Die Anwendung wird als 32\-Bit\-Anwendung auf 32\-Bit\- und 64\-Bit\-Versionen von Windows ausgeführt.  Dieses Flag ist nur gültig für ausführbare Dateien \(.\(EXE\) und erfordert [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net-v45-md.md)].|  
+|`anycpu32bitpreferred`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform.  Die Anwendung wird als 32\-Bit\-Anwendung auf 32\-Bit\- und 64\-Bit\-Versionen von Windows ausgeführt.  Dieses Flag ist nur gültig für ausführbare Dateien \(.\(EXE\) und erfordert [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## Hinweise  
  Verwenden Sie die `/platform`\-Option, um den Typ des Zielprozessors für die Ausgabedatei anzugeben.  

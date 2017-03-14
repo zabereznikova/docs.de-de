@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Read From Text Files with Multiple Formats in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>\-Objekt können strukturierte Textdateien, z. B. Protokolle, leicht und effizient analysiert werden.  Sie können eine Datei mit mehreren Formaten mithilfe der `PeekChars`\-Methode verarbeiten, um das Format der jeweiligen Zeile zu bestimmen, während Sie die Datei analysieren.  
   

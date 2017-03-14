@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # From Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt eine oder mehrere Bereichsvariablen und eine abzufragende Auflistung an.  
   

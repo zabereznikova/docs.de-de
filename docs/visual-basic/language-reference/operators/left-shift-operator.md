@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # &lt;&lt; Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.  
   

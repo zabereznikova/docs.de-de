@@ -42,7 +42,7 @@ Klammern werden nicht nur für die Angabe der Reihenfolge von Vorgängen in eine
  Weitere Informationen zum Aufrufen von Methoden finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

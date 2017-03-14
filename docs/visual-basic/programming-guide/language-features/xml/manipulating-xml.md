@@ -22,9 +22,9 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Manipulating XML in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit *XML\-Literalen* können Sie XML aus einer externen Quelle laden, beispielsweise einer Zeichenfolge, einer Datei oder einem Stream.  Mit [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] kann anschließend der XML\-Code bearbeitet und mit [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] abgefragt werden.  
+Mit *XML\-Literalen* können Sie XML aus einer externen Quelle laden, beispielsweise einer Zeichenfolge, einer Datei oder einem Stream.  Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kann anschließend der XML\-Code bearbeitet und mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] abgefragt werden.  
   
 ## In diesem Abschnitt  
  [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
@@ -41,7 +41,7 @@ Mit *XML\-Literalen* können Sie XML aus einer externen Quelle laden, beispielsw
  Stellt Links auf Abschnitte bereit, in denen die verschiedenen XML\-Zugriffseigenschaften beschrieben werden.  
   
  [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Bietet eine Einführung in die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Bietet eine Einführung in die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  Bietet eine Einführung in die Verwendung von XML\-Literalen in Visual Basic.  
@@ -50,7 +50,7 @@ Mit *XML\-Literalen* können Sie XML aus einer externen Quelle laden, beispielsw
  Veranschaulicht, wie in Visual Basic auf Teile eines XML\-Elements oder eines XML\-Dokuments zugegriffen werden kann.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Stellt Links zu Abschnitten bereit, in denen die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.  
+ Stellt Links zu Abschnitten bereit, in denen die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.  
   
 ## Siehe auch  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   

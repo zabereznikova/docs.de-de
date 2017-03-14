@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # ^= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erhebt den Wert einer Variablen oder Eigenschaft zur Potenz eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft zu.  
   

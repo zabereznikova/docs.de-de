@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Retrieve the Contents of the My Documents Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>\-Objekt können Inhalte aus vielen der **Alle Benutzer**\-Verzeichnisse gelesen werden, z. B. aus **Eigene Dateien** oder **Desktop**.  
   

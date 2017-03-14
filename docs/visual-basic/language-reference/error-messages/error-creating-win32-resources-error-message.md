@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Error creating Win32 resources: &lt;error message&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler ruft den Assembly Linker \(Al.exe, auch als Alink bekannt\) auf, der eine Assembly mit Manifest generiert.  Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet.  Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  
+Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler ruft den Assembly Linker \(Al.exe, auch als Alink bekannt\) auf, der eine Assembly mit Manifest generiert.  Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet.  Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  
   
  **Fehler\-ID:** BC30136  
   

@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 33
 ---
 # Object Variable Declaration (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Normale Deklarationsanweisungen werden zum Deklarieren von Objektvariablen verwendet.  Als Datentyp, aus der das Objekt erstellt werden soll, geben Sie entweder `Object` \(d. h. [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)\) an oder eine spezifischere Klasse.  
   

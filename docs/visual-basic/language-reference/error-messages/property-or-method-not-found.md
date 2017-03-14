@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Property or method not found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Objektmethode oder Objekteigenschaft, auf die verwiesen wird, ist nicht definiert.  
   

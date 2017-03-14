@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 68
 ---
 # Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sprachfunktionen [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Abfrageausdrücke erstellen können.  Sie erfahren, wie Sie Abfragen für eine Liste von Studierenden erstellen, wie Sie diese Abfragen ausführen und wie Sie sie ändern.  Die Abfragen enthalten einige neue Funktionen von Visual Basic 2008 wie Objektinitialisierer, lokale Typrückschlüsse und anonyme Typen.  
+Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sprachfunktionen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Abfrageausdrücke erstellen können.  Sie erfahren, wie Sie Abfragen für eine Liste von Studierenden erstellen, wie Sie diese Abfragen ausführen und wie Sie sie ändern.  Die Abfragen enthalten einige neue Funktionen von Visual Basic 2008 wie Objektinitialisierer, lokale Typrückschlüsse und anonyme Typen.  
   
- Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter fortfahren, der Sie interessiert.  Zu den [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbietern zählen [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/linq-query-expressions/includes/linq-dataset-md.md)] und [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  
+ Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbieter fortfahren, der Sie interessiert.  Zu den [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbietern zählen [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## Erstellen eines Projekts  
   
@@ -137,12 +137,12 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sp
 2.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
   
 ## Weitere Beispiele  
- Nachdem Sie nun die Grundlagen kennen gelernt haben, finden Sie im Folgenden eine Liste zusätzlicher Beispiele, die die Flexibilität und Leistungsstärke von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen veranschaulichen.  Jedem Beispiel ist eine kurze Beschreibung vorangestellt.  Zeigen Sie mit der Abfrageergebnisvariable für jede Abfrage, um den abgeleiteten Typ zu finden. Verwenden Sie eine `For Each`\-Schleife, um die Ergebnisse zu erzeugen.  
+ Nachdem Sie nun die Grundlagen kennen gelernt haben, finden Sie im Folgenden eine Liste zusätzlicher Beispiele, die die Flexibilität und Leistungsstärke von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen veranschaulichen.  Jedem Beispiel ist eine kurze Beschreibung vorangestellt.  Zeigen Sie mit der Abfrageergebnisvariable für jede Abfrage, um den abgeleiteten Typ zu finden. Verwenden Sie eine `For Each`\-Schleife, um die Ergebnisse zu erzeugen.  
   
  [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## Zusätzliche Informationen  
- Nachdem Sie nun mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
+ Nachdem Sie nun mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
   
  [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   

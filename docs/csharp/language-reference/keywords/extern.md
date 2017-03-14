@@ -89,7 +89,7 @@ SampleMethod() returns 50.
 ```  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>   

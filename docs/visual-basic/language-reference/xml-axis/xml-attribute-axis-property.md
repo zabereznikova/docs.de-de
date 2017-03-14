@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # XML Attribute Axis Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ermöglicht den Zugriff auf den Wert eines Attributs für ein <xref:System.Xml.Linq.XElement>\-Objekt oder auf das erste Element in einer Aufzählung von <xref:System.Xml.Linq.XElement>\-Objekten.  
   
@@ -45,7 +45,7 @@ object.@<attribute>
  Erforderlich.  Kennzeichnet den Beginn eines Achseneigenschaftattributs.  
   
  \<  
- Optional.  Kennzeichnet den Beginn des Attributnamens, wenn `attribute` kein gültiger Bezeichner in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist.  
+ Optional.  Kennzeichnet den Beginn des Attributnamens, wenn `attribute` kein gültiger Bezeichner in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist.  
   
  `attribute`  
  Erforderlich.  Name des Attributs, auf das zugegriffen werden soll, in der Form \[`prefix`:\]`name`.  
@@ -56,7 +56,7 @@ object.@<attribute>
 |`name`|Erforderlich.  Lokaler Attributname.  Weitere Informationen finden Sie unter [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Optional.  Kennzeichnet das Ende des Attributnamens, wenn `attribute` kein gültiger Bezeichner in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist.  
+ Optional.  Kennzeichnet das Ende des Attributnamens, wenn `attribute` kein gültiger Bezeichner in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist.  
   
 ## Rückgabewert  
  Eine Zeichenfolge mit dem Wert von `attribute`.  Wenn der Attributname nicht vorhanden ist, wird `Nothing` zurückgegeben.  
@@ -66,7 +66,7 @@ object.@<attribute>
   
  Wenn Sie auf ein XML\-Attribut mit dem @\-Bezeichner verweisen, wird der Wert des Attributs als Zeichenfolge zurückgegeben, und Sie müssen die <xref:System.Xml.Linq.XAttribute.Value%2A>\-Eigenschaft nicht explizit angeben.  
   
- Die Benennungsregeln für XML\-Attribute unterscheiden sich von den Benennungsregeln für [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Bezeichner. Um auf ein XML\-Attribut zugreifen, das einen Namen hat, der kein gültiger Visual Basic\-Bezeichner ist, schließen Sie den Namen in spitzen Klammern \(\< und \>\) ein.  
+ Die Benennungsregeln für XML\-Attribute unterscheiden sich von den Benennungsregeln für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Bezeichner. Um auf ein XML\-Attribut zugreifen, das einen Namen hat, der kein gültiger Visual Basic\-Bezeichner ist, schließen Sie den Namen in spitzen Klammern \(\< und \>\) ein.  
   
 ## XML\-Namespaces  
  Für den Namen in einem Achseneigenschaftattribut können nur XML\-Namespacepräfixe verwendet werden, die mit der `Imports`\-Anweisung global deklariert wurden.  Es können keine XML\-Namespacepräfixe verwendet werden, die lokal innerhalb von XML\-Elementliteralen deklariert wurden.  Weitere Informationen finden Sie unter [Imports Statement \(XML Namespace\)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -98,7 +98,7 @@ object.@<attribute>
 ```  
   
 ## Beispiel  
- Das folgende Beispiel verwendet die Syntax mit spitzen Klammern zum Abrufen des Werts des XML\-Attributs mit dem Namen `number-type`, der in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kein gültiger Bezeichner ist.  
+ Das folgende Beispiel verwendet die Syntax mit spitzen Klammern zum Abrufen des Werts des XML\-Attributs mit dem Namen `number-type`, der in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kein gültiger Bezeichner ist.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

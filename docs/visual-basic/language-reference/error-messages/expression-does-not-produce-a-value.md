@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Expression does not produce a value
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, einen Ausdruck zu verwenden, der in einem Kontext, in dem Werte generiert werden, keinen Wert erstellt \(z. B. Aufruf von `Sub` in einem Kontext, in dem `Function` erwartet wird\).  
   

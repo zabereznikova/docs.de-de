@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Calling a Property or Method Using a String Name (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In den meisten Fällen können Sie die Eigenschaften und Methoden eines Objekts in der Entwurfsphase ermitteln und dafür entsprechenden Code schreiben.  In seltenen Fällen kann es jedoch vorkommen, dass Sie die Eigenschaften und Methoden eines Objekts nicht im Voraus kennen. Vielleicht möchten Sie auch Endbenutzern die Möglichkeit geben, zur Laufzeit Eigenschaften festzulegen oder Methoden auszuführen.  
   
@@ -40,7 +40,7 @@ In den meisten Fällen können Sie die Eigenschaften und Methoden eines Objekts 
   
  Das erste Argument, *Objekt*, erhält den Namen des betreffenden Objekts.  Das *ProcedureName*\-Argument erhält eine Zeichenfolge mit dem Namen der aufzurufenden Methode oder Eigenschaft.  Das *CallType*\-Argument erhält eine Konstante, die den Typ der aufzurufenden Prozedur darstellt: eine Methode \(`Microsoft.VisualBasic.CallType.Method`\), eine gelesene Eigenschaft \(`Microsoft.VisualBasic.CallType.Get`\) oder eine festgelegte Eigenschaft \(`Microsoft.VisualBasic.CallType.Set`\).  Das optionale *Arguments*\-Argument enthält ein Array des `Object`\-Typs mit allen Argumenten für die Prozedur.  
   
- Sie können `CallByName` in der aktuellen Projektmappe mit Klassen verwenden. In den meisten Fällen wird die Funktion jedoch dazu verwendet, auf COM\-Objekte oder Objekte aus [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys zuzugreifen.  
+ Sie können `CallByName` in der aktuellen Projektmappe mit Klassen verwenden. In den meisten Fällen wird die Funktion jedoch dazu verwendet, auf COM\-Objekte oder Objekte aus [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys zuzugreifen.  
   
  Angenommen, Sie fügen einen Verweis auf eine Assembly hinzu, die eine Klasse mit der Bezeichnung `MathClass` enthält, welche wiederum eine neue Funktion mit der Bezeichnung `SquareRoot` beinhaltet. Beispiel:  
   

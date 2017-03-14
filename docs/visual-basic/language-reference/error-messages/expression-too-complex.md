@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Expression too complex
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Gleitkommaausdruck enthält zu viele geschachtelte Teilausdrücke.  
   

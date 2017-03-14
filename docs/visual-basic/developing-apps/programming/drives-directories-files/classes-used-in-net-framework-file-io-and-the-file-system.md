@@ -19,11 +19,11 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Classes Used in .NET Framework File I/O and the File System (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In der folgenden Tabelle werden die Klassen aufgeführt, die im Allgemeinen für Datei\-E\/A\-Vorgänge in .NET Framework verwendet werden, unterteilt in Datei\-E\/A\-Klassen, Klassen für das Erstellen von Streams und Klassen für das Lesen und Schreiben von Streams.  
   
- Eine ausführlichere Auflistung finden Sie in der Dokumentation zu [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] unter [Übersicht über die Klassenbibliothek](../Topic/.NET%20Framework%20Class%20Library%20Overview.md).  
+ Eine ausführlichere Auflistung finden Sie in der Dokumentation zu [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] unter [Übersicht über die Klassenbibliothek](../Topic/.NET%20Framework%20Class%20Library%20Overview.md).  
   
 ## Grundlegende E\/A\-Klassen für Dateien, Laufwerke und Verzeichnisse  
  In der folgenden Tabelle werden die wichtigsten für Datei\-E\/A\-Vorgänge verwendeten Klassen aufgeführt und beschrieben.  

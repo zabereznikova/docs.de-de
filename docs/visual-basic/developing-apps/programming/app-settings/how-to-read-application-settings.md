@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Read Application Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können eine Benutzereinstellung lesen, indem Sie auf die zugehörige Eigenschaft im `My.Settings`\-Objekt zugreifen.  
   

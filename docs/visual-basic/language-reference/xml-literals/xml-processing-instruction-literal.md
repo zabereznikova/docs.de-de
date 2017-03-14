@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # XML Processing Instruction Literal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal, das ein <xref:System.Xml.Linq.XProcessingInstruction>\-Objekt darstellt.  
   
@@ -59,9 +59,9 @@ Ein Literal, das ein <xref:System.Xml.Linq.XProcessingInstruction>\-Objekt darst
  Ein XML\-Verarbeitungsanweisungsliteral kann einer Variablen zugewiesen oder in einem XML\-Dokumentliteral eingeschlossen werden.  
   
 > [!NOTE]
->  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu benötigen.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
+>  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu benötigen.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Verarbeitungsanweisungsliteral in einen Aufruf des <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>\-Konstruktors.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Verarbeitungsanweisungsliteral in einen Aufruf des <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>\-Konstruktors.  
   
 ## Beispiel  
  Im folgenden Beispiel wird eine Verarbeitungsanweisung erstellt, die ein Stylesheet für ein XML\-Dokument identifiziert.  

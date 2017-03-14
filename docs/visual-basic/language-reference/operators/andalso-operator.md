@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # AndAlso Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine logische Kurzschlusskonjunktion zweier Ausdrücke aus.  
   

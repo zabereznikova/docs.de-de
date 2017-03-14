@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Unable to embed resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen.  Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM\+\-Ressourcedatei in die Assembly.  
+Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen.  Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM\+\-Ressourcedatei in die Assembly.  
   
  **Fehler\-ID:** BC30143  
   

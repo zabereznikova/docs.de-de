@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, Typinformationen in den angegebenen Assemblys bereitstellt.  
   
@@ -55,7 +55,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, Typinformati
   
  Damit der Compiler einen Typ in einer Assembly \(nicht in einem Modul\) erkennt, muss er gezwungen werden, den Typ aufzulösen.  Eine mögliche Lösung hierfür besteht z. B. darin, eine Instanz des Typs zu definieren.  Es gibt noch andere Möglichkeiten, die Auflösung der Typennamen in einer Assembly für den Compiler zu erzwingen.  Bei Vererbung eines Typs in einer Assembly erfährt der Compiler den Typennamen.  
   
- Standardmäßig wird die Antwortdatei "Vbc.rsp" verwendet, die auf häufig verwendete [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie `/noconfig`, wenn der Compiler die Datei Vbc.rsp nicht verwenden soll.  
+ Standardmäßig wird die Antwortdatei "Vbc.rsp" verwendet, die auf häufig verwendete [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie `/noconfig`, wenn der Compiler die Datei Vbc.rsp nicht verwenden soll.  
   
  `/r` ist die Kurzform von `/reference` .  
   

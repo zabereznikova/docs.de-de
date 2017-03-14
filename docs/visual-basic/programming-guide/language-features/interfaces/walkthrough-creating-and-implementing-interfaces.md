@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Walkthrough: Creating and Implementing Interfaces (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Schnittstellen beschreiben die Merkmale von Feldern, Eigenschaften, Methoden und Ereignissen, wobei die Einzelheiten der Implementierung in Strukturen oder Klassen definiert sind.  
   
@@ -31,11 +31,11 @@ Schnittstellen beschreiben die Merkmale von Feldern, Eigenschaften, Methoden und
 > [!NOTE]
 >  Diese exemplarische Vorgehensweise bietet keine Informationen dazu, wie eine Benutzeroberfläche erstellt wird.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So definieren Sie eine Schnittstelle  
   
-1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt.  
+1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt.  
   
 2.  Fügen Sie dem Projekt ein neues Modul hinzu, indem Sie im Menü **Projekt** auf **Modul hinzufügen** klicken.  
   

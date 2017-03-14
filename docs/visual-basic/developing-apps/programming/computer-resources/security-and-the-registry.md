@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Security and the Registry (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Auf dieser Seite wird erläutert, welche Sicherheitsauswirkungen das Speichern von Daten in der Registrierung hat.  
   

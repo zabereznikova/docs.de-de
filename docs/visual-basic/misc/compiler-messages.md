@@ -15,4 +15,4 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Visual&#160;Basic-Compilermeldungen
-Dieser Abschnitt enthält die während der Kompilierung angezeigten [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Fehlermeldungen.
+Dieser Abschnitt enthält die während der Kompilierung angezeigten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Fehlermeldungen.

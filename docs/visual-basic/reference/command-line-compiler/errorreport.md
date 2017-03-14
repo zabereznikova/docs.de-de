@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # /errorreport
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Gibt an, wie der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler interne Compilerfehler meldet.  
+Gibt an, wie der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler interne Compilerfehler meldet.  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ Gibt an, wie der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/li
 ```  
   
 ## Hinweise  
- Diese Option bietet eine komfortable Möglichkeit, einen internen Compilerfehler \(ICE, Internal Compiler Error\) von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] dem [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Team von Microsoft mitzuteilen.  Standardmäßig sendet der Compiler keine Informationen an Microsoft.  Wenn jedoch ein interner Compilerfehler auftritt, ermöglicht es Ihnen diese Option, den Fehler Microsoft mitzuteilen.  Diese Informationen erleichtern es den Microsoft\-Technikern, die Ursache zu identifizieren und die nächste Version von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] entsprechend zu verbessern.  
+ Diese Option bietet eine komfortable Möglichkeit, einen internen Compilerfehler \(ICE, Internal Compiler Error\) von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Team von Microsoft mitzuteilen.  Standardmäßig sendet der Compiler keine Informationen an Microsoft.  Wenn jedoch ein interner Compilerfehler auftritt, ermöglicht es Ihnen diese Option, den Fehler Microsoft mitzuteilen.  Diese Informationen erleichtern es den Microsoft\-Technikern, die Ursache zu identifizieren und die nächste Version von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] entsprechend zu verbessern.  
   
  Ob Benutzer Berichte versenden können, ist vom Computer und den Benutzerberechtigungen abhängig.  
   

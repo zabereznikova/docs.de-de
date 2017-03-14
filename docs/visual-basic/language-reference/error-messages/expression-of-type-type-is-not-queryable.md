@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Expression of type &lt;type&gt; is not queryable
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Ausdruck vom Typ "\<Typ\>" kann nicht abgefragt werden.Stellen Sie sicher, dass kein Assemblyverweis und\/oder Namespaceimport für den LINQ\-Anbieter fehlt.  
   

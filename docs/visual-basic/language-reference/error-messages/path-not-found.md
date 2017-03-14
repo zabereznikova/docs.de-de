@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Path not found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das Betriebssystem konnte den angegebenen Pfad während eines Datei\- oder Datenträgerzugriffs nicht finden.  Der Pfad zu einer Datei beinhaltet die Laufwerkangabe sowie die Verzeichnisse und Unterverzeichnisse, die zum Auffinden der Datei durchlaufen werden müssen.  Ein Pfad kann relativ oder absolut sein.  
   

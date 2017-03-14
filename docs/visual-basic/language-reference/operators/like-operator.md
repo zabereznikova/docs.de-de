@@ -36,7 +36,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Like Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Vergleicht eine Zeichenfolge mit einem Muster.  
   

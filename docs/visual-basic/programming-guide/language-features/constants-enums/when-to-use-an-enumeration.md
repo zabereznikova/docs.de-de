@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # When to Use an Enumeration (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enumerationen vereinfachen die Arbeit mit einem Satz verwandter Konstanten.  Eine Enumeration \(`Enum`\) ist ein symbolischer Name für eine Gruppe von Werten.  Enumerationen werden als Datentypen behandelt. Mit ihrer Hilfe können Sie Konstanten erstellen, die für Variablen und Eigenschaften verwendet werden.  
   
@@ -37,12 +37,12 @@ Enumerationen vereinfachen die Arbeit mit einem Satz verwandter Konstanten.  Ein
 -   Sicherstellung der Vorwärtskompatibilität.  Mit Enumerationen wird das Auftreten von Fehlern im Code verringert, wenn die Werte, die den Membernamen entsprechen, nachträglich geändert werden.  
   
 ## Benennen von Enumerationen  
- Verwenden Sie eine Namenskonvention für Enumerationsmember.  Wenn [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Enumerationsmembernamen erkennt, wird u. U. eine Ausnahme ausgelöst, falls andere Typbibliotheken, auf die verwiesen wird, denselben Namen enthalten.  Verwenden Sie ein eindeutiges Präfix zur Kennzeichnung der Werte Ihrer Anwendung oder Komponente.  
+ Verwenden Sie eine Namenskonvention für Enumerationsmember.  Wenn [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Enumerationsmembernamen erkennt, wird u. U. eine Ausnahme ausgelöst, falls andere Typbibliotheken, auf die verwiesen wird, denselben Namen enthalten.  Verwenden Sie ein eindeutiges Präfix zur Kennzeichnung der Werte Ihrer Anwendung oder Komponente.  
   
  Wenn Sie auf einen Member einer Enumeration verweisen, müssen Sie den Membernamen mit dem Enumerationsnamen qualifizieren oder die `Imports`\-Anweisung verwenden.  Weitere Informationen hierzu finden Sie unter [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
 ## Vordefinierte Enumerationen  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Enumerationen bereit, z. B. `FirstDayOfWeek` und `MsgBoxResul`t, die die Erstellung von Code erleichtern.  Eine Liste dieser Enumerationen finden Sie unter [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Enumerationen bereit, z. B. `FirstDayOfWeek` und `MsgBoxResul`t, die die Erstellung von Code erleichtern.  Eine Liste dieser Enumerationen finden Sie unter [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## Siehe auch  
  [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Range variable name can be inferred only from a simple or qualified name with no arguments
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In einer LINQ\-Abfrage ist ein Programmierelement enthalten, das ein oder mehrere Argumente verwendet.  Der Compiler kann von diesem Programmierelement keine Bereichsvariable ableiten.  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Arrays declared as structure members cannot be declared with an initial size
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Array in einer Struktur wird mit einer vorgegebenen Größe deklariert.  Sie können nicht jedes beliebige Strukturelement initialisieren, die Deklaration einer Arraygröße ist jedoch eine Form von Initialisierung.  
   

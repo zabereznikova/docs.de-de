@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Unicode (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass Visual Basic unabhängig vom Namen der externen Prozedur, die deklariert wird, alle Zeichenfolgen in Unicode\-Werte marshallen soll.  
   

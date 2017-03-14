@@ -16,11 +16,11 @@ ms.author: "wiwagn"
 caps.handback.revision: 8
 ---
 # Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme
-Einige .NET\-Sprachen, einschließlich C\+\+\/CLI, ermöglichen es Objekten, Ausnahmen auszulösen, die sich nicht von <xref:System.Exception> ableiten.  Diese Ausnahmen werden als *Nicht\-CLS\-Ausnahmen* oder *Nicht\-Ausnahmen* bezeichnet.  In [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] können Sie keine Nicht\-CLS\-Ausnahmen auslösen, sie aber auf zwei Weisen abfangen:  
+Einige .NET\-Sprachen, einschließlich C\+\+\/CLI, ermöglichen es Objekten, Ausnahmen auszulösen, die sich nicht von <xref:System.Exception> ableiten.  Diese Ausnahmen werden als *Nicht\-CLS\-Ausnahmen* oder *Nicht\-Ausnahmen* bezeichnet.  In [!INCLUDE[csprcs](~/includes/csprcs-md.md)] können Sie keine Nicht\-CLS\-Ausnahmen auslösen, sie aber auf zwei Weisen abfangen:  
   
 -   Innerhalb eines `catch (Exception e)`\-Blocks als <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
   
-     Standardmäßig fängt eine [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]\-Assembly Nicht\-CLS\-Ausnahmen als umschlossene Ausnahmen ab.  Verwenden Sie diese Methode, wenn Sie auf die ursprüngliche Ausnahme zugreifen müssen, die über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft verfügbar ist.  Im Verfahren weiter unten in diesem Thema wird das Abfangen von Ausnahmen auf diese Weise beschrieben.  
+     Standardmäßig fängt eine [!INCLUDE[csprcs](~/includes/csprcs-md.md)]\-Assembly Nicht\-CLS\-Ausnahmen als umschlossene Ausnahmen ab.  Verwenden Sie diese Methode, wenn Sie auf die ursprüngliche Ausnahme zugreifen müssen, die über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft verfügbar ist.  Im Verfahren weiter unten in diesem Thema wird das Abfangen von Ausnahmen auf diese Weise beschrieben.  
   
 -   Innerhalb eines allgemeinen catch\-Blocks \(eines catch\-Blocks, für den kein Ausnahmetyp angegeben wurde\), der nach einem `catch (Exception)`\-Block oder `catch (Exception e)`\-Block platziert wird.  
   
@@ -33,7 +33,7 @@ Einige .NET\-Sprachen, einschließlich C\+\+\/CLI, ermöglichen es Objekten, Aus
 2.  Greifen Sie auf die ursprüngliche Ausnahme über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft zu.  
   
 ## Beispiel  
- Das folgende Beispiel zeigt, wie Sie eine Nicht\-CLS\-Ausnahme abfangen, die von einer in C\+\+\/CLR geschriebenen Klassenbibliothek ausgelöst wurde.  Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]\-Clientcode den Ausnahmetyp im Voraus als <xref:System.String?displayProperty=fullName> identifiziert.  Sie können die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft wieder in ihren ursprünglichen Typ umwandeln, sofern auf diesen Typ über den Code zugegriffen werden kann.  
+ Das folgende Beispiel zeigt, wie Sie eine Nicht\-CLS\-Ausnahme abfangen, die von einer in C\+\+\/CLR geschriebenen Klassenbibliothek ausgelöst wurde.  Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]\-Clientcode den Ausnahmetyp im Voraus als <xref:System.String?displayProperty=fullName> identifiziert.  Sie können die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft wieder in ihren ursprünglichen Typ umwandeln, sofern auf diesen Typ über den Code zugegriffen werden kann.  
   
 ```  
 // Class library written in C++/CLR.  

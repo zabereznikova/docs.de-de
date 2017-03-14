@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Refer to the Current Instance of an Object (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die *aktuelle Instanz* eines Objekts ist die Instanz, in der der Code gegenwärtig ausgeführt wird.  
   

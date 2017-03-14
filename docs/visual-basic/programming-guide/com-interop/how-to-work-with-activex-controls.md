@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # How to: Work with ActiveX Controls (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-ActiveX\-Steuerelemente sind COM\-Komponenten oder \-Objekte, die Sie in eine Webseite oder eine andere Anwendung einfügen können, um von anderen Entwicklern programmierte Funktionspakete wiederverwenden zu können.  Mit den ActiveX\-Steuerelementen, die für Visual Basic 6.0 und ältere Versionen entwickelt wurden, können Sie der **Toolbox** von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] Funktionen hinzufügen.  
+ActiveX\-Steuerelemente sind COM\-Komponenten oder \-Objekte, die Sie in eine Webseite oder eine andere Anwendung einfügen können, um von anderen Entwicklern programmierte Funktionspakete wiederverwenden zu können.  Mit den ActiveX\-Steuerelementen, die für Visual Basic 6.0 und ältere Versionen entwickelt wurden, können Sie der **Toolbox** von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Funktionen hinzufügen.  
   
 ### So fügen Sie ActiveX\-Steuerelemente der Toolbox hinzu  
   

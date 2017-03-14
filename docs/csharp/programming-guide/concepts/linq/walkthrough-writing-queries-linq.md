@@ -22,7 +22,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 30
 ---
 # Walkthrough: Writing Queries in C# (LINQ)
-Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücken verwendet werden.  Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter fortfahren, an dem Sie interessiert sind, beispielsweise [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] für DataSets oder [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  
+Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücken verwendet werden.  Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbieter fortfahren, an dem Sie interessiert sind, beispielsweise [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] für DataSets oder [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## Vorbereitungsmaßnahmen  
  Diese exemplarische Vorgehensweise erfordert Funktionen, die in Visual Studio 2008.  
@@ -181,7 +181,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, di
      [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## Nächste Schritte  
- Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C\# vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
+ Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C\# vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
   
  [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)  
   

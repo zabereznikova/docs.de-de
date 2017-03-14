@@ -32,7 +32,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 37
 ---
 # Basic LINQ Query Operations (C#)
-Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücke und einige der typischen Vorgänge in einer Abfrage.  Detaillierte Informationen finden Sie in folgenden Themen:  
+Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücke und einige der typischen Vorgänge in einer Abfrage.  Detaillierte Informationen finden Sie in folgenden Themen:  
   
  [LINQ\-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
   
@@ -41,10 +41,10 @@ Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinq](../../../..
  [Walkthrough: Writing Queries in C\#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  Wenn Sie bereits mit einer Abfragesprache wie SQL oder XQuery vertraut sind, können Sie den größten Teil dieses Themas überspringen.  Lesen Sie die Informationen zur "`from`\-Klausel" im nächsten Abschnitt, um mehr über die Reihenfolge von Klauseln in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücken zu erfahren.  
+>  Wenn Sie bereits mit einer Abfragesprache wie SQL oder XQuery vertraut sind, können Sie den größten Teil dieses Themas überspringen.  Lesen Sie die Informationen zur "`from`\-Klausel" im nächsten Abschnitt, um mehr über die Reihenfolge von Klauseln in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücken zu erfahren.  
   
 ## Erhalten einer Datenquelle  
- In einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage besteht der erste Schritt im Angeben der Datenquelle.  In C\#, wie in den meisten Programmiersprachen, muss eine Variable vor der Verwendung deklariert werden.  In einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage steht die `from`\-Klausel zuerst, um die Datenquelle \(`customers`\) und die *Bereichsvariable* \(`cust`\) einzuführen.  
+ In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage besteht der erste Schritt im Angeben der Datenquelle.  In C\#, wie in den meisten Programmiersprachen, muss eine Variable vor der Verwendung deklariert werden.  In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage steht die `from`\-Klausel zuerst, um die Datenquelle \(`customers`\) und die *Bereichsvariable* \(`cust`\) einzuführen.  
   
  [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
   
@@ -91,11 +91,11 @@ Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinq](../../../..
  Weitere Informationen finden Sie unter [group\-Klausel](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## Verknüpfen  
- Joinoperationen erstellen Zuordnungen zwischen Sequenzen, die nicht explizit in den Datenquellen modelliert werden.  Beispielsweise können Sie einen Join ausführen, um alle Kunden und Verteiler zu suchen, die über denselben Speicherort verfügen.  In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] wird die `join`\-Klausel immer für Objektauflistungen anstatt für Datenbanktabellen ausgeführt.  
+ Joinoperationen erstellen Zuordnungen zwischen Sequenzen, die nicht explizit in den Datenquellen modelliert werden.  Beispielsweise können Sie einen Join ausführen, um alle Kunden und Verteiler zu suchen, die über denselben Speicherort verfügen.  In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wird die `join`\-Klausel immer für Objektauflistungen anstatt für Datenbanktabellen ausgeführt.  
   
  [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
   
- In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] müssen Sie `join` nicht so häufig verwenden wie in SQL, da die Fremdschlüssel in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] im Objektmodell als Eigenschaften dargestellt werden, die eine Elementauflistung enthalten.  Zum Beispiel enthält ein `Customer`\-Objekt eine Auflistung von `Order`\-Objekten.  Statt einen Join auszuführen, greifen Sie auf die Reihenfolgen mit der Punktnotation zu:  
+ In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] müssen Sie `join` nicht so häufig verwenden wie in SQL, da die Fremdschlüssel in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] im Objektmodell als Eigenschaften dargestellt werden, die eine Elementauflistung enthalten.  Zum Beispiel enthält ein `Customer`\-Objekt eine Auflistung von `Order`\-Objekten.  Statt einen Join auszuführen, greifen Sie auf die Reihenfolgen mit der Punktnotation zu:  
   
 ```  
 from order in Customer.Orders...  
@@ -104,7 +104,7 @@ from order in Customer.Orders...
  Weitere Informationen finden Sie unter [join\-Klausel](../../../../csharp/language-reference/keywords/join-clause.md).  
   
 ## Auswählen \(Projektionen\)  
- Die `select`\-Klausel erzeugt die Ergebnisse der Abfrage und gibt die "Form" oder den Typ jedes zurückgegebenen Elements an.  Sie können beispielsweise angeben, ob Ihre Ergebnisse aus vollständigen `Customer`\-Objekten, nur einem Member, einer Teilmenge von Membern oder einem ganz anderen Ergebnistyp, der auf einer Berechnung oder einer neuen Objekterstellung basiert, bestehen soll.  Wenn die `select`\-Klausel ein anderes Ergebnis als eine Kopie des Quellelements zurückgibt, wird der Vorgang als *Projektion* bezeichnet.  Die Verwendung von Projektionen für die Datentransformation ist ein leistungsstarkes Merkmal von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücken.  Weitere Informationen finden Sie unter [Datentransformationen mit LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) und unter [select\-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Die `select`\-Klausel erzeugt die Ergebnisse der Abfrage und gibt die "Form" oder den Typ jedes zurückgegebenen Elements an.  Sie können beispielsweise angeben, ob Ihre Ergebnisse aus vollständigen `Customer`\-Objekten, nur einem Member, einer Teilmenge von Membern oder einem ganz anderen Ergebnistyp, der auf einer Berechnung oder einer neuen Objekterstellung basiert, bestehen soll.  Wenn die `select`\-Klausel ein anderes Ergebnis als eine Kopie des Quellelements zurückgibt, wird der Vorgang als *Projektion* bezeichnet.  Die Verwendung von Projektionen für die Datentransformation ist ein leistungsstarkes Merkmal von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücken.  Weitere Informationen finden Sie unter [Datentransformationen mit LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) und unter [select\-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
   
 ## Siehe auch  
  [Getting Started with LINQ in C\#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   

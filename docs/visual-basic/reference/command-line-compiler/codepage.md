@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # /codepage (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die für alle Quellcodedateien in der Kompilierung zu verwendende Codepage an.  
   
@@ -40,10 +40,10 @@ Gibt die für alle Quellcodedateien in der Kompilierung zu verwendende Codepage 
 ## Hinweise  
  Um Quellcode zu kompilieren, der mit einer bestimmten Codierung gespeichert wurde, können Sie mit `/codepage` die zu verwendende Codepage angeben.  Die `/codepage`\-Option wird auf alle bei der Kompilierung verwendeten Quellcodedateien angewendet.  Weitere Informationen finden Sie unter [Zeichencodierung in .NET Framework](../Topic/Character%20Encoding%20in%20the%20.NET%20Framework.md).  
   
- Die `/codepage`\-Option wird nicht benötigt, wenn die Quellcodedateien mit der aktuellen ANSI\-Codepage, mit Unicode oder mit UTF\-8 und einer Signatur gespeichert wurden.  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] speichert alle Quellcodedateien standardmäßig mit der aktuellen ANSI\-Codepage, außer wenn der Benutzer eine andere Codierung im Dialogfeld **Codierung** angibt.  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] verwendet das Dialogfeld **Codierung**, um mit einer anderen Codepage gespeicherte Quellcodedateien zu öffnen.  
+ Die `/codepage`\-Option wird nicht benötigt, wenn die Quellcodedateien mit der aktuellen ANSI\-Codepage, mit Unicode oder mit UTF\-8 und einer Signatur gespeichert wurden.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] speichert alle Quellcodedateien standardmäßig mit der aktuellen ANSI\-Codepage, außer wenn der Benutzer eine andere Codierung im Dialogfeld **Codierung** angibt.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet das Dialogfeld **Codierung**, um mit einer anderen Codepage gespeicherte Quellcodedateien zu öffnen.  
   
 > [!NOTE]
->  Die `/codepage`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
+>  Die `/codepage`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
   
 ## Siehe auch  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)

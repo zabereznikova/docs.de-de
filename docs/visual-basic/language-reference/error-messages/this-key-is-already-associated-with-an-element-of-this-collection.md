@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # This key is already associated with an element of this collection
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der angegebene Schlüssel für einen Auflistungsmember wird bereits zur Identifizierung eines anderen Members der Auflistung benutzt.  Ein Schlüssel ist eine Zeichenfolge, die in der `Add`\-Methode angegeben wird und einen bestimmten Member einer Auflistung eindeutig identifiziert.  
   

@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # My.Computer.Mouse Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften zum Abrufen von Informationen über das Format und die Konfiguration der auf dem lokalen Computer installierten Maus bereit.  
   

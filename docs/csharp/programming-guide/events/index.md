@@ -20,7 +20,7 @@ caps.handback.revision: 43
 # Ereignisse (C#-Programmierhandbuch)
 Ereignisse aktivieren eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet \(oder *auslöst*\), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen \(oder *behandeln*\), werden als *Abonnenten* bezeichnet.  
   
- In einer typischen C\#\-Windows Forms oder Web\-Anwendung abonnieren Sie Ereignisse, die von Steuerelementen wie Schaltflächen und Listenfelder ausgelöst werden. Sie können die [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]\-integrierte Entwicklungsumgebung \(IDE\) zum Durchsuchen der Ereignisse verwenden, die ein Steuerelement auslöst, und diejenigen wählen, die Sie behandeln möchten. Die IDE fügt automatisch eine leere Ereignishandlermethode und den Code zum Abonnieren des Ereignisses hinzu. Weitere Informationen finden Sie unter [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ In einer typischen C\#\-Windows Forms oder Web\-Anwendung abonnieren Sie Ereignisse, die von Steuerelementen wie Schaltflächen und Listenfelder ausgelöst werden. Sie können die [!INCLUDE[csprcs](~/includes/csprcs-md.md)]\-integrierte Entwicklungsumgebung \(IDE\) zum Durchsuchen der Ereignisse verwenden, die ein Steuerelement auslöst, und diejenigen wählen, die Sie behandeln möchten. Die IDE fügt automatisch eine leere Ereignishandlermethode und den Code zum Abonnieren des Ereignisses hinzu. Weitere Informationen finden Sie unter [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
 ## Übersicht über Ereignisse  
  Ereignisse verfügen über folgende Eigenschaften:  
@@ -35,7 +35,7 @@ Ereignisse aktivieren eine [Klasse](../../../csharp/language-reference/keywords/
   
 -   Wenn ein Ereignis mehrere Abonnenten hat, werden die Ereignishandler synchron aufgerufen, wenn ein Ereignis ausgelöst wird. Informationen zum asynchronen Aufrufen von Ereignissen finden Sie unter [Calling Synchronous Methods Asynchronously](../Topic/Calling%20Synchronous%20Methods%20Asynchronously.md).  
   
--   In der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek basieren Ereignisse auf dem <xref:System.EventHandler>\-Delegaten und der <xref:System.EventArgs>\-Basisklasse.  
+-   In der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek basieren Ereignisse auf dem <xref:System.EventHandler>\-Delegaten und der <xref:System.EventArgs>\-Basisklasse.  
   
 ## Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
@@ -55,7 +55,7 @@ Ereignisse aktivieren eine [Klasse](../../../csharp/language-reference/keywords/
 -   [Gewusst wie: Implementieren benutzerdefinierter Ereignisaccessoren](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Enthaltene Buchkapitel  
  [Delegaten, Ereignisse und Lambda\-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=195395) im [C\# 3.0 Cookbook, Third Edition: More than 250 solutions for C\# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Error Messages (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie einer Visual Basic\-Anwendung schreiben, kompilieren oder ausführen, können die folgenden Arten von Fehlern auftreten:  
   
@@ -34,7 +34,7 @@ Wenn Sie einer Visual Basic\-Anwendung schreiben, kompilieren oder ausführen, k
  Informationen dazu, wie Sie einen bestimmten Fehler, finden Sie unter [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md) enthalten.  
   
 ## Laufzeitfehler  
- Wenn eine Visual Basic\-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausgeführt werden kann, tritt ein Laufzeitfehler und [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] löst ein `Exception`\-Objekt auf.  Mithilfe der `Throw`\-Anweisung können benutzerdefinierte Fehler jeden Datentyps von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] generiert werden, darunter auch `Exception`\-Objekte.  Eine Anwendung kann den Fehler identifizieren, indem sie die Fehlernummer und \- meldung einer abgefangenen Ausnahme anzeigt.  Wenn ein Fehler nicht abgefangen wird, beendet die Anwendung.  
+ Wenn eine Visual Basic\-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausgeführt werden kann, tritt ein Laufzeitfehler und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst ein `Exception`\-Objekt auf.  Mithilfe der `Throw`\-Anweisung können benutzerdefinierte Fehler jeden Datentyps von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] generiert werden, darunter auch `Exception`\-Objekte.  Eine Anwendung kann den Fehler identifizieren, indem sie die Fehlernummer und \- meldung einer abgefangenen Ausnahme anzeigt.  Wenn ein Fehler nicht abgefangen wird, beendet die Anwendung.  
   
  Der Code kann Laufzeitfehler erfasst und überprüfen.  Wenn Sie den Code hinzufügen, der den Fehler in einem `Try`\-Block erzeugt, können Sie jeden ausgelösten Fehler mit einem entsprechenden `Catch`\-Block abfangen.  Informationen darüber, wie Fehler zur Laufzeit Felder und auf sie im Code, finden Sie unter [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) reagiert.  
   

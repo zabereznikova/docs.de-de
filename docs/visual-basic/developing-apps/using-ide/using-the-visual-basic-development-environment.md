@@ -15,7 +15,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Using the Visual Basic Development Environment
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zusätzlich zu den Hauptfunktionen der Visual Studio\-Benutzeroberfläche werden von der integrierten Entwicklungsumgebung \(IDE\) von Visual Basic weitere Funktionen bereitgestellt, die eine Steigerung der Produktivität und eine noch größere Benutzerfreundlichkeit ermöglichen.  
   

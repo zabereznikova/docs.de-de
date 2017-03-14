@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Name &#39;&lt;name&gt;&#39; is not declared
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Anweisung verweist auf ein Programmierelement, der Compiler kann jedoch kein Element mit genau diesem Namen finden.  
   
@@ -29,7 +29,7 @@ Eine Anweisung verweist auf ein Programmierelement, der Compiler kann jedoch kei
   
 ### So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die Schreibweise des Namens in der verweisenden Anweisung.  In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird nicht nach Groß\- und Kleinschreibung unterschieden, andere Abweichungen der Schreibweise gelten jedoch als völlig anderer Name.  Der Unterstrich \(`_`\) ist Teil des Namens und daher bei der Schreibweise zu berücksichtigen.  
+1.  Überprüfen Sie die Schreibweise des Namens in der verweisenden Anweisung.  In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird nicht nach Groß\- und Kleinschreibung unterschieden, andere Abweichungen der Schreibweise gelten jedoch als völlig anderer Name.  Der Unterstrich \(`_`\) ist Teil des Namens und daher bei der Schreibweise zu berücksichtigen.  
   
 2.  Prüfen Sie, ob Sie den Memberzugriffsoperator \(`.`\) zwischen einem Objekt und seinem Member eingefügt haben.  Wenn Sie z. B. auf die <xref:System.Windows.Forms.TextBoxBase.Text%2A>\-Eigenschaft eines <xref:System.Windows.Forms.TextBox>\-Steuerelements mit dem Namen `TextBox1` zugreifen möchten, müssen Sie `TextBox1.Text` eingeben.  Wenn Sie stattdessen `TextBox1Text` eingeben, haben Sie einen anderen Namen erstellt.  
   

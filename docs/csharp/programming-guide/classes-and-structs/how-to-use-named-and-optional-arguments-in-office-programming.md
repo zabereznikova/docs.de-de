@@ -18,13 +18,13 @@ ms.author: "wiwagn"
 caps.handback.revision: 34
 ---
 # Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
-Benannte Argumente und optionale Argumente, die mit [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] eingeführt wurden, erhöhen Benutzerfreundlichkeit, Flexibilität und Lesbarkeit bei der C\#\-Programmierung. Darüber hinaus wird durch diese Funktionen der Zugriff auf COM\-Schnittstellen, z. B. die Microsoft Office\-Automatisierungs\-APIs, erheblich erleichtert.  
+Benannte Argumente und optionale Argumente, die mit [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] eingeführt wurden, erhöhen Benutzerfreundlichkeit, Flexibilität und Lesbarkeit bei der C\#\-Programmierung. Darüber hinaus wird durch diese Funktionen der Zugriff auf COM\-Schnittstellen, z. B. die Microsoft Office\-Automatisierungs\-APIs, erheblich erleichtert.  
   
  Die [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378)\-Methode im folgenden Beispiel verfügt über 16 Parameter, die Eigenschaften einer Tabelle darstellen, wie z. B. Spalten\- und Zeilenanzahl, Formatierung, Rahmen, Schriftarten und Farben.  Alle 16 Parameter sind optional, da Sie in der Regel keine bestimmten Werte für diese Parameter angeben möchten, die von den Standardwerten abweichen.  Ohne benannte und optionale Argumente müssen Sie jedoch für jeden dieser Parameter einen Wert bzw. einen Platzhalterwert bereitstellen.  Mit benannten und optionalen Argumenten müssen Sie nur für die Parameter Werte angeben, die für Ihr Projekt erforderlich sind.  
   
  Zur Durchführung dieser Prozeduren muss Microsoft Office Word auf Ihrem Computer installiert sein.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie eine neue Konsolenanwendung  
   

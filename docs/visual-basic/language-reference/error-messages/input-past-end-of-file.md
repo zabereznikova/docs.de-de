@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Input past end of file
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Entweder wird mit einer `Input`\-Anweisung aus einer Datei gelesen, die leer ist oder in der alle Daten verwendet werden, oder Sie haben die `EOF`\-Funktion mit einer Datei verwendet, die im binären Zugriffsmodus geöffnet ist.  
   

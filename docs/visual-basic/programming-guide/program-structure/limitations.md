@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Visual Basic Limitations
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In früheren Versionen von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] galten bestimmte Codebeschränkungen, z. B. im Hinblick auf die Länge von Variablennamen, die zulässige Anzahl der Variablen in Modulen und die Modulgröße.  In [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] wurden diese Beschränkungen gelockert, sodass Code flexibler geschrieben und angeordnet werden kann.  
+In früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] galten bestimmte Codebeschränkungen, z. B. im Hinblick auf die Länge von Variablennamen, die zulässige Anzahl der Variablen in Modulen und die Modulgröße.  In [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] wurden diese Beschränkungen gelockert, sodass Code flexibler geschrieben und angeordnet werden kann.  
   
- Physikalische Grenzen hängen eher vom Speicher zur Laufzeit als von Aspekten der Kompilierzeit ab.  Mit kluger Programmiertechnik und der Unterteilung großer Anwendungen in mehrere Klassen und Module ist die Wahrscheinlichkeit gering, dass eine interne [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Begrenzung überschritten wird.  
+ Physikalische Grenzen hängen eher vom Speicher zur Laufzeit als von Aspekten der Kompilierzeit ab.  Mit kluger Programmiertechnik und der Unterteilung großer Anwendungen in mehrere Klassen und Module ist die Wahrscheinlichkeit gering, dass eine interne [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Begrenzung überschritten wird.  
   
  Im Folgenden werden einige Begrenzungen beschrieben, die in extremen Fällen möglicherweise überschritten werden:  
   

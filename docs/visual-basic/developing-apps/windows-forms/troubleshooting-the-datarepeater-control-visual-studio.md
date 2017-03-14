@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Troubleshooting the DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema sind allgemeine Probleme aufgelistet, die bei der Arbeit mit dem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement auftreten können.  
   

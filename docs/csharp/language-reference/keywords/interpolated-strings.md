@@ -65,7 +65,7 @@ expression: interpolated-string-expression interpolated-string-expression: inter
 ```  
   
 ## Sprachspezifikationen  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
  Weitere Informationen finden Sie unter [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).  
   

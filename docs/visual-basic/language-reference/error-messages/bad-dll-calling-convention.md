@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Bad DLL calling convention
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Argumente, die an eine Dynamic Link Library \(DLL\) übergeben werden, müssen mit den Argumenten genau übereinstimmen, die von der Routine erwartet werden.  Aufrufkonventionen enthalten die Nummer, den Typ und die Reihenfolge der Argumente.  Möglicherweise ruft das Programm eine Routine in einer DLL auf, der der falsche Typ oder die falsche Anzahl von Argumenten übergeben wird.  
   

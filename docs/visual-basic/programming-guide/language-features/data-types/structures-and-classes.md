@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Structures and Classes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird die Syntax für Strukturen und Klassen vereinheitlicht, mit dem Ergebnis, dass Strukturen und Klassen größtenteils die gleichen Funktionen unterstützen.  Zwischen Klassen und Strukturen bestehen jedoch auch wichtige Unterschiede.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird die Syntax für Strukturen und Klassen vereinheitlicht, mit dem Ergebnis, dass Strukturen und Klassen größtenteils die gleichen Funktionen unterstützen.  Zwischen Klassen und Strukturen bestehen jedoch auch wichtige Unterschiede.  
   
  Klassen haben den Vorteil, Verweistypen zu sein — die Übergabe eines Verweises ist effizienter als die Übergabe einer Strukturvariablen mit allen zugehörigen Daten.  Dagegen muss für Strukturen kein Speicher des globalen Heaps belegt werden.  
   

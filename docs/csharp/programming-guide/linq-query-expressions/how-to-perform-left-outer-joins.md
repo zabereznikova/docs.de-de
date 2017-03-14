@@ -3,7 +3,7 @@ redirect_url: /dotnet/articles/csharp/linq/perform-left-outer-joins
 caps.handback.revision: 23
 ---
 # Gewusst wie: Ausf&#252;hren linker &#228;u&#223;erer Verkn&#252;pfungen (C#-Programmierhandbuch)
-Ein linker äußerer Join ist ein Join, in dem jedes Element aus der ersten Auflistung zurückgegeben wird, unabhängig davon, ob korrelierte Elemente in der zweiten Auflistung dafür zur Verfügung stehen.  Sie können [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] verwenden, um einen linken äußeren Join ausführen, indem Sie die <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>\-Methode für die Ergebnisse eines Group Joins aufrufen.  
+Ein linker äußerer Join ist ein Join, in dem jedes Element aus der ersten Auflistung zurückgegeben wird, unabhängig davon, ob korrelierte Elemente in der zweiten Auflistung dafür zur Verfügung stehen.  Sie können [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] verwenden, um einen linken äußeren Join ausführen, indem Sie die <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>\-Methode für die Ergebnisse eines Group Joins aufrufen.  
   
 ## Beispiel  
  Das folgende Beispiel veranschaulicht, wie die <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>\-Methode auf die Ergebnisse des Group Joins angewendet wird, um einen linken äußeren Join auszuführen.  
@@ -19,7 +19,7 @@ Ein linker äußerer Join ist ein Join, in dem jedes Element aus der ersten Aufl
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein neues Konsolenanwendungsprojekt in [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)].  
+-   Erstellen Sie ein neues Konsolenanwendungsprojekt in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)].  
   
 -   Fügen Sie einen Verweis auf System.Core.dll hinzu, wenn er noch nicht vorhanden ist.  
   

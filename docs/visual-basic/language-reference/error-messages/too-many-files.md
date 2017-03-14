@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Too many files
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Entweder wurden mehr Dateien im Stammverzeichnis erstellt als im Betriebssystem zulässig sind, oder es wurden mehr Dateien geöffnet als in der Einstellung **files\=** in der CONFIG.SYS\-Datei angegeben.  
   

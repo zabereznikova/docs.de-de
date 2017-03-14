@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Enable Tabbing Between Shapes (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das Line\- und das Shape\-Steuerelement verfügen nicht über die Eigenschaften `TabStop` oder `TabIndex`. Sie können jedoch trotzdem das Wechseln zwischen Formen mit der Tabulatortaste aktivieren.  Wenn Sie in dem folgenden Beispiel gleichzeitig die STRG\-TASTE und die Tabulatortaste drücken, wechseln Sie zwischen Formen. Wenn Sie nur die Tabulatortaste drücken, wechseln Sie zwischen den Schaltflächen.  
   

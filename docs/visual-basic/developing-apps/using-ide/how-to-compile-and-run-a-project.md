@@ -19,33 +19,33 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # How to: Compile and Run a Project in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die integrierte Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] vereinfacht das Kompilieren eines Projekts und das anschließende Ausführen der Anwendung.  
+Die integrierte Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] vereinfacht das Kompilieren eines Projekts und das anschließende Ausführen der Anwendung.  
   
  Mithilfe des in die IDE integrierten Debuggers können Sie das Projekt während der Ausführung debuggen.  Weitere Informationen zum Debuggen finden Sie unter [Debugging Your Visual Basic Application](../../../visual-basic/developing-apps/debugging.md) und [Bearbeiten und Fortfahren \(Visual Basic\)](/visual-studio/debugger/edit-and-continue-visual-basic).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So kompilieren und führen Sie das aktuelle Projekt aus  
   
--   Drücken Sie F5, während Sie sich in der integrierten Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] befinden.  
+-   Drücken Sie F5, während Sie sich in der integrierten Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] befinden.  
   
-     Die IDE kompiliert das Projekt und führt die Anwendung innerhalb des [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Debuggers aus.  
+     Die IDE kompiliert das Projekt und führt die Anwendung innerhalb des [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Debuggers aus.  
   
 ### So kompilieren und führen Sie das aktuelle Projekt über das Menü aus  
   
--   Wählen Sie im Menü **Debuggen** der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-IDE die Option **Debugging starten** aus.  
+-   Wählen Sie im Menü **Debuggen** der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-IDE die Option **Debugging starten** aus.  
   
-     Die IDE kompiliert das Projekt und führt die Anwendung innerhalb des [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Debuggers aus.  
+     Die IDE kompiliert das Projekt und führt die Anwendung innerhalb des [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Debuggers aus.  
   
 ### So kompilieren und führen Sie das aktuelle Projekt ohne Debuggen aus  
   
--   Drücken Sie STRG\+F5, während Sie sich in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-IDE befinden.  
+-   Drücken Sie STRG\+F5, während Sie sich in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-IDE befinden.  
   
      Die IDE kompiliert das Projekt und führt die Anwendung aus.  
   
- Weitere Informationen zum Kompilieren und Ausführen von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code mit dem Befehlszeilencompiler finden Sie unter [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Weitere Informationen zum Kompilieren und Ausführen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code mit dem Befehlszeilencompiler finden Sie unter [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## Siehe auch  
  [Debugging Your Visual Basic Application](../../../visual-basic/developing-apps/debugging.md)   

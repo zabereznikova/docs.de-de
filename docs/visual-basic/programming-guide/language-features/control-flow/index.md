@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Control Flow in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ohne Steuerung durchläuft das Programm seine Anweisungen von Anfang bis Ende.  Es können nur einige sehr einfache Programme ohne eine Ablaufsteuerung geschrieben werden.  Ein Großteil der Leistung und Funktionalität einer Programmiersprache hängt von der Fähigkeit ab, die Reihenfolge der Ausführung durch Steuerungsanweisungen und Schleifen zu ändern.  
   
- Steuerungsstrukturen ermöglichen es Ihnen, den Ablauf der Programmausführung zu steuern.  Mithilfe von Steuerungsstrukturen können Sie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code schreiben, mit dem Entscheidungen getroffen und Aktionen wiederholt werden können.  Mit anderen Steuerungsstrukturen können Sie das Entfernen einer Ressource gewährleisten oder eine Reihe von Anweisungen für denselben Objektverweis ausführen.  
+ Steuerungsstrukturen ermöglichen es Ihnen, den Ablauf der Programmausführung zu steuern.  Mithilfe von Steuerungsstrukturen können Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code schreiben, mit dem Entscheidungen getroffen und Aktionen wiederholt werden können.  Mit anderen Steuerungsstrukturen können Sie das Entfernen einer Ressource gewährleisten oder eine Reihe von Anweisungen für denselben Objektverweis ausführen.  
   
 ## In diesem Abschnitt  
  [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

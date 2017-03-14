@@ -16,16 +16,16 @@ ms.author: "wiwagn"
 caps.handback.revision: 31
 ---
 # Gewusst wie: Ver&#246;ffentlichen von Ereignissen, die den .NET&#160;Framework-Richtlinien entsprechen (C#-Programmierhandbuch)
-Das folgende Verfahren veranschaulicht, wie Sie den Klassen und Strukturen Ereignisse hinzufügen, die dem Standardmuster von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] entsprechen.  Sämtliche Ereignisse in der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek basieren auf dem <xref:System.EventHandler>\-Delegat, der folgendermaßen definiert ist:  
+Das folgende Verfahren veranschaulicht, wie Sie den Klassen und Strukturen Ereignisse hinzufügen, die dem Standardmuster von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] entsprechen.  Sämtliche Ereignisse in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek basieren auf dem <xref:System.EventHandler>\-Delegat, der folgendermaßen definiert ist:  
   
 ```  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] führt eine generische Version dieses Delegaten ein, <xref:System.EventHandler%601>.  Die folgenden Beispiele zeigen die Verwendung beider Versionen.  
+>  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] führt eine generische Version dieses Delegaten ein, <xref:System.EventHandler%601>.  Die folgenden Beispiele zeigen die Verwendung beider Versionen.  
   
- Grundsätzlich können Ereignisse in benutzerdefinierten Klassen auf jedem gültigen Delegattyp basieren, einschließlich Delegaten, die einen Wert zurückgeben. Im Allgemeinen wird jedoch empfohlen, Ereignisse auf dem [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Muster zu basieren, indem Sie <xref:System.EventHandler> verwenden, wie im folgenden Beispiel gezeigt:  
+ Grundsätzlich können Ereignisse in benutzerdefinierten Klassen auf jedem gültigen Delegattyp basieren, einschließlich Delegaten, die einen Wert zurückgeben. Im Allgemeinen wird jedoch empfohlen, Ereignisse auf dem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Muster zu basieren, indem Sie <xref:System.EventHandler> verwenden, wie im folgenden Beispiel gezeigt:  
   
 ### So veröffentlichen Sie Ereignisse auf Basis des EventHandler\-Musters  
   

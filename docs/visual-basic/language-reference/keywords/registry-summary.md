@@ -17,9 +17,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Registry Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
+Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
   
  Die Verwendung der `My`\-Funktion ermöglicht bei Registrierungsoperationen mehr Produktivität und Leistung als diese Elemente.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   

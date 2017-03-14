@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Load XML from a File, String, or Stream (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) erstellen und sie mit dem Inhalt aus einer externen Quelle wie beispielsweise einer Datei, einer Zeichenfolge oder einem Stream unter Verwendung von unterschiedlichen Methoden auffüllen.  Diese Methoden sind in den folgenden Beispielen dargestellt.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So laden Sie XML aus einer Datei  
   

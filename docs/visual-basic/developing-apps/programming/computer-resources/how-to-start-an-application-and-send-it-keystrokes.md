@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Start an Application and Send it Keystrokes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird die `Shell`\-Funktion verwendet, um die Rechneranwendung zu starten. Anschließend werden zwei Zahlen multipliziert, indem Tastatureingaben mithilfe der `My.Computer.Keyboard.SendKeys`\-Methode gesendet werden.  
   

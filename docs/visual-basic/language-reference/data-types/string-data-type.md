@@ -31,7 +31,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # String Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert Sequenzen von 16\-Bit\-\(2\-Byte\)\-Codepunkten ohne Vorzeichen, deren Werte im Bereich von 0 bis 65535 liegen.  Jeder *Codepunkt* oder jedes Zeichencode, stellt ein einzelnes Unicode\-Zeichen dar.  Eine Zeichenfolge kann zwischen 0 und etwa zwei Milliarden \(2 ^ 31\) Unicode\-Zeichen enthalten.  
   

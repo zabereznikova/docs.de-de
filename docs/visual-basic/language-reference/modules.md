@@ -16,9 +16,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Modules (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet mehrere Module, mit denen Sie häufig ausgeführte Aufgaben im Code vereinfachen können, beispielsweise das Bearbeiten von Zeichenfolgen, das Ausführen mathematischer Berechnungen, das Abrufen von Systeminformationen, das Durchführen von Datei\- und Verzeichnisoperationen usw.  In der folgenden Tabelle sind die von [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellten Module aufgeführt.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bietet mehrere Module, mit denen Sie häufig ausgeführte Aufgaben im Code vereinfachen können, beispielsweise das Bearbeiten von Zeichenfolgen, das Ausführen mathematischer Berechnungen, das Abrufen von Systeminformationen, das Durchführen von Datei\- und Verzeichnisoperationen usw.  In der folgenden Tabelle sind die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellten Module aufgeführt.  
   
 |||  
 |-|-|  

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Label Statements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Anweisungsblöcke bestehen aus Codezeilen, in denen die Anweisungen durch Doppelpunkte voneinander getrennt sind.  Codezeilen, denen eine Zeichenfolge oder eine ganze Zahl als Kennzeichnung vorangestellt ist, sind *bezeichnet*.  Anweisungsbezeichnungen werden verwendet, um Codezeilen für die Verwendung mit Anweisungen wie `On Error Goto` zu kennzeichnen.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Declare and Use XML Namespace Prefixes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird gezeigt, wie das XML\-Namespacepräfix `ns` importiert wird und als XML\-Literal sowie als XML\-Achseneigenschaften verwendet wird.  
   

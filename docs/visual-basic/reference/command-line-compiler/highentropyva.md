@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # /highentropyva (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, ob eine 64\-Bit\-ausführbare Datei oder eine ausführbare Datei, die von der [\/platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)\-Compileroption markiert ist, Adressraum\-Layout\-Zufallszuteilung ASLR \(Entropie hoch\) unterstützt.  
   

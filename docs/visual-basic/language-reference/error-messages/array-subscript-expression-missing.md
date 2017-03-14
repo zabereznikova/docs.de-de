@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Array subscript expression missing
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In einer Arrayinitialisierung fehlen ein Subscript oder mehrere Subscripts zur Definition der Arraygrenzen.  Zum Beispiel könnte die Anweisung den Ausdruck `myArray (5,5,,10)` enthalten, in dem das dritte Subscript fehlt.  
   

@@ -39,7 +39,7 @@ Die `where`\-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welc
 ## Hinweise  
  Die `where`\-Klausel ist ein Filtermechanismus.  Sie kann fast überall in einem Abfrageausdruck platziert werden, darf aber nicht die erste oder letzte Klausel sein.  Eine `where`\-Klausel kann entweder vor oder nach einer [group](../../../csharp/language-reference/keywords/group-clause.md)\-Klausel erscheinen, je nach dem, ob Sie die Quellelemente vor oder nach dem Gruppieren filtern müssen.  
   
- Ist ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig, tritt ein Kompilierzeitfehler auf.  Dies ist ein Vorteil der starken Typüberprüfung, die von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] bereitgestellt wird.  
+ Ist ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig, tritt ein Kompilierzeitfehler auf.  Dies ist ein Vorteil der starken Typüberprüfung, die von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bereitgestellt wird.  
   
  Während der Kompilierung wird das `where`\-Schlüsselwort in einen Aufruf der <xref:System.Linq.Enumerable.Where%2A>\-Standardabfrageoperator\-Methode konvertiert.  
   

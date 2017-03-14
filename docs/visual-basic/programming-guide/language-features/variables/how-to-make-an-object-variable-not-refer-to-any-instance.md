@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können die Zuordnung einer Objektvariablen zu allen Objektinstanzen aufheben, indem Sie sie auf [Nothing](../../../../visual-basic/language-reference/nothing.md) festlegen.  
   

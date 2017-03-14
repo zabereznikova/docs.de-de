@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Reading from Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Abschnitt wird beschrieben, wie Aufgaben ausführt, die mit dem Lesen von Dateien zugeordnet sind.  
   
@@ -73,4 +73,4 @@ In diesem Abschnitt wird beschrieben, wie Aufgaben ausführt, die mit dem Lesen 
  Veranschaulicht die Verwendung des `My`\-Features mit Dateien und Verzeichnissen.  
   
  [Walkthrough: Manipulating Files by Using .NET Framework Methods](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Methoden mit Dateien und Verzeichnissen.
+ Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Methoden mit Dateien und Verzeichnissen.

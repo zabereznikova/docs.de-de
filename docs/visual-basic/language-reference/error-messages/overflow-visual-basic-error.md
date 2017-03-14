@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Overflow (Visual Basic Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal stellt einen Wert außerhalb der Grenzen des Datentyps dar, dem es zugewiesen wird.  
   

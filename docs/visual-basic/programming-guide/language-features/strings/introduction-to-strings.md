@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Introduction to Strings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschrieben.  
+In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben.  
   
 ## In diesem Abschnitt  
  [String Basics](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
@@ -31,7 +31,7 @@ In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Ze
  Stellt mehrere verschiedene Möglichkeiten vor, Zeichenfolgen zu analysieren und zu bearbeiten.  
   
  [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Erörtert, wie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Kulturinformationen verwendet, um Zeichenfolgenkonvertierungen und \-vergleiche auszuführen.  
+ Erörtert, wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kulturinformationen verwendet, um Zeichenfolgenkonvertierungen und \-vergleiche auszuführen.  
   
 ## Siehe auch  
  [Strings](../../../../visual-basic/programming-guide/language-features/strings/index.md)

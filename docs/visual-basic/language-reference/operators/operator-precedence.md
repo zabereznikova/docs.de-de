@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Operator Precedence in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Treten mehrere Operationen in einem Ausdruck auf, wird jedes Teil in einer vorbestimmten Reihenfolge ausgewertet und aufgelöst. Dies wird als *Operatorrangfolge* bezeichnet.  
   
@@ -96,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  Im ersten Ausdruck wird zuerst die Division 96 \/ 8 berechnet \(ergibt 12\) und anschließend 12 \/ 4 \(ergibt 3\).  Da der Compiler die Operationen für `n1` von links nach rechts auswertet, ist die Auswertung identisch, wenn diese Reihenfolge für `n2` explizit angegeben wird.  Sowohl `n1` als auch `n2` ergeben drei.  Im Gegensatz ergibt `n3` 48, da 8 \/ 4 aufgrund der Klammern zuerst vom Compiler ausgewertet wird.  
   
- Aufgrund dieses Verhaltens werden Operatoren in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als *linksassoziativ* bezeichnet.  
+ Aufgrund dieses Verhaltens werden Operatoren in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als *linksassoziativ* bezeichnet.  
   
 ## Überschreiben von Rangfolge und Assoziativität  
- Mithilfe von runden Klammern können Sie erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden.  Dadurch können sowohl die Rangfolge als auch die Linksassoziativität überschrieben werden.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird immer Vorgänge aus, die in Klammern vor die außerhalb enthalten sind. jedoch innerhalb der Klammern, wartet er normale Rangfolge und Assoziativität, es sei denn, Sie Klammern in Klammern verwenden.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Mithilfe von runden Klammern können Sie erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden.  Dadurch können sowohl die Rangfolge als auch die Linksassoziativität überschrieben werden.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird immer Vorgänge aus, die in Klammern vor die außerhalb enthalten sind. jedoch innerhalb der Klammern, wartet er normale Rangfolge und Assoziativität, es sei denn, Sie Klammern in Klammern verwenden.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

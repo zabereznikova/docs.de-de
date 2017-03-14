@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Let Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Berechnet einen Wert und weist ihn einer neuen Variable in der Abfrage zu.  
   

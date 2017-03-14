@@ -34,7 +34,7 @@ ms.author: "shoag"
 caps.handback.revision: 37
 ---
 # Do...Loop Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wiederholt einen Block mit Anweisungen, solange eine `Boolean`\-Bedingung `True` ist bzw. bis die Bedingung `True` wird.  
   

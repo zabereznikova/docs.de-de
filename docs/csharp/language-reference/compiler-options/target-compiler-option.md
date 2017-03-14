@@ -24,7 +24,7 @@ caps.handback.revision: 22
 Sie haben vier Möglichkeiten, die **\/target**\-Compileroption festzulegen:  
   
  [\/target: appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- So eine EXE\-Datei für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8-appname-long-md.md)]\-App erstellen.  
+ So eine EXE\-Datei für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]\-App erstellen.  
   
  [\/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
  Erstellt eine EXE\-Datei.  

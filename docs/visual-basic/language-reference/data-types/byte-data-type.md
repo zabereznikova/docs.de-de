@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Byte Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 8\-Bit\-\(1\-Byte\)\-Ganzzahlen ohne Vorzeichen, deren Werte im Bereich von 0 bis 255 liegen.  
   

@@ -23,7 +23,7 @@ Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren D
   
  Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie CSC.EXE aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie "vsvars32.bat" ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu VSVARS32, einschließlich Anweisungen zum Suchen und ausführen, finden Sie unter [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
- Wenn Sie auf einem Computer arbeiten, der nur die [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong-md.md)], können Sie den C#-Compiler von der **SDK Command Prompt**, das Sie öffnen die **Microsoft .NET Framework SDK** Menüoption.  
+ Wenn Sie auf einem Computer arbeiten, der nur die [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], können Sie den C#-Compiler von der **SDK Command Prompt**, das Sie öffnen die **Microsoft .NET Framework SDK** Menüoption.  
   
  Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visual-studio/msbuild/msbuild1).  
   

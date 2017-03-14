@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Eigenschaft in der `Set`\-Prozedur einer Eigenschaftendefinition speichert einen Wert im Namen der Eigenschaft.  
   

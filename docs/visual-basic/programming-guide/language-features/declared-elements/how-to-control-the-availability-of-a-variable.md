@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Control the Availability of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Verfügbarkeit einer Variablen, wird durch das Angeben ihrer *Zugriffsebene* gesteuert.  Die Zugriffsebene bestimmt, welcher Code berechtigt ist, die Variable zu lesen oder in die Variable zu schreiben.  
   

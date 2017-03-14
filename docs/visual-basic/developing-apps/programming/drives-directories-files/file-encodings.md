@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # File Encodings (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dateicodierungen, auch als Zeichencodierungen bezeichnet, geben an, wie Zeichen bei der Textverarbeitung dargestellt werden.  Codierungen können sich in Bezug auf die Unterstützung einzelner sprachspezifischer Zeichen unterscheiden. Im Allgemeinen empfiehlt sich jedoch die Verwendung von Unicode.  
   

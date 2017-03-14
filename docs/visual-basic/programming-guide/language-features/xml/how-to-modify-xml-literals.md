@@ -22,9 +22,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Modify XML Literals (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet bequeme Möglichkeiten zum Ändern von XML\-Literalen.  Sie können Elemente und Attribute hinzufügen oder entfernen und bestehende Elemente durch neue XML\-Elemente ersetzen.  Dieses Thema enthält mehrere Beispiele für das Ändern eines vorhandenen XML\-Literals.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bietet bequeme Möglichkeiten zum Ändern von XML\-Literalen.  Sie können Elemente und Attribute hinzufügen oder entfernen und bestehende Elemente durch neue XML\-Elemente ersetzen.  Dieses Thema enthält mehrere Beispiele für das Ändern eines vorhandenen XML\-Literals.  
   
 ### So ändern Sie den Wert eines XML\-Literals  
   

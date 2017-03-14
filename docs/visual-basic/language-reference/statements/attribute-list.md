@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Attribute List (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die Attribute an, die auf ein deklariertes Programmierelement angewendet werden sollen.  Mehrere Attribute werden durch Komma voneinander getrennt.  Die folgenden Informationen zeigen die Syntax für ein Attribut.  
   

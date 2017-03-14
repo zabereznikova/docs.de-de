@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Dial Modems Attached to Serial Ports in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit `My.Computer.Ports` einen Wählvorgang mit einem Modem ausführen können.  
+In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit `My.Computer.Ports` einen Wählvorgang mit einem Modem ausführen können.  
   
  In der Regel ist das Modem an einen der seriellen Anschlüsse am Computer angeschlossen.  Für die Kommunikation mit dem Modem muss die Anwendung Befehle an den entsprechenden seriellen Anschluss senden.  
   

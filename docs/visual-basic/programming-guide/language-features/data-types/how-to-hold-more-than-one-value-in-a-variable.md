@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Hold More Than One Value in a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Einer Variablen können mehrere Werte übergeben werden, wenn sie mit einem *zusammengesetzten Datentyp* deklariert wird.  
   

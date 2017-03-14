@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 31
 ---
 # Nothing (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt den Standardwert jedes beliebigen Datentyps dar.  Bei Verweistypen lautet der Standardwert der `null` Reference.  Für Werttypen Der Standardwert hängt davon ab, ob der Werttyp NULL\-Werte zulässig sind.  
   

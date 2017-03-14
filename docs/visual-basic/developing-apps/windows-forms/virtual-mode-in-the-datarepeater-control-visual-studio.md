@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Virtual Mode in the DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie sehr umfangreiche Tabellendaten in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement anzeigen möchten, können Sie die Leistung verbessern, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>\-Eigenschaft auf `True` festlegen und die Interaktion des Steuerelements mit der Datenquelle explizit verwalten.  Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement stellt mehrere Ereignisse bereit, die Sie für die Interaktion mit der Datenquelle und für die benötigte Datenanzeige zur Laufzeit verarbeiten können.  
   

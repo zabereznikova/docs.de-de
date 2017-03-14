@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # &#39;&lt;membername&gt;&#39; cannot expose type &#39;&lt;typename&gt;&#39; outside the project through &lt;containertype&gt; &#39;&lt;containertypename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Variable, ein Prozedurparameter oder eine Funktionsrückgabe wird außerhalb des zugehörigen Containers verfügbar gemacht, ist jedoch als Typ deklariert, der nicht außerhalb des Containers verfügbar gemacht werden darf.  
   

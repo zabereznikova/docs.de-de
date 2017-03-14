@@ -21,14 +21,14 @@ caps.handback.revision: 44
 # C# #
 C\# \(gesprochen: "si scharp"\) ist eine Programmiersprache, die zum Erstellen einer großen Bandbreite von Anwendungen, die auf .NET Framework aufsetzen, entwickelt wurde.  C\# ist einfach strukturiert, leistungsfähig, typsicher und objektorientiert.  Die zahlreichen Neuerungen in C\# ermöglichen eine schnelle Anwendungsentwicklung, bei der die Ausdruckskraft und Eleganz von Sprachen im C\-Format erhalten bleibt.  
   
- [!INCLUDE[csprcs](../csharp/includes/csprcs-md.md)] stellt eine Microsoft\-Implementierung der Programmiersprache C\# dar. In [!INCLUDE[vsprvs](../csharp/includes/vsprvs-md.md)] wird [!INCLUDE[csprcs](../csharp/includes/csprcs-md.md)] durch einen umfassenden Code\-Editor, einen Compiler, Projektvorlagen, Designer, Code\-Assistenten, einen leistungsfähigen und einfach zu bedienenden Debugger sowie weitere Tools unterstützt.  Die .NET Framework\-Klassenbibliothek ermöglicht den Zugriff auf viele Betriebssystemdienste und weitere nützliche, ausgereifte Klassen, mit denen der Entwicklungsprozess deutlich beschleunigt wird.  
+ [!INCLUDE[csprcs](~/includes/csprcs-md.md)] stellt eine Microsoft\-Implementierung der Programmiersprache C\# dar. In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] wird [!INCLUDE[csprcs](~/includes/csprcs-md.md)] durch einen umfassenden Code\-Editor, einen Compiler, Projektvorlagen, Designer, Code\-Assistenten, einen leistungsfähigen und einfach zu bedienenden Debugger sowie weitere Tools unterstützt.  Die .NET Framework\-Klassenbibliothek ermöglicht den Zugriff auf viele Betriebssystemdienste und weitere nützliche, ausgereifte Klassen, mit denen der Entwicklungsprozess deutlich beschleunigt wird.  
   
 ## In diesem Abschnitt  
  [Getting Started with Visual C\#](../csharp/getting-started/getting-started-with-csharp.md)  
- Bietet eine Einführung in die Funktionen von C\# für Programmierer, die mit der Sprache oder mit [!INCLUDE[vsprvs](../csharp/includes/vsprvs-md.md)] nicht vertraut sind, und stellt einen Wegweiser für die Suche nach Hilfe zu [!INCLUDE[vsprvs](../csharp/includes/vsprvs-md.md)] bereit.  
+ Bietet eine Einführung in die Funktionen von C\# für Programmierer, die mit der Sprache oder mit [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nicht vertraut sind, und stellt einen Wegweiser für die Suche nach Hilfe zu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bereit.  
   
  [Using the Visual C\# Development Environment](/visual-studio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Bietet eine Einführung in die [!INCLUDE[csprcs](../csharp/includes/csprcs-md.md)]\-Entwicklungsumgebung.  
+ Bietet eine Einführung in die [!INCLUDE[csprcs](~/includes/csprcs-md.md)]\-Entwicklungsumgebung.  
   
  [C\#\-Programmierhandbuch](../csharp/programming-guide/index.md)  
  Stellt Informationen und praktische Beispiele zum Verwenden von C\#\-Sprachkonstrukten bereit.  

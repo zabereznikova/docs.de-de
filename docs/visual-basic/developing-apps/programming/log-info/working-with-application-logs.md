@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Arbeiten mit Anwendungsprotokollen in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mithilfe der `My.Applicaton.Log`\- und `My.Log`\-Objekte ist es einfach, Protokollierungs\- und Ablaufverfolgungsinformationen in Protokolle zu schreiben.  
   
@@ -39,7 +39,7 @@ Mithilfe der `My.Applicaton.Log`\- und `My.Log`\-Objekte ist es einfach, Protoko
 ## Protokollspeicherorte von Meldungen  
  Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung \(mithilfe der <xref:System.Diagnostics.DefaultTraceListener>\-Klasse\). Darüber hinaus schreibt das `My.Application.Log`\-Objekt in die Protokolldatei der Assembly \(mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>\-Klasse\), während das `My.Log`\-Objekt in die Ausgabe der ASP.NET\-Webseite schreibt \(mithilfe der <xref:System.Web.WebPageTraceListener>\-Klasse\).  
   
- Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug**, zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe**  im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
+ Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug**, zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe**  im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
   
  Standardmäßig schreibt `My.Application.Log` die Protokolldatei in den Pfad für die Anwendungsdaten des Benutzers. Diesen Pfad können Sie aus der Eigenschaft <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> des <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A>\-Objekts abrufen. Das Format des Pfades ist wie folgt:  
   

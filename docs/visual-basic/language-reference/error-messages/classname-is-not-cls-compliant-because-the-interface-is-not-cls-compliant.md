@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # &#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Klasse oder Schnittstelle ist als `<CLSCompliant(True)>` markiert, doch sie ist von einem Typ abgeleitet oder implementiert einen Typ, der als `<CLSCompliant(False)>` markiert oder nicht markiert ist.  
   

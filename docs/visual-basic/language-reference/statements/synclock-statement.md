@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # SyncLock Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ruft vor dem Ausführen des Anweisungsblocks eine exklusive Sperre für den Block ab.  
   

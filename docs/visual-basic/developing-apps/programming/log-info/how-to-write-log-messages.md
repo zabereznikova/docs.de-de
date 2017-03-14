@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Gewusst wie: Schreiben von Protokollmeldungen (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können die Objekte `My.Application.Log`und `My.Log` verwenden, um Informationen über Ihre Anwendung zu protokollieren. Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry`\-Methode zum Protokollieren von Ablaufprotokollinformationen.  
   

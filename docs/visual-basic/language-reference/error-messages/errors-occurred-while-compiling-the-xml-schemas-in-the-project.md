@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Errors occurred while compiling the XML schemas in the project
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Fehler beim Kompilieren der XML\-Schemas im Projekt.Aus diesem Grund ist IntelliSense für XML nicht verfügbar.  
   

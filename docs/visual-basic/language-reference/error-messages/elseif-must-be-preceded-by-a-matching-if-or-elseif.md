@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;#ElseIf&#39; must be preceded by a matching &#39;#If&#39; or &#39;#ElseIf&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `#ElseIf` ist eine Direktive für die bedingte Kompilierung.  Einer `#ElseIf`\-Klausel muss eine entsprechende `#If`\-Klausel oder `#ElseIf`\-Klausel vorangehen.  
   

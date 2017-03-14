@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Iterate Through An Enumeration in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstanten zu arbeiten und Konstantenwerte mit Namen zu verknüpfen.  Um eine Enumeration zu durchlaufen, können Sie sie mit der <xref:System.Enum.GetValues%2A>\-Methode in ein Array verschieben.  Sie können dazu aber auch eine `For...Each`\-Anweisung verwenden. Extrahieren Sie dazu die Zeichenfolge oder den numerischen Wert mit der <xref:System.Enum.GetNames%2A>\-Methode bzw. der <xref:System.Enum.GetValues%2A>\-Methode.  
   

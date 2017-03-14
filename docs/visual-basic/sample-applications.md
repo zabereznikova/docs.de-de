@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 40
 ---
 # Visual Basic Sample Applications
-[!INCLUDE[vs2017banner](../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können Visual Studio verwenden, um Beispiele für vollständige, gepackte Visual Basic\-Anwendungen von der [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=254185) herunterzuladen und zu installieren.  
   

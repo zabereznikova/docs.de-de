@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # And Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine logische Konjunktion zweier `Boolean`\-Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke aus.  
   

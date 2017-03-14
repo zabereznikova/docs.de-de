@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Public (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass mindestens ein deklariertes Programmierelement über keine Zugriffsbeschränkungen verfügt.  
   

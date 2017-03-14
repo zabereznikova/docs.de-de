@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # File not found (Visual Basic Run-Time Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Datei wurde nicht an der angegebenen Stelle gefunden.  Dieser Fehler hat die folgenden möglichen Ursachen:  
   

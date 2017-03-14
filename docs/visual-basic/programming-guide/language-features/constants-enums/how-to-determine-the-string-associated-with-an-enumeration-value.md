@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Determine the String Associated with an Enumeration Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der <xref:System.Enum.GetValues%2A>\-Methode und der <xref:System.Enum.GetNames%2A>\-Methode können Sie die Zeichenfolgen und Werte ermitteln, die Enumerationsmembern zugeordnet sind.  
   

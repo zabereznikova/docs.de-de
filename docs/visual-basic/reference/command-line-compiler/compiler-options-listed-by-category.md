@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Visual Basic Compiler Options Listed by Category
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Es folgt eine Liste der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehlszeilen\-Compileroptionen \(nach Funktionskategorie sortiert\).  
+Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Es folgt eine Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Befehlszeilen\-Compileroptionen \(nach Funktionskategorie sortiert\).  
   
 ## Kompilierungsausgabe  
   
@@ -47,7 +47,7 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |-|-|  
 |Option|Zweck|  
 |[\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML\-Datei.|  
-|[\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] als Ziel fest.|  
+|[\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.|  
 |[\/out](../../../visual-basic/reference/command-line-compiler/out.md)|Gibt eine Ausgabedatei an.|  
 |[\/target](../../../visual-basic/reference/command-line-compiler/target.md)|Gibt das Format der Ausgabe an.|  
   
@@ -124,7 +124,7 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |[@ \(Antwortdatei festlegen\)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Legt eine Antwortdatei fest.|  
 |[\/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Gibt die Basisadresse einer DLL an.|  
 |[\/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|  
-|[\/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler gemeldet werden sollen.|  
+|[\/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler gemeldet werden sollen.|  
 |[\/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Informiert den Windows\-Kernel, ob eine bestimmte ausführbare Datei ASLR mit hoher Entropie \(Address Space Layout Randomization, Zufällige Anordnung des Layouts des Adressraums\) unterstützt.|  
 |[\/main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse an, die die `Sub``Main`\-Prozedur enthält, die beim Start verwendet werden soll.|  
 |[\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Führen Sie die Kompilierung nicht mit Vbc.rsp durch.|  

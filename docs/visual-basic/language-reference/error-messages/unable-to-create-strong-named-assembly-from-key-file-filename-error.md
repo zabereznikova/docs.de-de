@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Unable to create strong-named assembly from key file &#39;&lt;filename&gt;&#39;: &lt;error&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Aus der angegebenen Schlüsseldatei konnte keine Assembly mit starkem Namen erstellt werden.  
   

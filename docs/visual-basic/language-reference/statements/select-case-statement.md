@@ -35,7 +35,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Select...Case Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt je nach dem Wert eines Ausdrucks eine von mehreren Anweisungsgruppen aus.  
   

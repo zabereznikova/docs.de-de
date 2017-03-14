@@ -31,7 +31,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # #If...Then...#Else Directives
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Kompiliert ausgewählte Blöcke von Visual Basic\-Code, wenn bestimmte Bedingungen erfüllt sind.  
   

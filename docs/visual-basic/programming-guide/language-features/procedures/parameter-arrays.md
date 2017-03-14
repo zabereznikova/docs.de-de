@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # Parameter Arrays (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Normalerweise kann eine Prozedur nur mit der in der Prozedurdeklaration angegebenen Anzahl an Argumenten aufgerufen werden.  Wenn jedoch eine unbestimmte Anzahl von Argumenten erforderlich ist, können Sie ein *Parameterarray* deklarieren. Dadurch akzeptiert die Prozedur ein Array von Werten für einen Parameter.  Beim Definieren der Prozedur müssen Sie die Anzahl der Elemente im Parameterarray nicht kennen.  Die Arraygröße wird durch die einzelnen Aufrufe der Prozedur jeweils individuell festgelegt.  
   

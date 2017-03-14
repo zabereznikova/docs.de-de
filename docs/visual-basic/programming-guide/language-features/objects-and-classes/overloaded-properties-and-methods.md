@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Overloaded Properties and Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Überladen ist das Erstellen von mehreren Prozeduren, Eigenschaften oder Instanzkonstruktoren in einer Klasse, die zwar denselben Namen verwenden aber über andere Argumenttypen verfügen.  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 12
   
  [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
- Zur Laufzeit ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die richtige Prozedur auf Grundlage der Datentypen der von Ihnen angegebenen Parameter auf.  
+ Zur Laufzeit ruft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die richtige Prozedur auf Grundlage der Datentypen der von Ihnen angegebenen Parameter auf.  
   
 ## Überladen von Regeln  
  Sie können einen überladenen Klassenmember erstellen, indem Sie zwei oder mehr Eigenschaften bzw. Methoden mit dem gleichen Namen hinzufügen.  Mit Ausnahme von überladenen abgeleiteten Membern muss jeder überladene Member über zwei verschiedene Parameterlisten verfügen, wobei die folgenden Elemente beim Überladen einer Eigenschaft oder Prozedur nicht als unterscheidendes Merkmal verwendet werden können:  

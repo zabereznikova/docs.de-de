@@ -28,11 +28,11 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Change the Value of a Procedure Argument (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Im Aufruf einer Prozedur entspricht jedes Argument, das angegeben wird, einem der in der Prozedur definierten Parameter.  In einigen Fällen kann der Prozedurcode den Wert ändern, der einem Argument im Aufrufcode zugrunde liegt.  In anderen Fällen kann die Prozedur nur ihre lokale Kopie eines Arguments ändern.  
   
- Wenn Sie die Prozedur aufrufen, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] von jedem Argument, das mit [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) übergeben wird, eine lokale Kopie.  Für jedes mit [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) übergebene Argument übergibt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] der Prozedur einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt.  
+ Wenn Sie die Prozedur aufrufen, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] von jedem Argument, das mit [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) übergeben wird, eine lokale Kopie.  Für jedes mit [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) übergebene Argument übergibt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] der Prozedur einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt.  
   
  Falls es sich bei dem zugrunde liegenden Element im Aufrufcode um ein änderbares Element handelt und das Argument mit `ByRef` übergeben wird, kann der Prozedurcode über den direkten Verweis den Wert des Elements im Aufrufcode ändern.  
   
@@ -59,7 +59,7 @@ Im Aufruf einer Prozedur entspricht jedes Argument, das angegeben wird, einem de
   
      \- oder \-  
   
-     Schließen Sie im Aufrufcode das Argument in der Argumentliste in Klammern ein.  Dadurch wird [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gezwungen, das Argument als Wert zu übergeben, auch wenn für den entsprechenden Parameter `ByRef` angegeben wird.  
+     Schließen Sie im Aufrufcode das Argument in der Argumentliste in Klammern ein.  Dadurch wird [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gezwungen, das Argument als Wert zu übergeben, auch wenn für den entsprechenden Parameter `ByRef` angegeben wird.  
   
 2.  Verwenden Sie im Prozedurcode den Parameternamen, um der lokalen Kopie des Arguments einen Wert zuzuweisen.  Der zugrunde liegende Wert im Aufrufcode wird nicht geändert.  
   
@@ -81,7 +81,7 @@ Im Aufruf einer Prozedur entspricht jedes Argument, das angegeben wird, einem de
 ## Kompilieren des Codes  
  Die Variablenübergabe durch Verweis muss mit dem `ByRef`\-Schlüsselwort angegeben werden.  
   
- Standardmäßig werden Argumente in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
+ Standardmäßig werden Argumente in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
   
 ## .NET Framework-Sicherheit  
  Wenn Sie den Wert, der einem Argument im Aufrufcode zugrunde liegt, von einer Prozedur ändern lassen, stellt dies stets ein gewisses Risiko dar.  Stellen Sie sicher, dass Sie mit der Änderung des Werts einverstanden sind, und überprüfen Sie die Gültigkeit des Werts, bevor Sie ihn verwenden.  

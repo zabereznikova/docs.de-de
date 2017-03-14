@@ -26,14 +26,14 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # How to: Use a Class that Defines Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn Sie eine Klasse oder Struktur verwenden, die ihre eigenen Operatoren definiert, können Sie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auf diese Operatoren zugreifen.  
+Wenn Sie eine Klasse oder Struktur verwenden, die ihre eigenen Operatoren definiert, können Sie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf diese Operatoren zugreifen.  
   
  Das Definieren eines Operators für eine Klasse oder Struktur wird auch als *Überladen* bezeichnet.  
   
 ## Beispiel  
- Im folgenden Beispiel erfolgt ein Zugriff auf die SQL\-Struktur <xref:System.Data.SqlTypes.SqlString>, mit der die Operatoren \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)\) für die Konvertierung in beide Richtungen, nämlich zwischen einer SQL\-Zeichenfolge und einer [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Zeichenfolge, definiert werden.  Verwenden Sie `CType(`*SQL\-Zeichenfolgenausdruck*, `String)`, um eine SQL\-Zeichenfolge in eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Zeichenfolge zu konvertieren, und `CType(`*Visual Basic\-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString>`)` für die Konvertierung in die andere Richtung.  
+ Im folgenden Beispiel erfolgt ein Zugriff auf die SQL\-Struktur <xref:System.Data.SqlTypes.SqlString>, mit der die Operatoren \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)\) für die Konvertierung in beide Richtungen, nämlich zwischen einer SQL\-Zeichenfolge und einer [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Zeichenfolge, definiert werden.  Verwenden Sie `CType(`*SQL\-Zeichenfolgenausdruck*, `String)`, um eine SQL\-Zeichenfolge in eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Zeichenfolge zu konvertieren, und `CType(`*Visual Basic\-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString>`)` für die Konvertierung in die andere Richtung.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   

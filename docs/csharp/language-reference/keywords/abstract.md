@@ -82,7 +82,7 @@ BaseClass bc = new BaseClass();   // Error
  erhalten Sie eine Fehlermeldung, die besagt, dass der Compiler keine Instanz der abstrakten Klasse "BaseClass" erstellen kann.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

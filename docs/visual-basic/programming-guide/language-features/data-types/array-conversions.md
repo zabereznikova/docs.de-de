@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Array Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Arraytyp kann in einen anderen Arraytyp konvertiert werden, wenn die folgenden Bedingungen zutreffen:  
   

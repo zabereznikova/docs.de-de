@@ -25,14 +25,14 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Operators and Expressions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *Operator* ist ein Codeelement, das eine Operation für ein oder mehrere Codeelemente ausführt, die Werte enthalten.  Wertelemente sind z. B. Variablen, Konstanten, Literale, Eigenschaften, Rückgaben von der `Function`\-Prozedur und der `Operator`\-Prozedur sowie Ausdrücke.  
   
  Ein *Ausdruck* ist eine Reihe von Wertelementen, die mit Operatoren kombiniert werden, und dies ergibt einen neuen Wert.  Die Operatoren behandeln die Wertelemente, indem sie Berechnungen, Vergleiche und andere Operationen ausführen.  
   
 ## Typen von Operatoren  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt die folgenden Typen von Operatoren bereit:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt die folgenden Typen von Operatoren bereit:  
   
 -   [Arithmetische Operatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) führen gängige Berechnungen mit numerischen Werten aus, einschließlich des Verschiebens ihrer Bitmuster.  
   
@@ -69,7 +69,7 @@ Ein *Operator* ist ein Codeelement, das eine Operation für ein oder mehrere Cod
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- Im vorherigen Beispiel führt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die Operationen im Ausdruck auf der rechten Seite des Zuweisungsoperators \(`=`\) aus und weist dann der Variablen `x` auf der linken Seite den Ergebniswert zu.  Es gibt praktisch keine Begrenzung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Sie müssen jedoch die Regeln der [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
+ Im vorherigen Beispiel führt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Operationen im Ausdruck auf der rechten Seite des Zuweisungsoperators \(`=`\) aus und weist dann der Variablen `x` auf der linken Seite den Ergebniswert zu.  Es gibt praktisch keine Begrenzung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Sie müssen jedoch die Regeln der [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
   
  Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

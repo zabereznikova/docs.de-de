@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 39
 ---
 # Namespace Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert den Namen eines Namespaces und bewirkt, dass der auf die Deklaration folgende Quellcode in diesem Namespace kompiliert wird.  
   

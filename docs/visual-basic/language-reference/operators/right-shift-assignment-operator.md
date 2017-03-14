@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # &gt;&gt;= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine arithmetische Verschiebung nach rechts für den Wert einer Variablen oder Eigenschaft aus und weist das Ergebnis wieder der Variablen bzw. Eigenschaft zu.  
   

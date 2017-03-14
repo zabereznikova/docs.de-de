@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Sub or Function not defined (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Für einen Aufruf muss `Sub` oder `Function` zunächst definiert werden.  Dieser Fehler kann folgende Ursachen haben:  
   

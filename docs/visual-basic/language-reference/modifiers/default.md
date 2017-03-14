@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Default (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Identifiziert eine Eigenschaft als die Standardeigenschaft ihrer Klasse, Struktur oder Schnittstelle.  
   

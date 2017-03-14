@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;Class&#39; statement must end with a matching &#39;End Class&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `Class` wird zum Einleiten eines `Class`\-Blocks verwendet und kann daher nur am Anfang des Blocks stehen. Der Block muss mit einer passenden `End Class`\-Anweisung beendet werden.  Entweder es existiert eine weitere `Class`\-Anweisung, oder der `Class`\-Block wurde nicht durch `End Class` beendet.  
   

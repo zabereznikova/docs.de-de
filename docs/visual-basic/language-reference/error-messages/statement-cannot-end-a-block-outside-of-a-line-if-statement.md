@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Statement cannot end a block outside of a line &#39;If&#39; statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine einzeilige `If`\-Anweisung enthält mehrere Anweisungen, die durch Doppelpunkte \(:\) voneinander getrennt sind; eine dieser Anweisungen ist eine `End`\-Anweisung für einen Kontrollblock außerhalb der einzeiligen `If`\-Anweisung.  Einzeilige `If`\-Anweisungen verwenden keine `End If`\-Anweisung.  
   

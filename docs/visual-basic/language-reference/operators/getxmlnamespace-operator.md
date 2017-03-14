@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # GetXmlNamespace Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ruft das <xref:System.Xml.Linq.XNamespace>\-Objekt ab, das dem angegebenen XML\-Namespacepräfix entspricht.  
   
@@ -42,7 +42,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## Hinweise  
  Der Operator `GetXmlNamespace` ruft das <xref:System.Xml.Linq.XNamespace>\-Objekt ab, das dem XML\-Namespacepräfix `xmlNamespacePrefix` entspricht.  
   
- XML\-Namespacepräfixe können in XML\-Literalen und XML\-Achseneigenschaften direkt verwendet werden.  Bevor es im Code verwendet werden kann, muss jedoch das Namespacepräfix mit dem Operator `GetXmlNamespace` in ein <xref:System.Xml.Linq.XNamespace>\-Objekt konvertiert werden.  Ein nicht qualifizierter Elementname kann an ein <xref:System.Xml.Linq.XNamespace>\-Objekt angehängt werden, um ein vollqualifiziertes <xref:System.Xml.Linq.XName>\-Objekt zu erhalten, das für viele [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Methoden erforderlich ist.  
+ XML\-Namespacepräfixe können in XML\-Literalen und XML\-Achseneigenschaften direkt verwendet werden.  Bevor es im Code verwendet werden kann, muss jedoch das Namespacepräfix mit dem Operator `GetXmlNamespace` in ein <xref:System.Xml.Linq.XNamespace>\-Objekt konvertiert werden.  Ein nicht qualifizierter Elementname kann an ein <xref:System.Xml.Linq.XNamespace>\-Objekt angehängt werden, um ein vollqualifiziertes <xref:System.Xml.Linq.XName>\-Objekt zu erhalten, das für viele [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]\-Methoden erforderlich ist.  
   
 ## Beispiel  
  Im folgenden Beispiel wird `ns` als ein XML\-Namespacepräfix importiert.  Anschließend wird das Namespacepräfix verwendet, um ein XML\-Literal zu erstellen und auf den ersten untergeordneten Knoten mit dem qualifizierten Namen `ns:phone` zuzugreifen.  Anschließend wird dieser untergeordnete Knoten an die `ShowName`\-Unterroutine übergeben, die einen qualifizierten Namen erstellt, indem der Operator `GetXmlNamespace` verwendet wird.  Die `ShowName`\-Unterroutine übergibt dann den qualifizierten Namen an die <xref:System.Xml.Linq.XNode.Ancestors%2A>\-Methode, um den übergeordneten `ns:contact`\-Knoten zu erhalten.  

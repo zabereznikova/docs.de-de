@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # &#39;&lt;functionname&gt;&#39; is not declared (Smart Device/Visual Basic Compiler Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 \<`functionname`\> ist nicht deklariert.  Datei\-E\/A\-Funktionalität ist normalerweise im `Microsoft.VisualBasic`\-Namespace verfügbar, die verwendete Version von .NET Compact Framework unterstützt sie jedoch nicht.  
   

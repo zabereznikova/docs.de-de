@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # My.Computer.Registry Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften und Methoden zum Bearbeiten der Registrierung bereit.  
   
@@ -35,7 +35,7 @@ Stellt Eigenschaften und Methoden zum Bearbeiten der Registrierung bereit.
   
  **Klasse:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> \(bietet Zugriff auf <xref:Microsoft.Win32.Registry>\)  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  [My.Computer Object](../../../visual-basic/language-reference/objects/my-computer-object.md)

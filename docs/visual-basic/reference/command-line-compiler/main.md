@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # /main
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die Klasse oder das Modul an, die bzw. das die `Sub Main`\-Prozedur enthält.  
   

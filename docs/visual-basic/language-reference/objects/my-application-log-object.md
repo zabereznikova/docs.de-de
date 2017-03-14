@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 32
 ---
 # My.Application.Log-Objekt
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis\- und Ausnahmeinformationen in die Protokolllistener der Anwendung bereit.  
   
@@ -34,7 +34,7 @@ Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis\- und Ausnahmein
   
  **Klasse:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  [My.Application Object](../../../visual-basic/language-reference/objects/my-application-object.md)

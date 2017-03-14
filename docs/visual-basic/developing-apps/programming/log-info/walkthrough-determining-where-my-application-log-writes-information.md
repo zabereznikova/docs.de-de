@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Exemplarische Vorgehensweise: Bestimmen, wohin &quot;My.Application.Log&quot; Informationen schreibt (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Application.Log`\-Objekt kann Informationen in mehrere Protokolllistener schreiben. Die Protokolllistener werden durch die Konfigurationsdatei des Computers konfiguriert und können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden. Dieses Thema beschreibt die Standardeinstellungen und erläutert, wie Sie die Einstellungen für Ihre Anwendung ermitteln.  
   
@@ -32,7 +32,7 @@ Das `My.Application.Log`\-Objekt kann Informationen in mehrere Protokolllistener
   
 ### Bestimmen der Listener für "My.Application.Log"  
   
-1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)] im **Projektmappen\-Explorer** auf die "app.config" zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
+1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] im **Projektmappen\-Explorer** auf die "app.config" zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
   
     > [!NOTE]
     >  Nicht jede Assembly verfügt über eine Konfigurationsdatei.  
@@ -43,7 +43,7 @@ Das `My.Application.Log`\-Objekt kann Informationen in mehrere Protokolllistener
   
      Wenn diese Abschnitte nicht vorhanden sind, werden die `My.Application.Log`\-Protokolllistener möglicherweise durch die Konfigurationsdatei des Computers konfiguriert. In den folgenden Schritten ist beschrieben, wie Sie bestimmen, was in der Computerkonfigurationsdatei definiert ist:  
   
-    1.  Suchen Sie die Datei "machine.config" des Computers. In der Regel befindet sie sich im Verzeichnis *SystemRoot\\Microsoft.NET\\Framework\\frameworkVersion\\CONFIG*, wobei `SystemRoot` das Betriebssystemverzeichnis ist und `frameworkVersion` die Version von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)].  
+    1.  Suchen Sie die Datei "machine.config" des Computers. In der Regel befindet sie sich im Verzeichnis *SystemRoot\\Microsoft.NET\\Framework\\frameworkVersion\\CONFIG*, wobei `SystemRoot` das Betriebssystemverzeichnis ist und `frameworkVersion` die Version von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          Die Einstellungen in "machine.config" können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden.  
   

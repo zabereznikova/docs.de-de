@@ -27,9 +27,9 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
  Um diese exemplarische Vorgehensweise auszuführen, müssen Microsoft Office Excel 2007 und Microsoft Office Word 2007 oder neuere Versionen auf Ihrem Computer installiert sein.  
   
- Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver-md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] installiert ist.  
+ Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](~/includes/windowsver-md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] installiert ist.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie eine Konsolenanwendung  
   
@@ -79,7 +79,7 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
 1.  Fügen Sie die folgende Methode der `Program`\-Klasse hinzu, um ein Excel\-Arbeitsblatt einzurichten.  
   
-     Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen optionalen Parameter zur Angabe einer bestimmten Vorlage.  Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten.  Da im folgenden Beispiel kein Argument gesendet wird, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe.  Die entsprechende Anweisung in früheren Versionen von C\# erfordert ein Platzhalterargument: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen optionalen Parameter zur Angabe einer bestimmten Vorlage.  Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten.  Da im folgenden Beispiel kein Argument gesendet wird, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe.  Die entsprechende Anweisung in früheren Versionen von C\# erfordert ein Platzhalterargument: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -99,7 +99,7 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die [\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)\-Compileroption auf die Assembly verweist oder gleichermaßen wenn die Excel\-Eigenschaft **Interop\-Typen einbetten** auf "true" festgelegt ist.  Der Standardwert für diese Eigenschaft ist "True".  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die [\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)\-Compileroption auf die Assembly verweist oder gleichermaßen wenn die Excel\-Eigenschaft **Interop\-Typen einbetten** auf "true" festgelegt ist.  Der Standardwert für diese Eigenschaft ist "True".  
   
 ### So führen Sie das Projekt aus  
   
@@ -113,17 +113,17 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
 ### So fügen Sie ein Word\-Dokument hinzu  
   
-1.  Um zusätzliche Wege zu zeigen, wie [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] und höhere Versionen die Office\-Programmierung verbessern, öffnet der folgende Code eine Word\-Anwendung und erstellt ein Symbol, das mit dem Excel\-Arbeitsblatt verknüpft ist.  
+1.  Um zusätzliche Wege zu zeigen, wie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] und höhere Versionen die Office\-Programmierung verbessern, öffnet der folgende Code eine Word\-Anwendung und erstellt ein Symbol, das mit dem Excel\-Arbeitsblatt verknüpft ist.  
   
-     Fügen Sie die Methode `CreateIconInWordDoc`, die später in diesem Schritt bereitgestellt wird, in die `Program`\-Klasse ein.  `CreateIconInWordDoc` verwendet benannte und optionale Argumente, um die Komplexität der Methodenaufrufe von [Add](http://go.microsoft.com/fwlink/?LinkId=210937) und [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) zu reduzieren.  Diese Aufrufe beinhalten zwei weitere neue Funktionen, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] eingeführt wurden und die Aufrufe von COM\-Methoden mit Verweisparametern vereinfachen.  Erstens können Sie Argumente an die Verweisparameter senden als handele es sich um Werteparameter.  Das heißt, Sie können Werte direkt senden, ohne eine Variable für jeden Verweisparameter zu erstellen.  Der Compiler generiert temporäre Variablen, die die Argumentwerte enthalten, und verwirft diese Variablen bei Rückkehr vom Aufruf.  Zweitens können Sie das `ref`\-Schlüsselwort in der Argumentliste auslassen.  
+     Fügen Sie die Methode `CreateIconInWordDoc`, die später in diesem Schritt bereitgestellt wird, in die `Program`\-Klasse ein.  `CreateIconInWordDoc` verwendet benannte und optionale Argumente, um die Komplexität der Methodenaufrufe von [Add](http://go.microsoft.com/fwlink/?LinkId=210937) und [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) zu reduzieren.  Diese Aufrufe beinhalten zwei weitere neue Funktionen, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] eingeführt wurden und die Aufrufe von COM\-Methoden mit Verweisparametern vereinfachen.  Erstens können Sie Argumente an die Verweisparameter senden als handele es sich um Werteparameter.  Das heißt, Sie können Werte direkt senden, ohne eine Variable für jeden Verweisparameter zu erstellen.  Der Compiler generiert temporäre Variablen, die die Argumentwerte enthalten, und verwirft diese Variablen bei Rückkehr vom Aufruf.  Zweitens können Sie das `ref`\-Schlüsselwort in der Argumentliste auslassen.  
   
-     Die `Add`\-Methode verfügt über vier Verweisparameter, die alle optional sind.  In [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] oder höher können Sie Argumente für einen oder alle Parameter weglassen, wenn Sie deren Standardwerte verwenden möchten.  In [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] und früheren Versionen muss ein Argument für jeden Parameter bereitgestellt werden, und das Argument muss eine Variable sein, da es sich bei den Parametern um Verweisparameter handelt.  
+     Die `Add`\-Methode verfügt über vier Verweisparameter, die alle optional sind.  In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] oder höher können Sie Argumente für einen oder alle Parameter weglassen, wenn Sie deren Standardwerte verwenden möchten.  In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] und früheren Versionen muss ein Argument für jeden Parameter bereitgestellt werden, und das Argument muss eine Variable sein, da es sich bei den Parametern um Verweisparameter handelt.  
   
-     Die `PasteSpecial`\-Methode fügt den Inhalt aus der Zwischenablage ein.  Die Methode verfügt über sieben Verweisparameter, die alle optional sind.  Der folgende Code gibt Argumente für zwei dieser Parameter an: `Link`, um eine Verknüpfung mit der Quelle des Zwischenablage\-Inhalts zu erstellen, und `DisplayAsIcon`, um die Verknüpfung als Symbol anzuzeigen.  In [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] können Sie benannte Argumente für diese zwei verwenden und die anderen weglassen.  Obwohl es sich um Verweisparameter handelt, müssen Sie nicht das `ref`\-Schlüsselwort verwenden oder Variablen erstellen, die als Argumente gesendet werden.  Sie können die Werte direkt senden.  In [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] und früheren Versionen müssen Sie für jeden Verweisparameter ein Variablenargument senden.  
+     Die `PasteSpecial`\-Methode fügt den Inhalt aus der Zwischenablage ein.  Die Methode verfügt über sieben Verweisparameter, die alle optional sind.  Der folgende Code gibt Argumente für zwei dieser Parameter an: `Link`, um eine Verknüpfung mit der Quelle des Zwischenablage\-Inhalts zu erstellen, und `DisplayAsIcon`, um die Verknüpfung als Symbol anzuzeigen.  In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] können Sie benannte Argumente für diese zwei verwenden und die anderen weglassen.  Obwohl es sich um Verweisparameter handelt, müssen Sie nicht das `ref`\-Schlüsselwort verwenden oder Variablen erstellen, die als Argumente gesendet werden.  Sie können die Werte direkt senden.  In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] und früheren Versionen müssen Sie für jeden Verweisparameter ein Variablenargument senden.  
   
      [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
-     In [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] oder früheren Versionen der Sprache ist der folgende komplexere Code erforderlich.  
+     In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] oder früheren Versionen der Sprache ist der folgende komplexere Code erforderlich.  
   
      [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
@@ -145,7 +145,7 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
      Darüber hinaus ist die Programmierung einfacher, da die Typen, die erforderlich sind und von COM\-Methoden zurückgegeben werden, mithilfe des Typs `dynamic` anstelle von `Object` dargestellt werden können.  Variablen vom Typ `dynamic` werden erst zur Laufzeit ausgewertet, wodurch die Notwendigkeit der expliziten Umwandlung entfällt.  Weitere Informationen finden Sie unter [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
-     In [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] ist das Einbetten von Typinformationen anstelle eines Einsatzes von PIAs das Standardverhalten.  Aufgrund dieses Standardverhaltens werden mehrere der vorherigen Beispiele vereinfacht, da keine explizite Umwandlung erforderlich ist.  Beispiel: Die Deklaration von `worksheet` in `DisplayInExcel` lautet `Excel._Worksheet workSheet = excelApp.ActiveSheet` und nicht `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`.  Die Aufrufe von `AutoFit` in derselben Methode würden ebenfalls eine explizite Umwandlung ohne den Standard erfordern, da `ExcelApp.Columns[1]` ein `Object` zurückgibt und `AutoFit` eine Excel\-Methode ist.  Im folgenden Code sind alle Umwandlungen dargestellt.  
+     In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] ist das Einbetten von Typinformationen anstelle eines Einsatzes von PIAs das Standardverhalten.  Aufgrund dieses Standardverhaltens werden mehrere der vorherigen Beispiele vereinfacht, da keine explizite Umwandlung erforderlich ist.  Beispiel: Die Deklaration von `worksheet` in `DisplayInExcel` lautet `Excel._Worksheet workSheet = excelApp.ActiveSheet` und nicht `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`.  Die Aufrufe von `AutoFit` in derselben Methode würden ebenfalls eine explizite Umwandlung ohne den Standard erfordern, da `ExcelApp.Columns[1]` ein `Object` zurückgibt und `AutoFit` eine Excel\-Methode ist.  Im folgenden Code sind alle Umwandlungen dargestellt.  
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
@@ -167,7 +167,7 @@ Ab Visual C\# 2010 gibt es neue Funktionen, die den Zugriff auf Office\-API\-Obj
   
 2.  Drücken Sie STRG \+ F5, um das Ergebnis anzuzeigen.  Andere Formate finden Sie in der [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967)\-Enumeration.  
   
-3.  Vergleichen Sie die Anweisung in Schritt 1 mit dem folgenden Code, der die Argumente zeigt, die in [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] oder früheren Versionen erforderlich sind.  
+3.  Vergleichen Sie die Anweisung in Schritt 1 mit dem folgenden Code, der die Argumente zeigt, die in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] oder früheren Versionen erforderlich sind.  
   
      [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   

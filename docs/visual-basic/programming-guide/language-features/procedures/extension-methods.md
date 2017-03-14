@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 41
 ---
 # Erweiterungsmethoden (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen zu bereits definierten Datentypen, ohne dass ein neuer abgeleiteter Typ erstellt werden muss.  Erweiterungsmethoden ermöglichen das Erstellen einer Methode, die aufgerufen werden kann, als wäre sie eine Instanzenmethode des vorhandenen Typs.  
   

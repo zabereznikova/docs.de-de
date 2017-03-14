@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Elementary Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Datentypen bereit, die Sie für viele Programmierelemente verwenden können.  Im vorliegenden Abschnitt werden diese Typen und ihre Verwendung beschrieben.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Datentypen bereit, die Sie für viele Programmierelemente verwenden können.  Im vorliegenden Abschnitt werden diese Typen und ihre Verwendung beschrieben.  
   
 > [!NOTE]
 >  Jeder einfache Datentyp in Visual Basic wird durch eine Struktur oder eine Klasse unterstützt, die im <xref:System>\-Namespace befindet.  Der Compiler verwendet jedes Datentypschlüsselwort als Alias für die zugrunde liegende Struktur oder Klasse.  Zum Beispiel eine Variable, indem Sie das reservierte Wort `Byte` deklariert ist, wird dem es deklariert wird, indem Sie den voll qualifizierten Strukturnamen <xref:System.Byte?displayProperty=fullName>verwendet.  
@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
 ## Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Stellt die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
+ Stellt die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
   
  [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Bietet eine Übersicht über die elementaren Datentypen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].
+ Bietet eine Übersicht über die elementaren Datentypen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

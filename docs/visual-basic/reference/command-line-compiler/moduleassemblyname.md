@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /moduleassemblyname
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt den Namen der Assembly an, die dieses Modul beinhalten wird.  
   

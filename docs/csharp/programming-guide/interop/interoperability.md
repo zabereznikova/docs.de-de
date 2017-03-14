@@ -5,7 +5,7 @@ caps.handback.revision: 31
 # Interoperabilit&#228;t (C#-Programmierhandbuch)
 Interoperabilität bietet Ihnen die Möglichkeit, Ihre vorhandenen Investitionen in nicht verwalteten Code zu erhalten und weiterhin davon zu profitieren.  Code, der unter der Kontrolle der Common Language Runtime \(CLR\) ausgeführt wird, wird als *verwalteter Code* bezeichnet. Im Gegensatz dazu wird Code, der außerhalb der CLR ausgeführt wird, als *nicht verwalteter Code* bezeichnet.  Beispiele für nicht verwalteten Code sind COM, COM\+, C\+\+\-Komponenten, ActiveX\-Komponenten und die Microsoft Win32\-API.  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] ermöglicht durch Plattformaufrufdienste, den <xref:System.Runtime.InteropServices>\-Namespace, die C\+\+\-Interoperabilität und die COM\-Interoperabilität \(COM\-Interop\) die Interoperabilität mit nicht verwaltetem Code.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ermöglicht durch Plattformaufrufdienste, den <xref:System.Runtime.InteropServices>\-Namespace, die C\+\+\-Interoperabilität und die COM\-Interoperabilität \(COM\-Interop\) die Interoperabilität mit nicht verwaltetem Code.  
   
 ## In diesem Abschnitt  
  [Überblick über die Interoperabilität](../../../csharp/programming-guide/interop/interoperability-overview.md)  
@@ -27,7 +27,7 @@ Interoperabilität bietet Ihnen die Möglichkeit, Ihre vorhandenen Investitionen
  Veranschaulicht, wie eine C\#\-Klasse als COM\-Objekt verfügbar gemacht wird.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   

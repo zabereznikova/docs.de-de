@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # /keyfile
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
   
@@ -50,7 +50,7 @@ Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly e
  Weitere Informationen über das Signieren einer Assembly finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md).  
   
 > [!NOTE]
->  Die `/keyfile`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
+>  Die `/keyfile`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
   
 ## Beispiel  
  Mit dem folgenden Code wird die Quelldatei `Input.vb` kompiliert und eine Schlüsseldatei angegeben.  

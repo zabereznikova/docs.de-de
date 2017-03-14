@@ -12,10 +12,10 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Die in „Dateiname“ angegebene Datei ist keine g&#252;ltige XML-Datei.
-Der von Ihnen angegebene Dateiname gehört nicht zu einer gültigen XML\-Datei. Sie können eine Dokumenttypdefinition \(DTD\), ein Microsoft XDR\-Schemaformat \(XML\-Data Reduced\) oder ein XSD\-Schema \(Sprache der XML\-Schemadefinition\) verwenden, um die zulässige Struktur und die Inhalte eines XML\-Dokuments anzugeben. XSD\-Schemas sind die bevorzugte Methode zum Angeben von XML\-Grammatiken im [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort-md.md)].  
+Der von Ihnen angegebene Dateiname gehört nicht zu einer gültigen XML\-Datei. Sie können eine Dokumenttypdefinition \(DTD\), ein Microsoft XDR\-Schemaformat \(XML\-Data Reduced\) oder ein XSD\-Schema \(Sprache der XML\-Schemadefinition\) verwenden, um die zulässige Struktur und die Inhalte eines XML\-Dokuments anzugeben. XSD\-Schemas sind die bevorzugte Methode zum Angeben von XML\-Grammatiken im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
->  In einigen früheren Versionen von Visual Studio stellt der **XML\-Designer** den Designer für typisierte DataSets und XML\-Schemas dar. Der **XML\-Designer** kann weiterhin zum Erstellen und Bearbeiten von XML\-Schemadateien verwendet werden. In [!INCLUDE[vs_current_long](../../csharp/misc/includes/vs-current-long-md.md)] ist der Designer zum Erstellen und Bearbeiten typisierter DataSets der **DataSet\-Designer**. Weitere Informationen finden Sie unter [Erstellen und Bearbeiten von typisierten Datasets](/visual-studio/data-tools/creating-and-editing-typed-datasets).  
+>  In einigen früheren Versionen von Visual Studio stellt der **XML\-Designer** den Designer für typisierte DataSets und XML\-Schemas dar. Der **XML\-Designer** kann weiterhin zum Erstellen und Bearbeiten von XML\-Schemadateien verwendet werden. In [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)] ist der Designer zum Erstellen und Bearbeiten typisierter DataSets der **DataSet\-Designer**. Weitere Informationen finden Sie unter [Erstellen und Bearbeiten von typisierten Datasets](/visual-studio/data-tools/creating-and-editing-typed-datasets).  
   
 ### So beheben Sie diesen Fehler  
   

@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # My.Computer.Info Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften für das Abrufen von Informationen über den Arbeitsspeicher des Computers, geladene Assemblys, Name und Betriebssystem bereit.  
   

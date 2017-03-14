@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Ordinal is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Aufruf einer Dynamic Link Library \(DLL\) wurde mit der `#num`\-Syntax angegeben, dass eine Zahl anstelle eines Prozedurnamens verwendet wird.  Dieser Fehler hat die folgenden möglichen Ursachen:  
   

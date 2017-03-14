@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Accessing the Mouse (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Computer.Mouse`\-Objekt ermöglicht die Suche nach Informationen über die Maus des Computers, z. B. ob eine Maus vorhanden ist, die Anzahl der Maustasten und Angaben zum Mausrad.  
   

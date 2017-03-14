@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;membername&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 "\<Typname\>" muss "\<Membername\>" für die "\<Schnittstellenname\>"\-Schnittstelle implementieren.Die implementierende Eigenschaft muss übereinstimmende ReadOnly\- oder WriteOnly\-Spezifizierer aufweisen.  
   

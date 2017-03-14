@@ -30,9 +30,9 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # Statements in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine Anweisung in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist eine vollständige Instruktion.  Sie kann Schlüsselwörter, Operatoren, Variablen, Konstanten und Ausdrücke enthalten.  Jede Anweisung gehört zu einer der folgenden Kategorien:  
+Eine Anweisung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine vollständige Instruktion.  Sie kann Schlüsselwörter, Operatoren, Variablen, Konstanten und Ausdrücke enthalten.  Jede Anweisung gehört zu einer der folgenden Kategorien:  
   
 -   **Deklarationsanweisungen**, die eine Variable, Konstante oder Prozedur benennen und auch einen Datentyp angeben können.  
   
@@ -54,7 +54,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/l
  Die dritte Deklaration ist die `Dim`\-Anweisung, die die Variable `thisWidget` deklariert.  Der Datentyp ist ein bestimmtes Objekt, und zwar ein aus der `Widget`\-Klasse erstelltes Objekt.  Sie können eine Variable als beliebigen elementaren Datentyp oder als beliebigen Objekttyp deklarieren, der in der verwendeten Anwendung verfügbar gemacht wird.  
   
 ### Anfangswerte  
- Beim Ausführen von Code, der eine Deklarationsanweisung enthält, reserviert [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den für das deklarierte Element erforderlichen Speicher.  Wenn das Element einen Wert enthält, wird es von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit dem Standardwert für seinen Datentyp initialisiert.  Weitere Informationen finden Sie in [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) unter "Verhalten".  
+ Beim Ausführen von Code, der eine Deklarationsanweisung enthält, reserviert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den für das deklarierte Element erforderlichen Speicher.  Wenn das Element einen Wert enthält, wird es von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit dem Standardwert für seinen Datentyp initialisiert.  Weitere Informationen finden Sie in [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) unter "Verhalten".  
   
  Sie können einer Variablen in ihrer Deklaration einen Anfangswert zuweisen, wie im folgenden Beispiel veranschaulicht.  
   
@@ -122,7 +122,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/l
 ### Typkonvertierungen in Zuweisungsanweisungen  
  Der Datentyp des Werts, den Sie einer Variablen, einer Eigenschaft oder einem Arrayelement zuweisen, muss dem jeweiligen Zielelement entsprechen.  Versuchen Sie grundsätzlich, einen Wert mit demselben Datentyp wie der Datentyp des Zielelements zu generieren.  Einige Typen können jedoch während der Zuweisung in einen anderen Typ konvertiert werden.  
   
- Informationen über das Konvertieren von Datentypen finden Sie unter [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md).  Kurz gesagt, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] konvertiert den Wert eines bestimmten Typs automatisch in einen beliebigen anderen Typ, zu dem der ursprüngliche Typ erweitert werden kann.  Eine *erweiternde Konvertierung* wird zur Laufzeit immer erfolgreich und ohne Datenverlust ausgeführt.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] konvertiert z. B. einen `Integer`\-Wert ggf. in `Double`, da `Integer` zu `Double` erweitert wird.  Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Informationen über das Konvertieren von Datentypen finden Sie unter [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md).  Kurz gesagt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konvertiert den Wert eines bestimmten Typs automatisch in einen beliebigen anderen Typ, zu dem der ursprüngliche Typ erweitert werden kann.  Eine *erweiternde Konvertierung* wird zur Laufzeit immer erfolgreich und ohne Datenverlust ausgeführt.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konvertiert z. B. einen `Integer`\-Wert ggf. in `Double`, da `Integer` zu `Double` erweitert wird.  Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Einschränkende Konvertierungen* \(Konvertierungen, die keine erweiternden Konvertierungen sind\) können zur Laufzeit fehlschlagen oder mit Datenverlust ausgeführt werden.  Sie können eine einschränkende Konvertierung explizit ausführen, indem Sie eine Typkonvertierungsfunktion verwenden, oder Sie können den Compiler alle Konvertierungen implizit ausführen lassen, indem Sie `Option Strict Off` festlegen.  Weitere Informationen finden Sie unter [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -160,7 +160,7 @@ Eine Anweisung in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/l
 |Nach dem `From`\-Schlüsselwort in einem Auflistungsinitialisierer.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Weitere Informationen finden Sie unter [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## Hinzufügen von Kommentaren  
- Quellcode ist nicht immer selbsterklärend, selbst nicht für den Programmierer, der ihn geschrieben hat.  Daher verwenden die meisten Programmierer eingebettete Kommentare, um den Code zu dokumentieren.  Kommentare im Code dienen zur Erläuterung einer Prozedur oder zur Angabe bestimmter Anweisungen für andere Personen, die den Code lesen oder damit arbeiten.  In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] werden Kommentare während der Kompilierung ignoriert und haben keine Auswirkung auf den kompilierten Code.  
+ Quellcode ist nicht immer selbsterklärend, selbst nicht für den Programmierer, der ihn geschrieben hat.  Daher verwenden die meisten Programmierer eingebettete Kommentare, um den Code zu dokumentieren.  Kommentare im Code dienen zur Erläuterung einer Prozedur oder zur Angabe bestimmter Anweisungen für andere Personen, die den Code lesen oder damit arbeiten.  In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] werden Kommentare während der Kompilierung ignoriert und haben keine Auswirkung auf den kompilierten Code.  
   
  Kommentarzeilen beginnen mit einem Apostroph \(`'`\) oder `REM` vor einem Leerzeichen.  Sie können an beliebiger Stelle im Code, außer in einer Zeichenfolge, hinzugefügt werden.  Wenn Sie einen Kommentar an eine Anweisung anhängen möchten, fügen Sie nach der Anweisung einen Apostroph oder `REM` ein, und geben Sie danach den Kommentar ein.  Kommentare können auch in eine separate Zeile geschrieben werden.  Im folgenden Beispiel werden diese Möglichkeiten veranschaulicht.  
   

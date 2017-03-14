@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # XML comment exception must have a &#39;cref&#39; attribute
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das \< exception \>\-Tag bietet eine Möglichkeit zur Dokumentation der Ausnahmen, die von einer Methode ausgelöst werden können.  Das erforderliche `cref`\-Attribut legt den Namen eines Members fest, der vom Dokumentationsgenerator überprüft wird.  Wenn der Member vorhanden ist, wird er in der Dokumentationsdatei in den kanonischen Elementnamen übersetzt.  
   

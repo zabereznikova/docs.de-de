@@ -28,11 +28,11 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Eigenschaftenprozeduren (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Bei einer Eigenschaftenprozedur handelt es sich um eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen zum Ändern von benutzerdefinierten Eigenschaften in Modulen, Klassen oder Strukturen.  Property\-Prozeduren werden auch als *Eigenschaften\-Accessoren* bezeichnet.  
+Bei einer Eigenschaftenprozedur handelt es sich um eine Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisungen zum Ändern von benutzerdefinierten Eigenschaften in Modulen, Klassen oder Strukturen.  Property\-Prozeduren werden auch als *Eigenschaften\-Accessoren* bezeichnet.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] enthält die folgenden Eigenschaftenprozeduren:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enthält die folgenden Eigenschaftenprozeduren:  
   
 -   Die `Get`\-Prozedur gibt den Wert einer Eigenschaft zurück.  Sie wird aufgerufen, wenn Sie in einem Ausdruck auf die Eigenschaft zugreifen.  
   

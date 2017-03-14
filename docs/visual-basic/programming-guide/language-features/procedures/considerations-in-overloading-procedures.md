@@ -40,7 +40,7 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # Considerations in Overloading Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Prozedur überladen, müssen Sie für jede überladene Version eine andere *Signatur* verwenden.  Dies bedeutet normalerweise, dass jede Version eine andere Parameterliste angeben muss.  Weitere Informationen finden Sie im Abschnitt "Unterschiedliche Signaturen" unter [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
@@ -51,7 +51,7 @@ Wenn Sie eine Prozedur überladen, müssen Sie für jede überladene Version ein
 ## Alternativen zu überladenen Versionen  
  Gelegentlich stehen Alternativen zu überladenen Versionen zur Verfügung, insbesondere wenn das Vorhandensein von Argumenten optional ist oder wenn die Anzahl der Argumente variabel ist.  
   
- Denken Sie daran, dass optionale Argumente nicht unbedingt von allen Sprachen unterstützt werden und Parameterarrays auf [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschränkt sind.  Wenn Sie eine Prozedur schreiben, die möglicherweise von Code aufgerufen wird, der in anderen Sprachen geschrieben wurde, bieten überladene Versionen die größte Flexibilität.  
+ Denken Sie daran, dass optionale Argumente nicht unbedingt von allen Sprachen unterstützt werden und Parameterarrays auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschränkt sind.  Wenn Sie eine Prozedur schreiben, die möglicherweise von Code aufgerufen wird, der in anderen Sprachen geschrieben wurde, bieten überladene Versionen die größte Flexibilität.  
   
 ### Überladungen und optionale Argumente  
  Wenn der Aufrufcode optional ein oder mehrere Argumente angeben oder weglassen kann, können Sie mehrere überladene Versionen definieren oder optionale Parameter verwenden.  

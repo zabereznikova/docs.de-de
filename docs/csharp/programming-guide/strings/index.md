@@ -115,7 +115,7 @@ string s = String.Empty;
  [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
 ## Zeichenfolgen, Erweiterungsmethoden und LINQ  
- Da der <xref:System.String>\-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die in der <xref:System.Linq.Enumerable>\-Klasse in Zeichenfolgen definierten Erweiterungsmethoden verwenden.  Aus Gründen der Übersichtlichkeit werden diese Methoden für den <xref:System.String>\-Typ aus IntelliSense ausgeschlossen, sie sind jedoch weiterhin vorhanden.  Sie können auch [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücke für Zeichenfolgen verwenden.  Weitere Informationen finden Sie unter [LINQ and Strings](../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md).  
+ Da der <xref:System.String>\-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die in der <xref:System.Linq.Enumerable>\-Klasse in Zeichenfolgen definierten Erweiterungsmethoden verwenden.  Aus Gründen der Übersichtlichkeit werden diese Methoden für den <xref:System.String>\-Typ aus IntelliSense ausgeschlossen, sie sind jedoch weiterhin vorhanden.  Sie können auch [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücke für Zeichenfolgen verwenden.  Weitere Informationen finden Sie unter [LINQ and Strings](../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md).  
   
 ## Verwandte Themen  
   

@@ -25,7 +25,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 43
 ---
 # Benannte und optionale Argumente (C#-Programmierhandbuch)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] stellt erstmals benannte und optionale Argumente bereit.  *Benannte Argumente* ermöglichen Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen statt der Position des Parameters in der Parameterliste zuordnen.  *Optionale Argumente* ermöglichen Ihnen, Argumente für einige Parameter wegzulassen.  Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] stellt erstmals benannte und optionale Argumente bereit.  *Benannte Argumente* ermöglichen Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen statt der Position des Parameters in der Parameterliste zuordnen.  *Optionale Argumente* ermöglichen Ihnen, Argumente für einige Parameter wegzulassen.  Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
   
  Bei der Verwendung von benannten und optionalen Argumenten werden die Argumente in der Reihenfolge ausgewertet, die die Argumentliste vorgibt, nicht die Parameterliste.  
   
@@ -121,7 +121,7 @@ AutoFormat\-Parameter
 -   Wenn zwei Kandidaten gleich gut geeignet sind, wird der Kandidat bevorzugt, der keine optionalen Parameter aufweist, für die Argumente weggelassen wurden.  Die Ursache hierfür ist eine allgemeine Einstellung für die Überladungsauflösung für Kandidaten mit weniger Parametern.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office\-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   

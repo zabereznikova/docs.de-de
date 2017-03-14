@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Write Text to Files with a StreamWriter in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird mit der `My.Computer.FileSystem.OpenTextFileWriter`\-Methode ein <xref:System.IO.StreamWriter>\-Objekt geöffnet, und dieses wird zum Schreiben einer Zeichenfolge in eine Textdatei mithilfe der <xref:System.IO.TextWriter.WriteLine%2A>\-Methode der <xref:System.IO.StreamWriter>\-Klasse verwendet.  
   

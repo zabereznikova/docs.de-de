@@ -20,14 +20,14 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # My.Response Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ruft das <xref:System.Web.HttpResponse>\-Objekt ab, das der <xref:System.Web.UI.Page> zugeordnet ist.  Dieses Objekt ermöglicht das Senden von HTTP\-Antwortdaten an einen Client und enthält Informationen über diese Antwort.  
   
 ## Hinweise  
  Das `My.Response`\-Objekt enthält das aktuelle <xref:System.Web.HttpResponse>\-Objekt, das der Seite zugeordnet ist.  
   
- Das `My.Response`\-Objekt ist nur für [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)]\-Anwendungen verfügbar.  
+ Das `My.Response`\-Objekt ist nur für [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]\-Anwendungen verfügbar.  
   
 ## Beispiel  
  Im folgenden Beispiel wird die Headerauflistung vom `My.Request`\-Objekt abgerufen, und das `My.Response`\-Objekt wird zum Schreiben der Auflistung in die ASP.NET\-Seite verwendet.  

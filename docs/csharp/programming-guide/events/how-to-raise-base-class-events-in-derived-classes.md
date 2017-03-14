@@ -16,7 +16,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 24
 ---
 # Gewusst wie: Ausl&#246;sen von Basisklassenereignissen in abgeleiteten Klassen (C#-Programmierhandbuch)
-Das folgende einfache Beispiel veranschaulicht die herkömmliche Methode zum Deklarieren von Ereignissen in einer Basisklasse, damit sie über abgeleitete Klassen ausgelöst werden können.  Dieses Beispiel wird für zahlreiche Windows Forms\-Klassen in der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek verwendet.  
+Das folgende einfache Beispiel veranschaulicht die herkömmliche Methode zum Deklarieren von Ereignissen in einer Basisklasse, damit sie über abgeleitete Klassen ausgelöst werden können.  Dieses Beispiel wird für zahlreiche Windows Forms\-Klassen in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek verwendet.  
   
  Wenn Sie eine Klasse erstellen, die als Basisklasse für andere Klassen verwendet werden kann, dürfen Sie nicht vergessen, dass Ereignisse ein spezieller Delegattyp sind und nur innerhalb der Klasse aufgerufen werden können, in der sie deklariert wurden.  Abgeleitete Klassen können Ereignisse, die innerhalb der Basisklasse deklariert wurden, nicht direkt aufrufen.  Mitunter kann es zwar erwünscht sein, dass ein Ereignis nur von der Basisklasse ausgelöst werden kann, in den meisten Fällen sollten Sie jedoch die abgeleitete Klasse zum Aufrufen von Basisklassenereignissen aktivieren.  Hierzu können Sie eine geschützte aufrufende Methode in der Basisklasse erstellen, die das Ereignis umschließt.  Abgeleitete Klassen können das Ereignis durch Aufrufen oder Überschreiben dieser aufrufenden Methode indirekt aufrufen.  
   

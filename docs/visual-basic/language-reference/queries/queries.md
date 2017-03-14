@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Queries (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ermöglicht das Erstellen von [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Ausdrücken im Code.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht das Erstellen von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Ausdrücken im Code.  
   
 ## In diesem Abschnitt  
  [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)  

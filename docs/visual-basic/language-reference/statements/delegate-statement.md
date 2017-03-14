@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Delegate Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wird zur Deklaration eines Delegaten verwendet.  Ein Delegat ist ein Referenztyp, der auf eine `Shared`\-Methode eines Typs oder auf eine Instanzenmethode eines Objekts verweist.  Jede Prozedur mit identischen Parameter\- und Rückgabetypen kann zum Erstellen einer Instanz dieser Delegatklasse verwendet werden.  Die Prozedur kann anschließend mittels der Delegatinstanz aufgerufen werden.  
   

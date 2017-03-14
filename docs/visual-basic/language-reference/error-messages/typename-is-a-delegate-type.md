@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # &#39;&lt;typename&gt;&#39; is a delegate type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 "\<Typname\>" ist ein Delegattyp.Für das Erstellen eines Delegaten kann nur ein einziger AddressOf\-Ausdruck als Argument übergeben werden.In vielen Fällen kann ein AddressOf\-Ausdruck anstelle einer Delegatkonstruktion verwendet werden.  
   

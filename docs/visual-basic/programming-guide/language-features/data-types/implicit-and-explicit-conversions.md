@@ -35,9 +35,9 @@ ms.author: "shoag"
 caps.handback.revision: 25
 ---
 # Implicit and Explicit Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Für *implizite Konvertierungen* ist keine spezielle Syntax im Quellcode erforderlich.  Im folgenden Beispiel konvertiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Wert von `k` implizit in einen Gleitkommawert einfacher Genauigkeit und weist den Wert anschließend `q` zu.  
+Für *implizite Konvertierungen* ist keine spezielle Syntax im Quellcode erforderlich.  Im folgenden Beispiel konvertiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Wert von `k` implizit in einen Gleitkommawert einfacher Genauigkeit und weist den Wert anschließend `q` zu.  
   
 ```  
 Dim k As Integer  
@@ -47,7 +47,7 @@ k = 432
 q = k  
 ```  
   
- Bei *expliziten Konvertierungen* wird ein Schlüsselwort zur Typkonvertierung verwendet.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt mehrere solcher Schlüsselwörter bereit, mit denen ein in runden Klammern stehender Ausdruck in den gewünschten Datentyp konvertiert wird.  Diese Schlüsselwörter verhalten sich wie Funktionen, aber der Compiler generiert den Code inline, sodass die Ausführung etwas schneller als bei einem Funktionsaufruf erfolgt.  
+ Bei *expliziten Konvertierungen* wird ein Schlüsselwort zur Typkonvertierung verwendet.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt mehrere solcher Schlüsselwörter bereit, mit denen ein in runden Klammern stehender Ausdruck in den gewünschten Datentyp konvertiert wird.  Diese Schlüsselwörter verhalten sich wie Funktionen, aber der Compiler generiert den Code inline, sodass die Ausführung etwas schneller als bei einem Funktionsaufruf erfolgt.  
   
  In der folgenden Erweiterung des oben stehenden Beispiels konvertiert das `CInt`\-Schlüsselwort den Wert von `q` vor der Zuweisung zu `k` wieder in eine ganze Zahl.  
   

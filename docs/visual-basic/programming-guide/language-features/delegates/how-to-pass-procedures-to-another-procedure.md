@@ -20,11 +20,11 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # How to: Pass Procedures to Another Procedure in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird veranschaulicht, wie mithilfe von Delegaten eine Prozedur an eine andere Prozedur übergeben wird.  
   
- Ein Delegat ist ein Typ, den Sie wie jeden anderen Typ in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwenden können.  Wenn der Operator `AddressOf` auf einen Prozedurnamen angewendet wird, gibt er ein Delegatobjekt zurück.  
+ Ein Delegat ist ein Typ, den Sie wie jeden anderen Typ in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwenden können.  Wenn der Operator `AddressOf` auf einen Prozedurnamen angewendet wird, gibt er ein Delegatobjekt zurück.  
   
  Im vorliegenden Beispiel liegt eine Prozedur mit einem Delegatparameter vor. Dieser kann eine Referenz an eine andere Prozedur enthalten, die mit dem Operator `AddressOf` abgerufen wird.  
   

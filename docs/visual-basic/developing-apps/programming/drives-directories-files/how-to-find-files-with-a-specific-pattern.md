@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # How to: Find Files with a Specific Pattern in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>\-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen.  Sie können mithilfe des `wildCards`\-Parameters ein bestimmtes Muster angeben.  Wenn Sie Unterverzeichnisse in der Suche berücksichtigen möchten, legen Sie den `searchType`\-Parameter auf `SearchOption.SearchAllSubDirectories` fest.  
   

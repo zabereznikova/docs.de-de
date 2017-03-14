@@ -40,7 +40,7 @@ Für generische Typparameter gibt das `in`\-Schlüsselwort an, dass der Typparam
  [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   

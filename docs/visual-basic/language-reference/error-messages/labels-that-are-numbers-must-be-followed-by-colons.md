@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Labels that are numbers must be followed by colons
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Für Zeilennummern gelten dieselben Regeln wie für andere Arten von Bezeichnungen. Sie müssen daher einen Doppelpunkt enthalten.  
   

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Umgestaltung und Dialogfeld &quot;Umbenennen&quot; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Im Dialogfeld **Umbenennen** von Visual Basic können Sie Bezeichner im Code umbenennen, z. B. Bezeichner für Felder, lokale Variablen, Methoden, Namespaces, Eigenschaften und Typen.  Sie öffnen das Dialogfeld **Umbenennen**, indem Sie mit der rechten Maustaste auf die Elementdeklaration klicken.  
   

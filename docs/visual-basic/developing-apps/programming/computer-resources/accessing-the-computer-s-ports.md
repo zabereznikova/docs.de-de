@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Accessing the Computer&#39;s Ports (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Computer.Ports`\-Objekt enthält eine Eigenschaft und eine Methode für den Zugriff auf die seriellen Anschlüsse des Computers.  
   
@@ -38,7 +38,7 @@ Das `My.Computer.Ports`\-Objekt enthält eine Eigenschaft und eine Methode für 
  Zeigt, wie eine Zeichenfolge vom seriellen Anschluss eines Computers empfangen wird.  
   
  [Port Operations in the .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Beschreibt, wie [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] beim Arbeiten mit Anschlüssen verwendet wird.  
+ Beschreibt, wie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] beim Arbeiten mit Anschlüssen verwendet wird.  
   
 ## Referenz  
  <xref:Microsoft.VisualBasic.Devices.Ports>  

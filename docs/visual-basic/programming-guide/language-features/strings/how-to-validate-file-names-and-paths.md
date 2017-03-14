@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # How to: Validate File Names and Paths in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird ein `Boolean`\-Wert zurückgegeben, der angibt, ob eine Zeichenfolge einen Dateinamen oder einen Pfad darstellt.  Bei der Validierung wird überprüft, ob der Name Zeichen enthält, die im Dateisystem nicht zulässig sind.  
   

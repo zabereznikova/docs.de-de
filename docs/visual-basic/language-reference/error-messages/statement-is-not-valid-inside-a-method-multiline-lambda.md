@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Statement is not valid inside a method/multiline lambda
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Anweisung ist innerhalb einer `Sub`\-Prozedur oder `Function`\-Prozedur sowie einer `Get`\-Eigenschaftenprozedur oder `Set`\-Eigenschaftenprozedur nicht gültig.  Einige Anweisungen können auf Modul\- oder Klassenebene definiert werden.  Andere Anweisungen wie z. B. `Option Strict` müssen auf Namespaceebene definiert werden und allen anderen Deklarationen vorangehen.  
   

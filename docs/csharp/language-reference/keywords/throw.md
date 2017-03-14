@@ -42,7 +42,7 @@ throw new MyException();
  Weitere Informationen finden Sie in den Beispielen in [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) und [Gewusst wie: Explizites Auslösen von Ausnahmen](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

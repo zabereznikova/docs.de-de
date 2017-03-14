@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Xor Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt einen logischen Ausschluss zweier `Boolean`\-Ausdrücke oder einen bitweisen Ausschluss zweier numerischer Ausdrücke durch.  
   

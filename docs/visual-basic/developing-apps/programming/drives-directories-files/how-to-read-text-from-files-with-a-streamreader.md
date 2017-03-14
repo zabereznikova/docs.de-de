@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Read Text from Files with a StreamReader (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Computer.FileSystem`\-Objekt stellt Methoden bereit, mit denen ein <xref:System.IO.TextReader> und ein <xref:System.IO.TextWriter> geöffnet werden kann.  Die `OpenTextFileWriter`\-Methode und die `OpenTextFileReader`\-Methode sind erweiterte Methoden, die in IntelliSense nur dann angezeigt werden, wenn Sie die Registerkarte **Alle** auswählen.  
   

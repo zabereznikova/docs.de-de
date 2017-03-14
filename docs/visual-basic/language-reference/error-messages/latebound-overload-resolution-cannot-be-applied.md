@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, doch der Verweis schlägt fehl, weil ein Argument vom Typ `Object` ist und der Datentyp des verweisenden Objekts eine Schnittstelle ist.  Das `Object`\-Argument erzwingt das Auflösen des Verweises durch den Compiler als spät gebundenen.  
   

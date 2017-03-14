@@ -36,7 +36,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # User-Defined Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enthält Daten in einem Format, das Sie definieren.  Das Format wird durch die `Structure`\-Anweisung definiert.  
   

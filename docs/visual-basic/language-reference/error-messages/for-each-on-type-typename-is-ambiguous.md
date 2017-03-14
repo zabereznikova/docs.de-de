@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # &#39;For Each&#39; on type &#39;&lt;typename&gt;&#39; is ambiguous because the type implements multiple instantiations of &#39;System.Collections.Generic.IEnumerable(Of T)&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In einer `For Each`\-Anweisung wird eine Iteratorvariable angegeben, die über mehrere <xref:System.Collections.IEnumerable.GetEnumerator%2A>\-Methoden verfügt.  
   
- Die Iteratorvariable muss von einem Typ sein, der die <xref:System.Collections.IEnumerable?displayProperty=fullName>\-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>\-Schnittstelle in einem der `Collections`\-Namespaces von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] implementiert.  Eine Klasse kann mehrere erstellte generische Schnittstellen implementieren, wenn für jede erstellte Schnittstelle ein anderes Typargument verwendet wird.  Wenn eine Klasse, auf die diese Bedingungen zutreffen, für die Iteratorvariable verwendet wird, verfügt diese Variable über mehrere <xref:System.Collections.IEnumerable.GetEnumerator%2A>\-Methoden.  In solch einem Fall kann [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nicht bestimmen, welche Methode aufgerufen werden soll.  
+ Die Iteratorvariable muss von einem Typ sein, der die <xref:System.Collections.IEnumerable?displayProperty=fullName>\-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>\-Schnittstelle in einem der `Collections`\-Namespaces von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] implementiert.  Eine Klasse kann mehrere erstellte generische Schnittstellen implementieren, wenn für jede erstellte Schnittstelle ein anderes Typargument verwendet wird.  Wenn eine Klasse, auf die diese Bedingungen zutreffen, für die Iteratorvariable verwendet wird, verfügt diese Variable über mehrere <xref:System.Collections.IEnumerable.GetEnumerator%2A>\-Methoden.  In solch einem Fall kann [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nicht bestimmen, welche Methode aufgerufen werden soll.  
   
  **Fehler\-ID:** BC32096  
   

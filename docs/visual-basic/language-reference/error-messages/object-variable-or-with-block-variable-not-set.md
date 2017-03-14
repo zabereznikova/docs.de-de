@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Object variable or With block variable not set
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es ist ein Verweis auf eine ungültige Variable vorhanden.  Wenn Sie eine Objektvariable erstellen möchten, müssen Sie die Objektvariable deklarieren und anschließend mithilfe der `Set`\-Anweisung einen gültigen Verweis auf die Objektvariable zuweisen.  Außerdem muss ein `With...End With`\-Block initialisiert werden, indem der Einstiegspunkt der `With`\-Anweisung ausgeführt wird.  
   

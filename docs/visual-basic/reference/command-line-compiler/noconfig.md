@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # /noconfig
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Gibt an, dass der Compiler nicht automatisch auf die im Allgemeinen verwendeten [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys verweisen oder den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace importieren soll.  
+Gibt an, dass der Compiler nicht automatisch auf die im Allgemeinen verwendeten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys verweisen oder den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace importieren soll.  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ Gibt an, dass der Compiler nicht automatisch auf die im Allgemeinen verwendeten 
 ```  
   
 ## Hinweise  
- Durch die Option `/noconfig` wird der Compiler angewiesen, die Kompilierung nicht unter Verwendung der Datei Vbc.rsp auszuführen, die sich im selben Verzeichnis wie die Datei Vbc.exe befindet.  Die Datei Vbc.rsp verweist auf die im Allgemeinen verwendeten [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys und importiert den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace.  Der Compiler verweist implizit auf die Assembly System.dll, es sei denn, die Option `/nostdlib` wird angegeben.  Die Option `/nostdlib` bewirkt, dass der Compiler nicht mit Vbc.rsp kompiliert oder automatisch auf die Assembly System.dll verweist.  
+ Durch die Option `/noconfig` wird der Compiler angewiesen, die Kompilierung nicht unter Verwendung der Datei Vbc.rsp auszuführen, die sich im selben Verzeichnis wie die Datei Vbc.exe befindet.  Die Datei Vbc.rsp verweist auf die im Allgemeinen verwendeten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys und importiert den `System`\-Namespace und den `Microsoft.VisualBasic`\-Namespace.  Der Compiler verweist implizit auf die Assembly System.dll, es sei denn, die Option `/nostdlib` wird angegeben.  Die Option `/nostdlib` bewirkt, dass der Compiler nicht mit Vbc.rsp kompiliert oder automatisch auf die Assembly System.dll verweist.  
   
 > [!NOTE]
 >  Auf die Assembly Mscorlib.dll und auf die Assembly Microsoft.VisualBasic.dll wird immer verwiesen.  

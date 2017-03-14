@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Doppelte Anf&#252;hrungszeichen sind kein g&#252;ltiges Kommentartoken f&#252;r Felder mit Trennzeichen, bei denen HasFieldsEnclosedInQuotes auf &quot;True&quot; festgelegt ist.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Als Trennzeichen für den `TextFieldParser` wurde ein Anführungszeichen angegeben, aber `EscapeQuotes` ist auf `True` festgelegt.  
   

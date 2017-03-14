@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Customizing Projects and Extending My with Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können Projektvorlagen anpassen, um zusätzliche `My`\-Objekte bereitzustellen.  So können andere Entwickler Ihre Objekte leichter finden und verwenden.  
   

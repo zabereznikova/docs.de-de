@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # XML IntelliSense in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Code\-Editor von Visual Basic enthält IntelliSense\-Features für XML, die Wortvervollständigungen für in einem XML\-Schema definierte Elemente bereitstellen.  Wenn Sie einem Projekt eine XSD \(XML Schema Definition\)\-Datei hinzufügen und mit der `Imports`\-Anweisung den Zielnamespace des Schemas importieren, werden Elemente aus dem XSD\-Schema vom Code\-Editor in die IntelliSense\-Liste der gültigen Membervariablen für <xref:System.Xml.Linq.XElement>\-Objekte und <xref:System.Xml.Linq.XDocument>\-Objekte aufgenommen.  Die folgende Abbildung zeigt die IntelliSense\-Memberliste für ein <xref:System.Xml.Linq.XElement>\-Objekt.  
   

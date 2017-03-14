@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Determining Object Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Generische Objektvariablen, d. h. als `Object` deklarierte Variablen, können Objekte aus allen Klassen enthalten.  Wenn Sie Variablen vom Typ `Object` verwenden, müssen Sie möglicherweise andere Aktionen auf Grundlage der Klasse des Objekts ausführen; einige Objekte bieten z. B. möglicherweise keine Unterstützung für bestimmte Eigenschaften oder Methoden.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet zwei Möglichkeiten, den in einer Objektvariablen gespeicherten Typ zu bestimmen: die `TypeName`\-Funktion und den `TypeOf...Is`\-Operator.  
+Generische Objektvariablen, d. h. als `Object` deklarierte Variablen, können Objekte aus allen Klassen enthalten.  Wenn Sie Variablen vom Typ `Object` verwenden, müssen Sie möglicherweise andere Aktionen auf Grundlage der Klasse des Objekts ausführen; einige Objekte bieten z. B. möglicherweise keine Unterstützung für bestimmte Eigenschaften oder Methoden.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bietet zwei Möglichkeiten, den in einer Objektvariablen gespeicherten Typ zu bestimmen: die `TypeName`\-Funktion und den `TypeOf...Is`\-Operator.  
   
 ## TypeName und TypeOf…Is  
  Die `TypeName`\-Funktion gibt eine Zeichenfolge zurück, deren Verwendung sich beim Speichern oder Anzeigen des Klassennamens eines Objekts, wie im folgenden Codefragment gezeigt, empfiehlt:  
@@ -37,7 +37,7 @@ Generische Objektvariablen, d. h. als `Object` deklarierte Variablen, können O
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- Dabei müssen Sie allerdings folgende Besonderheiten beachten.  Der Operator `TypeOf...Is` gibt `True` zurück, wenn ein Objekt eines bestimmten Typs vorliegt oder von einem bestimmten Typ abgeleitet wurde.  Beinahe jeder Vorgang in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] umfasst Objekte, wozu auch solche Elemente gehören, die normalerweise nicht als Objekte betrachtet werden, z. B. String\- und Integer\-Werte.  Diese Objekte sind von <xref:System.Object> abgeleitet und erben Methoden von dieser Klasse.  Wenn dem Operator `TypeOf...Is` ein `Integer`\-Wert übergeben und nach `Object` überprüft wird, ergibt die Auswertung `True`.  Im folgenden Beispiel wird gemeldet, dass der Parameter `InParam` gleichzeitig vom Typ `Object` und `Integer` ist:  
+ Dabei müssen Sie allerdings folgende Besonderheiten beachten.  Der Operator `TypeOf...Is` gibt `True` zurück, wenn ein Objekt eines bestimmten Typs vorliegt oder von einem bestimmten Typ abgeleitet wurde.  Beinahe jeder Vorgang in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst Objekte, wozu auch solche Elemente gehören, die normalerweise nicht als Objekte betrachtet werden, z. B. String\- und Integer\-Werte.  Diese Objekte sind von <xref:System.Object> abgeleitet und erben Methoden von dieser Klasse.  Wenn dem Operator `TypeOf...Is` ein `Integer`\-Wert übergeben und nach `Object` überprüft wird, ergibt die Auswertung `True`.  Im folgenden Beispiel wird gemeldet, dass der Parameter `InParam` gleichzeitig vom Typ `Object` und `Integer` ist:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   

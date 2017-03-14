@@ -20,11 +20,11 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Create XML Documentation in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird veranschaulicht, wie dem Code XML\-Dokumentationskommentare hinzugefügt werden.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie eine XML\-Dokumentation für einen Typ oder einen Member  
   

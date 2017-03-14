@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # &#39;As Any&#39; is not supported in &#39;Declare&#39; statements
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der `Any`\-Datentyp wurde in Visual Basic 6.0 und früheren Versionen in `Declare`\-Anweisungen verwendet, um die Verwendung von Argumenten zu ermöglichen, die Daten eines beliebigen Typs enthalten konnten.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt jedoch Überladen und löst so den `Any`\-Datentyp ab.  
+Der `Any`\-Datentyp wurde in Visual Basic 6.0 und früheren Versionen in `Declare`\-Anweisungen verwendet, um die Verwendung von Argumenten zu ermöglichen, die Daten eines beliebigen Typs enthalten konnten.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt jedoch Überladen und löst so den `Any`\-Datentyp ab.  
   
  **Fehler\-ID:** BC30828  
   

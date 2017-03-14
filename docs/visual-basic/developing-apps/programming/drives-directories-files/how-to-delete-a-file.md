@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # How to: Delete a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der `DeleteFile`\-Methode des `My.Computer.FileSystem`\-Objekts können Sie Dateien löschen.  Dabei sind u. a. folgende Optionen verfügbar: ob die gelöschte Datei in den **Papierkorb** verschoben werden soll, ob eine Bestätigungsabfrage für den Löschvorgang angezeigt werden soll und was beim Abbrechen des Vorgangs durch den Benutzer geschehen soll.  
   

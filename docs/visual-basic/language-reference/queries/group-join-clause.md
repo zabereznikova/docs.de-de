@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Group Join Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen.  Die Joinoperation beruht auf übereinstimmenden Schlüsseln.  
   

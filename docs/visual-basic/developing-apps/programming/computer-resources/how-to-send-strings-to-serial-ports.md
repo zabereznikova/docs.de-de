@@ -22,9 +22,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Send Strings to Serial Ports in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Thema wird beschrieben, wie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit `My.Computer.Ports` Zeichenfolgen an die seriellen Anschlüsse des Computers gesendet werden.  
+In diesem Thema wird beschrieben, wie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit `My.Computer.Ports` Zeichenfolgen an die seriellen Anschlüsse des Computers gesendet werden.  
   
 ## Beispiel  
  In diesem Beispiel wird eine Zeichenfolge zum seriellen Anschluss COM1 gesendet.  Sie müssen eventuell einen anderen seriellen Anschluss auf dem Computer verwenden.  

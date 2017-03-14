@@ -32,7 +32,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Procedure Overloading (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Unter dem *Überladen* einer Prozedur versteht man die Definition mehrerer Prozedurversionen gleichen Namens mit unterschiedlichen Parameterlisten.  Durch die Überladung können mehrere ähnliche Prozedurversionen definiert werden, ohne dass diese nach Namen voneinander unterschieden werden müssen.  Die Unterscheidung wird durch Abwandeln der Parameterlisten vorgenommen.  
   

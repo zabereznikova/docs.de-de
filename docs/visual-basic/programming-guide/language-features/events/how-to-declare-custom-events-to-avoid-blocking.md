@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Declare Custom Events To Avoid Blocking (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn bestimmte Bedingungen vorliegen, darf ein Ereignishandler nachfolgende Ereignishandler nicht blockieren.  Benutzerdefinierte Ereignisse ermöglichen den asynchronen Aufruf der Ereignishandler durch das betreffende Ereignis.  
   

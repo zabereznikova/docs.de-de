@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Overload a Procedure that Takes an Indefinite Number of Parameters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn eine Prozedur über einen [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)\-Parameter verfügt, können Sie keine überladene Version definieren, die ein eindimensionales Array für das Parameterarray akzeptiert.  Weitere Informationen finden Sie im Abschnitt "Implizite Überladungen für ParamArray\-Parameter" unter [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
   
@@ -54,7 +54,7 @@ Wenn eine Prozedur über einen [ParamArray](../../../../visual-basic/language-re
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- Im Code der überladenen Versionen muss nicht überprüft werden, ob der Aufrufcode einen oder mehrere Werte für den `ParamArray`\-Parameter angegeben hat, und wenn dies der Fall war, wie viele Werte bereitgestellt wurden.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] übergibt die Steuerung der Version, zu der die angegebene Argumentliste passt.  
+ Im Code der überladenen Versionen muss nicht überprüft werden, ob der Aufrufcode einen oder mehrere Werte für den `ParamArray`\-Parameter angegeben hat, und wenn dies der Fall war, wie viele Werte bereitgestellt wurden.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt die Steuerung der Version, zu der die angegebene Argumentliste passt.  
   
 ## Kompilieren des Codes  
  Weil eine Prozedur mit einem `ParamArray`\-Parameter einer Gruppe von überladenen Versionen entspricht, kann eine solche Prozedur nicht mit einer Parameterliste überladen werden, die einer dieser impliziten Überladungen entspricht.  Weitere Informationen hierzu finden Sie unter [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  

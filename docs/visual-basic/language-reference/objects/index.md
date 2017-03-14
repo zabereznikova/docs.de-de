@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Objects (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema finden Sie Links zu anderen Themen, welche die Visual Basic\-Laufzeitobjekte dokumentieren und Tabellen mit den Prozeduren, Eigenschaften und Ereignissen ihrer Member enthalten.  
   
@@ -44,9 +44,9 @@ In diesem Thema finden Sie Links zu anderen Themen, welche die Visual Basic\-La
 |`My.Computer.Registry` \(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>\)|Stellt Eigenschaften und Methoden zum Bearbeiten der Registrierung bereit.|  
 |[My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md)|Stellt Eigenschaften für den Zugriff auf eine Instanz von jedem im aktuellen Projekt deklarierten Windows Form bereit.|  
 |`My.Log` \(<xref:Microsoft.VisualBasic.Logging.AspLog>\)|Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis\- und Ausnahmeinformationen in die Protokollüberwachungen für Webanwendungen bereit.|  
-|[My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md)|Ruft das <xref:System.Web.HttpRequest>\-Objekt für die angeforderte Seite ab.  Das `My.Request`\-Objekt enthält Informationen über die aktuelle HTTP\-Anforderung.<br /><br /> Das `My.Request`\-Objekt ist nur für [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)]\-Anwendungen verfügbar.|  
+|[My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md)|Ruft das <xref:System.Web.HttpRequest>\-Objekt für die angeforderte Seite ab.  Das `My.Request`\-Objekt enthält Informationen über die aktuelle HTTP\-Anforderung.<br /><br /> Das `My.Request`\-Objekt ist nur für [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]\-Anwendungen verfügbar.|  
 |[My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md)|Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen einer Anwendung bereit.|  
-|[My.Response Object](../../../visual-basic/language-reference/objects/my-response-object.md)|Ruft das <xref:System.Web.HttpResponse>\-Objekt ab, das dem <xref:System.Web.UI.Page>\-Element zugeordnet ist.  Dieses Objekt ermöglicht das Senden von HTTP\-Antwortdaten an einen Client und enthält Informationen über diese Antwort.<br /><br /> Das `My.Response`\-Objekt ist nur für [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)]\-Anwendungen verfügbar.|  
+|[My.Response Object](../../../visual-basic/language-reference/objects/my-response-object.md)|Ruft das <xref:System.Web.HttpResponse>\-Objekt ab, das dem <xref:System.Web.UI.Page>\-Element zugeordnet ist.  Dieses Objekt ermöglicht das Senden von HTTP\-Antwortdaten an einen Client und enthält Informationen über diese Antwort.<br /><br /> Das `My.Response`\-Objekt ist nur für [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]\-Anwendungen verfügbar.|  
 |[My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md)|Stellt Eigenschaften und Methoden für den Zugriff auf die Einstellungen einer Anwendung bereit.|  
 |`My.User` \(<xref:Microsoft.VisualBasic.ApplicationServices.User>\)|Ermöglicht den Zugriff auf die Informationen über den aktuellen Benutzer.|  
 |[My.WebServices Object](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Stellt Eigenschaften bereit, mit denen von jedem Webdienst, auf den das aktuelle Projekt verweist, eine Einzelinstanz erstellt werden bzw. auf diese Einzelinstanz zugegriffen werden kann.|  

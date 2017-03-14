@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Return Values for the CStr Function (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In der folgenden Tabelle werden die Rückgabewerte für `CStr` bei unterschiedlichen `expression`\-Datenypen beschrieben.  
   

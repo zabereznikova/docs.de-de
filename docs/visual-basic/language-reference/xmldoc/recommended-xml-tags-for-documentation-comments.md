@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Recommended XML Tags for Documentation Comments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler kann Dokumentationskommentare im Code zu einer XML\-Datei verarbeiten.  Sie können zusätzliche Tools verwenden, um die XML\-Datei zu Dokumentationsmaterial zu verarbeiten.  
+Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler kann Dokumentationskommentare im Code zu einer XML\-Datei verarbeiten.  Sie können zusätzliche Tools verwenden, um die XML\-Datei zu Dokumentationsmaterial zu verarbeiten.  
   
  XML\-Kommentare sind für Codekonstrukte wie Typen und Typenmember zulässig.  Bei partiellen Typen kann nur ein Teil des Typs über XML\-Kommentare verfügen. Allerdings gibt es keine Einschränkungen für das Kommentieren seiner Member.  
   

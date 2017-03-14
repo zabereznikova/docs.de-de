@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Can&#39;t create necessary temporary file
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Entweder ist das Laufwerk voll, das das von der TEMP\-Umgebungsvariable angegebene Verzeichnis enthält, oder die TEMP\-Umgebungsvariable gibt ein ungültiges oder schreibgeschütztes Laufwerk oder Verzeichnis an.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Call a Procedure that Does Not Return a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Sub`\-Prozedur gibt keinen Wert an den Aufrufcode zurück.  Sie wird explizit mit einer eigenständigen Aufrufanweisung aufgerufen.  Sie kann nicht durch Einfügen ihres Namens in einen Ausdruck aufgerufen werden.  
   
@@ -33,7 +33,7 @@ Eine `Sub`\-Prozedur gibt keinen Wert an den Aufrufcode zurück.  Sie wird expli
   
 3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern, und trennen Sie die Argumente durch Kommas.  Geben Sie die Argumente unbedingt in genau der Reihenfolge an, in der die `Sub`\-Prozedur die entsprechenden Parameter definiert.  
   
-     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>\-Funktion aufgerufen, um ein Anwendungsfenster zu aktivieren.  Die Funktion <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> erfordert als einziges Argument den Fenstertitel.  Sie gibt an den Aufrufcode keinen Wert zurück.  Wenn kein Editor\-Prozess ausgeführt wird, löst das Beispiel eine <xref:System.ArgumentException>\-Ausnahme aus.  Die `Shell`\-Prozedur setzt voraus, dass sich die Anwendungen in den angegebenen Pfaden befinden.  
+     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>\-Funktion aufgerufen, um ein Anwendungsfenster zu aktivieren.  Die Funktion <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> erfordert als einziges Argument den Fenstertitel.  Sie gibt an den Aufrufcode keinen Wert zurück.  Wenn kein Editor\-Prozess ausgeführt wird, löst das Beispiel eine <xref:System.ArgumentException>\-Ausnahme aus.  Die `Shell`\-Prozedur setzt voraus, dass sich die Anwendungen in den angegebenen Pfaden befinden.  
   
      [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   

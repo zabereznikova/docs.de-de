@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # &amp;= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verkettet einen `String`\-Ausdruck mit einer `String`\-Variablen oder \-Eigenschaft und weist das Ergebnis der Variablen oder der Eigenschaft zu.  
   

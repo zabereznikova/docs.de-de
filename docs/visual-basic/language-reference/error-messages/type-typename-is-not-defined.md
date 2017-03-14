@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Type &#39;&lt;typename&gt;&#39; is not defined
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Anweisung erstellte einen Verweis auf einen Typ, der nicht definiert wurde.  Sie können einen Typ, z. B. `Enum`, `Structure`, `Class` oder `Interface`, in einer Deklarationsanweisung definieren.  
   
@@ -35,7 +35,7 @@ Die Anweisung erstellte einen Verweis auf einen Typ, der nicht definiert wurde. 
   
 -   Stellen Sie sicher, dass der Namespace des Typs innerhalb des Projekts neu definiert wurde.  Verwenden Sie in diesem Fall das `Global`\-Schlüsselwort, um den Typnamen vollständig zu qualifizieren.  Wenn z. B. ein Projekt einen Namespace mit dem Namen `System` definiert, kann der <xref:System.Object?displayProperty=fullName>\-Typ erst aufgerufen werden, wenn er mit dem `Global`\-Schlüsselwort vollständig qualifiziert wurde: `Global.System.Object`.  
   
--   Wenn der Typ zwar definiert, die Objekt\- oder Typbibliothek, in der er definiert wurde, in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] jedoch nicht registriert ist, klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**, und wählen Sie anschließend die geeignete Objekt\- oder Typbibliothek aus.  
+-   Wenn der Typ zwar definiert, die Objekt\- oder Typbibliothek, in der er definiert wurde, in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jedoch nicht registriert ist, klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**, und wählen Sie anschließend die geeignete Objekt\- oder Typbibliothek aus.  
   
 -   Stellen Sie sicher, dass der Typ in einer Assembly enthalten ist, die Teil des als Ziel festgelegten .NET Framework\-Profils ist.  Weitere Informationen finden Sie unter [Troubleshooting .NET Framework Targeting Errors](/visual-studio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   

@@ -18,7 +18,7 @@ caps.handback.revision: 15
 # Gewusst wie: Bereitstellen eines Statusdialogfelds f&#252;r Dateioperationen (C#-Programmierhandbuch)
 Sie können ein Standarddialogfeld bereitstellen, das den Verlauf bei Dateivorgängen in Windows anzeigt, wenn Sie die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> im <xref:Microsoft.VisualBasic?displayProperty=fullName>\-Namespace verwenden.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So fügen Sie einen Verweis in Visual Studio hinzu  
   

@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Passing Arguments by Value and by Reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann ein Argument *als Wert* oder *als Verweis* an eine Prozedur übergeben werden.  Dies wird als *Übergabemechanismus* bezeichnet und legt fest, ob die Prozedur das Programmelement, das dem Argument im Aufrufcode zugrunde liegt, ändern kann.  In der Prozedurdeklaration wird der Übergabemechanismus durch die Angabe des [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselworts oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselworts für jeden Parameter festgelegt.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann ein Argument *als Wert* oder *als Verweis* an eine Prozedur übergeben werden.  Dies wird als *Übergabemechanismus* bezeichnet und legt fest, ob die Prozedur das Programmelement, das dem Argument im Aufrufcode zugrunde liegt, ändern kann.  In der Prozedurdeklaration wird der Übergabemechanismus durch die Angabe des [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselworts oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselworts für jeden Parameter festgelegt.  
   
 ## Unterscheidungen  
  Wenn ein Argument an eine Prozedur übergeben wird, sind verschiedene Unterscheidungen zu beachten, zwischen denen eine Wechselwirkung besteht:  
@@ -46,7 +46,7 @@ In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes
   
 -   **Schutz**.  Bei der Wahl eines der beiden Übergabemechanismen fällt vor allem ins Gewicht, ob die Aufrufvariablen geändert werden dürfen oder nicht.  Der Vorteil der Argumentübergabe `ByRef` besteht darin, dass die Prozedur durch dieses Argument einen Wert an den Aufrufcode zurückgeben kann.  Der Vorteil der Argumentübergabe `ByVal` besteht darin, dass die Variable vor Änderungen durch die Prozedur geschützt wird.  
   
--   **Leistung**.  Möglicherweise wirkt sich der Übergabemechanismus auf die Leistung des Codes aus, jedoch ist dies normalerweise unbedeutend.  Eine Ausnahme bildet ein `ByVal` übergebener Werttyp.  Hier kopiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den gesamten Dateninhalt des Arguments.  Deshalb kann die Übergabe `ByRef` bei umfassenden Werttypen wie Strukturen effizienter sein.  
+-   **Leistung**.  Möglicherweise wirkt sich der Übergabemechanismus auf die Leistung des Codes aus, jedoch ist dies normalerweise unbedeutend.  Eine Ausnahme bildet ein `ByVal` übergebener Werttyp.  Hier kopiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den gesamten Dateninhalt des Arguments.  Deshalb kann die Übergabe `ByRef` bei umfassenden Werttypen wie Strukturen effizienter sein.  
   
      Bei Verweistypen wird lediglich der Zeiger auf die Daten kopiert \(vier Bytes bei 32\-Bit\-Plattformen, acht Bytes bei 64\-Bit\-Plattformen\).  Deshalb können Argumente vom Typ `String` oder vom Typ `Object` ohne Leistungseinbußen als Wert übergeben werden.  
   
@@ -55,7 +55,7 @@ In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes
   
  Wenn ein Parameter mit `ByRef` deklariert wird, kann der Aufrufcode den Mechanismus für `ByVal` erzwingen, indem er den Argumentnamen in Klammern im \- Aufruf einschließt.  Weitere Informationen finden Sie unter [How to: Force an Argument to Be Passed by Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Standardmäßig werden Argumente in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Wert übergeben.  
+ Standardmäßig werden Argumente in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als Wert übergeben.  
   
 ## Wann ein Argument als Wert übergeben werden sollte  
   

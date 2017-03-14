@@ -22,13 +22,13 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Walkthrough: Implementing Inheritance with COM Objects (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleitet werden, auch wenn diese mit früheren Versionen von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellt wurden.  Die von COM\-Objekten geerbten Eigenschaften und Methoden können auf die gleiche Weise überschrieben oder überladen werden wie Eigenschaften und Methoden jeder anderen Basisklasse.  Das Vererben von COM\-Objekten bietet sich an, wenn Sie eine vorhandene Klassenbibliothek nicht erneut kompilieren möchten.  
+Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleitet werden, auch wenn diese mit früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellt wurden.  Die von COM\-Objekten geerbten Eigenschaften und Methoden können auf die gleiche Weise überschrieben oder überladen werden wie Eigenschaften und Methoden jeder anderen Basisklasse.  Das Vererben von COM\-Objekten bietet sich an, wenn Sie eine vorhandene Klassenbibliothek nicht erneut kompilieren möchten.  
   
  In der folgenden Prozedur wird veranschaulicht, wie Sie mit Visual Basic 6.0 ein COM\-Objekt erstellen, das eine Klasse enthält, und wie Sie diese dann als Basisklasse verwenden.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie das in dieser exemplarischen Vorgehensweise verwendete COM\-Objekt  
   
@@ -78,14 +78,14 @@ Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleite
 10. Erstellen und registrieren Sie das COM\-Objekt, indem Sie im Menü **Datei** auf **ComObject1.dll erstellen** klicken.  
   
     > [!NOTE]
-    >  Sie können zwar auch eine mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellte Klasse als COM\-Objekt verfügbar machen, allerdings handelt es sich dann nicht um ein echtes COM\-Objekt. Ein solches Objekt kann in dieser exemplarischen Vorgehensweise nicht verwendet werden.  Ausführliche Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Sie können zwar auch eine mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellte Klasse als COM\-Objekt verfügbar machen, allerdings handelt es sich dann nicht um ein echtes COM\-Objekt. Ein solches Objekt kann in dieser exemplarischen Vorgehensweise nicht verwendet werden.  Ausführliche Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## Interop\-Assemblys  
- In der folgenden Prozedur erstellen Sie eine Interop\-Assembly, die als Brücke zwischen nicht verwaltetem Code \(z. B. einem COM\-Objekt\) und dem verwalteten Code von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] fungiert.  Die von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellte Interop\-Assembly deckt viele Details der Arbeit mit COM\-Objekten ab, wie beispielsweise *Interop\-Marshalling*, d. i. das Zusammenfassen von Parametern und Rückgabewerten in äquivalente Datentypen, wenn diese an COM\-Objekte und von COM\-Objekten übergeben werden.  Der Verweis in der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anwendung zeigt auf die Interop\-Assembly, nicht auf das eigentliche COM\-Objekt.  
+ In der folgenden Prozedur erstellen Sie eine Interop\-Assembly, die als Brücke zwischen nicht verwaltetem Code \(z. B. einem COM\-Objekt\) und dem verwalteten Code von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fungiert.  Die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellte Interop\-Assembly deckt viele Details der Arbeit mit COM\-Objekten ab, wie beispielsweise *Interop\-Marshalling*, d. i. das Zusammenfassen von Parametern und Rückgabewerten in äquivalente Datentypen, wenn diese an COM\-Objekte und von COM\-Objekten übergeben werden.  Der Verweis in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anwendung zeigt auf die Interop\-Assembly, nicht auf das eigentliche COM\-Objekt.  
   
 #### So verwenden Sie ein COM\-Objekt mit Visual Basic 2005 und höheren Versionen  
   
-1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt.  
+1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt.  
   
 2.  Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**.  
   
@@ -125,7 +125,7 @@ Visual Basic\-Klassen können von `Public`\-Klassen aus COM\-Objekten abgeleite
   
 3.  Führen Sie das Projekt aus, indem Sie F5 drücken.  
   
- Wenn Sie auf die Schaltfläche im Formular klicken, wird zuerst die `AddNumbers`\-Methode mit Zahlen vom Datentyp `Short` aufgerufen. Die entsprechende Methode der Basisklasse wird von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ausgewählt.  Der zweite Aufruf von `AddNumbers` wird an die überladene Methode von `MathClass` weitergeleitet.  Der dritte Aufruf ruft die `SubtractNumbers`\-Methode auf, die die Klasse erweitert.  Die Eigenschaft der Basisklasse wird festgelegt, und der Wert wird angezeigt.  
+ Wenn Sie auf die Schaltfläche im Formular klicken, wird zuerst die `AddNumbers`\-Methode mit Zahlen vom Datentyp `Short` aufgerufen. Die entsprechende Methode der Basisklasse wird von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ausgewählt.  Der zweite Aufruf von `AddNumbers` wird an die überladene Methode von `MathClass` weitergeleitet.  Der dritte Aufruf ruft die `SubtractNumbers`\-Methode auf, die die Klasse erweitert.  Die Eigenschaft der Basisklasse wird festgelegt, und der Wert wird angezeigt.  
   
 ## Nächste Schritte  
  Die überladene `AddNumbers`\-Funktion scheint zum gleichen Datentyp zu gehören wie die von der Basisklasse des COM\-Objekts geerbte Methode.  Dies liegt daran, dass die Argumente und Parameter der Methode der Basisklasse in Visual Basic 6.0 als 16\-Bit\-Ganzzahlen definiert sind, jedoch in höheren Visual Basic\-Versionen als 16\-Bit\-Ganzzahlen vom Typ `Short` verfügbar gemacht werden.  Die neue Funktion übernimmt 32\-Bit\-Ganzzahlen und überlädt die Funktion der Basisklasse.  

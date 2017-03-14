@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Boolean Expressions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *boolescher Ausdruck* ist ein Ausdruck, der zu einem Wert mit dem [Boolean\-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ausgewertet wird: `True` oder `False`.  `Boolean`\-Ausdrücke können verschiedene Formen aufweisen.  Die einfachste Form ist der direkte Vergleich des Werts einer `Boolean`\-Variablen mit einem `Boolean`\-Literal, wie im folgenden Beispiel veranschaulicht.  
   

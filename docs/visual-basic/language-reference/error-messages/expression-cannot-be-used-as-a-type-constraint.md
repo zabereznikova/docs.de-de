@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # &#39;&lt;expression&gt;&#39; cannot be used as a type constraint
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Einschränkungsliste enthält einen Ausdruck, der keine gültige Einschränkung für einen Typparameter darstellt.  
   

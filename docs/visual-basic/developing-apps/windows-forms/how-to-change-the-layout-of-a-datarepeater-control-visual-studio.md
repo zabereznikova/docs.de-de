@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # How to: Change the Layout of a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement kann sowohl vertikal \(vertikaler Bildlauf der Elemente\) als auch horizontal \(horizontaler Bildlauf der Elemente\) ausgerichtet werden.  Die Ausrichtung kann zur Entwurfszeit oder Laufzeit geändert werden, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft bearbeiten.  Wenn Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft zur Laufzeit ändern, sollten Sie ggf. die Größe von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> anpassen und die untergeordneten Steuerelemente neu positionieren.  
   

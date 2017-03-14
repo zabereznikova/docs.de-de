@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Concatenation Operators in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verkettungsoperatoren verbinden mehrere Zeichenfolgen zu einer einzelnen Zeichenfolge.  Es gibt zwei Verkettungsoperatoren: `+` und `&`.  Beide führen einen grundlegende Verkettungsvorgang durch, wie das nachfolgende Beispiel zeigt.  
   

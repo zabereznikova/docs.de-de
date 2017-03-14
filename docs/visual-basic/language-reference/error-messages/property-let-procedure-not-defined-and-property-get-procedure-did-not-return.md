@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Property let procedure not defined and property get procedure did not return an object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bestimmte Eigenschaften, Methoden und Operationen sind nur auf `Collection`\-Objekte anwendbar.  Sie haben eine Operation oder Eigenschaft angegeben, die ausschließlich auf Auflistungen angewendet wird, das Objekt stellt jedoch keine Auflistung dar.  
   

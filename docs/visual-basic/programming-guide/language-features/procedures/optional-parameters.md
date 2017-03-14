@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Optional Parameters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss.  *Optionale Parameter* werden in der Prozedurdefinition durch das `Optional`\-Schlüsselwort gekennzeichnet.  Dabei gelten folgende Regeln:  
   

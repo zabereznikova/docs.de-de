@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Visual Basic Runtime Library Members
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der `Microsoft.VisualBasic`\-Namespace enthält die Klassen, Module, Konstanten und Enumerationen, die die [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Laufzeitbibliothek bilden.  Diese Member der Bibliothek stellen Prozeduren, Eigenschaften und konstante Werte bereit, die Sie im Code verwenden können.  Jedes Modul und jede Klasse stellt eine bestimmte Kategorie von Funktionalität dar.  
+Der `Microsoft.VisualBasic`\-Namespace enthält die Klassen, Module, Konstanten und Enumerationen, die die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Laufzeitbibliothek bilden.  Diese Member der Bibliothek stellen Prozeduren, Eigenschaften und konstante Werte bereit, die Sie im Code verwenden können.  Jedes Modul und jede Klasse stellt eine bestimmte Kategorie von Funktionalität dar.  
   
 ## Microsoft.VisualBasic.Collection\-Klasse  
   
@@ -197,7 +197,7 @@ Der `Microsoft.VisualBasic`\-Namespace enthält die Klassen, Module, Konstanten 
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## Konstanten und Enumerationen von Microsoft Visual Basic  
- Der `Microsoft.VisualBasic`\-Namespace stellt Konstanten und Enumerationen als Teil der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Laufzeitbibliothek bereit.  Sie können diese konstanten Werte im Code verwenden.  Jede Enumeration stellt eine bestimmte Kategorie von Funktionalität dar.  Weitere Informationen finden Sie unter [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Der `Microsoft.VisualBasic`\-Namespace stellt Konstanten und Enumerationen als Teil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Laufzeitbibliothek bereit.  Sie können diese konstanten Werte im Code verwenden.  Jede Enumeration stellt eine bestimmte Kategorie von Funktionalität dar.  Weitere Informationen finden Sie unter [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## Siehe auch  
  [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md)   

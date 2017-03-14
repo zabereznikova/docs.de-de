@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Property &#39;&lt;propertyname&gt;&#39; doesn&#39;t return a value on all code paths
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die \<Eigenschaftenname\>\-Eigenschaft gibt nicht für alle Codepfade einen Wert zurück.Wenn das Ergebnis verwendet wird, kann zur Laufzeit eine NULL\-Verweisausnahme auftreten  
   

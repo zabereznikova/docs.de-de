@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # How to: Declare and Call a Default Property in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine *Standardeigenschaft* ist eine Klassen\- oder Struktureigenschaft, auf die der Code zugreifen kann, ohne dass die Eigenschaft angegeben wird.  Wenn der Aufrufcode eine Klasse oder Struktur, nicht jedoch eine Eigenschaft angibt und der Kontext den Zugriff auf eine Eigenschaft zulässt, löst [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Zugriff in die Standardeigenschaft dieser Klasse oder Struktur auf, falls eine solche Eigenschaft vorhanden ist.  
+Eine *Standardeigenschaft* ist eine Klassen\- oder Struktureigenschaft, auf die der Code zugreifen kann, ohne dass die Eigenschaft angegeben wird.  Wenn der Aufrufcode eine Klasse oder Struktur, nicht jedoch eine Eigenschaft angibt und der Kontext den Zugriff auf eine Eigenschaft zulässt, löst [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Zugriff in die Standardeigenschaft dieser Klasse oder Struktur auf, falls eine solche Eigenschaft vorhanden ist.  
   
  Eine Klasse oder Struktur kann höchstens eine Standardeigenschaft haben.  Sie können eine Standardeigenschaft jedoch überladen und mehrere Versionen davon verwenden.  
   

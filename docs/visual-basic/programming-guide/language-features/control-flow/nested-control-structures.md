@@ -25,12 +25,12 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Nested Control Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können Steuerungsanweisungen in andere Steuerungsanweisungen einfügen, wie z. B. einen `If...Then...Else`\-Block in eine `For...Next`\-Schleife.  Eine Steuerungsanweisung, die in eine andere Steuerungsanweisung eingefügt wurde, ist *geschachtelt*.  
   
 ## Schachtelungsebenen  
- Steuerungsstrukturen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können auf beliebig vielen Ebenen geschachtelt werden.  Es ist üblich, geschachtelte Strukturen lesbarer zu machen, indem der Text jeder Struktur eingerückt wird.  Dies wird automatisch vom Editor der integrierten Entwicklungsumgebung \(IDE\) erledigt.  
+ Steuerungsstrukturen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können auf beliebig vielen Ebenen geschachtelt werden.  Es ist üblich, geschachtelte Strukturen lesbarer zu machen, indem der Text jeder Struktur eingerückt wird.  Dies wird automatisch vom Editor der integrierten Entwicklungsumgebung \(IDE\) erledigt.  
   
  Im folgenden Beispiel addiert die `sumRows`\-Prozedur die positiven Elemente jeder Zeile der Matrix.  
   
@@ -79,7 +79,7 @@ Next ctl
  ![Grafisches Diagramm einer ungültigen Schachtelung](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.png "NestExampleInvalid")  
 Ungültige Schachtelung von For\- und With\-Strukturen  
   
- Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler erkennt diese überlappenden Steuerungsstrukturen und signalisiert beim Kompilieren einen Fehler.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler erkennt diese überlappenden Steuerungsstrukturen und signalisiert beim Kompilieren einen Fehler.  
   
 ## Siehe auch  
  [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   

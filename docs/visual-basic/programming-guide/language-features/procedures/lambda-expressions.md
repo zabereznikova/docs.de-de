@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 52
 ---
 # Lambda Expressions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die Sie an Stellen verwenden können, an denen die Verwendung eines Delegattypen gültig ist.  Lambda\-Ausdrücke können Funktionen oder Unterroutinen und einzeilig oder mehrzeilig sein.  Sie können Werte aus dem aktuellen Gültigkeitsbereich an einen Lambda\-Ausdruck übergeben.  
   

@@ -47,7 +47,7 @@ Das `event`\-Schlüsselwort wird verwendet, um in einer Herausgeberklasse ein Er
  Ein Ereignis kann mit dem [virtual](../../../csharp/language-reference/keywords/virtual.md)\-Schlüsselwort als virtuelles Ereignis gekennzeichnet werden.  Dies ermöglicht abgeleiteten Klassen, das Verhalten von Ereignissen mit dem [override](../../../csharp/language-reference/keywords/override.md)\-Schlüsselwort zu überschreiben.  Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  Ein Ereignis, das ein virtuelles Ereignis überschreibt, kann auch [versiegelt](../../../csharp/language-reference/keywords/sealed.md) sein. Damit wird angegeben, dass es für abgeleitete Klassen nicht mehr virtuell ist.  Schließlich kann ein Ereignis als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert werden, d. h., der Compiler generiert keinen `add`\-Ereignisaccessorblock und keinen `remove`\-Ereignisaccessorblock.  Somit müssen abgeleitete Klassen ihre eigene Implementierung bereitstellen.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

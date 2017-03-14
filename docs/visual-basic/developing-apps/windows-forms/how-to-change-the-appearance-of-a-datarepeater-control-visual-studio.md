@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Change the Appearance of a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können die Darstellung eines <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelements zur Entwurfszeit ändern, indem Sie Eigenschaften festlegen. Für eine Änderung während der Laufzeit muss das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>\-Ereignis verarbeitet werden.  
   

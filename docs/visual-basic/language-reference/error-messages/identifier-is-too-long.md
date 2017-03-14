@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Identifier is too long
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Name oder Bezeichner jedes Programmierelements kann maximal 1023 Zeichen Länge haben.  Darüber hinaus darf ein voll gekennzeichneter Name nicht länger als 1023 Zeichen sein.  Das heißt, dass die gesamte Bezeichnerzeichenfolge \(`<namespace>.<...>.<namespace>.<class>.<element>`\) einschließlich der Memberzugriff\-Operatorzeichen \(`.`\) nicht mehr als 1023 Zeichen umfassen darf.  
   

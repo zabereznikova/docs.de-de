@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Alias Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass eine externe Prozedur in der DLL einen anderen Namen aufweist.  
   

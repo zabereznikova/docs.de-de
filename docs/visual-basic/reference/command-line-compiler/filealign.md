@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # /filealign
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, wo die Abschnitte der Ausgabedatei auszurichten sind.  
   

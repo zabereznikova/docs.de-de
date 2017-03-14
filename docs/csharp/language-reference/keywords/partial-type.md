@@ -33,7 +33,7 @@ Die Definitionen partieller Typen ermöglichen es, die Definition einer Klasse, 
  Einen Klassen\-, Struktur\- oder Schnittstellentyp auf mehrere Dateien aufzuteilen kann hilfreich sein, wenn Sie mit großen Projekten oder mit automatisch generiertem Code wie dem von [Windows Forms Designer](http://msdn.microsoft.com/de-de/3c3d61f8-f36c-4d41-b9c3-398376fabb15) bereitgestellten Code arbeiten.  Ein partieller Typ kann eine [partielle Methode](../../../csharp/language-reference/keywords/partial-method.md) enthalten.  Weitere Informationen finden Sie unter [Partielle Klassen und Methoden](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

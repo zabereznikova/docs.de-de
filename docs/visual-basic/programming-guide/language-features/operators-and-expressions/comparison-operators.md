@@ -30,12 +30,12 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Comparison Operators in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert zurück, der die Beziehung zwischen ihren Werten darstellt.  Es gibt Operatoren für das Vergleichen von numerischen Werten, Operatoren für Zeichenfolgen und Operatoren für Objekte.  Alle drei Typen werden an dieser Stelle erläutert.  
   
 ## Vergleichen von numerischen Werten  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vergleicht numerische Werte mithilfe von sechs numerischen Vergleichsoperatoren.  Jeder Operator akzeptiert zwei Ausdrücke als Operanden, die numerische Werte ergeben.  In der folgenden Tabelle werden die Operatoren aufgelistet und für jeden Operator Beispiele dargestellt.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vergleicht numerische Werte mithilfe von sechs numerischen Vergleichsoperatoren.  Jeder Operator akzeptiert zwei Ausdrücke als Operanden, die numerische Werte ergeben.  In der folgenden Tabelle werden die Operatoren aufgelistet und für jeden Operator Beispiele dargestellt.  
   
 |Operator|Getestete Bedingung|Beispiele|  
 |--------------|-------------------------|---------------|  
@@ -47,7 +47,7 @@ Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert
 |`>=` \(Größer oder gleich\)|Ist der Wert des ersten Ausdrucks größer oder gleich dem Wert des zweiten Ausdrucks?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## Vergleichen von Zeichenfolgen  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vergleicht Zeichenfolgen mit dem [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) sowie den numerischen Vergleichsoperatoren.  Mit dem Operator `Like` können Sie ein Muster angeben.  Die Zeichenfolge wird dann mit dem Muster verglichen, und bei Übereinstimmung ist das Ergebnis `True`.  Andernfalls ist das Ergebnis `False`.  Mit den numerischen Operatoren können Sie `String`\-Werte anhand ihrer Sortierreihenfolge vergleichen, wie im folgenden Beispiel veranschaulicht.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vergleicht Zeichenfolgen mit dem [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) sowie den numerischen Vergleichsoperatoren.  Mit dem Operator `Like` können Sie ein Muster angeben.  Die Zeichenfolge wird dann mit dem Muster verglichen, und bei Übereinstimmung ist das Ergebnis `True`.  Andernfalls ist das Ergebnis `False`.  Mit den numerischen Operatoren können Sie `String`\-Werte anhand ihrer Sortierreihenfolge vergleichen, wie im folgenden Beispiel veranschaulicht.  
   
  `"73" < "9"`  
   
@@ -68,7 +68,7 @@ Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert
  Die Sortierreihenfolge beruht entweder auf einem binären Vergleich oder einem Textvergleich. Dies hängt von der Einstellung von `Option Compare` ab.  Weitere Informationen finden Sie unter [Option Compare Statement](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## Vergleichen von Objekten  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vergleicht zwei Objektverweisvariablen mit dem [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) und dem [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md).  Sie können mit beiden Operatoren bestimmen, ob zwei Verweisvariablen auf die gleiche Objektinstanz verweisen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vergleicht zwei Objektverweisvariablen mit dem [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) und dem [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md).  Sie können mit beiden Operatoren bestimmen, ob zwei Verweisvariablen auf die gleiche Objektinstanz verweisen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
  [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   

@@ -14,7 +14,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 13
 ---
 # /target:appcontainerexe (C#-Compileroptionen)
-Wenn Sie die **\/target:appcontainerexe**\-Compileroption verwenden, erstellt der Compiler eine ausführbare Windows\-Datei \(.exe\), die in einem App\-Container ausgeführt werden muss.  Diese Option entspricht [\/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ist aber für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8-appname-long-md.md)]\-Apps vorgesehen.  
+Wenn Sie die **\/target:appcontainerexe**\-Compileroption verwenden, erstellt der Compiler eine ausführbare Windows\-Datei \(.exe\), die in einem App\-Container ausgeführt werden muss.  Diese Option entspricht [\/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ist aber für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]\-Apps vorgesehen.  
   
 ## Syntax  
   
@@ -35,7 +35,7 @@ Wenn Sie die **\/target:appcontainerexe**\-Compileroption verwenden, erstellt de
   
 2.  Wählen Sie auf der Registerkarte **Anwendung** in der Liste **Ausgabetyp** die Option **Windows Store\-App** aus.  
   
-     Diese Option ist nur für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8-appname-long-md.md)]\-App\-Vorlagen verfügbar.  
+     Diese Option ist nur für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]\-App\-Vorlagen verfügbar.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

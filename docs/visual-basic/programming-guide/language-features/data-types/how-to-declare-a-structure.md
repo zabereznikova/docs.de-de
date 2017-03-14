@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Declare a Structure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie beginnen eine Strukturdeklaration mit der [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)\-Anweisung und beenden sie mit der `End` `Structure`\-Anweisung.  Zwischen diesen beiden Anweisungen müssen Sie mindestens ein *Element* deklarieren.  Die Elemente können einen beliebigen Datentyp haben, allerdings muss mindestens ein Element eine nicht freigegebene Variable oder ein nicht freigegebenes, nicht benutzerdefiniertes Ereignis sein.  
   

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Write Text to Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>\-Methode kann verwendet werden, um Text in Dateien zu schreiben.  Wenn die angegebene Datei nicht vorhanden ist, wird diese erstellt.  
   

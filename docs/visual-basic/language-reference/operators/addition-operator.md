@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # + Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zurück.  Kann auch zum Verketten zweier Zeichenfolgenausdrücke verwendet werden.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Variable &#39;&lt;variablename&gt;&#39; hides a variable in an enclosing block
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine in einen Block eingeschlossene Variable hat denselben Namen wie eine andere lokale Variable.  
   

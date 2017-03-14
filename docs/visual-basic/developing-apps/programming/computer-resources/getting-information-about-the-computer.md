@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Getting Information about the Computer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Computer.Info`\-Objekt stellt Eigenschaften für das Abrufen von Informationen über den Arbeitsspeicher des Computers, über geladene Assemblys, Namen und Betriebssysteme bereit.  
   

@@ -16,7 +16,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 34
 ---
 # Unterbrechende Visual C#-&#196;nderungen in Visual Studio 2013
-Keine Änderungen in Visual C\# in [!INCLUDE[vs_dev12](../../csharp/getting-started/includes/vs-dev12-md.md)] verhindern, dass eine Anwendung, die in Visual C\# in Visual Studio 2012 erstellt wurde, kompiliert wird oder dass das Laufzeitverhalten einer solchen Anwendung geändert wird.  
+Keine Änderungen in Visual C\# in [!INCLUDE[vs_dev12](~/includes/vs-dev12-md.md)] verhindern, dass eine Anwendung, die in Visual C\# in Visual Studio 2012 erstellt wurde, kompiliert wird oder dass das Laufzeitverhalten einer solchen Anwendung geändert wird.  
   
 ## Siehe auch  
  [Getting Started with Visual C\#](../../csharp/getting-started/getting-started-with-csharp.md)   

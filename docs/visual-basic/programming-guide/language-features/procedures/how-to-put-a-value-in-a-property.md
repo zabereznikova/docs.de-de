@@ -23,17 +23,17 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Put a Value in a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Um einen Wert in einer Eigenschaft zu speichern, fügen Sie den Namen der Eigenschaft auf der linken Seite einer Zuweisungsanweisung ein.  
   
- Die `Set`\-Prozedur der Eigenschaft speichert einen Wert. Sie rufen die Eigenschaft jedoch nicht explizit über ihren Namen auf.  Sie verwenden die Eigenschaft wie eine Variable.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
+ Die `Set`\-Prozedur der Eigenschaft speichert einen Wert. Sie rufen die Eigenschaft jedoch nicht explizit über ihren Namen auf.  Sie verwenden die Eigenschaft wie eine Variable.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
   
 ### So speichern Sie einen Wert in einer Eigenschaft  
   
 1.  Verwenden Sie den Namen der Eigenschaft auf der linken Seite einer Zuweisungsanweisung.  
   
-     Im folgenden Beispiel wird der Wert der `TimeOfDay`\-Eigenschaft von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auf Mittag gesetzt, wobei deren `Set`\-Prozedur implizit aufgerufen wird.  
+     Im folgenden Beispiel wird der Wert der `TimeOfDay`\-Eigenschaft von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf Mittag gesetzt, wobei deren `Set`\-Prozedur implizit aufgerufen wird.  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   

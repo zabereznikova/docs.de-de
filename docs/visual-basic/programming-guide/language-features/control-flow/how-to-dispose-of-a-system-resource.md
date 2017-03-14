@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Dispose of a System Resource (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit einem `Using`\-Block können Sie sicherstellen, dass das System eine Ressource freigibt, wenn der Code den Block beendet.  Dies ist hilfreich, wenn Sie eine Systemressource verwenden, die sehr viel Speicher beansprucht oder auf die auch andere Komponenten zugreifen.  
   

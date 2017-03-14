@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # /optioncompare
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, wie Zeichenfolgenvergleiche durchgeführt werden.  
   

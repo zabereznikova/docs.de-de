@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # How to: Determine Whether Two Objects Are Related (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können zwei Objekte miteinander vergleichen, um ggf. die Beziehung zwischen den Klassen zu ermitteln, aus denen sie erstellt wurden.  Die <xref:System.Type.IsInstanceOfType%2A>\-Methode der <xref:System.Type?displayProperty=fullName>\-Klasse gibt `True` zurück, wenn die angegebene Klasse von der aktuellen Klasse erbt oder wenn der aktuelle Typ eine Schnittstelle ist, die von der angegebenen Klasse unterstützt wird.  
   

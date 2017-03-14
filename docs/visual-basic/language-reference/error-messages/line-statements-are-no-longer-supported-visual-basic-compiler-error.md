@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # &#39;Line&#39; statements are no longer supported (Visual Basic Compiler Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Line\-Anweisungen werden nicht mehr unterstützt.  Dateiein\- und \-ausgaben sind als `Microsoft.VisualBasic.FileSystem.LineInput` verfügbar, und Grafikfunktionalität ist als `System.Drawing.Graphics.DrawLine` verfügbar.  
   

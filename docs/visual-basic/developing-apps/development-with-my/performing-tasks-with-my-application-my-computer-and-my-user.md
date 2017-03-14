@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Performing Tasks with My.Application, My.Computer, and My.User (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die drei zentralen `My`\-Objekte, die Zugriff auf Informationen und häufig verwendete Funktionen bereitstellen, sind `My.Application` \(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>\), `My.Computer` \(<xref:Microsoft.VisualBasic.Devices.Computer>\) und `My.User` \(<xref:Microsoft.VisualBasic.ApplicationServices.User>\).  Mit diesen Objekten können Sie auf Informationen zugreifen, die sich auf die aktuelle Anwendung, den Computer, auf dem die Anwendung installiert ist, sowie auf den aktuellen Benutzer der Anwendung beziehen.  
   

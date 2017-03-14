@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # /help, /? (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zeigt die Compileroptionen an.  
   
@@ -39,7 +39,7 @@ Zeigt die Compileroptionen an.
  Wenn Sie diese Option in eine Kompilierung einfügen, wird keine Ausgabedatei erstellt, und es erfolgt keine Kompilierung.  
   
 > [!NOTE]
->  Die `/help`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
+>  Die `/help`\-Option ist innerhalb der Entwicklungsumgebung von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
   
 ## Beispiel  
  Im folgenden Code werden von der Befehlszeile aus Hilfeinformationen aufgerufen.  

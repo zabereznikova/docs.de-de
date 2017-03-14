@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # MustInherit (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Legt fest, dass eine Klasse lediglich als Basisklasse verwendet werden kann und Objekte dieser Klasse nicht direkt erstellt werden können.  
   

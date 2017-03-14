@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # How to: Receive Strings From Serial Ports in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Thema wird beschrieben, wie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit `My.Computer.Ports` Zeichenfolgen von den seriellen Anschlüssen des Computers empfangen werden.  
+In diesem Thema wird beschrieben, wie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit `My.Computer.Ports` Zeichenfolgen von den seriellen Anschlüssen des Computers empfangen werden.  
   
 ### So empfangen Sie Zeichenfolgen vom seriellen Anschluss  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &#39;AddressOf&#39; operand must be the name of a method (without parentheses)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Operator `AddressOf` erstellt eine Instanz eines Prozedurdelegaten, die auf eine bestimmte Prozedur verweist.  Die Syntax lautet wie folgt:  
   

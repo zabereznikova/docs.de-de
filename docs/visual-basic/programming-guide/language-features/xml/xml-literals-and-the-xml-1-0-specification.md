@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # XML Literals and the XML 1.0 Specification (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die XML\-Literalsyntax in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt den Großteil der XML 1.0\-Spezifikation \(Extensible Markup Language\).  Details zur XML 1.0\-Spezifikation finden Sie unter [Extensible Markup Language \(XML\) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) auf der W3C\-Website.  
+Die XML\-Literalsyntax in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt den Großteil der XML 1.0\-Spezifikation \(Extensible Markup Language\).  Details zur XML 1.0\-Spezifikation finden Sie unter [Extensible Markup Language \(XML\) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) auf der W3C\-Website.  
   
 ## Was in Visual Basic nicht unterstützt wird  
   

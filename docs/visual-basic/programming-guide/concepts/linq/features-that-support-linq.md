@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 49
 ---
 # Visual Basic Features That Support LINQ
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der Begriff [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] bezieht sich auf eine Technologie in Visual Basic, die Abfragesyntax und andere Sprachkonstrukte direkt in der Programmiersprache unterstützt.  Bei [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] ist es nicht erforderlich, eine neue Programmiersprache zu erlernen, um Abfragen gegen eine externe Datenquelle auszuführen.  Sie können Daten in relationalen Datenbanken, XML\-Speichern oder Objekten mithilfe von Visual Basic abfragen.  Diese Integration von Abfragefunktionen in die Programmiersprache ermöglicht die Suche nach Syntaxfehlern zur Kompilierzeit und bietet Typsicherheit.  Außerdem wird durch diese Integration sichergestellt, dass Ihnen die meisten Informationen, die Sie zum Schreiben umfangreicher, vielseitiger Abfragen in Visual Basic benötigen, bereits bekannt sind.  
+Der Begriff [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich auf eine Technologie in Visual Basic, die Abfragesyntax und andere Sprachkonstrukte direkt in der Programmiersprache unterstützt.  Bei [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ist es nicht erforderlich, eine neue Programmiersprache zu erlernen, um Abfragen gegen eine externe Datenquelle auszuführen.  Sie können Daten in relationalen Datenbanken, XML\-Speichern oder Objekten mithilfe von Visual Basic abfragen.  Diese Integration von Abfragefunktionen in die Programmiersprache ermöglicht die Suche nach Syntaxfehlern zur Kompilierzeit und bietet Typsicherheit.  Außerdem wird durch diese Integration sichergestellt, dass Ihnen die meisten Informationen, die Sie zum Schreiben umfangreicher, vielseitiger Abfragen in Visual Basic benötigen, bereits bekannt sind.  
   
  In den folgenden Abschnitten werden die neuen Sprachkonstrukte beschrieben, die LINQ unterstützten, um Ihnen den Einstieg in die einführende Dokumentation sowie in Codebeispiele und Beispielanwendungen zu erleichtern.  Sie können auch auf die Links klicken, um genau zu erfahren, wie die Sprachfeatures zur Unterstützung der sprachintegrierten Abfrage \(Language\-Integrated Query, LINQ\) zusammenspielen.  [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md) bietet einen guten Einstiegspunkt.  
   
@@ -66,7 +66,7 @@ Der Begriff [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/
  Weitere Informationen finden Sie unter [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## Erweiterungsmethoden  
- Mit Erweiterungsmethoden können Sie einem Datentyp oder einer Schnittstelle Methoden außerhalb der Definition hinzufügen.  Dieses Feature ermöglicht Ihnen im Prinzip, einem vorhandenen Typ neue Methoden hinzuzufügen, ohne den Typ tatsächlich zu ändern.  Die Standardabfrageoperatoren selbst stellen eine Reihe von Erweiterungsmethoden dar, die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Andere Erweiterungen für <xref:System.Collections.Generic.IEnumerable%601> umfassen <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A> und <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Mit Erweiterungsmethoden können Sie einem Datentyp oder einer Schnittstelle Methoden außerhalb der Definition hinzufügen.  Dieses Feature ermöglicht Ihnen im Prinzip, einem vorhandenen Typ neue Methoden hinzuzufügen, ohne den Typ tatsächlich zu ändern.  Die Standardabfrageoperatoren selbst stellen eine Reihe von Erweiterungsmethoden dar, die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Andere Erweiterungen für <xref:System.Collections.Generic.IEnumerable%601> umfassen <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A> und <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  Durch die folgende Erweiterungsmethode wird der <xref:System.String>\-Klasse eine Print\-Methode hinzugefügt.  
   
@@ -87,7 +87,7 @@ Der Begriff [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/
   
  [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
   
- In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] liegen vielen der Standardabfrageoperatoren Lambda\-Ausdrücke zugrunde.  Lambda\-Ausdrücke werden vom Compiler erstellt, um Berechnungen zu erfassen, die in grundlegenden Abfragemethoden wie `Where`, `Select`, `Order By`, `Take While` usw. definiert sind.  
+ In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] liegen vielen der Standardabfrageoperatoren Lambda\-Ausdrücke zugrunde.  Lambda\-Ausdrücke werden vom Compiler erstellt, um Berechnungen zu erfassen, die in grundlegenden Abfragemethoden wie `Where`, `Select`, `Order By`, `Take While` usw. definiert sind.  
   
  Im folgenden Code wird beispielsweise eine Abfrage definiert, die aus einer Liste von Studenten alle Studenten im Abschlussjahr zurückgibt.  
   

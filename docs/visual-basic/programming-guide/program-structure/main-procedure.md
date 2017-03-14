@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Main Procedure in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enthalten.  Diese Prozedur fungiert als Ausgangspunkt und Gesamtsteuerung für die Anwendung.  Wenn .NET Framework die Anwendung geladen hat und die Steuerung an sie übergeben kann, wird die `Main`\-Prozedur aufgerufen.  Sofern Sie keine Windows Forms\-Anwendung erstellen, müssen Sie die `Main`\-Prozedur für Anwendungen schreiben, die eigenständig ausgeführt werden.  
   

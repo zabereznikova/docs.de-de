@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Prozedur aufrufen, übergeben Sie i. d. R. mindestens ein Argument an die Prozedur.  Jedes Argument entspricht einem zugrunde liegenden Programmierelement.  Sowohl die zugrunde liegenden Elemente als auch die Argumente selbst können veränderbar oder nicht veränderbar sein.  
   

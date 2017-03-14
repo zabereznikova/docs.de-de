@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # String Basics in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der `String`\-Datentyp stellt eine Reihe von Zeichen dar \(wobei jedes Zeichen wiederum eine Instanz des `Char`\-Datentyps darstellt\).  In diesem Thema werden die grundlegenden Konzepte von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erläutert.  
+Der `String`\-Datentyp stellt eine Reihe von Zeichen dar \(wobei jedes Zeichen wiederum eine Instanz des `Char`\-Datentyps darstellt\).  In diesem Thema werden die grundlegenden Konzepte von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erläutert.  
   
 ## Zeichenfolgenvariablen  
  Einer Instanz einer Zeichenfolge kann ein Literalwert zugewiesen werden, der eine Reihe von Zeichen darstellt.  Zum Beispiel:  
@@ -38,7 +38,7 @@ Der `String`\-Datentyp stellt eine Reihe von Zeichen dar \(wobei jedes Zeichen w
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Dieser Code verursacht einen Fehler, da der Compiler die Zeichenfolge nach dem zweiten Anführungszeichen beendet, und der Rest der Zeichenfolge wird als Code interpretiert.  Zur Lösung dieses Problems interpretiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zwei Anführungszeichen in einem Zeichenfolgenliteral als ein Anführungszeichen in der Zeichenfolge.  Das folgende Beispiel zeigt die korrekte Methode zum Einschließen eines Anführungszeichens in eine Zeichenfolge:  
+ Dieser Code verursacht einen Fehler, da der Compiler die Zeichenfolge nach dem zweiten Anführungszeichen beendet, und der Rest der Zeichenfolge wird als Code interpretiert.  Zur Lösung dieses Problems interpretiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zwei Anführungszeichen in einem Zeichenfolgenliteral als ein Anführungszeichen in der Zeichenfolge.  Das folgende Beispiel zeigt die korrekte Methode zum Einschließen eines Anführungszeichens in eine Zeichenfolge:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
 ```  
   
 ## Zeichen in Zeichenfolgen  
- Eine Zeichenfolge kann als eine Reihe von `Char`\-Werten betrachtet werden, und der `String`\-Typ verfügt über integrierte Funktionen, mit denen Sie zahlreiche Bearbeitungen an einer Zeichenfolge vornehmen können, die den durch Arrays zulässigen Bearbeitungen ähneln.  Wie bei allen Arrays in [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)], handelt es sich dabei um nullbasierte Arrays.  Sie möchten möglicherweise auf ein bestimmtes Zeichen in einer Zeichenfolge durch die `Chars`\-Eigenschaft verweisen, die eine Möglichkeit bietet, auf ein Zeichen durch die Position zuzugreifen, in der es in der Zeichenfolge auftritt.  Zum Beispiel:  
+ Eine Zeichenfolge kann als eine Reihe von `Char`\-Werten betrachtet werden, und der `String`\-Typ verfügt über integrierte Funktionen, mit denen Sie zahlreiche Bearbeitungen an einer Zeichenfolge vornehmen können, die den durch Arrays zulässigen Bearbeitungen ähneln.  Wie bei allen Arrays in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], handelt es sich dabei um nullbasierte Arrays.  Sie möchten möglicherweise auf ein bestimmtes Zeichen in einer Zeichenfolge durch die `Chars`\-Eigenschaft verweisen, die eine Möglichkeit bietet, auf ein Zeichen durch die Position zuzugreifen, in der es in der Zeichenfolge auftritt.  Zum Beispiel:  
   
  [!code-vb[VbVbalrStrings#67](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_5.vb)]  
   

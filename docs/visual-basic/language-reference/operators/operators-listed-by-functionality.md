@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Operators Listed by Functionality (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine alphabetisch sortierte Liste der  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Operatoren finden Sie in der Kategorienliste unten. Sie haben auch die Möglichkeit, diesen Abschnitt im Inhaltsverzeichnis der Hilfe zu öffnen.  
+Eine alphabetisch sortierte Liste der  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Operatoren finden Sie in der Kategorienliste unten. Sie haben auch die Möglichkeit, diesen Abschnitt im Inhaltsverzeichnis der Hilfe zu öffnen.  
   
 ## Kategorien von Operatoren  
   

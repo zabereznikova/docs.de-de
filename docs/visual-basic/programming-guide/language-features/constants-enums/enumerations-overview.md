@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Enumerations Overview (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enumerationen sind eine praktische Möglichkeit, mit Gruppen von verwandten Konstanten zu arbeiten und Konstantenwerte mit Namen zu verbinden.  Sie können beispielsweise eine Enumeration für eine Reihe von Ganzzahlkonstanten deklarieren, die mit den Wochentagen verknüpft sind. Anschließend können Sie anstelle der Ganzzahlwerte im Code die Namen der einzelnen Tage verwenden.  
   

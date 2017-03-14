@@ -890,16 +890,16 @@ caps.handback.revision: 15
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler.  Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten.  Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
   
  [Visual C\# Language](http://go.microsoft.com/fwlink/?LinkId=146921)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)]\-Sprachsyntax und \-Compiler.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](~/includes/csprcs-md.md)]\-Sprachsyntax und \-Compiler.  
   
  [Visual C\# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-Umgebung.  
+ Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Umgebung.  
   
  [Visual C\# General](http://go.microsoft.com/fwlink/?LinkId=146920)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)], die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)], die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)].  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  Siehe auch:  
  [Additional Resources for Visual C\# Programmers](../../csharp/getting-started/additional-resources.md)  

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &#39;&lt;attribute&gt;&#39; cannot be applied because the format of the GUID &#39;&lt;number&gt;&#39; is not correct
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein `COMClassAttribute`\-Attributblock gibt einen Globally Unique Identifier \(GUID\) an, der nicht das richtige GUID\-Format aufweist.  `COMClassAttribute` nutzt GUIDs zur eindeutigen Identifizierung der Klasse, der Schnittstelle und des Erstellungsereignisses.  
   

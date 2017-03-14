@@ -17,13 +17,13 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können verknüpfte Daten anzeigen, indem Sie mithilfe von zwei oder mehr <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelementen ein Master\-\/Detailformular erstellen.  Sie können beispielsweise in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> eine Liste der Kunden anzeigen und nach Auswahl eines Kunden durch den Benutzer in einem zweiten <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> die Aufträge dieses Kunden einblenden.  
   
  Um verknüpfte Daten anzuzeigen, ziehen Sie Detailelemente mit dem gleichen Mastertabellenknoten aus dem Fenster **Datenquellen** auf ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement.  Wenn beispielsweise eine Datenquelle mit einer Kundentabelle und einer verknüpften Auftragstabelle vorliegt, werden beide Tabellen in der Strukturansicht als Knoten der höchsten Ebene im Fenster **Datenquellen** angezeigt.  Erweitern Sie den Knoten für Kunden, um die Spalten einzublenden.  Beachten Sie, dass die letzte Spalte in der Liste ein erweiterbarer Knoten ist, der die Auftragstabelle darstellt.  Dieser Knoten entspricht den verknüpften Bestellungen eines Kunden.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So zeigen Sie verknüpfte Daten in zwei DataRepeater\-Steuerelementen an  
   

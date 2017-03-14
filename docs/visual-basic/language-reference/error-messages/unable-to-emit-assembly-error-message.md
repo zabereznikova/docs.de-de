@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Unable to emit assembly: &lt;error message&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen. Dabei meldet der Linker einen Fehler in der Ausgabephase der Assemblyerstellung.  
+Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler ruft den Assemblylinker \(Al.exe, auch bekannt als Alink\) auf, um eine Assembly mit einem Manifest zu erstellen. Dabei meldet der Linker einen Fehler in der Ausgabephase der Assemblyerstellung.  
   
  **Fehler\-ID:** BC30145  
   
@@ -61,7 +61,7 @@ Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
   
      Verwenden Sie doppelte Anführungszeichen \("\), wenn ein Pfad oder eine Datei Leerzeichen enthält.  
   
-6.  Fügen Sie in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] einen .NET Assembly\-Verweis auf die gerade von Ihnen erstellte Datei hinzu.  
+6.  Fügen Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] einen .NET Assembly\-Verweis auf die gerade von Ihnen erstellte Datei hinzu.  
   
 ## Siehe auch  
  [Al.exe \(Assembly Linker\-Tool\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)   

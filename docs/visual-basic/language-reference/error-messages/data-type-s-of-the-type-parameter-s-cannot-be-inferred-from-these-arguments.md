@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Data type(s) of the type parameter(s) cannot be inferred from these arguments
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden.Sie können diesen Fehler möglicherweise beheben, indem Sie die Datentypen explizit angeben.  
   

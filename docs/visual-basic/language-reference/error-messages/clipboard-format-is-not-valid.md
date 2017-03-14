@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Clipboard format is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das angegebene Format der Zwischenablage ist nicht mit der ausgeführten Methode kompatibel.  Dieser Fehler kann folgende Ursachen haben:  
   

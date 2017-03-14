@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # File name or class name not found during Automation operation (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Name, der für einen Dateinamen oder eine Klasse angegeben wurde, um die `GetObject`\-Funktion aufzurufen, wurde nicht gefunden.  
   

@@ -23,18 +23,18 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Differences Between Passing an Argument By Value and By Reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie einer Prozedur ein oder mehrere Argumente übergeben, ist jedes Argument einem zugrunde liegenden Programmierelement im Aufrufcode zugeordnet.  Sie können entweder den Wert dieses zugrunde liegenden Elements oder einen Verweis darauf übergeben.  Dies wird als *Übergabemechanismus* bezeichnet.  
   
 ## Übergabe als Wert  
- Sie übergeben ein Argument *als Wert*, indem Sie das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition angeben.  Bei Verwendung dieses Übergabemechanismus kopiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Wert des zugrunde liegenden Programmierelements in eine lokale Variable der Prozedur.  Der Prozedurcode hat keinen Zugriff auf das zugrunde liegende Element im Aufrufcode.  
+ Sie übergeben ein Argument *als Wert*, indem Sie das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition angeben.  Bei Verwendung dieses Übergabemechanismus kopiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Wert des zugrunde liegenden Programmierelements in eine lokale Variable der Prozedur.  Der Prozedurcode hat keinen Zugriff auf das zugrunde liegende Element im Aufrufcode.  
   
 ## Übergabe als Verweis  
- Sie übergeben ein Argument *als Verweis*, indem Sie das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition angeben.  Bei Verwendung dieses Übergabemechanismus übergibt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] im Aufrufcode einen direkten Verweis auf das zugrunde liegende Programmierelement an die Prozedur.  
+ Sie übergeben ein Argument *als Verweis*, indem Sie das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition angeben.  Bei Verwendung dieses Übergabemechanismus übergibt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] im Aufrufcode einen direkten Verweis auf das zugrunde liegende Programmierelement an die Prozedur.  
   
 ## Übergabemechanismus und Elementtyp  
- Die Auswahl des Übergabemechanismus ist nicht das Gleiche wie die Klassifizierung des zugrunde liegenden Elementtyps.  Die Übergabe als Wert oder als Verweis bezieht sich darauf, was [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] für den Prozedurcode bereitstellt.  Ein Werttyp oder ein Verweistyp verweist darauf, wie ein Programmierelement im Arbeitsspeicher gespeichert wird.  
+ Die Auswahl des Übergabemechanismus ist nicht das Gleiche wie die Klassifizierung des zugrunde liegenden Elementtyps.  Die Übergabe als Wert oder als Verweis bezieht sich darauf, was [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] für den Prozedurcode bereitstellt.  Ein Werttyp oder ein Verweistyp verweist darauf, wie ein Programmierelement im Arbeitsspeicher gespeichert wird.  
   
  Es besteht jedoch ein Zusammenhang zwischen Übergabemechanismus und Elementtyp.  Der Wert eines Verweistyps ist ein Zeiger auf die Daten, die sich an einer anderen Position im Arbeitsspeicher befinden.  Das bedeutet, dass der Prozedurcode bei der Übergabe eines Referenztyps als Wert über einen Zeiger auf die Daten des zugrunde liegenden Elements verfügt, auch wenn er nicht auf das zugrunde liegende Programmierelement selbst zugreifen kann.  Wenn das Element beispielsweise eine Arrayvariable ist, hat der Prozedurcode keinen Zugriff auf die eigentliche Variable, aber er kann auf die Arraymember zugreifen.  
   

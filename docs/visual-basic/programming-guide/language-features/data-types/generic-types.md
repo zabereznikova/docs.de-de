@@ -51,7 +51,7 @@ ms.author: "shoag"
 caps.handback.revision: 45
 ---
 # Generische Typen in Visual Basic (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
   
@@ -86,7 +86,7 @@ Schraubendrehersatz als generisches Werkzeug
  Ein ausführlicheres Beispiel finden Sie unter [Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## Geeignete Programmierelemente  
- Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Der <xref:System.Collections.Generic?displayProperty=fullName>\-Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie ein eigenes generisches Element definieren, überprüfen Sie, ob es bereits in <xref:System.Collections.Generic?displayProperty=fullName> verfügbar ist.  
+ Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Der <xref:System.Collections.Generic?displayProperty=fullName>\-Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie ein eigenes generisches Element definieren, überprüfen Sie, ob es bereits in <xref:System.Collections.Generic?displayProperty=fullName> verfügbar ist.  
   
  Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden. Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   

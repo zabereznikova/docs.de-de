@@ -26,17 +26,17 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Walkthrough: Calling Windows APIs (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Windows\-APIs sind DLLs \(Dynamic Link Libraries\), die Bestandteil des Betriebssystems Windows sind.  Verwenden Sie DLLs, wenn das Schreiben eigener Prozeduren für bestimmte Aufgaben zu aufwendig ist.  Windows bietet z. B. die Funktion `FlashWindowEx`, mit der Sie die Farbe einer Titelleiste für eine Anwendung von Hell nach Dunkel wechseln lassen können.  
   
  Der Vorteil der Verwendung von Windows\-APIs im Code ist die verkürzte Entwicklungszeit, da Sie Dutzende hilfreiche und bereits verfasste Funktionen verwenden können.  Ein Nachteil von Windows\-APIs ist, dass die Verwendung möglicherweise schwierig ist und Probleme kaum abgefangen werden können.  
   
- Windows\-APIs stellen eine besondere Kategorie der Interoperabilität dar.  Windows\-APIs verwenden keinen verwalteten Code, verfügen nicht über integrierte Typbibliotheken und verwenden andere Datentypen als Visual Studio.  Aufgrund dieser Unterschiede und weil Windows\-APIs keine COM\-Objekte sind, erfolgt die Zusammenarbeit zwischen Windows\-APIs und [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] über die Plattformaktivierung \(PInvoke\).  Die Plattformaktivierung ist ein Dienst, mit dem verwalteter Code nicht verwaltete Funktionen aufrufen kann, die in DLLs implementiert sind.  Weitere Informationen finden Sie unter [Consuming Unmanaged DLL Functions](../Topic/Consuming%20Unmanaged%20DLL%20Functions.md).  Sie können PInvoke in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] entweder mit der `Declare`\-Anweisung oder durch Anwenden des `DllImport`\-Attributs auf eine leere Prozedur verwenden.  
+ Windows\-APIs stellen eine besondere Kategorie der Interoperabilität dar.  Windows\-APIs verwenden keinen verwalteten Code, verfügen nicht über integrierte Typbibliotheken und verwenden andere Datentypen als Visual Studio.  Aufgrund dieser Unterschiede und weil Windows\-APIs keine COM\-Objekte sind, erfolgt die Zusammenarbeit zwischen Windows\-APIs und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] über die Plattformaktivierung \(PInvoke\).  Die Plattformaktivierung ist ein Dienst, mit dem verwalteter Code nicht verwaltete Funktionen aufrufen kann, die in DLLs implementiert sind.  Weitere Informationen finden Sie unter [Consuming Unmanaged DLL Functions](../Topic/Consuming%20Unmanaged%20DLL%20Functions.md).  Sie können PInvoke in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] entweder mit der `Declare`\-Anweisung oder durch Anwenden des `DllImport`\-Attributs auf eine leere Prozedur verwenden.  
   
- Windows\-API\-Aufrufe waren in der Vergangenheit ein wichtiger Bestandteil der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmierung, sind aber bei [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] selten erforderlich.  Verwenden Sie zum Ausführen von Aufgaben nach Möglichkeit immer verwalteten Code von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] anstelle von Windows\-API\-Aufrufen.  Diese exemplarische Vorgehensweise enthält Informationen über die Situationen, in denen die Verwendung von Windows\-APIs erforderlich ist.  
+ Windows\-API\-Aufrufe waren in der Vergangenheit ein wichtiger Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmierung, sind aber bei [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] selten erforderlich.  Verwenden Sie zum Ausführen von Aufgaben nach Möglichkeit immer verwalteten Code von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] anstelle von Windows\-API\-Aufrufen.  Diese exemplarische Vorgehensweise enthält Informationen über die Situationen, in denen die Verwendung von Windows\-APIs erforderlich ist.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## API\-Aufrufe mit "Declare"  
  Aufrufe von Windows\-APIs erfolgen im Allgemeinen über die `Declare`\-Anweisung.  
@@ -50,7 +50,7 @@ Windows\-APIs sind DLLs \(Dynamic Link Libraries\), die Bestandteil des Betriebs
   
 2.  Öffnen Sie ein neues Windows\-Anwendungsprojekt, indem Sie im Menü **Datei** erst auf **Neu** und dann auf **Projekt** klicken.  Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Wählen Sie in der Liste der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projektvorlagen **Windows\-Anwendung** aus.  Das neue Projekt wird angezeigt.  
+3.  Wählen Sie in der Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projektvorlagen **Windows\-Anwendung** aus.  Das neue Projekt wird angezeigt.  
   
 4.  Fügen Sie die folgende `Declare`\-Funktion entweder der Klasse oder dem Modul hinzu, in der bzw. dem Sie die DLL verwenden möchten:  
   
@@ -67,13 +67,13 @@ Windows\-APIs sind DLLs \(Dynamic Link Libraries\), die Bestandteil des Betriebs
   
  Geben Sie das `Lib`\-Schlüsselwort an, gefolgt von dem Namen und Speicherort der DLL mit der aufgerufenen Funktion.  Sie brauchen den Pfad zu Dateien in Windows\-Systemverzeichnissen nicht anzugeben.  
   
- Verwenden Sie das `Alias`\-Schlüsselwort, wenn der Name der aufgerufenen Funktion kein gültiger [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Prozedurname ist oder mit dem Namen anderer Elemente in der Anwendung in Konflikt steht.  `Alias` gibt den tatsächlichen Namen der aufgerufenen Funktion an.  
+ Verwenden Sie das `Alias`\-Schlüsselwort, wenn der Name der aufgerufenen Funktion kein gültiger [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Prozedurname ist oder mit dem Namen anderer Elemente in der Anwendung in Konflikt steht.  `Alias` gibt den tatsächlichen Namen der aufgerufenen Funktion an.  
   
 #### Argument\- und Datentypdeklarationen  
- Deklarieren Sie die Argumente und deren Datentypen.  Dieser Teil kann mit einigen Herausforderungen verbunden sein, da die Windows\-Datentypen nicht den Visual Studio\-Datentypen entsprechen.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nimmt Ihnen einen Großteil der Arbeit ab, indem Argumente in kompatible Datentypen konvertiert werden. Dieser Prozess wird als *Marshalling* bezeichnet.  Sie können das Marshalling der Argumente explizit steuern, indem Sie das im <xref:System.Runtime.InteropServices>\-Namespace definierte <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut verwenden.  
+ Deklarieren Sie die Argumente und deren Datentypen.  Dieser Teil kann mit einigen Herausforderungen verbunden sein, da die Windows\-Datentypen nicht den Visual Studio\-Datentypen entsprechen.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nimmt Ihnen einen Großteil der Arbeit ab, indem Argumente in kompatible Datentypen konvertiert werden. Dieser Prozess wird als *Marshalling* bezeichnet.  Sie können das Marshalling der Argumente explizit steuern, indem Sie das im <xref:System.Runtime.InteropServices>\-Namespace definierte <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut verwenden.  
   
 > [!NOTE]
->  Bei älteren Versionen von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] konnten Sie Parameter als `As Any` deklarieren, d. h., dass Daten eines beliebigen Datentyps verwendet werden konnten.  Bei [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] müssen Sie einen bestimmten Datentyp für alle `Declare`\-Anweisungen verwenden.  
+>  Bei älteren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konnten Sie Parameter als `As Any` deklarieren, d. h., dass Daten eines beliebigen Datentyps verwendet werden konnten.  Bei [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen Sie einen bestimmten Datentyp für alle `Declare`\-Anweisungen verwenden.  
   
 #### Windows\-API\-Konstanten  
  Einige Argumente sind Kombinationen von Konstanten.  Die in dieser exemplarischen Vorgehensweise gezeigte `MessageBox`\-API übernimmt z. B. das integer\-Argument `Typ`, das die Anzeige des Meldungsfelds steuert.  Sie können den numerischen Wert dieser Konstanten bestimmen, indem Sie die `#define`\-Anweisungen in der Datei "WinUser.h" untersuchen.  Die numerischen Werte werden im Allgemeinen im Hexadezimalformat angezeigt. Es empfiehlt sich daher, diese mit einem Rechner zu addieren und in Dezimalzahlen umzuwandeln.  Wenn Sie z. B. die Konstanten für das Format mit Ausrufezeichen `MB_ICONEXCLAMATION` 0x00000030 und das Format mit Ja\/Nein\-Schaltflächen `MB_YESNO` 0x00000004 kombinieren möchten, können Sie die Zahlen addieren, und erhalten so als Ergebnis 0x00000034 bzw. im Dezimalformat 52.  Sie können das Dezimalergebnis direkt verwenden, es wird aber empfohlen, diese Werte als Konstanten in der Anwendung zu deklarieren und mit dem Operator `Or` zu kombinieren.  
@@ -101,7 +101,7 @@ Windows\-APIs sind DLLs \(Dynamic Link Libraries\), die Bestandteil des Betriebs
 3.  Führen Sie das Projekt aus, indem Sie F5 drücken.  Das Meldungsfeld wird mit den Antwortschaltflächen **Ja** und **Nein** angezeigt.  Klicken Sie auf eine der beiden Schaltflächen.  
   
 #### Datenmarshalling  
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] konvertiert die Datentypen von Parametern und Rückgabewerten für Windows\-API\-Aufrufe automatisch. Sie können aber mit dem `MarshalAs`\-Attribut explizit nicht verwaltete Datentypen angeben, die von einer API erwartet werden.  Weitere Informationen zum Interop\-Marshalling finden Sie unter [Interop Marshaling](../Topic/Interop%20Marshaling.md).  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konvertiert die Datentypen von Parametern und Rückgabewerten für Windows\-API\-Aufrufe automatisch. Sie können aber mit dem `MarshalAs`\-Attribut explizit nicht verwaltete Datentypen angeben, die von einer API erwartet werden.  Weitere Informationen zum Interop\-Marshalling finden Sie unter [Interop Marshaling](../Topic/Interop%20Marshaling.md).  
   
 ###### So verwenden Sie "Declare" und "MarshalAs" in einem API\-Aufruf  
   
@@ -124,7 +124,7 @@ Windows\-APIs sind DLLs \(Dynamic Link Libraries\), die Bestandteil des Betriebs
   
 1.  Öffnen Sie ein neues Windows\-Anwendungsprojekt, indem Sie im Menü **Datei** erst auf **Neu** und dann auf **Projekt** klicken.  Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Wählen Sie in der Liste der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projektvorlagen **Windows\-Anwendung** aus.  Das neue Projekt wird angezeigt.  
+2.  Wählen Sie in der Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projektvorlagen **Windows\-Anwendung** aus.  Das neue Projekt wird angezeigt.  
   
 3.  Fügen Sie dem Startformular die Schaltfläche `Button2` hinzu.  
   

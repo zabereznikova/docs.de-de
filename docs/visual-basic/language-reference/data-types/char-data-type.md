@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Char Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 16\-Bit\-\(2\-Byte\)\-Codepunkte ohne Vorzeichen, deren Werte im Bereich von 0 bis 65535 liegen.  Jeder *Codepunkt* oder jedes Zeichencode, stellt ein einzelnes Unicode\-Zeichen dar.  
   

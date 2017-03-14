@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Lambda\-Ausdruck wurde einem Delegaten zugewiesen, der über eine nicht kompatible Signatur verfügt.  Im folgenden Code verfügt der `Del`\-Delegat beispielsweise über zwei ganzzahlige Parameter.  
   

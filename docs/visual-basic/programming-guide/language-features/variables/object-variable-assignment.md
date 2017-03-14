@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Object Variable Assignment (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Objekt wird einer Objektvariablen mit einer normalen Zuweisungsanweisung zugewiesen.  Sie können einen Objektausdruck oder das [Nothing](../../../../visual-basic/language-reference/nothing.md)\-Schlüsselwort zuweisen, wie im folgenden Beispiel veranschaulicht wird.  
   

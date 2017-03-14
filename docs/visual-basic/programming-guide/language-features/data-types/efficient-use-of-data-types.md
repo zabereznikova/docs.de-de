@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Efficient Use of Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Nicht deklarierten Variablen und Variablen, die ohne Datentyp deklariert sind, wird der Datentyp `Object` zugewiesen.  Programme lassen sich dadurch schneller programmieren, werden jedoch auch langsamer ausgeführt.  
   
@@ -42,7 +42,7 @@ Nicht deklarierten Variablen und Variablen, die ohne Datentyp deklariert sind, w
 -   Sie ermöglicht die schnellere Ausführung des Codes.  
   
 ## Die effizientesten Datentypen  
- Für Variablen, die generell keine Nachkommastellen enthalten, sind Ganzzahldatentypen effizienter als Nicht\-Ganzzahltypen.  In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] sind `Integer` und `UInteger` die effizientesten numerischen Typen.  
+ Für Variablen, die generell keine Nachkommastellen enthalten, sind Ganzzahldatentypen effizienter als Nicht\-Ganzzahltypen.  In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sind `Integer` und `UInteger` die effizientesten numerischen Typen.  
   
  Bei Bruchzahlen ist `Double` der effizienteste Datentyp, weil die Prozessoren der aktuellen Plattformen Gleitkommaoperationen mit doppelter Genauigkeit ausführen.  Operationen mit `Double` werden jedoch langsamer ausgeführt als solche mit ganzzahligen Typen wie `Integer`.  
   

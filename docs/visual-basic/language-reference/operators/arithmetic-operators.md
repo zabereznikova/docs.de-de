@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Arithmetic Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die folgenden Operatoren sind die arithmetischen Operatoren von Visual Basic.  
   

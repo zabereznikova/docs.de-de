@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der in Imports '\<QualifizierterElementname\>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden.Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält.Stellen Sie weiterhin sicher, dass der Aliasname keine weiteren Aliase enthält.  
   

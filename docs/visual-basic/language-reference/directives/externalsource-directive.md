@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 160
 ---
 # #ExternalSource Directive
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt eine Zuordnung von bestimmten Quellcodezeilen zu externem Text an.  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # /win32icon
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Fügt eine ICO\-Datei in die Ausgabedatei ein.  Diese ICO\-Datei wird die Ausgabedatei in **Explorer** dar.  
   
@@ -40,7 +40,7 @@ Fügt eine ICO\-Datei in die Ausgabedatei ein.  Diese ICO\-Datei wird die Ausgab
 ## Hinweise  
  Eine ICO\-Datei können Sie mit dem Ressourcencompiler \(RC\) von Microsoft Windows erstellen.  Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C\+\+\-Programm kompilieren. Die ICO\-Datei wird anhand der RC\-Datei erstellt.  Die `/win32icon`\-Option und die `/win32resource`\-Option schließen sich gegenseitig aus.  
   
- Siehe [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md), wenn Sie auf eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei verweisen, oder [\/resource](../../../visual-basic/reference/command-line-compiler/resource.md), wenn Sie eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei anfügen möchten.  Informationen zum Importieren einer RES\-Datei finden Sie unter [\/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md).  
+ Siehe [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md), wenn Sie auf eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei verweisen, oder [\/resource](../../../visual-basic/reference/command-line-compiler/resource.md), wenn Sie eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei anfügen möchten.  Informationen zum Importieren einer RES\-Datei finden Sie unter [\/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md).  
   
 ||  
 |-|  

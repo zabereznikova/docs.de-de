@@ -26,9 +26,9 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Composite Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Zusätzlich zu den in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verfügbaren elementaren Datentypen können Sie auch Elemente unterschiedlicher Typen zusammenstellen und so *zusammengesetzte Datentypen* wie Strukturen, Arrays und Klassen bilden.  Sie können zusammengesetzte Datentypen aus elementaren Typen und aus anderen zusammengesetzten Typen erstellen.  So können Sie z. B. ein Array von Strukturelementen oder eine Struktur mit Arraymembern erstellen.  
+Zusätzlich zu den in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbaren elementaren Datentypen können Sie auch Elemente unterschiedlicher Typen zusammenstellen und so *zusammengesetzte Datentypen* wie Strukturen, Arrays und Klassen bilden.  Sie können zusammengesetzte Datentypen aus elementaren Typen und aus anderen zusammengesetzten Typen erstellen.  So können Sie z. B. ein Array von Strukturelementen oder eine Struktur mit Arraymembern erstellen.  
   
 ## Datentypen  
  Zusammengesetzte Typen unterscheiden sich vom Datentyp ihrer Komponenten.  So hat ein Array von `Integer`\-Elementen nicht den Datentyp `Integer`.  
@@ -36,7 +36,7 @@ Zusätzlich zu den in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/con
  Der Datentyp eines Arrays wird normalerweise mithilfe des Elementtyps, runder Klammern und, falls erforderlich, Kommas dargestellt.  Beispielsweise wird ein eindimensionales Array von `String`\-Elementen in der Form `String()` dargestellt. Ein zweidimensionales Array von `Boolean`\-Elementen wird durch `Boolean(,)` angegeben.  
   
 ## Strukturtypen  
- Es gibt nicht einen einzelnen Datentyp, der alle Strukturen umfasst.  Stattdessen stellt jede Definition einer Struktur einen eindeutigen Datentyp dar, auch wenn in den Definitionen zweier Strukturen die gleichen Elemente in derselben Reihenfolge angegeben werden.  Wenn Sie jedoch zwei oder mehr Instanzen derselben Struktur erstellen, werden sie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Strukturen desselben Typs behandelt.  
+ Es gibt nicht einen einzelnen Datentyp, der alle Strukturen umfasst.  Stattdessen stellt jede Definition einer Struktur einen eindeutigen Datentyp dar, auch wenn in den Definitionen zweier Strukturen die gleichen Elemente in derselben Reihenfolge angegeben werden.  Wenn Sie jedoch zwei oder mehr Instanzen derselben Struktur erstellen, werden sie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] als Strukturen desselben Typs behandelt.  
   
 ## Arraytypen  
  Es gibt keinen universellen Datentyp, der sich für alle Arrays eignet.  Der Datentyp einer bestimmten Instanz eines Arrays richtet sich nach den folgenden Faktoren:  

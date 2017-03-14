@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Accessing Application Settings (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieser Abschnitt enthält Themen, in denen das `My.Settings`\-Objekt und die Aufgaben beschrieben werden, die mithilfe dieses Objekts durchgeführt werden können.  
   

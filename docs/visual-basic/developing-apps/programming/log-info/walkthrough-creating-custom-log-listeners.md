@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Walkthrough: Creating Custom Log Listeners (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In dieser exemplarische Vorgehensweise wird erläutert, wie Sie einen benutzerdefinierten Protokolllistener erstellen und so konfigurieren können, dass dieser die Ausgaben des `My.Application.Log`\-Objekts überwacht.  
   

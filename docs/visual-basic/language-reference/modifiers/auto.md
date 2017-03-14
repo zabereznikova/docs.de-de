@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Auto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass Visual Basic Zeichenfolgen entsprechend den .NET\-Framework\-Regeln auf der Grundlage des externen Namens der deklarierten externen Prozedur marshallen soll.  
   

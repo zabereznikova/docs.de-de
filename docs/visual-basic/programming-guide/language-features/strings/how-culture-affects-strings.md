@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How Culture Affects Strings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Kulturinformationen für Zeichenfolgenkonvertierungen und \-vergleiche verwendet werden.  
+Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kulturinformationen für Zeichenfolgenkonvertierungen und \-vergleiche verwendet werden.  
   
 ## Wann sollten kulturspezifische Zeichenfolgen verwendet werden?  
  Normalerweise empfiehlt sich die Verwendung kulturspezifischer Zeichenfolgen für alle Daten, die für Benutzer dargestellt und von Benutzern gelesen werden, während von der Kultur unabhängige Zeichenfolgen für die internen Daten der Anwendung verwendet werden sollten.  
@@ -32,7 +32,7 @@ Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../cshar
  Wenn jedoch die Anwendung das Datum auf einen zentralen Server hochlädt, sollte sie die Zeichenfolge entsprechend einer bestimmten Kultur formatieren, um Probleme durch möglicherweise unterschiedliche Datumsformate zu verhindern.  
   
 ## Kulturabhängige Funktionen  
- In allen Zeichenfolgenkonvertierungsfunktionen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] \(mit Ausnahme der `Str`\-Funktion und der `Val`\-Funktion\) werden die Kulturinformationen der Anwendung verwendet, um sicherzustellen, dass die Konvertierungen und Vergleiche der Kultur des Anwendungsbenutzers entsprechen.  
+ In allen Zeichenfolgenkonvertierungsfunktionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] \(mit Ausnahme der `Str`\-Funktion und der `Val`\-Funktion\) werden die Kulturinformationen der Anwendung verwendet, um sicherzustellen, dass die Konvertierungen und Vergleiche der Kultur des Anwendungsbenutzers entsprechen.  
   
  Um Zeichenfolgenkonvertierungsfunktionen in Anwendungen erfolgreich zu verwenden, die auf Computern mit unterschiedlichen Kultureinstellungen ausgeführt werden, müssen Sie wissen, welche Funktionen eine bestimmte Kultureinstellung verwenden und welche Funktionen die aktuelle Kultureinstellung verwenden.  Beachten Sie, dass die Kultureinstellungen einer Anwendung standardmäßig von den Kultureinstellungen des Betriebssystems geerbt werden.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A> und [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -47,7 +47,7 @@ Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../cshar
 ## Verwenden einer bestimmten Kultur  
  Angenommen, Sie entwickeln eine Anwendung, die ein Datum \(als Zeichenfolge formatiert\) an einen Webdienst sendet.  In diesem Fall muss die Anwendung eine bestimmte Kultur für die Zeichenfolgenkonvertierung verwenden.  Um zu veranschaulichen, warum dies erforderlich ist, betrachten wir das Ergebnis der Verwendung der <xref:System.DateTime.ToString>\-Methode für das Datum. Wenn die Anwendung das Datum July 4, 2005 mit dieser Methode formatiert, gibt sie "7\/4\/2005 12:00:00 AM" zurück, wenn sie mit der Kultur Englisch \(USA\) ausgeführt wird, doch sie gibt "04.07.2005 00:00:00" zurück, wenn sie mit der Kultur Deutsch \(Deutschland\) ausgeführt wird.  
   
- Wenn Sie eine Zeichenfolgenkonvertierung in einem bestimmten Kulturformat ausführen müssen, sollten Sie die `CultureInfo`\-Klasse verwenden, die in [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] integriert ist.  Sie können ein neues `CultureInfo`\-Objekt für eine bestimmte Kultur erstellen, indem Sie den Namen der Kultur an den <xref:System.Globalization.CultureInfo.%23ctor%2A>\-Konstruktor übergeben.  Die Namen der unterstützten Kulturen werden auf der Hilfeseite für die <xref:System.Globalization.CultureInfo>\-Klasse aufgelistet.  
+ Wenn Sie eine Zeichenfolgenkonvertierung in einem bestimmten Kulturformat ausführen müssen, sollten Sie die `CultureInfo`\-Klasse verwenden, die in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] integriert ist.  Sie können ein neues `CultureInfo`\-Objekt für eine bestimmte Kultur erstellen, indem Sie den Namen der Kultur an den <xref:System.Globalization.CultureInfo.%23ctor%2A>\-Konstruktor übergeben.  Die Namen der unterstützten Kulturen werden auf der Hilfeseite für die <xref:System.Globalization.CultureInfo>\-Klasse aufgelistet.  
   
  Stattdessen können Sie auch von der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>\-Eigenschaft eine Instanz der *invarianten Kultur* abrufen.  Die invariante Kultur basiert auf der englischen Kultur, allerdings mit einigen Unterschieden.  Beispielsweise verwendet die invariante Kultur ein 24\-Stunden\-Format statt eines 12\-Stunden\-Formats.  
   
@@ -65,13 +65,13 @@ Auf dieser Hilfeseite wird erörtert, wie in [!INCLUDE[vbprvb](../../../../cshar
   
 -   **Bestimmen, ob zwei anwendungsinterne Zeichenfolgen genau übereinstimmen \(i. d. R. für Sicherheitszwecke\).** Verwenden Sie Operationen, die von der aktuellen Kultur unabhängig sind.  
   
- Sie können beide Arten von Vergleichen mit der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A>\-Funktion ausführen.  Geben Sie das optionale `Compare`\-Argument an, um den Vergleichstyp zu bestimmen: `Text` für die meisten Ein\- und Ausgaben und `Binary` für genaue Übereinstimmungen.  
+ Sie können beide Arten von Vergleichen mit der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A>\-Funktion ausführen.  Geben Sie das optionale `Compare`\-Argument an, um den Vergleichstyp zu bestimmen: `Text` für die meisten Ein\- und Ausgaben und `Binary` für genaue Übereinstimmungen.  
   
  Die `StrComp`\-Funktion gibt eine ganze Zahl zurück, die die Beziehung zwischen den zwei verglichenen Zeichenfolgen auf der Grundlage der Sortierreihenfolge angibt.  Ein positiver Ergebniswert weist darauf hin, dass die erste Zeichenfolge größer als die zweite ist.  Ein negatives Ergebnis zeigt an, dass die erste Zeichenfolge kleiner ist. 0 bedeutet, das beide Zeichenfolgen übereinstimmen.  
   
  [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
- Sie können auch die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Entsprechung der `StrComp`\-Funktion, die <xref:System.String.Compare%2A?displayProperty=fullName>\-Methode, verwenden.  Dabei handelt es sich um eine statische, überladene Methode der Basiszeichenfolgenklasse.  Das folgende Beispiel demonstriert die Verwendung der Methode:  
+ Sie können auch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Entsprechung der `StrComp`\-Funktion, die <xref:System.String.Compare%2A?displayProperty=fullName>\-Methode, verwenden.  Dabei handelt es sich um eine statische, überladene Methode der Basiszeichenfolgenklasse.  Das folgende Beispiel demonstriert die Verwendung der Methode:  
   
  [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   

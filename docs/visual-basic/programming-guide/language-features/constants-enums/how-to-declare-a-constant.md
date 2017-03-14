@@ -38,7 +38,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Declare A Constant (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mithilfe der `Const`\-Anweisung wird eine Konstante deklariert und ihr Wert festgelegt.  Durch Deklarieren einer Konstante weisen Sie einem Wert einen aussagekräftigen Namen zu.  Nachdem eine Konstante deklariert wurde, können Sie sie weder verändern noch ihr einen neuen Wert zuweisen.  
   
@@ -46,7 +46,7 @@ Mithilfe der `Const`\-Anweisung wird eine Konstante deklariert und ihr Wert fest
   
  Die Konstante muss einen gültigen symbolischen Namen haben \(die Regeln für die Namenserstellung sind identisch mit denen für Variablennamen\) und der Konstantenausdruck muss aus numerischen oder Zeichenfolgenkonstanten und \-operatoren \(jedoch nicht aus Funktionsaufrufen\) zusammengesetzt sein.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So deklarieren Sie eine Konstante  
   

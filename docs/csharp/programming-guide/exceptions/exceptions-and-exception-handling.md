@@ -50,7 +50,7 @@ Die Features zur Ausnahmebehandlung in C\# helfen Ihnen, wenn bei der Ausführun
 -   [Gewusst wie: Ausführen von Bereinigungscode mit finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  <xref:System.SystemException>   

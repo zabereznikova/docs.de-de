@@ -47,7 +47,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinfo
 > [!NOTE]
 >  Wenn Sie im Code eine Instanz eines eingebetteten COM\-Typs erstellen, müssen Sie die Instanz mit der entsprechenden Schnittstelle erstellen.  Der Versuch, mit CoClass eine Instanz eines eingebetteten COM\-Typs zu erstellen, führt zu einem Fehler.  
   
- Um die `/link`\-Option in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] festzulegen, fügen Sie einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`\-Eigenschaft auf **true** fest.  Der Standardwert für die `Embed Interop Types`\-Eigenschaft ist **false**.  
+ Um die `/link`\-Option in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] festzulegen, fügen Sie einen Assemblyverweis hinzu, und legen Sie die `Embed Interop Types`\-Eigenschaft auf **true** fest.  Der Standardwert für die `Embed Interop Types`\-Eigenschaft ist **false**.  
   
  Wenn Sie eine Verknüpfung mit einer COM\-Assembly \(Assembly A\) herstellen, die wiederum auf eine andere COM\-Assembly \(Assembly B\) verweist, müssen Sie auch eine Verknüpfung mit Assembly B herstellen, wenn eine der folgenden Voraussetzungen erfüllt ist:  
   
@@ -55,7 +55,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, COM\-Typinfo
   
 -   Ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode mit einem Rückgabe\- oder Parametertyp aus Assembly B wird aufgerufen.  
   
- Ebenso wie die [\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)\-Compileroption verwendet die `/link`\-Compileroption die Antwortdatei Csc.rsp, die auf häufig verwendete [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie die [\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)\-Compileroption, wenn der Compiler die Datei Csc.rsp nicht verwenden soll.  
+ Ebenso wie die [\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)\-Compileroption verwendet die `/link`\-Compileroption die Antwortdatei Csc.rsp, die auf häufig verwendete [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie die [\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)\-Compileroption, wenn der Compiler die Datei Csc.rsp nicht verwenden soll.  
   
  Die Kurzform von `/link` ist `/l`.  
   

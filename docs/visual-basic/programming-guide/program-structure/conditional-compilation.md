@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Conditional Compilation in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bei der *bedingten Kompilierung* werden besondere Codeblöcke in einem Programm selektiv kompiliert, während andere ignoriert werden.  
   

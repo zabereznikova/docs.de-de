@@ -21,17 +21,17 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Unable to write temporary file because temporary path is not available
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] konnte den Pfad nicht bestimmen, in dem temporäre Dateien gespeichert sind.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konnte den Pfad nicht bestimmen, in dem temporäre Dateien gespeichert sind.  
   
  **Fehler\-ID:** BC30698  
   
 ### So beheben Sie diesen Fehler  
   
-1.  Starten Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  
+1.  Starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
-2.  Wenn das Problem weiterhin auftritt, installieren Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] neu.  
+2.  Wenn das Problem weiterhin auftritt, installieren Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] neu.  
   
 ## Siehe auch  
  [Sprechen Sie mit uns](/visual-studio/ide/talk-to-us)

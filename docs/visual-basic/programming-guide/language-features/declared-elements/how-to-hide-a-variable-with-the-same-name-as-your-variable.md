@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 25
 ---
 # How to: Hide a Variable with the Same Name as Your Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können eine Variable ausblenden, indem Sie ein *Shadowing* für sie durchführen, d. h., indem Sie sie mit einer gleichnamigen Variablen neu definieren.  Für ein Shadowing der Variablen, die Sie ausblenden möchten, gibt es zwei Möglichkeiten:  
   

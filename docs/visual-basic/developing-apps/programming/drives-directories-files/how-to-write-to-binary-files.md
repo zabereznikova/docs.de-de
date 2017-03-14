@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Write to Binary Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>\-Methode schreibt Daten in eine Binärdatei.  Wenn der `append`\-Parameter `True` ist, werden die Daten an die Datei angefügt, andernfalls werden die Daten in der Datei überschrieben.  
   

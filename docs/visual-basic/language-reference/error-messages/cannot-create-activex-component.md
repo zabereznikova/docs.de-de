@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Cannot create ActiveX Component
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, beim Entwerfen ein ActiveX\-Steuerelement auf einem Formular zu platzieren oder ein Formular zu einem Projekt mit einem ActiveX\-Steuerelement hinzuzufügen, doch die zugewiesenen Informationen in der Registrierung wurden nicht gefunden.  
   

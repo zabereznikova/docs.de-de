@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Validating Strings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Abschnitt wird erläutert, wie Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] überprüft werden.  
+In diesem Abschnitt wird erläutert, wie Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] überprüft werden.  
   
 ## In diesem Abschnitt  
  [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  

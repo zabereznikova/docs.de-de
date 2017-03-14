@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 31
 ---
 # Variablendeklaration in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Variablen werden deklariert, um ihren Namen und ihre Merkmale festzulegen.  Deklarationsanweisungen für Variablen werden mit der [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) durchgeführt.  Die Merkmale einer Variablen werden durch ihren Speicherort und ihren Inhalt bestimmt.  
   
@@ -42,7 +42,7 @@ Variablen werden deklariert, um ihren Namen und ihre Merkmale festzulegen.  Dekl
 ## Deklarationsebenen  
   
 ### Lokale Variablen und Membervariablen  
- *Lokale Variablen* sind Variablen, die innerhalb einer Prozedur deklariert wurden.  Eine *Membervariable* ist ein Member eines [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Typs. Sie wird auf Modulebene in einer Klasse, einer Struktur oder einem Modul deklariert, darf jedoch nicht innerhalb einer internen Prozedur der betreffenden Klasse oder Struktur oder des Moduls deklariert werden.  
+ *Lokale Variablen* sind Variablen, die innerhalb einer Prozedur deklariert wurden.  Eine *Membervariable* ist ein Member eines [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Typs. Sie wird auf Modulebene in einer Klasse, einer Struktur oder einem Modul deklariert, darf jedoch nicht innerhalb einer internen Prozedur der betreffenden Klasse oder Struktur oder des Moduls deklariert werden.  
   
 ### Freigegebene Variable und Instanzvariablen  
  In Klassen oder Strukturen ist bei der Kategorisierung einer Membervariablen entscheidend, ob sie freigegeben ist oder nicht.  Mit dem [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)\-Schlüsselwort deklarierte Variablen sind *freigegebene Variablen*, die als einzelnes, von allen Instanzen der Klasse oder Struktur gemeinsam genutztes Exemplar vorliegen.  
@@ -58,7 +58,7 @@ Variablen werden deklariert, um ihren Namen und ihre Merkmale festzulegen.  Dekl
   
 -   Ein Objekttyp oder eine Klasse, der bzw. die in der vorliegenden oder einer anderen Anwendung definiert ist  
   
--   Eine [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klasse, wie beispielsweise <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
+-   Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klasse, wie beispielsweise <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
   
 -   Ein Schnittstellentyp, z. B. <xref:System.IComparable> oder <xref:System.IDisposable>  
   

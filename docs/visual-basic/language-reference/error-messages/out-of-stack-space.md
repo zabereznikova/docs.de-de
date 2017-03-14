@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Out of stack space (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, dessen Kapazität entsprechend den Anforderungen des ausgeführten Programms dynamisch vergrößert und verkleinert wird.  Die Grenzen wurden überschritten.  
   
@@ -34,7 +34,7 @@ Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, dessen Kapazität entspr
   
 5.  Überprüfen Sie die Anzahl geschachtelter `DoEvents`\-Funktionsaufrufe, indem Sie die auf dem Stapel aktiven Prozeduren mithilfe des Dialogfelds `Calls` anzeigen.  
   
-6.  Vergewissern Sie sich, dass Sie keine Ereigniskette verursacht haben, indem Sie ein Ereignis ausgelöst haben, durch das eine bereits auf dem Stapel befindliche Ereignisprozedur aufgerufen wird.  Eine Ereigniskette ist mit einem nicht abgeschlossenen rekursiven Prozeduraufruf vergleichbar, jedoch schwieriger zu erkennen, da der Aufruf durch [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] anstatt explizit im Code erfolgt.  Verwenden Sie das Dialogfeld `Calls`, um die auf dem Stapel aktiven Prozeduren anzuzeigen.  
+6.  Vergewissern Sie sich, dass Sie keine Ereigniskette verursacht haben, indem Sie ein Ereignis ausgelöst haben, durch das eine bereits auf dem Stapel befindliche Ereignisprozedur aufgerufen wird.  Eine Ereigniskette ist mit einem nicht abgeschlossenen rekursiven Prozeduraufruf vergleichbar, jedoch schwieriger zu erkennen, da der Aufruf durch [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] anstatt explizit im Code erfolgt.  Verwenden Sie das Dialogfeld `Calls`, um die auf dem Stapel aktiven Prozeduren anzuzeigen.  
   
 ## Siehe auch  
  [Fenster "Arbeitsspeicher"](/visual-studio/debugger/memory-windows)

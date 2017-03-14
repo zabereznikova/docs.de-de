@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 29
 ---
 # Decision Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gibt Ihnen die Möglichkeit, Bedingungen zu testen und je nach Testergebnis verschiedene Vorgänge durchzuführen.  Sie können für verschiedene Werte eines Ausdrucks oder verschiedene Ausnahmen, die beim Ausführen einer Reihe von Anweisungen generiert werden, testen, ob eine Bedingung "True" oder "False" ist.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gibt Ihnen die Möglichkeit, Bedingungen zu testen und je nach Testergebnis verschiedene Vorgänge durchzuführen.  Sie können für verschiedene Werte eines Ausdrucks oder verschiedene Ausnahmen, die beim Ausführen einer Reihe von Anweisungen generiert werden, testen, ob eine Bedingung "True" oder "False" ist.  
   
  Im folgenden Beispiel wird eine Entscheidungsstruktur veranschaulicht, mit der eine Bedingung auf den Wert True getestet wird und verschiedene Aktionen ausgeführt werden, je nachdem, ob die Bedingung True oder False ist.  
   

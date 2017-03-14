@@ -132,7 +132,7 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
  Es gibt keine Möglichkeit, Signaturinformationen wie z. B. „`Method1 (str, str)`“ abzurufen.  Dazu müssen Sie z. B. einen Ausdruck \(`Expression e = () => A.B.Method1("s1", "s2")`\) verwenden und die MemberInfo aus der resultierenden Ausdrucksbaumstruktur abrufen.  
   
 ## Sprachspezifikationen  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
  Weitere Informationen finden Sie in der [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).  
   

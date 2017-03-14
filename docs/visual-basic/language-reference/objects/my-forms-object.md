@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # My.Forms Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften für den Zugriff auf eine Instanz jedes im aktuellen Projekt deklarierten Windows Form bereit.  
   

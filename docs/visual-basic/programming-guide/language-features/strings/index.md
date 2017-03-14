@@ -20,13 +20,13 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Strings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschrieben.  
+In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben.  
   
 ## In diesem Abschnitt  
  [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Listet Themen auf, in denen die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beschrieben werden.  
+ Listet Themen auf, in denen die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben werden.  
   
  [How to: Create Strings Using a StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Veranschaulicht, wie effizient aus vielen kleineren Zeichenfolgen eine lange Zeichenfolge erstellt.  

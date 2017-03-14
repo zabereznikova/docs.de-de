@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # My.Application Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften, Methoden und Ereignisse bereit, die sich auf die aktuelle Anwendung beziehen.  
   

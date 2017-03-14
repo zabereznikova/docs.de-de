@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 ## In diesem Abschnitt  
  [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  

@@ -38,7 +38,7 @@ ms.author: "shoag"
 caps.handback.revision: 33
 ---
 # Type List (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die *Typparameter* für ein *generisches* Programmierelement an.  Mehrere Parameter werden durch Komma voneinander getrennt.  Im Folgenden wird die Syntax für einen Typparameter gezeigt.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;Get&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Anweisung versucht, den Wert einer Eigenschaft abzurufen, obwohl sie über keinen Zugriff auf die `Get`\-Prozedur der Eigenschaft verfügt.  
   

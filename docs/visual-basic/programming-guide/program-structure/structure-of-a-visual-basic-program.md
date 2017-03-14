@@ -22,11 +22,11 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Structure of a Visual Basic Program
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm besteht aus Standardbausteinen.  Eine *Projektmappe* umfasst ein oder mehrere Projekte.  Ein *Projekt* wiederum kann eine oder mehrere Assemblys enthalten.  Jede *Assembly* wird aus einer oder mehreren Quelldateien kompiliert.  Eine *Quelldatei* stellt die Definition und Implementierung von Klassen, Strukturen, Modulen und Schnittstellen bereit, die schließlich den gesamten Code enthalten.  
+Ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm besteht aus Standardbausteinen.  Eine *Projektmappe* umfasst ein oder mehrere Projekte.  Ein *Projekt* wiederum kann eine oder mehrere Assemblys enthalten.  Jede *Assembly* wird aus einer oder mehreren Quelldateien kompiliert.  Eine *Quelldatei* stellt die Definition und Implementierung von Klassen, Strukturen, Modulen und Schnittstellen bereit, die schließlich den gesamten Code enthalten.  
   
- Weitere Informationen über diese Bausteine eines [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programms finden Sie unter [Projektmappen und Projekte](/visual-studio/ide/solutions-and-projects-in-visual-studio) und [Assemblys und der globale Assemblycache](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen über diese Bausteine eines [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programms finden Sie unter [Projektmappen und Projekte](/visual-studio/ide/solutions-and-projects-in-visual-studio) und [Assemblys und der globale Assemblycache](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md).  
   
 ## Programmierelemente auf Dateiebene  
  Wenn Sie ein Projekt oder eine Datei starten und den Code\-Editor öffnen, wird bereits ein Teil des Codes an der richtigen Stelle und in der richtigen Reihenfolge angezeigt.  Beim Schreiben von Code sollten Sie prinzipiell die folgende Reihenfolge beachten:  

@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Event &#39;&lt;eventname1&gt;&#39; cannot implement event &#39;&lt;eventname2&gt;&#39; on interface &#39;&lt;interface&gt;&#39; because their delegate types &#39;&lt;delegate1&gt;&#39; and &#39;&lt;delegate2&gt;&#39; do not match
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann ein Ereignis nicht implementieren, weil der Delegattyp des Ereignisses nicht mit dem Delegattyp des Ereignisses in der Schnittstelle übereinstimmt.  Dieser Fehler kann auftreten, wenn Sie mehrere Ereignisse in einer Schnittstelle definieren und anschließend versuchen, sie mit demselben Ereignis zu implementieren.  Ein Ereignis kann zwei oder mehrere Ereignisse nur implementieren, wenn alle implementierten Ereignisse mithilfe der `As`\-Syntax deklariert werden und den gleichen Delegattyp angeben.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann ein Ereignis nicht implementieren, weil der Delegattyp des Ereignisses nicht mit dem Delegattyp des Ereignisses in der Schnittstelle übereinstimmt.  Dieser Fehler kann auftreten, wenn Sie mehrere Ereignisse in einer Schnittstelle definieren und anschließend versuchen, sie mit demselben Ereignis zu implementieren.  Ein Ereignis kann zwei oder mehrere Ereignisse nur implementieren, wenn alle implementierten Ereignisse mithilfe der `As`\-Syntax deklariert werden und den gleichen Delegattyp angeben.  
   
  **Fehler\-ID:** BC31423  
   

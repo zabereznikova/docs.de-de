@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # += Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Addiert den Wert eines numerischen Ausdrucks zum Wert einer numerischen Variablen oder Eigenschaft und weist der Variablen bzw. der Eigenschaft das Ergebnis zu.  Kann auch verwendet werden, um einen `String`\-Ausdruck mit einer `String`\-Variablen oder String\-Eigenschaft zu verketten und der Variablen bzw. Eigenschaft das Ergebnis zuzuweisen.  
   

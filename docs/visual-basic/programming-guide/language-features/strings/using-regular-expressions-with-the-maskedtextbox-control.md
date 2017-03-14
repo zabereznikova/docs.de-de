@@ -21,12 +21,12 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Using Regular Expressions with the MaskedTextBox Control in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke für die Verwendung mit dem <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelement konvertiert werden.  
   
 ## Beschreibung der Maskingsprache  
- Die Standardmaskingsprache für <xref:System.Windows.Forms.MaskedTextBox> beruht auf der vom `Masked Edit`\-Steuerelement in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 6.0 verwendeten Maskingsprache, und Benutzer, die von dieser Plattform migrieren, sollten damit vertraut sein.  
+ Die Standardmaskingsprache für <xref:System.Windows.Forms.MaskedTextBox> beruht auf der vom `Masked Edit`\-Steuerelement in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 verwendeten Maskingsprache, und Benutzer, die von dieser Plattform migrieren, sollten damit vertraut sein.  
   
  Die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>\-Eigenschaft des <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelements gibt die zu verwendende Eingabemaske an.  Die Maske muss eine Zeichenfolge sein, die aus einem oder mehreren Maskierungselementen in der folgenden Tabelle besteht.  
   

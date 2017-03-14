@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Bad file name or number
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Versuch, auf die angegebene Datei zuzugreifen, ist ein Fehler aufgetreten.  Dieser Fehler kann folgende Ursachen haben:  
   

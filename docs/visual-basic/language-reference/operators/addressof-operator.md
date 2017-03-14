@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # AddressOf Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erstellt eine Instanz eines Prozedurdelegaten, die auf die bestimmte Prozedur verweist.  
   

@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Type Promotion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn Sie in einem Modul ein Programmierelement deklarieren, wird dessen Gültigkeitsbereich von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auf den Namespace erweitert, der das Modul enthält.  Dies wird als *Typerweiterung* bezeichnet.  
+Wenn Sie in einem Modul ein Programmierelement deklarieren, wird dessen Gültigkeitsbereich von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf den Namespace erweitert, der das Modul enthält.  Dies wird als *Typerweiterung* bezeichnet.  
   
  Am folgenden Beispiel wird gezeigt, wie die Gerüstdefinition für ein Modul und zwei Member dieses Moduls erfolgt.  
   
@@ -47,7 +47,7 @@ Wenn Sie in einem Modul ein Programmierelement deklarieren, wird dessen Gültigk
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- Im vorhergehenden Beispiel kann [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die `abc`\-Klasse nicht auf `thisNameSpace` erweitern, da dort bereits eine Enumeration mit dem gleichen Namen auf Namespaceebene vorhanden ist.  Wenn Sie auf `abcSub` zugreifen möchten, müssen Sie den vollständigen Qualifizierungspfad `thisNamespace.thisModule.abc.abcSub` verwenden.  Die `xyz`\-Klasse wird jedoch erweitert, und Sie können über den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub` auf `xyzSub` zugreifen.  
+ Im vorhergehenden Beispiel kann [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die `abc`\-Klasse nicht auf `thisNameSpace` erweitern, da dort bereits eine Enumeration mit dem gleichen Namen auf Namespaceebene vorhanden ist.  Wenn Sie auf `abcSub` zugreifen möchten, müssen Sie den vollständigen Qualifizierungspfad `thisNamespace.thisModule.abc.abcSub` verwenden.  Die `xyz`\-Klasse wird jedoch erweitert, und Sie können über den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub` auf `xyzSub` zugreifen.  
   
 ### Fehlschlagen der Typerweiterung für partielle Typen  
  Wenn in einer Klasse oder in einer Struktur innerhalb eines Moduls das [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)\-Schlüsselwort verwendet wird, ist die Typerweiterung für die betreffende Klasse oder Struktur automatisch nicht mehr möglich. Dies gilt unabhängig davon, ob es im Namespace einen Member mit dem gleichen Namen gibt.  Andere Elemente im Modul sind dennoch weiterhin für die Typerweiterung geeignet.  

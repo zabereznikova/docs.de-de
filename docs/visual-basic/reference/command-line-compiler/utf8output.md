@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # /utf8output (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zeigt die Compilerausgabe mit UTF\-8\-Codierung an.  
   

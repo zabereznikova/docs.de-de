@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Range variable &lt;variable&gt; hides a variable in an enclosing block, a previously defined range variable, or an implicitly declared variable in a query expression
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Durch den Namen einer in den Klauseln `Select`, `From`, `Aggregate` oder `Let` angegebenen Bereichsvariablen wird der Name der zuvor bereits in der Abfrage angegebenen Bereichsvariablen oder der Name einer Variablen, die implizit durch die Abfrage deklariert wird, z. B. ein Feldname oder der Name einer Aggregatfunktion, verdoppelt.  
   

@@ -42,7 +42,7 @@ Unter Umständen müssen Sie auf zwei Versionen von Assemblys verweisen, die üb
  Im vorherigen Beispiel wäre `GridV1::Grid` das Steuerelement von `grid.dll` und `GridV2::Grid` das von `grid20.dll`.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

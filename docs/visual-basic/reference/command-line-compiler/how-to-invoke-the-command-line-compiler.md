@@ -21,19 +21,19 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # How to: Invoke the Command-Line Compiler (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Zum Aufrufen des Befehlszeilencompilers geben Sie den Namen seiner ausführbaren Datei in der Befehlszeile ein \(auch als MS\-DOS\-Eingabeaufforderung bezeichnet\).  Wenn Sie in der Standard\-Windows\-Eingabeaufforderung kompilieren, müssen Sie den voll qualifizierten Pfad zur ausführbaren Datei eingeben.  Wenn Sie dieses Standardverhalten überschreiben möchten, können Sie entweder die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Eingabeaufforderung verwenden oder die PATH\-Umgebungsvariable ändern.  In beiden Fällen können Sie in einem beliebigen Verzeichnis kompilieren, indem Sie einfach den Compilernamen eingeben.  
+Zum Aufrufen des Befehlszeilencompilers geben Sie den Namen seiner ausführbaren Datei in der Befehlszeile ein \(auch als MS\-DOS\-Eingabeaufforderung bezeichnet\).  Wenn Sie in der Standard\-Windows\-Eingabeaufforderung kompilieren, müssen Sie den voll qualifizierten Pfad zur ausführbaren Datei eingeben.  Wenn Sie dieses Standardverhalten überschreiben möchten, können Sie entweder die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Eingabeaufforderung verwenden oder die PATH\-Umgebungsvariable ändern.  In beiden Fällen können Sie in einem beliebigen Verzeichnis kompilieren, indem Sie einfach den Compilernamen eingeben.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So rufen Sie den Compiler mit der Visual Studio\-Eingabeaufforderung auf  
   
 1.  Öffnen Sie den Programmordner von Visual Studio\-Tools innerhalb der Microsoft Visual Studio\-Programmgruppe.  
   
-2.  Sie können die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] Eingabeaufforderung können Sie den Compiler von einem beliebigen Computerverzeichnis zuzugreifen, wenn Visual Studio installiert ist.  
+2.  Sie können die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Eingabeaufforderung können Sie den Compiler von einem beliebigen Computerverzeichnis zuzugreifen, wenn Visual Studio installiert ist.  
   
-3.  Rufen Sie die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Eingabeaufforderung auf.  
+3.  Rufen Sie die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Eingabeaufforderung auf.  
   
 4.  Geben Sie in der Befehlszeile `vbc.exe` *Quelldateiname* ein, und drücken Sie dann die EINGABETASTE.  
   
@@ -43,7 +43,7 @@ Zum Aufrufen des Befehlszeilencompilers geben Sie den Namen seiner ausführbaren
   
 1.  Verwenden Sie das Windows\-Feature Suchen, um die Datei Vbc.exe auf der lokalen Festplatte zu finden.  
   
-     Der genaue Name des Verzeichnisses, in dem sich der Compiler befindet, hängt vom Speicherort des Windows\-Verzeichnisses und der installierten Version von [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] ab.  Wenn mehr als eine Version von [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] installiert ist, müssen Sie festlegen, welche Version verwendet werden soll \(in der Regel die neueste Version\).  
+     Der genaue Name des Verzeichnisses, in dem sich der Compiler befindet, hängt vom Speicherort des Windows\-Verzeichnisses und der installierten Version von [!INCLUDE[Compact](~/includes/compact-md.md)] ab.  Wenn mehr als eine Version von [!INCLUDE[Compact](~/includes/compact-md.md)] installiert ist, müssen Sie festlegen, welche Version verwendet werden soll \(in der Regel die neueste Version\).  
   
 2.  Klicken Sie im **Startmenü** mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann im Kontextmenü auf **Eigenschaften**.  
   
@@ -55,7 +55,7 @@ Zum Aufrufen des Befehlszeilencompilers geben Sie den Namen seiner ausführbaren
   
 6.  Klicken Sie auf **OK**, um die Bearbeitung zu bestätigen und das Dialogfeld zu schließen.  
   
-     Nachdem Sie die PATH\-Umgebungsvariable geändert haben, können Sie den [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler von einem beliebigen Verzeichnis auf dem Computer über die Windows\-Eingabeaufforderung ausführen.  
+     Nachdem Sie die PATH\-Umgebungsvariable geändert haben, können Sie den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler von einem beliebigen Verzeichnis auf dem Computer über die Windows\-Eingabeaufforderung ausführen.  
   
 ### So rufen Sie den Compiler mit der Windows\-Eingabeaufforderung auf  
   

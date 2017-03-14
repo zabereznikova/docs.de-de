@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # TextFieldParser Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Methoden und Eigenschaften zur Analyse strukturierter Textdateien bereit.  
   
@@ -39,4 +39,4 @@ Public Class TextFieldParser
   
  **Klasse:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]

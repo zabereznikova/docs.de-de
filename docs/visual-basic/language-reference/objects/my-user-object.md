@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # My.User Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ermöglicht den Zugriff auf die Informationen über den aktuellen Benutzer.  
   

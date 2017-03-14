@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 46
 ---
 # Anonymous Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Visual Basic untersützt anonyme Typen, mit denen Objekte erzeugt werden können, ohne eine Klassendefinition für den Datentyp zu schreiben.  Stattdessen erzeugt der Compiler eine Klasse.  Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object> und enthält die von Ihnen in der Deklaration des Objekts angegebenen Eigenschaften.  Da der Name des Datentyps nicht angegeben wird, wird er als *anonymer Typ* bezeichnet.  
   

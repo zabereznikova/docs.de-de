@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # My.Resources Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendung bereit.  
   

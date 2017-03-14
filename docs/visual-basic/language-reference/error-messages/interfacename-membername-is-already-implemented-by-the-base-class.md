@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # &#39;&lt;interfacename&gt;.&lt;membername&gt;&#39; is already implemented by the base class &#39;&lt;baseclassname&gt;&#39;. Re-implementation of &lt;type&gt; assumed
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In einer Eigenschaft, einer Prozedur oder einem Ereignis in einer abgeleiteten Klasse wird eine `Implements`\-Klausel verwendet, die einen Schnittstellenmember angibt, der bereits in der Basisklasse implementiert ist.  
   

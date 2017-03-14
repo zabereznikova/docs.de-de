@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # My.Computer.Ports Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt eine Eigenschaft und eine Methode für den Zugriff auf die seriellen Anschlüsse des Computers bereit.  
   
@@ -35,7 +35,7 @@ Stellt eine Eigenschaft und eine Methode für den Zugriff auf die seriellen Ansc
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  [My.Computer Object](../../../visual-basic/language-reference/objects/my-computer-object.md)

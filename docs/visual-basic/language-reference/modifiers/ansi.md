@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Ansi (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Legt fest, dass Visual Basic alle Zeichenfolgen unabhängig von dem Namen der deklarierten externen Prozedur als ANSI\-Werte \(American National Standards Institute\) marshallen soll.  
   

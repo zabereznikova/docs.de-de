@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Single Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enthält 32\-Bit\-\(4\-Byte\-\)Gleitkommazahlen mit Vorzeichen mit einfacher Genauigkeit nach IEEE. Die Werte reichen von –3,4028235E\+38 bis –1,401298E–45 für negative Werte und von 1,401298E–45 bis 3,4028235E\+38 für positive Werte.  Zahlen mit einfacher Genauigkeit enthalten eine Näherung einer reellen Zahl.  
   

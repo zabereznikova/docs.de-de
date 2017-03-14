@@ -37,7 +37,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Passing Arguments by Position and by Name (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine `Sub`\- oder `Function`\-Prozedur aufrufen, können Sie Argumente *durch die Position* übergeben, d. h. in der Reihenfolge, in der sie in der Prozedurdefinition aufgeführt werden, oder *durch Namen* unabhängig von der Position.  
   

@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 69
 ---
 # Try...Catch...Finally Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bietet eine Möglichkeit, einige oder alle möglichen Fehler zu behandeln, die in einem bestimmten Codeblock auftreten können, während dieser Code noch ausgeführt wird.  
   
@@ -72,7 +72,7 @@ End Try
 ## Hinweise  
  Wenn Sie erwarten, dass eine bestimmte Ausnahme während der Ausführung eines bestimmten Codeabschnitts auftreten könnte, fügen Sie diesen Code in einen `Try`\-Block ein, und verwenden Sie einen `Catch`\-Block, um die Kontrolle zu behalten und die Ausnahme zu behandeln, falls sie auftritt.  
   
- Eine `Try…Catch`\-Anweisung besteht aus einem `Try`\-Block gefolgt von einer oder mehreren `Catch`\-Klauseln, die Handler für verschiedene Ausnahmen angeben.  Wenn in einem `Try`\-Block eine Ausnahme ausgelöst wird, sucht [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nach der `Catch`\-Anweisung, die die Ausnahme behandelt.  Wenn eine entsprechende `Catch`\-Anweisung nicht gefunden wird, untersucht [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die Methode, die die aktuelle Methode aufgerufen hat, und so weiter nach oben in der Aufrufliste.  Wird kein `Catch`\-Block gefunden, zeigt [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] eine nicht bearbeitete Ausnahmemeldung für den Benutzer an und hält die Ausführung des Programms an.  
+ Eine `Try…Catch`\-Anweisung besteht aus einem `Try`\-Block gefolgt von einer oder mehreren `Catch`\-Klauseln, die Handler für verschiedene Ausnahmen angeben.  Wenn in einem `Try`\-Block eine Ausnahme ausgelöst wird, sucht [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nach der `Catch`\-Anweisung, die die Ausnahme behandelt.  Wenn eine entsprechende `Catch`\-Anweisung nicht gefunden wird, untersucht [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Methode, die die aktuelle Methode aufgerufen hat, und so weiter nach oben in der Aufrufliste.  Wird kein `Catch`\-Block gefunden, zeigt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] eine nicht bearbeitete Ausnahmemeldung für den Benutzer an und hält die Ausführung des Programms an.  
   
  Sie können mehr als eine `Catch`\-Anweisung in einer `Try…Catch`\-Anweisung verwenden.  Wenn Sie dies tun, ist die Reihenfolge der `Catch`\-Klauseln bedeutend, weil sie nacheinander überprüft werden.  Präziser definierte Ausnahmen sollten vor weniger präzisen abgefangen werden.  
   
@@ -82,7 +82,7 @@ End Try
   
 -   Die Anweisung hat keine `exception`\-Variable, Beispiel: `Catch`  
   
- Wenn eine `Try…Catch…Finally`\-Anweisung in einem anderen `Try`\-Block geschachtelt ist, untersucht [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zunächst jede `Catch`\-Anweisung im innersten `Try`\-Block.  Wenn keine übereinstimmende `Catch`\-Anweisung gefunden wird, wird die Suche in den `Catch`\-Anweisungen äußeren `Try…Catch…Finally`\-Blocks fortgeführt.  
+ Wenn eine `Try…Catch…Finally`\-Anweisung in einem anderen `Try`\-Block geschachtelt ist, untersucht [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zunächst jede `Catch`\-Anweisung im innersten `Try`\-Block.  Wenn keine übereinstimmende `Catch`\-Anweisung gefunden wird, wird die Suche in den `Catch`\-Anweisungen äußeren `Try…Catch…Finally`\-Blocks fortgeführt.  
   
  Lokale Variablen aus einem `Try`\-Block sind in einem `Catch`\-Block nicht verfügbar, weil es sich um eigene Blöcke handelt.  Wenn Sie eine Variable in mehreren Blöcken verwenden möchten, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally`\-Struktur.  
   

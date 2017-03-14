@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 36
 ---
 # Using Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert den Beginn eines `Using`\-Blocks und ruft optional die Systemressourcen ab, die von dem Block gesteuert werden.  
   

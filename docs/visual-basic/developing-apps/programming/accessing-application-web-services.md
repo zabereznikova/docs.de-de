@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Accessing Application Web Services (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.WebServices`\-Objekt stellt eine Instanz von jedem Webdienst bereit, auf den im aktuellen Projekt verwiesen wird.  Jede Instanz wird bei Bedarf instanziiert.  Sie können auf diese Webdienste über die Eigenschaften des `My.WebServices`\-Objekts zugreifen.  Der Name der Eigenschaft ist identisch mit dem Namen des Webdienstes, auf den die Eigenschaft zugreift.  Jede Klasse, die von <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> erbt, ist ein Webdienst.  
   

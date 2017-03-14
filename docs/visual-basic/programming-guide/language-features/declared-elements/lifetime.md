@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Lifetime in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die *Lebensdauer* eines deklarierten Elements ist der Zeitraum, während dessen das Element verfügbar ist.  Variablen sind die einzigen Elemente, die eine Lebensdauer haben.  Aus diesem Grund behandelt der Compiler Prozedurparameter und Funktionsrückgaben als spezielle Variablenarten.  Die Lebensdauer einer Variablen ist der Zeitraum, während dessen sie einen Wert enthalten kann.  Der Wert kann sich innerhalb der Lebensdauer ändern, aber ein Wert ist immer vorhanden.  
   
@@ -42,7 +42,7 @@ Die *Lebensdauer* eines deklarierten Elements ist der Zeitraum, während dessen 
  Variablen, die in einem Block innerhalb einer Prozedur deklariert sind \(z. B. in einer `For`\-Schleife\), werden beim Eintritt in die Prozedur initialisiert.  Diese Initialisierungen finden unabhängig davon statt, ob der Code den Block jemals ausführt.  
   
 ## Ende der Lebensdauer  
- Wenn eine Prozedur endet, bleiben die Werte ihrer lokalen Variablen nicht erhalten und [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] fordert ihren Arbeitsspeicher an.  Beim nächsten Aufruf der Prozedur werden alle ihre lokalen Variablen von neuem erstellt und initialisiert.  
+ Wenn eine Prozedur endet, bleiben die Werte ihrer lokalen Variablen nicht erhalten und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fordert ihren Arbeitsspeicher an.  Beim nächsten Aufruf der Prozedur werden alle ihre lokalen Variablen von neuem erstellt und initialisiert.  
   
  Wenn eine Instanz einer Klasse oder Struktur beendet wird, verlieren die nicht freigegebenen Variablen ihren Arbeitsspeicher und ihre Werte.  Jede neue Instanz der Klasse oder Struktur erstellt und initialisiert ihre nicht freigegebenen Variablen erneut.  `Shared`\-Variablen bleiben jedoch erhalten, bis die Anwendung nicht mehr ausgeführt wird.  
   
@@ -56,7 +56,7 @@ Die *Lebensdauer* eines deklarierten Elements ist der Zeitraum, während dessen 
 |In einer Instanz einer Klasse, nicht `Shared` \(Prozedur ist ein Instanzmember\)|Wenn die Prozedur zum ersten Mal an der spezifischen Instanz aufgerufen wird|Bei der Freigabe der Instanz für die Garbage Collection \(GC\)|  
   
 ## Statische Variablen mit demselben Namen  
- Statische Variablen mit demselben Namen können in mehreren Prozeduren deklariert werden.  In einem solchen Fall gilt jede dieser Variablen für den [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler als separates Element.  Die Initialisierung einer dieser Variablen wirkt sich nicht auf die Werte der anderen aus.  Dasselbe gilt, wenn Sie eine Prozedur mit einer Reihe von Überladungen definieren und in jeder Überladung eine statische Variable mit demselben Namen deklarieren.  
+ Statische Variablen mit demselben Namen können in mehreren Prozeduren deklariert werden.  In einem solchen Fall gilt jede dieser Variablen für den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler als separates Element.  Die Initialisierung einer dieser Variablen wirkt sich nicht auf die Werte der anderen aus.  Dasselbe gilt, wenn Sie eine Prozedur mit einer Reihe von Überladungen definieren und in jeder Überladung eine statische Variable mit demselben Namen deklarieren.  
   
 ## Enthaltende Elemente für statische Variablen  
  Es ist möglich, eine statische lokale Variable in einer Klasse, d. h. innerhalb einer Prozedur in dieser Klasse, zu deklarieren.  Sie können eine statische lokale Variable jedoch nicht in einer Struktur deklarieren, sei es als Strukturmember oder als lokale Variable einer Prozedur innerhalb dieser Struktur.  

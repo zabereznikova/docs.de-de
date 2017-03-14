@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # In Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt entweder die Gruppe an, die die Schleifenvariable in einer `For Each`\-Schleife durchlaufen muss, oder die Auflistung, die in einer `From`\-, `Join`\- oder `Group Join`\-Klausel abgefragt werden soll.  
   

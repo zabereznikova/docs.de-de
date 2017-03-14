@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Create Property Grids for User Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können ein Eigenschaftenraster für Benutzereinstellungen erstellen, indem Sie ein <xref:System.Windows.Forms.PropertyGrid>\-Steuerelement mit den Benutzereinstellungseigenschaften des `My.Settings`\-Objekts auffüllen.  
   

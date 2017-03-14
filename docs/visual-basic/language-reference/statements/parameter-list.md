@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Parameter List (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die Parameter an, die eine Prozedur bei ihrem Aufruf erwartet.  Mehrere Parameter werden durch Komma voneinander getrennt.  Im Folgenden ist die Syntax für einen Parameter dargestellt.  
   

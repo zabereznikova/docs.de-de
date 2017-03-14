@@ -42,7 +42,7 @@ Bei dem `protected`\-Schlüsselwort handelt es sich um einen Zugriffsmodifiziere
  `'Point.x' is inaccessible due to its protection level.`  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

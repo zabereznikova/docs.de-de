@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Number of indices exceeds the number of dimensions of the indexed array
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Anzahl der Indizes, die für den Zugriff auf ein Arrayelement verwendet wird, muss mit dem Rang des Arrays genau übereinstimmen, d. h. mit der Anzahl der dafür deklarierten Dimensionen.  
   

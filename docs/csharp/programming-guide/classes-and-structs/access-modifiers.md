@@ -75,7 +75,7 @@ Alle Typen und Typmember verfügen über eine Zugriffsebene, durch die festgeleg
  Delegaten verhalten sich wie Klassen und Strukturen.  Standardmäßig haben sie internen Zugriff bei direkter Deklarierung in einem Namespace und privaten Zugriff bei Schachtelung.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

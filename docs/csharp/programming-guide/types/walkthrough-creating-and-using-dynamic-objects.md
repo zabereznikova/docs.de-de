@@ -22,7 +22,7 @@ Dynamische Objekte stellen Member, z. B. Eigenschaften oder Methoden, anstatt z
   
  Dynamische Objekte bieten außerdem einfachen Zugriff auf dynamische Sprachen, z. B. IronPython und IronRuby.  Sie können ein dynamisches Objekt verwenden, um auf ein dynamisches Skript zu verweisen, das zur Laufzeit interpretiert wird.  
   
- Sie versehen ein dynamisches Objekt mithilfe der Funktion zur späten Bindung mit einem Verweis.  In C\# geben Sie den Typ eines spät gebundenen Objekts als `dynamic` an.  In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] geben Sie den Typ eines spät gebundenen Objekts als `Object` an.  Weitere Informationen finden Sie unter [dynamic](../../../csharp/language-reference/keywords/dynamic.md) und [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md).  
+ Sie versehen ein dynamisches Objekt mithilfe der Funktion zur späten Bindung mit einem Verweis.  In C\# geben Sie den Typ eines spät gebundenen Objekts als `dynamic` an.  In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] geben Sie den Typ eines spät gebundenen Objekts als `Object` an.  Weitere Informationen finden Sie unter [dynamic](../../../csharp/language-reference/keywords/dynamic.md) und [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md).  
   
  Sie können benutzerdefinierte dynamische Objekte mit den Klassen im <xref:System.Dynamic?displayProperty=fullName>\-Namespace erstellen.  Sie können z. B. ein <xref:System.Dynamic.ExpandoObject> erstellen und die Member dieses Objekts zur Laufzeit angeben.  Sie können auch einen eigenen Typ erstellen, der die <xref:System.Dynamic.DynamicObject>\-Klasse erbt.  Anschließend können Sie die Member der <xref:System.Dynamic.DynamicObject>\-Klasse überschreiben, um laufzeitbezogene dynamische Funktionalität bereitzustellen.  
   
@@ -35,14 +35,14 @@ Dynamische Objekte stellen Member, z. B. Eigenschaften oder Methoden, anstatt z
 ## Vorbereitungsmaßnahmen  
  Sie benötigen IronPython 2.6.1 for .NET 4.0, um diese exemplarische Vorgehensweise auszuführen.  Sie können IronPython 2.6.1 for .NET 4.0 von [CodePlex](http://go.microsoft.com/fwlink/?LinkId=187223) herunterladen.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## Erstellen eines benutzerdefinierten dynamischen Objekts  
  Im ersten Projekt, das wir in dieser exemplarischen Vorgehensweise erstellen, wird ein benutzerdefiniertes dynamisches Objekt definiert, das den Inhalt einer Textdatei durchsucht.  Der Suchtext wird durch die Bezeichnung einer dynamischen Eigenschaft angegeben.  Wenn im Aufrufcode z. B. `dynamicFile.Sample` angegeben wird, gibt die dynamische Klasse eine generische Liste von Zeichenfolgen zurück, die alle Zeilen der Datei enthält, die mit "Sample" beginnen.  Bei der Suche wird die Groß\- und Kleinschreibung nicht berücksichtigt.  Von der dynamischen Klasse werden auch zwei optionale Argumente unterstützt.  Das erste Argument ist ein Suchoptionsenumerationswert, der angibt, dass die dynamische Klasse am Anfang, am Ende oder an einer beliebigen Position in der Zeile nach Übereinstimmungen suchen soll.  Das zweite Argument gibt an, dass die dynamische Klasse vor dem Suchen vorangestellte und nachgestellte Leerzeichen in jeder Zeile abschneiden soll.  Wenn im Aufrufode z. B. `dynamicFile.Sample(StringSearchOption.Contains)` angegeben wird, wird von der dynamischen Klasse an einer beliebigen Zeilenposition nach "Sample" gesucht.  Wird im Aufrufcode `dynamicFile.Sample(StringSearchOption.StartsWith, false)` angegeben, sucht die dynamische Klasse am Anfang jeder Zeile nach "Sample" und entfernt keine vorangestellten und nachgestellten Leerzeichen.  Standardmäßig sucht die dynamische Klasse am Zeilenanfang nach einer Übereinstimmung und entfernt vorangestellte und nachgestellte Leerzeichen.  
   
 #### So erstellen Sie eine benutzerdefinierte dynamische Klasse  
   
-1.  Starten Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  
+1.  Starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
@@ -114,7 +114,7 @@ Dynamische Objekte stellen Member, z. B. Eigenschaften oder Methoden, anstatt z
   
 #### So erstellen Sie eine Beispielanwendung, die das benutzerdefinierte dynamische Objekt verwendet  
   
-1.  Doppelklicken Sie im **Projektmappen\-Explorer** auf die Datei "Module1.vb", wenn Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwenden, oder auf die Datei "Program.cs", wenn Sie Visual C\# verwenden.  
+1.  Doppelklicken Sie im **Projektmappen\-Explorer** auf die Datei "Module1.vb", wenn Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwenden, oder auf die Datei "Program.cs", wenn Sie Visual C\# verwenden.  
   
 2.  Fügen Sie der Main\-Prozedur den folgenden Code hinzu, um für die Datei "TextFile1.txt" eine Instanz der `ReadOnlyFile`\-Klasse zu erstellen.  Der Code verwendet späte Bindung, um dynamische Member aufzurufen und Textzeilen abzurufen, die die Zeichenfolge "Customer" enthalten.  
   
@@ -128,15 +128,15 @@ Dynamische Objekte stellen Member, z. B. Eigenschaften oder Methoden, anstatt z
   
 #### So erstellen Sie eine benutzerdefinierte dynamische Klasse  
   
-1.  Zeigen Sie in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
+1.  Zeigen Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
 2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist.  Wählen Sie im Bereich **Vorlagen** die Option **Konsolenanwendung** aus.  Geben Sie im Feld **Name** den Namen `DynamicIronPythonSample` ein, und klicken Sie dann auf **OK**.  Das neue Projekt wird erstellt.  
   
-3.  Wenn Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwenden, klicken Sie mit der rechten Maustaste auf das DynamicIronPythonSample\-Projekt, und klicken Sie dann auf **Eigenschaften**.  Klicken Sie auf die Registerkarte **Verweise**.  Klicken Sie auf die Schaltfläche **Hinzufügen**.  Wenn Sie Visual C\#, verwenden, klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf den Ordner **Verweise** und dann auf **Verweis hinzufügen**.  
+3.  Wenn Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwenden, klicken Sie mit der rechten Maustaste auf das DynamicIronPythonSample\-Projekt, und klicken Sie dann auf **Eigenschaften**.  Klicken Sie auf die Registerkarte **Verweise**.  Klicken Sie auf die Schaltfläche **Hinzufügen**.  Wenn Sie Visual C\#, verwenden, klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf den Ordner **Verweise** und dann auf **Verweis hinzufügen**.  
   
 4.  Navigieren Sie auf der Registerkarte **Durchsuchen** zu dem Ordner, in dem die IronPython\-Bibliotheken installiert sind.  Beispiel: C:\\Programme\\IronPython 2.6 for .NET 4.0.  Wählen Sie die Bibliotheken **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** und **Microsoft.Dynamic.dll** aus.  Klicken Sie auf **OK**.  
   
-5.  Wenn Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwenden, bearbeiten Sie die Datei Module1.vb.  Wenn Sie Visual C\# verwenden, bearbeiten Sie die Datei Program.cs.  
+5.  Wenn Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwenden, bearbeiten Sie die Datei Module1.vb.  Wenn Sie Visual C\# verwenden, bearbeiten Sie die Datei Program.cs.  
   
 6.  Fügen Sie am Anfang der Datei folgenden Code hinzu, um den `IronPython.Hosting`\-Namespace und den `Microsoft.Scripting.Hosting`\-Namespace aus den IronPython\-Bibliotheken zu importieren.  
   

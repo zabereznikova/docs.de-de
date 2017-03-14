@@ -36,7 +36,7 @@ In diesem Abschnitt wird die allgemeine Struktur eines C\#\-Programms erläutert
 -   [\<paveover\>C\# Sample Applications](http://msdn.microsoft.com/de-de/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)

@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Display Bound Data in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wird häufig zur Anzeige gebundener Daten aus einer Datenbank oder einer anderen Datenquelle eingesetzt.  
   
@@ -26,7 +26,7 @@ Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wird hä
   
  Sie können auch zur Laufzeit Objekte an eine Datenquelle binden, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>\-Eigenschaft auf `True` festlegen und der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A>\-Eigenschaft eine Datenquelle zuweisen.  In diesem Fall müssen Sie alle Interaktion mit der Datenquelle verwalten.  Weitere Informationen hierzu finden Sie unter [Virtual Mode in the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie einen datengebundenen DataRepeater  
   

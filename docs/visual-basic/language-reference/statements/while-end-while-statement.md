@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # While...End While Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine Reihe von Anweisungen aus, solange eine bestimmte Bedingung `True` ist.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Shadows (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass ein deklariertes Programmierelement ein Element mit derselben Bezeichnung oder eine Gruppe überladener Elemente in einer Basisklasse erneut deklariert und ausblendet.  
   

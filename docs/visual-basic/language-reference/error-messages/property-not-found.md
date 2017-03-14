@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Property not found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Objekt unterstützt die angegebene Eigenschaft nicht.  
   

@@ -16,9 +16,9 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # Debugging Your Visual Basic Application
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Diese Seite enthält Links auf Dokumentation für die in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] enthaltenen Debuggingfunktionen.  Sie können zum Beispiel Semantikfehler in der Anwendung feststellen, indem Sie ihr Laufzeitverhalten im Debugger beobachten.  
+Diese Seite enthält Links auf Dokumentation für die in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] enthaltenen Debuggingfunktionen.  Sie können zum Beispiel Semantikfehler in der Anwendung feststellen, indem Sie ihr Laufzeitverhalten im Debugger beobachten.  
   
  Mithilfe eines Debuggers können Sie den Inhalt von Anwendungsvariablen untersuchen, ohne dass zusätzliche Aufrufe für die Ausgabe der Werte hinzugefügt werden müssen.  Auf ähnliche Weise können Sie einen Haltepunkt im Code einfügen, um die Programmausführung am angegebenen Punkt anzuhalten.  
   

@@ -31,7 +31,7 @@ Einigen C\#\-Compilerfehlern sind entsprechende Themen zugeordnet, in denen die 
   
  Informationen zum Konfigurieren von Fehler\- und Warnungsoptionen in C\# finden Sie unter [Seite "Erstellen", Projekt\-Designer \(C\#\)](/visual-studio/ide/reference/build-page-project-designer-csharp).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## Siehe auch  
  [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   

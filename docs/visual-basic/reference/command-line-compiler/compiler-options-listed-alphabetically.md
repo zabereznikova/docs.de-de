@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Visual Basic Compiler Options Listed Alphabetically
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Es folgt eine Liste der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehlszeilen\-Compileroptionen \(alphabetisch sortiert\).  
+Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Es folgt eine Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Befehlszeilen\-Compileroptionen \(alphabetisch sortiert\).  
   
 |Option|Zweck|  
 |------------|-----------|  
@@ -37,7 +37,7 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |[\/define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiert Symbole für bedingte Kompilierung.|  
 |[\/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Gibt an, ob die Assembly vollständig oder teilweise signiert wird.|  
 |[\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML\-Datei.|  
-|[\/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler gemeldet werden sollen.|  
+|[\/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler gemeldet werden sollen.|  
 |[\/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.|  
 |[\/help](../../../visual-basic/reference/command-line-compiler/help.md)|Zeigt Compileroptionen an  Dieser Befehl entspricht der Angabe der `/?`\-Option.  Es findet keine Kompilierung statt.|  
 |[\/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Gibt an, ob eine bestimmte ausführbare Datei ASLR mit hoher Entropie \(Address Space Layout Randomization, Zufällige Anordnung des Layouts des Adressraums\) unterstützt.|  
@@ -50,7 +50,7 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |[\/main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse an, die die `Sub``Main`\-Prozedur enthält, die beim Start verwendet werden soll.|  
 |[\/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Gibt den Namen der Assembly an, zu der dieses Modul gehört.|  
 |`/modulename:<string>`|Geben Sie den Namen des Quellmoduls an|  
-|[\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] als Ziel fest.|  
+|[\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.|  
 |[\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Führen Sie die Kompilierung nicht mit Vbc.rsp durch.|  
 |[\/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Unterdrückt Compilerbannerinformationen.|  
 |[\/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Bewirkt, dass der Compiler nicht auf die Standardbibliotheken verweist.|  

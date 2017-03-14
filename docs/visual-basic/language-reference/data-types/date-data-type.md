@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Date Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enthält IEEE\-64\-Bit\(8\-Byte\)\-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr \(Mitternacht\) bis 23:59:59.9999999 Uhr darstellen.  Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar.  Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.  
   

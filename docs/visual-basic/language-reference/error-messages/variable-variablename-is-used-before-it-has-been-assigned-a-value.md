@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Variable &#39;&lt;variablename&gt;&#39; is used before it has been assigned a value
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die \<Variablenname\>\-Variable wird verwendet, bevor ihr ein Wert zugewiesen wird.Zur Laufzeit kann eine NULL\-Verweisausnahme auftreten  
   

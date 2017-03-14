@@ -23,12 +23,12 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Error Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] werden Fehler \(auch *Ausnahmen* genannt\) in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und Logikfehler.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] werden Fehler \(auch *Ausnahmen* genannt\) in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und Logikfehler.  
   
 ## Syntaxfehler  
- *Syntaxfehler* sind Fehler, die bei der Eingabe des Codes entstehen.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] überprüft den Code bereits während der Eingabe im Fenster **Code\-Editor** und weist Sie auf Fehler hin, z. B. Tippfehler in einem reservierten Wort oder falsch verwendete Sprachelemente.  Syntaxfehler stellen den häufigsten Fehlertyp dar.  Sie können in der Codierungsumgebung sofort problemlos behoben werden.  
+ *Syntaxfehler* sind Fehler, die bei der Eingabe des Codes entstehen.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] überprüft den Code bereits während der Eingabe im Fenster **Code\-Editor** und weist Sie auf Fehler hin, z. B. Tippfehler in einem reservierten Wort oder falsch verwendete Sprachelemente.  Syntaxfehler stellen den häufigsten Fehlertyp dar.  Sie können in der Codierungsumgebung sofort problemlos behoben werden.  
   
 > [!NOTE]
 >  Die `Option Explicit`\-Anweisung ist ein Mittel zur Vermeidung von Syntaxfehlern.  Sie bewirkt, dass alle in einer Anwendung zu verwendenden Variablen im Voraus deklariert werden müssen.  Deshalb lassen sich Tippfehler sofort erkennen und beheben, wenn diese Variablen im Code verwendet werden.  

@@ -29,13 +29,13 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn Sie eine Klasse, ein Modul oder eine Struktur mit Membern aus Ganzzahltypen ohne Vorzeichen verwenden, können Sie mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auf diese Member zugreifen.  
+Wenn Sie eine Klasse, ein Modul oder eine Struktur mit Membern aus Ganzzahltypen ohne Vorzeichen verwenden, können Sie mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auf diese Member zugreifen.  
   
 ### So rufen Sie eine Windows\-Funktion auf, die einen Typ ohne Vorzeichen akzeptiert  
   
-1.  Teilen Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit einer [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) mit, in welcher Bibliothek die Funktion enthalten ist, welchen Namen sie in dieser Bibliothek hat, wie ihre Aufruffolge lautet und wie Zeichenfolgen bei deren Aufruf konvertiert werden.  
+1.  Teilen Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit einer [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) mit, in welcher Bibliothek die Funktion enthalten ist, welchen Namen sie in dieser Bibliothek hat, wie ihre Aufruffolge lautet und wie Zeichenfolgen bei deren Aufruf konvertiert werden.  
   
 2.  Verwenden Sie in der `Declare`\-Anweisung nach Bedarf `UInteger`, `ULong`, `UShort` oder `Byte` für jeden Parameter mit einem Typ ohne Vorzeichen.  
   

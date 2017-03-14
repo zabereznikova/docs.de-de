@@ -29,9 +29,9 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # File Access with Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Das `My.Computer.FileSystem`\-Objekt stellt Tools für das Arbeiten mit Dateien und Ordnern bereit.  Seine Eigenschaften, Methoden und Ereignisse ermöglichen es, Dateien und Ordner zu erstellen, zu kopieren, zu verschieben, zu untersuchen und zu löschen.  `My.Computer.FileSystem` bietet ein besseres Leistungsverhalten als die älteren Funktionen \(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` usw.\), die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] aus Gründen der Abwärtskompatibilität bereitgestellt werden.  
+Das `My.Computer.FileSystem`\-Objekt stellt Tools für das Arbeiten mit Dateien und Ordnern bereit.  Seine Eigenschaften, Methoden und Ereignisse ermöglichen es, Dateien und Ordner zu erstellen, zu kopieren, zu verschieben, zu untersuchen und zu löschen.  `My.Computer.FileSystem` bietet ein besseres Leistungsverhalten als die älteren Funktionen \(`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` usw.\), die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aus Gründen der Abwärtskompatibilität bereitgestellt werden.  
   
 ## In diesem Abschnitt  
  [Reading from Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  

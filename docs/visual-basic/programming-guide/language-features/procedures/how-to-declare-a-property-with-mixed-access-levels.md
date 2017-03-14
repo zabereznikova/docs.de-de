@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Declare a Property with Mixed Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn die `Get`\-Prozedur und die `Set`\-Prozedur einer Eigenschaft verschiedene Zugriffsebenen haben sollen, kann in der `Property`\-Anweisung die weniger einschränkende Zugriffsebene und in der `Get`\-Anweisung oder der `Set`\-Anweisung die restriktivere Ebene verwendet werden.  Innerhalb einer Eigenschaft können gemischte Zugriffsebenen verwendet werden, wenn bestimmte Codeteile den Wert der Eigenschaft abrufen und andere Teile des Codes den Wert ändern können sollen.  
   

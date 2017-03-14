@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Implements Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt eine oder mehrere Schnittstellen oder Schnittstellenmember an, die in der umgebenden Klassen\- oder Strukturdefinition implementiert werden müssen.  
   

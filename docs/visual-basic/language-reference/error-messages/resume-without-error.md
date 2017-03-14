@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Resume without error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es wurde eine `Resume`\-Anweisung außerhalb des Fehlerbehandlungscodes gefunden, oder die Codeausführung ist in einen Fehlerhandler gesprungen, obwohl kein Fehler aufgetreten war.  
   

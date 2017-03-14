@@ -34,7 +34,7 @@ C\#\-Programme können aus einer oder mehreren Dateien bestehen.  Jede Datei kan
 -   [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

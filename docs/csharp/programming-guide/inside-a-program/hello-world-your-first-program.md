@@ -24,7 +24,7 @@ Mit der folgenden Prozedur wird eine C\#\-Version des herkömmlichen "Hello Worl
   
  Weitere Beispiele von einführenden Konzepten, finden Sie unter [Erste Schritte mit Visual C\# und Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie eine neue Konsolenanwendung und führen diese aus  
   

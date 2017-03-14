@@ -34,7 +34,7 @@ Mit Objektinitialisierern können Sie Typobjekte deklarativ initialisieren, ohne
  [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## Kompilieren des Codes  
- Um diesen Code auszuführen, kopieren Sie die Klasse, und fügen Sie sie in ein Visual C\#\-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] erstellt wurde.  Weitere Informationen finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
+ Um diesen Code auszuführen, kopieren Sie die Klasse, und fügen Sie sie in ein Visual C\#\-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erstellt wurde.  Weitere Informationen finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

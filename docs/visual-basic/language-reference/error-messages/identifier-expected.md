@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Identifier expected
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Programmierelement, bei dem es sich nicht um einen erkennbaren, deklarierten Elementnamen handelt, tritt an der Stelle auf, an der im Kontext ein Elementname benötigt wird.  Eine mögliche Ursache besteht darin, dass ein Attribut nicht am Anfang der Anweisung, sondern an einer anderen Stelle angegeben wurde.  
   

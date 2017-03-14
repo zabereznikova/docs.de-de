@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # /win32resource
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Fügt eine Win32‑Ressource in die Ausgabedatei ein.  
   
@@ -42,7 +42,7 @@ Fügt eine Win32‑Ressource in die Ausgabedatei ein.
   
  Eine Win32\-Ressource kann Release\- oder Bitmap\(Symbol\) Informationen enthalten, mit deren Hilfe die Anwendung in **Explorer** identifizieren.  Wenn Sie `/win32resource` nicht angeben, generiert der Compiler Versionsinformationen basierend auf der Assemblyversion.  Die `/win32resource`\-Option und die `/win32icon`\-Option schließen sich gegenseitig aus.  
   
- Siehe [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md), wenn Sie auf eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei verweisen, oder [\/resource](../../../visual-basic/reference/command-line-compiler/resource.md), wenn Sie eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei anfügen möchten.  
+ Siehe [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md), wenn Sie auf eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei verweisen, oder [\/resource](../../../visual-basic/reference/command-line-compiler/resource.md), wenn Sie eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei anfügen möchten.  
   
 > [!NOTE]
 >  Die `/win32resource`\-Option ist innerhalb der Entwicklungsumgebung von Visual Studio nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  

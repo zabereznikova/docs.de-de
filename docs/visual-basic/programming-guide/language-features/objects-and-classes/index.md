@@ -20,16 +20,16 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # Objects and Classes in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 *Objekte* sind Kombinationen von Code und Daten, die als Einheit behandelt werden können.  Sie können Teile von Anwendungen sein, wie Steuerelemente oder Formulare.  Auch ganze Anwendungen können ein Objekt darstellen.  
   
- Beim Erstellen einer Anwendung in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] arbeiten Sie stets mit Objekten.  Sie können von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellte Objekte verwenden, z. B. Steuerelemente, Formulare und Datenzugriffsobjekte.  Sie können in der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anwendung auch Objekte aus anderen Anwendungen verwenden.  Darüber hinaus können Sie eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren.  Objekte verhalten sich wie vorgefertigte Bausteine für Programme, d. h., mit Objekten können Codeabschnitte einmal geschrieben und dann immer wieder verwendet werden.  
+ Beim Erstellen einer Anwendung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] arbeiten Sie stets mit Objekten.  Sie können von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellte Objekte verwenden, z. B. Steuerelemente, Formulare und Datenzugriffsobjekte.  Sie können in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anwendung auch Objekte aus anderen Anwendungen verwenden.  Darüber hinaus können Sie eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren.  Objekte verhalten sich wie vorgefertigte Bausteine für Programme, d. h., mit Objekten können Codeabschnitte einmal geschrieben und dann immer wieder verwendet werden.  
   
  Dieses Thema enthält ausführliche Erläuterungen zu Objekten.  
   
 ## Objekte und Klassen  
- Jedes Objekt in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird von einer *Klasse* definiert.  Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts.  Objekte sind Instanzen von Klassen; sobald Sie eine Klasse definiert haben, können Sie eine beliebige Anzahl von Objekten erstellen.  
+ Jedes Objekt in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird von einer *Klasse* definiert.  Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts.  Objekte sind Instanzen von Klassen; sobald Sie eine Klasse definiert haben, können Sie eine beliebige Anzahl von Objekten erstellen.  
   
  Die Beziehung zwischen einem Objekt und seiner Klasse können Sie sich zum besseren Verständnis wie die zwischen Ausstechform und Plätzchen vorstellen.  Die Ausstechform ist die Klasse.  Sie definiert die Merkmale der einzelnen Plätzchen, z. B. die Größe und die Form.  Die Klasse wird zur Erstellung von Objekten verwendet.  Die Objekte sind in diesem Fall die Plätzchen.  
   
@@ -175,7 +175,7 @@ safetyTimer.Start()
 ## Wiederverwenden von Klassen und Objekten  
  Mit Objekten können Variablen und Prozeduren einmal deklariert und dann bei Bedarf erneut verwendet werden.  Wenn Sie beispielsweise einer Anwendung eine Rechtschreibprüfung hinzufügen möchten, können Sie alle Variablen und Unterstützungsfunktionen definieren, die für die Rechtschreibprüfung erforderlich sind.  Wenn Sie die Rechtschreibprüfung als Klasse erstellen, können Sie sie in anderen Anwendungen erneut verwenden, indem Sie der kompilierten Assembly einen Verweis hinzufügen.  Eine noch bessere Möglichkeit, bei der Sie sich gleichzeitig einigen Arbeitsaufwand sparen, ist die Verwendung einer Rechtschreibprüfungsklasse, die bereits von einem anderen Entwickler entwickelt wurde.  
   
- [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] enthält beispielsweise viele Komponenten, die verwendet werden können.  Im folgenden Beispiel wird die <xref:System.TimeZone>\-Klasse im <xref:System>\-Namespace verwendet.  Die <xref:System.TimeZone>\-Klasse stellt Member zur Verfügung, mit denen Sie Informationen über die Zeitzone des aktuellen Computersystems abrufen können.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enthält beispielsweise viele Komponenten, die verwendet werden können.  Im folgenden Beispiel wird die <xref:System.TimeZone>\-Klasse im <xref:System>\-Namespace verwendet.  Die <xref:System.TimeZone>\-Klasse stellt Member zur Verfügung, mit denen Sie Informationen über die Zeitzone des aktuellen Computersystems abrufen können.  
   
 ```  
 Public Sub examineTimeZone()  
@@ -239,7 +239,7 @@ End Sub
  Eine andere Möglichkeit, Objekte miteinander in Beziehung zu setzen, ist die *Kapselungsbeziehung*.  Containerobjekte kapseln andere Objekte nach logischen Gesichtspunkten.  So enthält das <xref:System.OperatingSystem>\-Objekt beispielsweise logisch ein <xref:System.Version>\-Objekt, das es über seine <xref:System.OperatingSystem.Version%2A>\-Eigenschaft zurückgibt.  Beachten Sie, dass das Containerobjekt ein anderes Objekt nur logisch enthält.  
   
 #### Auflistungen  
- Eine spezielle Art der Objektkapselung stellen *Auflistungen* dar.  Auflistungen sind Gruppen von ähnlichen Objekten, die aufgelistet werden können.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt eine spezielle Syntax in der [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md), mit der Sie die Elemente einer Auflistung durchlaufen können.  Darüber hinaus ermöglichen Auflistungen in vielen Fällen die Verwendung einer <xref:Microsoft.VisualBasic.Collection.Item%2A>, mit der Sie Elemente über ihren Index abrufen können oder indem Sie sie mit einer eindeutigen Zeichenfolge verknüpfen.  Auflistungen können einfacher zu verwenden sein als Arrays, da sie es ermöglichen, Elemente ohne Verwendung von Indizes hinzuzufügen oder zu entfernen.  Aufgrund dieses Vorteils werden Auflistungen häufig dazu verwendet, Formulare und Steuerelemente zu speichern.  
+ Eine spezielle Art der Objektkapselung stellen *Auflistungen* dar.  Auflistungen sind Gruppen von ähnlichen Objekten, die aufgelistet werden können.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt eine spezielle Syntax in der [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md), mit der Sie die Elemente einer Auflistung durchlaufen können.  Darüber hinaus ermöglichen Auflistungen in vielen Fällen die Verwendung einer <xref:Microsoft.VisualBasic.Collection.Item%2A>, mit der Sie Elemente über ihren Index abrufen können oder indem Sie sie mit einer eindeutigen Zeichenfolge verknüpfen.  Auflistungen können einfacher zu verwenden sein als Arrays, da sie es ermöglichen, Elemente ohne Verwendung von Indizes hinzuzufügen oder zu entfernen.  Aufgrund dieses Vorteils werden Auflistungen häufig dazu verwendet, Formulare und Steuerelemente zu speichern.  
   
 ## Verwandte Themen  
  [Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

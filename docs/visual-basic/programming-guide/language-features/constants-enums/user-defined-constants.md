@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # User-Defined Constants (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Konstante ist ein aussagekräftiger Name, der anstelle einer unveränderlichen Zahl oder Zeichenfolge verwendet wird.  Konstanten speichern Werte, die \(wie der Name sagt\) während der Ausführung einer Anwendung konstant bleiben.  Sie können Konstanten verwenden, die in den von Ihnen verwendeten Steuerelementen oder Komponenten definiert sind, oder selbst Konstanten erstellen.  Vom Benutzer selbst erstellte Konstanten werden auch als *benutzerdefiniert* bezeichnet.  
   
@@ -62,7 +62,7 @@ Eine Konstante ist ein aussagekräftiger Name, der anstelle einer unveränderlic
  [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
 [!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- Im Fall eines zirkulären Verweises generiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Compilerfehler.  
+ Im Fall eines zirkulären Verweises generiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen Compilerfehler.  
   
 ## Siehe auch  
  [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)   

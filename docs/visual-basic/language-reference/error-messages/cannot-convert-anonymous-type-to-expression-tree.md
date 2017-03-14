@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Compiler lässt keine Konvertierung eines anonymen Typs in eine Ausdrucksbaumstruktur zu, wenn eine Eigenschaft des anonymen Typs zur Initialisierung einer anderen Eigenschaft des anonymen Typs verwendet wird.  Im folgenden Code wird `Prop1` beispielsweise in der Initialisierungsliste deklariert und dann als Anfangswert für `Prop2` verwendet.  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # How to: Create a String from An Array of Char Values (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Beispiel erstellt die Zeichenfolge "abcd" anhand von einzelnen Zeichen.  
   

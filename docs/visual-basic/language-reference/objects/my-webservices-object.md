@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # My.WebServices Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enthält Eigenschaften, mit denen eine Einzelinstanz jedes XML\-Webdiensts, mit dem das aktuelle Projekt verbunden ist, erstellt werden oder auf diese Einzelinstanz zugegriffen werden kann.  
   

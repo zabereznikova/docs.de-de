@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Access Members of an Object (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn eine Objektvariable gegeben ist, die auf ein Objekt verweist, wird häufig der Fall eintreten, dass Sie die Member dieses Objekts, z. B. seine Methoden, Eigenschaften, Felder und Ereignisse, verwenden möchten.  Wenn Sie beispielsweise ein neues <xref:System.Windows.Forms.Form>\-Objekt erstellt haben, möchten Sie wahrscheinlich dessen <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft festlegen oder seine <xref:System.Windows.Forms.Control.Focus%2A>\-Methode aufrufen.  
   

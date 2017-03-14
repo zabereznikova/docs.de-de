@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Create a Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verwenden Sie die `CreateDirectory`\-Methode des `My.Computer.FileSystem`\-Objekts zum Erstellen von Verzeichnissen.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Return a Value from a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Function`\-Prozedur gibt an den Aufrufcode einen Wert zurück. Dies geschieht entweder durch Ausführen einer `Return`\-Anweisung oder weil eine `Exit Function`\-Anweisung oder eine `End Function`\-Anweisung auftritt.  
   
@@ -45,7 +45,7 @@ Eine `Function`\-Prozedur gibt an den Aufrufcode einen Wert zurück. Dies geschi
   
 1.  Weisen Sie an wenigstens einer Stelle in der `Function`\-Prozedur dem Namen der Prozedur einen Wert zu.  
   
-2.  Wenn Sie eine `Exit Function`\-Anweisung oder eine `End Function`\-Anweisung ausführen, gibt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Wert zurück, der dem Namen der Prozedur zuletzt zugewiesen wurde.  
+2.  Wenn Sie eine `Exit Function`\-Anweisung oder eine `End Function`\-Anweisung ausführen, gibt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Wert zurück, der dem Namen der Prozedur zuletzt zugewiesen wurde.  
   
 3.  Eine Prozedur kann mehrere `Exit Function`\-Anweisungen enthalten, und Sie können `Return`\-Anweisungen sowie `Exit Function`\-Anweisungen in einer Prozedur gleichzeitig verwenden.  
   

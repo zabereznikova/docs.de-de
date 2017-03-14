@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Overload Resolution (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler auf den Aufruf einer Prozedur trifft, die in mehreren überladenen Versionen definiert ist, muss er entscheiden, welche der Überladungen aufgerufen wird.  Dazu werden die folgenden Schritte ausgeführt:  
+Wenn der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler auf den Aufruf einer Prozedur trifft, die in mehreren überladenen Versionen definiert ist, muss er entscheiden, welche der Überladungen aufgerufen wird.  Dazu werden die folgenden Schritte ausgeführt:  
   
 1.  **Zugriff.** Der Compiler schließt jede Überladung mit einer Zugriffsebene aus, die den Aufrufcode daran hindert, sie aufzurufen.  
   

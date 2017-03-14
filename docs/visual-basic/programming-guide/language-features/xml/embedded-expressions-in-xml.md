@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Embedded Expressions in XML (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit eingebetteten Ausdrücken können XML\-Literale erstellt werden, die Ausdrücke enthalten, welche zur Laufzeit ausgewertet werden.  Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`. Sie stimmt mit der in [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)] verwendeten Syntax überein.  
+Mit eingebetteten Ausdrücken können XML\-Literale erstellt werden, die Ausdrücke enthalten, welche zur Laufzeit ausgewertet werden.  Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`. Sie stimmt mit der in [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] verwendeten Syntax überein.  
   
  Beispielsweise können XML\-Elementliterale erstellt und so eingebettete Ausdrücke mit Literaltextinhalt kombiniert werden.  
   
@@ -84,7 +84,7 @@ Mit eingebetteten Ausdrücken können XML\-Literale erstellt werden, die Ausdrü
  Weitere Informationen über die Verwendung von eingebetteten Ausdrücken in Literalen eines bestimmten Typs finden Sie unter [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## Bereichsregeln  
- Der Compiler konvertiert jedes XML\-Literal in einen Konstruktoraufruf des entsprechenden Literaltyps.  Der Literalinhalt und eingebettete Ausdrücke in einem XML\-Literal werden dem Konstruktor als Argumente übergeben.  Das bedeutet, dass sämtliche für XML\-Literale verfügbare [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmierelemente auch für deren eingebettete Ausdrücke verfügbar sind.  
+ Der Compiler konvertiert jedes XML\-Literal in einen Konstruktoraufruf des entsprechenden Literaltyps.  Der Literalinhalt und eingebettete Ausdrücke in einem XML\-Literal werden dem Konstruktor als Argumente übergeben.  Das bedeutet, dass sämtliche für XML\-Literale verfügbare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmierelemente auch für deren eingebettete Ausdrücke verfügbar sind.  
   
  Innerhalb eines XML\-Literals kann auf die mit der `Imports`\-Anweisung deklarierten XML\-Namespacepräfixe zugegriffen werden.  Mit dem `xmlns`\-Attribut kann in einem Element ein neues XML\-Namespacepräfix deklariert oder Shadowing für ein existierendes XML\-Namespacepräfix durchgeführt werden.  Der neue Namespace ist für untergeordnete Knoten, nicht jedoch für XML\-Literale in eingebetteten Ausdrücken verfügbar.  
   

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Determine What Type an Object Variable Refers To (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespeichert sind.  Der Typ dieser Daten kann sich während der Laufzeit ändern.  Sie können jederzeit die <xref:System.Type.GetTypeCode%2A>\-Methode verwenden, um den aktuellen Laufzeittyp zu ermitteln, oder den [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md), um festzustellen, ob der aktuelle Laufzeittyp mit einem angegebenen Typ kompatibel ist.  
   

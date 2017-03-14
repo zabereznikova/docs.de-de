@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Operator Mod(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Teilt zwei Zahlen und gibt nur den Rest zurück.  
   

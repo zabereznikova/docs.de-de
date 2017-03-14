@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Using the iteration variable in a lambda expression may have unexpected results
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Verwendung der Iterationsvariablen in einem lambda\-Ausdruck kann zu unerwarteten Ergebnissen führen.Erstellen Sie stattdessen in der Schleife eine lokale Variable, und weisen Sie dieser den Wert der Iterationsvariablen zu.  
   

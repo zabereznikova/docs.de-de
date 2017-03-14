@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 29
 ---
 # My.Computer.Clipboard Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Methoden zum Bearbeiten der Zwischenablage bereit.  
   
@@ -35,7 +35,7 @@ Stellt Methoden zum Bearbeiten der Zwischenablage bereit.
   
  **Klasse:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> \(bietet Zugriff auf <xref:System.Windows.Forms.Clipboard>\)  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>   

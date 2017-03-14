@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # &#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Erstaufruf der `Dir`\-Funktion enthält kein `PathName`\-Argument.  Der erste Aufruf von `Dir` muss `PathName` enthalten. Bei allen folgenden Aufrufen von `Dir` wird das nächste Element auch ohne Parameter abgerufen.  
   

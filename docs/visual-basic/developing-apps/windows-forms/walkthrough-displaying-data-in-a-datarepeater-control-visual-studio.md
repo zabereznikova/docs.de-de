@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Exemplarische Vorgehensweise: Anzeigen von Daten in einem DataRepeater-Steuerelement (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Diese exemplarische Vorgehensweise enthält ein grundlegendes Szenario von Anfang bis zum Ende der Anzeige von gebundenen Daten in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement.  
   
@@ -37,7 +37,7 @@ Diese exemplarische Vorgehensweise enthält ein grundlegendes Szenario von Anfan
   
 -   Hinzufügen datengebundener Steuerelemente  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## Erstellen einer DataRepeater\-Projektmappe  
  Im ersten Schritt erstellen Sie ein Projekt und eine Projektmappe.  

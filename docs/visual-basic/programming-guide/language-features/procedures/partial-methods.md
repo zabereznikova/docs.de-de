@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit partiellen Methoden können Entwickler benutzerdefinierte Logik in Code einfügen.  In der Regel ist der Code Teil einer vom Designer generierten Klasse.  Partielle Methoden werden in einer partiellen Klasse definiert, die von einem Code\-Generator erstellt wird. Sie werden im Allgemeinen verwendet, um Benachrichtigungen über Änderungen bereitzustellen.  Sie ermöglichen es dem Entwickler, eine benutzerdefinierte Reaktion auf eine Änderung anzugeben.  
   

@@ -40,7 +40,7 @@ Mit einem `finally`\-Block können Sie alle Ressourcen bereinigen, die in einem 
  C\# enthält auch die [Using\-Anweisung](../../../csharp/language-reference/keywords/using-statement.md), die ähnliche Funktionalität für <xref:System.IDisposable>\-Objekte in einer zweckmäßigen Syntax bereitstellt.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

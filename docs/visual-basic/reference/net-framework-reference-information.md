@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # .NET Framework Reference Information (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieses Thema enthält Links zu Informationen darüber bereit, wie Sie mit der [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek funktioniert.  
+Dieses Thema enthält Links zu Informationen darüber bereit, wie Sie mit der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek funktioniert.  
   
 ## Verwandte Abschnitte  
  [Erste Schritte](../Topic/Getting%20Started%20with%20the%20.NET%20Framework.md)  

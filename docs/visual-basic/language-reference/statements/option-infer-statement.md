@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 72
 ---
 # Option Infer Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
   
@@ -59,7 +59,7 @@ IntelliSense, wenn die Option Infer aktiviert ist.
 IntelliSense, wenn Option Infer deaktiviert ist  
   
 > [!NOTE]
->  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] führt Operationen mit Bezeichnung *Boxing* und *Unboxing* aus, um zwischen einem `Object` und einem Werttyp zu konvertieren, was die Ausführung langsamer macht.  Weitere Informationen zu Boxing und Unboxing finden Sie unter der [Visual Basic Language Specification](../../../visual-basic/reference/language-specification.md).  
+>  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] führt Operationen mit Bezeichnung *Boxing* und *Unboxing* aus, um zwischen einem `Object` und einem Werttyp zu konvertieren, was die Ausführung langsamer macht.  Weitere Informationen zu Boxing und Unboxing finden Sie unter der [Visual Basic Language Specification](../../../visual-basic/reference/language-specification.md).  
   
  Typrückschluss findet auf Prozedurebene Anwendung und nicht außerhalb einer Prozedur in einer Klasse, Struktur, Modul oder Schnittstelle.  
   

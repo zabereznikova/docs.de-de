@@ -16,7 +16,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 12
 ---
 # Gewusst wie: Verwenden von Lambda-Ausdr&#252;cken au&#223;erhalb von LINQ (C#-Programmierhandbuch)
-Lambda\-Ausdrücke sind nicht auf [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfragen beschränkt.  Sie können überall dort verwendet werden, wo ein Delegatwert erwartet wird, also da, wo anonyme Methoden eingesetzt werden können.  Das folgende Beispiel veranschaulicht die Verwendung eines Lambda\-Ausdrucks in einem Windows Forms\-Ereignishandler.  Beachten Sie, dass die Eingabetypen \(<xref:System.Object> und <xref:System.Windows.Forms.MouseEventArgs>\) vom Compiler abgeleitet werden und nicht explizit in den Lambda\-Eingabeparametern angegeben werden müssen.  
+Lambda\-Ausdrücke sind nicht auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen beschränkt.  Sie können überall dort verwendet werden, wo ein Delegatwert erwartet wird, also da, wo anonyme Methoden eingesetzt werden können.  Das folgende Beispiel veranschaulicht die Verwendung eines Lambda\-Ausdrucks in einem Windows Forms\-Ereignishandler.  Beachten Sie, dass die Eingabetypen \(<xref:System.Object> und <xref:System.Windows.Forms.MouseEventArgs>\) vom Compiler abgeleitet werden und nicht explizit in den Lambda\-Eingabeparametern angegeben werden müssen.  
   
 ## Beispiel  
   

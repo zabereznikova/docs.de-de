@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # &#39;&lt;name&gt;&#39; is ambiguous in the namespace &#39;&lt;namespacename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Sie haben einen Namen angegeben, der mehrdeutig ist und dadurch einen Konflikt mit einem anderen Namen verursacht.  Für den [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler wurden keine Regeln zur Konfliktlösung implementiert, sodass Sie die Mehrdeutigkeit des Namens selbst auflösen müssen.  
+Sie haben einen Namen angegeben, der mehrdeutig ist und dadurch einen Konflikt mit einem anderen Namen verursacht.  Für den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler wurden keine Regeln zur Konfliktlösung implementiert, sodass Sie die Mehrdeutigkeit des Namens selbst auflösen müssen.  
   
  **Fehler\-ID:** BC30560  
   

@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Error in loading DLL (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Dynamic Link Library \(DLL\) ist eine Bibliothek, die in der `Lib`\-Klausel einer `Declare`\-Anweisung angegeben ist.  Dieser Fehler kann folgende Ursachen haben:  
   

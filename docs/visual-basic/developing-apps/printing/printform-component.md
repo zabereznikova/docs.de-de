@@ -17,9 +17,9 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # PrintForm Component (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente für [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ermöglicht Ihnen, ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic\-Versionen.  
+Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>\-Komponente für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht Ihnen, ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic\-Versionen.  
   
  Die PowerPack\-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169) herunterladen.  
   

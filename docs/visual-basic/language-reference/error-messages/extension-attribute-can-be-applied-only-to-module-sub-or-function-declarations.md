@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # &#39;Extension&#39; attribute can be applied only to &#39;Module&#39;, &#39;Sub&#39;, or &#39;Function&#39; declarations
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die einzige Möglichkeit, Datentypen in Visual Basic zu erweitern, ist die Definition einer Erweiterungsmethode innerhalb eines Standardmoduls.  Die Erweiterungsmethode kann eine `Sub`\-Prozedur oder eine `Function`\-Prozedur sein.  Alle Erweiterungsmethoden müssen mit dem Extension\-Attribut `<Extension()>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=fullName>\-Namespace markiert werden.  Optional kann ein Modul, das eine Erweiterungsmethode enthält, auf die gleiche Weise markiert werden.  Eine andere Verwendung des Extension\-Attributs ist nicht gültig.  
   

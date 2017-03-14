@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Access a Variable Hidden by a Derived Class (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn der Code in einer abgeleiteten Klasse auf eine Variable zugreift, löst der Compiler den Verweis in der Regel in die nächste Version auf, auf die zugegriffen werden kann, das heißt in die verwendbare Version, die die wenigsten Ableitungsschritte zurück von der zugreifenden Klasse liegt.  Wenn die Variable in der abgeleiteten Klasse definiert ist, greift der Code normalerweise auf diese Definition zu.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Logging Information from the Application (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieser Abschnitt enthält Themen zum Protokollieren von Anwendungsinformationen unter Verwendung des `My.Application.Log`\-Objekts oder des `My.Log`\-Objekts sowie zum Erweitern der Protokollierungsfunktionen der Anwendung.  
   

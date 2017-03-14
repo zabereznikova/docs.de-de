@@ -37,17 +37,17 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Object Lifetime: How Objects Are Created and Destroyed (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erstellt mit dem `New`\-Schlüsselwort eine Instanz einer Klasse, ein Objekt.  Initialisierungsaufgaben müssen häufig für neue Objekte ausgeführt werden, bevor sie verwendet werden.  Gebräuchliche Initialisierungsaufgaben umfassen das Öffnen von Dateien, Verbinden mit Datenbanken und das Lesen von Werten von Registrierungsschlüsseln.  Visual Basic steuert die Initialisierung neuer Objekte mit Prozeduren mit Namen *Konstruktoren* \(spezielle Methoden, über die die Initialisierung gesteuert werden kann\).  
   
  Nachdem ein Objekt den Gültigkeitsbereich verlässt, wird es von der common Language Runtime \(CLR\) freigegeben.  Visual Basic steuert die Freigabe von Systemressourcen mit Prozeduren mit Namen *Destruktoren*.  Konstruktoren und Destruktoren unterstützen gemeinsam die Erstellung stabiler und vorhersehbarer Klassenbibliotheken.  
   
 ## Verwenden von Konstruktoren und Destruktoren  
- Konstruktoren und Destruktoren steuern die Erstellung und Zerstörung von Objekten.  Die `Sub New`\- und `Sub Finalize`\-Prozeduren in Visual Basic initialisieren bzw. zerstören Objekte; sie ersetzen die `Class_Initialize`\- und `Class_Terminate`\-Methoden, die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 6.0 und früheren Versionen verwendet wurden.  
+ Konstruktoren und Destruktoren steuern die Erstellung und Zerstörung von Objekten.  Die `Sub New`\- und `Sub Finalize`\-Prozeduren in Visual Basic initialisieren bzw. zerstören Objekte; sie ersetzen die `Class_Initialize`\- und `Class_Terminate`\-Methoden, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 und früheren Versionen verwendet wurden.  
   
 ### Sub New  
- Der `Sub New`\-Konstruktor kann nur einmal während der Erstellung der Klasse ausgeführt werden.  Es kann nicht als explizit an einer beliebigen Stelle aufgerufen werden, außer in der ersten Codezeile eines anderen Konstruktors von derselben Klasse oder von einer abgeleiteten Klasse.  Weiterhin wird der Code in der `Sub New`\-Methode immer vor jedem anderen Code in einer Klasse ausgeführt.  [!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] und höhere Versionen erstellen implizit einen `Sub New`\-Konstruktor zur Laufzeit, wenn Sie nicht explizit eine `Sub New`\-Prozedur für eine Klasse definieren.  
+ Der `Sub New`\-Konstruktor kann nur einmal während der Erstellung der Klasse ausgeführt werden.  Es kann nicht als explizit an einer beliebigen Stelle aufgerufen werden, außer in der ersten Codezeile eines anderen Konstruktors von derselben Klasse oder von einer abgeleiteten Klasse.  Weiterhin wird der Code in der `Sub New`\-Methode immer vor jedem anderen Code in einer Klasse ausgeführt.  [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] und höhere Versionen erstellen implizit einen `Sub New`\-Konstruktor zur Laufzeit, wenn Sie nicht explizit eine `Sub New`\-Prozedur für eine Klasse definieren.  
   
  Um einen Konstruktor für eine Klasse zu erstellen, erstellen Sie eine Prozedur mit dem Namen `Sub New` an einer beliebigen Stelle in der Klassendefinition.  Zum Erstellen eines parametrisierten Konstruktors legen Sie die Namen und Datentypen der Argumente von `Sub New` so fest, wie Sie die Argumente für eine beliebige andere Prozedur angeben würden, wie im folgenden Code:  
   
@@ -57,7 +57,7 @@ Erstellt mit dem `New`\-Schlüsselwort eine Instanz einer Klasse, ein Objekt.  I
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- Wenn Sie eine von einer anderen Klasse abgeleitete Klasse definieren, muss die erste Zeile eines Konstruktors ein Aufruf an den Konstruktor der Basisklasse sein, es sei denn die Basisklasse verfügt über einen zugreifbaren Konstruktor, der keine Parameter annimmt.  Ein Aufruf der Basisklasse mit dem oben stehenden Konstruktor wäre zum Beispiel `MyBase.New(s)`.  Andernfalls ist `MyBase.New` optional, und die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Laufzeit ruft sie implizit auf.  
+ Wenn Sie eine von einer anderen Klasse abgeleitete Klasse definieren, muss die erste Zeile eines Konstruktors ein Aufruf an den Konstruktor der Basisklasse sein, es sei denn die Basisklasse verfügt über einen zugreifbaren Konstruktor, der keine Parameter annimmt.  Ein Aufruf der Basisklasse mit dem oben stehenden Konstruktor wäre zum Beispiel `MyBase.New(s)`.  Andernfalls ist `MyBase.New` optional, und die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Laufzeit ruft sie implizit auf.  
   
  Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`\-Verfahren hinzufügen.  `Sub New` kann beim Aufruf als parametrisierter Konstruktor Argumente akzeptieren.  Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.  
   
@@ -69,7 +69,7 @@ Erstellt mit dem `New`\-Schlüsselwort eine Instanz einer Klasse, ein Objekt.  I
   
  Der `Finalize`\-Destruktor ist eine geschützte Methode, die nur über die zugehörige Klasse oder über abgeleitete Klassen aufgerufen werden kann.  Das System ruft `Finalize` automatisch auf, wenn ein Objekt zerstört wird, daher sollten Sie `Finalize` nicht explizit von außerhalb einer `Finalize`\-Implementierung einer abgeleiteten Klasse aufrufen müssen.  
   
- Im Gegensatz zu `Class_Terminate`, das ausgeführt wird, sobald ein Objekt auf nichts festgelegt wurde, gibt es in der Regel eine Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert und wenn Visual Basic den `Finalize`\-Destruktor aufruft.  [!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] und höhere Versionen ermöglichen die Verwendung einer zweiten Art von Destruktor, <xref:System.IDisposable.Dispose%2A>, die explizit jederzeit für die umgehende Freigabe von Ressourcen aufgerufen werden kann.  
+ Im Gegensatz zu `Class_Terminate`, das ausgeführt wird, sobald ein Objekt auf nichts festgelegt wurde, gibt es in der Regel eine Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert und wenn Visual Basic den `Finalize`\-Destruktor aufruft.  [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] und höhere Versionen ermöglichen die Verwendung einer zweiten Art von Destruktor, <xref:System.IDisposable.Dispose%2A>, die explizit jederzeit für die umgehende Freigabe von Ressourcen aufgerufen werden kann.  
   
 > [!NOTE]
 >  Eine `Finalize`\-Destruktor sollte keine Ausnahmen auslösen, da die Anwendung sie nicht behandeln kann und sie das Beenden der Anwendung verursachen können.  
@@ -149,7 +149,7 @@ End Sub
  Eine abgeleitete Klasse darf nicht die <xref:System.IDisposable.Dispose%2A>\- und `Finalize`\-Methode der Basisklasse überschreiben.  Wenn diese Methoden aus einer Instanz der abgeleiteten Klasse aufgerufen werden, ruft die Basisklassenimplementierung dieser Methoden die Überschreibung der `Dispose(disposing)`\-Methode auf.  
   
 ## Garbagecollection und der Finalize\-Destruktor  
- Das [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] verwendet das *verweisverfolgenden Garbagecollection*\-System, um nicht verwendete Ressourcen in regelmäßigen Abständen freizugeben.  Visual Basic 6.0 und frühere Versionen verwendeten ein anderes System namens *Verweiszählung* zum Verwalten von Ressourcen.  Obwohl beide Systeme dieselbe Funktion automatisch ausführen, gibt es einige wichtige Unterschiede.  
+ Das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwendet das *verweisverfolgenden Garbagecollection*\-System, um nicht verwendete Ressourcen in regelmäßigen Abständen freizugeben.  Visual Basic 6.0 und frühere Versionen verwendeten ein anderes System namens *Verweiszählung* zum Verwalten von Ressourcen.  Obwohl beide Systeme dieselbe Funktion automatisch ausführen, gibt es einige wichtige Unterschiede.  
   
  Die CLR zerstört Objekte in regelmäßigen Abständen, wenn das System feststellt, dass diese Objekte nicht mehr benötigt werden.  Objekte werden schneller freigegeben, wenn die Systemressourcen knapp und ansonsten seltener sind.  Die Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert, und der Freigabe durch der CLR bedeutet, dass im Unterschied zu Objekten in Visual Basic 6.0 und früheren Versionen, Sie genau bestimmen können, wann das Objekt zerstört wird.  In einer solchen Situation sollen Objekte eine *nicht deterministische Lebensdauer* haben.  In den meisten Fällen ändert die nicht deterministische Lebensdauer nicht das Schreiben von Anwendungen, solange beachtet wird, dass der `Finalize`\-Destruktor möglicherweise nicht sofort nach Verlust des Gültigkeitsbereichs eines Objekts ausgeführt wird.  
   

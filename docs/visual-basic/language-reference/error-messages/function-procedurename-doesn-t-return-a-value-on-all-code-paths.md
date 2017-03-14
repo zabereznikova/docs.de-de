@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Function &#39;&lt;procedurename&gt;&#39; doesn&#39;t return a value on all code paths
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die \<Prozedurname\>\-Funktion gibt nicht für alle Codepfade einen Wert zurück.Fehlt eine Return\-Anweisung?  
   

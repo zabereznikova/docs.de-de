@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 47
 ---
 # Arrays in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Arrays sind Gruppen von Werten, die logisch miteinander verknüpft sind, z. B. die Anzahl der Schüler in jeder Jahrgangsstufe einer Grundschule.  Hilfe zu Arrays in Visual Basic for Applications \(VBA\) finden Sie in der [Sprachreferenz](https://msdn.microsoft.com/en-us/library/office/gg264383\(v=office.14\).aspx).  
   
@@ -188,7 +188,7 @@ Elemente des "students"\-Arrays
   
  Unter den folgenden Bedingungen müssen Sie eventuell ein Array der Länge 0 \(null\) erstellen:  
   
--   Der Code muss, ohne eine <xref:System.NullReferenceException>\-Ausnahme auszulösen, auf Member der <xref:System.Array>\-Klasse zugreifen, beispielsweise auf <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Funktion wie <xref:Microsoft.VisualBasic.Information.UBound%2A> aufrufen.  
+-   Der Code muss, ohne eine <xref:System.NullReferenceException>\-Ausnahme auszulösen, auf Member der <xref:System.Array>\-Klasse zugreifen, beispielsweise auf <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Funktion wie <xref:Microsoft.VisualBasic.Information.UBound%2A> aufrufen.  
   
 -   Sie möchten den verwendeten Code dadurch vereinfachen, dass eine Überprüfung auf das Vorhandensein von `Nothing` als Sonderfall entfällt.  
   
@@ -238,7 +238,7 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_Collections"></a> Auflistungen als Alternative zu Arrays  
  Arrays eignen sich bestens zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ. Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Im Gegensatz zu Arrays kann sich die Gruppe von Objekten, mit denen Sie arbeiten, in Abhängigkeit von den sich ändernden Anforderungen der Anwendung dynamisch vergrößern bzw. verkleinern.  
   
- Wenn Sie die Größe eines Arrays ändern müssen, müssen Sie die [ReDim Statement](../../../../visual-basic/language-reference/statements/redim-statement.md) verwenden. Dabei erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ein neues Array und gibt das vorherige Array zum Löschen frei. Dies nimmt Ausführungszeit in Anspruch. Wenn sich die Anzahl der verwendeten Elemente häufig ändert oder Sie die maximale Anzahl der benötigten Elemente nicht vorhersehen können, erzielen Sie mit einer Auflistung möglicherweise eine höhere Leistung.  
+ Wenn Sie die Größe eines Arrays ändern müssen, müssen Sie die [ReDim Statement](../../../../visual-basic/language-reference/statements/redim-statement.md) verwenden. Dabei erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ein neues Array und gibt das vorherige Array zum Löschen frei. Dies nimmt Ausführungszeit in Anspruch. Wenn sich die Anzahl der verwendeten Elemente häufig ändert oder Sie die maximale Anzahl der benötigten Elemente nicht vorhersehen können, erzielen Sie mit einer Auflistung möglicherweise eine höhere Leistung.  
   
  Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.  
   
@@ -247,7 +247,7 @@ Dim prices(3, 4, 5) As Long
  Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md).  
   
 ### Beispiel  
- Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klasse <xref:System.Collections.Generic.List%601?displayProperty=fullName> eine Listenauflistung mit `Customer`\-Objekten erstellt.  
+ Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klasse <xref:System.Collections.Generic.List%601?displayProperty=fullName> eine Listenauflistung mit `Customer`\-Objekten erstellt.  
   
  [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   

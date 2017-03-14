@@ -59,7 +59,7 @@ int i = 0;
  Beachten Sie bei dem Beispiel, dass es sich bei dem Standardwert einer Zeichenfolge um `null` handelt.  Aus diesem Grund wird er nicht angezeigt.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

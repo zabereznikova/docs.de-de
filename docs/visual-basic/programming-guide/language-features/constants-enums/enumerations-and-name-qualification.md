@@ -32,7 +32,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Enumerations and Name Qualification (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie auf einen Member in einer Enumeration verweisen, müssen Sie in der Regel den Membernamen mit dem Enumerationsnamen qualifizieren.  Wenn Sie beispielsweise auf den Member `Sunday` in der `Days`\-Enumeration verweisen möchten, würden Sie folgende Syntax verwenden:  
   

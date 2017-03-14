@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # XML entity references are not supported
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein in der XML 1.0\-Spezifikation nicht definierter Entitätsverweis \(z. B. `©`\) ist als Wert für ein XML\-Literal enthalten.  Nur die XML\-Entitätsverweise `&`, `"`, `<`, `>` und `'` werden in XML\-Literalen unterstützt.  
   

@@ -18,7 +18,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 46
 ---
 # Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
-Ab [!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/vs-dev10-long-md.md)] gibt es neue Funktionen in C\# und Visual Basic, die die Microsoft Office\-Programmierung verbessern.  Jede Sprache verfügt über zusätzliche Funktionen, die bereits in der anderen Sprache existieren.  
+Ab [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] gibt es neue Funktionen in C\# und Visual Basic, die die Microsoft Office\-Programmierung verbessern.  Jede Sprache verfügt über zusätzliche Funktionen, die bereits in der anderen Sprache existieren.  
   
  Zu den neuen Funktionen in C\# gehören benannte und optionale Argumente, Rückgabewerte vom Typ `dynamic` und in der COM\-Programmierung die Möglichkeit, das Schlüsselwort `ref` auszulassen und auf indizierte Eigenschaften zuzugreifen.  Die neuen Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambda\-Ausdrücken sowie Auflistungsinitialisierer.  
   
@@ -29,9 +29,9 @@ Ab [!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/v
 ## Vorbereitungsmaßnahmen  
  Zum Durchführen dieser exemplarischen Vorgehensweise müssen Microsoft Office Excel 2013 \(oder Version 2007 oder höher\) und Microsoft Office Word 2013 \(oder Version 2007 oder höher\) auf Ihrem Computer installiert sein.  
   
- Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver-md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] installiert ist.  
+ Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](~/includes/windowsver-md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] installiert ist.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So richten Sie eine Excel\-Add\-In\-Anwendung ein  
   
@@ -91,7 +91,7 @@ Ab [!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/v
   
      Bei dieser Methode werden zwei neue C\#\-Funktionen verwendet.  Beide Funktionen existieren bereits in Visual Basic.  
   
-    -   Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen *optionalen Parameter* zur Angabe einer bestimmten Vorlage.  Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten.  Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe.  Die entsprechende Anweisung in früheren Versionen von C\# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen *optionalen Parameter* zur Angabe einer bestimmten Vorlage.  Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten.  Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe.  Die entsprechende Anweisung in früheren Versionen von C\# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Weitere Informationen finden Sie unter [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   

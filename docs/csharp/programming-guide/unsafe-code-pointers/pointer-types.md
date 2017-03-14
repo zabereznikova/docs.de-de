@@ -130,7 +130,7 @@ Console.ReadLine();
 |`fixed`\-Anweisung|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

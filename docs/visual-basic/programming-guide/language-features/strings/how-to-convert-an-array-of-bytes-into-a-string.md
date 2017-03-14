@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # How to: Convert an Array of Bytes into a String in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Thema zeigt, wie die Bytes eines Bytearrays in eine Zeichenfolge konvertiert werden.  
   

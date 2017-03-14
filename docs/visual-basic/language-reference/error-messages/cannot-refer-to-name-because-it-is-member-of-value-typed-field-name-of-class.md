@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Cannot refer to &#39;&lt;name&gt;&#39; because it is a member of the value-typed field &#39;&lt;name&gt;&#39; of class &#39;&lt;classname&gt;&#39; which has &#39;System.MarshalByRefObject&#39; as a base class
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die `System.MarshalByRefObject`\-Klasse ermöglicht Anwendungen, die Remotezugriff unterstützen, über die Grenzen von Anwendungsdomänen hinweg auf Objekte zugreifen zu können.  Typen müssen von der `MarshalByRejectObject`\-Klasse erben, wenn sie über Anwendungsdomänengrenzen hinweg verwendet werden.  Der Zustand des Objekts darf nicht kopiert werden, da die Member des Objekts außerhalb der Anwendungsdomäne, in der sie erstellt wurden, nicht verwendet werden können.  
   

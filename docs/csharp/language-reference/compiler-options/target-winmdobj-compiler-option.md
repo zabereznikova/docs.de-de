@@ -39,7 +39,7 @@ Wenn Sie die **\/target:winmdobj**\-Compileroption verwenden, erstellt der Compi
   
 3.  Wählen Sie in der Liste **Ausgabetyp** die Option **WinMD\-Datei** aus.  
   
-     Die Option **WinMD\-Datei** ist nur für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8-appname-long-md.md)]\-App\-Vorlagen verfügbar.  
+     Die Option **WinMD\-Datei** ist nur für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]\-App\-Vorlagen verfügbar.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

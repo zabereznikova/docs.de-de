@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Expression has the type &#39;&lt;typename&gt;&#39; which is a restricted type and cannot be used to access members inherited from &#39;Object&#39; or &#39;ValueType&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Ausdruck wird als Typ ausgewertet, den die Common Language Runtime \(CLR\) nicht mit Boxing konvertieren kann, der jedoch Boxing erfordert.  
   
  Als *Boxing* wird die Verarbeitung bezeichnet, die zum Konvertieren eines Typs in `Object` oder ggf. in <xref:System.ValueType> erforderlich ist.  Die Common Language Runtime kann bestimmte Typen, z. B. <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle> und <xref:System.TypedReference>, nicht mit Boxing konvertieren.  
   
- Dieser Ausdruck versucht mithilfe des eingeschränkten Typs eine Methode aufzurufen, die von <xref:System.Object> oder <xref:System.ValueType> geerbt wird, z. B. <xref:System.Object.GetHashCode%2A> oder <xref:System.Object.ToString%2A>.  Um auf diese Methode zuzugreifen, hat [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] eine implizite Boxingkonvertierung versucht, die diesen Fehler verursacht.  
+ Dieser Ausdruck versucht mithilfe des eingeschränkten Typs eine Methode aufzurufen, die von <xref:System.Object> oder <xref:System.ValueType> geerbt wird, z. B. <xref:System.Object.GetHashCode%2A> oder <xref:System.Object.ToString%2A>.  Um auf diese Methode zuzugreifen, hat [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] eine implizite Boxingkonvertierung versucht, die diesen Fehler verursacht.  
   
  **Fehler\-ID:** BC31393  
   

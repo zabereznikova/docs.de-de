@@ -55,7 +55,7 @@ public class MyClass{}
 -   [\/doc \(Verarbeiten von Dokumentationskommentaren\)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)

@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # Type &lt;typename&gt; is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Variable, Eigenschaft, oder Funktionsrückgabe ist mit einem Datentyp deklariert, der nicht CLS\-kompatibel ist.  
   
  Damit eine Anwendung mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel ist, darf sie nur CLS\-kompatible Typen verwenden.  
   
- Die folgenden [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
+ Die folgenden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen sind nicht CLS\-kompatibel:  
   
 -   [SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   

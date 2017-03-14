@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Interfaces (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können.  Schnittstellen erlauben es Ihnen Features als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden.  Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
   
@@ -49,13 +49,13 @@ caps.handback.revision: 11
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## Implementieren von Schnittsellen  
- Das [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] reservierte Wort `Implements` wird in zwei Arten verwendet.  Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert.  Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
+ Das [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reservierte Wort `Implements` wird in zwei Arten verwendet.  Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert.  Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
   
 ### Implements\-Anweisung  
  Wenn eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, muss die `Implements` Anweisung unmittelbar nach der `Class` oder `Structure` Anweisung erfolgen.  Die `Implements` Anweisung erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellen, die von einer Klasse implementiert werden.  Die Klasse oder Struktur muss alle Schnittstellenmember mit dem `Implements` Schlüsselwort implementieren.  
   
 ### Implements\-Schlüsselwort  
- Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden.  In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben.  Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll.  Der Name des Members, der ein Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden; und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwendet wurde.  
+ Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden.  In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben.  Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll.  Der Name des Members, der ein Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden; und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet wurde.  
   
  Der folgende Code zeigt z. B. das Deklarieren einer Unterroutine namens `Sub1`, die eine Methode einer Schnittstelle implementiert:  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Relaxed Delegate Conversion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die gelockerte Delegatenkonvertierung ermöglicht das Zuweisen von Unterroutinen und Funktionen zu Delegaten oder Handlern, auch wenn deren Signaturen nicht identisch sind. Das Binden an Delegaten ist deshalb konsistent mit dem bereits zulässigen Binden für Methodenaufrufe.  
   

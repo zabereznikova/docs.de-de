@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Rapid Application Development with My.Resources and My.Settings (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Resources`\-Objekt ermöglicht den Zugriff auf die Ressourcen der Anwendung und das dynamische Abrufen von Ressourcen für die Anwendung.  
   

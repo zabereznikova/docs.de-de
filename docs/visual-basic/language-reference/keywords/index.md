@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 43
 ---
 # Schl&#252;sselw&#246;rter (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprache aufgeführt.  
+In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprache aufgeführt.  
   
 ## Reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie nicht als Namen von Programmierelementen wie Variablen oder Prozeduren verwenden können.  Sie können diese Beschränkung umgehen, indem Sie den Namen in eckige Klammern \(`[` `]`\) einschließen.  Weitere Informationen finden Sie im Abschnitt "Mit Escapzeichen versehene Namen" unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -84,7 +84,7 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](../.
 |[\>\> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[\>\>\= Operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[\<\<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[\<\<\=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant` und `Wend` sind reservierte Schlüsselwörter, die in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] allerdings nicht mehr verwendet werden.  Die Bedeutung des `Let`\-Schlüsselworts hat sich geändert.  `Let` wird jetzt in LINQ\-Abfragen verwendet.  Weitere Informationen finden Sie unter [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md).  
+>  `EndIf`, `GoSub`, `Variant` und `Wend` sind reservierte Schlüsselwörter, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allerdings nicht mehr verwendet werden.  Die Bedeutung des `Let`\-Schlüsselworts hat sich geändert.  `Let` wird jetzt in LINQ\-Abfragen verwendet.  Weitere Informationen finden Sie unter [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## Nicht reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind nicht reserviert. Das bedeutet, dass Sie sie als Namen von Programmierelementen verwenden können.  Dieses Vorgehen wird jedoch nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  

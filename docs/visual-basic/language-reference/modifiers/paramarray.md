@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # ParamArray (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass ein Prozedurparameter ein optionales Array aus Elementen mit dem angegebenen Typ verwendet.  `ParamArray` kann nur auf dem letzten Parameter einer Parameterliste verwendet werden.  
   

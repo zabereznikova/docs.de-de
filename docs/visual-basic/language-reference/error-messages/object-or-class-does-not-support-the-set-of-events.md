@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Object or class does not support the set of events
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, eine `WithEvents`\-Variable mit einer Komponente zu verwenden, die nicht als Ereignisquelle für den angegebenen Satz von Ereignissen fungieren kann.  Sie haben z. B. versucht, die Ereignisse eines Objekts aufzufangen und anschließend ein anderes Objekt zu erstellen, das das erste Objekt `Implements`.  Es ist nicht immer möglich, die Ereignisse aus dem implementierten Objekt aufzufangen.  Mit `Implements` wird nur eine Schnittstelle für Methoden und Eigenschaften implementiert.  `WithEvents` wird für private`UserControls` nicht unterstützt, da die Typinformationen zum Auslösen von `ObjectEvent` zur Laufzeit nicht verfügbar sind.  
   

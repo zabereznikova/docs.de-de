@@ -27,7 +27,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Control the Scope of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Normalerweise erstreckt sich der *Gültigkeitsbereich* einer Variablen oder ihre Verfügbarkeit für Verweise auf den Bereich, in dem Sie sie deklarieren.  In manchen Fällen wirkt sich die *Zugriffsebene* der Variablen auf ihren Gültigkeitsbereich aus.  
   

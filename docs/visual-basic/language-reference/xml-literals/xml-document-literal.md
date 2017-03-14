@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # XML Document Literal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal, das ein <xref:System.Xml.Linq.XDocument>\-Objekt darstellt.  
   
@@ -55,9 +55,9 @@ rootElement
  Ein XML\-Dokumentliteral kann nicht in einem XML\-Element enthalten sein.  
   
 > [!NOTE]
->  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu verwenden.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
+>  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu verwenden.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Dokumentliteral in Aufrufe an den <xref:System.Xml.Linq.XDocument.%23ctor%2A>\-Konstruktor und den <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>\-Konstruktor.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Dokumentliteral in Aufrufe an den <xref:System.Xml.Linq.XDocument.%23ctor%2A>\-Konstruktor und den <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>\-Konstruktor.  
   
 ## Beispiel  
  Mit dem folgenden Beispiel wird ein XML\-Dokument mit einer XML\-Deklaration, einer Verarbeitungsanweisung, einem Kommentar und einem Element, das ein anderes Element enthält, erstellt.  

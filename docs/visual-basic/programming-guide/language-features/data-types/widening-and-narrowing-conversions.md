@@ -34,7 +34,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Widening and Narrowing Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein wichtiger Aspekt von Typkonvertierungen ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Zieldatentyps liegt.  
   
@@ -103,7 +103,7 @@ Ein wichtiger Aspekt von Typkonvertierungen ist, ob das Ergebnis der Konvertieru
   
 -   <xref:System.OverflowException>, \(nur bei ganzzahligen Typen\) wenn der konvertierte Wert für den Zieltyp zu groß ist  
   
- Wenn in einer Klasse oder Struktur eine [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) definiert ist, die als Operator für die Konvertierung in diese oder aus dieser Klasse bzw. Struktur dient, kann diese `CType`\-Funktion eine geeignete Ausnahme auslösen.  Zusätzlich kann `CType` ggf. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Funktionen oder [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Methoden aufrufen, die wiederum verschiedene Ausnahmen auslösen können.  
+ Wenn in einer Klasse oder Struktur eine [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) definiert ist, die als Operator für die Konvertierung in diese oder aus dieser Klasse bzw. Struktur dient, kann diese `CType`\-Funktion eine geeignete Ausnahme auslösen.  Zusätzlich kann `CType` ggf. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Funktionen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Methoden aufrufen, die wiederum verschiedene Ausnahmen auslösen können.  
   
 ## Veränderungen bei der Konvertierung von Verweistypen  
  Bei der Konvertierung eines *Verweistyps* wird nur der Zeiger auf den Wert konvertiert.  Der Wert an sich wird weder kopiert noch in irgendeiner Weise verändert.  Lediglich der Datentyp der Variablen, die den Zeiger enthält, kann sich ändern.  Im folgenden Beispiel wird der Datentyp von der abgeleiteten Klasse in die Basisklasse konvertiert. Das Objekt, auf das nun beide Variablen zeigen, wird dabei allerdings nicht verändert.  

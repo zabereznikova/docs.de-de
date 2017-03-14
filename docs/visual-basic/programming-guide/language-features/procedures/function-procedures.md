@@ -24,9 +24,9 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Function-Prozeduren (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine `Function`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen, die von den Anweisungen `Function` und `End Function` eingeschlossen sind.  Die `Function`\-Prozedur führt eine Aufgabe aus und gibt die Steuerung dann an den Aufrufcode zurück.  Wenn sie die Steuerung zurückgibt, gibt sie auch einen Wert an den Aufrufcode zurück.  
+Eine `Function`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisungen, die von den Anweisungen `Function` und `End Function` eingeschlossen sind.  Die `Function`\-Prozedur führt eine Aufgabe aus und gibt die Steuerung dann an den Aufrufcode zurück.  Wenn sie die Steuerung zurückgibt, gibt sie auch einen Wert an den Aufrufcode zurück.  
   
  Bei jedem Aufruf der Prozedur werden ihre Anweisungen ausgeführt. Die Ausführung wird mit der ersten ausführbaren Anweisung nach der `Function`\-Anweisung begonnen und mit der ersten auftretenden `End Function`\-, `Exit Function`\- oder `Return`\-Anweisung beendet.  
   

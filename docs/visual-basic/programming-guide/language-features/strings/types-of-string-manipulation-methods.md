@@ -20,12 +20,12 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Types of String Manipulation Methods in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Zum Analysieren und Bearbeiten von Zeichenfolgen gibt es verschiedene Möglichkeiten.  Einige dieser Methoden sind Bestandteil der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprache, wohingegen andere Bestandteil der `String`\-Klasse sind.  
+Zum Analysieren und Bearbeiten von Zeichenfolgen gibt es verschiedene Möglichkeiten.  Einige dieser Methoden sind Bestandteil der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprache, wohingegen andere Bestandteil der `String`\-Klasse sind.  
   
 ## Visual Basic und .NET Framework  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Methoden werden als inhärente Funktionen der Sprache verwendet.  Sie können im Code ohne Qualifizierung verwendet werden.  Im folgenden Beispiel wird die typische Verwendung eines [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Befehls zur Zeichenfolgenbearbeitung veranschaulicht:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Methoden werden als inhärente Funktionen der Sprache verwendet.  Sie können im Code ohne Qualifizierung verwendet werden.  Im folgenden Beispiel wird die typische Verwendung eines [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Befehls zur Zeichenfolgenbearbeitung veranschaulicht:  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   

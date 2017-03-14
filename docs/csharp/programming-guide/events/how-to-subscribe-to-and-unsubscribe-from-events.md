@@ -28,7 +28,7 @@ Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu ab
   
 3.  Doppelklicken Sie auf das Ereignis, das Sie erstellen möchten, z. B. das `Load`\-Ereignis.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] erstellt eine leere Ereignishandlermethode und fügt diese dem Code hinzu.  Sie können den Code auch in der **Codeansicht** manuell hinzufügen.  Die folgenden Codezeilen deklarieren z. B. eine Ereignishandlermethode, die aufgerufen wird, wenn die `Form`\-Klasse das `Load`\-Ereignis auslöst.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] erstellt eine leere Ereignishandlermethode und fügt diese dem Code hinzu.  Sie können den Code auch in der **Codeansicht** manuell hinzufügen.  Die folgenden Codezeilen deklarieren z. B. eine Ereignishandlermethode, die aufgerufen wird, wenn die `Form`\-Klasse das `Load`\-Ereignis auslöst.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

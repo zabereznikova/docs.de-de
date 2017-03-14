@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # File already open
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Manchmal muss eine Datei geschlossen werden, bevor eine andere `FileOpen`\-Aktion oder eine andere Operation ausgeführt werden kann.  Dieser Fehler kann folgende Ursachen haben:  
   

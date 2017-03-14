@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # First statement of this &#39;Sub New&#39; must be a call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; (No Accessible Constructor Without Parameters)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die erste Anweisung dieses "Sub New" muss ein Aufruf von "MyBase.New" oder "MyClass.New" sein, da die Basisklasse "\<Basisname\>" von "\<abgeleiteter Name\>" keine zugreifbare "Sub New" hat, die ohne Argumente aufgerufen werden kann.  
   

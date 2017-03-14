@@ -24,10 +24,10 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
   
 ## In diesem Abschnitt  
  [Zugreifen auf das Web mit Async und Await](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)  
- Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../csharp/language-reference/keywords/async.md) und [Await](../csharp/language-reference/keywords/await.md), die ab [!INCLUDE[vs_dev11_long](../csharp/includes/vs-dev11-long-md.md)] im Lieferumfang enthalten sind.  
+ Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../csharp/language-reference/keywords/async.md) und [Await](../csharp/language-reference/keywords/await.md), die ab [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)] im Lieferumfang enthalten sind.  
   
  [Erstellen einer Windows\-Runtime\-Komponente in C\# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](../Topic/Walkthrough:%20Creating%20a%20simple%20component%20in%20C%23%20or%20Visual%20Basic%20and%20calling%20it%20from%20JavaScript.md)  
- Veranschaulicht das Erstellen eines [!INCLUDE[wrt](../csharp/includes/wrt-md.md)]\-Typs, das Verpacken in einer [!INCLUDE[wrt](../csharp/includes/wrt-md.md)]\-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](../csharp/includes/win8-appname-long-md.md)]\-App, die mithilfe von JavaScript für Windows erstellt wurde.  
+ Veranschaulicht das Erstellen eines [!INCLUDE[wrt](~/includes/wrt-md.md)]\-Typs, das Verpacken in einer [!INCLUDE[wrt](~/includes/wrt-md.md)]\-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]\-App, die mithilfe von JavaScript für Windows erstellt wurde.  
   
  [Office\-Programmierung \(C\# und Visual Basic\)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Veranschaulicht das Erstellen einer Excel\-Arbeitsmappe und eines Word\-Dokuments mithilfe von C\# und Visual Basic.  
@@ -57,10 +57,10 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht einige der häufig ausgeführten Aufgaben wie das Hinzufügen oder Entfernen einer Registerkarte auf einem `TabControl`, das Andocken eines Steuerelements an seinem übergeordneten Element und das Ändern der Ausrichtung eines `SplitContainer`\-Steuerelements.  
   
  [Schreiben von Abfragen in C\# \(LINQ\)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Veranschaulicht die C\#\-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücke verwendet werden.  
+ Veranschaulicht die C\#\-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageausdrücke verwendet werden.  
   
  [Bearbeiten von Daten \(C\#\) \(LINQ to SQL\)](../Topic/Walkthrough:%20Manipulating%20Data%20\(C%23\).md)  
- Beschreibt ein [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq-md.md)]\-Szenario für das Hinzufügen, Ändern und Löschen von Daten in einer Datenbank.  
+ Beschreibt ein [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]\-Szenario für das Hinzufügen, Ändern und Löschen von Daten in einer Datenbank.  
   
  [Einfaches Objektmodell und einfache Abfrage \(C\#\) \(LINQ to SQL\)](../Topic/Walkthrough:%20Simple%20Object%20Model%20and%20Query%20\(C%23\).md)  
  Veranschaulicht das Erstellen einer Entitätsklasse und einer einfachen Abfrage zum Filtern der Entitätsklasse.  
@@ -69,7 +69,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht, wie Sie mithilfe von LINQ to SQL auf Daten zugreifen können, indem Sie nur gespeicherte Prozeduren ausführen.  
   
  [Beziehungsübergreifendes Abfragen \(C\#\) \(LINQ to SQL\)](../Topic/Walkthrough:%20Querying%20Across%20Relationships%20\(C%23\).md)  
- Veranschaulicht die Verwendung der [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq-md.md)]\-Zuordnungen, um Fremdschlüsselbeziehungen in einer Datenbank darzustellen.  
+ Veranschaulicht die Verwendung der [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]\-Zuordnungen, um Fremdschlüsselbeziehungen in einer Datenbank darzustellen.  
   
  [Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](../Topic/Walkthrough:%20Serializing%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md)  
  Veranschaulicht die Verwendung der `DesignerSerializationVisibilityAttribute`\-Klasse, um zu steuern, wie eine Auflistung zur Entwurfszeit serialisiert wird.  

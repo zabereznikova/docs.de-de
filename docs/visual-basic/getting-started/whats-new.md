@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 145
 ---
 # What&#39;s New for Visual Basic
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Auf dieser Seite sind die Namen der wichtigsten Features für jede Version von Visual Basic mit Beschreibungen der neuen und verbesserten Features in der neuesten Version der Sprache aufgelistet.  
   

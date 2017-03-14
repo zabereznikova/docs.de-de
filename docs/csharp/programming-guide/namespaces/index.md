@@ -54,7 +54,7 @@ Bei der C\#\-Programmierung wird ausgiebig Gebrauch von Namespaces gemacht, wobe
 -   [Gewusst wie: Verwenden des My\-Namespaces](../../../csharp/programming-guide/namespaces/how-to-use-the-my-namespace.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Overview of LINQ to XML in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] durch XML\-Literale und XML\-Achseneigenschaften.  Dies ermöglicht Ihnen, im [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code mit vertrauter, zweckmäßiger Syntax in XML zu arbeiten. *XML\-Literale* ermöglichen die direkte Aufnahme von XML in den Code.  *XML\-Achseneigenschaften* ermöglichen den Zugriff auf untergeordnete Knoten, nachfolgende Knoten und Attribute eines XML\-Literals.  Weitere Informationen finden Sie unter [XML Literals Overview](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) und unter [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] durch XML\-Literale und XML\-Achseneigenschaften.  Dies ermöglicht Ihnen, im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code mit vertrauter, zweckmäßiger Syntax in XML zu arbeiten. *XML\-Literale* ermöglichen die direkte Aufnahme von XML in den Code.  *XML\-Achseneigenschaften* ermöglichen den Zugriff auf untergeordnete Knoten, nachfolgende Knoten und Attribute eines XML\-Literals.  Weitere Informationen finden Sie unter [XML Literals Overview](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) und unter [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] ist eine XML\-Programmier\-API im Speicher, die speziell entworfen wurde, um die Vorteile von [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] zu nutzen.  Sie können zwar [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-APIs direkt aufrufen, Sie können jedoch nur in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] XML\-Literale deklarieren und direkt auf XML\-Achseneigenschaften zugreifen.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist eine XML\-Programmier\-API im Speicher, die speziell entworfen wurde, um die Vorteile von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zu nutzen.  Sie können zwar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-APIs direkt aufrufen, Sie können jedoch nur in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] XML\-Literale deklarieren und direkt auf XML\-Achseneigenschaften zugreifen.  
   
 > [!NOTE]
 >  In einer ASP.NET\-Seite werden XML\-Literale und XML\-Achseneigenschaften in deklarativem Code nicht unterstützt.  Sie können XML\-Features von Visual Basic verwenden, indem Sie in der ASP.NET\-Anwendung den Code in eine Code\-Behind\-Seite einfügen.  
@@ -33,21 +33,21 @@ caps.handback.revision: 17
  ![Link zu Video](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Unter [How Do I Get Started with LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143034) und [How Do I Create Excel Spreadsheets using LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143536) finden Sie Videodemonstrationen.  
   
 ## Erstellen von XML  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gibt es zwei Möglichkeiten zum Erstellen von XML\-Strukturen.  Sie können XML\-Literale direkt im Code deklarieren oder die Struktur mithilfe der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-APIs erstellen.  Mit beiden Vorgehensweisen kann die endgültige XML\-Struktur im Code abgebildet werden.  So wird beispielsweise mit dem folgenden Codebeispiel ein XML\-Element erstellt:  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gibt es zwei Möglichkeiten zum Erstellen von XML\-Strukturen.  Sie können XML\-Literale direkt im Code deklarieren oder die Struktur mithilfe der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-APIs erstellen.  Mit beiden Vorgehensweisen kann die endgültige XML\-Struktur im Code abgebildet werden.  So wird beispielsweise mit dem folgenden Codebeispiel ein XML\-Element erstellt:  
   
  [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
   
  Weitere Informationen finden Sie unter [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## Zugreifen auf und Navigieren in XML  
- Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann auf XML\-Strukturen zugegriffen und darin navigiert werden.  Diese Eigenschaften ermöglichen den Zugriff auf XML\-Elemente und \-Attribute mittels Namensangabe untergeordneter XML\-Elemente.  Sie können die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Methoden auch explizit aufrufen, um zwischen Elementen und Attributen zu navigieren und nach diesen zu suchen.  Im folgenden Codebeispiel wird beispielsweise mit XML\-Achseneigenschaften auf Attribute und untergeordnete Elemente eines XML\-Elements Bezug genommen.  Mit einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage werden in diesem Beispiel untergeordnete Elemente abgerufen und als XML\-Elemente ausgegeben, wobei eine Transformation stattfindet.  
+ Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann auf XML\-Strukturen zugegriffen und darin navigiert werden.  Diese Eigenschaften ermöglichen den Zugriff auf XML\-Elemente und \-Attribute mittels Namensangabe untergeordneter XML\-Elemente.  Sie können die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Methoden auch explizit aufrufen, um zwischen Elementen und Attributen zu navigieren und nach diesen zu suchen.  Im folgenden Codebeispiel wird beispielsweise mit XML\-Achseneigenschaften auf Attribute und untergeordnete Elemente eines XML\-Elements Bezug genommen.  Mit einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage werden in diesem Beispiel untergeordnete Elemente abgerufen und als XML\-Elemente ausgegeben, wobei eine Transformation stattfindet.  
   
  [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
   
  Weitere Informationen finden Sie unter [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## XML\-Namespaces  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können Sie mit der `Imports`\-Anweisung einen Alias für einen globalen XML\-Namespace angeben.  Im folgenden Beispiel wird gezeigt, wie mit der `Imports`\-Anweisung ein XML\-Namespace importiert werden kann:  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können Sie mit der `Imports`\-Anweisung einen Alias für einen globalen XML\-Namespace angeben.  Im folgenden Beispiel wird gezeigt, wie mit der `Imports`\-Anweisung ein XML\-Namespace importiert werden kann:  
   
  [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 17
   
  [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
   
- Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler übersetzt XML\-Literale, die XML\-Namespacealiase enthalten, mit dem `xmlns`\-Attribut in entsprechenden Code, der die XML\-Notation für XML\-Namespaces verwendet.  Beim Kompilieren des Beispielcodes aus dem vorangegangenen Abschnitt wird im Wesentlichen der gleiche ausführbare Code erzeugt wie im folgenden Beispiel:  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler übersetzt XML\-Literale, die XML\-Namespacealiase enthalten, mit dem `xmlns`\-Attribut in entsprechenden Code, der die XML\-Notation für XML\-Namespaces verwendet.  Beim Kompilieren des Beispielcodes aus dem vorangegangenen Abschnitt wird im Wesentlichen der gleiche ausführbare Code erzeugt wie im folgenden Beispiel:  
   
  [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
   

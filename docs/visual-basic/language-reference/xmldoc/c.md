@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # &lt;c&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass es sich bei Text innerhalb einer Beschreibung um Code handelt.  
   

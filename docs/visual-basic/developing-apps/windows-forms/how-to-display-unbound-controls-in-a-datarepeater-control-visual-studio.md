@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # How to: Display Unbound Controls in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können zusätzlich zu gebundenen Steuerelementen weitere Steuerelemente zu einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement hinzufügen, z. B. eine statische Bezeichnung oder ein Bild, die auf allen Elementen im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wiederholt werden.  
   

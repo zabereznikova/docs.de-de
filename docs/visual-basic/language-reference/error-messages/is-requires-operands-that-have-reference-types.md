@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;Is&#39; requires operands that have reference types, but this operand has the value type &#39;&lt;typename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der `Is`\-Vergleichsoperator bestimmt, ob zwei Objektvariablen auf dieselbe Instanz verweisen.  Diese Vergleichsmethode ist für Werttypen nicht definiert.  
   

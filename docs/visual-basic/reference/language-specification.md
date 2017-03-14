@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Visual Basic Language Specification
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmiersprachenspezifikation enthält verbindliche Antworten auf alle Fragen zu Grammatik und Syntax von [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Sie enthält ausführliche Informationen zu allen Aspekten der Programmiersprache, darunter auch viele Punkte, die in der Referenzdokumentation zu [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nicht behandelt werden.  
+Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmiersprachenspezifikation enthält verbindliche Antworten auf alle Fragen zu Grammatik und Syntax von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  Sie enthält ausführliche Informationen zu allen Aspekten der Programmiersprache, darunter auch viele Punkte, die in der Referenzdokumentation zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nicht behandelt werden.  
   
  Die Spezifikation ist im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=188623) verfügbar.  
   

@@ -52,7 +52,7 @@ Um Typsicherheit und Sicherheit zu gewährleisten, unterstützt C\# standardmä�
 -   [Unsicher](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)

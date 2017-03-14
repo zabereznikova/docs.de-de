@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # End &lt;keyword&gt; Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn ein weiteres Schlüsselwort folgt, wird die Definition des durch dieses Schlüsselwort eingeleiteten Anweisungsblocks beendet.  
   

@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 33
 ---
 # Der Typ f&#252;r die Variable &#39;&lt;Variablenname&gt;&#39; wird nicht abgeleitet, da er an ein Feld in einem einschlie&#223;enden Bereich gebunden ist.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Typ für die Variable '\<Variablenname\>' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist.Ändern Sie entweder den Namen von '\<Variablenname\>', oder verwenden Sie den vollqualifizierten Namen \(z. B. 'Me.variablenname' oder 'MyBase.variablenname'\).  
   

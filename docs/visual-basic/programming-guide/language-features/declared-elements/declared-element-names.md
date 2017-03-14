@@ -38,12 +38,12 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Declared Element Names (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Jedes deklarierte Element hat einen Namen, der auch als *Bezeichner* bezeichnet wird, der im Code dazu verwendet wird, auf dieses Element zu verweisen.  
   
 ## Regeln  
- Ein Elementname in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] muss den folgenden Regeln entsprechen:  
+ Ein Elementname in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] muss den folgenden Regeln entsprechen:  
   
 -   Er muss mit einem alphabetischen Zeichen oder einem Unterstrich \(`_`\) beginnen.  
   
@@ -80,18 +80,18 @@ Jedes deklarierte Element hat einen Namen, der auch als *Bezeichner* bezeichnet 
  Andererseits sollte der Name aber nicht so kurz sein, dass nicht eindeutig daraus hervorgehen, was das Element darstellt und wie Ihr Code das Element verwendet.  Dies ist für die Lesbarkeit des Codes wichtig.  Wenn andere Benutzer den Code zu verstehen versuchen oder wenn Sie sich den Code lange nach dessen Erstellung ansehen, sparen Sie und die anderen Benutzer unter Umständen sehr viel Zeit, wenn geeignete Elementnamen verwendet wurden.  
   
 ## Entwertete Namen  
- Im Allgemeinen darf ein Elementname nicht mit einem von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] reservierten Schlüsselwort übereinstimmen, z. B. `Case` oder `Friend`.  Sie können jedoch einen *entwerteten Namen* definieren, der in eckige Klammern \(`[ ]`\) eingeschlossen wird.  Ein mit Escapezeichen versehener Name kann einem beliebigen [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Schlüsselwort entsprechen, da die eckigen Klammern Mehrdeutigkeiten ausschließen.  Die eckigen Klammern müssen dann auch später im Code bei einem Verweis auf den Namen verwendet werden.  
+ Im Allgemeinen darf ein Elementname nicht mit einem von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reservierten Schlüsselwort übereinstimmen, z. B. `Case` oder `Friend`.  Sie können jedoch einen *entwerteten Namen* definieren, der in eckige Klammern \(`[ ]`\) eingeschlossen wird.  Ein mit Escapezeichen versehener Name kann einem beliebigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Schlüsselwort entsprechen, da die eckigen Klammern Mehrdeutigkeiten ausschließen.  Die eckigen Klammern müssen dann auch später im Code bei einem Verweis auf den Namen verwendet werden.  
   
  Im Allgemeinen sollten Sie entwertete Namen nur in den folgenden Situationen verwenden:  
   
--   Ihr Code wurde von einer vorherigen [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Version migriert, bei der das als Name verwendete Schlüsselwort nicht reserviert war, oder  
+-   Ihr Code wurde von einer vorherigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Version migriert, bei der das als Name verwendete Schlüsselwort nicht reserviert war, oder  
   
 -   Sie arbeiten mit Code, der in einer anderen Sprache geschrieben wurde. Das angegebene Schlüsselwort ist darin nicht reserviert.  
   
  Andernfalls sollten Sie eine Umbenennung des Elements in Betracht ziehen, wenn sein Name mit einem Schlüsselwort in Konflikt steht.  Die integrierte Entwicklungsumgebung \(IDE\) bietet eine einfache Möglichkeit, dies zu bewerkstelligen.  Weitere Informationen finden Sie unter [Umgestaltung und Dialogfeld "Umbenennen"](../../../../visual-basic/developing-apps/using-ide/refactoring-and-rename-dialog-box.md).  
   
 ## Groß\- und Kleinschreibung bei Namen  
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird bei Elementnamen nicht zwischen Groß\- und Kleinschreibung unterschieden.  Dies bedeutet, dass der Compiler bei einem Vergleich zweier Namen, die sich nur durch die Groß\- und Kleinschreibung unterscheiden, beide als ein und denselben Namen interpretiert.  `ABC` und `abc` werden beispielsweise als Verweis auf dasselbe deklarierte Element angesehen.  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird bei Elementnamen nicht zwischen Groß\- und Kleinschreibung unterschieden.  Dies bedeutet, dass der Compiler bei einem Vergleich zweier Namen, die sich nur durch die Groß\- und Kleinschreibung unterscheiden, beide als ein und denselben Namen interpretiert.  `ABC` und `abc` werden beispielsweise als Verweis auf dasselbe deklarierte Element angesehen.  
   
  Die Common Language Runtime \(CLR\) verwendet jedoch eine Bindung, bei der zwischen Groß\- und Kleinschreibung unterschieden wird.  Wenn Sie eine Assembly oder eine DLL erstellen und diese für andere Assemblys verfügbar machen, wird bei den Namen daher zwischen Groß\-\/Kleinschreibung unterschieden.  Wenn Sie beispielsweise eine Klasse mit einem Element `ABC` definieren und andere Assemblys mithilfe der Common Language Runtime auf diese Klasse zugreifen, müssen Sie auf dieses Element verweisen, indem der Name `ABC` verwendet wird.  Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in `abc` ändern, können die anderen Assemblys, die die Klasse verwenden, nicht mehr auf dieses Element zugreifen.  Daher sollten Sie beim Fertigstellen einer aktualisierten Version einer Assembly nicht die Groß\- und Kleinschreibung von public\-Elementen verändern.  
   

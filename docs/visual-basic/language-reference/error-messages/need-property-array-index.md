@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Need property array index
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieser Eigenschaftswert besteht aus einem Array, anstelle eines einzelnen Werts.  Sie haben keinen Index für das Eigenschaftenarray angegeben, auf das Sie zugreifen wollten.  
   

@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # /resource (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bettet eine verwaltete Ressource in eine Assembly ein.  
   
@@ -46,7 +46,7 @@ Bettet eine verwaltete Ressource in eine Assembly ein.
 ## Hinweise  
  Verwenden Sie `/linkresource`, wenn Sie eine Ressource mit einer Assembly verknüpfen möchten und die Ressourcendatei nicht in der Ausgabedatei platziert werden soll.  
   
- Wenn `filename` eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei ist, die beispielsweise durch den [Resgen.exe \(Resource File Generator\)](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) oder in der Entwicklungsumgebung erstellt wurde, kann mit Membern im <xref:System.Resources>\-Namespace darauf zugegriffen werden \(weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>\).  Um zur Laufzeit auf alle anderen Ressourcen zuzugreifen, verwenden Sie eine der folgenden Methoden: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> oder <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ Wenn `filename` eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei ist, die beispielsweise durch den [Resgen.exe \(Resource File Generator\)](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) oder in der Entwicklungsumgebung erstellt wurde, kann mit Membern im <xref:System.Resources>\-Namespace darauf zugegriffen werden \(weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>\).  Um zur Laufzeit auf alle anderen Ressourcen zuzugreifen, verwenden Sie eine der folgenden Methoden: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> oder <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
   
  `/res` ist die Kurzform von `/resource` .  
   

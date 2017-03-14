@@ -43,7 +43,7 @@ ms.author: "shoag"
 caps.handback.revision: 52
 ---
 # Sub-Anweisung (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert den Namen, Parameter und Code, definieren ein `Sub` Verfahren.  
   

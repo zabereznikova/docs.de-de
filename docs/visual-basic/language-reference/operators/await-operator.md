@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # Await Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie wenden den Operator `Await` auf einen Operanden in einer asynchronen Methode oder einem Lambda\-Ausdruck an, um die Ausführung der Methode anzuhalten, bis die erwartete Aufgabe ausgeführt wurde.  Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
   

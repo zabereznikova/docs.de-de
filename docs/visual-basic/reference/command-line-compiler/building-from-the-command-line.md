@@ -27,15 +27,15 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Erstellen von der Befehlszeile aus (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projekt besteht aus einer oder mehreren separaten Quelldateien.  Während des als Kompilierung bezeichneten Vorgangs werden diese Dateien zu einem Paket zusammengefasst – einer ausführbaren Datei, die als Anwendung ausgeführt werden kann.  
+Ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projekt besteht aus einer oder mehreren separaten Quelldateien.  Während des als Kompilierung bezeichneten Vorgangs werden diese Dateien zu einem Paket zusammengefasst – einer ausführbaren Datei, die als Anwendung ausgeführt werden kann.  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] bereit.  Der Befehlszeilencompiler bietet sich vor allem dann an, wenn Sie nicht sämtliche Features der IDE benötigen, weil Sie z. B. mit Computern mit begrenztem Systemspeicher oder geringer Speicherkapazität arbeiten oder Programme für solche Computer schreiben.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bereit.  Der Befehlszeilencompiler bietet sich vor allem dann an, wenn Sie nicht sämtliche Features der IDE benötigen, weil Sie z. B. mit Computern mit begrenztem Systemspeicher oder geringer Speicherkapazität arbeiten oder Programme für solche Computer schreiben.  
   
- Beim Kompilieren von der Befehlszeile aus müssen Sie mit der `/reference`\-Compileroption explizit auf die Laufzeitbibliothek von Microsoft [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verweisen.  
+ Beim Kompilieren von der Befehlszeile aus müssen Sie mit der `/reference`\-Compileroption explizit auf die Laufzeitbibliothek von Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verweisen.  
   
- Um Quelldateien in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-IDE zu kompilieren, wählen Sie im Menü **Erstellen** den Befehl **Erstellen** aus.  
+ Um Quelldateien in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-IDE zu kompilieren, wählen Sie im Menü **Erstellen** den Befehl **Erstellen** aus.  
   
 > [!TIP]
 >  Wenn Sie Projektdateien erstellen, indem Sie die Visual Studio\-IDE verwenden, können Sie Informationen zum zugeordneten **vbc** Befehl und seine Schalter im Ausgabefenster anzeigen.  Um diese Informationen anzuzeigen, öffnen Sie [Optionen \(Dialogfeld\), Projekte und Projektmappen, Erstellen und Ausführen](/visual-studio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann **Ausführlichkeit der MSBuild\-Projektbuildausgabe** zu **Normal** oder eine höhere Ebene des Ausführlichkeitsgrads fest.  Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](../Topic/How%20to:%20View,%20Save,%20and%20Configure%20Build%20Log%20Files.md).  

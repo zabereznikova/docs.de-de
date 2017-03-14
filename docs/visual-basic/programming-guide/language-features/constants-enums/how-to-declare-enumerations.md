@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # How to: Declare Enumerations (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können eine Enumeration mithilfe der `Enum`\-Anweisung im Deklarationsabschnitt einer Klasse oder eines Moduls erstellen.  Es ist nicht möglich, eine Enumeration innerhalb einer Methode zu deklarieren.  Zur Angabe der geeigneten Zugriffsebene verwenden Sie `Private`, `Protected`, `Friend` oder `Public`.  
   
- Ein `Enum`\-Typ hat einen Namen, einen zugrunde liegenden Typ und eine Reihe von Feldern, die jeweils eine Konstante darstellen.  Der Name muss ein gültiger [!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)]\-Qualifizierer sein.  Bei dem zugrunde liegenden Typ muss es sich um einen ganzzahligen Typ handeln, d. h. `Byte`, `Short`, `Long` oder `Integer`.  Standardmäßig ist `Integer` festgelegt.  Enumerationen sind immer stark typisiert und nicht mit Ganzzahltypen austauschbar.  
+ Ein `Enum`\-Typ hat einen Namen, einen zugrunde liegenden Typ und eine Reihe von Feldern, die jeweils eine Konstante darstellen.  Der Name muss ein gültiger [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]\-Qualifizierer sein.  Bei dem zugrunde liegenden Typ muss es sich um einen ganzzahligen Typ handeln, d. h. `Byte`, `Short`, `Long` oder `Integer`.  Standardmäßig ist `Integer` festgelegt.  Enumerationen sind immer stark typisiert und nicht mit Ganzzahltypen austauschbar.  
   
  Enumerationen dürfen keine Gleitkommawerte haben.  Wenn `Option Strict On` aktiviert ist und einer Enumeration ein Gleitkommawert zugewiesen wird, führt dies zu einem Compilerfehler.  Wenn für `Option Strict` die Einstellung `Off` gewählt ist, wird der Wert automatisch in den `Enum`\-Typ konvertiert.  
   

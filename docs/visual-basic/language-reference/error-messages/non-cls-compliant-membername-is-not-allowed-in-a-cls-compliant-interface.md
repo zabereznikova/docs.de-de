@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Non-CLS-compliant &lt;membername&gt; is not allowed in a CLS-compliant interface
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Eigenschaft, eine Prozedur oder ein Ereignis in einer Schnittstelle ist als `<CLSCompliant(True)>` markiert, obwohl die Schnittstelle selbst als `<CLSCompliant(False)>` markiert ist oder nicht markiert ist.  
   

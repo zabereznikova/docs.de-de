@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Collection Initializers (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 *Auflistungsinitialisierer* stellen eine Kurzsyntax bereit, mit der Sie eine Auflistung erstellen und mit einer Reihe von Anfangswerten auffüllen können.  Auflistungsinitialisierer sind hilfreich, wenn Sie eine Auflistung aus einer Reihe von bekannten Werten erstellen, beispielsweise einer Liste von Menüoptionen oder Kategorien, einem Anfangssatz von numerischen Werten, einer statischen Liste von Zeichenfolgen wie Tages\- oder Monatsnamen oder geografischer Positionen wie einer Liste von Staaten, die zur Validierung verwendet wird.  
   

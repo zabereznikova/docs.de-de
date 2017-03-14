@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Yield-Anweisung (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sendet das folgende Element einer Auflistung einer `For Each...Next`\-Anweisung.  
   
@@ -101,7 +101,7 @@ Next
  Weitere Beispiele finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   
 ## Anforderungen  
- [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs-dev11-long-md.md)]  
+ [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)]  
   
 ## Siehe auch  
  [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)   

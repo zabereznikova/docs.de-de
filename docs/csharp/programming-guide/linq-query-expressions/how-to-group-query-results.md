@@ -3,7 +3,7 @@ redirect_url: /dotnet/articles/csharp/linq/group-query-results
 caps.handback.revision: 19
 ---
 # Gewusst wie: Gruppieren von Abfrageergebnissen (C#-Programmierhandbuch)
-Das Gruppieren ist eine der leistungsstärksten Funktionen von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  In den folgenden Beispielen wird gezeigt, wie Daten auf verschiedene Weisen gruppiert werden:  
+Das Gruppieren ist eine der leistungsstärksten Funktionen von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  In den folgenden Beispielen wird gezeigt, wie Daten auf verschiedene Weisen gruppiert werden:  
   
 -   Anhand einer einzelnen Eigenschaft.  
   
@@ -62,7 +62,7 @@ Das Gruppieren ist eine der leistungsstärksten Funktionen von [!INCLUDE[vbtecli
 ## Kompilieren des Codes  
  Kopieren Sie jede Methode, die Sie testen möchten, in die `StudentClass`\-Klasse.  Fügen Sie der `Main`\-Methode eine Aufrufanweisung für die Methode hinzu, und drücken Sie F5.  
   
- Wenn Sie diese Methoden an die eigene Anwendung anpassen, beachten Sie, dass LINQ [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] Version 3.5 oder 4 erfordert und dass das Projekt einen Verweis auf System.Core.dll enthalten und eine Direktive für System.Linq verwenden muss.  LINQ to SQL\-, LINQ to XML\- und LINQ to DataSet\-Typen erfordern zusätzliche using\-Direktiven und \-Verweise.  Weitere Informationen hierzu finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
+ Wenn Sie diese Methoden an die eigene Anwendung anpassen, beachten Sie, dass LINQ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version 3.5 oder 4 erfordert und dass das Projekt einen Verweis auf System.Core.dll enthalten und eine Direktive für System.Linq verwenden muss.  LINQ to SQL\-, LINQ to XML\- und LINQ to DataSet\-Typen erfordern zusätzliche using\-Direktiven und \-Verweise.  Weitere Informationen hierzu finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
   
 ## Siehe auch  
  <xref:System.Linq.Enumerable.GroupBy%2A>   

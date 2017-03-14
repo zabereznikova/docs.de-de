@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # My Reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My`\-Feature beschleunigt und erleichtert das Programmieren, denn Sie erhalten intuitiven Zugriff auf häufig verwendete Methoden, Eigenschaften und Ereignisse.  In dieser Tabelle werden die in `My` enthaltenen Objekte und die Aktionen aufgeführt, die mit den verschiedenen Objekten ausgeführt werden können.  
   

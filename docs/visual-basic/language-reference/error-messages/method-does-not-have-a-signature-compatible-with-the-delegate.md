@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Method does not have a signature compatible with the delegate
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es besteht eine Inkompatibilität zwischen den Signaturen der Methode und dem verwendeten Delegaten.  Die `Delegate`\-Anweisung definiert die Parametertypen sowie die Rückgabetypen einer Delegatklasse.  Eine beliebige Prozedur mit identischen Parametern kompatibler Typen und Rückgabetypen kann zur Erstellung einer Instanz dieses Delegattyps verwendet werden.  
   

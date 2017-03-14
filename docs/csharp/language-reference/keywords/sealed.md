@@ -57,7 +57,7 @@ sealed class B : A {}
  `'MyDerivedC' cannot inherit from sealed class 'SealedClass'.`  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Hinweise  
  Um zu ermitteln, ob eine Klasse, Methode oder Eigenschaft versiegelt werden soll, beachten Sie die folgenden beiden Punkte:  

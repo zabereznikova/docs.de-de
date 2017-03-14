@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Leading &#39;.&#39; or &#39;!&#39; can only appear inside a &#39;With&#39; statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Punkt \(.\) oder ein Ausrufezeichen \(\!\), der bzw. das sich nicht innerhalb eines `With`\-Blocks befindet, tritt ohne Ausdruck auf der linken Seite auf.  Memberzugriff \(`.`\) und Dictionary\-Memberzugriff \(`!`\) erfordern einen Ausdruck, der das Element angibt, das den Member enthält.  Dieser muss direkt links neben dem Accessor oder als Ziel eines `With`\-Blocks stehen, der den Memberzugriff enthält.  
   

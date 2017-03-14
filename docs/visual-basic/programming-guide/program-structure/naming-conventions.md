@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Visual Basic Naming Conventions
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie ein Element in einer Visual Basic\-Anwendung benennen, muss das erste Zeichen dieses Namens ein alphabetisches Zeichen oder ein Unterstrich sein.  Beachten Sie jedoch, dass mit einem Unterstrich beginnende Namen nicht mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel sind.  
   

@@ -17,22 +17,22 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschiedene Aspekte der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmierung beziehen.  
+Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschiedene Aspekte der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmierung beziehen.  
   
 ## In diesem Abschnitt  
  [Visual Basic Language Reference](../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprache.  
+ Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprache.  
   
  [Visual Basic Command\-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio\-IDE\-Programmen bietet.  
   
  [.NET Framework Reference Information](../../visual-basic/reference/net-framework-reference-information.md)  
- Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek.  
+ Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassenbibliothek.  
   
  [Visual Basic Language Specification](../../visual-basic/reference/language-specification.md)  
- Enthält Links zur vollständigen [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
+ Enthält Links zur vollständigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
   
 ## Referenz  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
@@ -43,10 +43,10 @@ Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschied
   
 ## Verwandte Abschnitte  
  [Allgemeine Elemente der Benutzeroberfläche \(Visual Studio\)](/visual-studio/ide/reference/general-user-interface-elements-visual-studio)  
- Enthält Themen zu den in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] verwendeten Dialogfeldern und Fenstern.  
+ Enthält Themen zu den in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendeten Dialogfeldern und Fenstern.  
   
  [XML\-Tools in Visual Studio](/visual-studio/xml-tools/xml-tools-in-visual-studio)  
- Enthält Links zu Themen über verschiedene, in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] verfügbare XML\-Tools.  
+ Enthält Links zu Themen über verschiedene, in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verfügbare XML\-Tools.  
   
  [Referenz zur Automatisierung und Erweiterbarkeit](../Topic/Automation%20and%20Extensibility%20Reference.md)  
- Enthält Links zu Themen über Automatisierung und Erweiterbarkeit – sowohl für freigegebene als auch für sprachspezifische Komponenten in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)].
+ Enthält Links zu Themen über Automatisierung und Erweiterbarkeit – sowohl für freigegebene als auch für sprachspezifische Komponenten in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].

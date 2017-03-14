@@ -14,7 +14,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Interner Fehler in der Microsoft Visual Basic-Laufzeit.
-In der Microsoft [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Laufzeit ist ein interner Fehler aufgetreten.  
+In der Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Laufzeit ist ein interner Fehler aufgetreten.  
   
 ### So beheben Sie diesen Fehler  
   

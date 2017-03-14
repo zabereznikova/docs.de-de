@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 25
 ---
 # How to: Enable XML IntelliSense in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 IntelliSense für XML in Visual Basic stellt die Funktion der Wortvervollständigung für Elemente bereit, die in einem XML\-Schema definiert sind.  Führen Sie die folgenden Schritte aus, um IntelliSense für XML in Visual Basic zu aktivieren:  
   
@@ -36,7 +36,7 @@ IntelliSense für XML in Visual Basic stellt die Funktion der Wortvervollständi
   
  Weitere Informationen über die Funktionen von IntelliSense für XML in Visual Basic finden Sie unter [XML IntelliSense in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md).  Weitere Informationen über das Importieren von XML\-Namespaces finden Sie unter [Imports Statement \(XML Namespace\)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) oder [Seite "Verweise", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic).  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![Link zu Video](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Unter [Video How to: Enable XML IntelliSense in Visual Basic](http://go.microsoft.com/fwlink/?LinkId=102466) finden Sie eine Videodemonstration zu diesem Thema.  Eine ähnliche Videodemo finden Sie unter [How Do I Enable XML IntelliSense and Use XML Namespaces?](http://go.microsoft.com/fwlink/?LinkId=143035).  
   

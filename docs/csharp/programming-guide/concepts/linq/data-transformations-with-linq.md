@@ -25,7 +25,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 15
 ---
 # Datentransformationen mit LINQ (C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] dient nicht nur zum Abrufen von Daten.  Es ist auch ein leistungsstarkes Tool zum Transformieren von Daten.  Mit einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf verschiedene Art und Weise zum Erstellen einer neuen Ausgabesequenz einsetzen.  Sie können die Sequenz ändern, ohne die Elemente zu ändern, indem Sie sortieren und gruppieren. Die vielleicht ist die leistungsstärkste Funktion von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen die Fähigkeit, neue Typen zu erstellen.  Dies wird mit der [select](../../../../csharp/language-reference/keywords/select-clause.md)\-Klausel erreicht.  Sie können z. B. folgende Aufgaben ausführen:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dient nicht nur zum Abrufen von Daten.  Es ist auch ein leistungsstarkes Tool zum Transformieren von Daten.  Mit einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf verschiedene Art und Weise zum Erstellen einer neuen Ausgabesequenz einsetzen.  Sie können die Sequenz ändern, ohne die Elemente zu ändern, indem Sie sortieren und gruppieren. Die vielleicht ist die leistungsstärkste Funktion von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen die Fähigkeit, neue Typen zu erstellen.  Dies wird mit der [select](../../../../csharp/language-reference/keywords/select-clause.md)\-Klausel erreicht.  Sie können z. B. folgende Aufgaben ausführen:  
   
 -   Führen Sie mehrere Eingabesequenzen in eine einzelne Ausgabesequenz zusammen, die einen neuen Typ hat.  
   
@@ -38,7 +38,7 @@ caps.handback.revision: 15
  Dies sind nur einige Beispiele.  Natürlich können diese Transformationen auf verschiedene Art und Weise in der gleichen Abfrage kombiniert werden.  Außerdem kann die Ausgabesequenz einer Abfrage als Eingabesequenz für eine neue Abfrage verwendet werden.  
   
 ## Verknüpfen mehrerer Eingaben in eine Ausgabesequenz  
- Sie können eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage zum Erstellen einer Ausgabesequenz verwenden, die Elemente von mehr als einer Eingabesequenz enthält.  Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Speicher kombiniert werden, aber die gleichen Prinzipien können für die Kombination von XML\- oder SQL\- oder DataSet\-Quellen angewendet werden.  Nehmen wir an, es liegen die folgenden beiden Klassentypen vor:  
+ Sie können eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage zum Erstellen einer Ausgabesequenz verwenden, die Elemente von mehr als einer Eingabesequenz enthält.  Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Speicher kombiniert werden, aber die gleichen Prinzipien können für die Kombination von XML\- oder SQL\- oder DataSet\-Quellen angewendet werden.  Nehmen wir an, es liegen die folgenden beiden Klassentypen vor:  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 15
  Weitere Informationen finden Sie unter [Objekt\- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) und unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## Transformieren von Objekten im Speicher in XML  
- Mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen können Daten zwischen Datenstrukturen im Speicher, SQL\-Datenbanken, [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)]\-Datasets und XML\-Streams oder \-Dokumenten auf einfache Weise umgewandelt werden.  Im folgenden Beispiel werden Objekte in einer Datenstruktur im Speicher in XML\-Elemente umgewandelt.  
+ Mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen können Daten zwischen Datenstrukturen im Speicher, SQL\-Datenbanken, [!INCLUDE[vstecado](~/includes/vstecado-md.md)]\-Datasets und XML\-Streams oder \-Dokumenten auf einfache Weise umgewandelt werden.  Im folgenden Beispiel werden Objekte in einer Datenstruktur im Speicher in XML\-Elemente umgewandelt.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
@@ -100,7 +100,7 @@ caps.handback.revision: 15
  Eine Ausgabesequenz enthält unter Umständen keine Elemente oder Elementeigenschaften aus der Quellsequenz.  Diese Ausgabe kann stattdessen eine Wertesequenz sein, die durch Verwendung der Quellelemente als Eingabeargumente berechnet wird.  Durch folgende einfache Abfrage wird eine Zeichenfolgensequenz ausgegeben, deren Werte eine Berechnung basierend auf der Quellelementsequenz des Typs `double` darstellen.  
   
 > [!NOTE]
->  Das Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage für eine andere Domäne übersetzt wird.  Sie können beispielsweise keine normale C\#\-Methode in [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt.  Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen.  Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](../Topic/Stored%20Procedures.md).  
+>  Das Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage für eine andere Domäne übersetzt wird.  Sie können beispielsweise keine normale C\#\-Methode in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt.  Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen.  Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](../Topic/Stored%20Procedures.md).  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   

@@ -21,12 +21,12 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Variables in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Beim Ausführen von Berechnungen mit [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] müssen häufig Werte gespeichert werden.  Dies ist beispielsweise der Fall, wenn Sie verschiedene Werte berechnen und vergleichen möchten, um dann, in Abhängigkeit von den Ergebnissen des Vergleichs, unterschiedliche Vorgänge mit ihnen auszuführen.  Sie müssen die Werte beibehalten, wenn Sie diese vergleichen möchten.  
+Beim Ausführen von Berechnungen mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen häufig Werte gespeichert werden.  Dies ist beispielsweise der Fall, wenn Sie verschiedene Werte berechnen und vergleichen möchten, um dann, in Abhängigkeit von den Ergebnissen des Vergleichs, unterschiedliche Vorgänge mit ihnen auszuführen.  Sie müssen die Werte beibehalten, wenn Sie diese vergleichen möchten.  
   
 ## Verwendung  
- Wie bei den meisten Programmiersprachen werden in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Werte mithilfe von Variablen gespeichert.  Eine *Variable* besitzt einen Namen \(die von Ihnen verwendete Bezeichnung für den mithilfe der Variablen gespeicherten Wert\).  Eine Variable weist außerdem einen Datentyp aus \(dieser legt die Daten fest, die in der Variablen gespeichert werden können\).  Eine Variable kann ein Array darstellen, wenn ein indizierter Satz verwandter Datenelemente in ihr gespeichert werden soll.  
+ Wie bei den meisten Programmiersprachen werden in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Werte mithilfe von Variablen gespeichert.  Eine *Variable* besitzt einen Namen \(die von Ihnen verwendete Bezeichnung für den mithilfe der Variablen gespeicherten Wert\).  Eine Variable weist außerdem einen Datentyp aus \(dieser legt die Daten fest, die in der Variablen gespeichert werden können\).  Eine Variable kann ein Array darstellen, wenn ein indizierter Satz verwandter Datenelemente in ihr gespeichert werden soll.  
   
  Mit lokaler Typableitung können Sie Variablen ohne explizite Angabe eines Datentyps deklarieren.  Stattdessen leitet der Compiler den Typ der Variable vom Typ des Initialisierungsausdrucks ab.  Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

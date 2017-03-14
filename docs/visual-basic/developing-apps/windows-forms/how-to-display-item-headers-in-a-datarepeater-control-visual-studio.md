@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 7
 ---
 # How to: Display Item Headers in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Elementheader in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement fungiert als visueller Hinweis, wenn ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> ausgewählt wird.  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> \(Standardeinstellung\) festgelegt ist, wird der Header auf der linken Seite jedes Elements angezeigt.  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> festgelegt ist, wird der Header am Anfang jedes Elements angezeigt.  
   

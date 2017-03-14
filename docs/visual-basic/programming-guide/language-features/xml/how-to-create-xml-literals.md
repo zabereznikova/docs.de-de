@@ -20,11 +20,11 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Create XML Literals (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-Element direkt im Code erstellen.  In den Beispielen in diesem Thema wird veranschaulicht, wie ein XML\-Element mit drei untergeordneten Elementen erstellt wird, und wie ein XML\-Dokument erstellt wird.  
   
- Sie können auch die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-APIs verwenden, um [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Objekte zu erstellen.  Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
+ Sie können auch die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]\-APIs verwenden, um [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]\-Objekte zu erstellen.  Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
   
 ### So erstellen Sie ein XML\-Element  
   

@@ -16,9 +16,9 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Attributes (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt verschiedene Attribute bereit, die die Interoperabilität zwischen Objekten und nicht verwaltetem Code sicherstellen. Ein Attribut ermöglicht den Zugriff auf Modulmember ohne Angabe des Modulnamens.  In der folgenden Tabelle sind die von [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwendeten Attribute aufgelistet.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt verschiedene Attribute bereit, die die Interoperabilität zwischen Objekten und nicht verwaltetem Code sicherstellen. Ein Attribut ermöglicht den Zugriff auf Modulmember ohne Angabe des Modulnamens.  In der folgenden Tabelle sind die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendeten Attribute aufgelistet.  
   
 |||  
 |-|-|  

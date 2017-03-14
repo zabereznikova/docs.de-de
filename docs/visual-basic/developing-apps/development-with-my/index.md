@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 26
 ---
 # Development with My (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Visual Basic umfasst neue Features zur schnellen Anwendungsentwicklung, die eine Steigerung der Produktivität ermöglichen und sich durch ihre besondere Benutzerfreundlichkeit und Leistungsstärke auszeichnen.  Eines dieser Features, `My`, ermöglicht den Zugriff auf Informationen und Standardobjektinstanzen, die für die Anwendung und die zugehörige Laufzeitumgebung relevant sind.  Die Informationen sind in einem von IntelliSense erkennbaren Format strukturiert und entsprechend der Verwendung logisch abgegrenzt.  
   
@@ -43,7 +43,7 @@ Visual Basic umfasst neue Features zur schnellen Anwendungsentwicklung, die eine
  Beschreibt das `My.Resources`\-Objekt und das `My.Settings`\-Objekt, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung bereitstellen.  
   
  [Overview of the Visual Basic Application Model](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Beschreibt das [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Modell für das Starten und Beenden von Anwendungen.  
+ Beschreibt das [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Modell für das Starten und Beenden von Anwendungen.  
   
  [How My Depends on Project Type](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Enthält Informationen zu den `My`\-Features, die in verschiedenen Projekttypen verfügbar sind.  

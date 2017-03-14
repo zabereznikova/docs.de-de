@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Troubleshooting: Reading from and Writing to Text Files (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema werden allgemeine Probleme erläutert, die im Zusammenhang mit der Arbeit mit Textdateien auftreten können, und entsprechende Lösungsvorschläge angegeben.  
   

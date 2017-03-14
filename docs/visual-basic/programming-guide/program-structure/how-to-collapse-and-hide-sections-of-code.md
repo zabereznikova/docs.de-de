@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Collapse and Hide Sections of Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit der `#Region`\-Direktive können Sie Codeabschnitte aus [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Dateien reduzieren und ausblenden.  Mit der `#Region`\-Direktive können Sie einen Codeblock angeben, den Sie erweitern oder reduzieren können, wenn Sie den Code\-Editor von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] verwenden.  Durch die Möglichkeit, ausgewählte Codeabschnitte auszublenden, werden Dateien leichter lesbar und sind besser zu verwalten.  Weitere Informationen finden Sie unter [Gliedern](/visual-studio/ide/outlining).  
+Mit der `#Region`\-Direktive können Sie Codeabschnitte aus [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Dateien reduzieren und ausblenden.  Mit der `#Region`\-Direktive können Sie einen Codeblock angeben, den Sie erweitern oder reduzieren können, wenn Sie den Code\-Editor von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwenden.  Durch die Möglichkeit, ausgewählte Codeabschnitte auszublenden, werden Dateien leichter lesbar und sind besser zu verwalten.  Weitere Informationen finden Sie unter [Gliedern](/visual-studio/ide/outlining).  
   
  `#Region`\-Direktiven unterstützen Codeblocksemantik, z. B. `#If...#End If`.  Dies bedeutet, dass sie nicht in einem Block beginnen und in einem anderen Block enden können. Beginn und Ende müssen im gleichen Block liegen.  `#Region`\-Direktiven werden in Funktionen nicht unterstützt.  
   

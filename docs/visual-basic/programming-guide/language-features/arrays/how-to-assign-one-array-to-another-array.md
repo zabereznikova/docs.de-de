@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # How to: Assign One Array to Another Array (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Da Arrays Objekte sind, können Sie sie wie andere Objekttypen in Zuweisungsanweisungen verwenden.  Eine Arrayvariable enthält einen Zeiger auf die Daten, die die Arrayelemente sowie die Rang\- und Längeninformationen bilden. Eine Zuweisung kopiert nur diesen Zeiger.  
   

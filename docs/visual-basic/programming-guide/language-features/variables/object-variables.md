@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Object Variables in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Variablen können nicht nur Werte, sondern auch Verweise auf ein Objekt enthalten.  Ein Objekt wird einer Variablen aus den gleichen Gründen zugewiesen wie ein Wert:  
   

@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Access Levels in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die *Zugriffsebene* eines deklarierten Elements gibt an, welche Zugriffsmöglichkeiten für das Element gelten, d. h. welchem Code es gestattet ist, das Element zu lesen oder Daten in das Element zu schreiben.  Dies wird nicht nur durch die Deklaration des Elements selbst bestimmt, sondern auch durch die Zugriffsebene des Elementcontainers.  Code, der nicht auf ein Containerelement zugreifen kann, kann auch nicht auf darin enthaltene Elemente zugreifen, selbst dann nicht, wenn diese Elemente als `Public` deklariert sind.  Auf eine `Public`\-Variable in einer `Private`\-Struktur kann beispielsweise von innerhalb der Klasse zugegriffen werden, die die Struktur enthält, jedoch nicht von außerhalb dieser Klasse.  
   

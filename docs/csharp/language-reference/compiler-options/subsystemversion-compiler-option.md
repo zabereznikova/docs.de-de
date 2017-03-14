@@ -42,7 +42,7 @@ Gibt die Mindestversion des Subsystems, auf dem die generierte ausführbare Date
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8-md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
  Der Standardwert der **/subsystemversion** (Compileroption) hängt von der Bedingung in der folgenden Liste:  
@@ -55,7 +55,7 @@ Gibt die Mindestversion des Subsystems, auf dem die generierte ausführbare Date
   
     -   [/Platform:ARM](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Der Standardwert ist 6.00, wenn Sie MSBuild verwenden, die Sie als Ziel [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net-v45-md.md)], und Sie können alle Compileroptionen, die zuvor in dieser Liste angegeben wurden noch nicht festlegen.  
+-   Der Standardwert ist 6.00, wenn Sie MSBuild verwenden, die Sie als Ziel [!INCLUDE[net_v45](~/includes/net-v45-md.md)], und Sie können alle Compileroptionen, die zuvor in dieser Liste angegeben wurden noch nicht festlegen.  
   
 -   Der Standardwert ist 4.00, wenn keine der vorherigen Bedingungen true ist.  
   

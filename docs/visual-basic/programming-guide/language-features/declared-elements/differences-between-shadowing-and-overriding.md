@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Differences Between Shadowing and Overriding (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Klasse definieren, die von einer Basisklasse erbt, möchten Sie u. U. eines oder mehrere der Basisklassenelemente in der abgeleiteten Klasse neu definieren.  Zu diesem Zweck sind die Techniken Shadowing und Überschreiben verfügbar.  
   

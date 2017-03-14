@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Miscellaneous Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Bei den folgenden Operatoren handelt es sich um verschiedene in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] definierte Operatoren.  
+Bei den folgenden Operatoren handelt es sich um verschiedene in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] definierte Operatoren.  
   
  [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   

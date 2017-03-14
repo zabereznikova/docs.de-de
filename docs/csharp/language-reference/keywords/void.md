@@ -36,7 +36,7 @@ public void SampleMethod()
  `void` ist ein Alias für den <xref:System.Void?displayProperty=fullName>\-Typ von .NET Framework.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

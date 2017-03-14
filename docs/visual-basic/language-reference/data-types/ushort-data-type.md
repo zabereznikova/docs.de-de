@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # UShort Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Enthält 16\-Bit\-\(2\-Byte\-\)Ganzzahlen ohne Vorzeichen im Wertebereich von 0 bis 65.535.  
   

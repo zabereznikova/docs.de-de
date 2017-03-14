@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 48
 ---
 # Visual Basic Coding Conventions
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen.  Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
   

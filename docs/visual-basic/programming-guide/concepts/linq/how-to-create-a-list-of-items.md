@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # How to: Create a List of Items
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Code in diesem Thema definiert eine `Student`\-Klasse und erstellt eine Liste von Instanzen der Klasse.  Die Liste soll das Thema [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md) unterstützen.  Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt.  Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.  
   

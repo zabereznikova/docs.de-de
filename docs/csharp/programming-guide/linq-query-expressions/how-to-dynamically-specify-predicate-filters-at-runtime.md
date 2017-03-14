@@ -66,7 +66,7 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie a
   
 ### So verwenden Sie diese Methode in eigenen Anwendungen  
   
--   Wenn Sie diese Methode an Ihre eigene Anwendung anpassen, beachten Sie, dass LINQ, Version 3.5 oder 4, von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] erfordert, und dass das Projekt auf "System.Core.dll" verweisen und eine `using`\-Direktive für `System.Linq` enthalten muss.  LINQ\-to\-SQL\-, LINQ\-to\-XML\- und LINQ\-to\-DataSet\-Typen erfordern zusätzliche `using`\-Direktiven und \-Verweise.  Weitere Informationen hierzu finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
+-   Wenn Sie diese Methode an Ihre eigene Anwendung anpassen, beachten Sie, dass LINQ, Version 3.5 oder 4, von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erfordert, und dass das Projekt auf "System.Core.dll" verweisen und eine `using`\-Direktive für `System.Linq` enthalten muss.  LINQ\-to\-SQL\-, LINQ\-to\-XML\- und LINQ\-to\-DataSet\-Typen erfordern zusätzliche `using`\-Direktiven und \-Verweise.  Weitere Informationen hierzu finden Sie unter [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
   
 ## Siehe auch  
  [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   

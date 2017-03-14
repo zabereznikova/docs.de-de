@@ -25,9 +25,9 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Recursive Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-*Rekursive* Prozeduren sind Prozeduren, die sich selbst aufrufen.  Im Allgemeinen ist dies nicht die effizienteste Art und Weise, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code zu schreiben.  
+*Rekursive* Prozeduren sind Prozeduren, die sich selbst aufrufen.  Im Allgemeinen ist dies nicht die effizienteste Art und Weise, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Code zu schreiben.  
   
  Die folgende Prozedur berechnet die Fakultät ihres ursprünglichen Arguments mithilfe der Rekursion.  
   

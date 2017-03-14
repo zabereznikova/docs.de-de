@@ -24,11 +24,11 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Walkthrough: Handling Events (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ereignissen veranschaulicht.  Im ersten Thema \([Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)\) wird beschrieben, wie Ereignisse deklariert und ausgelöst werden.  In diesem Abschnitt werden das Formular und die Klasse aus der erwähnten exemplarischen Vorgehensweise verwendet, um zu demonstrieren, wie eingetretene Ereignisse behandelt werden.  
   
- Im Beispiel mit der `Widget`\-Klasse werden herkömmliche Ereignisbehandlungsanweisungen verwendet.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt andere Techniken zur Arbeit mit Ereignissen bereit.  Um weitere praktische Erfahrungen zu gewinnen, können Sie dieses Beispiel für die Verwendung der `AddHandler`\-Anweisung und der `Handles`\-Anweisung abwandeln.  
+ Im Beispiel mit der `Widget`\-Klasse werden herkömmliche Ereignisbehandlungsanweisungen verwendet.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt andere Techniken zur Arbeit mit Ereignissen bereit.  Um weitere praktische Erfahrungen zu gewinnen, können Sie dieses Beispiel für die Verwendung der `AddHandler`\-Anweisung und der `Handles`\-Anweisung abwandeln.  
   
 ### So verarbeiten Sie das PercentDone\-Ereignis der Widget\-Klasse  
   
@@ -81,7 +81,7 @@ In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ere
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Wenn dieser Code ausgeführt wird, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ein `Widget`\-Objekt und verbindet die zugehörigen Ereignisse mit den Ereignisprozeduren, die `mWidget` zugeordnet sind.  Von diesem Zeitpunkt an wird die `mWidget_PercentDone`\-Ereignisprozedur immer ausgeführt, wenn das `PercentDone`\-Ereignis vom `Widget` ausgelöst wird.  
+ Wenn dieser Code ausgeführt wird, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ein `Widget`\-Objekt und verbindet die zugehörigen Ereignisse mit den Ereignisprozeduren, die `mWidget` zugeordnet sind.  Von diesem Zeitpunkt an wird die `mWidget_PercentDone`\-Ereignisprozedur immer ausgeführt, wenn das `PercentDone`\-Ereignis vom `Widget` ausgelöst wird.  
   
 #### So rufen Sie die LongTask\-Methode auf  
   

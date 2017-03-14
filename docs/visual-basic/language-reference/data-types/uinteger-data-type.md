@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # UInteger Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 32\-Bit\-\(4\-Byte\-\)Ganzzahlen ohne Vorzeichen mit einem Wert zwischen 0 und 4.294.967.295.  
   

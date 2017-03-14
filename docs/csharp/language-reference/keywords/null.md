@@ -26,7 +26,7 @@ Bei dem `null`\-Schlüsselwort handelt es sich um ein Literal, das einen NULL\-V
  [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/null_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

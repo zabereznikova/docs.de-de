@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Constant expression not representable in type &#39;&lt;typename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie versuchen, eine Konstante auszuwerten, die nicht zum Zieltyp passt. Dies liegt in der Regel daran, dass sie einen Bereichsüberlauf verursacht.  
   

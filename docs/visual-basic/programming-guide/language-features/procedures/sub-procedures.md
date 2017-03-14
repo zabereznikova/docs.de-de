@@ -26,9 +26,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Sub Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine `Sub`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen, die von den Anweisungen `Sub` und `End Sub` eingeschlossen sind.  Die `Sub`\-Prozedur führt eine Aufgabe aus und gibt die Steuerung anschließend an den Aufrufcode zurück; sie gibt dem Aufrufcode jedoch keinen Wert zurück.  
+Eine `Sub`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisungen, die von den Anweisungen `Sub` und `End Sub` eingeschlossen sind.  Die `Sub`\-Prozedur führt eine Aufgabe aus und gibt die Steuerung anschließend an den Aufrufcode zurück; sie gibt dem Aufrufcode jedoch keinen Wert zurück.  
   
  Bei jedem Aufruf der Prozedur werden ihre Anweisungen ausgeführt. Dabei wird mit der ersten ausführbaren Anweisung nach der `Sub`\-Anweisung begonnen und mit der ersten auftretenden `End Sub`\-, `Exit Sub`\- oder `Return`\-Anweisung geendet.  
   

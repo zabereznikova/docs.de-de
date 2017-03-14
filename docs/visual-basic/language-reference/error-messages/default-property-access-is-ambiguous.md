@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Schnittstelle erbt von zwei Schnittstellen, von denen jede eine Standardeigenschaft mit dem gleichen Namen deklariert.  Der Compiler kann einen Zugriff auf diese Standardeigenschaft ohne Qualifikation nicht auflösen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   

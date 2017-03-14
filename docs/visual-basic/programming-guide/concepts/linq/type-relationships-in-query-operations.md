@@ -27,30 +27,30 @@ ms.author: "shoag"
 caps.handback.revision: 32
 ---
 # Type Relationships in Query Operations (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Abfrageoperationen verwendete Variablen sind stark typisiert und müssen miteinander kompatibel sein.  Die starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung verwendet.  Die folgende Abbildung veranschaulicht Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage verwendet werden.  Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+In [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Abfrageoperationen verwendete Variablen sind stark typisiert und müssen miteinander kompatibel sein.  Die starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung verwendet.  Die folgende Abbildung veranschaulicht Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage verwendet werden.  Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
  ![Pseudocode&#45;Abfrage mit hervorgehobenen Elementen.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
 Teile einer LINQ\-Abfrage  
   
  Der Typ der Bereichsvariablen in der Abfrage muss kompatibel mit dem Typ der Elemente in der Datenquelle sein.  Der Typ der Abfragevariablen muss kompatibel mit dem Sequenzelement sein, das in der `Select`\-Klausel definiert ist.  Schließlich muss der Typ der Sequenzelemente auch kompatibel mit dem Typ der Schleifensteuerungsvariablen sein, die in der `For Each`\-Anweisung zur Ausführung der Abfrage verwendet wird.  Diese starke Typisierung erleichtert zur Kompilierzeit die Identifikation von Typfehlern.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erleichtert eine starke Typisierung, indem lokale Typrückschlusse, auch bekannt als *implizite Typisierung*, implementiert werden.  Dieses Feature wird im vorigen Beispiel sowie in allen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Beispielen und \-Dokumentation verwendet.  In Visual Basic werden lokale Typrückschlüsse auf einfache Weise durch Verwendung einer `Dim`\-Anweisung ohne `As`\-Klausel erzielt.  Im folgenden Beispiel ist `city` als Zeichenfolge stark typisiert.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erleichtert eine starke Typisierung, indem lokale Typrückschlusse, auch bekannt als *implizite Typisierung*, implementiert werden.  Dieses Feature wird im vorigen Beispiel sowie in allen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Beispielen und \-Dokumentation verwendet.  In Visual Basic werden lokale Typrückschlüsse auf einfache Weise durch Verwendung einer `Dim`\-Anweisung ohne `As`\-Klausel erzielt.  Im folgenden Beispiel ist `city` als Zeichenfolge stark typisiert.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
 >  Der lokale Typrückschluss funktioniert nur, wenn `Option Infer` auf `On` festgelegt ist.  Weitere Informationen finden Sie unter [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
- Verwenden Sie jedoch einen lokalen Typrückschluss in einer Abfrage, sind die gleichen Typbeziehungen innerhalb der Variablen in der Datenquelle, der Abfragevariablen und der Abfrageausführungsschleife vorhanden.  Es ist hilfreich, über ein grundlegendes Verständnis dieser Typbeziehungen zu verfügen, wenn Sie [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen erstellen oder mit den Beispielen und Codebeispielen in der Dokumentation arbeiten.  
+ Verwenden Sie jedoch einen lokalen Typrückschluss in einer Abfrage, sind die gleichen Typbeziehungen innerhalb der Variablen in der Datenquelle, der Abfragevariablen und der Abfrageausführungsschleife vorhanden.  Es ist hilfreich, über ein grundlegendes Verständnis dieser Typbeziehungen zu verfügen, wenn Sie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen erstellen oder mit den Beispielen und Codebeispielen in der Dokumentation arbeiten.  
   
  Sie müssen möglicherweise einen expliziten Typ für eine Bereichsvariable angeben, der nicht mit dem von der Datenquelle zurückgegeben Typ übereinstimmt.  Sie können den Typ der Bereichsvariablen mit einer `As`\-Klausel angeben.  Dies führt jedoch zu einem Fehler, wenn es sich um eine [eingrenzende Konvertierung](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) handelt und `Option Strict` auf `On` festgelegt ist.  Aus diesem Grund sollten Sie die von der Datenquelle empfangenen Werte konvertieren.  Sie können diese Werte mit der <xref:System.Linq.Enumerable.Cast%2A>\-Methode in den expliziten Bereichsvariablentyp konvertieren.  Sie können die in der `Select`\-Klausel ausgewählten Werte auch in einen expliziten Typ umwandeln, der nicht mit dem Typ der Bereichsvariablen übereinstimmt.  Diese Punkte werden im folgenden Code veranschaulicht.  
   
  [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
 ## Abfragen, die ganze Elemente der Quelldaten zurückgeben  
- Im folgenden Beispiel wird eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageoperation gezeigt, die eine Sequenz von Elementen zurückgibt, die aus den Quelldaten ausgewählt wurden.  Die Quelle `names` enthält ein Zeichenfolgenarray, und die Abfrageausgabe ist eine Sequenz mit Zeichenfolgen, die mit dem Buchstaben M beginnen.  
+ Im folgenden Beispiel wird eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrageoperation gezeigt, die eine Sequenz von Elementen zurückgibt, die aus den Quelldaten ausgewählt wurden.  Die Quelle `names` enthält ein Zeichenfolgenarray, und die Abfrageausgabe ist eine Sequenz mit Zeichenfolgen, die mit dem Buchstaben M beginnen.  
   
  [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
@@ -67,7 +67,7 @@ Teile einer LINQ\-Abfrage
 3.  Die in `mNames` definierte Abfrage wird in der `For Each`\-Schleife ausgeführt.  Die Schleife durchläuft das Ergebnis der Abfrage.  Da `mNames` beim Ausführen eine Zeichenfolgensequenz zurückgibt, ist die Schleifeniterationsvariable `nm` auch eine Zeichenfolge.  
   
 ## Abfragen, die ein Feld aus ausgewählten Elementen zurückgeben  
- Im folgenden Beispiel wird eine [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)]\-Abfrageoperation gezeigt, die eine Sequenz zurückgibt, die nur ein Teil jedes in der Datenquelle ausgewählten Elements enthält.  Die Abfrage verwendet eine Auflistung von `Customer`\-Objekten als Datenquelle und projiziert nur die `Name`\-Eigenschaft im Ergebnis.  Da der Kundenname eine Zeichenfolge ist, erzeugt die Abfrage eine Zeichenfolgensequenz als Ausgabe.  
+ Im folgenden Beispiel wird eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]\-Abfrageoperation gezeigt, die eine Sequenz zurückgibt, die nur ein Teil jedes in der Datenquelle ausgewählten Elements enthält.  Die Abfrage verwendet eine Auflistung von `Customer`\-Objekten als Datenquelle und projiziert nur die `Name`\-Eigenschaft im Ergebnis.  Da der Kundenname eine Zeichenfolge ist, erzeugt die Abfrage eine Zeichenfolgensequenz als Ausgabe.  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
  Die Beziehungen zwischen Variablen gleichen denen im einfacheren Beispiel.  

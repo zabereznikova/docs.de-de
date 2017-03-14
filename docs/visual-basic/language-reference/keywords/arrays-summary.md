@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Arrays Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
   

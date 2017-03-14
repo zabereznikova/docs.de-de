@@ -41,7 +41,7 @@ ms.author: "shoag"
 caps.handback.revision: 29
 ---
 # Gewusst wie: Definieren einer Klasse, die f&#252;r unterschiedliche Datentypen die gleiche Funktionalit&#228;t bereitstellen kann (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse* bezeichnet.  
   

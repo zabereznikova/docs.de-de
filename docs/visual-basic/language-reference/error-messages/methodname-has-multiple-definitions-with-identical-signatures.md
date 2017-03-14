@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Function`\- oder `Sub`\-Prozedurdeklaration verwendet den gleichen Prozedurnamen und die gleiche Argumentliste wie eine vorherige Deklaration.  Eine mögliche Ursache ist der Versuch, die Originalprozedur zu überladen.  Überladene Prozeduren müssen unterschiedliche Argumentlisten haben.  
   

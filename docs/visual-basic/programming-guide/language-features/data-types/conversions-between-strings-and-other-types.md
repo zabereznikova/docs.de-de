@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Conversions Between Strings and Other Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Numerische, `Boolean` sowie Datum\-\/Uhrzeitwerte können in `String` konvertiert werden.  Eine Konvertierung in die umgekehrte Richtung, also von String in einen numerischen, `Boolean` oder einen `Date`\-Wert, ist ebenfalls möglich, sofern der Inhalt von String als gültiger Wert des Zieldatentyps interpretiert werden kann.  Anderenfalls tritt ein Laufzeitfehler auf.  
   
@@ -47,7 +47,7 @@ Str = "The total count is " & count
   
  `Val("   14   1.825 miles")`  
   
- Bei der Konvertierung einer Zeichenfolge in einen numerischen Wert verwendet [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] für die Interpretation des Tausendertrennzeichens, des Dezimaltrennzeichens und des Währungssymbols die in der **Systemsteuerung** unter **Ländereinstellungen** festgelegten Einstellungen.  Als Folge dessen kann eine Konvertierung unter einer Einstellung erfolgreich sein, während sie unter einer anderen fehlschlägt.  So ist beispielsweise `"$14.20"` für das Gebietsschema "Englisch \(USA\)" zulässig, nicht jedoch für die Gebietsschemas "Französisch".  
+ Bei der Konvertierung einer Zeichenfolge in einen numerischen Wert verwendet [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] für die Interpretation des Tausendertrennzeichens, des Dezimaltrennzeichens und des Währungssymbols die in der **Systemsteuerung** unter **Ländereinstellungen** festgelegten Einstellungen.  Als Folge dessen kann eine Konvertierung unter einer Einstellung erfolgreich sein, während sie unter einer anderen fehlschlägt.  So ist beispielsweise `"$14.20"` für das Gebietsschema "Englisch \(USA\)" zulässig, nicht jedoch für die Gebietsschemas "Französisch".  
   
 ## Siehe auch  
  [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   

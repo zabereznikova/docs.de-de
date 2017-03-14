@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Convert an Object to Another Type in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `Object`\-Variable kann mithilfe eines Konvertierungsschlüsselworts wie [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) in einen anderen Datentyp umgewandelt werden.  
   

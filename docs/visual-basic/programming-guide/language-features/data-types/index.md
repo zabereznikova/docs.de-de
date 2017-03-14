@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # Datentypen in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der *Datentyp* von Programmierelementen gibt an, welche Art von Daten das jeweilige Programmierelement enthalten kann und wie diese Daten gespeichert werden.  Datentypen gelten für alle Werte, die im Computerspeicher gespeichert werden können oder an der Auswertung eines Ausdrucks beteiligt sind.  Der Rückgabewert jeder Variablen, jedes Literals, jeder Konstanten, jeder Enumeration, jeder Eigenschaft, jedes Prozedurparameters und jedes Prozedurrückgabewerts verfügt über einen Datentyp.  
   

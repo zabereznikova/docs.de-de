@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Funktionen (Visual&#160;Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Themen in diesem Abschnitt enthalten Tabellen mit den Laufzeitmemberfunktionen von Visual Basic.  
   

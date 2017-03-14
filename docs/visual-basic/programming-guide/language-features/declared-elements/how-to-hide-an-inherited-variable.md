@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Hide an Inherited Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine abgeleitete Klasse erbt alle Definitionen ihrer Basisklasse.  Falls Sie eine Variable unter Verwendung des Namens eines Basisklassenelements definieren möchten, können Sie das betreffende Basisklassenelement ausblenden bzw. für das Element *Shadowing* durchführen, wenn Sie die Variable in der abgeleiteten Klasse definieren.  In diesem Fall wird in der abgeleiteten Klasse auf die Variable zugegriffen, sofern der Shadowing\-Mechanismus nicht explizit umgangen wird.  
   

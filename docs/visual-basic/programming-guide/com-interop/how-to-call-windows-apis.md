@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Call Windows APIs (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Beispiel definiert die `MessageBox`\-Funktion in der Datei "user32.dll", ruft sie auf und fügt ihr anschließend eine Zeichenfolge hinzu.  
   

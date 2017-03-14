@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 49
 ---
 # Wichtige Visual Basic-&#196;nderungen in Visual Studio 2015
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Durch Visual Basic\-Änderungen in Visual Studio 2015 wird keine Anwendung, die in Visual Studio 2013 in Visual Basic erstellt wurde, nicht kompiliert bzw. ihr Laufzeitverhalten nicht geändert.  
   

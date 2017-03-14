@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Programming in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Abschnitt werden Programmieraufgaben erläutert, die beim Erstellen von Visual Basic\-Anwendungen relevant sind.  
   

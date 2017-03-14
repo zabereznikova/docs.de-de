@@ -15,9 +15,9 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Printing and Reporting (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet mehrere Optionen für Druck und Berichterstellung.  Die folgenden Themen enthalten Übersichten und Links zu der für das Drucken und die Berichterstellung relevanten Dokumentation.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bietet mehrere Optionen für Druck und Berichterstellung.  Die folgenden Themen enthalten Übersichten und Links zu der für das Drucken und die Berichterstellung relevanten Dokumentation.  
   
 ## In diesem Abschnitt  
  [PrintForm Component](../../../visual-basic/developing-apps/printing/printform-component.md)  

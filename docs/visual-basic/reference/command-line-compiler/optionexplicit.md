@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /optionexplicit
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bewirkt, dass der Compiler Fehler meldet, wenn Variablen vor der Verwendung nicht deklariert wurden.  
   

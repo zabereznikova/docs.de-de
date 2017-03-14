@@ -23,13 +23,13 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Reference COM Objects from Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] müssen Sie zum Hinzufügen von Verweisen auf COM\-Objekte mit Typbibliotheken eine Interopassembly für die COM\-Bibliothek erstellen.  Verweise auf Member des COM\-Objekts werden an die Interop\-Assembly und dann an das eigentliche COM\-Objekt weitergeleitet.  Antworten vom COM\-Objekt werden an die Interopassembly und von dort an Ihre [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Anwendung weitergeleitet.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen Sie zum Hinzufügen von Verweisen auf COM\-Objekte mit Typbibliotheken eine Interopassembly für die COM\-Bibliothek erstellen.  Verweise auf Member des COM\-Objekts werden an die Interop\-Assembly und dann an das eigentliche COM\-Objekt weitergeleitet.  Antworten vom COM\-Objekt werden an die Interopassembly und von dort an Ihre [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Anwendung weitergeleitet.  
   
  Sie können auf ein COM\-Objekt verweisen, ohne eine Interopassembly zu erstellen, indem Sie die Typinformationen für das COM\-Objekt in eine .NET\-Assembly einbetten.  Zum Einbetten der Typinformationen legen Sie die `Embed Interop Types`\-Eigenschaft für den Verweis auf das COM\-Objekt auf `True` fest.  Wenn Sie mit dem Befehlszeilencompiler kompilieren, verwenden Sie die `/link`\-Option, um auf die COM\-Bibliothek zu verweisen.  Weitere Informationen finden Sie unter [\/link](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellt automatisch Interopassemblys, wenn Sie einen Verweis auf eine Typbibliothek der integrierten Entwicklungsumgebung \(IDE\) hinzufügen.  Über die Befehlszeile können Sie mit dem Dienstprogramm Tlbimp manuell Interop\-Assemblys erstellen.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellt automatisch Interopassemblys, wenn Sie einen Verweis auf eine Typbibliothek der integrierten Entwicklungsumgebung \(IDE\) hinzufügen.  Über die Befehlszeile können Sie mit dem Dienstprogramm Tlbimp manuell Interop\-Assemblys erstellen.  
   
 ### So fügen Sie Verweise auf COM\-Objekte hinzu  
   

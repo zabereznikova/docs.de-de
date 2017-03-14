@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Packaging and Deploying Custom My Extensions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Visual Basic bietet mit den Visual Studio\-Vorlagen eine einfache Möglichkeit zum Bereitstellen benutzerdefinierter `My`\-Namespaceerweiterungen.  Wenn Sie eine Projektvorlage erstellen, bei der Ihre `My`\-Erweiterungen ein integraler Bestandteil des neuen Projekttyps sind, können Sie einfach Ihren benutzerdefinierten `My`\-Erweiterungscode zum Projekt hinzufügen, wenn Sie die Vorlage exportieren.  Weitere Informationen zum Exportieren von Projektvorlagen finden Sie unter [Gewusst wie: Erstellen von Projektvorlagen](../Topic/How%20to:%20Create%20Project%20Templates.md).  
   

@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt. Ziehen Sie ein Anwenden des „Await“\-Operators auf das Ergebnis des Aufrufs in Betracht.  
   

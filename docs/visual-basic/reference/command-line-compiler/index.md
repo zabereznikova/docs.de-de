@@ -22,13 +22,13 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Visual Basic Command-Line Compiler
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] \-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Dieser Abschnitt enthält Beschreibungen für die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compileroptionen.  
+Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] \-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung \(IDE\).  Dieser Abschnitt enthält Beschreibungen für die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compileroptionen.  
   
 ## In diesem Abschnitt  
  [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
- Beschreibt den [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Befehlszeilencompiler, der als Alternative zum Kompilieren von Programmen in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] IDE zur Verfügung gestellt wird.  
+ Beschreibt den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Befehlszeilencompiler, der als Alternative zum Kompilieren von Programmen in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE zur Verfügung gestellt wird.  
   
  [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
  Listet Compileroptionen alphabetisch in einer Tabelle auf.  
@@ -41,4 +41,4 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
  Erläutert die Verwendung des Projekt\-Designers, um globale Einstellungen für das Projekt festzulegen.  
   
  [Visual Basic](../../../visual-basic/index.md)  
- Der Ausgangspunkt für die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Hilfe.
+ Der Ausgangspunkt für die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Hilfe.

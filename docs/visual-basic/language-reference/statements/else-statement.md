@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Else Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Leitet eine Gruppe von Anweisungen ein, die ausgeführt oder kompiliert wird, wenn keine andere bedingte Gruppe von Anweisungen ausgeführt oder kompiliert wurde.  
   

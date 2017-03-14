@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Create a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Eigenschaftendefinition wird von einer `Property`\-Anweisung und einer `End Property`\-Anweisung eingeschlossen.  Innerhalb dieser Definition kann eine `Get`\-Prozedur, eine `Set`\-Prozedur oder beides definiert werden.  Der gesamte Code der Eigenschaft ist in diesen Prozeduren enthalten.  
   

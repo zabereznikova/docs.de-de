@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Protected (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass auf ein oder mehrere deklarierte Programmierelement\/e nur aus seiner bzw. ihrer eigenen Klasse oder aus einer abgeleiteten Klasse heraus zugegriffen werden kann.  
   

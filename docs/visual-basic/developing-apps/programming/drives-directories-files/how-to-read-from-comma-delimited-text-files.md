@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Read From Comma-Delimited Text Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem `TextFieldParser`\-Objekt können strukturierte Textdateien, z. B. Protokolle, leicht und effizient analysiert werden.  Die `TextFieldType`\-Eigenschaft definiert, ob es sich um eine Datei mit Trennzeichen oder um eine Datei mit Textfeldern fester Breite handelt.  
   

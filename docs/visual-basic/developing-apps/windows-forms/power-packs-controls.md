@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Visual Basic Power Packs Controls
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Visual Basic Power Packs\-Steuerelemente sind zusätzliche Windows Forms\-Steuerelemente.  Sie sind nicht in Visual Studio enthalten.  Sie können [sie herunterladen](http://go.microsoft.com/fwlink/?LinkId=321343), sie werden jedoch wie sie sind angeboten, ohne Support.  
   

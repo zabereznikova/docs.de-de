@@ -51,7 +51,7 @@ Eckige Klammern \(`[]`\) werden für Arrays, Indexer und Attribute verwendet.  S
  Es wird keine Überprüfung der Grenzen durchgeführt.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

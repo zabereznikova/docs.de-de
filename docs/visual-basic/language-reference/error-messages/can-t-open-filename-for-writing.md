@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Can&#39;t open &#39;&lt;filename&gt;&#39; for writing
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die angegebene Datei kann nicht zum Schreiben geöffnet werden, vielleicht weil sie bereits geöffnet wurde.  
   

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Call a Procedure That Returns a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 `Function`\-Prozeduren geben einen Wert an den Aufrufcode zurück.  Zum Aufrufen einer solchen Prozedur tragen Sie ihren Namen und die Argumente entweder auf der rechten Seite der Zuweisungsanweisung ein oder in einen Ausdruck.  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 15
 4.  Der von der Prozedur zurückgegebene Wert wird auf der linken Seite der Zuweisungsanweisung in der Variablen oder Eigenschaft gespeichert.  
   
 ## Beispiel  
- Im folgenden Beispiel wird die <xref:Microsoft.VisualBasic.Interaction.Environ%2A> von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] aufgerufen, um den Wert einer Umgebungsvariablen des Betriebssystems abzurufen.  Von der ersten Zeile wird `Environ` in einem Ausdruck aufgerufen, von der zweiten Zeile in einer Zuweisungsanweisung.  `Environ` erfordert als einziges Argument den Variablennamen.  Die Funktion gibt den Wert der Variablen an den Aufrufcode zurück.  
+ Im folgenden Beispiel wird die <xref:Microsoft.VisualBasic.Interaction.Environ%2A> von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aufgerufen, um den Wert einer Umgebungsvariablen des Betriebssystems abzurufen.  Von der ersten Zeile wird `Environ` in einem Ausdruck aufgerufen, von der zweiten Zeile in einer Zuweisungsanweisung.  `Environ` erfordert als einziges Argument den Variablennamen.  Die Funktion gibt den Wert der Variablen an den Aufrufcode zurück.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   

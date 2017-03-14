@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Common Tasks Performed with Visual Basic Operators
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Operatoren führen viele allgemeine Aufgaben mit einem oder mehreren als *Operanden* bezeichneten Ausdrücken aus.  
   

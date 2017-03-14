@@ -21,13 +21,13 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Transform XML by Using LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) kann XML leicht aus einer Quelle gelesen und in ein neues XML\-Format umgewandelt werden.  Sie können LINQ\-Abfragen nutzen, um den umzuwandelnden Inhalt abzurufen oder den Inhalt eines vorhandenen Dokuments in ein neues XML\-Format zu ändern.  
   
  Im Beispiel dieses Themas wird der Inhalt eines XML\-Quelldokuments in HTML umgewandelt, um ihn in einem Browser anzuzeigen.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So wandeln Sie ein XML\-Dokument um  
   

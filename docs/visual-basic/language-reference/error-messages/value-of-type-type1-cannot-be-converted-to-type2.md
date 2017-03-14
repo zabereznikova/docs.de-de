@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Value of type &#39;type1&#39; cannot be converted to &#39;type2&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Wert vom Typ 'Typ1' kann nicht in 'Typ2' konvertiert werden.Rufen Sie mit der Value\-Eigenschaft den Zeichenfolgenwert des ersten Elements von '\<übergeordnetesElement\>' ab.  
   

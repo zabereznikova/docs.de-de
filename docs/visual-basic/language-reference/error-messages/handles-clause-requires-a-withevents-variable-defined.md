@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Handles clause requires a WithEvents variable defined in the containing type or one of its base types
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben in der `Handles`\-Klausel keine `WithEvents`\-Variable angegeben.  Verwenden Sie das `Handles`\-Schlüsselwort am Ende einer Prozedurdeklaration, damit es Ereignisse behandelt, die durch eine mit dem `WithEvents`\-Schlüsselwort deklarierte Objektvariable ausgelöst werden.  
   

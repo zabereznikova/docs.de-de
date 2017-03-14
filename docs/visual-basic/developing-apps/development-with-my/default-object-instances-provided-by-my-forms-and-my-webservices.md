@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)\-Objekt und das [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)\-Objekt bieten Zugriff auf die von der Anwendung verwendeten Formulare, Datenquellen und XML\-Webdienste.  Dazu werden Auflistungen der *Standardinstanzen* von jedem dieser Objekte bereitgestellt.  
   

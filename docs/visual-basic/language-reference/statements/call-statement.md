@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Call Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Überträgt die Steuerung an eine `Function`\-Prozedur, eine `Sub`\-Prozedur oder eine Prozedur in einer DLL \(Dynamic Link Library\).  
   

@@ -37,7 +37,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Creating, Deleting, and Moving Files and Directories in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Abschnitt werden Aufgaben im Zusammenhang mit dem Erstellen, Löschen, Verschieben und Umbenennen von Dateien und Verzeichnissen in Visual Basic aufgeführt.  
   

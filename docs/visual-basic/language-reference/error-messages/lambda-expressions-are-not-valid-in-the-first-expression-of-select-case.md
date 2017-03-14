@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Lambda expressions are not valid in the first expression of a &#39;Select Case&#39; statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können keinen Lambda\-Ausdruck für den Testausdruck in einer `Select Case`\-Anweisung verwenden.  Definitionen von Lambda\-Ausdrücken geben Funktionen zurück, und der Testausdruck einer `Select Case`\-Anweisung muss einem elementaren Datentyp entsprechen.  
   

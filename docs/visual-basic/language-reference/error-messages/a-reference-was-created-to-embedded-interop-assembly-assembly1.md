@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # A reference was created to embedded interop assembly &#39;&lt;assembly1&gt;&#39; because of an indirect reference to that assembly from assembly &#39;&lt;assembly2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es wurde ein Verweis auf die eingebettete Interopassembly "\<Assembly1\>" aufgrund eines indirekten Verweises auf diese Assembly aus Assembly "\<Assembly2\>" erstellt.Es kann ratsam sein, die Eigenschaft "Interoptypen einbetten" in einer Assembly zu ändern.  
   

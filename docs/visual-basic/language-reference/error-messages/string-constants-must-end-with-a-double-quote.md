@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # String constants must end with a double quote
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zeichenfolgenliterale müssen mit Anführungszeichen anfangen und enden.  
   

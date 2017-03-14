@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Constants and Enumerations (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Konstanten und Enumerationen für Entwickler bereit.  Konstanten speichern Werte, die während der gesamten Ausführung der Anwendung nicht geändert werden.  Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstanten zu arbeiten und Konstantenwerte mit Namen zu verknüpfen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Konstanten und Enumerationen für Entwickler bereit.  Konstanten speichern Werte, die während der gesamten Ausführung der Anwendung nicht geändert werden.  Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstanten zu arbeiten und Konstantenwerte mit Namen zu verknüpfen.  
   
 ## Konstanten  
   
@@ -32,9 +32,9 @@ caps.handback.revision: 18
 |**Konstante**|**Beschreibung**|  
 |`CONFIG`|Eine Zeichenfolge, die der aktuellen Einstellung des Felds **Konfiguration der aktuellen Projektmappe** im **Konfigurations\-Manager** entspricht.|  
 |`DEBUG`|Ein `Boolean`\-Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann.  Standardmäßig definiert die Debugkonfiguration für ein Projekt `DEBUG`.  Wenn `DEBUG` definiert wurde, generieren die <xref:System.Diagnostics.Debug>\-Klassenmethoden Ausgabedaten für das Fenster **Ausgabe**.  Ist das nicht der Fall, so werden die <xref:System.Diagnostics.Debug>\-Klassenmethoden nicht kompiliert, und es wird keine Debugausgabe generiert.|  
-|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung der **\/target**\-Befehlszeilenoption darstellt.  Mögliche Werte von `TARGET` sind:<br /><br /> -   "winexe" für eine Windows\-Anwendung<br />-   "exe" für eine Konsolenanwendung<br />-   "library" für eine Klassenbibliothek<br />-   "module" für ein Modul<br />-   Die **\/target**\-Option kann in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-integrierten Entwicklungsumgebung festgelegt werden.  Weitere Informationen finden Sie unter [\/target](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung der **\/target**\-Befehlszeilenoption darstellt.  Mögliche Werte von `TARGET` sind:<br /><br /> -   "winexe" für eine Windows\-Anwendung<br />-   "exe" für eine Konsolenanwendung<br />-   "library" für eine Klassenbibliothek<br />-   "module" für ein Modul<br />-   Die **\/target**\-Option kann in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-integrierten Entwicklungsumgebung festgelegt werden.  Weitere Informationen finden Sie unter [\/target](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Ein `Boolean`\-Wert, der im Dialogfeld **Projekteigenschaften** festgelegt werden kann.  Standardmäßig definieren alle Konfigurationen für ein Projekt `TRACE`.  Wenn `TRACE` definiert wurde, generieren die <xref:System.Diagnostics.Trace>\-Klassenmethoden Ausgabedaten für das Fenster **Ausgabe**.  Ist das nicht der Fall, so werden die <xref:System.Diagnostics.Trace>\-Klassenmethoden nicht kompiliert, und es wird keine `Trace`\-Ausgabe generiert.|  
-|`VBC_VER`|Eine Zahl, die die [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Version im Format *Hauptversion*.*Nebenversion* darstellt.  Die Versionsnummer für [!INCLUDE[vbprvblong](../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] ist 8.0.|  
+|`VBC_VER`|Eine Zahl, die die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Version im Format *Hauptversion*.*Nebenversion* darstellt.  Die Versionsnummer für [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] ist 8.0.|  
   
 ### Druck\- und Anzeigekonstanten  
  Beim Aufrufen von Druck\- und Anzeigekonstanten können Sie anstelle der eigentlichen Werte die folgenden Konstanten im Code verwenden.  
@@ -55,7 +55,7 @@ caps.handback.revision: 18
 |`vbVerticalTab`|In Microsoft Windows nicht sinnvoll.|  
   
 ## Enumerationen  
- In der folgenden Tabelle sind einige der von [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellten Enumerationen aufgeführt und beschrieben.  
+ In der folgenden Tabelle sind einige der von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellten Enumerationen aufgeführt und beschrieben.  
   
 |||  
 |-|-|  

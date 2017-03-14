@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Statement is not valid in a namespace
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Anweisung kann nicht auf Namespaceebene angezeigt werden.  Die einzigen auf Namespaceebene zugelassenen Deklarationen sind Modul\-, Schnittstellen\-, Klassen\-, Delegat\-, Enumerations\- und Strukturdeklarationen.  
   

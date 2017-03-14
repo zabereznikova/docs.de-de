@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # COM Interoperability in .NET Framework Applications (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn Sie COM\-Objekte und .NET Framework\-Objekte in derselben Anwendung verwenden möchten, müssen Sie berücksichtigen, dass die Objekte im Speicher in unterschiedlicher Form vorliegen.  Ein .NET Framework\-Objekt befindet sich im verwalteten Arbeitsspeicher, der durch die Common Language Runtime gesteuert wird, und kann von dieser je nach Bedarf verschoben werden.  Ein COM\-Objekt befindet sich im nicht verwalteten Speicher und wird in der Regel nicht an eine andere Position im Speicher verschoben.  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] und [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] enthalten Tools zum Steuern der Interaktion dieser verwalteten und nicht verwalteten Komponenten.  Weitere Informationen über verwalteten Code finden Sie unter [Common Language Runtime](../Topic/Common%20Language%20Runtime%20\(CLR\).md).  
+Wenn Sie COM\-Objekte und .NET Framework\-Objekte in derselben Anwendung verwenden möchten, müssen Sie berücksichtigen, dass die Objekte im Speicher in unterschiedlicher Form vorliegen.  Ein .NET Framework\-Objekt befindet sich im verwalteten Arbeitsspeicher, der durch die Common Language Runtime gesteuert wird, und kann von dieser je nach Bedarf verschoben werden.  Ein COM\-Objekt befindet sich im nicht verwalteten Speicher und wird in der Regel nicht an eine andere Position im Speicher verschoben.  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enthalten Tools zum Steuern der Interaktion dieser verwalteten und nicht verwalteten Komponenten.  Weitere Informationen über verwalteten Code finden Sie unter [Common Language Runtime](../Topic/Common%20Language%20Runtime%20\(CLR\).md).  
   
- Möglicherweise möchten Sie nicht nur COM\-Objekte in .NET\-Anwendungen verwenden, sondern darüber hinaus mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Objekte entwickeln, auf die nicht verwalteter Code über COM zugreifen kann.  
+ Möglicherweise möchten Sie nicht nur COM\-Objekte in .NET\-Anwendungen verwenden, sondern darüber hinaus mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Objekte entwickeln, auf die nicht verwalteter Code über COM zugreifen kann.  
   
  Über die Links auf dieser Seite erhalten Sie weitere Details zu den Interaktionen zwischen COM\- und .NET Framework\-Objekten.  
   

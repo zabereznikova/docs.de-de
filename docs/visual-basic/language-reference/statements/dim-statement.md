@@ -43,7 +43,7 @@ ms.author: "shoag"
 caps.handback.revision: 72
 ---
 # Dim-Anweisung (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert und reserviert Speicherplatz für eine oder mehrere Variablen.  
   
@@ -264,7 +264,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Ja|Nein|`Dim qty As Integer`|Die Variable wird auf den Standardwert für den Datentyp initialisiert. Siehe die Tabelle weiter unten in diesem Abschnitt.|  
 |Ja|Ja|`Dim qty  As Integer = 5`|Wenn der Datentyp der Initialisierung nicht in den angegebenen Datentyp konvertiert werden kann, tritt ein Fehler während der Kompilierung auf.|  
   
- Wenn Sie einen Datentyp angeben, aber Sie einen Initialisierer geben [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die Variable auf den Standardwert für seinen Datentyp initialisiert. Die folgende Tabelle zeigt die Initialisierungswerte.  
+ Wenn Sie einen Datentyp angeben, aber Sie einen Initialisierer geben [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Variable auf den Standardwert für seinen Datentyp initialisiert. Die folgende Tabelle zeigt die Initialisierungswerte.  
   
 |||  
 |-|-|  

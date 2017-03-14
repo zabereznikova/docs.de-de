@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Directives (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In den Themen in diesem Abschnitt werden die Visual Basic\-Quellcode\-Compilerdirektiven dokumentiert.  
   

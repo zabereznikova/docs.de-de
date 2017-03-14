@@ -22,11 +22,11 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Determine Whether Two Objects Are Identical (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gelten zwei Variablenverweise als identisch, wenn deren Zeiger gleich sind, d. h., wenn beide Variablen im Arbeitsspeicher auf die gleiche Klasseninstanz zeigen.  So können Sie in einer Windows Forms\-Anwendung einen Vergleich ausführen, um zu bestimmen, ob die aktuelle Instanz \(`Me`\) mit einer bestimmten Instanz identisch ist, beispielsweise `Form2`.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gelten zwei Variablenverweise als identisch, wenn deren Zeiger gleich sind, d. h., wenn beide Variablen im Arbeitsspeicher auf die gleiche Klasseninstanz zeigen.  So können Sie in einer Windows Forms\-Anwendung einen Vergleich ausführen, um zu bestimmen, ob die aktuelle Instanz \(`Me`\) mit einer bestimmten Instanz identisch ist, beispielsweise `Form2`.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt zwei Operatoren zum Vergleich von Zeigern bereit.  Der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) gibt `True` zurück, wenn die Objekte identisch sind. Der [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) gibt `True` zurück, wenn sie nicht identisch sind.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt zwei Operatoren zum Vergleich von Zeigern bereit.  Der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) gibt `True` zurück, wenn die Objekte identisch sind. Der [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) gibt `True` zurück, wenn sie nicht identisch sind.  
   
 ## Bestimmen der Gleicheit zweier Objekte  
   

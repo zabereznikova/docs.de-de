@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Extending the My Namespace in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der `My`\-Namespace in Visual Basic macht Eigenschaften und Methoden verfügbar, mit denen Sie alle Vorteile von .NET Framework problemlos nutzen können.  Der `My`\-Namespace vereinfacht häufig auftretende Programmierprobleme und löst schwierige Aufgaben oftmals mit nur einer Codezeile.  Darüber hinaus ist der `My`\-Namespace vollständig erweiterbar. So können Sie das Verhalten von `My` anpassen und seiner Hierarchie neue Dienste hinzufügen, um den Namespace auf spezielle Anwendungsanforderungen abzustimmen.  In diesem Thema wird erläutert, wie vorhandene Member des `My`\-Namespaces angepasst werden und wie Sie dem `My`\-Namespace eigene benutzerdefinierte Klassen hinzufügen.  
   

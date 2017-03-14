@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Writing to Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Abschnitt wird beschrieben, wie Aufgaben ausführt, die auf Dateien einschließen, in den geschrieben werden soll.  
   

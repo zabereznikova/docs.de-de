@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Visual Basic IntelliSense Code Snippets
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] umfasst eine Codebibliothek mit mehreren hundert Codesegmenten, so genannten IntelliSense\-Codeausschnitten, die in Ihre Anwendung eingefügt werden können.  Jeder Ausschnitt führt eine vollständige Programmieraufgabe aus, z. B. das Erstellen einer benutzerdefinierten Ausnahme, das Senden einer E\-Mail\-Nachricht oder das Zeichnen eines Kreises.  Mit wenigen Mausklicks können Sie einen Ausschnitt in den Quellcode einfügen.  Sie können auch eigene Ausschnitte erstellen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind, sie der Bibliothek hinzufügen und anschließend bei Bedarf verwenden.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst eine Codebibliothek mit mehreren hundert Codesegmenten, so genannten IntelliSense\-Codeausschnitten, die in Ihre Anwendung eingefügt werden können.  Jeder Ausschnitt führt eine vollständige Programmieraufgabe aus, z. B. das Erstellen einer benutzerdefinierten Ausnahme, das Senden einer E\-Mail\-Nachricht oder das Zeichnen eines Kreises.  Mit wenigen Mausklicks können Sie einen Ausschnitt in den Quellcode einfügen.  Sie können auch eigene Ausschnitte erstellen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind, sie der Bibliothek hinzufügen und anschließend bei Bedarf verwenden.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
   
 ## Ein Produktivitätstool für Visual Basic\-Benutzer  
  Mithilfe dieser Ausschnitte erhöhen Sie Ihre Produktivität, denn Sie benötigen weniger Zeit für die Suche nach Codebeispielen, Sie können noch unbekannte Features schneller erlernen und Code wiederverwenden.  
@@ -38,7 +38,7 @@ caps.handback.revision: 21
   
 -   Laden Sie weitere Aufgaben von Drittanbietern herunter.  
   
- Diese Codeblöcke stehen überall in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] zur Verfügung:  
+ Diese Codeblöcke stehen überall in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zur Verfügung:  
   
 -   Sie können sie über das Kontextmenü des **Code\-Editors** hinzufügen.  
   

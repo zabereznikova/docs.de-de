@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # &#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Typname tritt an einer Stelle auf, an der ein Ausdruck erforderlich ist.  Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function`\-Prozeduraufrufen bestehen.  
   

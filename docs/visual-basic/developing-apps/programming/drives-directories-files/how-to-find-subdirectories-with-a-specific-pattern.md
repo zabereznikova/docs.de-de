@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Find Subdirectories with a Specific Pattern in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>\-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Unterverzeichnisse in einem Verzeichnis darstellen.  Sie können mithilfe des `wildCards`\-Parameters ein bestimmtes Muster angeben.  Wenn Sie den Inhalt von Unterverzeichnissen in die Suche einbeziehen möchten, legen Sie den `searchType`\-Parameter auf `SearchOption.SearchAllSubDirectories` fest.  
   

@@ -25,14 +25,14 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # XML to Schema Wizard (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem XML\-zu\-Schema\-Assistenten können Sie ein XML\-Schemaset erstellen, das aus einem oder aus mehreren XML\-Dokumenten abgeleitet wird, und es in das Projekt integrieren.  Es kann eine beliebige Kombination von XML\-Dokumenten in Form von Textdateien, XML aus HTTP\-Internetadressen oder in den XML\-zu\-Schema\-Assistenten eingegebene oder eingefügte XML verwendet werden.  
   
  Durch XML\-Schemas wird IntelliSense für XML\-Eigenschaften in Visual Basic bereitgestellt.  Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md) und [XML IntelliSense in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md).  
   
 > [!NOTE]
->  Bevor Sie den XML\-zu\-Schema\-Assistenten ausführen, sollten Sie alle vorhandenen XSD\-Dateien, die bereits von dem Assistenten erstellt wurden, aus dem Projekt entfernen.  Wenn Sie ein XML\-Schemaset ableiten, das mit einem vorhandenen Schemaset übereinstimmt, verursacht dies einen Konflikt. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist in diesem Fall nicht in der Lage, IntelliSense für XML\-Eigenschaften bereitzustellen.  
+>  Bevor Sie den XML\-zu\-Schema\-Assistenten ausführen, sollten Sie alle vorhandenen XSD\-Dateien, die bereits von dem Assistenten erstellt wurden, aus dem Projekt entfernen.  Wenn Sie ein XML\-Schemaset ableiten, das mit einem vorhandenen Schemaset übereinstimmt, verursacht dies einen Konflikt. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist in diesem Fall nicht in der Lage, IntelliSense für XML\-Eigenschaften bereitzustellen.  
   
  Der XML\-zu\-Schema\-Assistent verwendet die <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse, um das Schema für das angegebene XML zu erstellen.  Hierdurch werden u. U. mehrere Schemadateien für das Schemaset erstellt.  Für jeden XML\-Namespace im angegebenen XML wird eine XSD\-Datei \(Extensible Schema Definition\) erstellt.  Weitere Informationen finden Sie unter der <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>\-Methode.  
   

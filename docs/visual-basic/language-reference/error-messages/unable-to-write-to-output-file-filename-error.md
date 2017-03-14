@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Unable to write to output file &#39;&lt;filename&gt;&#39;: &lt;error&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
   
@@ -41,11 +41,11 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 1.  Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2.  Wenn der Fehler weiterhin besteht, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] erneut.  
+2.  Wenn der Fehler weiterhin besteht, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erneut.  
   
 3.  Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
   
-4.  Wenn der Fehler erneut auftritt, installieren Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] neu.  
+4.  Wenn der Fehler erneut auftritt, installieren Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] neu.  
   
 5.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   

@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Create a Copy of a File in a Different Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die `My.Computer.FileSystem.CopyFile`\-Methode ermöglicht das Kopieren von Dateien.  Dabei können Sie verschiedene Parameter angeben, beispielsweise um vorhandene Dateien zu überschreiben, die Datei umzubenennen, den Fortschritt des Vorgangs anzuzeigen und dem Benutzer den Abbruch des Vorgangs zu erlauben.  
   

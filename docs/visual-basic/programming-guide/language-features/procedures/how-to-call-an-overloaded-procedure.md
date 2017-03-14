@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # How to: Call an Overloaded Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Vorteil der Prozedurüberladung liegt in der Flexibilität des Aufrufs.  Der Aufrufcode kann die Informationen abrufen, die er an die Prozedur übergeben muss, und dann unabhängig davon, welche Argumente übergeben werden, denselben Prozedurnamen verwenden.  
   
@@ -33,7 +33,7 @@ Der Vorteil der Prozedurüberladung liegt in der Flexibilität des Aufrufs.  Der
   
 2.  Schreiben Sie den Prozeduraufruf auf die übliche Weise, und geben Sie dabei die Daten in der Argumentliste an.  Stellen Sie sicher, dass die Argumente zur Parameterliste einer der Versionen passen, die für die Prozedur definiert sind.  
   
-3.  Sie müssen nicht festlegen, welche Version der Prozedur aufgerufen werden soll.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] übergibt die Steuerung der Version, zu der die angegebene Argumentliste passt.  
+3.  Sie müssen nicht festlegen, welche Version der Prozedur aufgerufen werden soll.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] übergibt die Steuerung der Version, zu der die angegebene Argumentliste passt.  
   
      Im folgenden Beispiel wird die in [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md) deklarierte `post`\-Prozedur aufgerufen.  Es wird die Kundenkennung abgerufen und dann ermittelt, ob es sich dabei um einen Wert vom Typ `String` oder `Integer` handelt. Anschließend wird in beiden Fällen die gleiche Prozedur aufgerufen.  
   

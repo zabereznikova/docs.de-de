@@ -19,14 +19,14 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Port Operations in the .NET Framework with Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Sie können über die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassen im <xref:System.IO.Ports?displayProperty=fullName>\-Namespace auf die seriellen Anschlüsse des Computers zugreifen.  Die wichtigste Klasse, <xref:System.IO.Ports.SerialPort>, bietet ein Framework für synchrone und ereignisgesteuerte E\/A\-Vorgänge, Zugriff auf Pin\- und Unterbrechungszustände sowie Zugriff auf die Treibereigenschaften für den seriellen Anschluss.  Diese Klasse kann mit einem <xref:System.IO.Stream>\-Objekt umschlossen werden, das über die <xref:System.IO.Ports.SerialPort.BaseStream%2A>\-Eigenschaft zugänglich ist.  Durch das Umschließen von <xref:System.IO.Ports.SerialPort> mit einem <xref:System.IO.Stream>\-Objekt wird der Zugriff auf den seriellen Anschluss für Klassen ermöglicht, in denen Streams verwendet werden.  Der Namespace enthält verschiedene Enumerationen, die die Steuerung von seriellen Anschlüssen vereinfachen.  
+Sie können über die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassen im <xref:System.IO.Ports?displayProperty=fullName>\-Namespace auf die seriellen Anschlüsse des Computers zugreifen.  Die wichtigste Klasse, <xref:System.IO.Ports.SerialPort>, bietet ein Framework für synchrone und ereignisgesteuerte E\/A\-Vorgänge, Zugriff auf Pin\- und Unterbrechungszustände sowie Zugriff auf die Treibereigenschaften für den seriellen Anschluss.  Diese Klasse kann mit einem <xref:System.IO.Stream>\-Objekt umschlossen werden, das über die <xref:System.IO.Ports.SerialPort.BaseStream%2A>\-Eigenschaft zugänglich ist.  Durch das Umschließen von <xref:System.IO.Ports.SerialPort> mit einem <xref:System.IO.Stream>\-Objekt wird der Zugriff auf den seriellen Anschluss für Klassen ermöglicht, in denen Streams verwendet werden.  Der Namespace enthält verschiedene Enumerationen, die die Steuerung von seriellen Anschlüssen vereinfachen.  
   
  Am einfachsten kann ein <xref:System.IO.Ports.SerialPort>\-Objekt mit der <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>\-Methode erstellt werden.  
   
 > [!NOTE]
->  Die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassen können nicht für den direkten Zugriff auf andere Anschlussarten verwendet werden, beispielsweise parallele Anschlüsse oder USB\-Anschlüsse.  
+>  Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassen können nicht für den direkten Zugriff auf andere Anschlussarten verwendet werden, beispielsweise parallele Anschlüsse oder USB\-Anschlüsse.  
   
 ## Enumerationen  
  In dieser Tabelle werden die wichtigsten Enumerationen für den Zugriff auf den seriellen Anschluss beschrieben:  

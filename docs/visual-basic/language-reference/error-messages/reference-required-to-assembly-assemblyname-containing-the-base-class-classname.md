@@ -21,11 +21,11 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Ein Verweis auf die Assembly „&lt;Assemblyname&gt;“, die die Basisklasse „&lt;Klassenname&gt;“ enth&#228;lt, ist erforderlich.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Verweis auf die Assembly „\<Assemblyname\>“, die die Basisklasse „\<Klassenname\>“ enthält, ist erforderlich. Fügen Sie dem Projekt einen Verweis hinzu.  
   
- Die Klasse ist in einer Dynamic Link Library \(DLL\) oder Assembly definiert, auf die in Ihrem Projekt nicht direkt verwiesen wird. Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler benötigt einen Verweis, um Mehrdeutigkeiten zu vermeiden, falls die Klasse in mehreren DLLs oder Assemblys definiert ist.  
+ Die Klasse ist in einer Dynamic Link Library \(DLL\) oder Assembly definiert, auf die in Ihrem Projekt nicht direkt verwiesen wird. Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler benötigt einen Verweis, um Mehrdeutigkeiten zu vermeiden, falls die Klasse in mehreren DLLs oder Assemblys definiert ist.  
   
  **Fehler\-ID:** BC30007  
   

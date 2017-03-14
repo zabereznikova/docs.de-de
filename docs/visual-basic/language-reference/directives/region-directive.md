@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # #Region Directive
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Reduziert Codeabschnitte in Visual Basic\-Dateien und blendet sie aus.  
   

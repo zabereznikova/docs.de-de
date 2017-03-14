@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Directories and Files Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
+Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
   
  Mit der `My`\-Funktion können Sie bei Datei\-E\/A\-Vorgängen höhere Produktivität und Leistung als mit diesen Membern erzielen.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   

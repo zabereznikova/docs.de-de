@@ -17,9 +17,9 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Customizing Which Objects are Available in My (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Thema wird beschrieben, wie in einem Projekt durch Festlegen der `_MYTYPE`\-Konstante für die bedingte Kompilierung definiert werden kann, welche `My`\-Objekte aktiviert werden.  Die integrierte Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] passt die `_MYTYPE`\-Konstante für die bedingte Kompilierung in einem Projekt an den Typ des Projekts an.  
+In diesem Thema wird beschrieben, wie in einem Projekt durch Festlegen der `_MYTYPE`\-Konstante für die bedingte Kompilierung definiert werden kann, welche `My`\-Objekte aktiviert werden.  Die integrierte Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] passt die `_MYTYPE`\-Konstante für die bedingte Kompilierung in einem Projekt an den Typ des Projekts an.  
   
 ## Vordefinierte \_MYTYPE\-Werte  
  Die `_MYTYPE`\-Konstante für die bedingte Kompilierung wird mit der Compileroption `/define` festgelegt.  Beim Angeben benutzerdefinierter Werte für die `_MYTYPE`\-Konstante müssen Sie den Zeichenfolgenwert am Anfang und Ende mit einem umgekehrten Schrägstrich und einem Anführungszeichen \(\\"\) umschließen.  Sie könnten z. B. folgende Angabe verwenden:  

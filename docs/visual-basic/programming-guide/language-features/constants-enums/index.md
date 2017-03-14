@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Constants and Enumerations in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Konstanten stellen eine Möglichkeit dar, anstelle eines unveränderlichen Werts einen aussagekräftigen Namen zu verwenden.  Konstanten speichern Werte, die \(wie der Name sagt\) während der Ausführung einer Anwendung konstant bleiben.  Die Verwendung von Konstanten ermöglicht das Bereitstellen aussagekräftiger Namen anstelle von Zahlen, wodurch der Code leichter lesbar wird.  
   

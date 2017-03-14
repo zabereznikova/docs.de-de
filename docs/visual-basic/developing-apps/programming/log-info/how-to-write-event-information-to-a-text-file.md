@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # How to: Write Event Information to a Text File (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können das `My.Application.Log`\-Objekt und das `My.Log`\-Objekt verwenden, um Informationen über in der Anwendung auftretende Ereignisse zu protokollieren.  In diesem Beispiel wird veranschaulicht, wie die `My.Application.Log.WriteEntry`\-Methode verwendet wird, um Ablaufverfolgungsinformationen in einer Protokolldatei zu protokollieren.  
   

@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Shared (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass mindestens ein deklariertes Programmierelement einer Klasse oder Struktur im Allgemeinen und nicht einer bestimmten Instanz der Klasse bzw. Struktur zugeordnet ist.  
   

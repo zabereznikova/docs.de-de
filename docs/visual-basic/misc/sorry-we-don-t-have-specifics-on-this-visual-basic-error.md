@@ -3060,19 +3060,19 @@ caps.handback.revision: 21
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler.  Sie können für die Fehler\-Nummer und \-Nachricht nach Informationen im Web suchen.  Oder Sie können andere Entwickler, die eines der folgenden Foren nutzen, Fragen stellen:  
   
  [Visual Basic\-Sprache](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Sprachsyntax und \-Compiler.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Sprachsyntax und \-Compiler.  
   
  [Visual Basic\-Interop und \-Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Bietet ein Forum für Fragen und Probleme beim Aktualisieren auf [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] und für die Arbeit mit Interoperabilitätsfunktionen.  
+ Bietet ein Forum für Fragen und Probleme beim Aktualisieren auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und für die Arbeit mit Interoperabilitätsfunktionen.  
   
  [Visual Basic\-IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-Umgebung.  
+ Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Umgebung.  
   
  [Visual Basic – Allgemein](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Siehe auch:  
  [Additional Resources for Visual Basic Programmers](../../visual-basic/getting-started/additional-resources.md)  

@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement aus dem Visual Basic Power Packs ist ein scrollfähiger Container für Steuerelemente, die sich wiederholende Daten anzeigen, z. B. Zeilen in einer Datenbanktabelle. Es kann als Alternative zum <xref:System.Windows.Forms.DataGridView>\-Steuerelement verwendet werden, wenn Sie mehr Kontrolle über das Layout der Daten benötigen.  
   

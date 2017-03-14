@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Parsing Text Files with the TextFieldParser Object (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem `TextFieldParser`\-Objekt können Sie sehr große Dateien analysieren und verarbeiten, die Textspalten mit Trennzeichen enthalten, z. B. Protokolldateien oder ältere Datenbankinformationen.  Die Analyse einer Textdatei mit `TextFieldParser` ähnelt dem Durchlaufen einer Textdatei, während die Verarbeitungsmethode für die Extrahierung von Textfeldern mit Methoden zum Bearbeiten von Zeichenfolgen vergleichbar ist.  
   

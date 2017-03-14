@@ -27,7 +27,7 @@ Das `implicit`\-Schlüsselwort wird verwendet, um einen impliziten benutzerdefin
  Durch implizite Konvertierungen kann die Lesbarkeit des Quellcodes verbessert werden, da nicht erforderliche Typumwandlungen entfernt werden.  Da implizite Konvertierungen jedoch keine explizite Umwandlung von einem Typ in einen anderen erfordern, ist Vorsicht angebracht, um unerwartete Ergebnisse zu vermeiden.  In der Regel sollten durch implizite Konvertierungsoperatoren keine Ausnahmen ausgelöst werden oder Informationen verloren gehen, sodass sie sicher verwendet werden können, ohne dass sich der Programmierer dessen bewusst ist.  Ein Konvertierungsoperator, der diese Kriterien nicht erfüllen kann, sollte als `explicit` markiert werden.  Weitere Informationen hierzu finden Sie unter [Verwenden von Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

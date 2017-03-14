@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # New Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine `New`\-Klausel ein, um eine neue Objektinstanz zu erstellen, gibt eine Konstruktoreinschränkung auf einem Typparameter an oder identifiziert eine `Sub`\-Prozedur als Klassenkonstruktor.  
   

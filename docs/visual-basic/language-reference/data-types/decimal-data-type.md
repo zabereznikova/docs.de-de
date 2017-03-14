@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 20
 ---
 # Decimal Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 128\-Bit \(16\-Byte\)\-Werte mit Vorzeichen, die 96\-Bit \(12\-Bytes\)\-Ganzzahlnummern darstellen, deren Einteilung durch eine variable Zehnerpotenz erfolgt.  Der Skalierungsfaktor gibt die Anzahl der Ziffern rechts neben dem Dezimaltrennzeichen an. Sie reicht von 0 bis 28.  Bei einer Skala von 0 \(keine Dezimalstellen\) ist der größtmögliche Wert \+\/\-79,228,162,514,264,337,593,543,950,335 \(\+\/\-7.9228162514264337593543950335E\+28\).  Bei 28 Dezimalstellen ist der größte Wert \+\/\-7,9228162514264337593543950335, und der kleinste Wert ungleich 0 \(null\) ist \+\/\-0.0000000000000000000000000001 \(\+\/\-1E\-28\).  
   

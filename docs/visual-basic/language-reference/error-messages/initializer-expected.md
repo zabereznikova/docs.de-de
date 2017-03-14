@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 6
 ---
 # Initializer expected
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben versucht, eine Instanz einer Klasse mithilfe eines Objektinitialisierers zu deklarieren, dessen Initialisierungsliste leer ist. Dies wird in folgendem Beispiel dargestellt.  
   

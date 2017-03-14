@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 37
 ---
 # Async (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Modifizierer `Async` gibt an, dass die von ihm geänderte Methode oder der von ihm geänderte [Lambda\-Ausdruck](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) asynchron ist.  Solche Methoden werden als *asynchrone Methoden* bezeichnet.  
   

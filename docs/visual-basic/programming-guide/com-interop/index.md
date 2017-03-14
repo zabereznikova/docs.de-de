@@ -20,9 +20,9 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # COM Interop (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Mit dem Component Object Model \(COM\) kann ein Objekt seine Funktionalität für andere Komponenten und Hostanwendungen verfügbar machen.  Der größte Teil der aktuellen Software enthält COM\-Objekte.  Wenn auch .NET\-Assemblys i. d. R. für neue Anwendungen am besten geeignet sind, müssen Sie in bestimmten Situationen möglicherweise COM\-Objekte verwenden.  In diesem Abschnitt werden einige mit dem Erstellen und Verwenden von COM\-Objekten in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verbundene Fragen beschrieben.  
+Mit dem Component Object Model \(COM\) kann ein Objekt seine Funktionalität für andere Komponenten und Hostanwendungen verfügbar machen.  Der größte Teil der aktuellen Software enthält COM\-Objekte.  Wenn auch .NET\-Assemblys i. d. R. für neue Anwendungen am besten geeignet sind, müssen Sie in bestimmten Situationen möglicherweise COM\-Objekte verwenden.  In diesem Abschnitt werden einige mit dem Erstellen und Verwenden von COM\-Objekten in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verbundene Fragen beschrieben.  
   
 ## In diesem Abschnitt  
  [Introduction to COM Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -32,7 +32,7 @@ Mit dem Component Object Model \(COM\) kann ein Objekt seine Funktionalität fü
  Beschreibt das Hinzufügen von Verweisen auf COM\-Objekte, die über Typbibliotheken verfügen.  
   
  [How to: Work with ActiveX Controls](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Veranschaulicht, wie der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Toolbox mit vorhandenen ActiveX\-Steuerelementen Funktionen hinzugefügt werden.  
+ Veranschaulicht, wie der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-Toolbox mit vorhandenen ActiveX\-Steuerelementen Funktionen hinzugefügt werden.  
   
  [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Führt Sie schrittweise durch den Prozess des Aufrufens der APIs, die Teil des Windows\-Betriebssystems sind.  

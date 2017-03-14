@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # @ (Specify Response File) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt eine Datei an, die Compileroptionen und zu kompilierende Quellcodedateien enthält.  
   

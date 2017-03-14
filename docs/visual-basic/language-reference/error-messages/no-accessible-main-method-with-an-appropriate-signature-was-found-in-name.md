@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In Befehlszeilenanwendungen muss eine `Sub Main`\-Prozedur definiert sein.  In Klassendeklarationen muss `Main` als `Public Shared` deklariert werden, in einer Moduldeklaration als `Public`.  
   

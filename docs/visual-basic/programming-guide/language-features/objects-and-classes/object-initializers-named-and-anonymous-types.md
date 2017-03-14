@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Object Initializers: Named and Anonymous Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Durch Objektinitialisierer können mithilfe eines einzelnen Ausdrucks die Eigenschaften für ein komplexes Objekt angegeben werden.  Sie können verwendet werden, um Instanzen von benannten Typen und anonymen Typen zu erstellen.  
   
@@ -114,7 +114,7 @@ Durch Objektinitialisierer können mithilfe eines einzelnen Ausdrucks die Eigens
   
  Da der Name des Typs nicht verfügbar ist, können Sie keine `As`\-Klausel verwenden, um `cust13` zu deklarieren.  Der Typ muss abgeleitet werden.  Ohne die Verwendung später Bindung wird dadurch die Verwendung anonymer Typen auf lokale Variablen eingeschränkt.  
   
- Anonyme Typen unterstützen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen.  Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Anonyme Typen unterstützen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen.  Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### Hinweise zu anonymen Typen  
   

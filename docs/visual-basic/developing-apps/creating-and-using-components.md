@@ -16,11 +16,11 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Creating and Using Components in Visual Basic
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine *Komponente* ist eine Klasse, die die <xref:System.ComponentModel.IComponent?displayProperty=fullName>\-Schnittstelle implementiert oder die direkt oder indirekt von einer Klasse abgeleitet ist, die <xref:System.ComponentModel.IComponent> implementiert.  Eine [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Komponente ist ein wiederverwendbares Objekt, das mit anderen Objekten interagieren kann, die Steuerung externer Ressourcen ermöglicht und Unterstützung zur Entwurfszeit bietet.  
+Eine *Komponente* ist eine Klasse, die die <xref:System.ComponentModel.IComponent?displayProperty=fullName>\-Schnittstelle implementiert oder die direkt oder indirekt von einer Klasse abgeleitet ist, die <xref:System.ComponentModel.IComponent> implementiert.  Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Komponente ist ein wiederverwendbares Objekt, das mit anderen Objekten interagieren kann, die Steuerung externer Ressourcen ermöglicht und Unterstützung zur Entwurfszeit bietet.  
   
- Ein wichtiges Feature von Komponenten besteht darin, dass diese entwurfsfähig sind, d. h., dass eine Klasse, die eine Komponente ist, in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)]\-IDE verwendet werden kann.  Eine Komponente kann der Toolbox hinzugefügt, per Drag & Drop in ein Formular eingefügt und in einer Entwurfsoberfläche geändert werden.  Beachten Sie, dass die Basisunterstützung zur Entwurfszeit für Komponenten in [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort-md.md)] integriert ist. Ein Komponentenentwickler muss daher keine zusätzlichen Schritte unternehmen, um die Vorteile der Basisfunktionalität zur Entwurfszeit nutzen zu können.  
+ Ein wichtiges Feature von Komponenten besteht darin, dass diese entwurfsfähig sind, d. h., dass eine Klasse, die eine Komponente ist, in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]\-IDE verwendet werden kann.  Eine Komponente kann der Toolbox hinzugefügt, per Drag & Drop in ein Formular eingefügt und in einer Entwurfsoberfläche geändert werden.  Beachten Sie, dass die Basisunterstützung zur Entwurfszeit für Komponenten in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] integriert ist. Ein Komponentenentwickler muss daher keine zusätzlichen Schritte unternehmen, um die Vorteile der Basisfunktionalität zur Entwurfszeit nutzen zu können.  
   
  Ein *Steuerelement* ist einer Komponente ähnlich, da beide entwurfsfähig sind.  Ein Steuerelement stellt jedoch im Gegensatz zu einer Komponente eine Benutzeroberfläche bereit.  Steuerelemente müssen entweder von der <xref:System.Windows.Forms.Control>\-Basisklasse oder der <xref:System.Web.UI.Control>\-Basisklasse abgeleitet sein.  
   

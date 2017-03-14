@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Select Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Definiert das Ergebnis einer Abfrage.  
   

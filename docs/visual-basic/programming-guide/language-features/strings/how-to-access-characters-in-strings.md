@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # How to: Access Characters in Strings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird die Verwendung der <xref:System.String.Chars%2A>\-Eigenschaft für den Zugriff auf das Zeichen an einer angegebenen Position in einer Zeichenfolge veranschaulicht.  
   

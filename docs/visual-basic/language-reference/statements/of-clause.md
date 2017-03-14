@@ -31,7 +31,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Of Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Leitet eine `Of`\-Klausel ein, die in einer *generischen* Klasse, Struktur, Schnittstelle, Prozedur oder in einem Delegaten einen *Typparameter* identifiziert.  Informationen zu generischen Typen finden Sie unter [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   

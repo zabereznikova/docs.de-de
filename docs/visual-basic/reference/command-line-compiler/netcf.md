@@ -23,9 +23,9 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # /netcf
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Legt fest, dass der Compiler [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] als Zielplattform verwendet.  
+Legt fest, dass der Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Zielplattform verwendet.  
   
 ## Syntax  
   
@@ -34,12 +34,12 @@ Legt fest, dass der Compiler [!INCLUDE[Compact](../../../visual-basic/reference/
 ```  
   
 ## Hinweise  
- Die `/netcf`\-Option bewirkt, dass der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler auf [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] statt auf das vollständige [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] abzielt.  Die Sprachfunktionalität, die nur im vollständigen [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] verfügbar ist, wird deaktiviert.  
+ Die `/netcf`\-Option bewirkt, dass der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler auf [!INCLUDE[Compact](~/includes/compact-md.md)] statt auf das vollständige [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] abzielt.  Die Sprachfunktionalität, die nur im vollständigen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügbar ist, wird deaktiviert.  
   
  Die `/netcf`\-Option ist für die Verwendung mit [\/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) vorgesehen.  Die Sprachfeatures, die durch `/netcf` deaktiviert werden, sind die Sprachfeatures, die in den durch `/sdkpath` verwendeten Dateien nicht verfügbar sind.  
   
 > [!NOTE]
->  Die `/netcf`\-Option ist innerhalb der Entwicklungsumgebung von Visual Studio nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  Die `/netcf`\-Option wird festgelegt, wenn ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Geräteprojekt geladen wird.  
+>  Die `/netcf`\-Option ist innerhalb der Entwicklungsumgebung von Visual Studio nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  Die `/netcf`\-Option wird festgelegt, wenn ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Geräteprojekt geladen wird.  
   
  Die `/netcf`\-Option ändert die folgenden Sprachfeatures:  
   
@@ -55,7 +55,7 @@ Legt fest, dass der Compiler [!INCLUDE[Compact](../../../visual-basic/reference/
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Bei Verwendung von Visual Basic 6.0\-Schlüsselwörtern, die aus [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] entfernt wurden, werden andere Fehler generiert als bei Angabe von `/netcf`.  Dies hat Auswirkungen auf die Fehlermeldungen für die folgenden Schlüsselwörter:  
+-   Bei Verwendung von Visual Basic 6.0\-Schlüsselwörtern, die aus [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] entfernt wurden, werden andere Fehler generiert als bei Angabe von `/netcf`.  Dies hat Auswirkungen auf die Fehlermeldungen für die folgenden Schlüsselwörter:  
   
     -   `Open`  
   
@@ -90,7 +90,7 @@ Legt fest, dass der Compiler [!INCLUDE[Compact](../../../visual-basic/reference/
     -   `Line`  
   
 ## Beispiel  
- Mit dem folgenden Code wird `Myfile.vb` mit [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] kompiliert. Dabei werden die Versionen von Mscorlib.dll und Microsoft.VisualBasic.dll verwendet, die sich im Standardinstallationsverzeichnis von [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] auf Laufwerk C befinden.  In der Regel verwenden Sie die neueste Version von [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)].  
+ Mit dem folgenden Code wird `Myfile.vb` mit [!INCLUDE[Compact](~/includes/compact-md.md)] kompiliert. Dabei werden die Versionen von Mscorlib.dll und Microsoft.VisualBasic.dll verwendet, die sich im Standardinstallationsverzeichnis von [!INCLUDE[Compact](~/includes/compact-md.md)] auf Laufwerk C befinden.  In der Regel verwenden Sie die neueste Version von [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ```  
 vbc /netcf /sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

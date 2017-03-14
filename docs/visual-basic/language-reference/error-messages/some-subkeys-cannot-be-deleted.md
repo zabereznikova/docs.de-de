@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Some subkeys cannot be deleted
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Es wurde versucht, einen Registrierungsschlüssel zu löschen, doch der Vorgang ist fehlgeschlagen, weil einige Unterschlüssel nicht gelöscht werden können.  Die Ursache hierfür sind i. d. R. fehlende Berechtigungen.  
   

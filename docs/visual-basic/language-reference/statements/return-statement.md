@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Return Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt die Steuerung an den Code zurück, mit dem eine der Prozeduren `Function`, `Sub`, `Get`, `Set` oder `Operator` aufgerufen wurde.  
   

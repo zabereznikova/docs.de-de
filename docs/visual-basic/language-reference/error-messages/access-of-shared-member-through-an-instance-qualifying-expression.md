@@ -20,13 +20,13 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs &#252;ber eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Instanzvariable einer Klasse oder Struktur dient für den Zugriff auf eine `Shared` Variable, Eigenschaft, Prozedur oder Ereignis in dieser Klasse oder Struktur definiert. Diese Warnung kann auch auftreten, wenn eine Instanzvariable zum Zugriff auf einen implizit freigegebenen Member einer Klasse oder Struktur, z. B. eine Konstante oder Enumeration oder einer geschachtelten Klasse oder Struktur verwendet wird.  
   
  Der Zweck der Freigabe ist nur eine einzige Kopie dieses Members zu erstellen, und diese einzelne Kopie für jede Instanz der Klasse oder Struktur, in der sie deklariert ist, verfügbar zu machen. Es ist diesem Grund für den Zugriff auf eine `Shared` Member über den Namen der Klasse oder Struktur, statt über eine Variable, die eine einzelne Instanz dieser Klasse oder Struktur enthält.  
   
- Zugreifen auf eine `Shared` Member über eine Instanzvariable kann erschweren, Code zu verstehen, indem die Tatsache, dass der Member verdeckt `Shared`. Darüber, wenn ein solcher Zugriff Bestandteil eines Ausdrucks ist, der weitere Aktionen ausführt, z. B. eine `Function` Prozedur, die eine Instanz des freigegebenen Members zurückgibt [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] umgeht den Ausdruck sowie ggf. Weitere Aktionen, die sie andernfalls führen würde.  
+ Zugreifen auf eine `Shared` Member über eine Instanzvariable kann erschweren, Code zu verstehen, indem die Tatsache, dass der Member verdeckt `Shared`. Darüber, wenn ein solcher Zugriff Bestandteil eines Ausdrucks ist, der weitere Aktionen ausführt, z. B. eine `Function` Prozedur, die eine Instanz des freigegebenen Members zurückgibt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umgeht den Ausdruck sowie ggf. Weitere Aktionen, die sie andernfalls führen würde.  
   
  Weitere Informationen und ein Beispiel finden Sie unter [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   

@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Declared Elements in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert wird.  Deklarierte Elemente können Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, Verweise auf externe Prozeduren, Operatoren, Eigenschaften, Ereignisse und Delegaten sein.  
   

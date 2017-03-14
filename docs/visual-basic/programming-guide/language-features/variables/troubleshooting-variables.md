@@ -21,9 +21,9 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Problembehandlung bei Variablen in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbeit mit Variablen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] auftreten können.  
+Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbeit mit Variablen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] auftreten können.  
   
 ## Zugriff auf Member eines Objekts ist nicht möglich  
  Wenn Ihr Code versucht, auf eine Eigenschaft oder Methode eines Objekts zuzugreifen, können zwei Arten von Fehlern auftreten:  
@@ -44,7 +44,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbe
  Um auf alle Member eines Objekts einer bestimmten Klasse zugreifen zu können, deklarieren Sie die Objektvariable nach Möglichkeit als Typ der Klasse. Wenn das nicht möglich ist, z. B. weil Sie den Objekttyp zur Kompilierzeit nicht kennen, müssen Sie für `Option Strict``Off` festlegen und die Variable als [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) deklarieren. So können der Variablen Objekte beliebigen Typs zugewiesen werden, und Sie sollten Maßnahmen ergreifen, um sicherzustellen, dass das aktuell zugewiesene Objekt einen zulässigen Typ hat. Sie können diese Entscheidung mit dem [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) treffen.  
   
 ## Andere Komponenten können nicht auf die Variable zugreifen  
- Bei [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Namen wird die *Groß\-\/Kleinschreibung nicht beachtet*. Wenn zwei Namen sich nur in der Groß\- und Kleinschreibung unterscheiden, interpretiert der Compiler sie als identisch. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
+ Bei [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Namen wird die *Groß\-\/Kleinschreibung nicht beachtet*. Wenn zwei Namen sich nur in der Groß\- und Kleinschreibung unterscheiden, interpretiert der Compiler sie als identisch. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
   
  Allerdings verwendet die Common Language Runtime \(CLR\) die *Groß\-\/Kleinschreibung unterscheidende* Bindung. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß\-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC` definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC` verweisen. Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in `abc` ändern, können andere Assemblys, die Ihre Klasse verwenden, nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß\-\/Kleinschreibung öffentlicher Elemente nicht ändern.  
   
@@ -54,7 +54,7 @@ Auf dieser Seite werden einige allgemeine Probleme aufgelistet, die bei der Arbe
  Um anderen Komponenten den Zugriff auf Ihre Variablen zu ermöglichen, behandeln Sie deren Namen so, als würde die Groß\-\/Kleinschreibung unterschieden. Stellen Sie beim Testen der Klasse oder des Moduls sicher, dass andere Assemblys sich gemäß Ihrer Erwartung an die Variablen binden. Nachdem Sie eine Komponente veröffentlicht haben, nehmen Sie keine Änderungen an vorhandenen Namen von Variablen vor, Ändern von Groß\-\/Kleinschreibung inbegriffen.  
   
 ## Falsche Variable wird verwendet  
- Wenn Sie über mehrere Variablen gleichen Namens verfügen, versucht der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler, jeden Verweis auf diesen Namen aufzulösen. Wenn die Variablen über unterschiedliche Gültigkeitsbereiche verfügen, löst der Compiler einen Verweis auf die Deklaration mit dem engsten Gültigkeitsbereich auf. Wenn sie den gleichen Gültigkeitsbereich aufweisen, gelingt die Auflösung nicht, und der Compiler signalisiert einen Fehler. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Wenn Sie über mehrere Variablen gleichen Namens verfügen, versucht der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler, jeden Verweis auf diesen Namen aufzulösen. Wenn die Variablen über unterschiedliche Gültigkeitsbereiche verfügen, löst der Compiler einen Verweis auf die Deklaration mit dem engsten Gültigkeitsbereich auf. Wenn sie den gleichen Gültigkeitsbereich aufweisen, gelingt die Auflösung nicht, und der Compiler signalisiert einen Fehler. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ### Richtige Vorgehensweise  
  Vermeiden Sie, Variablen mit gleichem Namen, aber unterschiedlichen Gültigkeitsbereichen zu verwenden. Wenn Sie andere Assemblys oder Projekte verwenden, vermeiden Sie so weit wie möglich die Verwendung von Namen, die in diesen externen Komponenten definiert werden. Wenn Sie über mehrere Variablen gleichen Namens verfügen, achten Sie darauf, jeden Verweis auf sie zu qualifizieren. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  

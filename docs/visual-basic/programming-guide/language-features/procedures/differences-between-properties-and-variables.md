@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # Differences Between Properties and Variables in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Variablen und Eigenschaften stellen jeweils Werte dar, auf die Sie zugreifen können.  Es gibt jedoch Unterschiede in Bezug auf Speicherung und Implementierung.  
   

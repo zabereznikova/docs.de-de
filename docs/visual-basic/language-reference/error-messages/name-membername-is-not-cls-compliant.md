@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Name &lt;membername&gt; is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Assembly ist als `<CLSCompliant(True)>` markiert, macht jedoch einen Member verfügbar, dessen Name mit einem Unterstrich \(`_`\) beginnt.  
   

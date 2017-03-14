@@ -42,7 +42,7 @@ ms.author: "shoag"
 caps.handback.revision: 62
 ---
 # Function-Anweisung (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert den Namen, Parameter und Code, definieren ein `Function` Verfahren.  
   

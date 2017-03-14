@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 49
 ---
 # Option Strict Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Schränkt die impliziten Datentypkonvertierungen auf ausschließlich Erweiterungskonvertierungen ein, lässt eine späte Bindung nicht zu und lässt keine implizite Typisierung zu, die einen `Object`\-Typ ergibt.  
   
@@ -70,7 +70,7 @@ Option Strict { On | Off }
 ## Implizite Einschränkungskonvertierungsfehler  
  Implizite Einschränkungskonvertierungsfehler treten auf, wenn eine implizite Datentypkonvertierung vorliegt, die eine einschränkende Konvertierung ist.  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann viele Datentypen in andere Datentypen konvertieren.  Ein Datenverlust kann auftreten, wenn der Wert eines Datentyps in einen Datentyp mit geringerer Genauigkeit oder kleinerer Kapazität konvertiert wird.  Ein Laufzeitfehler tritt auf, wenn so eine einschränkende Konvertierung fehlschlägt.  `Option Strict` stellt Kompilierzeitbenachrichtigung dieser einschränkenden Konvertierungen sicher, damit sie vermieden werden können.  Weitere Informationen finden Sie unter [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) und [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann viele Datentypen in andere Datentypen konvertieren.  Ein Datenverlust kann auftreten, wenn der Wert eines Datentyps in einen Datentyp mit geringerer Genauigkeit oder kleinerer Kapazität konvertiert wird.  Ein Laufzeitfehler tritt auf, wenn so eine einschränkende Konvertierung fehlschlägt.  `Option Strict` stellt Kompilierzeitbenachrichtigung dieser einschränkenden Konvertierungen sicher, damit sie vermieden werden können.  Weitere Informationen finden Sie unter [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) und [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Zu Konvertierungen, die Fehler verursachen können, gehören implizite Konvertierungen in Ausdrücken.  Weitere Informationen finden Sie unter den folgenden Themen:  
   
@@ -117,7 +117,7 @@ Option Strict { On | Off }
  Wenn Sie den Befehlszeilencompiler verwenden, können Sie die [\/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)\-Compileroption verwenden, um eine Einstellung für `Option Strict` anzugeben.  
   
 ### So legen Sie Option Strict in der IDE fest  
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  Weitere Informationen finden Sie unter [Introduction to the Project Designer](http://msdn.microsoft.com/de-de/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
   

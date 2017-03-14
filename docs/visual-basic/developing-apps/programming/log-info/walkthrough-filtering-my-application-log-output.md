@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Exemplarische Vorgehensweise: Filterung der Ausgaben von &quot;My.Application.Log&quot; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In dieser exemplarischen Vorgehensweise veranschaulicht, wie das Protokoll für die Filterung ändern die `My.Application.Log` Objekt, um zu steuern, welche Informationen übergeben wird, aus der `Log` Objekt, das die Listener und welche Informationen von den Listenern geschrieben wird. Sie können das Protokollierungsverhalten ändern, auch nach dem Erstellen der Anwendung, da die Konfigurationsinformationen in der Konfigurationsdatei der Anwendung gespeichert ist.  
   
@@ -30,7 +30,7 @@ In dieser exemplarischen Vorgehensweise veranschaulicht, wie das Protokoll für 
   
 #### <a name="to-build-the-sample-application"></a>Zum Erstellen der beispielanwendung  
   
-1.  Öffnen Sie eine neue [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Windows-Anwendungsprojekt.  
+1.  Öffnen Sie eine neue [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows-Anwendungsprojekt.  
   
 2.  Hinzufügen einer Schaltfläche mit dem Namen Button1 zu Form1 hinzu.  
   
@@ -145,7 +145,7 @@ In dieser exemplarischen Vorgehensweise veranschaulicht, wie das Protokoll für 
 9. Ändern Sie den Wert, der die `value` -Attributs zurück in "Information".  
   
     > [!NOTE]
-    >  Die `DefaultSwitch` Einstellung steuert nur Schalter `My.Application.Log`. Ändert sich nicht wie die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> Klassen Verhalten.  
+    >  Die `DefaultSwitch` Einstellung steuert nur Schalter `My.Application.Log`. Ändert sich nicht wie die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> Klassen Verhalten.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für My.Application.Log-Listener  
  Im vorherige Beispiel veranschaulicht das Ändern der Filterung für alle `My.Application.Log` Ausgabe. In diesem Beispiel wird veranschaulicht, wie einen einzelnen Protokolllistener filtern. Standardmäßig verwendet eine Anwendung zwei Listener, die in die Debugausgabe und die Protokolldatei schreiben.  

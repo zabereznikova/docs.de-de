@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 29
 ---
 # How to: Create a New Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Variablen werden mit einer [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) erstellt.  
   
@@ -42,7 +42,7 @@ Variablen werden mit einer [Dim Statement](../../../../visual-basic/language-ref
   
      Sie müssen das `Dim`\-Schlüsselwort nicht angeben, wenn Sie andere Schlüsselwörter in der Deklaration verwenden.  
   
-3.  Geben Sie nach den Spezifikationen den Namen der Variablen an. Dieser muss den für [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] geltenden Regeln und Konventionen entsprechen.  Weitere Informationen finden Sie unter [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+3.  Geben Sie nach den Spezifikationen den Namen der Variablen an. Dieser muss den für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] geltenden Regeln und Konventionen entsprechen.  Weitere Informationen finden Sie unter [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
     ```  
     Public Static newCustomer  
@@ -58,7 +58,7 @@ Variablen werden mit einer [Dim Statement](../../../../visual-basic/language-ref
   
 5.  Geben Sie nach der `As`\-Klausel ein Gleichheitszeichen \(`=`\) und nach dem Gleichheitszeichen den Anfangswert der Variablen an.  
   
-     [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] weist der Variablen den angegebenen Wert jedes Mal zu, wenn die `Dim`\-Anweisung ausgeführt wird.  Wenn kein Anfangswert angegeben wird, weist [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] der Variablen den Standardanfangswert ihres Datentyps zu, sobald mit der Ausführung des Codes begonnen wird, der die `Dim`\-Anweisung enthält.  
+     [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] weist der Variablen den angegebenen Wert jedes Mal zu, wenn die `Dim`\-Anweisung ausgeführt wird.  Wenn kein Anfangswert angegeben wird, weist [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] der Variablen den Standardanfangswert ihres Datentyps zu, sobald mit der Ausführung des Codes begonnen wird, der die `Dim`\-Anweisung enthält.  
   
      Handelt es sich bei der Variablen um einen Referenztyp, kann durch die Angabe des [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)\-Schlüsselworts in der `As`\-Klausel eine Instanz der betreffenden Klasse erstellt werden.  Wenn Sie `New` nicht verwenden, ist der Anfangswert der Variablen [Nothing](../../../../visual-basic/language-reference/nothing.md).  
   

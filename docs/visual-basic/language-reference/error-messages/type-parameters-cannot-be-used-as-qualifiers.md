@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Type parameters cannot be used as qualifiers
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Programmierelement wird mit einem Qualifizierungspfad qualifiziert, der einen Typparameter enthält.  
   

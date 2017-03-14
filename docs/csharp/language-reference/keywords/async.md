@@ -43,7 +43,7 @@ string contents = await contentsTask;
  Das `async`\-Schlüsselwort ist insofern kontextabhängig, dass es nur dann ein Schlüsselwort ist, wenn mit ihm eine Methode, ein Lambda\-Ausdruck oder eine anonyme Methode geändert wird.  In allen anderen Kontexten wird es als Bezeichner interpretiert.  
   
 ## Beispiel  
- Im folgenden Beispiel werden die Struktur und Ablaufsteuerung zwischen einem asynchronen Ereignishandler, `StartButton_Click`, und einer asynchronen Methode, `ExampleMethodAsync`, veranschaulicht.  Das Ergebnis der Async\-Methode ist die Länge einer heruntergeladenen Website.  Der Code ist für eine Windows Presentation Foundation \(WPF\)\- oder Windows Store\-Anwendung geeignet, die Sie in [!INCLUDE[vs_dev12](../../../csharp/getting-started/includes/vs-dev12-md.md)] erstellen. Informationen hierzu finden Sie in den Codekommentaren für die Installation der Anwendung.  
+ Im folgenden Beispiel werden die Struktur und Ablaufsteuerung zwischen einem asynchronen Ereignishandler, `StartButton_Click`, und einer asynchronen Methode, `ExampleMethodAsync`, veranschaulicht.  Das Ergebnis der Async\-Methode ist die Länge einer heruntergeladenen Website.  Der Code ist für eine Windows Presentation Foundation \(WPF\)\- oder Windows Store\-Anwendung geeignet, die Sie in [!INCLUDE[vs_dev12](~/includes/vs-dev12-md.md)] erstellen. Informationen hierzu finden Sie in den Codekommentaren für die Installation der Anwendung.  
   
 ```c#  
 // You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  

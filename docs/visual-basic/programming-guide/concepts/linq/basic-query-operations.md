@@ -31,9 +31,9 @@ ms.author: "shoag"
 caps.handback.revision: 35
 ---
 # Grundlegende Abfrageoperationen (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Ausdrücke in Visual Basic und in einige der typischen Vorgänge bei einer Abfrage.  Weitere Informationen finden Sie unter den folgenden Themen:  
+Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Ausdrücke in Visual Basic und in einige der typischen Vorgänge bei einer Abfrage.  Weitere Informationen finden Sie unter den folgenden Themen:  
   
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -42,7 +42,7 @@ Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinqext](../../..
  [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## Angeben der Datenquelle \(From\)  
- In einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage ist der erste Schritt das Angeben der Datenquelle, für die eine Abfrage durchgeführt werden soll.  Dadurch wechselt die `From`\-Klausel in einer Abfrage immer zuerst. Abfrageoperatoren wählen aus und entstehende das Ergebnis auf dem Typ der Quelle.  
+ In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage ist der erste Schritt das Angeben der Datenquelle, für die eine Abfrage durchgeführt werden soll.  Dadurch wechselt die `From`\-Klausel in einer Abfrage immer zuerst. Abfrageoperatoren wählen aus und entstehende das Ergebnis auf dem Typ der Quelle.  
   
  [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
   

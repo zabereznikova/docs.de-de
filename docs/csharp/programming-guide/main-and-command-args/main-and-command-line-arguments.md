@@ -17,7 +17,7 @@ Die `Main`\-Methode ist der Einstiegspunkt einer C\#\-Konsolenanwendung oder ein
   
 -   `Main` kann entweder einen `void`\-Rückgabetyp oder einen `int`\-Rückgabetyp aufweisen.  
   
--   Die `Main`\-Methode kann mit oder ohne einen `string[]`\-Parameter deklariert werden, der Befehlszeilenargumente enthält.  Wenn Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] zum Erstellen von Windows Forms\-Anwendungen verwenden, können Sie den Parameter manuell hinzufügen oder anderenfalls die <xref:System.Environment>\-Klasse zum Abrufen der Befehlszeilenargumente verwenden.  Parameter werden als nullbasierte Befehlszeilenargumente gelesen. Im Gegensatz zu C und C\+\+ wird der Name des Programms nicht als Erstes Befehlszeilenargument behandelt.  
+-   Die `Main`\-Methode kann mit oder ohne einen `string[]`\-Parameter deklariert werden, der Befehlszeilenargumente enthält.  Wenn Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zum Erstellen von Windows Forms\-Anwendungen verwenden, können Sie den Parameter manuell hinzufügen oder anderenfalls die <xref:System.Environment>\-Klasse zum Abrufen der Befehlszeilenargumente verwenden.  Parameter werden als nullbasierte Befehlszeilenargumente gelesen. Im Gegensatz zu C und C\+\+ wird der Name des Programms nicht als Erstes Befehlszeilenargument behandelt.  
   
 ## In diesem Abschnitt  
   
@@ -30,7 +30,7 @@ Die `Main`\-Methode ist der Einstiegspunkt einer C\#\-Konsolenanwendung oder ein
 -   [Main\(\)\-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [Command\-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   

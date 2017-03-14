@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Search Data in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement mit zahlreichen Datensätzen verwenden, können Sie den Benutzern ermöglichen, einen spezifischen Datensatz zu suchen.  Anstatt die Daten in dem Steuerelement selbst zu durchsuchen, können Sie eine Suche in Form einer Abfrage der zugrunde liegenden <xref:System.Windows.Forms.BindingSource> implementieren.  Wenn das Element gefunden wurde, können Sie es mit der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A>\-Eigenschaft auswählen und einblenden.  
   

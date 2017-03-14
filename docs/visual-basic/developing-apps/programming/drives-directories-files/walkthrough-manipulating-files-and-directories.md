@@ -30,13 +30,13 @@ ms.author: "shoag"
 caps.handback.revision: 49
 ---
 # Walkthrough: Manipulating Files and Directories in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlagen der Datei\-E\/A in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Sie beschreibt, wie eine kleine Anwendung erstellt wird, von der Textdateien in einem Verzeichnis aufgeführt und überprüft werden.  Für alle markierten Textdateien werden von der Anwendung Dateiattribute und die erste Zeile des Inhalts bereitgestellt.  Eine Option zum Schreiben von Informationen in eine Protokolldatei steht zur Verfügung.  
+Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlagen der Datei\-E\/A in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  Sie beschreibt, wie eine kleine Anwendung erstellt wird, von der Textdateien in einem Verzeichnis aufgeführt und überprüft werden.  Für alle markierten Textdateien werden von der Anwendung Dateiattribute und die erste Zeile des Inhalts bereitgestellt.  Eine Option zum Schreiben von Informationen in eine Protokolldatei steht zur Verfügung.  
   
- Diese exemplarische Vorgehensweise verwendet Mitglieder von `My.Computer.FileSystem Object`, die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verfügbar sind.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  Am Ende der exemplarischen Vorgehensweise wird ein entsprechendes Beispiel bereitgestellt, das Klassen vom <xref:System.IO>\-Namespace verwendet.  
+ Diese exemplarische Vorgehensweise verwendet Mitglieder von `My.Computer.FileSystem Object`, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbar sind.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  Am Ende der exemplarischen Vorgehensweise wird ein entsprechendes Beispiel bereitgestellt, das Klassen vom <xref:System.IO>\-Namespace verwendet.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie das Projekt  
   
@@ -48,7 +48,7 @@ Diese exemplarische Vorgehensweise bietet Ihnen eine Einführung in die Grundlag
   
 3.  Geben Sie im Feld **Name** die Bezeichnung `FileExplorer` ein, um den Projektnamen festzulegen, und klicken Sie dann auf **OK**.  
   
-     Das Projekt wird von [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)] dem **Projektmappen\-Explorer** hinzugefügt, und der Windows Forms\-Designer wird geöffnet.  
+     Das Projekt wird von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dem **Projektmappen\-Explorer** hinzugefügt, und der Windows Forms\-Designer wird geöffnet.  
   
 4.  Fügen Sie dem Formular die in der folgenden Tabelle genannten Steuerelemente hinzu, und legen Sie deren Eigenschaften wie beschrieben fest.  
   

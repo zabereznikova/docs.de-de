@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # &#39;#Region&#39; and &#39;#End Region&#39; statements are not valid within method bodies/multiline lambdas
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der `#Region`\-Block muss auf Klassen\-, Modul\- oder Namespaceebene deklariert werden.  Eine reduzierbare Region kann eine oder mehrere Prozeduren umfassen, kann aber nicht in einer Prozedur beginnen oder enden.  
   

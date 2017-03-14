@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # My.Computer.FileSystem Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften und Methoden für das Arbeiten mit Laufwerken, Dateien und Verzeichnissen bereit.  
   

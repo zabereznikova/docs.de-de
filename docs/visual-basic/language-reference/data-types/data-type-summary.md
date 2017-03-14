@@ -50,7 +50,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Data Type Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In der folgenden Tabelle sind die Datentypen von Visual Basic, die Typen der Common Language Runtime, die sie unterstützen, und die entsprechenden nominalen Speicherbelegungen und Wertbereiche aufgeführt.  
   

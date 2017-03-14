@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Type &#39;&lt;typename&gt;&#39; has no constructors
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`.  Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
@@ -33,7 +33,7 @@ Ein Typ unterstützt nicht den Aufruf von `Sub New()`.  Eine mögliche Ursache i
   
 2.  Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.  
   
-3.  Wenn der Fehler erneut auftritt, installieren Sie den [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler neu.  
+3.  Wenn der Fehler erneut auftritt, installieren Sie den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler neu.  
   
 4.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   

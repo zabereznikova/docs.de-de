@@ -36,9 +36,9 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # Me, My, MyBase, and MyClass in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-`Me`, `My`, `MyBase` und `MyClass` in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] weisen ähnliche Namen auf, werden jedoch zu unterschiedlichen Zwecken verwendet.  In diesem Thema wird jede dieser Entitäten beschrieben, um die Unterschiede zu erläutern.  
+`Me`, `My`, `MyBase` und `MyClass` in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] weisen ähnliche Namen auf, werden jedoch zu unterschiedlichen Zwecken verwendet.  In diesem Thema wird jede dieser Entitäten beschrieben, um die Unterschiede zu erläutern.  
   
 ## Me  
  Das `Me`\-Schlüsselwort ermöglicht einen Verweis auf die bestimmte Instanz einer Klasse oder Struktur, in der der Code momentan ausgeführt wird.  Das `Me`\-Schlüsselwort verhält sich wie eine Objektvariable oder eine Strukturvariable, die auf die aktuelle Instanz verweist.  `Me` ist vor allem bei der Übergabe von Informationen über die momentan ausgeführte Instanz einer Klasse oder Struktur an eine Prozedur in einer anderen Klasse oder Struktur oder in einem anderen Modul hilfreich.  
@@ -59,7 +59,7 @@ ChangeFormColor(Me)
 ```  
   
 ## My  
- Die `My`\-Funktion ermöglicht es, einfach und intuitiv auf eine Reihe von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassen zuzugreifen, sodass der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Benutzer mit dem Computer, der Anwendung, mit Einstellungen, Ressourcen usw. interagieren kann.  
+ Die `My`\-Funktion ermöglicht es, einfach und intuitiv auf eine Reihe von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Klassen zuzugreifen, sodass der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Benutzer mit dem Computer, der Anwendung, mit Einstellungen, Ressourcen usw. interagieren kann.  
   
 ## MyBase  
  Das `MyBase`\-Schlüsselwort verhält sich wie eine Objektvariable, die auf die Basisklasse der aktuellen Instanz einer Klasse verweist.  `MyBase` wird häufig für den Zugriff auf Basisklassenmember verwendet, die in einer abgeleiteten Klasse überschrieben werden oder für die ein Shadowing durchgeführt wird.  `MyBase.New` dient dazu, Basisklassenkonstruktoren aus einem abgeleiteten Klassenkonstruktor explizit aufzurufen.  

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Option &lt;keyword&gt; Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Leitet eine Anweisung ein, die eine Compileroption angibt, die für die ganze Quelldatei gilt.  
   

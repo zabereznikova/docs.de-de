@@ -30,14 +30,14 @@ Bei einer anonymen Funktion handelt es sich um eine "Inlineanweisung" bzw. einen
     >  Lambda\-Ausdrücke können an Ausdrucksbaumstrukturen und an Delegaten gebunden werden.  
   
 ## Die Entwicklung von Delegaten in C\#  
- In C\# 1.0 wurde eine Instanz eines Delegaten durch explizites Initialisieren mit einer Methode erstellt, die an anderer Stelle im Code definiert war.  In C\# 2.0 wurde das Konzept anonymer Methoden als Möglichkeit eingeführt, unbenannte Inlineanweisungsblöcke zu schreiben, die in einem Delegataufruf ausgeführt werden können.  In C\# 3.0 wurden Lambda\-Ausdrücke eingeführt, die vom Konzept her anonymen Methoden ähneln, jedoch aussagekräftiger und präziser sind.  Diese beiden Funktionen werden allgemein als *anonyme Funktionen* bezeichnet.  Im Allgemeinen sollten Anwendungen, die mit Version 3.5 und höher von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] arbeiten, Lambda\-Ausdrücke verwenden.  
+ In C\# 1.0 wurde eine Instanz eines Delegaten durch explizites Initialisieren mit einer Methode erstellt, die an anderer Stelle im Code definiert war.  In C\# 2.0 wurde das Konzept anonymer Methoden als Möglichkeit eingeführt, unbenannte Inlineanweisungsblöcke zu schreiben, die in einem Delegataufruf ausgeführt werden können.  In C\# 3.0 wurden Lambda\-Ausdrücke eingeführt, die vom Konzept her anonymen Methoden ähneln, jedoch aussagekräftiger und präziser sind.  Diese beiden Funktionen werden allgemein als *anonyme Funktionen* bezeichnet.  Im Allgemeinen sollten Anwendungen, die mit Version 3.5 und höher von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] arbeiten, Lambda\-Ausdrücke verwenden.  
   
  Im folgenden Beispiel wird die Entwicklung der Delegaterstellung von C\# 1.0 bis C\# 3.0 veranschaulicht:  
   
  [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [Anweisungen, Ausdrücke und Operatoren](../../../csharp/programming-guide/statements-expressions-operators/index.md)   

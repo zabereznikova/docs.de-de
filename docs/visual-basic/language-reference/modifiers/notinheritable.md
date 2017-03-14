@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # NotInheritable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Gibt an, dass eine Klasse nicht als Basisklasse verwendet werden kann.  
   

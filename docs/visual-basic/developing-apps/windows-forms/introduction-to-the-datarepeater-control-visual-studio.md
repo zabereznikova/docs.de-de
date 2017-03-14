@@ -19,7 +19,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Introduction to the DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement von Visual Basic Power Packs ist ein bildlauffähiger Container für Steuerelemente, die wiederkehrende Daten anzeigen, z. B. Zeilen in einer Datenbanktabelle.  Dieses kann als Alternative zum <xref:System.Windows.Forms.DataGridView>\-Steuerelement verwendet werden, wenn Sie eine genauere Steuerung des Datenlayouts benötigen.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "wiederholt" eine Gruppe zusammengehöriger Steuerelemente, indem mehrere Instanzen in einer Bildlaufansicht erstellt werden.  Benutzer können so mehrere Datensätze gleichzeitig anzeigen.  
   
@@ -28,7 +28,7 @@ Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement von Visu
   
  Zur Laufzeit wird <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> in ein virtuelles <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>\-Objekt kopiert, das zum Anzeigen der Daten verwendet wird, wenn die einzelnen Datensätze per Bildlauf angezeigt werden.  Sie können die Darstellung einzelner Datensätze im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>\-Ereignis anpassen, z. B. indem Sie ein Feld basierend auf dem enthaltenen Wert hervorheben.  Weitere Informationen hierzu finden Sie unter [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md).  
   
- Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wird häufig zur Anzeige von Daten aus einer Datenbanktabelle oder anderer gebundener Datenquellen eingesetzt.  Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement kann nicht nur an [!INCLUDE[vstecado](../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)]\-Datenobjekte, sondern auch an eine beliebige Klasse gebunden werden, die die <xref:System.Collections.IList>\-Schnittstelle \(einschließlich Arrays\), die <xref:System.ComponentModel.IListSource>\-Schnittstelle, die <xref:System.ComponentModel.IBindingList>\-Schnittstelle oder die <xref:System.ComponentModel.IBindingListView>\-Schnittstelle implementiert.  
+ Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wird häufig zur Anzeige von Daten aus einer Datenbanktabelle oder anderer gebundener Datenquellen eingesetzt.  Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement kann nicht nur an [!INCLUDE[vstecado](~/includes/vstecado-md.md)]\-Datenobjekte, sondern auch an eine beliebige Klasse gebunden werden, die die <xref:System.Collections.IList>\-Schnittstelle \(einschließlich Arrays\), die <xref:System.ComponentModel.IListSource>\-Schnittstelle, die <xref:System.ComponentModel.IBindingList>\-Schnittstelle oder die <xref:System.ComponentModel.IBindingListView>\-Schnittstelle implementiert.  
   
 ### Datenbindung  
  Zur Datenbindung ziehen Sie in der Regel Felder aus dem Fenster **Datenquellen** auf das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement.  Weitere Informationen hierzu finden Sie unter [How to: Display Bound Data in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md).  

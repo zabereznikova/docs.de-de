@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 32
 ---
 # XML-Elementliteral (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.  
   
@@ -112,18 +112,18 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
  Sie können die XML-Literale Syntax erstellen <xref:System.Xml.Linq.XElement> Objekte in Ihrem Code.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen. Dieses Feature können Sie Inhalt aus einem XML-Dokument kopieren und Einfügen direkt in ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Programm.  
+>  Ein XML-literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen. Dieses Feature können Sie Inhalt aus einem XML-Dokument kopieren und Einfügen direkt in ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Programm.  
   
  Eingebettete Ausdrücke der Form `<%=` `exp` `%>` ermöglichen es Ihnen, einem XML-Elementliteral dynamische Informationen hinzugefügt. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler konvertiert das XML-Elementliteral in Aufrufe an die <xref:System.Xml.Linq.XElement.%23ctor%2A> Konstruktor und, falls erforderlich, die <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Konstruktor.  
+ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert das XML-Elementliteral in Aufrufe an die <xref:System.Xml.Linq.XElement.%23ctor%2A> Konstruktor und, falls erforderlich, die <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Konstruktor.  
   
 ## <a name="xml-namespaces"></a>XML-Namespaces  
  XML-Namespacepräfixe sind nützlich, wenn Sie XML-Literale mit Elementen aus demselben Namespace oft in Code erstellen. Können Sie globale XML-Namespacepräfixe verwenden, die mit der `Imports` -Anweisung oder lokale Präfixe, die mit der `xmlns:``xmlPrefix`= "`xmlNamespace`" Attributsyntax. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
  Gemäß den Bereichsregeln für XML-Namespaces haben lokale Präfixe Vorrang gegenüber globalen Präfixen. Wenn ein XML-Literal einen XML-Namespace definiert sind, steht jedoch diesem Namespace nicht auf Ausdrücke, die in einem eingebetteten Ausdruck angezeigt werden. Die eingebettete Ausdruck kann nur auf den globalen XML-Namespace zugreifen.  
   
- Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler konvertiert jeden globalen XML-Namespace, die von einem XML-literal in eine lokale Namespacedefinition im generierten Code verwendet wird. Globale XML-Namespaces, die nicht verwendet werden, erscheinen nicht im generierten Code.  
+ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler konvertiert jeden globalen XML-Namespace, die von einem XML-literal in eine lokale Namespacedefinition im generierten Code verwendet wird. Globale XML-Namespaces, die nicht verwendet werden, erscheinen nicht im generierten Code.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein einfaches XML-Element zu erstellen, die zwei geschachtelte leere Elemente.  

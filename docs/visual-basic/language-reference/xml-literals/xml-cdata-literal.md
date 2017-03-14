@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # XML CDATA Literal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal, das ein <xref:System.Xml.Linq.XCData>\-Objekt darstellt.  
   
@@ -55,9 +55,9 @@ Ein Literal, das ein <xref:System.Xml.Linq.XCData>\-Objekt darstellt.
  Ein XML\-CDATA\-Literal kann einer Variablen zugewiesen oder in einem XML\-Elementliteral eingeschlossen werden.  
   
 > [!NOTE]
->  Ein XML\-Literal kann mehrere Zeilen umfassen, verwendet jedoch keine Zeilenfortsetzungszeichen.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
+>  Ein XML\-Literal kann mehrere Zeilen umfassen, verwendet jedoch keine Zeilenfortsetzungszeichen.  So kann Inhalt aus einem XML\-Dokument kopiert und direkt in ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm eingefügt werden.  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-CDATA\-Literal in einen Aufruf des <xref:System.Xml.Linq.XCData.%23ctor%2A>\-Konstruktors.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-CDATA\-Literal in einen Aufruf des <xref:System.Xml.Linq.XCData.%23ctor%2A>\-Konstruktors.  
   
 ## Beispiel  
  Im folgenden Beispiel wird ein CDATA\-Abschnitt mit dem Text "Can contain literal \<XML\> Tags" erstellt.  

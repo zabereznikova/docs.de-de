@@ -30,7 +30,7 @@ ms.author: "shoag"
 caps.handback.revision: 40
 ---
 # Imports Statement (.NET Namespace and Type)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ermöglicht Typnamenverweise ohne Namespaceangabe.  
   

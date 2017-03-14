@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Subscript out of range (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Arrayfeldindex ist ungültig, weil er außerhalb des zulässigen Bereichs liegt.  Der niedrigste Indexwert für eine Dimension beträgt immer 0, während der höchste Indexwert für eine Dimension durch die `GetUpperBound`\-Methode zurückgegeben wird.  
   

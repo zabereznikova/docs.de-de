@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Walkthrough: Declaring and Raising Events (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Ereignisse für eine Klasse mit der Bezeichnung `Widget` deklariert und ausgelöst werden.  Nachdem Sie die einzelnen Schritte ausgeführt haben, können Sie bei Interesse auch das an diese Thematik anknüpfende Thema \([Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)\) lesen. Dort wird gezeigt, wie Ereignisse aus `Widget`\-Objekten verwendet werden, um in einer Anwendung Statusinformationen zur Verfügung zu stellen.  
   
@@ -37,7 +37,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Ereignisse fü
   
 #### So erstellen Sie das Codebeispiel für dieses Thema  
   
-1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
+1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Windows\-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
   
 2.  Fügen Sie `Form1` zwei Schaltflächen und eine Bezeichnung hinzu.  
   

@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # XML Comment Literal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Literal, das ein <xref:System.Xml.Linq.XComment>\-Objekt darstellt.  
   
@@ -55,9 +55,9 @@ Ein Literal, das ein <xref:System.Xml.Linq.XComment>\-Objekt darstellt.
  Ein XML\-Kommentarliteral kann einer Variablen zugewiesen oder in einem XML\-Elementliteral eingeschlossen werden.  
   
 > [!NOTE]
->  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu verwenden.  Mit diesem Feature können Sie den Inhalt eines XML\-Dokuments kopieren und direkt in ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm einfügen.  
+>  Ein XML\-Literal kann mehrere Zeilen umfassen, ohne Zeilenfortsetzungszeichen zu verwenden.  Mit diesem Feature können Sie den Inhalt eines XML\-Dokuments kopieren und direkt in ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm einfügen.  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Kommentarliteral in einen Aufruf des <xref:System.Xml.Linq.XComment.%23ctor%2A>\-Konstruktors.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert das XML\-Kommentarliteral in einen Aufruf des <xref:System.Xml.Linq.XComment.%23ctor%2A>\-Konstruktors.  
   
 ## Beispiel  
  Im folgenden Beispiel wird ein XML\-Kommentar erstellt, der den Text "This is a comment" enthält.  

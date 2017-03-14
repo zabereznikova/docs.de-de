@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Statements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die Themen in diesem Abschnitt enthalten Tabellen der Visual Basic\-Deklaration und mit ausführbaren Anweisungen sowie mit wichtigen Listen, die für zahlreiche Anweisungen gelten.  
   

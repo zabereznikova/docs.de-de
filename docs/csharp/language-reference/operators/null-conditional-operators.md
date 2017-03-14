@@ -66,7 +66,7 @@ PropertyChanged?.Invoke(e)
  Sie müssen die `Invoke`\-Methode explizit aufrufen, da es keine Aufrufsyntax für Null\-Bedingungsdelegate gibt `PropertyChanged?(e)`.  Es gab zu viele mehrdeutige Analysesituationen.  
   
 ## Sprachspezifikationen  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
  Weitere Informationen finden Sie in der [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).  
   

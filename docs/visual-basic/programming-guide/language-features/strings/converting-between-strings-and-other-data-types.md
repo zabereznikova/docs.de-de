@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Converting Between Strings and Other Data Types in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Abschnitt wird beschrieben, wie Zeichenfolgen in andere Datentypen konvertiert werden.  
   

@@ -23,11 +23,11 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Call a Property Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Eigenschaftenprozedur wird aufgerufen, wenn Sie in der Eigenschaft einen Wert speichern oder deren Wert abrufen.  Auf Eigenschaften wird auf die gleiche Weise zugegriffen wie auf Variablen.  
   
- Mit der `Set`\-Prozedur der Eigenschaft wird ein Wert gespeichert, und mit der `Get`\-Prozedur der Eigenschaft wird ihr Wert abgerufen.  Sie rufen diese Prozeduren jedoch nicht explizit über ihren Namen auf.  Sie verwenden stattdessen die Eigenschaft in einer Zuweisungsanweisung oder einem Ausdruck wie beim Speichern oder Abrufen eines Variablenwerts.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
+ Mit der `Set`\-Prozedur der Eigenschaft wird ein Wert gespeichert, und mit der `Get`\-Prozedur der Eigenschaft wird ihr Wert abgerufen.  Sie rufen diese Prozeduren jedoch nicht explizit über ihren Namen auf.  Sie verwenden stattdessen die Eigenschaft in einer Zuweisungsanweisung oder einem Ausdruck wie beim Speichern oder Abrufen eines Variablenwerts.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft die Prozeduren der Eigenschaft auf.  
   
 ### So rufen Sie die Get\-Prozedur einer Eigenschaft auf  
   

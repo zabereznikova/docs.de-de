@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # How to: Append to Text Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>\-Methode können Daten an eine Textdatei angefügt werden, indem der `append`\-Parameter auf `True` festgelegt wird.  
   

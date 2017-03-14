@@ -20,11 +20,11 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Miscellaneous Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet verschiedene Datentypen, die für andere Werte als Ziffern oder Zeichen bestimmt sind.  Mit diesen Datentypen können besondere Daten wie ja\/nein\-Werte, Datums\- bzw. Uhrzeitangaben und Objektadressen dargestellt werden.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bietet verschiedene Datentypen, die für andere Werte als Ziffern oder Zeichen bestimmt sind.  Mit diesen Datentypen können besondere Daten wie ja\/nein\-Werte, Datums\- bzw. Uhrzeitangaben und Objektadressen dargestellt werden.  
   
- Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## Boolean\-Datentyp  
  Der [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ist ein Wert ohne Vorzeichen, der als `True` oder `False` interpretiert wird.  Die Datenbreite hängt von der implementierenden Plattform ab.  Wenn eine Variable nur einen von zwei Werten annehmen kann, z. B. wahr\/falsch, ja\/nein, ein\/aus, deklarieren Sie sie als `Boolean`\-Variable.  

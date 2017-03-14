@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # Type of &#39;&lt;variablename&gt;&#39; cannot be inferred because the loop bounds and the step variable do not widen to the same type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie haben eine `For...Next`\-Schleife geschrieben, in der der Compiler aufgrund der folgenden Bedingungen keinen Datentyp für die Schleifensteuerungsvariable ableiten kann:  
   

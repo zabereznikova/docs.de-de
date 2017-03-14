@@ -69,7 +69,7 @@ caps.handback.revision: 53
  Sie verwenden die Konstrukte [struct](../../../csharp/language-reference/keywords/struct.md), [class](../../../csharp/language-reference/keywords/class.md), [interface](../../../csharp/language-reference/keywords/interface.md) und [enum](../../../csharp/language-reference/keywords/enum.md), um eigene benutzerdefinierte Typen zu erstellen.  Die .NET Framework\-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können.  Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C\#\-Programm verfügbar.  Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind.  Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen \(und Konstanten\) des in dieser Assembly deklarierten Typs im Quellcode deklarieren.  Weitere Informationen finden Sie in der Dokumentation zur [.NET Framework\-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=217856).  
   
 ## Das allgemeine Typsystem  
- Mit zwei grundlegenden Punkten über das System der Typen in [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] sollten Sie vertraut sein:  
+ Mit zwei grundlegenden Punkten über das System der Typen in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sollten Sie vertraut sein:  
   
 -   Es unterstützt das Prinzip der Vererbung.  Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden.  Der abgeleitete Typ erbt \(mit einigen Beschränkungen\) die Methoden, Eigenschaften und anderen Member des Basistyps.  Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie.  Alle Typen, einschließlich integrierter numerischer Typen, z. B. <xref:System.Int32?displayProperty=fullName> \(C\#\-Schlüsselwort: [int](../../../csharp/language-reference/keywords/int.md)\), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich <xref:System.Object?displayProperty=fullName> \(C\#\-Schlüsselwort: [object](../../../csharp/language-reference/keywords/object.md)\).  Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md) \(CTS\) bezeichnet.  Weitere Informationen zur Vererbung in C\# finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -109,7 +109,7 @@ char c = 'Z';
   
  [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
- Weitere Informationen über Strukturen finden Sie unter [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md).  Weitere Informationen über Werttypen im [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] finden Sie unter [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md).  
+ Weitere Informationen über Strukturen finden Sie unter [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md).  Weitere Informationen über Werttypen im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] finden Sie unter [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md).  
   
  Die andere Kategorie von Werttypen ist [enum](../../../csharp/language-reference/keywords/enum.md).  Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten.  So enthält z. B. die <xref:System.IO.FileMode?displayProperty=fullName>\-Enumeration in der .NET Framework\-Klassenbibliothek einen Satz benannter ganzzahliger Konstanten, die festlegen, wie eine Datei geöffnet werden soll.  Die Definition erfolgt wie im folgenden Beispiel:  
   
@@ -183,7 +183,7 @@ IMyInterface iface = new MyClass();
 -   [Variablen und Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=221228) im Buch zum [Einstieg in Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

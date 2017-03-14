@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Array declared as for loop control variable cannot be declared with an initial size
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine `For Each`\-Schleife verwendet ein Array als *Element*\-Iterationsvariable, initialisiert jedoch dieses Array.  
   

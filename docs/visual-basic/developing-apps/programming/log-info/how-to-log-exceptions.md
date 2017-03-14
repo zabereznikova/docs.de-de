@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Log Exceptions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können das `My.Application.Log`\-Objekt und das `My.Log`\-Objekt verwenden, um Informationen über in der Anwendung auftretende Ausnahmen zu protokollieren.  In diesen Beispielen wird gezeigt, wie mithilfe der `My.Application.Log.WriteException`\-Methode sowohl explizit abgefangene als auch unbehandelte Ausnahmen protokolliert werden können.  
   

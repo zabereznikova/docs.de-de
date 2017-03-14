@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Static (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Legt fest, dass eine oder mehrere deklarierte lokale Variablen nach Beendigung der Prozedur, in der sie deklariert wurden, erhalten bleiben und die letzten Werte beibehalten.  
   

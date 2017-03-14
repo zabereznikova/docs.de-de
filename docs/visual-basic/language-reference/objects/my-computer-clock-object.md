@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # My.Computer.Clock Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften für den Zugriff auf die aktuelle lokale Uhrzeit und die aktuelle koordinierte Weltzeit \(Universal Coordinated Time, UTC – entspricht Greenwich Mean Time\) der Systemuhr bereit.  
   

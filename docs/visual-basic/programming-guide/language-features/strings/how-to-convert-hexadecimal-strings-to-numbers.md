@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # How to: Convert Hexadecimal Strings to Numbers (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird eine Hexadezimalzeichenfolge mit der <xref:System.Convert.ToInt32%2A>\-Methode in eine ganze Zahl konvertiert.  
   

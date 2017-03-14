@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # Exit Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beendet eine Prozedur oder einen Block und überträgt die Steuerung sofort an die Anweisung, die auf den Prozeduraufruf oder die Blockdefinition folgt.  
   

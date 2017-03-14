@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # How to: Group Related Constant Values Together (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verwandte Konstanten lassen sich am besten mit Enumerationen gruppieren.  Sie können eine Enumeration mithilfe der `Enum`\-Anweisung im Deklarationsabschnitt einer Klasse oder eines Moduls erstellen.  Weitere Informationen finden Sie unter [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
   

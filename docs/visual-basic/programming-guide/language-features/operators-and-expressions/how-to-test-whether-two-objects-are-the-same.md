@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Test Whether Two Objects Are the Same (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn zwei auf Objekte verweisende Variablen vorhanden sind, können Sie mit dem Operator `Is` oder dem Operator `IsNot` überprüfen, ob sie auf dieselbe Instanz verweisen.  
   

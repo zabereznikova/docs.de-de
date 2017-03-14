@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # &lt;proceduresignature1&gt; is not CLS-compliant because it overloads &lt;proceduresignature2&gt; which differs from it only by array of array parameter types or by the rank of the array parameter types
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Prozedur oder Eigenschaft ist als `<CLSCompliant(True)>` markiert, doch sie überschreibt eine andere Prozedur bzw. Eigenschaft, und ihre Parameterlisten unterscheiden sich nur durch die Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.  
   

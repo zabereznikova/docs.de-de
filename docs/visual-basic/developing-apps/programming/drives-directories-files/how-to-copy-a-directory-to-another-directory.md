@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Copy a Directory to Another Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>, um ein Verzeichnis in ein anderes Verzeichnis zu kopieren.  Diese Methode kopiert den Inhalt des Verzeichnisses sowie das Verzeichnis selbst.  Wenn das Zielverzeichnis nicht vorhanden ist, wird dieses erstellt.  Wenn am Zielort ein Verzeichnis mit dem gleichen Namen vorhanden ist und `overwrite` auf `False` festgelegt ist, wird der Inhalt der beiden Verzeichnisse zusammengeführt.  Sie können während des Vorgangs einen neuen Namen für das Verzeichnis angeben.  
   

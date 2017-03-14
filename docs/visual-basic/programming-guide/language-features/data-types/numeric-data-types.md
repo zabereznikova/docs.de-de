@@ -38,11 +38,11 @@ ms.author: "shoag"
 caps.handback.revision: 25
 ---
 # Numeric Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt verschiedene *numerische Datentypen* für die Verarbeitung von Zahlen in unterschiedlichen Darstellungen bereit.  *Ganzzahlige* Typen stellen nur ganze Zahlen \(positive, negative und Null\) dar, während *nicht ganzzahlige* Typen Zahlen darstellen, die aus einem ganzzahligen Wert und aus Nachkommastellen bestehen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt verschiedene *numerische Datentypen* für die Verarbeitung von Zahlen in unterschiedlichen Darstellungen bereit.  *Ganzzahlige* Typen stellen nur ganze Zahlen \(positive, negative und Null\) dar, während *nicht ganzzahlige* Typen Zahlen darstellen, die aus einem ganzzahligen Wert und aus Nachkommastellen bestehen.  
   
- Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Eine Tabelle mit einer Gegenüberstellung der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Datentypen finden Sie unter [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## Ganzzahlige numerische Typen  
  Bei *Ganzzahldatentypen* handelt es sich um Datentypen, die nur Zahlen ohne Nachkommastellen darstellen.  
@@ -52,7 +52,7 @@ caps.handback.revision: 25
  Die ganzzahligen Datentypen *ohne Vorzeichen* sind [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) \(8 Bits\), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) \(16 Bits\), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) \(32 Bits\) und [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) \(64 Bits\).  Wenn eine Variable binäre Daten oder Daten unbekannten Typs enthält, deklarieren Sie die Variable als einen dieser Typen.  
   
 ### Leistung  
- Arithmetische Operationen werden mit ganzzahligen Typen schneller als mit anderen Typen ausgeführt.  Am schnellsten werden sie in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mit den Typen `Integer` und `UInteger` ausgeführt.  
+ Arithmetische Operationen werden mit ganzzahligen Typen schneller als mit anderen Typen ausgeführt.  Am schnellsten werden sie in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mit den Typen `Integer` und `UInteger` ausgeführt.  
   
 ### Große ganze Zahlen  
  Wenn Sie eine ganze Zahl ablegen müssen, die größer ist als der Wert, der im `Integer`\-Datentyp abgelegt werden kann, können Sie stattdessen den `Long`\-Datentyp verwenden.  `Long`\-Variablen können Zahlen von \-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten.  Operationen mit `Long`\-Variablen werden geringfügig langsamer ausgeführt als solche mit `Integer`\-Variablen.  

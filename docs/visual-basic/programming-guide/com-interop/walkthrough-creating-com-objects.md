@@ -23,16 +23,16 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # Walkthrough: Creating COM Objects with Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn Sie neue Anwendungen oder Komponenten erstellen, ist es am sinnvollsten, .NET Framework\-Assemblys zu erstellen.  Mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] können .NET Framework\-Komponenten jedoch auch problemlos für COM zur Verfügung gestellt werden.  So können neue Komponenten für ältere Anwendungen bereitgestellt werden, die COM\-Komponenten erfordern.  In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verwenden, um [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Objekte sowohl mit als auch ohne COM\-Klassenvorlage als COM\-Objekte verfügbar zu machen.  
+Wenn Sie neue Anwendungen oder Komponenten erstellen, ist es am sinnvollsten, .NET Framework\-Assemblys zu erstellen.  Mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können .NET Framework\-Komponenten jedoch auch problemlos für COM zur Verfügung gestellt werden.  So können neue Komponenten für ältere Anwendungen bereitgestellt werden, die COM\-Komponenten erfordern.  In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwenden, um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Objekte sowohl mit als auch ohne COM\-Klassenvorlage als COM\-Objekte verfügbar zu machen.  
   
  Am einfachsten können Sie COM\-Objekte mit der COM\-Klassenvorlage zur Verfügung stellen.  Die COM\-Klassenvorlage erstellt eine neue Klasse und konfiguriert anschließend das Projekt, um die Klasse und die Interoperabilitätsschicht als COM\-Objekt zu generieren und dieses anschließend im Betriebssystem zu registrieren.  
   
 > [!NOTE]
->  Sie können zwar auch eine mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellte Klasse als COM\-Objekt für nicht verwalteten Code verfügbar machen, allerdings handelt es sich dann nicht um ein echtes COM\-Objekt. Dieses Objekt kann in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nicht verwendet werden.  Weitere Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+>  Sie können zwar auch eine mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellte Klasse als COM\-Objekt für nicht verwalteten Code verfügbar machen, allerdings handelt es sich dann nicht um ein echtes COM\-Objekt. Dieses Objekt kann in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nicht verwendet werden.  Weitere Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### So erstellen Sie ein COM\-Objekt mit der COM\-Klassenvorlage  
   
@@ -42,11 +42,11 @@ Wenn Sie neue Anwendungen oder Komponenten erstellen, ist es am sinnvollsten, .N
   
 3.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
-4.  Wählen Sie **COM\-Klasse** aus der Liste **Vorlagen**, und klicken Sie dann auf **Hinzufügen**.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] fügt eine neue Klasse hinzu und konfiguriert das neue Projekt für COM\-Interop.  
+4.  Wählen Sie **COM\-Klasse** aus der Liste **Vorlagen**, und klicken Sie dann auf **Hinzufügen**.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fügt eine neue Klasse hinzu und konfiguriert das neue Projekt für COM\-Interop.  
   
 5.  Fügen Sie zur COM\-Klasse Code hinzu, z. B. Eigenschaften, Methoden und Ereignisse.  
   
-6.  Wählen Sie im Menü **Erstellen** die Option **ClassLibrary1 erstellen**.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellt die Assembly und registriert das COM\-Objekt im Betriebssystem.  
+6.  Wählen Sie im Menü **Erstellen** die Option **ClassLibrary1 erstellen**.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellt die Assembly und registriert das COM\-Objekt im Betriebssystem.  
   
 ## Erstellen von COM\-Objekten ohne die COM\-Klassenvorlage  
  Sie können eine COM\-Klasse auch manuell ohne Verwendung der COM\-Klassenvorlage erstellen.  Dieses Vorgehen wird empfohlen, wenn Sie mit der Befehlszeile arbeiten, oder wenn Sie mehr Kontrolle über die Definition von COM\-Objekten wünschen.  
@@ -94,10 +94,10 @@ Wenn Sie neue Anwendungen oder Komponenten erstellen, ist es am sinnvollsten, .N
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. Fügen Sie der Klasse Eigenschaften, Methoden und Ereignisse hinzu, und beenden Sie die Eingabe mit einer `End Class`\-Anweisung.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erstellt die Assembly und registriert das COM\-Objekt im Betriebssystem.  
+9. Fügen Sie der Klasse Eigenschaften, Methoden und Ereignisse hinzu, und beenden Sie die Eingabe mit einer `End Class`\-Anweisung.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erstellt die Assembly und registriert das COM\-Objekt im Betriebssystem.  
   
     > [!NOTE]
-    >  Die mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] generierten COM\-Objekte können nicht von anderen [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anwendungen verwendet werden, da es sich nicht um echte COM\-Objekte handelt.  Wenn Sie versuchen, Verweise auf solche COM\-Objekte hinzuzufügen, tritt ein Fehler auf.  Ausführliche Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Die mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] generierten COM\-Objekte können nicht von anderen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anwendungen verwendet werden, da es sich nicht um echte COM\-Objekte handelt.  Wenn Sie versuchen, Verweise auf solche COM\-Objekte hinzuzufügen, tritt ein Fehler auf.  Ausführliche Informationen finden Sie unter [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## Siehe auch  
  <xref:Microsoft.VisualBasic.ComClassAttribute>   

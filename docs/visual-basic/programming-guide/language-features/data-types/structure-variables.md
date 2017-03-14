@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Structure Variables (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wenn Sie eine Struktur erstellt haben, können Sie für diesen Typ Variablen auf Prozedurebene und Variablen auf Modulebene deklarieren.  Zum Beispiel können Sie eine Struktur erstellen, in der Informationen über ein Computersystem aufgezeichnet werden.  Das folgende Beispiel veranschaulicht dies.  
   

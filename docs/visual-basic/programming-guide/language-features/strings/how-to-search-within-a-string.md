@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # How to: Search Within a String (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das nachfolgende Beispiel ruft die <xref:System.String.IndexOf%2A>\-Methode für ein <xref:System.String>\-Objekt auf, um den Index des ersten Auftretens einer Teilzeichenfolge wiederzugeben.  
   

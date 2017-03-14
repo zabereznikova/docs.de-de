@@ -20,7 +20,7 @@ Eine Abfrage ist im Grunde ein Satz von Anweisungen, wie Daten abgerufen und org
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)]\-Projekt für .NET Framework, Version 3.5.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
+-   Erstellen Sie ein [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]\-Projekt für .NET Framework, Version 3.5.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
   
 -   Kopieren Sie den Code in Ihr Projekt.  
   

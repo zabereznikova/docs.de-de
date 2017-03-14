@@ -65,7 +65,7 @@ Typen, die NULL\-Werte zulassen, sind Instanzen der <xref:System.Nullable%601?di
 -   [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  <xref:System.Nullable>   

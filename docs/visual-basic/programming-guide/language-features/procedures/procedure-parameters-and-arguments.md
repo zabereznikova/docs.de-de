@@ -33,7 +33,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Procedure Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In den meisten Fällen benötigen Prozeduren einige Informationen zu den Umständen, unter denen sie aufgerufen wurden.  Prozeduren, die sich wiederholende und freigegebene Aufgaben ausführen, verwenden für jeden Aufruf andere Informationen.  Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücken, die beim Aufruf an die Prozedur übergeben werden.  
   

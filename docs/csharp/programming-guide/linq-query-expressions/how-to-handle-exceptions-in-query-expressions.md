@@ -3,7 +3,7 @@ redirect_url: /dotnet/articles/csharp/linq/handle-exceptions-in-query-expression
 caps.handback.revision: 15
 ---
 # Gewusst wie: Behandeln von Ausnahmen in Abfrageausdr&#252;cken (C#-Programmierhandbuch)
-Es ist möglich, eine Methode im Kontext eines Abfrageausdrucks aufzurufen.  Sie sollten es jedoch vermeiden, eine Methode in einem Abfrageausdruck aufzurufen, wenn dies zu unerwünschten Nebeneffekten führt, z. B. zum Ändern des Inhalts der Datenquelle oder zum Auslösen einer Ausnahme.  Dieses Beispiel zeigt, wie Sie verhindern können, dass Ausnahmen ausgelöst werden, wenn Sie Methoden in einem Abfrageausdruck aufrufen, ohne gegen die allgemeinen [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Richtlinien zur Ausnahmebehandlung zu verstoßen.  Diese Richtlinien besagen, dass spezielle Ausnahmen abgefangen werden können, wenn Sie wissen, warum sie in einem bestimmten Kontext ausgelöst werden.  Weitere Informationen finden Sie unter [Best Practices für Ausnahmen](../Topic/Best%20Practices%20for%20Exceptions.md).  
+Es ist möglich, eine Methode im Kontext eines Abfrageausdrucks aufzurufen.  Sie sollten es jedoch vermeiden, eine Methode in einem Abfrageausdruck aufzurufen, wenn dies zu unerwünschten Nebeneffekten führt, z. B. zum Ändern des Inhalts der Datenquelle oder zum Auslösen einer Ausnahme.  Dieses Beispiel zeigt, wie Sie verhindern können, dass Ausnahmen ausgelöst werden, wenn Sie Methoden in einem Abfrageausdruck aufrufen, ohne gegen die allgemeinen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Richtlinien zur Ausnahmebehandlung zu verstoßen.  Diese Richtlinien besagen, dass spezielle Ausnahmen abgefangen werden können, wenn Sie wissen, warum sie in einem bestimmten Kontext ausgelöst werden.  Weitere Informationen finden Sie unter [Best Practices für Ausnahmen](../Topic/Best%20Practices%20for%20Exceptions.md).  
   
  Im letzten Beispiel wird gezeigt, wie Sie Fälle, in denen die Ausgabe einer Ausnahme während der Ausführung einer Abfrage erforderlich ist, behandeln können.  
   
@@ -21,7 +21,7 @@ Es ist möglich, eine Methode im Kontext eines Abfrageausdrucks aufzurufen.  Sie
   
 ## Kompilieren des Codes  
   
--   Erstellen Sie ein [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)]\-Projekt für .NET Framework, Version 3.5.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
+-   Erstellen Sie ein [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]\-Projekt für .NET Framework, Version 3.5.  Standardmäßig weist das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den System.Linq\-Namespace auf.  
   
 -   Kopieren Sie den Code in Ihr Projekt.  
   

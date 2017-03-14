@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Accessing the Keyboard (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das `My.Computer.Keyboard`\-Objekt enthält Eigenschaften für den Zugriff auf den aktuellen Status der Tastatur \(z. B. Informationen über die derzeit gedrückten Tasten\) und eine Methode zum Senden von Tastaturanschlägen an das aktive Fenster.  
   

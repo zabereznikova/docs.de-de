@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Class &#39;&lt;classname&gt;&#39; cannot be found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Klasse "\<Klassenname\>" wurde nicht gefunden.Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
   
@@ -33,9 +33,9 @@ Klasse "\<Klassenname\>" wurde nicht gefunden.Diese Bedingung ist in der Regel d
   
 1.  Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2.  Wenn der Fehler erneut auftritt, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] erneut.  
+2.  Wenn der Fehler erneut auftritt, speichern Sie Ihre Arbeit, und starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] erneut.  
   
-3.  Wenn der Fehler weiterhin besteht, installieren Sie [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] neu.  
+3.  Wenn der Fehler weiterhin besteht, installieren Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] neu.  
   
 4.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   

@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Function Expression (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert die Parameter und den Code, die einen Lambda\-Funktionsausdruck definieren.  
   
@@ -82,7 +82,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## Beispiel  
- In [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)] liegen zahlreichen Abfrageoperatoren Lambda\-Ausdrücke zugrunde, die in methodenbasierten Abfragen explizit verwendet werden können.  Im folgenden Beispiel wird eine typische [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrage gefolgt von der Übersetzung der Abfrageinformationen in das Methodenformat dargestellt.  
+ In [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] liegen zahlreichen Abfrageoperatoren Lambda\-Ausdrücke zugrunde, die in methodenbasierten Abfragen explizit verwendet werden können.  Im folgenden Beispiel wird eine typische [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfrage gefolgt von der Übersetzung der Abfrageinformationen in das Methodenformat dargestellt.  
   
 ```vb#  
 Dim londonCusts = From cust In db.Customers  

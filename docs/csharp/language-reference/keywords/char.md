@@ -38,7 +38,7 @@ Das `char`\-Schlüsselwort wird verwendet, um eine Instanz der <xref:System.Char
  Der <xref:System.Char?displayProperty=fullName>\-Typ stellt mehrere statische Methoden zum Arbeiten mit `char`\-Werten bereit.  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  <xref:System.Char>   

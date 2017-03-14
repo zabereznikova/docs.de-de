@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Ein Aufruf f&#252;r eine Eigenschaft oder Methode darf keinen Verweis auf ein privates Objekt enthalten - weder als Argument, noch als R&#252;ckgabewert.
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Zu den möglichen Ursachen für diesen Fehler gehören:  
   

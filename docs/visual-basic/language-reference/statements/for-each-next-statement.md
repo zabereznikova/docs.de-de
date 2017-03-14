@@ -36,7 +36,7 @@ ms.author: "shoag"
 caps.handback.revision: 56
 ---
 # For Each...Next-Anweisung (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Wiederholt eine Reihe von Anweisungen für jedes Element in einer Auflistung.  
   
@@ -151,7 +151,7 @@ Next [ element ]
   
  **Ändern der Auflistung.** Das Enumeratorobjekt, das von <xref:System.Collections.IEnumerable.GetEnumerator%2A> normalerweise zurückgegeben wird, können Sie nicht die Auflistung ändern, indem es hinzugefügt wird, löscht, ersetzt, oder neu angeordnet werden alle Elemente.  Wenn Sie die Auflistung ändern, nachdem Sie eine `For Each`...`Next`\-Schleife gestartet haben, wird das Enumerationsobjekt ungültig, und der nächste Versuch des Zugriffs auf ein Element führt zu einer <xref:System.InvalidOperationException>\-Ausnahme.  
   
- ist jedoch Blockieren der Änderung nicht von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], sondern durch die Implementierung der \- Schnittstelle <xref:System.Collections.IEnumerable> bestimmt.  `IEnumerable` kann auf eine Weise implementiert werden, die Änderungen während der Iteration zulässt.  Für die Durchführung einer solchen dynamischen Änderung sollten Sie mit den Merkmalen der `IEnumerable`\-Implementierung für die verwendete Auflistung vertraut sein.  
+ ist jedoch Blockieren der Änderung nicht von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], sondern durch die Implementierung der \- Schnittstelle <xref:System.Collections.IEnumerable> bestimmt.  `IEnumerable` kann auf eine Weise implementiert werden, die Änderungen während der Iteration zulässt.  Für die Durchführung einer solchen dynamischen Änderung sollten Sie mit den Merkmalen der `IEnumerable`\-Implementierung für die verwendete Auflistung vertraut sein.  
   
  **Ändern von Auflistungselementen.** Die <xref:System.Collections.IEnumerator.Current%2A>\-Eigenschaft des Enumerationsobjekts ist [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) und gibt eine lokale Kopie jedes Auflistungselements zurück.  Das bedeutet, dass Sie die eigentlichen Elemente in einer `For Each`...`Next`\-Schleife nicht ändern können.  Jede Änderung erstellen Sie wirkt sich nur auf die lokale Kopie von `Current` und nicht zurück in die zugrunde liegende Auflistung wiedergegeben.  Wenn ein Element jedoch ein Verweistyp ist, können Sie die Member der Instanz ändern, auf die es zeigt.  Im folgenden Beispiel ändert den `BackColor`\-Member jedes `thisControl`\-Elements.  Sie können `thisControl` selbst jedoch nicht ändern.  
   

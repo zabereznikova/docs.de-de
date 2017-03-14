@@ -19,9 +19,9 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # Processing the XML File (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID\-Zeichenfolge generiert.  \(Informationen zum Kennzeichnen des Codes finden Sie unter [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).\) Das Konstrukt wird von der ID\-Zeichenfolge eindeutig identifiziert.  Programme, von denen die XML\-Datei verarbeitet wird, können das entsprechende [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Metadaten\-\/Reflektionselement mithilfe der ID\-Zeichenfolge identifizieren.  
+Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID\-Zeichenfolge generiert.  \(Informationen zum Kennzeichnen des Codes finden Sie unter [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).\) Das Konstrukt wird von der ID\-Zeichenfolge eindeutig identifiziert.  Programme, von denen die XML\-Datei verarbeitet wird, können das entsprechende [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Metadaten\-\/Reflektionselement mithilfe der ID\-Zeichenfolge identifizieren.  
   
  Die XML\-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine unstrukturierte Liste mit einer generierten ID für jedes Element.  
   
@@ -40,11 +40,11 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 |P|Eigenschaft: `Property` \(einschließlich Standardeigenschaften\)|  
 |M|Methode: `Sub`, `Function`, `Declare`, `Operator`|  
 |E|Ereignis: `Event`|  
-|\!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen.  Vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler werden Fehlerinformationen für Links generiert, die nicht aufgelöst werden können.|  
+|\!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen.  Vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler werden Fehlerinformationen für Links generiert, die nicht aufgelöst werden können.|  
   
 -   Beim zweiten Teil von `String` handelt es sich um den vollqualifizierten Namen des Elements, beginnend mit dem Stamm des Namespaces.  Der Name des Elements, der bzw. die einschließende\(n\) Typ\(en\) und der Namespace sind durch Punkte getrennt.  Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Nummernzeichen \(\#\) ersetzt.  Es wird vorausgesetzt, dass kein Element ein Nummernzeichen direkt im Namen aufweist.  Der vollqualifizierte Name des `String`\-Konstruktors würde beispielsweise `System.String.#ctor` lauten.  
   
--   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste.  Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet.  Die Argumente werden durch Kommas voneinander getrennt.  Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Signatur:  
+-   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste.  Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet.  Die Argumente werden durch Kommas voneinander getrennt.  Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Signatur:  
   
 ## Beispiel  
  Im folgenden Codebeispiel wird die Generierung der ID\-Zeichenfolgen für eine Klasse und deren Member dargestellt:  

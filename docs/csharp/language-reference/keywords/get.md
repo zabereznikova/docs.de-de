@@ -30,7 +30,7 @@ Das `get`\-Schlüsselwort definiert eine *accessor*\-Methode in einer Eigenschaf
  [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_2.cs)]  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Referenz](../../../csharp/language-reference/index.md)   

@@ -31,7 +31,7 @@ ms.author: "shoag"
 caps.handback.revision: 28
 ---
 # Operator Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Deklariert Symbol, Operanden und Code eines Operators, die eine Operatorprozedur für eine Klasse oder Struktur definieren.  
   

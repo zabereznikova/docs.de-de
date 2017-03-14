@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Keywords as Element Names in Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Jedes Programmelement \(z. B. Variablen, Klassen oder Member\) kann denselben Namen wie ein eingeschränktes Schlüsselwort haben.  Beispielsweise können Sie eine Variable mit dem Namen `Loop` erstellen.  Um jedoch auf diese Version der Variablen verweisen zu können, die denselben Namen wie das geschützte `Loop`\-Schlüsselwort aufweist, müssen Sie dem Namen entweder die vollständige qualifizierende Zeichenfolge voranstellen, oder ihn wie im folgenden Beispiel in eckige Klammern \(`[ ]`\) einschließen:  
   

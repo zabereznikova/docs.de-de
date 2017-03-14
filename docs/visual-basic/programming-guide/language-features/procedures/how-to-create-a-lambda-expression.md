@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # How to: Create a Lambda Expression (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen aufweist.  Lambda\-Ausdrücke können an allen Stellen verwendet werden, an denen ein Delegattyp gültig ist.  
   
@@ -109,7 +109,7 @@ Ein *Lambda\-Ausdruck* ist eine Funktion oder Unterroutine, die keinen Namen auf
   
  [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
- Das vorherige Beispiel ist äquivalent zu folgendem, in [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Syntax geschriebenem Code:  
+ Das vorherige Beispiel ist äquivalent zu folgendem, in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]\-Syntax geschriebenem Code:  
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   

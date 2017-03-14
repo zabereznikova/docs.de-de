@@ -15,7 +15,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Visual Basic-Laufzeitmeldungen
-Dieser Abschnitt enthält die während der Laufzeit angezeigten [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Fehlermeldungen.  
+Dieser Abschnitt enthält die während der Laufzeit angezeigten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Fehlermeldungen.  
   
  [\<Adresse\> ist keine gültige Remotedateiadresse.](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   

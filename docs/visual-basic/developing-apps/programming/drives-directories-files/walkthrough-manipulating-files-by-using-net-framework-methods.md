@@ -30,14 +30,14 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Walkthrough: Manipulating Files by Using .NET Framework Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In dieser exemplarischen Vorgehensweise wird erläutert, wie Sie mithilfe der <xref:System.IO.StreamReader>\-Klasse Dateien öffnen und lesen, mit einer Instanz der <xref:System.IO.StreamReader>\-Klasse in eingelesenen Dateien nach einer Zeichenfolge suchen und mithilfe der <xref:System.IO.StreamWriter>\-Klasse in Dateien schreiben.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## Erstellen der Anwendung  
- Starten Sie [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)], und beginnen Sie mit dem Projekt, indem Sie ein Formular erstellen, das der Benutzer zum Schreiben in die vorgesehene Datei verwenden kann.  
+ Starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], und beginnen Sie mit dem Projekt, indem Sie ein Formular erstellen, das der Benutzer zum Schreiben in die vorgesehene Datei verwenden kann.  
   
 #### So erstellen Sie das Projekt  
   
@@ -47,7 +47,7 @@ In dieser exemplarischen Vorgehensweise wird erläutert, wie Sie mithilfe der <x
   
 3.  Geben Sie im Feld **Name** die Bezeichnung `MyDiary` ein, und klicken Sie auf **OK**.  
   
-     Das Projekt wird von [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs-md.md)] dem **Projektmappen\-Explorer** hinzugefügt, und der **Windows Forms\-Designer** wird geöffnet.  
+     Das Projekt wird von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dem **Projektmappen\-Explorer** hinzugefügt, und der **Windows Forms\-Designer** wird geöffnet.  
   
 4.  Fügen Sie dem Formular die in der folgenden Tabelle genannten Steuerelemente hinzu, und legen Sie deren Eigenschaften wie beschrieben fest.  
   

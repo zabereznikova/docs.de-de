@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 5
 ---
 # Friend assembly reference &lt;reference&gt; is invalid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Friend\-Assemblyverweis "\<Verweis\>" ist ungültig.Mit starken Namen signierte Assemblys müssen einen öffentlichen Schlüssel in ihren InternalsVisibleTo\-Deklarationen angeben.  
   

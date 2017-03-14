@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # How to: Download a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>\-Methode kann eine Remotedatei heruntergeladen und an einem bestimmten Speicherort gespeichert werden.  Wenn der `ShowUI`\-Parameter auf `True` festgelegt ist, wird ein Dialogfeld mit dem Fortschritt des Downloads angezeigt. Über dieses Dialogfeld ist auch ein Benutzerabbruch des Vorgangs möglich.  Standardmäßig werden vorhandene Dateien gleichen Namens nicht überschrieben. Wenn vorhandene Dateien überschrieben werden sollen, legen Sie den `overwrite`\-Parameter auf `True` fest.  
   
@@ -37,7 +37,7 @@ Mit der <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>\-Methode ka
   
 -   Die Anforderung wurde von der Website \(<xref:System.Net.WebException>\) verweigert.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+ [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 > [!IMPORTANT]
 >  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.  Bei der Datei Form1.vb handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic\-Quelldatei.  Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  

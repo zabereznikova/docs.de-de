@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Late bound resolution; runtime errors could occur
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Einer als [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) deklarierten Variablen ist ein Objekt zugewiesen.  
   

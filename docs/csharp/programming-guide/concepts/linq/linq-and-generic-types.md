@@ -21,7 +21,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 16
 ---
 # LINQ and Generic Types (C#)
-[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen basieren auf generischen Typen, die in Version 2.0 von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] eingeführt wurden.  Sie benötigen kein ausführliches Wissen über Generika, um Abfragen zu schreiben.  Dennoch ist es gut, wenn Sie zwei grundlegende Konzepte verstehen:  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragen basieren auf generischen Typen, die in Version 2.0 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eingeführt wurden.  Sie benötigen kein ausführliches Wissen über Generika, um Abfragen zu schreiben.  Dennoch ist es gut, wenn Sie zwei grundlegende Konzepte verstehen:  
   
 1.  Wenn Sie eine Instanz einer generischen Auflistungsklasse erstellen, wie zum Beispiel <xref:System.Collections.Generic.List%601>, ersetzen Sie das "T" durch den Typ von Objekten, die die Liste enthalten wird.  Zum Beispiel wird eine Liste von Zeichenfolgen als `List<string>` und eine Liste von `Customer`\-Objekten als `List<Customer>` ausgedrückt.  Eine generische Liste weist eine starke Typisierung auf und bietet viele Vorteile gegenüber Auflistungen, die ihre Elemente als <xref:System.Object> speichern.  Wenn Sie versuchen, `Customer` zu `List<string>` hinzuzufügen, tritt zur Kompilierungszeit ein Fehler auf.  Die Verwendung von generischen Auflistungen ist leicht, da Sie zur Laufzeit keine Typumwandlungen ausführen müssen.  
   
@@ -30,7 +30,7 @@ caps.handback.revision: 16
  Weitere Informationen zu Generika finden Sie unter [Generika](../../../../csharp/programming-guide/generics/index.md).  
   
 ## IEnumerable\<T\>\-Variablen in LINQ\-Abfragen  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragevariablen werden als <xref:System.Collections.Generic.IEnumerable%601> typisiert oder als abgeleiteter Typ, wie zum Beispiel <xref:System.Linq.IQueryable%601>.  Wenn Sie eine Abfragevariable mit der Typisierung `IEnumerable<Customer>` sehen, so bedeutet dies lediglich, dass die Abfrage bei ihrer Ausführung eine Sequenz von keinen oder mehreren `Customer`\-Objekten erstellen wird.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]\-Abfragevariablen werden als <xref:System.Collections.Generic.IEnumerable%601> typisiert oder als abgeleiteter Typ, wie zum Beispiel <xref:System.Linq.IQueryable%601>.  Wenn Sie eine Abfragevariable mit der Typisierung `IEnumerable<Customer>` sehen, so bedeutet dies lediglich, dass die Abfrage bei ihrer Ausführung eine Sequenz von keinen oder mehreren `Customer`\-Objekten erstellen wird.  
   
  [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   

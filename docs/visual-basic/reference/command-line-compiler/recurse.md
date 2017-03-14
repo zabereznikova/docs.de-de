@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # /recurse
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Kompiliert Quellcodedateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnisses oder des Projektverzeichnisses.  
   
@@ -44,13 +44,13 @@ Kompiliert Quellcodedateien in allen untergeordneten Verzeichnissen des angegebe
 >  Die `/recurse`\-Option ist innerhalb der Entwicklungsumgebung von Visual Studio nicht verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
   
 ## Beispiel  
- Mit dem folgenden Code werden alle [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Dateien im aktuellen Verzeichnis kompiliert.  
+ Mit dem folgenden Code werden alle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Dateien im aktuellen Verzeichnis kompiliert.  
   
 ```  
 vbc *.vb  
 ```  
   
- Mit dem folgenden Code werden alle [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Dateien im Verzeichnis `Test\ABC` und in allen darunter befindlichen Verzeichnissen kompiliert. Es wird die Datei `Test.ABC.dll` generiert.  
+ Mit dem folgenden Code werden alle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Dateien im Verzeichnis `Test\ABC` und in allen darunter befindlichen Verzeichnissen kompiliert. Es wird die Datei `Test.ABC.dll` generiert.  
   
 ```  
 vbc /target:library /out:Test.ABC.dll /recurse:Test\ABC\*.vb  

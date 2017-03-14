@@ -20,7 +20,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Create a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 In diesem Beispiel wird unter Verwendung der <xref:System.IO.File.Create%2A>\-Methode in der <xref:System.IO.File>\-Klasse eine Textdatei im angegebenen Pfad erstellt.  
   

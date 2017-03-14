@@ -34,7 +34,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # Derived Math Functions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die folgende Tabelle enthält nicht systeminterne mathematische Funktionen, die aus den systeminternen mathematischen Funktionen des <xref:System.Math?displayProperty=fullName>\-Objekts abgeleitet werden können:  Sie können auf die systeminternen mathematischen Funktionen zugreifen, indem Sie der Datei oder dem Projekt `Imports System.Math` hinzufügen.  
   

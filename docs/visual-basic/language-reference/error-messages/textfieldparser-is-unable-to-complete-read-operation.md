@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # TextFieldParser is unable to complete the read operation because maximum buffer size has been exceeded
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Der Vorgang kann nicht abgeschlossen werden, da die maximale Puffergröße \(10.000.000 Bytes\) überschritten wurde.  
   

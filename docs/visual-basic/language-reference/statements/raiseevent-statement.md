@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # RaiseEvent Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Löst ein Ereignis aus, das auf Modulebene in einer Klasse, einem Formular oder einem Dokument deklariert wurde.  
   

@@ -26,7 +26,7 @@ ms.author: "shoag"
 caps.handback.revision: 30
 ---
 # How to: Create a Registry Key and Set Its Value in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Die `CreateSubKey`\-Methode des `My.Computer.Registry`\-Objekts kann zum Erstellen eines Registrierungsschlüssels verwendet werden.  
   

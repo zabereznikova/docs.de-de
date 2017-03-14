@@ -18,9 +18,9 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Financial Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
+Im Folgenden werden die Schlüsselwörter von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung aufgelistet.  
   
 |Aktion|Sprachelement|  
 |------------|-------------------|  

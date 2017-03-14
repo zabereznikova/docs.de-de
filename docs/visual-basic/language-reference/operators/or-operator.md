@@ -29,7 +29,7 @@ ms.author: "shoag"
 caps.handback.revision: 12
 ---
 # Or-Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Führt eine logische Disjunktion für zwei `Boolean` Ausdrücke oder eine bitweise Disjunktion für zwei numerische Ausdrücke.  
   

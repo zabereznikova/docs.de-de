@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Extension Indexer Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Bietet Zugriff auf einzelne Elemente in einer Auflistung.  
   
@@ -50,7 +50,7 @@ object(index)
 ## Hinweise  
  Mit der Erweiterungsindexereigenschaft können Sie auf einzelne Elemente in einer Auflistung zugreifen.  Diese Indexereigenschaft wird in der Regel für Ausgaben von XML\-Achseneigenschaften verwendet.  Die Achseneigenschaften des untergeordneten und des nachfolgenden XML\-Elements geben Auflistungen von <xref:System.Xml.Linq.XElement>\-Objekten oder einen Attributwert zurück.  
   
- Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler konvertiert Indexer\-Erweiterungseigenschaften in Aufrufe der `ElementAtOrDefault`\-Methode. Im Gegensatz zu einem Array\-Indexer gibt die `ElementAtOrDefault`\-Methode `Nothing` zurück, wenn der Index außerhalb des zulässigen Bereichs ist.  Dieses Verhalten ist nützlich, wenn Sie die Anzahl von Elementen in einer Auflistung nicht leicht ermitteln können.  
+ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler konvertiert Indexer\-Erweiterungseigenschaften in Aufrufe der `ElementAtOrDefault`\-Methode. Im Gegensatz zu einem Array\-Indexer gibt die `ElementAtOrDefault`\-Methode `Nothing` zurück, wenn der Index außerhalb des zulässigen Bereichs ist.  Dieses Verhalten ist nützlich, wenn Sie die Anzahl von Elementen in einer Auflistung nicht leicht ermitteln können.  
   
  Diese Indexereigenschaft ist vergleichbar mit der Erweiterungseigenschaft für Auflistungen, die <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> implementieren: Sie wird nur verwendet, wenn die Auflistung nicht über einen Indexer oder eine Standardeigenschaft verfügt.  
   

@@ -17,7 +17,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # My.Computer.Network Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt eine Eigenschaft, ein Ereignis und Methoden für die Interaktion mit dem Netzwerk bereit, an das der Computer angeschlossen ist.  
   

@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Option Explicit Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erzwingt die explizite Deklaration aller Variablen in einer Datei oder ermöglicht die implizite Deklaration von Variablen.  
   

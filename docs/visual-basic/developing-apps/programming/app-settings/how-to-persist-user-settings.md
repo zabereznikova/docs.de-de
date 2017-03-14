@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 15
 ---
 # How to: Persist User Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der `My.Settings.Save`\-Methode können Sie Änderungen an den Benutzereinstellungen beibehalten.  
   

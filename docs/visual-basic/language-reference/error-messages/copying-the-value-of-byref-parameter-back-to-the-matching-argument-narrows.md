@@ -21,21 +21,21 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument narrows from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine Prozedur wird mit einem Argument aufgerufen, das den entsprechenden Parametertyp erweitert, und die Konvertierung vom Parameter in das Argument führt zu einer Einschränkung.  
   
- Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren festlegen, um den Klassen\- oder Strukturtyp in andere Typen zu konvertieren.  Sie können auch Konvertierungsoperatoren für die umgekehrte Konvertierung festlegen, um die anderen Typen in den Klassen\- oder Strukturtyp zurückzukonvertieren.  Wenn Sie den Klassen\- oder Strukturtyp in einem Prozeduraufruf verwenden, kann [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] mithilfe dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.  
+ Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren festlegen, um den Klassen\- oder Strukturtyp in andere Typen zu konvertieren.  Sie können auch Konvertierungsoperatoren für die umgekehrte Konvertierung festlegen, um die anderen Typen in den Klassen\- oder Strukturtyp zurückzukonvertieren.  Wenn Sie den Klassen\- oder Strukturtyp in einem Prozeduraufruf verwenden, kann [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mithilfe dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.  
   
- Wenn Sie das Argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) übergeben, kopiert [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben.  In diesem Fall muss [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] anschließend beim Beenden der Prozedur den Wert der lokalen Variablen in das Argument im aufrufenden Code zurückkopieren.  
+ Wenn Sie das Argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) übergeben, kopiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben.  In diesem Fall muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] anschließend beim Beenden der Prozedur den Wert der lokalen Variablen in das Argument im aufrufenden Code zurückkopieren.  
   
- Wenn der Wert eines `ByRef`\-Arguments in die Prozedur kopiert wird und Argument sowie Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich.  Wenn sich die Typen jedoch unterscheiden, muss [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] in beide Richtungen konvertieren.  Wenn es sich bei einem der Typen um den Klassen\- oder Strukturtyp handelt, muss [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beide Typen in den jeweils anderen Typ konvertieren.  Wenn eine dieser Konvertierungen eine Erweiterungskonvertierung ist, ist die umgekehrte Konvertierung möglicherweise eine einschränkende Konvertierung.  
+ Wenn der Wert eines `ByRef`\-Arguments in die Prozedur kopiert wird und Argument sowie Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich.  Wenn sich die Typen jedoch unterscheiden, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] in beide Richtungen konvertieren.  Wenn es sich bei einem der Typen um den Klassen\- oder Strukturtyp handelt, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beide Typen in den jeweils anderen Typ konvertieren.  Wenn eine dieser Konvertierungen eine Erweiterungskonvertierung ist, ist die umgekehrte Konvertierung möglicherweise eine einschränkende Konvertierung.  
   
  **Fehler\-ID:** BC32053  
   
 ### So beheben Sie diesen Fehler  
   
--   Verwenden Sie nach Möglichkeit ein aufrufendes Argument von demselben Typ wie der Prozedurparameter, damit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] keine Konvertierung ausführen muss.  
+-   Verwenden Sie nach Möglichkeit ein aufrufendes Argument von demselben Typ wie der Prozedurparameter, damit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] keine Konvertierung ausführen muss.  
   
 -   Wenn Sie die Prozedur mit einem anderen Argumenttyp als dem Parametertyp aufrufen müssen, jedoch in das aufrufende Argument kein Wert zurückgegeben werden muss, definieren Sie den Parameter als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) statt als `ByRef`.  
   

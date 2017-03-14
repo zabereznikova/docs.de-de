@@ -14,7 +14,7 @@ ms.author: "shoag"
 caps.handback.revision: 10
 ---
 # Interner Fehler (Visual Basic)
-In [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist eine interne Fehlfunktion aufgetreten.  
+In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine interne Fehlfunktion aufgetreten.  
   
 ### So beheben Sie diesen Fehler  
   

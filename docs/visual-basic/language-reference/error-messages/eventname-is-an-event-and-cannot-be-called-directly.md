@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # &#39;&lt;eventname&gt;&#39; is an event, and cannot be called directly
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 '\<`eventname`\>' ist ein Ereignis und kann daher nicht direkt aufgerufen werden.  Verwenden Sie eine `RaiseEvent`\-Anweisung, um ein Ereignis auszulösen.  
   

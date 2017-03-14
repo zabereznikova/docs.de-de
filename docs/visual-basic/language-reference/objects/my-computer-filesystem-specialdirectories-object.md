@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # My.Computer.FileSystem.SpecialDirectories Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Stellt Eigenschaften für den Zugriff auf Verzeichnisse bereit, auf die häufig verwiesen wird.  
   
@@ -32,7 +32,7 @@ Stellt Eigenschaften für den Zugriff auf Verzeichnisse bereit, auf die häufig 
   
  **Klasse:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> \(bietet Zugriff auf <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>\)  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## Siehe auch  
  [My.Computer.FileSystem Object](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   

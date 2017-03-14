@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 11
 ---
 # How to: Declare an Object Variable and Assign an Object to It in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie deklarieren eine Variable vom Typ [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) durch die Angabe von `As Object` in einer [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)\-Anweisung.  Um einer solchen Variablen ein Objekt zuzuweisen, geben Sie das Objekt in einer Zuweisungsanweisung oder Initialisierungsklausel nach dem Gleichheitszeichen \(`=`\) an.  
   

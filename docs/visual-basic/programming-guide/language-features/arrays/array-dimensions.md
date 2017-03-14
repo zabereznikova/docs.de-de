@@ -24,7 +24,7 @@ ms.author: "shoag"
 caps.handback.revision: 22
 ---
 # Array Dimensions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Eine *Dimension* ist eine Richtung, in der sich die Spezifikation von Arrayelementen variieren lässt.  Ein Array, in dem die Tagesverkaufsumsätze eines Monats abgelegt sind, hat eine Dimension \(Tag des Monats\).  Ein Array, in dem die Tagesverkaufsumsätze einzelner Abteilungen abgelegt sind, hat zwei Dimensionen \(Abteilungsnummer und Tag des Monats\).  Die Anzahl der Dimensionen eines Arrays wird als *Rang* bezeichnet.  
   

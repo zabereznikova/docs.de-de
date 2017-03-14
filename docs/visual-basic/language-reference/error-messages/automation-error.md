@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Automation error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Beim Ausführen einer Methode oder Abrufen oder Festlegen einer Eigenschaft einer Objektvariable ist ein Fehler aufgetreten.  Der Fehler wurde von der Anwendung gemeldet, mit der das Objekt erstellt wurde.  
   

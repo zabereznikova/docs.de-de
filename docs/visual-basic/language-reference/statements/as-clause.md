@@ -22,7 +22,7 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # As Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Leitet eine `As`\-Klausel ein, die in einer Deklarationsanweisung oder einer Liste von Einschränkungen für einen allgemeinen Typparameter einen Datentyp bezeichnet.  
   

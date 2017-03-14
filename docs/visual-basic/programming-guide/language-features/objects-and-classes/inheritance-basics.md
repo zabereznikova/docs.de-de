@@ -35,18 +35,18 @@ ms.author: "shoag"
 caps.handback.revision: 23
 ---
 # Inheritance Basics (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit der `Inherits`–Anweisung wird eine neue Klasse, eine so genannte *abgeleitete Klasse*, deklariert, die auf einer vorhandenen Klasse, der *Basisklasse*, basiert.  Abgeleitete Klassen erben die in der Basisklasse definierten Eigenschaften, Methoden, Ereignisse, Felder und Konstanten und können diese erweitern.  Im folgenden Abschnitt werden einige Vererbungsregeln sowie die Modifizierer beschrieben, die Sie zum Ändern der Vererbungs\- oder Erbungsart für Klassen verwenden können.  
   
 -   Standardmäßig können alle Klassen vererbt werden, es sei denn, sie sind durch das Schlüsselwort `NotInheritable` gekennzeichnet.  Klassen können von anderen Klassen in Ihrem Projekt oder von Klassen in anderen Assemblys erben, auf die das Projekt verweist.  
   
--   Im Gegensatz zu Sprachen, für die eine Mehrfachvererbung zulässig ist, sind in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] nur einfache Vererbungen in Klassen möglich, d. h. abgeleitete Klassen können nur eine Basisklasse haben.  Obwohl die Mehrfachvererbung in Klassen nicht zulässig ist, können Klassen mehrfache Schnittstellen implementieren, was die gleiche Wirkung hat.  
+-   Im Gegensatz zu Sprachen, für die eine Mehrfachvererbung zulässig ist, sind in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nur einfache Vererbungen in Klassen möglich, d. h. abgeleitete Klassen können nur eine Basisklasse haben.  Obwohl die Mehrfachvererbung in Klassen nicht zulässig ist, können Klassen mehrfache Schnittstellen implementieren, was die gleiche Wirkung hat.  
   
 -   Wenn Sie vermeiden möchten, dass eingeschränkte Elemente in einer Basisklasse verfügbar werden, muss der Zugriffstyp einer abgeleiteten Klasse ebenso eingeschränkt oder eingeschränkter als die Basisklasse sein.  Eine `Public`\-Klasse kann z. B. keine `Friend`\-Klasse oder keine `Private`\-Klasse vererben, und eine `Friend`\-Klasse kann keine `Private`\-Klasse vererben.  
   
 ## Vererbungsmodifizierer  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] führt folgende Anweisungen und Modifizierer auf Klassenebene zur Unterstützung der Vererbung ein:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] führt folgende Anweisungen und Modifizierer auf Klassenebene zur Unterstützung der Vererbung ein:  
   
 -   `Inherits`\-Anweisung: Gibt die Basisklasse an.  
   

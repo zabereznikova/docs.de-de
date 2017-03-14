@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Path/File access error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Das Betriebssystem konnte während eines Datei\- oder Datenträgerzugriffs keine Verbindung zwischen dem Pfad und dem Dateinamen herstellen.  
   
@@ -30,7 +30,7 @@ Das Betriebssystem konnte während eines Datei\- oder Datenträgerzugriffs keine
   
 3.  Stellen Sie sicher, dass Sie nicht versucht haben, eine schreibgeschützte Datei im sequenziellen `Output`\-Modus oder `Append`\-Modus zu öffnen.  In einem solchen Fall müssen Sie die Datei im `Input`\-Modus öffnen oder das Schreibschutzattribut der Datei ändern.  
   
-4.  Stellen Sie außerdem sicher, dass Sie kein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projekt innerhalb einer Datenbank oder eines Dokuments ändern wollten.  
+4.  Stellen Sie außerdem sicher, dass Sie kein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Projekt innerhalb einer Datenbank oder eines Dokuments ändern wollten.  
   
 ## Siehe auch  
  [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)

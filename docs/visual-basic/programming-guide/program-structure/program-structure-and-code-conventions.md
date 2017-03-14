@@ -28,9 +28,9 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Programmstruktur und Codekonventionen (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-In diesem Abschnitt werden die typische [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmstruktur eingeführt, das einfache [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm "Hello, World" vorgestellt und die Codekonventionen von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] erörtert.  Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren.  Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten.  Codekonventionen umfassen u. a.:  
+In diesem Abschnitt werden die typische [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programmstruktur eingeführt, das einfache [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm "Hello, World" vorgestellt und die Codekonventionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erörtert.  Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren.  Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten.  Codekonventionen umfassen u. a.:  
   
 -   Standardisierte Formate für Bezeichnungen und Kommentare im Code.  
   
@@ -38,11 +38,11 @@ In diesem Abschnitt werden die typische [!INCLUDE[vbprvb](../../../csharp/progra
   
 -   Benennungskonventionen für Objekte, Variablen und Prozeduren.  
   
- Die folgenden Themen enthalten eine Reihe von Programmierungsrichtlinien für [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programme und Beispiele für die richtige Verwendung.  
+ Die folgenden Themen enthalten eine Reihe von Programmierungsrichtlinien für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programme und Beispiele für die richtige Verwendung.  
   
 ## In diesem Abschnitt  
  [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Bietet eine Übersicht über die Elemente, aus denen ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programm besteht.  
+ Bietet eine Übersicht über die Elemente, aus denen ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programm besteht.  
   
  [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
  Erörtert die Prozedur, die als Ausgangspunkt und Gesamtsteuerung für die Anwendung fungiert.  
@@ -66,7 +66,7 @@ In diesem Abschnitt werden die typische [!INCLUDE[vbprvb](../../../csharp/progra
  Zeigt, wie lange Anweisungen in mehrere Zeilen aufgeteilt und kurze Anweisungen zu einer Zeile zusammengefasst werden können.  
   
  [How to: Collapse and Hide Sections of Code](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Erläutert das Reduzieren und Ausblenden von Codeabschnitten im Code\-Editor von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Erläutert das Reduzieren und Ausblenden von Codeabschnitten im Code\-Editor von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
  Veranschaulicht, wie Codezeilen für die Verwendung mit Anweisungen, z. B. `On Error Goto`, gekennzeichnet werden.  
@@ -78,17 +78,17 @@ In diesem Abschnitt werden die typische [!INCLUDE[vbprvb](../../../csharp/progra
  Beschreibt, wie dem Code beschreibende Kommentare hinzugefügt werden können.  
   
  [Keywords as Element Names in Code](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Beschreibt, wie Variablennamen, die gleichzeitig [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Schlüsselwörter sind, mithilfe von eckigen Klammern \(`[]`\) begrenzt werden.  
+ Beschreibt, wie Variablennamen, die gleichzeitig [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Schlüsselwörter sind, mithilfe von eckigen Klammern \(`[]`\) begrenzt werden.  
   
  [Me, My, MyBase, and MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Beschreibt verschiedene Möglichkeiten, auf Elemente eines [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programms zu verweisen.  
+ Beschreibt verschiedene Möglichkeiten, auf Elemente eines [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Programms zu verweisen.  
   
  [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- Erläutert die Entfernung bekannter Codierungsbeschränkungen in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Erläutert die Entfernung bekannter Codierungsbeschränkungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## Verwandte Abschnitte  
  [Typographic and Code Conventions](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Enthält Standardcodierungskonventionen für [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Enthält Standardcodierungskonventionen für [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Schreiben von Code](/visual-studio/ide/writing-code-in-the-code-and-text-editor)  
  Beschreibt Funktionen, die Ihnen das Schreiben und Verwalten von Code erleichtern.

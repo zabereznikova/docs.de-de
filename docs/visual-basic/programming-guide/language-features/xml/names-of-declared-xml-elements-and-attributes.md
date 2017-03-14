@@ -24,12 +24,12 @@ ms.author: "shoag"
 caps.handback.revision: 13
 ---
 # Names of Declared XML Elements and Attributes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Dieses Thema enthält [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Richtlinien zur Benennung von XML\-Elementen und Attributen in XML\-Literalen. In einem XML\-Literal können Sie einen lokalen Namen oder einen qualifizierten Namen angeben.  Ein qualifizierter Name besteht aus einem XML\-Namespacepräfix, einem Doppelpunkt und einem lokalen Namen.  Weitere Informationen zu XML\-Namespacepräfixen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+Dieses Thema enthält [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Richtlinien zur Benennung von XML\-Elementen und Attributen in XML\-Literalen. In einem XML\-Literal können Sie einen lokalen Namen oder einen qualifizierten Namen angeben.  Ein qualifizierter Name besteht aus einem XML\-Namespacepräfix, einem Doppelpunkt und einem lokalen Namen.  Weitere Informationen zu XML\-Namespacepräfixen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## Regeln  
- Für lokale Namen von Elementen oder Attributen gelten in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die folgenden Regeln.  
+ Für lokale Namen von Elementen oder Attributen gelten in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die folgenden Regeln.  
   
 -   Der Name kann mit einem Namespace beginnen.  Der Name muss mit einem alphabetischen Zeichen oder einem Unterstrich \(`_`\) beginnen.  
   
@@ -49,7 +49,7 @@ Dieses Thema enthält [!INCLUDE[vbprvb](../../../../csharp/programming-guide/con
  Namen sollten jedoch nicht so kurz sein, dass nicht eindeutig aus ihnen hervorgeht, was das Element darstellt oder wie der Code das Element verwendet.  Dies ist für die Lesbarkeit des Codes wichtig.  Wenn andere Personen versuchen, den Code zu verstehen, oder Sie selbst nach langer Zeit den Code erneut durchsehen, kann die Verwendung geeigneter Elementnamen Zeit sparen,.  
   
 ## Groß\- und Kleinschreibung bei Namen  
- Bei XML\-Elementnamen muss die Groß\-\/Kleinschreibung beachtet werden.  Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler interpretiert Namen, die sich nur durch die Groß\- und Kleinschreibung unterscheiden, als unterschiedliche Namen.  Beispielsweise werden `ABC` und `abc` als Verweise auf verschiedene Elemente interpretiert.  
+ Bei XML\-Elementnamen muss die Groß\-\/Kleinschreibung beachtet werden.  Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler interpretiert Namen, die sich nur durch die Groß\- und Kleinschreibung unterscheiden, als unterschiedliche Namen.  Beispielsweise werden `ABC` und `abc` als Verweise auf verschiedene Elemente interpretiert.  
   
 ## XML\-Namespaces  
  Wenn Sie ein XML\-Elementliteral erstellen, können Sie das XML\-Namespacepräfix für den Elementnamen angeben.  Weitere Informationen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  

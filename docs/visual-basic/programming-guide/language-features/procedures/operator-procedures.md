@@ -26,14 +26,14 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # Operator Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Eine Operatorprozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen, die das Verhalten eines Standardoperators \(z. B. `*`, `<>` oder `And`\) in einer Klasse oder Struktur definieren, die Sie definiert haben.  Dies wird auch als *Überladen des Operators* bezeichnet.  
+Eine Operatorprozedur ist eine Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anweisungen, die das Verhalten eines Standardoperators \(z. B. `*`, `<>` oder `And`\) in einer Klasse oder Struktur definieren, die Sie definiert haben.  Dies wird auch als *Überladen des Operators* bezeichnet.  
   
 ## Zeitpunkt für die Definition von Operatorprozeduren  
  Wenn Sie eine Klasse oder Struktur definiert haben, können Sie Variablen deklarieren, die dem Typ dieser Klasse oder Struktur angehören.  Gelegentlich muss eine solche Variable innerhalb eines Ausdrucks in einer Operation verwendet werden.  Dazu muss diese Variable ein Operand eines Operators sein.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] definiert nur die grundlegenden Datentypen von Operatoren.  Sie können das Verhalten eines Operators definieren, wenn mindestens einer der Operanden dem Typ der Klasse oder Struktur entspricht.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] definiert nur die grundlegenden Datentypen von Operatoren.  Sie können das Verhalten eines Operators definieren, wenn mindestens einer der Operanden dem Typ der Klasse oder Struktur entspricht.  
   
  Weitere Informationen finden Sie unter [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   

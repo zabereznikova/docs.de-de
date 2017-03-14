@@ -18,11 +18,11 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Call a Web Service Asynchronously (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann.  Dieses Beispiel verwendet den Webdienst DemoTemperatureService auf http:\/\/www.xmethods.  net.  
   
- Wenn Sie im Projekt in der integrierten Entwicklungsumgebung \(Integrated Development Environment, IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] auf einen Webdienst verweisen, wird dieser dem `My.WebServices`\-Objekt hinzugefügt und die IDE generiert eine Client\-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
+ Wenn Sie im Projekt in der integrierten Entwicklungsumgebung \(Integrated Development Environment, IDE\) von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] auf einen Webdienst verweisen, wird dieser dem `My.WebServices`\-Objekt hinzugefügt und die IDE generiert eine Client\-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
   
  Mit der Proxyklasse ist es möglich, die Webdienstmethoden synchron aufzurufen, während die Anwendung darauf wartet, dass die Funktion abgeschlossen wird.  Außerdem erstellt das Proxy weitere Member zur asynchronen Unterstütztung der Methode.  Für jede Webdienstfunktion, *NameOfWebServiceFunction*, erstellt das Proxy eine *NameOfWebServiceFunction*`Async`\-Unterroutine, ein *NameOfWebServiceFunction*`Completed`\-Ereignis und eine *NameOfWebServiceFunction*`CompletedEventArgs`\-Klasse.  Dieses Beispiel demonstriert, wie Sie die asynchronen Member für den Zugriff auf die `getTemp`\-Funktion des Webdiensts DemoTemperatureService verwenden.  
   

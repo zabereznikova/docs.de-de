@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 21
 ---
 # Extending the Visual Basic Application Model
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Sie können durch Überschreiben der `Overridable`\-Member der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Klasse dem Anwendungsmodell Funktionen hinzufügen.  Mit dieser Technik können Sie das Verhalten des Anwendungsmodells anpassen und Aufrufe eigener Methoden beim Starten und Herunterfahren der Anwendung hinzufügen.  
   
@@ -50,7 +50,7 @@ Sie können durch Überschreiben der `Overridable`\-Member der <xref:Microsoft.V
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>.  Ermöglicht es einem Designer, Code auszugeben, mit dem der Begrüßungsbildschirm initialisiert wird.  
   
-         Standardmäßig hat diese Methode keine Auswirkungen.  Wenn Sie im [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-**Projekt\-Designer** einen Begrüßungsbildschirm für die Anwendung auswählen, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>\-Methode mit einer Methode, die die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>\-Eigenschaft auf eine neue Instanz des Formulars mit dem Begrüßungsbildschirm festlegt.  
+         Standardmäßig hat diese Methode keine Auswirkungen.  Wenn Sie im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-**Projekt\-Designer** einen Begrüßungsbildschirm für die Anwendung auswählen, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>\-Methode mit einer Methode, die die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>\-Eigenschaft auf eine neue Instanz des Formulars mit dem Begrüßungsbildschirm festlegt.  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>.  Stellt einen Erweiterungspunkt für das Auslösen des `Startup`\-Ereignisses bereit.  Wenn diese Funktion `False` zurückgibt, wird das Starten der Anwendung abgebrochen.  
   
@@ -62,7 +62,7 @@ Sie können durch Überschreiben der `Overridable`\-Member der <xref:Microsoft.V
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>.  Ermöglicht es einem Designer, Code auszugeben, mit dem das Hauptformular initialisiert wird.  
   
-         Standardmäßig hat diese Methode keine Auswirkungen.  Wenn Sie jedoch im [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-**Projekt\-Designer** ein Hauptformular für die Anwendung auswählen, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>\-Methode mit einer Methode, die die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>\-Eigenschaft auf eine neue Instanz des Hauptformulars festlegt.  
+         Standardmäßig hat diese Methode keine Auswirkungen.  Wenn Sie jedoch im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-**Projekt\-Designer** ein Hauptformular für die Anwendung auswählen, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>\-Methode mit einer Methode, die die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>\-Eigenschaft auf eine neue Instanz des Hauptformulars festlegt.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>.  Wenn für die Anwendung ein Begrüßungsbildschirm definiert und dieser geöffnet ist, schließt diese Methode den Begrüßungsbildschirm.  
   
@@ -82,10 +82,10 @@ Sie können durch Überschreiben der `Overridable`\-Member der <xref:Microsoft.V
   
  Wenn es sich um eine bereits ausgeführte Einzelinstanzanwendung handelt, ruft die nachfolgende Instanz der Anwendung die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>\-Methode für die ursprüngliche Anwendungsinstanz auf und wird anschließend beendet.  
   
- Der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Konstruktor ruft die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft auf, um zu bestimmen, welches Textdarstellungsmodul für die Formulare der Anwendung verwendet wird.  Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft gibt standardmäßig `False` zurück, wodurch angezeigt wird, dass das Textdarstellungsmodul GDI verwendet wird, das Standardmodul in [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)].  Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft überschreiben, um `True` zurückzugeben. Dadurch wird angegeben, dass das Textdarstellungsmodul GDI\+ verwendet wird, das Standardmodul in Visual Basic .NET 2002 und in Visual Basic .NET 2003.  
+ Der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Konstruktor ruft die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft auf, um zu bestimmen, welches Textdarstellungsmodul für die Formulare der Anwendung verwendet wird.  Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft gibt standardmäßig `False` zurück, wodurch angezeigt wird, dass das Textdarstellungsmodul GDI verwendet wird, das Standardmodul in [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)].  Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>\-Eigenschaft überschreiben, um `True` zurückzugeben. Dadurch wird angegeben, dass das Textdarstellungsmodul GDI\+ verwendet wird, das Standardmodul in Visual Basic .NET 2002 und in Visual Basic .NET 2003.  
   
 ## Konfigurieren der Anwendung  
- Im Rahmen des [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anwendungsmodells bietet die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Klasse geschützte Eigenschaften für die Konfiguration der Anwendung.  Diese Eigenschaften sollten im Konstruktor der implementierenden Klasse festgelegt werden.  
+ Im Rahmen des [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Anwendungsmodells bietet die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>\-Klasse geschützte Eigenschaften für die Konfiguration der Anwendung.  Diese Eigenschaften sollten im Konstruktor der implementierenden Klasse festgelegt werden.  
   
  In einem Windows Forms\-Projekt erstellt der **Projekt\-Designer** standardmäßig Code, mit dem die Eigenschaften auf Grundlage der Einstellungen für den Designer festgelegt werden.  Die Eigenschaften werden nur beim Starten der Anwendung verwendet. Änderungen an den Eigenschaften zur Laufzeit haben keine Auswirkungen.  
   

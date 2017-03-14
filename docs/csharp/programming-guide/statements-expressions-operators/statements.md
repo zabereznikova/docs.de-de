@@ -74,7 +74,7 @@ Die Aktionen, die ein Programm ausführt, werden in Anweisungen ausgedrückt.  Z
 -   [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## Siehe auch  
  [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)

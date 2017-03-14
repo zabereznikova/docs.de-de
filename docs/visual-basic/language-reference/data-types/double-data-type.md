@@ -32,7 +32,7 @@ ms.author: "shoag"
 caps.handback.revision: 25
 ---
 # Double Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert 64\-Bit\-\(8\-Byte\-\)Gleitkommazahlen mit Vorzeichen und doppelter Genauigkeit nach IEEE. Die Werte reichen von \-1,79769313486231570E\+308 bis \-4,94065645841246544E\-324 für negative Werte und von 4,94065645841246544E\-324 bis 1,79769313486231570E\+308 für positive Werte.  Zahlen mit doppelter Genauigkeit enthalten eine Näherung einer reellen Zahl.  
   

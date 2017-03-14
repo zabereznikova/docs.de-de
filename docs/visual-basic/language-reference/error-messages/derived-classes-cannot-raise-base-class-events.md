@@ -21,7 +21,7 @@ ms.author: "shoag"
 caps.handback.revision: 9
 ---
 # Derived classes cannot raise base class events
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein Ereignis kann nur vom Deklarationsabschnitt ausgelöst werden, in dem es deklariert wurde.  Daher kann eine Klasse keine Ereignisse aus einer anderen Klasse auslösen, auch nicht aus einer Klasse, aus der sie abgeleitet wurde.  
   

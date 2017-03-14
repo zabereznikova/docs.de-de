@@ -25,7 +25,7 @@ ms.author: "shoag"
 caps.handback.revision: 18
 ---
 # Boolean Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Speichert Werte, die nur `True` oder `False` sein können.  Die Schlüsselwörter `True` und `False` entsprechen den zwei Zuständen von `Boolean`\-Variablen.  
   

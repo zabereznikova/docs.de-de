@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 27
 ---
 # Adding Printable Reports to Visual Studio Applications
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Visual Studio unterstützt eine Reihe von Berichtslösungen, mit denen Sie Ihre Visual Basic\-Anwendungen um umfangreiche Datenberichtsfunktionen ergänzen können.  Sie können Berichte mithilfe von ReportViewer\-Steuerelementen, Crystal Reports oder SQL Server Reporting Services erstellen und hinzufügen.  
   

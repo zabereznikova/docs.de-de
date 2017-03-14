@@ -16,7 +16,7 @@ ms.author: "shoag"
 caps.handback.revision: 8
 ---
 # Internal error happened at &lt;location&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Ein interner Fehler ist aufgetreten.  Die Zeile, in der der Fehler aufgetreten ist, wird in der Fehlermeldung angegeben.  
   

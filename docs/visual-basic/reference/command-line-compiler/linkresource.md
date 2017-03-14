@@ -23,7 +23,7 @@ ms.author: "shoag"
 caps.handback.revision: 16
 ---
 # /linkresource (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Erstellt einen Link zu einer verwalteten Ressource.  
   
@@ -47,7 +47,7 @@ Erstellt einen Link zu einer verwalteten Ressource.
   
  Die  `/linkresource`\-Option erfordert eine der `/target`\-Optionen, jedoch nicht `/target:module`.  
   
- Wenn `filename` einer [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Ressourcendatei entspricht, die beispielsweise durch den [Resgen.exe \(Resource File Generator\)](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) oder in der Entwicklungsumgebung erstellt wurde, kann mit Membern im <xref:System.Resources>\-Namespace darauf zugegriffen werden.  \(Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.\) Mit den Methoden der <xref:System.Reflection.Assembly>\-Klasse, die mit `GetManifestResource` beginnen, greifen Sie zur Laufzeit auf alle anderen Ressourcen zu.  
+ Wenn `filename` einer [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]\-Ressourcendatei entspricht, die beispielsweise durch den [Resgen.exe \(Resource File Generator\)](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) oder in der Entwicklungsumgebung erstellt wurde, kann mit Membern im <xref:System.Resources>\-Namespace darauf zugegriffen werden.  \(Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.\) Mit den Methoden der <xref:System.Reflection.Assembly>\-Klasse, die mit `GetManifestResource` beginnen, greifen Sie zur Laufzeit auf alle anderen Ressourcen zu.  
   
  Der Dateiname kann jedes Dateiformat haben.  Sie können beispielsweise eine systemeigene DLL zum Bestandteil der Assembly machen, damit sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
   

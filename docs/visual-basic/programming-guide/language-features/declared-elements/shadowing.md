@@ -33,9 +33,9 @@ ms.author: "shoag"
 caps.handback.revision: 24
 ---
 # Shadowing in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
-Wenn zwei Programmierelemente denselben Namen haben, kann eines das andere verdecken, bzw. *Shadowing* durchführen.  In diesem Fall ist das Element, für das ein Shadowing durchgeführt wurde, für Verweise nicht verfügbar. Stattdessen löst der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler den Verweis in das Shadowingelement auf, wenn der Code den Elementnamen verwendet.  
+Wenn zwei Programmierelemente denselben Namen haben, kann eines das andere verdecken, bzw. *Shadowing* durchführen.  In diesem Fall ist das Element, für das ein Shadowing durchgeführt wurde, für Verweise nicht verfügbar. Stattdessen löst der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]\-Compiler den Verweis in das Shadowingelement auf, wenn der Code den Elementnamen verwendet.  
   
 ## Zweck  
  Hauptzweck des Shadowing ist es, die Definition von Klassenmembern zu schützen.  Die Basisklasse wird vielleicht in einer Weise geändert, die ein Element mit dem gleichen Namen wie dem bereits definierten Namen zur Folge hat.  In diesem Fall erzwingt der `Shadows`\-Modifizierer, dass Verweise über die Klasse in den von Ihnen definierten Member aufgelöst werden und nicht in das neue Basisklassenelement.  

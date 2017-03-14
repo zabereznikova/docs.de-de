@@ -28,7 +28,7 @@ ms.author: "shoag"
 caps.handback.revision: 17
 ---
 # #Const Directive
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Definiert Konstanten für die bedingte Kompilierung in Visual Basic.  
   

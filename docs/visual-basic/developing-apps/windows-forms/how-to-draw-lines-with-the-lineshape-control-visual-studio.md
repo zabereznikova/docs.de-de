@@ -18,7 +18,7 @@ ms.author: "shoag"
 caps.handback.revision: 14
 ---
 # How to: Draw Lines with the LineShape Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 Mit dem <xref:Microsoft.VisualBasic.PowerPacks.LineShape>\-Steuerelement können Sie sowohl zur Entwurfszeit als auch zur Laufzeit horizontale, vertikale oder diagonale Linien auf einem Formular oder Container zeichnen.  
   

@@ -23,13 +23,13 @@ ms.author: "shoag"
 caps.handback.revision: 19
 ---
 # How to: Call an Event Handler in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+[!INCLUDE[vs2017banner](~/includes/vs2017banner.md)]
 
 *Ereignisse* sind Aktionen oder Vorkommnisse, z. B. ein Mausklick oder das Überschreiten eines Kreditrahmens, die von einem Objekt erkannt werden und für die Sie Code schreiben können, der darauf reagiert.  Ein *Ereignishandler* ist der Code, der auf diese Ereignisse reagiert.  
   
- In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist ein Ereignishandler eine `Sub`\-Prozedur.  Sie rufen Ereignishandler aber normalerweise nicht auf die gleiche Weise wie andere `Sub`\-Prozeduren auf.  Stattdessen identifizieren Sie die Prozedur als Handler für das Ereignis.  Sie können dies entweder mit einer [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)\-Klausel und einer [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)\-Variablen oder mit einer [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) tun.  Standardmäßig werden in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Ereignishandler mit einer `Handles`\-Klausel deklariert.  Auf diese Weise werden Ereignishandler von den Designern geschrieben, wenn Sie in der integrierten Entwicklungsumgebung \(IDE\) programmieren.  Die `AddHandler`\-Anweisung eignet sich dazu, Ereignisse dynamisch zur Laufzeit auszulösen.  
+ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist ein Ereignishandler eine `Sub`\-Prozedur.  Sie rufen Ereignishandler aber normalerweise nicht auf die gleiche Weise wie andere `Sub`\-Prozeduren auf.  Stattdessen identifizieren Sie die Prozedur als Handler für das Ereignis.  Sie können dies entweder mit einer [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)\-Klausel und einer [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)\-Variablen oder mit einer [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) tun.  Standardmäßig werden in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Ereignishandler mit einer `Handles`\-Klausel deklariert.  Auf diese Weise werden Ereignishandler von den Designern geschrieben, wenn Sie in der integrierten Entwicklungsumgebung \(IDE\) programmieren.  Die `AddHandler`\-Anweisung eignet sich dazu, Ereignisse dynamisch zur Laufzeit auszulösen.  
   
- Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] automatisch die Ereignishandlerprozedur auf.  Jeglicher Code, der Zugriff auf das Ereignis hat, kann durch die Ausführung einer [RaiseEvent Statement](../../../../visual-basic/language-reference/statements/raiseevent-statement.md) das Ereignis auslösen.  
+ Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch die Ereignishandlerprozedur auf.  Jeglicher Code, der Zugriff auf das Ereignis hat, kann durch die Ausführung einer [RaiseEvent Statement](../../../../visual-basic/language-reference/statements/raiseevent-statement.md) das Ereignis auslösen.  
   
  Sie können einem Ereignis mehrere Ereignishandler zuordnen.  In einigen Fällen können Sie die Zuordnung zwischen einem Handler und einem Ereignis aufheben.  Weitere Informationen hierzu finden Sie unter [Events](../../../../visual-basic/programming-guide/language-features/events/events.md).  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 19
   
 3.  Fügen Sie der `Sub`\-Prozedur, die als Ereignishandler fungiert, eine [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)\-Klausel ein, die die `WithEvents`\-Variable und den Ereignisnamen enthält.  
   
-4.  Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] automatisch die `Sub`\-Prozedur auf.  Im Code kann eine `RaiseEvent`\-Anweisung zum Auslösen des Ereignisses verwendet werden.  
+4.  Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch die `Sub`\-Prozedur auf.  Im Code kann eine `RaiseEvent`\-Anweisung zum Auslösen des Ereignisses verwendet werden.  
   
      Im folgenden Beispiel werden ein Ereignis und eine `WithEvents`\-Variable definiert, die auf die Klasse verweist, welche das Ereignis auslöst.  In der `Sub`\-Prozedur, die als Ereignishandler fungiert, wird eine `Handles`\-Klausel verwendet, um die Klasse und das Ereignis anzugeben, die verarbeitet werden.  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 19
   
 2.  Führen Sie eine [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) aus, um die ereignisbehandelnde `Sub`\-Prozedur dynamisch dem Ereignis zuzuordnen.  
   
-3.  Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] automatisch die `Sub`\-Prozedur auf.  Im Code kann eine `RaiseEvent`\-Anweisung zum Auslösen des Ereignisses verwendet werden.  
+3.  Wenn das Ereignis eintritt, ruft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch die `Sub`\-Prozedur auf.  Im Code kann eine `RaiseEvent`\-Anweisung zum Auslösen des Ereignisses verwendet werden.  
   
      Im folgenden Beispiel wird eine `Sub`\-Prozedur definiert, die das <xref:System.Windows.Forms.Form.Closing>\-Ereignis eines Formulars behandelt.  Dann wird die `catchClose`\-Prozedur mithilfe der [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) als Ereignishandler für <xref:System.Windows.Forms.Form.Closing> zugeordnet.  
   
