@@ -1,42 +1,58 @@
 ---
-title: "Printing and Reporting (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: Drucken und Berichterstellung (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
----
-# Printing and Reporting (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e4c522f279c097d92d3fe0ffa05dc56c705f50ca
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bietet mehrere Optionen für Druck und Berichterstellung.  Die folgenden Themen enthalten Übersichten und Links zu der für das Drucken und die Berichterstellung relevanten Dokumentation.  
+---
+# <a name="printing-and-reporting-visual-basic"></a>Drucken und Berichterstellung (Visual Basic)
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]bietet mehrere Optionen zum Drucken und Berichterstattung. Die folgenden Themen enthalten Übersichten und Links zu relevanten Dokumentation zu drucken und berichterstellung.  
   
-## In diesem Abschnitt  
- [PrintForm Component](../../../visual-basic/developing-apps/printing/printform-component.md)  
- Bietet eine Übersicht über die `PrintForm`\-Komponente, die das Drucken eines Formularinhalts ermöglicht.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [PrintForm-Komponente](../../../visual-basic/developing-apps/printing/printform-component.md)  
+ Bietet eine Übersicht über die `PrintForm` -Komponente, Drucken des Inhalts eines Formulars ermöglicht.  
   
  [Gewusst wie: Drucken eines bildlauffähigen Formulars](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
- Erläutert, wie mit der `PrintForm`\-Komponente ein bildlauffähiges Formular gedruckt wird.  
+ Erläutert das Drucken eines bildlauffähigen Formulars mithilfe der `PrintForm` Komponente.  
   
- [Gewusst wie: Drucken von Client\- und Nicht\-Client\-Bereichen eines Formulars](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- Erläutert, wie mit der `PrintForm`\-Komponente sowohl Client\- als auch Nicht\-Client\-Bereiche eines Formulars gedruckt werden.  
+ [Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ Erläutert, wie Drucken Sie sowohl Client als auch nicht-Client-Bereichen eines Formulars mithilfe der `PrintForm` Komponente.  
   
  [Gewusst wie: Drucken des Clientbereichs eines Formulars](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- Erläutert, wie mit der `PrintForm`\-Komponente der Clientbereich eines Formulars gedruckt wird.  
+ Erläutert das Drucken des Clientbereichs eines Formulars mithilfe der `PrintForm` Komponente.  
   
- [Gewusst wie: Drucken eines Formulars mithilfe der PrintForm\-Komponente](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- Erläutert, wie mit der `PrintForm`\-Komponente ein einfaches Formular gedruckt wird.  
+ [Gewusst wie: Drucken eines Formulars mithilfe der PrintForm-Komponente](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
+ Erläutert, wie ein einfaches Formular gedruckt werden, indem Sie mit der `PrintForm` Komponente.  
   
- [Deploying Applications That Reference the PrintForm Component](../../../visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)  
- Erläutert, wie die `PrintForm`\-Komponente zusammen mit einer Anwendung bereitgestellt wird.  
+ [Bereitstellen von Anwendungen, die auf die PrintForm-Komponente verweisen](../../../visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)  
+ Beschreibt, wie Sie die Bereitstellung der `PrintForm` Komponente zusammen mit einer Anwendung.  
   
- [Adding Printable Reports to Visual Studio Applications](../../../visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)  
- Erläutert die zum Schreiben von Berichten verfügbaren Optionen.
+ [Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendung](../../../visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)  
+ Erläutert die Optionen, die zum Schreiben von Berichten zur Verfügung.

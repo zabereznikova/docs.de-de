@@ -1,79 +1,90 @@
 ---
-title: "Getting Started with LINQ in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [LINQ in Visual Basic], about LINQ in Visual Basic queries"
-  - "queries [LINQ in Visual Basic]"
-  - "LINQ in Visual Basic"
-  - "LINQ [Visual Basic]"
-  - "LINQ, Visual Basic"
+title: Erste Schritte mit LINQ in Visual Basic | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
+- queries [LINQ in Visual Basic]
+- LINQ in Visual Basic
+- LINQ [Visual Basic]
+- LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Getting Started with LINQ in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9b8a45dff4600c71cf7395d5eee626b7ffd365b7
+ms.lasthandoff: 03/13/2017
 
-Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)].  
+---
+# <a name="getting-started-with-linq-in-visual-basic"></a>Erste Schritte mit LINQ in Visual Basic
+Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, die Sie verstehen und Verwenden von Visual Basic und Language-Integrated Query (LINQ) unterstützen.  
   
-## In diesem Abschnitt  
- [Schreiben der ersten LINQ\-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
- Beschreibt die drei Stufen beim Schreiben einer grundlegenden LINQ\-Abfrage: Abrufen der Datenquelle, Schreiben der Abfrage und Ausführen der Abfrage.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Schreiben der ersten LINQ-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
+ Beschreibt die drei Stufen beim Schreiben einer grundlegenden LINQ-Abfrage: Abrufen der Datenquelle, Schreiben der Abfrage und Ausführen der Abfrage.  
   
- [Grundlegende Abfrageoperationen \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
- Beschreibt die allgemeinen Typen von Abfrageoperationen und wie diese in Visual Basic ausgedrückt werden.  
+ [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
+ Beschreibt die am häufigsten verwendeten Typen von Abfrageoperationen und wie diese in Visual Basic ausgedrückt werden.  
   
- [Visual Basic Features That Support LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)  
- Beschreibt die Visual Basic\-Sprachfeatures, die LINQ unterstützen, z. B. anonyme Typen und Typrückschluss.  
+ [Visual Basic-Features, die LINQ unterstützen](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)  
+ Beschreibt die Visual Basic-Sprachfeatures, die LINQ unterstützen, z. B. anonyme Typen und Typrückschluss.  
   
- [Type Relationships in Query Operations \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
- Beschreibt, wie Datentypen beibehalten werden oder beim Schreiben und Ausführen von Abfragen transformiert werden.  
+ [Typbeziehungen in Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
+ Beschreibt, wie Datentypen beibehalten oder beim Schreiben und Ausführen von Abfragen transformiert werden.  
   
  [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Schrittanleitungen zum Erstellen eines Visual Basic LINQ\-Projekts, Hinzufügen einer einfachen Datenquelle und Durchführen einiger grundlegender Operationen.  
+ Eine schrittweise Anleitung zum Erstellen eines Visual Basic-LINQ-Projekts und Hinzufügen einer einfachen Datenquelle einige grundlegende Abfrageoperationen durchführen.  
   
-## Verwandte Abschnitte  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Enthält eine Übersicht der Abfragen in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] und stellt Links zu zusätzlichen Ressourcen bereit.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen.  
   
- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  Beschreibt, wie Visual Basic LINQ to XML unterstützt.  
   
- [Übersicht über LINQ to DataSet](../Topic/LINQ%20to%20DataSet%20Overview.md)  
- Stellt eine grundlegende Übersicht von LINQ to DataSet bereit.  
+ [LINQ to DataSet (Übersicht)](http://msdn.microsoft.com/library/dc20a8fb-03f6-4b68-9c2b-7f7299e3070b)  
+ Enthält eine konzeptionelle Übersicht über LINQ to DataSet.  
   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)  
- Erläutert die LINQ to SQL\-Technologie und stellt Links zu Themen zur Verfügung, die Sie bei der Verwendung von LINQ to SQL unterstützen.  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ Erläutert die LINQ to SQL-Technologie und bietet Links zu Themen, in denen LINQ to SQL verwenden.  
   
- [Getting Started with LINQ in C\#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Stellt Links zu Themen über die Verwendung von LINQ in C\# bereit.  
+ [Visual Studio-IDE und Toolunterstützung für LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ Beschreibt Tools, die in der Visual Studio-Umgebung zum Entwerfen, codieren und Debuggen von LINQ-fähige verfügbar sind.  
   
- [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)  
- Beschreibt die .NET Framework\-Version, Namespaces und Verweise, die für die Erstellung von LINQ\-Projekten erforderlich sind.  
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ Enthält eine Auswahl von Gewusst-wie-Themen für die Verwendung von LINQ mit Auflistungen im Arbeitsspeicher.  
   
- [Visual Studio IDE and Tools Support for LINQ](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Beschreibt verfügbare Tools in der Visual Studio\-Umgebung zum Entwerfen, Codieren und Debuggen von LINQ\-fähigen Anwendungen.  
+ [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ Enthält Links zu Themen über die Verwendung von LINQ to XML, die die speicherresidenten Dokumentänderungsfunktionen des Model (DOM) und unterstützt LINQ-Abfrageausdrücke.  
   
- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- Umfasst eine Auswahl von Gewusst\-wie\-Themen zur Verwendung von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] mit Auflistungen im Arbeitsspeicher.  
+ [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Enthält Links zu Themen, in denen die LINQ-Technologien.  
   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
- Umfasst Links zu Themen, in denen die Verwendung von LINQ to XML erläutert wird, wodurch die speicherresidenten Dokumentänderungsfunktionen des Dokumentobjektmodells \(Document Object Model, DOM\) bereitgestellt werden, und unterstützt LINQ\-Abfrageausdrücke.  
-  
- [LINQ\-Beispiele](../Topic/LINQ%20Samples.md)  
- Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Beispiele erläutert werden.  
-  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- Stellt Links zu Themen bereit, in denen die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Technologien erläutert werden.
+ [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ Enthält Links zu Themen über die Verwendung von LINQ in c#.

@@ -1,54 +1,70 @@
 ---
-title: "When to Use an Enumeration (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "enumerations [Visual Basic]"
+title: Verwendung von Enumerationen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# When to Use an Enumeration (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f22102a2e1e7eafd7fcf4db1f46af2cc622eba70
+ms.lasthandoff: 03/13/2017
 
-Enumerationen vereinfachen die Arbeit mit einem Satz verwandter Konstanten.  Eine Enumeration \(`Enum`\) ist ein symbolischer Name für eine Gruppe von Werten.  Enumerationen werden als Datentypen behandelt. Mit ihrer Hilfe können Sie Konstanten erstellen, die für Variablen und Eigenschaften verwendet werden.  
+---
+# <a name="when-to-use-an-enumeration-visual-basic"></a>Situationen für die Verwendung von Enumerationen (Visual Basic)
+Enumerationen bieten eine einfache Möglichkeit zum Arbeiten mit Gruppen verwandter Konstanten. Eine Enumeration oder `Enum`, ein symbolischer Namen für einen Satz von Werten ist. Enumerationen werden als Datentypen behandelt, und Sie können diese Konstanten für die Verwendung mit Variablen und Eigenschaften erstellen.  
   
-## Situationen für die Verwendung von Enumerationen  
- Sobald eine Prozedur eine begrenzte Menge von Variablen annimmt, können Sie die Verwendung einer Enumeration in Betracht ziehen.  Durch Enumerationen wird Code besser lesbar, insbesondere wenn aussagekräftige Namen verwendet werden.  
+## <a name="when-to-use-an-enumeration"></a>Situationen für die Verwendung von Enumerationen  
+ Wenn eine Prozedur eine begrenzte Menge von Variablen annimmt, sollten erwägen Sie, eine Enumeration zu verwenden. Enumerationen stellen für Code besser lesbar, insbesondere wenn aussagekräftige Namen verwendet werden.  
   
  Die Verwendung von Enumerationen hat folgende Vorteile:  
   
--   Reduzierung von Fehlern, die durch das Übertragen von Zahlen oder falsch eingegebene Zahlen verursacht werden  
+-   Fehler aufgrund eines vertauschen oder falsch eingegebene Zahlen wird reduziert.  
   
--   Vereinfachen der nachträglichen Änderung von Werten  
+-   Erleichtert die Werte in der Zukunft ändern.  
   
--   Erhöhung der Lesbarkeit des Codes, sodass sich weniger Fehler einschleichen können  
+-   Ist der Code einfacher zu lesen, was bedeutet, dass es weniger wahrscheinlich ist, dass Fehler einschleichen können.  
   
--   Sicherstellung der Vorwärtskompatibilität.  Mit Enumerationen wird das Auftreten von Fehlern im Code verringert, wenn die Werte, die den Membernamen entsprechen, nachträglich geändert werden.  
+-   Sicherstellung der Vorwärtskompatibilität. Mit Enumerationen ist der Code weniger wahrscheinlich fehlschlägt, wenn jemand die Namen der entsprechenden Werte ändert.  
   
-## Benennen von Enumerationen  
- Verwenden Sie eine Namenskonvention für Enumerationsmember.  Wenn [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] einen Enumerationsmembernamen erkennt, wird u. U. eine Ausnahme ausgelöst, falls andere Typbibliotheken, auf die verwiesen wird, denselben Namen enthalten.  Verwenden Sie ein eindeutiges Präfix zur Kennzeichnung der Werte Ihrer Anwendung oder Komponente.  
+## <a name="naming-enumerations"></a>Benennen von Enumerationen  
+ Verwenden Sie eine Namenskonvention für Enumerationsmember. Wenn [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] einen Enumerationsmembernamen trifft möglicherweise eine Ausnahme ausgelöst, falls andere Typbibliotheken, auf die verwiesen wird, denselben Namen enthalten. Verwenden Sie ein eindeutiges Präfix an, das die Werte aus der Anwendung oder Komponente identifiziert.  
   
- Wenn Sie auf einen Member einer Enumeration verweisen, müssen Sie den Membernamen mit dem Enumerationsnamen qualifizieren oder die `Imports`\-Anweisung verwenden.  Weitere Informationen hierzu finden Sie unter [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ In Bezug auf einen Member einer Enumeration Sie müssen den Membernamen mit dem Enumerationsnamen qualifizieren, da sonst verwenden die `Imports` Anweisung. Weitere Informationen finden Sie unter [Enumerationen und Namensqualifikation](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
-## Vordefinierte Enumerationen  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt eine Reihe vordefinierter Enumerationen bereit, z. B. `FirstDayOfWeek` und `MsgBoxResul`t, die die Erstellung von Code erleichtern.  Eine Liste dieser Enumerationen finden Sie unter [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+## <a name="predefined-enumerations"></a>Vordefinierte Enumerationen  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Stellt eine Reihe vordefinierter Enumerationen bereit, z. B. `FirstDayOfWeek` und `MsgBoxResul`t, um Ihren Code zu vereinfachen. Eine Liste dieser finden Sie unter [Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## Siehe auch  
- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [How to: Refer to an Enumeration Member](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [How to: Determine the String Associated with an Enumeration Value](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Siehe auch  
+ [Gewusst wie: Deklarieren einer Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
+ [Gewusst wie: Verweisen auf einen Enumerationsmember](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
+ [Enumerationen und Namensqualifikation](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
+ [Gewusst wie: Durchlaufen einer Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
+ [Gewusst wie: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
+ [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)   
+ [Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)

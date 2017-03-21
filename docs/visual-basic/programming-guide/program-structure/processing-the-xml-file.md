@@ -1,56 +1,71 @@
 ---
-title: "Processing the XML File (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "XML comments, parsing [Visual Basic]"
+title: Verarbeiten der XML-Datei (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML comments, parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Processing the XML File (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 72b2832d0131adf39a37ebd9297b43fb34ea49ba
+ms.lasthandoff: 03/13/2017
 
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID\-Zeichenfolge generiert.  \(Informationen zum Kennzeichnen des Codes finden Sie unter [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).\) Das Konstrukt wird von der ID\-Zeichenfolge eindeutig identifiziert.  Programme, von denen die XML\-Datei verarbeitet wird, können das entsprechende [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Metadaten\-\/Reflektionselement mithilfe der ID\-Zeichenfolge identifizieren.  
+---
+# <a name="processing-the-xml-file-visual-basic"></a>Verarbeiten der XML-Datei (Visual Basic)
+Der Compiler generiert eine ID-Zeichenfolge für jedes Konstrukt in Ihrem Code, der zum Generieren von Dokumentation gekennzeichnet ist. (Informationen zum Markieren von Code finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) Die ID-Zeichenfolge identifiziert eindeutig das Konstrukt. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge zum Identifizieren der entsprechenden [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Metadaten/Reflektion-Element.  
   
- Die XML\-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine unstrukturierte Liste mit einer generierten ID für jedes Element.  
+ Die XML-Datei ist keine hierarchische Darstellung des Codes. Es ist eine flache Liste mit einer generierten ID für jedes Element.  
   
- Die folgenden Regeln werden vom Compiler beim Generieren der ID\-Zeichenfolgen beachtet:  
+ Der Compiler verwendet die folgenden Regeln beim Generieren der ID-Zeichenfolgen:  
   
--   Die Zeichenfolge darf keine Leerräume enthalten.  
+-   In der Zeichenfolge wird kein Leerzeichen eingefügt.  
   
--   Der erste Teil der ID\-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt.  Die folgenden Membertypen werden verwendet.  
+-   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des Elements identifiziert werden, durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet.  
   
-|||  
-|-|-|  
 |Zeichen|Beschreibung|  
-|N|\-Namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Sie können jedoch CREF\-Verweise hinzufügen, falls diese unterstützt werden.|  
-|T|Typ: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|Feld: `Dim`|  
-|P|Eigenschaft: `Property` \(einschließlich Standardeigenschaften\)|  
-|M|Methode: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|Ereignis: `Event`|  
-|\!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen.  Vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler werden Fehlerinformationen für Links generiert, die nicht aufgelöst werden können.|  
+|---|---|  
+|N|namespace<br /><br /> Ein Namespace können keine Dokumentationskommentare hinzugefügt, Sie können jedoch CREF-Verweise, sofern unterstützt.|  
+|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`,`Delegate`|  
+|F|Feld:`Dim`|  
+|P|Eigenschaft: `Property` (einschließlich Standardeigenschaften)|  
+|M|method: `Sub`, `Function`, `Declare`,`Operator`|  
+|E|Ereignis:`Event`|  
+|!|Fehlerzeichenfolge<br /><br /> Der Rest der Zeichenfolge enthält Informationen über den Fehler. Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler werden Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
   
--   Beim zweiten Teil von `String` handelt es sich um den vollqualifizierten Namen des Elements, beginnend mit dem Stamm des Namespaces.  Der Name des Elements, der bzw. die einschließende\(n\) Typ\(en\) und der Namespace sind durch Punkte getrennt.  Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Nummernzeichen \(\#\) ersetzt.  Es wird vorausgesetzt, dass kein Element ein Nummernzeichen direkt im Namen aufweist.  Der vollqualifizierte Name des `String`\-Konstruktors würde beispielsweise `System.String.#ctor` lauten.  
+-   Der zweite Teil der `String` ist der vollqualifizierte Name des Elements, beginnend mit dem Stamm des Namespace. Der Name des Elements, seiner einschließenden Typen und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt durch ein Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element ein Nummernzeichen direkt im Namen aufweist. Z. B. den vollqualifizierten Namen von der `String` Konstruktor wäre `System.String.#ctor`.  
   
--   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste.  Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet.  Die Argumente werden durch Kommas voneinander getrennt.  Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Signatur:  
+-   Eigenschaften und Methoden sind die Argumente der Methode folgt die Argumentliste in Klammern eingeschlossen. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas getrennt. Die Codierung jedes Arguments erfolgt genauso wie es in ist eine [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Signatur.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird die Generierung der ID\-Zeichenfolgen für eine Klasse und deren Member dargestellt:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert.  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments&#10;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
-## Siehe auch  
- [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   
- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ doc](../../../visual-basic/reference/command-line-compiler/doc.md)   
+ [Gewusst wie: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

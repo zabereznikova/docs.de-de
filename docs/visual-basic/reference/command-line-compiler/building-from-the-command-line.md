@@ -1,60 +1,77 @@
 ---
-title: "Erstellen von der Befehlszeile aus (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Builds [Visual Basic], Befehlszeile"
-  - "Visual Basic-Compiler, Informationen über Visual Basic-Compiler"
-  - "Befehlszeile [Visual Basic], Compiler"
-  - "Befehlszeile [Visual Basic], Erstellen über"
-  - "Befehlszeile [Visual Basic], Builds"
-  - "Compiler, Aufrufen über die Befehlszeile"
-  - "Erstellen über die Befehlszeile"
-  - "Kompilieren von Quellcode"
-  - "Befehlszeilencompiler, Visual Basic"
-  - "Befehlszeile [Visual Basic], Visual Basic"
+title: Erstellen von der Befehlszeile aus (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- builds [Visual Basic], command-line
+- Visual Basic compiler, about Visual Basic compiler
+- command line [Visual Basic], compilers
+- command line [Visual Basic], building from
+- command line [Visual Basic], builds
+- compilers, invoking from command line
+- command-line builds
+- compiling source code
+- command-line compilers, Visual Basic
+- command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Erstellen von der Befehlszeile aus (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 49f84c221e18457ab46534ca46da7c4764a8ee40
+ms.lasthandoff: 03/13/2017
 
-Ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Projekt besteht aus einer oder mehreren separaten Quelldateien.  Während des als Kompilierung bezeichneten Vorgangs werden diese Dateien zu einem Paket zusammengefasst – einer ausführbaren Datei, die als Anwendung ausgeführt werden kann.  
+---
+# <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
+Ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Projekt besteht aus einem oder mehreren separaten Quelldateien. Bei der Kompilierung genannt, werden diese Dateien in einem Paket zusammengefasst – einer einzelnen ausführbaren Datei, die als eine Anwendung ausgeführt werden kann.  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung \(IDE\) von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] bereit.  Der Befehlszeilencompiler bietet sich vor allem dann an, wenn Sie nicht sämtliche Features der IDE benötigen, weil Sie z. B. mit Computern mit begrenztem Systemspeicher oder geringer Speicherkapazität arbeiten oder Programme für solche Computer schreiben.  
+ [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] integrierten Entwicklungsumgebung (IDE). Der Befehlszeilencompiler eignet sich für Situationen, in dem Sie den vollständigen Satz von Funktionen in der IDE nicht benötigen, z. B. Wenn Sie mithilfe von oder für Computer mit begrenztem Arbeitsspeicher oder ein Speicherplatz schreiben.  
   
- Beim Kompilieren von der Befehlszeile aus müssen Sie mit der `/reference`\-Compileroption explizit auf die Laufzeitbibliothek von Microsoft [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verweisen.  
+ Beim Kompilieren von der Befehlszeile aus müssen Sie explizit verweisen, auf die Microsoft [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Laufzeitbibliothek über die `/reference` -Compileroption.  
   
- Um Quelldateien in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-IDE zu kompilieren, wählen Sie im Menü **Erstellen** den Befehl **Erstellen** aus.  
+ Zum Kompilieren von Quelldateien in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] IDE, wählen Sie die **erstellen** Befehl die **erstellen** im Menü.  
   
 > [!TIP]
->  Wenn Sie Projektdateien erstellen, indem Sie die Visual Studio\-IDE verwenden, können Sie Informationen zum zugeordneten **vbc** Befehl und seine Schalter im Ausgabefenster anzeigen.  Um diese Informationen anzuzeigen, öffnen Sie [Optionen \(Dialogfeld\), Projekte und Projektmappen, Erstellen und Ausführen](/visual-studio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann **Ausführlichkeit der MSBuild\-Projektbuildausgabe** zu **Normal** oder eine höhere Ebene des Ausführlichkeitsgrads fest.  Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](../Topic/How%20to:%20View,%20Save,%20and%20Configure%20Build%20Log%20Files.md).  
+>  Wenn Sie Dateien mithilfe von Visual Studio-IDE erstellen, können Sie anzeigen, Informationen zum zugehörigen **Vbc** Befehl und Schaltern im Ausgabefenster angezeigt. Öffnen Sie zum Anzeigen dieser Informationen die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](https://docs.microsoft.com/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild-Projektbuilds Ausgabe Ausführlichkeit** auf **Normal** oder eine höhere Stufe der Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
   
- Sie können Dateien des Projekts \(.vbproj\) an einer Eingabeaufforderung kompilieren, indem Sie MSBuild verwenden.  Weitere Informationen finden Sie unter [Command\-Line Reference](/visual-studio/msbuild/msbuild-command-line-reference) und [Walkthrough: Using MSBuild](../Topic/Walkthrough:%20Using%20MSBuild.md).  
+ Sie können Projektdateien (.vbproj) in einer Befehlszeile kompilieren, mithilfe von MSBuild. Weitere Informationen finden Sie unter [-Befehlszeilenreferenz](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference) und [Exemplarische Vorgehensweise: Verwenden von MSBuild](http://msdn.microsoft.com/library/b8a8b866-bb07-4abf-b9ec-0b40d281c310).  
   
-## In diesem Abschnitt  
- [How to: Invoke the Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
- Beschreibt, wie der Befehlszeilencompiler an der MS\-DOS\-Eingabeaufforderung oder von einem bestimmten Unterverzeichnis aus aufgerufen wird.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Gewusst wie: Aufrufen des Befehlszeilencompilers](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
+ Beschreibt das Aufrufen des Befehlszeilencompilers auf MS-DOS oder von einem bestimmten Unterverzeichnis.  
   
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- Enthält eine Liste mit Beispielbefehlszeilen, die Sie nach Bedarf abwandeln können.  
+ Enthält eine Liste mit Beispielbefehlszeilen, die Sie für Ihre eigenen Zwecke ändern können.  
   
-## Verwandte Abschnitte  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- Enthält Listen mit Compileroptionen, die in alphabetischer Reihenfolge oder nach Zweck angeordnet sind.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
+ Enthält eine Liste der Compileroptionen alphabetisch oder nach ihrem Zweck geordnet sind.  
   
- [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Erläutert die Kompilierung bestimmter Codeabschnitte.  
+ [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ Beschreibt, wie bestimmte Codeabschnitte kompiliert.  
   
- [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](/visual-studio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
- Beschreibt, wie Sie die Elemente verwalten, die in verschiedenen Builds zum Einsatz kommen sollen, Projekteigenschaften auswählen und sicherstellen, dass die Projekte in der richtigen Reihenfolge erstellt werden.
+ [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ Beschreibt das Organisieren, was in verschiedenen Builds eingeschlossen, Projekteigenschaften auswählen und sicherstellen, dass Projekte in der richtigen Reihenfolge erstellen.

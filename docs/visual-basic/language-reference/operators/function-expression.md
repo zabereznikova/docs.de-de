@@ -1,90 +1,105 @@
 ---
-title: "Function Expression (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Function expression [Visual Basic]"
-  - "functions [Visual Basic], function expressions"
-  - "lambda expressions [Visual Basic], function expression"
+title: Funktionsausdruck (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Function expression [Visual Basic]
+- functions [Visual Basic], function expressions
+- lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Function Expression (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9b181b18a28a8b92a392fffdc10e08690d54f545
+ms.lasthandoff: 03/13/2017
 
-Deklariert die Parameter und den Code, die einen Lambda\-Funktionsausdruck definieren.  
+---
+# <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
+Deklariert die Parameter und Code, die einen Lambda-Funktionsausdruck definieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-Function ( [ parameterlist ] ) expression  
+Function ( [ parameterlist ] ) expression  
 - or -  
-Function ( [ parameterlist ] )  
-  [ statements ]  
+Function ( [ parameterlist ] )  
+  [ statements ]  
 End Function  
   
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`parameterlist`|Optional.  Eine Liste der Namen von lokalen Variablen, die die Parameter dieser Prozedur darstellen.  Die Klammern müssen auch dann vorhanden sein, wenn die Liste leer ist.  Weitere Informationen finden Sie unter [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Erforderlich.  Ein einzelner Ausdruck.  Der Typ des Ausdrucks ist der Rückgabetyp der Funktion.|  
-|`statements`|Erforderlich.  Eine Liste von Anweisungen, die mit der Anweisung `Return` einen Wert zurückgibt.  \(Siehe [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).\) Der Typ des Rückgabewerts ist der Rückgabetyp der Funktion.|  
+|---|---|  
+|`parameterlist`|Optional. Eine Liste der Namen lokaler Variablen, die die Parameter dieser Prozedur darstellen. Die Klammern müssen vorhanden sein, auch wenn die Liste leer ist. Finden Sie unter [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Erforderlich. Ein einzelner Ausdruck. Der Typ des Ausdrucks ist der Rückgabetyp der Funktion.|  
+|`statements`|Erforderlich. Eine Liste von Anweisungen, die einen Wert zurückgibt, mit der `Return` Anweisung. (Siehe [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).) Der Typ des Rückgabewerts ist der Rückgabetyp der Funktion.|  
   
-## Hinweise  
- Ein *Lambda\-Ausdruck* ist eine Funktion ohne Namen, von der ein einzelner Wert berechnet und zurückgegeben wird.  Sie können einen Lambda\-Ausdruck überall dort verwenden, wo Sie auch einen Delegattyp verwenden können, außer als Argument für `RemoveHandler`.  Weitere Informationen zu Delegaten und der Verwendung von Lambda\-Ausdrücken mit Delegaten, finden Sie unter [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) und [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+## <a name="remarks"></a>Hinweise  
+ Ein *Lambda-Ausdruck* ist eine Funktion ohne Namen, die einen Wert berechnet und zurückgibt. Sie können einen Lambda-Ausdruck an einer beliebigen Stelle können Sie einen Delegattyp, außer als Argument für `RemoveHandler`. Weitere Informationen zu Delegaten und der Verwendung von Lambda-Ausdrücken mit Delegaten finden Sie unter [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) und [gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## Lambda\-Ausdruckssyntax  
- Die Syntax eines Lambda\-Ausdrucks ähnelt der einer Standardfunktion.  Die Unterschiede sind:  
+## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
+ Die Syntax eines Lambda-Ausdrucks ähnelt der einer Standardfunktion. Die Unterschiede sind wie folgt:  
   
--   Ein Lambda\-Ausdruck verfügt über keinen Namen.  
+-   Ein Lambda-Ausdruck keinen Namen.  
   
--   Lambda\-Ausdrücke dürfen keine Modifizierer enthalten, wie z. B. `Overloads` oder `Overrides`.  
+-   Lambda-Ausdrücke dürfen keine Modifizierer enthalten, wie z. B. `Overloads` oder `Overrides`.  
   
--   In Lambda\-Ausdrücken wird der Rückgabetyp der Funktion nicht mit einer `As`\-Klausel festgelegt.  Stattdessen wird der Typ von dem Wert, zu dem der Text des einzeiligen Lambda\-Ausdruck ausgewertet wird, oder dem Rückgabewert des mehrzeiligen Lambda\-Ausdruck abgeleitet.  Wenn der Text eines einzeiligen Lambda\-Ausdrucks z. B. `Where cust.City = "London"` lautet, ist dessen Rückgabetyp `Boolean`.  
+-   Lambda-Ausdrücke verwenden Sie keine `As` -Klausel, um den Rückgabetyp der Funktion festlegen. Stattdessen wird der Typ von dem Wert, dem der Text eines einzeiligen Lambda-Ausdrucks ergibt, oder den Rückgabewert eines mehrzeiligen Lambda-Ausdrucks abgeleitet. Wenn der Text eines einzeiligen Lambda-Ausdrucks ist z. B. `Where cust.City = "London"`, dessen Rückgabetyp `Boolean`.  
   
--   Der Text des einzeiligen Lambda\-Ausdruck muss ein Ausdruck sein, keine Anweisung.  Der Text kann aus einem Aufruf einer Funktionsprozedur bestehen, jedoch nicht aus einem Aufruf einer Unterprozedur.  
+-   Der Text eines einzeiligen Lambda-Ausdrucks muss ein Ausdruck und keine Anweisung sein. Der Text kann aus einem Aufruf einer Funktionsprozedur, jedoch nicht aus einem Aufruf einer Sub-Prozedur bestehen.  
   
--   Entweder müssen alle Parameter über angegebene Datentypen verfügen, oder alle Datentypen müssen abgeleitet sein.  
+-   Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen abgeleitet werden müssen.  
   
--   Optionale und ParamArray\-Parameter sind nicht zulässig.  
+-   Optional und Paramarray-Parameter sind nicht zulässig.  
   
 -   Generische Parameter sind nicht zulässig.  
   
-## Beispiel  
- In den folgenden Beispielen werden zwei Möglichkeiten für die Erstellung einfacher Lambda\-Ausdrücke gezeigt.  Im ersten Beispiel wird mithilfe von `Dim` ein Name für die Funktion bereitgestellt.  Zum Aufrufen der Funktion übergeben Sie einen Wert als Parameter.  
+## <a name="example"></a>Beispiel  
+ Den folgenden Beispielen werden zwei Methoden zum Erstellen von einfachen Lambda-Ausdrücke. Die erste Anwendung verwendet eine `Dim` einen Namen für die Funktion angeben. Um die Funktion aufrufen, senden Sie einen Wert für den Parameter.  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas&#1;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
+ [!code-vb[VbVbalrLambdas&#2;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
-## Beispiel  
- Alternativ kann die Funktion gleichzeitig deklariert und ausgeführt werden.  
+## <a name="example"></a>Beispiel  
+ Alternativ können Sie deklarieren, und führen Sie die Funktion zur gleichen Zeit.  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
+ [!code-vb[VbVbalrLambdas&3;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
-## Beispiel  
- Das folgende Beispiel zeigt einen Lambda\-Ausdruck, der das übergebene Argument inkrementiert und den Wert zurückgibt.  Im Beispiel wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Funktion veranschaulicht.  Weitere Beispiele finden Sie unter [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+## <a name="example"></a>Beispiel  
+ Es folgt ein Beispiel eines Lambda-Ausdrucks, das Argument inkrementiert und gibt den Wert zurück. Das Beispiel zeigt sowohl die einzeilige und mehrzeilige Lambda-Ausdruckssyntax für eine Funktion. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
+ [!code-vb[VbVbalrLambdas&14;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
-## Beispiel  
- In [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)] liegen zahlreichen Abfrageoperatoren Lambda\-Ausdrücke zugrunde, die in methodenbasierten Abfragen explizit verwendet werden können.  Im folgenden Beispiel wird eine typische [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrage gefolgt von der Übersetzung der Abfrageinformationen in das Methodenformat dargestellt.  
+## <a name="example"></a>Beispiel  
+ Lambda-Ausdrücke zugrunde liegen viele Abfrageoperatoren in [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)], und in methodenbasierten Abfragen explizit verwendet werden können. Das folgende Beispiel zeigt eine typische [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] Abfrage, gefolgt von der Übersetzung der Abfrage in Methode Format.  
   
-```vb#  
+```vb  
 Dim londonCusts = From cust In db.Customers  
                        Where cust.City = "London"  
                        Select cust  
@@ -95,14 +110,14 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Weitere Informationen zu Abfragemethoden finden Sie unter [Queries](../../../visual-basic/language-reference/queries/queries.md).  Weitere Informationen über Standardabfrageoperatoren finden Sie unter [Standard Query Operators Overview](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Weitere Informationen zu Abfragemethoden finden Sie unter [Abfragen](../../../visual-basic/language-reference/queries/queries.md). Weitere Informationen über Standardabfrageoperatoren finden Sie unter [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
-## Siehe auch  
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   
- [Value Comparisons](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
- [If Operator](../../../visual-basic/language-reference/operators/if-operator.md)   
- [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Siehe auch  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)   
+ [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
+ [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)   
+ [Wertvergleiche](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
+ [Boolesche Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
+ [Wenn Operator](../../../visual-basic/language-reference/operators/if-operator.md)   
+ [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

@@ -1,100 +1,116 @@
 ---
-title: "Object Initializers: Named and Anonymous Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ObjectInitializer"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "object initializers [Visual Basic]"
-  - "anonymous types [Visual Basic], object initializers"
-  - "initializing properties [Visual Basic]"
-  - "initializers [Visual Basic]"
-  - "named types [Visual Basic]"
+title: 'Objektinitialisierer: Benannte und anonyme Typen (Visual Basic) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ObjectInitializer
+dev_langs:
+- VB
+helpviewer_keywords:
+- object initializers [Visual Basic]
+- anonymous types [Visual Basic], object initializers
+- initializing properties [Visual Basic]
+- initializers [Visual Basic]
+- named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# Object Initializers: Named and Anonymous Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d684ad4f3dd47dc7400ea401a94660af832ef866
+ms.lasthandoff: 03/13/2017
 
-Durch Objektinitialisierer können mithilfe eines einzelnen Ausdrucks die Eigenschaften für ein komplexes Objekt angegeben werden.  Sie können verwendet werden, um Instanzen von benannten Typen und anonymen Typen zu erstellen.  
+---
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Objektinitialisierer: Benannte und anonyme Typen (Visual Basic)
+Mit Objektinitialisierern können Sie Eigenschaften für ein komplexes Objekt mit einem einzelnen Ausdruck angeben. Sie können zum Erstellen von Instanzen benannter Typen und anonymer Typen verwendet werden.  
   
-## Deklarationen  
- Deklarationen von Instanzen benannter und anonymer Typen können fast identisch aussehen. Ihre Auswirkungen sind jedoch unterschiedlich.  Jede Kategorie verfügt über eigene Möglichkeiten und Einschränkungen.  Im folgenden Beispiel wird eine einfache Möglichkeit gezeigt, unter Verwendung einer Objektinitialisiererliste eine Instanz einer benannten Klasse, der `Customer`\-Klasse, zu deklarieren und zu initialisieren.  Beachten Sie, dass der Name der Klasse nach dem Schlüsselwort `New` angegeben wird.  
+## <a name="declarations"></a>Deklarationen  
+ Deklarationen von Instanzen von benannten und anonymen Typen können fast identisch aussehen, aber die Auswirkungen sind nicht identisch. Jede Kategorie verfügt über Funktionen und Einschränkungen der eigenen. Das folgende Beispiel zeigt eine bequeme Möglichkeit zum Deklarieren und initialisieren eine Instanz einer benannten Klasse, `Customer`, mithilfe einer Initialisierungsliste Objekt. Beachten Sie, dass der Name der Klasse nach dem Schlüsselwort angegeben wird `New`.  
   
- [!code-vb[VbVbalrObjectInit#1](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_1.vb)]  
+ [!code-vb[VbVbalrObjectInit&#1;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_1.vb)]  
   
- Ein anonymer Typ hat keinen verwendbaren Namen.  Daher kann eine Instanziierung eines anonymen Typs keinen Klassennamen einschließen.  
+ Ein anonymer Typ hat keinen verwendbaren Namen. Eine Instanziierung eines anonymen Typs kann nicht aus diesem Grund Klassennamen angeben.  
   
- [!code-vb[VbVbalrObjectInit#2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_2.vb)]  
+ [!code-vb[VbVbalrObjectInit&#2;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_2.vb)]  
   
- Die Anforderungen und Ergebnisse der beiden Deklarationen sind nicht identisch.  Für `namedCust` muss bereits eine `Customer`\-Klasse mit einer `Name`\-Eigenschaft vorhanden sein. Die Deklaration erstellt eine Instanz dieser Klasse.  Für `anonymousCust` definiert der Compiler eine neue Klasse mit einer Eigenschaft, einer Zeichenfolge mit dem Namen `Name`, und erstellt eine neue Instanz dieser Klasse.  
+ Die Anforderungen und die Ergebnisse der beiden Deklarationen sind nicht identisch. Für `namedCust`, `Customer` -Klasse, verfügt eine `Name` Eigenschaft muss bereits vorhanden sein, und die Deklaration erstellt eine Instanz dieser Klasse. Für `anonymousCust`, definiert der Compiler eine neue Klasse, die eine eine Zeichenfolge mit dem Namen Eigenschaft `Name`, und erstellt eine neue Instanz dieser Klasse.  
   
-## Benannte Typen  
- Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen und die Werte einiger oder aller Eigenschaften in einer einzigen Anweisung festzulegen.  Der Compiler ruft den entsprechenden Konstruktor für die Anweisung auf: den Standardkonstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn mindestens ein Argument übergeben wird.  Anschließend werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in der sie in der Initialisiererliste angezeigt werden.  
+## <a name="named-types"></a>Benannte Typen  
+ Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen, und legen Sie die Werte einiger oder aller Eigenschaften in einer einzelnen Anweisung. Der Compiler Ruft den entsprechenden Konstruktor für die Anweisung: der Standardkonstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn ein oder mehrere Argumente gesendet werden. Danach werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in denen sie in der Initialisiererliste angezeigt werden.  
   
- Jede Initialisierung in der Initialisiererliste besteht aus der Zuweisung eines Anfangswerts zu einem Member der Klasse.  Die Namen und Datentypen der Member werden bei der Definition der Klasse bestimmt.  In den folgenden Beispielen muss die `Customer`\-Klasse vorhanden sein. Diese muss über Member mit Namen `Name` und `City` verfügen, die Zeichenfolgenwerte akzeptieren.  
+ Jede Initialisierung in der Initialisiererliste besteht aus der Zuweisung eines Anfangswerts auf einen Member der Klasse. Wenn die Klasse definiert ist, werden die Namen und Datentypen der Elemente bestimmt. In den folgenden Beispielen wird die `Customer` Klasse muss vorhanden sein und müssen Mitglieder benannten `Name` und `City` können Werte akzeptieren.  
   
- [!code-vb[VbVbalrObjectInit#3](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_3.vb)]  
+ [!code-vb[VbVbalrObjectInit&3;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_3.vb)]  
   
- Alternativ erhalten Sie das gleiche Ergebnis, indem Sie den folgenden Code verwenden:  
+ Alternativ können Sie das gleiche Ergebnis abrufen, mit dem folgenden Code:  
   
- [!code-vb[VbVbalrObjectInit#4](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_4.vb)]  
+ [!code-vb[VbVbalrObjectInit&4;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_4.vb)]  
   
- Jede dieser Deklarationen entspricht dem folgenden Beispiel, in dem mithilfe des Standardkonstruktors ein `Customer`\-Objekt erzeugt wird und dann unter Verwendung einer `With`\-Anweisung Anfangswerte für die `Name`\-Eigenschaft und die `City`\-Eigenschaft angegeben werden.  
+ Jede dieser Deklarationen entspricht dem folgenden Beispiel erstellt eine `Customer` -Objekts, indem Sie mit dem Standardkonstruktor, und legt dann die Anfangswerte für die `Name` und `City` Eigenschaften mithilfe einer `With` Anweisung.  
   
- [!code-vb[VbVbalrObjectInit#5](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_5.vb)]  
+ [!code-vb[VbVbalrObjectInit&5;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_5.vb)]  
   
- Wenn die `Customer`\-Klasse einen parametrisierten Konstruktor enthält, mit dem beispielsweise ein Wert für `Name` festgelegt werden kann, können Sie ein `Customer`\-Objekt auch folgendermaßen deklarieren und initialisieren:  
+ Wenn die `Customer` Klasse enthält einen parametrisierten Konstruktor, der Ihnen ermöglicht, ein Wert für `Name`, z. B. können auch deklarieren und Initialisieren einer `Customer` Objekt auf folgende Weise:  
   
- [!code-vb[VbVbalrObjectInit#6](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_6.vb)]  
+ [!code-vb[VbVbalrObjectInit&6;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_6.vb)]  
   
- Wie folgender Code zeigt, müssen Sie nicht alle Eigenschaften initialisieren.  
+ Sie müssen nicht alle Eigenschaften, wie im folgenden Code gezeigt zu initialisieren.  
   
- [!code-vb[VbVbalrObjectInit#7](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_7.vb)]  
+ [!code-vb[VbVbalrObjectInit&#7;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_7.vb)]  
   
- Die Initialisierungsliste darf jedoch nicht leer sein.  Nicht initialisierte Eigenschaften behalten ihre Standardwerte.  
+ Allerdings werden die Initialisierungsliste darf nicht leer sein. Nicht initialisierte Eigenschaften behalten ihre Standardwerte.  
   
-### Typrückschluss mit benannten Typen  
- Sie können den Code für die Deklaration von `cust1` verkürzen, indem Sie Objektinitialisierer und lokalen Typrückschluss kombinieren.  Dadurch können Sie auf die `As`\-Klausel in der Variablendeklaration verzichten.  Der Datentyp der Variablen wird vom Typ des von der Zuweisung erstellten Objekts abgeleitet.  Im folgenden Beispiel ist `cust6` vom Typ `Customer`.  
+### <a name="type-inference-with-named-types"></a>Typrückschluss mit benannten Typen  
+ Sie können den Code für die Deklaration von verkürzen `cust1` durch Objektinitialisierer und lokalen Typrückschluss kombinieren. Dadurch können Sie weglassen der `As` -Klausel in der Variablendeklaration. Der Datentyp der Variablen wird vom Typ des Objekts abgeleitet, die durch die Zuweisung erstellt wird. Im folgenden Beispiel den Typ des `cust6` ist `Customer`.  
   
- [!code-vb[VbVbalrObjectInit#8](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrObjectInit&#8;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_8.vb)]  
   
-### Hinweise zu benannten Typen  
+### <a name="remarks-about-named-types"></a>Hinweise zu benannten Typen  
   
--   Ein Klassenmember kann nicht mehr als einmal in der Objektinitialisiererliste initialisiert werden.  Die Deklaration von `cust7` verursacht einen Fehler.  
+-   Ein Klassenmember kann nicht mehr als einmal in der Objektinitialisiererliste initialisiert werden. Die Deklaration von `cust7` verursacht einen Fehler.  
   
-     [!code-vb[VbVbalrObjectInit#9](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_9.vb)]  
+     [!code-vb[VbVbalrObjectInit&#9;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_9.vb)]  
   
--   Ein Member kann verwendet werden, um sich selbst oder ein anderes Feld zu initialisieren.  Wenn, wie in der folgenden Deklaration für `cust8`, auf einen Member zugegriffen wird, bevor er initialisiert wurde, wird der Standardwert verwendet.  Beachten Sie, dass bei der Verarbeitung einer Deklaration, die einen Objektinitialisierer verwendet, als erstes der entsprechende Konstruktor aufgerufen wird.  Danach werden die einzelnen Felder in der Initialisiererliste initialisiert.  In den folgenden Beispielen wird der Standardwert für `Name` für `cust8` zugewiesen, und `cust9` wird ein initialisierter Wert zugewiesen.  
+-   Ein Element kann verwendet werden, um sich selbst oder ein anderes Feld zu initialisieren. Wenn ein Mitglied zugegriffen wird, bevor es in der folgenden Deklaration für initialisiert wurde, `cust8`, der Standardwert verwendet werden. Denken Sie daran, dass wenn eine Deklaration, die mithilfe ein Objektinitialisierers verarbeitet wird, ist das erste Ereignis, dass der entsprechende Konstruktor aufgerufen wird. Danach werden die einzelnen Felder in der Initialisierungsliste initialisiert. In den folgenden Beispielen wird der Standardwert für `Name` für zugewiesen ist `cust8`, und ein initialisierter Wert zugewiesen ist `cust9`.  
   
-     [!code-vb[VbVbalrObjectInit#10](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_10.vb)]  
+     [!code-vb[VbVbalrObjectInit&#10;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_10.vb)]  
   
-     Im folgenden Beispiel wird der parametrisierte Konstruktor aus `cust3` und `cust4` verwendet, um `cust10` und `cust11` zu deklarieren und zu initialisieren.  
+     Im folgenden Beispiel wird den parametrisierten Konstruktor aus `cust3` und `cust4` zu deklarieren und initialisieren `cust10` und `cust11`.  
   
-     [!code-vb[VbVbalrObjectInit#11](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_11.vb)]  
+     [!code-vb[VbVbalrObjectInit&#11;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_11.vb)]  
   
--   Objektinitialisierer können geschachtelt werden.  Im folgenden Beispiel ist `AddressClass` eine Klasse mit zwei Eigenschaften, `City` und `State`. Die `Customer`\-Klasse verfügt über eine `Address`\-Eigenschaft, die eine Instanz von `AddressClass` ist.  
+-   Objektinitialisierer können geschachtelt werden. Im folgenden Beispiel `AddressClass` ist eine Klasse mit zwei Eigenschaften, `City` und `State`, und die `Customer` -Klasse verfügt über eine `Address` -Eigenschaft, die eine Instanz des `AddressClass`.  
   
-     [!code-vb[VbVbalrObjectInit#12](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_12.vb)]  
+     [!code-vb[VbVbalrObjectInit&#12;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_12.vb)]  
   
 -   Die Initialisierungsliste darf nicht leer sein.  
   
--   Die Instanz, die initialisiert wird, kann nicht vom Typ Object sein.  
+-   Die initialisierte Instanz darf nicht vom Typ Object sein.  
   
--   Klassenmember, die initialisiert werden, können keine freigegebenen Member, schreibgeschützten Member, Konstanten oder Methodenaufrufe sein.  
+-   Member der Klasse initialisiert wird, können nicht freigegebene Member, schreibgeschützten Member, Konstanten oder Methodenaufrufe sein.  
   
--   Klassenmember, die initialisiert werden, können nicht indiziert oder qualifiziert werden.  In den folgenden Beispielen werden Compilerfehler ausgelöst:  
+-   Klassenmember, die initialisiert können nicht indiziert oder qualifiziert werden. In den folgenden Beispielen werden Compilerfehler ausgelöst:  
   
      `'' Not valid.`  
   
@@ -102,44 +118,44 @@ Durch Objektinitialisierer können mithilfe eines einzelnen Ausdrucks die Eigens
   
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
-## Anonyme Typen  
- Anonyme Typen verwenden Objektinitialisierer, um Instanzen neuer Typen zu erstellen, die Sie nicht explizit definieren und benennen.  Stattdessen generiert der Compiler einen Typ entsprechend den Eigenschaften, die Sie in der Objektinitialisiererliste festlegen.  Da der Name des Typs nicht angegeben wird, wird er als *anonymer Typ* bezeichnet.  Vergleichen Sie die folgende Deklaration z. B. mit der früheren für `cust6`.  
+## <a name="anonymous-types"></a>Anonyme Typen  
+ Anonyme Typen verwenden Objektinitialisierer, um Instanzen neue Typen, die Sie nicht explizit definieren und den Namen erstellen. In diesem Fall generiert der Compiler einen Typ mit den Eigenschaften, die Sie angeben, in der Objektinitialisiererliste. Da der Name des Typs nicht angegeben wird, wird bezeichnet als ein *anonymen Typ*. Vergleichen Sie beispielsweise die folgende Deklaration mit der früheren für `cust6`.  
   
- [!code-vb[VbVbalrObjectInit#13](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_13.vb)]  
+ [!code-vb[VbVbalrObjectInit&#13;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_13.vb)]  
   
- Der einzige syntaktische Unterschied besteht darin, dass nach `New` kein Name für den Datentyp angegeben wird.  Es geschieht jedoch etwas ganz anderes.  Vom Compiler wird ein neuer anonymer Typ definiert, der über zwei Eigenschaften, `Name` und `City`, verfügt. Dann wird mit den angegebenen Werten eine Instanz davon erstellt.  Im Beispiel werden die Typen von `Name` und `City` per Typrückschluss als Zeichenfolgen bestimmt.  
+ Der einzige Unterschied ist syntaktisch, dass kein Name angegeben wird `New` für den Datentyp. Was geschieht, ist jedoch sehr unterschiedlich. Der Compiler definiert einen neuen anonymen Typ mit den beiden Eigenschaften `Name` und `City`, und erstellt eine Instanz mit den angegebenen Werten. Typrückschluss bestimmt die Art der `Name` und `City` im Beispiel um Zeichenfolgen handelt.  
   
 > [!CAUTION]
->  Der Name des anonymen Typs wird vom Compiler erzeugt und kann von Kompilierung zu Kompilierung variieren.  Sie sollten im Code den Namen eines anonymen Typs nicht verwenden oder sich darauf verlassen.  
+>  Der Name des anonymen Typs wird vom Compiler generiert und kann von Kompilierung zu Kompilierung variieren. Ihr Code sollte nicht verwenden oder basieren auf den Namen eines anonymen Typs.  
   
- Da der Name des Typs nicht verfügbar ist, können Sie keine `As`\-Klausel verwenden, um `cust13` zu deklarieren.  Der Typ muss abgeleitet werden.  Ohne die Verwendung später Bindung wird dadurch die Verwendung anonymer Typen auf lokale Variablen eingeschränkt.  
+ Da der Name des Typs nicht verfügbar ist, können kein `As` -Klausel, um deklarieren `cust13`. Der Typ muss abgeleitet werden. Keine späten Bindung, schränkt dies die Verwendung von anonymen Typen auf lokale Variablen.  
   
- Anonyme Typen unterstützen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen.  Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Anonyme Typen unterstützen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen. Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-### Hinweise zu anonymen Typen  
+### <a name="remarks-about-anonymous-types"></a>Hinweise zu anonymen Typen  
   
--   In der Regel sind alle bzw. die meisten Eigenschaften in einer Deklaration von anonymen Typen Schlüsseleigenschaften, die durch das Schlüsselwort `Key` vor dem Eigenschaftennamen gekennzeichnet werden.  
+-   In der Regel alle oder die meisten der Eigenschaften in der Deklaration eines anonymen Typs werden wichtige Eigenschaften, die angegeben werden, durch das Schlüsselwort `Key` vor dem Eigenschaftennamen.  
   
-     [!code-vb[VbVbalrObjectInit#14](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_14.vb)]  
+     [!code-vb[VbVbalrObjectInit&14;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_14.vb)]  
   
-     Weitere Informationen zu Schlüsseleigenschaften finden Sie unter [Key](../../../../visual-basic/language-reference/modifiers/key.md).  
+     Weitere Informationen zu Schlüsseleigenschaften finden Sie unter [Schlüssel](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Wie bei benannten Typen müssen Initialisiererlisten für anonyme Typdefinitionen mindestens eine Eigenschaft deklarieren.  
+-   Wie bei benannten Typen müssen Initialisiererlisten für anonyme Typdefinitionen mindestens eine Eigenschaft deklarieren müssen.  
   
-     [!code-vb[VbVbalrObjectInit#2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_2.vb)]  
+     [!code-vb[VbVbalrObjectInit&#2;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_2.vb)]  
   
--   Wenn eine Instanz eines anonymen Typs deklariert wird, generiert der Compiler eine entsprechende anonyme Typdefinition.  Die Namen und Datentypen der Eigenschaften werden aus der Deklaration der Instanz übernommen und vom Compiler in die Definition eingefügt.  Die Eigenschaften werden nicht im Voraus benannt und definiert, wie dies bei einem benannten Typ der Fall wäre.  Ihre Typen werden abgeleitet.  Sie können die Datentypen der Eigenschaften nicht durch Verwendung einer `As`\-Klausel angeben.  
+-   Wenn eine Instanz eines anonymen Typs deklariert wird, generiert der Compiler eine entsprechende anonyme Typdefinition. Die Namen und Datentypen der Eigenschaften werden aus der Deklaration der Instanz übernommen und vom Compiler in der Definition enthalten sind. Die Eigenschaften sind nicht mit dem Namen und im Voraus definiert werden, wie bei einem benannten Typ. Ihre Typen werden abgeleitet. Sie können die Datentypen der Eigenschaften durch Verwendung angeben einer `As` Klausel.  
   
--   Anonyme Typen können die Namen und Werte ihrer Eigenschaften auch auf andere Weisen bestimmen.  Beispielsweise kann eine Eigenschaft eines anonymen Typs sowohl den Namen als auch den Wert einer Variablen oder aber den Namen und den Wert einer Eigenschaft eines anderen Objekts annehmen.  
+-   Anonyme Typen können die Namen und Werte ihrer Eigenschaften auch auf verschiedene Weise einrichten. Eine Eigenschaft eines anonymen Typs kann z. B. den Namen und den Wert einer Variablen oder den Namen und Wert einer Eigenschaft eines anderen Objekts dauern.  
   
-     [!code-vb[VbVbalrObjectInit#15](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_15.vb)]  
+     [!code-vb[VbVbalrObjectInit&#15;](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_15.vb)]  
   
-     Weitere Informationen über die Optionen zum Definieren von Eigenschaften in anonymen Typen finden Sie unter [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+     Weitere Informationen zu den Optionen zum Definieren von Eigenschaften in anonymen Typen finden Sie unter [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## Siehe auch  
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+ [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
+ [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
  [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)   
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)   
- [How to: Declare an Object by Using an Object Initializer](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+ [Schlüssel](../../../../visual-basic/language-reference/modifiers/key.md)   
+ [Gewusst wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

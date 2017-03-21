@@ -1,63 +1,79 @@
 ---
-title: "Decision Structures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "statements [Visual Basic], control flow"
-  - "If statement, decision structures"
-  - "If statement, If...Then...Else"
-  - "control flow, decision structures"
-  - "decision structures"
-  - "conditional statements, decision structures"
+title: Decision-Strukturen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- statements [Visual Basic], control flow
+- If statement, decision structures
+- If statement, If...Then...Else
+- control flow, decision structures
+- decision structures
+- conditional statements, decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 29
----
-# Decision Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c69b487322dc75ae8d54f42c1c62f8f5cc35757d
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gibt Ihnen die Möglichkeit, Bedingungen zu testen und je nach Testergebnis verschiedene Vorgänge durchzuführen.  Sie können für verschiedene Werte eines Ausdrucks oder verschiedene Ausnahmen, die beim Ausführen einer Reihe von Anweisungen generiert werden, testen, ob eine Bedingung "True" oder "False" ist.  
+---
+# <a name="decision-structures-visual-basic"></a>Entscheidungsstrukturen (Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]können Sie testbedingungen und andere Vorgänge abhängig von den Ergebnissen dieses Tests ausführen. Sie können testen, für eine Bedingung zu true oder false für verschiedene Werte für einen Ausdruck oder für verschiedene Ausnahmen generiert, wenn Sie eine Reihe von Anweisungen ausführen.  
   
- Im folgenden Beispiel wird eine Entscheidungsstruktur veranschaulicht, mit der eine Bedingung auf den Wert True getestet wird und verschiedene Aktionen ausgeführt werden, je nachdem, ob die Bedingung True oder False ist.  
+ Die folgende Abbildung zeigt eine Entscheidungsstruktur, die testet eine Bedingung erfüllt sein und verschiedene Aktionen abhängig davon, ob er true oder false.  
   
- ![Flussdiagramm einer If...Then...Else&#45;Konstruktion](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-Ausführen unterschiedlicher Aktionen, je nachdem, ob eine Bedingung True oder False ist  
+ ![Flussdiagramm einer If... Dann... Else-Konstruktion](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
+Unterschiedliche Aktionen auszuführen, wenn eine Bedingung True ist, und wenn sie falsch ist.  
   
-## If...Then...Else\-Konstruktion  
- Anhand von `If...Then...Else`\-Konstruktionen können Sie eine oder mehrere Bedingungen überprüfen und je nach Bedingung eine oder mehrere Anweisungen ausführen.  Sie können Bedingungen testen und folgende, von den Testergebnissen abhängige Maßnahmen ergreifen:  
+## <a name="ifthenelse-construction"></a>If... Dann... Else-Konstruktion  
+ `If...Then...Else`Konstruktionen können Sie für mindestens eine Bedingung zu testen, und führen Sie eine oder mehrere Anweisungen jede Bedingung. Sie können testbedingungen und Aktionen auf folgende Weise:  
   
--   Ausführen einer oder mehrerer Anweisungen, wenn eine Bedingung `True` ist  
+-   Führen Sie eine oder mehrere Anweisungen, wenn eine Bedingung`True`  
   
--   Ausführen einer oder mehrerer Anweisungen, wenn eine Bedingung `False` ist  
+-   Führen Sie eine oder mehrere Anweisungen, wenn eine Bedingung`False`  
   
--   Ausführen einer Gruppe von Anweisungen, wenn eine Bedingung `True` ist, und Ausführen anderer Anweisungen, wenn die Bedingung `False` ist  
+-   Führen Sie einige Anweisungen, wenn eine Bedingung `True` und anderen ist dies`False`  
   
--   Testen einer zusätzlichen Bedingung, wenn eine zuvor angegebene Bedingung `False` ist  
+-   Testen einer zusätzlichen Bedingung, wenn eine zuvor angegebene Bedingung ist`False`  
   
- Die Kontrollstruktur, die all diese Maßnahmen ermöglicht, wird als [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md) bezeichnet.  Verwenden Sie eine einzeilige Variante, wenn nur eine Bedingung getestet und eine Anweisung ausgeführt werden soll.  Wenn eine komplexere Gruppe von Bedingungen und Aktionen vorliegt, verwenden Sie die mehrzeilige Variante.  
+ Die Kontrollstruktur, die all diese Maßnahmen ermöglicht, wird die [Wenn... Dann... Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sie können eine einzeiligen Version verwenden, haben nur einen Test und eine Anweisung auszuführen. Wenn Sie einen komplexen Satz aus Bedingung und Aktion haben, können Sie die Version für mehrere Zeilen.  
   
-## Select...Case\-Konstruktion  
- Mit der `Select...Case`\-Konstruktion können Sie einen Ausdruck einmal auswerten und für verschiedene mögliche Werte Gruppen von Anweisungen ausführen.  Weitere Informationen finden Sie unter [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Wählen Sie... Case-Konstruktion  
+ Die `Select...Case` Konstruktion können Sie Auswerten eines Ausdrucks einmal, und führen Sie verschiedene Gruppen von Anweisungen basierend auf verschiedenen möglichen Werte. Weitere Informationen finden Sie unter [wählen... Case-Anweisung](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## Try...Catch...Finally\-Konstruktion  
- Mit `Try...Catch...Finally`\-Konstruktionen können Sie eine Gruppe von Anweisungen in einer weiterhin steuerbaren Umgebung ausführen, falls eine der Anweisungen eine Ausnahme auslöst.  Unterschiedliche Ausnahmen können unterschiedlich behandelt werden.  Optional können Sie auch einen Codeblock angeben, der in jedem Fall ausgeführt wird, bevor die gesamte `Try...Catch...Finally`\-Konstruktion verlassen wird.  Weitere Informationen finden Sie unter [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Versuchen Sie es... Catch... Finally-Konstruktion  
+ `Try...Catch...Finally`Konstruktionen können Sie eine Gruppe von Anweisungen in einer Umgebung ausführen, die Kontrolle behält, wenn eine Anweisung eine Ausnahme auslöst. Sie können verschiedene Aktionen für verschiedene Ausnahmen. Optional können Sie angeben, einen Codeblock, der ausgeführt wird, bevor Sie verlassen, dass die gesamte `Try...Catch...Finally` Konstruktion, unabhängig davon, was auftritt. Weitere Informationen finden Sie unter [versuchen... Catch... Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
->  Bei vielen Steuerungsstrukturen werden beim Klicken auf ein Schlüsselwort alle Schlüsselwörter der Struktur hervorgehoben.  Wenn Sie in einer `If...Then...Else`\-Konstruktion beispielsweise auf `If` klicken, werden in der Konstruktion alle Instanzen von `If`, `Then`, `ElseIf`, `Else` und `End If` hervorgehoben.  Um zum nächsten oder vorherigen markierten Schlüsselwort zu springen, drücken Sie STRG\+UMSCHALT\+NACH\-UNTEN bzw. STRG\+UMSCHALT\+NACH\-OBEN.  
+>  Für viele Steuerungsstrukturen werden beim Klicken auf ein Schlüsselwort alle Schlüsselwörter in der Struktur hervorgehoben. Z. B. beim Klicken auf `If` in einer `If...Then...Else` Konstruktion, alle Instanzen von `If`, `Then`, `ElseIf`, `Else`, und `End If` bei der Erstellung werden hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu wechseln, drücken Sie STRG + UMSCHALT + nach-unten oder STRG + UMSCHALT + nach-oben-Taste.  
   
-## Siehe auch  
- [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Other Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [If Operator](../../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
+ [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
+ [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
+ [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
+ [If-Operator](../../../../visual-basic/language-reference/operators/if-operator.md)

@@ -1,45 +1,61 @@
 ---
-title: "&#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc40029"
-  - "vbc40029"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40029"
+title: '&quot;&lt;Classname&gt;&quot;ist nicht CLS-kompatibel, da die Schnittstelle&quot;&lt;Interfacename&gt;&quot; Es implementiert ist nicht CLS-kompatibel. | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc40029
+- vbc40029
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# &#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1e5c948ed5ddeaa2f8a8efd4aa83a2539cc862f3
+ms.lasthandoff: 03/13/2017
 
-Eine Klasse oder Schnittstelle ist als `<CLSCompliant(True)>` markiert, doch sie ist von einem Typ abgeleitet oder implementiert einen Typ, der als `<CLSCompliant(False)>` markiert oder nicht markiert ist.  
+---
+# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>'&lt;Classname&gt;"ist nicht CLS-kompatibel, da die Schnittstelle"&lt;Interfacename&gt;' Es implementiert ist nicht CLS-kompatibel.
+Eine Klasse oder Schnittstelle wird als `<CLSCompliant(True)>` gekennzeichnet, wenn sie von einem Typ abgeleitet ist oder einen Typ implementiert, der als `<CLSCompliant(False)>` oder gar nicht gekennzeichnet ist.  
   
- Damit eine Klasse oder Schnittstelle mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel ist, muss ihre gesamte Vererbungshierarchie CLS\-kompatibel sein.  Das bedeutet, dass jeder Typ, von dem sie direkt oder indirekt erbt, kompatibel sein muss.  Wenn eine Klasse eine oder mehrere Schnittstellen implementiert, müssen entsprechend alle diese Schnittstellen in ihrer gesamten Vererbungshierarchie kompatibel sein.  
+ Für eine Klasse oder Schnittstelle, um die Kompatibilität mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), ihre gesamte Vererbungshierarchie kompatibel sein. Das bedeutet, dass jeder Typ, von dem sie direkt oder indirekt erbt, kompatibel sein muss. Analog dazu muss eine Klasse, wenn sie eine oder mehrere Schnittstellen implementiert, deren Konformität durch alle Vererbungshierarchien sicherstellen.  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant`\-Parameter des Attributs auf `True` oder auf `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben.  Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
+ Beim Anwenden der <xref:System.CLSCompliantAttribute>auf ein Programmierelement legen Sie des Attributs `isCompliant` Parameter entweder `True` oder `False` an Kompatibilität oder Nichtkompatibilität.</xref:System.CLSCompliantAttribute> Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> nicht auf ein Element anwenden, wird dieses als nicht kompatibel betrachtet.  
+ Wenn Sie nicht anwenden der <xref:System.CLSCompliantAttribute>auf ein Element gilt nicht kompatibel ist.</xref:System.CLSCompliantAttribute>  
   
- Standardmäßig ist diese Meldung eine Warnung.  Informationen über das Ausblenden von Warnungen bzw. über die Behandlung von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Fehler\-ID:** BC40029  
+ **Fehler-ID:** BC40029  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn CLS\-Kompatibilität erforderlich ist, definieren Sie diesen Typ in einer anderen Vererbungshierarchie oder in einem anderen Implementierungsschema.  
+-   Wenn Sie CLS-Konformität benötigen, definieren Sie diesen Typ innerhalb einer anderen Vererbungshierarchie oder eines anderen Implementierungsschemas.  
   
--   Wenn dieser Typ in der aktuellen Vererbungshierarchie oder im aktuellen Implementierungsschema verbleiben muss, entfernen Sie das <xref:System.CLSCompliantAttribute> aus der Typdefinition, oder markieren Sie ihn als `<CLSCompliant(False)>`.  
+-   Wenn dieser Typ innerhalb der aktuellen Vererbung oder Schema verbleiben muss, entfernen Sie die <xref:System.CLSCompliantAttribute>aus der Definition oder markieren Sie ihn als `<CLSCompliant(False)>`.</xref:System.CLSCompliantAttribute>  
   
-## Siehe auch  
- [\<PAVE OVER\> Writing CLS\-Compliant Code](http://msdn.microsoft.com/de-de/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a>Siehe auch  
+ [\<PAVE über > CLS-kompatiblen Code schreiben](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

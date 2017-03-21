@@ -1,78 +1,91 @@
 ---
-title: "/warnaserror (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "warnaserror compiler option [Visual Basic]"
-  - "/warnaserror compiler option [Visual Basic]"
-  - "-warnaserror compiler option [Visual Basic]"
+title: / warnaserror (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- warnaserror compiler option [Visual Basic]
+- /warnaserror compiler option [Visual Basic]
+- -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# /warnaserror (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 28f232b1ad8200455550f2f4c1204818c8b143ab
+ms.lasthandoff: 03/13/2017
 
-Bewirkt, dass der Compiler eine erstmalig auftretende Warnung als Fehler behandelt.  
+---
+# <a name="warnaserror-visual-basic"></a>/warnaserror (Visual Basic)
+Der Compiler das erste Vorkommen einer Warnung als Fehler behandelt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /warnaserror[+ | -][:numberList]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|\+ &#124; \-|Optional.  Standardmäßig ist `/warnaserror-` aktiviert; Warnungen verhindern in diesem Fall nicht, dass der Compiler eine Ausgabedatei erstellt.  Die `/warnaserror` \-Option \(entspricht `/warnaserror+`\) bewirkt, dass Warnungen als Fehler behandelt werden.|  
-|`numberList`|Optional.  Durch Kommas getrennte Liste der Warnungs\-ID\-Nummern, für die die `/warnaserror`\-Option gilt.  Wenn keine Warnungs\-ID angegeben wird, gilt die `/warnaserror`\-Option für alle Warnungen.|  
+|---|---|  
+|+ &#124; -|Optional. In der Standardeinstellung `/warnaserror-` ist aktiviert; Warnungen verhindern nicht, dass den Compiler erzeugt eine Ausgabedatei. Die `/warnaserror` Option, die die gleiche wird als `/warnaserror+`, werden Warnungen als Fehler behandelt werden.|  
+|`numberList`|Optional. Durch Kommas getrennte Liste der ID der Warnung auf die Zahlen der `/warnaserror` Option gilt. Wenn keine Warnung-ID angegeben wird, die `/warnaserror` Option gilt für alle Warnungen.|  
   
-## Hinweise  
- Die Option `/warnaserror` behandelt alle Warnungen als Fehler.  Alle Meldungen, die normalerweise als Warnungen gemeldet werden, werden stattdessen als Fehler gemeldet.  Der Compiler gibt aufeinander folgende Vorkommen der gleichen Warnung als Warnungen aus.  
+## <a name="remarks"></a>Hinweise  
+ Die `/warnaserror` Option alle Warnungen als Fehler behandelt. Alle Nachrichten, die in der Regel gemeldet werden, wie Warnungen stattdessen als Fehler gemeldet werden. Der Compiler meldet nachfolgende Vorkommen der gleichen Warnung als Warnungen.  
   
- Standardmäßig ist `/warnaserror-` aktiviert. Dies bewirkt, dass die Warnungen nur zur Information dienen.  Die `/warnaserror` \-Option \(entspricht `/warnaserror+`\) bewirkt, dass Warnungen als Fehler behandelt werden.  
+ In der Standardeinstellung `/warnaserror-` ist gültig, wodurch die Warnungen, um nur zu Informationszwecken werden. Die `/warnaserror` Option, die die gleiche wird als `/warnaserror+`, werden Warnungen als Fehler behandelt werden.  
   
- Wenn nur einige ausgewählte Warnungen als Fehler behandelt werden sollen, erstellen Sie eine Liste mit durch Trennzeichen voneinander getrennten Warnungsnummern, die als Fehler behandelt werden sollen.  
+ Wenn Sie nur einige bestimmte Warnungen als Fehler behandelt werden soll, können Sie eine durch Trennzeichen getrennte Liste von Warnungsnummern als Fehler behandelt angeben.  
   
 > [!NOTE]
->  Mit der `/warnaserror`\-Option wird nicht gesteuert, wie Warnungen angezeigt werden.  Verwenden Sie die [\/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)\-Option, um Warnungen zu deaktivieren.  
+>  Die `/warnaserror` Option steuert nicht die Anzeige von Warnungen. Verwenden der [/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) Option zum Deaktivieren von Warnungen.  
   
-||  
-|-|  
-|So legen Sie \/warnaserror darauf fest, alle Warnungen in der Visual Studio\-IDE als Fehler zu behandeln|  
-|1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  Weitere Informationen finden Sie unter [Introduction to the Project Designer](http://msdn.microsoft.com/de-de/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Stellen Sie sicher, dass das Kontrollkästchen **Alle Warnungen deaktivieren** deaktiviert ist.<br />4.  Aktivieren Sie das Kontrollkästchen **Alle Warnungen als Fehler behandeln**.|  
+|/ Warnaserror behandelt alle Warnungen als Fehler in der Visual Studio-IDE fest|  
+|---|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die **Kompilieren** Registerkarte.<br />3.  Stellen Sie sicher, dass die **alle Warnungen deaktivieren** das Kontrollkästchen deaktiviert ist.<br />4.  Überprüfen Sie die **alle Warnungen als Fehler behandeln** das Kontrollkästchen.|  
   
-||  
-|-|  
-|So legen Sie \/warnaserror darauf fest, bestimmte Warnungen in der Visual Studio\-IDE als Fehler zu behandeln|  
-|1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Stellen Sie sicher, dass das Kontrollkästchen **Alle Warnungen deaktivieren** deaktiviert ist.<br />4.  Stellen Sie sicher, dass das Kontrollkästchen **Alle Warnungen als Fehler behandeln** deaktiviert ist.<br />5.  Wählen Sie in der Spalte **Benachrichtigung** neben der Warnung, die als Fehler behandelt werden soll, **Fehler** aus.|  
+|Festlegen von/warnaserror, bestimmte Warnungen als Fehler in der Visual Studio-IDE zu behandeln.|  
+|---|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**.<br />2.  Klicken Sie auf die **Kompilieren** Registerkarte.<br />3.  Stellen Sie sicher, dass die **alle Warnungen deaktivieren** das Kontrollkästchen deaktiviert ist.<br />4.  Stellen Sie sicher, dass die **alle Warnungen als Fehler behandeln** das Kontrollkästchen deaktiviert ist.<br />5.  Wählen Sie **Fehler** aus der **Benachrichtigung** Spalte neben der Warnung, die als Fehler behandelt werden soll.|  
   
-## Beispiel  
- Mit dem folgenden Code wird `In.vb` kompiliert, und der Compiler zeigt bei jeder Warnung, die zum ersten Mal auftritt, einen Fehler an.  
+## <a name="example"></a>Beispiel  
+ Der folgende code kompiliert `In.vb` und leitet den Compiler einen Fehler für das erste Vorkommen eines jeder Warnung anzeigen gefunden wird.  
   
 ```  
 vbc /warnaserror in.vb  
 ```  
   
-## Beispiel  
- Mit dem folgenden Code wird `T2.vb` kompiliert, und nur die Warnung für nicht verwendete lokale Variablen \(42024\) wird als Fehler behandelt.  
+## <a name="example"></a>Beispiel  
+ Der folgende code kompiliert `T2.vb` und nur die Warnung für nicht verwendete lokale Variablen (42024) wird als Fehler behandelt.  
   
 ```  
 vbc /warnaserror:42024 t2.vb  
 ```  
   
-## Siehe auch  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
+ [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)

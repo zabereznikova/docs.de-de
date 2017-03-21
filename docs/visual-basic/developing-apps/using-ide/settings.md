@@ -1,75 +1,86 @@
 ---
-title: "Visual Basic Settings | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "settings, Visual Basic"
+title: Visual Basic-Einstellungen | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- settings, Visual Basic
 ms.assetid: 2712b3b1-18f2-430c-ae91-28468bbf5f32
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Visual Basic Settings
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 82f3c955325e25fd3d32e1a8fac1f79fe701c518
+ms.lasthandoff: 03/13/2017
 
-Mithilfe der Visual Basic\-Einstellungen kann die Benutzerfreundlichkeit optimiert und die Produktivität der Visual Basic\-Entwickler maximal gesteigert werden.  Sie sind ein Bestandteil des Features [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3), mit dem Sie Ihre Einstellungen in der Visual Studio\-IDE \(Integrated Development Environment –integrierte Entwicklungsumgebung\) anpassen und speichern können.  
+---
+# <a name="visual-basic-settings"></a>Visual Basic-Einstellungen
+Visual Basic sind die Benutzerfunktionalität zu optimieren und die Produktivität von Visual Basic-Entwickler gedacht. Es ist Teil der [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3) Feature ermöglicht es Ihnen, anpassen und speichern die Einstellungen in der Visual Studio IDE Integrated Development Environment ().  
   
- Die IDE\-Einstellungen können zudem in andere Computer portiert bzw. in anderen Computern neu geladen werden.  Weitere Informationen finden Sie unter [How to: Share Settings Between Computers](http://msdn.microsoft.com/de-de/1131fb10-35c1-42da-9cd8-91aa3235b882).  
+ Sie können auch port oder laden die IDE-Einstellungen auf anderen Computern. Weitere Informationen finden Sie unter [Gewusst wie: Freigeben von Einstellungen zwischen Computern](http://msdn.microsoft.com/en-us/1131fb10-35c1-42da-9cd8-91aa3235b882).  
   
-## Fenster und Ansichten  
+## <a name="windows-and-views"></a>Fenster und Ansichten  
   
-||||  
-|-|-|-|  
-|Funktion|Standardmäßig angezeigt|Hinweise|  
-|[Klassenansicht](/visual-studio/ide/viewing-the-structure-of-code)|Nein|Blendet **Ausgeblendete Typen und Member** aus.|  
-|[Befehlsfenster](/visual-studio/ide/reference/command-window)|Nein||  
-|Fenster **Dynamische Hilfe**|Nein|Wird nicht angezeigt, wenn Sie F1 drücken.|  
-|[Direktfenster](/visual-studio/ide/reference/immediate-window)|Ja, wenn Debuggen gestartet wird.||  
-|[Objektkatalog](/visual-studio/ide/viewing-the-structure-of-code)|Nein|Zeigt standardmäßig an:<br /><br /> -   Namespaces<br />-   Öffentliche Member<br />-   Geerbte Member|  
-|[Ausgabefenster](/visual-studio/ide/reference/output-window)|Ja, wenn der Buildvorgang gestartet wird.||  
-|[Eigenschaftenfenster](/visual-studio/ide/reference/properties-window)|Ja||  
-|`Solution Explorer`|Ja||  
-|[Server Explorer](../Topic/Server%20Explorer.md)|Nein|Zeigt Datenverbindungen und verfügbare Systemdienste an.|  
-|[Startseite](/visual-studio/ide/customizing-the-start-page-for-visual-studio)|Ja|Wird beim ersten Starten der IDE angezeigt.  Kann angepasst werden.|  
-|[\<Pave Over\> Task List \(Visual Studio\)](http://msdn.microsoft.com/de-de/ce97c0e2-5011-499a-b60a-dc5b9cc22654)|Ja, wenn Compilerfehler oder Warnungen vorhanden sind.||  
-|[Team Explorer](../Topic/Connect%20to%20team%20projects%20in%20Team%20Foundation%20Server.md)|Ja|Sie können auf die Teamprojekte mithilfe von Team Explorer zugreifen und können die Anwendungslebenszyklusverwaltungsfunktionen von Team Foundation verwenden, z. B. Versionskontrolle, Builds, Projektmanagement und integrierte Berichte und Dashboards.  Diese schließen Versionskontrolle, Builds, Projektmanagement, integrierte Berichte und Dashboards ein.|  
-|[Toolbox](/visual-studio/ide/reference/toolbox)|Ja|Zeigt Steuerelemente und Komponenten in alphabetischer Reihenfolge an.|  
+|Funktion|Standardmäßig angezeigt?|Notizen|  
+|---|---|---|    
+|[Klassenansicht](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code)|Nein|Blendet **ausgeblendete Typen und Member**|  
+|[Befehlsfenster](https://docs.microsoft.com/visualstudio/ide/reference/command-window)|Nein||  
+|**Dynamische Hilfe** Fenster|Nein|Wird nicht angezeigt, wenn Sie F1 drücken.|  
+|[Direktfenster](https://docs.microsoft.com/visualstudio/ide/reference/immediate-window)|Ja, beim Starten des Debuggens.||  
+|[Objektkatalog](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code)|Nein|Werden standardmäßig angezeigt:<br /><br /> -Namespaces<br />-Öffentliche Member<br />-Geerbte Member|  
+|[Ausgabefenster](https://docs.microsoft.com/visualstudio/ide/reference/output-window)|Ja, wenn der Buildvorgang gestartet wird.||  
+|[Eigenschaftenfenster](https://docs.microsoft.com/visualstudio/ide/reference/properties-window)|Ja||  
+|**Projektmappen-Explorer**|Ja||  
+|**Server-Explorer**|Nein|Zeigt an, datenverbindungen und Dienste zur Verfügung.|  
+|[Startseite](https://docs.microsoft.com/visualstudio/ide/customizing-the-start-page-for-visual-studio)|Ja|Wird beim ersten der IDE starten angezeigt. Sie können es anpassen.|  
+|**Aufgabenliste**|Ja, beim Kompilieren Fehler oder Warnungen vorhanden sind.||  
+|[Team Explorer](http://msdn.microsoft.com/library/1372e56c-b34f-42c2-b72c-94b57620c75c)|Ja|Sie können Team Explorer und Zugriff auf Ihre Teamprojekte in der Anwendungslebenszyklus-Verwaltungsfunktionen von Team Foundation verwenden. Dazu gehören die Versionskontrolle, Builds, Projektmanagement, integrierte Berichte und Dashboards.|  
+|[Werkzeugkasten](https://docs.microsoft.com/visualstudio/ide/reference/toolbox)|Ja|Zeigt Steuerelemente und Komponenten in alphabetischer Reihenfolge.|  
   
- Darüber hinaus wird bei Auswahl der **Visual Basic\-Entwicklungseinstellungen** für die folgenden Elemente ein bestimmtes Verhalten aktiviert:  
+ Darüber hinaus die folgenden Elemente haben bestimmte Verhalten aktiviert, wenn Sie auswählen **Visual Basic-Entwicklungseinstellungen**.  
   
-## Dialogfelder  
+## <a name="dialog-boxes"></a>Dialogfelder  
   
-|||  
-|-|-|  
+|Funktion|Verhalten|
+|---|---|  
+|**Neues Projekt** (Dialogfeld)|Wenn andere Plattformen auf dem Computer installiert sind, aktiviert die IDE das Kombinationsfeld, mit dem Sie die Zielplattform festlegen kann.|  
+|[Optionen (Dialogfeld)](https://docs.microsoft.com/visualstudio/ide/reference/options-dialog-box-visual-studio)|Visual Basic ermöglicht vereinfacht **Optionen** Seiten. Klicken Sie auf die **alle Einstellungen anzeigen** das Kontrollkästchen, um die vollständige Liste der Optionen finden Sie unter.|  
+  
+## <a name="keyboard"></a>Tastatur  
+  
 |Funktion|Verhalten|  
-|Dialogfeld **Neues Projekt**|Wenn andere Plattformen auf dem Computer installiert sind, aktiviert die IDE das Kombinationsfeld, in dem Sie die Zielplattform festlegen können.|  
-|[Dialogfeld "Optionen"](/visual-studio/ide/reference/options-dialog-box-visual-studio)|Visual Basic aktiviert vereinfachte Seiten für **Optionen**.  Aktivieren Sie das Kontrollkästchen **Alle Einstellungen anzeigen**, um die vollständige Liste mit Optionen anzuzeigen.|  
+|---|---|  
+|Standardtastenkombinationen für Visual Basic 6.0|Unterstützt die Standard-Visual Basic 6-Tastaturzuordnungsschema.|  
   
-## Tastatur  
+## <a name="miscellaneous-ide-elements"></a>Verschiedene IDE-Elemente  
   
-|||  
-|-|-|  
 |Funktion|Verhalten|  
-|Standardtastenkombinationen in Visual Basic 6.0|Unterstützt die reguläre Visual Basic 6\-Tastaturzuordnung.|  
+|---|---|  
+|QuickInfos|-Angezeigt für alle Menüelemente und Symbolleisten-Schaltflächen, wenn die Maus darüber bewegt wird.|  
+|[Visual Basic IntelliSense-Codeausschnitte](../../../visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)|Enthält eine Bibliothek von Codeausschnitten, die in der Anwendung eingefügt werden können.|  
+|[Visual Basic-spezifisches IntelliSense](https://docs.microsoft.com/visualstudio/ide/visual-basic-specific-intellisense)|– Enthält alle IntelliSense-Funktionen mit einigen Produktivitätssteigerungen für Visual Basic-Entwickler.|  
   
-## Sonstige IDE\-Elemente  
-  
-|||  
-|-|-|  
-|Funktion|Verhalten|  
-|QuickInfo|-   Wird für alle Menüelemente und Symbolleisten\-Schaltflächen angezeigt, wenn mit der Maus auf sie gezeigt wird.|  
-|[Visual Basic IntelliSense Code Snippets](../../../visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)|Beinhaltet eine Bibliothek von Codeausschnitten, die in die Anwendung eingefügt werden können.|  
-|[Visual Basic\-spezifisches IntelliSense](/visual-studio/ide/visual-basic-specific-intellisense)|-   Stellt alle IntelliSense\-Features einschließlich einiger Produktivitätserweiterungen für Visual Basic\-Entwickler bereit.|  
-  
-## Siehe auch  
- [How to: Change Select Settings](http://msdn.microsoft.com/de-de/ec70b520-a3e3-43c9-929b-bdc732cd2147)   
- [How to: Specify Settings for a Team](http://msdn.microsoft.com/de-de/89eeee3d-dd5e-4815-a45b-c48add63a8aa)   
- [\<PAVE OVER\> Import and Export Settings, Environment, Options Dialog Box](http://msdn.microsoft.com/de-de/536fb39a-83a4-4b5b-afd6-8e6c42f980fe)   
- [How to: Share Settings Between Computers or Visual Studio Versions](http://msdn.microsoft.com/de-de/1131fb10-35c1-42da-9cd8-91aa3235b882)
+## <a name="see-also"></a>Siehe auch  
+ [Gewusst wie: Ändern der Auswahleinstellungen](http://msdn.microsoft.com/en-us/ec70b520-a3e3-43c9-929b-bdc732cd2147)   
+ [Gewusst wie: Angeben von Einstellungen für ein Team](http://msdn.microsoft.com/en-us/89eeee3d-dd5e-4815-a45b-c48add63a8aa)   
+ [Gewusst wie: Freigeben von Einstellungen zwischen Computern oder Visual Studio-Versionen](http://msdn.microsoft.com/en-us/1131fb10-35c1-42da-9cd8-91aa3235b882)

@@ -1,165 +1,180 @@
 ---
-title: "Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Abfragen [LINQ in Visual Basic], Schreiben"
-  - "LINQ [Visual Basic], exemplarische Vorgehensweisen"
-  - "LINQ [Visual Basic], Schreiben von Abfragen"
-  - "Schreiben von LINQ-Abfragen [Visual Basic]"
+title: Schreiben von Abfragen in Visual Basic | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs:
+- VB
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], writing
+- LINQ [Visual Basic], walkthroughs
+- LINQ [Visual Basic], writing queries
+- writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 caps.latest.revision: 70
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 68
----
-# Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e870d5d0640c68fa57b07986f2bf8268fd5246c9
+ms.lasthandoff: 03/13/2017
 
-Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit Visual Basic\-Sprachfunktionen [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Abfrageausdrücke erstellen können.  Sie erfahren, wie Sie Abfragen für eine Liste von Studierenden erstellen, wie Sie diese Abfragen ausführen und wie Sie sie ändern.  Die Abfragen enthalten einige neue Funktionen von Visual Basic 2008 wie Objektinitialisierer, lokale Typrückschlüsse und anonyme Typen.  
+---
+# <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
+Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Visual Basic-Sprachfeatures verwenden können, schreiben [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] -Abfrageausdrücke. Die exemplarische Vorgehensweise veranschaulicht das Erstellen von Abfragen in der Liste der Student-Objekten, die Abfragen ausführen und zum Ändern. Die Abfragen umfassen verschiedene Features, einschließlich Objektinitialisierer, lokale Typrückschlüsse und anonyme Typen.  
   
- Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter fortfahren, der Sie interessiert.  Zu den [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbietern zählen [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/linq-query-expressions/includes/linq-dataset-md.md)] und [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  
+ Nach Abschluss dieser exemplarischen Vorgehensweise werden Sie mit den Beispielen und Dokumentation der jeweiligen Fortfahren [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Anbieter, die Sie interessiert sind. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]die folgenden Anbieter: [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)], und [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
   
-## Erstellen eines Projekts  
+## <a name="create-a-project"></a>Erstellen eines Projekts  
   
-#### So erstellen Sie ein Konsolenanwendungsprojekt  
+#### <a name="to-create-a-console-application-project"></a>Erstellen Sie ein Konsolenanwendungsprojekt  
   
 1.  Starten Sie Visual Studio.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-3.  Klicken Sie in der Liste **Installierte Vorlagen** auf **Visual Basic**.  
+3.  In der **installierte Vorlagen** auf **Visual Basic**.  
   
-4.  Klicken Sie in der Liste Projekttypen auf **Konsolenanwendung**.  Geben Sie im Feld **Name** einen Namen für das Projekt ein, und klicken Sie auf **OK**.  
+4.  Klicken Sie in der Liste der Projekttypen auf **Konsolenanwendung**. In der **Namen** , geben Sie einen Namen für das Projekt, und klicken Sie dann auf **OK**.  
   
-     Ein Projekt wird erstellt.  Standardmäßig ist darin ein Verweis auf System.Core.dll enthalten.  Außerdem enthält die Liste **Importierte Namespaces** in [Seite "Verweise", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic) den <xref:System.Linq?displayProperty=fullName>\-Namespace.  
+     Ein Projekt wird erstellt. Standardmäßig enthält es einen Verweis auf System.Core.dll. Darüber hinaus die **importierte Namespaces** auf in der Liste der [Seite "Verweise", Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic) enthält die <xref:System.Linq?displayProperty=fullName>Namespace.</xref:System.Linq?displayProperty=fullName>  
   
-5.  Klicken Sie auf [Seite "Kompilieren", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic) stellen Sie sicher, dass **Option Infer** zu **Ein** festgelegt ist.  
+5.  Auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), sicher, dass **Option infer** Wert **auf**.  
   
-## Hinzufügen einer Datenquelle im Arbeitsspeicher  
- Die Datenquelle für die Abfragen in dieser exemplarischen Vorgehensweise ist eine Liste von `Student`\-Objekten.  Jedes `Student`\-Objekt enthält einen Vornamen, einen Nachnamen, einen Jahrgang und einen akademischen Rang im student\-Text.  
+## <a name="add-an-in-memory-data-source"></a>Hinzufügen einer Datenquelle im Arbeitsspeicher  
+ Die Datenquelle für die Abfragen in dieser exemplarischen Vorgehensweise ist eine Liste der `Student` Objekte. Jede `Student` -Objekt enthält einen Vornamen, Nachnamen, eine Klasse Jahr und einen akademischen Rang im Student-Text.  
   
-#### So fügen Sie die Datenquelle hinzu  
+#### <a name="to-add-the-data-source"></a>Hinzufügen der Datenquelle  
   
--   Definieren Sie eine `Student`\-Klasse, und erstellen Sie eine Liste der Instanzen der Klasse.  
+-   Definieren einer `Student` Klasse, und erstellen Sie eine Liste der Instanzen der Klasse.  
   
     > [!IMPORTANT]
-    >  Der Code für die Definition der `Student`\-Klasse und die Erstellung der in der exemplarischen Vorgehensweise verwendeten Liste wird in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md) bereitgestellt.  Sie können ihn von dort kopieren und in Ihr Projekt einfügen.  Der neue Code ersetzt den Code, der beim Erstellen des Projekts angezeigt wird.  
+    >  Den Code zum Definieren der `Student` Klasse, und erstellen Sie die verwendete Liste in der exemplarischen Vorgehensweise Beispiele finden Sie im [Gewusst wie: Erstellen Sie eine Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Sie können ihn von dort kopieren und in Ihr Projekt einfügen. Der neue Code ersetzt den Code, der beim Erstellen des Projekts angezeigt.  
   
-#### So fügen Sie der Liste der Studierenden einen neuen Studenten hinzu  
+#### <a name="to-add-a-new-student-to-the-students-list"></a>Liste der Studierenden einen neuen Studenten hinzu  
   
--   Befolgen Sie das Muster in der `getStudents`\-Methode, um der Liste eine andere Instanz der `Student`\-Klasse hinzuzufügen.  Durch Hinzufügen dieser Klasse können Sie sich einen Überblick über die Objektinitialisierer verschaffen.  Weitere Informationen finden Sie unter [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Befolgen Sie die Muster in der `getStudents` Methode zum Hinzufügen einer anderen Instanz von der `Student` Klasse zur Liste. Hinzufügen der Student werden Objektinitialisierer vorgestellt. Weitere Informationen finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
-## Erstellen einer Abfrage  
- Bei Ausführung erzeugt die in diesem Abschnitt hinzugefügte Abfrage eine Liste der Studierenden, die aufgrund ihres akademischen Rangs zu den ersten Zehn gehören.  Da die Abfrage jedes Mal das komplette `Student`\-Objekt auswählt, lautet der Typ des Abfrageergebnisses `IEnumerable(Of Student)`.  Der Typ der Abfrage wird i. d. R. jedoch nicht in Abfragedefinitionen angegeben.  Stattdessen verwendet der Compiler einen lokalen Typrückschluss, um den Typ zu bestimmen.  Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  Die Bereichsvariable der `currentStudent`\-Abfrage dient als Verweis auf jede `Student`\-Instanz in der Quelle `students` und bietet Zugriff auf die Eigenschaften der Objekte in `students`.  
+## <a name="create-a-query"></a>Erstellen einer Abfrage  
+ Bei Ausführung erzeugt die in diesem Abschnitt hinzugefügte Abfrage eine Liste der Studenten akademischen Rang in zehn versetzt. Da die Abfrage die vollständige auswählt `Student` Objekt immer der Typ des Abfrageergebnisses ist `IEnumerable(Of Student)`. Der Typ der Abfrage wird jedoch in der Regel nicht in Abfragedefinitionen angegeben. Stattdessen verwendet der Compiler lokaler Typrückschluss zum Bestimmen des Typs. Weitere Informationen finden Sie unter [lokalen Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Bereichsvariable der Abfrage `currentStudent`, dient als Verweis auf die einzelnen `Student` -Instanz in der Quelle `students`, den Zugriff auf die Eigenschaften jedes Objekts in `students`.  
   
-#### So erstellen Sie eine einfache Abfrage  
+#### <a name="to-create-a-simple-query"></a>So erstellen Sie eine einfache Abfrage  
   
-1.  Suchen Sie die Stelle in der `Main`\-Methode des Projekts, die wie folgt markiert ist:  
+1.  Suchen Sie die Stelle in der `Main` -Methode des Projekts, die wie folgt markiert ist:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
-     Kopieren Sie den folgenden Code, und fügen Sie ihn ein.  
+     Kopieren Sie den folgenden Code, und fügen Sie ihn.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
-2.  Zeigen Sie mit der Maus auf `studentQuery` im Code, um zu überprüfen, dass der vom Compiler zugewiesene Typ `IEnumerable(Of Student)` lautet.  
+2.  Zeigen Sie mit der Maus auf `studentQuery` in Ihrem Code, um sicherzustellen, dass der vom Compiler zugewiesene Typ ist `IEnumerable(Of Student)`.  
   
-## Ausführen der Abfrage  
- Die `studentQuery`\-Variable enthält die Definition der Abfrage, nicht die Ergebnisse aus der Ausführung.  Ein typischer Mechanismus für die Ausführung einer Abfrage ist eine `For Each`\-Schleife.  Auf jedes Element in der zurückgegebenen Sequenz wird über die Schleifeniterationsvariable zugegriffen.  Weitere Informationen zur Abfrageausführung finden Sie unter [Schreiben der ersten LINQ\-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+## <a name="run-the-query"></a>Führen Sie die Abfrage  
+ Die Variable `studentQuery` enthält die Definition der Abfrage, nicht die Ergebnisse der Ausführung der Abfrage. Ein übliche Mechanismus für die Ausführung einer Abfrage ist eine `For Each` Schleife. Jedes Element in der zurückgegebenen Sequenz wird über die Schleifeniterationsvariable zugegriffen. Weitere Informationen zur Ausführung von Abfragen finden Sie unter [Schreiben der ersten LINQ-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-#### So führen Sie die Abfrage aus  
+#### <a name="to-run-the-query"></a>Zum Ausführen der Abfrage  
   
-1.  Fügen Sie die folgende `For Each`\-Schleife unter der Abfrage im Projekt hinzu.  
+1.  Fügen Sie die folgenden `For Each` -Schleife unter der Abfrage im Projekt.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
-2.  Zeigen Sie mit der Maus auf die `studentRecord`\-Schleifensteuerungsvariable, um den Datentyp festzustellen.  Der Typ von `studentRecord` wird als `Student` abgeleitet, da `studentQuery` eine Auflistung von `Student`\-Instanzen zurückgibt.  
+2.  Der Mauszeiger auf die Schleifensteuerungsvariable `studentRecord` , der den Datentyp finden Sie unter. Der Typ des `studentRecord` wird als abgeleitet, `Student`, da `studentQuery` gibt eine Auflistung von `Student` Instanzen.  
   
-3.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
+3.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
-## Ändern der Abfrage  
- Es ist leichter, Abfrageergebnisse zu prüfen, wenn sie sich einer bestimmten Reihenfolge befinden.  Sie können die zurückgegebene Sequenz auf Grundlage eines verfügbaren Felds sortieren.  
+## <a name="modify-the-query"></a>Ändern Sie die Abfrage  
+ Es ist einfacher, Abfrageergebnisse zu prüfen, wenn sie sich in einer bestimmten Reihenfolge befinden. Sie können die zurückgegebene Sequenz anhand eines verfügbaren Felds sortieren.  
   
-#### So sortieren Sie die Ergebnisse  
+#### <a name="to-order-the-results"></a>Zum Sortieren der Ergebnisse  
   
-1.  Fügen Sie die folgende `Order By`\-Klausel zwischen der `Where`\-Anweisung und der `Select`\-Anweisung der Abfrage hinzu.  Die `Order By`\-Klausel sortiert die Ergebnisse anhand der Nachnamen der Studenten alphabetisch von A bis Z.  
+1.  Fügen Sie die folgenden `Order By` Klausel zwischen dem `Where` Anweisung und die `Select` -Anweisung der Abfrage. Die `Order By` Klausel sortiert die Ergebnisse alphabetisch von A bis Z, die anhand des Nachnamens der Studenten.  
   
     ```  
     Order By currentStudent.Last Ascending   
     ```  
   
-2.  Um zuerst nach Nachname und anschließend nach Vorname zu sortieren, müssen Sie der Abfrage beide Felder hinzufügen:  
+2.  Um nach Nachnamen und Vornamen sortieren, fügen Sie der Abfrage beide Felder hinzu:  
   
     ```  
     Order By currentStudent.Last Ascending, currentStudent.First Ascending   
     ```  
   
-     Sie können auch `Descending` angeben, um von Z bis A zu sortieren.  
+     Sie können auch angeben, `Descending` auf Reihenfolge von Z bis a.  
   
-3.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
+3.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
-#### So führen Sie einen lokalen Bezeichner ein  
+#### <a name="to-introduce-a-local-identifier"></a>Lokalen Bezeichner einführen  
   
-1.  Fügen Sie den Code in diesem Abschnitt hinzu, um einen lokalen Bezeichner in den Abfrageausdruck einzuführen.  Der lokale Bezeichner enthält ein Zwischenergebnis.  Im folgenden Beispiel ist `name` ein Bezeichner, der eine Verkettung aus Vor\- und Nachname des Studierenden enthält.  Ein lokaler Bezeichner kann aus praktischen Gründen verwendet werden oder die Leistung durch Speichern der Ergebnisse eines Ausdrucks verbessern, die ansonsten mehrmals berechnet werden müssten.  
+1.  Fügen Sie den Code in diesem Abschnitt, um einen lokalen Bezeichner in den Abfrageausdruck einzuführen. Der lokale Bezeichner enthält ein Zwischenergebnis. Im folgenden Beispiel `name` ist ein Bezeichner, der eine Verkettung des Studenten enthält vor- und Nachnamen. Ein lokaler Bezeichner kann aus praktischen Gründen verwendet werden, oder kann eine Leistungssteigerung durch Speichern der Ergebnisse eines Ausdrucks, der ansonsten mehrmals berechnet werden müssten.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
-2.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
+2.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
-#### So projizieren Sie ein Feld in der Select\-Klausel  
+#### <a name="to-project-one-field-in-the-select-clause"></a>Um ein Feld in der Select-Klausel zu projizieren.  
   
-1.  Fügen Sie die Abfrage und die `For Each`\-Schleife aus diesem Abschnitt hinzu, um eine Abfrage zu erstellen, die eine Sequenz erzeugt, die andere Elemente als die in der Quelle enthält.  Im folgenden Beispiel ist die Quelle eine Auflistung von `Student`\-Objekten, aber nur ein Member jedes Objekts wird zurückgegeben: der Vorname von Studenten mit dem Nachnamen Garcia.  Da `currentStudent.First` eine Zeichenfolge ist, lautet der Datentyp der von `studentQuery3` zurückgegebenen Sequenz `IEnumerable(Of String)` \(eine Zeichenfolgesequenz\).  Wie in früheren Beispielen wird die Zuordnung eines Datentyps für `studentQuery3` dem Compiler in Form eines lokalen Typrückschlusses überlassen.  
+1.  Fügen Sie der Abfrage und `For Each` -Schleife aus diesem Abschnitt zum Erstellen einer Abfrage, die eine Sequenz erzeugt, dessen Elemente unterscheiden sich die Elemente in der Quelle. Im folgenden Beispiel ist die Quelle eine Auflistung von `Student` -Objekten, aber nur ein Member jedes Objekts wird zurückgegeben: der Vorname von Studenten mit dem Nachnamen Garcia. Da `currentStudent.First` ist eine Zeichenfolge, die den Datentyp des von zurückgegebenen Sequenz `studentQuery3` ist `IEnumerable(Of String)`, eine Sequenz von Zeichenfolgen. Wie in früheren Beispielen, geben Sie die Zuweisung eines `studentQuery3` bleibt der Compiler mithilfe lokaler Typrückschluss bestimmen.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
-2.  Zeigen Sie mit der Maus auf `studentQuery3` im Code, um zu überprüfen, dass der zugewiesene Typ `IEnumerable(Of String)` lautet.  
+2.  Zeigen Sie mit der Maus auf `studentQuery3` in Ihrem Code zu überprüfen, ob der zugewiesene Typ lautet `IEnumerable(Of String)`.  
   
-3.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
+3.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
-#### So erstellen Sie einen anonymen Typ in der Select\-Klausel  
+#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Erstellen Sie einen anonymen Typ in der Select-Klausel  
   
-1.  Fügen Sie den Code aus diesem Abschnitt hinzu, um zu erfahren, wie anonyme Typen in Abfragen verwendet werden.  Sie verwenden sie in Abfragen, wenn Sie mehrere Felder statt kompletter Datensätze \(`currentStudent`\-Datensätze in den vorigen Beispielen\) aus der Datenquelle oder einzelne Felder \(`First` im vorangegangenen Abschnitt\) zurückgeben möchten.  Anstatt, einen neuen benannten Typ zu definieren, der die Felder enthält, die Sie, im Ergebnis einbezogen werden sollen, geben Sie die Felder in der `Select`\-Klausel und erstellt der Compiler einen anonymen Typ mit diesen Feldern als Eigenschaften. Weitere Informationen finden Sie unter [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+1.  Fügen Sie der Code in diesem Abschnitt, wie anonyme Typen in Abfragen verwendet werden. Sie werden in Abfragen verwenden, wenn Sie mehrere Felder statt kompletter Datensätze der Datenquelle zurückgeben möchten (`currentStudent` Datensätze in den vorherigen Beispielen) oder einzelne Felder (`First` im vorherigen Abschnitt). Anstatt einen neuen benannten Typ, der die Felder enthält, im Ergebnis enthalten sein sollen, geben Sie die Felder in der `Select` -Klausel und der Compiler erstellt einen anonymen Typ mit diesen Feldern als Eigenschaften. Weitere Informationen finden Sie unter [anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-     Im folgenden Beispiel wird eine Abfrage erstellt, die den Namen und den Rang von Studierenden höherer Semester mit einem akademischen Rang zwischen 1 und 10 nach Rang geordnet zurückgibt.  In diesem Beispiel muss der `studentQuery4`\-Typ abgeleitet werden, da die `Select`\-Klausel eine Instanz eines anonymen Typs zurückgibt und ein anonymer Typ keinen verwendbaren Namen hat.  
+     Das folgende Beispiel erstellt eine Abfrage, die den Namen und den Rang des Vorgesetzten akademischen Rang zwischen 1 und 10, in der Reihenfolge der akademischen Rang ist zurückgibt. In diesem Beispiel ist der Typ des `studentQuery4` muss abgeleitet werden, da die `Select` -Klausel eine Instanz eines anonymen Typs zurückgibt und ein anonymer Typ hat keinen verwendbaren Namen.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
-2.  Erstellen Sie die Anwendung, und führen Sie sie aus, indem Sie STRG\+F5 drücken.  Beachten Sie die Ergebnisse im Konsolenfenster.  
+2.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
-## Weitere Beispiele  
- Nachdem Sie nun die Grundlagen kennen gelernt haben, finden Sie im Folgenden eine Liste zusätzlicher Beispiele, die die Flexibilität und Leistungsstärke von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen veranschaulichen.  Jedem Beispiel ist eine kurze Beschreibung vorangestellt.  Zeigen Sie mit der Abfrageergebnisvariable für jede Abfrage, um den abgeleiteten Typ zu finden. Verwenden Sie eine `For Each`\-Schleife, um die Ergebnisse zu erzeugen.  
+## <a name="additional-examples"></a>Weitere Beispiele  
+ Nun, da Sie die Grundlagen kennen gelernt haben, werden im folgenden eine Liste zusätzlicher Beispiele veranschaulichen die Flexibilität und Leistungsfähigkeit von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen. Jedes Beispiel ist eine kurze Beschreibung der Funktion vorangestellt. Der Mauszeiger auf die Abfrageergebnisvariable für jede Abfrage den abgeleiteten Typ angezeigt. Verwenden einer `For Each` Schleife, um die Ergebnisse zu erzeugen.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
-## Zusätzliche Informationen  
- Nachdem Sie nun mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
+## <a name="additional-information"></a>Zusätzliche Informationen  
+ Wenn Sie mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, haben können, lesen Sie die Dokumentation und Beispiele für den spezifischen Typ der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Anbieter, der Sie interessiert sind:  
   
- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)  
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
   
-## Siehe auch  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Supplementary LINQ Resources](../Topic/Supplementary%20LINQ%20Resources.md)   
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
+ [Erste Schritte mit LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+ [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
+ [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
+ [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Queries](../../../../visual-basic/language-reference/queries/queries.md)   
- [Walkthrough: Writing Queries in C\#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+ [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)

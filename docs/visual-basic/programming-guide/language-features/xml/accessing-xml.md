@@ -1,70 +1,86 @@
 ---
-title: "Accessing XML in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "LINQ to XML [Visual Basic], accessing XML"
-  - "Visual Basic code, XML"
-  - "accessing XML [Visual Basic], axis properties"
-  - "XML [Visual Basic], axis properties"
-  - "XML [Visual Basic], accessing"
+title: Zugreifen auf XML in Visual Basic | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- LINQ to XML [Visual Basic], accessing XML
+- Visual Basic code, XML
+- accessing XML [Visual Basic], axis properties
+- XML [Visual Basic], axis properties
+- XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Accessing XML in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 215f057f0b4d884369aad53cbbdbb98f240b56c4
+ms.lasthandoff: 03/13/2017
 
-Mit den XML\-Achseneigenschaften von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] kann auf [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Strukturen zugegriffen und darin navigiert werden.  Diese Eigenschaften verwenden eine spezielle Syntax, um den Zugriff auf Elemente und Attribute durch Angabe von XML\-Namen zu ermöglichen.  
+---
+# <a name="accessing-xml-in-visual-basic"></a>Zugreifen auf XML in Visual Basic
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]zum Zugreifen auf und Navigieren in XML-Achseneigenschaften kann [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] Strukturen. Diese Eigenschaften verwenden eine spezielle Syntax, um die Elemente und Attribute zugreifen, indem die XML-Namen angeben können.  
   
- Die folgende Tabelle listet die Sprachfeatures auf, mit denen auf XML\-Elemente und \-Attribute in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] zugegriffen werden kann.  
+ Die folgende Tabelle listet die Sprachfeatures, mit denen Sie Zugriff auf XML-Elemente und Attribute in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
-### XML\-Achseneigenschaften  
+### <a name="xml-axis-properties"></a>XML-Achseneigenschaften  
   
-|Eigenschaftenbeschreibung|Beispiel|Beschreibung|  
-|-------------------------------|--------------|------------------|  
-|*Untergeordnete Achse*|`contact.<phone>`|Ruft alle `phone`\-Elemente ab, die untergeordnete Elemente des `contact`\-Elements sind.|  
-|*Attributachse*|`phone.@type`|Ruft alle `type`\-Attribute des `phone`\-Elements ab.|  
-|*Nachfolgerachse*|`contacts...<name>`|Ruft alle `name`\-Elemente des `contacts`\-Elements ab, unabhängig davon, wie tief sie in der Hierarchieebene liegen.|  
-|*Erweiterungsindexer*|`contacts...<name>(0)`|Ruft das erste `name`\-Element der Sequenz ab.|  
-|*value*|`contacts...<name>.Value`|Ruft die Zeichenfolgendarstellung des ersten Objekts in der Sequenz oder `Nothing` ab, wenn die Sequenz leer ist.|  
+|Beschreibung der Eigenschaft|Beispiel|Beschreibung|  
+|--------------------------|-------------|-----------------|  
+|*Child-Achse*|`contact.<phone>`|Ruft alle `phone` Elemente, die untergeordnete Elemente von sind die `contact` Element.|  
+|*Attribute-Achse*|`phone.@type`|Ruft alle `type` Attribute der `phone` Element.|  
+|*descendant-Achse*|`contacts...<name>`|Ruft alle `name` Elemente der `contacts` Element, unabhängig davon, wie viele Ebenen in der Hierarchie, die sie auftreten.|  
+|*erweiterungsindizierer*|`contacts...<name>(0)`|Ruft die erste `name` Element aus der Sequenz.|  
+|*value*|`contacts...<name>.Value`|Ruft die Darstellung des ersten Objekts in der Sequenz oder `Nothing` , wenn die Sequenz leer ist.|  
   
-## In diesem Abschnitt  
- [How to: Access XML Descendant Elements](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Zeigt, wie mit einer Nachfolgerachseneigenschaft auf alle XML\-Elemente zugegriffen werden kann, die einen bestimmten Namen haben und die einem bestimmten XML\-Element untergeordnet sind.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Gewusst wie: Zugreifen auf XML-Nachfolgerelemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ Veranschaulicht, wie einen Nachfolger-Achseneigenschaft auf alle XML-Elemente, die einen angegebenen Namen aufweisen und unter einem angegebenen XML-Element enthalten sind.  
   
- [How to: Access XML Child Elements](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Zeigt, wie eine untergeordnete Achseneigenschaft verwendet wird, um auf alle untergeordneten XML\-Elemente zuzugreifen, die einen bestimmten Namen in einem XML\-Element haben.  
+ [Gewusst wie: Zugreifen auf untergeordnete XML-Elemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
+ Veranschaulicht, wie eine untergeordnete Achseneigenschaft auf alle untergeordneten XML-Elemente zuzugreifen, die in einem XML-Element angegebenen Namen aufweisen.  
   
- [How to: Access XML Attributes](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Zeigt, wie ein Achseneigenschaftattribut verwendet wird, um auf alle XML\-Attribute zuzugreifen, die einen bestimmten Namen in einem XML\-Element haben.  
+ [Gewusst wie: Zugreifen auf XML-Attribute](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
+ Veranschaulicht, wie eine Attributachseneigenschaft auf alle XML-Attribute zuzugreifen, die in einem XML-Element angegebenen Namen aufweisen.  
   
- [How to: Declare and Use XML Namespace Prefixes](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Zeigt, wie ein XML\-Namespacepräfix deklariert wird und wie damit XML\-Elemente erstellt werden und auf diese zugegriffen wird.  
+ [Gewusst wie: Deklarieren und Verwenden von XML-Namespacepräfixen](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
+ Zeigt, wie ein XML-Namespacepräfix deklariert und zum Erstellen und Zugreifen auf XML-Elemente.  
   
-## Verwandte Abschnitte  
- [XML Axis Properties](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- Stellt Links auf Abschnitte bereit, in denen die verschiedenen XML\-Zugriffseigenschaften beschrieben werden.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [XML-Achseneigenschaften](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ Enthält Links zu Abschnitten beschreiben die verschiedenen XML-Zugriffseigenschaften.  
   
- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Bietet eine Einführung in die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Bietet eine Einführung zur Verwendung [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] in Visual Basic.  
   
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Bietet eine Einführung in die Verwendung von XML\-Literalen in Visual Basic.  
+ [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ Bietet eine Einführung zur Verwendung von XML-Literalen in Visual Basic.  
   
- [Manipulating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Stellt Links zu Abschnitten bereit, in den das Laden und Ändern von XML in Visual Basic beschrieben wird.  
+ [Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ Enthält Links zu Abschnitten zum Laden und Ändern von XML in Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Stellt Links zu Abschnitten bereit, in denen die Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] in Visual Basic beschrieben wird.
+ Enthält Links zu Abschnitten, die zur Verwendung [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] in Visual Basic.

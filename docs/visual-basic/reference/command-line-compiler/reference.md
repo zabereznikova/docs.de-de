@@ -1,33 +1,49 @@
 ---
-title: "/reference (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/reference compiler option [Visual Basic]"
-  - "r compiler option [Visual Basic]"
-  - "-reference compiler option [Visual Basic]"
-  - "/r compiler option [Visual Basic]"
-  - "reference compiler option [Visual Basic]"
-  - "-r compiler option [Visual Basic]"
+title: / Reference (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- /reference compiler option [Visual Basic]
+- r compiler option [Visual Basic]
+- -reference compiler option [Visual Basic]
+- /r compiler option [Visual Basic]
+- reference compiler option [Visual Basic]
+- -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# /reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 12344dba82131d6be2c32127de287a6e9e3efa39
+ms.lasthandoff: 03/13/2017
 
-Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, Typinformationen in den angegebenen Assemblys bereitstellt.  
+---
+# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+Veranlasst den Compiler, Typinformationen in den angegebenen Assemblys für das Projekt verfügbar, das Sie gerade kompilieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /reference:fileList  
@@ -35,40 +51,39 @@ Bewirkt, dass der Compiler dem Projekt, das Sie gerade kompilieren, Typinformati
 /r:fileList  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`fileList`|Erforderlich.  Durch Kommas getrennte Liste von Assemblydateinamen.  Wenn der Dateiname ein Leerzeichen enthält, schließen Sie den Namen in Anführungszeichen ein.|  
+|---|---|  
+|`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
-## Hinweise  
- Die Dateien, die Sie importieren, müssen Assembly\-Metadaten enthalten.  Außerhalb der Assembly sind nur `Public`\-Typen sichtbar.  Die [\/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)\-Option importiert Metadaten aus einem Modul.  
+## <a name="remarks"></a>Hinweise  
+ Die importierten Dateien müssen Assemblymetadaten enthalten. Es werden nur öffentliche Typen außerhalb der Assembly sichtbar. Die [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) -Option importiert Metadaten aus einem Modul.  
   
- Wenn auf eine Assembly verwiesen wird \(Assembly A\), die ihrerseits auf eine weitere Assembly verweist \(Assembly B\), müssen Sie in folgenden Fällen auf Assembly B verweisen:  
+ Wenn Sie eine Assembly (Assembly A) verweisen, die wiederum verweist auf eine andere Assembly (Assembly B), müssen Sie auf Assembly B verweisen wenn:  
   
--   Ein für Assembly A verwendeter Typ erbt von einem Typ oder implementiert eine Schnittstelle von Assembly B.  
+-   Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
   
--   Ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode mit einem Rückgabe\- oder Parametertyp aus Assembly B wird aufgerufen.  
+-   Ein Feld, Eigenschaft, Ereignis oder -Methode, die einen Rückgabetyp für oder Parametertyp aus Assembly B wird aufgerufen.  
   
- Geben Sie mithilfe von [\/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) das Verzeichnis an, in dem sich ein oder mehrere Assemblyverweise befinden.  
+ Verwendung [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) an das Verzeichnis, in dem eine oder mehrere der Assemblyverweise befindet.  
   
- Damit der Compiler einen Typ in einer Assembly \(nicht in einem Modul\) erkennt, muss er gezwungen werden, den Typ aufzulösen.  Eine mögliche Lösung hierfür besteht z. B. darin, eine Instanz des Typs zu definieren.  Es gibt noch andere Möglichkeiten, die Auflösung der Typennamen in einer Assembly für den Compiler zu erzwingen.  Bei Vererbung eines Typs in einer Assembly erfährt der Compiler den Typennamen.  
+ Der Compiler einen Typ in einer Assembly (nicht in einem Modul) erkennt muss er gezwungen werden, den Typ aufzulösen. Ein Beispiel dafür, wie Sie dies tun können, ist eine Instanz des Typs zu definieren. Andere Methoden sind auflösen Typnamen in einer Assembly für den Compiler verfügbar. Wenn Sie von einem Typ in einer Assembly erben, wird der Name z. B. dann an den Compiler bezeichnet.  
   
- Standardmäßig wird die Antwortdatei "Vbc.rsp" verwendet, die auf häufig verwendete [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Assemblys verweist.  Verwenden Sie `/noconfig`, wenn der Compiler die Datei Vbc.rsp nicht verwenden soll.  
+ Der Vbc.rsp-Antwortdatei, die häufig Verweise verwendet [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Assemblys wird standardmäßig verwendet. Verwenden Sie `/noconfig` , wenn Sie nicht, dass den Compiler Vbc.rsp verwendet möchten.  
   
- `/r` ist die Kurzform von `/reference` .  
+ Die Kurzform der `/reference` ist `/r`.  
   
-## Beispiel  
- Im folgenden Code wird die Quelldatei I`nput.vb` kompiliert und auf Assemblys in M`etad1.dll` und M`etad2.dll` verwiesen, um O`ut.exe` zu erstellen.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code kompiliert Quelldatei I`nput.vb` und verweisen auf Assemblys von M`etad1.dll` und M`etad2.dll` zu O`ut.exe`.  
   
 ```  
 vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
 ```  
   
-## Siehe auch  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [\/target](../../../visual-basic/reference/command-line-compiler/target.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
+ [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
+ [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)   
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

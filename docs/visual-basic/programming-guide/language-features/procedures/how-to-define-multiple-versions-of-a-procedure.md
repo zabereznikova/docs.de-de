@@ -1,61 +1,77 @@
 ---
-title: "How to: Define Multiple Versions of a Procedure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "procedures, overloading"
-  - "procedures, multiple versions"
-  - "procedure overloading, multiple versions"
+title: 'Gewusst wie: Definieren mehrerer Versionen einer Prozedur (Visual Basic) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedures, defining
+- Visual Basic code, procedures
+- procedures, overloading
+- procedures, multiple versions
+- procedure overloading, multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# How to: Define Multiple Versions of a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0228083ce00a0f552227fd7ae8f0f5a24f65148e
+ms.lasthandoff: 03/13/2017
 
-Sie können durch *Überladen* mehrere Versionen einer Prozedur definieren. Es wird dann für jede Version der gleiche Name, jedoch eine andere Parameterliste verwendet.  Durch die Überladung können mehrere ähnliche Prozedurversionen definiert werden, ohne dass diese nach Namen voneinander unterschieden werden müssen.  
+---
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Gewusst wie: Definieren mehrerer Versionen einer Prozedur (Visual Basic)
+Definieren Sie eine Prozedur in mehreren Versionen von *überladen* , es mit demselben Namen, jedoch eine andere Parameterliste für jede Version. Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur zu definieren, ohne Unterscheidung nach Name.  
   
- Weitere Informationen hierzu finden Sie unter [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+ Weitere Informationen finden Sie unter [Prozedurüberladung](./procedure-overloading.md).  
   
-### So definieren Sie mehrere Versionen einer Prozedur  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>Definieren mehrerer Versionen einer Prozedur  
   
-1.  Schreiben Sie eine `Sub`\- oder `Function`\-Deklarationsanweisung für jede Version der Prozedur, die Sie definieren möchten.  Verwenden Sie in jeder Deklaration den gleichen Prozedurnamen.  
+1.  Schreiben einer `Sub` oder `Function` deklarationsanweisung für jede Version der Prozedur zu definieren. Verwenden Sie den gleichen Prozedurnamen in jeder Deklaration.  
   
-2.  Stellen Sie in jeder Deklaration das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)\-Schlüsselwort dem `Sub`\-Schlüsselwort bzw. dem `Function`\-Schlüsselwort voran.  Sie können das `Overloads`\-Schlüsselwort in den Deklarationen auch weglassen. Wenn Sie es aber in einer Deklaration angeben, müssen Sie es auch in allen anderen Deklarationen angeben.  
+2.  Vorausgehen der `Sub` oder `Function` Schlüsselwort in jeder Deklaration der [überlädt](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort. Sie können optional auch weglassen `Overloads` in den Deklarationen, auch wenn Sie es in einer der Deklarationen, müssen Sie es in jeder Deklaration einschließen.  
   
-3.  Fügen Sie nach der Deklarationsanweisung den Prozedurcode für den speziellen Fall ein, in dem der Aufrufcode Argumente für die Parameterliste der betreffenden Version angibt.  Sie müssen nicht überprüfen, welche Parameter der Aufrufcode angibt.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] übergibt die Steuerung an die passende Prozedurversion.  
+3.  Nach jeder deklarationsanweisung Prozedurcode um bestimmte Fälle zu behandeln, in denen der aufrufende Code Argumente entsprechen diese Version Parameterliste bereitstellt. Sie müssen keinen test für die Parameter der aufrufende Code bereitgestellt wurde. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]übergibt die Steuerung an die entsprechende Version der Prozedur.  
   
-4.  Beenden Sie jede Version der Prozedur je nach Bedarf mit einer `End Sub`\-Anweisung oder einer `End Function`\-Anweisung.  
+4.  Beenden Sie jede Version der Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine `Sub`\-Prozedur definiert, die eine Transaktion übermittelt, die mit dem Kontostand eines Kunden verrechnet werden soll.  Hier werden mithilfe des `Overloads`\-Schlüsselworts zwei Versionen der Prozedur definiert; eine Version erwartet die Angabe des Namens des Kunden und die andere seine Kontonummer.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel definiert ein `Sub` Verfahren zum Bereitstellen einer Transaktions mit dem Kontostand eines Kunden. Er verwendet die `Overloads` Schlüsselwort, um zwei Versionen der Prozedur definieren, die der Kunde anhand des Namens und der andere über die Kontonummer annimmt.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#72;](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
- Der Aufrufcode kann die Kundenkennung entweder als `String` oder als `Integer`\-Wert abrufen und dann in beiden Fällen dieselbe Aufrufanweisung verwenden.  
+ Der aufrufende Code erhalten die Kunden-ID als ein `String` oder `Integer`, und verwenden Sie dann in beiden Fällen die gleiche aufrufende Anweisung.  
   
- Informationen dazu, wie diese beiden Versionen der `post`\-Prozedur aufgerufen werden, finden Sie unter [How to: Call an Overloaded Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md).  
+ Informationen zu diesen Versionen von Aufrufen der `post` Verfahren finden Sie unter [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md).  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Stellen Sie sicher, dass jede der überladenen Versionen den gleichen Prozedurnamen, aber eine andere Parameterliste hat.  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Troubleshooting Procedures](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [How to: Overload a Procedure that Takes Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [How to: Overload a Procedure that Takes an Indefinite Number of Parameters](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)   
- [Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)   
+ [Gewusst wie: überladen eine Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
+ [Gewusst wie: überladen eine Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
+ [Überlegungen zur prozedurüberladung](./considerations-in-overloading-procedures.md)   
+ [Überladungsauflösung](./overload-resolution.md)

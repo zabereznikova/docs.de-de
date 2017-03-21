@@ -1,92 +1,108 @@
 ---
-title: "Sub Procedures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Sub procedures, about Sub procedures"
-  - "statement blocks"
-  - "Sub procedures, calling"
-  - "procedures, calling"
-  - "Sub procedures, syntax"
-  - "Sub procedures"
-  - "procedures, Sub"
-  - "syntax, Sub procedures"
+title: Sub-Prozeduren (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Sub procedures, about Sub procedures
+- statement blocks
+- Sub procedures, calling
+- procedures, calling
+- Sub procedures, syntax
+- Sub procedures
+- procedures, Sub
+- syntax, Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Sub Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d224fa3338ca707070ee431380578a8fdde47e07
+ms.lasthandoff: 03/13/2017
 
-Eine `Sub`\-Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Anweisungen, die von den Anweisungen `Sub` und `End Sub` eingeschlossen sind.  Die `Sub`\-Prozedur führt eine Aufgabe aus und gibt die Steuerung anschließend an den Aufrufcode zurück; sie gibt dem Aufrufcode jedoch keinen Wert zurück.  
+---
+# <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
+Ein `Sub` Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Anweisungen, die durch die `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur eine Aufgabe ausführt, und dann wird die Steuerung an den aufrufenden Code zurückgegeben, aber keinen Wert an den aufrufenden Code zurück.  
   
- Bei jedem Aufruf der Prozedur werden ihre Anweisungen ausgeführt. Dabei wird mit der ersten ausführbaren Anweisung nach der `Sub`\-Anweisung begonnen und mit der ersten auftretenden `End Sub`\-, `Exit Sub`\- oder `Return`\-Anweisung geendet.  
+ Jedes Mal die Prozedur aufgerufen wird, die Anweisungen ausgeführt werden, beginnend mit der ersten ausführbaren Anweisung nach der `Sub` -Anweisung und endet mit dem ersten `End Sub`, `Exit Sub`, oder `Return` Anweisung aufgetreten.  
   
- `Sub`\-Prozeduren können in Modulen, Klassen und Strukturen definiert werden.  Sie sind standardmäßig als `Public` definiert. Sie können sie an jeder Stelle im Code Ihrer Anwendung aufrufen, der Zugriff auf das Modul, die Klasse oder die Struktur hat, in der sie definiert sind.  Die Bezeichnung *Methode* beschreibt eine `Sub`\-Prozedur oder `Function`\-Prozedur, die außerhalb des Moduls, der Klasse oder der Struktur aufgerufen wird, in der sie definiert ist.  Weitere Informationen finden Sie unter [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md).  
+ Sie können eine `Sub` Verfahren in Modulen, Klassen und Strukturen. In der Standardeinstellung ist `Public`, womit Sie können ihn Aufrufen von überall in Ihrer Anwendung, die Zugriff auf das Modul, Klasse oder Struktur, in der Sie definiert, wurde. Der Begriff *Methode*, beschreibt eine `Sub` oder `Function` -Prozedur, die außerhalb der definieren aus zugegriffen werden kann-Modul, die Klasse oder Struktur. Weitere Informationen finden Sie unter [Prozeduren](./index.md).  
   
- Eine `Sub`\-Prozedur kann Argumente wie Konstanten, Variablen oder Ausdrücke annehmen, die durch den Aufrufcode an sie übergeben werden.  
+ Ein `Sub` -Prozeduren können Argumente, wie z. B. Konstanten, Variablen oder Ausdrücke, die durch den Aufrufcode an sie übergeben werden.  
   
-## Deklarationssyntax  
- Die Syntax zur Deklaration einer `Sub`\-Prozedur lautet wie folgt:  
+## <a name="declaration-syntax"></a>Deklarationssyntax  
+ Die Syntax zum Deklarieren einer `Sub` Prozedur lautet wie folgt:  
   
- `[` *Modifizierer* `] Sub`  *Subname* `[(` *Parameterliste* `)]`  
+ `[`*modifiers* `] Sub`*subname* `[(` *parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- Mithilfe von `modifiers` werden die Zugriffsebene und Informationen zum Überladen, Überschreiben, Freigeben und Shadowing angegeben.  Weitere Informationen finden Sie unter [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ Die `modifiers` können Zugriffsebene und Informationen zum Überladen, überschreiben, freigeben und shadowing angeben. Weitere Informationen finden Sie unter [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## Parameterdeklaration  
- Jeder Prozedurparameter wird ähnlich wie eine Variable deklariert, nämlich durch Angabe des Parameternamens und des Datentyps.  Sie können auch den Übergabemechanismus festlegen und bestimmen, ob der Parameter optional oder ein Parameterarray ist.  
+## <a name="parameter-declaration"></a>Parameterdeklaration  
+ Sie deklarieren jeder Prozedurparameter wird auf ähnliche Weise, wie Sie eine Variable deklarieren, den Parametertyp und den Datentyp angibt. Sie können auch angeben, den Mechanismus übergeben, und gibt an, ob der Parameter optional ist oder ein Parameterarray.  
   
- Die Syntax für jeden Parameter in der Parameterliste lautet folgendermaßen:  
+ Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*  `As`  *Datentyp*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datentyp    *  
   
- Wenn der Parameter optional ist, müssen Sie bei seiner Deklaration auch einen Standardwert angeben.  Die Syntax zur Angabe eines Standardwerts lautet folgendermaßen:  
+ Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert lautet wie folgt:  
   
- `Optional [ByVal | ByRef]`  *Parametername*  `As`  *Datentyp*  `=`  *Standardwert*  
+ `Optional [ByVal | ByRef]`  *Parametername*`As`*Datentyp*`=`*Defaultvalue        *  
   
-### Parameter als lokale Variablen  
- Wenn die Steuerung an die Prozedur übergeben wird, wird jeder Parameter als lokale Variable behandelt.  Dies bedeutet, dass die Lebensdauer der Parameter derjenigen der Prozedur entspricht und ihr Gültigkeitsbereich die gesamte Prozedur umfasst.  
+### <a name="parameters-as-local-variables"></a>Parameter als lokale Variablen  
+ Wenn die Steuerung an die Prozedur übergeben wird, wird jeder Parameter als lokale Variable behandelt. Dies bedeutet, dass seine Lebensdauer identisch mit der Prozedur ist, und der Gültigkeitsbereich die gesamte Prozedur ist.  
   
-## Aufrufsyntax  
- `Sub`\-Prozeduren werden explizit mit eigenständigen Aufrufanweisungen aufgerufen.  Sie können nicht unter Verwendung ihres Namens in einem Ausdruck aufgerufen werden.  Sie müssen Werte für alle nicht optionalen Argumente angeben und die Argumentliste in Klammern setzen.  Wenn keine Argumente angegeben werden, können Sie die Klammern auch weglassen.  Die Verwendung des `Call`\-Schlüsselworts ist optional, wird aber empfohlen.  
+## <a name="calling-syntax"></a>Aufrufen der Syntax  
+ Rufen Sie eine `Sub` Prozedur explizit mit dem eigenständigen aufrufen. Sie können nicht durch die Verwendung des Namens in einem Ausdruck aufgerufen werden. Geben Sie Werte für alle Argumente, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen. Wenn keine Argumente angegeben sind, können Sie die Klammern auch weglassen. Die Verwendung der `Call` -Schlüsselwort ist optional, wird aber empfohlen.  
   
- Die Syntax für den Aufruf einer `Sub`\-Prozedur lautet wie folgt:  
+ Die Syntax für einen Aufruf einer `Sub` Prozedur lautet wie folgt:  
   
- `[Call]`  *Subname* `[(` *Argumentliste* `)]`  
+ `[Call]`  *Subname* `[(` *Argumentlist*`)]`  
   
- Sie können eine `Sub`\-Methode außerhalb der Klasse aufrufen, in der sie definiert ist.  Zunächst müssen Sie mithilfe des `New`\-Schlüsselworts eine Instanz der Klasse erstellen oder eine Methode aufrufen, die eine Instanz der Klasse zurückgibt.  Weitere Informationen finden Sie unter [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md).  Anschließend können Sie die folgende Syntax verwenden, um die `Sub`\-Methode für das Instanzobjekt aufzurufen:  
+ Rufen Sie eine `Sub` -Methode außerhalb der Klasse, die es definiert. Zuerst müssen Sie verwenden die `New` -Schlüsselwort verwenden, um eine Instanz der Klasse erstellen oder eine Methode aufrufen, gibt eine Instanz der Klasse zurück. Weitere Informationen finden Sie unter [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md). Anschließend können die folgende Syntax zum Aufrufen der `Sub` -Methode für das Instanzobjekt:  
   
- *Objekt*.*Methodenname*`[(`*Argumentliste*`)]`  
+ *Object*.* MethodName*`[(`*Argumentlist*`)]`  
   
-### Darstellung von Deklaration und Aufruf  
- Die folgende `Sub`\-Prozedur meldet den Computerbenutzern, welche Aufgabe die Anwendung als nächste ausführt. Außerdem wird ein Timestamp angezeigt.  Anstatt den Code zu Beginn jeder Aufgabe zu duplizieren, wird  `tellOperator` von verschiedenen Stellen durch die Anwendung aufgerufen.  Bei jedem Aufruf wird eine Zeichenfolge an das `task` \-Argument übergeben, die die gestartete Aufgabe identifiziert.  
+### <a name="illustration-of-declaration-and-call"></a>Darstellung von Deklaration und Aufruf  
+ Die folgenden `Sub` -Prozedur meldet die welche Aufgabe die Anwendung sowie einen Zeitstempel an. Anstatt diesen Code am Anfang jeder Aufgabe wiederholt auszuführen, ruft die Anwendung nur `tellOperator` von verschiedenen Standorten. Jeder Aufruf übergibt eine Zeichenfolge in der `task` -Argument, das die gestartete Aufgabe identifiziert.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#2;](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
- Im folgenden Beispiel wird ein typischer Aufruf von `tellOperator` dargestellt.  
+ Das folgende Beispiel zeigt einen normalen Aufruf `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures&3;](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [How to: Call a Procedure that Does Not Return a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-does-not-return-a-value.md)   
- [How to: Call an Event Handler in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-event-handler.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)   
+ [Function-Prozeduren](./function-procedures.md)   
+ [Property-Prozeduren](./property-procedures.md)   
+ [Operatorprozeduren](./operator-procedures.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt](./how-to-call-a-procedure-that-does-not-return-a-value.md)   
+ [Gewusst wie: Aufrufen von einem Ereignishandler in Visual Basic](./how-to-call-an-event-handler.md)

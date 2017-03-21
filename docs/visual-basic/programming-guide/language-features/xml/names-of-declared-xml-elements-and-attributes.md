@@ -1,59 +1,75 @@
 ---
-title: "Names of Declared XML Elements and Attributes (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declarations [XML in Visual Basic]"
-  - "element names [XML in Visual Basic]"
-  - "names in XML literals"
-  - "attribute names [XML in Visual Basic]"
-  - "XML literals [Visual Basic], element names"
+title: Namen von deklarierten XML-Elementen und Attributen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declarations [XML in Visual Basic]
+- element names [XML in Visual Basic]
+- names in XML literals
+- attribute names [XML in Visual Basic]
+- XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Names of Declared XML Elements and Attributes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ed8ecf69170acf9745a4038975e7e3421722d52d
+ms.lasthandoff: 03/13/2017
 
-Dieses Thema enthält [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Richtlinien zur Benennung von XML\-Elementen und Attributen in XML\-Literalen. In einem XML\-Literal können Sie einen lokalen Namen oder einen qualifizierten Namen angeben.  Ein qualifizierter Name besteht aus einem XML\-Namespacepräfix, einem Doppelpunkt und einem lokalen Namen.  Weitere Informationen zu XML\-Namespacepräfixen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+---
+# <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Namen von deklarierten XML-Elementen und Attributen (Visual Basic)
+Dieses Thema enthält [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Richtlinien für die Benennung von XML-Elementen und Attributen in XML-Literalen.  In einem XML-literal können Sie einen lokalen Namen oder einen qualifizierten Namen angeben. Ein qualifizierter Name besteht aus einer XML-Namespacepräfix, einem Doppelpunkt und einem lokalen Namen. Weitere Informationen zu XML-Namespacepräfixen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
-## Regeln  
- Für lokale Namen von Elementen oder Attributen gelten in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die folgenden Regeln.  
+## <a name="rules"></a>Regeln  
+ Einen lokalen Namen eines Elements oder Attributs in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] müssen die folgenden Regeln einhalten.  
   
--   Der Name kann mit einem Namespace beginnen.  Der Name muss mit einem alphabetischen Zeichen oder einem Unterstrich \(`_`\) beginnen.  
+-   Sie können mit einem Namespace beginnen. Es muss mit einem Buchstaben oder Unterstrich beginnen (`_`).  
   
--   Der Name darf nur alphabetische Zeichen, Dezimalziffern, Unterstriche, Punkte \(.\) und Bindestriche \(\-\) enthalten.  
+-   Es darf nur alphabetische Zeichen, Dezimalziffern, Unterstriche, Punkte (.) und Bindestriche (-).  
   
--   Er darf nicht mehr als 1,024 Zeichen umfassen.  
+-   Es muss nicht mehr als 1024 Zeichen lang sein.  
   
--   Doppelpunkte geben innerhalb von Namen Namespaceabgrenzungen an.  Daher können Sie Doppelpunkte nur zum Angeben eines XML\-Namespace für einen bestimmten Namen verwenden.  
+-   Doppelpunkte, die innerhalb von Namen Namespaceabgrenzungen. Daher können Sie Doppelpunkte nur für einen XML-Namespace für einen bestimmten Namen geben.  
   
- Außerdem sollten Sie folgende Richtlinie beachten.  
+ Darüber hinaus sollten Sie sich an die folgenden Richtlinien halten.  
   
--   Alle Namen, die mit der Zeichenfolge "xml" beginnen, sind, unabhängig von Groß\- bzw. Kleinschreibung, durch die XML 1.0\-Spezifikation reserviert.  Deshalb dürfen Element\- und Attributnamen nicht auf diese Weise benannt werden.  
+-   XML 1.0-Spezifikation reserviert alle Namen, die mit der Zeichenfolge "Xml", der Variation Großschreibung ab. Verwenden Sie daher nicht die Namen für das Element und die Attributnamen.  
   
-### Richtlinien zur Länge von Namen  
- Namen sollten aus praktischen Gründen so kurz wie möglich sein und gleichzeitig die Art des Elements eindeutig kennzeichnen.  Dies verbessert die Lesbarkeit des Codes und reduziert die Zeilenlänge und die Quelldateigröße.  
+### <a name="name-length-guidelines"></a>Richtlinien zur Länge von Namen  
+ Ein Namen sollten aus praktischen Gründen so kurz wie möglich sein und gleichzeitig die Art des Elements eindeutig kennzeichnen. Dies verbessert die Lesbarkeit des Codes und Länge und die Quelldatei die Größe verringert.  
   
- Namen sollten jedoch nicht so kurz sein, dass nicht eindeutig aus ihnen hervorgeht, was das Element darstellt oder wie der Code das Element verwendet.  Dies ist für die Lesbarkeit des Codes wichtig.  Wenn andere Personen versuchen, den Code zu verstehen, oder Sie selbst nach langer Zeit den Code erneut durchsehen, kann die Verwendung geeigneter Elementnamen Zeit sparen,.  
+ Ihr Name sollte jedoch nicht so kurz sein, dass es nicht angemessen beantwortet werden, das Element oder wie der Code verwendet. Dies ist wichtig für die Lesbarkeit des Codes. Wenn jemand versucht, zu verstehen, oder wenn Sie sich diese betrachten sehr lange, nachdem Sie ihn geschrieben haben, können geeigneter Elementnamen Zeit sparen.  
   
-## Groß\- und Kleinschreibung bei Namen  
- Bei XML\-Elementnamen muss die Groß\-\/Kleinschreibung beachtet werden.  Der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler interpretiert Namen, die sich nur durch die Groß\- und Kleinschreibung unterscheiden, als unterschiedliche Namen.  Beispielsweise werden `ABC` und `abc` als Verweise auf verschiedene Elemente interpretiert.  
+## <a name="case-sensitivity-in-names"></a>Groß-und Kleinschreibung bei Namen  
+ XML-Elementnamen Groß-/Kleinschreibung. Dies bedeutet, dass bei der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler vergleicht zwei Namen, die nur die Groß-und Kleinschreibung unterscheiden, als unterschiedliche Namen interpretiert. Interpretiert z. B. `ABC` und `abc` als Verweise auf verschiedene Elemente.  
   
-## XML\-Namespaces  
- Wenn Sie ein XML\-Elementliteral erstellen, können Sie das XML\-Namespacepräfix für den Elementnamen angeben.  Weitere Informationen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+## <a name="xml-namespaces"></a>XML-Namespaces  
+ Wenn ein XML-Elementliteral erstellen, können Sie das XML-Namespacepräfix für den Elementnamen angeben. Weitere Informationen finden Sie unter [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
-## Siehe auch  
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
+ [XML-Elementliteral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

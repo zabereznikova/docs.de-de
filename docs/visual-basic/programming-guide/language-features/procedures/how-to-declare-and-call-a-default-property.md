@@ -1,103 +1,119 @@
 ---
-title: "How to: Declare and Call a Default Property in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "defaults, properties"
-  - "properties [Visual Basic], default"
-  - "procedures, defining"
-  - "default properties, in Visual Basic"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, properties"
-  - "default properties"
+title: 'Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- defaults, properties
+- properties [Visual Basic], default
+- procedures, defining
+- default properties, in Visual Basic
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
----
-# How to: Declare and Call a Default Property in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ce98e7fe72a395f6c4cde481feaa60be28c6fcc3
+ms.lasthandoff: 03/13/2017
 
-Eine *Standardeigenschaft* ist eine Klassen\- oder Struktureigenschaft, auf die der Code zugreifen kann, ohne dass die Eigenschaft angegeben wird.  Wenn der Aufrufcode eine Klasse oder Struktur, nicht jedoch eine Eigenschaft angibt und der Kontext den Zugriff auf eine Eigenschaft zulässt, löst [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Zugriff in die Standardeigenschaft dieser Klasse oder Struktur auf, falls eine solche Eigenschaft vorhanden ist.  
+---
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic
+Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die der Code zugreifen kann, ohne dass es. Beim Aufrufen von Code, den Namen einer Klasse oder Struktur, aber keine Eigenschaft, und der Kontext den Zugriff auf eine Eigenschaft ermöglicht [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] löst den Zugriff auf die Klasse oder Struktur Standardeigenschaft, falls vorhanden.  
   
- Eine Klasse oder Struktur kann höchstens eine Standardeigenschaft haben.  Sie können eine Standardeigenschaft jedoch überladen und mehrere Versionen davon verwenden.  
+ Eine Klasse oder Struktur kann höchstens eine Standardeigenschaft besitzen. Sie können allerdings haben mehr als eine Version und eine Standardeigenschaft überladen.  
   
- Weitere Informationen finden Sie unter [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
+ Weitere Informationen finden Sie unter [Standard](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### So deklarieren Sie eine Standardeigenschaft  
+### <a name="to-declare-a-default-property"></a>Deklarieren Sie eine Default-Eigenschaft  
   
-1.  Deklarieren Sie die Eigenschaft auf die übliche Weise.  Geben Sie das `Shared`\-Schlüsselwort oder das `Private`\-Schlüsselwort nicht an.  
+1.  Deklarieren Sie die Eigenschaft auf die übliche Weise. Geben Sie die `Shared` oder `Private` Schlüsselwort.  
   
-2.  Fügen Sie das `Default`\-Schlüsselwort in die Eigenschaftendeklaration ein.  
+2.  Enthalten die `Default` Schlüsselwort in der Eigenschaftendeklaration.  
   
-3.  Geben Sie mindestens einen Parameter für die Eigenschaft an.  Sie können keine Standardeigenschaft definieren, die nicht wenigstens ein Argument annimmt.  
+3.  Geben Sie mindestens einen Parameter für die Eigenschaft. Sie können keine Standardeigenschaft definieren, die nicht mindestens ein Argument annimmt.  
   
-     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures&17;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
-### So rufen Sie eine Standardeigenschaft auf  
+### <a name="to-call-a-default-property"></a>Aufrufen eine Standardeigenschaft  
   
-1.  Deklarieren Sie eine Variable der enthaltenden Klasse oder des Strukturtyps.  
+1.  Deklarieren Sie eine Variable des enthaltenden Typs Klasse oder Struktur.  
   
-     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures Nr.&16;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
-2.  Verwenden Sie den Variablennamen allein in einem Ausdruck, in den Sie normalerweise den Eigenschaftennamen einfügen würden.  
+2.  Verwenden Sie den Variablennamen Allein in einem Ausdruck, der Sie normalerweise den Eigenschaftennamen enthalten würde.  
   
-     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[VbVbcnProcedures&21;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
-3.  Geben Sie nach dem Variablennamen eine Argumentliste in runden Klammern ein.  Eine Standardeigenschaft muss mindestens ein Argument annehmen.  
+3.  Folgen Sie den Variablennamen eine Argumentliste in Klammern. Eine Standardeigenschaft muss mindestens ein Argument annehmen.  
   
-     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures&20;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
-4.  Um den Wert der Standardeigenschaft abzurufen, verwenden Sie den Variablennamen mit einer Argumentliste in einem Ausdruck oder nach dem Gleichheitszeichen \(`=`\) in einer Zuweisungsanweisung.  
+4.  Um den Standardwert der Eigenschaft abzurufen, verwenden Sie den Variablennamen mit einer Argumentliste, die in einem Ausdruck oder nach dem Gleichheitszeichen (`=`) melden Sie sich eine Zuweisung.  
   
-     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures&#15;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
-5.  Um den Wert der Standardeigenschaft festzulegen, verwenden Sie den Variablennamen \(mit einer Argumentliste\) auf der linken Seite einer Zuweisungsanweisung.  
+5.  Um den Standardwert der Eigenschaft festzulegen, verwenden Sie den Variablennamen mit einer Argumentliste auf der linken Seite einer Zuweisung-Anweisung.  
   
-     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures&14;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
-6.  Ebenso wie beim Zugriff auf andere Eigenschaften können Sie den Namen der Standardeigenschaft stets zusammen mit dem Variablennamen angeben.  
+6.  Sie können den Standardnamen für die Eigenschaft zusammen mit dem Variablennamen immer angeben, wie würde für den Zugriff auf eine andere Eigenschaft.  
   
-     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures Nr.&19;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Standardeigenschaft in einer Klasse deklariert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel deklariert eine Standardeigenschaft für eine Klasse.  
   
- [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures&#12;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die `myProperty`\-Standardeigenschaft in der `class1`\-Klasse aufgerufen wird.  Die drei Zuweisungsanweisungen speichern Werte in `myProperty`, und der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>\-Aufruf liest die Werte.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie die Standardeigenschaft Aufrufen `myProperty` Klasse `class1`. Die drei zuweisungsanweisungen speichern Sie die Werte in `myProperty`, und die <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>Aufruf liest die Werte.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
   
- [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures&#13;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
- Am häufigsten wird die <xref:Microsoft.VisualBasic.Collection.Item%2A>\-Eigenschaft in verschiedenen Auflistungsklassen als Standardeigenschaft verwendet.  
+ Die häufigste Verwendung einer Standard-Eigenschaft wird die <xref:Microsoft.VisualBasic.Collection.Item%2A>-Eigenschaft in verschiedenen Auflistungsklassen.</xref:Microsoft.VisualBasic.Collection.Item%2A>  
   
-## Robuste Programmierung  
- Durch Standardeigenschaften wird zwar die Anzahl der Quellcodezeichen geringfügig verringert, der Code wird durch sie jedoch unter Umständen schlechter lesbar.  Wenn dem Aufrufcode die Klasse oder die Struktur, auf die verwiesen wird, nicht bekannt sind, ist unsicher, ob durch diesen Verweis auf die Klasse bzw. die Struktur selbst oder auf eine Standardeigenschaft zugegriffen wird.  Dies kann zu Compilerfehlern oder kleineren Laufzeitlogikfehlern führen.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Standardeigenschaften können dazu führen, dass eine kleine Reduzierung Code Quellzeichen können, sie jedoch Ihren Code schwieriger zu lesen. Wenn der aufrufende Code nicht mit der Klasse oder Struktur, vertraut ist, wenn einen Verweis auf den Namen der Klasse oder Struktur erstellt kann nicht es sicher sein, ob der Verweis der Klasse oder Struktur selbst oder eine Default-Eigenschaft zugreift. Dies kann zu Compilerfehlern oder feine Laufzeitlogik Fehler führen.  
   
- Die Möglichkeit von Eigenschaftenfehlern lässt sich ein wenig reduzieren, wenn Sie stets die [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) verwenden, um die Compilertypüberprüfung auf `On` zu setzen.  
+ Sie können das Fehlerrisiko Standard-Eigenschaft etwas reduzieren, indem Sie immer die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) Compilertyp Überprüfung festlegen `On`.  
   
- Wenn Sie im Code eine vordefinierte Klasse oder Struktur verwenden möchten, müssen Sie festlegen, ob sie eine Standardeigenschaft besitzt. Ist dies der Fall, müssen Sie auch einen Namen für die Eigenschaft festlegen.  
+ Wenn Sie beabsichtigen, mit eine vordefinierte Klasse oder Struktur im Code müssen Sie bestimmen, ob es sich um eine Standardeigenschaft verfügt, und wenn Ja, wie lautet der Name.  
   
- Aufgrund dieser Nachteile sollten Sie keine Standardeigenschaften definieren.  Zur besseren Lesbarkeit des Codes sollten Sie zudem stets explizit auf alle Eigenschaften verweisen, auch auf Standardeigenschaften.  
+ Wegen dieser Nachteile sollten Sie keine Standardeigenschaften definieren. Für die Lesbarkeit des Codes sollten Sie auch in Betracht ziehen, immer explizit auf alle Eigenschaften verweisen, auch auf Standardeigenschaften.  
   
-## Siehe auch  
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Default](../../../../visual-basic/language-reference/modifiers/default.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Create a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Siehe auch  
+ [Property-Prozeduren](./property-procedures.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Standardwert](../../../../visual-basic/language-reference/modifiers/default.md)   
+ [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)   
+ [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)   
+ [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)   
+ [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)   
+ [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)   
+ [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)

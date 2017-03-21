@@ -1,53 +1,69 @@
 ---
-title: "Expression of type &lt;type&gt; is not queryable | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36593"
-  - "vbc36593"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36593"
+title: Ein Ausdruck vom Typ &lt;Typ&gt; kann nicht abgefragt werden | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36593
+- vbc36593
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
----
-# Expression of type &lt;type&gt; is not queryable
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1e7e1e2652cf730ef6d14b0579d8a3ee3de67fbb
+ms.lasthandoff: 03/13/2017
 
-Ein Ausdruck vom Typ "\<Typ\>" kann nicht abgefragt werden.Stellen Sie sicher, dass kein Assemblyverweis und\/oder Namespaceimport für den LINQ\-Anbieter fehlt.  
+---
+# <a name="expression-of-type-lttypegt-is-not-queryable"></a>Ein Ausdruck vom Typ &lt;Typ&gt; kann nicht abgefragt werden
+Ein Ausdruck vom Typ \<Typ > kann nicht abgefragt werden. Sicherstellen Sie, dass einen Assembly und/oder Namespaceimport Import nicht für die LINQ-Anbieter fehlt.  
   
- Abfragbare Typen werden in den Namespaces <xref:System.Linq>, <xref:System.Data.Linq> und <xref:System.Xml.Linq> definiert.  Sie müssen mindestens einen dieser Namespaces importieren, um LINQ\-Abfragen auszuführen.  
+ Abfragbare Typen werden definiert die <xref:System.Linq>, <xref:System.Data.Linq>, und <xref:System.Xml.Linq>Namespaces.</xref:System.Xml.Linq> </xref:System.Data.Linq> </xref:System.Linq> Importieren Sie eine oder mehrere dieser Namespaces zur LINQ-Abfragen auszuführen.  
   
- Der <xref:System.Linq>\-Namespace ermöglicht es Ihnen, Objekte wie Auflistungen und Arrays mithilfe von LINQ abzufragen.  
+ Die <xref:System.Linq>Namespaces können Sie Abfragen von Objekten wie z. B. Sammlungen und Arrays mithilfe von LINQ.</xref:System.Linq>  
   
- Der <xref:System.Data.Linq>\-Namespace ermöglicht es Ihnen, ADO.NET\-Datasets und SQL Server\-Datenbanken mithilfe von LINQ abzufragen.  
+ Der <xref:System.Data.Linq>-Namespace ermöglicht es Ihnen, ADO.NET-Datasets und SQL Server-Datenbanken mithilfe von LINQ Abfragen.</xref:System.Data.Linq>  
   
- Der <xref:System.Xml.Linq>\-Namespace ermöglicht es Ihnen, XML mithilfe von LINQ abzufragen und XML\-Features in Visual Basic zu verwenden.  
+ Die <xref:System.Xml.Linq>Namespaces können Sie XML-Abfrage mithilfe von LINQ und XML-Features in Visual Basic verwenden.</xref:System.Xml.Linq>  
   
- **Fehler\-ID:** BC36593  
+ **Fehler-ID:** BC36593  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Fügen Sie der Codedatei die `Import`\-Anweisung für den Namespace <xref:System.Linq>, <xref:System.Data.Linq> oder <xref:System.Xml.Linq> hinzu.  Namespaces für das Projekt können auch über die Seite **Verweise** im Projekt\-Designer \(**Mein Projekt**\) importiert werden.  
+1.  Hinzufügen einer `Import` -Anweisung für die <xref:System.Linq>, <xref:System.Data.Linq>, oder <xref:System.Xml.Linq>Namespace zur Codedatei.</xref:System.Xml.Linq> </xref:System.Data.Linq> </xref:System.Linq> Sie können auch Namespaces für das Projekt importieren, mit dem **Verweise** Seite im Projekt-Designer (**Mein Projekt**).  
   
-2.  Stellen Sie sicher, dass der Typ, der als Quelle der Abfrage identifiziert wurde, ein abfragbarer Typ ist.  Es muss sich also um einen Typ handeln, durch den <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> implementiert wird.  
+2.  Stellen Sie sicher, dass des Typs, den Sie identifiziert haben, wie die Quelle der Abfrage ein abfragbarer Typ ist. D. h. ein Typ, <xref:System.Collections.Generic.IEnumerable%601>oder <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> implementiert,  
   
-## Siehe auch  
- <xref:System.Linq>   
- <xref:System.Data.Linq>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Linq></xref:System.Linq>   
+ <xref:System.Data.Linq></xref:System.Data.Linq>   
  <xref:System.Xml.Linq>   
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [References and the Imports Statement](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)   
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Seite "Verweise", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic)
+ [Verweise und die Imports-Anweisung](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)   
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
+ [Seite „Verweise“, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic)

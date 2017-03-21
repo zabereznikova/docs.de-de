@@ -1,60 +1,76 @@
 ---
-title: "Recursive Procedures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, procedures"
-  - "procedures, that call themselves"
-  - "procedures, recursive"
-  - "procedures, calling"
-  - "recursive procedures"
-  - "functions [Visual Basic], calling recursively"
-  - "recursion"
+title: Rekursive Prozeduren (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- procedures, that call themselves
+- procedures, recursive
+- procedures, calling
+- recursive procedures
+- functions [Visual Basic], calling recursively
+- recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Recursive Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9fc95cd5f7cfd5637f6282c6ef571eb81bac1816
+ms.lasthandoff: 03/13/2017
 
-*Rekursive* Prozeduren sind Prozeduren, die sich selbst aufrufen.  Im Allgemeinen ist dies nicht die effizienteste Art und Weise, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Code zu schreiben.  
+---
+# <a name="recursive-procedures-visual-basic"></a>Rekursive Prozeduren (Visual Basic)
+Ein *rekursive* Prozedur ist eine, die sich selbst aufruft. Im Allgemeinen, dies ist nicht die effizienteste Methode zum Schreiben [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Code.  
   
- Die folgende Prozedur berechnet die Fakultät ihres ursprünglichen Arguments mithilfe der Rekursion.  
+ Die folgende Prozedur verwendet die Rekursion berechnet die Fakultät ihres ursprünglichen Arguments.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures&51;](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
-## Überlegungen hinsichtlich rekursiver Prozeduren  
- **Einschränkende Bedingungen**.  Sie müssen eine rekursive Prozedur so gestalten, dass sie mindestens eine Bedingung überprüft, mit der die Rekursion beendet wird. Berücksichtigen Sie auch den Fall, dass eine solche Bedingung auch nach einer hinlänglichen Anzahl rekursiver Aufrufe nicht erfüllt wird.  Wenn nicht mindestens eine Bedingung gegeben ist, die fehlerfrei erfüllt werden kann, dann besteht die Gefahr, dass die Prozedur in einer Endlosschleife ausgeführt wird.  
+## <a name="considerations-with-recursive-procedures"></a>Zu rekursive Prozeduren  
+ **Beschränkenden Bedingungen**. Sie müssen eine rekursive Prozedur für mindestens eine Bedingung zu testen, die die Rekursion beendet entwerfen, und Sie müssen auch den Fall, in dem keine solchen Bedingung, innerhalb einer angemessenen Anzahl von rekursiven Aufrufen erfüllt ist, behandeln. Ohne mindestens eine Bedingung, die fehlerfrei erfüllt werden kann, wird die Prozedur ein erhöhtes Risiko für die Ausführung in einer Endlosschleife ausgeführt.  
   
- **Speichernutzung**.  Anwendungen verfügen nur beschränkt über Speicherplatz für lokale Variablen.  Jedes Mal, wenn eine Prozedur sich selbst aufruft, verbraucht sie mehr von diesem Platz für zusätzliche Kopien ihrer lokalen Variablen.  Wenn sich dieser Vorgang unendlich lange fortsetzt, wird letztendlich ein <xref:System.StackOverflowException>\-Fehler ausgelöst.  
+ **Speicherverwendung**. Ihre Anwendung hat eine begrenzte Menge an Speicherplatz für lokale Variablen. Jedes Mal eine Prozedur aufruft, wird weiterer Speicherplatz für zusätzliche Kopien ihrer lokalen Variablen. Wenn dieser Vorgang unendlich lange fortsetzt, wird letztendlich eine <xref:System.StackOverflowException>Fehler.</xref:System.StackOverflowException>  
   
- **Effizienz**.  Rekursion lässt sich fast immer durch eine Schleife ersetzen.  Eine Schleife ist nicht mit dem Verwaltungsaufwand verbunden, den das Übergeben von Argumenten, das Initialisieren von zusätzlichem Speicher und das Zurückgeben von Werten bedeutet.  Das Leistungsverhalten kann ohne rekursive Aufrufe u. U. viel besser sein.  
+ **Effizienz**. Sie können fast immer eine Schleife für die Rekursion ersetzen. Eine Schleife muss nicht den Aufwand für das Übergeben von Argumenten, Initialisieren von zusätzlichem Speicher und das Zurückgeben von Werten. Die Leistung kann ohne rekursive Aufrufe viel besser sein.  
   
- **Gegenseitige Rekursion**.  Sie werden ein sehr schlechtes Leistungsverhalten feststellen oder sogar eine Endlosschleife finden, wenn zwei Prozeduren einander aufrufen.  Eine solche Konstellation verursacht die gleichen Probleme wie eine einzelne rekursive Prozedur, ist aber möglicherweise schwerer zu erkennen und zu debuggen.  
+ **Gegenseitige Rekursion**. Sie können eine sehr schlechte Leistung oder sogar eine Endlosschleife, beobachten, wenn zwei Prozeduren einander aufrufen. Ein solcher Entwurf stellt die gleichen Probleme wie eine einzelne rekursive Prozedur, aber möglicherweise schwerer zu erkennen und zu debuggen.  
   
- **Aufrufe mit Klammern**.  Wenn eine `Function`\-Prozedur sich rekursiv aufruft, müssen auch dann nach dem Prozedurnamen runde Klammern angegeben werden, wenn keine Argumentliste vorhanden ist.  Anderenfalls wird der Funktionsname als Rückgabewert der Funktion gedeutet.  
+ **Aufrufe mit Klammern**. Wenn ein `Function` Prozedur ruft sich selbst rekursiv, Sie müssen den Namen der Prozedur mit Klammern folgen, selbst wenn keine Argumentliste vorhanden ist. Andernfalls stammt der Funktionsname als Rückgabewert der Funktion.  
   
- **Testen**.  Beim Schreiben einer rekursiven Prozedur sollten Sie sehr sorgfältig testen, ob die Prozedur stets eine einschränkende Bedingung erfüllt.  Sie sollten auch sicherstellen, dass der Arbeitsspeicher nicht durch zu viele rekursive Aufrufe erschöpft wird.  
+ **Testen von**. Wenn Sie eine rekursive Prozedur schreiben, sollten Sie es sehr sorgfältig testen, um sicherzustellen, dass es immer eine einschränkende Bedingung erfüllt. Sie sollten auch sicherstellen, dass nicht genügend Arbeitsspeicher nicht durch zu viele rekursive Aufrufe ausgeführt werden kann.  
   
-## Siehe auch  
- <xref:System.StackOverflowException>   
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Troubleshooting Procedures](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Problembehandlung bei Ausnahmen: System.StackOverflowException](../Topic/Troubleshooting%20Exceptions:%20System.StackOverflowException.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.StackOverflowException></xref:System.StackOverflowException>   
+ [Verfahren](./index.md)   
+ [Sub-Prozeduren](./sub-procedures.md)   
+ [Function-Prozeduren](./function-procedures.md)   
+ [Property-Prozeduren](./property-procedures.md)   
+ [Operatorprozeduren](./operator-procedures.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Prozedurüberladung](./procedure-overloading.md)   
+ [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)   
+ [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
+ [Problembehandlung bei Ausnahmen: System.StackOverflowException](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

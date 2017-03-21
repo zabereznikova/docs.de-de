@@ -1,53 +1,69 @@
 ---
-title: "Property &#39;&lt;propertyname&gt;&#39; doesn&#39;t return a value on all code paths | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42107"
-  - "vbc42107"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42107"
+title: "Eigenschaft &quot;&lt;Propertyname&gt;&quot; nicht für alle Codepfade einen Wert zurück | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42107
+- vbc42107
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
 caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
----
-# Property &#39;&lt;propertyname&gt;&#39; doesn&#39;t return a value on all code paths
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e7c94d827761ad26d517b44a06734c5db4480a62
+ms.lasthandoff: 03/13/2017
 
-Die \<Eigenschaftenname\>\-Eigenschaft gibt nicht für alle Codepfade einen Wert zurück.Wenn das Ergebnis verwendet wird, kann zur Laufzeit eine NULL\-Verweisausnahme auftreten  
+---
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Eigenschaft '&lt;Propertyname&gt;' nicht für alle Codepfade einen Wert zurück
+Eigenschaft '\<Propertyname >' nicht für alle Codepfade einen Wert zurück. Wenn das Ergebnis verwendet wird, kann während der Laufzeit eine NULL-Verweisausnahme auftreten.  
   
- Eine `Get`\-Eigenschaftenprozedur weist mindestens einen möglichen Codepfad auf, der keinen Wert zurückgibt.  
+ Eine Eigenschaft `Get` Prozedur verfügt über mindestens einen möglichen Codepfad auf, die keinen Wert zurückgibt.  
   
- Mit einem der folgenden Verfahren kann ein Wert von einer `Get`\-Eigenschaftenprozedur zurückgegeben werden:  
+ Sie können einen Wert zurückgeben, von einer Eigenschaft `Get` Verfahren in den folgenden Methoden:  
   
--   Weisen Sie dem Eigenschaftennamen den Wert zu, und führen Sie dann eine `Exit Property`\-Anweisung aus.  
+-   Weisen Sie den Wert auf den Eigenschaftennamen, und führen Sie dann eine `Exit Property` Anweisung.  
   
--   Weisen Sie dem Eigenschaftennamen den Wert zu, und führen Sie dann die `End Get`\-Anweisung aus.  
+-   Weisen Sie den Wert auf den Eigenschaftennamen, und führen Sie dann die `End Get` Anweisung.  
   
--   Fügen Sie den Wert in eine [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) ein.  
+-   Fügen Sie den Wert in einem [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- Wenn die Steuerung an `Exit Property` oder an `End Get` übergeben wird und Sie dem Eigenschaftennamen keinen Wert zugewiesen haben, gibt die `Get`\-Prozedur den Standardwert für den Datentyp der Eigenschaft zurück.  Weitere Informationen finden Sie in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) unter "Verhalten".  
+ Wenn die Steuerung an `Exit Property` oder `End Get` und Sie den Namen der Eigenschaft einen Wert zugewiesen haben die `Get` Prozedur gibt den Standardwert des Datentyps der Eigenschaft zurück. Weitere Informationen finden Sie unter "Verhalten" in [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
   
- Standardmäßig ist diese Meldung eine Warnung.  Weitere Informationen über das Ausblenden von Warnungen bzw. über die Behandlung von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zu Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Fehler\-ID:** BC42107  
+ **Fehler-ID:** BC42107  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Überprüfen Sie die Ablaufsteuerungslogik, und weisen Sie vor jeder Anweisung, die eine Rückgabe verursacht, einen Wert zu.  
+-   Überprüfen Sie die Ablaufsteuerungslogik, und stellen Sie sicher, dass Sie vor jeder Anweisung einen Wert zuweisen, der eine Rückgabe verursacht.  
   
-     Wenn Sie immer die `Return`\-Anweisung verwenden, lässt sich einfacher sicherstellen, dass bei jeder Beendigung der Prozedur ein Wert zurückgegeben wird.  Bei dieser Vorgehensweise muss die letzte Anweisung vor `End Get` eine `Return`\-Anweisung sein.  
+     Es ist einfacher sicherstellen, dass bei jeder Beendigung der Prozedur einen Wert zurückgibt, wenn Sie immer verwenden die `Return` Anweisung. Wenn Sie die letzte Anweisung vor dazu `End Get` sollte eine `Return` Anweisung.  
   
-## Siehe auch  
- [Eigenschaftenprozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Property-Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
+ [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)

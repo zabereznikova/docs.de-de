@@ -1,130 +1,146 @@
 ---
-title: "Walkthrough: Handling Events (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "event handling [Visual Basic], walkthroughs"
-  - "walkthroughs [Visual Basic], event handling"
-  - "variables [Visual Basic], WithEvents"
-  - "events [Visual Basic], walkthroughs"
-  - "WithEvents keyword, walkthroughs"
-  - "event handlers [Visual Basic], walkthroughs"
+title: Behandlung von Ereignissen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- event handling [Visual Basic], walkthroughs
+- walkthroughs [Visual Basic], event handling
+- variables [Visual Basic], WithEvents
+- events [Visual Basic], walkthroughs
+- WithEvents keyword, walkthroughs
+- event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Walkthrough: Handling Events (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 17cd0bddbe8c89cf60e19f3f2af6f448ad465d70
+ms.lasthandoff: 03/13/2017
 
-In diesem Thema, dem zweiten von zwei verwandten Themen, wird die Arbeit mit Ereignissen veranschaulicht.  Im ersten Thema \([Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)\) wird beschrieben, wie Ereignisse deklariert und ausgelöst werden.  In diesem Abschnitt werden das Formular und die Klasse aus der erwähnten exemplarischen Vorgehensweise verwendet, um zu demonstrieren, wie eingetretene Ereignisse behandelt werden.  
+---
+# <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
+Dies ist die zweite von zwei Themen, die zum Arbeiten mit Ereignissen zu veranschaulichen. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), zeigt, wie Ereignisse deklariert und ausgelöst. Dieser Abschnitt verwendet die Form und die Klasse aus dieser exemplarischen Vorgehensweise veranschaulicht, wie Ereignisse werden behandelt.  
   
- Im Beispiel mit der `Widget`\-Klasse werden herkömmliche Ereignisbehandlungsanweisungen verwendet.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt andere Techniken zur Arbeit mit Ereignissen bereit.  Um weitere praktische Erfahrungen zu gewinnen, können Sie dieses Beispiel für die Verwendung der `AddHandler`\-Anweisung und der `Handles`\-Anweisung abwandeln.  
+ Die `Widget` Beispiel verwendet herkömmliche Ereignisbehandlung-Anweisungen. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]bietet andere Verfahren zum Arbeiten mit Ereignissen. Als Übung, können Sie dieses Beispiel verwenden Sie ändern die `AddHandler` und `Handles` Anweisungen.  
   
-### So verarbeiten Sie das PercentDone\-Ereignis der Widget\-Klasse  
+### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Der Widget-Klasse das PercentDone-Ereignis behandeln  
   
-1.  Fügen Sie in `Form1` folgenden Code ein:  
+1.  Fügen Sie folgenden Code im `Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&4;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
-     Das `WithEvents`\-Schlüsselwort legt fest, dass die Variable `mWidget` zur Behandlung von Objektereignissen verwendet wird.  Sie legen den Objekttyp fest, indem Sie den Namen der Klasse angeben, aus der das Objekt erstellt wird.  
+     Die `WithEvents` Schlüsselwort Gibt an, dass die Variable `mWidget` zum Behandeln der Ereignisse eines Objekts. Geben Sie die Art des Objekts, indem der Name der Klasse, von der das Objekt erstellt wird.  
   
-     Die Variable `mWidget` wird in `Form1` deklariert, da `WithEvents`\-Variablen auf Klassenebene definiert werden müssen.  Dies gilt unabhängig vom Typ der Klasse, in die sie eingefügt werden.  
+     Die Variable `mWidget` im deklarierten `Form1` da `WithEvents` Variablen auf Klassenebene werden müssen. Dies gilt unabhängig vom Typ der Klasse, die in den sie eingefügt.  
   
-     Die `mblnCancel`\-Variable wird verwendet, um die `LongTask`\-Methode abzubrechen.  
+     Die Variable `mblnCancel` wird verwendet, um das Abbrechen der `LongTask` Methode.  
   
-## Schreiben von Code zur Ereignisbehandlung  
- Sobald Sie ein eVariable mit `WithEvents` deklarieren, wird der Variablenname in der linken Dropdownliste des **Code\-Editors** der Klasse angezeigt.  Wenn Sie `mWidget` auswählen, werden die Ereignisse der `Widget`\-Klasse in der rechten Dropdownliste angezeigt.  Bei Auswahl eines Ereignisses wird die entsprechende Ereignisprozedur mit dem Präfix `mWidget` und einem Unterstrich angezeigt.  Alle mit einer `WithEvents`\-Variablen verknüpften Ereignisprozeduren erhalten als Präfix den Variablennamen.  
+## <a name="writing-code-to-handle-an-event"></a>Schreiben von Code zum Behandeln eines Ereignisses  
+ Sobald Sie deklarieren eine Variable mit `WithEvents`, der Variablennamen angezeigt, in der linken Dropdown-Liste die Klasse **Code-Editor**. Wenn Sie die Option `mWidget`, die `Widget` -Klasse Ereignisse werden in der rechten Dropdownliste angezeigt. Auswahl eines Ereignisses wird die entsprechende Ereignisprozedur mit dem Präfix `mWidget` und der Unterstrich. Alle zugeordneten Ereignisprozeduren eine `WithEvents` Variable den Variablennamen als Präfix erhalten.  
   
-#### So behandeln Sie ein Ereignis  
+#### <a name="to-handle-an-event"></a>So behandeln Sie ein Ereignis  
   
-1.  Wählen Sie `mWidget` in der linken Dropdownliste des **Code\-Editors** aus.  
+1.  Wählen Sie `mWidget` aus der linken Dropdown-Liste in der **Code-Editor**.  
   
-2.  Wählen Sie das `PercentDone`\-Ereignis aus der rechten Dropdownliste aus.  Der **Code\-Editor** öffnet die `mWidget_PercentDone`\-Ereignisprozedur.  
+2.  Wählen Sie die `PercentDone` aus der Liste rechts Dropdown-Ereignis. Die **Code-Editor** öffnet der `mWidget_PercentDone` -Ereignisprozedur.  
   
     > [!NOTE]
-    >  Zum Einfügen neuer Ereignishandler ist der **Code\-Editor** hilfreich, doch nicht erforderlich.  In dieser exemplarischen Vorgehensweise werden die Ereignishandler einfach direkt in den Code eingefügt.  
+    >  Die **Code-Editor** ist nützlich, aber nicht erforderlich, für das Einfügen eines neuen Ereignishandler. In dieser exemplarischen Vorgehensweise ist es eine direktere, kopieren Sie die Ereignishandler einfach direkt in den Code.  
   
-3.  Fügen Sie dem `mWidget_PercentDone`\-Ereignishandler folgenden Code hinzu:  
+3.  Fügen Sie dem `mWidget_PercentDone`-Ereignishandler folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&5;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
-     Bei jedem Auslösen des `PercentDone`\-Ereignisses zeigt die Ereignisprozedur den Prozentsatz der bereits erfolgten Verarbeitung in einem `Label`\-Steuerelement an.  Die `DoEvents`\-Methode bietet nicht nur die Möglichkeit, die Bezeichnung neu zu zeichnen, sondern ermöglicht es darüber hinaus dem Benutzer, auf die Schaltfläche **Abbrechen** zu klicken.  
+     Wenn die `PercentDone` -Ereignis ausgelöst wird, zeigt die Ereignisprozedur die abgeschlossenen Prozentsatz in eine `Label` Steuerelement. Die `DoEvents` -Methode ermöglicht es, die Bezeichnung neu zu zeichnen, und auch dem Benutzer die Möglichkeit, klicken Sie auf die **Abbrechen** Schaltfläche.  
   
-4.  Fügen Sie folgenden Code für den `Button2_Click`\-Ereignishandler hinzu:  
+4.  Fügen Sie den folgenden Code für den `Button2_Click` -Ereignishandler:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&6;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
- Wenn der Benutzer während der Ausführung von `LongTask` auf die Schaltfläche **Abbrechen** klickt, wird das `Button2_Click`\-Ereignis ausgeführt, sobald die `DoEvents`\-Anweisung die Ereignisverarbeitung zulässt.  Die Variable `mblnCancel` auf Klassenebene wird auf `True` festgelegt und anschließend vom `mWidget_PercentDone`\-Ereignis überprüft, und das `ByRef Cancel`\-Argument wird auf `True` festgelegt.  
+ Klickt der Benutzer auf die **Abbrechen** Schaltfläche `LongTask` ausgeführt wird, die `Button2_Click` Ereignis wird ausgeführt, sobald die `DoEvents` Anweisung ermöglicht die Verarbeitung von Ereignissen auftreten. Die Variable auf Klassenebene `mblnCancel` auf festgelegt ist `True`, und die `mWidget_PercentDone` Ereignis überprüft, und legt die `ByRef Cancel` Argument `True`.  
   
-## Verbinden einer WithEvents\-Variablen mit einem Objekt  
- `Form1` ist jetzt für die Behandlung von Ereignissen eines `Widget`\-Objekts eingerichtet.  Jetzt muss nur noch ein `Widget`\-Objekt gefunden werden.  
+## <a name="connecting-a-withevents-variable-to-an-object"></a>Herstellen einer Verbindung eine WithEvents-Variable auf ein Objekt  
+ `Form1`ist nun eingerichtet, behandeln eine `Widget` Ereignisse des Objekts. Übrig bleibt, suchen Sie einen `Widget` an.  
   
- Wenn Sie eine `WithEvents`\-Variable zur Entwurfszeit deklarieren, wird kein Objekt damit verknüpft.  Eine `WithEvents`\-Variable funktioniert genau wie jede andere Objektvariable.  Sie müssen ein Objekt erstellen und ihm mithilfe der `WithEvents`\-Variablen einen Verweis zuweisen.  
+ Wenn Sie eine Variable deklarieren `WithEvents` zur Entwurfszeit kein Objekt zugeordnet ist. Ein `WithEvents` -Variable funktioniert genau wie jede andere Objektvariable. Sie müssen ein Objekt erstellen, und weisen Sie einen Verweis mit dem `WithEvents` Variable.  
   
-#### So erstellen Sie ein Objekt und weisen ihm einen Verweis zu  
+#### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Erstellen Sie ein Objekt und einen Verweis darauf zuweisen  
   
-1.  Wählen Sie **\(Form1\-Ereignisse\)** in der linken Dropdownliste des **Code\-Editors** aus.  
+1.  Wählen Sie **(Form1-Ereignisse)** aus der linken Dropdown-Liste in der **Code-Editor**.  
   
-2.  Wählen Sie das `Load`\-Ereignis aus der rechten Dropdownliste aus.  Der **Code\-Editor** öffnet die `Form1_Load`\-Ereignisprozedur.  
+2.  Wählen Sie die `Load` aus der Liste rechts Dropdown-Ereignis. Die **Code-Editor** öffnet der `Form1_Load` -Ereignisprozedur.  
   
-3.  Fügen Sie folgenden Code für die `Form1_Load`\-Ereignisprozedur hinzu, um das `Widget` zu erstellen:  
+3.  Fügen Sie den folgenden Code für die `Form1_Load` Ereignis Verfahren zum Erstellen der `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&#7;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Wenn dieser Code ausgeführt wird, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ein `Widget`\-Objekt und verbindet die zugehörigen Ereignisse mit den Ereignisprozeduren, die `mWidget` zugeordnet sind.  Von diesem Zeitpunkt an wird die `mWidget_PercentDone`\-Ereignisprozedur immer ausgeführt, wenn das `PercentDone`\-Ereignis vom `Widget` ausgelöst wird.  
+ Wenn dieser Code ausgeführt wird, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] erstellt eine `Widget` -Objekt und verbindet die zugehörigen Ereignisse auf das Ereignis Verfahren im Zusammenhang mit `mWidget`. Von diesem Zeitpunkt an, wenn die `Widget` löst seine `PercentDone` -Ereignis, das `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
   
-#### So rufen Sie die LongTask\-Methode auf  
+#### <a name="to-call-the-longtask-method"></a>Zum Aufrufen der Methode von LongTask  
   
--   Fügen Sie dem `Button1_Click`\-Ereignishandler folgenden Code hinzu:  
+-   Fügen Sie dem `Button1_Click`-Ereignishandler folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&#8;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
- Bevor die `LongTask`\-Methode aufgerufen wird, muss die Bezeichnung initialisiert werden, die den Prozentsatz der bereits erfolgten Verarbeitung anzeigt. Außerdem muss das auf Klassenebene deklarierte `Boolean`\-Flag zum Abbrechen der Methode auf `False` festgelegt werden.  
+ Bevor Sie die `LongTask` -Methode aufgerufen wird, wird die Bezeichnung, zeigt der abgeschlossene Prozentsatz initialisiert werden müssen, und der Klassenebene `Boolean` flag für das Abbrechen der Methode festgelegt werden muss, `False`.  
   
- `LongTask` wird mit einer Aufgabendauer von 12,2 Sekunden aufgerufen.  Das `PercentDone`\-Ereignis wird jede Drittelsekunde einmal ausgelöst.  Bei jedem Auslösen des Ereignisses wird die `mWidget_PercentDone`\-Ereignisprozedur ausgeführt.  
+ `LongTask`wird mit einer Aufgabendauer von 12,2 Sekunden aufgerufen. Das `PercentDone` -Ereignis wird ausgelöst, einmal alle ein Drittel von einer Sekunde. Jedes Mal das Ereignis ausgelöst wird, die `mWidget_PercentDone` Ereignisprozedur ausgeführt wird.  
   
- Nachdem `LongTask` abgeschlossen wurde, wird `mblnCancel` daraufhin überprüft, ob `LongTask` normal beendet oder angehalten wurde, weil `mblnCancel` auf `True` festgelegt war.  Der bereits verarbeitete Prozentsatz wird nur im ersten Fall aktualisiert.  
+ Wenn `LongTask` erfolgt, `mblnCancel` wird daraufhin überprüft, ob `LongTask` normal beendet oder angehalten wurde, weil `mblnCancel` wurde `True`. Der Prozentsatz der Fertigstellung wird nur im ersten Fall aktualisiert.  
   
-#### So führen Sie das Programm aus  
+#### <a name="to-run-the-program"></a>So führen Sie das Programm aus  
   
 1.  Drücken Sie F5, um das Projekt auszuführen.  
   
-2.  Klicken Sie auf die Schaltfläche **Start Task**.  Jedes Mal, wenn das `PercentDone`\-Ereignis ausgelöst wird, wird die Bezeichnung mit dem Prozentsatz der Aufgabe, der bereits erledigt wurde, aktualisiert.  
+2.  Klicken Sie auf die **Aufgabe** Schaltfläche. Jedes Mal die `PercentDone` -Ereignis ausgelöst wird, wird die Bezeichnung mit dem Prozentsatz der Aufgabe, die abgeschlossen wurde aktualisiert.  
   
-3.  Klicken Sie auf die **Cancel**\-Schaltfläche, um die Aufgabe abzubrechen.  Beachten Sie, dass sich das Erscheinungsbild der **Cancel**\-Schaltfläche nicht direkt ändert, wenn Sie darauf klicken.  Das `Click`\-Ereignis kann erst eintreten, wenn die `My.Application.DoEvents`\-Anweisung die Ereignisverarbeitung zulässt.  
+3.  Klicken Sie auf die **Abbrechen** Schaltfläche, um den Vorgang zu beenden. Beachten Sie, dass die Darstellung der **Abbrechen** Schaltfläche nicht direkt ändert, wenn Sie darauf klicken. Die `Click` Ereignis nicht auftreten, bis die `My.Application.DoEvents` Anweisung ermöglicht die Verarbeitung von Ereignissen.  
   
     > [!NOTE]
-    >  Die `My.Application.DoEvents`\-Methode verarbeitet Ereignisse nicht genau auf die gleiche Weise wie das Formular.  In dieser exemplarischen Vorgehensweise müssen Sie z. B. zweimal auf die Schaltfläche **Abbrechen** klicken.  Damit das Formular die Ereignisse direkt behandeln kann, können Sie Multithreading verwenden.  Weitere Informationen finden Sie unter [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md).  
+    >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht auf genau die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** zweimal auf die Schaltfläche. Um das Formular die Ereignisse direkt behandeln kann, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
   
- Möglicherweise finden Sie es aufschlussreich, das Programm durch Drücken von F11 auszuführen und den Code zeilenweise durchzugehen.  In diesem Fall ist klar erkennbar, wie die Ausführung von `LongTask` beginnt und bei jedem Auslösen des `PercentDone`\-Ereignisses kurz wieder zu `Form1` zurückkehrt.  
+ Möglicherweise ist es hilfreich, das Programm durch Drücken von F11 auszuführen und den Code zu einem Zeitpunkt schrittweise. Klar erkennbar, wie die Ausführung von eingegeben `LongTask`, und klicken Sie dann kurz erneut eingegeben `Form1` jedes Mal die `PercentDone` -Ereignis wird ausgelöst.  
   
- Was geschieht jedoch, wenn sich die Ausführungsroutine wieder im Code von `Form1` befindet, während die `LongTask`\-Methode erneut aufgerufen wird?  Wenn `LongTask` bei jedem Auslösen des Ereignisses aufgerufen würde, wäre im schlimmsten Fall ein Stapelüberlauf die Folge.  
+ Was geschieht, wenn ist, bei der Ausführung wieder im Code ist `Form1`, die `LongTask` Methode erneut aufrufen würden? Im schlimmsten Fall ein Stapelüberlauf auftreten, wenn `LongTask` aufgerufen wurden, jedes Mal, wenn das Ereignis ausgelöst wurde.  
   
- Sie können festlegen, dass die Variable `mWidget` Ereignisse für ein anderes `Widget`\-Objekt behandelt, indem Sie `mWidget` einen Verweis auf das neue `Widget` zuweisen.  Der Code in `Button1_Click` kann diesen Vorgang sogar jedes Mal ausführen, wenn Sie auf die Schaltfläche klicken.  
+ Veranlassen Sie, dass die Variable `mWidget` zum Behandeln von Ereignissen für eine andere `Widget` Objekt durch einen Verweis auf die neue zuweisen `Widget` auf `mWidget`. In der Tat können Sie den Code in vornehmen `Button1_Click` dazu, jedes Mal, wenn Sie auf die Schaltfläche klicken.  
   
-#### So behandeln Sie Ereignisse für ein anderes Widget\-Objekt  
+#### <a name="to-handle-events-for-a-different-widget"></a>So behandeln Sie Ereignisse für ein anderes Widget-Objekt  
   
--   Fügen Sie der `Button1_Click`\-Prozedur die folgende Codezeile direkt vor der Zeile `mWidget.LongTask(12.2, 0.33)` hinzu:  
+-   Fügen Sie die folgende Codezeile, die `Button1_Click` Verfahren, die unmittelbar vor der Zeile `mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents&#9;](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
- Durch den oben stehenden Code wird bei jedem Klicken auf die Schaltfläche ein neues `Widget` erstellt.  Bei Abschluss der `LongTask`\-Methode wird der Verweis auf das `Widget` freigegeben und das `Widget` zerstört.  
+ Der obige Code erstellt ein neues `Widget` jedes Mal die Schaltfläche geklickt wird. Sobald die `LongTask` Methode ausgeführt wird, den Verweis auf die `Widget` freigegeben wird, und die `Widget` zerstört wird.  
   
- Eine `WithEvents`\-Variable kann jeweils nur einen Objektverweis enthalten. Wenn Sie `mWidget` ein anderes `Widget`\-Objekt zuweisen, werden daher die Ereignisse des vorherigen `Widget`\-Objekts nicht mehr behandelt.  Wenn `mWidget` als einzige Objektvariable einen Verweis auf das alte `Widget` enthält, wird das Objekt zerstört.  Wenn die Ereignisse mehrerer `Widget`\-Objekte behandelt werden sollen, verwenden Sie die `AddHandler`\-Anweisung, um die Ereignisse der einzelnen Objekte gesondert zu verarbeiten.  
+ Ein `WithEvents` -Variable kann jeweils nur einen Objektverweis enthalten, wenn Sie eine andere zuweisen `Widget` -Objekt `mWidget`, die vorherige `Widget` Ereignisse des Objekts nicht mehr verarbeitet werden. Wenn `mWidget` ist der einzige Objektvariable einen Verweis auf die alte `Widget`, das Objekt zerstört wird. Wenn Sie mehrere Ereignisse behandeln möchten `Widget` -Objekten, die `AddHandler` Anweisung, um die Ereignisse der einzelnen Objekte gesondert zu verarbeiten.  
   
 > [!NOTE]
->  Sie können beliebig viele `WithEvents`\-Variablen deklarieren, Arrays von `WithEvents`\-Variablen werden jedoch nicht unterstützt.  
+>  Sie können beliebig viele deklarieren `WithEvents` Variablen als Sie benötigen, aber Arrays `WithEvents` Variablen werden nicht unterstützt.  
   
-## Siehe auch  
- [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)   
- [Events](../../../../visual-basic/programming-guide/language-features/events/events.md)
+## <a name="see-also"></a>Siehe auch  
+ [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)   
+ [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)

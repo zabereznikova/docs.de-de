@@ -1,48 +1,64 @@
 ---
-title: "Non-CLS-compliant &lt;membername&gt; is not allowed in a CLS-compliant interface | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc40033"
-  - "vbc40033"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40033"
+title: "Nicht CLS-kompatible &lt;Membername&gt; ist in einer CLS-kompatiblen Schnittstelle unzulässig | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc40033
+- vbc40033
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
 caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
----
-# Non-CLS-compliant &lt;membername&gt; is not allowed in a CLS-compliant interface
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2861ef22c9307e5bd7d2eabf4f6e37bbd9086345
+ms.lasthandoff: 03/13/2017
 
-Eine Eigenschaft, eine Prozedur oder ein Ereignis in einer Schnittstelle ist als `<CLSCompliant(True)>` markiert, obwohl die Schnittstelle selbst als `<CLSCompliant(False)>` markiert ist oder nicht markiert ist.  
+---
+# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>Nicht CLS-kompatible &lt;Membername&gt; ist in einer CLS-kompatiblen Schnittstelle nicht zulässig
+Eine Eigenschaft, eine Prozedur oder ein Ereignis in einer Schnittstelle ist als markiert `<CLSCompliant(True)>` Wenn die Schnittstelle selbst markiert ist, als `<CLSCompliant(False)>` oder gar nicht markiert ist.  
   
- Damit eine Schnittstelle mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel ist, müssen alle Member der Schnittstelle CLS\-kompatibel sein.  
+ Für eine Schnittstelle, kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), alle seine Member müssen kompatibel sein.  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant`\-Parameter des Attributs auf `True` oder auf `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben.  Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
+ Beim Anwenden der <xref:System.CLSCompliantAttribute>auf ein Programmierelement, legen Sie des Attributs `isCompliant` Parameter entweder `True` oder `False` an Kompatibilität oder Nichtkompatibilität.</xref:System.CLSCompliantAttribute> Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> nicht auf ein Element anwenden, wird dieses als nicht kompatibel betrachtet.  
+ Wenn Sie nicht anwenden der <xref:System.CLSCompliantAttribute>auf ein Element gilt nicht kompatibel ist.</xref:System.CLSCompliantAttribute>  
   
- Standardmäßig ist diese Meldung eine Warnung.  Informationen über das Ausblenden von Warnungen bzw. über die Behandlung von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Fehler\-ID:** BC40033  
+ **Fehler-ID:** BC40033  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn CLS\-Kompatibilität erforderlich ist und Sie über die Quellcodeverwaltung der Schnittstelle verfügen, markieren Sie die Schnittstelle als `<CLSCompliant(True)>`, wenn alle Member der Schnittstelle CLS\-kompatibel sind.  
+-   Wenn Sie CLS-Kompatibilität erfordert und haben die Kontrolle über den Quellcode für die Schnittstelle, markieren Sie die Schnittstelle als `<CLSCompliant(True)>` Wenn alle seine Member kompatibel sind.  
   
--   Wenn CLS\-Kompatibilität erforderlich ist und Sie nicht über die Quellcodeverwaltung der Schnittstelle verfügen oder wenn die Schnittstelle nicht die Kompatibilitätsvoraussetzungen erfüllt, definieren Sie diesen Member in einer anderen Schnittstelle.  
+-   Definieren Sie Wenn Sie CLS-Kompatibilität erfordert und haben keine Kontrolle über den Quellcode für die Schnittstelle oder nicht qualifiziert wird, kompatibel ist, dieser Member innerhalb einer anderen Schnittstelle.  
   
--   Wenn dieser Member in der aktuellen Schnittstelle verbleiben muss, entfernen Sie das <xref:System.CLSCompliantAttribute> aus der Definition des Members, oder markieren Sie ihn als `<CLSCompliant(False)>`.  
+-   Wenn Sie dieses Element in der aktuellen Schnittstelle verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute>aus der Definition oder markieren Sie ihn als `<CLSCompliant(False)>`.</xref:System.CLSCompliantAttribute>  
   
-## Siehe auch  
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [\<PAVE OVER\> Writing CLS\-Compliant Code](http://msdn.microsoft.com/de-de/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a>Siehe auch  
+ [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)   
+ [\<PAVE über > CLS-kompatiblen Code schreiben](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

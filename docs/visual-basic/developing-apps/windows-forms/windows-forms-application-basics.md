@@ -1,114 +1,124 @@
 ---
-title: "Windows Forms Application Basics (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Windows applications"
-  - "Windows Forms, Visual Basic"
+title: Windows Forms-Anwendung Grundlagen (Visual Basic) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Windows applications
+- Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Windows Forms Application Basics (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8275d3c06ebd89254a07127b4850d32ef0580830
+ms.lasthandoff: 03/13/2017
 
-Ein wichtiger Bestandteil von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] ist die Möglichkeit, Windows Forms\-Anwendungen zu erstellen, die lokal auf dem Computer des Benutzers ausgeführt werden.  Sie können Visual Studio verwenden, um die Anwendung und die Benutzeroberfläche mithilfe der Windows Forms zu erstellen.  Eine Windows Forms\-Anwendung wird auf Grundlage von Klassen aus dem <xref:System.Windows.Forms>\-Namespace erstellt.  
+---
+# <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
+Ein wichtiger Bestandteil der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ist die Möglichkeit, Windows Forms-Anwendung erstellen, die lokal auf dem Computer des Benutzers ausgeführt. Sie können Visual Studio verwenden, die mithilfe von Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Windows Forms-Anwendung baut auf Klassen aus dem <xref:System.Windows.Forms>Namespace.</xref:System.Windows.Forms>  
   
-## Entwerfen von Windows Forms\-Anwendungen  
- Mit [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] können Sie Windows Forms\- und Windows\-Dienstanwendungen erstellen.  Weitere Informationen finden Sie unter den folgenden Themen:  
+## <a name="designing-windows-forms-applications"></a>Entwerfen von Windows Forms-Anwendung  
+ Sie können Windows Forms und Windows-dienstanwendungen mit erstellen [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [Erste Schritte mit Windows Forms](../Topic/Getting%20Started%20with%20Windows%20Forms.md).  Stellt Informationen darüber bereit, wie Sie Windows Forms erstellen und programmieren können.  
+-   [Erste Schritte mit Windows Forms](https://msdn.microsoft.com/library/ms229601.aspx). Enthält Informationen zum Erstellen und Programmieren von Windows Forms.  
+   
+-   [Windows Forms-Steuerelemente](https://msdn.microsoft.com/library/ettb6e2a.aspx). Auflistung der Themen, die Verwendung von Windows Forms-Steuerelemente.  
   
--   [Windows Forms Walkthroughs](http://msdn.microsoft.com/de-de/fd44d13d-4733-416f-aefc-32592e59e5d9).  Enthält Themen mit schrittweisen Entwicklungsverfahren für häufig erstellte Windows Forms\-Anwendungen, die auf Windows Forms basieren.  
+-   [Windows-Dienstanwendungen](https://msdn.microsoft.com/library/y817hyb6.aspx). Enthält Themen, in denen Erstellen von Windows-Diensten erläutert.  
   
--   [Windows Forms\-Steuerelemente](../Topic/Windows%20Forms%20Controls.md).  Eine Reihe von Themen, in denen die Verwendung von Windows Forms\-Steuerelementen näher erläutert wird.  
+## <a name="building-rich-interactive-user-interfaces"></a>Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken  
+ Windows Forms ist die Smart Client-Komponente von der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], ein Satz verwalteter Bibliotheken, die generelle Anwendungsaufgaben wie Lesen und Schreiben in das Dateisystem ermöglichen. Mit einer Entwicklungsumgebung wie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], Sie können Windows Forms-Anwendung, die Informationen anzeigen, Eingaben von Benutzern anfordern und die Kommunikation über ein Netzwerk mit Remotecomputern erstellen.  
   
--   [Windows Service Applications](../Topic/Developing%20Windows%20Service%20Applications.md).  Enthält Themen, in denen das Erstellen von Windows\-Diensten erklärt wird.  
+ In Windows Forms ist ein Formular eine visuelle Oberfläche, auf der Informationen für den Benutzer angezeigt. Im Allgemeinen erstellen Sie Windows Forms-Anwendung durch Platzieren von Steuerelementen auf Formularen und Antworten auf Benutzeraktionen wie Mausklicks oder Tastatureingaben entwickeln. Ein *Steuerelement* ist ein Element der Benutzeroberfläche (UI), das Daten anzeigt oder Dateneingaben akzeptiert.  
   
-## Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken  
- Windows Forms ist die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Komponente für intelligente Clients, eine Gruppe von verwalteten Bibliotheken, die häufig verwendete Aufgaben wie Lese\- und Schreibzugriffe auf das Dateisystem ermöglichen.  Mithilfe einer Entwicklungsumgebung wie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] können Sie Windows Forms\-Anwendungen erstellen, die Informationen anzeigen, Benutzereingaben anfordern und mit Remotecomputern über ein Netzwerk kommunizieren.  
+### <a name="events"></a>Ereignisse  
+ Wenn ein Benutzer Aktionen im Formular oder in enthaltenen Steuerelementen ausführt, wird ein Ereignis generiert. Die Anwendung reagiert auf diese Ereignisse und verarbeitet sie zum Zeitpunkt ihres Auftretens. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx).  
   
- In Windows Forms ist ein Formular eine visuelle Oberfläche, auf der Informationen für den Benutzer angezeigt werden.  Windows Forms\-Anwendungen werden in der Regel erstellt, indem Steuerelemente auf Formularen platziert und Reaktionen auf Benutzeraktionen wie Mausklicks oder gedrückte Tasten entwickelt werden.  Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement \(UI\-Element\), das Daten anzeigt oder Dateneingaben akzeptiert.  
+### <a name="controls"></a>Steuerelemente  
+ Windows Forms enthält eine Vielzahl von Steuerelementen, die Sie in Formularen platzieren können: Steuerelemente zur Anzeige von Textfeldern, Schaltflächen, Dropdownfeldern, Optionsfeldern und sogar Webseiten. Eine Liste aller Steuerelemente, die Sie in einem Formular verwenden können, finden Sie unter [Steuerelemente für Windows Forms](https://msdn.microsoft.com/library/3xdhey7w.aspx). Wenn ein vorhandenes Steuerelement nicht Ihren Bedürfnissen entspricht, unterstützt Windows Forms auch Erstellen Ihrer eigenen benutzerdefinierten Steuerelemente mithilfe der <xref:System.Windows.Forms.UserControl>Klasse.</xref:System.Windows.Forms.UserControl>  
   
-### Ereignisse  
- Wenn ein Benutzer mit einem Formular oder einem der zugehörigen Steuerelemente interagiert, wird ein Ereignis ausgelöst.  Die Anwendung reagiert auf diese Ereignisse und verarbeitet sie zum Zeitpunkt ihres Auftretens.  Weitere Informationen hierzu finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../Topic/Creating%20Event%20Handlers%20in%20Windows%20Forms.md).  
+ Windows Forms verfügt über komplexe Steuerelemente für die Benutzeroberfläche, mit denen Funktionen aus Anwendungen wie Microsoft Office emuliert werden können. Mithilfe der <xref:System.Windows.Forms.ToolStrip>und <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie Symbolleisten und Menüs, die Text und Bilder enthalten, Untermenüs und andere Steuerelemente wie Textfelder und Kombinationsfelder erstellen.</xref:System.Windows.Forms.MenuStrip> </xref:System.Windows.Forms.ToolStrip>  
   
-### Steuerelemente  
- Windows Forms enthält verschiedene Steuerelemente, die Sie auf Formularen platzieren können, beispielsweise für Textfelder, Schaltflächen, Dropdownlisten, Optionsfelder und sogar Webseiten.  Eine Liste aller Steuerelemente, die Sie auf einem Formular verwenden können, finden Sie unter [Steuerelemente für Windows Forms](../Topic/Controls%20to%20Use%20on%20Windows%20Forms.md).  Windows Forms unterstützt über die <xref:System.Windows.Forms.UserControl>\-Klasse auch das Erstellen benutzerdefinierter Steuerelemente.  
+ Mit der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Drag-and-Drop-Forms-Designer können Sie problemlos Windows Forms-Anwendung erstellen: einfach wählen Sie die Steuerelemente mit dem Cursor und platzieren sie Sie auf dem Formular möchten. Der Designer bietet Tools wie Rasterlinien und "Snap" Steuerelemente ausgerichtet werden. Und ob verwendet [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] oder Kompilieren in der Befehlszeile können Sie die <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel>und <xref:System.Windows.Forms.SplitContainer>Steuerelemente erstellen Formularlayouts mit minimalem Zeit- und Arbeitsaufwand.</xref:System.Windows.Forms.SplitContainer> </xref:System.Windows.Forms.TableLayoutPanel> </xref:System.Windows.Forms.FlowLayoutPanel>  
   
- Darüber hinaus verfügt Windows Forms über komplexe Steuerelemente, mit denen Features aus Anwendungen wie Microsoft Office emuliert werden können.  Mithilfe des <xref:System.Windows.Forms.ToolStrip>\-Steuerelements und des <xref:System.Windows.Forms.MenuStrip>\-Steuerelements können Sie Symbolleisten und Menüs mit Texten, Bildern und Untermenüs erstellen, die wiederum andere Steuerelemente wie Textfelder und Kombinationsfelder enthalten können.  
+### <a name="custom-ui-elements"></a>Benutzerdefinierte Benutzeroberflächenelemente  
+ Schließlich, wenn Sie eigene benutzerdefinierte Benutzeroberflächenelemente erstellen, müssen die <xref:System.Drawing>-Namespace enthält alle Klassen Sie Linien, Kreise und andere Formen direkt auf einem Formular zu rendern müssen.</xref:System.Drawing>  
   
- Mit dem Drag & Drop\-Formular\-Designer von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] können Sie problemlos Windows Forms\-Anwendungen erstellen, indem Sie Steuerelemente mit dem Cursor markieren und an der gewünschten Stelle im Formular platzieren.  Mit Funktionen wie Rasterlinien und Ausrichtungslinien können Steuerelemente mühelos ausgerichtet werden.  Unabhängig davon, ob Sie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] verwenden oder über die Befehlszeile kompilieren, können Sie mit dem <xref:System.Windows.Forms.FlowLayoutPanel>\-Steuerelement, dem <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement und dem <xref:System.Windows.Forms.SplitContainer>\-Steuerelement einfach und schnell komplexe Formularlayouts erstellen.  
+ Detaillierte Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen.  
   
-### Benutzerdefinierte Benutzeroberflächenelemente  
- Wenn Sie benutzerdefinierte Benutzeroberflächenelemente erstellen möchten, können Sie den <xref:System.Drawing>\-Namespace verwenden, der alle benötigten Klassen zum Darstellen von Linien, Kreisen und anderen Formen auf einem Formular enthält.  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Erstellen einer neuen Windows Forms-Anwendung mit[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Verwenden von Steuerelementen auf Formularen|[Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](https://msdn.microsoft.com/library/0h5y8567.aspx)|   
+|Erstellen von Grafiken mit<xref:System.Drawing></xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](https://msdn.microsoft.com/library/da0f23z7.aspx)|  
+|Erstellen benutzerdefinierter Steuerelemente|[Gewusst wie: erben von der UserControl-Klasse](https://msdn.microsoft.com/library/00ctb4z0.aspx)|  
   
- In den folgenden Hilfethemen finden Sie Schritt\-für\-Schritt\-Anweisungen für die Verwendung dieser Features.  
+## <a name="displaying-and-manipulating-data"></a>Anzeigen und Bearbeiten von Daten  
+ Viele Anwendungen müssen Daten aus einer Datenbank, einer XML-Datei, einem XML-Webdienst oder einer anderen Datenquelle anzeigen. Windows Forms bietet ein flexibles Steuerelement namens der <xref:System.Windows.Forms.DataGridView>Steuerelement zum Rendern von Tabellendaten in einem herkömmlichen Zeilen- und Format, sodass jedes Datenelement seine eigene Zelle belegt.</xref:System.Windows.Forms.DataGridView> Mit <xref:System.Windows.Forms.DataGridView>können Sie die Darstellung einzelner Zellen anpassen, beliebige Zeilen und Spalten fixieren und komplexe Steuerelemente innerhalb von Zellen andere Funktionen anzeigen.</xref:System.Windows.Forms.DataGridView>  
   
-|To|Siehe|  
-|--------|-----------|  
-|Erstellen einer neuen Windows Forms\-Anwendung mit [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]|[Walkthrough: Creating a Simple Windows Form](http://msdn.microsoft.com/de-de/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|Verwenden von Steuerelementen auf Formularen|[Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../Topic/How%20to:%20Add%20Controls%20to%20Windows%20Forms.md)|  
-|Behandeln von Ereignissen aus einem Formular und dessen Steuerelementen|[How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/de-de/8461e9b8-14e8-406f-936e-3726732b23d2)|  
-|Verwenden des <xref:System.Windows.Forms.ToolStrip>\-Steuerelements|[Gewusst wie: Erstellen eines einfachen ToolStrip mit Standardelementen im Designer](../Topic/How%20to:%20Create%20a%20Basic%20Windows%20Forms%20ToolStrip%20with%20Standard%20Items%20Using%20the%20Designer.md)|  
-|Erstellen von Grafiken mit <xref:System.Drawing>|[Erste Schritte mit der Grafikprogrammierung](../Topic/Getting%20Started%20with%20Graphics%20Programming.md)|  
-|Erstellen von benutzerdefinierten Steuerelementen|[Gewusst wie: Erben von der UserControl\-Klasse](../Topic/How%20to:%20Inherit%20from%20the%20UserControl%20Class.md)|  
+ Mit intelligenten Windows Forms-Clients kann problemlos eine Netzwerkverbindung zu Datenquellen hergestellt werden. Die <xref:System.Windows.Forms.BindingSource>Komponente, die neu für Windows Forms in [!INCLUDE[vsprvslong](../../../csharp/misc/includes/vsprvslong_md.md)] und [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)], stellt eine Verbindung mit einer Datenquelle dar und macht Methoden zum Binden von Daten an Steuerelemente, Navigieren zum vorherigen bzw. nächsten Datensatz, Bearbeiten von Datensätzen und Speichern von Änderungen in der ursprünglichen Quelle verfügbar.</xref:System.Windows.Forms.BindingSource> Die <xref:System.Windows.Forms.BindingNavigator>Steuerelement stellt eine einfache Schnittstelle bereit, über die <xref:System.Windows.Forms.BindingSource>zum Navigieren zwischen Datensätzen-Komponente.</xref:System.Windows.Forms.BindingSource> </xref:System.Windows.Forms.BindingNavigator>  
   
-## Anzeigen und Bearbeiten von Daten  
- Viele Anwendungen müssen Daten aus einer Datenbank, einer XML\-Datei, einem XML\-Webdienst oder einer anderen Datenquelle anzeigen.  Mit dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement bietet Windows Forms ein flexibles Steuerelement für die Anzeige tabellarischer Daten in einem herkömmlichen Format mit Zeilen und Spalten, bei dem jedes Datenelement in einer eigenen Zelle angeordnet ist.  Bei Verwendung von <xref:System.Windows.Forms.DataGridView> können Sie beispielsweise das Aussehen einzelner Zellen anpassen, beliebige Zeilen und Spalten fixieren und innerhalb von Zellen komplexe Steuerelemente anzeigen.  
+### <a name="data-bound-controls"></a>Datengebundene Steuerelemente  
+ Sie können datengebundene Steuerelemente problemlos mit dem Fenster "Datenquellen", das Datenquellen wie Datenbanken, Webdienste und Objekte in Ihrem Projekt anzeigt erstellen. Zum Erstellen datengebundener Steuerelemente können Sie Elemente aus diesem Fenster auf Formulare im Projekt ziehen. Darüber hinaus können Sie auch bestehende Steuerelemente an Daten binden, indem Sie Objekte aus dem Datenquellenfenster auf bestehende Steuerelemente ziehen.  
   
- Mit intelligenten Windows Forms\-Clients kann problemlos eine Netzwerkverbindung zu Datenquellen hergestellt werden.  Die <xref:System.Windows.Forms.BindingSource>\-Komponente, die erstmals für Windows Forms in [!INCLUDE[vsprvslong](../../../csharp/misc/includes/vsprvslong-md.md)] und [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] verfügbar ist, stellt eine Verbindung zu einer Datenquelle dar und macht Methoden zum Binden von Daten an Steuerelemente, Navigieren zum vorherigen oder nächsten Datensatz, Bearbeiten von Datensätzen und Speichern von Änderungen in der ursprünglichen Quelle verfügbar.  Das <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement stellt über die <xref:System.Windows.Forms.BindingSource>\-Komponente eine einfache Schnittstelle zum Navigieren zwischen Datensätzen bereit.  
+### <a name="settings"></a>Einstellungen  
+ Ein weiterer ist Datenbindungsfunktionen in Windows Forms verwalten können Einstellungen. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, und Einstellungen Benutzer Daten, z. B. Standardspeicherorte für gespeicherte Dateien beibehalten. Die anwendungseinstellungsfunktion erfüllt diese Anforderungen durch eine einfache Möglichkeit zum Speichern von beide Arten von Einstellungen auf dem Clientcomputer bereitstellen. Einmal definiert entweder [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] oder einem Code-Editor diese Einstellungen als XML beibehalten und zur Laufzeit automatisch in den Arbeitsspeicher eingelesen.  
   
-### Datengebundene Steuerelemente  
- Im Datenquellenfenster, in dem projektrelevante Datenquellen wie Datenbanken, Webdienste und Objekte angezeigt werden, können Sie schnell und einfach datengebundene Steuerelemente erstellen.  Zum Erstellen datengebundener Steuerelemente können Sie Elemente aus diesem Fenster auf Formulare im Projekt ziehen.  Darüber hinaus können Sie auch bestehende Steuerelemente an Daten binden, indem Sie Objekte aus dem Datenquellenfenster auf bestehende Steuerelemente ziehen.  
+ Detaillierte Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen.  
   
-### Einstellungen  
- Ein weiterer Typ von Datenbindungen, die in Windows Forms verwaltet werden können, sind Einstellungen.  Bei den meisten Anwendungen für intelligente Clients müssen Informationen zum Laufzeitzustand gespeichert werden, beispielsweise die aktuelle Größe von Formularen, sowie Benutzereinstellungen, beispielsweise Standardverzeichnisse für zu speichernde Dateien.  Mit dem Feature für Anwendungseinstellungen können problemlos beide Arten von Einstellungen auf Clientcomputern gespeichert werden.  Nach dem Definieren von Einstellungen mit [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] oder einem Code\-Editor werden diese als XML gespeichert und zur Laufzeit automatisch wieder eingelesen.  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Verwenden Sie die <xref:System.Windows.Forms.BindingSource>Komponente</xref:System.Windows.Forms.BindingSource>|[Gewusst wie: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](https://msdn.microsoft.com/library/801dxw2t.aspx)|  
+|Arbeiten mit [!INCLUDE[vstecado](../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] -Datenquellen|[Gewusst wie: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|Verwenden Sie das Datenquellenfenster|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
- In den folgenden Hilfethemen finden Sie Schritt\-für\-Schritt\-Anweisungen für die Verwendung dieser Features.  
+## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
+ Nachdem Sie Ihre Anwendung geschrieben haben, müssen Sie es an Ihre Benutzer senden, damit sie installieren und auf dem eigenen Clientcomputer ausführen können. Mithilfe der [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] -Technologie können Sie Anwendungen in bereitstellen [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] unter Verwendung von nur wenigen Mausklicks und Benutzern eine URL verweist auf die Anwendung im Web zur Verfügung stellen. [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung, und stellt sicher, dass die Anwendung auf dem Clientcomputer installiert ist.  
   
-|To|Siehe|  
-|--------|-----------|  
-|Verwenden der <xref:System.Windows.Forms.BindingSource>\-Komponente|[Gewusst wie: Binden von Windows Forms\-Steuerelementen an die BindingSource\-Komponente mithilfe des Designers](../Topic/How%20to:%20Bind%20Windows%20Forms%20Controls%20with%20the%20BindingSource%20Component%20Using%20the%20Designer.md)|  
-|Arbeiten mit [!INCLUDE[vstecado](../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)]\-Datenquellen|[Gewusst wie: Sortieren und Filtern von ADO.NET\-Daten mit der BindingSource\-Komponente in Windows Forms](../Topic/How%20to:%20Sort%20and%20Filter%20ADO.NET%20Data%20with%20the%20Windows%20Forms%20BindingSource%20Component.md)|  
-|Verwenden des Datenquellenfensters|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](../Topic/Walkthrough:%20Displaying%20Data%20on%20a%20Windows%20Form.md)|  
-|Verwenden von Anwendungseinstellungen|[How to: Create Application Settings Using the Designer](http://msdn.microsoft.com/de-de/53b3af80-1c02-4e35-99c6-787663148945)|  
+ [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden können. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] Fügt einen Link zu der Anwendung des Benutzers **Start** Menü, damit der Benutzer ohne die URL geöffnet werden kann.  
   
-## Bereitstellen von Anwendungen auf Clientcomputern  
- Nach dem Erstellen einer Anwendung muss diese an Benutzer gesendet werden, damit sie anschließend auf den Clientcomputern installiert und ausgeführt werden kann.  Mithilfe der [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]\-Technologie können Anwendungen in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] durch ein paar einfache Klicks bereitgestellt werden, und den Benutzern wird eine URL angegeben, die im Internet auf die Anwendung verweist.  [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in der Anwendung und stellt sicher, dass die Anwendung auf dem Clientcomputer ordnungsgemäß installiert ist.  
+ Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]erkennt, dass ein Update verfügbar ist und aktualisiert die Installation des Benutzers. zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.  
   
- [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]\-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden.  Wenn Sie eine Anwendung für den Offlinebetrieb konfigurieren, fügt [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)] auf dem Computer des Benutzers im Menü **Start** einen Link zu der Anwendung hinzu, sodass diese auch ohne die URL geöffnet werden kann.  
+ Eine umfassende Einführung in [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)], finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment). Detaillierte Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen:  
   
- Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung.  [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)] erkennt, dass ein Update verfügbar ist und aktualisiert die Installation des Benutzers; zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Bereitstellen einer Anwendung mit[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](https://docs.microsoft.com/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](https://docs.microsoft.com/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Aktualisieren einer [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Verwalten der Sicherheit mit[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](https://docs.microsoft.com/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
- Eine umfassende Einführung in [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)] finden Sie unter [ClickOnce Security and Deployment](/visual-studio/deployment/clickonce-security-and-deployment).  In den folgenden Hilfethemen finden Sie Schritt\-für\-Schritt\-Anweisungen für die Verwendung dieser Features:  
+## <a name="other-controls-and-features"></a>Andere Steuerelemente und Funktionen  
+ In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus bedient sich Windows Forms des stabilen Sicherheitssystems von der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], aktivieren Sie sicherer Anwendungen für Ihre Kunden freigeben.  
   
-|To|Siehe|  
-|--------|-----------|  
-|Bereitstellen einer Anwendung mit [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]|[How to: Publish a ClickOnce Application using the Publish Wizard](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)<br /><br /> [Walkthrough: Manually Deploying a ClickOnce Application](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)|  
-|Aktualisieren einer [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]\-Bereitstellung|[How to: Manage Updates for a ClickOnce Application](../Topic/How%20to:%20Manage%20Updates%20for%20a%20ClickOnce%20Application.md)|  
-|Verwalten der Sicherheit mithilfe von [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick-md.md)]|[How to: Enable ClickOnce Security Settings](../Topic/How%20to:%20Enable%20ClickOnce%20Security%20Settings.md)|  
+ Detaillierte Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen:  
   
-## Andere Steuerelemente und Funktionen  
- In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen.  Darüber hinaus wird in Windows Forms das robuste Sicherheitssystem von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] verwendet, sodass Sie problemlos sichere Anwendungen bereitstellen können.  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Drucken des Inhalts eines Formulars|[Gewusst wie: Drucken von Grafiken in Windows Forms](https://msdn.microsoft.com/library/741a0ktc.aspx)<br /><br /> [Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms](https://msdn.microsoft.com/library/cwbe712d.aspx)|   
+|Weitere Informationen zur Windows Forms-Sicherheit|[Sicherheit in Windows Forms (Übersicht)](https://msdn.microsoft.com/library/90k49ccb.aspx)|  
   
- In den folgenden Hilfethemen finden Sie Schritt\-für\-Schritt\-Anweisungen für die Verwendung dieser Features:  
-  
-|To|Siehe|  
-|--------|-----------|  
-|Drucken des Inhalts eines Formulars|[Gewusst wie: Drucken von Grafiken in Windows Forms](../Topic/How%20to:%20Print%20Graphics%20in%20Windows%20Forms.md)<br /><br /> [Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms](../Topic/How%20to:%20Print%20a%20Multi-Page%20Text%20File%20in%20Windows%20Forms.md)|  
-|Globalisieren einer Windows Forms\-Anwendung|[Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/de-de/9a96220d-a19b-4de0-9f48-01e5d82679e5)|  
-|Weitere Informationen zu Windows Forms\-Sicherheit|[Übersicht über die Sicherheit in Windows Forms](../Topic/Security%20in%20Windows%20Forms%20Overview.md)|  
-  
-## Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- [Übersicht über Windows Forms](../Topic/Windows%20Forms%20Overview.md)   
- [My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
+ [Übersicht über Windows Forms](https://msdn.microsoft.com/library/8bxxy49h.aspx)   
+ [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)

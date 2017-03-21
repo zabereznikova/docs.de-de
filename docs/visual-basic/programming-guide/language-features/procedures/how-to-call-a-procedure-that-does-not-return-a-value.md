@@ -1,49 +1,65 @@
 ---
-title: "How to: Call a Procedure that Does Not Return a Value (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedure calls, returning values"
-  - "Visual Basic code, procedures"
-  - "procedures, calling"
+title: "Gewusst wie: Aufrufen einer Prozedur, die keinen Wert (Visual Basic) zurückgibt | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedure calls, returning values
+- Visual Basic code, procedures
+- procedures, calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# How to: Call a Procedure that Does Not Return a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 17b2b902f3ee6ab79b2614b7742aa08fefab2420
+ms.lasthandoff: 03/13/2017
 
-Eine `Sub`\-Prozedur gibt keinen Wert an den Aufrufcode zurück.  Sie wird explizit mit einer eigenständigen Aufrufanweisung aufgerufen.  Sie kann nicht durch Einfügen ihres Namens in einen Ausdruck aufgerufen werden.  
+---
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt (Visual Basic)
+Ein `Sub` -Prozedur gibt keinen Wert an den aufrufenden Code zurück. Sie rufen es explizit mit einer eigenständigen aufrufenden Anweisung. Sie können nicht sie aufrufen, indem Sie einfach den Namen in einen Ausdruck.  
   
-### So rufen Sie eine Sub\-Prozedur auf  
+### <a name="to-call-a-sub-procedure"></a>Eine Subprozedur aufrufen  
   
-1.  Geben Sie den Namen der `Sub` Prozedur an.  
+1.  Geben Sie den Namen der `Sub` Verfahren.  
   
-2.  Auf den Prozedurnamen müssen Klammern folgen, die die Argumentliste einschließen.  Wenn keine Argumente vorliegen, können Sie die Klammern auch weglassen.  Mit den Klammern ist der Code jedoch besser lesbar.  
+2.  Führen Sie den Namen der Prozedur mit Klammern um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern auch weglassen. Allerdings vereinfacht die Verwendung der Klammern Code leichter zu lesen.  
   
-3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern, und trennen Sie die Argumente durch Kommas.  Geben Sie die Argumente unbedingt in genau der Reihenfolge an, in der die `Sub`\-Prozedur die entsprechenden Parameter definiert.  
+3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt. Stellen Sie sicher, geben Sie die Argumente in der gleichen Reihenfolge, die `Sub` -Prozedur die entsprechenden Parameter definiert.  
   
-     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>\-Funktion aufgerufen, um ein Anwendungsfenster zu aktivieren.  Die Funktion <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> erfordert als einziges Argument den Fenstertitel.  Sie gibt an den Aufrufcode keinen Wert zurück.  Wenn kein Editor\-Prozess ausgeführt wird, löst das Beispiel eine <xref:System.ArgumentException>\-Ausnahme aus.  Die `Shell`\-Prozedur setzt voraus, dass sich die Anwendungen in den angegebenen Pfaden befinden.  
+     Im folgenden Beispiel wird die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>Funktion, um ein Anwendungsfenster aktiviert.</xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>erfordert den Fenstertitel als einziges Argument.</xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> Es keinen Wert an den aufrufenden Code zurück. Wenn kein Editor-Prozess nicht ausgeführt wird, löst das Beispiel eine <xref:System.ArgumentException>.</xref:System.ArgumentException> Die `Shell` Verfahren wird davon ausgegangen, die in den Pfaden angegeben sind.  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef&#11;](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
- <xref:System.ArgumentException>   
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [How to: Create a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure.md)   
- [How to: Call a Procedure That Returns a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-returns-a-value.md)   
- [How to: Call an Event Handler in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-event-handler.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.Interaction.Shell%2A></xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
+ <xref:System.ArgumentException></xref:System.ArgumentException>   
+ [Verfahren](./index.md)   
+ [Sub-Prozeduren](./sub-procedures.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Gewusst wie: Erstellen einer Prozedur](./how-to-create-a-procedure.md)   
+ [Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt](./how-to-call-a-procedure-that-returns-a-value.md)   
+ [Gewusst wie: Aufrufen von einem Ereignishandler in Visual Basic](./how-to-call-an-event-handler.md)

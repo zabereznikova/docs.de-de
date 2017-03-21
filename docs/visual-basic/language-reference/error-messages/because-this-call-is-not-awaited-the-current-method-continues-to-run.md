@@ -1,39 +1,56 @@
 ---
-title: "Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42358"
-  - "vbc42358"
-helpviewer_keywords: 
-  - "BC42358"
+title: Da dieser Aufruf nicht gewartet wird, weiterhin die aktuelle Methode vor Abschluss des Aufrufs | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42358
+- vbc42358
+helpviewer_keywords:
+- BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.lasthandoff: 03/13/2017
 
-Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt. Ziehen Sie ein Anwenden des „Await“\-Operators auf das Ergebnis des Aufrufs in Betracht.  
+---
+# <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt
+Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt. Ziehen Sie ein Anwenden des „Await“-Operators auf das Ergebnis des Aufrufs in Betracht.  
   
- Die aktuelle Methode ruft eine asynchrone Methode auf, die ein <xref:System.Threading.Tasks.Task> oder ein <xref:System.Threading.Tasks.Task%601> zurückgibt und nicht den [Await](../../../visual-basic/language-reference/operators/await-operator.md)\-Operator auf das Ergebnis anwendet. Der Aufruf der asynchronen Methode startet eine asynchrone Aufgabe. Da jedoch kein `Await`\-Operator angewendet wird, wird das Programm fortgesetzt, ohne auf den Abschluss der Aufgabe zu warten. Dieses Verhalten wird in den meisten Fällen nicht erwartet. Andere Aspekte der aufrufenden Methode hängen in der Regel von den Ergebnissen des Aufrufs ab, mindestens jedoch wird erwartet, dass die aufgerufene Methode abgeschlossen wird, bevor Sie von der Methode zurückgegeben, die den Aufruf enthält.  
+ Die aktuelle Methode ruft eine asynchrone Methode, zurückgibt ein <xref:System.Threading.Tasks.Task>oder ein <xref:System.Threading.Tasks.Task%601>und gilt nicht die ["await"](../../../visual-basic/language-reference/operators/await-operator.md) Operator das Ergebnis.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Der Aufruf der asynchronen Methode startet eine asynchrone Aufgabe. Da jedoch kein `Await` -Operator angewendet wird, wird das Programm fortgesetzt, ohne auf den Abschluss der Aufgabe zu warten. Dieses Verhalten wird in den meisten Fällen nicht erwartet. Andere Aspekte der aufrufenden Methode hängen in der Regel von den Ergebnissen des Aufrufs ab, mindestens jedoch wird erwartet, dass die aufgerufene Methode abgeschlossen wird, bevor Sie von der Methode zurückgegeben, die den Aufruf enthält.  
   
- Ein gleichermaßen wichtiges Problem besteht in der Behandlung von Ausnahmen, die in der aufgerufenen asynchrone Methode ausgelöst werden. Eine Ausnahme, die in einer Methode ausgelöst wird, die ein <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgibt, wird in der zurückgegebenen Aufgabe gespeichert. Wenn Sie nicht auf die Aufgabe warten oder explizit auf Ausnahmen hin prüfen, geht die Ausnahme verloren. Wenn Sie auf die Aufgabe warten, wird die Ausnahme erneut ausgelöst.  
+ Ein gleichermaßen wichtiges Problem besteht in der Behandlung von Ausnahmen, die in der aufgerufenen asynchrone Methode ausgelöst werden. Eine Ausnahme, die in einer Methode ausgelöst wird, die gibt ein <xref:System.Threading.Tasks.Task>oder <xref:System.Threading.Tasks.Task%601>wird in der zurückgegebenen Aufgabe gespeichert.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Wenn Sie nicht auf die Aufgabe warten oder explizit auf Ausnahmen hin prüfen, geht die Ausnahme verloren. Wenn Sie auf die Aufgabe warten, wird die Ausnahme erneut ausgelöst.  
   
  Als bewährte Methode sollten Sie immer auf den Aufruf warten.  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Fehler\-ID:** BC42358  
+ **Fehler-ID:** BC42358  
   
-### So reagieren Sie auf diese Warnung  
+### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung  
   
 -   Ziehen Sie eine Unterdrückung der Warnung nur dann in Betracht, wenn Sie sicher sind, dass Sie nicht auf den Abschluss des asynchronen Aufrufs warten möchten und dass die aufgerufene Methode keine Ausnahmen auslösen wird. In diesem Fall können Sie die Warnung unterdrücken, indem Sie das Aufgabenergebnis des Aufrufs einer Variablen zuweisen.  
   
@@ -88,7 +105,7 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
   
     ```  
   
-     Wenn Sie beispielsweise „Call \#1“ oder „Call \#2“ wählen, wird die unerwartete asynchrone Methode \(`CalledMethodAsync`\) beendet, nachdem der Aufrufer \(`CallingMethodAsync`\) und der Aufrufer des Aufrufers \(`StartButton_Click`\) abgeschlossen sind. Die letzte Zeile in der folgenden Ausgabe zeigt, wann die aufgerufene Methode beendet ist. Der Eingang und das Ende des Ereignishandlers, der `CallingMethodAsync` im vollständigen Beispiel aufruft, werden in der Ausgabe gekennzeichnet.  
+     Wenn Sie beispielsweise „Call #1“ oder „Call #2“ wählen, wird die unerwartete asynchrone Methode (`CalledMethodAsync`) beendet, nachdem der Aufrufer (`CallingMethodAsync`) und der Aufrufer des Aufrufers (`StartButton_Click`) abgeschlossen sind. Die letzte Zeile in der folgenden Ausgabe zeigt, wann die aufgerufene Methode beendet ist. Der Eingang und das Ende des Ereignishandlers, der `CallingMethodAsync` im vollständigen Beispiel aufruft, werden in der Ausgabe gekennzeichnet.  
   
     ```  
   
@@ -100,16 +117,16 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
         Task.Delay is finished--returning from called method.  
     ```  
   
-## Beispiel  
- Die folgende Windows Presentation Foundation \(WPF\)\-Anwendung enthält die Methoden aus dem vorherigen Beispiel. Die folgenden Schritte richten die Anwendung ein.  
+## <a name="example"></a>Beispiel  
+ Die folgende Windows Presentation Foundation (WPF)-Anwendung enthält die Methoden aus dem vorherigen Beispiel. Die folgenden Schritte richten die Anwendung ein.  
   
-1.  Erstellen Sie eine WPF\-Anwendung, und geben Sie Ihr den Namen `AsyncWarning`.  
+1.  Erstellen Sie eine WPF-Anwendung, und geben Sie Ihr den Namen `AsyncWarning`.  
   
 2.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
-     Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen\-Explorer**, und wählen Sie dann **Code anzeigen** aus.  
+     Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.  
   
-3.  Ersetzen Sie den Code in der **XAML**\-Ansicht der MainWindow.xaml\-Datei durch den folgenden Code.  
+3.  Ersetzen Sie den Code in der **XAML** -Ansicht der MainWindow.xaml-Datei durch den folgenden Code.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -124,9 +141,9 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
   
     ```  
   
-     Ein einfaches Fenster, das eine Schaltfläche und ein Textfeld enthält, wird in der **Entwurf**\-Ansicht der MainWindow.xaml\-Datei angezeigt.  
+     Ein einfaches Fenster, das eine Schaltfläche und ein Textfeld enthält, wird in der **Entwurf** -Ansicht der MainWindow.xaml-Datei angezeigt.  
   
-     Weitere Informationen zum XAML\-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML\-Designer](/visual-studio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Informationen zum Erstellen der eigenen einfachen Benutzeroberfläche finden Sie in den Abschnitten „So erstellen Sie eine WPF\-Anwendung“ und „So entwerfen Sie ein einfaches WPF\-MainWindow“ von [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md).  
+     Weitere Informationen zum XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit XAML-Designer](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Informationen dazu, wie Sie Ihre eigene einfache Benutzeroberfläche erstellen, finden Sie unter der "So erstellen eine WPF-Anwendung" und "So entwerfen ein einfache WPF-MainWindow" Abschnitte des [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
   
@@ -209,10 +226,10 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
     ' Exiting the Click event handler.  
     ```  
   
-5.  Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**.  
+5.  Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
   
      Am Ende des Codes wird die erwartete Ausgabe angezeigt.  
   
-## Siehe auch  
- [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Asynchrone Programmierung mit Async und Await](../Topic/Asynchronous%20Programming%20with%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Siehe auch  
+ [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -1,33 +1,49 @@
 ---
-title: "Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30955"
-  - "bc30955"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30955"
+title: Wert des Typs &quot;&lt;&quot;Typname1&quot;&gt;&quot;kann nicht konvertiert werden&quot;&lt;typename2&gt;&quot; | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30955
+- bc30955
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c973d5e2aa03d423e1dea8053946172655f08490
+ms.lasthandoff: 03/13/2017
 
-Der Wert vom Typ '\<Typname1\>' kann nicht in '\<Typname2\>' konvertiert werden.Der Typenkonflikt könnte auf das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly "\<Assemblyname\>" zurückzuführen sein.Ersetzen Sie den Dateiverweis auf "\<Dateipfad\>" in Projekt "\<Projektname1\>" durch einen Projektverweis auf "\<Projektname2\>"'  
+---
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Wert des Typs '&lt;"Typname1"&gt;"kann nicht konvertiert werden"&lt;typename2&gt;'
+Wert des Typs '\<"Typname1" >' kann nicht konvertiert werden "\<typename2 >'. Typenkonflikt wird möglicherweise durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'. Ersetzen Sie den Verweis auf "\<Filepath >" im Projekt "\<projectname1 >" durch einen Projektverweis auf '\<projectname2 >'.  
   
- Wenn ein Projekt sowohl einen Projektverweis als auch einen Dateiverweis enthält, kann der Compiler die Konvertierung zwischen den Typen nicht gewährleisten.  
+ Wenn ein Projekt sowohl einen Projektverweis als auch einen Dateiverweis enthält, kann der Compiler, dass ein Typ in einen anderen konvertiert werden kann nicht gewährleisten.  
   
- Im folgenden Pseudocode wird eine Situation veranschaulicht, die diesen Fehler verursachen kann.  
+ Der folgende Pseudocode veranschaulicht eine Situation, die diesen Fehler verursachen kann.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -55,19 +71,19 @@ Der Wert vom Typ '\<Typname1\>' kann nicht in '\<Typname2\>' konvertiert werden.
   
  `End Class`  
   
- Projekt `P1` enthält einen indirekten Projektverweis über Projekt `P2` auf Projekt `P3` sowie einen direkten Dateiverweis auf `P3`.  In der Deklaration von `commonObject` wird der Dateiverweis auf `P3` verwendet, während im Aufruf von `P2.getCommonClass` der Projektverweis auf `P3` verwendet wird.  
+ Project `P1` macht einen indirekten Projektverweis über Projekt `P2` Projekt `P3`, und auch ein direkter Verweis auf `P3`. Die Deklaration von `commonObject` verwendet den Dateiverweis auf `P3`, während im Aufruf von `P2.getCommonClass` verwendet den Projektverweis `P3`.  
   
- Das Problem in diesem Fall ist, dass im Dateiverweis ein Dateipfad und \-name für die Ausgabedatei von `P3` \(normalerweise p3.dll\) angegeben wird, während die Projektverweise das Quellprojekt \(`P3`\) mit dem Projektname bezeichnen.  Daher kann der Compiler nicht gewährleisten, dass der Typ `P3.commonClass` von demselben Quellcode über zwei unterschiedliche Verweise stammt.  
+ Das Problem in diesem Fall ist, dass im Dateiverweis ein Dateipfad und-Name für die Ausgabedatei angegeben `P3` (normalerweise p3.dll), während die Projektverweise das Quellprojekt ermitteln (`P3`) nach dem Projektnamen. Aus diesem Grund der Compiler nicht garantieren, dass den Typ `P3.commonClass` demselben Quellcode über zwei unterschiedliche Verweise stammt.  
   
- Diese Situation tritt i. d. R. auf, wenn Projektverweise und Dateiverweise gemeinsam verwendet werden.  Im vorhergehenden Beispiel tritt das Problem nicht auf, wenn `P1` statt eines Dateiverweises einen direkten Projektverweis auf `P3` enthält.  
+ Diese Situation tritt normalerweise auf, wenn Projektverweise und Dateiverweise gemeinsam. In der vorherigen Abbildung sind das Problem würde nicht auftreten, wenn `P1` erstellt einen direkten Projektverweis auf `P3` statt eines Dateiverweises.  
   
- **Fehler\-ID:** BC30955  
+ **Fehler-ID:** BC30955  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie den Dateiverweis in einen Projektverweis.  
+-   Ändern Sie den Verweis auf einen Projektverweis.  
   
-## Siehe auch  
- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Verwalten von Verweisen in einem Projekt](/visual-studio/ide/managing-references-in-a-project)   
- [Gewusst wie: Hinzufügen oder Entfernen von Verweisen mithilfe des Dialogfelds "Verweise hinzufügen"](http://msdn.microsoft.com/de-de/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a>Siehe auch  
+ [Typumwandlungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [Verwalten von Verweise in einem Projekt](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
+ [NIB How to: Add or Remove References By Using the Add Reference Dialog Box (Vorgehensweise: Hinzufügen und Entfernen von Verweisen mithilfe des Dialogfelds „Verweis hinzufügen“)](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

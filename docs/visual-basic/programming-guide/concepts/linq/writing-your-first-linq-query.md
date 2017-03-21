@@ -1,141 +1,149 @@
 ---
-title: "Schreiben der ersten LINQ-Abfrage (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Abfragen [LINQ in Visual Basic], Schreiben"
-  - "LINQ-Abfragen [Visual Basic]"
-  - "LINQ [Visual Basic], Schreiben von Abfragen"
+title: Schreiben der ersten LINQ-Abfrage (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], writing
+- LINQ queries [Visual Basic]
+- LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 caps.latest.revision: 56
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 54
----
-# Schreiben der ersten LINQ-Abfrage (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 48f1c5e15654580b6e4d060860a0d7001af5e2ef
+ms.lasthandoff: 03/13/2017
 
-Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft.  Abfragen werden in einer dedizierten Abfragesprache ausgedrückt.  Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML.  Aus diesem Grund muss der Anwendungsentwickler für jeden Typ von Datenquelle oder Datenformat die jeweilige Abfragesprache erlernen.  
+---
+# <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
+Ein *Abfrage* ist ein Ausdruck, der Daten aus einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, beispielsweise SQL für relationale Datenbanken und XQuery für XML entwickelt. Dies macht es für den Entwickler der Anwendung für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird eine neue Abfragesprache erlernen.  
   
- [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten.  In einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage arbeiten Sie immer mit Objekten.  Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML\-Dokumenten, SQL\-Datenbanken, ADO.NET\-Datasets und \-Entitäten, .NET Framework\-Auflistungen sowie allen anderen Quellen und Formaten, für die ein [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter verfügbar ist.  In diesem Dokument werden die drei Phasen der Erstellung und die Verwendung grundlegender [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen beschrieben.  
+ [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets und Entitäten, .NET Framework-Auflistungen und alle anderen Quelle oder Format für die ein [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Anbieter verfügbar ist. Dieses Dokument beschreibt die drei Phasen der Erstellung und Verwendung von Basic [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen.  
   
- ![Link zu Video](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Unter [How Do I: Get Started with LINQ?](http://go.microsoft.com/fwlink/?LinkId=133021) finden Sie eine Videodemonstration zum Thema.  
+## <a name="three-stages-of-a-query-operation"></a>Drei Phasen einer Abfrageoperation  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfrageoperationen bestehen aus drei Aktionen:  
   
-## Drei Phasen einer Abfrageoperation  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageoperationen bestehen aus drei Aktionen:  
-  
-1.  Abrufen der Datenquelle oder der Datenquellen  
+1.  Abrufen der Datenquelle(n).  
   
 2.  Erstellen der Abfrage  
   
 3.  Ausführen der Abfrage  
   
- In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] sind die Ausführung einer Abfrage und die Erstellung der Abfrage voneinander getrennte Vorgänge.  Sie rufen Daten nicht einfach ab, indem Sie eine Abfrage erstellen.  Dieser Punkt wird weiter unten in diesem Thema ausführlich erläutert.  
+ In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], die Ausführung einer Abfrage unterscheidet sich von der Erstellung der Abfrage. Alle Daten werden nicht durch das bloße Erstellen einer Abfrageergebnis abgerufen werden. Dieser Punkt wird später in diesem Thema ausführlicher erläutert.  
   
- Im folgenden Beispiel werden die drei Teile einer Abfrageoperation veranschaulicht.  Im Beispiel wird ein Array von Ganzzahlen als zweckmäßige Datenquelle zur Demonstration der Vorgehensweise verwendet.  Dieselben Konzepte gelten jedoch auch für andere Datenquellen.  
+ Das folgende Beispiel veranschaulicht die drei Teile einer Abfrageoperation. Das Beispiel wird ein Array von Ganzzahlen als Datenquelle für eine einfache zu Demonstrationszwecken verwendet. Dieselben Konzepte gelten jedoch auch für andere Datenquellen.  
   
 > [!NOTE]
->  Klicken Sie auf [Seite "Kompilieren", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic) stellen Sie sicher, dass **Option Infer** zu **Ein** festgelegt ist.  
+>  Auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), sicher, dass **Option infer** Wert **auf**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Ausgabe:  
   
  `0 2 4 6`  
   
-## Die Datenquelle  
- Da es sich bei der Datenquelle im vorherigen Beispiel um ein Array handelt, unterstützt sie implizit die generische <xref:System.Collections.Generic.IEnumerable%601>\-Schnittstelle.  Dadurch kann ein Array als Datenquelle für eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage verwendet werden.  Typen, die <xref:System.Collections.Generic.IEnumerable%601> oder eine abgeleitete Schnittstelle wie generische <xref:System.Linq.IQueryable%601> unterstützen, werden als *abfragbare Typen* aufgerufen.  
+## <a name="the-data-source"></a>Die Datenquelle  
+ Da die Datenquelle im vorherigen Beispiel ein Array ist, unterstützt sie implizit die generische <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle.</xref:System.Collections.Generic.IEnumerable%601> Dadurch kann die Möglichkeit, ein Array als Datenquelle für die Verwendung einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrage. Typen, die unterstützen <xref:System.Collections.Generic.IEnumerable%601>oder eine abgeleitete Schnittstelle, wie z. B. die generische <xref:System.Linq.IQueryable%601>heißen *abfragbare Typen*.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601>  
   
- Da das Array ein abfragbarer Typ ist, ist keine Änderung oder besondere Behandlung erforderlich, um es als [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Datenquelle zu verwenden.  Dasselbe gilt für jeden Auflistungstyp, der <xref:System.Collections.Generic.IEnumerable%601>, einschließlich generischer <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> unterstützt, und andere Klassen in der .NET Framework\-Klassenbibliothek erfüllt.  
+ Als ein abfragbarer Typ, Arrays erfordert keine Änderung oder besondere Behandlung notwendig, um als eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Datenquelle. Das gleiche gilt für alle Auflistungstypen, die unterstützt <xref:System.Collections.Generic.IEnumerable%601>, einschließlich des generischen <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, und andere Klassen in der .NET Framework-Klassenbibliothek.</xref:System.Collections.Generic.Dictionary%602> </xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.IEnumerable%601>  
   
- Wenn die Quelldaten nicht bereits <xref:System.Collections.Generic.IEnumerable%601> implementieren, wird ein [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] Anbieter erforderlich, um die Funktionen der *Standardabfrageoperatoren* für diese Datenquelle implementiert.  So übernimmt beispielsweise [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] die Aufgabe, ein XML\-Dokument in einen abfragbaren <xref:System.Xml.Linq.XElement>\-Typ zu laden, wie im folgenden Beispiel dargestellt.  Weitere Informationen über Standardabfrageoperatoren finden Sie unter [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Wenn die Quelldaten nicht bereits implementiert <xref:System.Collections.Generic.IEnumerable%601>, [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Anbieter ist erforderlich, um die Funktionalität implementieren der *Standardabfrageoperatoren* für diese Datenquelle.</xref:System.Collections.Generic.IEnumerable%601> Beispielsweise [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] übernimmt die Aufgabe Laden ein XML-Dokument in einen abfragbaren <xref:System.Xml.Linq.XElement>eingeben, wie im folgenden Beispiel gezeigt.</xref:System.Xml.Linq.XElement> Weitere Informationen über Standardabfrageoperatoren finden Sie unter [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
- Mit [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] erstellen Sie zuerst eine objektrelationale Zuordnung zur Entwurfszeit, entweder manuell oder über [Object Relational Designer \(O\/R\-Designer\)](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Sie schreiben die Abfragen anhand der Objekte, und zur Laufzeit übernimmt [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] die Kommunikation mit der Datenbank.  Im folgenden Beispiel stellt `customers` eine bestimmte Tabelle in der Datenbank dar, und <xref:System.Data.Linq.Table%601> unterstützt die generische <xref:System.Linq.IQueryable%601>.  
+ Mit [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], Sie erstellen eine objektrelationale Zuordnung zur Entwurfszeit, entweder manuell oder mithilfe der [LINQ to SQL-Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio. Sie schreiben die Abfragen anhand der Objekte, und zur Laufzeit übernimmt [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] die Kommunikation mit der Datenbank. Im folgenden Beispiel `customers` stellt eine bestimmte Tabelle in der Datenbank und <xref:System.Data.Linq.Table%601>unterstützt generische <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Data.Linq.Table%601>  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter.  \(Eine Liste dieser Anbieter finden Sie unter [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md).\) Die Grundregel ist einfach: Eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>\-Schnittstelle oder eine Schnittstelle unterstützt, die von ihr erbt.  
+ Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Anbieter. (Eine Liste dieser Anbieter finden Sie unter [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Die Grundregel ist einfach: eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle oder eine Schnittstelle, die aus dem Array erbt,</xref:System.Collections.Generic.IEnumerable%601> unterstützt  
   
 > [!NOTE]
->  Typen wie <xref:System.Collections.ArrayList>, die die nicht generische <xref:System.Collections.IEnumerable>\-Schnittstelle unterstützen, können ebenso als [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Datenquellen verwendet werden.  Ein Beispiel, in dem eine <xref:System.Collections.ArrayList> verwendet wird, finden Sie unter [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md).  
+>  Typen wie <xref:System.Collections.ArrayList>, die nicht generische unterstützen <xref:System.Collections.IEnumerable>Schnittstelle kann auch verwendet werden, als [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Datenquellen.</xref:System.Collections.IEnumerable> </xref:System.Collections.ArrayList> Ein Beispiel für die Verwendung einer <xref:System.Collections.ArrayList>, finden Sie unter [Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).</xref:System.Collections.ArrayList>  
   
-## Die Abfrage  
- In der Abfrage geben Sie an, welche Informationen Sie aus der Datenquelle oder den Datenquellen abrufen möchten.  Sie haben auch die Möglichkeit, anzugeben, wie diese Informationen vor der Rückgabe sortiert, gruppiert oder strukturiert werden sollen.  Um das Erstellen von Abfragen zu ermöglichen, wurde eine neue Abfragesyntax in die Visual Basic\-Sprache integriert.  
+## <a name="the-query"></a>Die Abfrage  
+ In der Abfrage geben Sie die Informationen aus der Datenquelle oder den Datenquellen abgerufen werden sollen. Sie können angeben, wie diese Informationen sollten werden sortiert, gruppiert oder strukturiert werden, bevor er zurückgegeben wird. Um die Abfrage erstellt werden kann, hat Visual Basic neue Abfragesyntax in die Sprache integriert.  
   
- Wenn die Abfrage im folgenden Beispiel ausgeführt wird, gibt sie alle geraden Zahlen aus einem Ganzzahlen\-Array, `numbers`, zurück.  
+ Wenn es ausgeführt wird, gibt die Abfrage im folgenden Beispiel alle geraden Zahlen aus einem Ganzzahlen-Array `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
- Der Abfrageausdruck enthält drei Klauseln: `From`, `Where` und `Select`.  Die spezielle Funktion und der Zweck jeder Abfrageausdrucksklausel werden in [Grundlegende Abfrageoperationen \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) erläutert.  Weitere Informationen finden Sie unter [Queries](../../../../visual-basic/language-reference/queries/queries.md).  Beachten Sie, dass in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] eine Abfragedefinition häufig in einer Variablen gespeichert und später ausgeführt wird.  Die Abfragevariable, wie `evensQuery` im vorherigen Beispiel, muss ein abfragbarer Typ sein. Der Typ von `evensQuery` ist `IEnumerable(Of Integer)` zugewiesen, vom Compiler, der lokalen Typrückschlusses.  
+ Der Abfrageausdruck enthält drei Klauseln: `From`, `Where`, und `Select`. Die spezielle Funktion und der Zweck jeder behandelt [Grundlegende Abfrageoperationen (Visual Basic)](basic-query-operations.md). Weitere Informationen finden Sie unter [Abfragen](../../../../visual-basic/language-reference/queries/queries.md). Beachten Sie, dass in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], eine Abfragedefinition häufig in einer Variablen gespeichert und später ausgeführt. Die Abfrage Variablen, wie z. B. `evensQuery` im vorherigen Beispiel, muss ein abfragbarer Typ sein. Der Typ des `evensQuery` ist `IEnumerable(Of Integer)`, durch den Compiler, die unter Verwendung des lokalen Typrückschlusses zugewiesen.  
   
- Beachten Sie, dass die Abfragevariable selbst keine Aktion ausführt und keine Daten zurückgibt.  Sie speichert nur die Abfragedefinition.  Im vorherigen Beispiel wird die Abfrage durch die `For Each`\-Schleife ausgeführt.  
+ Es ist wichtig zu beachten, dass die Abfragevariable selbst keine Aktion ausführt und keine Daten zurückgibt. Sie speichert nur die Abfragedefinition. Im vorherigen Beispiel ist die `For Each` -Schleife, die die Abfrage ausgeführt wird.  
   
-## Abfrageausführung  
- Die Ausführung einer Abfrage erfolgt getrennt von der Erstellung einer Abfrage.  Beim Erstellen der Abfrage wird die Abfrage definiert. Das Ausführen wird jedoch durch einen anderen Mechanismus ausgelöst.  Eine Abfrage kann ausgeführt werden, sobald sie definiert ist \(*unmittelbare Ausführung*\), oder die Definition kann gespeichert und die Abfrage kann später ausgeführt werden \(*verzögerte Ausführung*\).  
+## <a name="query-execution"></a>Abfrageausführung  
+ Ausführung einer Abfrage ist getrennt von der Erstellung der Abfrage. Erstellung der Abfrage die Abfrage definiert, aber die Abfrage wird mit einem anderen Mechanismus ausgelöst. Eine Abfrage kann ausgeführt werden, sobald sie definiert ist (*unmittelbare Ausführung*), oder die Definition kann gespeichert und die Abfrage kann später ausgeführt werden (*verzögerte Ausführung*).  
   
-### Verzögerte Ausführung  
- Eine typische [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage sieht ähnlich der Abfrage im vorherigen Beispiel aus, in dem `evensQuery` definiert wird.  Dabei wird die Abfrage erstellt, jedoch nicht sofort ausgeführt.  Stattdessen wird die Abfragedefinition in der Abfragevariablen `evensQuery` gespeichert.  Die Abfrage wird später ausgeführt, in der Regel unter Verwendung einer `For Each`\-Schleife, die eine Sequenz von Werten zurückgibt, oder durch Anwendung eines Standardabfrageoperators wie `Count` oder `Max`.  Dieser Vorgang wird als *verzögerte Ausführung* bezeichnet.  
+### <a name="deferred-execution"></a>Verzögerte Ausführung  
+ Ein herkömmliches [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrage ähnelt dem im vorherigen Beispiel, in dem `evensQuery` definiert ist. Er erstellt die Abfrage jedoch nicht sofort ausgeführt. Stattdessen wird die Abfragedefinition in der Abfragevariablen gespeichert `evensQuery`. Die Abfrage wird später ausgeführt, in der Regel durch die Verwendung einer `For Each` -Schleife, die eine Sequenz von Werten oder durch Anwenden von Standardabfrageoperator, wie z. B. zurückgibt `Count` oder `Max`. Dieser Prozess wird als bezeichnet *verzögerte Ausführung*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
- Bei einer Sequenz von Werten greifen Sie auf die abgerufenen Daten unter Verwendung der Iterationsvariablen in der `For Each`\-Schleife zu \(im vorherigen Beispiel `number`\).  Da die Abfragevariable `evensQuery` die Abfragedefinition und nicht die Abfrageergebnisse enthält, können Sie die Abfrage beliebig oft ausführen, indem Sie die Abfragevariable mehrfach verwenden.  Sie könnten beispielsweise über eine Datenbank in Ihrer Anwendung verfügen, die ständig durch eine separate Anwendung aktualisiert wird.  Nach Erstellen einer Abfrage, mit der Daten aus dieser Datenbank abgerufen werden, können Sie eine `For Each`\-Schleife verwenden, um die Abfrage wiederholt auszuführen, sodass jedes Mal die neuesten Daten abgerufen werden.  
+ Für eine Sequenz von Werten, greifen Sie die abgerufenen Daten unter Verwendung der Iterationsvariablen in der `For Each` Schleife (`number` im vorherigen Beispiel). Da die Abfragevariable `evensQuery`, enthält die Ergebnisse der Abfrage, anstatt die Abfragedefinition können Sie die Abfrage so oft wie gewünscht mithilfe der Abfragevariablen mehr als einmal ausführen. Beispielsweise müssen Sie eine Datenbank in Ihrer Anwendung möglicherweise, die ständig durch eine separate Anwendung aktualisiert wird. Nachdem Sie eine Abfrage, die Daten aus dieser Datenbank abruft erstellt haben, können Sie mithilfe einer `For Each` Schleife wiederholt wird, führen Sie die Abfrage zum Abrufen der neuesten Daten jedes Mal.  
   
- Das folgende Beispiel veranschaulicht die Funktionsweise der verzögerten Ausführung.  Nachdem `evensQuery2` definiert und mit einer `For Each`\-Schleife ausgeführt wurde, wie in den vorherigen Beispielen, ändern sich einige Elemente in der Datenquelle `numbers`.  Anschließend führt eine zweite `For Each`\-Schleife erneut `evensQuery2` aus.  Beim zweiten Mal sind die Ergebnisse anders, da die `For Each`\-Schleife die Abfrage erneut ausführt, und zwar unter Verwendung der neuen Werte in `numbers`.  
+ Im folgende Beispiel wird veranschaulicht, wie die verzögerte Ausführung arbeitet. Nach `evensQuery2` definiert und ausgeführt werden, ein `For Each` wie in den vorherigen Beispielen werden einige Elemente in der Datenquelle Schleife `numbers` geändert werden. Klicken Sie dann ein zweites `For Each` Schleife ausgeführt wird `evensQuery2` erneut. Die Ergebnisse unterscheiden sich das zweite Mal, da die `For Each` Schleife führt die Abfrage erneut mit den neuen Werten in `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  Ausgabe:  
   
  `Evens in original array:`  
   
- `0 2 4 6`  
+ `0  2  4  6`  
   
  `Evens in changed array:`  
   
- `0 10 2 22 8`  
+ `0  10  2  22  8`  
   
-### Unmittelbare Ausführung  
- Bei der verzögerten Ausführung von Abfragen wird die Abfragedefinition für die spätere Ausführung in einer Abfragevariablen gespeichert.  Bei der unmittelbaren Ausführung wird die Abfrage zum Zeitpunkt ihrer Definition ausgeführt.  Die Abfrage wird ausgelöst, indem Sie eine Methode anwenden, für die ein Zugriff auf einzelne Elemente des Abfrageergebnisses erforderlich ist.  Die unmittelbare Ausführung wird häufig durch die Verwendung eines der Standardabfrageoperatoren erzwungen, die einzelne Werte zurückgeben.  Beispiele sind `Count`, `Max`, `Average` und `First`.  Diese Standardabfrageoperatoren führen die Abfrage aus, sobald sie angewendet werden, um ein einzelnes Ergebnis zu berechnen und zurückzugeben.  Weitere Informationen über Standardabfrageoperatoren, die einzelne Werte zurückgeben, finden Sie unter [Aggregation Operations](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md), [Element Operations](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md) und [Quantifier Operations](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+### <a name="immediate-execution"></a>Sofortige Ausführung  
+ Bei der verzögerten Ausführung von Abfragen wird die Abfragedefinition in einer Abfragevariablen zur späteren Ausführung gespeichert. Bei der unmittelbaren Ausführung wird die Abfrage zum Zeitpunkt seiner Definition ausgeführt. Die Abfrage wird ausgelöst, wenn Sie eine Methode anwenden, die Zugriff auf einzelne Elemente des Abfrageergebnisses erforderlich ist. Unmittelbare Ausführung häufig erzwungen wird, mithilfe einer der Standardabfrageoperatoren, die einzelne Werte zurückgeben. Examples are `Count`, `Max`, `Average`, and `First`. Diese Standardabfrageoperatoren führen die Abfrage aus, sobald sie angewendet werden, um zu berechnen und ein Singleton-Ergebnis zurück. Weitere Informationen über Standardabfrageoperatoren, die einzelne Werte zurückgeben, finden Sie unter [Aggregationsvorgänge](aggregation-operations.md), [Elementvorgänge](element-operations.md), und [Quantifizierer-Vorgänge](quantifier-operations.md).  
   
- Die folgende Abfrage gibt die Anzahl der geraden Zahlen in einem Ganzzahlen\-Array zurück.  Die Abfragedefinition wird nicht gespeichert, und `numEvens` ist eine einfache `Integer`.  
+ Die folgende Abfrage gibt die Anzahl der geraden Zahlen in einem Array von ganzen Zahlen zurück. Die Abfragedefinition wird nicht gespeichert, und `numEvens` ist eine einfache `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
- Das gleiche Ergebnis lässt sich mithilfe der `Aggregate`\-Methode erzielen.  
+ Sie können das gleiche Ergebnis erzielen, indem Sie mit der `Aggregate` Methode.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
- Sie können die Ausführung einer Abfrage auch erzwingen, indem Sie die `ToList`\- oder die `ToArray`\-Methode für eine Abfrage \(unmittelbar\) oder eine Abfragevariable \(verzögert\) aufrufen, wie im folgenden Code gezeigt.  
+ Sie können die Ausführung einer Abfrage auch erzwingen, durch Aufrufen der `ToList` oder `ToArray` Methode für eine Abfrage (unmittelbar) oder eine Abfragevariable (verzögert), wie im folgenden Code gezeigt.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
- In den vorherigen Beispielen ist `evensQuery3` eine Abfragevariable, `evensList` ist jedoch eine Liste, und `evensArray` ist ein Array.  
+ In den vorherigen Beispielen `evensQuery3` ist eine Variable, aber `evensList` ist eine Liste und `evensArray` ist ein Array.  
   
- Die Verwendung von `ToList` oder `ToArray` zum Erzwingen einer unmittelbaren Ausführung ist besonders nützlich in Szenarien, in denen Sie die Abfrage sofort ausführen und die Ergebnisse in einem einzigen Auflistungsobjekt zwischenspeichern möchten.  Weitere Informationen über diese Methoden finden Sie unter [Converting Data Types](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ Mithilfe von `ToList` oder `ToArray` sofortige erzwingen Ausführung ist besonders nützlich in Szenarien, in denen die Abfrage sofort ausführen und die Ergebnisse in einem einzelnen Auflistungsobjekt zwischengespeichert werden soll. Weitere Informationen zu diesen Methoden finden Sie unter [Datentypen konvertieren](converting-data-types.md).  
   
- Sie können das Ausführen einer Abfrage auch durch Verwendung einer `IEnumerable`\-Methode veranlassen, z. B. der <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>\-Methode.  
+ Kann auch eine Abfrage mithilfe von ausgeführt werden ein `IEnumerable` Methode, z. B. die <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>-Methode.</xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>  
   
-## Demovideos zu ähnlichen Themen  
- [Gewusst wie: Erste Schritte mit LINQ](http://go.microsoft.com/fwlink/?LinkId=133021)  
-  
- [Gewusst\-wie\-Video: Schreiben von Abfragen in Visual Basic](http://go.microsoft.com/fwlink/?LinkID=100356)  
-  
-## Siehe auch  
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [LINQ\-Beispiele](../Topic/LINQ%20Samples.md)   
- [Übersicht über den O\/R\-Designer](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erste Schritte mit LINQ in Visual Basic](getting-started-with-linq.md)   
+ [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+ [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md)   
+ [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Queries](../../../../visual-basic/language-reference/queries/queries.md)
+ [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)

@@ -1,84 +1,99 @@
 ---
-title: "Delegate Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Delegate"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "delegate keyword"
-  - "Delegate statement"
+title: Delegate-Anweisung | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Delegate
+dev_langs:
+- VB
+helpviewer_keywords:
+- delegate keyword
+- Delegate statement
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# Delegate Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9ac9e28c82f8a6b5a9c1398961d831c956a649e0
+ms.lasthandoff: 03/13/2017
 
-Wird zur Deklaration eines Delegaten verwendet.  Ein Delegat ist ein Referenztyp, der auf eine `Shared`\-Methode eines Typs oder auf eine Instanzenmethode eines Objekts verweist.  Jede Prozedur mit identischen Parameter\- und Rückgabetypen kann zum Erstellen einer Instanz dieser Delegatklasse verwendet werden.  Die Prozedur kann anschließend mittels der Delegatinstanz aufgerufen werden.  
+---
+# <a name="delegate-statement"></a>Delegate-Anweisung
+Deklarieren einen Delegaten verwendet. Ein Delegat ist ein Verweistyp, der sich auf eine `Shared` -Methode eines Typs oder auf eine Instanzenmethode eines Objekts. Jede Prozedur mit identischen Parameter-und Rückgabetypen kann zum Erstellen einer Instanz dieser Delegatklasse verwendet werden. Die Prozedur kann anschließend über die Delegatinstanz aufgerufen werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
 [ Shadows ] Delegate [ Sub | Function ] name [( Of typeparamlist )] [([ parameterlist ])] [ As type ]  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`attrlist`|Optional.  Liste der Attribute, die für diesen Delegaten zutreffen.  Mehrere Attribute werden durch Komma voneinander getrennt.  Schließen Sie die [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern \("`<`" und "`>`"\) ein.|  
-|`accessmodifier`|Optional.  Gibt an, welcher Code auf den Delegaten zugreifen kann.  Einer der folgenden Werte ist möglich:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md).  Jeder Code, der auf das Element zugreifen kann, das den Delegaten deklariert, kann auf diesen zugreifen.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md).  Nur Code innerhalb der Klasse des Delegaten oder innerhalb einer abgeleiteten Klasse kann auf den Delegaten zugreifen.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md).  Nur Code innerhalb der gleichen Assembly kann auf den Delegaten zugreifen.<br />-   [Privat](../../../visual-basic/language-reference/modifiers/private.md).  Nur Code innerhalb des Elements, das den Delegaten deklariert, kann auf diesen zugreifen.<br /><br /> Sie können `Protected Friend` angeben, um den Zugriff von Code innerhalb der Klasse des Delegaten, innerhalb einer abgeleiteten Klasse oder innerhalb der gleichen Assembly zu ermöglichen.|  
-|`Shadows`|Optional.  Gibt an, dass dieser Delegat ein Programmierelement mit der gleichen Bezeichnung oder eine Gruppe überladener Elemente in einer Basisklasse erneut deklariert und ausblendet.  Sie können mit jeder Art von deklarierten Elementen ein Shadowing einer anderen Art durchführen.<br /><br /> Ein Element, für das ein Shadowing durchgeführt wurde, ist innerhalb der abgeleiteten Klasse, die das Shadowing durchführt, nicht verfügbar, es sei denn, auf das Element, welches das Shadowing durchführt, kann nicht zugegriffen werden.  Wenn z. B. ein `Private`\-Element ein Shadowing eines Basisklassenelements durchführt, greift Code ohne Zugriffsberechtigung für das `Private`\-Element stattdessen auf das Basisklassenelement zu.|  
-|`Sub`|Optional \(entweder muss `Sub` oder `Function` angegeben werden\).  Deklariert diese Prozedur als `Sub`\-Prozedur des Delegaten, die keinen Wert zurückgibt.|  
-|`Function`|Optional \(entweder muss `Sub` oder `Function` angegeben werden\).  Deklariert diese Prozedur als `Function`\-Prozedur des Delegaten, die einen Wert zurückgibt.|  
-|`name`|Erforderlich.  Name des Delegattyps; entspricht den Standardnamenskonventionen für Variablen.|  
-|`typeparamlist`|Optional.  Liste mit Typparametern für diesen Delegaten.  Mehrere Typparameter werden durch Komma voneinander getrennt.  Optional kann jeder Typparameter mit dem generischen `In`\-Modifizierer und dem generischen `Out`\-Modifizierer als Variant deklariert werden.  Sie müssen die [Type List](../../../visual-basic/language-reference/statements/type-list.md) in Klammern einschließen und mit dem `Of`\-Schlüsselwort einleiten.|  
-|`parameterlist`|Optional.  Liste mit Parametern, die an die Prozedur übergeben werden, wenn diese aufgerufen wird.  Sie müssen die [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in Klammern einschließen.|  
-|`type`|Erforderlich, wenn Sie eine `Function`\-Prozedur angeben.  Datentyp des Rückgabewerts.|  
+|---|---|  
+|`attrlist`|Optional. Liste der Attribute, die für diesen Delegaten zutreffen. Mehrere Attribute werden durch Kommas getrennt. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").|  
+|`accessmodifier`|Optional. Gibt an, welcher Code auf den Delegaten zugreifen kann. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md). Jeglicher Code, der das Element zugreifen kann, das den Delegaten deklariert, kann darauf zugreifen.<br />-   [Geschützte](../../../visual-basic/language-reference/modifiers/protected.md). Nur Code innerhalb der Klasse des Delegaten oder eine abgeleitete Klasse kann darauf zugreifen.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Nur Code innerhalb der gleichen Assembly kann auf den Delegaten zugreifen.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md). Nur Code innerhalb des Elements, das den Delegaten deklariert, kann darauf zugreifen.<br /><br /> Sie können angeben, `Protected Friend` Zugriff von Code innerhalb der Klasse des Delegaten, einer abgeleiteten Klasse oder der gleichen Assembly zu aktivieren.|  
+|`Shadows`|Optional. Gibt an, dass dieser Delegat erneut deklariert und ein Programmierelement mit derselben Bezeichnung oder eine Gruppe überladener Elemente in einer Basisklasse ausgeblendet. Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen.<br /><br /> Ein schattiertes Element steht in der abgeleiteten Klasse, die es spiegelt, nicht zur Verfügung, und zwar mit Ausnahme von dem Punkt, wo nicht auf das Shadowing-Element zugriffen werden kann. Z. B. wenn ein `Private` überschattet Element eine Basisklasse, Code, der keine Berechtigung zum Zugriff auf die `Private` Element Element der Basisklasse stattdessen zugreift.|  
+|`Sub`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Deklariert diese Prozedur als Delegat `Sub` Prozedur, die keinen Wert zurückgibt.|  
+|`Function`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Deklariert diese Prozedur als Delegat `Function` Prozedur, die einen Wert zurückgibt.|  
+|`name`|Erforderlich. Name des Delegattyps; folgt standard Namenskonventionen für Variable.|  
+|`typeparamlist`|Optional. Liste mit Typparametern für diesen Delegaten. Mehrere Parameter werden durch Kommas getrennt. Optional, einzelnen Typparameter kann als Variant deklariert werden mit `In` und `Out` generischer Modifizierer. Muss die [Liste](../../../visual-basic/language-reference/statements/type-list.md) in Klammern, und führen Sie es mit der `Of` Schlüsselwort.|  
+|`parameterlist`|Optional. Liste der Parameter, die an die Prozedur übergeben werden, wenn sie aufgerufen wird. Setzen Sie die [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md) in Klammern.|  
+|`type`|Erforderlich, wenn Sie angeben, einen `Function` Verfahren. Der Datentyp des Rückgabewerts.|  
   
-## Hinweise  
- Die `Delegate`\-Anweisung definiert die Parameter\- und Rückgabetypen einer Delegatklasse.  Jede Prozedur mit identischen Parameter\- und Rückgabetypen kann zum Erstellen einer Instanz dieser Delegatklasse verwendet werden.  Die Prozedur kann anschließend über die Delegatinstanz aufgerufen werden. Dazu rufen Sie die `Invoke`\-Methode des Delegaten auf.  
+## <a name="remarks"></a>Hinweise  
+ Die `Delegate` -Anweisung definiert die Parameter- und Rückgabetypen einer Delegatklasse. Jede Prozedur mit identischen Parametern und Rückgabetypen kann zum Erstellen einer Instanz dieser Delegatklasse verwendet werden. Die Prozedur kann dann später aufgerufen werden über die Delegatinstanz Aufrufen des Delegaten `Invoke` Methode.  
   
- Delegaten können auf Namespace\-, Modul\-, Klassen\- oder Strukturebene deklariert werden, jedoch nicht innerhalb einer Prozedur.  
+ Delegaten können an den Namespace, Modul, Klasse oder Strukturebene, aber nicht innerhalb einer Prozedur deklariert werden.  
   
- Jede Delegatklasse definiert einen Konstruktor, an den die Spezifikation einer Objektmethode übergeben wird.  Ein Argument für einen Delegatkonstruktor muss ein Verweis auf eine Methode oder ein Lambda\-Ausdruck sein.  
+ Jede Delegatklasse definiert einen Konstruktor, dem die Spezifikation einer Objektmethode übergeben wird. Ein Argument für einen Delegatkonstruktor muss ein Verweis auf eine Methode oder ein Lambda-Ausdruck sein.  
   
- Verwenden Sie die folgende Syntax, um einen Verweis auf eine Methode festzulegen:  
+ Um einen Verweis auf eine Methode anzugeben, verwenden Sie die folgende Syntax:  
   
- `AddressOf` \[`expression`.\]`methodname`  
+ `AddressOf` [`expression`.]`methodname`  
   
- Der Typ von `expression` muss zur Kompilierungszeit der Name einer Klasse oder Schnittstelle sein, die eine Methode des angegebenen Namens enthält, deren Signatur mit der Signatur der Delegatklasse übereinstimmt.  Mit `methodname` kann entweder eine freigegebene Methode oder eine Instanzenmethode angegeben werden.  `methodname` ist nicht optional, selbst dann nicht, wenn Sie einen Delegaten für die Standardmethode der Klasse erstellen.  
+ Der Kompilierzeit-Typ, der die `expression` muss der Name einer Klasse oder eine Schnittstelle, die eine Methode mit dem angegebenen Namen enthält, deren Signatur mit die Signatur der Delegatklasse übereinstimmt. Die `methodname` kann entweder eine freigegebene Methode oder eine Instanzmethode sein. Die `methodname` ist nicht optional, selbst wenn Sie einen Delegaten für die Standardmethode der Klasse erstellen.  
   
- Verwenden Sie die folgende Syntax, um einen Lambda\-Ausdruck festzulegen:  
+ Um einen Lambda-Ausdruck anzugeben, verwenden Sie die folgende Syntax:  
   
- `Function` \(\[`parm` As `type`, `parm2` As `type2`, ...\]\) `expression`  
+ `Function`([`parm` As `type`, `parm2` As `type2`, ...])`expression`  
   
- Die Signatur der Funktion muss mit dem Delegattyp übereinstimmen.  Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Die Signatur der Funktion muss der Typ des Delegaten übereinstimmen. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Weitere Informationen über Delegaten finden Sie unter [Delegates](../../../visual-basic/programming-guide/language-features/delegates/delegates.md).  
+ Weitere Informationen über Delegaten finden Sie unter [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird mit der `Delegate`\-Anweisung ein Delegat deklariert, mit dem zwei Zahlen bearbeitet werden und eine Zahl zurückgegeben wird.  Die `DelegateTest`\-Methode verwendet eine Instanz eines Delegaten dieses Typs und bearbeitet damit Zahlenpaare.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `Delegate` -Anweisung ein Delegat deklariert, mit dem zwei Zahlen und eine Zahl zurückgegeben. Die `DelegateTest` Methode akzeptiert eine Instanz eines Delegaten dieses Typs und wird verwendet, um Paare von Zahlen ausgeführt werden.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates&14;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## Siehe auch  
- [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
+## <a name="see-also"></a>Siehe auch  
+ [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   
- [Delegates](../../../visual-basic/programming-guide/language-features/delegates/delegates.md)   
+ [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)   
  [Gewusst wie: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
  [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Kovarianz und Kontravarianz](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md)   
+ [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
  [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+ [Auschecken](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

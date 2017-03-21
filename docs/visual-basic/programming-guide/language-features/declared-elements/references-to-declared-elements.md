@@ -1,33 +1,49 @@
 ---
-title: "Verweise auf deklarierte Elemente (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Deklarierte Elemente"
-  - "Verweise auf deklarierte Elemente"
-  - "Qualifizierte Namen"
+title: Verweise auf deklarierte Elemente (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declared elements
+- references, declared elements
+- qualified names
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Verweise auf deklarierte Elemente (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 48a04f81075accc073b0d1f5b7a61006bef807ae
+ms.lasthandoff: 03/13/2017
 
-Wenn der Code auf ein deklariertes Element verweist die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler mit dem Namen im Verweis der entsprechenden Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit dem gleichen Namen deklariert wird, können Sie steuern, welches dieser Elemente wird durch Verweise auf *qualifizierenden* seinen Namen.  
+---
+# <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
+Wenn der Code auf ein deklariertes Element verweist die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler mit dem Namen im Verweis der entsprechenden Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit dem gleichen Namen deklariert wird, können Sie steuern, welches dieser Elemente wird durch Verweise auf *qualifizierenden* seinen Namen.  
   
  Der Compiler versucht, einen Namensverweis einen Namen mit entsprechen den *engsten Gültigkeitsbereich*. Dies bedeutet, dass es beginnt mit dem Code, der den Verweis und arbeitet nach außen aufeinander folgende Ebenen der enthaltenden Elemente.  
   
- Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Bereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] löst der Compiler den Verweis in die Deklaration mit dem engsten Gültigkeitsbereich auf, nämlich die lokale Deklaration in `showCount`. Wenn qualifizierten `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis in die Deklaration mit einem größeren Bereich.  
+ Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Bereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] löst der Compiler den Verweis in die Deklaration mit dem engsten Gültigkeitsbereich auf, nämlich die lokale Deklaration in `showCount`. Wenn qualifizierten `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis in die Deklaration mit einem größeren Bereich.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -104,7 +120,7 @@ End Module
   
 6.  Der Compiler verwendet den Qualifizierungspfad eine klare, eindeutige Deklaration gefunden, es den Ziel-Elementverweis zuordnen kann.  
   
- Sie möglicherweise auch einen Namensverweis qualifizieren, wenn die Anwendung Zugriff auf mehrere Programmierelemente verfügt, die den gleichen Namen hat. Zum Beispiel die <xref:System.Windows.Forms> und <xref:System.Web.UI.WebControls> beide-Namespaces enthalten eine `Label` Klasse (<xref:System.Windows.Forms.Label?displayProperty=fullName> und <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>). Wenn der Anwendung beide verwendet oder eine eigene definiert `Label` -Klasse, Sie müssen die verschiedenen unterscheiden `Label` Objekte. Schließen Sie den Namespace oder Alias in der Variablendeklaration. Im folgenden Beispiel wird den Importalias.  
+ Sie möglicherweise auch einen Namensverweis qualifizieren, wenn die Anwendung Zugriff auf mehrere Programmierelemente verfügt, die den gleichen Namen hat. Z. B. die <xref:System.Windows.Forms>und <xref:System.Web.UI.WebControls>beide Namespaces enthalten eine `Label` Klasse (<xref:System.Windows.Forms.Label?displayProperty=fullName> und <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>).</xref:System.Web.UI.WebControls.Label?displayProperty=fullName> </xref:System.Windows.Forms.Label?displayProperty=fullName> </xref:System.Web.UI.WebControls> </xref:System.Windows.Forms> Wenn der Anwendung beide verwendet oder eine eigene definiert `Label` -Klasse, Sie müssen die verschiedenen unterscheiden `Label` Objekte. Schließen Sie den Namespace oder Alias in der Variablendeklaration. Im folgenden Beispiel wird den Importalias.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -159,9 +175,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Verweise auf Projekte  
- Verwenden [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf Assembly oder die Typbibliothek des Projekts. Um einen Verweis festlegen möchten, klicken Sie auf **Verweis hinzufügen** auf die **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilen-Compileroption.  
+ Verwenden [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf Assembly oder die Typbibliothek des Projekts. Um einen Verweis festlegen möchten, klicken Sie auf **Verweis hinzufügen** auf der **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilen-Compileroption.  
   
- Sie können z. B. das XML-Objektmodell der [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie eine der Klassen, wie z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
+ Sie können z. B. das XML-Objektmodell der [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml>-Namespace können Sie deklarieren und verwenden Sie eine der Klassen, z. B. <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument> </xref:System.Xml> Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -170,7 +186,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Importieren von enthaltenden Elementen  
- Können Sie die [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) zu *importieren* Namespaces, die enthalten Module oder Klassen, die Sie verwenden möchten. Dadurch können Sie zum Verweisen auf die definierten Elemente in einem importierten Namespace ohne vollständige Qualifizierung ihrer Namen. Im folgende Beispiel ändert die im vorherige Beispiel zum Importieren der <xref:System.Xml> Namespace.  
+ Können Sie die [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) auf *importieren* Namespaces, die enthalten Module oder Klassen, die Sie verwenden möchten. Dadurch können Sie zum Verweisen auf die definierten Elemente in einem importierten Namespace ohne vollständige Qualifizierung ihrer Namen. Im folgende Beispiel ändert die im vorherige Beispiel zum Importieren der <xref:System.Xml>Namespace.</xref:System.Xml>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -180,7 +196,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Darüber hinaus die `Imports` Anweisung können eine *Importieren Alias* für jeden importierten Namespace. Dadurch kann den Quellcode kürzer und leichter lesbar zu sein. Im folgende Beispiel ändert die im vorherige Beispiel verwendet `xD` als Alias für die <xref:System.Xml> Namespace.  
+ Darüber hinaus die `Imports` -Anweisung definieren kann ein *importieren Alias* für jeden importierten Namespace. Dadurch kann den Quellcode kürzer und leichter lesbar zu sein. Im folgende Beispiel ändert das vorherige Beispiel verwenden `xD` als Alias für die <xref:System.Xml>Namespace.</xref:System.Xml>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -200,13 +216,13 @@ Dim xDoc As xD.XmlDocument
  Mehrdeutigkeit bei Namen können Sie vermeiden, indem alle Elemente einen eindeutige Namen zuweisen. Anschließend können Sie auf jedes beliebige Element verweisen ohne seinen Namen mit einem Namespace, Modul oder Klasse zu qualifizieren. Sie reduzieren außerdem die Chancen, dass versehentlich auf das falsche Element verweisen.  
   
 ## <a name="shadowing"></a>Shadowing  
- Wenn zwei Programmierelemente denselben Namen haben, eine davon kann auszublenden, oder *Schatten*, eine. Ein gespiegeltes Element ist nicht verfügbar für Verweis. Stattdessen, wenn der Code verwendet den Namen gespiegelte Element der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Compiler löst den Verweis in das spiegelnde Element. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Wenn zwei Programmierelemente denselben Namen haben, eine davon kann auszublenden, oder *Schatten*, eine. Ein gespiegeltes Element ist nicht verfügbar für Verweis. Stattdessen, wenn der Code verwendet den Namen gespiegelte Element der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler löst den Verweis in das spiegelnde Element. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
  [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [NIB Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [NIB Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
  [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
  [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [Öffentliche](../../../../visual-basic/language-reference/modifiers/public.md)
+ [Public](../../../../visual-basic/language-reference/modifiers/public.md)

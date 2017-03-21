@@ -1,53 +1,69 @@
 ---
-title: "Structures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structures"
-  - "user-defined data types, structures"
-  - "user-defined types, about user-defined types"
-  - "data types [Visual Basic], user-defined"
-  - "user-defined data types, about user-defined data types"
-  - "types [Visual Basic], user-defined"
+title: Strukturen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- structures
+- user-defined data types, structures
+- user-defined types, about user-defined types
+- data types [Visual Basic], user-defined
+- user-defined data types, about user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0c7ab14a169ec512f78a8eff1c8009140a30f56c
+ms.lasthandoff: 03/13/2017
 
-Eine *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs \(UDT, User\-Defined Type\), der in älteren Versionen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt wird.  Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen.  Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für die einzelnen Felder deklarieren.  
+---
+# <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
+Ein *Struktur* ist eine Verallgemeinerung des benutzerdefinierten Typs (UDT) unterstützt, die von früheren Versionen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Zusätzlich zu Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für die einzelnen Felder deklarieren.  
   
- Sie können Datenelemente verschiedener Typen kombinieren, um eine Struktur zu erstellen.  In einer Struktur werden ein oder mehrere *Elemente* einander und der Struktur an sich zugeordnet.  Wenn Sie eine Struktur deklarieren, entsteht ein *zusammengesetzter Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
+ Sie können Datenelemente verschiedener Typen erstellen eine Struktur kombinieren. In einer Struktur zugeordnet wird, eine oder mehrere *Elemente* untereinander und mit der Struktur selbst. Wenn Sie eine Struktur zu deklarieren, es wird ein *zusammengesetzten Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
   
- Die Verwendung von Strukturen empfiehlt sich, wenn eine einzelne Variable verschiedene verwandte Informationen enthalten soll.  Angenommen, Sie möchten den Namen eines Mitarbeiters, seine Telefondurchwahl und Informationen zu seinem Gehalt zusammen speichern.  Sie könnten für diese Informationen verschiedene Variablen verwenden, oder Sie könnten eine Struktur definieren und diese für die Variable für einen einzelnen Mitarbeiter verwenden.  Der Vorteil, der sich durch die Verwendung einer Struktur ergibt, wird deutlich, wenn viele Mitarbeiter und somit auch viele Instanzen der Variablen vorhanden sind.  
+ Strukturen sind hilfreich, wenn Sie eine einzelne Variable verschiedene verwandte Informationen enthalten soll. Sie möchten z. B. Name, Durchwahl und Gehalt des Mitarbeiters zusammenzuhalten. Können Sie mehrere Variablen für diese Informationen, oder Sie können eine Struktur definieren und verwenden sie für eine Variable für die einzelnen Mitarbeiter. Der Vorteil der Struktur wird offensichtlich, wenn Sie viele Mitarbeiter und somit auch viele Instanzen der Variablen verfügen.  
   
-## In diesem Abschnitt  
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Veranschaulicht das Deklarieren einer Struktur und ihrer Elemente.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ Zeigt, wie eine Struktur und seine Elemente deklarieren.  
   
- [Structure Variables](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Erläutert das Zuweisen einer Struktur zu einer Variablen sowie den Zugriff auf ihre Elemente.  
+ [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ Erläutert das Zuweisen einer Struktur zu einer Variablen und den Zugriff auf die Elemente.  
   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
  Fasst zusammen, wie Strukturen mit Arrays, Objekten, Prozeduren und miteinander interagieren.  
   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Beschreibt die Unterschiede und Gemeinsamkeiten zwischen Strukturen und Klassen.  
+ [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ Beschreibt die ähnlichkeiten und Unterschiede zwischen Strukturen und Klassen.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Stellt die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Datentypen vor und beschreibt deren Verwendung.  
+ Führt die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Datentypen und beschreibt deren Verwendung.  
   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Listet die elementaren Datentypen auf, die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] bereitgestellt werden.
+ [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ Listet die elementaren Datentypen von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].

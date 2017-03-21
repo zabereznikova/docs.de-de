@@ -1,30 +1,46 @@
 ---
-title: "/doc | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "doc compiler option [Visual Basic]"
-  - "-doc compiler option [Visual Basic]"
-  - "/doc compiler option [Visual Basic]"
+title: / doc | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- doc compiler option [Visual Basic]
+- -doc compiler option [Visual Basic]
+- /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# /doc
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1054eb256eb7670ee0454b02fc094e0306c1218d
+ms.lasthandoff: 03/13/2017
 
-Verarbeitet Dokumentationskommentare zu einer XML\-Datei.  
+---
+# <a name="doc"></a>/doc
+Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /doc[+ | -]  
@@ -32,37 +48,35 @@ Verarbeitet Dokumentationskommentare zu einer XML\-Datei.
 /doc:file  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`+`  &#124; `-`|Optional.  Wenn Sie \+ oder nur `/doc` angeben, generiert der Compiler Dokumentationsinformationen und platziert diese in einer XML\-Datei.  Die Angabe von `-`  ist gleichbedeutend mit dem Weglassen von `/doc` und bewirkt, dass keine Dokumentationsinformationen erstellt werden.|  
-|`file`|Erforderlich, wenn `/doc:` angegeben wird.  Legt die XML\-Ausgabedatei fest, in die die Kommentare aus den kompilierten Quellcodedateien gefüllt werden.  Wenn der Dateiname ein Leerzeichen enthält, schließen Sie den Namen in Anführungszeichen \(""\) ein.|  
+|---|---|  
+|`+` &#124; `-`|Optional. Angeben von +, oder nur `/doc`, generiert der Compiler Dokumentationsinformationen und platziert diese in einer XML-Datei. Angeben von `-` entspricht dem Angeben von nicht `/doc`, verursacht keine Dokumentationsinformationen erstellt werden.|  
+|`file`|Erforderlich, wenn `/doc:` verwendet wird. Gibt die XML-Ausgabedatei, die mit den Kommentaren in den Quellcodedateien der Kompilierung aufgefüllt wird. Wenn der Dateiname ein Leerzeichen enthält, setzen Sie den Namen in Anführungszeichen ("").|  
   
-## Hinweise  
- Die `/doc` Option steuert, ob der Compiler eine XML\-Datei generiert, die die Dokumentationskommentare enthält.  Wenn Sie die Syntax `/doc:``file` verwenden, gibt der `file`\-Parameter den Namen der XML\-Datei an.  Wenn `/doc` oder `/doc+` verwendet wird, entnimmt der Compiler den Namen der XML\-Datei der ausführbaren Datei oder Bibliothek, die vom Compiler erstellt wird.  Wenn Sie `/doc-` verwenden oder die `/doc`\-Option nicht angeben, erstellt der Compiler keine XML\-Datei.  
+## <a name="remarks"></a>Hinweise  
+ Die `/doc` option steuert, ob der Compiler eine XML-Datei generiert, die die Dokumentationskommentare enthält. Bei Verwendung der `/doc:``file` Syntax der `file` Parameter gibt den Namen der XML-Datei. Bei Verwendung von `/doc` oder `/doc+`, entnimmt der Compiler den Namen der XML-Datei der ausführbaren Datei oder Bibliothek, die die vom Compiler erstellt wird. Bei Verwendung von `/doc-` , oder geben Sie die `/doc` auswählen, erstellt der Compiler keine XML-Datei.  
   
  In Quellcodedateien können Dokumentationskommentare den folgenden Definitionen vorausgehen:  
   
--   Benutzerdefinierte Typen, z. B. eine [Klasse](../../../visual-basic/language-reference/statements/class-statement.md) oder [Schnittstelle](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   Benutzerdefinierte Typen, z. B. ein [Klasse](../../../visual-basic/language-reference/statements/class-statement.md) oder [Schnittstelle](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   Member, z. B. ein Feld, ein [Ereignis](../../../visual-basic/language-reference/statements/event-statement.md), oder eine [Eigenschaft](../../../visual-basic/language-reference/statements/property-statement.md), [Funktion](../../../visual-basic/language-reference/statements/function-statement.md) oder [Unterroutine](../../../visual-basic/language-reference/statements/sub-statement.md).  
+-   Member, z. B. ein Feld [Ereignis](../../../visual-basic/language-reference/statements/event-statement.md), [Eigenschaft](../../../visual-basic/language-reference/statements/property-statement.md), [Funktion](../../../visual-basic/language-reference/statements/function-statement.md), oder [Unterroutine](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Um die generierte XML\-Datei mit dem [IntelliSense](/visual-studio/ide/using-intellisense)\-Feature von [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] zu verwenden, benennen Sie die XML\-Datei nach der Assembly, die unterstützt werden soll.  Stellen Sie sicher, dass sich XML\-Datei und Assembly im selben Verzeichnis befinden, damit auch die XML\-Datei gefunden wird, wenn im [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Projekt auf die Assembly verwiesen wird.  Für den erfolgreichen Einsatz des IntelliSense\-Features in Code, der in einem Projekt oder in Projekten, auf die ein Projekt verweist, enthalten ist, sind XML\-Dokumentationsdateien nicht erforderlich.  
+ Verwenden Sie die generierte XML-Datei mit den [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense) verfügen, können Sie den Dateinamen der XML-Datei der Assembly identisch sein, Sie unterstützen möchten. Stellen Sie sicher, dass die XML-Datei im gleichen Verzeichnis wie die Assembly, damit bei der Assembly verwiesen wird die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] -Projekt die XML-Datei befindet sich ebenfalls. XML-Dokumentationsdateien sind nicht erforderlich, damit IntelliSense funktioniert für Code in einem Projekt oder in Projekten, die von einem Projekt verwiesen wird.  
   
- Sofern nicht mit `/target:module` kompiliert wird, enthält die XML\-Datei die Tags `<assembly></assembly>`.  Diese Tags geben den Namen der Datei an, die das Assemblymanifest für die Ausgabedatei der Kompilierung enthält.  
+ Wenn Sie die Kompilierung mit `/target:module`, die XML-Datei enthält die Tags `<assembly></assembly>`. Diese Tags Geben Sie den Namen der Datei, die das Assemblymanifest für die Ausgabedatei der Kompilierung enthält.  
   
- Möglichkeiten, eine Dokumentation aus Kommentaren im Code zu generieren, finden Sie unter [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).  
+ Finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md) für Methoden zum Generieren von Dokumentation aus Kommentaren im Code.  
   
-||  
-|-|  
-|So legen Sie \/doc in der integrierten Entwicklungsumgebung von Visual Studio fest|  
-|1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  Weitere Informationen finden Sie unter [Introduction to the Project Designer](http://msdn.microsoft.com/de-de/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Legen Sie den Wert im Feld **XML\-Dokumentationsdatei generieren** fest.|  
+|Zum Festlegen von/doc in Visual Studio integrierte Entwicklungsumgebung|  
+|---|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die **Kompilieren** Registerkarte.<br />3.  Legen Sie den Wert der **XML-Dokumentationsdatei generieren** Feld.|  
   
-## Beispiel  
- Ein Beispiel finden Sie unter [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) ein Beispiel.  
   
-## Siehe auch  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

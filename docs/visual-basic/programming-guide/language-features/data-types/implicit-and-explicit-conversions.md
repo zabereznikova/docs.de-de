@@ -1,43 +1,59 @@
 ---
-title: "Implicit and Explicit Conversions (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conversions, type"
-  - "variables [Visual Basic], changing data type"
-  - "casting"
-  - "conversions, data type"
-  - "type conversion, implicit conversions"
-  - "CType function, conversions"
-  - "casting, data types"
-  - "data type conversion, explicit"
-  - "type conversion, explicit conversions"
-  - "data types [Visual Basic], casting"
-  - "conversions, implicit"
-  - "explicit data type conversions"
-  - "conversions"
-  - "changing data types"
-  - "conversions, explicit"
-  - "data type conversion, implicit"
-  - "implicit data type conversions"
+title: Implizite und explizite Konvertierungen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- conversions, type
+- variables [Visual Basic], changing data type
+- casting
+- conversions, data type
+- type conversion, implicit conversions
+- CType function, conversions
+- casting, data types
+- data type conversion, explicit
+- type conversion, explicit conversions
+- data types [Visual Basic], casting
+- conversions, implicit
+- explicit data type conversions
+- conversions
+- changing data types
+- conversions, explicit
+- data type conversion, implicit
+- implicit data type conversions
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
 caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
----
-# Implicit and Explicit Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 24c434df4be480c290b3e4e36bd9f294d12b99ef
+ms.lasthandoff: 03/13/2017
 
-Für *implizite Konvertierungen* ist keine spezielle Syntax im Quellcode erforderlich.  Im folgenden Beispiel konvertiert [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] den Wert von `k` implizit in einen Gleitkommawert einfacher Genauigkeit und weist den Wert anschließend `q` zu.  
+---
+# <a name="implicit-and-explicit-conversions-visual-basic"></a>Implizite und explizite Konvertierungen (Visual Basic)
+Ein *implizite Konvertierung* ist eine besondere Syntax in den Quellcode nicht erforderlich. Im folgenden Beispiel [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] implizit konvertiert den Wert der `k` in einen Gleitkommawert mit einfacher Genauigkeit-Wert vor der Zuweisung zu `q`.  
   
 ```  
 Dim k As Integer  
@@ -47,9 +63,9 @@ k = 432
 q = k  
 ```  
   
- Bei *expliziten Konvertierungen* wird ein Schlüsselwort zur Typkonvertierung verwendet.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt mehrere solcher Schlüsselwörter bereit, mit denen ein in runden Klammern stehender Ausdruck in den gewünschten Datentyp konvertiert wird.  Diese Schlüsselwörter verhalten sich wie Funktionen, aber der Compiler generiert den Code inline, sodass die Ausführung etwas schneller als bei einem Funktionsaufruf erfolgt.  
+ Ein *explizite Konvertierung* verwendet das Schlüsselwort Typ konvertieren. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]bietet mehrere solcher Schlüsselwörter, die einen Ausdruck in Klammern, um den gewünschten Datentyp umgewandelt werden. Diese Schlüsselwörter Verhalten sich wie Funktionen, aber der Compiler generiert den Code Inline, damit die Ausführung etwas schneller als bei einem Aufruf der Funktion ist.  
   
- In der folgenden Erweiterung des oben stehenden Beispiels konvertiert das `CInt`\-Schlüsselwort den Wert von `q` vor der Zuweisung zu `k` wieder in eine ganze Zahl.  
+ In der folgenden Erweiterung des vorherigen Beispiels die `CInt` Schlüsselwort konvertiert den Wert der `q` wieder in eine ganze Zahl vor der Zuweisung zu `k`.  
   
 ```  
 ' q had been assigned the value 432 from k.  
@@ -58,38 +74,37 @@ k = CInt(q)
 ' k now has the value 21 (rounded square root of 432).  
 ```  
   
-## Konvertierungsschlüsselwörter  
- In der folgenden Tabelle sind die verfügbaren Konvertierungsschlüsselwörter zusammengefasst.  
+## <a name="conversion-keywords"></a>Konvertierungsschlüsselwörter  
+ Die folgende Tabelle zeigt die verfügbaren Konvertierungsschlüsselwörter zusammengefasst.  
   
-||||  
-|-|-|-|  
-|Typkonvertierungsschlüsselwort|Konvertierung eines Ausdrucks in Datentyp|Zulässige Datentypen für zu konvertierenden Ausdruck|  
-|`CBool`|[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `String`, `Object`|  
-|`CByte`|[Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CChar`|[Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
-|`CDate`|[Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CDec`|[Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CInt`|[Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CLng`|[Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CObj`|[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Beliebiger Typ|  
-|`CSByte`|[SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CShort`|[Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CSng`|[Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CStr`|[String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `Char`, `Char`\-Array, `Date`, `Object`|  
-|`CType`|Nach dem Komma \(`,`\) angegebener Typ|Bei der Konvertierung in einen *elementaren Datentyp* \(einschließlich eines Arrays eines elementaren Typs\) dieselben Typen, die für das entsprechende Konvertierungsschlüsselwort zulässig sind<br /><br /> Bei der Konvertierung in einen *zusammengesetzten Datentyp* die implementierten Schnittstellen und die Klassen, von denen geerbt wird<br /><br /> Bei der Konvertierung in eine Klasse oder Struktur, auf die Sie `CType` überladen haben, die betreffende Klasse oder Struktur|  
-|`CUInt`|[UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CULng`|[ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
-|`CUShort`|[UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Ein beliebiger numerischer Typ \(einschließlich `Byte`, `SByte` und Enumerationstypen\), `Boolean`, `String`, `Object`|  
+|Die Konvertierungsschlüsselwort eingeben|Konvertiert einen Ausdruck in den Datentyp|Zulässige Datentypen für die zu konvertierende Ausdruck|  
+|---|---|---|  
+|`CBool`|[Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `String`,`Object`|  
+|`CByte`|[Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Alle numerischen Typen (einschließlich `SByte` und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CChar`|[Char-Datentyp](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
+|`CDate`|[Date-Datentyp](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
+|`CDbl`|[Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CDec`|[Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CInt`|[Integer-Datentyp](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CLng`|[Long-Datentyp](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CObj`|[Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Beliebiger Typ|  
+|`CSByte`|[SByte-Datentyp](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Alle numerischen Typen (einschließlich `Byte` und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CShort`|[Short-Datentyp](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CSng`|[Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CStr`|[String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `Char`, `Char` Array `Date`,`Object`|  
+|`CType`|Nach dem Komma angegeben Typ (`,`)|Beim Konvertieren in ein *elementaren Datentyp* (einschließlich eines Arrays eines elementaren Typs), die gleichen Typen für das entsprechende Konvertierungsschlüsselwort zulässig sind<br /><br /> Beim Konvertieren in ein *zusammengesetzten Datentyp*, die implementierten Schnittstellen und die Klassen, von denen geerbt wird,<br /><br /> Bei der Konvertierung in eine Klasse oder Struktur, auf denen überlastete `CType`, Klasse oder Struktur|  
+|`CUInt`|[UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CULng`|[ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CUShort`|[UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
   
-## Die CType\-Funktion  
- Die [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) wird auf zwei Argumente angewendet.  Das erste Argument ist der zu konvertierende Ausdruck, das zweite der Zieldatentyp oder die Objektklasse.  Das erste Argument muss ein Ausdruck sein, kein Typ.  
+## <a name="the-ctype-function"></a>CType-Funktion  
+ Die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) wirkt auf zwei Argumente. Die erste ist der Ausdruck konvertiert werden, und das zweite ist das Ziel Daten oder die Objektklasse. Beachten Sie, dass das erste Argument einen Ausdruck kein Typ sein muss.  
   
- `CType` ist eine *Inlinefunktion*. Das heißt, dass der kompilierte Code die Konvertierung ausführt, in vielen Fällen auch ohne Funktionsaufruf.  Dies führt zu einer Leistungssteigerung.  
+ `CType`ist ein *Inlinefunktion*, d. h. den kompilierten Code wird die Konvertierung, häufig ohne generiert eine Funktion aufrufen. Dies verbessert die Leistung.  
   
- Einen Vergleich von `CType` mit den anderen Typkonvertierungsschlüsselwörtern finden Sie unter [DirectCast Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) und [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Einen Vergleich der `CType` mit anderen Typkonvertierungsschlüsselwörter, finden Sie unter [DirectCast-Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) und [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
-### Elementare Typen  
+### <a name="elementary-types"></a>Elementare Datentypen  
  Das folgende Beispiel veranschaulicht die Verwendung von `CType`.  
   
 ```  
@@ -98,8 +113,8 @@ k = CType(q, Integer)
 f = CType(w, Label)  
 ```  
   
-### Zusammengesetzte Typen  
- Mithilfe von `CType` können Sie Werte sowohl in zusammengesetzte Datentypen als auch in elementare Typen konvertieren.  Darüber hinaus können Sie damit eine Objektklasse in den Typ einer der dazugehörigen Schnittstellen konvertieren, wie im folgenden Beispiel dargestellt.  
+### <a name="composite-types"></a>Zusammengesetzte Typen  
+ Sie können `CType` , Werte in zusammengesetzte Datentypen als auch in elementare Typen konvertieren. Sie können es auch verwenden, umzuwandelnde eine Objektklasse in den Typ einer der Schnittstellen, wie im folgenden Beispiel.  
   
 ```  
 ' Assume class cZone implements interface iZone.  
@@ -110,8 +125,8 @@ Dim cZ As cZone
 h = CType(cZ, iZone)  
 ```  
   
-### Arraytypen  
- Außerdem können mit `CType` Arraytypen konvertiert werden, wie im folgenden Beispiel dargestellt.  
+### <a name="array-types"></a>Arraytypen  
+ `CType`Array-Datentypen, wie im folgenden Beispiel können auch konvertieren.  
   
 ```  
 Dim v() As classV  
@@ -124,26 +139,26 @@ If TypeOf obArray Is classV()
 End If  
 ```  
   
- Weitere Informationen und ein Beispiel finden Sie unter [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
+ Weitere Informationen und ein Beispiel finden Sie unter [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
   
-### Typen, die CType definieren  
- Sie können `CType` auf einer Klasse oder einer Struktur definieren, die Sie definiert haben.  Damit können Sie Werte in den Typ der Klasse oder Struktur konvertieren bzw. aus diesem Typ konvertieren.  Weitere Informationen und ein Beispiel finden Sie unter [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+### <a name="types-defining-ctype"></a>Typen, die CType definieren  
+ Sie können definieren, `CType` für eine Klasse oder Struktur, die Sie definiert haben. Dadurch können Sie zum Konvertieren von Werten in und aus dem Typ der Klasse oder Struktur. Weitere Informationen und ein Beispiel finden Sie unter [Gewusst wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
->  Die mit einem Konvertierungsschlüsselwort verwendeten Werte müssen für den Zieldatentyp gültig sein. Andernfalls tritt ein Fehler auf.  Wenn Sie beispielsweise versuchen, `Long` in `Integer` zu konvertieren, muss der Wert von `Long` innerhalb des gültigen Bereichs für den `Integer`\-Datentyp liegen.  
+>  Mit einem Konvertierungsschlüsselwort verwendeten Werte müssen für den Zieldatentyp gültig sein, oder ein Fehler auftritt. Beispielsweise, wenn Sie versuchen, konvertieren eine `Long` , ein `Integer`, den Wert des der `Long` muss innerhalb des gültigen Bereichs für die `Integer` -Datentyp.  
   
 > [!CAUTION]
->  Wenn der Ausgangstyp nicht aus dem Zieltyp abgeleitet wird, tritt bei der Verwendung von `CType` zur Konvertierung von einem Klassentyp in einen anderen ein Fehler auf.  Durch einen solchen Fehler wird eine <xref:System.InvalidCastException>\-Ausnahme ausgelöst.  
+>  Angeben von `CType` von einem Klassentyp anderen schlägt zur Laufzeit fehl konvertieren, wenn der Typ nicht aus dem Zieltyp abgeleitet ist. Dieser Fehler wird ein <xref:System.InvalidCastException>Ausnahme.</xref:System.InvalidCastException>  
   
- Wenn es sich bei einem dieser Typen jedoch um eine von Ihnen definierte Struktur oder Klasse handelt und Sie `CType` in der betreffenden Struktur oder Klasse definiert haben, kann eine Konvertierung durchgeführt werden, wenn sie den Anforderungen von `CType` entspricht.  Weitere Informationen finden Sie unter [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Allerdings einen der Typen ist eine Struktur oder Klasse, die Sie definiert haben, und Sie definiert haben `CType` auf, die Struktur oder Klasse, eine Konvertierung möglich, wenn er die Anforderungen erfüllt Ihre `CType`. Finden Sie unter [Gewusst wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
- Explizite Konvertierungen werden auch als *Umwandlung* eines Ausdrucks in einen gegebenen Datentyp oder eine Objektklasse bezeichnet.  
+ Eine explizite Konvertierung ist auch bekannt als *Umwandlung* eines Ausdrucks in einen angegebenen Daten oder die Objektklasse.  
   
-## Siehe auch  
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
+ [Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
+ [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+ [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+ [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

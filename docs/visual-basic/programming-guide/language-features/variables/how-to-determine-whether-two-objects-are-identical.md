@@ -1,70 +1,86 @@
 ---
-title: "How to: Determine Whether Two Objects Are Identical (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "testing, objects"
-  - "objects [Visual Basic], comparing"
-  - "object variables, determining identity"
+title: 'Gewusst wie: bestimmen, ob zwei Objekte identisch (Visual Basic) sind | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- testing, objects
+- objects [Visual Basic], comparing
+- object variables, determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# How to: Determine Whether Two Objects Are Identical (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3a853d9f958829eeb0fb42ecbcdae7ba912c89ed
+ms.lasthandoff: 03/13/2017
 
-In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gelten zwei Variablenverweise als identisch, wenn deren Zeiger gleich sind, d. h., wenn beide Variablen im Arbeitsspeicher auf die gleiche Klasseninstanz zeigen.  So können Sie in einer Windows Forms\-Anwendung einen Vergleich ausführen, um zu bestimmen, ob die aktuelle Instanz \(`Me`\) mit einer bestimmten Instanz identisch ist, beispielsweise `Form2`.  
+---
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Gewusst wie: Bestimmen der Gleichheit zweier Objekte (Visual Basic)
+In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], Verweise auf zwei Variablen gelten als identisch, wenn deren Zeiger übereinstimmen, d. h., wenn beide Variablen auf die gleiche Klasseninstanz im Arbeitsspeicher verweisen. Z. B. in einer Windows Forms-Anwendung möglicherweise soll einen Vergleich aus, um zu bestimmen, ob die aktuelle Instanz (`Me`) ist identisch mit einer bestimmten Instanz, wie z. B. `Form2`.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt zwei Operatoren zum Vergleich von Zeigern bereit.  Der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) gibt `True` zurück, wenn die Objekte identisch sind. Der [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) gibt `True` zurück, wenn sie nicht identisch sind.  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]bietet zwei Operatoren zum Vergleich von Zeigern. Die [Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md) gibt `True` , wenn die Objekte identisch sind und die [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) gibt `True` sind.  
   
-## Bestimmen der Gleicheit zweier Objekte  
+## <a name="determining-if-two-objects-are-identical"></a>Bestimmen, ob zwei Objekte identisch sind  
   
-#### So stellen Sie fest, ob zwei Objekte identisch sind  
+#### <a name="to-determine-if-two-objects-are-identical"></a>Bestimmt, ob zwei Objekte identisch sind  
   
-1.  Richten Sie einen `Boolean`\-Ausdruck ein, um die beiden Objekte zu testen.  
+1.  Einrichten einer `Boolean` Ausdruck, der die beiden Objekte zu testen.  
   
-2.  Verwenden Sie im Testausdruck den Operator `Is` mit den beiden Objekten als Operanden.  
+2.  Verwenden Sie im Testausdruck den `Is` Operator mit den beiden Objekten als Operanden.  
   
-     `Is` gibt `True` zurück, wenn die Objekte auf die gleiche Klasseninstanz zeigen.  
+     `Is`Gibt `True` , wenn die Objekte auf die gleiche Klasseninstanz zeigen.  
   
-## Bestimmen der Ungleichheit zweier Objekte  
- Es kann vorkommen, dass Sie eine Aktion ausführen möchten, wenn die beiden Objekte nicht identisch sind. Dabei ist es eventuell umständlich, `Not` und `Is` zu kombinieren, wie z. B. bei `If Not obj1 Is obj2`.  In einem solchen Fall können Sie den Operator `IsNot` verwenden.  
+## <a name="determining-if-two-objects-are-not-identical"></a>Bestimmen, ob zwei Objekte identisch sind  
+ Manchmal möchten Sie eine Aktion durchführen, wenn die beiden Objekte nicht identisch sind, und es kann schwierig zu kombinieren `Not` und `Is`, z. B. `If Not obj1 Is obj2`. In diesem Fall können Sie die `IsNot` Operator.  
   
-#### So stellen Sie fest, ob zwei Objekte nicht identisch sind  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>Bestimmt, ob zwei Objekte identisch sind  
   
-1.  Richten Sie einen `Boolean`\-Ausdruck ein, um die beiden Objekte zu testen.  
+1.  Einrichten einer `Boolean` Ausdruck, der die beiden Objekte zu testen.  
   
-2.  Verwenden Sie im Testausdruck den Operator `IsNot` mit den beiden Objekten als Operanden.  
+2.  Verwenden Sie im Testausdruck den `IsNot` Operator mit den beiden Objekten als Operanden.  
   
-     `IsNot` gibt `True` zurück, wenn die Objekte nicht auf die gleiche Klasseninstanz zeigen.  
+     `IsNot`Gibt `True` , wenn die Objekte nicht auf die gleiche Klasseninstanz zeigen.  
   
-## Beispiel  
- Im folgenden Beispiel werden Paare von `Object`\-Variablen daraufhin getestet, ob sie auf die gleiche Klasseninstanz zeigen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel testet Paare von `Object` Variablen, um festzustellen, ob sie auf die gleiche Klasseninstanz zeigen.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
+ [!code-vb[VbVbalrKeywords&14;](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
   
- Durch den Code im vorhergehenden Beispiel wird folgende Ausgabe angezeigt.  
+ Im vorhergehenden Beispiel wird die folgende Ausgabe.  
   
- `objA different from objB?  True`  
+ `objA different from objB? True`  
   
- `objA identical to objC?  True`  
+ `objA identical to objC? True`  
   
-## Siehe auch  
- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)   
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Object Variable Values](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [How to: Determine Whether Two Objects Are Related](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
- [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Siehe auch  
+ [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)   
+ [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
+ [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
+ [Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md)   
+ [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)   
+ [Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
+ [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

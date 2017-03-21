@@ -1,96 +1,112 @@
 ---
-title: "Overloaded Properties and Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "properties [Visual Basic], overloading"
-  - "methods [Visual Basic], overloading"
-  - "shadowing"
-  - "names, multiple procedures with same"
-  - "procedures, mulltiples with same name"
-  - "classes [Visual Basic], properties"
-  - "classes [Visual Basic], methods"
-  - "method overloading"
-  - "Overloads keyword, overloaded members"
+title: "Überladene Eigenschaften und Methoden (Visual Basic) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- properties [Visual Basic], overloading
+- methods [Visual Basic], overloading
+- shadowing
+- names, multiple procedures with same
+- procedures, mulltiples with same name
+- classes [Visual Basic], properties
+- classes [Visual Basic], methods
+- method overloading
+- Overloads keyword, overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Overloaded Properties and Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6f379f04ca9b75161baf2bf2c33e87f05a9edf97
+ms.lasthandoff: 03/13/2017
 
-Überladen ist das Erstellen von mehreren Prozeduren, Eigenschaften oder Instanzkonstruktoren in einer Klasse, die zwar denselben Namen verwenden aber über andere Argumenttypen verfügen.  
+---
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Überladene Eigenschaften und Methoden (Visual Basic)
+Überladen ist das Erstellen von mehreren Prozeduren, Instanzkonstruktor oder Eigenschaft in einer Klasse mit dem gleichen Namen, aber unterschiedliche Argumenttypen.  
   
-## Verwenden der Überladung  
- Eine Überladung ist besonders dann hilfreich, wenn es das Objektmodell erforderlich macht, identische Namen für Prozeduren zu vergeben, die auf verschiedene Datentypen angewendet werden.  So kann beispielsweise eine Klasse, die mehrere unterschiedliche Datentypen anzeigen kann, über `Display`\-Prozeduren verfügen, die folgendermaßen aussehen:  
+## <a name="overloading-usage"></a>Verwenden der Überladung  
+ Überladen ist besonders nützlich, wenn das Objektmodell erforderlich macht, dass Sie identische Namen für Prozeduren verwenden, die auf unterschiedliche Datentypen angewendet werden. Angenommen, eine Klasse, die mehrere unterschiedliche Datentypen anzeigen kann verfügen über `Display` Prozeduren, die wie folgt aussehen:  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
+ [!code-vb[VbVbalrOOP&#64;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
- Ohne die Überladung müssten Sie unterschiedliche Namen für jede Prozedur erstellen, auch wenn alle dieselben Funktionen haben, wie das folgende Beispiel zeigt:  
+ Ohne überladen müssten Sie unterschiedliche Namen für jede Prozedur erstellen, obwohl sie das gleiche tun, wie nachfolgend dargestellt:  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
+ [!code-vb[VbVbalrOOP&#65;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
- Durch die Überladung wird eine Reihe von optional verwendbaren Datentypen zur Verfügung gestellt, wodurch die Verwendung von Eigenschaften oder Methoden vereinfacht wird.  So kann beispielsweise die oben beschriebene überladene `Display`\-Methode durch eine der folgenden Codezeilen aufgerufen werden:  
+ Überladen erleichtert es, Eigenschaften oder Methoden verwenden, da sie eine Auswahl von Datentypen enthält, die verwendet werden kann. Angenommen, die überladene `Display` beschriebene Methode zuvor kann aufgerufen werden mit den folgenden Codezeilen:  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
+ [!code-vb[VbVbalrOOP&#66;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
- Zur Laufzeit ruft [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die richtige Prozedur auf Grundlage der Datentypen der von Ihnen angegebenen Parameter auf.  
+ Zur Laufzeit [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Aufrufe, die die richtige Prozedur auf der Grundlage der Datentypen der Parameter Sie angeben.  
   
-## Überladen von Regeln  
- Sie können einen überladenen Klassenmember erstellen, indem Sie zwei oder mehr Eigenschaften bzw. Methoden mit dem gleichen Namen hinzufügen.  Mit Ausnahme von überladenen abgeleiteten Membern muss jeder überladene Member über zwei verschiedene Parameterlisten verfügen, wobei die folgenden Elemente beim Überladen einer Eigenschaft oder Prozedur nicht als unterscheidendes Merkmal verwendet werden können:  
+## <a name="overloading-rules"></a>Überladen von Regeln  
+ Erstellen Sie einen überladene Member für eine Klasse durch Hinzufügen von zwei oder mehr Eigenschaften oder Methoden mit demselben Namen. Mit Ausnahme von überladenen abgeleiteten Membern jeder überladene Member muss unterschiedliche Parameterlisten aufweisen, und die folgenden Elemente nicht als unterscheidendes Merkmal verwendet werden, wenn eine Eigenschaft oder Prozedur überladen:  
   
--   Modifizierer \(z. B. `ByVal` oder `ByRef`\), die für einen Member gelten, oder Parameter des Members.  
+-   Modifizierer, wie z. B. `ByVal` oder `ByRef`, gilt für einen Member oder Parameter des Members.  
   
--   Parameternamen  
+-   Namen von Parametern  
   
 -   Rückgabetypen von Prozeduren  
   
- Das `Overloads`\-Schlüsselwort ist beim Überladen optional. Wenn jedoch ein beliebiger überladener Member das `Overloads`\-Schlüsselwort verwendet, müssen alle anderen überladenen Member mit demselben Namen ebenfalls dieses Schlüsselwort angeben.  
+ Die `Overloads` -Schlüsselwort ist beim Überladen optional, aber wenn eine überladene Member verwendet die `Overloads` -Schlüsselwort, und klicken Sie dann auf alle anderen überladene Member mit demselben Namen müssen auch dieses Schlüsselwort angeben.  
   
- Abgeleitete Klassen können geerbte Member mit Membern überladen, die über identische Parameter und Parametertypen verfügen. Dieser Prozess wird als *Shadowing nach Namen und Signatur* bezeichnet.  Wenn das `Overloads`\-Schlüsselwort beim Shadowing nach Namen und Signatur verwendet wird, wird anstelle der Basisklassenimplementierung des Members die Implementierung der abgeleiteten Klasse verwendet, und alle anderen Überladungen für diesen Member werden den Instanzen der abgeleiteten Klasse zur Verfügung gestellt.  
+ Abgeleitete Klassen können geerbte Member mit Membern, die über identische Parameter und Parametertypen verfügen genannten überladen *mit Name und Signatur shadowing*. Wenn die `Overloads` -Schlüsselwort wird verwendet, wenn shadowing nach Name und die Signatur, die abgeleitete Klasse die Implementierung des Members anstelle der Implementierung in der Basisklasse verwendet werden, und alle anderen Überladungen für diesen Member für Instanzen der abgeleiteten Klasse verfügbar.  
   
- Wenn bei der Überladung eines geerbten Members mit einem Member, dessen Parameter und Parametertypen identisch sind, das `Overloads`\-Schlüsselwort ausgelassen wird, so wird dies als *Shadowing nach Namen* bezeichnet.  Das Shadowing nach Namen ersetzt die geerbte Implementierung eines Members und bewirkt, dass alle anderen Überladungen für die Instanzen der abgeleiteten Klasse sowie für ihre Nachkommen nicht mehr verfügbar sind.  
+ Wenn die `Overloads` -Schlüsselwort ausgelassen wird, wenn ein geerbtes Members mit einem Member zu überladen, die über identische Parameter und Parametertypen verfügt, dann heißt das Überladen *shadowing nach Namen*. Ein Shadowing nach dem Namen die geerbte Implementierung eines Elements ersetzt, und die alle anderen Überladungen auf Instanzen von der abgeleiteten Klasse und der Decedents nicht verfügbar.  
   
- Die `Overloads`\- und `Shadows`\-Modifizierer können nicht zusammen mit derselben Eigenschaft oder Methode verwendet werden.  
+ Die `Overloads` und `Shadows` -Modifizierer können nicht zusammen mit derselben Eigenschaft oder Methode verwendet werden.  
   
-### Beispiel  
- Im folgenden Beispiel werden überladene Methoden erstellt, die eine Darstellung eines bestimmten Dollarbetrags entweder als `String` oder als `Decimal` akzeptieren und eine Zeichenfolge mit der entsprechenden Umsatzsteuer zurückgeben.  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt die überladene Methoden, die entweder akzeptieren ein `String` oder `Decimal` Darstellung eines Währungsbetrag und eine Zeichenfolge mit der entsprechenden Umsatzsteuer zurück.  
   
-##### So verwenden Sie dieses Beispiel, um eine überladene Methode zu erstellen  
+##### <a name="to-use-this-example-to-create-an-overloaded-method"></a>In diesem Beispiel verwenden, um eine überladene Methode erstellen  
   
-1.  Öffnen Sie ein neues Projekt, und fügen Sie eine Klasse mit dem Namen `TaxClass` hinzu.  
+1.  Öffnen Sie ein neues Projekt und fügen Sie eine Klasse mit dem Namen `TaxClass`.  
   
-2.  Fügen Sie der `TaxClass`\-Klasse den folgenden Code hinzu:  
+2.  Fügen Sie der `TaxClass`-Klasse folgenden Code hinzu.  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
+     [!code-vb[VbVbalrOOP&#67;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
-3.  Fügen Sie dem Formular die folgende Prozedur hinzu:  
+3.  Fügen Sie die folgende Prozedur in das Formular.  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
+     [!code-vb[VbVbalrOOP&#68;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
-4.  Fügen Sie dem Formular eine Schaltfläche hinzu, und rufen Sie die `ShowTax`\-Prozedur über das `Button1_Click`\-Ereignis der Schaltfläche auf.  
+4.  Hinzufügen einer Schaltfläche zu Ihrem Formular ein und rufen die `ShowTax` Prozedur aus dem `Button1_Click` -Ereignis der Schaltfläche.  
   
-5.  Führen Sie das Projekt aus, und klicken Sie auf die Schaltfläche im Formular, um die überladene `ShowTax`\-Prozedur zu testen.  
+5.  Führen Sie das Projekt, und klicken Sie auf die Schaltfläche auf dem Formular so testen Sie die überladenen `ShowTax` Verfahren.  
   
- Der Compiler wählt zur Laufzeit die entsprechende Überladungsfunktion, die mit den verwendeten Parametern übereinstimmt.  Wenn Sie auf die Schaltfläche klicken, wird die überladene Methode zuerst mit einem `Price`\-Parameter \(Zeichenfolge\) aufgerufen, und die Meldung "Price is a String.  Tax is $5.12" wird angezeigt.  Beim zweiten Mal wird `TaxAmount` mit einem `Decimal`\-Wert aufgerufen, und die Meldung "Price is a Decimal.  Tax is $5.12" wird angezeigt.  
+ Zur Laufzeit wählt der Compiler den geeignete überladene Funktion, die die Parametern entspricht. Wenn Sie auf die Schaltfläche klicken, die überladene Methode zuerst aufgerufen mit einem `Price` -Parameter, der eine Zeichenfolge ist und die Meldung "Preis ist eine Zeichenfolge. Steuer ist $5,12" wird angezeigt. `TaxAmount`wird aufgerufen, mit einem `Decimal` Wert erneut und der Meldung, "Preis ist eine Dezimalzahl. Steuer ist $5,12" wird angezeigt.  
   
-## Siehe auch  
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
  [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
+ [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
+ [Schatten](../../../../visual-basic/language-reference/modifiers/shadows.md)   
  [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)   
  [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)   
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)   
+ [Überladungen](../../../../visual-basic/language-reference/modifiers/overloads.md)   
  [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

@@ -1,136 +1,147 @@
 ---
-title: "Troubleshooting Data Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Char data type, converting"
-  - "Decimal data type, conversions"
-  - "data types [Visual Basic], troubleshooting"
-  - "literals, default types"
-  - "type characters, literal"
-  - "Mod operator [Visual Basic], in floating-point operations"
-  - "troubleshooting Visual Basic, data types"
-  - "troubleshooting data types"
-  - "floating-point numbers, precision"
-  - "Boolean data type, converting"
-  - "literal types"
-  - "literal type characters"
-  - "floating-point numbers, imprecision"
-  - "String data type, converting"
-  - "floating-point numbers, comparison"
-  - "floating-point numbers"
+title: Problembehandlung bei Datentypen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Char data type, converting
+- Decimal data type, conversions
+- data types [Visual Basic], troubleshooting
+- literals, default types
+- type characters, literal
+- Mod operator [Visual Basic], in floating-point operations
+- troubleshooting Visual Basic, data types
+- troubleshooting data types
+- floating-point numbers, precision
+- Boolean data type, converting
+- literal types
+- literal type characters
+- floating-point numbers, imprecision
+- String data type, converting
+- floating-point numbers, comparison
+- floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
 caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
----
-# Troubleshooting Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: cfb8fc77d3e0d85ef795a94fc95ab61a8f68ff39
+ms.lasthandoff: 03/13/2017
 
-Auf dieser Seite sind einige Probleme aufgeführt, die häufig auftreten, wenn Operationen mit systeminternen Datentypen ausgeführt werden.  
+---
+# <a name="troubleshooting-data-types-visual-basic"></a>Problembehandlung bei Datentypen (Visual Basic)
+Diese Seite listet einige der häufigsten Probleme, die auftreten können, wenn Operationen mit systeminternen Datentypen ausgeführt.  
   
-## Gleitkommaausdrücke werden nicht als gleich ausgewertet  
- Wenn Sie mit Gleitkommazahlen \([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) und [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)\) arbeiten, beachten Sie, dass sie als Binärbrüche gespeichert werden.  Das bedeutet, dass sie keine präzise Darstellung einer Größe speichern können, die kein Binärbruch ist \(ein Binärbruch ist eine Größe von der Form k \/ \(2 ^ n\)\), wobei k und n ganze Zahlen sind\).  Beispielsweise können 0,5 \(\= 1\/2\) and 0,3125 \(\= 5\/16\) als präzise Werte gespeichert werden, während 0,2 \(\= 1\/5\) und 0,3 \(\= 3\/10\) nur annähernd genau gespeichert werden können.  
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Gleitkomma-Ausdrücke vergleichen nicht gleichwertig  
+ Beim Arbeiten mit Gleitkommazahlen ([Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md) und [Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md)), beachten Sie, dass sie als binäre Brüche gespeichert werden. Dies bedeutet, sie können keine genaue Darstellung der eine Menge, die nicht Binärbruch enthalten (im Format k / (2 ^ n), k und n sind ganze Zahlen). Beispielsweise können 0,5 (= 1/2) and 0,3125 (= 5/16) als präzise Werte gespeichert werden, während 0,2 (= 1/5) und 0,3 (= 3/10) nur Näherungswerte sein können.  
   
- Aufgrund dieser Ungenauigkeit können Sie keine genauen Ergebnissen erwarten, wenn Sie mit Gleitkommawerten arbeiten.  Insbesondere können zwei Werte, die theoretisch gleich sind, geringfügig unterschiedliche Darstellungen aufweisen.  
+ Aus diesem Grund können nicht Ungenauigkeit, Sie genaue Ergebnisse abhängig, wenn Sie mit Gleitkommawerten arbeiten. Insbesondere möglicherweise zwei Werte, die theoretisch gleich sind etwas unterschiedlich dargestellt.  
   
-||  
-|-|  
-|So vergleichen Sie Gleitkommagrößen|  
-|1.  Berechnen Sie den Absolutbetrag ihrer Differenz mit der <xref:System.Math.Abs%2A>\-Methode der <xref:System.Math>\-Klasse im <xref:System>\-Namespace.<br />2.  Legen Sie eine maximal zulässige Differenz fest, um die beiden Größen für praktische Zwecke als gleich zu betrachten, sofern ihre Abweichung nicht größer ist.<br />3.  Vergleichen Sie den absoluten Wert der Abweichung mit der zulässigen Abweichung.|  
+| Zu vergleichenden Gleitkommazahlen Mengen | 
+|---| 
+|1.  Berechnen Sie den Absolutbetrag ihrer Differenz mithilfe der <xref:System.Math.Abs%2A>Methode der <xref:System.Math>-Klasse in die <xref:System>Namespace.</xref:System> </xref:System.Math> </xref:System.Math.Abs%2A><br />2.  Bestimmen Sie eine zulässige maximale Abweichung, die Sie berücksichtigen können die beiden Größen für praktische Zwecke gleich sein, sofern ihre Abweichung nicht größer ist.<br />3.  Vergleichen Sie den absoluten Wert des Unterschieds mit der zulässigen Abweichung.|  
   
- Im folgenden Beispiel wird sowohl ein korrekter als auch ein fehlerhafter Vergleich zweier `Double`\-Werte veranschaulicht.  
+ Das folgende Beispiel zeigt die falschen und richtigen Vergleich von zwei `Double` Werte.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes&#10;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
- Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>\-Methode der <xref:System.Double>\-Struktur verwendet. So wird eine größere Genauigkeit als mit dem `CStr`\-Schlüsselwort erreicht.  Der Standardwert ist 15 Stellen, aber mit dem Format "G17" wird er auf 17 Stellen erweitert.  
+ Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>Methode der <xref:System.Double>so strukturieren, dass er eine größere Genauigkeit als angeben kann die `CStr` -Schlüsselwort verwendet.</xref:System.Double> </xref:System.Double.ToString%2A> Der Standardwert ist 15 Stellen, aber das Format "G17" erweitert ihn auf 17 Ziffern.  
   
-## Der Operator 'Mod' gibt kein präzises Ergebnis zurück  
- Aufgrund der Ungenauigkeit beim Speichern von Gleitkommazahlen kann der [Operator Mod](../../../../visual-basic/language-reference/operators/mod-operator.md) ein unerwartetes Ergebnis zurückgeben, wenn mindestens einer der Operanden eine Gleitkommazahl ist.  
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod-Operator gibt kein präzises Ergebnis zurück.  
+ Aufgrund der Ungenauigkeit von Gleitkommazahlen die [Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) kann ein unerwartetes Ergebnis zurückgeben, wenn mindestens einer der Operanden eine Gleitkommazahl ist.  
   
- Der [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) verwendet keine Gleitkommadarstellung.  Viele Zahlen, die mit `Single` und `Double` ungenau sind, sind mit `Decimal` genau \(z. B. 0,2 und 0,3\).  Obwohl die Berechnung mit `Decimal` langsamer als mit Gleitkommazahlen erfolgt, wiegt die größere Genauigkeit die geringere Leistung eventuell auf.  
+ Die [Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) gleitkommadarstellung wird nicht verwendet. Viele Zahlen, die ungenau sind `Single` und `Double` sind genau in `Decimal` (z. B. 0,2 und 0,3). Obwohl die Berechnung ist langsamer in `Decimal` als in Gleitkommazahlen es möglicherweise wiegt die geringere Leistung, größere Genauigkeit.  
   
-||  
-|-|  
-|So ermitteln Sie den ganzzahligen Rest von Gleitkommagrößen|  
-|1.  Deklarieren Sie Variablen als `Decimal`.<br />2.  Verwenden Sie das Literaltypzeichen `D`, um `Decimal` für Literale zu erzwingen, für den Fall, dass sie für den `Long`\-Datentyp zu groß sind.|  
+|Um den ganzzahligen Rest Gleitkomma Mengen suchen|  
+|---|  
+|1.  Deklarieren Sie Variablen als `Decimal`.<br />2.  Verwenden Sie das Literalzeichen `D` erzwingen Literale `Decimal`für den Fall, dass ihre Werte für zu groß sind die `Long` -Datentyp.|  
   
- Im folgenden Beispiel wird die potenzielle Ungenauigkeit von Gleitkommaoperanden veranschaulicht.  
+ Das folgende Beispiel zeigt die potenzielle Ungenauigkeit der Gleitkomma-Operanden.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes&#11;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
- Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>\-Methode der <xref:System.Double>\-Struktur verwendet. So wird eine größere Genauigkeit als mit dem `CStr`\-Schlüsselwort erreicht.  Der Standardwert ist 15 Stellen, aber mit dem Format "G17" wird er auf 17 Stellen erweitert.  
+ Im vorhergehenden Beispiel wird die <xref:System.Double.ToString%2A>Methode der <xref:System.Double>so strukturieren, dass er eine größere Genauigkeit als angeben kann die `CStr` -Schlüsselwort verwendet.</xref:System.Double> </xref:System.Double.ToString%2A> Der Standardwert ist 15 Stellen, aber das Format "G17" erweitert ihn auf 17 Ziffern.  
   
- Weil `zeroPointTwo` `Double` ist, ist sein Wert für 0,2 ein unendlicher Binärbruch mit dem gespeicherten Wert 0,20000000000000001.  Die Division von 2,0 durch diese Größe ergibt 9,9999999999999995 mit dem Rest 0,19999999999999991.  
+ Da `zeroPointTwo` ist `Double`, sein Wert für 0,2 ein unendlicher Binärbruch mit dem gespeicherten Wert 0,20000000000000001 dargestellt wird. 2.0 durch diese Menge dividiert ergibt 9,9999999999999995 mit dem Rest des 0,19999999999999991.  
   
- Im zweiten Ausdruck für `decimalRemainder` erzwingt das Literaltypzeichen `D`, dass beide Operanden den `Decimal`\-Datentyp aufweisen, und 0,2 wird präzise dargestellt.  Darum liefert der Operator `Mod` den erwarteten Rest 0,0.  
+ Im Ausdruck für `decimalRemainder`, das Literalzeichen `D` erzwingt, dass beide Operanden `Decimal`, und 0,2 wird präzise dargestellt. Aus diesem Grund die `Mod` -Operator liefert den erwarteten Rest 0,0.  
   
- Beachten Sie, dass es nicht ausreicht, `decimalRemainder` als `Decimal` zu deklarieren.  Sie müssen außerdem für die Literale `Decimal` erzwingen. Andernfalls ist ihr Standarddatentyp `Double`, und `decimalRemainder` erhält denselben ungenauen Wert wie `doubleRemainder`.  
+ Beachten Sie, dass es nicht ausreicht, deklarieren `decimalRemainder` als `Decimal`. Sie müssen außerdem die Literale erzwingen `Decimal`, oder sie verwenden `Double` standardmäßig und `decimalRemainder` empfängt ungenauen denselben Wert wie `doubleRemainder`.  
   
-## Boolescher Typ wird nicht präzise in den numerischen Typ konvertiert  
- [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)\-Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht mit Zahlen gleichwertig sein.  Aus Gründen der Kompatibilität mit älteren Versionen stellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Konvertierungsschlüsselwörter \([CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt` usw.\) zum Konvertieren zwischen `Boolean`\-Typen und numerischen Typen bereit.  In anderen Sprachen werden diese Konvertierungen jedoch zuweilen anders ausgeführt als mit den [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Methoden.  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean-Typ konvertiert nicht numerischen Typ korrekt  
+ [Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht mit Zahlen gleichwertig sein. Für die Kompatibilität mit früheren Versionen [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bietet Konvertierungsschlüsselwörter ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`usw.) zum Konvertieren zwischen `Boolean` und numerischen Typen. Andere Sprachen manchmal führen jedoch diese Konvertierungen wie unterschiedlich die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] Methoden.  
   
- Sie sollten nie Code schreiben, der von entsprechenden numerischen Werten für `True` und `False` abhängt.  Beschränken Sie den Einsatz von `Boolean`\-Variablen auf die logischen Werte, für die sie entworfen wurden.  Wenn es erforderlich ist, `Boolean`\-Werte und numerische Werte zu mischen, müssen Sie wissen, wie die gewählte Konvertierungsmethode arbeitet.  
+ Sie sollten nie schreiben Code, der von entsprechenden numerischen Werten für beruht `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen auf die logischen Werte, für die sie entworfen werden. Wenn Sie kombinieren müssen `Boolean` und numerische Werte, stellen Sie sicher, dass Sie die Konvertierungsmethode verstehen, die Sie auswählen.  
   
-### Konvertierung in Visual Basic  
- Wenn Sie mithilfe der Konvertierungsschlüsselwörter `CType` oder `CBool` numerische Datentypen in `Boolean` konvertieren, wird aus 0 `False` und aus alle anderen Werten `True`.  Wenn Sie `Boolean`\-Werte mit den Konvertierungsschlüsselwörtern in numerische Typen konvertieren, wird `False` zu 0 und `True` zu \-1.  
+### <a name="conversion-in-visual-basic"></a>Konvertieren in Visual Basic  
+ Bei Verwendung der `CType` oder `CBool` Konvertierungsschlüsselwörter Konvertieren von numerischen Datentypen in `Boolean`, wird 0 `False` und alle anderen Werte werden `True`. Bei der Konvertierung `Boolean` Werte in numerische Typen mit den Konvertierungsschlüsselwörtern `False` wird 0 und `True` wird – 1.  
   
-### Konvertierung in .NET Framework  
- Die <xref:System.Convert.ToInt32%2A>\-Methode der <xref:System.Convert>\-Klasse im <xref:System>\-Namespace konvertiert `True` in \+1.  
+### <a name="conversion-in-the-framework"></a>Konvertierung in das Framework  
+ Die <xref:System.Convert.ToInt32%2A>Methode der <xref:System.Convert>-Klasse in die <xref:System>Namespace konvertiert `True` bis +&1;.</xref:System> </xref:System.Convert> </xref:System.Convert.ToInt32%2A>  
   
- Achten Sie auf die verwendete Konvertierungsmethode, wenn Sie einen `Boolean`\-Wert in einen numerischen Datentyp konvertieren.  
+ Wenn Sie konvertieren eine `Boolean` -Wert in einen numerischen Datentyp aufweisen, seien Sie vorsichtig Konvertierungsmethode, die Sie verwenden.  
   
-## Zeichenliteral generiert Compilerfehler  
- Sind keine Typzeichen angeben, verwendet [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] für Literale Standarddatentypen.  Der Standardtyp für ein Zeichenliteral – in Anführungszeichen \(`" "`\) – ist `String`.  
+## <a name="character-literal-generates-compiler-error"></a>Zeichenliteral generiert Compilerfehler.  
+ In Ermangelung keine Typzeichen [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Standarddatentypen für Literale. Der Standardtyp für ein Zeichenliteral – in Anführungszeichen eingeschlossen (`" "`) – ist `String`.  
   
- Der `String`\-Datentyp wird nicht zum [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md) erweitert.  Wenn Sie einer `Char`\-Variablen ein Literal zuweisen möchten, müssen Sie daher entweder eine Einschränkungskonvertierung ausführen oder den `Char`\-Typ für das Literal erzwingen.  
+ Die `String` Datentyp wird nicht erweitert werden, um die [Char-Datentyp](../../../../visual-basic/language-reference/data-types/char-data-type.md). Dies bedeutet, dass, wenn Sie ein Literal zuweisen möchten eine `Char` Variablen, Sie stellen eine einschränkende Konvertierung, oder erzwingen Sie das Literal der `Char` Typ.  
+
+|Eine char-Variable zuweisen zu einer Variablen oder Konstanten Literalen erstellen|
+|---|  
+|1.  Deklarieren Sie die Variable oder Konstante als `Char`.<br />2.  Schließen Sie den Zeichenwert in Anführungszeichen (`" "`).<br />3.  Führen Sie das schließende Anführungszeichen das Literaltypzeichen `C` zu erzwingen, dass das Literal `Char`. Dies ist erforderlich, wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On`, und es ist in jedem Fall wünschenswert.|  
   
-||  
-|-|  
-|So erstellen Sie ein Zeichenliteral, um es einer Variablen oder Konstanten zuzuweisen|  
-|1.  Deklarieren Sie die Variable oder die Konstante als `Char`.<br />2.  Schließen Sie den Zeichenwert in Anführungszeichen \(`" "`\) ein.<br />3.  Fügen Sie nach dem schließenden doppelten Anführungszeichen das Literaltypzeichen `C` ein, um `Char` für das Literal zu erzwingen.  Dies ist erforderlich, falls für die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) `On` festgelegt ist, und empfiehlt sich auf jeden Fall.|  
+ Das folgende Beispiel zeigt sowohl erfolgreiche als auch nicht erfolgreiche Zuweisungen von ein Literal eine `Char` Variable.  
   
- Im folgenden Beispiel werden sowohl fehlgeschlagene als auch erfolgreiche Zuweisungen eines Literals zu einer `Char`\-Variablen veranschaulicht.  
+ [!code-vb[VbVbalrDataTypes&#12;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
- [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
+ Es besteht immer ein Risiko mit einschränkende Konvertierungen, da sie zur Laufzeit fehlschlagen können. Angenommen, eine Konvertierung von `String` auf `Char` kann fehlschlagen, wenn die `String` Wert mehr als ein Zeichen enthält. Es ist daher besser Programmiersprachen verwenden die `C` Zeichen eingeben.  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+## <a name="string-conversion-fails-at-run-time"></a>Konvertierung zur Laufzeit fehlschlägt.  
+ Die [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) nur sehr wenige erweiternde Konvertierungen beteiligt. `String`Erweitert die nur sich selbst und `Object`, und nur `Char` und `Char()` (eine `Char` Array) werden zu `String`. Grund hierfür ist, `String` Variablen und Konstanten können Werte enthalten, die andere Datentypen enthalten können.  
   
- Die Verwendung von Einschränkungskonvertierungen ist immer mit Risiken verbunden, weil sie zur Laufzeit fehlschlagen können.  Beispielsweise kann eine Konvertierung von `String` in `Char` fehlschlagen, wenn der `String`\-Wert mehrere Zeichen enthält.  In gut geschriebenen Programmen wird daher das `C`\-Typzeichen verwendet.  
-  
-## Zeichenfolgenkonvertierung schlägt zur Laufzeit fehl  
- Der [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) ist an sehr wenigen Erweiterungskonvertierungen beteiligt.  `String` wird nur in sich selbst und zu `Object` erweitert, und nur `Char` und `Char()` \(ein `Char`\-Array\) werden zu `String` erweitert.  Der Grund hierfür ist, dass `String`\-Variablen und \-Konstanten Werte enthalten können, die andere Datentypen nicht behandeln können.  
-  
- Wenn die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) den Wert `On` hat, lässt der Compiler keine impliziten einschränkenden Konvertierungen zu.  Das gilt auch für solche, die `String` betreffen.  Im Code können dennoch Konvertierungsschlüsselwörter wie `CStr` und [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) verwendet werden, die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] anweisen, die Konvertierung auszuführen.  
+ Wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On`, der Compiler lässt alle implizite einschränkende Konvertierungen. Dies gilt für die im Zusammenhang mit `String`. Code kann dennoch Konvertierungsschlüsselwörter wie z. B. `CStr` und [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), welche direkt den [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] , die Konvertierung auszuführen.  
   
 > [!NOTE]
->  Der Fehler für einschränkende Konvertierung wird unterdrückt für Konvertierungen von den Elementen in einer `For Each…Next`\-Auflistung zur Schleifensteuerungsvariable.  Weitere Informationen und Beispiele finden Sie im Abschnitt "Eingrenzende Konvertierungen" unter [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+>  Der Fehler für einschränkende Konvertierung wird unterdrückt für Konvertierungen von den Elementen in einem `For Each…Next` -Auflistung, um die Schleifensteuerungsvariable. Weitere Informationen und Beispiele finden Sie im Abschnitt "Einschränkende Konvertierungen" im [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### Schutz von Einschränkungskonvertierungen  
- Einschränkungskonvertierungen weisen den Nachteil auf, dass sie zur Laufzeit fehlschlagen können.  Wenn z. B. eine `String`\-Variable einen anderen Wert als "True" oder "False" enthält, kann sie nicht in `Boolean` konvertiert werden.  Wenn sie Satzzeichen enthält, schlägt die Konvertierung in jeden numerischen Typ fehl.  Sofern Sie nicht sicher sind, dass eine `String`\-Variable immer Werte enthält, die mit dem Zieltyp kompatibel sind, sollten Sie keine Konvertierung durchführen.  
+### <a name="narrowing-conversion-protection"></a>Einschränkende Konvertierung Schutz  
+ Der Nachteil der einschränkende Konvertierungen ist, dass sie zur Laufzeit fehlschlagen können. Z. B. wenn ein `String` Variable enthält alles andere als "True" oder "False", es konvertiert werden kann `Boolean`. Satzzeichen enthalten, schlägt fehl, die Konvertierung in einen beliebigen numerischen Typ. Es sei denn, Sie wissen, dass Ihre `String` Variable enthält immer die Werte, die der Zieltyp akzeptieren kann, Sie sollten nicht versuchen, eine Konvertierung.  
   
- Wenn Sie `String` in einen anderen Datentyp konvertieren müssen, ist es am sichersten, die Konvertierung in eine [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) einzuschließen.  Dies ermöglicht die Behandlung eines Laufzeitfehlers.  
+ Konvertieren von muss `String` in einen anderen Datentyp, ist am sichersten, die Konvertierung in den [versuchen... Catch... Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Dadurch können Sie den Umgang mit einem Laufzeitfehler.  
   
-### Zeichenarrays  
- Sowohl ein einzelnes Zeichen vom Typ `Char` als auch ein Array von `Char`\-Elementen wird zu `String` erweitert.  `String` wird jedoch nicht zu `Char()` erweitert.  Um einen `String`\-Wert zu einem `Char`\-Array zu erweitern, können Sie die <xref:System.String.ToCharArray%2A>\-Methode der <xref:System.String?displayProperty=fullName>\-Klasse verwenden.  
+### <a name="character-arrays"></a>Zeichenarrays  
+ Ein einzelnes `Char` und ein Array von `Char` Elemente sowohl zu erweitert `String`. Allerdings `String` wird nicht erweitert, um `Char()`. Konvertieren einer `String` -Wert in einen `Char` Array, können Sie die <xref:System.String.ToCharArray%2A>Methode der <xref:System.String?displayProperty=fullName>Klasse.</xref:System.String?displayProperty=fullName> </xref:System.String.ToCharArray%2A>  
   
-### Bedeutungslose Werte  
- Im Allgemeinen sind `String`\-Werte in anderen Datentypen ohne Bedeutung, und die Konvertierung ist von nur theoretischem Nutzen und sehr gefährlich.  Beschränken Sie die Verwendung von `String`\-Variablen nach Möglichkeit auf die Zeichenfolgen, für die sie entworfen wurden.  Schreiben Sie niemals Code, der von entsprechenden Werten in anderen Datentypen abhängt.  
+### <a name="meaningless-values"></a>Bedeutungslose Werte  
+ Im allgemeinen `String` Werte sind nicht in andere Datentypen sinnvoll, und eine Konvertierung ist nur künstliche und sehr gefährlich. Wann immer möglich, beschränken Sie die Verwendung von `String` Variablen auf die Zeichenfolgen, für die sie entworfen werden. Sie sollten nie Code schreiben, der von entsprechenden Werten in anderen Typen abhängt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Efficient Use of Data Types](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
+ [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
+ [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+ [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+ [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
-ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7c9ccd455bf0d14122c0547177cc29ace6ebde42
+ms.lasthandoff: 02/17/2017
 
 ---
 
@@ -57,14 +58,14 @@ Die @System.Exception-Klasse verfügt über die folgenden Eigenschaften, die das
 | ------------- | ----------- |
 | @System.Exception.Data | Ein @System.Collections.IDictionary, das beliebige Daten in Schlüssel-Wert-Paaren enthält. |
 | @System.Exception.HelpLink | Kann einen URL (oder URN) zu einer Hilfedatei enthalten, die ausführliche Informationen zur Ursache einer Ausnahme bereitstellt. |
-| @System.Exception.InnerException | Diese Eigenschaft kann verwendet werden, um während der Ausnahmebehandlung eine Reihe von Ausnahmen zu erstellen und beizubehalten. Sie können sie verwenden, um eine neue Ausnahme zu erstellen, die zuvor bereits abgefangene Ausnahmen enthält. Die ursprüngliche Ausnahme kann durch die zweite Ausnahme in der @System.Exception.InnerException-Eigenschaft abgefangen werden. So kann der Code, der die zweite Ausnahme verarbeitet, die zusätzlichen Informationen untersuchen. Ein Beispiel: Sie verfügen über eine Methode, die ein unzureichend formatiertes Argument erhält.  Der Code versucht, das Argument zu lesen, es wird aber eine Ausnahme ausgelöst. Die Methode fängt die Ausnahme ab und löst eine @System.FormatException. aus. Um die Fähigkeit des Aufrufers zu erhöhen, den Grund für eine Ausnahme zu ermitteln, ist es manchmal wünschenswert, dass eine Methode eine von einer Hilfsroutine ausgelöste Ausnahme abfängt und dann eine Ausnahme auslöst, die bessere Hinweise auf den aufgetretenen Fehler bietet. Es kann eine neue, aussagekräftigere Ausnahme erstellt werden, in der der Verweis auf die innere Ausnahme auf die ursprüngliche Ausnahme festgelegt werden kann. Diese aussagekräftigere Ausnahme kann für den Aufrufer ausgelöst werden. Beachten Sie, dass Sie mit dieser Funktionalität eine Reihe von verknüpften Ausnahmen erstellen können, die mit der Ausnahme endet, die zuerst ausgelöst wurde. |
+| @System.Exception.InnerException | Diese Eigenschaft kann verwendet werden, um während der Ausnahmebehandlung eine Reihe von Ausnahmen zu erstellen und beizubehalten. Sie können sie verwenden, um eine neue Ausnahme zu erstellen, die zuvor bereits abgefangene Ausnahmen enthält. Die ursprüngliche Ausnahme kann durch die zweite Ausnahme in der @System.Exception.InnerException-Eigenschaft abgefangen werden. So kann der Code, der die zweite Ausnahme verarbeitet, die zusätzlichen Informationen untersuchen. Ein Beispiel: Sie verfügen über eine Methode, die ein unzureichend formatiertes Argument erhält.  Der Code versucht, das Argument zu lesen, es wird aber eine Ausnahme ausgelöst. Die Methode fängt die Ausnahme ab und löst eine @System.FormatException aus. Um die Fähigkeit des Aufrufers zu erhöhen, den Grund für eine Ausnahme zu ermitteln, ist es manchmal wünschenswert, dass eine Methode eine von einer Hilfsroutine ausgelöste Ausnahme abfängt und dann eine Ausnahme auslöst, die bessere Hinweise auf den aufgetretenen Fehler bietet. Es kann eine neue, aussagekräftigere Ausnahme erstellt werden, in der der Verweis auf die innere Ausnahme auf die ursprüngliche Ausnahme festgelegt werden kann. Diese aussagekräftigere Ausnahme kann für den Aufrufer ausgelöst werden. Beachten Sie, dass Sie mit dieser Funktionalität eine Reihe von verknüpften Ausnahmen erstellen können, die mit der Ausnahme endet, die zuerst ausgelöst wurde. |
 | @System.Exception.Message | Bietet Informationen zur Ursache einer Ausnahme.
 | @System.Exception.Source | Gibt den Namen der Anwendung oder des Objekts zurück, die bzw. das den Fehler verursacht hat, oder legt diesen fest. |
 | @System.Exception.StackTrace | Enthält eine Stapelüberwachung, die verwendet kann, um zu ermitteln, wo ein Fehler aufgetreten ist. Die Stapelüberwachung beinhaltet den Quelldateinamen und die Programmzeilennummer, falls Debuginformationen verfügbar sind. |
 
-Die meisten Klassen, die von @System.Exception erben, implementieren keine zusätzlichen Member oder zusätzlichen Funktionen. Sie erben lediglich von @System.Exception. Daher finden sich die wichtigsten Informationen für eine Ausnahme in der Hierarchie der Ausnahmeklassen, dem Namen der Ausnahme und den in der Ausnahme enthaltenen Details.
+Die meisten der Klassen, die von @System.Exception erben, implementieren keine weiteren Member und stellen keine weitere Funktionalität bereit. Sie erben einfach von @System.Exception. Daher finden sich die wichtigsten Informationen für eine Ausnahme in der Hierarchie der Ausnahmeklassen, dem Namen der Ausnahme und den in der Ausnahme enthaltenen Details.
 
-Es wird empfohlen, nur Objekte auszulösen und abzufangen, die von @System.Exception, abgeleitet sind. Sie können jedoch jedes beliebige, von der @System.Object-Klasse abgeleitete Objekt als Ausnahme auslösen. Beachten Sie, dass einige Sprachen nur das Auslösen und Abfangen von Objekten unterstützen, die von @System.Exception. abgeleitet sind.
+Es wird empfohlen, nur Objekte auszulösen und abzufangen, die von @System.Exception, abgeleitet sind. Sie können jedoch jedes beliebige, von der @System.Object-Klasse abgeleitete Objekt als Ausnahme auslösen. Beachten Sie, dass einige Sprachen nur das Auslösen und Abfangen von Objekten unterstützen, die nicht von @System.Exception abgeleitet sind.
 
 ## <a name="common-exceptions"></a>Allgemeine Ausnahmen
 
@@ -112,7 +113,7 @@ public class ProcessFile
 Die Common Language Runtime fängt Ausnahmen ab, die nicht von einem catch-Block abgefangen werden. Je nach Konfiguration der Runtime wird ein Dialogfeld zum Debuggen angezeigt, oder das Programm beendet die Ausführung und zeigt ein Dialogfeld mit Informationen zur Ausnahme an, oder es wird ein Fehler an STDERR ausgegeben.
 
 > [!NOTE] 
-> Nahezu jede Codezeile kann eine Ausnahme verursachen, insbesondere Ausnahmen, die von der Common Language Runtime selbst ausgelöst werden, z.B. eine @System.OutOfMemoryException. Die meisten Anwendungen müssen diese Ausnahmen nicht behandeln, beim Schreiben von Bibliotheken, die von anderen Anwendungen verwendet werden sollen, sollte diese Möglichkeit allerdings berücksichtigt werden. Vorschläge dazu, wann Sie Code in einen try-Block platzieren sollten, finden Sie unter [Bewährte Methoden für Ausnahmen](#best-practices-for-exceptions).
+> Nahezu jede Codezeile kann eine Ausnahme verursachen, insbesondere Ausnahmen, die von der Common Language Runtime selbst ausgelöst werden, wie z.B. eine @System.OutOfMemoryException. Die meisten Anwendungen müssen diese Ausnahmen nicht behandeln, beim Schreiben von Bibliotheken, die von anderen Anwendungen verwendet werden sollen, sollte diese Möglichkeit allerdings berücksichtigen werden. Vorschläge dazu, wann Sie Code in einen try-Block platzieren sollten, finden Sie unter [Bewährte Methoden für Ausnahmen](#best-practices-for-exceptions).
  
 ## <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Verwenden spezifischer Ausnahmen in einem catch-Block
 
@@ -120,7 +121,7 @@ Das vorherige Codebeispiel veranschaulicht eine grundlegende `catch`-Anweisung, 
 
 Wenn eine Ausnahme auftritt, wird sie von unten nach oben durch den Stapel übergeben, und jeder Block erhält die Möglichkeit, sie zu behandeln. Die Reihenfolge der catch-Anweisungen ist wichtig. Platzieren Sie catch-Blöcke für bestimmte Ausnahmen vor einen allgemeinen Block zum Abfangen von Ausnahmen. Andernfalls gibt der Compiler möglicherweise einen Fehler aus. Der richtige catch-Block wird ermitteln, indem der Typ der Ausnahme mit dem Namen der im catch-Block angegebenen Ausnahme abgeglichen wird. Wenn kein bestimmter catch-Block vorhanden ist, wird die Ausnahme durch einen allgemeinen catch-Block abgefangen, sofern vorhanden.
 
-Das folgende Codebeispiel verwendet einen `try`/`catch`-Block zum Abfangen einer @System.InvalidCastException. Das Beispiel erstellt eine Klasse namens `Employee` mit einer einzigen Eigenschaft für die Mitarbeiterstufe (`Emlevel`). Eine Methode, `PromoteEmployee`, übernimmt ein Objekt und erhöht die Mitarbeiterstufe. Eine @System.InvalidCastException tritt auf, wenn eine @System.DateTime-Instanz an die `PromoteEmployee`-Methode übergeben wird.
+Das folgende Codebeispiel verwendet einen `try`/`catch`-Block, um eine @System.InvalidCastException abzufangen. Das Beispiel erstellt eine Klasse namens `Employee` mit einer einzigen Eigenschaft für die Mitarbeiterstufe („employee level“, `Emlevel`). Eine Methode, `PromoteEmployee`, übernimmt ein Objekt und erhöht die Mitarbeiterstufe. Eine @System.InvalidCastException tritt auf, wenn eine @System.DateTime-Instanz an die `PromoteEmployee`-Methode übergeben wird.
 
 A#
 ```
@@ -177,7 +178,7 @@ public class Ex13
 
 Wenn eine Ausnahme auftritt, wird die Ausführung beendet und die Steuerung an den entsprechenden Ausnahmehandler übergeben. Dies bedeutet häufig, dass Codezeilen umgangen werden, die eigentlich ausgeführt werden sollten. Daher muss auch nach Auslösen einer Ausnahme eine Ressourcenbereinigung durchgeführt werden, z.B. das Schließen einer Datei. Zu diesem Zweck können Sie einen `finally`-Block verwenden. Ein `finally`-Block wird immer ausgeführt, unabhängig davon, ob eine Ausnahme ausgelöst wird.
 
-Im folgenden Codebeispiel wird mit ein `try`/`catch`-Block zum Abfangen einer @System.ArgumentOutOfRangeException. verwendet. Die `Main`-Methode erstellt zwei Arrays und versucht, das eine Array in das andere zu kopieren. Die Aktion generiert eine @System.ArgumentOutOfRangeException, und der Fehler wird an die Konsole geschrieben. Der `finally`-Block wird unabhängig vom Ergebnis des Kopiervorgangs ausgeführt.
+Das folgende Codebeispiel verwendet einen `try`/`catch`-Block, um eine @System.ArgumentOutOfRangeException abzufangen. Die `Main`-Methode erstellt zwei Arrays und versucht, das eine Array in das andere zu kopieren. Die Aktion generiert eine @System.ArgumentOutOfRangeException, und der Fehler wird an die Konsole geschrieben. Der `finally`-Block wird unabhängig vom Ergebnis des Kopiervorgangs ausgeführt.
 
 A#
 ```
@@ -210,7 +211,7 @@ class ArgumentOutOfRangeExample
 
 Sie können mithilfe der `throw`-Anweisung eine Ausnahme explizit auslösen. Mit der `throw`-Anweisung können Sie auch eine abgefangene Ausnahme erneut auslösen. Es ist sinnvoll, einer Ausnahme, die erneut ausgelöst wird, weitere Informationen hinzuzufügen, um das Debuggen zu vereinfachen.
 
-Im folgenden Codebeispiel wird ein `try`/`catch`-Block verwendet, um eine mögliche @System.IO.FileNotFoundException. abzufangen. Auf den `try`-Block folgt ein `catch`-Block, der die @System.IO.FileNotFoundException abfängt und eine Meldung an die Konsole schreibt, wenn die Datendatei nicht gefunden wird. Die nächste Anweisung ist die `throw`-Anweisung, die eine neue @System.IO.FileNotFoundException auslöst und der Ausnahme Textinformationen hinzufügt.
+Das folgende Codebeispiel verwendet einen `try`/`catch`-Block, um eine @System.IO.FileNotFoundException abzufangen. Auf den `try`-Block folgt ein `catch`-Block, der die @System.IO.FileNotFoundException abfängt und eine Meldung an die Konsole schreibt, wenn die Datendatei nicht gefunden wird. Die nächste Anweisung ist die `throw`-Anweisung, die eine neue @System.IO.FileNotFoundException auslöst und der Ausnahme Textinformationen hinzufügt.
 
 A#
 ```
@@ -249,7 +250,7 @@ public class ProcessFile
 
 ## <a name="how-to-create-user-defined-exceptions"></a>Erstellen benutzerdefinierter Ausnahmen
 
-.NET stellt eine Hierarchie aus Ausnahmeklassen bereit, die letztendlich von der @System.Exception.-Basisklasse abgeleitet werden. Wenn keine der vordefinierten Ausnahmen Ihre Anforderungen erfüllt, können Sie durch Ableiten von der @System.Exception-Klasse eigene Ausnahmeklassen erstellen.
+.NET stellt eine Hierarchie aus Ausnahmeklassen bereit, die letztendlich von der @System.Exception-Basisklasse abgeleitet werden. Wenn keine der vordefinierten Ausnahmen Ihre Anforderungen erfüllt, können Sie durch Ableiten von der @System.Exception-Klasse eigene Ausnahmeklassen erstellen.
 
 Beim Erstellen eigener Ausnahmen muss der Klassenname der benutzerdefinierten Ausnahme auf das Wort „Exception“ enden. Implementieren Sie außerdem die drei allgemeinen Konstruktoren, wie im folgenden Beispiel gezeigt. Das Beispiel definiert eine neue Ausnahmeklasse namens `EmployeeListNotFoundException`. Die Klasse wird von @System.Exception abgeleitet und enthält drei Konstruktoren.
 
@@ -506,9 +507,4 @@ catch (Exception ex)
 ## <a name="see-also"></a>Siehe auch
 
 Weitere Informationen zur Funktionsweise von Ausnahmen in .NET finden Sie in [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

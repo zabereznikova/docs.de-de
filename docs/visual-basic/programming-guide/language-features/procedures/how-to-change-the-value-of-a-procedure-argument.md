@@ -1,99 +1,115 @@
 ---
-title: "How to: Change the Value of a Procedure Argument (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, parameters"
-  - "procedure arguments"
-  - "arguments [Visual Basic], passing by reference"
-  - "Visual Basic code, procedures"
-  - "arguments [Visual Basic], ByVal"
-  - "arguments [Visual Basic], passing by value"
-  - "procedure parameters"
-  - "arguments [Visual Basic], ByRef"
-  - "arguments [Visual Basic], changing value"
+title: "Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedures, arguments
+- procedures, parameters
+- procedure arguments
+- arguments [Visual Basic], passing by reference
+- Visual Basic code, procedures
+- arguments [Visual Basic], ByVal
+- arguments [Visual Basic], passing by value
+- procedure parameters
+- arguments [Visual Basic], ByRef
+- arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# How to: Change the Value of a Procedure Argument (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6c42a50b75bcc70ae0a3f70771b9e1f85626004b
+ms.lasthandoff: 03/13/2017
 
-Im Aufruf einer Prozedur entspricht jedes Argument, das angegeben wird, einem der in der Prozedur definierten Parameter.  In einigen Fällen kann der Prozedurcode den Wert ändern, der einem Argument im Aufrufcode zugrunde liegt.  In anderen Fällen kann die Prozedur nur ihre lokale Kopie eines Arguments ändern.  
+---
+# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)
+Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie Bereitstellen einer der in der Prozedur definierten Parameter. In einigen Fällen kann der Code der Prozedur den Wert, der einem Argument im Aufrufcode zugrunde liegt ändern. In anderen Fällen kann die Prozedur nur ihre lokale Kopie eines Arguments ändern.  
   
- Wenn Sie die Prozedur aufrufen, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] von jedem Argument, das mit [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) übergeben wird, eine lokale Kopie.  Für jedes mit [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) übergebene Argument übergibt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] der Prozedur einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt.  
+ Beim Aufrufen der Prozedur [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] wird eine lokale Kopie jedes Argument übergeben [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Für jedes Argument übergebenen [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] übergibt der Prozedur einen direkten Verweis auf das Programmierelement, das dem Argument im Aufrufcode zugrunde liegt.  
   
- Falls es sich bei dem zugrunde liegenden Element im Aufrufcode um ein änderbares Element handelt und das Argument mit `ByRef` übergeben wird, kann der Prozedurcode über den direkten Verweis den Wert des Elements im Aufrufcode ändern.  
+ Wenn das zugrunde liegende Element im Aufrufcode ein veränderbares Element ist und das Argument übergeben wird `ByRef`, Code der Prozedur können den direkten Verweis der Wert des Elements im Aufrufcode ändern.  
   
-## Ändern des zugrunde liegenden Werts  
+## <a name="changing-the-underlying-value"></a>Ändern des zugrunde liegenden Werts  
   
-#### So ändern Sie den zugrunde liegenden Wert eines Prozedurarguments im Aufrufcode  
+#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>So ändern Sie den zugrunde liegenden Wert eines Prozedurarguments im Aufrufcode  
   
-1.  Geben Sie in der Prozedurdeklaration [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) für den Parameter an, der dem Argument entspricht.  
+1.  Geben Sie in der Prozedurdeklaration [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) für den Parameter entspricht dem Argument.  
   
-2.  Übergeben Sie im Aufrufcode ein änderbares Programmierelement als Argument.  
+2.  Übergeben Sie in den Aufrufcode ein änderbares Programmierelement als Argument.  
   
-3.  Schließen Sie im Aufrufcode das Argument in der Argumentliste nicht in Klammern ein.  
+3.  Schließen Sie in den aufrufenden Code nicht das Argument in Klammern in der Argumentliste.  
   
-4.  Verwenden Sie im Prozedurcode den Parameternamen, um dem zugrunde liegenden Element im Aufrufcode einen Wert zuzuweisen.  
+4.  Verwenden Sie im Code Prozedur den Namen des Parameters an das zugrunde liegende Element im Aufrufcode einen Wert zuzuweisen.  
   
- Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Siehe das Beispiel weiter unten veranschaulicht.  
   
-## Ändern von lokalen Kopien  
- Wenn es sich beim zugrunde liegenden Element im Aufrufcode um ein nicht änderbares Element handelt, oder wenn das Argument mit `ByVal` übergeben wird, kann die Prozedur dessen Wert im Aufrufcode nicht ändern.  Die Prozedur kann jedoch die lokale Kopie eines solchen Arguments ändern.  
+## <a name="changing-local-copies"></a>Ändern von lokalen Kopien  
+ Wenn das zugrunde liegende Element im Aufrufcode ein nicht änderbares Element ist oder wenn das Argument übergeben wird `ByVal`, die Prozedur Wert im aufrufenden Code nicht ändern. Die Prozedur kann jedoch die lokale Kopie eines solchen Arguments ändern.  
   
-#### So ändern Sie die Kopie eines Prozedurarguments im Prozedurcode  
+#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>So ändern Sie die Kopie eines Prozedurarguments im Prozedurcode  
   
-1.  Geben Sie in der Prozedurdeklaration [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) für den Parameter an, der dem Argument entspricht.  
+1.  Geben Sie in der Prozedurdeklaration [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) für den Parameter entspricht dem Argument.  
   
-     \- oder \-  
+     - oder -   
   
-     Schließen Sie im Aufrufcode das Argument in der Argumentliste in Klammern ein.  Dadurch wird [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] gezwungen, das Argument als Wert zu übergeben, auch wenn für den entsprechenden Parameter `ByRef` angegeben wird.  
+     Setzen Sie in den aufrufenden Code das Argument in Klammern in der Argumentliste. Dies zwingt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] , das Argument als Wert zu übergeben, auch wenn der entsprechende Parameter gibt `ByRef`.  
   
-2.  Verwenden Sie im Prozedurcode den Parameternamen, um der lokalen Kopie des Arguments einen Wert zuzuweisen.  Der zugrunde liegende Wert im Aufrufcode wird nicht geändert.  
+2.  Verwenden Sie im Code Prozedur den Parameternamen, um die lokale Kopie des Arguments einen Wert zuzuweisen. Der zugrunde liegende Wert im Aufrufcode wird nicht geändert.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei Prozeduren gezeigt, die eine Arrayvariable übernehmen und auf deren Elemente anwenden.  Mit der `increase`\-Prozedur wird einfach 1 zu jedem Element addiert.  Mit der `replace`\-Prozedur wird dem Parameter `a()` ein neues Array zugewiesen und zu jedem Element 1 addiert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt zwei Prozeduren, die eine Arrayvariable und ausgeführt werden, auf deren Elemente. Die `increase` Prozedur fügt einfach zu jedem Element. Die `replace` -Prozedur weist den Parameter ein neues Array `a()` und fügt dann jedem Element&1; hinzu.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#35;](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures Nr.&36;](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
+ [!code-vb[VbVbcnProcedures&#37;](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
   
- Beim ersten `MsgBox`\-Aufruf wird Folgendes angezeigt: "After increase\(n\): 11, 21, 31, 41".  Da das Array `n` ein Verweistyp ist, kann `replace` dessen Member ändern, obwohl der Übergabemechanismus `ByVal` ist.  
+ Die erste `MsgBox` -Aufruf zeigt "After increase(n):: 11, 21, 31, 41". Da das Array `n` ist ein Verweistyp, `replace` kann seine Member ändern, obwohl die Übergabemechanismus ist `ByVal`.  
   
- Der zweite `MsgBox`\-Aufruf zeigt "After replace\(n\): 101, 201, 301" an.  Da `n` mit `ByRef` übergeben wird, kann `replace` die Variable `n` im Aufrufcode ändern und ihr ein neues Array zuweisen.  Weil `n` ein Verweistyp ist, kann `replace` auch seine Member ändern.  
+ Die zweite `MsgBox` -Aufruf zeigt "After replace(n):: 101, 201, 301". Da `n` übergeben `ByRef`, `replace` ändern Sie die Variable `n` in den aufrufenden Code, und weisen Sie ein neues Array. Da `n` ist ein Verweistyp `replace` Membern können auch ändern.  
   
- Sie können verhindern, dass die Prozedur die Variable im Aufrufcode ändert.  Weitere Informationen finden Sie unter [How to: Protect a Procedure Argument Against Value Changes](../../../../visual-basic/programming-guide/language-features/procedures/how-to-protect-a-procedure-argument-against-value-changes.md).  
+ Sie können verhindern, dass die Prozedur die Variable im aufrufenden Code ändern. Finden Sie unter [Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## Kompilieren des Codes  
- Die Variablenübergabe durch Verweis muss mit dem `ByRef`\-Schlüsselwort angegeben werden.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Wenn Sie eine Variable als Verweis übergeben, müssen Sie mithilfe der `ByRef` Schlüsselwort dieser Mechanismus angeben.  
   
- Standardmäßig werden Argumente in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] als Wert übergeben.  Beim Programmieren empfiehlt es sich jedoch, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)\-Schlüsselwort oder das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Schlüsselwort in jeden deklarierten Parameter aufzunehmen.  Dadurch wird der Code besser lesbar.  
+ Die Standardeinstellung für [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Argumente als Wert übergeben wird. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort in jeden deklarierten Parameter. Dadurch wird Ihr Code leichter zu lesen.  
   
-## .NET Framework-Sicherheit  
- Wenn Sie den Wert, der einem Argument im Aufrufcode zugrunde liegt, von einer Prozedur ändern lassen, stellt dies stets ein gewisses Risiko dar.  Stellen Sie sicher, dass Sie mit der Änderung des Werts einverstanden sind, und überprüfen Sie die Gültigkeit des Werts, bevor Sie ihn verwenden.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Es ist immer ein potenzielles Risiko einer Prozedur so ändern Sie den Wert, der einem Argument im Aufrufcode zugrunde liegt. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und bereiten Sie sich vor der Verwendung auf Gültigkeit überprüfen.  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Differences Between Modifiable and Nonmodifiable Arguments](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)   
- [Differences Between Passing an Argument By Value and By Reference](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)   
- [How to: Protect a Procedure Argument Against Value Changes](../../../../visual-basic/programming-guide/language-features/procedures/how-to-protect-a-procedure-argument-against-value-changes.md)   
- [How to: Force an Argument to Be Passed by Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md)   
- [Passing Arguments by Position and by Name](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)   
+ [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
+ [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)   
+ [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)   
+ [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](./differences-between-modifiable-and-nonmodifiable-arguments.md)   
+ [Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis](./differences-between-passing-an-argument-by-value-and-by-reference.md)   
+ [Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)   
+ [Gewusst wie: erzwingen, dass ein Argument als Wert übergeben werden](./how-to-force-an-argument-to-be-passed-by-value.md)   
+ [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)   
+ [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

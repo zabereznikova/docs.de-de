@@ -1,84 +1,100 @@
 ---
-title: "Virtual Mode in the DataRepeater Control (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "virtual data binding"
-  - "DataRepeater"
-  - "DataRepeater, virtual mode"
+title: Virtueller Modus im DataRepeater-Steuerelement (Visual Studio) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- virtual data binding
+- DataRepeater
+- DataRepeater, virtual mode
 ms.assetid: 5fb805dc-2d8b-4139-b1e3-86e4c2667221
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Virtual Mode in the DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 85f7e250c57a507e891eb30756c0550098cce9e0
+ms.lasthandoff: 03/13/2017
 
-Wenn Sie sehr umfangreiche Tabellendaten in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement anzeigen möchten, können Sie die Leistung verbessern, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>\-Eigenschaft auf `True` festlegen und die Interaktion des Steuerelements mit der Datenquelle explizit verwalten.  Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement stellt mehrere Ereignisse bereit, die Sie für die Interaktion mit der Datenquelle und für die benötigte Datenanzeige zur Laufzeit verarbeiten können.  
+---
+# <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>Virtueller Modus im DataRepeater-Steuerelement (Visual Studio)
+Wenn Sie umfangreiche Tabellendaten in anzeigen möchten ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>-Steuerelement können Sie die Leistung verbessern, indem Sie festlegen der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>-Eigenschaft `True` und die Interaktion des Steuerelements mit der Datenquelle explizit verwalten.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>Steuerelement bietet mehrere Ereignisse, die Sie behandeln können, um die Interaktion mit der Datenquelle und die Daten anzuzeigen, wie zur Laufzeit benötigt.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-## Funktionsweise des virtuellen Modus  
- Das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement wird am häufigsten verwendet, um untergeordnete Steuerelemente von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> zur Entwurfszeit an eine Datenquelle zu binden und um zu ermöglichen, dass <xref:System.Windows.Forms.BindingSource> Daten in beide Richtungen überträgt.  Im virtuellen Modus sind die Steuerelemente nicht an eine Datenquelle gebunden. Die Daten werden zur Laufzeit von der zugrunde liegenden Datenquelle abgerufen und an diese übertragen.  
+## <a name="how-virtual-mode-works"></a>Funktionsweise von virtuellen Modus funktioniert  
+ Das häufigste Szenario für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>ist das Steuerelement binden die untergeordneten Steuerelemente des der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>an eine Datenquelle zur Entwurfszeit und ermöglichen die <xref:System.Windows.Forms.BindingSource>zum Übergeben von Daten vorwärts und rückwärts nach Bedarf.</xref:System.Windows.Forms.BindingSource> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Bei Verwendung des virtuellen Modus die Steuerelemente sind nicht an eine Datenquelle gebunden, und Daten werden an die zugrunde liegende Datenquelle zur Laufzeit hin und her übergeben.  
   
- Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>\-Eigenschaft auf `True` festgelegt wurde, erstellen Sie die Benutzeroberfläche, indem Sie Steuerelemente aus der **Toolbox** hinzufügen, anstatt gebundene Steuerelemente aus dem Fenster **Datenquellen** hinzuzufügen.  
+ Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>Eigenschaft auf festgelegt ist `True`, erstellen Sie die Benutzeroberfläche durch Hinzufügen von Steuerelementen aus der **Toolbox** anstatt gebundene Steuerelemente aus der **Datenquellen** Fenster.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
   
- Ereignisse werden für jedes Steuerelement einzeln ausgelöst, und Sie müssen Code hinzufügen, um die Datenanzeige zu verwalten.  Wenn die Ansicht zu einem neuen <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> blättert, wird für jedes Steuerelement einmal das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>\-Ereignis ausgelöst. Sie müssen dann die Werte für jedes Steuerelement im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>\-Ereignishandler angeben.  
+ Ereignisse auf Basis von Steuerelement ausgelöst werden, und müssen Sie Code, um die Anzeige der Daten hinzufügen. Beim Erstellen eines neuen <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>ist im Ansichtsfenster angezeigt, die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>-Ereignis wird ausgelöst, einmal für jedes Steuerelement, und Sie müssen die Werte für jedes Steuerelement im Angeben der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>-Ereignishandler.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>  
   
- Wenn der Benutzer Daten in einem der Steuerelemente ändert, wird das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>\-Ereignis ausgelöst. Sie müssen die Daten anschließend validieren und in der Datenquelle speichern.  
+ Wenn Daten in einem Steuerelement, durch den Benutzer geändert werden der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>-Ereignis wird ausgelöst, und müssen Sie die Daten überprüfen und speichern Sie es in der Datenquelle.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>  
   
- Wenn der Benutzer ein neues Element hinzufügt, wird das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>\-Ereignis ausgelöst.  Verwenden Sie den Ereignishandler, um einen neuen Datensatz in der Datenquelle zu erstellen.  Um unbeabsichtigte Änderungen zu vermeiden, müssen Sie zudem das <xref:System.Windows.Forms.Control.KeyDown>\-Ereignis für jedes Steuerelement überwachen und <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> aufrufen, wenn der Benutzer die ESC\-TASTE drückt.  
+ Wenn der Benutzer ein neues Element hinzufügt der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>-Ereignis wird ausgelöst.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> Verwenden Sie den Ereignishandler, um einen neuen Datensatz in der Datenquelle zu erstellen. Sie müssen auch überwachen, um unbeabsichtigte Änderungen zu verhindern, die <xref:System.Windows.Forms.Control.KeyDown>-Ereignis für jedes Steuerelement auf und rufen <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>, wenn der Benutzer die ESC-Taste drückt.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> </xref:System.Windows.Forms.Control.KeyDown>  
   
- Wenn sich die Datenquelle ändert, können Sie das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement aktualisieren, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetTemplateItem%2A>\-Methode und die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetTemplateItem%2A>\-Methode aufrufen.  Beide Methoden müssen der Reihenfolge nach aufgerufen werden.  
+ Wenn Ihre ändert Datenquelle, können Sie aktualisieren die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>durch Aufrufen der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>und <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>Methoden.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Beide Methoden müssen in der Reihenfolge aufgerufen werden.  
   
- Zudem müssen Sie Ereignishandler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>\-Ereignis, das beim Löschen eines Elements ausgelöst wird, und optional für die Ereignisse <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems> und <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> implementieren. Letztere werden ausgelöst, wenn ein Benutzer ein Element über die ENTF\-TASTE löscht.  
+ Abschließend müssen Sie Ereignishandler für Implementieren der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>Ereignis, das auftritt, wenn ein Element gelöscht wird, und optional für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems>und <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems>Ereignisse, die auftreten, wenn ein Benutzer ein Element durch Drücken der ENTF-Taste löscht.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>  
   
-## Implementieren des virtuellen Modus  
- Im Folgenden werden die Schritte zum Implementieren des virtuellen Modus erläutert.  
+## <a name="implementing-virtual-mode"></a>Implementieren des virtuellen Modus  
+ Im folgenden werden die Schritte, die zum Implementieren des virtuellen Modus erforderlich sind.  
   
-#### So implementieren Sie den virtuellen Modus  
+#### <a name="to-implement-virtual-mode"></a>Implementieren des virtuellen Modus  
   
-1.  Ziehen Sie ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement von der Registerkarte **Visual Basic PowerPacks** in der **Toolbox** in ein Formular\- oder Containersteuerelement.  Legen Sie für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>\-Eigenschaft `True` fest.  
+1.  Ziehen Sie ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>-Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in ein Formular oder Containersteuerelement.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Legen Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>-Eigenschaft `True`.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
   
-2.  Ziehen Sie Steuerelemente aus der **Toolbox** in den Elementvorlagenbereich \(der obere Bereich\) des <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelements.  Sie benötigen ein Steuerelement für jedes Feld in der Datenquelle, das angezeigt werden soll.  
+2.  Ziehen Sie Steuerelemente aus der **Toolbox** auf den Elementvorlagenbereich (der obere Bereich) von der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>Steuerelement.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Sie benötigen ein Steuerelement für jedes Feld in der Datenquelle, die Sie anzeigen möchten.  
   
-3.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>\-Ereignis, um Werte für jedes Steuerelement bereitzustellen.  Dieses Ereignis wird ausgelöst, wenn beim Bildlauf ein neues <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> angezeigt wird.  Der Code entspricht in etwa folgendem Beispiel für eine Datenquelle mit dem Namen `Employees`.  
+3.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>Ereignis, um Werte für jedes Steuerelement bereitzustellen.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> Dieses Ereignis wird ausgelöst, wenn ein neuer <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>ist Bildlauf sichtbar.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> Der Code entspricht in etwa das folgende Beispiel, das für eine Datenquelle mit dem Namen `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode Nr.&1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
   
-4.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>\-Ereignis, um die Daten zu speichern.  Dieses Ereignis wird ausgelöst, wenn ein Benutzer Änderungen an einem untergeordneten Steuerelement von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> übergibt.  Der Code entspricht in etwa folgendem Beispiel für eine Datenquelle mit dem Namen `Employees`.  
+4.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>Ereignis, um die Daten zu speichern.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> Dieses Ereignis wird ausgelöst, wenn der Benutzer Änderungen an ein untergeordnetes Steuerelement des <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> ausgeführt. Der Code entspricht in etwa das folgende Beispiel, das für eine Datenquelle mit dem Namen `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode Nr.&2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
   
-5.  Implementieren Sie einen Handler für das <xref:System.Windows.Forms.Control.KeyDown>\-Ereignis jedes untergeordneten Steuerelements, und überwachen Sie die ESC\-TASTE.  Rufen Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>\-Methode auf, um zu verhindern, dass das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>\-Ereignis ausgelöst wird.  Der Code entspricht in etwa dem folgenden Beispiel.  
+5.  Implementieren Sie einen Handler für jedes untergeordnete Steuerelement <xref:System.Windows.Forms.Control.KeyDown>Ereignis und überwachen Sie die ESC-Taste.</xref:System.Windows.Forms.Control.KeyDown> Rufen Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>Methode, um zu verhindern, dass die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>Ereignis ausgelöst wird.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> Der Code wird im folgende Beispiel entsprechen.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode Nr.&3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
   
-6.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>\-Ereignis.  Dieses Ereignis wird ausgelöst, wenn der Benutzer ein neues Element zum <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement hinzufügt.  Der Code entspricht in etwa folgendem Beispiel für eine Datenquelle mit dem Namen `Employees`.  
+6.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>Ereignis.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> Dieses Ereignis wird ausgelöst, wenn der Benutzer ein neues Element hinzufügt der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>Steuerelement.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Der Code entspricht in etwa das folgende Beispiel, das für eine Datenquelle mit dem Namen `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode Nr.&4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
   
-7.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>\-Ereignis.  Dieses Ereignis wird ausgelöst, wenn ein Benutzer ein vorhandenes Element löscht.  Der Code entspricht in etwa folgendem Beispiel für eine Datenquelle mit dem Namen `Employees`.  
+7.  Implementieren Sie einen Handler für das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>Ereignis.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> Dieses Ereignis tritt auf, wenn ein Benutzer ein vorhandenes Element löscht. Der Code entspricht in etwa das folgende Beispiel, das für eine Datenquelle mit dem Namen `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
   
-8.  Implementieren Sie zur Validierung auf Steuerelementebene optional Handler für die <xref:System.Windows.Forms.Control.Validating>\-Ereignisse der untergeordneten Steuerelemente.  Der Code entspricht in etwa dem folgenden Beispiel.  
+8.  Implementieren Sie für die Validierung auf Steuerelementebene optional Handler für die <xref:System.Windows.Forms.Control.Validating>Ereignisse der untergeordneten Steuerelemente.</xref:System.Windows.Forms.Control.Validating> Der Code wird im folgende Beispiel entsprechen.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode Nr.&6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>   
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>   
+ [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)

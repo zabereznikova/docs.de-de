@@ -1,105 +1,121 @@
 ---
-title: "Structures and Classes (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], vs. structures"
-  - "structures"
-  - "classes [Visual Basic]"
-  - "structures, compared to classes"
-  - "structures, structure variables"
-  - "structure variables"
+title: Strukturen und Klassen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- classes [Visual Basic], vs. structures
+- structures
+- classes [Visual Basic]
+- structures, compared to classes
+- structures, structure variables
+- structure variables
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Structures and Classes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e7402ec0fcfc279470d39a4919d3b5ec8b5d9dff
+ms.lasthandoff: 03/13/2017
 
-In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] wird die Syntax für Strukturen und Klassen vereinheitlicht, mit dem Ergebnis, dass Strukturen und Klassen größtenteils die gleichen Funktionen unterstützen.  Zwischen Klassen und Strukturen bestehen jedoch auch wichtige Unterschiede.  
+---
+# <a name="structures-and-classes-visual-basic"></a>Strukturen und Klassen (Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass größtenteils die gleichen Funktionen unterstützen vereinheitlicht. Es gibt jedoch auch wichtige Unterschiede zwischen Strukturen und Klassen.  
   
- Klassen haben den Vorteil, Verweistypen zu sein — die Übergabe eines Verweises ist effizienter als die Übergabe einer Strukturvariablen mit allen zugehörigen Daten.  Dagegen muss für Strukturen kein Speicher des globalen Heaps belegt werden.  
+ Klassen haben den Vorteil, Verweistypen – Übergabe eines Verweises ist effizienter als die Übergabe einer Strukturvariablen mit allen zugehörigen Daten. Auf der anderen Seite erfordern Strukturen keine Zuordnung von Arbeitsspeicher auf dem globalen Heap.  
   
- Da nicht von einer Struktur geerbt werden kann, dürfen Strukturen nur für Objekte verwendet werden, die nicht erweitert werden müssen.  Verwenden Sie Strukturen, wenn die Instanz des zu erstellenden Objekts klein ist. Ziehen Sie außerdem die Leistungsmerkmale von Klassen im Vergleich zu Strukturen in Betracht.  
+ Da Sie von einer Struktur geerbt werden können, sollten Strukturen nur für Objekte verwendet werden, die nicht erweitert werden müssen. Verwenden Sie Strukturen, wenn das Objekt, das Sie erstellen möchten, hat eine Größe von kleinen Instanz und die Leistungsmerkmale von Klassen und Strukturen berücksichtigen.  
   
-## Ähnlichkeiten  
- Strukturen und Klassen sind sich in folgender Hinsicht ähnlich:  
+## <a name="similarities"></a>Ähnlichkeit  
+ Strukturen und Klassen sind ähnlich wie in folgender Hinsicht:  
   
--   Beide sind *Containertypen*, d. h. sie enthalten andere Typen als Member.  
+-   Beide sind *Container* Typen, d. h., dass sie andere Typen als Member enthalten.  
   
--   Beide besitzen Member, z. B. Konstruktoren, Methoden, Eigenschaften, Felder, Konstanten, Enumerationen, Ereignisse und Ereignishandler.  Diese Member dürfen jedoch nicht mit den deklarierten *Elementen* einer Struktur verwechselt werden.  
+-   Beide verfügen über Member, die Konstruktoren, Methoden, Eigenschaften, Felder, Konstanten, Enumerationen, Ereignisse und Ereignishandler enthalten können. Verwechseln Sie jedoch nicht diese Member mit dem deklarierten *Elemente* einer Struktur.  
   
--   Die Member beider Typen können individuelle Zugriffsebenen aufweisen.  Beispielsweise kann ein Member als `Public` und ein anderer als `Private` deklariert sein.  
+-   Die Member beider können Zugriffsebenen aufweisen. Beispielsweise kann ein Member deklariert werden `Public` und anderen `Private`.  
   
 -   Beide können Schnittstellen implementieren.  
   
--   Beide können freigegebene Konstruktoren mit oder ohne Parameter besitzen.  
+-   Beide können freigegebene Konstruktoren mit oder ohne Parameter verfügen.  
   
--   Beide können eine *Standardeigenschaft* verfügbar machen, vorausgesetzt, dieser Eigenschaft wird mindestens ein Parameter übergeben.  
+-   Beide verfügbar machen, können eine *Standardeigenschaft*, vorausgesetzt, dass die Eigenschaft nimmt mindestens einen Parameter.  
   
--   Beide können Ereignisse deklarieren und auslösen, und beide können Delegaten deklarieren.  
+-   Beide können deklarieren und Auslösen von Ereignissen, und beide können Delegaten deklarieren.  
   
-## Unterschiede  
- Zwischen Strukturen und Klassen bestehen folgende Unterschiede:  
+## <a name="differences"></a>Unterschiede  
+ Strukturen und Klassen unterscheiden sich in den folgenden Angaben:  
   
--   Strukturen sind *Werttypen*. Klassen sind *Verweistypen*.  Im Unterschied zu einer Variablen eines Klassentyps enthält eine Variable eines Strukturtyps die Daten dieser Struktur statt eines Verweises auf die Daten.  
+-   Strukturen sind *Werttypen*; Klassen sind *Verweistypen*. Eine Variable eines Strukturtyps enthält die Struktur Daten, anstatt mit einem Verweis auf die Daten als Typ einer Klasse ist.  
   
--   Strukturen verwenden Stapelzuweisung; Klassen verwenden Heapzuweisung.  
+-   Strukturen verwenden stapelzuordnung. Klassen verwenden Heapzuweisung.  
   
--   Alle Strukturelemente sind standardmäßig `Public`; Klassenvariablen und Konstanten sind standardmäßig `Private`, während andere Klassenmember standardmäßig `Public` sind.  Aufgrund dieses Verhaltens sind Klassenmember mit den Standardelementen des Visual Basic 6.0\-Systems kompatibel.  
+-   Alle Strukturelemente sind `Public` standardmäßig-Klasse Variablen und Konstanten sind `Private` , während andere Klassenmember sind standardmäßig `Public` standardmäßig. Dieses Verhalten für Klassenmember bietet Kompatibilität mit dem Visual Basic 6.0-System Standardwerte.  
   
--   Eine Struktur muss mindestens eine nicht freigegebene Variable oder ein nicht freigegebenes und nicht benutzerdefiniertes Ereigniselement enthalten. Eine Klasse kann völlig leer sein.  
+-   Eine Struktur müssen mindestens eine nicht freigegebene Variable oder weder freigegebenes noch benutzerdefiniertes Ereigniselement. eine Klasse kann völlig leer sein.  
   
--   Strukturelemente können im Gegensatz zu Klassenmembern nicht als `Protected` deklariert werden.  
+-   Strukturelemente nicht deklariert werden, als `Protected`; Klassenmember können.  
   
--   Eine Strukturprozedur kann nur dann Ereignisse behandeln, wenn sie als [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`\-Prozedur definiert ist und die [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md)\-Anweisung zur Ereignisbehandlung verwendet wird. Jede Klassenprozedur kann mithilfe des [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)\-Schlüsselworts oder der `AddHandler`\-Anweisung Ereignisse behandeln.  Weitere Informationen finden Sie unter [Events](../../../../visual-basic/programming-guide/language-features/events/events.md).  
+-   Eine Strukturprozedur kann Ereignisse behandeln, nur, wenn es eine [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` Verfahren und nur von der [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md); jede Klassenprozedur kann Ereignisse entweder behandeln die [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) Schlüsselwort oder `AddHandler` Anweisung. Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
--   In Strukturvariablendeklarationen können keine Initialisierungen oder anfängliche Arraygrößen angegeben werden, in Deklarationen von Klassenvariablen ist dies hingegen möglich.  
+-   Struktur Variablendeklarationen können keine Initialisierer oder Anfangsgröße für Arrays angeben; Klasse Variablendeklarationen können.  
   
--   Strukturen erben implizit von der <xref:System.ValueType?displayProperty=fullName>\-Klasse und können von keinem anderen Typ erben. Klassen können von einer beliebigen Klasse bzw. von beliebigen Klassen, ausgenommen <xref:System.ValueType?displayProperty=fullName>, erben.  
+-   Strukturen erben implizit von der <xref:System.ValueType?displayProperty=fullName>-Klasse und nicht von einem anderen Typ; erben Klassen können von einer Klasse oder einer anderen <xref:System.ValueType?displayProperty=fullName>.</xref:System.ValueType?displayProperty=fullName> Klassen erben</xref:System.ValueType?displayProperty=fullName>  
   
--   Strukturen können nicht geerbt werden, Klassen hingegen schon.  
+-   Strukturen können nicht vererbt werden; Klassen sind.  
   
--   Strukturen werden nie beendet, sodass die Common Language Runtime \(CLR\) nie die <xref:System.Object.Finalize%2A>\-Methode für eine Struktur aufruft. Klassen werden durch den Garbage Collector \(GC\) beendet, der <xref:System.Object.Finalize%2A> für eine Klasse aufruft, wenn er feststellt, dass keine aktiven Verweise mehr vorhanden sind.  
+-   Strukturen werden nie beendet, sodass die common Language Runtime (CLR) aufgerufen werden, nie die <xref:System.Object.Finalize%2A>-Methode für eine Struktur; Klassen werden vom Garbage Collector (GC), der aufgerufen wird, beendet <xref:System.Object.Finalize%2A>für eine Klasse, wenn es erkennt keine aktiven Verweise mehr vorhanden sind.</xref:System.Object.Finalize%2A> </xref:System.Object.Finalize%2A>  
   
--   Eine Struktur erfordert keinen Konstruktor, eine Klasse hingegen schon.  
+-   Eine Struktur ist einen Konstruktor nicht erforderlich. eine Klasse ist.  
   
--   Strukturen können nur dann über nicht gemeinsame Konstruktoren verfügen, wenn sie Parameter annehmen; bei Klassen ist dies mit oder ohne Parameter möglich.  
+-   Strukturen können nicht freigegebene Konstruktoren nur, wenn sie Parameter annehmen; Klassen können sie mit oder ohne Parameter aufweisen.  
   
- Jede Struktur verfügt über einen impliziten öffentlichen Konstruktor ohne Parameter.  Dieser Konstruktor initialisiert alle Datenmember der Struktur mit ihren Standardwerten.  Dafür kann kein anderes Verhalten definiert werden.  
+ Jede Struktur verfügt über einen impliziten öffentlichen Konstruktor ohne Parameter. Dieser Konstruktor initialisiert alle die Datenmember der Struktur mit ihren Standardwerten. Sie können dieses Verhalten nicht neu definieren.  
   
-## Instanzen und Variablen  
- Da es sich bei Strukturen um Werttypen handelt, sind Strukturvariablen immer permanent an eine einzelne Strukturinstanz gebunden.  Klassen sind hingegen Verweistypen, und eine Objektvariable kann zu verschiedenen Zeitpunkten auf unterschiedliche Klasseninstanzen verweisen.  Dieser Unterschied wirkt sich in folgender Weise auf die Verwendung von Strukturen und Klassen aus:  
+## <a name="instances-and-variables"></a>Instanzen und Variablen  
+ Da Strukturen Werttypen sind, wird Strukturvariablen permanent an eine einzelne Strukturinstanz gebunden. Jedoch sind Klassen Verweistypen, und eine Objektvariable kann zu unterschiedlichen Zeitpunkten auf unterschiedliche Klasseninstanzen verweisen. Dieser Unterschied wirkt sich auf folgende Weise auf die Verwendung von Strukturen und Klassen aus:  
   
--   **Initialisierung.** Eine Strukturvariable umfasst implizit eine Initialisierung der Elemente mithilfe des parameterlosen Konstruktors der Struktur.  Daher ist `Dim s As struct1` gleichbedeutend mit `Dim s As struct1 = New struct1()`.  
+-   **Die Initialisierung.** Eine Strukturvariable umfasst implizit eine Initialisierung der Elemente mithilfe des parameterlosen Konstruktors der Struktur. Aus diesem Grund `Dim s As struct1` entspricht `Dim s As struct1 = New struct1()`.  
   
--   **Zuweisen von Variablen.** Wenn Sie eine Strukturvariable einer anderen Strukturvariablen zuweisen oder eine Strukturinstanz an ein Prozedurargument übergeben, werden die aktuellen Werte aller Variablenelemente in die neue Struktur kopiert.  Wenn Sie eine Objektvariable einer anderen Objektvariablen zuweisen oder eine Objektvariable an eine Prozedur übergeben, wird nur der Verweiszeiger kopiert.  
+-   **Zuweisen von Variablen.** Wenn Sie eine Strukturvariable zu einem anderen zuweisen oder eine Strukturinstanz an Prozedurarguments übergeben, werden die aktuellen Werte aller Variablenelemente in die neue Struktur kopiert. Wenn Sie eine Objektvariable zu einem anderen zuweisen oder eine Objektvariable an eine Prozedur übergeben, wird nur der Verweiszeiger kopiert.  
   
--   **Zuweisen von Nothing.** Sie können einer Strukturvariablen den Wert [Nothing](../../../../visual-basic/language-reference/nothing.md) zuweisen, jedoch bleibt die Instanz weiterhin der Variablen zugeordnet.  Obwohl die Variablenelemente durch die Zuweisung neu initialisiert werden, können Sie die Methoden der Instanz aufrufen und auf die Datenelemente zugreifen.  
+-   **Zuweisen von Nothing.** Weisen Sie den Wert [nichts](../../../../visual-basic/language-reference/nothing.md) auf eine Struktur Variable, aber die Instanz weiterhin der Variablen zugeordnet werden. Weiterhin können Sie ihre Methoden aufrufen und die Datenelemente zugreifen, obwohl die Variablenelemente durch die Zuweisung erneut initialisiert werden.  
   
-     Wenn Sie im Gegensatz dazu eine Objektvariable `Nothing` zuweisen, heben Sie die Zuweisung von allen Klasseninstanzen auf, und Sie können erst wieder über die Variable auf Member zugreifen, wenn Sie eine andere Instanz zuweisen.  
+     Im Gegensatz dazu, wenn Sie eine Objektvariablen auf `Nothing`, heben Sie die Zuweisung von allen Klasseninstanzen und Sie können nicht auf Member über die Variable zugreifen, bis Sie eine andere Instanz zuweisen.  
   
--   **Mehrere Instanzen.** Einer Objektvariablen können zu unterschiedlichen Zeitpunkten verschiedene Klasseninstanzen zugewiesen sein, und verschiedene Objektvariablen können gleichzeitig auf dieselbe Klasseninstanz verweisen.  Beim Zugriff über eine andere Variable, die auf dieselbe Instanz zeigt, wirken sich Änderungen an den Werten von Klassenmembern auf diese Member aus.  
+-   **Mehrere Instanzen.** Eine Objektvariablen kann verschiedene Klasseninstanzen zu unterschiedlichen Zeiten zugewiesen, und verschiedene Objektvariablen können gleichzeitig auf die gleiche Klasseninstanz verweisen. Vorgenommenen Änderungen auf die Werte von Klassenmembern Einfluss auf die Elemente, die beim Zugriff über eine andere Variable, die auf dieselbe Instanz verweisen.  
   
-     Strukturelemente sind hingegen in ihrer eigenen Instanz isoliert.  Änderungen an den Werten werden nicht in anderen Strukturvariablen oder gar in anderen Instanzen derselben `Structure`\-Deklaration wiedergegeben.  
+     Strukturelemente sind hingegen in ihrer eigenen Instanz isoliert. Ändert die Werte werden nicht widergespiegelt, in anderen Strukturvariablen, auch in anderen Instanzen des gleichen `Structure` Deklaration.  
   
--   **Gleichheit.** Ein Gleichheitstest zweier Strukturen muss für jedes einzelne Element durchgeführt werden.  Zwei Objektvariablen können mit der <xref:System.Object.Equals%2A>\-Methode verglichen werden.  <xref:System.Object.Equals%2A> gibt an, ob die zwei Variablen auf die gleiche Instanz zeigen.  
+-   **Gleichheit.** Gleichheitstest zwei Strukturen muss für ein Element für Element durchgeführt werden. Zwei Objektvariablen können verglichen werden, mithilfe der <xref:System.Object.Equals%2A>-Methode.</xref:System.Object.Equals%2A> <xref:System.Object.Equals%2A>Gibt an, ob die zwei Variablen auf dieselbe Instanz verweisen.</xref:System.Object.Equals%2A>  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
+ [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
+ [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
+ [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

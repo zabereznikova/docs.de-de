@@ -1,68 +1,84 @@
 ---
-title: "Efficient Use of Data Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "performance, data type efficiency"
-  - "data types [Visual Basic], weak typing"
-  - "AscW function, preferred to Asc"
-  - "data types [Visual Basic], using efficiently"
-  - "optimization, data types"
-  - "data types [Visual Basic], strong typing"
-  - "strong typing"
-  - "typing, strong"
-  - "data types [Visual Basic], optimizing"
-  - "ChrW function, preferred to Chr"
+title: Effiziente Verwendung von Datentypen (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- performance, data type efficiency
+- data types [Visual Basic], weak typing
+- AscW function, preferred to Asc
+- data types [Visual Basic], using efficiently
+- optimization, data types
+- data types [Visual Basic], strong typing
+- strong typing
+- typing, strong
+- data types [Visual Basic], optimizing
+- ChrW function, preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Efficient Use of Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b81a1c81d970beee32925c3f2fe6ca3bcad79151
+ms.lasthandoff: 03/13/2017
 
-Nicht deklarierten Variablen und Variablen, die ohne Datentyp deklariert sind, wird der Datentyp `Object` zugewiesen.  Programme lassen sich dadurch schneller programmieren, werden jedoch auch langsamer ausgeführt.  
+---
+# <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
+Nicht deklarierte Variablen und Variablen, die ohne einen Datentyp zugewiesen sind die `Object` -Datentyp. Ganz einfach, schnell Programme zu schreiben, aber es kann dazu führen, dass sie langsamer ausgeführt.  
   
-## Starke Typisierung  
- Die Angabe von Datentypen für alle Variablen wird als *starke Typisierung* bezeichnet.  Die Verwendung der starken Typisierung bietet einige Vorteile:  
+## <a name="strong-typing"></a>Starke Typisierung  
+ Die Angabe von Datentypen für alle Variablen wird als bezeichnet *starke Typisierung*. Mit starker Typisierung hat mehrere Vorteile:  
   
--   Dadurch wird die IntelliSense\-Unterstützung für die Variablen.  Sie können die Eigenschaften und andere Member der Variablen bei der Eingabe in den Code anzeigen.  
+-   Sie können IntelliSense-Unterstützung für Variablen. Dadurch können Sie die Eigenschaften und andere Member finden Sie unter während der Eingabe im Code.  
   
--   Die Compilertypüberprüfung wird genutzt.  Anweisungen, die zur Laufzeit beispielsweise aufgrund eines Überlaufs oder anderer Fehler fehlschlagen können, können abgefangen werden.  Außerdem werden Aufrufe von Methoden für Objekte, die diese nicht unterstützen, abgefangen.  
+-   Nutzt die Vorteile der Compiler Typ überprüft. Anweisungen, die zur Laufzeit aufgrund von Fehlern, z. B. Überlauf fehlschlagen können abzufangen. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
   
--   Sie ermöglicht die schnellere Ausführung des Codes.  
+-   Schnellere Ausführung des Codes führt.  
   
-## Die effizientesten Datentypen  
- Für Variablen, die generell keine Nachkommastellen enthalten, sind Ganzzahldatentypen effizienter als Nicht\-Ganzzahltypen.  In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] sind `Integer` und `UInteger` die effizientesten numerischen Typen.  
+## <a name="most-efficient-data-types"></a>Die effizientesten Datentypen  
+ Für Variablen, die generell keine Nachkommastellen enthalten, sind Ganzzahldatentypen effizienter als die Ganzzahltypen. In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], `Integer` und `UInteger` sind die effizientesten numerischen Typen.  
   
- Bei Bruchzahlen ist `Double` der effizienteste Datentyp, weil die Prozessoren der aktuellen Plattformen Gleitkommaoperationen mit doppelter Genauigkeit ausführen.  Operationen mit `Double` werden jedoch langsamer ausgeführt als solche mit ganzzahligen Typen wie `Integer`.  
+ Bei Bruchzahlen `Double` ist der effizienteste Datentyp, da die Prozessoren auf den aktuellen Plattformen Gleitkommaoperationen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
   
-## Angeben eines Datentyps  
- Deklarieren Sie eine Variable eines bestimmten Typs mittels der [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).  Sie können gleichzeitig, wie im folgenden Beispiel gezeigt, ihre Zugriffsebene angeben. Verwenden Sie dazu das Schlüsselwort [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) oder [Private](../../../../visual-basic/language-reference/modifiers/private.md).  
+## <a name="specifying-data-type"></a>Angeben eines Datentyps  
+ Verwenden der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) zum Deklarieren einer Variablen eines bestimmten Typs. Sie können die Zugriffsebene gleichzeitig angeben, mit der [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md), [geschützt](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), oder [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort, wie im folgenden Beispiel.  
   
 ```  
 Private x As Double  
 Protected s As String  
 ```  
   
-## Zeichenkonvertierung  
- Die `AscW`\-Funktion und die `ChrW`\-Funktion werden in Unicode verwendet.  Sie sind `Asc` und `Chr` vorzuziehen, da letztere in und aus Unicode konvertiert werden müssen.  
+## <a name="character-conversion"></a>Zeichen-Konvertierung  
+ Die `AscW` und `ChrW` Funktionen werden in Unicode. Verwenden Sie diese den Vorzug `Asc` und `Chr`, die in und aus Unicode übersetzen.  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>   
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>   
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Numeric Data Types](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Verwenden von IntelliSense](/visual-studio/ide/using-intellisense)
+ [Numerische Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
+ [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
+ [Verwenden von IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)

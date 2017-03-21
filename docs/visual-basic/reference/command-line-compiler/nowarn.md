@@ -1,69 +1,83 @@
 ---
-title: "/nowarn | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "nowarn compiler option [Visual Basic]"
-  - "/nowarn compiler option [Visual Basic]"
-  - "-nowarn compiler option [Visual Basic]"
+title: / nowarn | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- nowarn compiler option [Visual Basic]
+- /nowarn compiler option [Visual Basic]
+- -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# /nowarn
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 61b145a9eb95f5357c7aa2983a96c31e8f2cef6a
+ms.lasthandoff: 03/13/2017
 
-Unterdrückt die Compilerfunktion zum Erstellen von Warnungen.  
+---
+# <a name="nowarn"></a>/nowarn
+Unterdrückt die Compilerfunktion zum Generieren von Warnungen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /nowarn[:numberList]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`numberList`|Optional.  Durch Kommas getrennte Liste der Warnungs\-ID\-Nummern, die vom Compiler unterdrückt werden sollen.  Wenn keine Warnungs\-IDs angegeben werden, werden alle Warnungen unterdrückt.|  
+|---|---|  
+|`numberList`|Optional. Durch Kommas getrennte Liste von Warnung-ID-Nummern an, denen der Compiler unterdrücken soll. Wenn die Warnung IDs nicht angegeben sind, werden alle Warnungen unterdrückt.|  
   
-## Hinweise  
- Die `/nowarn`\-Option bewirkt, dass der Compiler keine Warnungen generiert.  Um eine einzelne Warnung zu unterdrücken, geben Sie die Warnungs\-ID bei der `/nowarn`\-Option nach dem Doppelpunkt an.  Trennen Sie mehrere Warnungsnummern jeweils durch ein Komma voneinander.  
+## <a name="remarks"></a>Hinweise  
+ Die `/nowarn` -Option bewirkt, dass den Compiler keine Warnungen generiert werden. Um eine einzelne Warnung zu unterdrücken, geben Sie die ID der Warnung auf die `/nowarn` Option hinter dem Doppelpunkt. Trennen Sie mehrere Warnungsnummern jeweils durch Kommas.  
   
- Sie müssen lediglich den numerischen Teil des Warnungsbezeichners angeben.  Wenn Sie z. B. BC42024 \(die Warnung für nicht verwendete lokale Variablen\) unterdrücken möchten, geben Sie `/nowarn:42024` an.  
+ Sie müssen nur den numerischen Teil des Warnungsbezeichners angeben. Wenn Sie BC42024, die Warnung für nicht verwendete lokale Variablen unterdrücken möchten, z. B. Geben Sie `/nowarn:42024`.  
   
- Weitere Informationen über die Warnungs\-ID\-Nummern finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Weitere Informationen über die Warnung-ID-Nummern, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-||  
-|-|  
-|So legen Sie \/nowarn in der integrierten Entwicklungsumgebung von Visual Studio fest|  
-|1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  Weitere Informationen finden Sie unter [Introduction to the Project Designer](http://msdn.microsoft.com/de-de/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Aktivieren Sie das Kontrollkästchen **Alle Warnungen deaktivieren**, um alle Warnungen zu deaktivieren.<br />     \- oder \-<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie in der Dropdownliste neben der Warnung auf **Keine**.|  
+|Zum Festlegen von/nowarn in Visual Studio integrierte Entwicklungsumgebung|  
+|---|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die **Kompilieren** Registerkarte.<br />3.  Wählen Sie die **alle Warnungen deaktivieren** Kontrollkästchen, um alle Warnungen deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie auf **keine** aus der Dropdownliste neben der Warnung.|  
   
-## Beispiel  
- Mit dem folgenden Code wird `T2.vb` kompiliert. Warnungen werden nicht angezeigt.  
+## <a name="example"></a>Beispiel  
+ Der folgende code kompiliert `T2.vb` und keine Warnungen angezeigt.  
   
 ```  
 vbc /nowarn t2.vb  
 ```  
   
-## Beispiel  
- Mit dem folgenden Code wird `T2.vb` kompiliert. Warnungen für nicht verwendete lokale Variablen \(42024\) werden nicht angezeigt.  
+## <a name="example"></a>Beispiel  
+ Der folgende code kompiliert `T2.vb` und die Warnung für nicht verwendete lokale Variablen (42024) wird nicht angezeigt.  
   
 ```  
 vbc /nowarn:42024 t2.vb  
 ```  
   
-## Siehe auch  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
+ [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)

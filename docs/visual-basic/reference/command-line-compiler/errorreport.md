@@ -1,65 +1,81 @@
 ---
-title: "/errorreport | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "-errorreport compiler option [Visual Basic]"
-  - "/errorreport compiler option [Visual Basic]"
-  - "errorreport compiler option [Visual Basic]"
+title: / errorreport | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- -errorreport compiler option [Visual Basic]
+- /errorreport compiler option [Visual Basic]
+- errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# /errorreport
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2ebe5646256926f68a1a900b91c25a1768505785
+ms.lasthandoff: 03/13/2017
 
-Gibt an, wie der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Compiler interne Compilerfehler meldet.  
+---
+# <a name="errorreport"></a>/errorreport
+Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Compiler gemeldet werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /errorreport:{ prompt | queue | send | none }  
 ```  
   
-## Hinweise  
- Diese Option bietet eine komfortable Möglichkeit, einen internen Compilerfehler \(ICE, Internal Compiler Error\) von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] dem [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Team von Microsoft mitzuteilen.  Standardmäßig sendet der Compiler keine Informationen an Microsoft.  Wenn jedoch ein interner Compilerfehler auftritt, ermöglicht es Ihnen diese Option, den Fehler Microsoft mitzuteilen.  Diese Informationen erleichtern es den Microsoft\-Technikern, die Ursache zu identifizieren und die nächste Version von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] entsprechend zu verbessern.  
+## <a name="remarks"></a>Hinweise  
+ Diese Option bietet eine komfortable Möglichkeit, einen [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] interner Compilerfehler (ICE) auf dem [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Team bei Microsoft. Standardmäßig sendet der Compiler keine Informationen an Microsoft. Wenn Sie einen internen Fehler auftreten, kann jedoch diese Option auf den Fehler an Microsoft senden. Diese Informationen helfen Microsoft-Technikern, die Ursache zu identifizieren und die nächste Version von zu verbessern [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
- Ob Benutzer Berichte versenden können, ist vom Computer und den Benutzerberechtigungen abhängig.  
+ Die Fähigkeit eines Benutzers zum Senden von Berichten hängt vom Computer und den Benutzerberechtigungen ab.  
   
- In der folgenden Tabelle wird die Wirkung der `/errorreport`\-Option zusammengefasst.  
+ Die folgende Tabelle enthält die Auswirkung der `/errorreport` Option.  
   
-|||  
-|-|-|  
 |Option|Verhalten|  
-|`prompt`|Wenn ein interner Compilerfehler auftritt, wird ein Dialogfeld eingeblendet, in dem die Daten genau angezeigt werden, die vom Compiler erfasst wurden.  Sie können bestimmen, ob der Fehlerbericht vertrauliche Daten enthält, und entscheiden, ob er an Microsoft gesendet werden soll.  Wenn Sie den Bericht senden möchten und die Computer\- und Benutzerrichtlinien dies zulassen, sendet der Compiler die Daten an Microsoft.|  
-|`queue`|Reiht den Fehlerbericht in eine Warteschlange ein.  Wenn Sie sich mit Administratorberechtigungen anmelden, können Sie alle Fehler seit der letzten Anmeldung angeben \(Sie werden nur etwa alle drei Tage einmal dazu aufgefordert, Fehlerberichte zu senden\).  Dies ist das Standardverhalten, wenn die `/errorreport`\-Option nicht angegeben wurde.|  
-|`send`|Wenn ein interner Compilerfehler auftritt und die Computer\- und Benutzerrichtlinien dies zulassen, sendet der Compiler die Daten an Microsoft.<br /><br /> Die Option `/errorReport:send` versucht automatisch, Fehlerinformationen an Microsoft zu senden.  Diese Option hängt von der Registrierung ab.  Weitere Informationen zur Einstellung der entsprechenden Werte in der Registrierung finden Sie unter [Aktivieren der automatischen Fehlerberichtertstattung in Visual Studio 2008\-Befehlszeilentools](http://go.microsoft.com/fwlink/?LinkID=184695).|  
-|`none`|Wenn ein interner Compilerfehler auftritt, wird er nicht erfasst und nicht an Microsoft gesendet.|  
+|---|---|  
+|`prompt`|Wenn ein interner Compilerfehler auftritt, wird ein Dialogfeld, damit Sie genauen die Daten anzeigen können, die der Compiler erfasst. Sie können bestimmen, ob vertrauliche Daten im Bericht und treffen einer Entscheidung, ob Sie diese an Microsoft gesendet. Wenn Sie senden möchten, und die Computer- und Benutzerrichtlinien dies zulassen, sendet der Compiler die Daten an Microsoft.|  
+|`queue`|Den Bericht-Warteschlangen. Wenn Sie sich mit Administratorrechten anmelden, können Sie Fehler melden, seit der letzten Sie angemeldet wurden (nicht werden Sie aufgefordert, Fehlerberichte mehr als einmal alle drei Tage senden). Dies ist das Standardverhalten bei der `/errorreport` nicht angegeben wird.|  
+|`send`|Wenn ein interner Compilerfehler auftritt und die Computer- und Benutzerrichtlinien dies zulassen, sendet der Compiler die Daten an Microsoft.<br /><br /> Die Option `/errorReport:send` versucht, automatisch Informationen an Microsoft gesendet. Diese Option hängt von der Registrierung ab. Weitere Informationen zum Festlegen der entsprechenden Werte in der Registrierung finden Sie unter [Aktivieren der automatischen Fehlerberichterstattung in Visual Studio 2008-Befehlszeilentools](http://go.microsoft.com/fwlink/?LinkID=184695).|  
+|`none`|Wenn ein interner Compilerfehler auftritt, wird es nicht erfasst oder an Microsoft gesendet.|  
   
- Zu den vom Compiler gesendeten Daten zählt der Stapel zum Zeitpunkt des Fehlers. Diese Daten umfassen i. d. R. Quellcode.  Bei Verwendung von `/errorreport` mit der[\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)\-Option wird die gesamte Quelldatei gesendet.  
+ Der Compiler sendet Daten, die im Stapel zum Zeitpunkt des Fehlers, der Quellcode in der Regel enthält enthält. Wenn `/errorreport` wird verwendet, mit der [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) -Option wird die gesamte Quelldatei gesendet wird.  
   
- Es empfiehlt sich, die Option zusammen mit der [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)\-Option zu verwenden, da die Microsoft\-Techniker so den Fehler einfacher reproduzieren können.  
+ Diese Option wird am besten verwendet, mit der [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) option, da Microsoft-Techniker so den Fehler einfacher reproduzieren können.  
   
 > [!NOTE]
->  Die Option `/errorreport` ist nicht innerhalb der Entwicklungsumgebung von Visual Studio verfügbar, sondern nur bei der Kompilierung über die Befehlszeile.  
+>  Die `/errorreport` Option ist nicht verfügbar in der Visual Studio Development Environment; es ist nur beim Kompilieren von der Befehlszeile aus.  
   
-## Beispiel  
- Im folgenden Code wird versucht, `T2.vb` zu kompilieren, und wenn der Compiler auf einen internen Compilerfehler trifft, werden Sie gebeten, den Fehlerbericht an Microsoft zu senden.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code versucht, kompilieren Sie `T2.vb`, und wenn der Compiler einen internen Fehler, sie werden aufgefordert, den Fehlerbericht an Microsoft zu senden.  
   
 ```  
 vbc /errorreport:prompt t2.vb  
 ```  
   
-## Siehe auch  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
+ [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

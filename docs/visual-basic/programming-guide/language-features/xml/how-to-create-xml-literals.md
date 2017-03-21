@@ -1,38 +1,54 @@
 ---
-title: "How to: Create XML Literals (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "XML literals [Visual Basic], creating"
+title: 'Gewusst wie: Erstellen von XML-Literalen (Visual Basic) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# How to: Create XML Literals (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 72d96f36fc17f32ac3ee3ea97175f112fcd21681
+ms.lasthandoff: 03/13/2017
 
-Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-Element direkt im Code erstellen.  In den Beispielen in diesem Thema wird veranschaulicht, wie ein XML\-Element mit drei untergeordneten Elementen erstellt wird, und wie ein XML\-Dokument erstellt wird.  
+---
+# <a name="how-to-create-xml-literals-visual-basic"></a>Gewusst wie: Erstellen von XML-Literalen (Visual Basic)
+Sie können ein XML-Dokument, Fragment oder das Element direkt im Code erstellen, mit einem XML-literal. In den Beispielen in diesem Thema veranschaulichen ein XML-Element zu erstellen, die drei untergeordnete Elemente verfügt, und wie Sie ein XML-Dokument zu erstellen.  
   
- Sie können auch die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-APIs verwenden, um [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\-Objekte zu erstellen.  Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
+ Sie können auch die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] APIs zum Erstellen [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] Objekte. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>  
   
-### So erstellen Sie ein XML\-Element  
+### <a name="to-create-an-xml-element"></a>Erstellen Sie ein XML-element  
   
--   Erstellen Sie XML inline, indem Sie die XML\-Literalsyntax verwenden, die der tatsächlichen XML\-Syntax entspricht.  
+-   Erstellen Sie XML Inline, indem die XML-Literalen Syntax verwenden, die die tatsächlichen XML-Syntax entspricht.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
-     Führen Sie den Code aus.  Ausgabe dieses Codes:  
+     Führen Sie den Code. Die Ausgabe dieses Codes lautet:  
   
      `<contact>`  
   
@@ -44,17 +60,17 @@ Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-El
   
      `</contact>`  
   
-### So erstellen Sie ein XML\-Dokument  
+### <a name="to-create-an-xml-document"></a>Zum Erstellen eines XML-Dokuments  
   
--   Erstellen Sie das XML\-Dokument inline.  Mit dem folgenden Code wird ein XML\-Dokument mit Literalsyntax, einer XML\-Deklaration, einer Verarbeitungsanweisung, einem Kommentar und einem Element, das ein anderes Element enthält, erstellt.  
+-   Erstellen Sie die XML-Dokument Inline. Der folgende Code erstellt ein XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples&#30;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
-     Führen Sie den Code aus.  Ausgabe dieses Codes:  
+     Führen Sie den Code. Die Ausgabe dieses Codes lautet:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
-     `<!-- Tests that the application works.  -->`  
+     `<!-- Tests that the application works. -->`  
   
      `<books>`  
   
@@ -62,8 +78,8 @@ Mithilfe eines XML\-Literals können Sie ein XML\-Dokument, \-Fragment oder \-El
   
      `</books>`  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
- [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+ [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
+ [XML-Elementliteral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
+ [XML-Dokumentliteral](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

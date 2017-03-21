@@ -1,51 +1,67 @@
 ---
-title: "Name &lt;namespacename&gt; in the root namespace &lt;fullnamespacename&gt; is not CLS-compliant | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40039"
-  - "bc40039"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40039"
+title: Namen &lt;Namespacename&gt; im Namespace Root &lt;Fullnamespacename&gt; ist nicht CLS-kompatibel. | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40039
+- bc40039
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Name &lt;namespacename&gt; in the root namespace &lt;fullnamespacename&gt; is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 344a0ca098160a8d9f5bc8281a941311f82000c4
+ms.lasthandoff: 03/13/2017
 
-Eine Assembly ist als `<CLSCompliant(True)>` markiert, doch ein Element des Stammnamespacenamens beginnt mit einem Unterstrich \(`_`\).  
+---
+# <a name="name-ltnamespacenamegt-in-the-root-namespace-ltfullnamespacenamegt-is-not-cls-compliant"></a>Namen &lt;Namespacename&gt; im Namespace Root &lt;Fullnamespacename&gt; ist nicht CLS-kompatibel.
+Eine Assembly ist als markiert `<CLSCompliant(True)>`, aber ein Element der Name des Stammnamespaces beginnt mit einem Unterstrich (`_`).  
   
- Ein Programmierelement kann ein oder mehrere Unterstriche enthalten, doch darf es nicht mit einem Unterstrich beginnen, wenn es mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) kompatibel sein soll.  Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Ein Programmierelement kann ein oder mehrere Unterstriche enthalten, doch zum kompatibel sein, mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), es muss nicht mit einem Unterstrich beginnen. Finden Sie unter [deklarierten Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant`\-Parameter des Attributs auf `True` oder auf `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben.  Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
+ Beim Anwenden der <xref:System.CLSCompliantAttribute>auf ein Programmierelement legen Sie des Attributs `isCompliant` Parameter entweder `True` oder `False` an Kompatibilität oder Nichtkompatibilität.</xref:System.CLSCompliantAttribute> Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
- Wenn Sie <xref:System.CLSCompliantAttribute> nicht auf ein Element anwenden, wird dieses als nicht kompatibel betrachtet.  
+ Wenn Sie nicht anwenden der <xref:System.CLSCompliantAttribute>auf ein Element gilt nicht kompatibel ist.</xref:System.CLSCompliantAttribute>  
   
- Standardmäßig ist diese Meldung eine Warnung.  Informationen über das Ausblenden von Warnungen bzw. über die Behandlung von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Fehler\-ID:** BC40039  
+ **Fehler-ID:** BC40039  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn CLS\-Kompatibilität erforderlich ist, ändern Sie den Stammnamespacenamen, sodass keines seiner Elemente mit einem Unterstrich beginnt.  
+-   Wenn Sie CLS-Kompatibilität erforderlich ist, Ändern der Name des Stammnamespaces, sodass keines seiner Elemente mit einem Unterstrich beginnt.  
   
--   Wenn der Name dieses Namespaces nicht geändert werden darf, entfernen Sie das <xref:System.CLSCompliantAttribute> aus der Assembly, oder markieren Sie sie als `<CLSCompliant(False)>`.  
+-   Wenn der Name des Namespaces unverändert bleiben muss, entfernen Sie die <xref:System.CLSCompliantAttribute>aus der Assembly, oder markieren Sie es als `<CLSCompliant(False)>`.</xref:System.CLSCompliantAttribute>  
   
-## Siehe auch  
- [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)   
  [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [\/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)   
- [Seite "Anwendung", Projekt\-Designer \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic)   
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [\<PAVE OVER\> Writing CLS\-Compliant Code](http://msdn.microsoft.com/de-de/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ [/ RootNamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)   
+ [Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+ [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
+ [\<PAVE über > CLS-kompatiblen Code schreiben](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

@@ -1,41 +1,57 @@
 ---
-title: "&#39;AddressOf&#39; operand must be the name of a method (without parentheses) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30577"
-  - "bc30577"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30577"
+title: '&quot;AddressOf&quot;-Operand muss der Name einer Methode (ohne Klammern) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30577
+- bc30577
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# &#39;AddressOf&#39; operand must be the name of a method (without parentheses)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 04103fe23ee55bb751d9604ef74614edeead8886
+ms.lasthandoff: 03/13/2017
 
-Der Operator `AddressOf` erstellt eine Instanz eines Prozedurdelegaten, die auf eine bestimmte Prozedur verweist.  Die Syntax lautet wie folgt:  
+---
+# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>"AddressOf"-Operand muss der Name einer Methode (ohne Klammern) sein.
+Der `AddressOf` -Operator erstellt eine Delegatinstanz einer Prozedur, die auf eine bestimmte Prozedur verweist. Die Syntax lautet wie folgt.  
   
  `AddressOf` `procedurename`  
   
- Das Argument nach `AddressOf` steht in runden Klammern. An dieser Stelle sind keine Klammern erforderlich.  
+ Runden Klammern folgende Argument `AddressOf`, wobei keine benötigt werden.  
   
- **Fehler\-ID:** BC30577  
+ **Fehler-ID:** BC30577  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Entfernen Sie die runden Klammern, die das Argument hinter `AddressOf` umschließen.  
+1.  Entfernen Sie die Klammern um das Argument nach `AddressOf`.  
   
 2.  Stellen Sie sicher, dass das Argument ein Methodenname ist.  
   
-## Siehe auch  
- [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Delegates](../../../visual-basic/programming-guide/language-features/delegates/delegates.md)
+## <a name="see-also"></a>Siehe auch  
+ [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
+ [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)
