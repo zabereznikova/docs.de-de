@@ -56,7 +56,7 @@ Es gibt kein entsprechendes Schlüsselwort zum Aufheben der Speicherzuweisung, d
 
 Typen in einem bestimmten Bereich verlieren normalerweise ihre Gültigkeit, sobald eine Methode beendet ist. An diesem Punkt können sie gesammelt werden. Mit der `using`-Anweisung können Sie den Garbage Collector darüber informieren, dass ein bestimmtes Objekt noch vor Beendigung der Methode seine Gültigkeit verliert:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 Sobald der `using`-Block beendet ist, weiß der Garbage Collector, dass das `stream`-Objekt im vorherigen Beispiel gesammelt und der verwendete Speicherplatz freigegeben werden kann.
 
@@ -68,7 +68,7 @@ Die .NET-Runtime bietet zusätzliche Dienste, um die Speichersicherheit zu gewä
 
 Das folgende Beispiel löst aufgrund der Speichersicherheit eine Ausnahme aus.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>Typsicherheit
 
