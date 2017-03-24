@@ -1,24 +1,22 @@
 ---
-title: .NET Core Anwendungsbereitstellung
+title: .NET Core-Anwendungsbereitstellung | Microsoft-Dokumentation
 description: .NET Core Anwendungsbereitstellung
 keywords: .NET, .NET Core, .NET Core Bereitstellung
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung #
-
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [.NET Core-Anwendungsbereitstellung (.NET Core Tools RC4)](../preview3/deploying/index.md).
+# <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
 Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen: 
 
@@ -50,7 +48,7 @@ Es gibt auch einige Nachteile:
 
 Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das [Dotnet-Dienstprogramm](../tools/dotnet.md) über die Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung wie Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, zu testen und zu veröffentlichen.
 
-1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile [dotnet new](../tools/dotnet-new.md) ein, um ein neues C#-Konsolenprojekt zu erstellen.
+1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile `[dotnet new console](../tools/dotnet-new.md)` ein, um ein neues C#-Konsolenprojekt zu erstellen.
 
 2. Öffnen Sie die `Program.cs`-Datei in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurde, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
@@ -93,9 +91,9 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
 4. Erstellen Sie mithilfe des Befehls [Dotnet Build](../tools/dotnet-build.md) einen Debugbuild Ihrer Anwendung.
 
-5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie mithilfe des `dotnet publish -f netcoreapp1.0 -c release`-Befehls die Dateien erstellen, die mit Ihrer Anwendung bereitgestellt werden. Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung.
+5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie mithilfe des `dotnet publish -f netcoreapp1.1 -c release`-Befehls die Dateien erstellen, die mit Ihrer Anwendung bereitgestellt werden. Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung.
 
-   Die resultierenden Dateien werden in ein Verzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.0`-Unterverzeichnis Ihres Projekts befindet.
+   Die resultierenden Dateien werden in ein Verzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.1`-Unterverzeichnis Ihres Projekts befindet.
 
 6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
@@ -107,17 +105,15 @@ Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung 
 
 Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst drei zusätzliche Schritte vor dem Ausführen des `dotnet restore`-Befehls:
 
-1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `dependencies`-Teil Ihrer `project.json`-Datei hinzu. Der folgende `dependencies`-Abschnitt verwendet Json.NET als Drittanbieter-Bibliothek.
+1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer `csproj`-Datei hinzu. Der folgende Abschnitt `<ItemGroup>` zeigt das Element `<ItemGroup>`, das die Abhängigkeiten im Standardprojekt mit Json.NET als Bibliothek eines Drittanbieters enthält.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": {
-        "type": "platform",
-        "version": "1.0.0"
-      },
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
+
+ Beachten Sie, dass die SDK-Abhängigkeit im obigen Beispiel bestehen bleibt. Dies ist beabsichtigt, da diese Abhängigkeit zum Wiederherstellen aller benötigten Ziele erforderlich ist, damit die Befehlszeilentools funktionieren.  
 
 2. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit herunter. Um das Paket herunterzuladen, führen Sie nach dem Hinzufügen der Abhängigkeit den `dotnet restore`-Befehl aus. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
 
@@ -143,11 +139,11 @@ Es hat auch einige Nachteile:
 
 - Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> Bereitstellen einer einfachen eigenständigen Bereitstellung ###
+### <a name="simpleSelf"></a> Bereitstellen einer einfachen eigenständigen Bereitstellung ###
 
-Das Bereitstellen einer eigenständigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst das Erstellen des Projekts, das Ändern der Datei project.json, und das Erstellen, Testen und Veröffentlichen der Anwendung.  Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das `dotnet`-Dienstprogramm von der Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung, wie z.B. Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, testen und veröffentlichen.
+Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von Drittanbietern umfasst das Erstellen des Projekts, das Ändern der CSPROJ-Datei sowie das Erstellen, Testen und Veröffentlichen der Anwendung.  Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das `dotnet`-Dienstprogramm von der Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung, wie z.B. Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, testen und veröffentlichen.
 
-1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile `dotnet new` ein, um ein neues C#-Konsolenprojekt zu erstellen.
+1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile `dotnet new console` ein, um ein neues C#-Konsolenprojekt zu erstellen.
 
 2. Öffnen Sie die `Program.cs`-Datei in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurde, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
@@ -185,121 +181,72 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Drittanbieter-Abhän
     }
     ```
 
-3. Öffnen Sie die `project.json`-Datei, und entfernen Sie die folgende Zeile im `frameworks`-Abschnitt:
+3. Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei `csproj`, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). Das folgende Beispiel gibt an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
-   ```json
-   "type": "platform",
-   ```
-Der Framework-Abschnitt sollte wie folgt aussehen, nachdem Sie ihn geändert haben:
-
-    ```json
-    "frameworks": {
-      "netcoreapp1.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": {
-             "version": "1.0.0"
-          }
-        }
-      }
-    }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-Das Entfernen des `"type": "platform"`-Attributs gibt an, dass das Framework als eine Reihe von für unsere Anwendung lokalen Komponenten, und nicht als ein systemweites Plattformpaket bereitgestellt wird.
+Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Beachten Sie außerdem, dass das Element `<RuntimeIdentifier>` jedem `<PropertyGroup>`-Element in Ihrer Datei `csproj` hinzugefügt werden kann. Eine vollständige `csproj`-Beispieldatei wird später in diesem Abschnitt angezeigt.
 
-4. Erstellen Sie einen `runtimes`-Abschnitt in Ihrer `project.json`-Datei, der die Plattformen Ihrer Zielanwendungen definiert, und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). Der folgende `runtimes`-Abschnitt gibt z.B. an, dass die Anwendung auf 64-Bit Windows 10-Betriebssystemen und der 64-Bit OS X-Version 10.10 ausgeführt wird.
+4. Führen Sie den `dotnet restore`-Befehl aus, um die in Ihrem Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
-    ```
-Beachten Sie, dass Sie auch ein Komma hinzufügen müssen, um den `runtimes`-Abschnitt vom vorherigen Abschnitt zu trennen.
-Eine vollständige `project.json`-Beispieldatei wird später in diesem Abschnitt angezeigt.
-
-6. Führen Sie den `dotnet restore`-Befehl aus, um die in Ihrem Projekt angegebenen Abhängigkeiten wiederherzustellen.
-
-7. Erstellen Sie mithilfe des `dotnet build`-Befehls Debugversionen Ihrer Anwendung auf allen Zielplattformen. Wenn Sie den Runtime-ID, den Sie gerne erstellen würden, nicht angeben, erstellt der `dotnet build`-Befehl nur einen Build für die Runtime-ID des aktuellen Systems. Mit den folgenden Befehlen können Sie Ihre Anwendung für beide Zielplattformen erstellen:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-Die Debugbuilds Ihrer Anwendung für jede Plattform befinden sich im `.\bin\Debug\netcoreapp1.0\<runtime_identifier>`-Unterverzeichnis des Projekts.
-
-8. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
+5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
-Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.0\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
+Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.1\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
 
-9. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
+6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
 Die veröffentlichten Dateien können so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen. 
 
-Nachfolgend ist die vollständige `project.json`-Datei für dieses Projekt angegeben.
+Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.0"
-        }
-      }
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+</Project>
 ```
+
 
 ### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>Bereitstellen einer eigenständigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
 
 Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst das Hinzufügen der Drittanbieter-Abhängigkeit:
 
-1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `dependencies`-Teil Ihrer `project.json`-Datei hinzu. Der folgende `dependencies`-Abschnitt verwendet Json.NET als Drittanbieter-Bibliothek.
+1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer `csproj`-Datei hinzu. Der folgende `<ItemGroup>`-Abschnitt verwendet Json.NET als Drittanbieter-Bibliothek.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": "1.0.0",
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
 2. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit auf Ihr System herunter. Nach dem Hinzufügen der Abhängigkeit, führen Sie den `dotnet restore`-Befehl aus, um über die Abhängigkeit auf Ihrer Anwendung zu verfügen. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
 
-Im folgenden sehen Sie die vollständige project.json-Datei für dieses Projekt:
+Es folgt die vollständige CSPROJ-Datei dieses Projekts:
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0",
-    "Newtonsoft.Json": "9.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+</Project>
 ```
 
 Wenn Sie Ihre Anwendung bereitstellen, sind die Drittanbieter-Abhängigkeiten, die in Ihrer Anwendung verwendet werden, auch in Ihren Anwendungsdateien enthalten. Drittanbieter-Bibliotheken müssen noch nicht auf dem System vorhanden sein, auf dem die Anwendung ausgeführt wird.
@@ -308,92 +255,68 @@ Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbiete
 
 ### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>Bereitstellen einer eigenständigen Bereitstellung mit weniger Speicherbedarf ###
 
-Wenn die Verfügbarkeit von ausreichend Speicherplatz auf den Zielsystemen ein Problem sein könnte, können Sie den allgemeinen Speicherbedarf Ihrer Anwendung durch Ausschließen einiger Systemkomponenten reduzieren. Zu diesem Zweck definieren Sie explizit die .NET Core-Komponenten, die Ihre Anwendung in der Datei project.json enthält.
+Wenn die Verfügbarkeit von ausreichend Speicherplatz auf den Zielsystemen ein Problem sein könnte, können Sie den allgemeinen Speicherbedarf Ihrer Anwendung durch Ausschließen einiger Systemkomponenten reduzieren. Zu diesem Zweck definieren Sie explizit die .NET Core-Komponenten, die Ihre App in der CSPROJ-Datei enthält.
 
-Befolgen Sie die ersten beiden Schritte für die Erstellung einer eigenständigen Bereitstellung, um eine eigenständigen Bereitstellung mit weniger Speicherbedarf zu erstellen. Nachdem Sie den `dotnet new`-Befehl ausgeführt und den C#-Quellcode für Ihre Anwendung hinzugefügt haben, gehen Sie folgendermaßen vor:
+Befolgen Sie die ersten beiden Schritte für die Erstellung einer eigenständigen Bereitstellung, um eine eigenständigen Bereitstellung mit weniger Speicherbedarf zu erstellen. Nachdem Sie den `dotnet new console`-Befehl ausgeführt und den C#-Quellcode für Ihre Anwendung hinzugefügt haben, gehen Sie folgendermaßen vor:
 
-1. Öffnen Sie die `project.json`-Datei und ersetzen Sie den `frameworks`-Abschnitt folgendermaßen:
+1. Öffnen Sie die `csproj`-Datei und ersetzen Sie das `<TargetFramework>`-Element folgendermaßen:
 
-    ```json
-    "frameworks": {
-      "netstandard1.6": { }
-    }
-    ```
-Dies bewirkt zweierlei:
+  ```xml
+  <TargetFramework>netstandard1.6</TargetFramework>
+  ```
+Dieser Vorgang gibt an, dass unsere App nur die .NET-Standardbibliothek verwendet, anstatt des gesamten `netcoreapp1.0`-Frameworks einschließlich .NET Core-CLR, der .NET Core-Bibliothek und zahlreicher anderer Systemkomponenten.
 
-    * Es gibt an, dass unsere Anwendung nur die .NET-Standardbibliothek verwendet, anstatt des gesamten `netcoreapp1.0`-Framework einschließlich .NET Core-CLR, der .NET Core-Bibliothek und zahlreichen anderen Systemkomponenten.
+2. Ersetzen Sie die `<ItemGroup>`, die Paketverweise enthält, durch Folgendes:
 
-    * Das Entfernen des `"type": "platform"`-Attributs gibt an, dass das Framework als eine Reihe von für unsere Anwendung lokalen Komponenten, und nicht als ein systemweites Plattformpaket bereitgestellt wird.
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+  ```
 
-2. Ersetzen Sie den Abschnitt `dependencies` durch Folgendes:
-
-    ```json
-    "dependencies": {
-      "NETStandard.Library": "1.6.0",
-      "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-      "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-    },
-    ```
    Dies definiert die von unserer Anwendung verwendeten Systemkomponenten. Die Systemkomponenten, die mit unserer Anwendung verpackt sind, enthalten die .NET-Standardbibliothek, die .NET Core Runtime und den .NET Core-Host. Dies führt zu einer eigenständigen Bereitstellung mit weniger Speicherbedarf.
 
-3. Wie im Beispiel [Bereitstellen einer einfachen eigenständigen Bereitstellung](#simpleSelf) erstellen Sie einen `runtimes`-Abschnitt in Ihrer `project.json`-Datei, der die Zielplattformen Ihrer Anwendung definiert, und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). Der folgende `runtimes`-Abschnitt gibt z.B. an, dass die Anwendung auf 64-Bit Windows 10-Betriebssystemen und der 64-Bit OS X-Version 10.10 ausgeführt wird.
+3. Wie im Beispiel [Bereitstellen einer einfachen eigenständigen Bereitstellung](#simpleSelf) erstellen Sie das Element `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` in Ihrer Datei `csproj`, der die Zielplattformen Ihrer Anwendung definiert, und die Runtime-ID für jede Zielplattform angibt. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). Das folgende Beispiel gibt an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
+    ```xml
+    <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+    </PropertyGroup>
     ```
-Beachten Sie, dass Sie auch ein Komma hinzufügen müssen, um den `runtimes`-Abschnitt vom vorherigen Abschnitt zu trennen.
-Eine vollständige `project.json`-Beispieldatei wird später in diesem Abschnitt angezeigt.
+    
+   Eine vollständige `csproj`-Beispieldatei wird später in diesem Abschnitt angezeigt.
 
 4. Führen Sie den `dotnet restore`-Befehl aus, um die in Ihrem Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
-5. Erstellen Sie mithilfe des `dotnet build`-Befehls Debugversionen Ihrer Anwendung auf allen Zielplattformen. Wenn Sie den Runtime-ID, den Sie gerne erstellen würden, nicht angeben, erstellt der `dotnet build`-Befehl nur einen Build für die Runtime-ID des aktuellen Systems. Mit den folgenden Befehlen können Sie Ihre Anwendung für beide Zielplattformen erstellen:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-
-6. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
+5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netstandard1.6\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
 
-7. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
+6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
 Die veröffentlichten Dateien können so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen. 
 
-Nachfolgend ist die vollständige `project.json`-Datei für dieses Projekt angegeben.
+Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
 
-```json
-   {
-     "version": "1.0.0-*",
-     "buildOptions": {
-       "debugType": "portable",
-       "emitEntryPoint": true
-     },
-     "dependencies": {
-       "NETStandard.Library": "1.6.0",
-       "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-       "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-     },
-     "frameworks": {
-       "netstandard1.6": { }
-     },
-     "runtimes": {
-       "win10-x64": {},
-       "osx.10.10-x64": {}
-     }
-   }
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+</Project>
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

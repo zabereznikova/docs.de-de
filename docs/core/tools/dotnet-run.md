@@ -4,22 +4,20 @@ description: "Der dotnet-run-Befehl bietet eine praktische Option zum Ausführen
 keywords: dotnet-run, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
+ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 60bb9160e43788539b0dc6bcf1372bb925e9ba22
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
-
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-run (.NET Core Tools RC4)](../preview3/tools/dotnet-run.md).
 
 ## <a name="name"></a>Name 
 
@@ -27,23 +25,26 @@ ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet run [--help] [--framework] [--configuration]
-    [--project] [[--] [application arguments]]`
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 ## <a name="description"></a>Beschreibung
-Der `dotnet run`-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode mit einem Befehl. Kompiliert Quellcode, erzeugt ein Ausgabeprogramm und führt dieses Programm aus. Dieser Befehl eignet sich für eine schnelle iterative Entwicklung und kann auch zum Ausführen eines quellenverteilten Programms (z.B. einer Website) verwendet werden.
 
-Dieser Befehl basiert auf [Dotnet Build](dotnet-build.md) zum Erstellen von Quelleingaben für eine .NET-Assembly, bevor das Programm gestartet wird. Die Anforderungen für diesen Befehl und die Verarbeitung von Quelleingaben werden vom Buildbefehl geerbt. Die Dokumentation für den Buildbefehl enthält weitere Informationen zu diesen Anforderungen.
+Der `dotnet run`-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode mit einem Befehl. Es empfiehlt sich für eine schnelle iterative Entwicklung in der Befehlszeile. Der Befehl hängt vom [`dotnet build`](dotnet-build.md)-Befehl ab, um den Code zu erstellen, sodass Anforderungen für das Build und dieses Projekt zuerst erstellt werden müssen. Wenden Sie dies auch auf `dotnet run` an. 
 
-Ausgabedateien werden in den untergeordneten *Bin*-Ordner geschrieben, der erstellt wird, wenn er nicht vorhanden ist. Dateien werden bei Bedarf überschrieben. Temporäre Dateien werden in den untergeordneten *Obj*-Ordner geschrieben.  
+Ausgabedateien werden im Standardspeicherort `bin/<configuration>/<target>` geschrieben. Angenommen, Sie haben eine `netcoreapp1.0`-Anwendung und Sie führen `dotnet run` aus, dann wird die Ausgabe in `bin/Debug/netcoreapp1.0` platziert. Dateien werden bei Bedarf überschrieben. Temporäre Dateien befinden sich im `obj`-Verzeichnis. 
 
-Im Falle eines Projekts mit mehreren angegebenen Frameworks wählt `dotnet run` zuerst die .NET Core-Frameworks aus. Wenn diese nicht vorhanden sind, tritt ein Fehler auf. Verwenden Sie zum Angeben anderer Frameworks das Argument `--framework`.
+Im Falle eines Projekts mit mehreren angegebenen Frameworks zeigt `dotnet run` einen Fehler an, es sei denn, die `--framework`-Option wird verwendet, um anzugeben, für welches Framework die Anwendung ausgeführt wird.
 
 Der Befehl `dotnet run` muss im Kontext von Projekten, nicht erstellter Assemblys verwendet werden. Wenn Sie stattdessen eine portable Anwendungs-DLL ausführen möchten, verwenden Sie [dotnet](dotnet.md) ohne jeden Befehl wie im folgenden Beispiel:
  
 `dotnet myapp.dll`
 
 Weitere Informationen zu den `dotnet`-Treibern finden Sie unter dem Thema [.NET Core-Befehlszeilentools (CLI)](index.md).
+
+Um die Anwendung auszuführen, löst der `dotnet run`-Befehl die Abhängigkeiten der Anwendung außerhalb der freigegebenen Laufzeit aus dem NuGet-Cache. Deshalb wird davon abgeraten, diesen Befehl zur Ausführung der Anwendung in der Produktion zu verwenden. Stattdessen sollten Sie eine [Bereitstellung erstellen](../deploying/index.md) und zwar mithilfe des [`dotnet publish`](dotnet-publish.md)-Befehls und sie in der Produktion verwenden. 
 
 ## <a name="options"></a>Optionen
 
@@ -55,31 +56,28 @@ Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendun
 
 Druckt eine kurze Hilfe für den Befehl.
 
-`-f`, `--framework <FRAMEWORK_IDENTIFIER>`
+`-c|--configuration {Debug|Release}`
 
-Führt die Anwendung für eine bestimmte Framework-ID (FID) aus. 
+Konfiguration, die beim Erstellen des Projekts verwendet wird. Der Standardwert ist `Debug`.
 
-`-c`, `--configuration <Debug|Release>`
+`-f|--framework <FRAMEWORK_IDENTIFIER>`
 
-Konfiguration bei der Veröffentlichung. Der Standardwert ist `Debug`.
+Erstellt und führt die Anwendung mithilfe des angegebenen Frameworks aus. Das Framework muss in der Projektdatei angegeben werden.
 
-`-p`, `--project [PATH]`
+`-p|--project <PATH>`
 
-Gibt an, welches Projekt auszuführen ist. Es kann entweder ein Pfad zu einer Datei [project.json](project-json.md) oder zu einem Verzeichnis mit einer Datei [project.json](project-json.md) sein. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt. 
+Gibt den Pfad zur ausführenden Projektdatei an. Es kann entweder ein Pfad zu einer [CSPROJ](csproj.md)-Datei oder zu einem Verzeichnis mit einer [CSPROJ](csproj.md)-Datei sein. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt. 
 
 ## <a name="examples"></a>Beispiele
 
-Führt das Projekt im aktuellen Verzeichnis aus: `dotnet run` 
+Führt das Projekt im aktuellen Verzeichnis aus:
+
+`dotnet run` 
 
 Führt das angegebene Projekt aus:
 
-`dotnet run --project /projects/proj1/project.json`
+`dotnet run --project /projects/proj1/proj1.csproj`
 
 Führt das Projekt im aktuellen Verzeichnis aus (das Argument `--help` in diesem Beispiel wird der ausgeführten Anwendung übergeben, da das Argument `--` verwendet wurde):
 
 `dotnet run --configuration Release -- --help`
-
-
-<!--HONumber=Feb17_HO2-->
-
-

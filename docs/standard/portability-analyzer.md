@@ -4,21 +4,22 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 07/05/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 translationtype: Human Translation
-ms.sourcegitcommit: 8599be1eadcd6f005ef344bf173e8c06fce80725
-ms.openlocfilehash: 9e35fd4dff15cec688ee11f98682eb7cb96e9403
+ms.sourcegitcommit: 2dcfc9e725a9776e810f23a505e2c6fb157161c4
+ms.openlocfilehash: dd14dc23b14e45569f0fdb9a37954b34c4e654d1
+ms.lasthandoff: 02/21/2017
 
 ---
 
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-Sollen Ihre Bibliotheken auf mehreren Plattformen einsetzbar sein? Möchten Sie wissen, wie viel Arbeit erforderlich ist, um Ihre Anwendung mit anderen .NET-Plattformen kompatibel zu machen? [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) ist ein Tool, das Ihnen durch die Analyse von Assemblys einen detaillierten Bericht zur Flexibilität Ihres Programms auf verschiedenen .NET-Plattformen bietet. Portability Analyzer wird als Visual Studio-Extension und als Konsolen-App angeboten.
+Sollen Ihre Bibliotheken auf mehreren Plattformen einsetzbar sein? Möchten Sie wissen, wie viel Arbeit erforderlich ist, um Ihre Anwendung mit anderen .NET-Plattformen kompatibel zu machen? [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) ist ein Tool, das Ihnen durch die Analyse von Assemblys einen detaillierten Bericht zur Flexibilität Ihres Programms auf verschiedenen .NET-Plattformen bietet. Der Portability Analyzer wird als Erweiterung zu Visual Studio 2015 und als Konsolenanwendung angeboten.
 
 ## <a name="new-targets"></a>Neue Ziele
 
@@ -28,11 +29,11 @@ Sollen Ihre Bibliotheken auf mehreren Plattformen einsetzbar sein? Möchten Sie 
 
 ## <a name="how-to-use-portability-analyzer"></a>Gewusst wie: Verwenden von Portability Analyzer
 
-Um mit der Verwendung von .NET Portability Analyzer zu beginnen, müssen Sie die Erweiterung zunächst aus der [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=507467) herunterladen. Sie können sie in Visual Studio über **Extras** > **Optionen** > **.NET Portability Analyzer** konfigurieren und Ihre Zielplattformen auswählen. Verwenden Sie vorerst ASP.NET Core als Proxy für alle .NET Core-basierten Plattformen (z.B. [Windows 10 .NET-UAP-Apps](http://blogs.windows.com/buildingapps/2015/03/02/a-first-look-at-the-windows-10-universal-app-platform/)).
+Um mit der Verwendung von .NET Portability Analyzer zu beginnen, müssen Sie die Erweiterung zunächst aus der [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=507467) herunterladen. Sie können ihn in Visual Studio über **Analysieren** > **Einstellungen des Portability Analyzer** konfigurieren und Ihre Zielplattformen auswählen.
 
 ![Screenshot zur Portabilität](./media/portability-analyzer/portability-screenshot.png)
 
-Um das gesamte Projekt zu analysieren, klicken Sie mit der rechten Maustaste im Projektmappen-Explorer**** auf Ihr Projekt, und wählen Sie **Analysieren** > **Assemblyportabilität analysieren** aus. Wechseln Sie andernfalls zum Menü **Analysieren**, und wählen Sie **Assemblyportabilität analysieren**. Wählen Sie dort die ausführbare Datei oder DLL-Datei des Projekts aus.
+Um das gesamte Projekt zu analysieren, klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf Ihr Projekt, und wählen Sie **Assemblyportabilität analysieren** aus. Wechseln Sie andernfalls zum Menü **Analysieren**, und wählen Sie **Assemblyportabilität analysieren**. Wählen Sie dort die ausführbare Datei oder DLL-Datei des Projekts aus.
 
 ![Projektmappen-Explorer für Portabilität](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -42,15 +43,9 @@ Nach dem Ausführen der Analyse wird Ihnen der .NET-Portabilitätsbericht angeze
 
 Sie möchten Visual Studio nicht verwenden? Sie können Portability Analyzer auch von der Befehlszeile aus verwenden. Laden Sie einfach den [API Portability Analyzer](http://www.microsoft.com/download/details.aspx?id=42678) herunter.
 
-*   Geben Sie den folgenden Befehl an, um das aktuelle Verzeichnis zu analysieren: `\...\ApiPort.exe .`
-*   Um eine bestimmte Liste von DLL-Dateien zu analysieren, geben Sie den folgenden Befehl ein: `\...\ApiPort.exe first.dll second.dll third.dll`
+*   Geben Sie den folgenden Befehl an, um das aktuelle Verzeichnis zu analysieren: `\...\ApiPort.exe analyze -f .`
+*   Um eine bestimmte Liste von DLL-Dateien zu analysieren, geben Sie den folgenden Befehl ein: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 Der .NET-Portabilitätsbericht wird als Excel-Datei (*.xlsx*) im aktuellen Verzeichnis gespeichert. Die Registerkarte **Details** in der Excel-Arbeitsmappe enthält weitere Informationen.
 
-Weitere Informationen zu .NET Portability Analyzer finden Sie im Artikel [Verwenden von vorhandenem Code auf verschiedenen .NET-Plattformen](https://blogs.msdn.microsoft.com/dotnet/2014/08/06/leveraging-existing-code-across-net-platforms/) im .NET-Blog.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+Weitere Informationen zum .NET Portability Analyzer, finden Sie auf der [GitHub-Dokumentation](https://github.com/Microsoft/dotnet-apiport#documentation) und im Channel 9-Video [Eine kurze Betrachtung des .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).

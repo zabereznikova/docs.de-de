@@ -2,52 +2,24 @@
 title: global.json-Referenz | Microsoft-Dokumentation
 description: Global.json-Referenz
 keywords: .NET, .NET Core
-author: aL3891
+author: blackdwarf
 ms.author: mairaw
-ms.date: 11/02/2016
+ms.date: 03/06/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
+ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 253b8642ae6fc5308d47552e9addfdbed6813ff1
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="globaljson-reference"></a>Global.json-Referenz
 
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [global.json-Referenz (.NET Core Tools RC4)](../preview3/tools/global-json.md).
-
-Die global.json-Datei wird für Projekte unter .NET Core verwendet, um Lösungsmetadaten zu definieren. Diese Datei wird verwendet, wenn der [dotnet-restore](dotnet-restore.md)-Befehl aufgerufen wird, um die Abhängigkeiten eines .NET Core-Projekts wiederherzustellen.
-In diesem Referenzthema finden Sie die Liste der Eigenschaften, die Sie in der Datei „global.json“ definieren können.
-
-## <a name="projects"></a>Projekte
-Typ: Zeichenfolge[]
-
-Gibt an, in welchen Ordnern das Buildsystem beim Auflösen von Abhängigkeiten nach Projekten suchen sollte. Das Buildsystem sucht nur nach untergeordneten Ordnern der obersten Ebene.
-
-Beispiel:
-
-```json
-{
-    "projects": [ "src", "test" ]
-}
-```
-
-## <a name="packages"></a>Pakete
-Typ: Zeichenfolge
-
-Der Speicherort zum Speichern von Paketen.
-
-Beispiel:
-```json
-{
-    "packages": "packages-dir"
-}
-```
+Die global.json-Datei ermöglicht die Auswahl der .NET Core-Toolversionen, die über die `sdk`-Eigenschaft verwendet werden. 
 
 ## <a name="sdk"></a>SDK
 Typ: Objekt
@@ -68,9 +40,3 @@ Beispiel:
     }
 }
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

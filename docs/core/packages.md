@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -44,74 +44,44 @@ Im Folgenden werden die Haupt-NuGet-Pakete für .NET Core aufgelistet:
 - [System.Linq](https://www.nuget.org/packages/System.Linq) – eine Reihe von Typen zur Abfrage von Objekten, einschließlich Enumerable und [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2).
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection) – eine Reihe von Typen für das Laden, Überprüfen und Aktivieren von Typen, einschließlich [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) und [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo).
 
-Auf Pakete wird in „project.json“ verwiesen. Im folgenden Beispiel wird auf das [System.Runtime](https://www.nuget.org/packages/System.Runtime/) Paket verwiesen. 
+In der Regel ist es einfacher, ein *Metapaket* in Ihr Projekt einzuschließen, als einzelne Pakete. Ein Metapaket ist eine Gruppe von Paketen, die häufig zusammen verwendet werden. (Weitere Informationen zu Metapaketen finden Sie im folgenden Abschnitt.) Wenn Sie ein einzelnes Paket benötigen, können Sie es wie im folgenden Beispiel gezeigt einschließen. Das Beispiel verweist auf das [System.Runtime](https://www.nuget.org/packages/System.Runtime/)-Paket. 
 
-```json
-{
-  "dependencies": {
-    "System.Runtime": "4.1.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+  </ItemGroup>
+</Project>
 ```
-
-In den meisten Fällen werden Sie nicht direkt auf .NET Core-Pakete der niedrigerer Ebene verweisen, da dies zu viele Pakete ergeben würde, die verwaltet werden müssen. Stattdessen müssen Sie auf ein Metapaket verweisen.
 
 ## <a name="metapackages"></a>Metapakete
 
 Metapakete sind eine NuGet-Paket-Konvention zur Beschreibung einer Reihe von Paketen, die zusammen sinnvoll sind. Sie stellen diese Reihe von Paketen dar, indem Sie sie zu Abhängigkeiten machen. Sie können optional ein Framework für diesen Satz von Paketen einrichten, indem Sie ein Framework angeben. 
 
-Durch das Verweisen auf ein Metapaket fügen Sie tatsächlich in einer einzigen Geste einen Verweis auf jedes einzelne abhängige Paket hinzu. Das bedeutet, dass alle Bibliotheken in diesen Paketen (Refs oder Libs) für IntelliSense (oder ähnliches) und für die Veröffentlichung (nur Libs) Ihrer App verfügbar sind. 
+Frühere Versionen von .NET Core-Tools („project.json“ und csproj-basierte Tools) geben standardmäßig ein Framework und ein Metapaket an. Derzeit verweist das Zielframework jedoch implizit auf das Metapaket, damit jedes Metapaket mit einem Zielframework verknüpft ist. Zum Beispiel verweist das `netstandard1.6`-Framework auf die NetStandard.Library-Version 1.6.0 des Metapakets. Das `netcoreapp1.1`-Framework verweist in ähnlicher Art und Weise auf das Metapaket der Version 1.1.0 der Microsoft.NETCore.App. Weitere Informationen finden Sie unter [Impliziter Metapaketverweis in .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
-Hinweis: Die Begriffe „Lib“ und „Ref“ beziehen sich auf Ordner in NuGet-Paketen. In den Ordnern „Ref“ wird die öffentliche API eines Pakets über Assemblymetadaten beschrieben. Die Ordner „Lib“ enthalten die Implementierung dieser öffentlichen API für ein bestimmtes Framework. 
+Durch das Abzielen auf ein Framework und das implizite Verweisen auf ein Metapaket fügen Sie tatsächlich in einer einzigen Geste einen Verweis auf jedes einzelne abhängige Paket hinzu. Alle Bibliotheken in diesen Paketen sind für IntelliSense (oder ähnliches) und für die Veröffentlichung Ihrer Anwendung verfügbar.  
 
 Es gibt Vorteile gegenüber der Verwendung von Metapaketen:
 
 - Ermöglicht benutzerfreundliches Verweisen auf eine große Zahl von differenzierten Paketen. 
 - Definiert eine Reihe von Paketen (einschließlich spezifischer Versionen), die getestet werden, und die gut zusammen funktionieren.
 
-Das .NET Standardbibliothek-Metapaket:
+Das .NET Standardbibliothek-Metapaket lautet:
 
 - [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) – beschreibt die Bibliotheken, die Teil der „.NET Standardbibliothek“ sind. Gilt für alle .NET-Implementierungen (z.B. .NET Framework, .NET Core und Mono), die die .NET-Standardbibliothek unterstützen. Legt das Framework „netstandard“ fest.
 
-Das sind die Haupt-.NET Core-Metapakete:
+Das sind die .NET Core-Hauptmetapakete:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – beschreibt die Bibliotheken, die Teil der .NET Core Verteilung sind. Richtet das[`.NETCoreApp` Framework](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj) ein. Dies ist abhängig von der kleineren `NETStandard.Library`.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – eine Reihe von Kompatibilitätsfassaden, mit denen mscorlib-basierte Portable Klassenbibliotheken (Portable Class Libraries, PCLs) auf .NET Core ausgeführt werden können.
 
-In „project.json“ wird auf Metapakete sowie andere NuGet-Pakete verwiesen. 
-
-Im folgenden Beispiel wird auf das Metapaket `NETStandard.Library` verwiesen, das zum Erstellen von Bibliotheken verwendet wird, die zwischen .NET-Laufzeiten portabel sind.
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
-```
-
-Im folgenden Beispiel wird auf das Metapaket `Microsoft.NETCore.App` verwiesen, das zum Erstellen von Anwendungen und Bibliotheken verwendet wird, die dazu vorgesehen sind, auf .NET Core ausgeführt zu werden und die gesamten Vorteile zu nutzen. Es ermöglicht den Zugriff auf einen größeren Satz von Bibliotheken als von der `NETStandard.Library` bereitgestellt werden.
-
-```json
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {}
-  }
-}
-```
-
 ## <a name="frameworks"></a>Frameworks
 
-.NET Core-Pakete unterstützen alle eine Gruppe von Frameworks, die mit Framework-Ordnern (innerhalb der vorher erwähnten Ordner „Lib“ und „Ref“) deklariert werden. Frameworks beschreiben einen zur Verfügung stehenden API-Satz (und mögliche andere Eigenschaften), auf den Sie sich verlassen können, wenn Sie ein bestimmtes Framework als Ziel festlegen. Sie werden mit Versionsangabe versehen, wenn neue APIs hinzugefügt werden.
+.NET Core-Pakete unterstützen jeweils einen Satz an Laufzeit-Frameworks. Frameworks beschreiben einen zur Verfügung stehenden API-Satz (und mögliche andere Eigenschaften), auf den Sie sich verlassen können, wenn Sie ein bestimmtes Framework als Ziel festlegen. Sie werden mit Versionsangabe versehen, wenn neue APIs hinzugefügt werden.
 
 [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) unterstützt z.B. die folgenden Frameworks:
 
@@ -135,8 +105,6 @@ Der zweite Teil der Beziehung ist die Auswahl von Ressourcen. Pakete können Res
 
 Sie können diese Beziehung in der Abbildung oben sehen. Die *API* hat das *Framework* als Ziel und definiert es. Das *Framework* wird zur *Ressourcenauswahl* verwendet. Von der *Ressource* erhalten Sie die API.
 
-Es ist eine interessante Frage, wo die Definition eines paketbasierten Frameworks endet und die Nutzung dieser Definition beginnt. Man könnte Ihre Ansicht des Frameworks als eine Funktion einer bestimmten „project.json“-Datei ansehen. Ihre Abhängigkeiten erstellen Ihre Ansicht des Frameworks, unabhängig von dem oder den Herausgeber(n) dieser Abhängigkeiten.
-
 Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwendet werden, sind:
 
 - `netstandard`
@@ -146,37 +114,32 @@ Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwende
 
 Das Framework .NET Standard (TFM: `netstandard`) stellt die APIs dar, die von der [.NET Standardbibliothek](../standard/library.md) definiert werden und auf dieser basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z.B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren. 
 
-Das Metapaket `NETStandard.Library` hat das Framework `netstandard` als Ziel. Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa&40; .NET-Bibliotheken und zugehörige APIs, die die .NET-Standardbibliothek definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel haben, um Zugriff auf zusätzliche APIs zu erhalten.
+Das `netstandard`-Framework verweist implizit auf die `NETStandard.Library`-Metapakete. Die folgende MSBuild-Projektdatei gibt beispielsweise an, dass das Projekt auf `netstandard1.6` abzielt, das auf das Metapaket der Standardbibliothek .NET Version 1.6 verweist. 
 
-Eine [NETStandard.Library-Version](versions/index.md) entspricht der höchsten `netstandard`-Version, die sie (über dessen Abschluss) verfügbar macht. Die Framework-Referenz in „project.json“ wird verwendet, um die richtigen Ressourcen aus den zugrunde liegenden Paketen auszuwählen. In diesem Fall werden die Ressourcen `netstandard1.6` benötigt, im Gegensatz zu z.B. `netstandard1.4` oder `net46`. 
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
-Das Framework und das Metapaket, auf die in „project.json“ verwiesen wird, müssen nicht übereinstimmen. Zum Beispiel ist die folgende Datei „project.json“ gültig.
+Allerdings müssen die Verweise des Frameworks und Metapakets in der Projektdatei nicht übereinstimmen, und Sie können das `<NetStandardImplicitPackageVersion>`-Element in Ihrer Projektdatei verwenden, um eine Frameworkversion anzugeben, die niedriger ist als die Version des Metapakets. Zum Beispiel ist die folgende Projektdatei gültig.
 
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.3": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <NetStandardImplicitPackageVersion Include="NetStandardLibrary" Version="1.6.0" />
+  </ItemGroup>
+</Project>
 ```
 
 Es mag merkwürdig erscheinen, `netstandard1.3` als Ziel festzulegen, aber die 1.6.0-Version von `NETStandard.Library` zu verwenden. Es ist ein gültiger Anwendungsfall, da das Metapaket auch ältere Versionen von `netstandard` unterstützt. Möglicherweise ist es der Fall, dass Sie sich auf Version 1.6.0 des Metapakets standardisiert haben und es für alle Ihre Bibliotheken verwenden, die eine Vielzahl von `netstandard`-Versionen als Ziel haben. Bei diesem Ansatz müssen Sie nur `NETStandard.Library` 1.6.0 wiederherstellen, keine früheren Versionen. 
 
-Das Gegenteil wäre nicht gültig: `netstandard1.6` mit der 1.3.0 Version von `NETStandard.Library` als Ziel festzulegen. Sie können kein höheres Framework mit einem niedrigeren Metapaket als Ziel festlegen, da das Metapaket einer niedrigeren Version keine Ressourcen für dieses höhere Framework verfügbar macht. Das [Versionsschema] für Metapakete bestätigt, dass Metapakete mit der höchsten Version des Frameworks übereinstimmen, das sie beschreiben. Aufgrund des Versionsschemas ist v1.6.0 die erste Version von `NETStandard.Library`, da sie `netstandard1.6`-Ressourcen enthält. v1.3.0 wird im obigen Beispiel für die Symmetrie mit dem obigen Beispiel verwendet, ist aber tatsächlich nicht vorhanden.
+Das Gegenteil wäre nicht gültig: `netstandard1.6` mit der 1.3.0 Version von `NETStandard.Library` als Ziel festzulegen. Sie können kein höheres Framework mit einem niedrigeren Metapaket als Ziel festlegen, da das Metapaket einer niedrigeren Version keine Ressourcen für dieses höhere Framework verfügbar macht. Das Versionsschema für Metapakete bestätigt, dass Metapakete mit der höchsten Version des Frameworks übereinstimmen, das sie beschreiben. Aufgrund des Versionsschemas ist v1.6.0 die erste Version von `NETStandard.Library`, da sie `netstandard1.6`-Ressourcen enthält. v1.3.0 wird im obigen Beispiel für die Symmetrie mit dem obigen Beispiel verwendet, ist aber tatsächlich nicht vorhanden.
 
 ### <a name="net-core-application"></a>.NET Core-Anwendung
 
@@ -185,3 +148,4 @@ Das Framework der .NET Core-Anwendung (TFM: `netcoreapp`) stellt die Pakete und 
 Das Metapaket `Microsoft.NETCore.App` hat das Framework `netcoreapp` als Ziel. Es bietet Zugriff auf ~60-Bibliotheken, ~40 werden durch das `NETStandard.Library`-Paket bereitgestellt, und ~20 weitere werden zusätzlich bereitgestellt. Sie können auf zusätzliche Bibliotheken verweisen, die `netcoreapp` oder kompatible Frameworks wie z.B. `netstandard` als Ziel haben, um den Zugriff auf zusätzliche APIs zu erhalten. 
 
 Die meisten der zusätzlichen Bibliotheken, die von `Microsoft.NETCore.App` bereitgestellt werden, haben ebenfalls `netstandard` als Ziel, vorausgesetzt, dass ihre Abhängigkeiten von anderen `netstandard`-Bibliotheken erfüllt werden. Dies bedeutet, dass `netstandard`-Bibliotheken auch auf diese Pakete als Abhängigkeiten verweisen können. 
+

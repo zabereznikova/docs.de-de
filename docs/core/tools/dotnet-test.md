@@ -4,117 +4,93 @@ description: "Der Befehl `dotnet test` wird zum Ausführen von Komponententests 
 keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
+ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-test"></a>Dotnet-Test
 
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [dotnet-test (.NET Core Tools RC4)](../preview3/tools/dotnet-test.md).
-
 ## <a name="name"></a>Name
 
-`dotnet-test`: Führt Komponententests mit konfiguriertem Test Runner durch
+`dotnet-test` – .NET-Testtreiber
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet test [project] [--help] 
-    [--parentProcessId] [--port] [--configuration]   
-    [--output] [--build-base-path] [--framework] [--runtime]
-    [--no-build]`  
+```
+dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 
 ## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Komponententests sind Klassenbibliotheksprojekte, die Abhängigkeiten vom Komponententest-Framework (z.B. NUnit oder xUnit) und dotnet-Test-Runner für dieses Komponententestframework aufweisen. Sie werden als NuGet-Pakete verpackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
-Testprojekte müssen auch mithilfe des Knotens „testRunner“ einen Test Runner-Eigenschaft in project.json angeben. Dieser Wert sollte den Namen des Komponententestframeworks enthalten.
+Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normalen `<PackageReference>`-Element angegeben, wie in der folgenden Beispielprojektdatei gezeigt:
 
-Das folgende Beispiel project.json zeigt die erforderlichen Eigenschaften:
-
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable"
-  },
-  "dependencies": {
-    "System.Runtime.Serialization.Primitives": "4.1.1",
-    "xunit": "2.1.0",
-    "dotnet-test-xunit": "1.0.0-rc2-192208-24"
-  },
-  "testRunner": "xunit",
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.0.0"
-        }
-      },
-      "imports": [
-        "dotnet5.4",
-        "portable-net451+win8"
-      ]
-    }
-  }
-}
-```
-
-`dotnet test` unterstützt zwei ausführende Modi:
-
-1. Konsole: Im Konsolenmodus führt `dotnet test` einfach alle an ihn übergebenen Befehle vollständig aus und gibt die Ergebnisse aus. Jedes Mal, wenn Sie `dotnet test` aufrufen, ohne den Port aufzurufen, wird es im Konsolenmodus ausgeführt, wodurch wiederum der Runner im Konsolenmodus ausgeführt wird.
-2. Entwurfszeit: im Kontext anderer Tools, wie Editoren oder Integrierter Entwicklungsumgebungen (IDEs) verwendet. Sie finden weitere Informationen zu diesem Modus in der Datei [Dotnet-Testprotokoll](test-protocol.md). 
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Optionen
 
-`[project]`
+`project`
     
 Gibt den Pfad des Testprojekts an. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben.
 
-`-?|-h|--help`
+`-h|--help`
 
 Druckt eine kurze Hilfe für den Befehl.
 
-`--parentProcessId`
+`-s|--settings <SETTINGS_FILE>`
 
-Wird von IDEs verwendet, um ihre Prozess-ID anzugeben. Test wird beendet, wenn der übergeordnete Prozess beendet wird.
+Einstellungen, die beim Ausführen von Tests verwendet werden. 
 
-`--port`
+`-t|--list-tests`
 
-Wird von IDEs verwendet, um eine Portnummer für die Überwachung einer Verbindung anzugeben.
+Listen Sie alle ermittelten Tests im aktuellen Projekt auf. 
+
+`--filter <EXPRESSION>`
+
+Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen zur Filterungsunterstützung finden Sie unter [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering).
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf. 
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Gibt eine Protokollierung für die Testergebnisse an. 
 
 `-c|--configuration <Debug|Release>`
 
-Konfiguration für die Erstellung. Der Standardwert ist `Release`. 
+Konfiguration für die Erstellung. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
-
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
-
-Verzeichnis, in dem temporäre Ausgaben platziert werden.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 Sucht nach Testbinärdateien für ein bestimmtes Framework.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Suchen Sie nach den Testbinärdateien für die angegebene Laufzeit.
+Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei. 
 
 `--no-build` 
 
-Erstellt das Testprojekt nicht vor der Ausführung. 
+Erstellt das Testprojekt nicht vor der Ausführung.
+
+`-v|--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
 ## <a name="examples"></a>Beispiele
 
@@ -124,17 +100,10 @@ Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
 Führen Sie die Tests im Projekt test1 durch:
 
-`dotnet test /projects/test1/project.json` 
+`dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>Siehe auch
-
-[Kommunikationsprotokoll dotnet-Test](test-protocol.md)
 
 [Frameworks](../../standard/frameworks.md)
 
 [Runtime-ID-Katalog (RID)](../rid-catalog.md)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

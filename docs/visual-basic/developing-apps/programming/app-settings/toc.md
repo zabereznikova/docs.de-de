@@ -1,0 +1,5 @@
+# [Zugreifen auf Anwendungseinstellungen](accessing-application-settings.md)
+## [Gewusst wie: Erstellen von Eigenschaftenrastern für Benutzereinstellungen](how-to-create-property-grids-for-user-settings.md)
+## [Gewusst wie: Beibehalten von Benutzereinstellungen](how-to-persist-user-settings.md)
+## [Gewusst wie: Ändern von Benutzereinstellungen](how-to-change-user-settings.md)
+## [Gewusst wie: Lesen von Anwendungseinstellungen](how-to-read-application-settings.md)

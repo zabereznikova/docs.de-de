@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
+ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -34,7 +34,9 @@ Wenn Sie Unittests schreiben, achten Sie darauf, dass Sie nicht versehentlich Ab
 
 Möchten Sie mehr über Unittests in .NET Core-Projekten erfahren?
 
-Probieren Sie diese [exemplarische Vorgehensweise mit xunit und der.NET CLI (in englischer Sprache)](unit-testing-with-dotnet-test.md).
+Probieren Sie [walkthrough creating unit tests with xUnit and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit xUnit und der .NET-CLI)](unit-testing-with-dotnet-test.md) aus. 
 
-Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [wie xunit mit .NET Core und Visual Studio verwendet werden (in englischer Sprache)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [how to use xUnit with .NET Core and Visual Studio (wie xUnit mit .NET Core und Visual Studio verwendet wird)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+
+Wenn Sie lieber MSTest verwenden, versuchen Sie [walkthrough creating unit tests with MSTest and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit MSTest und der .NET-CLI)](unit-testing-with-mstest.md).
 
