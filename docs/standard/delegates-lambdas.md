@@ -21,7 +21,7 @@ ms.lasthandoff: 03/02/2017
 
 Delegaten definieren einen Typ, der eine bestimmte Methodensignatur angibt. Eine Methode (statische Methode oder Instanzmethode), die dieser Signatur entspricht, kann einer Variablen dieses Typs zugewiesen werden. Anschließend kann sie (mit den entsprechenden Argumenten) direkt aufgerufen oder selbst als Argument an eine andere Methode übergeben und dann aufgerufen werden. Das folgende Beispiel veranschaulicht die Verwendung von Delegaten.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -55,7 +55,7 @@ Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegatty
 
 Wir schreiben jetzt das obige Beispiel neu, indem wir den `Func<>`-Delegaten anstelle eines benutzerdefinierten Typs verwenden. Das Programm wird weiterhin genau gleich ausgeführt.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -78,7 +78,7 @@ In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb
 
 Als Beispiel verwenden wir unseren anonymen Delegaten, um eine Liste mit gerade Zahlen herauszufiltern und diese Zahlen in der Konsole auszugeben.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -115,7 +115,7 @@ Lambdaausdrücke (kurz „Lambdas“) wurden zum ersten Mal in C# 3.0 eingeführ
 
 Da ein Lambdaausdruck einfach nur eine weitere Möglichkeit ist, einen Delegaten anzugeben, können wir das obige Beispiel neu schreiben und einen Lambdaausdruck anstelle eines anonymen Delegaten verwenden.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -143,7 +143,7 @@ In den markierten Zeilen sehen Sie, wie ein Lambdaausdruck aussieht. Das ist ein
 
 Noch einmal: Lambdas sind einfach Delegaten. Das bedeutet, dass sie problemlos als Ereignishandler verwendet werden können, wie im folgenden Codeausschnitt veranschaulicht.
 
-```cs
+```csharp
 public MainWindow()
 {
     InitializeComponent();

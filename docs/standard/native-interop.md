@@ -38,7 +38,7 @@ P/Invoke ist eine Technologie, die Ihnen den Zugriff auf Strukturen, Rückrufe u
 
 Beginnen wir mit dem gängigsten Beispiel, dem Aufruf nicht verwalteter Funktionen im Ihrem verwalteten Code. Wir zeigen ein Meldungsfeld aus einer Befehlszeilenanwendung:
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -66,7 +66,7 @@ Der Rest des Beispiels besteht nur aus dem Aufruf der Methode, der wie bei jeder
 
 Das Beispiel ist für macOS ähnlich. Eine Sache, die geändert werden muss, ist natürlich der Name der Bibliothek im `DllImport`-Attribut, da macOS ein anderes Schema für die Benennung dynamischer Bibliotheken verwendet. Das Beispiel unten verwendet die `getpid(2)`-Funktion, um die Prozess-ID der Anwendung abzurufen und in der Konsole auszugeben.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -89,7 +89,7 @@ namespace PInvokeSamples {
 
 Unter Linux verhält es sich natürlich ähnlich. Der Funktionsname ist identisch, da es sich bei `getpid(2)` um einen [POSIX](https://en.wikipedia.org/wiki/POSIX)-Systemaufruf handelt.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -116,7 +116,7 @@ Selbstverständlich ermöglicht die Runtime die Kommunikation in beide Richtunge
 
 Dieses Feature wird ähnlich dem oben beschriebenen Verfahren von verwaltetem zu nativem Code verwendet. Für einen bestimmten Rückruf definieren Sie einen Delegaten, der der Signatur entspricht, und übergeben Sie ihn an die externe Methode. Die Runtime übernimmt alles Weitere.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -160,7 +160,7 @@ In diesem Sinn betrachten wir das Beispiel:
 
 Die Beispiele für Linux und macOS werden im Folgenden angezeigt. Hierfür verwenden wir die `ftw`-Funktion, die in `libc` zu finden ist, der C-Bibliothek. Anhand dieser Funktion werden die Verzeichnishierarchien durchlaufen. Sie verwendet einen Zeiger auf eine Funktion als einen ihrer Parameter. Diese Funktion besitzt die folgende Signatur: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -213,7 +213,7 @@ namespace PInvokeSamples {
 
 Im macOS-Beispiel wird die gleiche Funktion verwendet. Der einzige Unterschied ist das Argument für das `DllImport`-Attribut, da macOS `libc` an einer anderen Stelle speichert.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -272,7 +272,7 @@ Das **Marshallen** bezeichnet den Vorgang zum Umwandeln von Typen, wenn diese di
 
 Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit Null endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
 
-```cs
+```csharp
 [DllImport("somenativelibrary.dll"]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
@@ -282,7 +282,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 Ein weiterer Aspekt des Marshallens von Typen ist die Übergabe einer Struktur an eine nicht verwaltete Methode. Einige der nicht verwalteten Methoden erfordern beispielsweise eine Struktur als Parameter. In diesen Fällen müssen wir eine entsprechende Struktur oder eine Klasse im verwalteten Bereich erstellen, um sie als Parameter zu verwenden. Allerdings reicht das Definieren der Klasse nicht aus, wir müssen dem Marshaller außerdem mitteilen, wie Felder in der Klasse der nicht verwalteten Struktur zuzuordnen sind. An dieser Stelle komm das `StructLayout`-Attribut ins Spiel.
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -324,7 +324,7 @@ typedef struct _SYSTEMTIME {
 
 Das Linux- und macOS-Beispiel hierfür haben wir bereits im vorherigen Beispiel gesehen. Es wird unten noch einmal aufgeführt.
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;
