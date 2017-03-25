@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
-ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
+ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
+ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
+ms.lasthandoff: 02/23/2017
 
 ---
 
@@ -53,7 +54,7 @@ Ihnen steht eine Vielzahl verschiedener Infrastrukturplattformen zur Verfügung.
 
 ### <a name="containers"></a>Container
 
-Container werden häufig in Verbindung mit einer Microservicearchitektur eingesetzt, obwohl sie auch für Web-Apps oder Dienste mit jedem beliebigen Architekturmuster verwendet werden können. .NET Framework lässt sich auch für Windows-Container verwenden, allerdings eignet sich .NET Core durch die Modularität und den einfachen Aufbau ideal für Container.  Die Imagegröße eines mit .NET Core erstellten und bereitgestellten Containers ist wesentlich kleiner als bei .NET Framework.  Aufgrund der plattformübergreifenden Struktur können Sie Server-Apps zum Beispiel in Linux-Docker-Containern bereitstellen.
+Container werden häufig in Verbindung mit einer Microservicearchitektur eingesetzt, obwohl sie auch für Web-Apps oder Dienste mit jedem beliebigen Architekturmuster verwendet werden können. .NET Framework lässt sich auch für Windows-Container verwenden, allerdings eignet sich .NET Core durch die Modularität und den einfachen Aufbau ideal für Container. Die Imagegröße eines mit .NET Core erstellten und bereitgestellten Containers ist wesentlich kleiner als bei .NET Framework. Aufgrund der plattformübergreifenden Struktur können Sie Server-Apps zum Beispiel in Linux-Docker-Containern bereitstellen.
 
 Sie können dann Ihre Docker-Container in Ihrer eigenen Linux- oder Windows-Infrastruktur hosten oder einen Clouddienst nutzen, z.B. [Azure Container Service](https://azure.microsoft.com/services/container-service/), mit dem Ihre containerbasierte Anwendung in der Cloud verwaltet, orchestriert und skaliert werden kann.
 
@@ -107,9 +108,4 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 * [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
 * [Leitfaden zu .NET Framework in Docker](../framework/index.md)
 * [.NET-Komponenten – Übersicht](components.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

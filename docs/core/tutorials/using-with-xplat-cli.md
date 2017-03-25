@@ -1,202 +1,108 @@
 ---
-title: Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile
-description: Erste Schritte mit .NET Core unter Windows, Linux oder Mac OS unter Verwendung der .NET Core-Befehlszeilenschnittstelle (CLI)
-keywords: .NET, .NET Core
+title: Erste Schritte mit .NET Core unter Verwendung der Befehlszeile | Microsoft-Dokumentation
+description: Erste Schritte mit .NET Core unter Windows, Linux oder Mac OS unter Verwendung der .NET Core-Befehlszeilenschnittstelle (CLI).
+keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 8f0ad79eafde695b956e89f48073dba2651b51cb
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 240061d2515c14ba7ab733f4cc9e7e38fb2a5c7c
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile
 
-> [!WARNING]
-> Dieses Thema gilt für .NET Core Preview 2-Tools. Informationen zur .NET Core Tools RC4-Version finden Sie im Thema [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile (.NET Core Tools RC4)](../preview3/tutorials/using-with-xplat-cli-msbuild.md).
+In diesem Thema erfahren Sie, wie Sie plattformübergreifende Anwendungen mit .NET Core CLI-Tools auf Ihrem Computer erstellen können.
 
-In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle einfache plattformübergreifende Konsolen-Apps erstellen können.
-
-Wenn Sie mit dem Toolset der .NET Core-Befehlszeilenschnittstelle nicht vertraut sind, finden Sie entsprechende Informationen in der [Übersicht über das .NET Core SDK](../sdk.md).
+Wenn Sie mit dem Toolset der .NET Core-Befehlszeilenschnittstelle nicht vertraut sind, finden Sie entsprechende Informationen in der [Übersicht über das .NET Core SDK](../tools/index.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Stellen Sie vor Beginn sicher, dass die [aktuellsten Tools der .NET Core-CLI](https://www.microsoft.com/net/core) installiert sind. Außerdem benötigen Sie einen Text-Editor.
+- [.NET Core SDK 1.0.0](https://www.microsoft.com/net/download/core).
+- Ein Text-Editor oder Code-Editor Ihrer Wahl.
 
 ## <a name="hello-console-app"></a>Hallo Konsolenanwendung!
 
-Navigieren Sie zu einem Ordner mit einem beliebigen Namen, oder erstellen Sie diesen. Wir haben den Namen „Hello“ für den Beispielcode verwendet, der [hier](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello) zu finden ist.
+Erstellen Sie zunächst einen Ordner mit einem beliebigen Namen. Wir haben den Namen *Hello* für den Beispielcode verwendet, der [hier](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) zu finden ist.
 
 Öffnen Sie die Eingabeaufforderung, und geben Sie folgenden Befehl ein:
 
 ```
-$ dotnet new
+$ dotnet new console
 $ dotnet restore
 $ dotnet run
 ```
 
 Hier eine kurze Beschreibung der Schritte:
 
-1. `$ dotnet new`
+1. `$ dotnet new console`
 
-   Mit [`dotnet new`](../tools/dotnet-new.md) wird eine aktuelle `project.json`-Datei mit den NuGet-Abhängigkeiten erstellt, die zum Erstellen einer Konsolenanwendung benötigt werden.  Zudem wird `Program.cs` erstellt. Hierbei handelt es sich um eine einfache Datei, die den Einstiegspunkt für die Anwendung enthält.
+Mit [`dotnet new`](../tools/dotnet-new.md) wird eine aktuelle Projektdatei `Hello.csproj` mit den Abhängigkeiten erstellt, die zum Erstellen einer Konsolen-App benötigt werden.  Zudem wird `Program.cs` erstellt. Hierbei handelt es sich um eine einfache Datei, die den Einstiegspunkt für die Anwendung enthält.
    
-   `project.json`:
-   ```json
-   {
-        "version": "1.0.0-*",
-        "buildOptions": {
-            "emitEntryPoint": true
-        },
-        "dependencies": {
-            "Microsoft.NETCore.App": {
-                "type": "platform",
-                "version": "1.0.0"
-            }
-        },   
-       "frameworks": {
-            "netcoreapp1.0": {
-                "imports": "dnxcore50"
-            }
-        }
-   }
-   ```
-   `Program.cs`:
-   ```csharp
-   using System;
+`Hello.csproj`:
 
-   namespace ConsoleApplication
-   {
-       public class Program
-       {
-           public static void Main(string[] args)
-           {
-               Console.WriteLine("Hello World!");
-           }
-       }
-   }
-   ```
+[!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+
+   Die Projektdatei gibt alle Elemente an, die zum Wiederherstellen von Abhängigkeiten und erstellen des Programms erforderlich sind.
+
+   * Das Tag `OutputType` gibt an, dass wir eine ausführbare Datei, also eine Konsolenanwendung, erstellen.
+   * Das Tag `TargetFramework` gibt an, welche .NET Runtime wir als Ziel haben. In einem komplexen Szenario können Sie mehrere Zielframeworks angeben und die Erstellung für diese in einem einzigen Vorgang vornehmen. In diesem Tutorial beschränken wir uns auf Builds für .NET Core 1.0.
+
+   `Program.cs`:
+
+[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+
+   Das Programm startet mithilfe von `using System`, was bedeutet, dass alles im Namespace `System` in den Geltungsbereich für diese Datei gebracht wird. Der Namespace `System` enthält grundlegende Konstrukte, wie z.B. `string`, oder numerische Typen.
+
+   Wir definieren dann einen Namespace namens `Hello`. Sie können diesen Namen nach Wunsch ändern. Eine Klasse namens `Program` wird in diesem Namespace mit einer `Main`-Methode definiert, welche ein Array von Zeichenfolgen als Argument verwendet. Dieses Array enthält die Liste mit Argumenten, die übergeben werden, wenn das kompilierte Programm aufgerufen wird. Dieses Array wird allerdings nicht verwendet. Die Anwendung gibt lediglich „Hello World!“ auf der Konsole aus. Später werden wir Änderungen am Code vornehmen, die dieses Argument verwenden.
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) führt einen Aufruf in NuGet aus, um die Struktur der Abhängigkeiten wiederherzustellen. NuGet analysiert die Datei `project.json`, lädt die in der Datei angegebenen Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die Datei `project.lock.json`.  Die Datei `project.lock.json` ist zum Kompilieren und Ausführen erforderlich.
+   [`dotnet restore`](../tools/dotnet-restore.md) führt einen Aufruf in [NuGet](http://nuget.org) (dem Paket-Manager von .NET) aus, um die Struktur der Abhängigkeiten wiederherzustellen. NuGet analysiert die *Hello.csproj*-Datei, lädt die in der Datei angegebenen Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die *obj/project.assets.json*-Datei.  Die *project.assets.json*-Datei ist zum Kompilieren und Ausführen erforderlich.
    
-   Bei der Datei `project.lock.json` handelt es sich um eine persistente und umfassende Gruppe des Diagramms von NuGet-Abhängigkeiten und anderen Informationen, die eine Anwendung beschreiben.  Diese Datei wird von anderen Tools wie `dotnet build` und `dotnet run` gelesen, die dadurch in die Lage versetzt werden, den Quellcode mit einer vorschriftsmäßigen Menge von NuGet-Abhängigkeiten und Bindungsauflösungen zu verarbeiten.
+   Bei der *project.assets.json*-Datei handelt es sich um eine persistente und umfassende Gruppe des Diagramms von NuGet-Abhängigkeiten und anderen Informationen, die eine Anwendung beschreiben.  Diese Datei wird von anderen Tools wie [`dotnet build`](../tools/dotnet-build.md) und [`dotnet run`](../tools/dotnet-run.md) gelesen, die dadurch in die Lage versetzt werden, den Quellcode mit einer vorschriftsmäßigen Menge von NuGet-Abhängigkeiten und Bindungsauflösungen zu verarbeiten.
    
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md) ruft `dotnet build` auf, um sicherzustellen, dass die Buildziele erstellt wurden, und ruft anschließend `dotnet <assembly.dll>` auf, um die Zielanwendung auszuführen.
+   [`dotnet run`](../tools/dotnet-run.md) ruft [`dotnet build`](../tools/dotnet-build.md) auf, um sicherzustellen, dass die Buildziele erstellt wurden, und ruft anschließend `dotnet <assembly.dll>` auf, um die Zielanwendung auszuführen.
    
-```
-$ dotnet run
-Hello, World!
-```
+    ```
+    $ dotnet run
+    Hello World!
+    ```
 
-Sie können auch [`dotnet build`](../tools/dotnet-build.md) ausführen, um den Code zu kompilieren, ohne die Konsolenanwendungen des Builds auszuführen.
+    Sie können alternativ [`dotnet build`](../tools/dotnet-build.md) ausführen, um den Code zu kompilieren, ohne die Konsolenanwendungen des Builds auszuführen. Dies führt zu einer kompilierten Anwendung, wie einer DLL-Datei, die mit `dotnet bin\Debug\netcoreapp1.0\Hello.dll` unter Windows ausgeführt werden kann (verwenden Sie `/` für nicht-Windowssysteme). Sie können auch Argumente für die Anwendung angeben, wie Sie später im Thema sehen werden.
 
-### <a name="building-a-self-contained-application"></a>Erstellen einer eigenständigen Anwendung
+    ```
+    $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
+    Hello World!
+    ```
 
-Versuchen wir, anstelle einer portierbaren Anwendung eine eigenständige Anwendung zu kompilieren. Weitere Informationen zu den Arten der Portierbarkeit in .NET Core sowie zu deren Bereitstellung finden Sie [hier](../deploying/index.md).
-
-Sie müssen einige Änderungen an Ihrer `project.json`-Datei vornehmen, um die Tools so anzuweisen, dass eine eigenständige Anwendung erstellt wird. Diese sind im Projekt [HelloNative](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloNative) im Beispielverzeichnis zu sehen.
-
-Die erste Änderung besteht darin, das Element `"type": "platform"` aus allen Abhängigkeiten zu entfernen. Dieses Projekt enthält bis jetzt nur die Abhängigkeit `"Microsoft.NETCore.App"`. Der Abschnitt `dependencies` sollte wie folgt aussehen:
-
-```json
-"dependencies": {
-    "Microsoft.NETCore.App": {
-        "version": "1.0.0"
-    }
-},
-```
-
-Als Nächstes müssen Sie einen `runtimes`-Knoten hinzufügen, um alle Zielausführungsumgebungen anzugeben. Der folgende `runtimes`-Knoten weist das Buildsystem beispielsweise an, die ausführbaren Dateien für die 64-Bit-Version von Windows 10 und der 64-Bit-Version von Mac OS X Version 10.11 zu erstellen.
-Das Buildsystem generiert native ausführbare Dateien für die aktuelle Umgebung. Wenn Sie diese Schritte auf einem Windows-Computer befolgen, erstellen Sie eine ausführbare Windows-Datei. Wenn Sie diese Schritte auf einem Mac-Computer befolgen, erstellen Sie eine ausführbare OS X-Datei.
-
-```json 
-"runtimes": {
-  "win10-x64": {},
-  "osx.10.11-x64": {}
-}
-```
-
-Die Liste mit allen unterstützten Runtimes finden Sie im [RID-Katalog](../rid-catalog.md). 
- 
-Nachdem Sie diese beiden Änderungen vorgenommen haben, führen Sie zuerst `dotnet restore` und dann `dotnet build` aus, um die native ausführbare Datei zu erstellen. Anschließend können Sie die generierte native ausführbare Datei ausführen. 
-
-Das folgende Beispiel enthält die Befehle für Windows. Im Beispiel wird gezeigt, an welcher Stelle die native ausführbare Datei erstellt wird. Dabei wird davon ausgegangen, dass der Name des Projektverzeichnisses „HelloNative“ lautet.
-
-```
-$ dotnet restore 
-$ dotnet build 
-$ .\bin\Debug\netcoreapp1.0\win10-x64\HelloNative.exe
-Hello World!
-```
-
-Sie werden feststellen, dass es etwas länger dauert, bis die native Anwendung erstellt ist. Dafür wird sie jedoch etwas schneller ausgeführt. Dieses Verhalten wird umso deutlicher, wenn die Anwendung größer wird.
-
-Während des Buildprozesses werden einige Dateien mehr erstellt, wenn die Datei `project.json` einen nativen Build erstellt. Diese Dateien werden in `bin\Debug\netcoreapp1.0\<platform>` erstellt, wobei `<platform>` die ausgewählte RID ist. Neben der Datei `HelloNative.dll` des Projekts gibt es die Datei `HelloNative.exe`, mit der die Runtime geladen und die Anwendung gestartet wird.
-Beachten Sie, dass der Name der generierten Anwendung geändert wurde, da der Name des Projektverzeichnisses geändert wurde.  
-
-Packen Sie diese Anwendung, um sie auf einem Computer auszuführen, auf dem die .NET-Laufzeit nicht installiert ist.
-Verwenden Sie hierzu den Befehl `dotnet publish`. Mit dem Befehl `dotnet publish` wird ein Unterverzeichnis im Verzeichnis `./bin/Debug/netcoreapp1.0/<platform>` mit dem Namen `publish` erstellt. Damit werden die ausführbare Datei, alle abhängigen DLL-Dateien und das Framework in dieses Unterverzeichnis kopiert. Sie können dieses Verzeichnis auf einem anderen Computer (oder Container) packen und die Anwendung dort ausführen. 
-
-Vergleichen wir dies mit dem Verhalten von `dotnet publish` im ersten „Hello World“-Beispiel. Diese Anwendung ist eine *portierbare Anwendung*, also der Standardanwendungstyp für .NET Core. Für eine portierbare Anwendung muss .NET Core auf dem Zielcomputer installiert sein. Portierbare Anwendungen können auf einem Computer erstellt und auf einem beliebigen Computer ausgeführt werden. Native Anwendung müssen für jeden Zielcomputer separat erstellt werden. `dotnet publish` erstellt ein Verzeichnis, das die DLL der Anwendung sowie alle abhängigen DLLs enthält, die nicht Teil der Plattforminstallation sind.
+    In einem komplexen Szenario ist es möglich, die Anwendung als eigenständigen Satz plattformspezifischer Dateien zu erstellen, die auf einen Computer bereitgestellt und ausgeführt werden können, auf dem nicht notwendigerweise .NET Core installiert ist. Details finden Sie unter [.NET Core-Anwendungsbereitstellung](../deploying/index.md).
 
 ### <a name="augmenting-the-program"></a>Erweitern des Programms
 
-Verändern wir nun die Datei ein wenig.  Fibonacci-Zahlen machen Spaß, also probieren wir das aus (mit der nativen Version):
+Ändern wir das Programm ein bisschen. Fibonacci-Zahlen sind interessant, also fügen wir sie zusätzlich zur Verwendung des Arguments für die Begrüßung der Person hinzu, die die Anwendung ausführt.
 
-`Program.cs`:
+1. Ersetzen Sie den Inhalt der *Program.cs*-Datei durch den folgenden Code:
 
-```csharp
-using static System.Console;
+[!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
-namespace ConsoleApplication
-{
-    public class Program
-    {
-        public static int FibonacciNumber(int n)
-        {
-            int a = 0;
-            int b = 1;
-            int tmp;
-            
-            for (int i = 0; i < n; i++)
-            {
-                tmp = a;
-                a = b;
-                b += tmp;
-            }
-            
-            return a;   
-        }
-        
-        public static void Main(string[] args)
-        {
-            WriteLine("Hello World!");
-            WriteLine("Fibonacci Numbers 1-15:");
-            
-            for (int i = 0; i < 15; i++)
-            {
-                WriteLine($"{i+1}: {FibonacciNumber(i)}");
-            }
-        }
-    }
-}
-```
+2. Führen Sie [`dotnet build`](../tools/dotnet-build.md) aus, um die Änderungen zu kompilieren.
 
-Führen wir das Programm aus (dabei gehen wir davon aus, dass Sie mit Windows arbeiten und das Projektverzeichnis in „Fibonacci“ umbenannt haben):
+3. Führen Sie das Programm aus, das einen Parameter für die App übergibt:
 
 ```
-$ dotnet build
-$ .\bin\Debug\netcoreapp1.0\win10-x64\Fibonacci.exe
+$ dotnet run -- John
+Hello John!
+Fibonacci Numbers 1-15:
 1: 0
 2: 1
 3: 1
@@ -216,116 +122,23 @@ $ .\bin\Debug\netcoreapp1.0\win10-x64\Fibonacci.exe
 
 Und das ist schon alles!  Sie können `Program.cs` beliebig erweitern.
 
-## <a name="adding-some-new-files"></a>Hinzufügen neuer Dateien
+## <a name="working-with-multiple-files"></a>Arbeiten mit mehreren Dateien
 
-Einzelne Dateien können problemlos zu einfachen Einmalprogrammen hinzugefügt werden. Wenn Sie jedoch ein Programm mit mehreren Komponenten erstellen, werden Sie die Dinge wahrscheinlich in mehreren Dateien ausgliedern wollen.  Eine Möglichkeit, dies zu tun, ist die Verwendung mehrerer Dateien.
+Einzelne Dateien sind für einfache einmalige Programme in Ordnung, aber wenn Sie eine komplexere Anwendung erstellen, verfügen Sie wahrscheinlich über mehrere Quelldateien in Ihrem Projekt. Bauen wir auf den vorherigen Fibonacci-Werten auf und fügen wir rekursive Features hinzu. 
 
-Erstellen Sie eine neue Datei, und geben Sie ihr einen eindeutigen Namespace:
+1. Fügen Sie eine neue Datei im *Hello*-Verzeichnis mit dem Namen *FibonacciGenerator.cs* durch den folgenden Code hinzu:
 
-```csharp
-using System;
+[!code-csharp[Fibonacci-Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
-namespace NumberFun
-{
-    // code can go here
-} 
-```
+2. Ändern Sie die `Main`-Methode in Ihrer *Program.cs*-Datei, um die neue Klasse zu instanziieren und rufen Sie die Methode wie im folgenden Beispiel auf:
 
-Als Nächstes fügen Sie sie in die Datei `Program.cs` ein:
+[!code-csharp[Neues Programm.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
-```csharp
-using static System.Console;
-using NumberFun;
-```
+3. Führen Sie [`dotnet build`](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
-Und schließlich können Sie sie erstellen:
-
-`$ dotnet build`
-
-Nun kommt der unterhaltsame Teil: Sorgen Sie dafür, dass die neue Datei etwas tut.
-
-### <a name="example-a-fibonacci-sequence-generator"></a>Beispiel: Generator für Fibonacci-Folgen
-
-Angenommen, Sie möchten das vorherige [Fibonacci-Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Fibonacci) weiterentwickeln, indem Sie einige Fibonacci-Werte zwischenspeichern und einige rekursive Funktionen hinzufügen.  Ihr Code für ein [verbessertes Fibonacci-Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/FibonacciBetter) kann beispielsweise wie folgt aussehen:
-
-```csharp
-using System;
-using System.Collections.Generic;
-
-namespace NumberFun
-{
-    public class FibonacciGenerator
-    {
-        private Dictionary<int, int> _cache = new Dictionary<int, int>();
-        
-        private int Fib(int n) => n < 2 ? n : FibValue(n - 1) + FibValue(n - 2);
-        
-        private int FibValue(int n)
-        {
-            if (!_cache.ContainsKey(n))
-            {
-                _cache.Add(n, Fib(n));
-            }
-            
-            return _cache[n];
-        }
-        
-        public IEnumerable<int> Generate(int n)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                yield return FibValue(i);
-            }
-        }
-    }
-}
-```
-
-Beachten Sie, dass die Verwendung von `Dictionary<int, int>` und `IEnumerable<int>` bedeutet, dass der Namespace `System.Collections` eingebunden wird.
-Beim `Microsoft.NetCore.App`-Paket handelt es sich um ein *Metapaket*, das zahlreiche Basisassemblys aus dem .NET Framework enthält. Durch das Einbinden dieses Metapakets haben Sie die `System.Collections.dll`-Assembly bereits als Teil Ihres Projekts eingebunden. Sie können dies überprüfen, indem Sie `dotnet publish` ausführen und die Dateien überprüfen, die Teil des installierten Pakets sind. `System.Collections.dll` wird in der Liste angezeigt. 
-
-```json
-{ 
-  "version": "1.0.0-*", 
-  "buildOptions": { 
-    "debugType": "portable", 
-    "emitEntryPoint": true 
-  }, 
-  "dependencies": {}, 
-  "frameworks": { 
-    "netcoreapp1.0": { 
-      "dependencies": { 
-        "Microsoft.NETCore.App": { 
-          "version": "1.0.0" 
-        } 
-      }, 
-      "imports": "dnxcore50" 
-    } 
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.11-x64": {}
-  }
-}
-```
-
-Passen Sie nun die `Main()`-Methode in der Datei `Program.cs` wie folgt an. Im Beispiel wird vorausgesetzt, dass `Program.cs` eine `using System;`-Anweisung enthält. Wenn eine `using static System.Console;`-Anweisung vorhanden ist, entfernen Sie `Console.` aus `Console.WriteLine`.  
-
-```csharp
-public static void Main(string[] args)
-{
-    var generator = new FibonacciGenerator();
-    foreach (var digit in generator.Generate(15))
-    {
-        WriteLine(digit);
-    }
-}
-```
-
-Führen Sie die Datei anschließend aus.
+4. Führen Sie Ihre App durch, indem Sie [`dotnet run`](../tools/dotnet-run.md) ausführen. Nachfolgend sehen Sie die Programmausgabe:
 
 ```
-$ dotnet run
 0
 1
 1
@@ -343,313 +156,10 @@ $ dotnet run
 377
 ```
 
-Und das ist schon alles!
+Und das ist schon alles! Nun können Sie beginnen, die grundlegenden Konzepte zur Erstellung Ihrer eigene Programme zu nutzen.
 
-## <a name="using-folders-to-organize-code"></a>Verwenden von Ordnern zum Strukturieren von Code
+Beachten Sie, dass die Befehle und die Schritte in diesem Lernprogramm zum Ausführen der Anwendung nur während der Entwicklungszeit verwendet werden. Nachdem Sie Ihre Anwendung bereitstellen möchten, sollten Sie einen Blick auf die verschiedenen [Bereitstellungsstrategien](../deploying/index.md) für .NET Core-Anwendungen und den [`dotnet publish`](../tools/dotnet-publish.md)-Befehl werfen.
 
-Angenommen, Sie möchten einige neue Typen einführen, die Sie bearbeiten möchten.  In diesem Fall können Sie weitere Dateien hinzufügen und ihnen Namespaces zuordnen, die Sie in die Datei `Program.cs` einbinden können.
+## <a name="see-also"></a>Siehe auch
 
-```
-/MyProject
-|__Program.cs
-|__AccountInformation.cs
-|__MonthlyReportRecords.cs
-|__project.json
-```
-
-Das funktioniert bei relativ kleinen Projekten recht gut.  Wenn Sie jedoch eine größere Anwendung mit vielen verschiedenen Datentypen und womöglich mehreren Schichten haben, sollten Sie die Dinge logisch strukturieren.  Hier kommen nun Ordner ins Spiel.  Sie können entweder [das Beispielprojekt „NewTypes“](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypes) in diesem Leitfaden befolgen oder eigene Dateien und Ordner erstellen.
-
-Erstellen Sie zunächst im Stammverzeichnis des Projekts einen neuen Ordner.  In diesem Fall wird `/Model` ausgewählt.
-
-```
-/NewTypes
-|__/Model
-|__Program.cs
-|__project.json
-```
-
-Fügen Sie nun einige neue Typen zum Ordner hinzu:
-
-```
-/NewTypes
-|__/Model
-   |__AccountInformation.cs
-   |__MonthlyReportRecords.cs
-|__Program.cs
-|__project.json
-```
-
-Ordnen Sie die Dateien demselben Namespace zu, als würden sie sich in einem Verzeichnis befinden, sodass Sie sie in die Datei `Program.cs` einbinden können.
-
-### <a name="example-pet-types"></a>Beispiel: Pet-Typen
-
-In diesem Beispiel werden die beiden neuen Typen `Dog` und `Cat` erstellt, mit deren Hilfe die Schnittstelle `IPet` implementiert wird.
-
-Ordnerstruktur:
-
-```
-/NewTypes
-|__/Pets
-   |__Dog.cs
-   |__Cat.cs
-   |__IPet.cs
-|__Program.cs
-|__project.json
-```
-
-`IPet.cs`:
-```csharp
-using System;
-
-namespace Pets
-{
-    public interface IPet
-    {
-        string TalkToOwner();
-    }
-}
-```
-
-`Dog.cs`:
-```csharp
-using System;
-
-namespace Pets
-{
-    public class Dog : IPet
-    {
-        public string TalkToOwner() => "Woof!";
-    }
-}
-```
-
-`Cat.cs`:
-```csharp
-using System;
-
-namespace Pets
-{
-    public class Cat : IPet
-    {
-        public string TalkToOwner() => "Meow!";
-    }
-}
-```
-
-`Program.cs`:
-```csharp
-using System;
-using Pets;
-using System.Collections.Generic;
-
-namespace ConsoleApplication
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            List<IPet> pets = new List<IPet>
-            {
-                new Dog(),
-                new Cat()  
-            };
-            
-            foreach (var pet in pets)
-            {
-                Console.WriteLine(pet.TalkToOwner());
-            }
-        }
-    }
-}
-```
-
-`project.json`:
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.0"
-    }
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-      "imports": "dnxcore50"
-    }
-  }
-}
-```
-
-Ergebnis bei der Ausführung:
-
-```
-$ dotnet restore
-$ dotnet run
-Woof!
-Meow!
-```
-
-Das Projekt kann durch Hinzufügen neuer Pet-Typen (wie etwa `Bird`) erweitert werden.
-
-## <a name="testing-your-console-app"></a>Testen der Konsolenanwendung
-
-Irgendwann müssen Sie Ihre Projekte testen.  Im Folgenden wird ein recht gute Methode dafür beschrieben:
-
-1. Verschieben Sie alle Quelldateien Ihres vorhandenen Projekts in einen neuen `src`-Ordner.
-
-   ```
-   /Project
-   |__/src
-   ```
-
-2. Erstellen Sie das Verzeichnis `/test`.
-
-   ```
-   /Project
-   |__/src
-   |__/test
-   ```
-
-3. Erstellen Sie eine neue `global.json`-Datei:
-
-   ```
-   /Project
-   |__/src
-   |__/test
-   |__global.json
-   ```
-
-   `global.json`:
-   ```json
-   {
-      "projects": [
-         "src", "test"
-      ]
-   }
-   ```
-
-   Diese Datei teilt dem Buildsystem mit, dass es sich hierbei um ein System mit mehreren Projekten handelt, das die Suche nach Abhängigkeiten nicht nur in dem Ordner ermöglicht, indem es aktuell ausgeführt wird.  Dies ist wichtig, weil Sie dadurch eine Abhängigkeit in den zu testenden Code in Ihrem Testprojekt einfügen können.
-   
-### <a name="example-extending-the-newtypes-project"></a>Beispiel: Erweitern des Projekts „NewTypes“
-
-Nachdem Sie das Projektsystem eingerichtet haben, können Sie das Testprojekt erstellen und mit dem Schreiben von Tests beginnen.  Ab hier wird in diesem Leitfaden [das Beispielprojekt „Types“](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypes) verwendet und erweitert.  Darüber hinaus wird das [Xunit](https://xunit.github.io/)-Testframework verwendet.  Sie können diesem Beispiel folgen oder ein eigenes System mit mehreren Projekten und Tests erstellen.
-
-
-Die gesamte Projektstruktur sollte wie folgt aussehen:
-
-```
-/NewTypes
-|__/src
-   |__/NewTypes
-      |__/Pets
-         |__Dog.cs
-         |__Cat.cs
-         |__IPet.cs
-      |__Program.cs
-      |__project.json
-|__/test
-   |__NewTypesTests
-      |__PetTests.cs
-      |__project.json
-|__global.json
-```
-
-Stellen Sie sicher, dass sich zwei neue Dinge in Ihrem Testprojekt befinden:
-
-1. Eine korrekte `project.json`-Datei, die Folgendes enthält:
-
-   * Einen Verweis auf `xunit`
-   * Einen Verweis auf `dotnet-test-xunit`
-   * Einen Verweis auf den Namespace für den zu testenden Code
-
-2. Eine Xunit-Testklasse.
-
-`NewTypesTests/project.json`:
-```json
-{
-  "version": "1.0.0-*",
-  "testRunner": "xunit",
-
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type":"platform",
-      "version": "1.0.0"
-    },
-    "xunit":"2.2.0-beta2-build3300",
-    "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "NewTypes": "1.0.0"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-      "imports": [
-        "dnxcore50",
-        "portable-net45+win8" 
-      ]
-    }
-  }
-}
-```
-
-`PetTests.cs`: 
-```csharp
-using System;
-using Xunit;
-using Pets;
-public class PetTests
-{
-    [Fact]
-    public void DogTalkToOwnerTest()
-    {
-        string expected = "Woof!";
-        string actual = new Dog().TalkToOwner();
-        
-        Assert.Equal(expected, actual);
-    }
-    
-    [Fact]
-    public void CatTalkToOwnerTest()
-    {
-        string expected = "Meow!";
-        string actual = new Cat().TalkToOwner();
-           
-        Assert.Equal(expected, actual);
-    }
-}
-```
-   
-Nun können Sie Tests durchführen.  Mit dem Befehl [`dotnet test`](../tools/dotnet-test.md) wird der in Ihrem Projekt angegebene Test Runner ausgeführt. Stellen Sie sicher, dass Sie mit dem Verzeichnis der obersten Ebene beginnen.
- 
-```
-$ dotnet restore
-$ cd test/NewTypesTests
-$ dotnet test
-```
- 
-Das Ergebnis sollte wie folgt aussehen:
- 
-```
-xUnit.net .NET CLI test runner (64-bit win10-x64)
-  Discovering: NewTypesTests
-  Discovered:  NewTypesTests
-  Starting:    NewTypesTests
-  Finished:    NewTypesTests
-=== TEST EXECUTION SUMMARY ===
-   NewTypesTests  Total: 2, Errors: 0, Failed: 0, Skipped: 0, Time: 0.144s
-SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
-```
- 
-## <a name="conclusion"></a>Schlussfolgerung
- 
-In dieser Anleitung wurde beschrieben, wie eine .NET Core-Konsolenanwendung erstellt wird. Dabei wurde mit einer einfachen Konsolenanwendung begonnen, die schrittweise zu einem System mit mehreren Projekten und Unittests erweitert wurde.  Im nächsten Schritt erstellen Sie eigene beeindruckende Konsolenanwendungen.
- 
-Wenn Sie Interesse an einem komplexeren Beispiel für eine Konsolenanwendung haben, lesen Sie das nächste Tutorial: [Using the CLI tools to write console apps: An advanced step-by-step guide (Schreiben von Konsolenanwendungen mithilfe der CLI-Tools: ein ausführlicher Schritt-für-Schritt-Leitfaden)](cli-console-app-tutorial-advanced.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-
+[Organisieren und Testen von Projekten mit .NET Core CLI-Tools](testing-with-cli.md)
