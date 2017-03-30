@@ -1,0 +1,6 @@
+# [Arrays in Visual Basic](index.md)
+## [Arraydimensionen](array-dimensions.md)
+## [Gewusst wie: Initialisieren einer Arrayvariablen](how-to-initialize-an-array-variable.md)
+## [Gewusst wie: Sortieren eines Arrays](how-to-sort-an-array.md)
+## [Gewusst wie: Zuweisen eines Arrays zu einem anderen Array](how-to-assign-one-array-to-another-array.md)
+## [Problembehandlung bei Arrays](troubleshooting-arrays.md)

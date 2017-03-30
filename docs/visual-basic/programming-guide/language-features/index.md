@@ -1,94 +1,110 @@
 ---
-title: "Visual Basic Language Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, elements of"
-  - "Visual Basic code"
+title: "Funktionen von Visual Basic | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, elements of
+- Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Visual Basic Language Features
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
+ms.lasthandoff: 03/13/2017
 
-In den folgenden Themen werden die wesentlichen Komponenten der objektorientierten Programmiersprache [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] vorgestellt und erläutert.  Nachdem Sie unter Verwendung von Formularen und Steuerelementen die Benutzeroberfläche der Anwendung erstellt haben, müssen Sie Code schreiben, der das Verhalten der Anwendung definiert.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] unterstützt wie jede andere moderne Programmiersprache eine Reihe häufig verwendeter Programmierkonstrukte und Sprachelemente.  
+---
+# <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
+In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], einer objektorientierten Programmiersprache, vorgestellt und erläutert. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
   
- Wenn Sie über Programmiererfahrung in anderen Sprachen verfügen, werden Sie mit vielen der in diesem Abschnitt enthaltenen Informationen vertraut sein.  Während die Mehrzahl der Konstrukte mit denen anderer Sprachen übereinstimmt, gibt es einige feine Unterschiede, die auf dem ereignisgesteuerten Verhalten von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] beruhen.  
+ Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Die meisten Konstrukte ähneln denen in anderen Sprachen. Allerdings gibt es aufgrund der ereignisgesteuerten Natur von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] einige feine Unterschiede.  
   
- Wenn Sie noch nicht über Erfahrungen im Programmieren verfügen, bietet Ihnen dieser Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code.  Sobald Sie die Grundlagen kennen, können Sie mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] leistungsstarke Anwendungen erstellen.  
+ Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Sobald Sie mit den Grundlagen vertraut sind, können Sie mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] leistungsstarke Anwendungen erstellen.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- Erläutert, wie Code durch Deklarieren und Verwenden von Arrays, die mehrere zusammengehörende Werte enthalten, kompakter und leistungsstärker gestaltet werden kann.  
+ Dieser Artikel erläutert, wie Sie Ihren Code kompakter und leistungsfähiger machen, indem Sie Arrays deklarieren und verwenden, die mehrere zusammengehörige Werte enthalten.  
   
  [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- Beschreibt Auflistungsinitialisierer, mit denen Sie eine Auflistung erstellen und sie mit einem Anfangssatz von Werten aufgefüllt werden soll.  
+ Dieser Artikel beschreibt Auflistungsinitialisierer, mit denen Sie eine Auflistung erstellen und mit einem anfänglichen Satz von Werten auffüllen können.  
   
  [Konstanten und Enumerationen](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- Erläutert das Speichern unveränderlicher Werte für die wiederholte Verwendung sowie Gruppen von zusammengehörenden konstanten Werten.  
+ Dieser Artikel erläutert die Speicherung unveränderter Werte für die wiederholte Verwendung, einschließlich eines Satzes zusammengehöriger konstanter Werte.  
   
- [Kontrollfluss](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- Erläutert die Steuerung des Programmablaufs.  
+ [Ablaufsteuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ Dieser Artikel zeigt Ihnen, wie Sie den Ablauf der Ausführung Ihres Programms steuern.  
   
  [Datentypen](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Beschreibt den Typ der in einem Programmierelement enthaltenen Daten und das Speichern dieser Daten.  
+ Dieser Artikel beschreibt, welche Arten von Daten ein Programmierelement enthalten kann und wie diese Daten gespeichert werden.  
   
  [Deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- Beschreibt Programmierelemente, die deklariert werden können, deren Namen und Merkmale sowie die Auflösung der Verweise auf diese Elemente durch den Compiler.  
+ Dieser Artikel beschreibt Programmierelemente, die Sie deklarieren können, ihre Namen und Merkmale, und erläutert, wie der Compiler Verweise auf diese Elemente auflöst.  
   
- [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/delegates.md)  
- Enthält eine Einführung in Delegaten und ihre Verwendung in Visual Basic.  
+ [Delegaten](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ Dieser Artikel stellt Delegaten vor und erläutert, wie sie in Visual Basic verwendet werden.  
   
- [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md)  
- Beschreibt das Binden, das vom Compiler ausgeführt wird, wenn ein Objekt einer Objektvariablen zugeordnet wird, sowie die Unterschiede zwischen früh und spät gebundenen Objekten.  
+ [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ Dieser Artikel beschreibt die Bindung, die vom Compiler ausgeführt wird, wenn ein Objekt einer Objektvariablen zugewiesen wird, sowie die Unterschiede zwischen früh gebundenen und spät gebundenen Objekten.  
   
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)  
- Enthält eine Übersicht über Syntaxfehler, Laufzeitfehler und logische Fehler.  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ Dieser Artikel bietet eine Übersicht über Syntaxfehler, Laufzeitfehler und Logikfehler.  
   
- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/events.md)  
- Zeigt die Deklaration und Verwendung von Ereignissen.  
+ [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ Dieser Artikel zeigt, wie Sie Ereignisse deklarieren und verwenden.  
   
  [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- Enthält eine Schnittstellendefinition und beschreibt die Verwendung von Schnittstellen in Anwendungen.  
+ Dieser Artikel beschreibt, was Schnittstellen sind und wie Sie diese in Ihren Anwendungen verwenden können.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Enthält Links zu Themen mit einer Einführung in [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)]\-Funktionen und \-Programmierung.  
+ Dieser Artikel stellt Links zu Themen bereit, die Features und Programmierelemente von [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)] einführen.  
   
  [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- Enthält eine Übersicht über Objekte und Klassen, ihre Verwendung, ihre wechselseitigen Beziehungen sowie die von ihnen offen gelegten Eigenschaften, Methoden und Ereignisse.  
+ Dieser Artikel bietet eine Übersicht über Objekte und Klassen, ihre Verwendung, ihre Beziehungen zueinander sowie die Eigenschaften, Methoden und Ereignisse, die sie verfügbar machen.  
   
  [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- Beschreibt die Codeelemente, mit denen Elemente geändert werden, die Werte enthalten, sowie deren effiziente Verwendung und deren Kombination zu neuen Werten.  
+ Dieser Artikel beschreibt die Codeelemente, die Elemente mit Werten ändern. Es wird auch erläutert, wie Sie diese Codeelemente effizient verwenden und zum Erzielen neuer Werte kombinieren.  
   
- [Arbeitsschritte](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- Beschreibt die Prozeduren `Sub`, `Function`, `Property` sowie `Operator` und behandelt weiterführende Themen wie rekursive und überladene Prozeduren.  
+ [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ Dieser Artikel beschreibt die Prozeduren `Sub`, `Function`, `Property` und `Operator` und bietet Informationen zu weiterführenden Themen wie rekursiven und überladenen Prozeduren.  
   
  [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)  
- Beschreibt Deklarationsanweisungen und ausführbare Anweisungen.  
+ Dieser Artikel beschreibt Deklarationen und ausführbare Anweisungen.  
   
  [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- Enthält Links zu Themen, in denen die grundlegenden Konzepte der Verwendung von Zeichenfolgen in Visual Basic beschrieben werden.  
+ Dieser Artikel enthält Links zu Themen, die grundlegende Konzepte zur Verwendung von Zeichenfolgen in Visual Basic beschreiben.  
   
  [Variablen](../../../visual-basic/programming-guide/language-features/variables/index.md)  
- Bietet eine Einführung in Variablen und beschreibt deren Verwendung in Visual Basic.  
+ Dieser Artikel stellt Variablen vor und beschreibt deren Verwendung in Visual Basic.  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Enthält Links zu Themen, in denen die Verwendung von XML in Visual Basic beschrieben wird.  
+ Dieser Artikel enthält Links zu Themen, in denen die Verwendung von XML in Visual Basic beschrieben wird.  
   
-## Verwandte Abschnitte  
- [Auflistungen](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)  
- Beschreibt verschiedene Typen von Auflistungen, die von .NET Framework bereitgestellt werden.  Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel\-Wert\-Paaren verwendet.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Programmierung.
+ [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
+ Dieser Artikel enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Programmierung.
