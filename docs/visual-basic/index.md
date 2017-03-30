@@ -1,62 +1,78 @@
 ---
-title: "Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Programmieren, Visual Basic"
-  - "Visual Basic"
+title: Visual Basic | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- programming, Visual Basic
+- Visual Basic
 ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
 caps.latest.revision: 37
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 37
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
+ms.lasthandoff: 03/22/2017
+
 ---
-# Visual Basic
-Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwendungen produktiv erstellen können. Visual Basic kann von Entwicklern für Windows\-basierte, webbasierte und mobile Geräte verwendet werden. Wie bei allen Sprachen für Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort-md.md)] haben in Visual Basic geschriebene Programme der Vorteil der Sicherheit und der sprachübergreifenden Interoperabilität.  
+# <a name="visual-basic"></a>Visual Basic
+Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwendungen produktiv erstellen können. Visual Basic kann von Entwicklern für Windows-basierte, webbasierte und mobile Geräte verwendet werden. Wie bei allen Sprachen für Microsoft .NET Framework profitieren in Visual Basic geschriebene Programme von Sicherheit und sprachübergreifender Interoperabilität.  
   
- Auch diese [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]\-Generation bietet Ihnen schnelle und einfache Möglichkeiten zur Erstellung [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort-md.md)]\-basierter Anwendungen.  
+ Auch diese Visual Basic-Generation bietet Ihnen schnelle und einfache Möglichkeiten zur Erstellung von Anwendungen auf der Basis von .NET Framework.  
   
- Wenn Sie noch nicht über Visual Basic verfügen, können Sie eine kostenlose Visual Studio\-Version mit Visual Basic auf der [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs)\-Website beziehen.  
+ Wenn Sie noch nicht über Visual Basic verfügen, können Sie eine kostenlose Visual Studio-Version mit Visual Basic auf der [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs) -Website beziehen.  
   
-## In diesem Abschnitt  
- [Getting Started](../visual-basic/getting-started/index.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Getting Started (Erste Schritte)](../visual-basic/getting-started/index.md)   
  Unterstützt Sie beim Einstieg durch die Auflistung der neuen Funktionen und gibt an, welche Features in den verschiedenen Produktversionen verfügbar sind.  
+   
+ [Programmierkonzepte](../visual-basic/programming-guide/concepts/index.md) 
+ Stellt die nützlichsten Sprachkonzepte für Visual Basic-Programmierer vor.
+
+ [Programmstruktur und Codekonventionen](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ Dokumentiert die grundlegende Struktur und die Codekonventionen von Visual Basic, z.B. Benennungskonventionen, Kommentare im Code und Einschränkungen in Visual Basic.  
   
+ [Funktionen von Visual Basic](../visual-basic/programming-guide/language-features/index.md)  
+ Bietet Links zu Themen, die wichtige Funktionen von Visual Basic vorstellen und erläutern, darunter LINQ und XML-Literale.  
+   
+ [Visual Basic-Referenz](../visual-basic/reference/index.md)  
+ Enthält Informationen zur Sprache Visual Basic sowie Compilerinformationen.  
+
  [Entwickeln von Anwendungen mit Visual Basic](../visual-basic/developing-apps/index.md)  
- Erörtert verschiedene Aspekte bei der Entwicklung in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], beispielsweise den Code\-Editor, die Sicherheit, die Behandlung von Ausnahmen, das Debugging und die Verwendung der [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek.  
+ Erläutert verschiedene Aspekte der Entwicklung in Visual Basic, beispielsweise Sicherheit, Ausnahmebehandlung und die Verwendung der [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek.
+
+ [COM-Interop](../visual-basic/programming-guide/com-interop/index.md)  
+ Erläutert Interoperabilitätsprobleme, die beim Erstellen und Verwenden von COM-Objekten (Component Object Model) mit Visual Basic auftreten können.  
   
- [Visual Basic Programming Guide](../visual-basic/programming-guide/index.md)  
- Enthält eine Einführung in die Hauptkomponenten der objektorientierten Programmiersprache [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
-  
- [Visual Basic Reference](../visual-basic/reference/index.md)  
- Enthält die Sprache [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] sowie Compilerinformationen.  
-  
- [Samples](../visual-basic/sample-applications.md)  
+ [Beispiele](../visual-basic/sample-applications.md)  
  Enthält Informationen zu Beispielen.  
   
- [Walkthroughs](../visual-basic/walkthroughs.md)  
+ [Exemplarische Vorgehensweisen](../visual-basic/walkthroughs.md)  
  Stellt Links zu Schrittanweisungen für gängige Szenarios bereit.  
   
-## Verwandte Abschnitte  
- [Erste Schritte](/visual-studio/ide/get-started-developing-with-visual-studio)  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Erste Schritte mit der Entwicklung in Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
  Stellt Links zu Themen bereit, in denen Sie mehr über die Grundlagen von Visual Studio erfahren.  
   
- [Anwendungsentwicklung in Visual Studio](http://msdn.microsoft.com/de-de/97490c1b-a247-41fb-8f2c-bc4c201eff68)  
- Erläutert die gemeinsamen Tools, mit denen Sie Anwendungen entwerfen, entwickeln, debuggen und bereitstellen können.  
-  
- [Clientanwendungen](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)  
- Enthält Links zu Themen, in denen die verschiedenen Typen von Windows\-Anwendungen, die Sie mit Visual Studio erstellen können, beschrieben werden.  
-  
- [ASP.NET Overview](../Topic/ASP.NET%20Overview.md)  
- Stellt allgemeine Informationen zu ASP.NET bereit und erläutert Faktoren, die Sie beim Erstellen einer Website mit ASP.NET berücksichtigen sollten.  
-  
- [Entwicklungshandbuch](../Topic/.NET%20Framework%20Development%20Guide.md)  
- Enthält Informationen über Schlüsseltechnologiebereiche und Aufgaben für die Anwendungsentwicklung, z. B. Erstellen, Konfigurieren, Debuggen, Sichern und Bereitstellen der Anwendung. Das Thema enthält auch Informationen über dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
-  
- [.NET Framework\-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Bietet Zugang zu der Bibliothek der Klassen, Schnittstellen und Werttypen, die in der Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort-md.md)] SDK enthalten sind.
+ [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ Bietet Zugang zu der Bibliothek der Klassen, Schnittstellen und Werttypen, die in der Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SDK enthalten sind.
