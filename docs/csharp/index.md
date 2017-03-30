@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d9efc2b1b8ad38a6444e7362da13ce3838476abd
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
+ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
+ms.lasthandoff: 03/28/2017
 
 ---
 
@@ -27,7 +27,7 @@ Der Leitfaden für C# enthält zahlreiche Informationen über die C#-Sprache. Di
     - Wenn Sie vorher schon entwickelt haben, aber neu bei C# sind, lesen Sie einfach die [Einführung in C#](tour-of-csharp/index.md). Sie lernen die grundlegende Syntax und Struktur der Sprache kennen und können die Einführung verwenden, um die Unterschiede zwischen C# und anderen von Ihnen verwendeten Sprachen kennenzulernen. Sie können auch die [Tutorials](tutorials/index.md) durchsuchen, um grundlegende C#-Programme zu testen. Oder Sie sehen sich die [C#-Konzepte](concepts.md) an, um die Funktionen von C# genau kennenzulernen.
 
 * Erfahrene C#-Entwickler:
-    - Wenn Sie C# bereits verwendet haben, sollten Sie zunächst lesen, was sich in der neuesten Version der Sprache geändert hat. Testen Sie unter [Neues in C# 6](csharp-6.md) die neuen Funktionen in der aktuellen Version. Erkunden Sie dann die [C#-Konzepte](concepts.md), die Sie genauer kennenlernen möchten.
+    - Wenn Sie C# bereits verwendet haben, sollten Sie zunächst lesen, was sich in der neuesten Version der Sprache geändert hat. Informieren Sie sich unter [Neues in C#](whats-new/index.md) über die neuen Funktionen in der aktuellen Version. Erkunden Sie dann die [C#-Konzepte](concepts.md), die Sie genauer kennenlernen möchten.
  
 ## <a name="how-the-c-guide-is-organized"></a>Organisation des Leitfadens für C#
 
@@ -42,7 +42,7 @@ Der Leitfaden für C# verfügt über sieben Abschnitte. Sie können diese nachei
 * [Einführung in C#](tour-of-csharp/index.md): 
     - Dieser Abschnitt enthält einen Überblick über die Sprache. Sie lernen die Elemente kennen, die die C#-Programme und die Funktionen der Sprache bilden. Sie sehen kleine Beispiele sämtlicher Syntaxelemente von C# und Erläuterungen zu den wichtigsten C#-Sprachthemen. 
 
-* [Neueste Funktionen](whats-new.md):
+* [Neueste Funktionen](whats-new/index.md):
     - Informationen zu neuen Funktionen in der Sprache Informationen zu neuen Tools wie C# Interactive (die REPL von C#) und .NET Compiler Platform SDK. Sie lernen, wie sich die Sprache entwickelt. Sie werden sehen, wie die neuen Tools Ihre Produktivität bei der Erkundung der Sprache steigern und Aufgaben automatisieren. 
 
 * [C# Interactive](interactive/index.md):
