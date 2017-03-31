@@ -1,28 +1,47 @@
 ---
-title: "C# Features That Support LINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], features supporting LINQ"
+title: "C#-Funktionen mit LINQ-Unterstützung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f844e967e2abb7ea23e04a797017261e33bb4d75
+ms.lasthandoff: 03/13/2017
+
 ---
-# C# Features That Support LINQ
-Der folgende Abschnitt gibt eine Einführung in die neuen Sprachkonstrukte in C\# 3.0.  Obwohl diese neuen Funktionen bis zu einem gewissen Grad alle mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen verwendet werden, sind sie nicht auf [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] beschränkt und können in jedem Kontext verwendet werden, den Sie als nützlich erachten.  
+# <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
+Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt werden, vorgestellt. Obwohl diese neuen Funktionen zu einem gewissen Grad mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfragen verwendet werden, sind sie nicht beschränkt auf [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] und können in jedem Kontext, in dem Sie sie nützlich finden, verwendet werden.  
   
-## Abfrageausdrücke  
- Abfrageausdrücke verwenden ähnlich wie SQL oder XQuery eine deklarative Syntax für eine Abfrage über IEnumerable\-Auflistungen.  Eine Abfragesyntax zur Kompilierzeit wird in Methodenaufrufe für eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieterimplementierung der standardmäßigen Abfrageoperator\-Erweiterungsmethoden umgewandelt.  Anwendungen steuern standardmäßige Abfrageoperatoren innerhalb des Bereichs durch die Angabe des entsprechenden Namespaces mit einer `using`\-Direktive.  Beim folgenden Abfrageausdruck wird ein Zeichenfolgenarray verwendet, der anhand des ersten Zeichens in der Zeichenfolge gruppiert wird. Diese Gruppen werden dann sortiert.  
+## <a name="query-expressions"></a>Abfrageausdrücke  
+ Abfrageausdrücke verwenden eine deklarative Syntax wie SQL oder XQuery, um eine Abfrage über IEnumerable-Sammlungen zu erstellen. Zur Kompilierzeit wird die Abfragesyntax in Methodenaufrufe an eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Implementierung des Anbieters der Erweiterungsmethode des Standardabfrageoperators kompiliert. Applikationen steuern die Standardabfrageoperatoren, die sich durch Angabe des entsprechenden Namespace mit einer `using`-Anweisung innerhalb des Bereichs befinden. Der folgende Abfrageausdruck nimmt ein Array von Zeichenfolgen, gruppiert sie nach dem ersten Zeichen in der Zeichenfolge und sortiert die Gruppen.  
   
 ```  
 var query = from str in stringArray  
@@ -31,10 +50,10 @@ var query = from str in stringArray
             select stringGroup;  
 ```  
   
- Weitere Informationen finden Sie unter [LINQ\-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md).  
+ Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md).  
   
-## Implizit typisierte Variablen \(var\)  
- Anstatt beim Deklarieren und Initialisieren einer Variable einen Typ explizit anzugeben, können Sie den [var](../../../../csharp/language-reference/keywords/var.md)\-Modifizierer verwenden, um den Compiler zum Ableiten und Zuweisen des Typs anzuweisen, wie hier gezeigt:  
+## <a name="implicitly-typed-variables-var"></a>Implizit typisierte Variablen (var)  
+ Anstatt beim Deklarieren und Initialisieren einer Variablen einen Typ explizit anzugeben, können Sie den [var](../../../../csharp/language-reference/keywords/var.md)-Modifizierer verwenden, um den Compiler zum Ableiten und Zuweisen des Typs anzuweisen, wie hier gezeigt:  
   
 ```  
 var number = 5;  
@@ -44,21 +63,21 @@ var query = from str in stringArray
             select str;  
 ```  
   
- Als `var` deklarierte Variablen sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben.  Die Verwendung von `var` macht die Erstellung von anonymen Typen möglich, aber es kann auch für alle lokalen Variablen verwendet werden.  Arrays können auch mit impliziter Typisierung deklariert werden.  
+ Variablen, die als `var` deklariert werden, sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben. Die Verwendung von `var` macht es möglich, anonyme Typen zu erstellen, aber es kann für jede lokale Variable verwendet werden. Arrays können auch mit impliziter Typisierung deklariert werden.  
   
  Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## Objekt\- und Auflistungsinitialisierer  
- Objekt\- und Auflistungsinitialisierer ermöglichen die Initialisierung von Objekten ohne den expliziten Aufruf eines Konstruktors für das Objekt.  Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren.  Beispiel: Bei einer Klasse mit dem Namen `Customer` mit der öffentlichen `Name`\-Eigenschaft und der öffentlichen `Phone`\-Eigenschaft kann der Objektinitialisierer wie im folgenden Code verwendet werden:  
+## <a name="object-and-collection-initializers"></a>Objekt- und Auflistungsinitialisierer  
+ Objekt- und Auflistungsinitialisierer ermöglichen das Initialisieren von Objekten ohne expliziten Aufruf eines Konstruktors für das Objekt. Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren. In einer Klasse namens `Customer` mit öffentlichen `Name`- und `Phone`-Eigenschaften können Objektinitialisierer wie im folgenden Code verwendet werden:  
   
 ```  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
- Weitere Informationen finden Sie unter [Objekt\- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Weitere Informationen finden Sie unter [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-## Anonyme Typen  
- Ein anonymer Typ wird vom Compiler erstellt, und der Typname ist nur für den Compiler verfügbar.  Mit anonymen Typen können Eigenschaftensätze vorübergehend in einem Abfrageergebnis gruppiert werden, ohne einen separaten benannten Typ definieren zu müssen.  Anonyme Typen werden mit einem neuen Ausdruck und einem Objektinitialisierer initialisiert, wie hier gezeigt:  
+## <a name="anonymous-types"></a>Anonyme Typen  
+ Ein anonymer Typ wird vom Compiler erstellt, und der Typname ist nur für den Compiler verfügbar. Anonyme Typen stellen eine bequeme Möglichkeit zum vorübergehenden Gruppieren einer Reihe von Eigenschaften in einem Abfrageergebnis bereit, ohne einen separaten benannten Typ definieren zu müssen. Anonyme Typen werden mit einem neuen Ausdruck und einem Objektinitialisierer initialisiert, wie hier gezeigt:  
   
 ```  
 select new {name = cust.Name, phone = cust.Phone};  
@@ -66,24 +85,24 @@ select new {name = cust.Name, phone = cust.Phone};
   
  Weitere Informationen finden Sie unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## Erweiterungsmethoden  
- Eine Erweiterungsmethode ist eine statische Methode, die mit einem Typ verknüpft werden kann, sodass sie wie eine Instanzenmethode des Typs aufgerufen werden kann.  Dieses Feature ermöglicht Ihnen im Prinzip, neue Methoden vorhandenen Typen "hinzuzufügen", ohne sie tatsächlich zu ändern.  Die standardmäßigen Abfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.  
+## <a name="extension-methods"></a>Erweiterungsmethoden  
+ Eine Erweiterungsmethode ist eine statische Methode, die einem Typ zugeordnet werden kann, sodass sie aufgerufen werden kann, als ob es sich um eine Instanzmethode für den Typ handeln würde. Diese Funktion ermöglicht es Ihnen, neue Methoden zu vorhandenen Typen „hinzuzufügen“, ohne sie tatsächlich zu ändern. Die Standardabfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.  
   
  Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
-## Lambda\-Ausdrücke  
- Ein Lambda\-Ausdruck ist eine Inline\-Funktion, die zum Trennen der Eingabeparameter aus dem Funktionstext den Operator \=\> verwendet und die beim Kompilieren in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann.  In der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Programmierung arbeiten Sie mit Lambda\-Ausdrücken, wenn Sie direkte Methodenaufrufe für die standardmäßigen Abfrageoperatoren vornehmen, aber nicht bei der Verwendung von Abfragesyntax.  
+## <a name="lambda-expressions"></a>Lambda-Ausdrücke  
+ Ein Lambdaausdruck ist eine Inlinefunktion, die den Operator => verwendet, um Eingabeparameter vom Funktionstext zu trennen, und die zur Kompilierzeit in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann. In der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Programmierung erhalten Sie Lambdaausdrücke, wenn Sie direkte Methodenaufrufe für die Standardabfrageoperatoren vornehmen.  
   
  Weitere Informationen finden Sie unter:  
   
 -   [Anonyme Funktionen](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
   
--   [Lambda\-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+-   [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
--   [Ausdrucksbaumstrukturen](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)  
+-   [Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
   
-## Automatisch implementierte Eigenschaften  
- Automatisch implementierte Eigenschaften machen die Eigenschaftendeklaration präziser.  Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates, anonymes dahinter liegendes Feld, das nur durch Getter und Setter für die Eigenschaft aufgerufen werden kann.  
+## <a name="auto-implemented-properties"></a>Automatisch implementierte Eigenschaften  
+ Automatisch implementierte Eigenschaften machen die Eigenschaftendeklaration präziser. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, wird der Compiler ein privates, anonymes Unterstützungsfeld erstellen, auf das nur durch die Getter und Setter der Eigenschaft zugegriffen werden kann.  
   
 ```  
 public string Name {get; set;}  
@@ -91,6 +110,5 @@ public string Name {get; set;}
   
  Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
-## Siehe auch  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [Visual Basic Features That Support LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)
+## <a name="see-also"></a>Siehe auch  
+ [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)

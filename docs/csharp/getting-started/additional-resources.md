@@ -1,75 +1,93 @@
 ---
-title: "Additional Resources for Visual C# Programmers | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "newsgroups [C#]"
-  - "Help, C# resources"
-  - "Visual C#, further information"
-  - "C# language, further information"
-  - "forums [C#]"
-  - "Visual C#, additional resources"
+title: "Zusätzliche Ressourcen für Visual C#-Programmierer | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- newsgroups [C#]
+- Help, C# resources
+- Visual C#, further information
+- C# language, further information
+- forums [C#]
+- Visual C#, additional resources
 ms.assetid: cdec0df0-89ef-4ff1-8ccf-26fef47e61cb
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7810948b8ee549d05d7e795f89822db2fdfd1648
+ms.lasthandoff: 03/13/2017
+
 ---
-# Additional Resources for Visual C# Programmers
+# <a name="additional-resources-for-visual-c-programmers"></a>Zusätzliche Ressourcen für Visual C#-Programmierer
 Die folgenden Websites helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.  
   
-## Microsoft\-Ressourcen  
+## <a name="microsoft-resources"></a>Microsoft-Ressourcen  
   
-### Im Web  
- [Microsoft Visual C\# Developer Center](http://go.microsoft.com/fwlink/?LinkId=47811)  
+### <a name="on-the-web"></a>Im Web  
+ [Microsoft Visual C# Developer Center](http://go.microsoft.com/fwlink/?LinkId=47811)  
  Enthält Codebeispiele, Upgradeinformationen, Downloads sowie technische Inhalte.  
   
- [Microsoft Hilfe und Support](http://go.microsoft.com/fwlink/?LinkID=108287)  
- Bietet Zugriff auf Knowledge Base\-Artikel, Downloads und Updates, Support\-WebCasts und andere Dienste.  
+ [Microsoft-Hilfe und -Support](http://go.microsoft.com/fwlink/?LinkID=108287)  
+ Bietet Zugriff auf Knowledge Base-Artikel, Downloads und Updates, Support-WebCasts und andere Dienste.  
   
  [CodePlex](http://go.microsoft.com/fwlink/?LinkId=137330)  
- Hostet Open Source\-Softwareprojekte.  Sie können CodePlex verwenden, um neue Projekte zu erstellen und sie der Öffentlichkeit zur Verfügung zu stellen oder um sich anderen anzuschließen, die bereits ihre eigenen Projekte gestartet haben.  
+ Hostet Open Source-Softwareprojekte. Sie können CodePlex verwenden, um neue Projekte zu erstellen und sie der Öffentlichkeit zur Verfügung zu stellen oder um sich anderen anzuschließen, die bereits ihre eigenen Projekte gestartet haben.  
   
-### Foren  
- [Visual C\#\-Sprache](http://go.microsoft.com/fwlink/?LinkId=165947)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zur C\#\-Sprachsyntax und zum C\#\-Compiler.  
+### <a name="forums"></a>Foren  
+ [Visual C# Language](http://go.microsoft.com/fwlink/?LinkId=165947)  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zur C#-Sprachsyntax und zum C#-Compiler.  
   
- [Visual C\# allgemein](http://go.microsoft.com/fwlink/?LinkId=165948)  
- Bietet ein Forum für allgemeine Diskussionen und Fragen rund um Visual C\#.  
+ [Visual C# General](http://go.microsoft.com/fwlink/?LinkId=165948)  
+ Bietet ein Forum für allgemeine Diskussionen und Fragen rund um Visual C#.  
   
- [Visual C\#\-IDE](http://go.microsoft.com/fwlink/?LinkId=165951)  
- Stellt ein Forum für Diskussionen zur C\#\-IDE bereit.  
+ [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=165951)  
+ Stellt ein Forum für Diskussionen zur C#-IDE bereit.  
   
- [MSDN\-Foren](http://go.microsoft.com/fwlink/?LinkId=157697)  
- Stellt Informationen zu Foren bereit, in denen Sie Fragen und Antworten veröffentlichen und ebenfalls von Benutzern erstellten Hilfeinhalt anzeigen und durchsuchen können.  Der Zugriff auf diese MSDN\-Foren ist durch Klicken auf **MSDN\-Foren** im Menü **Hilfe** möglich.  
+ [MSDN-Foren](http://go.microsoft.com/fwlink/?LinkId=157697)  
+ Stellt Informationen zu Foren bereit, in denen Sie Fragen und Antworten veröffentlichen und ebenfalls von Benutzern erstellten Hilfeinhalt anzeigen und durchsuchen können. Sie können auch auf diese MSDN-Foren zugreifen, indem Sie im Menü **Hilfe** auf **MSDN-Foren** klicken.  
   
-### Chats und Diskussionsgruppen  
- [MSDN\-Diskussionsgruppen](http://go.microsoft.com/fwlink/?LinkId=145961)  
- Bietet die Möglichkeit, in Form von Newsgroup\-Diskussionen mit Experten auf der ganzen Welt zu kommunizieren.  
+### <a name="chats-and-discussion-groups"></a>Chats und Diskussionsgruppen  
+ [MSDN-Diskussionsgruppen](http://go.microsoft.com/fwlink/?LinkId=145961)  
+ Bietet die Möglichkeit, in Form von Newsgroup-Diskussionen mit Experten auf der ganzen Welt zu kommunizieren.  
   
- [MSDN\-Chats](http://go.microsoft.com/fwlink/?LinkId=145962)  
- Bietet Diskussionen zu Microsoft\-Produkten und \-Technologien.  Jeder Chat wird von einem oder mehreren Experten von Microsoft betreut.  Für abgeschlossene Chats stehen Transkriptionen zur Verfügung.  
+ [MSDN-Chats](http://go.microsoft.com/fwlink/?LinkId=145962)  
+ Bietet Diskussionen zu Microsoft-Produkten und -Technologien. Jeder Chat wird von einem oder mehreren Experten von Microsoft betreut. Für abgeschlossene Chats stehen Transkriptionen zur Verfügung.  
   
-### Videos und Webcasts  
+### <a name="videos-and-webcasts"></a>Videos und Webcasts  
  [Channel9](http://go.microsoft.com/fwlink/?LinkID=123827)  
  Bietet eine Community anhand von Videos, Wikis und Foren.  
   
-### Unterstützung  
+### <a name="support"></a>Unterstützung  
  [Melden Sie Fehler, oder machen Sie Vorschläge](http://go.microsoft.com/fwlink/?LinkID=79804)  
- Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio an Microsoft.  Sie können auch Fehler melden, indem Sie im Menü **Hilfe** auf **Problem melden** klicken.  
+ Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio an Microsoft. Sie können Fehler auch melden, indem Sie im Menü **Hilfe** auf **Problem melden** klicken.  
   
-## Ressourcen von Drittanbietern  
- Die MSDN\-Website enthält Informationen über aktuelle Sites und Newsgroups von Drittanbietern.  Eine aktuelle Liste der verfügbaren Ressourcen finden Sie auf der [MSDN C\# Community\-Website](http://go.microsoft.com/fwlink/?LinkId=165945).  
+## <a name="third-party-resources"></a>Ressourcen von Drittanbietern  
+ Die MSDN-Website enthält Informationen über aktuelle Sites und Newsgroups von Drittanbietern. Eine aktuelle Liste der verfügbaren Ressourcen finden Sie auf der [MSDN C# Community-Website](http://go.microsoft.com/fwlink/?LinkId=165945).  
   
-## Siehe auch  
- [C\#](../../csharp/csharp.md)   
- [Getting Started with Visual C\#](../../csharp/getting-started/getting-started-with-csharp.md)   
- [Anpassen des Editors](/visual-studio/ide/customizing-the-editor)   
- [Gewusst wie: Teilnehmen an der Entwicklercommunity](../Topic/How%20to:%20Get%20Involved%20in%20the%20Developer%20Community.md)   
- [Gewusst wie: Senden von Feedback](../Topic/How%20to:%20Send%20Feedback%20About%20Visual%20Studio.md)   
- [Sprechen Sie mit uns](/visual-studio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch  
+ [C#](../../csharp/csharp.md)   
+ [Erste Schritte mit C#](../../csharp/getting-started/getting-started-with-csharp.md)   
+ [Anpassen des Editors](https://docs.microsoft.com/visualstudio/ide/customizing-the-editor)   
+ [Gewusst wie: Teilnehmen an der Entwicklercommunity](http://msdn.microsoft.com/library/f1503d98-7a64-41b6-a6c7-0e42a533e9c5)   
+ [Gewusst wie: Senden von Feedback](http://msdn.microsoft.com/library/c9f1dd8f-bcb6-40ac-b896-1e9eca0bb209)   
+ [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

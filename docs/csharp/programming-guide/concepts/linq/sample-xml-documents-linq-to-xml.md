@@ -1,0 +1,53 @@
+---
+title: Beispiel-XML-Dokumente (LINQ to XML) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f84017dc60724191b7516937622fd2fb5d03c5c5
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="sample-xml-documents-linq-to-xml"></a>Beispiel-XML-Dokumente (LINQ to XML)
+Die folgenden Beispieldateien werden in den Codebeispielen und den Codeausschnitten in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet.  
+  
+> [!NOTE]
+>  Die in den Beispielen genannten Unternehmen, Organisationen, Produkte, Domänennamen, E-Mail-Adressen, Logos, Personen, Orte und Ereignisse sind frei erfunden. Jede Ähnlichkeit mit bestehenden Unternehmen, Organisationen, Produkten, Domänen, E-Mail-Adressen, Logos, Personen, Orten oder Ereignissen ist rein zufällig.  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+  
+|Thema|Beschreibung|  
+|-----------|-----------------|  
+|[XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)|XML-Dokument, das einen typischen Auftrag enthält|  
+|[XML-Beispieldatei: Typische Bestellung in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|XML-Dokument in einem Namespace, das einen typischen Auftrag enthält|  
+|[XML-Beispieldatei: Mehrere Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|XML-Dokument, das mehrere Aufträge enthält|  
+|[XML-Beispieldatei: Mehrere Bestellungen in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|XML-Dokument in einem Namespace, das mehrere Aufträge enthält|  
+|[XML-Beispieldatei: Testkonfiguration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|XML-Dokument, das einige Pseudokonfigurationsdaten zu Testzwecken enthält|  
+|[XML-Beispieldatei: Testkonfiguration in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|XML-Dokument in einem Namespace, das einige Pseudokonfigurationsdaten zu Testzwecken enthält|  
+|[XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|XML-Dokument, das Kunden und Aufträge enthält|  
+|[XSD-Beispieldatei: Kunden und Bestellungen](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Eine XML-Schemadefinition (XSD), die die [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) überprüft.|  
+|[XML-Beispieldatei: Kunden und Bestellungen in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|XML-Dokument in einem Namespace, das Kunden und Aufträge enthält|  
+|[XML-Beispieldatei: Numerische Daten (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|XML-Dokument mit Daten, die summiert und gruppiert werden können|  
+|[XML-Beispieldatei: Numerische Daten in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|XML-Dokument in einem Namespace mit Daten, die summiert und gruppiert werden können|  
+|[XML-Beispieldatei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|XML-Dokument, das einen Bücherkatalog enthält|  
+|[XML-Beispieldatei: Konsolidierte Bestellungen](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|XML-Dokument mit Aufträgen, die sich in verschiedenen Namespaces befinden|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Programmierhandbuch (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

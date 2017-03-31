@@ -1,47 +1,63 @@
 ---
-title: "How to: Persist User Settings in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Settings object, persisting user settings"
-  - "persistence, persisting user settings [Visual Basic]"
-  - "user settings, persisting"
+title: 'Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Settings object, persisting user settings
+- persistence, persisting user settings [Visual Basic]
+- user settings, persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# How to: Persist User Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: edb813500202b313b7e306ab8f34bd1d1ca1391c
+ms.lasthandoff: 03/13/2017
 
-Mit der `My.Settings.Save`\-Methode können Sie Änderungen an den Benutzereinstellungen beibehalten.  
+---
+# <a name="how-to-persist-user-settings-in-visual-basic"></a>Gewusst wie: Beibehalten von Benutzereinstellungen in Visual Basic
+Sie können mit der `My.Settings.Save`-Methode Änderungen der Benutzereinstellungen beibehalten.  
   
- In der Regel werden Anwendungen so entworfen, dass Änderungen an den Benutzereinstellungen erst beim Schließen der Anwendung gespeichert werden.  Dies liegt daran, dass das Speichern der Einstellungen in Abhängigkeit von mehreren Faktoren mehrere Sekunden dauern kann.  
+ Anwendungen werden üblicherweise so entwickelt, dass sie Änderungen der Benutzereinstellungen beibehalten, wenn die Anwendung beendet wird. Dies liegt daran, dass das Speichern der Einstellungen mehrere Sekunden in Anspruch nehmen kann; dabei hängt die Länge des Speichervorgangs von mehreren Faktoren ab.  
   
- Weitere Informationen finden Sie unter [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
->  Obwohl Sie die Werte benutzerbezogener Einstellungen zur Laufzeit ändern und speichern können, sind anwendungsbezogene Einstellungen schreibgeschützt und können nicht programmgesteuert geändert werden.  Sie können anwendungsbezogene Einstellungen beim Erstellen der Anwendung über den **Projekt\-Designer** oder durch Bearbeiten der Konfigurationsdatei der Anwendung ändern.  Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
+>  Obwohl Sie die Werte der Einstellungen für den Benutzerbereich zur Laufzeit ändern und speichern können, sind die Einstellungen für den Anwendungsbereich schreibgeschützt und können nicht programmgesteuert geändert werden. Sie können die Einstellungen für den Anwendungsbereich nur ändern, wenn Sie die Anwendung (über den **Projekt-Designer**) erstellen, oder indem Sie die Anwendungskonfigurationsdatei bearbeiten. Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet).  
   
-## Beispiel  
- In diesem Beispiel wird die `LastChanged`\-Benutzereinstellung geändert und diese Änderung durch Aufrufen der `My.Settings.Save`\-Methode gespeichert.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird der Wert der Benutzereinstellung `LastChanged` geändert, und diese Änderung wird mit einem Aufruf an die `My.Settings.Save`-Methode gespeichert.  
   
  [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
   
- Für dieses Beispiel muss die Anwendung über eine `LastChanged`\-Benutzereinstellung vom Typ `Date` verfügen.  Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
+ Damit dieses Beispiel funktioniert, muss Ihre Anwendung eine `LastChanged`-Benutzereinstellung vom Typ `Date` aufweisen. Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet).  
   
-## Siehe auch  
- [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)   
- [How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)   
- [How to: Change User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)   
- [How to: Create Property Grids for User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)   
- [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Siehe auch  
+ [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)   
+ [Vorgehensweise: Lesen von Anwendungseinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)   
+ [Vorgehensweise: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)   
+ [Vorgehensweise: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)   
+ [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)

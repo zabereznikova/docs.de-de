@@ -1,71 +1,89 @@
 ---
-title: "/errorreport (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/errorreport"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-errorreport compiler option [C#]"
-  - "errorreport compiler option [C#]"
-  - "/errorreport compiler option [C#]"
+title: -errorreport (C#-Compileroptionen) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /errorreport
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -errorreport compiler option [C#]
+- errorreport compiler option [C#]
+- /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: 35
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 35
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
+ms.lasthandoff: 03/13/2017
+
 ---
-# /errorreport (C# Compiler Options)
-Diese Option bietet eine komfortable Möglichkeit, einen internen C\#\-Compilerfehler an Microsoft zu melden.  
+# <a name="errorreport-c-compiler-options"></a>/errorreport (C#-Compileroptionen)
+Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler an Microsoft zu melden.  
   
 > [!NOTE]
->  In Windows Vista und Windows Server 2008 überschreiben die Fehlerberichteinstellungen, die Sie für Visual Studio festlegen, nicht die über Windows Error Reporting \(WER\) festgelegten Einstellungen.  WER\-Einstellungen haben immer Vorrang vor Visual Studio\-Fehlerberichteinstellungen.  
+>  Unter Windows Vista und Windows Server 2008 überschreiben die Einstellungen für die Fehlerberichterstattung, die Sie für Visual Studio festgelegt haben, nicht die Einstellungen, die über Windows-Fehlerberichterstattung (WER) festgelegt wurden. WER-Einstellungen haben immer Vorrang vor Einstellungen für Fehlerberichterstattung in Visual Studio.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  **none**  
  Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.  
   
- **prompt**  
- Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen.  **prompt** ist der Standard, wenn Sie eine Anwendung in der Entwicklungsumgebung kompilieren.  
+ **Aufforderung**  
+ Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Aufforderung** ist die Standardeinstellung beim Kompilieren einer Anwendung in der Entwicklungsumgebung.  
   
- **queue**  
- Der Fehlerbericht wird in die Warteschleife eingereiht.  Wenn Sie sich mit Administratoranmeldeinformationen anmelden, können Sie alle Fehler seit der letzten Anmeldung angeben.  Sie werden nur alle drei Tage dazu aufgefordert, Berichte für Fehler zu senden.  **queue** ist der Standard, wenn eine Anwendung in der Befehlszeile kompiliert wird.  
+ **Warteschlange**  
+ Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratoranmeldeinformationen anmelden, können Sie alle Fehler seit dem letzten Login melden. Sie werden nicht aufgefordert, Fehlerberichte mehr als einmal alle drei Tage zu senden. **Warteschlange** ist die Standardeinstellung, wenn Sie eine Anwendung in der Befehlszeile kompilieren.  
   
- **send**  
- Berichte über interne Compilerfehler werden automatisch an Microsoft gesendet.  Um diese Option zu aktivieren, müssen Sie zuerst der Datensammlungsrichtlinie von Microsoft zustimmen.  Wenn Sie **\/errorreport:send** das erste Mal auf einem Computer angeben, werden Sie in einer Compilermeldung auf eine Website mit der Datensammlungsrichtlinie von Microsoft verwiesen.  
+ **Senden**  
+ Sendet Berichte über interne Compilerfehler automatisch an Microsoft. Wenn Sie diese Option aktivieren, müssen Sie zuerst der Richtlinie zur Datensammlung von Microsoft zustimmen. Beim ersten Mal, wenn Sie **/errorreport:send** auf einem Computer angeben, wird eine Compilermeldung Sie auf eine Website verweisen, die die Microsoft-Richtlinie zur Datensammlung enthält.  
   
- Diese Option hängt von den Registrierungseinstellungen ab.  Weitere Informationen darüber, wie die entsprechenden Werte in der Registrierung, finden Sie auf [Verwenden von automatischen Fehlerbericht in Visual Studio 2008\-Befehlszeilentools einschaltet](http://go.microsoft.com/fwlink/?LinkID=184695) der MSDN\-Website festlegt.  
+ Diese Option hängt von Registrierungseinstellungen ab. Informationen dazu, wie Sie die entsprechenden Werte in der Registrierung festlegen, finden Sie unter [How to Turn on Automatic Error Reporting in Visual Studio 2008 Command-line Tools (Aktivieren der automatischen Fehlerberichterstattung in Visual Studio 2008-Befehlszeilentools)](http://go.microsoft.com/fwlink/?LinkID=184695) auf der MSDN-Website.  
   
-## Hinweise  
- Ein interner Compilerfehler tritt auf, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann.  Bei Auftreten eines internen Compilerfehlers wird vom Compiler keine Ausgabedatei oder hilfreiche Analyse erstellt, die Sie zum Beheben des Fehlers im Code verwenden können.  
+## <a name="remarks"></a>Hinweise  
+ Ein interner Compilerfehler (ICE) entsteht, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann. Tritt ein ICE auf, erzeugt der Compiler keine Ausgabedatei oder eine hilfreiche Diagnose, die Sie verwenden können, um Ihren Code zu beheben.  
   
- In früheren Versionen wurden Sie beim Auftreten eines internen Compilerfehlers aufgefordert, das Problem dem Microsoft\-Produktsupport zu melden.  Mit **\/errorreport** können Sie die Informationen über den internen Compilerfehler direkt an das Visual C\#\-Team weiterleiten.  Die Fehlerberichte können dazu beitragen, zukünftige Compilerversionen zu verbessern.  
+ In früheren Versionen wurden Sie beim Auftreten eines ICE aufgefordert, sich an den Microsoft-Produktsupport zu wenden, um das Problem zu melden. Mithilfe von **/errorreport** können Sie dem Visual C#-Team ICE-Informationen bereitstellen. Die Fehlerberichte können dabei helfen, zukünftige Compilerversionen zu verbessern.  
   
- Ob Benutzer Berichte versenden können, ist von den Computer\- und den Benutzerberechtigungen abhängig.  
+ Die Fähigkeit eines Benutzers zum Senden von Berichten hängt vom Computer und den Benutzerberechtigungen ab.  
   
- Weitere Informationen über Fehlerdebugger, Sie finden [Beschreibung des Dr. Watson Tool für Windows \(Drwtsn32.exe\)](http://go.microsoft.com/fwlink/?LinkId=147286).  
+ Weitere Informationen zum Fehlerdebugger finden Sie unter [Beschreibung des Dr. Watson für Windows (Drwtsn32.exe)-Tool](http://go.microsoft.com/fwlink/?LinkId=147286).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  Weitere Informationen finden Sie unter [Seite "Erstellen", Projekt\-Designer \(C\#\)](/visual-studio/ide/reference/build-page-project-designer-csharp).  
+1.  Öffnen Sie die **Eigenschaften**Seite des Projekts. Weitere Informationen finden Sie unter [Seite „Erstellen“, Projekt-Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Build**.  
   
-3.  Klicken Sie auf die Schaltfläche **Erweitert**.  
+3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
   
 4.  Ändern Sie die Eigenschaft **Bericht für internen Compilerfehler**.  
   
- Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
+ Informationen zum programmatischen Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

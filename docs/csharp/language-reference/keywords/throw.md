@@ -45,7 +45,7 @@ Signalisiert das Auftreten einer Ausnahme während der Programmausführung.
 
 Die Syntax von `throw` lautet:
 
-```cs
+```csharp
 throw [e]
 ```
 wobei `e` eine Instanz einer Klasse ist, die von <xref:System.Exception?displayProperty=fullName> abgeleitet wurde. Im folgenden Beispiel wird die `throw`-Anweisung verwendet, um eine @System.IndexOutOfRangeException auszulösen, wenn das Argument, das an eine Methode mit dem Namen `GetNumber` übergeben wurde, nicht auf einen gültigen Index eines internen Arrays reagiert.

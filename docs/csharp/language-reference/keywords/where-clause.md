@@ -1,52 +1,70 @@
 ---
-title: "where-Klausel (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereclause_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where-Klausel [C#]"
-  - "where-Schlüsselwort [C#]"
+title: where-Klausel (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereclause_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where keyword [C#]
+- where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
+ms.lasthandoff: 03/13/2017
+
 ---
-# where-Klausel (C#-Referenz)
-Die `where`\-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welche Elemente aus der Datenquelle im Abfrageausdruck zurückgegeben werden.  Sie wendet eine boolesche Bedingung \(*Prädikat*\) auf die einzelnen Quellelemente an \(auf die durch die Bereichsvariable verwiesen wird\) und gibt diejenigen zurück, für die die angegebene Bedingung den Wert true hat.  Ein einzelner Abfrageausdruck kann mehrere `where`\-Klauseln enthalten, und eine einzelne Klausel kann mehrere Teilausdrücke des Prädikats enthalten.  
+# <a name="where-clause-c-reference"></a>where-Klausel (C#-Referenz)
+Die `where`-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welche Elemente aus der Datenquelle im Abfrageausdruck zurückgegeben werden. Sie wendet eine boolesche Bedingung (*Prädikat*) auf jedes Quellelement an, auf das durch die Bereichsvariable verwiesen wird, und gibt die Elemente zurück, bei denen die angegebene Bedingung wahr ist. Ein einzelner Abfrageausdruck enthält möglicherweise mehrere `where`-Klauseln, und eine einzelne Klausel kann mehrere Teilausdrücke des Prädikats enthalten.  
   
-## Beispiel  
- Im folgenden Beispiel werden durch die `where`\-Klausel alle Zahlen herausgefiltert, die größer als fünf sind.  Wenn Sie die `where`\-Klausel entfernen, werden alle Zahlen aus der Datenquelle zurückgegeben.  Der Ausdruck `num < 5` ist das Prädikat, das auf jedes Element angewendet wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel filtert die `where`-Klausel alle Zahlen mit Ausnahme derjenigen heraus, die niedriger als fünf sind. Wenn Sie die `where`-Klausel entfernen, werden alle Zahlen aus der Datenquelle zurückgegeben. Der Ausdruck `num < 5` ist das Prädikat, das auf jedes Element angewendet wird.  
   
  [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
-## Beispiel  
- Innerhalb einer einzelnen `where` \-Klausel können Sie mit dem Operator [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) und dem Operator [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) so viele Prädikate wie nötig angeben.  Im folgenden Beispiel gibt die Abfrage zwei Prädikate an, um nur die geraden Zahlen auszuwählen, die kleiner als fünf sind.  
+## <a name="example"></a>Beispiel  
+ Innerhalb einer einzelnen `where`-Klausel können Sie so viele Prädikate wie nötig angeben, indem Sie die Operatoren [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) und [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) verwenden. Im folgenden Beispiel gibt die Abfrage zwei Prädikate an, um nur die geraden Zahlen auszuwählen, die niedriger als fünf sind.  
   
  [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
-## Beispiel  
- Eine `where`\-Klausel enthält möglicherweise eine oder mehrere Methoden, die boolesche Werte zurückgeben.  Im folgenden Beispiel wird mithilfe der `where`\-Klausel eine Methode verwendet, um zu bestimmen, ob der aktuelle Wert der Bereichsvariable gerade oder ungerade ist.  
+## <a name="example"></a>Beispiel  
+ Eine `where`-Klausel kann eine oder mehrere Methoden enthalten, die boolesche Werte zurückgeben. Im folgenden Beispiel verwendet die `where`-Klausel eine Methode, um zu bestimmen, ob der aktuelle Wert der Bereichsvariable gerade oder ungerade ist.  
   
  [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
-## Hinweise  
- Die `where`\-Klausel ist ein Filtermechanismus.  Sie kann fast überall in einem Abfrageausdruck platziert werden, darf aber nicht die erste oder letzte Klausel sein.  Eine `where`\-Klausel kann entweder vor oder nach einer [group](../../../csharp/language-reference/keywords/group-clause.md)\-Klausel erscheinen, je nach dem, ob Sie die Quellelemente vor oder nach dem Gruppieren filtern müssen.  
+## <a name="remarks"></a>Hinweise  
+ Die `where`-Klausel ist ein Filtermechanismus. Sie kann praktisch überall in einem Abfrageausdruck positioniert werden; sie kann allerdings nicht die erste oder letzte Klausel sein. Eine `where`-Klausel kann entweder vor oder nach der [group](../../../csharp/language-reference/keywords/group-clause.md)-Klausel angezeigt werden, abhängig davon, ob Sie die Quellelemente vor oder nach deren Gruppierung filtern müssen.  
   
- Ist ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig, tritt ein Kompilierzeitfehler auf.  Dies ist ein Vorteil der starken Typüberprüfung, die von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] bereitgestellt wird.  
+ Wenn ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig ist, tritt ein Kompilierzeitfehler auf. Dies ist ein Vorteil der von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] bereitgestellten starken Typprüfung.  
   
- Während der Kompilierung wird das `where`\-Schlüsselwort in einen Aufruf der <xref:System.Linq.Enumerable.Where%2A>\-Standardabfrageoperator\-Methode konvertiert.  
+ Zur Kompilierzeit wird das Schlüsselwort `where` in einen Aufruf der Standardabfrageoperator-Methode <xref:System.Linq.Enumerable.Where%2A> konvertiert.  
   
-## Siehe auch  
- [Abfrageschlüsselwörter \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [from\-Klausel](../../../csharp/language-reference/keywords/from-clause.md)   
- [select\-Klausel](../../../csharp/language-reference/keywords/select-clause.md)   
- [Filtering Data](../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)   
- [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Siehe auch  
+ [Query keywords (LINQ) (Abfrageschlüsselwörter (LINQ))](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [from-Klausel](../../../csharp/language-reference/keywords/from-clause.md)   
+ [select-Klausel](../../../csharp/language-reference/keywords/select-clause.md)   
+ [Filtering Data (C#) (Filtern von Daten (C#))](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
+ [LINQ query expressions (LINQ-Abfrageausdrücke)](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

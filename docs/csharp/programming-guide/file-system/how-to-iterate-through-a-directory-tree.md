@@ -1,66 +1,84 @@
 ---
-title: "Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Dateiiteration [C#]"
-  - "Durchlaufen von Ordnern [C#]"
+title: 'Vorgehensweise: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- iterating through folders [C#]
+- file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c63e18bc7e23a9fda4a005745174bdd6c85b3f08
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
-Der Ausdruck "Durchlaufen einer Verzeichnisstruktur" bedeutet, auf jede Datei in einem verschachtelten Unterverzeichnis in einem angegebenen Stammordner zuzugreifen.  Sie müssen nicht unbedingt jede Datei öffnen.  Sie können einfach den Namen der Datei oder des Unterverzeichnisses als `string` oder zusätzliche Informationen in Form eines <xref:System.IO.FileInfo?displayProperty=fullName>\- Objekts oder <xref:System.IO.DirectoryInfo?displayProperty=fullName>\-Objekts abrufen.  
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
+Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder des Unterverzeichnisses als `string` abrufen, oder Sie können zusätzliche Informationen in der Form eines <xref:System.IO.FileInfo?displayProperty=fullName>- oder <xref:System.IO.DirectoryInfo?displayProperty=fullName>-Objekts abrufen.  
   
 > [!NOTE]
->  In Windows sind die Begriffe "Verzeichnis" und "Ordner" austauschbar.  In den meisten Dokumentationen und Benutzeroberflächentexten wird der Begriff "Ordner" verwendet, die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]\-Klassenbibliothek verwendet jedoch den Begriff "Verzeichnis".  
+>  In Windows sind die Begriffe „Verzeichnis“ und „Ordner“ austauschbar. Die meisten Dokumentationen und der Text der Benutzeroberfläche verwenden den Begriff „Ordner“, aber die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek verwendet den Begriff „Verzeichnis“.  
   
- Im einfachsten Fall, bei dem Sie ganz sicher sind, dass Sie Zugriffsberechtigungen für alle Verzeichnisse in einem bestimmten Stammverzeichnis haben, können Sie das `System.IO.SearchOption.AllDirectories`\-Flag verwenden.  Dieses Flag gibt alle geschachtelten Unterverzeichnisse zurück, die mit dem angegebenen Muster übereinstimmen.  Im folgenden Beispiel wird die Verwendung dieses Flags dargestellt.  
+ Im einfachsten Fall, in dem Sie ganz sicher sind, dass Sie über die Zugriffsberechtigungen für alle Verzeichnisse in einem angegebenen Stamm verfügen, können Sie das `System.IO.SearchOption.AllDirectories`-Flag verwenden. Dieses Flag gibt alle geschachtelten Unterverzeichnisse zurück, die mit dem angegebenen Muster übereinstimmen. Im folgenden Beispiel wird die Verwendung dieses Flags veranschaulicht.  
   
-```c#  
+```csharp  
 root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);  
 ```  
   
- Der Schwachpunkt bei dieser Methode besteht darin, dass die Methode fehlschlägt und keine Verzeichnisse zurückgibt, falls eines der Unterverzeichnisse im angegebenen Stammverzeichnis <xref:System.IO.DirectoryNotFoundException> oder <xref:System.UnauthorizedAccessException> auslöst.  Dasselbe gilt, wenn Sie die <xref:System.IO.DirectoryInfo.GetFiles%2A>\-Methode verwenden.  Wenn Sie diese Ausnahmen für bestimmte Unterverzeichnisse umgehen müssen, müssen Sie die Verzeichnisstruktur manuell durchlaufen, wie in den folgenden Beispielen dargestellt.  
+ Der Schwachpunkt bei diesem Ansatz ist, dass die Methode fehlschlägt und keine Verzeichnisse zurückgibt, wenn eines der Unterverzeichnisse im angegebenen Stamm eine <xref:System.IO.DirectoryNotFoundException> oder <xref:System.UnauthorizedAccessException> bewirkt. Das Gleiche gilt bei Verwendung der <xref:System.IO.DirectoryInfo.GetFiles%2A>-Methode. Wenn Sie diese Ausnahmen für bestimmte Unterverzeichnisse behandeln müssen, müssen Sie die Verzeichnisstruktur manuell durchlaufen, wie in den folgenden Beispielen gezeigt.  
   
- Wenn Sie eine Verzeichnisstruktur manuell durchlaufen, können Sie zuerst die Unterverzeichnisse \(*Durchlauf vor der Sortierung*\) oder zuerst die Dateien \(*Durchlauf nach der Sortierung*\) durchlaufen.  Wenn Sie einen Durchlauf vor der Sortierung ausführen, durchlaufen Sie die gesamte Verzeichnisstruktur unter dem aktuellen Verzeichnis vor den Dateien, die sich direkt im diesem Verzeichnis befinden.  In den Beispielen weiter unten in diesem Dokument wird ein Durchlauf nach der Sortierung ausgeführt. Sie können diesen aber problemlos in einen Durchlauf vor der Sortierung ändern.  
+ Wenn Sie eine Verzeichnisstruktur manuell durchlaufen, können Sie zuerst die Unterverzeichnisse (*Durchlauf vor der Sortierung*) oder die Dateien (*Durchlauf nach der Sortierung*) behandeln. Wenn Sie einen Durchlauf vor der Sortierung ausführen, durchlaufen Sie die gesamte Struktur unter dem aktuellen Ordner, bevor Sie die Dateien durchlaufen, die sich direkt in diesem Ordner befinden. In den Beispielen weiter unten in diesem Dokument wird ein Durchlauf nach der Sortierung ausgeführt, aber Sie können die Beispiele problemlos abändern, um einen Durchlauf vor der Sortierung auszuführen.  
   
- Außerdem können Sie zwischen einem Rekursions\- und einem stapelbasierten Durchlauf wählen.  In den Beispielen weiter unten in diesem Dokument werden beide Verfahren erläutert.  
+ Eine andere Option ist, entweder Rekursion oder einen stapelbasierten Durchlauf zu verwenden. In den Beispielen weiter unten in diesem Dokument werden beide Ansätze gezeigt.  
   
- Falls Sie verschiedene Operationen für Dateien und Ordner durchführen müssen, können Sie diese Beispiele in einer modularen Struktur halten. Gestalten Sie die Operation dazu in separate Funktionen um, die Sie mit einem einzelnen Delegaten aufrufen können.  
+ Wenn Sie mehrere Vorgänge für Dateien und Ordner ausführen müssen, können Sie diese Beispiele modularisieren, indem Sie den Vorgang in separate Funktionen umgestalten, die Sie mit einem einzelnen Delegaten aufrufen können.  
   
 > [!NOTE]
->  NTFS\-Dateisysteme können *Reparse Points* in Form von *Abzweigungspunkten*, *symbolischen Links* und *festen Links* enthalten.  Die .NET Framework\-Methoden, wie <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unterhalb eines Analysepunkts zurück.  Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Reparse Points aufeinander verweisen.  Im Allgemeinen sollten Sie extrem vorsichtig bei der Verwendung von Reparse Points sein, um sicherzustellen, dass Sie nicht unbeabsichtigterweise Dateien ändern oder löschen.  Wenn Sie Reparse Points genau steuern möchten, verwenden Sie den Plattformaufruf oder systemeigenen Code zum direkten Aufrufen der entsprechenden Win32\-Dateisystemmethoden.  
+>  NTFS-Dateisysteme können *Analysepunkte* in Form von *Verknüpfungspunkten*, *symbolischen Verknüpfungen* und *festen Links* enthalten. .NET Framework-Methoden wie z.B. <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unterhalb eines Analysepunkts zurück. Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Analysepunkte aufeinander verweisen. Im Allgemeinen sollten Sie bei Analysepunkten äußerst vorsichtig sein, um sicherzustellen, dass Sie nicht versehentlich Dateien ändern oder löschen. Wenn Sie genaue Kontrolle über Analysepunkte benötigen, verwenden Sie einen Plattformaufruf oder nativen Code, um die entsprechenden Win32-Dateisystemmethoden direkt aufzurufen.  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie eine Verzeichnisstruktur mit Rekursion durchlaufen wird.  Der rekursive Ansatz ist elegant. Jedoch besteht die Gefahr, dass eine Stapelüberlaufausnahme verursacht wird, falls es sich um eine große und tief verschachtelte Verzeichnisstruktur handelt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie eine Verzeichnisstruktur mit Rekursion direkt durchlaufen. Der rekursive Ansatz ist elegant, kann aber eine Stapelüberlaufausnahme verursachen, wenn die Verzeichnisstruktur groß und tief verschachtelt ist.  
   
- Die besonderen Ausnahmen für jede Datei und jeden Ordner und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden lediglich als Beispiel dargestellt.  Sie sollten diesen Code ändern, um Ihre speziellen Anforderungen zu erfüllen.  Weitere Informationen finden Sie in den Kommentaren im Code.  
+ Die besonderen Ausnahmen, die verarbeitet werden, und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden nur als Beispiele angegeben. Sie sollten diesen Code für Ihre speziellen Anforderungen ändern. Weitere Informationen finden Sie in den Kommentaren im Code.  
   
  [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie Verzeichnisse und Ordner in einer Verzeichnisstruktur ohne Rekursion durchlaufen werden.  Bei dieser Methode wird der generische <xref:System.Collections.Generic.Stack%601>\-Auflistungstyp verwendet, bei dem es sich um einen LIFO\-Stapel handelt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie Sie Dateien und Ordner in einer Verzeichnisstruktur ohne Rekursion durchlaufen. Diese Technik verwendet den generischen <xref:System.Collections.Generic.Stack%601>-Auflistungstyp, bei dem es sich um einen LIFO-Stapel handelt.  
   
- Die besonderen Ausnahmen für jede Datei und jeden Ordner und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden lediglich als Beispiel dargestellt.  Sie sollten diesen Code ändern, um Ihre speziellen Anforderungen zu erfüllen.  Weitere Informationen finden Sie in den Kommentaren im Code.  
+ Die besonderen Ausnahmen, die verarbeitet werden, und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden nur als Beispiele angegeben. Sie sollten diesen Code für Ihre speziellen Anforderungen ändern. Weitere Informationen finden Sie in den Kommentaren im Code.  
   
  [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
- In der Regel ist es zu zeitaufwändig, jeden Ordner zu testen, um zu ermitteln, ob Ihre Anwendung über die Berechtigungen zum Öffnen verfügt.  Im Codebeispiel wird deshalb nur dieser Teil der Operation in einen `try/catch`\-Block eingeschlossen.  Sie können den `catch`\-Block so ändern, dass Ihre Berechtigungen bei verweigertem Zugriff auf einen Ordner erhöht werden. Anschließend können Sie erneut darauf zugreifen.  Fangen Sie als Regel einfach die Ausnahmen ab, die Sie verarbeiten können, ohne Ihre Anwendung in einem unbekannten Zustand zu lassen.  
+ Es ist im Allgemeinen zu zeitaufwändig, bei allen Ordnern zu testen, ob die Anwendung über die Berechtigung zum Öffnen verfügt. Im Codebeispiel wird daher nur dieser Teil der Operation in einen `try/catch`-Block eingeschlossen. Sie können den `catch`-Block ändern, sodass Sie bei verweigertem Zugriff auf einen Ordner versuchen, Ihre Berechtigungen zu erhöhen, und dann erneut darauf zugreifen. In der Regel sollten Sie nur die Ausnahmen abfangen, die Sie behandeln können, ohne Ihre Anwendung in einem unbekannten Status zu lassen.  
   
- Falls Sie den Inhalt einer Verzeichnisstruktur entweder im Arbeitsspeicher oder auf Festplatte speichern müssen, speichern Sie am besten nur die <xref:System.IO.FileSystemInfo.FullName%2A>\-Eigenschaft \(vom Typ `string`\) für jede Datei.  Sie können diese Zeichenfolge dann verwenden, um ggf. ein neues <xref:System.IO.FileInfo>\-Objekt oder <xref:System.IO.DirectoryInfo>\-Objekt zu erstellen, oder eine Datei öffnen, für die eine weitere Bearbeitung erforderlich ist.  
+ Wenn Sie den Inhalt einer Verzeichnisstruktur entweder im Arbeitsspeicher oder auf dem Datenträger speichern müssen, speichern Sie am besten nur die <xref:System.IO.FileSystemInfo.FullName%2A>-Eigenschaft (vom Typ `string`) für jede Datei. Anschließend können Sie diese Zeichenfolge nach Bedarf zum Erstellen eines neuen <xref:System.IO.FileInfo>- oder <xref:System.IO.DirectoryInfo>-Objekts verwenden, oder eine beliebige Datei öffnen, für die zusätzliche Verarbeitung erforderlich ist.  
   
-## Robuste Programmierung  
- Beim robusten Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden.  Weitere Informationen finden Sie in der [NTFS Technical Reference](http://go.microsoft.com/fwlink/?LinkId=79488).  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Bei stabilem Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden. Weitere Informationen finden Sie unter [NTFS Technical Reference (Technische Referenz für NTFS)](http://go.microsoft.com/fwlink/?LinkId=79488).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.IO>   
- [LINQ and File Directories](../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
- [Das Dateisystem und die Registrierung](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)
+ [LINQ und Dateiverzeichnisse](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
+ [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)

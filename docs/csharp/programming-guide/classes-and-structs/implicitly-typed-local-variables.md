@@ -1,91 +1,109 @@
 ---
-title: "Implizit typisierte lokale Variablen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Implizit typisierte lokale Variablen [C#]"
-  - "var [C#]"
+title: Implizit typisierte lokale Variablen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- implicitly-typed local variables [C#]
+- var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 59bb61d8dd530e87f342d38acb131fab5e25febf
+ms.lasthandoff: 03/13/2017
+
 ---
-# Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
-Lokale Variablen können einen abgeleiteten "Typ" von `var` statt eines expliziten Typs erhalten.  Das `var`\-Schlüsselwort weist den Compiler an, den Typ der Variable aus dem Ausdruck an der rechten Seite der Initialisierungsanweisung abzuleiten.  Beim abgeleiteten Typ kann es sich um einen integrierten Typ, einen anonymen Typ, einen benutzerdefinierten Typ oder einen in der .NET Framework\-Klassenbibliothek definierten Typ handeln.  Weitere Informationen zum Initialisieren von Arrays mit `var` finden Sie unter [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+# <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
+Lokale Variablen können einen hergeleiteten Typ `var` statt eines expliziten Typ haben. Das `var`-Schlüsselwort weist den Compiler an, den Typ der Variablen vom Ausdruck auf der rechten Seite der Initialisierungsanweisung abzuleiten. Der hergeleitete Typ ist möglicherweise ein integrierter Typ, ein anonymer Typ, ein benutzerdefinierter Typ oder ein Typ, der in der .NET Framework-Klassenbibliothek definiert wurde. Weitere Informationen zur Initialisierung von Arrays mithilfe von `var` finden Sie unter [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
- In den folgenden Beispielen werden verschiedene Methoden veranschaulicht, mit denen lokale Variablen mit `var` deklariert werden können:  
+ Die folgenden Beispiele veranschaulichen verschiedene Arten, wie Sie lokale Variablen mit `var` deklarieren können:  
   
  [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
   
- Beachten Sie, dass das `var`\-Schlüsselwort nicht für "variant" steht und damit nicht festgelegt wird, dass die Variable lose typisiert oder spät gebunden ist.  Es bedeutet nur, dass der Compiler den am besten geeigneten Typ bestimmt und zuweist.  
+ Es ist von großer Bedeutung zu verstehen, dass das `var`-Schlüsselwort nicht „variant“ bedeutet, und das es nicht darauf hinweist, dass die Variable schwach typisiert oder spät gebunden ist. Es bedeutet nur, dass der Compiler den angemessensten Typen bestimmt und zuweist.  
   
- Das `var`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+ Das `var`-Schlüsselwort kann in folgendem Kontext verwendet werden:  
   
--   Für lokale Variablen \(bei Methodenbereich deklarierte Variablen\), wie im vorherigen Beispiel gezeigt.  
+-   Für lokale Variablen (Variablen, die im Geltungsbereich der Methode deklariert wurden), wie in vorherigem Beispiel gezeigt.  
   
--   In einer [for](../../../csharp/language-reference/keywords/for.md)\-Initialisierungsanweisung.  
+-   In einer [for](../../../csharp/language-reference/keywords/for.md)-Initialisierungsanweisung.  
   
     ```  
     for(var x = 1; x < 10; x++)  
     ```  
   
--   In einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)\-Initialisierungsanweisung.  
+-   In einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Initialisierungsanweisung.  
   
     ```  
     foreach(var item in list){...}  
     ```  
   
--   In einer [using](../../../csharp/language-reference/keywords/using-statement.md)\-Anweisung.  
+-   In einer [using](../../../csharp/language-reference/keywords/using-statement.md)-Anweisung.  
   
     ```  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
   
-## var und anonyme Typen  
- In vielen Fällen ist die Verwendung von `var` optional und nur ein syntaktisches Hilfsmittel.  Bei der Initialisierung einer Variablen mit einem anonymen Typ muss diese Variable jedoch als `var` deklariert werden, wenn auf die Eigenschaften des Objekts später zugegriffen werden muss.  Dies ist ein allgemeines Szenario in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücken.  Weitere Informationen finden Sie unter [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+## <a name="var-and-anonymous-types"></a>var und anonyme Typen  
+ In vielen Fällen ist der Einsatz von `var` optional und nur eine praktische Syntax. Wenn eine Variable allerdings mit einem anonymen Typ initialisiert wird, müssen Sie die Variable als `var` deklarieren, wenn Sie zu einem späteren Zeitpunkt auf die Eigenschaften des Objekts zugreifen möchten. Das ist ein häufiges Szenario in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Abfrageausdrücken. Weitere Informationen finden Sie unter [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
- Vom Quellcode aus betrachtet hat ein anonymer Typ keinen Namen.  Wenn eine Abfragevariable daher mit `var` initialisiert wurde, kann auf die Eigenschaften in der zurückgegebenen Folge von Objekten nur unter Verwendung von `var` als Typ der Iterationsvariable in der `foreach`\-Anweisung zugegriffen werden.  
+ Aus der Perspektive Ihres Quellcodes hat ein anonymer Typ keinen Namen. Wenn eine Abfragevariable mit `var` initialisiert wurde, ist es deshalb nur möglich, auf die Eigenschaften in der zurückgegebenen Objektsequenz zuzugreifen, wenn Sie `var` in der `foreach`-Anweisung als Typen der Iterationvariablen verwenden.  
   
  [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
   
-## Hinweise  
- Die folgenden Beschränkungen gelten für implizit typisierte Variablendeklarationen:  
+## <a name="remarks"></a>Hinweise  
+ Die folgenden Einschränkungen gelten für implizit typisierte Variablendeklarationen:  
   
--   `var` kann nur verwendet werden, wenn eine lokale Variable in der gleichen Anweisung deklariert und initialisiert wird. Die Variable kann nicht mit NULL oder einer Methodengruppe bzw. einer anonymen Funktion initialisiert werden.  
+-   `var` kann nur verwendet werden, wenn eine lokale Variable deklariert und in derselben Anweisung initialisiert wird; die Variable kann weder mit NULL noch mit einer Methodengruppe oder einer anonymen Funktion initialisiert werden.  
   
--   `var` kann nicht für Felder im Klassengültigkeitsbereich verwendet werden.  
+-   `var` kann nicht für Felder im Klassenbereich verwendet werden.  
   
--   Variablen, die mit `var` deklariert werden, können nicht im Initialisierungsausdruck verwendet werden.  Anders ausgedrückt, ist der Ausdruck `: int i = (i = 20);` gültig, während der Ausdruck `var i = (i = 20);` einen Kompilierungsfehler verursacht.  
+-   Variablen, die mit `var` deklariert wurden, können nicht im Initialisierungsausdruck verwendet werden. Sprich, dieser Ausdruck ist gültig`: int i = (i = 20);`, aber dieser Ausdruck führt zu einem Kompilierzeitfehler: `var i = (i = 20);`  
   
--   Mehrere implizit typisierte Variablen können nicht in der gleichen Anweisung initialisiert werden.  
+-   Es können nicht mehrere implizit typisierte Variablen in derselben Anweisung initialisiert werden.  
   
--   Wenn sich ein Typ mit der Bezeichnung `var` im Bereich befindet, wird das `var`\-Schlüsselwort zu diesem Typnamen aufgelöst und nicht als Teil einer implizit typisierten lokalen Variablendeklaration aufgefasst.  
+-   Wenn sich ein Typ mit dem Namen `var` im Geltungsbereich befindet, löst sich das `var`-Schlüsselwort zu diesem Typnamen auf und wird nicht als Teil der Deklaration einer implizit typisierten lokalen Variablen behandelt.  
   
- Möglicherweise stellen Sie fest, dass `var` auch bei Abfrageausdrücken nützlich sein kann, in denen der exakte konstruierte Typ der Abfragevariable nur schwer bestimmt werden kann.  Dies kann beim Gruppieren und Sortieren von Operationen auftreten.  
+ `var` erweist sich auch bei Abfrageausdrücken als nützlich, deren genauer konstruierter Typ der Abfragevariable schwer ermittelbar ist. Dies kann bei Gruppierungs- und Sortierungsvorgängen auftreten.  
   
- Das `var`\-Schlüsselwort kann auch nützlich sein, wenn der spezifische Typ der Variable nur mühsam mit der Tastatur eingegeben werden kann, oder wenn er offensichtlich ist bzw. nicht zur Lesbarkeit des Codes beiträgt.  Ein Beispiel, in dem `var` auf diese Weise nützlich ist, sind geschachtelte Typen, z. B. solche, die mit Gruppenoperationen verwendet werden.  In der folgenden Abfrage ist der Typ dieser Variable `IEnumerable<IGrouping<string, Student>>`.  Solange Sie und andere, die Ihren Code verwalten müssen, sich dessen bewusst sind, steht dem Verwenden der impliziten Typisierung aus Gründen der Einfachheit und der Kürze nichts im Weg.  
+ Das `var`-Schlüsselwort erweist sich auch als nützlich, wenn es umständlich ist, den Variablentypen mit der Tastatur einzugeben – oder wenn der Typ offensichtlich ist, oder nicht zur Lesbarkeit des Codes beiträgt. `var` ist z.B. bei geschachtelten generischen Typen wie die, die in Gruppenvorgängen verwendet werden, auf diese Weise nützlich. In der folgenden Abfrage ist der Typ der Abfragevariablen `IEnumerable<IGrouping<string, Student>>`. Solange dies Ihnen und denen, die Ihren Code verwalten müssen, klar ist, spricht nichts dagegen, implizite Typisierung aus Gründen der Zweckmäßigkeit und der Kürze zu verwenden.  
   
  [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
   
- Der Einsatz von `var` kompliziert jedoch potenziell Ihren Code, sodass andere Entwickler ihn nur schwer nachvollziehen können.  Aus diesem Grund wird in der C\#\-Dokumentation `var` im Allgemeinen nur verwendet, wenn es erforderlich ist.  
+ Durch den Gebrauch von `var` besteht aber zumindest die Möglichkeit, dass Ihr Code für andere Entwickler schwerer zu verstehen ist. Aus diesem Grund wird `var` in der C#-Dokumentation nur dann verwendet, wenn es tatsächlich erforderlich ist.  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
  [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)   
- [Gewusst wie: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)   
+ [Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)   
  [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [Objekt\- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [var](../../../csharp/language-reference/keywords/var.md)   
- [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
+ [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
+ ["var"](../../../csharp/language-reference/keywords/var.md)   
+ [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [for](../../../csharp/language-reference/keywords/for.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [using\-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)
+ [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)

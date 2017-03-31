@@ -45,7 +45,7 @@ ms.lasthandoff: 03/13/2017
 
 Das `is`-Schlüsselwort wertet die Typkompatibilität zur Laufzeit aus. Es bestimmt, ob eine Instanz eines Objekts oder das Ergebnis eines Ausdrucks in einen angegebenen Typen konvertiert werden kann. Besitzt die Syntax
 
-```cs
+```csharp
    expr is type
 ```
 
@@ -92,7 +92,7 @@ Ab C# 7 unterstützen die Auszüge `is` und [switch](../../../csharp/language-re
 
 Wenn Sie das Typmuster verwenden, um einen Musterabgleich durchzuführen, prüft `is`, ob ein Ausdruck in einen angegebenen Typen konvertiert werden kann; sofern dies möglich ist, wandelt es diesen in eine Variable dieses Typ um. Dies ist eine einfach Erweiterung der `is`-Anweisung, der eine präzise Auswertung und Konvertierung der Typs ermöglicht. Die allgemeine Form des Typmusters `is` ist:
 
-```cs
+```csharp
    expr is type varname 
 ```
 
@@ -130,7 +130,7 @@ Der gleichwertige Code erfordert ohne einen Musterabgleich eine gesonderte Zuwei
 
 Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax lautet:
 
-```cs
+```csharp
    expr is constant
 ```
 
@@ -156,7 +156,7 @@ Im folgenden Beispiel werden Typ- und Konstantenmuster miteinander vereint, um z
 
 Eine Musterübereinstimmung mit einem Variablenmuster wird immer erfolgreich ausgeführt. Deren Syntax lautet
 
-```cs 
+```csharp 
    expr is var varname
 ```
 

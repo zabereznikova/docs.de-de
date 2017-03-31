@@ -1,46 +1,64 @@
 ---
-title: "Erstellen &#252;ber die Befehlszeile mit csc.exe | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Builds [C#]"
-  - "Befehlszeile [C#]"
+title: "Erstellen über die Befehlszeile mit csc.exe | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- builds [C#]
+- command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: 28
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 28
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: aa6dd9801a141ec430bc291302fe74c35057f117
+ms.lasthandoff: 03/13/2017
+
 ---
-# Erstellen &#252;ber die Befehlszeile mit csc.exe
+# <a name="command-line-building-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (CSC.EXE) an der Befehlszeile eingeben.  
   
- Bei Verwendung der **Visual Studio Command Prompt** Fenster alle erforderlichen Umgebungsvariablen für Sie festgelegt. In Windows 7 können Sie das Fenster aus zugreifen die **Start** Menü öffnen Sie Microsoft Visual Studio *Version*\Visual Studio-Tools-Ordner. In Windows 8, die Visual Studio-Eingabeaufforderungsfenster wird aufgerufen, die **Developer-Eingabeaufforderung für VS2012**, und suchen Sie im Startbildschirm finden.  
+ Wenn Sie das Fenster **Visual Studio-Eingabeaufforderung** verwenden, werden alle erforderlichen Umgebungsvariablen für Sie festgelegt. In Windows 7 können Sie auf dieses Fenster über das Menü **Start** zugreifen, indem Sie den Ordner Microsoft Visual Studio *Version*\Visual Studio-Tools öffnen. In Windows 8 wird die Visual Studio-Eingabeaufforderung als **Developer-Eingabeaufforderung für VS2012** bezeichnet. Sie finden sie über die Suche im Startmenü.  
   
- Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie CSC.EXE aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie "vsvars32.bat" ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu VSVARS32, einschließlich Anweisungen zum Suchen und ausführen, finden Sie unter [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+ Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie CSC.EXE aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie "vsvars32.bat" ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu vsvars32.bat, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
- Wenn Sie auf einem Computer arbeiten, der nur die [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong-md.md)], können Sie den C#-Compiler von der **SDK Command Prompt**, das Sie öffnen die **Microsoft .NET Framework SDK** Menüoption.  
+ Wenn Sie auf einem Computer arbeiten, auf dem nur das [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)] installiert ist, können Sie den C#-Compiler von der **SDK-Eingabeaufforderung** aus verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.  
   
- Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visual-studio/msbuild/msbuild1).  
+ Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild1).  
   
- Die ausführbare Datei csc.exe befindet sich in der Microsoft.NET\Framework"\\*Version* Ordner im Windows-Verzeichnis. Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation, finden Sie unter [bestimmen die Version der .NET Framework installiert ist](http://msdn.microsoft.com/de-de/1a87cc6a-1c4b-4c38-b878-faa9b3beae3c).  
+ Die ausführbare Datei „csc.exe“ befindet sich in der Regel im Windows-Verzeichnis im Ordner Microsoft.NET\Framework\\\*Version*. Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [Bestimmen der installierten .NET Framework-Version](http://msdn.microsoft.com/en-us/1a87cc6a-1c4b-4c38-b878-faa9b3beae3c).  
   
 > [!TIP]
->  Wenn Sie ein Projekt mithilfe von Visual Studio-IDE erstellen, können Sie Anzeigen der **csc** Befehl und seine zugeordneten Compileroptionen in die **Ausgabe** Fenster. Um diese Informationen anzuzeigen, führen Sie die Schritte [Gewusst wie: anzeigen, speichern und erstellen Sie Protokolldateien konfigurieren](../Topic/How%20to:%20View,%20Save,%20and%20Configure%20Build%20Log%20Files.md) So ändern Sie den Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **detailliert**. Nachdem Sie das Projekt neu erstellen, durchsuchen die **Ausgabe** Fenster für **csc** an den Aufruf des C#-Compilers zu finden.  
+>  Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie den Befehl **csc** und seine zugeordneten Compileroptionen im Fenster **Ausgabe** anzeigen. Um diese Informationen anzuzeigen, befolgen Sie die Anweisungen in [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7), in denen erläutert wird, wie der Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **Detailliert** geändert wird. Nachdem Sie das Projekt neu erstellt haben, durchsuchen Sie das Fenster **Ausgabe** nach **csc** nach, um den Aufruf des C#-Compilers zu finden.  
   
- **In diesem Thema**  
+ **Inhalt**  
   
--   [Regeln für Befehlszeilensyntax](#vcconcommand-linebuildinganchor1)  
+-   [Regeln für die Syntax der Befehlszeile](#vcconcommand-linebuildinganchor1)  
   
 -   [Beispielbefehlszeilen](#vcconcommand-linebuildinganchor2)  
   
--   [Unterschiede zwischen der C#-Compiler und C++-Compiler-Ausgabe](#vcconcommand-linebuildinganchor3)  
+-   [Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe](#vcconcommand-linebuildinganchor3)  
   
-##  <a name="a-namevcconcommand-linebuildinganchor1a-rules-for-command-line-syntax-for-the-c-compiler"></a><a name="vcconcommand-linebuildinganchor1"></a> Regeln für Befehlszeilensyntax für den C#-Compiler  
+##  <a name="vcconcommand-linebuildinganchor1"></a> Regeln für Befehlszeilensyntax für den C#-Compiler  
  Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der C#-Compiler die folgenden Regeln:  
   
 -   Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.  
@@ -49,7 +67,7 @@ Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren D
   
 -   Eine in Anführungszeichen eingeschlossene Zeichenfolge ("Zeichenfolge") wird als einzelnes Argument interpretiert, auch wenn darin Leerräume enthalten sind. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  
   
--   Ein doppeltes Anführungszeichen ein umgekehrter Schrägstrich vorangestellt (\\") wird als ein Zeichen literales Anführungszeichen (") interpretiert.  
+-   Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.  
   
 -   Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.  
   
@@ -57,7 +75,7 @@ Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren D
   
 -   Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im argv-Array platziert. Das Anführungszeichen wird durch den übrig gebliebenen umgekehrten Schrägstrich maskiert. Hierdurch wird dem argv-Array ein echtes Anführungszeichen hinzugefügt.  
   
-##  <a name="a-namevcconcommand-linebuildinganchor2a-sample-command-lines-for-the-c-compiler"></a><a name="vcconcommand-linebuildinganchor2"></a> Beispielbefehlszeilen für den C#-Compiler  
+##  <a name="vcconcommand-linebuildinganchor2"></a> Beispielbefehlszeilen für den C#-Compiler  
   
 -   Kompiliert File.cs, sodass File.exe entsteht:  
   
@@ -95,15 +113,15 @@ Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren D
     csc /target:library /out:Something.xyz *.cs  
     ```  
   
-##  <a name="a-namevcconcommand-linebuildinganchor3a-differences-between-c-compiler-and-c-compiler-output"></a><a name="vcconcommand-linebuildinganchor3"></a> Unterschiede zwischen der C#-Compiler und C++-Compiler-Ausgabe  
+##  <a name="vcconcommand-linebuildinganchor3"></a> Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe  
  Durch den Aufruf des C#-Compilers werden keine Objektdateien (OBJ-Dateien) erstellt, stattdessen werden die Ausgabedateien direkt erstellt. Daher benötigt der C#-Compiler keinen Linker.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
  [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
  [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md)   
+ [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)   
- [Gewusst wie: Anzeigen der Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Gewusst wie: Zugriff Befehlszeilenargumente mithilfe von Foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
+ [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
+ [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

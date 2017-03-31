@@ -1,34 +1,52 @@
 ---
-title: "Statische Klassen und statische Klassenmember (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Statische Klassen"
-  - "C#-Sprache, Statische Member"
-  - "Statische Klassenmember [C#]"
-  - "Statische Klassen [C#]"
-  - "Statische Member [C#]"
+title: Statische Klassen und statische Klassenmember (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, static members
+- static members [C#]
+- static classes [C#]
+- C# language, static classes
+- static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 caps.latest.revision: 49
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 49
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f93706bb5df41e46c860ca70d131d94015a6348f
+ms.lasthandoff: 03/13/2017
+
 ---
-# Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
-Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse gleicht im Grunde einer nicht statischen Klasse, mit einem Unterschied: eine statische Klasse kann nicht instanziiert werden.  In anderen Worten, Sie können das [new](../../../csharp/language-reference/keywords/new.md)\-Schlüsselwort nicht verwenden, um eine Variable des Klassentyps zu erstellen.  Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu.  Wenn Sie beispielsweise eine statische Klasse mit dem Namen `UtilityClass` haben, die über eine öffentliche Methode mit dem Namen `MethodA` verfügt, rufen Sie die Methode wie im folgenden Beispiel dargestellt auf:  
+# <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
+Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B: eine statische Klasse haben, die `UtilityClass` heißt, die eine öffentliche Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode auf, wie im folgenden Beispiel gezeigt wird:  
   
-```c#  
+```csharp  
 UtilityClass.MethodA();  
 ```  
   
- Eine statische Klasse kann als geeigneter Container für Sätze von Methoden verwendet werden, die nur mit Eingabeparametern arbeiten und die keine internen Instanzfelder abrufen oder festlegen müssen.  In der .NET Framework\-Klassenbibliothek enthält die statische <xref:System.Math?displayProperty=fullName>\-Klasse beispielsweise Methoden zur Durchführung mathematischer Operationen, ohne die Erfordernis zum Speichern oder Abrufen von Daten, die spezifisch für eine bestimmte Instanz der <xref:System.Math>\-Klasse sind.  Das heißt, Sie wenden die Member der Klasse an, indem Sie den Klassennamen und den Methodennamen wie im folgenden Beispiel angeben.  
+ Eine statische Klasse kann als geeigneter Container für Reihen von Methoden verwendet werden, die nur Eingabeparameter verarbeiten und keine internen Instanzfelder haben oder festlegen müssen. In der .NET Framework-Klassenbibliothek enthält z.B. die Klasse <xref:System.Math?displayProperty=fullName> Methoden, die mathematische Vorgänge ausführen, ohne dass es notwendig ist, Daten zu speichern oder abzurufen, die in einer bestimmten Instanz der Klasse <xref:System.Math> einzigartig ist. Sie wenden also die Member der Klasse an, indem der Klassen- und Methodennamen angegeben wird, wie im folgenden Beispiel gezeigt wird.  
   
-```  
+```csharp  
 double dub = -3.14;  
 Console.WriteLine(Math.Abs(dub));  
 Console.WriteLine(Math.Floor(dub));  
@@ -38,62 +56,61 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3.14  
 // -4  
 // 3  
-  
 ```  
   
- Wie bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der CLR \(Common Language Runtime\) von [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau festlegen, wann die Klasse geladen wird.  Mit Bestimmtheit wird sie jedoch geladen, die zugehörigen Felder werden initialisiert und der statische Konstruktor wird aufgerufen, bevor im Programm zum ersten Mal auf die Klasse verwiesen wird.  Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
+ Wie auch bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Common Language Runtime (CLR) geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau angeben, wann die Klasse geladen wird. Jedoch wird sichergestellt, dass es geladen wird, und dass seine Felder initialisiert sowie seine statischen Konstruktoren aufgerufen sind, bevor zum ersten Mal auf die Klasse in Ihrem Programm verwiesen wird. Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
   
 > [!NOTE]
->  Informationen zum Erstellen einer nicht statischen Klasse, die nur die Erstellung einer einzigen Instanz von sich selbst zulässt, finden Sie unter [Implementing Singleton in C\#](http://go.microsoft.com/fwlink/?LinkID=100567).  
+>  Wie Sie eine nicht statische Klasse erstellen, die es erlaubt, dass nur eine Instanz von ihr selbst erstellt wird, finden Sie unter [Implementierung von Singleton in C#](http://go.microsoft.com/fwlink/?LinkID=100567).  
   
- Die folgende Liste enthält die Hauptmerkmale einer statischen Klasse:  
+ Die folgende Liste stellt die Haupteigenschaften einer statischen Klasse dar:  
   
--   Enthält nur statische Member.  
+-   Enthält nur statische Member  
   
--   Kann nicht instanziiert werden.  
+-   Kann nicht instanziiert werden  
   
--   Ist versiegelt.  
+-   Ist versiegelt  
   
--   Kann keine [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) enthalten.  
+-   Darf keine [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) enthalten  
   
- Das Erstellen einer statischen Klasse entspricht daher im Wesentlichen dem Erstellen einer Klasse, die nur statische Member und einen privaten Konstruktor enthält.  Ein privater Konstruktor verhindert, dass die Klasse instanziiert wird.  Der Vorteil der Verwendung von statischen Klassen besteht darin, dass der Compiler eine Überprüfung ausführen und sicherstellen kann, dass nicht versehentlich Instanzmember hinzugefügt werden.  Der Compiler garantiert, dass keine Instanzen dieser Klasse erstellt werden können.  
+ Daher ist das Erstellen einer statischen Klasse grundsätzlich dasselbe wie das Erstellen einer Klasse, die nur statische Member und einen privaten Konstruktor enthält. Ein privater Konstruktor verhindert, dass die Klasse instanziiert wird. Der Vorteil bei der Verwendung einer statischen Klasse ist, dass der Compiler überprüfen und dadurch sicherstellen kann, dass keine Instanzmember versehentlich hinzugefügt werden. Der Compiler garantiert, dass Instanzen dieser Klasse nicht erstellt werden können.  
   
- Statische Klassen sind versiegelt und deshalb nicht vererbbar.  Sie können von keiner Klasse erben, außer von <xref:System.Object>.  Statische Klassen können keinen Instanzkonstruktor enthalten, stattdessen jedoch einen statischen Konstruktor.  Nicht statische Klassen sollten auch einen statischen Konstruktor definieren, wenn die Klasse statische Member enthält, die eine nicht triviale Initialisierung erfordern.  Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ Statische Klassen sind versiegelt und können nicht vererbt werden. Sie können nur von der Klasse <xref:System.Object> erben. Statische Klassen können keinen Instanzkonstruktor enthalten. Allerdings können sie einen statischen Konstruktor enthalten. Nicht statische Klassen sollten auch einen statischen Konstruktor definieren, wenn die Klasse statische Member enthält, die eine nicht triviale Initialisierung erfordern. Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
-## Beispiel  
- Das folgende Beispiel einer statischen Klasse enthält zwei Methoden, die die Temperatur von Grad Celsius in Grad Fahrenheit und umgekehrt umwandeln:  
+## <a name="example"></a>Beispiel  
+ Dies ist ein Beispiel für eine statische Klasse, die zwei Methoden enthält, die die Temperatur von Grad Celsius in Fahrenheit und umgekehrt konvertieren:  
   
  [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
-## Statische Member  
- Eine nicht statische Klasse kann statische Methoden, Felder, Eigenschaften oder Ereignisse enthalten.  Der statische Member ist in einer Klasse auch dann aufrufbar, wenn keine Instanz der Klasse erstellt wurde.  Auf den statischen Member wird immer anhand des Klassennamens anstelle des Instanznamens zugegriffen.  Von einem statischen Member existiert nur eine Kopie, unabhängig davon, wie viele Instanzen der Klasse erstellt werden.  Statische Methoden und Eigenschaften haben in ihrem enthaltenden Typ keinen Zugriff auf nicht statische Felder und Ereignisse, und sie können auf eine Instanzvariable eines Objekts nur zugreifen, wenn diese explizit in einem Methodenparameter übergeben wird.  
+## <a name="static-members"></a>Statische Member  
+ Eine nicht statische Klasse kann statische Methoden, Felder, Eigenschaften oder Ereignisse enthalten. Der statische Member ist für eine Klasse aufrufbar, selbst wenn keine Instanz der Klasse erstellt wurde. Auf den statischen Member wird immer vom Klassennamen, nicht vom Namen der Instanz, zugegriffen. Es ist nur eine Kopie eines statischen Members vorhanden, unabhängig davon, wie viele Instanzen der Klasse erstellt werden. Statische Methoden und Eigenschaften können nicht auf nicht statische Felder und Ereignisse in ihrem enthaltenden Typ zugreifen, und sie können nicht auf eine Instanzvariable für ein beliebiges Objekt zugreifen, außer es wird ausdrücklich an einen Methodenparameter übergeben.  
   
- Es kommt es häufiger vor, dass eine nicht statische Klasse mit ein paar statischen Membern deklariert wird, als dass eine gesamte Klasse als statisch deklariert wird.  Das Zählen der Anzahl instanziierter Objekte oder das Speichern eines Werts, der für alle Instanzen freigegeben werden muss, sind zwei allgemeine Verwendungsweisen für statische Felder.  
+ Es ist üblicher, eine nicht statische Klasse mit einigen statischen Membern zu deklarieren, statt eine ganze Klasse als statisch zu deklarieren. Zwei häufige Verwendungen von statischen Feldern bestehen daraus, dass die Anzahl von instanziierten Objekten mitgezählt wird, oder dass ein Wert gespeichert wird, der für alle Instanzen freigegeben werden muss.  
   
- Statische Methoden können überladen, jedoch nicht überschrieben werden, da sie zur Klasse und nicht zu einer Instanz der Klasse gehören.  
+ Statische Methoden können überladen, aber nicht überschrieben werden, da sie zu der Klasse gehören und nicht zu einer Instanz der Klasse.  
   
- Obwohl ein Feld nicht als `static const` deklariert werden kann, ist ein [const](../../../csharp/language-reference/keywords/const.md)\-Feld in seinem Verhalten im Wesentlichen statisch.  Es gehört zum Typ und nicht zu Instanzen des Typs.  Daher kann auf const\-Felder mithilfe der gleichen `ClassName.MemberName`\-Notation wie bei statischen Feldern zugegriffen werden.  Eine Objektinstanz ist nicht erforderlich.  
+ Obwohl ein Feld nicht als `static const` deklariert werden kann, ist ein [const](../../../csharp/language-reference/keywords/const.md)-Feld in seinem Verhalten grundsätzlich statisch. Es gehört zum Typ und nicht zu Instanzen des Typs. Daher kann auf const-Felder mithilfe der gleichen Notation `ClassName.MemberName` zugegriffen werden, die für statische Felder verwendet wird. Es wird keine Objektinstanz benötigt.  
   
- C\# unterstützt keine statischen lokalen Variablen \(Variablen, die im Methodenbereich deklariert werden\).  
+ C# unterstützt keine statischen lokalen Variablen (Variablen, die im Methodenbereich deklariert werden).  
   
- Statische Klassenmember werden mit dem `static`\-Schlüsselwort vor dem Rückgabetyp des Members deklariert, wie im folgenden Beispiel erläutert:  
+ Deklarieren Sie statische Klassenmember mithilfe des Schlüsselworts `static` vor dem Rückgabetyp des Members, wie im folgenden Beispiel gezeigt wird:  
   
  [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
- Statische Member werden vor dem ersten Zugriff auf den statischen Member und vor dem Aufruf des statischen Konstruktors, soweit vorhanden, initialisiert.  Sie können auf einen statischen Klassenmember zugreifen, indem Sie anstelle eines Variablennamens den Klassennamen verwenden, um den Speicherort des Members anzugeben, wie im folgenden Beispiel erläutert:  
+ Statische Member werden initialisiert, bevor auf die statischen Member zum ersten Mal zugegriffen wird, und bevor der statische Konstruktor, sofern vorhanden, aufgerufen wird. Verwenden Sie zum Angeben des Speicherorts des Members den Namen der Klasse anstelle des Variablennamens, um auf einen statischen Klassenmember zuzugreifen, wie im folgenden Beispiel gezeigt wird:  
   
  [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
- Wenn die Klasse statische Felder enthält, geben Sie einen statischen Konstruktur an, der diese Felder beim Laden der Klasse initialisiert.  
+ Wenn Ihre Klasse statische Felder enthält, stellen Sie einen statischen Konstruktor bereit, der sie beim Laden der Klasse initialisiert.  
   
- Ein Aufruf einer statischen Methode generiert in Microsoft Intermediate Language \(MSIL\) eine Aufrufanweisung, während ein Aufruf einer Instanzmethode eine `callvirt`\-Anweisung generiert, bei der auch eine Überprüfung auf NULL\-Objektverweise durchgeführt wird.  Meistens ist der Leistungsunterschied zwischen beiden jedoch nicht spürbar.  
+ Ein Aufruf einer statischen Methode erzeugt eine Aufrufanweisung in Microsoft Intermediate Language (MSIL), während ein Aufruf einer Instanzmethode eine Anweisung `callvirt` erzeugt, die auch auf Verweise auf ein NULL-Objekt überprüft. Jedoch ist in den meisten Fällen der Leistungsunterschied zwischen den beiden nicht bedeutend genug.  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Statische](../../../csharp/language-reference/keywords/static.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [static](../../../csharp/language-reference/keywords/static.md)   
  [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)   
  [Klasse](../../../csharp/language-reference/keywords/class.md)   
  [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   

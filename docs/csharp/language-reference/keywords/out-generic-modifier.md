@@ -1,57 +1,75 @@
 ---
-title: "out (generischer Modifizierer) (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Kovarianz, out-Schlüsselwort [C#]"
-  - "out-Schlüsselwort [C#]"
+title: out (generische Modifizierer) (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- covariance, out keyword [C#]
+- out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a5b488eab5966a556b3e3c91ae8c748d11e61367
+ms.lasthandoff: 03/13/2017
+
 ---
-# out (generischer Modifizierer) (C#-Referenz)
-Für generische Typparameter gibt das `out`\-Schlüsselwort an, dass der Typparameter kovariant ist.  Sie können das `out`\-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
+# <a name="out-generic-modifier-c-reference"></a>out (generischer Modifizierer) (C#-Referenz)
+Das Schlüsselwort `out` gibt für generische Typparameter an, dass der Typparameter kovariant ist. Sie können das `out`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
   
- Kovarianz ermöglicht es, einen stärker abgeleiteten Typ zu verwenden als durch den generischen Parameter angegeben.  Dies ermöglicht die implizite Konvertierung von Klassen, die abweichende Schnittstellen implementieren, und die implizite Konvertierung von Delegattypen.  Kovarianz und Kontravarianz werden für Verweistypen, aber nicht für Werttypen unterstützt.  
+ Kovarianz ermöglicht Ihnen die Verwendung eines stärker abgeleiteten Typs als durch den generischen Parameter angegeben. Dadurch wird eine implizite Konvertierung von Klassen berücksichtigt, die variante Schnittstellen und Konvertierung von Delegattypen implementiert. Kovarianz und Kontravarianz werden für Verweistypen unterstützt, aber nicht für Werttypen.  
   
- Eine Schnittstelle, die über einen kovarianten Typparameter verfügt, ermöglicht es den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben als vom Typparameter angegeben.  Da in .NET Framework 4 beispielsweise Typ T in <xref:System.Collections.Generic.IEnumerable%601> kovariant ist, können Sie einem Objekt des Typs `IEnumerable(Of Object)` ein Objekt des Typs `IEnumerabe(Of String)` zuweisen, ohne besondere Konvertierungsmethoden zu verwenden.  
+ Die Methoden einer Schnittstelle, die einen kovarianten Typparameter hat, können mehr abgeleitete Typen als durch den Typparameter angegeben zurückgeben. Da z.B. in .NET Framework 4 Typ T in <xref:System.Collections.Generic.IEnumerable%601> kovariant ist, können Sie ein Objekt des `IEnumerabe(Of String)`-Typs an ein Objekt des `IEnumerable(Of Object)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden.  
   
- Einem kovarianten Delegaten kann ein anderer Delegat desselben Typs zugewiesen werden, allerdings mit einem stärker abgeleiteten generischen Typparameter.  
+ Ein kovarianter Delegat kann einem anderen Delegaten desselben Typs zugewiesen werden, jedoch mit einem stärker abgeleiteten generischen Typparameter.  
   
- Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine kovariante generische Schnittstelle deklariert, erweitert und implementiert wird.  Außerdem wird gezeigt, wie die implizite Konvertierung für Klassen verwendet wird, die eine kovariante Schnittstelle implementieren.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie Sie eine kovariante generische Schnittstelle deklarieren, erweitern und implementieren. Es wird auch gezeigt, wie eine implizite Konvertierung für Klassen verwendet wird, die eine kovariante Schnittstelle implementieren.  
   
  [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
- In einer generischen Schnittstelle kann ein Typparameter kovariant deklariert werden, wenn er die folgenden Bedingungen erfüllt:  
+ In einer generischen Schnittstelle kann ein Typparameter als kovariant deklariert werden, wenn er die folgenden Bedingungen erfüllt:  
   
--   Der Typparameter wird nur als Rückgabetyp von Schnittstellenmethoden und nicht als Typ von Methodenargumenten verwendet.  
+-   Der Typparameter wird nur als Rückgabetyp von Schnittstellenmethoden, und nicht als Typ von Methodenargumenten verwendet.  
   
     > [!NOTE]
-    >  Es gibt allerdings eine Ausnahme zu dieser Regel.  Wenn eine kovariante Schnittstelle einen kontravarianten generischen Delegaten als Methodenparameter enthält, können Sie den kovarianten Typ als generischen Typparameter für diesen Delegaten verwenden.  Weitere Informationen über kovariante und kontravariante generische Delegaten finden Sie unter [Varianz bei Delegaten](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md) und [Verwenden von Varianz für die generischen Delegaten Func und Action](../Topic/Using%20Variance%20for%20Func%20and%20Action%20Generic%20Delegates%20\(C%23%20and%20Visual%20Basic\).md).  
+    >  Es gibt allerdings eine Ausnahme zu dieser Regel. Wenn Sie in einer kovarianten Schnittstelle einen kontravarianten generischen Delegaten als Methodenparameter angegeben haben, können Sie den Typ als einen generischen Typparameter für diesen Delegaten verwenden. Weitere Informationen über kovariante und kontravariante generische Delegate finden Sie unter [Varianz in Delegaten](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) und [Verwenden von Varianz für die generischen Delegaten Func und Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).  
   
 -   Der Typparameter wird nicht als generische Einschränkung für die Schnittstellenmethoden verwendet.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein kovarianter generischer Delegat deklariert, instanziiert und aufgerufen wird.  Außerdem wird gezeigt, wie Delegattypen implizit konvertiert werden.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten deklarieren, instanziieren und aufrufen. Es wird gezeigt, wie Sie Delegattypen implizit konvertieren.  
   
  [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
- In einem generischen Delegaten kann ein Typ kovariant deklariert werden, wenn er nur als Methodenrückgabetyp und nicht für Methodenargumente verwendet wird.  
+ In einem generischen Delegaten kann ein Typ als kovariant deklariert werden, wenn er nur als Methodenrückgabetyp und nicht für Methodenargumente verwendet wird.  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [Abweichungen bei generischen Schnittstellen](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Varianz in generischen Schnittstellen](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
  [in](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)

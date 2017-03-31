@@ -1,50 +1,66 @@
 ---
-title: "How to: Create Property Grids for User Settings in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Settings object, creating property grids for user settings"
-  - "user settings, creating property grids"
-  - "property grids, creating for user settings"
-  - "property grids"
+title: "Vorgehensweise: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Settings object, creating property grids for user settings
+- user settings, creating property grids
+- property grids, creating for user settings
+- property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# How to: Create Property Grids for User Settings in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 17fab50b0f95bacd12d7044ec95c6cef2453d250
+ms.lasthandoff: 03/13/2017
 
-Sie können ein Eigenschaftenraster für Benutzereinstellungen erstellen, indem Sie ein <xref:System.Windows.Forms.PropertyGrid>\-Steuerelement mit den Benutzereinstellungseigenschaften des `My.Settings`\-Objekts auffüllen.  
+---
+# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Gewusst wie: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic
+Sie können ein Eigenschaftenraster für Benutzereinstellungen erstellen, indem Sie ein <xref:System.Windows.Forms.PropertyGrid>-Steuerelement mit den Benutzereinstellungseigenschaften des `My.Settings`-Objekts auffüllen.  
   
 > [!NOTE]
->  Damit dieses Beispiel ausgeführt werden kann, muss die Anwendung über konfigurierte Benutzereinstellungen verfügen.  Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
+>  Damit dieses Beispiel funktioniert, muss Ihre Anwendung über konfigurierte Benutzereinstellungen verfügen. Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet).  
   
- Das `My.Settings`\-Objekt macht alle Einstellungen als Eigenschaft verfügbar.  Der Eigenschaftenname entspricht dem Namen der Einstellung, und der Eigenschaftentyp entspricht dem Typ der Einstellung.  Der **Bereich** einer Einstellung bestimmt, ob die zugehörige Eigenschaft schreibgeschützt ist: Die Eigenschaft für eine Einstellung mit dem Bereich **Anwendung** ist schreibgeschützt, während die Eigenschaft für eine Einstellung mit dem Bereich **Benutzer** Lese\-\/Schreibzugriff ermöglicht.  Weitere Informationen finden Sie unter [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Das `My.Settings`-Objekt macht jede Einstellung als Eigenschaft verfügbar. Der Eigenschaftenname ist identisch mit dem Einstellungsnamen, und der Eigenschaftentyp entspricht dem Typ der Einstellung. Der **Bereich** der Einstellung gibt an, ob die Eigenschaft schreibgeschützt ist; die Eigenschaft für den Bereich **Anwendung** ist schreibgeschützt, während die Eigenschaft für die Bereichseinstellung **Benutzer** über einen Lese-/Schreibzugriff verfügt. Weitere Informationen finden Sie unter [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
->  Werte von Einstellungen, die für eine gesamte Anwendung gültig sind, können zur Laufzeit nicht geändert oder gespeichert werden.  Einstellungen, die für eine gesamte Anwendung gültig sind, können beim Erstellen der Anwendung im **Projekt\-Designer**\) oder später durch Bearbeiten der Anwendungskonfigurationsdatei geändert werden.  Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
+>  Sie können die Werte der Einstellungen für den Anwendungsbereich zur Laufzeit nicht ändern oder speichern. Einstellungen für den Anwendungsbereich können nur geändert werden, wenn Sie die Anwendung (über den **Projekt-Designer**) erstellen, oder indem Sie die Anwendungskonfigurationsdatei bearbeiten. Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet).  
   
- In diesem Beispiel wird ein <xref:System.Windows.Forms.PropertyGrid>\-Steuerelement verwendet, um auf die Benutzereinstellungseigenschaften des `My.Settings`\-Objekts zuzugreifen.  In der Standardeinstellung zeigt das <xref:System.Windows.Forms.PropertyGrid> alle Eigenschaften des `My.Settings`\-Objekts an.  In den Benutzereinstellungseigenschaften ist jedoch auch das <xref:System.Configuration.UserScopedSettingAttribute>\-Attribut verfügbar.  In diesem Beispiel wird die <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A>\-Eigenschaft von <xref:System.Windows.Forms.PropertyGrid> auf <xref:System.Configuration.UserScopedSettingAttribute> festgelegt, um ausschließlich die Benutzereinstellungseigenschaften anzuzeigen.  
+ Dieses Beispiel verwendet ein <xref:System.Windows.Forms.PropertyGrid>-Steuerelement, um auf die Benutzereinstellungseigenschaften des `My.Settings`-Objekts zuzugreifen. In der Standardeinstellung zeigt <xref:System.Windows.Forms.PropertyGrid> alle Eigenschaften des `My.Settings`-Objekts. Jedoch verfügen die Benutzereinstellungseigenschaften über das Attribut <xref:System.Configuration.UserScopedSettingAttribute>. Diese Beispiel legt die Eigenschaft <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> von <xref:System.Windows.Forms.PropertyGrid> auf <xref:System.Configuration.UserScopedSettingAttribute> fest, damit nur die Benutzereinstellungseigenschaften angezeigt werden.  
   
-### So fügen Sie ein Eigenschaftenraster für Benutzereinstellungen hinzu  
+### <a name="to-add-a-user-setting-property-grid"></a>So fügen Sie ein Eigenschaftenraster für Benutzereinstellungen hinzu  
   
-1.  Fügen Sie der Entwurfsoberfläche der Anwendung \(hier:  `Form1`\) das **PropertyGrid**\-Steuerelement aus der **Toolbox** hinzu.  
+1.  Fügen Sie das **PropertyGrid**-Steuerelement aus der **Toolbox** der Entwurfsoberfläche für Ihre Anwendung hinzu, von der davon ausgegangen wird, dass sie `Form1` ist.  
   
-     Der Standardname des Steuerelements für das Eigenschaftenraster ist `PropertyGrid1`.  
+     Der Standardname für das Steuerelement des Eigenschaftenrasters ist `PropertyGrid1`.  
   
-2.  Doppelklicken Sie auf die Entwurfsoberfläche für `Form1`, um den Code für den Ereignishandler zu öffnen, der dem Laden des Formulars zugeordnet ist.  
+2.  Doppelklicken Sie auf die Entwurfsoberfläche für `Form1`, um den Code für den Ereignishandler zum Laden von Formularen zu öffnen.  
   
-3.  Legen Sie das `My.Settings`\-Objekt als ausgewähltes Objekt für das Eigenschaftenraster fest.  
+3.  Legen Sie das `My.Settings`-Objekt als ausgewähltes Objekt für das Eigenschaftenraster fest.  
   
      [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_1.vb)]  
   
@@ -53,14 +69,14 @@ Sie können ein Eigenschaftenraster für Benutzereinstellungen erstellen, indem 
      [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_2.vb)]  
   
     > [!NOTE]
-    >  Um nur die Einstellungen anzuzeigen, verwenden Sie das \- Attribut anstelle <xref:System.Configuration.ApplicationScopedSettingAttribute><xref:System.Configuration.UserScopedSettingAttribute>.  
+    >  Um nur die Anwendungsbereichseinstellungen anzuzeigen, verwenden Sie das Attribut <xref:System.Configuration.ApplicationScopedSettingAttribute> anstatt des Attributs <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-## Robuste Programmierung  
- Die Benutzereinstellungen werden beim Beenden der Anwendung gespeichert.  Wenn Sie die Einstellungen sofort speichern möchten, rufen Sie die `My.Settings.Save`\-Methode auf.  Weitere Informationen finden Sie unter [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die Anwendung speichert die Benutzereinstellungen beim Herunterfahren der Anwendung. Um die Einstellungen sofort zu speichern, rufen Sie die `My.Settings.Save`-Methode auf. Weitere Informationen finden Sie unter [Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
-## Siehe auch  
- [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)   
- [How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)   
- [How to: Change User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)   
- [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)   
- [Verwalten von Anwendungseinstellungen \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Siehe auch  
+ [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)   
+ [Vorgehensweise: Lesen von Anwendungseinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)   
+ [Vorgehensweise: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)   
+ [Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)   
+ [Verwalten von Anwendungseinstellungen (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)

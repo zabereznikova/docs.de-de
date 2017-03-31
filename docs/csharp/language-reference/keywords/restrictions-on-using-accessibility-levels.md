@@ -1,46 +1,64 @@
 ---
-title: "Einschr&#228;nkungen bei der Verwendung von Zugriffsebenen (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Zugriffsmodifizierer [C#], Zugriffsebenenbeschränkungen"
+title: "Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 51b399993008a1a3ce61679cdccc3e5e7bf25354
+ms.lasthandoff: 03/13/2017
+
 ---
-# Einschr&#228;nkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)
-Wenn Sie einen Typ in einer Deklaration angeben, überprüfen Sie, ob die Zugriffsebene des Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängig ist.  So muss die direkte Basisklasse mindestens so zugreifbar sein wie die abgeleitete Klasse.  Die folgenden Deklarationen verursachen einen Compilerfehler, da die `BaseClass`\-Basisklasse weniger zugreifbar ist als `MyClass`:  
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)
+Wenn Sie in einer Deklaration einen Typ angeben, überprüfen Sie, ob die Zugriffsebene dieses Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängt. Auf die direkte Basisklasse muss z.B. mindestens genauso zugegriffen werden können wie auf die abgeleitete Klasse. Die folgende Deklaration verursacht einen Compilerfehler, da die Basisklasse `BaseClass` eine stärkere Zugriffsbeschränkung hat als `MyClass`:  
   
 ```  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
   
- Die nachstehende Tabelle fasst die Einschränkungen für deklarierte Zugriffsebenen zusammen.  
+ In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.  
   
 |Kontext|Hinweise|  
-|-------------|--------------|  
-|[Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)|Die direkte Basisklasse eines Klassentyps muss mindestens so zugreifbar sein wie der Klassentyp selbst.|  
-|[Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)|Die expliziten Basisschnittstellen eines Schnittstellentyps müssen mindestens so zugreifbar sein wie der Schnittstellentyp selbst.|  
-|[Delegaten](../../../csharp/programming-guide/delegates/index.md)|Der Rückgabetyp und die Parametertypen eines Delegattyps müssen mindestens so zugreifbar sein wie der Delegattyp selbst.|  
-|[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Der Typ einer Konstante muss mindestens so zugreifbar sein wie die Konstante selbst.|  
-|[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)|Der Typ eines Felds muss mindestens so zugreifbar sein wie das Feld selbst.|  
-|[Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)|Der Rückgabetyp und die Parametertypen einer Methode müssen mindestens so zugreifbar sein wie die Methode selbst.|  
-|[Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)|Der Typ einer Eigenschaft muss mindestens so zugreifbar sein wie die Eigenschaft selbst.|  
-|[Ereignisse](../../../csharp/programming-guide/events/index.md)|Der Typ eines Ereignisses muss mindestens so zugreifbar sein wie das Ereignis selbst.|  
-|[Indexer](../../../csharp/programming-guide/indexers/index.md)|Der Typ und die Parametertypen eines Indexers müssen mindestens so zugreifbar sein wie der Indexer selbst.|  
-|[Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Der Rückgabetyp und die Parametertypen eines Operators müssen mindestens so zugreifbar sein wie der Operator selbst.|  
-|[Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Die Parametertypen eines Konstruktors müssen mindestens so zugreifbar sein wie der Konstruktor selbst.|  
+|-------------|-------------|  
+|[Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)|Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.|  
+|[Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)|Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.|  
+|[Delegaten](../../../csharp/programming-guide/delegates/index.md)|Die Rückgabe- und Parametertypen eines Delegattyps müssen mindestens dieselben Zugriffsmöglichkeiten wie der Delegattyp selbst bieten.|  
+|[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Der Typ einer Konstante muss mindestens dieselben Zugriffsmöglichkeiten wie die Konstante selbst bieten.|  
+|[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)|Der Typ eines Felds muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Feld selbst.|  
+|[Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)|Die Rückgabe- und Parametertypen einer Methode müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie die Methode selbst.|  
+|[Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)|Der Typ einer Eigenschaft muss mindestens dieselben Zugriffsmöglichkeiten bieten wie die Eigenschaft selbst.|  
+|[Ereignisse](../../../csharp/programming-guide/events/index.md)|Der Typ eines Ereignisses muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Ereignis selbst.|  
+|[Indexer](../../../csharp/programming-guide/indexers/index.md)|Der Typ und die Parametertypen eines Indexers müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst.|  
+|[Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Die Rückgabe- und Parametertypen eines Operators müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Operator selbst.|  
+|[Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Die Parametertypen eines Konstruktors müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Konstruktor selbst.|  
   
-## Beispiel  
- Im folgenden Beispiel sind falsche Deklarationen verschiedener Typen enthalten.  Der einer Deklaration nachfolgende Kommentar zeigt den erwarteten Compilerfehler an.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel enthält fehlerhafte Deklarationen verschiedener Typen. Der Kommentar nach jeder Deklaration gibt den erwarteten Compilerfehler an.  
   
 ```  
 // Restrictions on Using Accessibility Levels  
@@ -105,18 +123,18 @@ public class A
 }  
 ```  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Zugriffsdomäne](../../../csharp/language-reference/keywords/accessibility-domain.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/language-reference/keywords/access-modifiers.md)   
+ [Accessibility Domain (Zugriffsdomäne)](../../../csharp/language-reference/keywords/accessibility-domain.md)   
  [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
- [Private](../../../csharp/language-reference/keywords/private.md)   
+ [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
- [interne](../../../csharp/language-reference/keywords/internal.md)
+ [internal](../../../csharp/language-reference/keywords/internal.md)

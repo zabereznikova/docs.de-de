@@ -1,114 +1,132 @@
 ---
-title: "Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Benannte und optionale Argumente [C#], Office-Programmierung"
-  - "Benannte Argumente [C#], Office-Programmierung"
-  - "Optionale Argumente [C#], Office-Programmierung"
+title: 'Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- named and optional arguments [C#], Office programming
+- optional arguments [C#], Office programming
+- named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: 34
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 34
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c6a591108b1ae225ecd311dcc04cd744acb48712
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
-Benannte Argumente und optionale Argumente, die mit [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] eingeführt wurden, erhöhen Benutzerfreundlichkeit, Flexibilität und Lesbarkeit bei der C\#\-Programmierung. Darüber hinaus wird durch diese Funktionen der Zugriff auf COM\-Schnittstellen, z. B. die Microsoft Office\-Automatisierungs\-APIs, erheblich erleichtert.  
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
+Benannte und optionale Argumente, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] eingeführt wurden, optimieren die Zweckmäßigkeit, die Flexibilität und die Lesbarkeit in der C#-Programmierung. Diese Funktionen erleichtern zusätzlich den Zugriff auf COM-Schnittstellen wie etwa die Automatisierungs-APIs in Microsoft Office.  
   
- Die [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378)\-Methode im folgenden Beispiel verfügt über 16 Parameter, die Eigenschaften einer Tabelle darstellen, wie z. B. Spalten\- und Zeilenanzahl, Formatierung, Rahmen, Schriftarten und Farben.  Alle 16 Parameter sind optional, da Sie in der Regel keine bestimmten Werte für diese Parameter angeben möchten, die von den Standardwerten abweichen.  Ohne benannte und optionale Argumente müssen Sie jedoch für jeden dieser Parameter einen Wert bzw. einen Platzhalterwert bereitstellen.  Mit benannten und optionalen Argumenten müssen Sie nur für die Parameter Werte angeben, die für Ihr Projekt erforderlich sind.  
+ In folgendem Beispiel hat die Methode [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) sechzehn Parameter, die Eigenschaften einer Tabelle repräsentieren, wie z.B. die Zeilen- und Spaltenanzahl, das Format, die Rahmen, Schriftarten und Farben. Alle sechzehn Parameter sind optional, weil Sie oftmals keine bestimmten Werte für sie festlegen möchten. Ohne benannte und optionale Argumente muss aber trotzdem ein Wert oder Platzhalterwert für jeden Parameter angegeben werden. Mit benannten und optionalen Argumenten geben Sie nur für die Parameter Werte an, die für Ihr Projekt erforderlich sind.  
   
- Zur Durchführung dieser Prozeduren muss Microsoft Office Word auf Ihrem Computer installiert sein.  
+ Microsoft Office Word muss auf Ihrem Computer installiert sein, damit Sie diesen Vorgang abschließen können.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### So erstellen Sie eine neue Konsolenanwendung  
+### <a name="to-create-a-new-console-application"></a>So erstellen Sie eine Konsolenanwendung  
   
 1.  Starten Sie Visual Studio.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-3.  Erweitern Sie im Bereich **Vorlagenkategorien** den Eintrag **Visual C\#**, und klicken Sie dann auf **Windows**.  
+3.  Erweitern Sie im Bereich **Templates Categories** (Vorlagenkategorien) den Eintrag **Visual C#**, und klicken Sie dann auf **Windows**.  
   
-4.  Stellen Sie oben im Bereich **Vorlagen** sicher, dass im Feld **Zielframework** der Eintrag **.NET Framework 4** angezeigt wird.  
+4.  Sehen Sie am oberen Rand des Bereichs **Vorlagen nach**, um sicherzustellen, dass **.NET Framework 4** im Feld **Zielframework** angezeigt wird.  
   
 5.  Klicken Sie im Bereich **Vorlagen** auf **Konsolenanwendung**.  
   
-6.  Geben Sie einen Namen für das Projekt in das Feld **Name** ein.  
+6.  Geben Sie einen Namen für das Projekt im Feld **Name** ein.  
   
 7.  Klicken Sie auf **OK**.  
   
-     Das neue Projekt wird im **Projektmappen\-Explorer** angezeigt.  
+     Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-### So fügen Sie einen Verweis hinzu  
+### <a name="to-add-a-reference"></a>So fügen Sie einen Verweis hinzu  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf den Namen des Projekts, und klicken Sie auf **Verweis hinzufügen**.  Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Verweis hinzufügen**. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   
-2.  Wählen Sie auf der Seite **.NET** den Eintrag **Microsoft.Office.Interop.Word** aus der Liste **Komponentenname** aus.  
+2.  Wählen Sie auf der Seite **.NET** **Microsoft.Office.Interop.Word** in der Liste **Komponentenname** aus.  
   
 3.  Klicken Sie auf **OK**.  
   
-### So fügen Sie erforderliche Direktiven hinzu  
+### <a name="to-add-necessary-using-directives"></a>So fügen Sie erforderliche using-Anweisungen hinzu  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Datei **Program.cs**, und klicken Sie dann auf **Code anzeigen**.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei **Program.cs** und dann auf **Code anzeigen**.  
   
-2.  Fügen Sie am Anfang der Codedatei die folgenden `using`\-Direktiven hinzu:  
+2.  Fügen Sie am Anfang der Codedatei die folgenden `using`-Direktiven hinzu.  
   
      [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
   
-### So zeigen Sie Text in einem Word\-Dokument an  
+### <a name="to-display-text-in-a-word-document"></a>So zeigen Sie Text in einem Word-Dokument an  
   
-1.  Fügen Sie in der `Program`\-Klasse in Program.cs die folgende Methode hinzu, um eine Word\-Anwendung und ein Word\-Dokument zu erstellen.  Die [Add](http://go.microsoft.com/fwlink/?LinkId=145381)\-Methode verfügt über vier optionale Parameter.  In diesem Beispiel werden die Standardwerte dieser Parameter verwendet.  Somit sind keine Argumente in der aufrufenden Anweisung erforderlich.  
+1.  Fügen Sie in der Klasse `Program` in Program.cs die folgende Methode hinzu, um eine Word-Anwendung und ein Word-Dokument zu erstellen. Die Methode [Hinzufügen](http://go.microsoft.com/fwlink/?LinkId=145381) verfügt über vier optionale Parameter. In diesem Beispiel werden ihre Standardwerte verwendet. Deshalb sind in der aufrufenden Anweisung keine Argumente erforderlich.  
   
      [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
-2.  Fügen Sie am Ende der Methode den folgenden Code hinzu, um zu definieren, an welcher Position im Dokument welcher Text angezeigt werden soll.  
+2.  Fügen Sie den folgenden Code am Ende der Methode hinzu, um zu definieren, wo der Text im Dokument angezeigt werden und um welchen Text es sich dabei handeln soll.  
   
      [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
   
-### So führen Sie die Anwendung aus  
+### <a name="to-run-the-application"></a>So führen Sie die Anwendung aus  
   
-1.  Fügen Sie Main die folgende Anweisung hinzu.  
+1.  Fügen Sie die folgende Anweisung in Main hinzu.  
   
      [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
   
-2.  Drücken Sie STRG\+F5, um das Projekt auszuführen.  Ein Word\-Dokument mit dem angegebenen Text wird angezeigt.  
+2.  Drücken Sie STRG+F5, um das Projekt auszuführen. Ein Word-Dokument mit dem angegebenen Text wird angezeigt.  
   
-### So konvertieren Sie den Text in eine Tabelle  
+### <a name="to-change-the-text-to-a-table"></a>So ändern Sie Text in eine Tabelle  
   
-1.  Verwenden Sie die `ConvertToTable`\-Methode, um den Text in eine Tabelle einzubinden.  Die Methode verfügt über sechzehn optionale Parameter.  IntelliSense schließt optionale Parameter in Klammern ein, wie in der folgenden Abbildung dargestellt.  
+1.  Verwenden Sie die `ConvertToTable`-Methode, um den Text in eine Tabelle einzuschließen. Die Methode verfügt über sechzehn optionale Parameter. IntelliSense schließt optionale Parameter in Klammern ein, wie in folgender Abbildung veranschaulicht.  
   
-     ![Liste der Parameter für ConvertToTable&#45;Methode.](../../../csharp/programming-guide/classes-and-structs/media/convert-tableparameters.png "Convert\_TableParameters")  
-ConvertToTable\-Parameter  
+     ![Liste der Parameter für die ConvertToTable-Methode.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
+ConvertToTable-Parameter  
   
-     Benannte und optionale Argumente ermöglichen Ihnen die Angabe von Werten ausschließlich für Parameter, die geändert werden sollen.  Fügen Sie am Ende der `DisplayInWord`\-Methode den folgenden Code hinzu, um eine einfache Tabelle zu erstellen.  Das Argument gibt an, dass die Kommas in der Textzeichenfolge in `range` die Zellen der Tabelle trennen.  
+     Benannte und optionale Argumente ermöglichen es Ihnen, nur Werte für die Parameter anzugeben, die Sie auch ändern möchten. Fügen Sie den folgenden Code am Ende der `DisplayInWord`-Methode hinzu, um eine einfache Tabelle zu erstellen. Das Argument gibt an, dass die Kommas in der Textzeichenfolge in `range` die Zelle der Tabelle trennen.  
   
      [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
   
-     In früheren Versionen von C\# erfordert der Aufruf von `ConvertToTable` ein Verweisargument für jeden Parameter, wie im folgenden Code gezeigt.  
+     In früheren Versionen von C# erfordert der Aufruf an `ConvertToTable` ein Verweisargument für jeden Parameter, wie in folgendem Codebeispiel gezeigt.  
   
      [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
   
-2.  Drücken Sie STRG\+F5, um das Projekt auszuführen.  
+2.  Drücken Sie STRG+F5, um das Projekt auszuführen.  
   
-### So experimentieren Sie mit anderen Parametern  
+### <a name="to-experiment-with-other-parameters"></a>So können Sie sich auch an anderen Parametern versuchen  
   
-1.  Um die Tabelle so zu ändern, dass sie eine Spalte und drei Zeilen enthält, ersetzen Sie die letzte Zeile in `DisplayInWord` durch die folgende Anweisung, und drücken Sie dann STRG\+F5.  
+1.  Um die Tabelle so zu ändern, dass sie nur noch eine Spalte und drei Zeilen hat, ersetzen Sie die letzte Zeile in `DisplayInWord` durch folgende Anweisung, und geben Sie dann STRG+F5 ein.  
   
      [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Um ein vordefiniertes Format für die Tabelle anzugeben, ersetzen Sie die letzte Zeile in `DisplayInWord` durch die folgende Anweisung, und drücken Sie dann STRG\+F5.  Das Format kann eine beliebige [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382)\-Konstante sein.  
+2.  Um ein vordefiniertes Format für eine Tabelle anzugeben, ersetzen Sie die letzte Zeile in `DisplayInWord` durch folgende Anweisung, und geben Sie dann STRG+F5 ein. Das Format kann jede der [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382)-Konstanten sein.  
   
      [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
-## Beispiel  
- Der folgende Code umfasst das vollständige Beispiel.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code enthält das vollständige Beispiel.  
   
  [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

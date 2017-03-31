@@ -1,89 +1,107 @@
 ---
-title: "Versionsverwaltung mit den Schl&#252;sselw&#246;rtern &quot;override&quot; und &quot;new&quot; (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, override und new"
-  - "C#-Sprache, Versionskontrolle"
+title: "Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“ (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, versioning
+- C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 caps.latest.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 25
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
+ms.lasthandoff: 03/13/2017
+
 ---
-# Versionsverwaltung mit den Schl&#252;sselw&#246;rtern &quot;override&quot; und &quot;new&quot; (C#-Programmierhandbuch)
-Die Programmiersprache C\# ist so ausgelegt, dass die Versionen von [Basis](../../../csharp/language-reference/keywords/base.md)\-Klassen und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt werden können, wobei die Rückwärtskompatibilität erhalten bleibt.  Daher wird z. B. die Einführung eines neuen Members in einer Basis\-[Klasse](../../../csharp/language-reference/keywords/class.md), der denselben Namen wie ein Member in einer abgeleiteten Klasse hat, vollständig durch C\# unterstützt und führt nicht zu unerwartetem Verhalten.  Dies bedeutet auch, dass in einer Klasse explizit angegeben werden muss, ob eine Methode eine geerbte Methode überschreiben soll oder ob es sich um eine neue Methode handelt, hinter der sich eine geerbte Methode mit ähnlichem Namen verbirgt.  
+# <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
+Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
   
- In C\# können abgeleitete Klassen Methoden mit dem gleichen Namen wie Basisklassenmethoden enthalten.  
+ In C# können abgeleitete Klassen Methoden mit dem gleichen Namen wie Basisklassen-Methoden enthalten.  
   
--   Die Basisklassenmethode muss als [virtual](../../../csharp/language-reference/keywords/virtual.md) definiert werden.  
+-   Die Basisklasse muss als [virtual](../../../csharp/language-reference/keywords/virtual.md) definiert werden.  
   
--   Wenn vor der Methode in der abgeleiteten Klasse weder das [new](../../../csharp/language-reference/keywords/new.md)\-Schlüsselwort noch das [override](../../../csharp/language-reference/keywords/override.md)\-Schlüsselwort stehen, gibt der Compiler eine Warnung aus. Die Methode wird dann behandelt, als wäre das `new`\-Schlüsselwort vorhanden.  
+-   Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../../csharp/language-reference/keywords/new.md) oder [override](../../../csharp/language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
   
--   Falls vor der Methode in der abgeleiteten Klasse das `new`\-Schlüsselwort steht, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
+-   Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `new` vorangestellt ist, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
   
--   Falls vor der Methode in der abgeleiteten Klasse das `override`\-Schlüsselwort steht, rufen Objekte der abgeleiteten Klasse diese Methode anstatt der Basisklassenmethode auf.  
+-   Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `override` vorangestellt ist, rufen Objekte der abgeleiteten Klasse diese Methode anstatt der Methode der Basisklasse auf.  
   
--   Die Basisklassenmethode kann aus der abgeleiteten Klasse mit dem `base`\-Schlüsselwort aufgerufen werden.  
+-   Die Methode der Basisklasse kann mithilfe des Schlüsselworts `base` aus der Basisklasse heraus aufgerufen werden.  
   
 -   Die Schlüsselwörter `override`, `virtual` und `new` können auch auf Eigenschaften, Indexer und Ereignisse angewendet werden.  
   
- C\#\-Methoden sind standardmäßig nicht virtuell.  Wenn eine Methode als virtuell deklariert ist, kann jede Klasse, die die Methode erbt, ihre eigene Version implementieren.  Um aus einer Methode eine virtuelle Methode zu machen, wird der `virtual`\-Modifizierer in der Methodendeklaration der Basisklasse verwendet.  Anschließend kann die virtuelle Methode der Basisklasse von der abgeleiteten Klasse mit dem `override`\-Schlüsselwort überschrieben werden oder mit dem `new`\-Schlüsselwort in der Basisklasse verborgen werden.  Wenn weder das `override`\-Schlüsselwort noch das `new`\-Schlüsselwort angegeben ist, gibt der Compiler eine Warnung aus, und die Basisklassenmethode wird von der Methode in der abgeleiteten Klasse verborgen.  
+ Standardmäßig sind C#-Methoden nicht virtuell. Wenn eine Methode als virtuell deklariert wird, kann jede Klasse, die die Methode erbt, ihre eigene Version implementieren. Um eine Methode in eine virtuelle Methode zu transformieren, wird der Modifizierer `virtual` in der Methodendeklaration der Basisklasse verwendet. Die abgeleitete Klasse kann anschließend die virtuelle Methode der Basisklasse mithilfe des Schlüsselworts `override` überschreiben oder die virtuelle Methode in der Basisklasse mithilfe des Schlüsselworts `new` verbergen. Wenn weder das Schlüsselwort `override` noch das Schlüsselwort `new` angegeben ist, gibt der Compiler eine Warnung aus, und die Methode in der abgeleiteten Klasse verbirgt die Methode in der Basisklasse.  
   
- Um dies praktisch zu demonstrieren, nehmen Sie einmal an, dass die Firma A eine Klasse mit dem Namen `GraphicsClass` erstellt hat, die von Ihrem Programm verwendet wird.  `GraphicsClass` sieht folgendermaßen aus:  
+ Nehmen wir zur Veranschaulichung dieser Vorgehensweise für einen Moment an, dass die Firma A eine Klasse mit dem Namen `GraphicsClass` erstellt, die Ihr Programm benutzt. Die folgende Datei ist `GraphicsClass`:  
   
  [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
   
- Sie verwenden diese Klasse, um eine eigene Klasse abzuleiten, und fügen eine neue Methode hinzu:  
+ Ihr Unternehmen verwendet diese Klasse, und Sie verwenden sie zum Ableiten einer Klasse oder zum Hinzufügen einer neuen Methode:  
   
  [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
   
- Die Anwendung funktioniert ohne Probleme, bis Firma A eine neue Version von `GraphicsClass` herausgibt, die dem folgenden Code ähnelt:  
+ Ihre Anwendung wird ohne Probleme verwendet, bis Firma A eine neue Version von `GraphicsClass` herausgibt, die dem folgenden Code ähnelt:  
   
  [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
   
- Die neue Version von `GraphicsClass` enthält jetzt eine Methode mit dem Namen `DrawRectangle`.  Anfänglich geschieht nichts.  Die neue Version ist mit der alten immer noch binärkompatibel.  Jede von Ihnen eingesetzte Software arbeitet weiter, auch wenn die neue Klasse auf diesen Computersystemen installiert wird.  Aufrufe der Methode `DrawRectangle` verweisen weiterhin auf die Version in der abgeleiteten Klasse.  
+ Die neue Version von `GraphicsClass` enthält jetzt eine Methode namens `DrawRectangle`. Anfänglich geschieht nichts. Die neue Version ist immer noch binärkompatibel mit der alten Version. Jede Software, die Sie entwickelt haben, funktioniert weiterhin, sogar wenn die neue Klasse auf diesen Computersystemen installiert ist. Aufgrund vorhandener Aufrufe der Methode verweist `DrawRectangle` weiterhin auf Ihre Version in Ihrer abgeleiteten Klasse.  
   
- Sobald Sie jedoch die Anwendung mit der neuen Version von `GraphicsClass` erneut kompilieren, wird vom Compiler die Warnung CS0108 ausgegeben.  Diese Warnung informiert Sie, dass Sie entscheiden müssen, wie sich die `DrawRectangle`\-Methode in der Anwendung verhalten soll.  
+ Sobald Sie Ihre Anwendung aber mit der neuen Version von `GraphicsClass` neu kompilieren, erhalten Sie vom Compiler eine Warnung, CS0108. Diese Warnung informiert Sie darüber, dass Sie das gewünschte Verhalten der `DrawRectangle`-Methode in Ihrer Anwendung bestimmen müssen.  
   
- Wenn die Methode die neue Basisklassenmethode überschreiben soll, verwenden Sie das `override`\-Schlüsselwort:  
+ Wenn Sie möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, verwenden Sie das Schlüsselwort `override`:  
   
  [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
   
- Das `override`\-Schlüsselwort stellt sicher, dass alle von `YourDerivedGraphicsClass` abgeleiteten Objekte die abgeleitete Klassenversion von `DrawRectangle` verwenden.  Von `YourDerivedGraphicsClass` abgeleitete Objekte können weiterhin mit dem Basisschlüsselwort auf die Basisklassenversion von `DrawRectangle` zugreifen:  
+ Das Schlüsselwort `override` stellt sicher, dass alle Objekte, die von `YourDerivedGraphicsClass` abgeleitet sind, die Version von `DrawRectangle` der abgeleiteten Klasse verwenden. Objekte, die von `YourDerivedGraphicsClass` abgeleitet sind, können auf die Basisklassenversion von `DrawRectangle` mithilfe des base-Schlüsselworts zugreifen:  
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- Wenn die Methode die neue Basisklassenmethode nicht überschreiben soll, müssen Sie die folgenden Aspekte berücksichtigen:  Um Verwechslungen zwischen den beiden Methoden zu vermeiden, können Sie die Methode umbenennen.  Dies kann zeitaufwändig und fehleranfällig sein und ist für einige Fälle einfach ungeeignet.  Wenn das Projekt relativ klein ist, können Sie die Methode allerdings mithilfe der Umgestaltungsoptionen von Visual Studio umbenennen.  Weitere Informationen finden Sie unter [Refactoring Classes and Types \(Class Designer\)](/visual-studio/ide/refactoring-classes-and-types-class-designer).  
+ Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
- Alternativ können Sie die Warnung mit dem `new`\-Schlüsselwort in der Definition der abgeleiteten Klasse umgehen:  
+ Alternativ können Sie die Warnung vermeiden, indem Sie in der Definition Ihrer abgeleiteten Klasse das Schlüsselwort `new` verwenden:  
   
  [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
   
- Das `new`\-Schlüsselwort teilt dem Compiler mit, dass die in der Basisklasse enthaltene Definition durch Ihre Definition verborgen wird.  Dies ist das Standardverhalten.  
+ Mit dem Schlüsselwort `new` teilt der Compiler mit, dass Ihre Definition die Definition ausblendet, die in der Basisklasse enthalten ist. Dies ist das Standardverhalten.  
   
-## Überschreiben und Methodenauswahl  
- Wenn eine Methode von einer Klasse benannt wird, wählt der C\#\-Compiler die am besten geeignete Aufrufmethode, falls mehr als eine Methode mit dem Aufruf kompatibel ist. Dies ist z. B. der Fall bei zwei Methoden mit demselben Namen und Parametern, die mit den übergebenen Parametern übereinstimmen.  Die folgenden Methoden wären kompatibel:  
+## <a name="override-and-method-selection"></a>Überschreiben und Methodenauswahl  
+ Wenn eine Methode in einer Klasse benannt wird, wählt der C#-Compiler die beste Methode zum Aufrufen aus, wenn mehr als eine Methode mit dem Aufruf kompatibel ist, z.B. wenn es zwei Methoden mit dem gleichen Namen und Parameter gibt, die mit dem übergebenen Parameter kompatibel sind. Die folgenden Methoden wären kompatibel:  
   
  [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- Wenn `DoWork` in einer Instanz von `Derived` aufgerufen wird, versucht der C\#\-Compiler zuerst den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich auf `Derived` deklariert wurden.  Überschreibungsmethoden werden nicht als Klassendeklarationen betrachtet, sondern als neue Implementierungen einer Methode, die in einer Basisklasse deklariert ist.  Nur wenn der C\#\-Compiler für den Methodenaufruf keine übereinstimmende ursprüngliche Methode auf `Derived` finden kann, versucht er, den Aufruf an eine überschriebene Methode zu richten, die den gleichen Namen und kompatible Parameter hat.  Beispiele:  
+ Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Beispiel:  
   
  [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- Da die Variable `val` implizit in double konvertiert werden kann, ruft der C\#\-Compiler `DoWork(double)` statt `DoWork(int)` auf.  Es gibt zwei Möglichkeiten, dies zu vermeiden.  Zum einen sollten Sie vermeiden, neue Methoden mit dem gleichen Namen wie virtuelle Methoden zu deklarieren.  Zum anderen können Sie den C\#\-Compiler anweisen, die virtuelle Methode aufzurufen. Dazu muss die Instanz von `Derived` in `Base` umgewandelt werden, um dann die die Methodenliste der Basisklasse durchsuchen zu können.  Da die Methode virtuell ist, wird die Implementierung von `DoWork(int)` für `Derived` aufgerufen.  Beispiele:  
+ Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Beispiel:  
   
  [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
- Weitere Beispiele für `new` und `override`, finden Sie [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)weitere Informationen.  
+ Weitere Beispiele für `new` und `override` finden Sie unter [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

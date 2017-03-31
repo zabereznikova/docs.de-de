@@ -1,41 +1,59 @@
 ---
-title: "Gewusst wie: Ausf&#252;hren von Bereinigungscode mit finally (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Ausnahmebehandlung [C#], try/finally-Block"
-  - "Ausnahmen [C#], try/finally-Block"
-  - "try/finally-Blöcke [C#]"
+title: "Vorgehensweise: Ausführen von Bereinigungscode mit finally (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- try/finally blocks [C#]
+- exceptions [C#], try/finally block
+- exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b9c22ca8ee9c83e6f1808520530c6d1912d8f4f1
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Ausf&#252;hren von Bereinigungscode mit finally (C#-Programmierhandbuch)
-Mit einer `finally`\-Anweisung soll sichergestellt werden, dass die notwendige Bereinigung von Objekten sofort erfolgt, auch wenn eine Ausnahme ausgelöst wird. Die zu bereinigenden Objekte enthalten in der Regel externe Ressourcen.  Ein Beispiel für eine solche Bereinigung ist der Aufruf von <xref:System.IO.Stream.Close%2A> für einen <xref:System.IO.FileStream> sofort nach der Verwendung, anstatt zu warten, dass das Objekt in die Garbage Collection der Common Language Runtime aufgenommen wird:  
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Gewusst wie: Ausführen von Bereinigungscode mit finally (C#-Programmierhandbuch)
+`finally`-Anweisungen sollen sicherstellen, dass die notwendige Bereinigung von Objekten, die externe Ressourcen enthalten, sofort erfolgen, auch wenn eine Ausnahme ausgelöst wird. Ein Beispiel für eine solche Bereinigung ist der Aufruf von <xref:System.IO.Stream.Close%2A> auf einem <xref:System.IO.FileStream> sofort nach der Verwendung, anstatt abzuwarten, bis das Objekt durch die Common Language Runtime wie folgt speicherbereinigt wird:  
   
  [!code-cs[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  
   
-## Beispiel  
- Um den vorherigen Code in eine `try-catch-finally`\-Anweisung umzuwandeln, wird der Bereinigungscode wie folgt vom Arbeitscode getrennt.  
+## <a name="example"></a>Beispiel  
+ Um den vorherigen Code in eine `try-catch-finally`-Anweisung umzuwandeln, wird der Bereinigungscode wie folgt vom Arbeitscode getrennt.  
   
  [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_2.cs)]  
   
- Da eine Ausnahme innerhalb eines `try`\-Blocks jederzeit vor dem `OpenWrite()`\-Aufruf auftreten oder der `OpenWrite()`\-Aufruf selbst fehlschlagen kann, ist nicht garantiert, dass die Datei geöffnet ist, wenn versucht wird, sie zu schließen.  Der `finally`\-Block fügt eine Prüfung hinzu, um sicherzustellen, dass das <xref:System.IO.FileStream>\-Objekt vor dem Aufruf der <xref:System.IO.Stream.Close%2A>\-Methode nicht `null` ist.  Ohne die `null`\-Prüfung löst der `finally`\-Block möglicherweise eine eigene <xref:System.NullReferenceException> aus. Das Auslösen von Ausnahmen in `finally`\-Blöcken sollte jedoch möglichst vermieden werden.  
+ Da eine Ausnahme zu einem beliebigen Zeitpunkt innerhalb des `try`-Blocks vor dem `OpenWrite()`-Aufruf auftreten oder der `OpenWrite()`-Aufruf selbst fehlschlagen kann, ist nicht garantiert, dass die Datei geöffnet ist, wenn wir versuchen, sie zu schließen. Der `finally`-Block fügt eine Prüfung durch, um sicherzustellen, dass die <xref:System.IO.FileStream>-Objekt vor dem Aufruf der Methode <xref:System.IO.Stream.Close%2A> nicht `null` entspricht. Ohne die `null`-Prüfung kann der `finally`-Block kann eine eigene <xref:System.NullReferenceException>-Ausnahme auslösen. Das Auslösen von Ausnahmen in `finally`-Blöcken sollte allerdings, wenn möglich, vermieden werden.  
   
- Auch zum Schließen von Datenbankverbindungen sind `finally`\-Blöcke gut geeignet.  Da die Anzahl der zulässigen Verbindungen zum Datenbankserver manchmal begrenzt ist, ist es wichtig, Datenbankverbindungen zu schnell wie möglich zu schließen.  Wenn der Fall eintritt, dass vor dem Schließen einer Verbindung eine Ausnahme ausgelöst wird, liegt eine weitere Situation vor, in der es günstiger ist, den `finally`\-Block zu verwenden, als auf die Garbage Collection zu warten.  
+ Auch Datenbankverbindungen können mit einem `finally`-Block geschlossen werden. Da die Anzahl der zulässigen Verbindungen mit einem Datenbankserver manchmal begrenzt ist, sollten Sie Datenbankverbindungen so schnell wie möglich schließen. Wenn eine Ausnahme ausgelöst wird, bevor Sie die Verbindung schließen können, ist es besser, den `finally`-Block zu verwenden, als die Speicherbereinigung abzuwarten.  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)   
  [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [using\-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)   
- [try\-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try\-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+ [using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)   
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

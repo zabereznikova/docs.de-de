@@ -1,80 +1,96 @@
 ---
-title: "Playing Sounds (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "system sounds, playing"
-  - "system sounds"
-  - "playing sounds, Visual Basic"
-  - "sound loops"
-  - "My.Computer.Audio object, tasks"
-  - "sounds, playing"
-  - "sounds, background"
-  - "playing sounds"
+title: Wiedergabe von Sound (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- system sounds, playing
+- system sounds
+- playing sounds, Visual Basic
+- sound loops
+- My.Computer.Audio object, tasks
+- sounds, playing
+- sounds, background
+- playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Playing Sounds (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ed4ee0a09067900a6bead04abec02f141936ba42
+ms.lasthandoff: 03/13/2017
 
-Das `My.Computer.Audio`\-Objekt stellt Methoden für die Wiedergabe von Sounds bereit.  
+---
+# <a name="playing-sounds-visual-basic"></a>Wiedergabe von Sound (Visual Basic)
+Das `My.Computer.Audio`-Objekt stellt Methoden zur Soundwiedergabe bereit.  
   
-## Sounds wiedergeben  
- Während der Soundwiedergabe im Hintergrund kann die Anwendung anderen Code ausführen.  Die `My.Computer.Audio.Play`\-Methode erlaubt jeweils nur die Wiedergabe eines einzelnen Hintergrundsounds. Bei Wiedergabe eines neuen Hintergrundsounds wird der vorherige Hintergrundsound beendet.  Sie können auch einen Sound wiedergeben und warten, bis er beendet wird.  
+## <a name="playing-sounds"></a>Wiedergabe von Sound  
+ Die Wiedergabe im Hintergrund lässt die Anwendung einen anderen Code ausführen, während der Sound wiedergegeben wird. Die `My.Computer.Audio.Play`-Methode lässt die Anwendung nur einen Hintergrundsound gleichzeitig wiedergeben; wenn die Anwendung einen neuen Hintergrundsound wiedergibt, stoppt sie die Wiedergabe des vorherigen. Sie können auch einen Sound wiedergeben und warten, bis er zu Ende ist.  
   
- Im folgenden Beispiel gibt die `My.Computer.Audio.Play`\-Methode einen Sound abgespielt.  Wenn `AudioPlayMode.WaitToComplete` angegeben ist, wartet `My.Computer.Audio.Play`, bis der Sound beendet wird, bevor der aufrufende Code weiter ausgeführt wird.  Wenn Sie dieses Beispiel verwenden möchten, sollten Sie sicherstellen, dass der Dateiname auf eine WAV\-Audiodatei auf dem Computer befindet  
+ Im folgenden Beispiel gibt die `My.Computer.Audio.Play`-Methode einen Sound wieder. Wenn `AudioPlayMode.WaitToComplete` angegeben wird, wartet `My.Computer.Audio.Play`, bis der Sound fertig ist, bevor der aufrufende Code fortgesetzt wird. Sie sollten beim Verwenden dieses Beispiels sicherstellen, dass der Dateiname auf eine WAV-Sounddatei verweist, die sich auf Ihrem Computer befindet.  
   
  [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
   
- Im folgenden Beispiel gibt die `My.Computer.Audio.Play`\-Methode einen Sound abgespielt.  Wenn Sie dieses Beispiel verwenden möchten, sollten Sie sicherstellen, dass die Anwendungsressourcen eine WAV\-Audiodatei enthalten, das Waterfall benannt ist.  
+ Im folgenden Beispiel gibt die `My.Computer.Audio.Play`-Methode einen Sound wieder. Sie sollten beim Verwenden dieses Beispiels sicherstellen, dass die Anwendungsressourcen eine WAV-Sounddatei mit dem Namen „Waterfall“ enthält.  
   
  [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
   
-## Schleifungssounds wiedergeben  
- Im folgenden Beispiel gibt die `My.Computer.Audio.Play`\-Methode den angegebenen Sound im Hintergrund wieder, wenn `PlayMode.BackgroundLoop` angegeben wird.  Wenn Sie dieses Beispiel verwenden möchten, sollten Sie sicherstellen, dass der Dateiname eine WAV\-Audiodatei angibt, der auf Ihrem Computer befindet.  
+## <a name="playing-looping-sounds"></a>Wiedergabe von Sound als Schleife  
+ Im folgenden Beispiel gibt die `My.Computer.Audio.Play`-Methode den angegebenen Sound im Hintergrund wieder, wenn `PlayMode.BackgroundLoop` angegeben wird. Sie sollten beim Verwenden dieses Beispiels sicherstellen, dass der Dateiname auf eine WAV-Sounddatei verweist, die sich auf Ihrem Computer befindet.  
   
  [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
   
- Im folgenden Beispiel gibt die `My.Computer.Audio.Play`\-Methode den angegebenen Sound im Hintergrund wieder, wenn `PlayMode.BackgroundLoop` angegeben wird.  Wenn Sie dieses Beispiel verwenden möchten, sollten Sie sicherstellen, dass die Anwendungsressourcen eine WAV\-Audiodatei enthalten, das Waterfall benannt ist.  
+ Im folgenden Beispiel gibt die `My.Computer.Audio.Play`-Methode den angegebenen Sound im Hintergrund wieder, wenn `PlayMode.BackgroundLoop` angegeben wird. Sie sollten beim Verwenden dieses Beispiels sicherstellen, dass die Anwendungsressourcen eine WAV-Sounddatei mit dem Namen „Waterfall“ enthält.  
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- Das vorangehende Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms Applications \> Sound**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
+ Das vorherige Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Er befindet sich in der Codeausschnittauswahl unter **Windows Forms-Anwendungen > Sound**. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
- Wenn eine Anwendung eine Soundschleife wiedergibt, sollte diese im Allgemeinen irgendwann angehalten werden.  
+ Wenn normalerweise eine Anwendung einen Sound als Schleife wiedergibt, sollte sie den Sound am Ende anhalten.  
   
-## Das Beenden der Wiedergabe von Sounds im Hintergrund  
- Verwenden Sie die `My.Computer.Audio.Stop`\-Methode, um die gegenwärtig von der Anwendung im Hintergrund wiedergegebene Soundschleife zu beenden.  
+## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Beenden der Wiedergabe von Sound im Hintergrund  
+ Verwenden Sie die `My.Computer.Audio.Stop`-Methode, um den momentan im Hintergrund oder als Schleife wiedergegebenen Sound der Anwendung zu beenden.  
   
- Wenn eine Anwendung eine Soundschleife wiedergibt, sollte diese im Allgemeinen irgendwann angehalten werden.  
+ Wenn eine Anwendung einen Sound als Schleife wiedergibt, sollte sie den Sound normalerweise irgendwann anhalten.  
   
- Im folgenden Beispiel wird beendet, der einen Sound im Hintergrund wiedergibt.  
+ Im folgenden Beispiel wird ein Sound, der im Hintergrund abgespielt wird, beendet.  
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- Das vorangehende Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms Applications \> Sound**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
+ Das vorherige Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Er befindet sich in der Codeausschnittauswahl unter **Windows Forms-Anwendungen > Sound**. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Systemsounds wiedergeben  
- Verwenden Sie die `My.Computer.Audio.PlaySystemSound`\-Methode, um den angegebenen Systemsound wiederzugeben.  
+## <a name="playing-system-sounds"></a>Wiedergabe von Systemsound  
+ Verwenden Sie die `My.Computer.Audio.PlaySystemSound`-Methode, um den angegebenen Systemsound wiederzugeben.  
   
- Die `My.Computer.Audio.PlaySystemSound`\-Methode akzeptiert als Parameter einen der freigegebenen Member der <xref:System.Media.SystemSound>\-Klasse.  Der Systemsound <xref:System.Media.SystemSounds.Asterisk%2A> weist i. d. R. auf Fehler hin.  
+ Die `My.Computer.Audio.PlaySystemSound`-Methode verwendet als Parameter einen der freigegebenen Member der <xref:System.Media.SystemSound>-Klasse. Mit dem Systemsound <xref:System.Media.SystemSounds.Asterisk%2A> werden im Allgemeinen Fehler angezeigt.  
   
- Im folgenden Beispiel wird die `My.Computer.Audio.PlaySystemSound`\-Methode, um einen Systemsound wiederzugeben.  
+ Im folgenden Beispiel wird die `My.Computer.Audio.PlaySystemSound`-Methode verwendet, um einen Systemsound wiederzugeben.  
   
  [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Audio>   
  <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>   
  <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   

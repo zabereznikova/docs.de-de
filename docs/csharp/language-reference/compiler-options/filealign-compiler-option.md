@@ -1,64 +1,82 @@
 ---
-title: "/filealign (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/filealign"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/alignment compiler option [C#]"
-  - "filealign compiler option [C#]"
-  - "-filealign compiler option [C#]"
-  - "/sections compiler option [C#]"
-  - "alignment compiler option [C#]"
-  - "sections compiler option [C#]"
-  - "-sections compiler option [C#]"
-  - "/filealign compiler option [C#]"
-  - "file sharing [C#]"
-  - "-alignment compiler option [C#]"
-  - "section alignment [C#]"
+title: -filealign (C#-Compileroptionen) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /filealign
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /alignment compiler option [C#]
+- filealign compiler option [C#]
+- -filealign compiler option [C#]
+- /sections compiler option [C#]
+- alignment compiler option [C#]
+- sections compiler option [C#]
+- -sections compiler option [C#]
+- /filealign compiler option [C#]
+- file sharing [C#]
+- -alignment compiler option [C#]
+- section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
+ms.lasthandoff: 03/13/2017
+
 ---
-# /filealign (C# Compiler Options)
-Mit der Option **\/filealign** können Sie die Größe der Abschnitte in der Ausgabedatei festlegen.  
+# <a name="filealign-c-compiler-options"></a>/filealign (C#-Compileroptionen)
+Mit der Option **/filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /filealign:number  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `number`  
- ein Wert, der die Größe der Abschnitte in der Ausgabedatei angibt.  Gültige Werte sind 512, 1024, 2048, 4096 und 8192.  Hierbei handelt es sich um Byteangaben.  
+ Ein Wert, der die Größe der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
-## Hinweise  
- Jeder Abschnitt wird an einer Grenze ausgerichtet, die einem Vielfachen des **\/filealign**\-Werts entspricht.  Es gibt keinen festen Standardwert.  Wurde **\/filealign** nicht angegeben, wählt die Common Language Runtime zur Kompilierungszeit einen Standardwert aus.  
+## <a name="remarks"></a>Hinweise  
+ Jeder Abschnitt wird auf einer Grenze angeordnet, die ein Mehrfaches des **/filealign**-Werts ist. Es gibt keinen festen Standardwert. Wenn **/filealign** nicht angegeben ist, wird die Common Language Runtime einen Standardwert zur Kompilierzeit wählen.  
   
- Durch Angeben der Abschnittsgröße können Sie die Größe der Ausgabedatei steuern.  Es kann hilfreich sein, die Abschnittsgröße zu ändern, wenn Sie Programme auf kleineren Geräten ausführen.  
+ Das Angeben der Abschnittsgröße wirkt sich auf die Größe der Ausgabedatei aus. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
   
- Mit [DUMPBIN\-Optionen](/visual-cpp/build/reference/dumpbin-options) können Sie Informationen über Abschnitte in der Ausgabedatei anzeigen.  
+ Verwenden Sie [DUMPBIN](https://docs.microsoft.com/cpp/build/reference/dumpbin-options), um Informationen über Abschnitte in Ihrer Ausgabedatei anzuzeigen.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Klicken Sie auf die Schaltfläche **Erweitert**.  
+3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
   
-4.  Ändern Sie die Eigenschaft **Dateianordnung**.  
+4.  Ändern der Eigenschaft **Dateianordnung**.  
   
- Informationen darüber, wie Sie diese Compileroption programmgesteuert festlegen können, finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [NIB: Vorgehensweise: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

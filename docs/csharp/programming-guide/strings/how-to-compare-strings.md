@@ -1,51 +1,69 @@
 ---
-title: "Gewusst wie: Vergleichen von Zeichenfolgen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Vergleichen von Zeichenfolgen [C#]"
-  - "Zeichenfolgen [C#], Vergleich"
+title: 'Vorgehensweise: Vergleichen von Zeichenfolgen (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- strings [C#], comparison
+- comparing strings [C#]
 ms.assetid: e1268e28-ee98-4695-98e9-92280f1c33c0
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 164d84a1e241572a1545c6fc2d3d1e9f0821cfcb
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Vergleichen von Zeichenfolgen (C#-Programmierhandbuch)
-Wenn Sie Zeichenfolgen vergleichen, führt dies zu einem Ergebnis, das besagt, dass eine Zeichenfolge größer oder kleiner ist als die andere oder dass die beiden Zeichenfolgen gleich sind.  Die Regeln, nach denen das Ergebnis bestimmt wird, sind unterschiedlich, je nachdem, ob Sie einen *Ordinalvergleich* oder einen *kulturabhängigen Vergleich* durchführen.  Es ist wichtig, die richtige Art von Vergleich für eine bestimmte Aufgabe zu verwenden.  
+# <a name="how-to-compare-strings-c-programming-guide"></a>Gewusst wie: Vergleichen von Zeichenfolgen (C#-Programmierhandbuch)
+Wenn Sie Zeichenfolgen vergleichen, erzeugen Sie ein Ergebnis, das besagt, dass eine Zeichenfolge größer oder kleiner als eine andere ist oder dass die beiden Zeichenfolgen gleich sind. Die Regeln, nach denen das Ergebnis bestimmt wird, unterscheiden sich abhängig davon, ob Sie einen *Ordinalvergleich* oder einen *kulturabhängigen Vergleich* durchführen. Es ist wichtig, die richtige Art von Vergleich für eine bestimmte Aufgabe zu verwenden.  
   
- Verwenden Sie die grundlegenden ordinalen Vergleiche, wenn Sie die Werte von zwei Zeichenfolgen ohne Berücksichtigung von linguistischen Konventionen vergleichen oder sortieren müssen.  Beim grundlegenden ordinalen Vergleich \(`System.StringComparison.Ordinal`\) wird die Groß\-\/Kleinschreibung berücksichtigt. Dies bedeutet, dass die beiden Zeichenfolgen Zeichen für Zeichen übereinstimmen müssen: "und" stimmt nicht mit "Und" oder "UND" überein.  Eine häufig verwendete Variante ist `System.StringComparison.OrdinalIgnoreCase`, bei der "und", "Und" und "UND" übereinstimmen.  `StringComparison.OrdinalIgnoreCase` wird häufig verwendet, um Dateinamen, Pfadnamen, Netzwerkpfade und jede andere Zeichenfolge zu vergleichen, deren Wert sich nicht basierend auf dem Gebietsschema des Computers des Benutzers ändert.  Weitere Informationen finden Sie unter <xref:System.StringComparison?displayProperty=fullName>.  
+ Verwenden Sie grundlegende Ordinalvergleiche, wenn Sie die Werte zweier Zeichenfolgen vergleichen oder sortieren, ohne linguistische Konventionen zu berücksichtigen. Ein grundlegender ordinaler Vergleich (`System.StringComparison.Ordinal`) unterscheidet zwischen Groß- und Kleinschreibung, was bedeutet, dass die beiden Zeichenfolgen Zeichen für Zeichen übereinstimmen müssen: „and“ ist nicht gleich „And“ oder „AND“. Eine häufig verwendete Variante ist `System.StringComparison.OrdinalIgnoreCase`, bei der „and“, „And“ und „AND“ nicht unterschieden werden. `StringComparison.OrdinalIgnoreCase` wird häufig verwendet, um Dateinamen, Pfadnamen, Netzwerkpfade und jede andere Zeichenfolge, deren Wert basierend auf dem Gebietsschema des Computers des Benutzers nicht geändert wird, zu vergleichen. Weitere Informationen finden Sie unter <xref:System.StringComparison?displayProperty=fullName>.  
   
- Kulturabhängige Vergleiche werden in der Regel verwendet, um Zeichenfolgen zu vergleichen oder zu sortieren, die von den Endbenutzern eingegeben werden, da die Zeichen und Sortierungskonventionen dieser Zeichenfolgen je nach Gebietsschema des Computers des Benutzers variieren können.  Sogar Zeichenfolgen, die identische Zeichen enthalten, werden je nach Kultur des aktuellen Threads verschieden sortiert.  
+ Kulturabhängige Vergleiche werden normalerweise verwendet, um Zeichenfolgen zu vergleichen und zu sortieren, die von Endbenutzern eingegeben werden, da die Zeichen und Sortierungskonventionen dieser Zeichenfolgen je nach Gebietsschema des Computers des Benutzers variieren können. Sogar Zeichenfolgen, die identische Zeichen enthalten, sortieren je nach Kultur des aktuellen Threads möglicherweise unterschiedlich.  
   
 > [!NOTE]
->  Wenn Sie Zeichenfolgen vergleichen, sollten Sie die Methoden verwenden, mit denen ausdrücklich angegeben wird, welchen Vergleich Sie durchführen möchten.  So kann Ihr Code viel besser verwaltet werden und ist besser lesbar.  Verwenden Sie die Überladungen der Methoden der <xref:System.String?displayProperty=fullName>\-Klasse und der <xref:System.Array?displayProperty=fullName>\-Klasse, die einen <xref:System.StringComparison>\-Enumerationsparameter übernehmen, damit Sie angeben können, welche Art des Vergleichs ausgeführt werden soll.  Am besten vermeiden Sie die Verwendung der Operatoren `==` und `!=`, wenn Sie Zeichenfolgen vergleichen.  Vermeiden Sie auch die Verwendung der <xref:System.String.CompareTo%2A?displayProperty=fullName>\-Instanzenmethoden, da keiner der Überladungen einen <xref:System.StringComparison> akzeptiert.  
+>  Wenn Sie Zeichenfolgen vergleichen, sollten Sie die Methoden verwenden, die explizit angeben, welche Art von Vergleich Sie durchführen möchten. Dadurch kann der Code viel besser verwaltet und gelesen werden. Verwenden Sie nach Möglichkeit die Überladungen der Methoden der <xref:System.String?displayProperty=fullName>- und <xref:System.Array?displayProperty=fullName>-Klassen, die einen <xref:System.StringComparison>-Enumerationsparameter akzeptieren, damit Sie angeben können, welcher Typ von Vergleich ausgeführt werden soll. Es empfiehlt sich, beim Vergleichen von Zeichenfolgen die Operatoren `==` und `!=` zu vermeiden. Vermeiden Sie es auch, die <xref:System.String.CompareTo%2A?displayProperty=fullName>-Instanzmethoden zu verwenden, da keine Überladung <xref:System.StringComparison> akzeptiert.  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen ordnungsgemäß verglichen werden, deren Werte sich nicht basierend auf dem Gebietsschema des Computers des Benutzers ändern.  Außerdem wird auch das C\#\-Feature *Internalisierung von Zeichenfolgen* erläutert.  Wenn ein Programm mehrere identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort.  Wenn Sie die <xref:System.Object.ReferenceEquals%2A>\-Methode aufrufen, sehen Sie, dass die beiden Zeichenfolgen auf dasselbe Objekt im Arbeitsspeicher verweisen.  Verwenden Sie die <xref:System.String.Copy%2A?displayProperty=fullName>\-Methode, um eine Internalisierung zu vermeiden, wie im folgenden Beispiel dargestellt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie Zeichenfolgen, deren Werte sich basierend auf dem Gebietsschema des Computers des Benutzers nicht ändern, ordnungsgemäß verglichen werden. Darüber hinaus wird die Funktion von C# zur *Internalisierung von Zeichenfolgen* gezeigt. Wenn ein Programm zwei oder mehr identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort. Durch Aufrufen der <xref:System.Object.ReferenceEquals%2A>-Methode können Sie sehen, dass die beiden Zeichenfolgen tatsächlich auf das gleiche Objekt im Arbeitsspeicher verweisen. Verwenden Sie die <xref:System.String.Copy%2A?displayProperty=fullName>-Methode, um eine Internalisierung zu vermeiden, wie im Beispiel gezeigt.  
   
  [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen auf die bevorzugte Weise mithilfe der <xref:System.String?displayProperty=fullName>\-Methoden verglichen werden, die eine <xref:System.StringComparison>\-Enumeration akzeptieren.  Beachten Sie, dass die <xref:System.String.CompareTo%2A?displayProperty=fullName>\-Instanzenmethoden hier nicht verwendet werden, da keine der Überladungen einen <xref:System.StringComparison> akzeptiert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie Zeichenfolgen bevorzugt verglichen werden, indem die <xref:System.String?displayProperty=fullName>-Methoden verwendet werden, die eine <xref:System.StringComparison>-Enumeration akzeptieren. Beachten Sie, dass die <xref:System.String.CompareTo%2A?displayProperty=fullName>-Instanzmethoden hier nicht verwendet werden, da keine Überladung <xref:System.StringComparison> akzeptiert.  
   
  [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie Zeichenfolgen sortiert werden und in einem Array auf kulturabhängige Weise danach gesucht wird. Verwenden Sie dazu die statischen <xref:System.Array>\-Methoden, die einen <xref:System.StringComparer?displayProperty=fullName>\-Parameter akzeptieren.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie Zeichenfolgen in einem Array auf kulturabhängige Weise mithilfe der statischen <xref:System.Array>-Methoden, die einen <xref:System.StringComparer?displayProperty=fullName>-Parameter akzeptieren, sortieren und danach suchen.  
   
  [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
- Auflistungsklassen, wie z. B. <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> und <xref:System.Collections.Generic.List%601?displayProperty=fullName> verfügen über Konstruktoren, die einen <xref:System.StringComparer?displayProperty=fullName>\-Parameter akzeptieren, wenn der Typ der Elemente oder Schlüssel `string` lautet.  Im Allgemeinen sollten Sie wann immer möglich diese Konstruktoren verwenden und entweder `Ordinal` oder `OrdinalIgnoreCase` angeben.  
+ Auflistungsklassen wie z.B. <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> und <xref:System.Collections.Generic.List%601?displayProperty=fullName> verfügen über Konstruktoren, die einen <xref:System.StringComparer?displayProperty=fullName>-Parameter akzeptieren, wenn der Typ der Elemente oder Schlüssel `string` ist. Im Allgemeinen sollten Sie nach Möglichkeit diese Konstruktoren verwenden und entweder `Ordinal` oder `OrdinalIgnoreCase` angeben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Globalization.CultureInfo?displayProperty=fullName>   
  <xref:System.StringComparer?displayProperty=fullName>   
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)   
- [Vergleichen von Zeichenfolgen](../Topic/Comparing%20Strings%20in%20the%20.NET%20Framework.md)   
- [Globalisieren und Lokalisieren von Anwendungen](/visual-studio/ide/globalizing-and-localizing-applications)
+ [Vergleichen von Zeichenfolgen](http://msdn.microsoft.com/library/977dc094-fe19-4955-98ec-d2294d04a4ba)   
+ [Globalisieren und Lokalisieren von Anwendungen](https://docs.microsoft.com/visualstudio/ide/globalizing-and-localizing-applications)

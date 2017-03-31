@@ -1,25 +1,43 @@
 ---
-title: "lock-Anweisung (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "lock_CSharpKeyword"
-  - "lock"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lock-Schlüsselwort [C#]"
+title: lock-Anweisung (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- lock_CSharpKeyword
+- lock
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 caps.latest.revision: 43
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 43
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 020be199391789360ae9a25858bef54d8259ae56
+ms.lasthandoff: 03/13/2017
+
 ---
-# lock-Anweisung (C#-Referenz)
-Das `lock`\-Schlüsselwort kennzeichnet einen Anweisungsblock als kritischen Abschnitt, indem die Sperre für gegenseitigen Ausschluss eines bestimmten Objekts ermittelt, eine Anweisung ausgeführt und die Sperre wieder aufgehoben wird.  Das folgende Beispiel enthält eine `lock`\-Anweisung.  
+# <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
+Das Schlüsselwort `lock` kennzeichnet einen Anweisungsblock als kritischen Abschnitt, indem es die sich gegenseitig ausschließende Sperre für ein gegebenes Objekt abruft, eine Anweisung ausführt und anschließend die Sperre aufhebt. Das folgende Beispiel enthält eine `lock`-Anweisung.  
   
 ```  
   
@@ -43,49 +61,49 @@ class Account
   
 ```  
   
- Weitere Informationen finden Sie unter [Threadsynchronisierung](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen finden Sie unter [Threadsynchronisierung](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4).  
   
-## Hinweise  
- Mit dem `lock`\-Schlüsselwort wird sichergestellt, dass ein Thread nicht auf einen kritischen Abschnitt des Codes zugreift, während ein anderer Thread mit diesem Codeabschnitt befasst ist.  Wenn ein anderer Thread versucht, auf gesperrten Code zuzugreifen, wartet er bis zur Freigabe des Objekts \(Blockierung\).  
+## <a name="remarks"></a>Hinweise  
+ Das Schlüsselwort `lock` stellt sicher, dass ein Thread keinen kritischen Abschnitt eines Codes betritt, während ein anderer Thread in diesem Abschnitt ist. Wenn ein anderer Thread versucht, auf einen gesperrten Code zuzugreifen, wartet er, sperrt, bis das Objekt freigegeben wird.  
   
- Im Abschnitt [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md) wird das Threading beschrieben.  
+ Der Abschnitt [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c) wird das Threading behandeln.  
   
- Das `lock`\-Schlüsselwort ruft <xref:System.Threading.Monitor.Enter%2A> am Anfang des Blocks und <xref:System.Threading.Monitor.Exit%2A> am Ende des Blocks auf.  <xref:System.Threading.ThreadInterruptedException> wird ausgelöst, wenn <xref:System.Threading.Thread.Interrupt%2A> einen Thread unterbrochen wird, der wartet, eine `lock`\-Anweisung einzugeben.  
+ Das Schlüsselwort `lock` ruft <xref:System.Threading.Monitor.Enter%2A> am Anfang des Blocks und <xref:System.Threading.Monitor.Exit%2A> am Ende des Blocks auf. Eine <xref:System.Threading.ThreadInterruptedException> wird ausgelöst, wenn <xref:System.Threading.Thread.Interrupt%2A> einen Thread unterbricht, der darauf wartet, auf eine `lock`-Anweisung zuzugreifen.  
   
- Vermeiden Sie es grundsätzlich, einen `public`\-Typ zu sperren oder Instanzen, die nicht durch Ihren Code gesteuert werden.  Die allgemeinen Konstrukte `lock (this)`, `lock (typeof (MyType))` und `lock ("myLock")` verstoßen gegen diese Richtlinie:  
+ Vermeiden Sie generell das Sperren eines `public`-Typs oder von Instanzen außerhalb der Kontrolle Ihres Codes. Die gemeinsamen Konstrukte `lock (this)`, `lock (typeof (MyType))` und `lock ("myLock")` verstoßen gegen diese Richtlinie:  
   
--   `lock (this)` ist problematisch, wenn auf die Instanz öffentlich zugegriffen werden kann.  
+-   `lock (this)` ist ein Problem, wenn auf die Instanz öffentlich zugegriffen werden kann.  
   
--   `lock (typeof (MyType))` ist problematisch, wenn `MyType` öffentlich zugreifbar ist.  
+-   `lock (typeof (MyType))` ist problematisch, wenn auf `MyType` öffentlich zugegriffen werden.  
   
--   `lock("myLock")` ist problematisch, weil jeder andere Code in diesem Prozess, der dieselbe Zeichenfolge verwendet, von derselben Sperre betroffen ist.  
+-   `lock("myLock")` ist problematisch, weil jeder andere Code in diesem Prozess, der die selbe Zeichenfolge verwendet, die gleiche Sperre teilt.  
   
- Es wird empfohlen, ein `private`\-Objekt zu definieren, das gesperrt werden soll, oder eine `private static`\-Objektvariable, um Daten zu schützen, die alle Instanzen gemeinsam nutzen.  
+ Eine bewährte Methode ist es, ein `private`-Objekt zum Sperren, oder eine `private static`-Objektvariable zu definieren, die Daten schützt, die in allen Instanzen häufig vorkommen.  
   
- Sie können das [Sie erwarten](../../../csharp/language-reference/keywords/await.md)\-Schlüsselwort im Text einer `lock`\-Anweisung verwenden.  
+ Sie können das Schlüsselwort [await](../../../csharp/language-reference/keywords/await.md) nicht im Text einer `lock`-Anweisung verwenden.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine einfache Verwendung von Threads ohne Sperren in C\# dargestellt:  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine einfache Verwendung von Threads ohne das Sperren in C# gezeigt.  
   
  [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
-## Beispiel  
- Im folgenden Beispiel werden Threads und `lock` verwendet.  Solange die `lock`\-Anweisung vorhanden ist, stellt der Anweisungsblock einen kritischen Abschnitt dar, und `balance` wird nie zu einer negativen Zahl.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden Threads und `lock` verwendet. Solange die `lock`-Anweisung vorhanden ist, ist der Anweisungsblock ein kritischer Abschnitt, und `balance` wird nie eine negative Zahl werden.  
   
  [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Reflection.MethodImplAttributes>   
  <xref:System.Threading.Mutex>   
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)   
- [Monitore](../Topic/Monitors.md)   
- [Interlocked Operations](../Topic/Interlocked%20Operations.md)   
- [AutoResetEvent](../Topic/AutoResetEvent.md)   
- [Threadsynchronisierung](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)
+ @System.Threading.Monitor   
+ [Interlocked-Vorgänge](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
+ [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
+ [Threadsynchronisierung](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)

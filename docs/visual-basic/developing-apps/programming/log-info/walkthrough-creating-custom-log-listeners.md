@@ -1,111 +1,127 @@
 ---
-title: "Walkthrough: Creating Custom Log Listeners (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom log listeners"
-  - "My.Application.Log object, custom log listeners"
+title: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- custom log listeners
+- My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Walkthrough: Creating Custom Log Listeners (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
+ms.lasthandoff: 03/13/2017
 
-In dieser exemplarische Vorgehensweise wird erläutert, wie Sie einen benutzerdefinierten Protokolllistener erstellen und so konfigurieren können, dass dieser die Ausgaben des `My.Application.Log`\-Objekts überwacht.  
+---
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
+Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefinierten Protokolllistener erstellen und ihn so konfigurieren, dass er der Ausgabe des `My.Application.Log`-Objekts lauscht.  
   
-## Erste Schritte  
- Protokolllistener müssen von der <xref:System.Diagnostics.TraceListener>\-Klasse erben.  
+## <a name="getting-started"></a>Erste Schritte  
+ Protokolllistener müssen von der Klasse <xref:System.Diagnostics.TraceListener> erben.  
   
-#### So erstellen Sie den Listener  
+#### <a name="to-create-the-listener"></a>So erstellen Sie den Listener  
   
--   Erstellen Sie in der Anwendung eine Klasse mit dem Namen `SimpleListener`, die von <xref:System.Diagnostics.TraceListener> erbt.  
+-   Erstellen Sie in Ihrer Anwendung eine Klasse mit dem Namen `SimpleListener`, die von <xref:System.Diagnostics.TraceListener> erbt.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     Die <xref:System.Diagnostics.TraceListener.Write%2A>\-Methode und die <xref:System.Diagnostics.TraceListener.WriteLine%2A>\-Methode, die für die Basisklasse erforderlich sind, rufen `MsgBox` auf, um die Eingaben für diese Methoden anzuzeigen.  
+     Die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A>, die von der Basisklasse benötigt werden, rufen `MsgBox` auf, um ihre Eingabe anzuzeigen.  
   
-     Das <xref:System.Security.Permissions.HostProtectionAttribute>\-Attribut wird auf die <xref:System.Diagnostics.TraceListener.Write%2A>\-Methode und die <xref:System.Diagnostics.TraceListener.WriteLine%2A>\-Methode angewendet, sodass deren Attribute den Methoden der Basisklasse entsprechen.  Durch das <xref:System.Security.Permissions.HostProtectionAttribute>\-Attribut kann der Host, auf dem der Code ausgeführt wird, ermitteln, dass der Code Hostschutzsynchronisierung verfügbar macht.  
+     Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> wird auf die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A> angewendet, sodass ihre Attribute den Methoden der Basisklasse entsprechen. Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> ermöglicht es dem Host, der den Code ausführt, zu bestimmen, ob der Code die Synchronisierung der Hostsicherheit verfügbar macht.  
   
     > [!NOTE]
-    >  Das <xref:System.Security.Permissions.HostProtectionAttribute>\-Attribut gilt nur für nicht verwaltete Anwendungen, bei denen die Common Language Runtime ausgeführt wird und die Hostschutz implementieren, z. B. SQL Server.  
+    >  Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> ist nur in nicht verwalteten Anwendungen effektiv, die die Common Language Runtime hosten und Hostschutz implementieren, z.B. SQL Server.  
   
- Geben Sie der Assembly, die den Protokolllistener enthält, einen starken Namen, um sicherzustellen, dass `My.Application.Log` den Protokolllistener verwendet.  
+ Sie sollten der Assembly, die Ihren Protokolllistener enthält, einen starken Namen geben, um sicherzustellen, dass `My.Application.Log` Ihren Protokolllistener verwendet.  
   
- Im nächsten Verfahren werden einige einfache Schritte für das Erstellen einer Protokolllistenerassembly mit starkem Namen aufgeführt.  Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md).  
+ Im nächste Verfahren finden Sie einige einfache Schritte zum Erstellen einer Assembly mit starkem Namen und Protokolllistener. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617).  
   
-#### So weisen Sie der Protokolllistenerassembly einen starken Namen zu  
+#### <a name="to-strongly-name-the-log-listener-assembly"></a>So geben Sie der Assembly mit Protokolllistener einen starken Namen  
   
-1.  Wählen Sie im **Projektmappen\-Explorer** ein Projekt aus.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  Weitere Informationen finden Sie unter [Introduction to the Project Designer](http://msdn.microsoft.com/de-de/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
   
 2.  Klicken Sie auf die Registerkarte **Signierung**.  
   
-3.  Wählen Sie das Feld **Assembly signieren** aus.  
+3.  Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.  
   
-4.  Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** die Option **\<Neu\>** aus.  
+4.  Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** **\<Neu>** aus.  
   
      Das Dialogfeld **Schlüssel für einen starken Namen erstellen** wird geöffnet.  
   
-5.  Geben Sie im Feld **Schlüsseldateiname** einen Namen für die Schlüsseldatei an.  
+5.  Geben Sie einen Namen für die Schlüsseldatei im Feld **Schlüsseldateiname** ein.  
   
-6.  Geben Sie in den Feldern **Kennwort eingeben** und **Kennwort bestätigen** ein Kennwort ein.  
+6.  Geben Sie in die Felder **Kennwort eingeben** und **Kennwort bestätigen** ein Kennwort ein.  
   
 7.  Klicken Sie auf **OK**.  
   
 8.  Erstellen Sie die Anwendung neu.  
   
-## Hinzufügen des Listeners  
- Da die Assembly jetzt über einen starken Namen verfügt, müssen Sie den starken Namen des Listeners ermitteln, damit `My.Application.Log` den Protokolllistener verwendet.  
+## <a name="adding-the-listener"></a>Hinzufügen des Listeners  
+ Da die Assembly jetzt über einen starken Namen verfügt, müssen Sie den starken Namen des Listeners bestimmen, damit `My.Application.Log` Ihren Protokolllistener verwendet.  
   
- Das Format eines Typs mit starkem Namen ist wie folgt.  
+ Das Format für einen Typ mit starkem Namen ist wie folgt.  
   
- \<Typname\>, \<Assemblyname\>, \<Versionsnummer\>, \<Kultur\>, \<starker Name\>  
+ \<Typname>, \<Assemblyname>, \<Versionsnummer>, \<Kultur>, \<starker Name>  
   
-#### So bestimmen Sie den starken Namen des Listeners  
+#### <a name="to-determine-the-strong-name-of-the-listener"></a>So bestimmen Sie den starken Namen des Listeners  
   
--   Im folgenden Code wird gezeigt, wie der Name des Typs mit starkem Namen für `SimpleListener` bestimmt wird.  
+-   Im folgenden Code wird gezeigt, wie Sie den Namen für den Typ mit starkem Namen für `SimpleListener` bestimmen.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
-     Der starke Name des Typs hängt vom Projekt ab.  
+     Der starke Name des Typs hängt von Ihrem Projekt ab.  
   
- Mithilfe des starken Namens können Sie den Listener der `My.Application.Log`\-Protokolllistenerauflistung hinzufügen.  
+ Sie können mit dem starken Namen den Listener zur `My.Application.Log`-Auflistung der Protokolllistener hinzufügen.  
   
-#### So fügen Sie den Listener My.Application.Log hinzu  
+#### <a name="to-add-the-listener-to-myapplicationlog"></a>So fügen Sie den Listener zu „My.Application.Log“ hinzu  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf app.config, und wählen Sie **Öffnen**.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
   
-     \- oder \-  
+     - oder -   
   
-     Wenn eine app.config\-Datei vorhanden ist:  
+     Wenn eine app.config-Datei vorhanden ist:  
   
     1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Anwendungskonfigurationsdatei**.  
+    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
     3.  Klicken Sie auf **Hinzufügen**.  
   
-2.  Suchen Sie im `<source>`\-Abschnitt mit dem `name`\-Attribut "DefaultSource" \(innerhalb des `<sources>`\-Abschnitts\) den `<listeners>`\-Abschnitt.  Der `<sources>`\-Abschnitt befindet sich im `<system.diagnostics>`\-Abschnitt \(innerhalb des `<configuration>`\-Abschnitts auf der obersten Ebene\).  
+2.  Suchen Sie den `<listeners>` -Abschnitt, der sich im `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` befindet. Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-3.  Fügen Sie dem `<listeners>`\-Abschnitt dieses Element hinzu:  
+3.  Fügen Sie dem Abschnitt `<listeners>` dieses Element hinzu:  
   
     ```  
     <add name="SimpleLog" />  
     ```  
   
-4.  Suchen Sie den `<sharedListeners>`\-Abschnitt im `<system.diagnostics>`\-Abschnitt im `<configuration>`\-Abschnitt auf der obersten Ebene.  
+4.  Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-5.  Fügen Sie diesem `<sharedListeners>`\-Abschnitt dieses Element hinzu:  
+5.  Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
   
     ```  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -113,9 +129,9 @@ In dieser exemplarische Vorgehensweise wird erläutert, wie Sie einen benutzerde
   
      Ändern Sie den Wert von `SimpleLogStrongName` in den starken Namen des Listeners.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
- [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Exemplarische Vorgehensweise: Ändern des Ortes, in den "My.Application.Log" Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+ [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
+ [Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
+ [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

@@ -1,69 +1,87 @@
 ---
-title: "double (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "double"
-  - "double_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "double-Datentyp [C#]"
+title: double (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- double
+- double_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ccdd29c78a3cdc9d32fa08b1be94eecd717418fc
+ms.lasthandoff: 03/13/2017
+
 ---
-# double (C#-Referenz)
-Das Schlüsselwort `double` kennzeichnet einen einfachen Typ, in dem 64\-Bit\-Gleitkommawerte gespeichert werden.  Der folgenden Tabelle können Sie die Genauigkeit und den ungefähren Bereich des `double`\-Typs entnehmen.  
+# <a name="double-c-reference"></a>double (C#-Referenz)
+Das `double`-Schlüsselwort kennzeichnet einen einfachen Typ, der 64-Bit-Gleitkommawerte speichert. Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für den `double`-Typ an.  
   
-|Typ|Ungefährer Bereich|Genauigkeit|.NET Framework\-Typ|  
-|---------|------------------------|-----------------|-------------------------|  
-|`double`|±5.0 × 10<sup>−324</sup> bis ±1.7 × 10<sup>308</sup>|15\-16 Stellen|<xref:System.Double?displayProperty=fullName>|  
+|Typ|Ungefährer Bereich|Genauigkeit|.NET Framework-Typ|  
+|----------|-----------------------|---------------|-------------------------|  
+|`double`|±5.0 × 10<sup>−324</sup> zu ±1.7 × 10<sup>308</sup>|15-16 Ziffern|<xref:System.Double?displayProperty=fullName>|  
   
-## Literale  
- Ein echtes numerisches Literal auf der rechten Seite des Zuweisungsoperators wird standardmäßig als `double`\-Typ behandelt.  Wenn dagegen eine ganze Zahl als `double` behandelt werden soll, verwenden Sie das Suffix d oder D. Beispiel:  
+## <a name="literals"></a>Literale  
+ Ein echtes numerisches Literal auf der rechten Seite des Zuweisungsoperators wird standardmäßig als `double` behandelt. Aber wenn Sie eine ganze Zahl als `double` behandeln möchten, verwenden Sie das Suffix d oder D, beispielsweise:  
   
 ```  
   
 double x = 3D;  
 ```  
   
-## Konvertierungen  
- Numerische ganzzahlige Typen und Gleitkommatypen können zusammen in einem Ausdruck verwendet werden.  In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert.  Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:  
+## <a name="conversions"></a>Konvertierungen  
+ Sie können numerische ganzzahlige Typen und Gleitkommatypen in einem Ausdruck kombinieren. In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert. Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:  
   
--   Wenn einer der Gleitkommatypen `double` lautet, wird der Ausdruck als `double` bzw. bei relationalen oder booleschen Ausdrücken als [bool](../../../csharp/language-reference/keywords/bool.md) ausgewertet.  
+-   Wenn einer der Gleitkommatypen `double` ist, ergibt der Ausdruck `double`, oder [bool](../../../csharp/language-reference/keywords/bool.md) in relationalen oder booleschen Ausdrücken.  
   
--   Wenn der Ausdruck keinen `double`\-Typ enthält, wird er als [float](../../../csharp/language-reference/keywords/float.md) \(bzw. im Fall relationaler oder boolescher Ausdrücke als [bool](../../../csharp/language-reference/keywords/bool.md)\) ausgewertet.  
+-   Wenn es im Ausdruck keinen `double`-Typ gibt, ergibt der es [float](../../../csharp/language-reference/keywords/float.md), oder [bool](../../../csharp/language-reference/keywords/bool.md) in relationalen oder booleschen Ausdrücken.  
   
- Ein Gleitkommaausdruck kann die folgenden Wertgruppen enthalten:  
+ Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:  
   
--   Positive und negative Null.  
+-   Positive und negative null  
   
--   Positive und negative Unendlichkeit.  
+-   Positive und negative Infinity  
   
--   Nicht numerischer Wert \(NaN, Not a Number\).  
+-   Not-a-Number-Wert (NaN)  
   
--   Endliche Menge von Werten ungleich 0 \(null\).  
+-   Die begrenzte Menge von Werten ungleich Null  
   
- Weitere Informationen zu diesen Werten finden Sie im IEEE\-Standard für binäre Gleitkommaarithmetik auf der Website .  
+ Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269)-Website.  
   
-## Beispiel  
- Im folgenden Beispiel werden die Typen [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md), [float](../../../csharp/language-reference/keywords/float.md) und `double` addiert, was zu einem `double`\-Ergebnis führt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden ein [int](../../../csharp/language-reference/keywords/int.md), ein [short](../../../csharp/language-reference/keywords/short.md),ein [float](../../../csharp/language-reference/keywords/float.md) und ein `double` zusammen addiert, was ein `double`-Ergebnis ergibt.  
   
  [!code-cs[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)   
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)   

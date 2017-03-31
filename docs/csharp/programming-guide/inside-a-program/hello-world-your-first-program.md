@@ -1,68 +1,86 @@
 ---
-title: "Hello World – Ihr erstes Programm (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "cs.program"
-  - "vs.csharp.startpage.firstapplication"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Beispiele [C#], Hello World"
-  - "Hello World (Beispiel) [C#]"
+title: "Hello World – Ihr erstes Programm (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: get-started-article
+f1_keywords:
+- cs.program
+- vs.csharp.startpage.firstapplication
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- examples [C#], Hello World
+- Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: 39
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 39
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7ca42afd69e814ce448bfea97c2dbf480830a74a
+ms.lasthandoff: 03/13/2017
+
 ---
-# Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
-Mit der folgenden Prozedur wird eine C\#\-Version des herkömmlichen "Hello World\!"\-Programms erstellt.  Das Programm zeigt die Zeichenfolge `Hello World!` an.  
+# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
+Mit der folgenden Prozedur wird eine C#-Version des herkömmlichen  Programms „Hello World!“ erstellt. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
   
- Weitere Beispiele von einführenden Konzepten, finden Sie unter [Erste Schritte mit Visual C\# und Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic).  
+ Weitere Beispiele zu einführenden Konzepten finden Sie unter [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### So erstellen Sie eine neue Konsolenanwendung und führen diese aus  
+### <a name="to-create-and-run-a-console-application"></a>So erstellen Sie eine neue Konsolenanwendung und führen diese aus  
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt** aus.  
+2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Erweitern Sie nacheinander **Installiert**, **Vorlagen**, **Visual C\#**, und wählen Sie dann **Konsolenanwendung** aus.  
+3.  Erweitern Sie nacheinander **Installiert**, **Vorlagen**, **Visual C#**, und wählen Sie dann **Konsolenanwendung** aus.  
   
 4.  Geben Sie im Feld **Name** einen Namen für das Projekt an, und klicken Sie dann auf die Schaltfläche **OK**.  
   
-     Das neue Projekt wird im **Projektmappen\-Explorer** angezeigt.  
+     Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-5.  Wenn Program.cs im **Code\-Editor** nicht geöffnet ist, öffnen Sie im **Projektmappen\-Explorer** das Kontextmenü für **Program.cs**, und wählen Sie dann **Code anzeigen** aus.  
+5.  Wenn „Program.cs“ im **Code-Editor** nicht geöffnet ist, öffnen Sie das Kontextmenü für **Program.cs** im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen** aus.  
   
 6.  Ersetzen Sie den Inhalt von Program.cs durch den folgenden Code.  
   
      [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  Drücken Sie die Taste F5, um das Projekt auszuführen.  Ein Eingabeaufforderungsfenster wird angezeigt, das die Zeile `Hello World!` enthält  
+7.  Drücken Sie die Taste F5, um das Projekt auszuführen. Ein Eingabeaufforderungsfenster wird angezeigt, das die Zeile `Hello World!` enthält  
   
  Im nächsten Schritt werden die wichtigen Bereiche des Programms überprüft.  
   
-## Kommentare  
- Die erste Zeile enthält einen Kommentar.  Durch die Zeichen `//` wird die restliche Zeile in einen Kommentar konvertiert.  
+## <a name="comments"></a>Kommentare  
+ Die erste Zeile enthält einen Kommentar. Durch die Zeichen `//` wird die restliche Zeile in einen Kommentar konvertiert.  
   
  [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
- Sie können auch einen Kommentar aus einem Textblock einfügen, indem Sie ihn zwischen den Zeichen `/*` und `*/` einschließen.  Dies wird im folgenden Beispiel gezeigt.  
+ Sie können auch einen Kommentar aus einem Textblock einfügen, indem Sie ihn zwischen den Zeichen `/*` und `*/` einschließen. Dies wird im folgenden Beispiel gezeigt.  
   
  [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
-## Die 'Main'\-Methode  
- Eine C\#\-Konsolenanwendung muss eine `Main`\-Methode enthalten, in der die Steuerung beginnt und endet.  Innerhalb der `Main`\-Methode erstellen Sie Objekte und führen andere Methoden aus.  
+## <a name="main-method"></a>Die 'Main'-Methode  
+ Eine C#-Konsolenanwendung muss eine `Main`-Methode enthalten, in der die Steuerung beginnt und endet. Innerhalb der `Main`-Methode erstellen Sie Objekte und führen andere Methoden aus.  
   
- Bei der `Main`\-Methode handelt es sich um eine [Statische](../../../csharp/language-reference/keywords/static.md)\-Methode, die sich innerhalb einer Klasse oder Struktur befindet.  Im vorherigen Beispiel "Hello World\!" befindet sie sich in der `Hello`\-Klasse.  Sie können die `Main`\-Methode auf eine der folgenden Arten deklarieren:  
+ Bei der `Main`-Methode handelt es sich um eine [statische](../../../csharp/language-reference/keywords/static.md) Methode, die sich innerhalb einer Klasse oder Struktur befindet. Im vorherigen „Hello World!“ -Beispiel befindet es sich innerhalb einer Klasse namens `Hello`. Sie können die `Main`-Methode auf eine der folgenden Arten deklarieren:  
   
 -   Es kann `void` zurückgegeben werden.  
   
@@ -76,45 +94,45 @@ Mit der folgenden Prozedur wird eine C\#\-Version des herkömmlichen "Hello Worl
   
      [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
-     \-oder\-  
+     - oder -   
   
      [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
- Der Parameter der `Main`\-Methode, `args`, ist ein `string`\-Array, das die Befehlszeilenargumente enthält, die zum Aufrufen des Programms verwendet werden.  Im Gegensatz zu C\+\+ enthält dieses Array nicht den Namen der ausführbaren Datei \(EXE\).  
+ Der Parameter der `Main`-Methode, `args`, ist ein `string`-Array, das die Befehlszeilenargumente enthält, die zum Aufrufen des Programms verwendet werden. Im Gegensatz zu C++ enthält dieses Array nicht den Namen der ausführbaren Datei (EXE).  
   
- Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie in den Beispielen unter [Main\(\) und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md) und [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie unter [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md) und [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
- Der Aufruf von <xref:System.Console.ReadKey%2A> am Ende der `Main`\-Methode verhindert, dass das Konsolenfenster geschlossen wird, bevor Sie die Ausgabe lesen können, wenn Sie das Programm durch Drücken von F5 im Debugmodus ausführen.  
+ Der Aufruf von <xref:System.Console.ReadKey%2A> am Ende der `Main`-Methode verhindert, dass das Konsolenfenster geschlossen wird, bevor Sie die Ausgabe lesen können, wenn Sie das Programm durch Drücken von F5 im Debugmodus ausführen.  
   
-## Eingabe und Ausgabe  
- C\#\-Programme verwenden im Allgemeinen die Eingabe\-\/Ausgabedienste der Laufzeitbibliothek von .NET Framework.  Die Anweisung `System.Console.WriteLine("Hello World!");` verwendet die <xref:System.Console.WriteLine%2A>\-Methode.  Dies ist eine der Ausgabemethoden der <xref:System.Console>\-Klasse in der Laufzeit\-Bibliothek.  Bei dieser Methode wird der Zeichenfolgenparameter für den Standardausgabestream gefolgt von einer neuen Zeile angezeigt.  Für andere Eingabe\-\/Ausgabevorgänge sind andere <xref:System.Console>\-Methoden verfügbar.  Wenn Sie die `using System;`\-Direktive am Anfang des Programms einfügen, können Sie die <xref:System>\-Klassen und \-Methoden direkt verwenden, ohne sie voll zu qualifizieren.  Zum Beispiel können Sie `Console.WriteLine` statt `System.Console.WriteLine` aufrufen:  
+## <a name="input-and-output"></a>Eingabe und Ausgabe  
+ C#-Programme verwenden im Allgemeinen die Eingabe-/Ausgabedienste der Laufzeitbibliothek von .NET Framework. Die Anweisung `System.Console.WriteLine("Hello World!");` verwendet die Methode <xref:System.Console.WriteLine%2A>. Dies ist eine der Ausgabemethoden der <xref:System.Console>-Klasse in der Laufzeitbibliothek. Bei dieser Methode wird der Zeichenfolgenparameter für den Standardausgabestream gefolgt von einer neuen Zeile angezeigt. Für andere Eingabe-/Ausgabevorgänge sind andere <xref:System.Console>-Methoden verfügbar. Wenn Sie die `using System;`-Direktive am Anfang des Programms einfügen, können Sie die <xref:System>-Klassen und -Methoden direkt verwenden, ohne sie voll zu qualifizieren. Zum Beispiel können Sie `Console.WriteLine` statt `System.Console.WriteLine` aufrufen:  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
  [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
- Weitere Informationen zu Eingabe\-\/Ausgabemethoden finden Sie unter <xref:System.IO>.  
+ Weitere Informationen zu Eingabe-/Ausgabemethoden finden Sie unter <xref:System.IO>.  
   
-## Befehlszeilenkompilierung und \-ausführung  
- Sie können das Programm "Hello, World\!" über die Befehlszeile statt mit der integrierten Entwicklungsumgebung \(IDE\) von Visual Studio kompilieren.  
+## <a name="command-line-compilation-and-execution"></a>Befehlszeilenkompilierung und -ausführung  
+ Sie können das Programm „Hello, World!“ über die Befehlszeile statt mit der integrierten Entwicklungsumgebung (IDE) von Visual Studio kompilieren.  
   
-#### So funktionieren Kompilierungsvorgänge und Ausführungen von einer Eingabeaufforderung aus  
+#### <a name="to-compile-and-run-from-a-command-prompt"></a>So funktionieren Kompilierungsvorgänge und Ausführungen von einer Eingabeaufforderung aus  
   
-1.  Fügen Sie den Code aus der vorherigen Prozedur in einem beliebigen Text\-Editor ein, und speichern Sie die Datei als Textdatei.  Nennen Sie die Datei `Hello.cs`.  C\#\-Quellcodedateien weisen die Erweiterung `.cs` auf.  
+1.  Fügen Sie den Code aus der vorherigen Prozedur in einem beliebigen Text-Editor ein, und speichern Sie die Datei als Textdatei. Nennen Sie die Datei `Hello.cs`. C#-Quellcodedateien weisen die Erweiterung `.cs` auf.  
   
 2.  Führen Sie einen der folgenden Schritte aus, um ein Eingabeaufforderungsfenster zu öffnen:  
   
-    -   Suchen Sie in Windows 8 auf dem Bildschirm **Start** nach `Entwickler-Eingabeaufforderung`, und wählen Sie dann **Developer\-Eingabeaufforderung für VS2012** aus.  
+    -   Suchen Sie in Windows 8 auf dem **Startbildschirm** nach `Developer Command Prompt`, und wählen Sie dann **Developer-Eingabeaufforderung für VS2012** aus.  
   
-         Ein Entwickler\-Eingabeaufforderungsfenster wird angezeigt.  
+         Ein Entwickler-Eingabeaufforderungsfenster wird angezeigt.  
   
-    -   Öffnen Sie in Windows 7 das Menü **Start**, erweitern Sie den Ordner für die aktuelle Version von Visual Studio, öffnen Sie das Kontextmenü für **Visual Studio\-Tools**, und wählen Sie dann **Developer\-Eingabeaufforderung für VS2012** aus.  
+    -   Öffnen Sie in Windows 7 das **Startmenü**, erweitern Sie den Ordner der aktuellen Version von Visual Studio, öffnen Sie das Kontextmenü für **Visual Studio-Tools**, und wählen Sie dann **Developer-Eingabeaufforderung für VS2012** aus.  
   
-         Ein Entwickler\-Eingabeaufforderungsfenster wird angezeigt.  
+         Ein Entwickler-Eingabeaufforderungsfenster wird angezeigt.  
   
     -   Aktivieren Sie Befehlszeilenbuilds von einem Standardeingabeaufforderungsfenster.  
   
-         Siehe [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  Navigieren Sie im Eingabeaufforderungsfenster zu dem Ordner, der die Datei `Hello.cs` enthält.  
   
@@ -128,16 +146,16 @@ Mit der folgenden Prozedur wird eine C\#\-Version des herkömmlichen "Hello Worl
   
      `Hello`  
   
- Weitere Informationen über den C\#\-Compiler und seine Optionen finden Sie unter [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md).  
+ Weitere Informationen über den C#-Compiler und seine Optionen finden Sie unter [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md).  
   
-## Enthaltenes Buchkapitel  
- [Schreiben eines C\#\-Programms](http://go.microsoft.com/fwlink/?LinkId=221227) im Buch zum [Einstieg in Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
+## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
+ [Writing a C# Program](http://go.microsoft.com/fwlink/?LinkId=221227) im Buch [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Einblicke in ein C\#\-Programm](../../../csharp/programming-guide/inside-a-program/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)   
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover\>C\# Sample Applications](http://msdn.microsoft.com/de-de/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [Main\(\) und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md)   
- [Erste Schritte mit Visual C\# und Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
