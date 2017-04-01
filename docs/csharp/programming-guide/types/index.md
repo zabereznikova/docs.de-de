@@ -36,9 +36,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5fbd7c5e08d862f079e0596cbe394afd0538bccc
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 61f23020b8a5dd0136d54e0a2ceb925bebca88cc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
@@ -202,9 +202,7 @@ stringList.Add(4);
 -   [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
 -   [Generika](../../../csharp/programming-guide/generics/index.md)  
-  
--   [Variablen und Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=221228) in [Einstieg in Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
+
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
