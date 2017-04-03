@@ -1,0 +1,271 @@
+---
+title: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3434dc4b13295101970fd4aadb69d56ddbca7142
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
+Wenn Sie die Methode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> zusammen mit einem <xref:System.Threading.CancellationToken> verwenden, können Sie alle verbleibenden Aufgaben nach dem Abschluss einer Aufgabe abbrechen. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.  
+  
+ In diesem Beispiel wird veranschaulicht, wie ein Abbruchtoken in Verbindung mit `WhenAny` verwendet wird, um an der ersten Aufgabe festzuhalten, die in der Auflistung von Aufgaben beendet wird, und die übrigen Aufgaben abzubrechen. Jede Aufgabe lädt den Inhalt einer Website herunter. Im Beispiel wird die Länge des Inhalts des ersten abgeschlossenen Downloads angezeigt und die anderen Downloads abgebrochen.  
+  
+> [!NOTE]
+>  Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
+  
+## <a name="downloading-the-example"></a>Herunterladen des Beispiels  
+ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen und anschließend die folgenden Schritte ausführen.  
+  
+1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
+  
+2.  Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
+  
+3.  Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.  
+  
+4.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das **CancelAfterOneTask**-Projekt, und wählen Sie dann **Als Startprojekt festlegen** aus.  
+  
+5.  Drücken Sie die Taste F5, um das Projekt auszuführen.  
+  
+     Drücken Sie STRG+F5, um das Projekt auszuführen, ohne es zu debuggen.  
+  
+6.  Führen Sie das Programm mehrmals aus, um zu überprüfen, dass unterschiedliche Downloads als erste beendet werden.  
+  
+ Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich die Dateien „MainWindow.xaml.vb“ und „MainWindow.xaml.cs“ am Ende dieses Themas anschauen.  
+  
+## <a name="building-the-example"></a>Erstellen des Beispiels  
+ Das Beispiel in diesem Thema baut auf dem Projekt auf, das unter [Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) entwickelt wurde, um eine Aufgabenliste abzubrechen. Im Beispiel wird die gleiche UI verwendet, obwohl die Schaltfläche **Abbrechen** nicht explizit verwendet wird.  
+  
+ Um das Beispiel selbst schrittweise zu erstellen, befolgen Sie die Anweisungen im Abschnitt „Herunterladen des Beispiels“. Wählen Sie als **Startprojekt** aber **CancelAListOfTasks** aus. Fügen Sie diesem Projekt die Änderungen in diesem Thema hinzu.  
+  
+ Starten Sie in der Datei „MainWindow.xaml.cs“ des **CancelAListOfTasks**-Projekts den Übergang, indem Sie die Verarbeitungsschritte für jede Website von der Schleife in `AccessTheWebAsync` zur folgenden asynchronen Methode verschieben.  
+  
+```cs  
+/ ***Bundle the processing steps for a website into one async method.  
+async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
+{  
+    // GetAsync returns a Task<HttpResponseMessage>.   
+    HttpResponseMessage response = await client.GetAsync(url, ct);  
+  
+    // Retrieve the website contents from the HttpResponseMessage.  
+    byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
+  
+    return urlContents.Length;  
+}  
+```  
+  
+ In `AccessTheWebAsync` wird in diesem Beispiel eine Abfrage, die <xref:System.Linq.Enumerable.ToArray%2A>-Methode und die `WhenAny`-Methode verwendet, um ein Array von Aufgaben zu erstellen und zu starten. Die Anwendung von `WhenAny` auf den Array gibt eine einzelne Aufgabe zurück, die, wenn sie erwartet wird, zur ersten Aufgabe auswertet wird, die im Array von Aufgaben zum Abschluss kommt.  
+  
+ Nehmen Sie in `AccessTheWebAsync` die folgenden Änderungen vor. Die Änderungen in der Codedatei sind mit Sternchen gekennzeichnet.  
+  
+1.  Kommentieren Sie die Schleife aus oder löschen Sie sie.  
+  
+2.  Erstellen Sie eine Abfrage, die eine Auflistung generischer Aufgaben erstellt, wenn sie ausgeführt wird. Jeder Aufruf an `ProcessURLAsync` gibt <xref:System.Threading.Tasks.Task%601> zurück, wobei `TResult` eine Ganzzahl ist.  
+  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+3.  Rufen Sie `ToArray` auf, um die Abfrage auszuführen und die Aufgaben zu starten. Die Anwendung der `WhenAny`-Methode im nächsten Schritt würde die Abfrage ohne `ToArray` ausführen und die Aufgaben starten, bei anderen Methoden ist dies möglicherweise nicht der Fall. Die sicherste Methode besteht darin, die Ausführung der Abfrage explizit zu erzwingen.  
+  
+<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+4.  Rufen Sie `WhenAny` mit der Auflistung von Aufgaben auf. `WhenAny` gibt `Task(Of Task(Of Integer))` oder `Task<Task<int>>` zurück.  Das bedeutet, dass `WhenAny` eine Aufgabe zurückgibt, die zu einem einzelnen `Task(Of Integer)` oder `Task<int>` ausgewertet wird, wenn sie erwartet wird. Diese einzelne Aufgabe ist die erste Aufgabe in der Auflistung, die beendet wird. Die Aufgabe, die als erste beendet wird, wird `firstFinishedTask` zugewiesen. Der Typ von `firstFinishedTask` ist <xref:System.Threading.Tasks.Task%601>, wobei `TResult` eine Ganzzahl ist, da dies der Rückgabetyp von `ProcessURLAsync` ist.  
+  
+    ```cs  
+    // ***Call WhenAny and then await the result. The task that finishes   
+    // first is assigned to firstFinishedTask.  
+    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
+    ```  
+  
+5.  In diesem Beispiel sind Sie nur an der Aufgabe interessiert, die zuerst beendet wird. Deshalb sollten Sie <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> verwenden, um die verbleibenden Aufgaben abzubrechen.  
+  
+    ```cs  
+    // ***Cancel the rest of the downloads. You just want the first one.  
+    cts.Cancel();  
+    ```  
+  
+6.  Schließlich warten Sie ab, dass `firstFinishedTask` die Länge des heruntergeladenen Inhalts abruft.  
+  
+    ```cs  
+    var length = await firstFinishedTask;  
+    resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+    ```  
+  
+ Führen Sie das Programm mehrmals aus, um zu überprüfen, dass unterschiedliche Downloads als erste beendet werden.  
+  
+## <a name="complete-example"></a>Vollständiges Beispiel  
+ Der folgende Code besteht aus der vollständigen Datei „MainWindow.xaml.cs“ für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden.  
+  
+ Beachten Sie, dass Sie einen Verweis auf <xref:System.Net.Http> hinzufügen müssen.  
+  
+ Sie können das Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
+  
+```cs  
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+using System.Threading.Tasks;  
+using System.Windows;  
+using System.Windows.Controls;  
+using System.Windows.Data;  
+using System.Windows.Documents;  
+using System.Windows.Input;  
+using System.Windows.Media;  
+using System.Windows.Media.Imaging;  
+using System.Windows.Navigation;  
+using System.Windows.Shapes;  
+  
+// Add a using directive and a reference for System.Net.Http.  
+using System.Net.Http;  
+  
+// Add the following using directive.  
+using System.Threading;  
+  
+namespace CancelAfterOneTask  
+{  
+    public partial class MainWindow : Window  
+    {  
+        // Declare a System.Threading.CancellationTokenSource.  
+        CancellationTokenSource cts;  
+  
+        public MainWindow()  
+        {  
+            InitializeComponent();  
+        }  
+  
+        private async void startButton_Click(object sender, RoutedEventArgs e)  
+        {  
+            // Instantiate the CancellationTokenSource.  
+            cts = new CancellationTokenSource();  
+  
+            resultsTextBox.Clear();  
+  
+            try  
+            {  
+                await AccessTheWebAsync(cts.Token);  
+                resultsTextBox.Text += "\r\nDownload complete.";  
+            }  
+            catch (OperationCanceledException)  
+            {  
+                resultsTextBox.Text += "\r\nDownload canceled.";  
+            }  
+            catch (Exception)  
+            {  
+                resultsTextBox.Text += "\r\nDownload failed.";  
+            }  
+  
+            // Set the CancellationTokenSource to null when the download is complete.  
+            cts = null;  
+        }  
+  
+        // You can still include a Cancel button if you want to.  
+        private void cancelButton_Click(object sender, RoutedEventArgs e)  
+        {  
+            if (cts != null)  
+            {  
+                cts.Cancel();  
+            }  
+        }  
+  
+        // Provide a parameter for the CancellationToken.  
+        async Task AccessTheWebAsync(CancellationToken ct)  
+        {  
+            HttpClient client = new HttpClient();  
+  
+            // Call SetUpURLList to make a list of web addresses.  
+            List<string> urlList = SetUpURLList();  
+  
+            // ***Comment out or delete the loop.  
+            //foreach (var url in urlList)  
+            //{  
+            //    // GetAsync returns a Task<HttpResponseMessage>.   
+            //    // Argument ct carries the message if the Cancel button is chosen.   
+            //    // ***Note that the Cancel button can cancel all remaining downloads.  
+            //    HttpResponseMessage response = await client.GetAsync(url, ct);  
+  
+            //    // Retrieve the website contents from the HttpResponseMessage.  
+            //    byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
+  
+            //    resultsTextBox.Text +=  
+            //        String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);  
+            //}  
+  
+            // ***Create a query that, when executed, returns a collection of tasks.  
+            IEnumerable<Task<int>> downloadTasksQuery =  
+                from url in urlList select ProcessURLAsync(url, client, ct);  
+  
+            // ***Use ToArray to execute the query and start the download tasks.   
+            Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
+  
+            // ***Call WhenAny and then await the result. The task that finishes   
+            // first is assigned to firstFinishedTask.  
+            Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
+  
+            // ***Cancel the rest of the downloads. You just want the first one.  
+            cts.Cancel();  
+  
+            // ***Await the first completed task and display the results.   
+            // Run the program several times to demonstrate that different  
+            // websites can finish first.  
+            var length = await firstFinishedTask;  
+            resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+        }  
+  
+        // ***Bundle the processing steps for a website into one async method.  
+        async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
+        {  
+            // GetAsync returns a Task<HttpResponseMessage>.   
+            HttpResponseMessage response = await client.GetAsync(url, ct);  
+  
+            // Retrieve the website contents from the HttpResponseMessage.  
+            byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
+  
+            return urlContents.Length;  
+        }  
+  
+        // Add a method that creates a list of web addresses.  
+        private List<string> SetUpURLList()  
+        {  
+            List<string> urls = new List<string>   
+            {   
+                "http://msdn.microsoft.com",  
+                "http://msdn.microsoft.com/library/hh290138.aspx",  
+                "http://msdn.microsoft.com/library/hh290140.aspx",  
+                "http://msdn.microsoft.com/library/dd470362.aspx",  
+                "http://msdn.microsoft.com/library/aa578028.aspx",  
+                "http://msdn.microsoft.com/library/ms404677.aspx",  
+                "http://msdn.microsoft.com/library/ff730837.aspx"  
+            };  
+            return urls;  
+        }  
+    }  
+    // Sample output:  
+  
+    // Length of the downloaded website:  158856  
+  
+    // Download complete.  
+}  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>   
+ [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
+ [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)

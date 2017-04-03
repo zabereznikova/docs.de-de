@@ -31,7 +31,7 @@ Die `using`-Anweisung in C# und die `Using`-Anweisung in Visual Basic vereinfach
 
 Im folgenden Beispiel wird die `using`-Anweisung verwendet, um ein [System.IO.StreamReader](xref:System.IO.StreamReader)-Objekt zu erstellen und freizugeben.
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -77,7 +77,7 @@ End Module
 
 Beachten Sie Folgendes: Obwohl die [StreamReader](xref:System.IO.StreamReader)-Klasse die [IDisposable](xref:System.IDisposable)-Schnittstelle implementiert, die angibt, dass sie eine nicht verwaltete Ressource verwendet, wird in dem Beispiel nicht explizit die [StreamReader.Dispose](xref:System.IO.StreamReader.Dispose(System.Boolean))-Methode aufgerufen. Wenn der C#- oder Visual Basic-Compiler die `using`-Anweisung findet, gibt er Zwischensprache (Intermediate Language, IL) aus, die dem folgenden Code entspricht, der explizit einen `try/finally`-Block enthält. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -134,7 +134,7 @@ End Module
 
 Mit der `using`-Anweisung in C# können Sie auch mehrere Ressourcen in einer einzigen Anweisung abrufen. Intern entspricht dies geschachtelten using-Anweisungen. Im folgenden Beispiel werden zwei [StreamReader](xref:System.IO.StreamReader)-Objekte instanziiert, um den Inhalt von zwei verschiedenen Dateien zu lesen. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -171,7 +171,7 @@ Anstatt einen `try/finally`-Block in einer `using`-Anweisung zu umschließen, ha
 
 Das folgende Beispiel ähnelt dem vorhergehenden, es wird jedoch ein `try/catch/finally`-Block verwendet, um ein [StreamReader](xref:System.IO.StreamReader)-Objekt zu instanziieren, zu verwenden und zu verwerfen und um alle Ausnahmen zu behandeln, die vom [StreamReader](xref:System.IO.StreamReader)-Konstruktor und dessen [ReadToEnd](xref:System.IO.StreamReader.ReadToEnd)-Methode ausgelöst werden. Beachten Sie, dass der Code im `finally`-Block überprüft, ob das Objekt, das [IDisposable](xref:System.IDisposable) implementiert, nicht `null` ist, bevor die [Dispose](xref:System.IDisposable.Dispose)-Methode aufgerufen wird. Wird dies nicht ausgeführt, kann es zu einer [NullReferenceException](xref:System.NullReferenceException)-Ausnahme zur Laufzeit kommen. 
 
-```cs
+```csharp
 using System;
 using System.Globalization;
 using System.IO;

@@ -1,45 +1,63 @@
 ---
-title: "Trennzeichen f&#252;r Dokumentationstags (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/** */-Trennzeichen für C#-Dokumentationstags"
-  - "///-Trennzeichen für C#-Dokumentation"
-  - "XML [C#], Trennzeichen"
+title: "Trennzeichen für Dokumentationstags (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- XML [C#], delimiters
+- /** */ delimiters for C# documentation tags
+- /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.lasthandoff: 03/13/2017
+
 ---
-# Trennzeichen f&#252;r Dokumentationstags (C#-Programmierhandbuch)
-Die Verwendung von XML\-Dokumentkommentaren erfordert Trennzeichen, anhand derer der Compiler erkennt, wo ein Dokumentationskommentar anfängt und wo er aufhört.  In Verbindung mit den XML\-Dokumentationstags können die folgenden Trennzeichen verwendet werden:  
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Trennzeichen für Dokumentationstags (C#-Programmierhandbuch)
+Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet. Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:  
   
  `///`  
- Einzeiliges Trennzeichen.  Diese Art Trennzeichen kommt in Dokumentationsbeispielen vor und wird in den Visual C\#\-Projektvorlagen verwendet.  Wenn ein Leerzeichen dem Trennzeichen folgt, ist dieses Zeichen nicht in der XML\-Ausgabe enthalten.  
+ Einzeiliges Trennzeichen Dies ist die Form, die in den Dokumentationsbeispielen dargestellt und von den Visual C#-Projektvorlagen verwendet wird. Wenn ein Leerzeichen hinter einem Trennzeichen steht, ist dieses Zeichen nicht in der XML-Ausgabe enthalten.  
   
 > [!NOTE]
->  Die Visual Studio IDE verfügt über ein Feature mit der Bezeichnung Smart\-Kommentar bearbeiten, durch das ein \<summary\>\/\<\/summary\>\-Tagpaar automatisch eingefügt und der Cursor innerhalb dieser Tags positioniert wird, nachdem Sie das `///`\-Trennzeichen im Code\-Editor eingegeben haben.  Greifen Sie auf dieses Feature in den Projekteigenschaftenseiten über [Optionen, Text\-Editor, C\#, Formatierung](/visual-studio/ide/reference/options-text-editor-csharp-formatting) zu.  
+>  Visual Studio-IDE bietet eine Funktion namens Smart Comment Editing, die automatisch die Tags \<summary> und \</summary > einfügt und Ihren Cursor innerhalb dieser Tags verschiebt, nachdem Sie das `///`-Trennzeichen im Code-Editor eingeben. Greifen Sie auf Ihren Eigenschaftenseiten des Projekts über [Formatierung, C#, Text-Editor, Dialogfeld „Optionen“](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting) auf die Funktion zu.  
   
  `/** */`  
  Mehrzeilige Trennzeichen.  
   
- Bei Verwendung der `/** */`\-Trennzeichen sind einige Formatierungsregeln zu beachten:  
+ Es gibt einige Formatierungsregeln zu beachten, wenn Sie die `/** */`-Trennzeichen verwenden.  
   
--   Wenn der verbleibende Teil der Zeile mit dem `/**` \-Trennzeichen Leerraum ist, wird die Zeile für Kommentare nicht verarbeitet.  Wenn das erste Zeichen nach dem Trennzeichen `/**` ein Leerzeichen ist, wird das entsprechende Zeichen ignoriert und der Rest der Zeile verarbeitet.  Andernfalls wird der gesamte Zeilentext hinter dem `/**`\-Trennzeichen als Teil des Kommentars verarbeitet.  
+-   In der Zeile mit dem `/**`-Trennzeichen, wenn der Rest der Zeile Leerraum ist, wird die Zeile für Kommentare nicht verarbeitet. Wenn das erste Zeichen nach dem `/**`-Trennzeichen ein Leerzeichen ist, wird dieses Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.  
   
--   Wenn auf der Zeile mit dem `*/` \-Trennzeichen bis zum `*/`\-Trennzeichen nur Leerraum vorhanden ist, wird diese Zeile ignoriert.  Andernfalls wird der Text in der Zeile bis zum `*/`\-Trennzeichen als Teil des Kommentars verarbeitet, wobei die im folgenden Punkt beschriebenen Mustervergleichsregeln gelten.  
+-   In der Zeile mit dem `*/`-Trennzeichen, wenn sie nur aus Leerzeichen bis zum `*/`-Trennzeichen besteht, wird diese Zeile ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.  
   
--   Hinter der Zeile, die mit dem `/**`\-Trennzeichen beginnt, überprüft der Compiler den Anfang der einzelnen Zeilen auf ein gemeinsames Muster.  Das Muster kann aus optionalen Leerstellen und einem Sternchen \(`*`\) bestehen, auf das weitere optionale Leerstellen folgen.  Wenn der Compiler am Anfang jeder Zeile, die nicht mit dem Trennzeichen `/**` oder `*/` beginnt, ein gemeinsames Muster findet, ignoriert er dieses Muster für alle Zeilen.  
+-   Für die Zeilen nach der, die mit dem `/**`-Trennzeichen beginnt, sucht der Compiler ein gemeinsames Muster am Anfang jeder Zeile. Das Muster kann aus optionalen Leerzeichen und einem Sternchen bestehen (`*`), gefolgt von weiteren optionalen Leerzeichen. Wenn der Compiler am Anfang jeder Zeile ein gemeinsames Muster findet, die nicht mit dem `/**`- oder `*/`-Trennzeichen beginnt, ignoriert er dieses Muster für jede Zeile.  
   
- Das folgende Beispiel veranschaulicht diese Regeln.  
+ In den folgenden Beispielen werden diese Regeln veranschaulicht.  
   
--   Vom folgenden Kommentar wird nur die Zeile verarbeitet, die mit `<summary>` beginnt.  Die folgenden drei Tagformate ergeben identische Kommentare.  
+-   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die drei Tag-Formate ergeben identische Kommentare.  
   
     ```  
     /** <summary>text</summary> */   
@@ -54,7 +72,7 @@ Die Verwendung von XML\-Dokumentkommentaren erfordert Trennzeichen, anhand derer
   
     ```  
   
--   Der Compiler identifiziert ein gemeinsames Muster " \* " am Anfang der zweiten und dritten Zeile.  Das Muster ist nicht in der Ausgabe enthalten.  
+-   Der Compiler identifiziert ein gemeinsames Muster von „*“ am Anfang der zweiten und dritten Zeile. Das Muster ist nicht in der Ausgabe enthalten.  
   
     ```  
     /**   
@@ -62,7 +80,7 @@ Die Verwendung von XML\-Dokumentkommentaren erfordert Trennzeichen, anhand derer
      * text </summary>*/   
     ```  
   
--   Der Compiler findet kein gemeinsames Muster im folgenden Kommentar, da das zweite Zeichen auf der dritten Zeile kein Sternchen ist.  Folglich wird der gesamte Text in der zweiten und dritten Zeile als Teil des Kommentars verarbeitet.  
+-   Der Compiler findet kein gemeinsames Muster im folgenden Kommentar, da das zweite Zeichen in der dritten Zeile kein Sternchen ist. Daher wird der gesamte Text in der zweiten und dritten Zeile als Teil des Kommentars verarbeitet.  
   
     ```  
     /**   
@@ -71,7 +89,7 @@ Die Verwendung von XML\-Dokumentkommentaren erfordert Trennzeichen, anhand derer
     */   
     ```  
   
--   Der Compiler findet aus zwei Gründen kein Muster im folgenden Kommentar.  Zunächst ist die Anzahl von Leerzeichen vor dem Sternchen nicht konsistent.  Zweitens beginnt die fünfte Zeile mit einem Tabulatorzeichen, das sich von Leerzeichen unterscheidet.  Folglich wird der gesamte Text von Zeile zwei bis fünf als Teil des Kommentars verarbeitet.  
+-   Der Compiler findet aus zwei Gründen kein Muster im folgenden Kommentar. Erstens ist die Anzahl von Leerzeichen vor dem Sternchen nicht konsistent. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Daher wird aller Text von Zeile zwei bis fünf als Teil des Kommentars verarbeitet.  
   
     ```  
     /**   
@@ -82,8 +100,8 @@ Die Verwendung von XML\-Dokumentkommentaren erfordert Trennzeichen, anhand derer
     */   
     ```  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [XML\-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [\/doc \(Process Documentation Comments\)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
- [XML\-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
+ [-doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

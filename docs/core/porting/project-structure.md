@@ -10,12 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: b86693b1d6eed0ff5b8d1831e324354241f29806
+ms.lasthandoff: 03/15/2017
 
 ---
 
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core
+
+> [!WARNING]
+> Dieses Thema wurde noch nicht auf die neueste Version des Tools aktualisiert.
 
 Dieser Artikel soll Projektbesitzer unterstützen, die Ihre eigene Lösung parallel für .NET Framework und .NET Core kompilieren wollen.  Es werden mehrere Optionen zum Organisieren von Projekten behandelt, die Entwickler beim Erreichen dieses Ziels unterstützen sollen.  Im Folgenden finden Sie einige Szenarios, die Sie bei der Entscheidung bedenken sollten, wie Sie Ihr Projektlayout mit .NET Core einrichten.  Sie decken möglicherweise nicht alle Punkte ab, die Sie benötigen. Sie können abhängig von den Anforderungen Ihrer Projekte priorisieren.
 
@@ -38,7 +42,7 @@ Dieser Artikel soll Projektbesitzer unterstützen, die Ihre eigene Lösung paral
   * Entwicklung in bereits erstellten Projekten wird weiterhin unterstützt. Entwickler oder Mitwirkende, die eventuell nicht über Visual Studio 2015 verfügen, müssen kein Upgrade durchführen.
   * Minimieren der Möglichkeit, neue Probleme in vorhandenen Projekten zu erstellen, da in diesen Projekten keine Codeänderung erforderlich ist.
 
-* <a name="support-pcl"></a>[**Behalten bestehender Projekte, und Erstellen Portabler Klassenbibliotheken **][option-pcl]
+* <a name="support-pcl"></a>[**Behalten bestehender Projekte, und Erstellen Portabler Klassenbibliotheken**][option-pcl]
 
   *Es dient folgenden Zwecken:*
   * Verweist auf Ihre .NET Core-Bibliotheken in Desktop und/oder Webprojekten, die das komplette .NET Framework in derselben Lösung als Ziel haben.
@@ -121,9 +125,4 @@ Weitere Anleitungen zum Wechsel zu „project.json“ und „xproj“ finden Sie
 [option-xproj-folder]: #keep-existing-projects-and-create-a-net-core-project
 
 [how-to-multitarget]: ../tutorials/libraries.md#how-to-multitarget
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

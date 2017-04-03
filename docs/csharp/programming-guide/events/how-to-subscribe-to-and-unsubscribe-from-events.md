@@ -1,46 +1,64 @@
 ---
-title: "Gewusst wie: Abonnieren von Ereignissen und K&#252;ndigen von Ereignisabonnements (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Code-Editor, Ereignishandler"
-  - "Ereignishandler [C#], Erstellen"
-  - "Ereignisse [C#], Erstellen mit der IDE"
+title: "Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- event handlers [C#], creating
+- Code Editor, event handlers
+- events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Abonnieren von Ereignissen und K&#252;ndigen von Ereignisabonnements (C#-Programmierhandbuch)
-Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu abonnieren, wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, sobald das Ereignis ausgelöst wird.  Beispielsweise können Sie das `click`\-Ereignis einer Schaltfläche abonnieren, damit die Anwendung eine sinnvolle Aktion ausführt, wenn der Benutzer auf die Schaltfläche klickt.  
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements (C#-Programmierhandbuch)
+Wenn Sie benutzerdefinierten Code schreiben möchten, der aufgerufen wird, wenn dieses Ereignis ausgelöst wird, können Sie ein Ereignis abonnieren, das von einer anderen Klasse veröffentlicht wurde. Sie können z.B. das `click`-Ereignis einer Schaltfläche abonnieren, damit Ihre Anwendung etwas nützliches macht, wenn ein Benutzer auf die Schaltfläche klickt.  
   
-### So abonnieren Sie Ereignisse mit der Visual Studio IDE  
+### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>So abonnieren Sie Ereignisse mit der Visual Studio IDE  
   
-1.  Wenn das Fenster **Eigenschaften** nicht sichtbar ist, klicken Sie in der **Entwurfsansicht** mit der rechten Maustaste auf das Formular oder Steuerelement, für das Sie einen Ereignishandler erstellen möchten, und wählen Sie **Eigenschaften**.  
+1.  Wenn Sie in der Ansicht **Entwurf** das Fenster **Eigenschaften** nicht sehen können, klicken Sie mit der rechten Maustaste auf das Formular oder das Kontrollelement, für das Sie einen Ereignishandler erstellen möchten, und wählen Sie anschließen **Eigenschaften** aus.  
   
 2.  Klicken Sie oben im Fenster **Eigenschaften** auf das Symbol **Ereignisse**.  
   
-3.  Doppelklicken Sie auf das Ereignis, das Sie erstellen möchten, z. B. das `Load`\-Ereignis.  
+3.  Doppelklicken Sie auf das Ereignis, das Sie erstellen möchten, z.B. das `Load`-Ereignis.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] erstellt eine leere Ereignishandlermethode und fügt diese dem Code hinzu.  Sie können den Code auch in der **Codeansicht** manuell hinzufügen.  Die folgenden Codezeilen deklarieren z. B. eine Ereignishandlermethode, die aufgerufen wird, wenn die `Form`\-Klasse das `Load`\-Ereignis auslöst.  
+     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] erstellt eine leere Ereignishandlermethode, und fügt diese in den Code ein. Alternativ können Sie den Code auch manuell in der **Codeansicht** einfügen. Die folgenden Codezeilen deklarieren beispielsweise eine Eventhandlermethode, die aufgerufen wird, wenn die Klasse `Form` das `Load`-Ereignis auslöst.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
-     Die Codezeile, die zum Abonnieren des Ereignisses erforderlich ist, wird automatisch in der `InitializeComponent`\-Methode der Projektdatei Form1.Designer.cs generiert.  Sie sieht etwa so aus:  
+     Die Codezeile, die für das Abonnement des Ereignisses erforderlich ist, wird auch automatisch in der `InitializeComponent`-Methode in der Datei „Form1.Designer.cs“ in Ihrem Projekt generiert. Sie sieht ungefähr so aus:  
   
     ```  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-### So abonnieren Sie Ereignisse programmgesteuert  
+### <a name="to-subscribe-to-events-programmatically"></a>So abonnieren Sie Ereignisse programmgesteuert  
   
-1.  Definieren Sie eine Ereignishandlermethode, deren Signatur mit der Delegatsignatur für das Ereignis übereinstimmt.  Wenn das Ereignis beispielsweise auf dem <xref:System.EventHandler>\-Delegattyp basiert, entspricht der folgende Code dem Methodenstub:  
+1.  Definieren Sie eine Ereignishandlermethode, deren Signatur mit der Delegatsignatur des Ereignisses übereinstimmt. Wenn das Ereignis z.B. auf dem Delegattyp <xref:System.EventHandler> basiert, repräsentiert der folgende Code den Methodenstub:  
   
     ```  
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -49,19 +67,19 @@ Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu ab
     }  
     ```  
   
-2.  Verwenden Sie den Additionszuweisungsoperator \(`+=`\), um den Ereignishandler mit dem Ereignis zu verknüpfen.  Im folgenden Beispiel wird angenommen, dass ein Objekt mit dem Namen `publisher` über ein Ereignis mit dem Namen `RaiseCustomEvent` verfügt.  Beachten Sie, dass die Abonnentenklasse einen Verweis auf die Herausgeberklasse benötigt, um die Ereignisse zu abonnieren.  
+2.  Verwenden Sie den Additionszuweisungsoperator (`+=`), um ihren Ereignishandler Ihrem Ereignis anzufügen. Gehen Sie in folgendem Beispiel davon aus, dass ein Objekt mit dem Namen `publisher` ein Ereignis mit dem Namen `RaiseCustomEvent` aufweist. Beachten Sie, dass die Abonnementklasse einen Verweis auf die Herausgeberklasse benötigt, um deren Ereignis abonnieren zu können.  
   
     ```  
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
-     Beachten Sie, dass die oben dargestellte Syntax in C\# 2.0 neu ist.  Sie stimmt exakt mit der C\# 1.0\-Syntax überein, in der der Kapselungsdelegat mit dem `new`\-Schlüsselwort explizit erstellt werden muss:  
+     Beachten Sie, dass die oben stehende Syntax in C# 2.0 neu ist. Sie entsprechen der Syntax in C# 1.0, in der der kapselnde Delegat mithilfe des Schlüsselwort `new` explizit erstellt werden muss:  
   
     ```  
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Ein Ereignishandler kann auch mit einem Lambda\-Ausdruck hinzugefügt werden:  
+     Ein Ereignishandler kann auch mithilfe eines Lambdaausdruckes hinzugefügt werden:  
   
     ```  
     public Form1()  
@@ -73,11 +91,11 @@ Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu ab
     }  
     ```  
   
-     Weitere Informationen hierzu finden Sie unter [Gewusst wie: Verwenden von Lambda\-Ausdrücken außerhalb von LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Lambdaausdrücken außerhalb von LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
-### So abonnieren Sie Ereignisse mit einer anonymen Methode  
+### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>So abonnieren Sie Ereignisse mit einer anonymen Methode  
   
--   Wenn Sie nicht zu einem späteren Zeitpunkt ein Abonnement für ein Ereignis kündigen müssen, können Sie dem Ereignis mit dem Additionszuweisungsoperator \(`+=`\) eine anonyme Methode zuweisen.  Im folgenden Beispiel wird angenommen, dass ein Objekt mit dem Namen `publisher` über ein Ereignis mit dem Namen `RaiseCustomEvent`  verfügt und dass eine `CustomEventArgs`\-Klasse definiert wurde, die spezielle Ereignisinformationen enthält.  Beachten Sie, dass die Abonnentenklasse einen Verweis auf `publisher` benötigt, um die Ereignisse zu abonnieren.  
+-   Wenn Sie das Abonnement eines Ereignisses später nicht kündigen müssen, können Sie den Additionszuweisungsoperator (`+=`) verwenden, um eine anonyme Methode an das Ereignis anzufügen. Gehen Sie in folgendem Beispiel davon aus, dass ein Objekt mit dem Namen `publisher` ein Ereignis mit dem Namen `RaiseCustomEvent` aufweist, und dass eine `CustomEventArgs`-Klasse so definiert wurde, dass Sie eine Art von spezialisierter Ereignisinformation enthält. Beachten Sie, dass die Abonnementklasse einen Verweis auf die `publisher` benötigt, um deren Ereignis abonnieren zu können.  
   
     ```  
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -87,24 +105,25 @@ Es empfiehlt sich, ein von einer anderen Klasse veröffentlichtes Ereignis zu ab
     };  
     ```  
   
-     Beachten Sie, dass ein Abonnement für ein Ereignis nicht leicht gekündigt werden kann, wenn Sie es mit der anonymen Funktion abonniert haben.  Um in diesem Szenario ein Abonnement zu kündigen, müssen Sie zu dem Code zurückkehren, mit dem Sie das Ereignis abonniert haben, die anonyme Methode in einer Delegatvariablen speichern und anschließend dem Ereignis den Delegaten hinzufügen.  Im Allgemeinen empfehlen wir, keine anonymen Funktionen zum Abonnieren von Ereignissen zu verwenden, wenn Sie das Abonnement des Ereignisses zu einem späteren Zeitpunkt im Code kündigen müssen.  Weitere Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     Nehmen Sie auch zur Kenntnis, dass Sie das Abonnement eines Ereignisses nicht ohne Weiteres kündigen können, wenn Sie eine anonyme Funktion für das Abonnement verwendet haben. Um in einem derartigen Szenario das Abonnement kündigen zu können, müssen Sie zu dem Code zurückkehren, mit dem Sie das Ereignis abonniert haben; speichern Sie anschließend die anonyme Methode in einer Delegatvariablen, und fügen Sie dann den Delegaten in das Ereignis ein. Grundsätzlich wird empfohlen, keine anonymen Funktionen für das Abonnieren von Ereignissen zu verwenden, wenn Sie das Abonnement an einer späteren Stelle in Ihrem Code noch einmal kündigen müssen. Informationen zu anonymen Funktionen finden Sie unter [Anonyme Funktionen](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
-## Kündigen des Abonnements  
- Wenn Sie nicht möchten, dass der Ereignishandler aufgerufen wird, wenn das Ereignis ausgelöst wird, müssen Sie das Abonnement für das Ereignis kündigen.  Um Ressourcenverluste zu verhindern, ist es wichtig, Abonnements für Ereignisse zu kündigen, bevor Sie ein Abonnentenobjekt entfernen.  Solange ein Abonnement für ein Ereignis nicht gekündigt wird, unterliegt der Multicastdelegat dem Ereignis im Veröffentlichungsobjekt, das auf den Delegaten verweist, der den Ereignishandler des Abonnenten kapselt.  Das Abonnentenobjekt wird erst aus der Garbage Collection gelöscht, wenn der Verweis aus dem Veröffentlichungsobjekt entfernt wurde.  
+## <a name="unsubscribing"></a>Kündigen des Abonnements  
+ Kündigen Sie das Ereignisabonnement, um ein Abrufen des Ereignishandlers beim Auslösen des Ereignisses zu verhindern. Sie sollten das Ereignisabonnement kündigen, bevor Sie ein Abonnentenobjekt verwerfen, um Ressourcenverluste zu verhindern. Bis zur Kündigung Ihres Ereignisabonnements verweist der Multicastdelegat, der dem Ereignis im Veröffentlichungsobjekt zugrunde liegt, auf einen Delegaten, der den Ereignishandler des Abonnenten einkapselt. Solange das Veröffentlichungsobjekt diesen Verweis enthält, wird Ihr Abonnentenobjekt bei der automatische Speicherbereinigung nicht gelöscht.  
   
-#### So kündigen Sie ein Abonnement für ein Ereignis  
+#### <a name="to-unsubscribe-from-an-event"></a>So kündigen Sie ein Ereignisabonnement  
   
--   Verwenden Sie den Subtraktionszuweisungsoperator \(`-=`\), um ein Abonnement für ein Ereignis zu kündigen:  
+-   Verwenden Sie den Subtraktionszuweisungsoperator (`-=`), um ein Ereignisabonnement zu kündigen:  
   
     ```  
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
-     Wenn alle Abonnenten ihre Abonnements für ein Ereignis gekündigt haben, wird die Ereignisinstanz in der Herausgeberklasse auf `null` festgelegt.  
+     Wenn alle Abonnenten ihr Ereignisabonnement gekündigt haben, wird die Ereignisinstanz in der Herausgeberklasse auf `null` festgelegt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ereignisse](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)   
- [Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework\-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
- [Operator \-\=](../../../csharp/language-reference/operators/subtraction-assignment-operator-1.md)   
- [Operator \+\=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+ [Ereignis](../../../csharp/language-reference/keywords/event.md)   
+ [Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
+ [-= Operator (C# Reference)](../../language-reference/operators/subtraction-assignment-operator.md)   
+ [+=-Operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+

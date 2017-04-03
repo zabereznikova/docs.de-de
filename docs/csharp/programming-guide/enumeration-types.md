@@ -1,33 +1,51 @@
 ---
-title: "Enumerationstypen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Bitflags [C#]"
-  - "Die Programmiersprache C#, Enumerationen"
-  - "Enumerationen [C#]"
-  - "Enumerationen [C#]"
+title: Enumerationstypen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- enumerations [C#]
+- enums [C#]
+- C# Language, enums
+- bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8c23c17967474af0f91c0dda6d071073234736c6
+ms.lasthandoff: 03/13/2017
+
 ---
-# Enumerationstypen (C#-Programmierhandbuch)
-Ein Enumerationstyp \(auch als Enumeration bezeichnet\) bietet eine effiziente Möglichkeit, einen Satz benannter integraler Konstanten zu definieren, die einer Variablen zugewiesen werden können.  Angenommen, Sie müssen eine Variable definieren, deren Wert einen Wochentag darstellt.  Es gibt nur sieben sinnvolle Werte, die diese Variable speichern kann.  Um diese Werte zu definieren, können Sie einen Enumerationstyp verwenden, der durch die Verwendung des [enum](../../csharp/language-reference/keywords/enum.md)\-Schlüsselworts deklariert wird.  
+# <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
+Ein Enumerationstyp (auch Enumeration oder enum genannt) bietet eine effiziente Möglichkeit zum Definieren von benannten ganzzahligen Konstanten, die einer Variablen zugewiesen werden können. Nehmen wir beispielsweise an, Sie müssen eine Variable definieren, deren Wert einen Tag der Woche darstellt. Es gibt nur sieben sinnvolle Werte, die diese Variable speichern kann. Sie können einen Enumerationstyp verwenden, der mithilfe des [enum](../../csharp/language-reference/keywords/enum.md)-Schlüsselworts deklariert wurde, um diese Werte zu definieren.  
   
  [!code-cs[csProgGuideEnums#1](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_1.cs)]  
   
- Der zugrunde liegende Standardtyp aller Elemente in der Enumeration lautet [int](../../csharp/language-reference/keywords/int.md).  Sie können mit einem Doppelpunkt einen anderen ganzzahligen numerischen Typ angeben, wie im vorherigen Beispiel dargestellt.  Eine vollständige Liste möglicher Typen finden Sie in [Enumeration \(C\#\-Referenz\)](../../csharp/language-reference/keywords/enum.md).  
+ Standardmäßig ist [int](../../csharp/language-reference/keywords/int.md) der zugrunde liegende Typ jedes Elements in enum. Sie können mithilfe eines Doppelpunktes einen anderen ganzzahligen numerischen Typ angeben, wie im vorherigen Beispiel gezeigt. Eine vollständige Liste der möglichen Typen finden Sie unter [enum (C#-Referenz)](../../csharp/language-reference/keywords/enum.md).  
   
- Sie können die zugrunde liegenden numerischen Werte überprüfen, indem Sie dem zugrunde liegenden Typ, wie im folgenden Beispiel gezeigt umwandeln.  
+ Sie können die zugrunde liegenden numerischen Werte durch Umwandeln in den zugrunde liegenden Typ, wie im folgenden Beispiel gezeigt, überprüfen.  
   
-```c#  
+```csharp  
 Days today = Days.Monday;  
 int dayNumber =(int)today;  
 Console.WriteLine("{0} is day number #{1}.", today, dayNumber);  
@@ -41,57 +59,57 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 // Dec is month number #11.  
 ```  
   
- Im Folgenden werden die Vorteile beschrieben, die mit der Verwendung eines Enumerations\- statt eines numerischen Typs einhergehen:  
+ Im Folgenden werden die Vorteile der Verwendung eines enum anstelle eines numerischen Typs gezeigt:  
   
--   Sie geben eindeutig für Clientcode an, welche Werte für die Variable gültig sind.  
+-   Sie geben für Clientcode eindeutig die Werte an, die für die Variable gültig sind.  
   
--   In [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)] führt IntelliSense die definierten Werte auf.  
+-   In [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] listet IntelliSense die definierten Werte auf.  
   
- Wenn Sie keine Werte für die Elemente in der Enumeratorliste angeben, werden die Werte automatisch um 1 erhöht.  Im vorhergehenden Beispiel hat `Days.Sunday` den Wert 0, `Days.Monday` den Wert 1 usw.  Wenn Sie ein neues `Days`\-Objekt erstellen, weist es den Standardwert `Days.Sunday` \(0\) auf, wenn Sie ihm nicht ausdrücklich einen Wert zuweisen.  Wenn Sie eine Enumeration erstellen, wählen Sie den Standardwert aus, der am logischsten ist und weisen Sie ihm den Wert Null zu.  Auf diese Weise erhalten alle Enumerationen diesen Standardwert, wenn ihnen nicht ausdrücklich beim Erstellen ein Wert zugewiesen wird.  
+ Wenn Sie keine Werte für die Elemente in der Enumeratorliste angeben, werden die Werte automatisch um 1 erhöht. Im vorherigen Beispiel hat `Days.Sunday` den Wert 0, `Days.Monday` hat den Wert 1 und so weiter. Beim Erstellen eines neuen `Days`-Objekt, wird es den Standardwert `Days.Sunday` (0) aufweisen, wenn Sie nicht explizit einen Wert zuweisen. Wenn Sie ein enum erstellen, wählen Sie den logischen Standardwert aus und weisen Sie ihm einen Wert von Null zu. Dadurch werden alle Enumerationen über diesen Standardwert verfügen, wenn sie nicht explizit einen Wert zugewiesen bekommen, wenn sie erstellt werden.  
   
- Falls die Variable `meetingDay` vom Typ `Days` ist, können Sie ihr \(ohne eine explizite Umwandlung\) lediglich einen der von `Days` definierten Werte zuweisen.  Und wenn sich der Besprechungstag ändert, können Sie `meetingDay` einen neuen Wert von `Days` zuweisen:  
+ Wenn die Variable `meetingDay` vom Typ `Days` ist, dann können Sie (ohne eine explizite Umwandlung) für sie nur einen der durch `Days` definierten Werte zuweisen. Und wenn sich der Sitzungstag ändert, können Sie einen neuen Wert von `Days` auf `meetingDay` zuweisen:  
   
  [!code-cs[csProgGuideEnums#4](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_2.cs)]  
   
 > [!NOTE]
->  Es ist möglich, `meetingDay` einen beliebigen ganzzahligen Wert zuzuweisen.  Zum Beispiel erzeugt diese Codezeile keinen Fehler: `meetingDay = (Days) 42`.  Sie sollten dies jedoch nicht tun, weil die damit einhergehende Erwartung darin besteht, dass eine Enumerationsvariable nur einen der vom Enumerator definierten Werte enthält.  Einer Variablen eines Enumerationstyps einen willkürlich gewählten Wert zuzuweisen, führt zu einem hohen Fehlerrisiko.  
+>  Es ist möglich, einen beliebigen ganzzahligen Wert an `meetingDay` zuzuweisen. Diese Codezeile ergibt z.B. keinen Fehler: `meetingDay = (Days) 42`. Allerdings sollten Sie dies nicht tun, da implizit erwartet wird, dass eine Enumerationensvariable nur einen der von enum definierten Werte enthält. Einen beliebigen Wert einer Variablen eines Enumerationstyps zuzuweisen bedeutet, ein hohes Fehlerrisiko einzuführen.  
   
- Sie können den Elementen in der Enumeratorliste, die einen Enumerationstyp aufweisen, beliebige Werte zuweisen und auch berechnete Werte verwenden:  
+ Sie können den Elementen in der Enumeratorliste eines Enumerationstyps Werte zuweisen, und Sie können auch berechnete Werte verwenden:  
   
  [!code-cs[csProgGuideEnums#3](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_3.cs)]  
   
-## Enumerationstypen als Bitflags  
- Sie können einen Enumerationstyp verwenden, um Bitflags zu definieren. Dadurch kann eine Instanz des Enumerationstyps eine Kombination aus den Werten speichern, die in der Enumeratorliste definiert sind.  \(Selbstverständlich sind einige Kombinationen möglicherweise im Programmcode nicht sinnvoll oder zulässig.\)  
+## <a name="enumeration-types-as-bit-flags"></a>Enumerationstypen als Bitflags  
+ Sie können einen Enumerationstyp zum Definieren von Bitflags verwenden. Dadurch kann eine Instanz des Enumerationstyps eine beliebige Kombination der Werte speichern, die in der Enumeratorliste definiert sind. (Natürlich können einige Kombinationen nicht sinnvoll oder in Ihrem Programmcode nicht zulässig sein.)  
   
- Sie erstellen eine Bitflagenumeration, indem Sie das <xref:System.FlagsAttribute?displayProperty=fullName>\-Attribut anwenden und die Werte entsprechend definieren, damit biweise `AND`\-Operationen, `OR`\-Operationen, `NOT`\-Operationen und `XOR`\-Operationen durchgeführt werden können.  Fügen Sie in eine Bitflagenumeration eine benannte Konstante mit dem Wert Null ein, was "Es sind keine Flags festelegt" bedeutet. Weisen Sie einem Flag nicht den Wert Null zu, falls dies nicht "Es sind keine Flags festgelegt" bedeutet.  
+ Sie erstellen ein Bitflags-Enum durch Anwenden des Attribut <xref:System.FlagsAttribute?displayProperty=fullName>, und definieren die Werte entsprechend, damit die bitweisen Operationen `AND`, `OR`, `NOT` und `XOR` ausgeführt werden können. In einem Bitflag-Enum ist eine benannte Konstante mit dem Wert Null enthalten, das bedeutet, dass „keine Flags festgelegt sind“. Geben Sie einem Flag keinen Wert Null, wenn es nicht bedeutet, dass „keine Flags festgelegt sind“.  
   
- Im folgenden Beispiel wird eine andere Version der `Days`\-Enumeration mit dem Namen `Days2` definiert.  `Days2` weist das `Flags`\-Attribut auf, und jedem Wert wird die nächste höhere Potenz von 2 zugewiesen.  So können Sie eine `Days2`\-Variable mit dem Wert `Days2.Tuesday` und `Days2.Thursday` erstellen.  
+ Im folgenden Beispiel ist eine andere Version der `Days`-Enum mit dem Namen `Days2` definiert. `Days2` verfügt über das `Flags`-Attribut, und jedem Wert wird die nächste höhere Potenz von 2 zugewiesen. Dies ermöglicht Ihnen die Erstellung einer `Days2`-Variable, deren Wert `Days2.Tuesday` und `Days2.Thursday` ist.  
   
  [!code-cs[csProgGuideEnums#2](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_4.cs)]  
   
- Um ein Flag für einen Enumerator festzulegen, verwenden Sie den bitweisen `OR`\-Operator, wie im folgenden Beispiel dargestellt:  
+ Um ein Flag für einen enum festzulegen, verwenden Sie den bitweisen `OR` Operator, wie im folgenden Beispiel gezeigt:  
   
  [!code-cs[csProgGuideEnums#6](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_5.cs)]  
   
- Um zu ermittln, ob ein bestimmtes Flag festgelegt ist, verwenden Sie eine bitweise `AND`\-Operation, wie im folgenden Beispiel dargestellt:  
+ Verwenden Sie einen bitweisen `AND`-Vorgang, wie im folgenden Beispiel gezeigt, um zu bestimmen, ob ein bestimmtes Flag festgelegt ist:  
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- Weitere Informationen zum Definieren von Enumerationstypen mit dem <xref:System.FlagsAttribute?displayProperty=fullName>\-Attribut finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
+ Weitere Informationen darüber, was Sie beim Definieren von Enumerationstypen mit dem Attribut <xref:System.FlagsAttribute?displayProperty=fullName> berücksichtigen müssen, finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
   
-## Verwenden der System.Enum\-Methoden zur Ermittlung und Behandlung von Enumerationswerten  
- Alle Enumerationen sind Instanzen des <xref:System.Enum?displayProperty=fullName>\-Typs.  Sie können von <xref:System.Enum?displayProperty=fullName> keine neuen Klassen ableiten. Sie können jedoch seine Methoden verwenden, um Informationen darüber zu erhalten und Werte in einer Enumerationsinstanz zu bearbeiten.  
+## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Verwenden der Methoden System.Enum zum Ermitteln und Bearbeiten der Enumerationswerte  
+ Alle Enumerationen sind Instanzen des Typs <xref:System.Enum?displayProperty=fullName>. Sie können keine neuen Klassen von <xref:System.Enum?displayProperty=fullName> ableiten, aber Sie können seine Methoden verwenden, um Informationen zu ermitteln und Werte in einer enum-Instanz zu bearbeiten.  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- Weitere Informationen hierzu finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
+ Weitere Informationen finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
   
- Sie können für eine Enumeration auch eine neue Methode erstellen, indem Sie die Erweiterungsmethode verwenden.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen einer neuen Methode für eine Enumeration](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).  
+ Sie können auch mithilfe einer Erweiterungsmethode eine neue Methode für ein enum erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer neuen Methode für eine Enumeration (C#-Programmierhandbuch)](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).  
   
-## Enthaltenes Buchkapitel  
- [Weitere Informationen zu Variablen](http://go.microsoft.com/fwlink/?LinkId=221230) in [Visual C\-2010 Anfang](http://go.microsoft.com/fwlink/?LinkId=221214)  
+## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
+ [More About Variables (Weitere Informationen zu Variablen)](http://go.microsoft.com/fwlink/?LinkId=221230) in [Beginning Visual C# 2010 (Visual C# 2010 starten)](http://go.microsoft.com/fwlink/?LinkId=221214).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Enum?displayProperty=fullName>   
- [C\#\-Programmierhandbuch](../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)

@@ -1,25 +1,43 @@
 ---
-title: "internal (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "internal_CSharpKeyword"
-  - "internal"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "internal-Schlüsselwort [C#]"
+title: internal (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- internal_CSharpKeyword
+- internal
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6b50c4c2a6e545e0313beb0450d9ca5ff170ad05
+ms.lasthandoff: 03/13/2017
+
 ---
-# internal (C#-Referenz)
-Das `internal`\-Schlüsselwort ist [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md) für Typen und Typmember.  Auf interne Typen oder Member kann nur in Dateien derselben Assembly zugegriffen werden, wie dieses Beispiel zeigt:  
+# <a name="internal-c-reference"></a>internal (C#-Referenz)
+Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md) für Typen und Typmember. Auf interne Typen oder Member kann nur innerhalb einer Datei in derselben Assembly zugegriffen werden, so wie in diesem Beispiel:  
   
 ```  
 public class BaseClass   
@@ -29,18 +47,18 @@ public class BaseClass
 }  
 ```  
   
- Auf Typen oder Member, die über `protected internal`\-Zugriffsmodifizierer verfügen, kann von der aktuellen Assembly oder von den Typen zugegriffen werden, die von der enthaltenden Klasse abgeleitet werden.  
+ Auf Typen oder Member, die über den Zugriffsmodifizierer `protected internal` verfügen, kann von der aktuellen Assembly oder von Typen aus zugegriffen werden, die von der enthaltenden Klasse abgeleitet werden.  
   
- Einen Vergleich von `internal` mit den anderen Zugriffsmodifizierern finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md) und [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Einen Vergleich von `internal` mit dem anderen Zugriffsmodifizierer finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md) und [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Weitere Informationen zu Assemblys finden Sie unter [Assemblys und der globale Assemblycache](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen zu Assemblys finden Sie unter [Assemblys und der globale Assemblycache](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
   
- Der interne Zugriff wird häufig in komponentenbasierter Entwicklung verwendet, da er einer Gruppe von Komponenten ermöglicht, in einer nicht öffentlichen Weise zusammenzuwirken, ohne dem Rest des Anwendungscodes zugänglich zu sein.  Ein Framework zum Erstellen von grafischen Benutzeroberflächen kann beispielsweise die `Control`\-Klasse und die `Form`\-Klasse bereitstellen, die unter Verwendung von Membern mit internem Zugriff zusammenwirken.  Da es sich bei diesen Membern um interne Elemente handelt, sind sie nicht dem Code, der das Gerüst verwendet, zugänglich gemacht worden.  
+ Ein interner Zugriff wird häufig bei komponentenbasierten Entwicklungen verwendet, da auf diese Weise Gruppen von Komponenten privat kooperieren können, ohne dass sie für den Rest des Anwendungscodes verfügbar gemacht werden. Ein Framework könnte z.B für das Erstellen grafischer Benutzeroberflächen `Control`- und `Form`-Klassen zur Verfügung stellen, die kooperieren, indem sie Member mit internen Zugriff verwenden. Da diese Member intern sind, werden sie nicht für Code verfügbar gemacht, der das Framework verwendet.  
   
- Außerhalb der Assembly, in der ein Typ oder Member mit internem Zugriff definiert wurde, darf nicht auf diesen verwiesen werden.  
+ Es ist unzulässig, auf einen Typen oder einen Member mit internem Zugriff außerhalb der Assembly zu verweisen, in der sie definiert wurden.  
   
-## Beispiel  
- In diesem Beispiel sind zwei Dateien enthalten, `Assembly1.cs` und `Assembly1`\_`a.cs`.  Die erste Datei weist eine interne Basisklasse auf, `BaseClass`.  In der zweiten Datei erzeugt ein Versuch, `BaseClass` zu instanziieren, einen Fehler.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly1`_`a.cs`. Die erste Datei enthält eine interne Basisklasse, `BaseClass`. In der zweiten Datei führt der Versuch, `BaseClass` zu instanziieren zu einem Fehler.  
   
 ```  
 // Assembly1.cs  
@@ -63,8 +81,8 @@ class TestAccess
 }  
 ```  
   
-## Beispiel  
- Verwenden Sie in diesem Beispiel dieselben Dateien wie in Beispiel 1, und ändern Sie die Zugriffsebene von `BaseClass` in `public`.  Ändern Sie außerdem die Zugriffsebene des Members `IntM` auf `internal`.  In diesem Fall können Sie die Klasse instanziieren, aber Sie können nicht auf den internen Member zugreifen.  
+## <a name="example"></a>Beispiel  
+ Verwenden Sie in diesem Beispiel dieselbe Datei, die Sie im ersten Beispiel verwendet haben, und ändern Sie die Zugriffsebene von `BaseClass` in `public`. Ändern Sie außerdem die Zugriffsebene des Members `IntM` in `internal`. Jetzt können Sie die Klasse instanziieren, aber Sie können nicht auf den internen Member zugreifen.  
   
 ```  
 // Assembly2.cs  
@@ -88,16 +106,16 @@ public class TestAccess
 }  
 ```  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
+ [Public](../../../csharp/language-reference/keywords/public.md)   
  [Private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)

@@ -1,85 +1,101 @@
 ---
-title: "Storing Data to and Reading from the Clipboard (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Clipboard, storing data to (My.Computer.Clipboard)"
-  - "Clipboard, reading from (My.Computer.Clipboard)"
-  - "Clipboard"
-  - "My.Computer.Clipboard object, tasks"
-  - "data [Visual Basic], Clipboard"
-  - "reading data, from Clipboard"
+title: Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Clipboard, storing data to (My.Computer.Clipboard)
+- Clipboard, reading from (My.Computer.Clipboard)
+- Clipboard
+- My.Computer.Clipboard object, tasks
+- data [Visual Basic], Clipboard
+- reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Storing Data to and Reading from the Clipboard (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a8580acf6fd23f9de264d3fed47d268898d498a6
+ms.lasthandoff: 03/13/2017
 
-Die Zwischenablage kann zum Speichern von Daten wie Text und Bildern verwendet werden.  Da die Zwischenablage von allen aktiven Prozessen genutzt wird, kann sie zur Übertragung von Daten zwischen den Prozessen verwendet werden.  Das `My.Computer.Clipboard`\-Objekt können Sie auf einfache Weise die Zwischenablage zuzugreifen und ihn zu lesen und zu schreiben.  
+---
+# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage (Visual Basic)
+Die Zwischenablage kann zum Speichern von Daten, z.B. Texten und Bildern, verwendet werden. Da die Zwischenablage von allen aktiven Prozessen genutzt wird, kann sie zur Übertragung von Daten zwischen den Prozessen verwendet werden. Mit dem Objekt `My.Computer.Clipboard` können Sie einfach auf die Zwischenablage zugreifen, aus ihr lesen sowie in sie schreiben.  
   
-## Lesen aus der Zwischenablage  
- Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A>\-Methode, um Text in der Zwischenablage lesen.  Mit dem folgenden Code wird der Text gelesen und in einem Meldungsfeld angezeigt.  In der Zwischenablage muss Text gespeichert sein, damit das Beispiel fehlerfrei ausgeführt werden kann.  
+## <a name="reading-from-the-clipboard"></a>Lesen aus der Zwischenablage  
+ Verwenden Sie die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A>, um den Text in der Zwischenablage zu lesen. Der folgende Code liest den Text aus und zeigt ihn in einem Nachrichtenfeld an. Es muss Text in der Zwischenablage gespeichert sein, damit das Beispiel richtig ausgeführt wird.  
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms\-Anwendung \> Zwischenablage**.  Weitere Informationen finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
+ Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Er befindet sich in der Codeausschnittauswahl unter **Windows Forms-Anwendungen > Zwischenablage**. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
- Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A>\-Methode, um ein Bild aus der Zwischenablage abzurufen.  Mit diesem Beispiel wird überprüft, ob die Zwischenablage ein Bild enthält, bevor das Bild abgerufen und  `PictureBox1` zugewiesen wird.  
+ Verwenden Sie die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A>, um ein Bild aus der Zwischenablage abzurufen. In diesem Beispiel wird überprüft, ob ein Bild in der Zwischenablage ist, bevor es abgerufen und `PictureBox1` zugewiesen wird.  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- Dieses Codebeispiel ist auch als IntelliSense\-Codeausschnitt verfügbar.  Sie finden das Element in der Codeausschnittauswahl unter **Windows Forms\-Anwendung \> Zwischenablage**. Weitere Informationen dazu finden Sie unter [Codeausschnitte](/visual-studio/ide/code-snippets).  
+ Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Es befindet sich in der Codeausschnittauswahl unter **Windows Forms-Anwendungen > Zwischenablage**. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
- In der Zwischenablage gespeicherte Elemente bleiben auch nach dem Beenden der Anwendung erhalten.  
+ Elemente, die in die Zwischenablage gelegt wurden, bleiben dort, auch nachdem die Anwendung heruntergefahren wurde.  
   
-## Den Dateityp bestimmen in der Zwischenablage gespeichert  
- Die Daten in der Zwischenablage können in verschiedenen Formaten gespeichert werden, z. B. als Text, Audiodaten oder Bilddaten.  Um festzustellen, welchen Dateityp die Zwischenablage enthält, können Sie Methoden wie <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> und <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> verwenden.  Die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A>\-Methode kann verwendet werden, wenn Sie das Vorhandensein eines benutzerdefinierten Formats überprüfen möchten.  
+## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Bestimmen des Dateityps, der in der Zwischenablage gespeichert ist  
+ Daten in der Zwischenablage können eine Anzahl von verschiedenen Formen annehmen, z.B. eine Audiodatei oder ein Bild. Sie können Methoden wie xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> und <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> verwenden, um zu bestimmen, welche Art von Datei in der Zwischenablage ist. Die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> kann verwendet werden, wenn Sie ein benutzerdefiniertes Format haben, das Sie überprüfen möchten.  
   
- Verwenden Sie die `ContainsImage`\-Funktion, um festzustellen, ob es sich bei den in der Zwischenablage enthaltenen Daten um ein Bild handelt.  Mit dem folgenden Code wird festgestellt, ob es sich bei den Daten um ein Bild handelt, und es wird eine entsprechende Meldung ausgegeben.  
+ Verwenden Sie die `ContainsImage`-Funktion, um zu bestimmen, ob die Daten in der Zwischenablage ein Bild sind. Der folgende Code überprüft, ob die Daten ein Bild sind und erstattet dementsprechend Bericht.  
   
  [!code-vb[VbResourceTasks#13](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_3.vb)]  
   
-## Die Zwischenablage löschen  
- Mit der <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A>\-Methode wird die Zwischenablage gelöscht.  Da die Zwischenablage auch von anderen Prozessen verwendet wird, wirkt sich das Löschen der Zwischenablage unter Umständen auch auf diese Prozesse aus.  
+## <a name="clearing-the-clipboard"></a>Löschen der Zwischenablage  
+ Die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> löscht die Zwischenablage. Da die Zwischenablage von anderen Prozessen gleichzeitig verwendet wird, kann sich das Löschen auf diese Prozesse auswirken.  
   
- Im folgenden Beispiel wird die Verwendung der `Clear`\-Methode veranschaulicht.  
+ Im folgenden Code wird die Verwendung der `Clear`-Methode veranschaulicht.  
   
  [!code-vb[VbVbcnMyClipboard#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_4.vb)]  
   
-## Schreiben in die Zwischenablage  
- Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A>\-Methode, um Text in die Zwischenablage zu schreiben.  Im folgenden Code wird die Zeichenfolge "This is a test string" in die Zwischenablage geschrieben.  
+## <a name="writing-to-the-clipboard"></a>In die Zwischenablage schreiben  
+ Verwenden Sie die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A>, um Text in die Zwischenablage zu schreiben. Der folgende Code schreibt die Zeichenfolge „Das ist eine Testzeichenfolge“ in die Zwischenablage.  
   
  [!code-vb[VbVbcnMyClipboard#1](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_5.vb)]  
   
- Die `SetText`\-Methode kann den Stilparameter akzeptieren, der einen primitiven Typ <xref:System.Windows.Forms.TextDataFormat>enthält.  Im folgenden Code wird die Zeichenfolge "This is a test string" als RTF\-Text in die Zwischenablage geschrieben.  
+ Die `SetText`-Methode kann Formatparameter akzeptieren, die einen Typ von <xref:System.Windows.Forms.TextDataFormat> enthält. Der folgende Code schreibt die Zeichenfolge „Das ist eine Testzeichenfolge“ als RTF-Text in die Zwischenablage.  
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A>\-Methode, um Daten in die Zwischenablage zu schreiben.  In diesem Beispiel wird das `DataObject` `dataChunk` im benutzerdefinierten Format `specialFormat` in die Zwischenablage geschrieben.  
+ Verwenden Sie die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A>, um Daten in die Zwischenablage zu schreiben. In diesem Beispiel wird das `DataObject``dataChunk` im benutzerdefiniertem Format `specialFormat` in die Zwischenablage geschrieben.  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   
- Verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A>\-Methode, um Audiodaten in die Zwischenablage zu schreiben.  In diesem Beispiel wird das `musicReader`\-Bytearray erstellt, die Datei `cool.wav` wird in dieses Array gelesen und anschließend in die Zwischenablage geschrieben.  
+ Verwenden Sie die Methode <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A>, um Audiodaten in die Zwischenablage zu schreiben. In diesem Beispiel wird das Bytearray `musicReader` erstellt, die Datei `cool.wav` darin gelesen und anschließend in die Zwischenablage geschrieben.  
   
  [!code-vb[VbResourceTasks#5](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_8.vb)]  
   
 > [!IMPORTANT]
->  Da auch andere Benutzer auf die Zwischenablage zugreifen können, sollten Sie sie nicht für sicherheitsrelevante Informationen wie Kennwörter oder vertrauliche Daten verwenden.  
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>   
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>   
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
- [Gewusst wie: Lesen von Objektdaten aus einer XML\-Datei](../Topic/How%20to:%20Read%20Object%20Data%20from%20an%20XML%20File%20\(C%23%20and%20Visual%20Basic\).md)   
- [Gewusst wie: Schreiben von Objektdaten in eine XML\-Datei](../Topic/How%20to:%20Write%20Object%20Data%20to%20an%20XML%20File%20\(C%23%20and%20Visual%20Basic\).md)
+ [Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

@@ -1,60 +1,79 @@
 ---
-title: "this (C#-Referenz) | Microsoft Docs"
-description: this keyword (C# Reference)
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "this"
-  - "this_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "this-Schlüsselwort [C#]"
+title: this (C#-Referenz) | Microsoft-Dokumentation
+description: "Schlüsselwort „this“ (C#-Referenz)"
+keywords: "this (C#), Schlüsselwort „this“ (C#), Schlüsselwort „this“ (C#-Referenz), Schlüsselwort „this“ (C#-Programmiersprachenreferenz)"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- this
+- this_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8e14a32f11b9661ae18fd718fb1a72385fa7f3a7
+ms.lasthandoff: 03/13/2017
+
 ---
-# this (C#-Referenz)
-Das `this`\-Schlüsselwort verweist auf die aktuelle Instanz der Klasse und wird auch als Modifizierer des ersten Parameters einer Erweiterungsmethode verwendet.  
+# <a name="this-c-reference"></a>this (C#-Referenz)
+Das Schlüsselwort `this` verweist auf die aktuelle Instanz der Klasse und wird auch als Modifizierer des ersten Parameters einer Erweiterungsmethode verwendet.  
   
 > [!NOTE]
->  In diesem Artikel wird die Verwendung von `this` mit Klasseninstanzen erläutert.  Weitere Informationen über die Verwendung in Erweiterungsmethoden finden Sie unter [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+>  Dieser Artikel behandelt die Verwendung von `this` mit Klasseninstanzen. Weitere Informationen zu seiner Verwendung in Erweiterungsmethoden finden Sie unter [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
- Im Folgenden sind häufige Verwendungen von `this` aufgeführt:  
+ Häufige Verwendungen von `this` sind wie folgt:  
   
--   Kennzeichnen von Membern, die durch ähnliche Namen ausgeblendet sind, z. B.:  
+-   Zum Qualifizieren von Membern, die durch ähnliche Namen ausgeblendet werden, wie z.B.:  
   
  [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
--   Übergeben eines Objekts als Parameter an andere Methoden, z. B.:  
+-   Zum Übergeben eines Objekts als ein Parameter an eine andere Methode, wie z.B.:  
   
     ```  
     CalcTax(this);  
     ```  
   
--   Deklarieren von Indexern, z. B.:  
+-   Zum Deklarieren von Indexern, wie z.B.:  
   
  [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
- Da statische Memberfunktionen auf der Klassenebene bestehen und nicht Teil eines Objekts sind, besitzen sie keinen `this`\-Zeiger.  Es ist nicht zulässig, in einer statischen Methode auf `this` zu verweisen.  
+ Statische Memberfunktionen haben keinen `this`-Zeiger, da sie auf Klassenebene und nicht als Teil eines Objekts existieren. Es ist ein Fehler, in einer statischen Methode auf `this` zu verweisen.  
   
-## Beispiel  
- In diesem Beispiel wird `this` zum Kennzeichnen der `Employee`\-Klassenmember `name` und `alias` verwendet, die durch ähnliche Namen ausgeblendet sind.  Es wird ebenfalls eingesetzt, um ein Objekt an die `CalcTax`\-Methode, die einer anderen Klasse angehört, zu übergeben.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird `this` verwendet, um die `Employee`-Klassenmember `name` und `alias` zu qualifizieren, die von ähnlichen Namen ausgeblendet werden. Er wird auch verwendet, um ein Objekt an die Methode `CalcTax` zu übergeben, die zu einer anderen Klasse gehört.  
   
  [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Basis](../../../csharp/language-reference/keywords/base.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [base](../../../csharp/language-reference/keywords/base.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)

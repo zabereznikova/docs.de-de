@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
+ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -68,7 +68,7 @@ Die Spezifikation der .NET-Standardbibliothek ist ein standardisierter Satz von 
 
 Die offizielle Spezifikation ist ein Satz von CS-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) für jede [Komponente](https://github.com/dotnet/corefx/tree/master/src) definiert die APIs der .NET-Standardbibliothek. Auch wenn sich die ref-Artefakte im [CoreFX-Repository](https://github.com/dotnet/corefx) befinden, sind sie nicht .NET Core-spezifisch.
 
-Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/corefx/blob/master/pkg/NETStandard.Library/NETStandard.Library.packages.targets)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen der .NET-Standardbibliothek definieren.
+Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen der .NET-Standardbibliothek definieren.
 
 Eine bestimmte Komponente, wie System.Runtime, beschreibt Folgendes:
 

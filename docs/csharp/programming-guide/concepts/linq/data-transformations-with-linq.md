@@ -1,78 +1,97 @@
 ---
-title: "Datentransformationen mit LINQ (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], Datentransformationen"
-  - "Quellelemente [LINQ in C#]"
-  - "Verknüpfen mehrerer Eingaben [LINQ in C#]"
-  - "Mehrere Ausgaben für eine Ausgabesequenz [LINQ in C#]"
-  - "Teilmenge von Quellelementen [LINQ in C#]"
-  - "Datenquellen [LINQ in C#], Datentransformationen"
-  - "Datentransformationen [LINQ in C#]"
+title: Datentransformationen mit LINQ (C#) | Microsoft -Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], data transformations
+- source elements [LINQ in C#]
+- joining multiple inputs [LINQ in C#]
+- multiple outputs for one output sequence [LINQ in C#]
+- subset of source elements [LINQ in C#]
+- data sources [LINQ in C#], data transformations
+- data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b7f8874e9a22ca14bee009cab98e13d96bd9621
+ms.lasthandoff: 03/13/2017
+
 ---
-# Datentransformationen mit LINQ (C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] dient nicht nur zum Abrufen von Daten.  Es ist auch ein leistungsstarkes Tool zum Transformieren von Daten.  Mit einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf verschiedene Art und Weise zum Erstellen einer neuen Ausgabesequenz einsetzen.  Sie können die Sequenz ändern, ohne die Elemente zu ändern, indem Sie sortieren und gruppieren. Die vielleicht ist die leistungsstärkste Funktion von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen die Fähigkeit, neue Typen zu erstellen.  Dies wird mit der [select](../../../../csharp/language-reference/keywords/select-clause.md)\-Klausel erreicht.  Sie können z. B. folgende Aufgaben ausführen:  
+# <a name="data-transformations-with-linq-c"></a>Datentransformationen mit LINQ (C#)
+Bei [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] geht es nicht nur um das Abrufen von Daten. Es ist auch ein leistungsstarkes Tool zur Datentransformation. Mithilfe einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf viele Arten zum Erstellen einer neuen Ausgabesequenz ändern. Sie können die Sequenz selbst durch Sortieren und Gruppieren ändern, ohne die Elemente zu ändern. Aber das vielleicht leistungsstärkste Feature von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfragen ist die Fähigkeit, neue Typen zu erstellen. Dies erfolgt in der [select](../../../../csharp/language-reference/keywords/select-clause.md)-Klausel. Sie können z. B. folgende Aufgaben ausführen:  
   
--   Führen Sie mehrere Eingabesequenzen in eine einzelne Ausgabesequenz zusammen, die einen neuen Typ hat.  
+-   Führen Sie mehrere Eingabesequenzen in einer einzelnen Ausgabesequenz, die einen neuen Typ hat, zusammen.  
   
 -   Erstellen Sie Ausgabesequenzen, deren Elemente aus nur einer oder mehreren Eigenschaften jedes Elements in der Quellsequenz bestehen.  
   
--   Erstellen Sie Ausgabesequenzen, deren Elemente aus den Ergebnissen von Operationen bestehen, die für die Quelldaten ausgeführt werden.  
+-   Erstellen Sie Ausgabesequenzen, deren Elemente aus Ergebnissen der Vorgänge für die Quelldaten bestehen.  
   
--   Erstellen Sie Ausgabesequenzen in einem anderen Format.  Zum Beispiel können Sie Daten von SQL\-Zeilen oder Textdateien in XML umwandeln.  
+-   Erstellen Sie Ausgabesequenzen in einem anderen Format. Beispielsweise können Sie Daten aus SQL-Zeilen oder Textdateien in XML umwandeln.  
   
- Dies sind nur einige Beispiele.  Natürlich können diese Transformationen auf verschiedene Art und Weise in der gleichen Abfrage kombiniert werden.  Außerdem kann die Ausgabesequenz einer Abfrage als Eingabesequenz für eine neue Abfrage verwendet werden.  
+ Dies sind nur einige Beispiele. Natürlich können diese Transformationen auf verschiedene Weise in der gleichen Abfrage kombiniert werden. Darüber hinaus kann die Ausgabesequenz einer Abfrage als Eingabesequenz für eine neue Abfrage verwendet werden.  
   
-## Verknüpfen mehrerer Eingaben in eine Ausgabesequenz  
- Sie können eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrage zum Erstellen einer Ausgabesequenz verwenden, die Elemente von mehr als einer Eingabesequenz enthält.  Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Speicher kombiniert werden, aber die gleichen Prinzipien können für die Kombination von XML\- oder SQL\- oder DataSet\-Quellen angewendet werden.  Nehmen wir an, es liegen die folgenden beiden Klassentypen vor:  
+## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Verknüpfen mehrerer Eingaben in eine Ausgabesequenz  
+ Sie können eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfrage verwenden, um eine Ausgabesequenz zu erstellen, die Elemente von mehr als einer Eingabesequenz enthält. Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Arbeitsspeicher kombiniert werden können, aber die gleichen Prinzipien können angewendet werden, um Daten von XML- oder SQL- oder DataSet-Quellen zu kombinieren. Nehmen Sie die beiden folgenden Klassentypen an:  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
- Im folgenden Beispiel wird die Abfrage gezeigt:  
+ Das folgende Beispiel gibt die Abfrage an:  
   
  [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
- Weitere Informationen finden Sie unter [join\-Klausel](../../../../csharp/language-reference/keywords/join-clause.md) und unter [select\-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Weitere Informationen finden Sie unter [join-Klausel](../../../../csharp/language-reference/keywords/join-clause.md) und [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## Auswählen einer Teilmenge jedes Quellelements  
- Es gibt zwei primäre Möglichkeiten, in der Quellsequenz eine Teilmenge von jedem Element auszuwählen:  
+## <a name="selecting-a-subset-of-each-source-element"></a>Auswählen einer Teilmenge jedes Quellelements  
+ Es gibt zwei Hauptmethoden, eine Teilmenge jedes Elements in der Quellsequenz auszuwählen:  
   
-1.  Um nur einen Member des Quellelements auszuwählen, verwenden Sie die Punktoperation.  Im folgenden Beispiel wird davon ausgegangen, dass ein `Customer`\-Objekt verschiedene öffentliche Eigenschaften enthält, einschließlich der Zeichenfolge `City`.  Bei Ausführung erzeugt diese Abfrage eine Ausgabesequenz von Zeichenfolgen.  
+1.  Um nur einen Member des Quellelements auszuwählen, verwenden Sie die Punktoperation. Im folgenden Beispiel wird angenommen, dass ein `Customer`-Objekt verschiedene öffentliche Eigenschaften enthält, einschließlich der Zeichenfolge `City`. Bei der Ausführung erzeugt diese Abfrage eine Ausgabesequenz von Zeichenfolgen.  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Um Elemente zu erstellen, die mehr als eine Eigenschaft vom Quellelement enthalten, können Sie einen Objektinitialisierer mit einem benannten Objekt oder einem anonymen Typ verwenden.  Im folgenden Beispiel wird die Verwendung eines anonymen Typs zum Kapseln zweier Eigenschaften von jedem `Customer`\-Element veranschaulicht:  
+2.  Zum Erstellen von Elementen, die mehr als eine Eigenschaft aus dem Quellelement enthalten, können Sie einen Objektinitialisierer mit einem benannten Objekt oder einen anonymen Typ verwenden. Das folgende Beispiel zeigt die Verwendung eines anonymen Typs zum Kapseln zweier Eigenschaften von jedem `Customer`-Element:  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- Weitere Informationen finden Sie unter [Objekt\- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) und unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Weitere Informationen finden Sie unter [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) und [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## Transformieren von Objekten im Speicher in XML  
- Mit [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfragen können Daten zwischen Datenstrukturen im Speicher, SQL\-Datenbanken, [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)]\-Datasets und XML\-Streams oder \-Dokumenten auf einfache Weise umgewandelt werden.  Im folgenden Beispiel werden Objekte in einer Datenstruktur im Speicher in XML\-Elemente umgewandelt.  
+## <a name="transforming-in-memory-objects-into-xml"></a>Transformieren von Objekten im Speicher in XML  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfragen machen es einfacher, Daten zwischen Datenstrukturen im Speicher, SQL-Datenbanken, [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)]-Datasets und XML-Streams oder XML-Dokumenten zu transformieren. Im folgenden Beispiel werden Objekte in einer Datenstruktur im Arbeitsspeicher in XML-Elemente transformiert.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
- Der Code erzeugt die folgende XML\-Ausgabe:  
+ Der Code erzeugt die folgende XML-Ausgabe:  
   
 ```  
 < Root>  
@@ -94,21 +113,20 @@ caps.handback.revision: 15
 </Root>  
 ```  
   
- Weitere Informationen finden Sie unter [Erstellen von XML\-Strukturen in C\#](../Topic/Creating%20XML%20Trees%20in%20C%23%20\(LINQ%20to%20XML\)1.md).  
+ Weitere Informationen finden Sie unter [Erstellen von XML-Strukturen in C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).  
   
-## Ausführen von Operationen für Quellelemente  
- Eine Ausgabesequenz enthält unter Umständen keine Elemente oder Elementeigenschaften aus der Quellsequenz.  Diese Ausgabe kann stattdessen eine Wertesequenz sein, die durch Verwendung der Quellelemente als Eingabeargumente berechnet wird.  Durch folgende einfache Abfrage wird eine Zeichenfolgensequenz ausgegeben, deren Werte eine Berechnung basierend auf der Quellelementsequenz des Typs `double` darstellen.  
+## <a name="performing-operations-on-source-elements"></a>Ausführen von Operationen für Quellelemente  
+ Eine Ausgabesequenz enthält möglicherweise keine Elemente oder Elementeigenschaften aus der Quellsequenz. Die Ausgabe kann möglicherweise stattdessen eine Sequenz von Werten enthalten, die durch Verwendung der Quellelemente als Eingabeargumente berechnet wird. Die folgende einfache Abfrage gibt, wenn sie ausgeführt wird, eine Sequenz von Zeichenfolgen aus, deren Werte eine Berechnung basierend auf der Quellsequenz der Elemente des Typs `double` darstellen.  
   
 > [!NOTE]
->  Das Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage für eine andere Domäne übersetzt wird.  Sie können beispielsweise keine normale C\#\-Methode in [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt.  Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen.  Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](../Topic/Stored%20Procedures.md).  
+>  Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage in eine andere Domäne übersetzt wird. Sie können beispielsweise keine normale C#-Methode in [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt. Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen. Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](http://msdn.microsoft.com/library/4d23dd7a-a85f-44ff-a717-af7d0950c0fc).  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
-## Siehe auch  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
- [LINQ\-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [select\-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)   
- [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+## <a name="see-also"></a>Siehe auch  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)   
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
+ [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)

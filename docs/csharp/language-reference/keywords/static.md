@@ -1,72 +1,90 @@
 ---
-title: "static (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "static"
-  - "static_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "static-Schlüsselwort [C#]"
+title: static (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- static
+- static_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9126a882984799a5c726ecc5d82b3f3db707858a
+ms.lasthandoff: 03/13/2017
+
 ---
-# static (C#-Referenz)
-Mit dem `static`\-Modifizierer kann ein statischer Member deklariert werden, der zum Typ selbst und nicht zu einem bestimmten Objekt gehört.  Der `static`\-Modifizierer kann bei Klassen, Feldern, Methoden, Eigenschaften, Operatoren, Ereignissen und Konstruktoren verwendet werden, jedoch nicht bei Indexern, Destruktoren oder Typen, die keine Klassen sind.  Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+# <a name="static-c-reference"></a>static (C#-Referenz)
+Verwenden Sie den Modifizierer `static`, um einen statischen Member zu deklarieren, der zum Typ selbst gehört, anstatt zu einem bestimmten Objekt. Der Modifizierer `static` kann mit Klassen, Felder, Methoden, Eigenschaften, Operatoren, Ereignissen und Konstruktoren verwendet werden, jedoch nicht mit Indexer, Destruktoren oder Typen außer Klassen. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
-## Beispiel  
- Die folgende Klasse ist zum Beispiel als `static` deklariert und enthält nur `static`\-Methoden:  
+## <a name="example"></a>Beispiel  
+ Die folgende Klasse wird als `static` deklariert und enthält nur `static`-Methoden:  
   
  [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
- Eine Konstanten\- oder Typdeklaration stellt implizit einen Member des Typs **static** dar.  
+ Die Deklaration einer Konstante oder eines Typs ist implizit ein statischer Member.  
   
- Auf einen Member vom Typ **static** darf nicht über eine Instanz verwiesen werden.  Stattdessen geschieht dies über den Typnamen.  Betrachten Sie z. B. die folgende Klasse:  
+ Ein statischer Member kann nicht über eine Instanz verwiesen werden. Stattdessen wird er über den Namen verwiesen. Betrachten Sie beispielsweise die folgende Klasse:  
   
  [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
- Verwenden Sie zum Verweisen auf den statischen Member `x` den vollqualifizierten Namen \(`MyBaseC.MyStruct.x`\), sofern nicht vom selben Projektumfang auf den Member zugegriffen werden kann:  
+ Verwenden Sie zum Verweisen auf ein statischen Member `x` den vollqualifizierten Namen `MyBaseC.MyStruct.x`, außer es kann auf den Member vom selben Geltungsbereich zugegriffen werden:  
   
-```c#  
+```csharp  
 Console.WriteLine(MyBaseC.MyStruct.x);  
 ```  
   
- Während die Instanz einer Klasse eine separate Kopie aller Instanzenfelder der Klasse enthält, ist lediglich eine Kopie jedes statischen Felds vorhanden.  
+ Während die Instanz einer Klasse eine separate Kopie aller Instanzfelder der Klasse enthält, gibt es nur eine Kopie von jedem statischen Feld.  
   
- [this](../../../csharp/language-reference/keywords/this.md) kann nicht zum Verweisen auf statische Methoden oder Eigenschaftenaccessoren verwendet werden.  
+ Es ist nicht möglich, [this](../../../csharp/language-reference/keywords/this.md) zum Verweis auf statische Methoden oder Eigenschaftenaccessoren zu verwenden.  
   
- Wenn das `static`\-Schlüsselwort auf eine Klasse angewendet wird, müssen alle Member der Klasse statisch sein.  
+ Wenn das Schlüsselwort `static` auf eine Klasse angewandt wird, müssen alle Member der Klasse statisch sein.  
   
- Klassen und statische Klassen können möglicherweise über statische Konstruktoren verfügen.  Statische Konstruktoren werden irgendwann zwischen dem Programmstart und der Klasseninstanziierung aufgerufen.  
+ Klassen und statische Klassen können über statische Konstruktoren verfügen. Statische Konstruktoren werden irgendwann zwischen Programmstart und Klasseninstanziierung aufgerufen.  
   
 > [!NOTE]
->  Die Verwendung des `static`\-Schlüsselworts ist eingeschränkter als in C\+\+.  Einen Vergleich mit dem C\+\+\-Schlüsselwort finden Sie unter [Statisch](/visual-cpp/misc/static-cpp).  
+>  Die Verwendung des Schlüsselworts `static` ist in C# eingeschränkter als in C++. Vergleiche mit dem C++-Schlüsselwort finden Sie unter [Statisch](https://docs.microsoft.com/cpp/misc/static-cpp).  
   
- Betrachten Sie zur Demonstration von statischen Membern eine Klasse, die einen Firmenangestellten repräsentiert.  Nehmen Sie an, dass die Klasse eine Methode zum Zählen der Angestellten und ein Feld zum Speichern der Angestelltenzahl enthält.  Weder die Methode noch das Feld sind Elemente einer Angestellteninstanz.  Stattdessen gehören sie zur Klasse.  Daher sollten sie als Member des Typs **static** der Klasse deklariert werden.  
+ Stellen Sie sich zur Veranschaulichung von statischen Membern eine Klasse vor, die einen Angestellten eines Unternehmens darstellt. Es wird angenommen, dass die Klasse eine Methode zum Zählen von Angestellten sowie ein Feld enthält, in dem die Anzahl von Angestellten gespeichert wird. Sowohl die Methode als auch das Feld gehören nicht zu einem Instanzangestellten. Sie gehören stattdessen zur Unternehmensklasse. Daher sollten sie als statische Member der Klasse deklariert werden.  
   
-## Beispiel  
- In diesem Beispiel werden der Name und die ID eines neuen Angestellten eingelesen, der Angestelltenzähler wird um eins erhöht, und die Informationen für den neuen Angestellten sowie die neue Angestelltenzahl werden angezeigt.  Der Einfachheit halber wird bei diesem Beispiel die Angestelltenzahl über die Tastatur eingegeben.  In einer realen Anwendung sollten diese Informationen jedoch aus einer Datei eingelesen werden.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird der Name und die ID eines neuen Angestellten gelesen, der Angestelltenzähler wird um 1 erhöht, und die Informationen zum neuen Angestellten sowie die neue Anzahl von Angestellten wird angezeigt. Der Einfachheit halber liest das Programm die aktuelle Anzahl von Angestellten von der Tastatur. Bei einer realen Anwendung sollten diese Informationen aus einer Datei gelesen werden.  
   
  [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
-## Beispiel  
- Dieses Beispiel zeigt, dass es zwar möglich ist, ein statisches Feld mit einem anderen statischen, noch nicht deklarierten Feld zu initialisieren, dass die Ergebnisse jedoch undefiniert bleiben, solange dem statischen Feld nicht explizit ein Wert zugewiesen wird.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt, dass, obwohl Sie ein statisches Feld mit einem anderen noch nicht deklarierte, statischen Feld initialisieren können, die Ergebnisse undefiniert bleiben, bis Sie dem statischen Feld explizit einen Wert zuweisen.  
   
  [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
  [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

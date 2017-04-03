@@ -1,32 +1,50 @@
 ---
-title: "typeof (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "typeof"
-  - "typeof_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "typeof-Schlüsselwort [C#]"
+title: typeof (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- typeof
+- typeof_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0590aa8a339dc58b7215722a530a71f8973864d4
+ms.lasthandoff: 03/13/2017
+
 ---
-# typeof (C#-Referenz)
-Wird verwendet, um das `System.Type`\-Objekt für einen Typ zu erhalten.  Der `typeof`\-Ausdruck nimmt folgende Form an:  
+# <a name="typeof-c-reference"></a>typeof (C#-Referenz)
+Wird zum Abrufen des Objekts `System.Type` eines Typs verwendet. Der Ausdruck `typeof` weist folgende Form auf:  
   
 ```  
 System.Type type = typeof(int);  
 ```  
   
-## Hinweise  
- Um den Laufzeittyp eines Ausdrucks abzurufen, kann die <xref:System.Object.GetType%2A>\-Methode von .NET Framework verwendet werden, wie im folgenden Beispiel gezeigt:  
+## <a name="remarks"></a>Hinweise  
+ Sie können die .NET Framework-Methode <xref:System.Object.GetType%2A> verwenden, um den Laufzeittyp eines Ausdrucks zu erhalten, so wie in folgendem Beispiel:  
   
 ```  
 int i = 0;  
@@ -35,28 +53,28 @@ System.Type type = i.GetType();
   
  Der Operator `typeof` kann nicht überladen werden.  
   
- Der Operator `typeof` kann auch bei offenen generischen Typen verwendet werden.  Typen mit mehr als einem Parameter müssen die entsprechende Anzahl Kommas in der Spezifikation aufweisen.  Im folgenden Beispiel wird gezeigt, wie ermittelt wird, ob der Rückgabetyp einer Methode ein generischer <xref:System.Collections.Generic.IEnumerable%601>\-Typ ist.  Angenommen, diese Methode ist eine Instanz eines MethodInfo\-Typs:  
+ Der Operator `typeof` kann auch bei offenen generischen Typen verwendet werden. Typen mit mehr als einem Parameter müssen die entsprechende Anzahl von Kommas in der Spezifikation haben. Das folgende Beispiel zeigt, wie Sie bestimmen, ob der Rückgabetyp einer Methode ein generischer <xref:System.Collections.Generic.IEnumerable%601> ist. Nehmen Sie an, dass die Methode eine Instanz eines MethodInfo-Typs ist:  
   
 ```  
 string s = method.ReturnType.GetInterface  
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
-## Beispiel  
- In diesem Beispiel wird die <xref:System.Object.GetType%2A>\-Methode verwendet, um den Typ zu ermitteln, der das Ergebnis der numerischen Berechnung enthält.  Dies hängt von den Speicheranforderungen der resultierenden Zahl ab.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet die Methode <xref:System.Object.GetType%2A>, um den Typ zu bestimmen, der verwendet wird, um das Ergebnis einer numerischen Berechnung zu speichern. Dies hängt vom Speicherbedarf der resultierenden Zahl ab.  
   
  [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Type?displayProperty=fullName>   
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
  [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)

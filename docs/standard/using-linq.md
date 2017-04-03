@@ -25,7 +25,7 @@ LINQ bietet Abfragefunktionen auf Sprachebene und eine API einer [Funktion höhe
 
 Abfragesyntax auf Sprachebene:
 
-```cs
+```csharp
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
@@ -34,7 +34,7 @@ var linqExperts = from p in programmers
 
 Gleiches Beispiel mit der `IEnumerable<T>`-API:
 
-```cs
+```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
 
@@ -46,7 +46,7 @@ Nehmen Sie an, Sie haben eine Liste mit Haustieren, möchten diese aber in ein W
 
 Herkömmlicher imperativer Code:
 
-```cs
+```csharp
 var petLookup = new Dictionary<int, Pet>();
 
 foreach (var pet in pets)
@@ -60,7 +60,7 @@ Der Zweck des Codes ist nicht, ein neues `Dictionary<int, Pet>` zu erstellen und
 
 Entsprechender LINQ-Ausdruck:
 
-```cs
+```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
 
 ```
@@ -73,7 +73,7 @@ Für einen erheblichen Teil der verwendeten Software dreht sich alles um den Umg
 
 Stellen Sie sich Folgendes vor: Sie möchten alle XML-Elemente mit einem bestimmten Attributwert finden.
 
-```cs
+```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
                                            string attributeName, string value)
 {
@@ -92,14 +92,14 @@ LINQ-Anbieter ermöglichen nicht nur die Interaktion mit XML. [LINQ to SQL](http
 
 Dies ist eine Frage, die häufig gestellt wird. Im Grunde ist dies:
 
-```cs
+```csharp
 var filteredItems = myItems.Where(item => item.Foo);
 
 ```
 
 sehr viel präziser als dies:
 
-```cs
+```csharp
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
@@ -132,7 +132,7 @@ Im Folgenden finden eine kurze Darstellung einiger der grundlegenden Bestandteil
 
 *   Die Grundbestandteile sind `Where`, `Select` und `Aggregate`:
 
-```cs
+```csharp
 // Filtering a list
 var germanShepards = dogs.Where(dog => dog.Breed == DogBreed.GermanShepard);
 
@@ -156,7 +156,7 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 
 *   Reduzieren einer Liste mit Listen:
 
-```cs
+```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
@@ -164,7 +164,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
 *   Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
 
-```cs
+```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
 {
     public bool Equals(Dog a, Dog b)
@@ -200,7 +200,7 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 
 *   Schnittmenge zwischen zwei Gruppen:
 
-```cs
+```csharp
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
@@ -209,7 +209,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 
 *   Sortierung:
 
-```cs
+```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
@@ -219,7 +219,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
 
 *   Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](http://stackoverflow.com/a/844855) übernommen und geändert):
 
-```cs
+```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
 {
     if (self != null && to != null)
@@ -248,7 +248,7 @@ PLINQ (Parallel LINQ) ist ein Modul für die parallele Ausführung für LINQ-Aus
 
 Nehmen wir einmal die folgende Situation:
 
-```cs
+```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
 {
     var seed = default(UInt64);

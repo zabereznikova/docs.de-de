@@ -1,0 +1,128 @@
+---
+title: "Übersicht über Standardabfrageoperatoren (C#) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 5b03c85a298b3864a91a7052ca80cf3714ba98fe
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="standard-query-operators-overview-c"></a>Übersicht über Standardabfrageoperatoren (C#)
+Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden funktionieren mit Sequenzen. Eine Sequenz ist ein Objekt, dessen Typ die Schnittstellen <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  
+  
+ Es gibt zwei Gruppen von LINQ-Standardabfrageoperatoren; eine Gruppe funktioniert auf Grundlage von Objekten vom Typ <xref:System.Collections.Generic.IEnumerable%601>, die andere auf Grundlage von Objekten vom Typ <xref:System.Linq.IQueryable%601>. Die Methoden, die eine Gruppe bilden, sind statische Member der Klassen <xref:System.Linq.Enumerable> und <xref:System.Linq.Queryable>. Sie werden als *Erweiterungsmethoden* des Typs, auf dessen Grundlage sie funktionieren, definiert. Das bedeutet, dass Sie entweder mit der Syntax für statische Methoden oder für Instanzmethoden aufgerufen werden.  
+  
+ Darüber hinaus funktionieren mehrere Standardabfrageoperator-Methoden auf Grundlage anderer Typen als die, die auf <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> basieren. Der Typ <xref:System.Linq.Enumerable> definiert zwei Methoden, die beide auf Grundlage von Objekten vom Typ <xref:System.Collections.IEnumerable> funktionieren. Die Methoden <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> und <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> ermöglichen es Ihnen, eine nicht parametrisierte oder nicht generische Auflistung im LINQ-Muster abfragen zu lassen. Dies erfolgt durch Erstellen einer stark typisierten Auflistung von Objekten. Die Klasse <xref:System.Linq.Queryable> definiert zwei ähnliche Methoden, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> und <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, die auf Grundlage von Objekten vom Typ <xref:System.Linq.Queryable> funktionieren.  
+  
+ Die Standardabfrageoperatoren unterscheiden sich im Zeitpunkt ihrer Ausführung. Dies hängt davon ab, ob sie einen Singleton-Wert oder eine Sequenz von Werten zurückgeben. Die Methoden, die einen Singleton-Wert zurückgeben (z.B. <xref:System.Linq.Enumerable.Average%2A> und <xref:System.Linq.Enumerable.Sum%2A>) werden sofort ausgeführt. Methoden, die eine Sequenz zurückgeben, verzögern die Abfrageausführung und geben ein auflistbares Objekt zurück.  
+  
+ Bei Methoden, die auf Grundlage von im Speicher enthaltenen Auflistungen funktionieren, d.h. die Methoden, die <xref:System.Collections.Generic.IEnumerable%601> erweitern, erfasst das zurückgegebene auflistbare Objekt die Argumente, die an die Methode übergeben wurden. Wenn dieses Objekt auflistbar ist, tritt die Logik des Abfrageoperators in Kraft, und die Abfrageergebnisse werden zurückgegeben.  
+  
+ Im Gegensatz dazu implementieren Methoden, die <xref:System.Linq.IQueryable%601> erweitern, kein Abfrageverhalten. Sie erstellen stattdessen eine Ausdrucksbaumstruktur, die die auszuführende Abfrage darstellt. Die Verarbeitung von Abfragen wird vom Quellobjekt <xref:System.Linq.IQueryable%601> übernommen.  
+  
+ Aufrufe der Abfragemethode können miteinander in eine Abfrage verkettet werden. Dadurch können Abfragen von beliebiger Komplexität sein.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Standardabfrageoperatoren verwendet werden können, um Informationen zu einer Sequenz zu erhalten.  
+  
+```csharp  
+string sentence = "the quick brown fox jumps over the lazy dog";  
+// Split the string into individual words to create a collection.  
+string[] words = sentence.Split(' ');  
+  
+// Using query expression syntax.  
+var query = from word in words  
+            group word.ToUpper() by word.Length into gr  
+            orderby gr.Key  
+            select new { Length = gr.Key, Words = gr };  
+  
+// Using method-based query syntax.  
+var query2 = words.  
+    GroupBy(w => w.Length, w => w.ToUpper()).  
+    Select(g => new { Length = g.Key, Words = g }).  
+    OrderBy(o => o.Length);  
+  
+foreach (var obj in query)  
+{  
+    Console.WriteLine("Words of length {0}:", obj.Length);  
+    foreach (string word in obj.Words)  
+        Console.WriteLine(word);  
+}  
+  
+// This code example produces the following output:  
+//  
+// Words of length 3:  
+// THE  
+// FOX  
+// THE  
+// DOG  
+// Words of length 4:  
+// OVER  
+// LAZY  
+// Words of length 5:  
+// QUICK  
+// BROWN  
+// JUMPS   
+```  
+  
+## <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
+ Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen über Standardabfrageoperatoren, die über dedizierte Schlüsselwörter und deren entsprechende Syntax verfügen, finden Sie unter [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+  
+## <a name="extending-the-standard-query-operators"></a>Erweitern der Standardabfrageoperatoren  
+ Sie können die Gruppe von Standardabfrageoperatoren durch Erstellen von domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder -technologie geeignet sind. Sie können die Standardabfrageoperatoren auch mit ihren eigenen Implementierungen ersetzen, die zusätzliche Dienste bieten, z.B. Remote-Auswertung, Abfrageübersetzung und Optimierung. Unter <xref:System.Linq.Enumerable.AsEnumerable%2A> finden Sie ein Beispiel.  
+  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ Über die folgenden Links gelangen Sie zu Themen, die Ihnen weitere Informationen über die verschiedenen Standardabfrageoperatoren basierend auf deren Funktionen bieten.  
+  
+ [Sorting Data (C#) (Sortieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+  
+ [Set Operations (C#) (Set-Vorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+  
+ [Filtering Data (C#) (Filtern von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+  
+ [Quantifier Operations (C#) (Quantifizierer-Vorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+  
+ [Projection Operations (C#) (Projektionsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+  
+ [Partitioning Data (C#) (Partitionieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+  
+ [Join Operations (C#) (Verknüpfungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+  
+ [Grouping Data (C#) (Gruppieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+  
+ [Generation Operations (C#) (Generierungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+  
+ [quality Operations (C#) (Gleichheitsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+  
+ [Element Operations (C#) (Elementvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+  
+ [Converting Data Types (C#) (Konvertieren von Datentypen (C#))](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+  
+ [Concatenation Operations (C#) (Verkettungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+  
+ [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Linq.Enumerable>   
+ <xref:System.Linq.Queryable>   
+ [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)   
+ [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
+ [Classification of Standard Query Operators by Manner of Execution (C#) (Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#))](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
+ [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

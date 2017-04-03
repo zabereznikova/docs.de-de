@@ -29,7 +29,7 @@ Generika sind auch zur Laufzeit verfügbar und werden **konkretisiert**. Dies be
 
 Das folgende Programm zeigt, wie effizient es ist, wenn die Art der Datenstruktur zur Laufzeit bekannt ist:
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;

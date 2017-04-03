@@ -1,96 +1,114 @@
 ---
-title: "join-Klausel (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "join"
-  - "join_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "join-Klausel [C#]"
-  - "join-Schlüsselwort [C#]"
+title: join-Klausel (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- join
+- join_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- join clause [C#]
+- join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 caps.latest.revision: 29
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 29
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
+ms.lasthandoff: 03/13/2017
+
 ---
-# join-Klausel (C#-Referenz)
-Die `join`\-Klausel ist nützlich, um Elemente aus unterschiedlichen Quellsequenzen, die keine direkte Beziehung im Objektmodell haben, zuzuweisen.  Die einzige Anforderung ist, dass die Elemente in jeder Quelle einige Werte gemeinsam nutzen, die auf Gleichheit verglichen werden können.  Ein Lebensmittelanbieter hat beispielsweise eine Liste mit Anbietern bestimmter Produkte und eine Liste mit Käufern.  Eine `join`\-Klausel kann z. B. verwendet werden, um eine Liste mit Anbietern und Käufern für dieses Produkt zu erstellen, die sich alle in der angegebenen Region befinden.  
+# <a name="join-clause-c-reference"></a>join-Klausel (C#-Referenz)
+Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus unterschiedlichen Quellsequenzen, die keine direkte Beziehung im Objektmodell haben. Die Elemente müssen lediglich in jeder Quelle einige Werte freigeben, die auf Gleichheit verglichen werden können. Ein Lebensmittelgroßhändler hat z.B. eine Liste seiner Lieferanten und seiner Käufer für ein bestimmtes Produkt. Eine `join`-Klausel kann beispielsweise verwendet werden, um eine Liste von Lieferanten und Käufern dieses Produkts zu erstellen, die sich alle in einer angegebenen Region befinden.  
   
- Eine `join`\-Klausel verwendet zwei Quellsequenzen als Eingabe.  Die Elemente in jeder Sequenz müssen entweder eine Eigenschaft sein oder eine Eigenschaft enthalten, die mit einer entsprechenden Eigenschaft in der anderen Sequenz verglichen werden kann.  Die `join`\-Klausel vergleicht die angegebenen Schlüssel mithilfe des speziellen `equals`\-Schlüsselworts auf Gleichheit.  Alle von der `join`\-Klausel ausgeführten Joins sind Equijoins.  Die Form der Ausgabe einer `join`\-Klausel ist vom speziellen Typ des Joins, den Sie ausführen, abhängig.  Die folgenden drei Jointypen kommen am häufigsten vor:  
+ Eine `join`-Klausel akzeptiert zwei Quellsequenzen als Eingabe. Die Elemente jeder Sequenz müssen entweder eine Eigenschaft sein oder eine Eigenschaft enthalten, die mit einer entsprechenden Eigenschaft einer anderen Sequenz verglichen werden kann. Die `join`-Klausel vergleicht die angegebenen Schlüssel auf Gleichheit, indem sie das besonderen Schlüsselwort `equals` verwendet. Alle Verknüpfungen, die von der `join`-Klausel vorgenommen werden, sind Gleichheitsverknüpfungen. Die Form der Ausgabe einer `join`-Klausel hängt vom Typ der durchgeführten Verknüpfung ab. Hier sind die am häufigsten vorkommenden Verknüpfungstypen:  
   
--   Innerer Join  
+-   Innere Verknüpfung  
   
--   Group Join  
+-   Gruppenverknüpfung  
   
--   Linker äußerer Join  
+-   Left Outer Join  
   
-## Innerer Join  
- Im folgenden Beispiel wird ein einfacher innerer Equijoin veranschaulicht.  Diese Abfrage erzeugt eine flache Sequenz von "Produktname\/Kategorie"\-Paaren.  Die gleiche Kategoriezeichenfolge wird in mehreren Elementen angezeigt.  Wenn ein Element aus `categories` nicht über entsprechende `products` verfügt, wird diese Kategorie nicht in den Ergebnissen angezeigt.  
+## <a name="inner-join"></a>Innerer Join  
+ Im folgenden Beispiel wird eine einfache Gleichheitsverknüpfung dargestellt. Diese Abfrage produziert eine flache Sequenz aus Paaren der Form „Produktname/Kategorie“. Die gleiche Kategoriezeichenfolge taucht in mehreren Elementen auf. Wenn ein Element aus `categories` keine entsprechenden `products` hat, wird diese Kategorie nicht in den Ergebnissen angezeigt.  
   
  [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
-## Group Join  
- Eine `join`\-Klausel mit einem `into`\-Ausdruck wird als Group Join bezeichnet.  
+## <a name="group-join"></a>Group Join  
+ Eine `join`-Klausel mit einem `into`-Ausdruck wird Gruppenverknüpfung genannt.  
   
  [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
- Ein Group Join erzeugt eine hierarchische Ergebnissequenz, in der Elemente in der linken Quellsequenz einem oder mehr entsprechenden Elementen in der rechten Quellsequenz zugeordnet werden.  Ein Group Join hat keine Entsprechung im relationalen Sinn; es ist im Grunde eine Sequenz von Objektarrays.  
+ Eine Gruppenverknüpfung erstellt eine hierarchische Ergebnissequenz, die Elemente in der linken Quellsequenz mit mindestens einem entsprechenden Element der rechten Quellsequenz verknüpft. Eine Gruppenverknüpfung hat keine entsprechenden Beziehungsbedingungen; eigentlich ist sie eine Sequenz von Objektarrays.  
   
- Wenn keine Elemente aus der rechten Quellsequenz gefunden werden, die mit einem Element in der linken Quelle übereinstimmen, erzeugt die `join`\-Klausel ein leeres Array für dieses Element.  Der Group Join ist im Grunde ein innerer Equijoin, mit der Ausnahme, dass die Ergebnissequenz in Gruppen organisiert ist.  
+ Wenn keine Elemente der rechten Quellsequenz gefunden werden, die mit Elementen der linken Sequenz übereinstimmen, erstellt die `join`-Klausel ein leeres Array für dieses Element. Deshalb ist eine Gruppenverknüpfung immer noch grundsätzlich eine innere Gleichheitsverknüpfung, nur dass die Ergebnissequenz in Gruppen aufgeteilt ist.  
   
- Wenn Sie die Ergebnisse eines Group Joins auswählen, können Sie auf die Elemente zugreifen, jedoch nicht den Entsprechungsschlüssel identifizieren.  Es ist daher im Allgemeinen sinnvoller, die Ergebnisse des Group Joins zu einem neuen Typ zusammenzufassen, der auch den Schlüsselnamen enthält, wie im vorherigen Beispiel gezeigt.  
+ Wenn Sie nur das Ergebnis einer Gruppenverknüpfung auswählen, können Sie auf Elemente zugreifen, aber Sie können nicht den Schlüssel identifizieren, der ihnen gleich ist. Deshalb ist es im Allgemeinen sinnvoller, das Ergebnis der Gruppenverknüpfung in einem neuen Typen auszuwählen, der auch einen Schlüsselnamen aufweist – so wie im vorherigen Ergebnis erläutert.  
   
- Sie können natürlich auch das Ergebnis eines Group Joins als Generator einer anderen Unterabfrage verwenden:  
+ Selbstverständlich können Sie auch das Ergebnis einer Gruppenverknüpfung als Generator einer anderen Unterabfrage verwenden:  
   
  [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
-## Linker äußerer Join  
- In einem linken äußeren Join werden alle Elemente in der linken Quellsequenz zurückgegeben, selbst dann, wenn es keine entsprechenden Elemente in der rechten Sequenz gibt.  Um einen linken äußeren Join in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] durchzuführen, verwenden Sie die `DefaultIfEmpty`\-Methode zusammen mit einem Group Join, um ein rechtes Standardelement anzugeben, das erstellt wird, wenn es keine Entsprechung für ein linkes Element gibt.  Sie können `null` als Standardwert für einen beliebigen Referenztyp verwenden, oder Sie können einen benutzerdefinierten Standardtyp festlegen.  Im folgenden Beispiel wird ein benutzerdefinierter Standardtyp gezeigt:  
+## <a name="left-outer-join"></a>Linker äußerer Join  
+ In einem Left Outer Join werden alle Elemente der linken Quellsequenz zurückgegeben, auch wenn sich keine entsprechenden Elemente in der rechten Sequenz befinden. Um einen Left Outer Join in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] durchzuführen, verwenden Sie die Methode `DefaultIfEmpty` zusammen mit einer Gruppenverknüpfung, um ein Standardelement für den rechten Bereich festzulegen, das erstellt wird, wenn es kein entsprechendes Element im linken Bereich gibt. Sie können `null` als Standardwert für jeden beliebigen Verweistyp verwenden, oder Sie können einen benutzerdefinierten Standardtyp festlegen. Im folgendem Beispiel wird ein benutzerdefinierter Standardtyp dargestellt:  
   
  [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
-## Der Gleichheitsoperator  
- Eine `join`\-Klausel führt einen Equijoin aus.  Das heißt, Sie können Übereinstimmungen nur auf der Gleichheit von zwei Schlüsseln basieren.  Andere Vergleichstypen, z. B. "größer als" oder "ungleich", werden nicht unterstützt.  Um sicherzustellen, dass alle Joins Equijoins sind, verwendet die `join`\-Klausel das `equals`\-Schlüsselwort anstelle des Operators `==`.  Das `equals`\-Schlüsselwort kann nur in einer `join`\-Klausel verwendet werden und unterscheidet sich in einem wichtigen Aspekt vom Operator `==`.  Bei `equals` nutzt der linke Schlüssel die äußere Quellsequenz, und der rechte Schlüssel nutzt die innere Quelle.  Die äußere Quelle befindet sich nur links von `equals` im Bereich, und die innere Quelle ist nur rechts eingebunden.  
+## <a name="the-equals-operator"></a>Der equals-Operator  
+ Eine `join`-Klausel führt eine Gleichheitsverknüpfung durch. D.h., dass Übereinstimmungen nur auf der Gleichheit zweier Schlüssel basieren können. Andere Vergleichstypen wie etwa „größer als“ oder „ungleich“ werden nicht unterstützt. Um sicherzustellen, dass die Verknüpfungen Gleichheitsverknüpfungen sind, verwendet die `join`-Klausel das Schlüsselwort `equals` statt des Operators `==`. Das Schlüsselwort `equals` kann nur in einer `join`-Klausel verwendet werden, und es unterscheidet sich vom Operator `==` in einem wesentlichen Punkt. Der linke Schlüssel verarbeitet mit `equals` die äußere Quellsequenz, und der rechte Schlüssel verarbeitet die innere Quelle. Die äußere Quelle befindet sich nur links von `equals` im Geltungsbereich, und die innere Quellsequenz befindet sich nur auf der rechten Seite im Geltungsbereich.  
   
-## Nicht\-Equijoins  
- Sie können mit mehreren `from`\-Klauseln Nicht\-Equijoins, Cross Joins und andere benutzerdefinierte Joinoperationen durchführen, um neue Sequenzen einzeln in eine Abfrage einzuführen.  Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
+## <a name="non-equijoins"></a>Nicht-Gleichheitsverknüpfungen  
+ Sie können Nicht-Gleichheitsverknüpfungen, Kreuzverknüpfungen und andere benutzerdefinierte Verknüpfungen durchführen, indem Sie mehrere `from`-Klauseln verwenden, um unabhängig neue Sequenzen in eine Abfrage einzuführen. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
-## Joins für Objektauflistungen im Vergleich zurelationalen Tabellen  
- In einem [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdruck werden Joinoperationen für Objektauflistungen ausgeführt.  Objektauflistungen können nicht auf genau die gleiche Art wie zwei relationale Tabellen verknüpft werden.  In [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] sind explizite `join`\-Klauseln nur erforderlich, wenn zwei Quellsequenzen nicht durch eine Beziehung gebunden sind.  Bei der Arbeit mit [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)] werden Fremdschlüsseltabellen im Objektmodell als Eigenschaften der Primärtabelle dargestellt.  In der Northwind\-Datenbank weist die Customer\-Tabelle beispielsweise eine Fremdschlüsselbeziehung mit der Orders\-Tabelle auf.  Wenn Sie die Tabellen dem Objektmodell zuordnen, weist die Customer\-Klasse eine Orders\-Eigenschaft auf, die die Auflistung von Bestellungen, die diesem Kunden zugewiesen sind, enthält.  Im Grunde wurde der Join bereits für Sie hergestellt.  
+## <a name="joins-on-object-collections-vs-relational-tables"></a>Verknüpfungen für Objektauflistungen vs. relationale Tabellen  
+ Verknüpfungsvorgänge in einem [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Abfrageausdruck werden in Objektauflistungen durchgeführt. Objektauflistungen können nicht wie relationale Tabellen „verknüpft“ werden. In [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] sind explizite `join`-Klauseln nur erforderlich, wenn zwei Quellsequenzen nicht durch eine Beziehung verbunden sind. Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] arbeiten, werden Tabellen mit Fremdschlüsseln in einem Objektmodell als Eigenschaften der primären Tabelle repräsentiert. In der Northwind-Datenbank weist die Tabelle „Customers“ (Kunden) beispielsweise eine Fremdschlüsselbeziehung zu der Tabelle „Orders“ (Aufträge) auf. Wenn Sie die Tabellen dem Objektmodell zuordnen, hat die Klasse „Customers“ eine Eigenschaft „Orders“, die die Auflistung der Aufträge enthält, die zu diesem Kunden gehören. Tatsächlich wurde die Verknüpfung bereits für Sie vorgenommen.  
   
- Weitere Informationen zum Abfragen von verknüpften Tabellen im Kontext von [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)] finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../Topic/How%20to:%20Map%20Database%20Relationships.md).  
+ Weitere Informationen zu Abfragen über verknüpfte Quellen hinweg in Bezug auf [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
   
-## Zusammengesetzte Schlüssel  
- Mit einem zusammengesetzten Schlüssel können Sie mehrere Werte auf Gleichheit prüfen.  Weitere Informationen finden Sie unter [Gewusst wie: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md).  Zusammengesetzte Schlüssel können auch in einer `group`\-Klausel verwendet werden.  
+## <a name="composite-keys"></a>Zusammengesetzte Schlüssel  
+ Mithilfe eines zusammengesetzten Schlüssels können Sie auf die Gleichheit mehrerer Werte prüfen. Weitere Informationen finden Sie unter [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Zusammengesetzte Schlüssel können auch in einer `group`-Klausel verwendet werden.  
   
-## Beispiel  
- Im folgenden Beispiel werden die Ergebnisse eines inneren Joins, eines Group Joins und eines linken äußeren Joins der gleichen Datenquellen mit den gleichen übereinstimmenden Schlüsseln verglichen.  Diesen Beispielen wird zusätzlicher Code hinzugefügt, um die Ergebnisse in der Konsolenanzeige zu erläutern.  
+## <a name="example"></a>Beispiel  
+ In folgendem Beispiel werden die Ergebnisse einer inneren Verknüpfung, einer Gruppenverknüpfung und einer linken äußeren Verknüpfung in der gleichen Datenquelle anhand derselben übereinstimmenden Schlüssel miteinander verglichen. Diesen Beispielen wurde zusätzlicher Code hinzugefügt, um die Ergebnisse in der Konsolenanzeige zu verdeutlichen.  
   
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
-## Hinweise  
- Eine `join`\-Klausel, der nicht `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>\-Methodenaufruf übersetzt.  Eine `join`\-Klausel, der `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>\-Methodenaufruf übersetzt.  
+## <a name="remarks"></a>Hinweise  
+ Eine `join`-Klausel, auf die kein `into` folgt, wird in einen Methodenaufruf <xref:System.Linq.Enumerable.Join%2A> übersetzt. Eine `join`-Klausel, auf die kein `into` folgt, wird in einen Methodenaufruf <xref:System.Linq.Enumerable.GroupJoin%2A> übersetzt.  
   
-## Siehe auch  
- [Abfrageschlüsselwörter \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Join Operations](../../../visual-basic/programming-guide/concepts/linq/join-operations.md)   
- [group\-Klausel](../../../csharp/language-reference/keywords/group-clause.md)   
- [Gewusst wie: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Gewusst wie: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Gewusst wie: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Gewusst wie: Sortieren der Ergebnisse einer Join\-Klausel](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Gewusst wie: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Gewusst wie: Installieren von Beispieldatenbanken](../Topic/How%20to:%20Install%20Sample%20Databases.md)
+## <a name="see-also"></a>Siehe auch  
+ [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Verknüpfungsvorgänge](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
+ [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md)   
+ [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
+ [Vorgehensweise: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
+ [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
+ [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
+ [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
+ [Gewusst wie: Installieren von Beispieldatenbanken](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)

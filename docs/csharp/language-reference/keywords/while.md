@@ -1,45 +1,63 @@
 ---
-title: "while (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "while_CSharpKeyword"
-  - "while"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "while-Schlüsselwort [C#]"
+title: while (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- while_CSharpKeyword
+- while
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 744980f2dd55806062901d874a3137f5936e0888
+ms.lasthandoff: 03/13/2017
+
 ---
-# while (C#-Referenz)
-Mit der `while`\-Anweisung wird eine Anweisung oder ein Anweisungsblock ausgeführt, bis ein bestimmter Ausdruck den Wert `false` liefert.  
+# <a name="while-c-reference"></a>while (C#-Referenz)
+Die `while`-Anweisung führt eine Anweisung oder einen Anweisungsblock aus, bis ein bestimmter Ausdruck `false` ergibt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
   
-## Beispiel  
- Da der Test des `while`\-Ausdrucks jedes Mal stattfindet, bevor die Schleife durchlaufen wird, wird eine `while`\-Anweisung keinmal, einmal oder häufiger ausgeführt.  Hierbei besteht ein Unterschied zur [do](../../../csharp/language-reference/keywords/do.md)\-Schleife, die mindestens einmal ausgeführt wird.  
+## <a name="example"></a>Beispiel  
+ Da der `while`-Ausdruck vor jeder Ausführung der Schleife getestet wird, wird eine `while`-Schleife entweder nie oder mehrmals ausgeführt. Dies unterscheidet sich von der [do](../../../csharp/language-reference/keywords/do.md)-Schleife, die ein oder mehrmals ausgeführt wird.  
   
- Eine `while`\-Schleife kann beendet werden, wenn eine der Anweisungen [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md) der Schleife die Steuerung entzieht.  Verwenden Sie die [continue](../../../csharp/language-reference/keywords/continue.md)\-Anweisung, um die Steuerung an die nächste Iteration zu übergeben, ohne die Schleife zu verlassen.  Beachten Sie, wie sich die Ausgabe der drei oben gezeigten Beispiele abhängig davon unterscheidet, an welcher Stelle `int n` inkrementiert wird.  Im Beispiel unten wird keine Ausgabe generiert.  
+ Eine `while`-Schleife kann beendet werden, wenn eine [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md)-Anweisung die Steuerung außerhalb der Schleife überträgt. Verwenden Sie die [continue](../../../csharp/language-reference/keywords/continue.md)-Anweisung, um die Steuerung an die nächste Iteration zu übertragen, ohne die Schleife zu beenden. Beachten Sie den Unterschied in der Ausgabe in den drei vorherigen Beispielen. Der Unterschied ist abhängig davon, wo `int n` inkrementiert wird. Im Beispiel unten wird keine Ausgabe generiert.  
   
  [!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [while\-Anweisung \(C\+\+\)](/visual-cpp/cpp/while-statement-cpp)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [while-Anweisung (C++)](https://docs.microsoft.com/cpp/cpp/while-statement-cpp)   
  [Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)

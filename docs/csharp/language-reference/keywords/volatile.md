@@ -1,59 +1,77 @@
 ---
-title: "volatile (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "volatile_CSharpKeyword"
-  - "volatile"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "volatile-Schlüsselwort [C#]"
+title: volatile (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- volatile_CSharpKeyword
+- volatile
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 caps.latest.revision: 29
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 29
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d31ba6dd73ec4f5abcb34dc481144b154301f1af
+ms.lasthandoff: 03/13/2017
+
 ---
-# volatile (C#-Referenz)
-Das `volatile`\-Schlüsselwort gibt an, dass ein Feld von mehreren gleichzeitig ausgeführten Threads geändert werden kann.  Mit `volatile` deklarierte Felder unterliegen nicht den Compileroptimierungen, für die der Zugriff durch einen Thread Voraussetzung ist.  Auf diese Weise wird sichergestellt, dass im Feld stets der aktuelle Wert vorhanden ist.  
+# <a name="volatile-c-reference"></a>volatile (C#-Referenz)
+Das Schlüsselwort `volatile` gibt an, dass ein Feld von mehreren Threads geändert werden kann, die zur gleichen Zeit ausgeführt werden. Felder, die als `volatile` deklariert sind, unterliegen keinen Compileroptimierungen, die von Zugriff durch einen einzelnen Thread ausgehen. Dadurch wird sichergestellt, dass immer der aktuelle Wert im Feld vorhanden ist.  
   
- Der `volatile`\-Modifizierer wird normalerweise für ein Feld verwendet, auf das mehrere Threads zugreifen, ohne dass die [lock](../../../csharp/language-reference/keywords/lock-statement.md)\-Anweisung zur Zugriffsserialisierung verwendet wird.  
+ Der `volatile`-Modifizierer wird normalerweise für Felder verwendet, auf die von mehreren Threads ohne die [lock](../../../csharp/language-reference/keywords/lock-statement.md)-Anweisung zugegriffen wird, um den Zugriff zu serialisieren.  
   
- Das `volatile`\-Schlüsselwort kann auf Felder der folgenden Typen angewendet werden:  
+ Das Schlüsselwort `volatile` kann auf Felder der folgenden Typen angewendet werden:  
   
--   Referenztypen.  
+-   Verweistypen.  
   
--   Zeigertypen \(in einem unsicheren Kontext\)  Beachten Sie, dass der Zeiger flüchtig sein kann, das Objekt, auf den er zeigt, jedoch nicht.  Mit anderen Worten können Sie keinen "Zeiger auf volatile" deklarieren.  
+-   Zeigertypen (in unsicherem Kontext). Beachten Sie, dass der Zeiger selbst als „volatile“ deklariert sein kann, das Objekt, auf das er zeigt aber nicht. Anders ausgedrückt können Sie keinen „Zeiger auf ‚volatile‘“ deklarieren.  
   
 -   Typen wie sbyte, byte, short, ushort, int, uint, char, float und bool.  
   
 -   Ein Enumerationstyp mit einem der folgenden Basistypen: byte, sbyte, short, ushort, int oder uint.  
   
--   Generische Typparameter, von denen bekannt ist, dass sie Referenztypen sind.  
+-   Generische Typparameter, die als Verweistypen bekannt sind.  
   
 -   <xref:System.IntPtr> und <xref:System.UIntPtr>.  
   
- Das volatile\-Schlüsselwort kann nur auf Felder einer Klasse oder Struktur angewendet werden.  Lokale Variablen können nicht als `volatile` deklariert werden.  
+ Das Schlüsselwort „volatile“ kann nur auf Felder einer Klasse oder Struktur angewendet werden. Lokale Variablen können nicht als `volatile` deklariert werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine public\-Feldvariable als `volatile` deklariert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Deklaration einer öffentlichen Feldvariable als `volatile` dargestellt.  
   
  [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs\- bzw. Arbeitsthread erstellt und für die Verarbeitung parallel zum primären Thread verwendet werden kann.  Hintergrundinformationen zum Multithreading finden Sie unter [Threading](../Topic/Managed%20Threading.md) und [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs- oder Arbeitsthread erstellt wird und für das Ausführen der Verarbeitung parallel mit dem primären Thread verwendet werden kann. Hintergrundinformationen zum Multithreading finden Sie unter [Threading](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87) und [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
   
  [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)

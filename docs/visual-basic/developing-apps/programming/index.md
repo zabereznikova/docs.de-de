@@ -1,51 +1,67 @@
 ---
-title: "Programming in Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "programming, Visual Basic"
-  - "programming"
+title: Programmieren in Visual Basic | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- programming, Visual Basic
+- programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# Programming in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1aed5aa95d9c7177ea52c28b2a169fdde8dc5ec4
+ms.lasthandoff: 03/13/2017
 
-In diesem Abschnitt werden Programmieraufgaben erläutert, die beim Erstellen von Visual Basic\-Anwendungen relevant sind.  
+---
+# <a name="programming-in-visual-basic"></a>Programmieren in Visual Basic
+Dieser Abschnitt beschreibt Programmieraufgaben, über die Sie möglicherweise weitere Informationen erhalten möchten, wie etwa das Erstellen Ihrer eigenen Visual Basic-Anwendung.  
   
-## In diesem Abschnitt  
- [Accessing Computer Resources](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- Enthält Dokumentation zur Verwendung des `My.Computer`\-Objekts für den Zugriff auf Informationen über den Computer, auf dem die Anwendung ausgeführt wird, und zur Steuerung des Computers.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Zugreifen auf Computerressourcen](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ Enthält die Dokumentation zur Verwendung des `My.Computer`-Objekts, um auf Informationen über den Computer zuzugreifen, auf dem eine Anwendung ausgeführt wird, und zur Steuerung des Computers.  
   
- [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
- Enthält Dokumentation zum Protokollieren von Anwendungsinformationen unter Verwendung des `My.Application.Log`\-Objekts und des `My.Log`\-Objekts sowie zum Erweitern der Protokollierungsfunktionen der Anwendung.  
+ [Protokollieren von Informationen aus der Anwendung](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ Enthält die Dokumentation zur Protokollierung von Anwendungsinformationen mithilfe der Objekte `My.Application.Log` und `My.Log` und zur Erweiterung der Protokollierungsfunktionen der Anwendung.  
   
- [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- Enthält Dokumentation zu Aufgaben im Zusammenhang mit dem `My.User`\-Objekt.  
+ [Zugreifen auf Benutzerdaten](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
+ Enthält die Dokumentation zu Aufgaben, die Sie mit dem `My.User`-Objekt erledigen.  
   
- [Accessing Application Forms](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- Enthält Dokumentation zum Zugriff auf die Formulare einer Anwendung durch Verwendung des `My.Forms`\-Objekts und des `My.Application`\-Objekts.  
+ [Zugreifen auf Anwendungsformulare](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
+ Enthält die Dokumentation für den Zugriff auf die Formulare einer Anwendung mithilfe der Objekte `My.Forms` und `My.Application`.  
   
- [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- Enthält Dokumentation zum Zugriff auf die Webdienste, auf die die Anwendung verweist, durch Verwendung des `My.WebServices`\-Objekts.  
+ [Zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
+ Enthält die Dokumentation für den Zugriff auf die Webdienste, auf die die Anwendung mit dem `My.WebServices`-Objekt verweist.  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
- Enthält Dokumentation zum Zugriff auf die Einstellungen einer Anwendung mit dem `My.Settings`\-Objekt.  
+ [Zugreifen auf Anwendungseinstellungen](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ Enthält die Dokumentation für den Zugriff auf die Einstellungen einer Anwendung mithilfe des Objekts `My.Settings`.  
   
- [Processing Drives, Directories, and Files](../../../visual-basic/developing-apps/programming/drives-directories-files/index.md)  
- Enthält Dokumentation zum Zugriff auf das Dateisystem unter Verwendung des `My.Computer.FileSystem`\-Objekts.  
+ [Verarbeiten von Laufwerken, Verzeichnissen und Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ Enthält die Dokumentation für den Zugriff auf das Dateisystem mit dem `My.Computer.FileSystem`-Objekt.  
   
-## Siehe auch  
- [Visual Basic Language Features](../../../visual-basic/programming-guide/language-features/index.md)   
- [Programmierungskonzepte](../Topic/Programming%20Concepts.md)   
- [Auflistungen](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic Language Features](../../../visual-basic/programming-guide/language-features/index.md)  (Sprachfunktionen von Visual Basic)  
+ [Programming Concepts](../../../visual-basic/programming-guide/concepts/index.md)  (Programmierkonzepte)  
+ [Collections](../../../visual-basic/programming-guide/concepts/collections.md)  (Sammlungen)  
  [Entwickeln von Anwendungen mit Visual Basic](../../../visual-basic/developing-apps/index.md)

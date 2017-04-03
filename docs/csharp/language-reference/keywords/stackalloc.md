@@ -1,32 +1,50 @@
 ---
-title: "stackalloc (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "stackalloc_CSharpKeyword"
-  - "stackalloc"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "stackalloc-Schlüsselwort [C#]"
+title: stackalloc (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- stackalloc_CSharpKeyword
+- stackalloc
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- stackalloc keyword [C#]
 ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.lasthandoff: 03/13/2017
+
 ---
-# stackalloc (C#-Referenz)
-Das `stackalloc`\-Schlüsselwort wird in einem unsicheren Codekontext verwendet, um einen Speicherblock auf dem Stapel zu belegen.  
+# <a name="stackalloc-c-reference"></a>stackalloc (C#-Referenz)
+Das Schlüsselwort `stackalloc` wird in unsicherem Codekontext verwendet, um dem Stapel einen Speicherblock zuzuweisen.  
   
 ```  
 int* block = stackalloc int[100];  
 ```  
   
-## Hinweise  
- Das Schlüsselwort ist nur in den lokalen Variableninitialisierern gültig.  Im folgenden Code werden Compilerfehler verursacht.  
+## <a name="remarks"></a>Hinweise  
+ Das Schlüsselwort ist nur in lokalen Variableninitialisierern gültig. Folgender Code verursacht Compilerfehler.  
   
 ```  
 int* block;  
@@ -36,24 +54,24 @@ int* block;
 block = stackalloc int[100];  
 ```  
   
- Da Zeigertypen beteiligt sind, verlangt `stackalloc` einen [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Kontext.  Weitere Informationen finden Sie unter [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+ Da Zeigertypen beteiligt sind, benötigt `stackalloc` einen [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Kontext. Weitere Informationen finden Sie unter [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
   
- `stackalloc` kann mit [\_alloca](/visual-cpp/c-runtime-library/reference/alloca) in der C\-Laufzeitbibliothek verglichen werden.  
+ Genau wie [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca) befindet sich `stackalloc` in der C-Laufzeitbibliothek.  
   
- Im folgenden Beispiel werden die ersten 20 Zahlen in der Fibonacci\-Sequenz berechnet und angezeigt.  Jede Zahl ist die Summe der vorherigen zwei Zahlen.  Im Code wird ein Speicherblock, der groß genug für 20 Elemente vom Typ `int` ist, auf dem Stapel reserviert, nicht auf dem Heap.  Die Adresse des Blocks wird im `fib`\-Zeiger gespeichert.  Dieser Speicher ist nicht der Garbage Collection unterworfen und muss daher nicht mit [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) fixiert werden.  Die Lebensdauer des Speicherblocks ist auf die Lebensdauer der Methode begrenzt, in der er definiert ist.  Sie können den Speicher nicht freigeben, bevor die Methode einen Wert zurückgibt.  
+ Im folgenden Beispiel werden die ersten 20 Zahlen der Fibonacci-Folge berechnet und angezeigt. Jede Zahl bildet die Summe der beiden vorherigen Zahlen. Im Code wird dem Stapel, nicht dem Heap, ein Speicherblock zugewiesen, der groß genug ist, um 20 Elemente vom Typ `int` zu enthalten. Die Adresse des Blocks wird im Zeiger `fib` gespeichert. Dieser Speicher unterliegt nicht der automatischen Speicherbereinigung und muss daher nicht (mithilfe von [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)) angeheftet werden. Die Lebensdauer des Speicherblocks ist auf die Lebensdauer der definierenden Methode begrenzt. Sie können den Speicher nicht freigeben, bevor die Methode zurückgibt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
   
-## Sicherheit  
- Unsicherer Code ist weniger sicher als sichere Alternativen.  Die Verwendung von `stackalloc` aktiviert jedoch automatisch Features zur Erkennung von Pufferüberläufen in der Common Language Runtime \(CLR\).  Wenn ein Pufferüberlauf festgestellt wird, wird der Prozess so schnell wie möglich beendet, um die Gefahr der Ausführung von bösartigem Code zu minimieren.  
+## <a name="security"></a>Sicherheit  
+ Unsicherer Code ist unsicherer als sichere Alternativen. Allerdings werden mit der Verwendung von `stackalloc` automatisch Funktionen zum Erkennen eines Pufferüberlaufs in der Common Language Runtime (CLR) aktiviert. Wenn ein Pufferüberlauf erkannt wird, wird der Vorgang so schnell wie möglich beendet, damit das Risiko der Ausführung von schädlichem Code verringert wird.  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [Operator Keywords (Operatorschlüsselwörter)](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

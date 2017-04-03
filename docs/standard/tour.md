@@ -4,16 +4,16 @@ description: "Eine Einführung in einige der wichtigsten Features der .NET-Platt
 keywords: ".NET, .NET Core, Einführung, Programmiersprachen, unsicher, Speicherverwaltung, Typsicherheit, asynchron"
 author: cartermp
 ms.author: wiwagn
-ms.date: 11/16/2016
+ms.date: 02/09/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: adb5cbc4cbaa6f25f77ec24e4dd5d37a022234ef
-ms.lasthandoff: 01/18/2017
+ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
+ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -54,21 +54,27 @@ Die beiden folgenden Zeilen weisen Speicher zu:
 
 Es gibt kein entsprechendes Schlüsselwort zum Aufheben der Speicherzuweisung, da diese automatisch erfolgt, wenn der Garbage Collector während seiner geplanten Ausführung Arbeitsspeicher freigibt.
 
-Typen in einem bestimmten Bereich verlieren normalerweise ihre Gültigkeit, sobald eine Methode beendet ist. An diesem Punkt können sie gesammelt werden. Mit der `using`-Anweisung können Sie den Garbage Collector darüber informieren, dass ein bestimmtes Objekt noch vor Beendigung der Methode seine Gültigkeit verliert:
+Der Garbage Collector ist nur einer der Dienste, die bei der Sicherstellung der *Speichersicherheit* helfen.  Das unveränderliche Merkmal der Speichersicherheit ist sehr einfach: Ein Programm ist speichersicher, wenn es nur auf Arbeitsspeicher zugreift, der zugewiesen (nicht freigegeben) wurde.  Die Laufzeit stellt z.B. sicher, dass Programme keine Indizierung über das Ende eines Arrays hinaus durchführen und nicht auf Phantomfelder hinter dem Ende eines Objekts zugreifen.
+
+Im folgenden Beispiel löst die Laufzeit eine `InvalidIndexException`-Ausnahme aus, um Speichersicherheit zu erzwingen.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-Sobald der `using`-Block beendet ist, weiß der Garbage Collector, dass das `stream`-Objekt im vorherigen Beispiel gesammelt und der verwendete Speicherplatz freigegeben werden kann.
+## <a name="working-with-unmanaged-resources"></a>Arbeiten mit nicht verwalteten Ressourcen
 
-Die Regeln dafür haben in F# eine etwas andere Semantik.  Weitere Informationen zur Ressourcenverwaltung in F# finden Sie unter [Ressourcenverwaltung: `use`-Schlüsselwort](../fsharp/language-reference/resource-management-the-use-keyword.md)
+Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Laufzeit verwaltet werden.  Ein Dateihandle ist z.B. eine nicht verwaltete Ressource.  Ein @System.IO.FileStream-Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist.  Wenn Sie mit FileStream fertig sind, müssen Sie das Dateihandle freigeben.
 
-Eines der weniger offensichtlichen, doch ziemlich weitreichenden Features, die durch den Garbage Collector ermöglicht werden, ist die Speichersicherheit. Das unveränderliche Merkmal der Speichersicherheit ist sehr einfach: Ein Programm ist speichersicher, wenn es nur auf Arbeitsspeicher zugreift, der zugewiesen (nicht freigegeben) wurde. Verbleibende Zeiger sind immer Fehler, und es ist häufig schwierig, sie zu finden.
+In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die @System.IDisposable-Schnittstelle.  Wenn Sie mit dem Objekt fertig sind, können Sie die @System.IDisposable.Dispose-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist.  .NET-Sprachen stellen eine praktische `using`-Syntax für solche Objekte bereit, so wie in folgendem Beispiel gezeigt:
 
-Die .NET-Runtime bietet zusätzliche Dienste, um die Speichersicherheit zu gewährleisten, die von einem Garbage Collector nicht geboten wird. Sie stellt sicher, dass Programme keine Indizierung über das Ende eines Arrays hinaus durchführen und nicht auf Phantomfelder hinter dem Ende eines Objekts zugreifen.
+[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Das folgende Beispiel löst aufgrund der Speichersicherheit eine Ausnahme aus.
+Sobald der `using`-Block abgeschlossen ist, ruft die .NET-Laufzeit automatisch die @System.IDisposable.Dispose-Methode des `stream`-Objekts auf, die das Dateihandle freigibt.  Die Laufzeit wird dies ebenfalls tun, wenn eine Ausnahme das Steuerelement dazu veranlasst, den Block zu verlassen.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+Weitere Details finden Sie auf den folgenden Seiten:
+
+* Für C#, [using-Anweisung](../csharp/language-reference/keywords/using-statement.md)
+* Für F#, [Ressourcenverwaltung: Das `use`-Schlüsselwort](../fsharp/language-reference/resource-management-the-use-keyword.md)
+* Für Visual Basic, [using-Anweisung](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>Typsicherheit
 

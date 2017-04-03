@@ -1,23 +1,41 @@
 ---
-title: "-Subsystemversion (C#-Compileroptionen) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+title: -subsystemversion (C#-Compileroptionen) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8766904cad739b29c7dfe80b29305ea2b3bd2e6f
+ms.lasthandoff: 03/13/2017
+
 ---
-# /subsystemversion (C#-Compileroptionen)
-Gibt die Mindestversion des Subsystems, auf dem die generierte ausführbare Datei ausführen kann, und bestimmen die Versionen von Windows auf dem die ausführbare Datei ausgeführt werden kann. In den meisten Fällen wird diese Option sichergestellt, die ausführbare Datei bestimmte Sicherheitsfunktionen nutzen, die nicht mit älteren Versionen von Windows verfügbar sind.  
+# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (C#-Compileroptionen)
+Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
   
 > [!NOTE]
->  Verwenden Sie zum Angeben der Subsystem selbst die [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) (Compileroption).  
+>  Verwenden Sie zum Angeben des Subsystems selbst die Compileroption [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -27,14 +45,14 @@ Gibt die Mindestversion des Subsystems, auf dem die generierte ausführbare Date
   
 #### <a name="parameters"></a>Parameter  
  `major.minor`  
- Die mindestens erforderliche Version des Subsystems, ausgedrückt in eine punktierte Schreibweise für Haupt-und Nebenversionen. Beispielsweise können Sie angeben, dass eine Anwendung unter einem Betriebssystem werden, die älter als Windows 7 ausgeführt kann wenn 6.01, den Wert dieser Option fest, wie in der Tabelle weiter unten in diesem Thema beschrieben. Geben Sie die Werte für `major` und `minor` als ganze Zahlen.  
+ Die mindestens erforderliche Version des Subsystems wird in einer Punktschreibweise für Haupt- und Nebenversionen ausgedrückt. Beispielsweise können Sie angeben, dass eine Anwendung nicht unter einem Betriebssystem, das älter als Windows 7 ist, ausgeführt werden kann,wenn Sie den Werte dieser Option auf 6.01 festlegen, wie es in der Tabelle in diesem Thema zu einem späteren Zeitpunkt beschrieben wird. Sie müssen die Werte für `major` und `minor` als ganze Zahl angeben.  
   
- Führende Nullen in der `minor` Version nicht die Version geändert, aber nachfolgende Nullen werden. Z. B. 6.1 und 6.01 beziehen sich auf die gleiche Version, aber 6.10 bezieht sich auf eine andere Version. Es wird empfohlen, die Nebenversion auszudrücken, als zwei Ziffern, um Verwechslungen zu vermeiden.  
+ Führende Nullen in der Version `minor` ändern die Version nicht, jedoch nachfolgende Nullen. 6.1 und 6.01 verweisen z.B. auf die gleiche Version, aber 6.10 verweist auf eine andere Version. Es wird empfohlen, die Nebenversion in Form von zwei Ziffern auszudrücken, um Verwechslungen zu vermeiden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält allgemeine Subsystemversionen von Windows.  
   
-|Windows-Version|Subsystem-version|  
+|Windows-Version|Subsystemversion|  
 |---------------------|-----------------------|  
 |Windows 2000|5.00|  
 |Windows XP|5.01|  
@@ -42,25 +60,25 @@ Gibt die Mindestversion des Subsystems, auf dem die generierte ausführbare Date
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8-md.md)]|6.02|  
+|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
- Der Standardwert der **/subsystemversion** (Compileroption) hängt von der Bedingung in der folgenden Liste:  
+ Der Standardwert der Compileroption **/subsystemversion** hängt von den Bedingungen in der folgenden Liste ab:  
   
--   Der Standardwert ist 6.02, wenn jede Compileroption in der folgenden Liste festgelegt wird:  
+-   Der Standardwert ist 6,02, wenn jede Compileroption in der folgenden Liste festgelegt ist:  
   
-    -   [/ target: appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+    -   [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
   
-    -   [/ target: winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+    -   [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/Platform:ARM](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Der Standardwert ist 6.00, wenn Sie MSBuild verwenden, die Sie als Ziel [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net-v45-md.md)], und Sie können alle Compileroptionen, die zuvor in dieser Liste angegeben wurden noch nicht festlegen.  
+-   Beim Verwenden von MSBuild ist der Standardwert 6,00, indem Sie [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)] als Ziel setzen, und Sie haben keine der Compileroptionen festgelegt, die zuvor in der Liste angegeben wurden.  
   
--   Der Standardwert ist 4.00, wenn keine der vorherigen Bedingungen true ist.  
+-   Der Standardwert ist 4,00, wenn keine der vorherigen Bedingungen TRUE ist.  
   
 ## <a name="setting-this-option"></a>Festlegen dieser Option  
- Festlegen der **/subsystemversion** -Compileroption in Visual Studio müssen Sie öffnen Sie die CSPROJ-Datei und geben Sie einen Wert für die `SubsystemVersion` Eigenschaft in der MSBuild-XML. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter "Standardwerte" weiter oben in diesem Thema oder [gemeinsame MSBuild-Projekteigenschaften](/visual-studio/msbuild/common-msbuild-project-properties).  
+ Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft `SubsystemVersion` im MSBuild-XML angeben, um die Compileroption **/subsystemversion** in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

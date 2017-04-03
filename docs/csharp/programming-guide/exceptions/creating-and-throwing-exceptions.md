@@ -1,75 +1,93 @@
 ---
-title: "Erstellen und Ausl&#246;sen von Ausnahmen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Abfangen von Ausnahmen [C#]"
-  - "Ausnahmen [C#], Erstellen"
-  - "Ausnahmen [C#], Auslösen"
-  - "Auslösen von Ausnahmen [C#]"
+title: "Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- catching exceptions [C#]
+- throwing exceptions [C#]
+- exceptions [C#], creating
+- exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
 caps.latest.revision: 28
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 28
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c3eab50a6a785676dd397498fbe95348187e2b7e
+ms.lasthandoff: 03/13/2017
+
 ---
-# Erstellen und Ausl&#246;sen von Ausnahmen (C#-Programmierhandbuch)
-Ausnahmen werden verwendet, um anzuzeigen, dass während der Programmausführung ein Fehler aufgetreten ist.  Ausnahmeobjekte, die einen Fehler beschreiben, werden erstellt und dann mit dem [throw](../../../csharp/language-reference/keywords/throw.md)\-Schlüsselwort *ausgelöst*.  Die Laufzeit sucht dann nach dem kompatibelsten Ausnahmehandler.  
+# <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch)
+Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Programms ein Fehler aufgetreten ist. Ausnahmeobjekte, die einen Fehler beschreiben, werden erstellt und dann mit dem Schlüsselwort [throw](../../../csharp/language-reference/keywords/throw.md) (auslösen) *ausgelöst*. Die Laufzeit sucht dann nach dem kompatibelsten Ausnahmehandler.  
   
- Programmierer sollten Ausnahmen auslösen, wenn mindestens eine der folgenden Bedingungen zutrifft:  
+ Programmierer sollten Ausnahmen auslösen, wenn eine oder mehrere der folgenden Bedingungen wahr sind:  
   
--   Die Methode kann die definierte Funktionalität nicht erfüllen.  
+-   Die Methode kann deren definierte Funktionalität nicht abschließen.  
   
-     Wenn beispielsweise ein Parameter zu einer Methode einen ungültigen Wert hat:  
+     Wenn beispielsweise ein Parameter einer Methode einen ungültigen Wert hat:  
   
      [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
   
--   Auf Grundlage des Objektzustands erfolgt ein unpassender Aufruf an ein Objekt.  
+-   Ein unpassender Aufruf eines Objekts erfolgt, basierend auf dem Objektzustand.  
   
-     Ein Beispiel wäre der Versuch, in eine schreibgeschützte Datei zu schreiben.  Lösen Sie in Fällen, in denen der Objektzustand einen bestimmten Vorgang nicht zulässt, eine Instanz von <xref:System.InvalidOperationException> oder ein auf einer Ableitung dieser Klasse basierendes Objekt aus.  Im folgenden Beispiel wird eine Methode veranschaulicht, die ein <xref:System.InvalidOperationException>\-Objekt auslöst:  
+     Ein Beispiel wäre ein Versuch, in eine schreibgeschützte Datei zu schreiben. Lösen Sie in Fällen, in denen ein Objektzustand keinen Vorgang erlaubt, eine Instanz von <xref:System.InvalidOperationException> oder ein Objekt aus, das auf einer Ableitung dieser Klasse basiert. Dies ist ein Beispiel für eine Methode, die ein <xref:System.InvalidOperationException>-Objekt auslöst:  
   
      [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
--   Wenn ein Argument einer Methode eine Ausnahme verursacht.  
+-   Wenn ein Argument an eine Methode eine Ausnahme auslöst.  
   
-     In diesem Fall sollte die ursprüngliche Ausnahme abgefangen werden, und es sollte eine <xref:System.ArgumentException>\-Instanz erstellt werden.  Die ursprüngliche Ausnahme sollte als <xref:System.Exception.InnerException%2A>\-Parameter an den Konstruktor von <xref:System.ArgumentException> übergeben werden:  
+     In diesem Fall muss die ursprüngliche Ausnahme abgefangen und eine <xref:System.ArgumentException>-Instanz erstellt werden. Die ursprüngliche Ausnahme sollte an den Konstruktor der <xref:System.ArgumentException> als <xref:System.Exception.InnerException%2A>-Parameter übergeben werden.  
   
      [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
- Ausnahmen enthalten eine Eigenschaft namens <xref:System.Exception.StackTrace%2A>.  Diese Zeichenfolge enthält die Namen der aktuell in der Aufrufliste befindlichen Methoden sowie den Dateinamen und die Zeilennummer der Stelle, an der die Ausnahme für die jeweilige Methode ausgelöst wurde.  Die Common Language Runtime \(CLR\) erstellt an der Position der `throw`\-Anweisung automatisch ein <xref:System.Exception.StackTrace%2A>\-Objekt. Ausnahmen müssen also an der Stelle ausgelöst werden, an der die Stapelüberwachung beginnen soll.  
+ Ausnahmen enthalten eine Eigenschaft mit dem Namen <xref:System.Exception.StackTrace%2A>. Diese Zeichenfolge enthält den Namen der Methoden für die aktuelle Aufrufliste, zusammen mit dem Dateinamen und der Zeilennummer, in der die Ausnahme für jede Methode ausgelöst wurde. Ein <xref:System.Exception.StackTrace%2A>-Objekt wird automatisch von der Common Language Runtime (CLR) ab der `throw`-Anweisung erstellt, sodass Ausnahmen ab dem Punkt ausgelöst werden müssen, wo die Stapelüberwachung beginnen soll.  
   
- Alle Ausnahmen enthalten eine Eigenschaft namens <xref:System.Exception.Message%2A>.  Diese Zeichenfolge sollte festgelegt werden, um den Grund für die Ausnahme zu erklären.  Beachten Sie, dass in den Meldungstext keine sicherheitsrelevanten Informationen eingefügt werden sollten.  Zusätzlich zu <xref:System.Exception.Message%2A> enthält <xref:System.ArgumentException> eine Eigenschaft mit dem Namen <xref:System.ArgumentException.ParamName%2A>, die auf den Namen des Arguments festgelegt werden sollte, das die Ausnahme ausgelöst hat.  Für einen Set\-Accessor einer Eigenschaft muss <xref:System.ArgumentException.ParamName%2A> auf `value` festgelegt werden.  
+ Alle Ausnahmen enthalten eine Eigenschaft mit dem Namen <xref:System.Exception.Message%2A>. Diese Zeichenfolge sollte festgelegt werden, um die Gründe für die Ausnahme zu erklären. Beachten Sie, dass vertrauliche Informationen aus Sicherheitsgründen nicht im E-Mail-Text eingefügt werden dürfen. Zusätzlich zu <xref:System.Exception.Message%2A> enthält <xref:System.ArgumentException> eine Eigenschaft mit dem Namen <xref:System.ArgumentException.ParamName%2A>, die auf den Namen des Arguments festgelegt werden sollte, das die auszulösende Ausnahme verursacht hat. Im Falle eines Eigenschaftensetters muss <xref:System.ArgumentException.ParamName%2A> an `value` übermittelt werden.  
   
- Member öffentlicher und geschützter Methoden müssen Ausnahmen immer auslösen, wenn sie die ihnen zugewiesenen Funktionen nicht erfüllen können.  Die ausgelöste Ausnahmeklasse sollte für den Fehlerzustand so spezifisch wie möglich sein.  Diese Ausnahmen sollten als Teil der Klassenfunktionalität dokumentiert werden, und abgeleitete Klassen oder Aktualisierungen der ursprünglichen Klasse sollten dasselbe Verhalten beibehalten, um Rückwärtskompatibilität zu gewährleisten.  
+ Öffentliche und geschützte Methodenmember sollten Ausnahmen auslösen, wann immer sie ihre beabsichtigten Funktionen nicht auslösen können. Die Ausnahmeklasse, die ausgelöst wird, muss die möglichst genaueste verfügbare Ausnahme sein, die zu den Fehlerbedingungen passt. Diese Ausnahmen sollten als Teil der Klassenfunktionalität dokumentiert werden, und abgeleitete Klassen oder Updates an der ursprünglichen Klasse müssen das gleiche Verhalten für die Abwärtskompatibilität beibehalten.  
   
-## Was beim Auslösen von Ausnahmen zu vermeiden ist  
- Die folgende Liste enthält Vorgehensweisen, die beim Auslösen von Ausnahmen vermieden werden sollten:  
+## <a name="things-to-avoid-when-throwing-exceptions"></a>Was Sie beim Auslösen von Ausnahmen vermeiden sollten  
+ Die folgende Liste enthält Vorgehensweisen, die beim Auslösen von Ausnahmen zu vermeiden sind:  
   
--   Ausnahmen sollten nicht verwendet werden, um den Programmfluss als Teil der normalen Ausführung zu ändern.  Ausnahmen sollten nur verwendet werden, um Fehlerzustände zu melden und zu behandeln.  
+-   Ausnahmen dürfen nicht zum Ändern des Flusses eines Programms als Teil der normalen Ausführung verwendet werden. Ausnahmen dürfen nur zum Melden und Behandeln von Fehlerzuständen verwendet werden.  
   
--   Geben Sie Ausnahmen nicht als Rückgabewert oder Parameter zurück, anstatt sie auszulösen.  
+-   Ausnahmen dürfen nicht als Rückgabewert oder Parameter zurückgegeben werden, anstatt ausgelöst zu werden.  
   
--   Lösen Sie <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> oder <xref:System.IndexOutOfRangeException?displayProperty=fullName> nicht absichtlich über den eigenen Quellcode aus.  
+-   Lösen Sie nicht absichtlich <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> oder <xref:System.IndexOutOfRangeException?displayProperty=fullName> über Ihren eigenen Quellcode aus.  
   
--   Erstellen Sie keine Ausnahmen, die im Debugmodus ausgelöst werden können, aber nicht im Releasemodus.  Verwenden Sie stattdessen die Debug Assert\-Methode, um Laufzeitfehler während der Entwicklungsphase zu identifizieren.  
+-   Erstellen Sie keine Ausnahmen, die im Debugmodus, aber nicht im Releasemodus ausgelöst werden können. Um Laufzeitfehler während der Entwicklungsphase zu identifizieren, verwenden Sie stattdessen die Debugassertion.  
   
-## Definieren von Ausnahmeklassen  
- In Programmen kann eine vordefinierte Ausnahmeklasse \(mit Ausnahme der oben genannten\) im <xref:System>\-Namespace ausgelöst werden, oder es können eigene Ausnahmeklassen durch Ableiten von <xref:System.Exception> erstellt werden.  Die abgeleiteten Klassen müssen mindestens vier Konstruktoren definieren: einen Standardkonstruktor, einen zum Festlegen der message\-Eigenschaft und einen, der sowohl die <xref:System.Exception.Message%2A>\-Eigenschaft als auch die <xref:System.Exception.InnerException%2A>\-Eigenschaft festlegt.  Der vierte Konstruktor wird verwendet, um die Ausnahme zu serialisieren.  Neue Ausnahmeklassen sollten serialisierbar sein.  Beispiele:  
+## <a name="defining-exception-classes"></a>Definieren von Ausnahmeklassen  
+ Programme können eine zuvor definierte Ausnahmeklasse im <xref:System>-Namespace auslösen (mit Ausnahme der eben beschriebenen Fälle) oder ihre eigenen Ausnahmeklassen durch Ableitung von <xref:System.Exception> erstellen. Die abgeleiteten Klassen müssen zumindest vier Konstruktoren definieren: einen Standardkonstruktor, einen, der die message-Eigenschaft festlegt, und einen, der jeweils die Eigenschaften <xref:System.Exception.Message%2A> und <xref:System.Exception.InnerException%2A> festlegt. Der vierte Konstruktor wird verwendet, um die Ausnahme zu serialisieren. Neue Ausnahmeklassen sollten serialisierbar sein. Zum Beispiel:  
   
  [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   
- Neue Eigenschaften sollten zur Ausnahmeklasse nur hinzugefügt werden, wenn die Daten, die durch sie bereitgestellt werden, zur Bearbeitung der Ausnahme benötigt werden.  Wenn der abgeleiteten Ausnahmeklasse neue Eigenschaften hinzugefügt werden, sollte `ToString()` überschrieben werden, um die ergänzenden Informationen zurückzugeben.  
+ Neue Eigenschaften sollten nur zur Ausnahmeklasse hinzugefügt werden, wenn die Daten, die sie bereitstellen, zur Auflösung der Ausnahme nützlich sind. Wenn der abgeleiteten Ausnahmeklasse neue Eigenschaften hinzugefügt werden, muss `ToString()` überschrieben werden, um die hinzugefügten Informationen zurückzugeben.  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)   
- [Ausnahmenhierarchie](../Topic/Exception%20Hierarchy.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)   
+ [Ausnahmenhierarchie](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)

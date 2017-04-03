@@ -1,93 +1,111 @@
 ---
-title: "abstract (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "abstract"
-  - "abstract_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "abstract-Schlüsselwort [C#]"
+title: abstract (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- abstract
+- abstract_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: acb9c5748addd75f741e97688fca707910b042a0
+ms.lasthandoff: 03/13/2017
+
 ---
-# abstract (C#-Referenz)
-Der `abstract`\-Modifizierer gibt an, dass die Implementierung des Elements, das geändert wird, fehlt oder unvollständig ist.  Der abstract\-Modifizierer kann für Klassen, Methoden, Eigenschaften, Indexer und Ereignisse verwendet werden.  In einer Klassendeklaration kann mit dem `abstract`\-Modifizierer angegeben werden, dass die Klasse nur als Basisklasse anderer Klassen verwendet werden soll.  Member, die als abstrakt gekennzeichnet oder in einer abstrakten Klasse enthalten sind, müssen von Klassen implementiert werden, die von der abstrakten Klasse abgeleitet sind.  
+# <a name="abstract-c-reference"></a>abstract (C#-Referenz)
+Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implementierung fehlt oder dass diese unvollständig ist. Der abstract-Modifizierer kann für Klassen, Methoden, Eigenschaften, Indexer und Ereignisse verwendet werden. Verwenden Sie den `abstract`-Modifizierer in einer Klassendeklaration, um anzugeben, dass die Klasse nur die Basisklasse für eine andere Klasse sein soll. Als abstrakt markierte Member oder Member in einer abstrakten Klasse müssen von Klassen, die von der abstrakten Klasse abgeleitet wurden, implementiert werden.  
   
-## Beispiel  
- In diesem Beispiel muss die Klasse `Square` eine Implementierung von `Area` bereitstellen, weil sie von `ShapesClass` abgeleitet ist:  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel muss die Klasse `Square` eine Implementierung von `Area` bereitstellen, da sie von `ShapesClass` abgeleitet ist:  
   
  [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
- Abstrakte Klassen weisen die nachstehenden Funktionen auf:  
+ Abstrakte Klassen weisen die folgenden Funktionen auf:  
   
 -   Eine abstrakte Klasse darf nicht instanziiert werden.  
   
--   Eine abstrakte Klasse darf abstrakte Methoden und Accessoren enthalten.  
+-   Eine abstrakte Klasse enthält möglicherweise abstrakte Methode und Accessoren.  
   
--   Es ist nicht möglich, eine abstrakte Klasse unter Verwendung des [sealed](../../../csharp/language-reference/keywords/sealed.md)\-Modifizierers zu ändern, da die beiden Modifizierer entgegengesetzte Bedeutungen haben.  Der `sealed`\-Modifizierer verhindert, dass eine Klasse geerbt wird, und der `abstract`\-Modifizierer erfordert, dass eine Klasse geerbt wird.  
+-   Eine abstrakte Klasse kann nicht mit dem [sealed](../../../csharp/language-reference/keywords/sealed.md)-Modifizierer geändert werden, da sich die beiden Modifizierer gegenseitig ausschließen. Der `sealed`-Modifizierer verhindert das Vererben einer Klasse, und der `abstract`-Modifizierer erfordert das Vererben einer Klasse.  
   
 -   Eine nicht abstrakte Klasse, die von einer abstrakten Klasse abgeleitet wurde, muss Implementierungen aller geerbten abstrakten Methoden und Accessoren enthalten.  
   
- In einer Methoden\- oder Eigenschaftendeklaration kann mit dem `abstract`\-Modifizierer angegeben werden, dass die Methode bzw. Eigenschaft keine Implementierung enthält.  
+ Verwenden Sie den `abstract`-Modifizierer in einer Methoden- oder Eigenschaftendeklaration, um anzugeben, dass die Methode oder Eigenschaft keine Implementierung enthalten.  
   
- Abstrakte Methoden weisen die nachstehenden Features auf:  
+ Abstrakte Methoden weisen die folgenden Funktionen auf:  
   
--   Eine abstrakte Methode stellt implizit eine virtuelle Methode dar.  
+-   Eine abstrakte Methode ist implizit eine virtuelle Methode.  
   
 -   Abstrakte Methodendeklarationen sind nur in abstrakten Klassen zulässig.  
   
--   Da eine abstrakte Methodendeklaration keine Implementierung bereitstellt, ist kein Methodentext vorhanden. Die Methodendeklaration wird einfach mit einem Semikolon beendet, ohne dass der Signatur geschweifte Klammern \({ }\) folgen.  Beispiele:  
+-   Es gibt keinen Methodenkörper, da eine abstrakte Methodendeklaration keine Implementierungen bietet; die Methodendeklaration enden ganz einfach mit einem Semikolon; auf die Signatur folgen keine geschweiften Klammern ({ }). Beispiel:  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     Die Implementierung wird durch eine überschreibende Methode [override](../../../csharp/language-reference/keywords/override.md) bereitgestellt, bei der es sich um einen Member einer nicht abstrakten Klasse handelt.  
+     Die Implementierung wird von der überschreibenden Methode [override](../../../csharp/language-reference/keywords/override.md) zur Verfügung gestellt, die ein Member einer nicht abstrakten Klasse ist.  
   
--   Die Modifizierer [static](../../../csharp/language-reference/keywords/static.md) oder [virtual](../../../csharp/language-reference/keywords/virtual.md) dürfen nicht in einer abstrakten Methodendeklaration verwendet werden.  
+-   Es ist unzulässig, die Modifizierer [static](../../../csharp/language-reference/keywords/static.md) oder [virtual](../../../csharp/language-reference/keywords/virtual.md) in einer abstrakten Methodendeklaration zu verwenden.  
   
- Abstrakte Eigenschaften verhalten sich wie abstrakte Methoden, mit Ausnahme der Unterschiede bei der Deklaration und der Syntax für den Aufruf.  
+ Abstrakte Eigenschaften verhalten sich wie abstrakte Methoden – sie unterscheiden sich lediglich in der Deklarations- und Aufrufsyntax.  
   
--   Der `abstract`\-Modifizierer darf nicht für eine statische Eigenschaft verwendet werden.  
+-   Es ist ein unzulässig, den `abstract`-Modifizierer für eine statische Eigenschaft zu verwenden.  
   
--   Eine abstrakte geerbte Eigenschaft kann in einer abgeleiteten Klasse überschrieben werden, indem eine Eigenschaftendeklaration, die den [override](../../../csharp/language-reference/keywords/override.md)\-Modifizierer verwendet, eingefügt wird.  
+-   Eine abstrakte vererbte Eigenschaft kann in einer abgeleiteten Klasse mithilfe der Eigenschaftendeklaration, die den Modifizierer [override](../../../csharp/language-reference/keywords/override.md) verwendet, außer Kraft gesetzt werden.  
   
- Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Weitere Informationen über abstrakte Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
- Eine abstrakte Klasse muss eine Implementierung aller Schnittstellenmember bereitstellen.  
+ Eine abstrakte Klasse muss eine Implementierung für alle Schnittstellenmember bereitstellen.  
   
- Eine abstrakte Klasse, die eine Schnittstelle implementiert, ordnet die Schnittstellenmethoden möglicherweise abstrakten Methoden zu.  Beispiele:  
+ Eine abstrakte Klasse, die eine Schnittstelle implementiert, ordnet die Schnittstellenmethoden möglicherweise abstrakten Methoden zu. Zum Beispiel:  
   
  [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
-## Beispiel  
- In diesem Beispiel wird die `DerivedClass`\-Klasse von der abstrakten `BaseClass`\-Klasse abgeleitet.  Die abstrakte Klasse enthält eine abstrakte Methode \(`AbstractMethod`\) sowie zwei abstrakte Eigenschaften \(`X` und `Y`\).  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird die `DerivedClass`-Klasse von der abstrakten Klasse `BaseClass` abgeleitet. Die abstrakte Klasse enthält eine abstrakte Methode, `AbstractMethod`, und zwei abstrakte Eigenschaften, `X` und `Y`.  
   
  [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
- Wenn Sie die abstrakte Klasse im voranstehenden Beispiel unter Verwendung einer Anweisung wie dieser instanziieren:  
+ Wenn Sie beim vorherigen Beispiel versuchen, die abstrakte Klasse mithilfe des folgenden Anweisungsbeispiels zu instanziieren:  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- erhalten Sie eine Fehlermeldung, die besagt, dass der Compiler keine Instanz der abstrakten Klasse "BaseClass" erstellen kann.  
+ erhalten Sie eine Fehlermeldung, dass der Compiler keine Instanz der abstrakten Klasse „BaseClass“ erstellen kann.  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
- [Virtuell](../../../csharp/language-reference/keywords/virtual.md)   
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)

@@ -1,66 +1,84 @@
 ---
-title: "where (Einschr&#228;nkung des generischen Typs) (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereconstraint"
-  - "whereconstraint_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where (Einschränkung eines generischen Typs) [C#]"
+title: "where (Einschränkung des generischen Typs) (C#-Referenz) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereconstraint
+- whereconstraint_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where (generic type constraint) [C#]
 ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
+ms.lasthandoff: 03/13/2017
+
 ---
-# where (Einschr&#228;nkung des generischen Typs) (C#-Referenz)
-In einer generischen Typdefinition wird die `where`\-Klausel verwendet, um Einschränkungen für die Typen festlegen, die als Argumente für einen Typparameter verwendet werden können, der in einer generischen Deklaration definiert ist.  Eine generische Klasse, `MyGenericClass`, kann beispielsweise so deklariert werden, dass der Typparameter `T` die <xref:System.IComparable%601>\-Schnittstelle implementiert:  
+# <a name="where-generic-type-constraint-c-reference"></a>where (Einschränkung des generischen Typs) (C#-Referenz)
+In einer generischen Typdefinition wird die `where`-Klausel verwendet, um Einschränkungen für Typen anzugeben, die als Argumente für einen Typenparameter verwendet werden können, der in einer generischen Deklaration definiert ist. So können Sie beispielsweise eine generische Klasse erstellen, `MyGenericClass`, deren Typparameter `T` die Schnittstelle <xref:System.IComparable%601> implementiert:  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
 > [!NOTE]
->  Weitere Informationen über die where\-Klausel in einem Abfrageausdruck finden Sie unter [where\-Klausel](../../../csharp/language-reference/keywords/where-clause.md).  
+>  Weitere Informationen über die where-Klausel in einem Abfrageausdruck finden Sie unter [where-Klausel](../../../csharp/language-reference/keywords/where-clause.md).  
   
- Zusätzlich zu Schnittstelleneinschränkungen kann eine `where`\-Klausel eine Basisklasseneinschränkung einschließen, die bestimmt, dass ein Typ über die angegebene Klasse als Basisklasse verfügen muss \(oder diese selbst sein muss\), damit er als Typargument für diesen generischen Typ verwendet werden kann.  Wird eine solche Einschränkung verwendet, muss sie vor jeder anderen Einschränkung für diesen Typparameter stehen.  
+ Zusätzlich zu Schnittstelleneinschränkungen kann eine `where`-Klausel eine Basisklasseneinschränkung enthalten, die angibt, dass ein Typ über die angegebene Klasse als Basisklasse verfügen muss (oder diese Klasse selbst sein muss), um als Typargument für diesen generischen Typ verwendet werden zu können. Wenn eine solche Einschränkung verwendet wird, muss sie vor jeder anderen Einschränkung für den Typparameter angezeigt werden.  
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- Die `where`\-Klausel kann auch eine Konstruktoreinschränkung einschließen.  Mit dem Operator "new" ist es möglich, eine Instanz eines Typparameters zu erstellen. Hierfür muss der Typparameter allerdings durch die Konstruktoreinschränkung `new()` eingeschränkt sein.  Die [new\(\)\-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md) informiert den Compiler, dass jedes Typargument, das übergeben wird, einen zugreifbaren, parameterlosen oder Standardkonstruktor aufweisen muss.  Beispiele:  
+ Die `where`-Klausel kann auch eine Konstruktoreinschränkung einschließen. Es ist möglich, eine Instanz eines Typparameters mithilfe des neuen Operators zu erstellen. Allerdings muss zu diesem Zweck der Typparameter durch die Konstruktoreinschränkung `new()` eingeschränkt werden. Die [new()-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen oder Standardkonstruktor verfügen muss. Beispiel:  
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
- Die `new()`\-Einschränkung ist an letzter Position in der `where`\-Klausel angegeben.  
+ Die `new()`-Einschränkung wird in der `where`-Klausel als Letztes angezeigt.  
   
- Verwenden Sie bei mehreren Typparametern eine `where`\-Klausel pro Typparameter, z. B.:  
+ Bei mehreren Typparametern müssen Sie für jeden davon eine eigene `where`-Klausel verwenden, z.B.:  
   
  [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
- Sie können auch Typparameter generischer Methoden mit Einschränkungen versehen, wie hier:  
+ Sie können auch Einschränkungen wie folgt an Typparameter generischer Methoden anfügen:  
   
 ```  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
- Beachten Sie, dass die Syntax zur Beschreibung von Typparametereinschränkungen in Delegaten identisch ist mit der Syntax von Methoden:  
+ Beachten Sie, dass die Syntax zum Beschreiben der Parametereinschränkungen für Delegaten mit der Syntax von Methoden identisch ist:  
   
 ```  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
- Informationen zu generischen Delegaten finden Sie unter [Generische Delegaten](../../../csharp/programming-guide/generics/generic-delegates.md).  
+ Informationen zu generischen Delegaten finden Sie unter [Generic Delegates (Generische Delegaten)](../../../csharp/programming-guide/generics/generic-delegates.md).  
   
- Details zu Syntax und Verwendung von Einschränkungen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+ Weitere Informationen zur Syntax und der Verwendung von Einschränkungen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [new\-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)   
+ [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)   
  [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

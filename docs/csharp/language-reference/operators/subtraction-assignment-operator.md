@@ -1,47 +1,68 @@
 ---
-title: "Operator /= (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/=_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/= (Divisionszuweisungsoperator) [C#]"
-  - "Divisionszuweisungsoperator (/=) [C#]"
+title: Operator -= (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- -=_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- subtraction assignment operator (-=) [C#]
+- -= operator (subtraction assignment ) [C#]
 ms.assetid: 05c7d68a-423f-4de8-891b-cf24e8fb6ed7
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d9ffcfe9b42f7ca65801a58338c8e40a37c90316
+ms.lasthandoff: 03/13/2017
+
 ---
-# Operator /= (C#-Referenz)
-Der Divisionszuweisungsoperator.  
+# <a name="--operator-c-reference"></a>Operator -= (C#-Referenz)
+Der Subtraktionszuweisungsoperator.  
   
-## Hinweise  
- Ein Ausdruck, in dem der Zuweisungsoperator `/=` verwendet wird, z. B.  
-  
-```  
-x /= y  
-```  
-  
- der folgenden Syntax:  
+## <a name="remarks"></a>Hinweise  
+ Ein Ausdruck mit dem Zuweisungsoperator `-=`, z.B.  
   
 ```  
-x = x / y  
+x -= y  
 ```  
   
- mit der Ausnahme, dass `x` nur einmal ausgewertet wird.  Der [Operator \/](../../../csharp/language-reference/operators/division-operator.md) ist für numerische Typen so definiert, dass er eine Division ausführt.  
+ für die folgende Syntax:  
   
- Der Operator `/=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den [Operator \/](../../../csharp/language-reference/operators/division-operator.md) überladen \(siehe [Operator](../../../csharp/language-reference/keywords/operator.md)\).  Bei allen Verbundzuweisungsoperatoren wird durch das Überladen des binären Operators die entsprechende Verbundzuweisung implizit überladen.  
+```  
+x = x - y  
+```  
   
-## Beispiel  
- [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
+ außer dass `x` nur einmal überprüft wird. Die Bedeutung des [Operators -](../../../csharp/language-reference/operators/subtraction-operator.md) hängt von den Typen `x` und `y` (Subtraktion für nummerische Operanden, Delegatentfernung für Delegatoperatoren usw.) ab.  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Operatoren](../../../csharp/language-reference/operators/index.md)
+ Der Operator `-=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[- Operator](../../../csharp/language-reference/operators/subtraction-operator.md) überladen (siehe [Operator](../../../csharp/language-reference/keywords/operator.md)).  
+  
+ Der Operator -= wird auch in C# verwendet, um ein Ereignisabonnement zu kündigen. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+  
+## <a name="example"></a>Beispiel  
+ [!code-cs[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
+  
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+

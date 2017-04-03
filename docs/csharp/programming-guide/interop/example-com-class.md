@@ -1,46 +1,64 @@
 ---
-title: "COM-Beispielklasse (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "COM, Verfügbarmachen von Visual C#-Objekten für"
-  - "Beispiele [C#], COM-Klassen"
+title: COM-Beispielklasse (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- examples [C#], COM classes
+- COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2525d322bf3284c82356253d1383edbcd3928084
+ms.lasthandoff: 03/13/2017
+
 ---
-# COM-Beispielklasse (C#-Programmierhandbuch)
-Folgendes ist ein Beispiel einer Klasse, die Sie als COM\-Objekt verfügbar machen würden.  Nachdem dieser Code in eine CS\-Datei eingefügt und dem Projekt hinzugefügt wurde, setzen Sie die Eigenschaft **Für COM\-Interop registrieren** auf **True**.  Weitere Informationen finden Sie unter [NIB: How to: Register a Component for COM Interop](http://msdn.microsoft.com/de-de/4de7d474-56e8-4027-994d-d47ca4725c5e).  
+# <a name="example-com-class-c-programming-guide"></a>COM-Beispielklasse (C#-Programmierhandbuch)
+Das Folgende ist ein Beispiel für eine Klasse, die Sie als COM-Objekt offenlegen würden. Nachdem dieser Code in eine CS-Datei platziert und Ihrem Projekt hinzugefügt wurde, legen Sie die Eigenschaft **für COM-Interop registrieren** auf **TRUE** fest. Weitere Informationen finden Sie unter [Vorgehensweise: Registrieren einer Komponente für COM-Interop](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e).  
   
- Das Verfügbarmachen von Visual C\#\-Objekten für COM erfordert die Deklaration einer Klassenschnittstelle, einer Ereignisschnittstelle \(falls erforderlich\) und der Klasse selbst.  Folgende Regeln gelten für die Klassenmember, damit sie für COM sichtbar sind:  
+ Das Verfügbarmachen von Visual C#-Objekten für COM erfordert die Deklaration einer Klassenschnittstelle, einer Ereignisschnittstelle (wenn dies erforderlich ist) und die Klasse selbst. Klassenmember müssen diesen Regeln folgen, um für COM sichtbar zu sein:  
   
--   Es muss sich um eine öffentliche Klasse handeln.  
+-   Die Klasse muss öffentlich sein.  
   
 -   Eigenschaften, Methoden und Ereignisse müssen öffentlich sein.  
   
 -   Eigenschaften und Methoden müssen auf der Klassenschnittstelle deklariert werden.  
   
--   Ereignisse müssen auf der Ereignisschnittstelle deklariert werden.  
+-   Ereignisse müssen in der Ereignisschnittstelle deklariert werden.  
   
- Andere öffentliche Klassenmember, die nicht auf diesen Schnittstellen deklariert werden, sind für COM nicht sichtbar. Für andere .NET Framework\-Objekte sind sie jedoch sichtbar.  
+ Andere öffentliche Member in der Klasse, die nicht in diesen Schnittstellen deklariert sind, werden für COM nicht sichtbar sein, aber für andere .NET Framework-Objekte werden sie sichtbar sein.  
   
- Um Eigenschaften und Methoden für COM verfügbar zu machen, müssen Sie diese auf der Klassenschnittstelle deklarieren und mit einem `DispId`\-Attribut markieren. Anschließend müssen Sie sie in der Klasse implementieren.  Die Reihenfolge, in der die Member auf der Schnittstelle deklariert werden, entspricht der für die COM\-vtable verwendeten Reihenfolge.  
+ Um Eigenschaften und Methoden für COM verfügbar zu machen, müssen Sie diese auf der Klassenschnittstelle deklarieren, sie mit einem `DispId`-Attribut markieren und sie in der Klasse implementieren. Die Reihenfolge, in der die Elemente in der Schnittstelle deklariert werden, ist die für die COM-Vtable verwendete Reihenfolge.  
   
- Um Ereignisse aus Ihrer Klasse verfügbar zu machen, müssen Sie diese auf der Ereignisschnittstelle deklarieren und mit einem `DispId`\-Attribut markieren.  Die Klasse sollte diese Schnittstelle nicht implementieren.  
+ Um Ereignisse aus Ihrer Klasse verfügbar zu machen, müssen Sie diese auf der Ereignisschnittstelle deklarieren und sie mit einem `DispId`-Attribut markieren. Die Klasse sollte diese Schnittstelle nicht implementieren.  
   
- Die Klasse implementiert die Klassenschnittstelle; sie kann mehr als eine Schnittstelle implementieren, zuerst wird jedoch die standardmäßige Klassenschnittstelle implementiert.  Implementieren Sie hier die für COM verfügbar gemachten Methoden und Eigenschaften.  Sie müssen als öffentlich markiert sein und den Deklarationen in der Klassenschnittstelle entsprechen.  Deklarieren Sie hier darüber hinaus die durch die Klasse ausgelösten Ereignisse.  Sie müssen als öffentlich markiert sein und den Deklarationen in der Ereignisschnittstelle entsprechen.  
+ Die Klasse implementiert die Klassenschnittstelle. Es kann mehr als eine Schnittstelle implementieren, aber die erste Implementierung ist die Standard-Klassenschnittstelle. Implementieren Sie die Methoden und Eigenschaften hier, die Sie für COM verfügbar gemacht haben. Sie müssen als öffentlich markiert sein und den Deklarationen in der Klassenschnittstelle entsprechen. Deklarieren Sie außerdem die von der Klasse hier ausgelösten Ereignisse. Sie müssen als öffentlich markiert sein und den Deklarationen in der Klassenschnittstelle entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Interoperabilität](../../../csharp/programming-guide/interop/interoperability.md)   
- [Seite "Erstellen", Projekt\-Designer \(C\#\)](/visual-studio/ide/reference/build-page-project-designer-csharp)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Interoperabilität](../../../csharp/programming-guide/interop/index.md)   
+ [Seite „Erstellen“, Projekt-Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)

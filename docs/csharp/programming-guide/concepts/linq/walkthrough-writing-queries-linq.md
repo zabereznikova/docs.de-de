@@ -1,199 +1,214 @@
 ---
-title: "Walkthrough: Writing Queries in C# (LINQ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "get-started-article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], walkthroughs"
-  - "LINQ [C#], writing queries"
-  - "queries [LINQ in C#], writing"
-  - "writing LINQ queries"
+title: 'Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: get-started-article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], walkthroughs
+- LINQ [C#], writing queries
+- queries [LINQ in C#], writing
+- writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 caps.latest.revision: 32
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9dd72793d23c7f6ccc208a3368c255f7cc4dbbd7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Walkthrough: Writing Queries in C# (LINQ)
-Diese exemplarische Vorgehensweise veranschaulicht die C\#\-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Abfrageausdrücken verwendet werden.  Nachdem Sie diese exemplarische Vorgehensweise durchgeführt haben, können Sie mit den Beispielen und der Dokumentation für den spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieter fortfahren, an dem Sie interessiert sind, beispielsweise [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] für DataSets oder [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
+Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
   
-## Vorbereitungsmaßnahmen  
- Diese exemplarische Vorgehensweise erfordert Funktionen, die in Visual Studio 2008.  
+## <a name="create-a-c-project"></a>Erstellen eines C#-Projekts  
   
- ![Link zu Video](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Unter [Video How to: Writing Queries in C\# \(LINQ\)](http://go.microsoft.com/fwlink/?LinkId=100393) finden Sie eine Videoversion dieses Themas.  
+> [!NOTE]
+>  Die folgenden Anweisungen gelten für Visual Studio. Wenn Sie eine andere Entwicklungsumgebung verwenden, erstellen Sie ein Konsolenprojekt mit einem Verweis auf „System.Core.dll“ und eine `using`-Direktive für den Namespace <xref:System.Linq?displayProperty=fullName>.  
   
-## Erstellen von C\#\-Projekten  
-  
-#### So erstellen Sie ein Projekt  
+#### <a name="to-create-a-project-in-visual-studio"></a>So erstellen Sie ein Projekt in Visual Studio  
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt** aus.  
+2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Erweitern Sie **InstalliertVorlagen**, erweitern Sie, erweitern Sie **Visual C\#** und wählen Sie dann **Konsolenanwendung** aus.  
+3.  Erweitern Sie nacheinander **Installiert**, **Vorlagen**, **Visual C#**, und wählen Sie dann **Konsolenanwendung** aus.  
   
-4.  Im **Name** Textfeld geben Sie einen anderen Namen ein oder übernehmen Sie den Standardnamen, und wählen Sie dann die Schaltfläche **OK** aus.  
+4.  Geben Sie im Textfeld **Name** einen anderen Namen ein, oder übernehmen Sie den Standardnamen, und wählen Sie dann die Schaltfläche **OK** aus.  
   
-     Das neue Projekt wird im **Projektmappen\-Explorer** angezeigt.  
+     Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-5.  Beachten Sie, dass das Projekt einen Verweis auf System.Core.dll und eine `using`\-Direktive für den <xref:System.Linq?displayProperty=fullName>\-Namespace aufweist.  
+5.  Beachten Sie, dass Ihr Projekt einen Verweis auf „System.Core.dll“ und eine `using`-Direktive für den Namespace <xref:System.Linq?displayProperty=fullName> enthält.  
   
-## Erstellen einer Datenquelle im Arbeitsspeicher  
- Die Datenquelle für die Abfragen ist eine einfache Liste von `Student`\-Objekten.  Jeder `Student`\-Datensatz umfasst einen Vornamen, einen Nachnamen und ein Array von Ganzzahlen, dass die Testergebnisse der einzelnen Studenten in der Klasse darstellt.  Kopieren Sie diesen Code ins Projekt.  Beachten Sie die folgenden Eigenschaften:  
+## <a name="create-an-in-memory-data-source"></a>Erstellen einer In-Memory-Datenquelle  
+ Die Datenquelle für die Abfragen ist eine einfache Liste mit `Student`-Objekten. Jeder `Student`-Datensatz umfasst einen Vornamen, einen Nachnamen und ein Array von Ganzzahlen, das die Testergebnisse der einzelnen Studenten in der Klasse darstellt. Kopieren Sie diesen Code in Ihr Projekt. Beachten Sie die folgenden Eigenschaften:  
   
--   Die `Student`\-Klasse besteht aus automatisch implementierten Eigenschaften.  
+-   Die `Student`-Klasse besteht aus automatisch implementierten Eigenschaften.  
   
 -   Jeder Student in der Liste wird mit einem Objektinitialisierer initialisiert.  
   
 -   Die Liste selbst wird mit einem Auflistungsinitialisierer initialisiert.  
   
- Die gesamte Datenstruktur wird ohne explizite Aufrufe eines Konstruktors oder expliziten Memberzugriff initialisiert und instanziiert.  Weitere Informationen über diese neuen Features finden Sie unter [Automatisch implementierte Eigenschaften](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) und [Objekt\- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Die gesamte Datenstruktur wird ohne explizite Aufrufe eines beliebigen Konstruktors oder expliziten Memberzugriff initialisiert und instanziiert. Weitere Informationen zu diesen neuen Funktionen finden Sie unter [Automatisch implementierte Eigenschaften](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) und [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-#### So fügen Sie die Datenquelle hinzu  
+#### <a name="to-add-the-data-source"></a>So fügen Sie die Datenquelle hinzu  
   
--   Fügen Sie die `Student`\-Klasse und die initialisierte Liste von Studenten der `Program`\-Klasse im Projekt hinzu.  
+-   Fügen Sie die `Student`-Klasse und die initialisierte Liste der Studenten zur `Program`-Klasse in Ihrem Projekt hinzu.  
   
      [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
-#### So fügen Sie einen neuen Studenten der Liste der Studenten hinzu  
+#### <a name="to-add-a-new-student-to-the-students-list"></a>So fügen Sie einen neuen Studenten zur Liste der Studenten hinzu  
   
-1.  Fügen Sie einen neuen `Student` der `Students`\-Liste hinzu, und verwenden Sie einen Namen und Testergebnisse Ihrer Wahl.  Versuchen Sie, alle Informationen für den neuen Studenten einzugeben, um die Syntax für den Objektinitialisierer besser kennen zu lernen.  
+1.  Fügen Sie einen neuen `Student` zur `Students`-Liste hinzu, und verwenden Sie einen Namen und ein Testergebnis Ihrer Wahl. Geben Sie alle Informationen für den neuen Studenten ein, um sich mit der Syntax für den Objektinitialisierer vertraut zu machen.  
   
-## Erstellen der Abfrage  
+## <a name="create-the-query"></a>Erstellen der Abfrage  
   
-#### So erstellen Sie eine einfache Abfrage  
+#### <a name="to-create-a-simple-query"></a>So erstellen Sie eine einfache Abfrage  
   
--   Erstellen Sie in der `Main`\-Methode der Anwendung eine einfache Abfrage, die bei Ausführung eine Liste aller Studenten erzeugt, deren Testergebnis beim ersten Test über 90 lag.  Da das gesamte `Student`\-Objekt ausgewählt ist, lautet der Typ der Abfrage `IEnumerable<Student>`.  Obwohl der Code auch eine implizite Typisierung mit dem [var](../../../../csharp/language-reference/keywords/var.md)\-Schlüsselwort verwenden könnte, wird hier die explizite Typisierung verwendet, um die Ergebnisse klar zu veranschaulichen.  \(Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).\)  
+-   Erstellen Sie in der `Main`-Methode der Anwendung eine einfache Abfrage, die bei Ausführung eine Liste aller Studenten erzeugt, deren Ergebnis im ersten Test höher als 90 war. Beachten Sie, dass der Typ der Abfrage `Student` ist, da das gesamte `IEnumerable<Student>`-Objekt ausgewählt wird. Obwohl der Code auch die implizite Typisierung mithilfe des Schlüsselworts [var](../../../../csharp/language-reference/keywords/var.md) verwenden könnte, wird die explizite Typisierung verwendet, um die Ergebnisse deutlich darzustellen. (Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
-     Die Bereichsvariable der Abfrage `student` dient als Verweis auf jeden `Student` in der Quelle und bietet Memberzugriff für jedes Objekt.  
+     Beachten Sie auch, dass `student`, die Bereichsvariable der Abfrage, als Verweis auf jeden `Student` in der Quelle dient und Memberzugriff auf jedes Objekt bietet.  
   
  [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
-## Ausführen der Abfrage  
+## <a name="execute-the-query"></a>Ausführen der Abfrage  
   
-#### So führen Sie die Abfrage aus  
+#### <a name="to-execute-the-query"></a>So führen Sie die Abfrage aus  
   
-1.  Schreiben Sie jetzt die `foreach`\-Schleife, die bewirkt, dass die Abfrage ausgeführt wird.  Beachten Sie Folgendes im Hinblick auf den Code:  
+1.  Schreiben Sie jetzt die `foreach`-Schleife, die das Ausführen der Abfrage auslöst. Beachten Sie Folgendes beim Code:  
   
-    -   Auf jedes Element in der zurückgegebenen Sequenz wird über die Iterationsvariable in der `foreach`\-Schleife zugegriffen.  
+    -   Auf jedes Element in der zurückgegebenen Sequenz wird über die Iterationsvariable in der `foreach`-Schleife zugegriffen.  
   
-    -   Der Typ dieser Variable ist `Student`, und der Typ der Abfragevariablen ist kompatibel, `IEnumerable<Student>`.  
+    -   Der Typ dieser Variable ist `Student`, und der Typ der Abfragevariable, `IEnumerable<Student>`, ist kompatibel.  
   
-2.  Nachdem Sie diesen Code hinzugefügt haben, erstellen Sie die Anwendung und führen sie aus, indem Sie STRG \+ F5 drücken, um die Ergebnisse im Fenster **Konsole** anzuzeigen.  
+2.  Erstellen Sie die Anwendung, und führen Sie sie aus, nachdem Sie diesen Code hinzugefügt haben, um die Ergebnisse im Fenster **Konsole** anzeigen zu lassen.  
   
  [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
-#### So fügen Sie eine weitere Filterbedingung hinzu  
+#### <a name="to-add-another-filter-condition"></a>So fügen Sie eine weitere Filterbedingung hinzu  
   
-1.  Sie können mehrere boolesche Bedingungen in der `where`\-Klausel kombinieren, um eine Abfrage weiter zu verfeinern.  Der folgende Code fügt eine Bedingung hinzu, die festlegt, dass die Abfrage nur die Studenten zurückgibt, deren erstes Ergebnis über 90 und deren letztes Ergebnis unter 80 lag.  Die `where`\-Klausel sollte etwa folgendermaßen aussehen:  
+1.  Sie können mehrere boolesche Bedingungen in der `where`-Klausel kombinieren, um eine Abfrage weiter zu optimieren. Der folgende Code fügt eine Bedingung hinzu, sodass die Abfrage die Studenten zurückgibt, deren erstes Ergebnis höher als 90 und das letzte Ergebnis niedriger als 80 war. Die `where`-Klausel sollte in etwa dem folgenden Code entsprechen.  
   
     ```  
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Weitere Informationen finden Sie unter [where\-Klausel](../../../../csharp/language-reference/keywords/where-clause.md).  
+     Weitere Informationen finden Sie unter [where-Klausel](../../../../csharp/language-reference/keywords/where-clause.md).  
   
-## Ändern der Abfrage  
+## <a name="modify-the-query"></a>Ändern der Abfrage  
   
-#### So sortieren Sie die Ergebnisse  
+#### <a name="to-order-the-results"></a>So sortieren Sie die Ergebnisse  
   
-1.  Die Ergebnisse lassen sich leichter prüfen, wenn sie sortiert sind.  Sie können die zurückgegebene Sequenz nach jedem Feld in den Quellelementen sortieren, auf das zugegriffen werden kann.  Die folgende `orderby`\-Klausel sortiert beispielsweise die Ergebnisse anhand des Nachnamens der Studenten alphabetisch von A bis Z.  Fügen Sie die folgende `orderby`\-Klausel Ihrer Abfrage hinzu, direkt nach der `where`\-Anweisung und vor der `select`\-Anweisung:  
+1.  Es ist einfacher, die Ergebnisse zu überprüfen, wenn sie geordnet dargestellt werden. Sie können die zurückgegebene Sequenz nach einem beliebigen zugänglichen Feld in den Quellelementen sortieren. Die folgende `orderby`-Klausel ordnet die Ergebnisse z.B. in alphabetischer Reihenfolge (A bis Z) nach dem Nachnamen jedes Studenten. Fügen Sie die folgende `orderby`-Klausel direkt nach der `where`-Anweisung und vor der `select`-Anweisung zu Ihrer Abfrage hinzu:  
   
     ```  
     orderby student.Last ascending  
     ```  
   
-2.  Ändern Sie jetzt die `orderby`\-Klausel so, dass die Ergebnisse in umgekehrter Reihenfolge gemäß dem Ergebnis des ersten Tests sortiert werden, vom höchsten Ergebnis zum niedrigsten Ergebnis.  
+2.  Ändern Sie nun die `orderby`-Klausel so, dass sie die Ergebnisse in umgekehrter Reihenfolge gemäß dem Ergebnis im ersten Test sortiert, vom höchsten zum niedrigsten Ergebnis.  
   
     ```  
     orderby student.Scores[0] descending  
     ```  
   
-3.  Ändern Sie die `WriteLine`\-Formatzeichenfolge, damit Sie die Ergebnisse sehen können:  
+3.  Ändern Sie die `WriteLine`-Formatzeichenfolge so, dass die Ergebnisse angezeigt werden:  
   
     ```  
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Weitere Informationen finden Sie unter [orderby\-Klausel](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+     Weitere Informationen finden Sie unter [orderby-Klausel](../../../../csharp/language-reference/keywords/orderby-clause.md).  
   
-#### So gruppieren Sie die Ergebnisse  
+#### <a name="to-group-the-results"></a>So gruppieren Sie die Ergebnisse  
   
-1.  Die Gruppierung ist eine leistungsstarke Fähigkeit in Abfrageausdrücken.  Eine Abfrage mit einer Gruppenklausel erzeugt eine Sequenz von Gruppen. Jede Gruppe selbst umfasst dabei einen `Key` und eine Sequenz, die aus allen Membern der Gruppe besteht.  Die folgende neue Abfrage gruppiert die Studenten unter Verwendung des Anfangsbuchstabens ihres Nachnamens als Schlüssel.  
+1.  Die Gruppierung ist eine leistungsstarke Funktion in Abfrageausdrücken. Eine Abfrage mit einer group-Klausel erzeugt eine Sequenz von Gruppen, in der jede Gruppe einen `Key` und eine Sequenz enthält, die aus allen Mitgliedern dieser Gruppe besteht. Die folgende neue Abfrage gruppiert die Studenten mit dem ersten Buchstaben ihres Nachnamens als Schlüssel.  
   
      [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
-2.  Beachten Sie, dass sich der Typ der Abfrage jetzt geändert hat.  Es wird nun eine Sequenz von Gruppen mit einem `char`\-Typ als Schlüssel und einer Sequenz von `Student`\-Objekten erzeugt.  Da sich der Typ der Abfrage geändert hat, ändert der folgende Code auch die `foreach`\-Ausführungsschleife:  
+2.  Beachten Sie, dass sich der Typ der Abfrage jetzt geändert ist. Sie erzeugt nun eine Sequenz von Gruppen mit einem `char`-Typ als Schlüssel und eine Sequenz von `Student`-Objekten. Da der Typ der Abfrage geändert wurde, ändert folgender Code ebenfalls die `foreach`-Ausführungsschleife:  
   
      [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
-3.  Drücken Sie STRG \+ F5, um die Anwendung auszuführen und die Ergebnisse im Fenster **Konsole** anzuzeigen.  
+3.  Führen Sie die Anwendung aus, und zeigen Sie die Ergebnisse im Fenster **Konsole** an.  
   
-     Weitere Informationen finden Sie unter [group\-Klausel](../../../../csharp/language-reference/keywords/group-clause.md).  
+     Weitere Informationen finden Sie unter [group-Klausel](../../../../csharp/language-reference/keywords/group-clause.md).  
   
-#### So machen Sie die Variablen zu implizit typisierten Variablen  
+#### <a name="to-make-the-variables-implicitly-typed"></a>So legen Sie Variablen als implizit typisiert fest  
   
-1.  Das explizite `IEnumerables`\-Codieren von `IGroupings` kann rasch zu einer zeitraubenden Aufgabe werden.  Sie können die gleiche Abfrage und `foreach`\-Schleife mit weniger Aufwand schreiben, wenn Sie `var` verwenden.  Das `var`\-Schlüsselwort ändert die Typen ihrer Objekte nicht, sondern weist nur den Compiler an, die Typen abzuleiten.  Ändern Sie den Typ von `studentQuery` und die Iteration Variable `group` zu `var` und überprüfen Sie die Abfrage.  Wie Sie sehen, wird die Iterationsvariable in der inneren `foreach`\-Schleife weiterhin als `Student` typisiert, und die Abfrage funktioniert wie zuvor.  Ändern Sie die Iterationsvariable `s` in `var`, und führen Sie wieder die Abfrage aus.  Sie sehen, dass die Ergebnisse genau gleich sind.  
+1.  Das explizite Codieren von `IEnumerables` von `IGroupings` kann schnell mühsam werden. Sie können dieselbe Abfrage und `foreach`-Schleife viel einfacher mithilfe von `var` schreiben. Das Schlüsselwort `var` ändert die Typen Ihres Objekts nicht; es weist nur den Compiler an, die Typen abzuleiten. Ändern Sie den Typ von `studentQuery` und der Iterationsvariable `group` zu `var`, und führen Sie die Abfrage erneut aus. Beachten Sie, dass die Iterationsvariable in der inneren `foreach`-Schleife immer noch als `Student` typisiert ist und die Abfrage so ausgeführt wird wie zuvor. Ändern Sie die Iterationsvariable `s` zu `var`, und führen Sie die Abfrage erneut aus. Sie sehen, dass Sie genau die gleichen Ergebnisse erhalten.  
   
      [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
-     Weitere Informationen über [var](../../../../csharp/language-reference/keywords/var.md) finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+     Weitere Informationen zu [var](../../../../csharp/language-reference/keywords/var.md) finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-#### So sortieren Sie die Gruppen nach ihrem Schlüsselwert  
+#### <a name="to-order-the-groups-by-their-key-value"></a>So sortieren Sie die Gruppen nach ihren Schlüsselwerten  
   
-1.  Wenn Sie die vorherige Abfrage ausführen, stellen Sie fest, dass die Gruppen nicht in alphabetischer Reihenfolge aufgeführt werden.  Um dies zu ändern, müssen Sie nach der `group`\-Klausel eine `orderby`\-Klausel bereitstellen.  Um eine `orderby`\-Klausel verwenden zu können, benötigen Sie jedoch zuerst einen Bezeichner, der als Verweis auf die durch die `group`\-Klausel erstellten Gruppen dient.  Sie stellen den Bezeichner bereit, indem Sie das `into`\-Schlüsselwort wie folgt verwenden:  
+1.  Wenn Sie die vorherige Abfrage ausführen, werden Sie feststellen, dass die Gruppen nicht alphabetischer angeordnet sind. Um dies zu ändern, müssen Sie eine `orderby`-Klausel nach der `group`-Klausel angeben. Sie benötigen aber zuerst einen Bezeichner, der als Verweis auf die durch die `group`-Klausel erstellte Gruppe dient, bevor Sie eine `orderby`-Klausel verwenden können. Geben Sie den Bezeichner mithilfe des Schlüsselworts `into` wie folgt an:  
   
      [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
-     Wenn Sie diese Abfrage ausführen, sehen Sie, dass die Gruppen jetzt in alphabetischer Reihenfolge sortiert sind.  
+     Wenn Sie diese Abfrage ausführen, werden Sie feststellen, dass die Gruppen nun in alphabetischer Reihenfolge sortiert sind.  
   
-#### So fügen Sie einen Bezeichner mit let ein  
+#### <a name="to-introduce-an-identifier-by-using-let"></a>So führen Sie einen Bezeichner mit „let“ ein  
   
-1.  Sie können das Schlüsselwort `let` verwenden, um einen Bezeichner für ein Ausdrucksergebnis in den Abfrageausdruck einzubeziehen.  Dieser Bezeichner kann aus praktischen Gründen verwendet werden, wie im folgenden Beispiel, oder er kann die Leistung durch Speichern der Ergebnisse eines Ausdrucks verbessern, die ansonsten mehrmals berechnet werden müssten.  
+1.  Sie können das Schlüsselwort `let` verwenden, um einen Bezeichner für ein beliebiges Ausdrucksergebnis in den Abfrageausdruck einzuführen. Dieser Bezeichner ist sehr praktisch, wie im folgenden Beispiel zu sehen ist; er kann auch die Leistung verbessern, da die Ergebnisse eines Ausdrucks gespeichert werden und nicht mehrfach berechnet werden müssen.  
   
      [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
-     Weitere Informationen finden Sie unter [let\-Klausel](../../../../csharp/language-reference/keywords/let-clause.md).  
+     Weitere Informationen finden Sie unter [let-Klausel](../../../../csharp/language-reference/keywords/let-clause.md).  
   
-#### So verwenden Sie Methodensyntax in einem Abfrageausdruck  
+#### <a name="to-use-method-syntax-in-a-query-expression"></a>So verwenden Sie die Methodensyntax in einem Abfrageausdruck  
   
-1.  Wie in [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) beschrieben, können einige Abfrageoperationen nur unter Verwendung von Methodensyntax ausgedrückt werden.  Der folgende Code berechnet das Gesamtergebnis für jeden `Student` in der Quellsequenz und ruft dann die `Average()`\-Methode für die Ergebnisse der Abfrage auf, um das Durchschnittsergebnis der Klasse zu berechnen.  Beachten Sie die Platzierung von Klammern rund um den Abfrageausdruck.  
+1.  Wie unter [Abfragesyntax und Methodensyntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) beschrieben, können einige Abfrageoperationen nur durch Verwendung der Methodensyntax ausgedrückt werden. Der folgende Code berechnet das Gesamtergebnis für jeden `Student` in der Quellsequenz und ruft dann die `Average()`-Methode für die Ergebnisse der Abfrage auf, um die durchschnittliche Punktzahl der Klasse zu berechnen. Beachten Sie die Platzierung von Klammern um den Abfrageausdruck.  
   
      [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
-#### So transformieren oder projizieren Sie in die Select\-Klausel  
+#### <a name="to-transform-or-project-in-the-select-clause"></a>So transformieren oder projizieren Sie in die select-Klausel  
   
-1.  Es kommt sehr häufig vor, dass eine Abfrage eine Sequenz erzeugt, deren Elemente sich von den Elementen in den Quellsequenzen unterscheiden.  Löschen Sie ihre vorherige Abfrage und Ausführungsschleife, oder kommentieren Sie sie aus, und ersetzen Sie sie durch den folgenden Code.  Beachten Sie, dass die Abfrage eine Sequenz von Zeichenfolgen zurückgibt \(keine `Students`\) und dass sich diese Tatsache in der `foreach`\-Schleife widerspiegelt.  
+1.  Es kommt sehr häufig vor, dass eine Abfrage eine Sequenz erzeugt, deren Elemente sich von den Elementen in den Quellsequenzen unterscheiden. Löschen Sie oder kommentieren Sie die vorherige Abfrage und Ausführungsschleife aus, und ersetzen Sie sie durch den folgenden Code. Beachten Sie, dass die Abfrage eine Sequenz von Zeichenfolgen zurückgibt (nicht `Students`). Dies spiegelt sich in der `foreach`-Schleife wider.  
   
      [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
-2.  Der Code weiter oben in dieser exemplarischen Vorgehensweise hat gezeigt, dass das durchschnittliche Klassenergebnis 334 ist.  Um eine Sequenz von `Students` zu erzeugen, deren Ergebnis über dem Klassendurchschnitt liegt, zusammen mit der dazugehörigen `Student ID`, können Sie einen anonymen Typ in der `select`\-Anweisung verwenden:  
+2.  Der vorherige Code in dieser exemplarischen Vorgehensweise hat gezeigt, dass das durchschnittliche Ergebnis der Klasse ungefähr 334 beträgt. Zum Erstellen einer Sequenz von `Students` mit ihrer `Student ID`, deren Ergebnis höher ist als der Klassendurchschnitt, können Sie einen anonymen Typ in der `select`-Anweisung verwenden:  
   
      [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
-## Nächste Schritte  
- Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C\# vertraut sind, können Sie die Dokumentation und die Beispiele des spezifischen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\-Anbieters lesen, der Sie interessiert:  
+## <a name="next-steps"></a>Nächste Schritte  
+ Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C# vertraut sind, sind Sie nun bereit, die Dokumentation und Beispiele für bestimmte LINQ-Anbieter zu lesen, an denen Sie interessiert sind:  
   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)  
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## Siehe auch  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [Getting Started with LINQ in C\#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [LINQ\-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Supplementary LINQ Resources](../Topic/Supplementary%20LINQ%20Resources.md)   
- [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)
+## <a name="see-also"></a>Siehe auch  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)

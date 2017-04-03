@@ -44,7 +44,7 @@ Die [IDisposable](xref:System.IDisposable)-Schnittstelle erfordert die Implement
 
 * Eine geschützte, virtuelle (`Overridable` in Visual Basic) `Dispose`-Methode mit der folgenden Signatur:
 
-  ```cs
+  ```csharp
   protected virtual void Dispose(bool disposing)
   ```
 
@@ -56,7 +56,7 @@ Die [IDisposable](xref:System.IDisposable)-Schnittstelle erfordert die Implement
 
 Da die öffentliche, nicht virtuelle (`NonInheritable` in Visual Basic), parameterlose `Dispose`-Methode von einem Consumer des Typs aufgerufen wird, besteht ihr Zweck darin, nicht verwaltete Ressourcen freizugeben und anzugeben, dass der Finalizer, sofern vorhanden, nicht ausgeführt werden muss. Daher weist sie eine Standardimplementierung auf:
 
-```cs
+```csharp
 public void Dispose()
 {
    // Dispose of unmanaged resources.
@@ -110,7 +110,7 @@ Wenn Sie das Dispose-Muster für eine Basisklasse implementieren, müssen Sie Fo
 
 Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispose-Musters für eine Basisklasse, die ein SafeHandle verwendet. 
 
-```cs
+```csharp
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Runtime.InteropServices;
@@ -187,7 +187,7 @@ End Class
  
 Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispose-Musters für eine Basisklasse, die [Object.Finalize](xref:System.Object.Finalize) überschreibt. 
 
-```cs
+```csharp
 using System;
 
 class BaseClass : IDisposable
@@ -271,7 +271,7 @@ Eine Klasse, die von einer Klasse abgeleitet ist, die die [IDisposable](xref:Sys
 
 Im Folgenden finden Sie das allgemeine Muster für das Implementieren des Dispose-Musters für eine abgeleitete Klasse, die ein SafeHandle verwendet: 
 
-```cs
+```csharp
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Runtime.InteropServices;
@@ -340,7 +340,7 @@ End Class
 
 Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispose-Musters für eine abgeleitete Klasse, die [Object.Finalize](xref:System.Object.Finalize) überschreibt:
 
-```cs
+```csharp
 using System;
 
 class DerivedClass : BaseClass
@@ -425,7 +425,7 @@ Von der [System.Runtime.InteropServices.SafeHandle](xref:System.Runtime.InteropS
 
 Das folgende Beispiel zeigt das Dispose-Muster für eine Basisklasse, `DisposableStreamResource`, die ein SafeHandle verwendet, um nicht verwaltete Ressourcen zu kapseln. Es definiert eine `DisposableResource`-Klasse, die ein [SafeFileHandle](xref:Microsoft.Win32.SafeHandles.SafeFileHandle) verwendet, um ein [Stream](xref:System.IO.Stream)-Objekt zu umschließen, das eine offene Datei darstellt. Die `DisposableResource`-Methode enthält auch eine einzelne Eigenschaft, `Size`, die die Gesamtzahl von Bytes im Dateistream zurückgibt. 
 
-```cs
+```csharp
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.IO;
@@ -589,7 +589,7 @@ End Class
 
 Das folgende Beispiel zeigt das Dispose-Muster für eine abgeleitete Klasse, `DisposableStreamResource2`, die von der `DisposableStreamResource`-Klasse erbt, die im vorherigen Beispiel dargestellt wurde. Die Klasse fügt eine zusätzliche Methode, `WriteFileInfo`, hinzu und verwendet ein [SafeFileHandle](xref:Microsoft.Win32.SafeHandles.SafeFileHandle)-Objekt, um das Handle der beschreibbaren Datei zu umschließen. 
 
-```cs
+```csharp
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.IO;

@@ -1,25 +1,43 @@
 ---
-title: "virtual (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "virtual_CSharpKeyword"
-  - "virtual"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "virtual-Schlüsselwort [C#]"
+title: virtual (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- virtual_CSharpKeyword
+- virtual
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e2268fcc3888bf4b3a30f5855a31bfafcbd3ca49
+ms.lasthandoff: 03/13/2017
+
 ---
-# virtual (C#-Referenz)
-Mit dem `virtual`\-Schlüsselwort können eine Methode, eine Eigenschaft, ein Indexer oder eine Ereignisdeklaration geändert und in einer abgeleiteten Klasse überschrieben werden.  Zum Beispiel kann diese Methode von jeder Klasse überschrieben werden, die diese Methode erbt:  
+# <a name="virtual-c-reference"></a>virtual (C#-Referenz)
+Das Schlüsselwort `virtual` wird zum Ändern einer Methoden-, Eigenschaften-, Indexer- oder Ereignisdeklaration verwendet, und lässt zu, dass sie in einer abgeleiteten Klasse außer Kraft gesetzt werden. Diese Methode kann z.B. von jeder Klasse, die sie erbt, überschrieben werden:  
   
 ```  
 public virtual double Area()   
@@ -28,45 +46,45 @@ public virtual double Area()
 }  
 ```  
   
- Die Implementierung eines virtuellen Members kann durch einen [override](../../../csharp/language-reference/keywords/override.md)\-Member in einer abgeleiteten Klasse geändert werden.  Weitere Informationen zur Verwendung des `virtual`\-Schlüsselworts finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) und [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Die Implementierung eines virtuellen Members kann durch einen [overriding member](../../../csharp/language-reference/keywords/override.md) (überschreibender Member) in einer abgeleiteten Klasse geändert werden. Weitere Informationen zur Verwendung des `virtual`-Schlüsselworts finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) und [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## Hinweise  
- Wenn eine virtuelle Methode aufgerufen wird, wird der Laufzeittyp des Objekts auf einen überschreibenden Member hin überprüft  und der überschreibende Member der tiefsten abgeleiteten Klasse aufgerufen. Wenn keine abgeleitete Klasse den Member überschrieben hat, handelt es sich hierbei möglicherweise um den ursprünglichen Member.  
+## <a name="remarks"></a>Hinweise  
+ Wenn eine virtuelle Methode aufgerufen wird, wird der Laufzeittyp des Objekts auf einen überschreibenden Member überprüft. Der überschreibende Member in der abgeleitetsten Klasse (bei dem es sich um den ursprünglichen Member handeln könnte) wird aufgerufen, wenn keine abgeleitete Klasse den Member außer Kraft gesetzt hat.  
   
- Standardmäßig sind Methoden nicht virtuell.  Eine nicht virtuelle Methode darf nicht überschrieben werden.  
+ Standardmäßig sind Methoden nicht virtuell. Sie können keine nicht virtuelle Methode überschreiben.  
   
- Der `virtual`\-Modifizierer kann nicht zusammen mit den Modifizierern `static`, `abstract, private` oder `override` verwendet werden.  Im folgenden Beispiel wird eine virtuelle Eigenschaft veranschaulicht:  
+ Sie können den Modifizierer `virtual` nicht mit den Modifizierern `static`, `abstract, private` oder `override` verwenden. Im folgenden Beispiel wird eine virtuelle Methode gezeigt:  
   
  [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
- Virtuelle Eigenschaften verhalten sich wie abstrakte Methoden, mit Ausnahme der Unterschiede bei der Deklaration und der Syntax für den Aufruf.  
+ Virtuelle Eigenschaften verhalten sich wie abstrakte Methoden – sie unterscheiden sich lediglich in der Deklarations- und Aufrufsyntax.  
   
--   Der `virtual`\-Modifizierer darf nicht für eine statische Eigenschaft verwendet werden.  
+-   Es ist unzulässig, den `virtual`-Modifizierer für eine statische Eigenschaft zu verwenden.  
   
--   In einer abgeleiteten Klasse kann eine virtuelle vererbte Eigenschaft überschrieben werden, indem eine Eigenschaftendeklaration, die den `override`\-Modifizierer verwendet, eingeschlossen wird.  
+-   Eine virtuelle vererbte Eigenschaft kann in einer abgeleiteten Klasse mithilfe der Eigenschaftendeklaration, die den Modifizierer `override` verwendet, außer Kraft gesetzt werden.  
   
-## Beispiel  
- In diesem Beispiel enthält die `Shape`\-Klasse die beiden Koordinaten `x` und `y` sowie die virtuelle `Area()`\-Methode.  Verschiedene Formklassen wie `Circle`, `Cylinder` und `Sphere` erben die `Shape`\-Klasse, und für jede Figur wird die Oberfläche berechnet.  Jede abgeleitete Klasse verfügt über ihre eigene override\-Implementierung von `Area()`.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel enthält die Klasse `Shape` die zwei Koordinaten `x` und `y` und die virtuelle Methode `Area()`. Andere Formklassen, z.B. `Circle`, `Cylinder` und `Sphere` erben die Klasse `Shape`. Die Oberfläche wird für jede Abbildung berechnet. Jede abgeleitete Klasse verfügt über Ihre eigene Überschreibungsimplementierung von `Area()`.  
   
- Beachten Sie, dass die geerbten Klassen `Circle`, `Sphere`und alle `Cylinder` verwenden konstruktoren, die die Basisklasse initialisiert werden, wie in der folgenden Deklaration veranschaulicht.  
+ Beachten Sie, dass die geerbten Klassen `Circle`, `Sphere` und `Cylinder` alle Konstruktoren verwenden, die die Basisklasse initialisieren, wie in der folgenden Deklaration gezeigt.  
   
 ```  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   
- Das folgende Programm berechnet und zeigt den entsprechenden Bereich für jede Figur an, indem er die entsprechende Implementierung der `Area()`\-Methode entsprechend dem Objekt aufruft, das mit der Methode zugeordnet ist.  
+ Das folgende Programm berechnet und zeigt den entsprechenden Bereich für jede Abbildung durch Aufruf der entsprechenden Implementierung der `Area()`-Methode gemäß dem Objekt, das der Methode zugeordnet ist.  
   
  [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Polymorphismus](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [abstract](../../../csharp/language-reference/keywords/abstract.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
- [neu](../../../csharp/language-reference/keywords/new.md)
+ [new](../../../csharp/language-reference/keywords/new.md)

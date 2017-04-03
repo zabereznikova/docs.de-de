@@ -1,39 +1,57 @@
 ---
-title: "Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Ausnahmen [C#], nicht mit CLS kompatibel"
+title: 'Vorgehensweise: Abfangen einer Nicht-CLS-Ausnahme | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
 caps.latest.revision: 8
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 8
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3515ecab379a0e910cdd5ba82a4a39b085cc816f
+ms.lasthandoff: 03/13/2017
+
 ---
-# Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme
-Einige .NET\-Sprachen, einschließlich C\+\+\/CLI, ermöglichen es Objekten, Ausnahmen auszulösen, die sich nicht von <xref:System.Exception> ableiten.  Diese Ausnahmen werden als *Nicht\-CLS\-Ausnahmen* oder *Nicht\-Ausnahmen* bezeichnet.  In [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] können Sie keine Nicht\-CLS\-Ausnahmen auslösen, sie aber auf zwei Weisen abfangen:  
+# <a name="how-to-catch-a-non-cls-exception"></a>Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme
+Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen auszulösen, die nicht aus <xref:System.Exception> stammen. Diese Ausnahmen werden als *Nicht-CLS-Ausnahmen* oder *Nicht-Ausnahmen* bezeichnet. In [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] können Sie keine Nicht-CLS-Ausnahmen auslösen. Sie können sie jedoch auf zwei Arten abfangen:  
   
--   Innerhalb eines `catch (Exception e)`\-Blocks als <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+-   Innerhalb eines `catch (Exception e)`-Blocks als eine <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
   
-     Standardmäßig fängt eine [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]\-Assembly Nicht\-CLS\-Ausnahmen als umschlossene Ausnahmen ab.  Verwenden Sie diese Methode, wenn Sie auf die ursprüngliche Ausnahme zugreifen müssen, die über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft verfügbar ist.  Im Verfahren weiter unten in diesem Thema wird das Abfangen von Ausnahmen auf diese Weise beschrieben.  
+     In der Standardeinstellung fängt eine [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]-Assembly Nicht-CLS-Ausnahmen als umschlossene Ausnahmen ab. Verwenden Sie diese Methode, wenn Sie Zugriff auf die ursprüngliche Ausnahme benötigen, auf die über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>-Eigenschaft zugegriffen werden kann. Weiter unten in diesem Thema wird erläutert, wie Abfragen auf diese Art und Weise abgefangen werden können.  
   
--   Innerhalb eines allgemeinen catch\-Blocks \(eines catch\-Blocks, für den kein Ausnahmetyp angegeben wurde\), der nach einem `catch (Exception)`\-Block oder `catch (Exception e)`\-Block platziert wird.  
+-   Innerhalb eines allgemeinen Catch-Blocks (ein Catch-Block ohne angegebenen Ausnahmetyp), der nach einem `catch (Exception)`- oder `catch (Exception e)`-Block eingefügt wird.  
   
-     Verwenden Sie diese Methode, wenn Sie Aktionen \(z. B. das Schreiben in eine Protokolldatei\) als Reaktion auf Nicht\-CLS\-Ausnahmen ausführen möchten und keinen Zugriff auf die Ausnahmeinformationen benötigen.  Standardmäßig umschließt die Common Language Runtime alle Ausnahmen.  Um dieses Verhalten zu deaktivieren, fügen Sie dem Code das folgende assemblyweit gültige Attribut hinzu, normalerweise in der Datei AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
+     Verwenden Sie diese Methode, wenn Sie eine Aktion (z.B. das Schreiben in eine Protokolldatei) als Reaktion auf Nicht-CLS-Ausnahmen ausführen möchten und Sie keinen Zugriff auf die Ausnahmeinformationen benötigen. Standardmäßig umschließt die Common Language Runtime alle Ausnahmen. Um dieses Verhalten zu deaktivieren, fügen Sie dieses Attribut auf Assemblyebene Ihrem Code hinzu, in der Regel in die Datei „AssemblyInfo.cs“: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
-### So fangen Sie eine Nicht\-CLS\-Ausnahme ab  
+### <a name="to-catch-a-non-cls-exception"></a>So fangen Sie eine Nicht-CLS-Ausnahme ab  
   
-1.  Verwenden Sie in einem `catch(Exception e) block` das `as`\-Schlüsselwort, um zu testen, ob `e` in eine <xref:System.Runtime.CompilerServices.RuntimeWrappedException> umgewandelt werden kann.  
+1.  Verwenden Sie innerhalb von `catch(Exception e) block` das Schlüsselwort `as`, um zu testen, ob `e` in eine <xref:System.Runtime.CompilerServices.RuntimeWrappedException> umgewandelt werden kann.  
   
-2.  Greifen Sie auf die ursprüngliche Ausnahme über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft zu.  
+2.  Greifen Sie über die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>-Eigenschaft auf die ursprüngliche Ausnahme zu.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie Sie eine Nicht\-CLS\-Ausnahme abfangen, die von einer in C\+\+\/CLR geschriebenen Klassenbibliothek ausgelöst wurde.  Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]\-Clientcode den Ausnahmetyp im Voraus als <xref:System.String?displayProperty=fullName> identifiziert.  Sie können die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>\-Eigenschaft wieder in ihren ursprünglichen Typ umwandeln, sofern auf diesen Typ über den Code zugegriffen werden kann.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie eine Nicht-CLS-Ausnahme abfangen, die von einer in C++/CRL geschriebenen Klassenbibliothek ausgelöst wurde. Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]-Clientcode im Voraus weiß, dass der Ausnahmetyp, der ausgelöst wird, eine <xref:System.String?displayProperty=fullName> darstellt. Wandeln Sie die <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>-Eigenschaft in den ursprünglichen Typ um, solange dieser Typ über Ihren Code erreicht werden kann.  
   
 ```  
 // Class library written in C++/CLR.  
@@ -64,6 +82,6 @@ Einige .NET\-Sprachen, einschließlich C\+\+\/CLI, ermöglichen es Objekten, Aus
    }             
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)
+ [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)
