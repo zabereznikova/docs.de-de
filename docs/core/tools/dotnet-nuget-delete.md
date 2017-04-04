@@ -1,37 +1,45 @@
 ---
-title: Befehl dotnet-nuget-delete | Microsoft-Dokumentation
+title: "Befehl „dotnet-nuget-delete“ – .NET Core-CLI | Microsoft-Dokumentation"
 description: "Der dotnet-nuget-delete-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf."
 keywords: dotnet-nuget-delete, CLI, CLI-Befehl, .NET Core
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 2ce157e3f32f3e899245e38bb4520b17be3e0b32
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 4b8694b83089d85646c9abd7e7f598cdb5879162
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-nuget-delete"></a>dotnet-nuget-delete
+
+# <a name="dotnet-nuget-delete"></a>dotnet-nuget delete
 
 ## <a name="name"></a>Name
 
-`dotnet-nuget-delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf. 
+`dotnet-nuget-delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf.
 
 ## <a name="synopsis"></a>Übersicht
 
-```
-dotnet nuget delete [<package_name> <package_version>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output]
-dotnet nuget delete [-h|--help]
-```
+`dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output] [-h|--help]`
 
 ## <a name="description"></a>Beschreibung
 
-Der `dotnet nuget delete`-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf. Für „NuGet.org“ wird die Auflistung des Pakets aufgehoben.
+Der `dotnet nuget delete`-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf. Für [nuget.org](https://www.nuget.org/) wird die Auflistung des Pakets aufgehoben.
+
+## <a name="arguments"></a>Argumente
+
+`PACKAGE_NAME`
+
+Zu löschendes Paket.
+
+`PACKAGE_VERSION`
+
+Version des zu löschenden Pakets.
 
 ## <a name="options"></a>Optionen
 
@@ -57,11 +65,11 @@ Erzwingt, dass die Befehlszeilenausgabe auf Englisch ist.
 
 ## <a name="examples"></a>Beispiele
 
-Löscht Version 1.0 des Pakets „MyPackage“:
+Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`:
 
-`dotnet nuget delete MyPackage 1.0` 
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0` 
 
-Löscht Version 1.0 des Pakets „MyPackage“, der Benutzer wird nicht zur Eingabe von Anmeldeinformationen oder zu anderen Eingaben aufgefordert:
+Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`, wobei der Benutzer nicht zur Eingabe von Anmeldeinformationen oder zu anderen Eingaben aufgefordert wird:
 
-`dotnet nuget delete MyPackage 1.0 --non-interactive`
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
 

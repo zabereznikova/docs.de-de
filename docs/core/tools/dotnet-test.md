@@ -1,19 +1,19 @@
 ---
-title: Befehl dotnet-test | Microsoft-Dokumentation
+title: "Befehl dotnet-test – .NET Core CLI | Microsoft-Dokumentation"
 description: "Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
 keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -21,18 +21,15 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="name"></a>Name
 
-`dotnet-test` – .NET-Testtreiber
+`dotnet-test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
 ## <a name="synopsis"></a>Übersicht
 
-```
-dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
-dotnet test [-h|--help]
-```
+`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Komponententests sind Klassenbibliotheksprojekte, die Abhängigkeiten vom Komponententest-Framework (z.B. NUnit oder xUnit) und dotnet-Test-Runner für dieses Komponententestframework aufweisen. Sie werden als NuGet-Pakete verpackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
+Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Komponententests sind Klassenbibliotheksprojekte, die Abhängigkeiten vom Komponententest-Framework (z.B. MSText, NUnit oder xUnit) und dotnet-Test Runner für das Komponententest-Framework aufweisen. Sie werden als NuGet-Pakete verpackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
 Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normalen `<PackageReference>`-Element angegeben, wie in der folgenden Beispielprojektdatei gezeigt:
 
@@ -40,7 +37,7 @@ Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normale
 
 ## <a name="options"></a>Optionen
 
-`project`
+`PROJECT`
     
 Gibt den Pfad des Testprojekts an. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben.
 
@@ -68,13 +65,13 @@ Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Te
 
 Gibt eine Protokollierung für die Testergebnisse an. 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
 Konfiguration für die Erstellung. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
 `-f|--framework <FRAMEWORK>`
 
-Sucht nach Testbinärdateien für ein bestimmtes Framework.
+Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -98,12 +95,11 @@ Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
 `dotnet test` 
 
-Führen Sie die Tests im Projekt test1 durch:
+Führen Sie die Tests im Projekt `test1` durch:
 
 `dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Frameworks](../../standard/frameworks.md)
-
-[Runtime-ID-Katalog (RID)](../rid-catalog.md)
+* [Zielframeworks](../../standard/frameworks.md)
+* [Runtime-ID-Katalog (RID)](../rid-catalog.md)

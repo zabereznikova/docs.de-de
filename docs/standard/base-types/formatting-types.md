@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: dc0693c2e2c034c4c71b4270ef2812be4af72e72
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: e9b8ad13a48dd43236769b130d6f8a75b7b023ca
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -1163,7 +1163,7 @@ End Module
 
 ## <a name="composite-formatting"></a>Kombinierte Formatierung
 
-Einige Methoden wie `String.Format` und `StringBuilder.AppendFormat` unterstützen die kombinierte Formatierung. Eine kombinierte Formatzeichenfolge ist eine Vorlage, die verwendet wird, um eine einzelne Zeichenfolge zurückzugeben, die die Zeichenfolgendarstellung von&0; (null), einem oder mehreren Objekten beinhaltet. Jedes Objekt wird in der kombinierten Formatzeichenfolge durch ein indiziertes Formatelement dargestellt. Der Index des Formatelements entspricht der Position des Objekts, das es in der Parameterliste der Methode darstellt. Indizes sind nullbasiert. Beispielsweise wird im folgenden Aufruf der `String.Format`-Methode das erste Formatelement `{0:D}` durch die Zeichenfolgendarstellung von `thatDate` ersetzt. Das zweite Formatelement `{1}` wird durch die Zeichenfolgendarstellung `item1` ersetzt, und das dritte Formatelement `{2:C2}` wird durch die Zeichenfolgendarstellung von `item1.Value` ersetzt.
+Einige Methoden wie `String.Format` und `StringBuilder.AppendFormat` unterstützen die kombinierte Formatierung. Eine kombinierte Formatzeichenfolge ist eine Vorlage, die verwendet wird, um eine einzelne Zeichenfolge zurückzugeben, die die Zeichenfolgendarstellung von 0 (null), einem oder mehreren Objekten beinhaltet. Jedes Objekt wird in der kombinierten Formatzeichenfolge durch ein indiziertes Formatelement dargestellt. Der Index des Formatelements entspricht der Position des Objekts, das es in der Parameterliste der Methode darstellt. Indizes sind nullbasiert. Beispielsweise wird im folgenden Aufruf der `String.Format`-Methode das erste Formatelement `{0:D}` durch die Zeichenfolgendarstellung von `thatDate` ersetzt. Das zweite Formatelement `{1}` wird durch die Zeichenfolgendarstellung `item1` ersetzt, und das dritte Formatelement `{2:C2}` wird durch die Zeichenfolgendarstellung von `item1.Value` ersetzt.
 
 ```csharp
 result = String.Format("On {0:d}, the inventory of {1} was worth {2:C2}.", 
@@ -1185,7 +1185,7 @@ Console.WriteLine(result)
 
 Zusätzlich zum Ersetzen eines Formatelements durch die Zeichenfolgendarstellung seines entsprechenden Objekts können Sie mit Formatelementen auch Folgendes steuern: 
 
-* Die spezifische Art, in der ein Objekt als Zeichenfolge dargestellt wird, wenn das Objekt die [IFormattable](xref:System.IFormattable)-Schnittstelle implementiert und Formatzeichenfolgen unterstützt. Zu diesem Zweck geben Sie nach dem Index des Formatelements einen Doppelpunkt (:) ein, gefolgt von einer gültigen Formatzeichenfolge. Im vorherigen Beispiel wurde hierzu ein Datumswert mit der Formatzeichenfolge „d“ (kurzes Datumsmuster) formatiert (z.B. `{0:d}`), und ein numerischer Wert wurde mit der Formatzeichenfolge „C2“ formatiert (z.B. `{2:C2}`), um die Zahl als Währungswert mit zwei Dezimalstellen darzustellen. 
+* Die spezifische Art, in der ein Objekt als Zeichenfolge dargestellt wird, wenn das Objekt die [IFormattable](xref:System.IFormattable)-Schnittstelle implementiert und Formatzeichenfolgen unterstützt. Zu diesem Zweck geben Sie nach dem Index des Formatelements einen Doppelpunkt (:) ein, gefolgt von einer gültigen Formatzeichenfolge. Im vorherigen Beispiel wurde hierzu ein Datumswert mit der Formatzeichenfolge „d“ (kurzes Datumsmuster) formatiert (z.B. `{0:d}`), und ein numerischer Wert wurde mit der Formatzeichenfolge „C2“ formatiert (z.B. `{2:C2}`, um die Zahl als Währungswert mit zwei Dezimalstellen darzustellen). 
 
 * Die Breite des Felds, das die Zeichenfolgendarstellung des Objekts enthält, und die Ausrichtung der Zeichenfolgendarstellung in diesem Feld. Hierzu geben Sie nach dem Index des Formatelements ein Komma (,) ein, gefolgt von der Feldbreite. Die Zeichenfolge wird rechtsbündig in dem Feld ausgerichtet, wenn die Feldbreite ein positiver Wert ist, und linksbündig, wenn die Feldbreite ein negativer Wert ist. Im folgenden Beispiel werden Datumswerte in einem 20 Zeichen breiten Feld linksbündig ausgerichtet, und Dezimalwerte mit einer Hinterkommastelle werden in einem 11 Zeichen breiten Feld rechtsbündig ausgerichtet. 
 

@@ -4,16 +4,16 @@ description: Informationen zur Zuordnung zwischen project.json und csproj-Elemen
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
 ms.author: mairaw
-ms.date: 03/02/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: beaae03add6f90692189325c0e1cff5ab761abb5
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -612,7 +612,7 @@ In MSBuild wird dies unter Verwendung von [Elementen](https://docs.microsoft.com
 ```
 
 > [!NOTE]
-> Viele der Standardglobmuster werden automatisch durch das .NET Core SDK hinzugefügt.
+> Viele der [Standardglobmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden automatisch durch das .NET Core SDK hinzugefügt.
 > Weitere Informationen finden Sie unter [Werte für Standardkompilierungselemente](https://aka.ms/sdkimplicititems).
 
 Alle `ItemGroup`-Elemente von MSBuild unterstützen `Include`, `Exclude` und `Remove`.

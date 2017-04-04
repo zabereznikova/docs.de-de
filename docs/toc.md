@@ -129,9 +129,12 @@
 # [Leitfaden für .NET Core](core/index.md)
 ## [Erste Schritte](core/getting-started.md)
 ## [Erforderliche Komponenten für Windows](core/windows-prerequisites.md)
+## [Erforderliche Komponenten für macOS](core/macos-prerequisites.md)
 ## [Tutorials](core/tutorials/index.md)
 ### [Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Erste Schritte mit .NET Core unter macOS](core/tutorials/using-on-macos.md)
+### [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs.md)
+### [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Erste Schritte mit .NET Core unter Verwendung der CLI-Tools](core/tutorials/using-with-xplat-cli.md)
 #### [Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile](core/tutorials/testing-with-cli.md)
 ### [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](core/tutorials/libraries.md)
@@ -139,8 +142,12 @@
 ### [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
 ### [Hosten von .NET Core von nativem Code](core/tutorials/netcore-hosting.md)
 ## [Pakete, Metapakete und Frameworks](core/packages.md)
+## [Änderungen in CLI – Übersicht](core/tools/cli-msbuild-architecture.md)
+### [Abhängigkeitsverwaltung](core/tools/dependencies.md)
+### [Erweiterungen des CSPROJ-Formats](core/tools/csproj.md)
 ## Migration
 ### [Migration in das csproj-Format](core/migration/index.md)
+### [Die Zuordnung zwischen project.json und csproj](core/tools/project-json-to-csproj.md)
 ### [Migrieren von DNX](core/migration/from-dnx.md)
 ## [Anwendungsbereitstellung](core/deploying/index.md)
 ### [Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools](core/deploying/creating-nuget-packages.md)
@@ -154,12 +161,7 @@
 ### [.NET Core-Unterstützung](core/versions/lts-current.md)
 ### [🔧 Wartung](core/versions/servicing.md)
 ## [Runtime-ID-Katalog](core/rid-catalog.md)
-## [.NET Core-Tools](core/tools/index.md)
-### [Änderungen in CLI – Übersicht](core/tools/cli-msbuild-architecture.md)
-### [Abhängigkeitsverwaltung](core/tools/dependencies.md)
-### [Bereitstellen von Anwendungen](core/deploying/index.md)
-### [Erweiterungen des CSPROJ-Formats](core/tools/csproj.md)
-### [Die Zuordnung zwischen project.json und csproj](core/tools/project-json-to-csproj.md)
+## [.NET Core-CLI-Tools](core/tools/index.md)
 ### [Telemetrie](core/tools/telemetry.md)
 ### [Erweiterbarkeitsmodell](core/tools/extensibility.md)
 ### [Continuous Integration](core/tools/using-ci-with-cli.md)
@@ -179,6 +181,7 @@
 ### [dotnet-run](core/tools/dotnet-run.md)
 ### [dotnet-sln](core/tools/dotnet-sln.md)
 ### [dotnet-test](core/tools/dotnet-test.md)
+### [dotnet-vstest](core/tools/dotnet-vstest.md)
 ### Befehle zur Projektänderung
 #### Verweise
 ##### [dotnet-add-reference](core/tools/dotnet-add-reference.md)
@@ -193,13 +196,13 @@
 ### [Analysieren der Abhängigkeiten von Drittanbietern](core/porting/third-party-deps.md)
 ### [Portieren von Bibliotheken](core/porting/libraries.md)
 ### [🔧NuGet-Pakete](core/porting/nuget-packages.md)
+## [VS 2015/project.json-Dokumentation](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
-# [.NET Framework im Docker-Leitfaden](framework/index.md)
+# [Leitfaden zu .NET Framework in Docker](framework/index.md)
 ## [Docker](framework/docker/index.md)
 ### [Ausführen von Konsolenanwendungen in Containern](framework/docker/console.md)
-### [Ausführen von ASP.NET MVC-Anwendungen in Containern](framework/docker/aspnetmvc.md)
 <!-- End .NET Framework Content -->
 
 <!-- Start of C# Content -->
@@ -408,14 +411,6 @@
 
 ## [Entwickeln von Anwendungen](visual-basic/developing-apps/index.md)
 
-### [Verwenden der Visual Basic-Entwicklungsumgebung](visual-basic/developing-apps/using-ide/using-the-visual-basic-development-environment.md)
-#### [Visual Basic-Einstellungen](visual-basic/developing-apps/using-ide/settings.md)
-#### [Visual Basic IntelliSense-Codeausschnitte](visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)
-#### [Refactoring](https://docs.microsoft.com/en-us/visualstudio/vb-ide/refactoring-vb)
-#### [Codegenerierung](https://docs.microsoft.com/en-us/visualstudio/vb-ide/code-generation-vb)
-#### [Hilfe für Ereignishandler in Visual Basic-Code](visual-basic/developing-apps/using-ide/help-for-event-handlers.md)
-#### [Gewusst wie: Kompilieren und Ausführen eines Projekts in Visual Basic](visual-basic/developing-apps/using-ide/how-to-compile-and-run-a-project.md)
-
 ### [Programmieren in Visual Basic](visual-basic/developing-apps/programming/index.md)
 #### [Zugreifen auf Computerressourcen](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
 #### [Protokollieren von Informationen aus der Anwendung](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
@@ -434,7 +429,6 @@
 #### [Merkmale von "My" auf Grundlage des Projekttyps](visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 
 ### [Zugreifen auf Daten](visual-basic/developing-apps/accessing-data.md)
-### [Debuggen](visual-basic/developing-apps/debugging.md)
 ### [Erstellen und Verwenden von Komponenten](visual-basic/developing-apps/creating-and-using-components.md)
 
 ### [Drucken und Berichterstellung](visual-basic/developing-apps/printing/printing-and-reporting.md)

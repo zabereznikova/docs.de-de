@@ -1,21 +1,22 @@
 ---
-title: Paketbefehl dotnet-add | Microsoft-Dokumentation
+title: "Paketbefehl „dotnet-add“ – .NET Core-CLI | Microsoft-Dokumentation"
 description: "Der Paketbefehl „dotnet-add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt."
 keywords: dotnet-add, CLI, CLI-Befehl, .NET Core
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 806f4383452cb250f302dc30ab2d59f7e4772026
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 41b46e879056d385ceb3abaec27db974cab812e3
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-add-package"></a>Paket dotnet-add
 
 ## <a name="name"></a>Name
@@ -24,22 +25,19 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>Übersicht
 
-```
-dotnet add [project] package <package_name> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]
-dotnet add package [-h|--help]
-```
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
 
 ## <a name="description"></a>Beschreibung
 
-Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket, das hinzugefügt wird, mit allen Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird [wiederherstellen](dotnet-restore.md) ausgeführt und das `<PackageReference>`-Fragment in der Projektdatei hinzugefügt.
+Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket mit den Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird ein `<PackageReference>`-Element zur Projektdatei hinzugefügt, und [dotnet restore](dotnet-restore.md) wird ausgeführt.
 
-Beispielsweise wird durch Hinzufügen von `Newtonsoft.Json` auf *ToDo.csproj* eine Ausgabe ähnlich der folgenden erzeugt:
+Beispielsweise wird durch Hinzufügen von `Newtonsoft.Json` zu *ToDo.csproj* eine Ausgabe ähnlich der folgenden erzeugt:
 
 ```
 Microsoft (R) Build Engine version 15.1.545.13942
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-  Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
+Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
 log  : Restoring packages for ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -50,21 +48,19 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
 ```
 
-Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)-Fragment für das verwiesene Paket.
+Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)-Element für das Paket, auf das verwiesen wird.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json">
-  <Version>9.0.1</Version>
-</PackageReference>
+<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
 ## <a name="arguments"></a>Argumente
 
-`project`
+`PROJECT`
 
-Auszuführende Projektdatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei.
+Gibt die Projektdatei an. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei.
 
-`package_name`
+`PACKAGE_NAME`
 
 Hinzuzufügender Paketverweis.
 
@@ -80,7 +76,7 @@ Die Version des Pakets.
 
 `-f|--framework <FRAMEWORK>`
 
-Fügt Paketverweise nur hinzu, wenn auf ein bestimmtes Framework abgezielt wird.
+Fügt Paketverweise nur hinzu, wenn ein bestimmtes [Framework](../../standard/frameworks.md) verwendet werden soll.
 
 `-n|--no-restore`
 
@@ -88,7 +84,7 @@ Fügt Paketverweise hinzu, ohne eine Vorschau der Wiederherstellung und eine Kom
 
 `-s|--source <SOURCE>`
 
-Verwendet eine bestimmte NuGet-Paketquelle, die während des Wiederherstellungsvorgangs zu verwenden ist.
+Verwendet während des Wiederherstellungsvorgangs eine bestimmte NuGet-Paketquelle.
 
 `--package-directory <PACKAGE_DIRECTORY>`
 
