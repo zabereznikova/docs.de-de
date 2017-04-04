@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: a6f90a43b5f129cd246546f2cc36c4b97c3fb15c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -74,7 +74,7 @@ Wie in der obigen Tabelle gezeigt, gibt es Features in DNX, die absichtlich nich
 ### <a name="global-commands"></a>Globale Befehle
 In DNU war ein Konzept namens „globale Befehle“ enthalten. Im Wesentlichen waren dies Konsolenanwendungen, die als NuGet Pakete mit einem Shell-Skript verpackt waren, und das angegebene DNX aufriefen, die Sie zum Ausführen der Anwendung angegeben hatten. 
 
-Dieses Konzept wird in CLI nicht unterstützt. CLI unterstützt jedoch das Konzept, Befehle pro Projekt hinzuzufügen, die mithilfe der bekannten Syntax `dotnet <command>` aufgerufen werden können. Weitere Informationen hierzu finden Sie unter [extensibility overview (Übersicht über die Erweiterbarkeit)](../tools/index.md#extensibility). 
+Dieses Konzept wird in CLI nicht unterstützt. CLI unterstützt jedoch das Konzept, Befehle pro Projekt hinzuzufügen, die mithilfe der bekannten Syntax `dotnet <command>` aufgerufen werden können.
 
 ### <a name="installing-dependencies"></a>Installieren von Abhängigkeiten
 Seit V1 verfügen die .NET Core-CLI-Tools nicht mehr über einen Befehl `install` für das Installieren von Abhängigkeiten. Wenn Sie ein Paket von NuGet installieren möchten, müssen Sie es als Abhängigkeit zu Ihrer Datei `project.json` hinzufügen und dann `dotnet restore` ausführen. 
@@ -117,7 +117,7 @@ Wenn Sie eine Konsolenanwendung erstellen, müssen Sie den folgenden Ausschnitt 
 
 Dies weist `dotnet build` an, einen Einstiegspunkt für Ihre Anwendung auszugeben, und macht Ihren Code dadurch ausführbar. Wenn Sie eine Klassenbibliothek erstellen, lassen Sie einfach den obigen Abschnitt aus. Sobald Sie den oben angezeigten Ausschnitt zu Ihrer Datei `project.json` hinzugefügt haben, müssen Sie natürlich einen statischen Einstiegspunkt hinzufügen. Mit dem Wechsel weg von DNX sind die DI-Dienste nicht mehr verfügbar, deswegen muss ein einfacher .NET-Einstiegspunkt hinzugefügt werden: `static void Main()`.
 
-Wenn sich ein Abschnitt „commands“ in Ihrer Datei `project.json` befindet, können Sie ihn entfernen. Manche der Befehle, die es als DNU-Befehle gab, zum Beispiel Entity Framework-CLI-Befehle, werden als pro Projekt-Erweiterung in die CLI portiert. Falls Sie eigene Befehle erstellt haben, die Sie in Ihren Projekten verwenden, müssen Sie diese mit der CLI-Erweiterung ersetzen. In diesem Fall muss der Knoten `commands` in der Datei `project.json` durch den Knoten `tools` ersetzt werden, und er muss die Tool-Abhängigkeiten auflisten, wie im Abschnitt [CLI-Erweiterbarkeit](../tools/index.md#extensibility) beschrieben. 
+Wenn sich ein Abschnitt „commands“ in Ihrer Datei `project.json` befindet, können Sie ihn entfernen. Manche der Befehle, die es als DNU-Befehle gab, zum Beispiel Entity Framework-CLI-Befehle, werden als pro Projekt-Erweiterung in die CLI portiert. Falls Sie eigene Befehle erstellt haben, die Sie in Ihren Projekten verwenden, müssen Sie diese mit der CLI-Erweiterung ersetzen. In diesem Fall muss der Knoten `commands` in der Datei `project.json` durch den Knoten `tools` ersetzt werden, und muss die Tool-Abhängigkeiten auflisten. 
 
 Nachdem diese Schritte abgeschlossen sind, müssen Sie entscheiden, über welche Art von Portabilität Ihre App verfügen soll. Wir haben mit .NET Core darin investiert, Ihnen eine Bandbreite von Optionen zur Portabilität anzubieten, aus denen Sie auswählen können. Sie können zum Beispiel zwischen einer voll *portablen* Anwendung oder einer *eigenständigen* Anwendung wählen. Die Option für die portable Anwendung entspricht eher der Arbeitsweise von .NET Framework-Anwendungen: Sie benötigt eine freigegebene Komponente, um sie auf dem Zielcomputer (.NET Core) auszuführen. Bei der eigenständigen Anwendung muss .NET Core nicht auf dem Zielcomputer installiert werden. Sie müssen allerdings für jedes Betriebssystem, das Sie unterstützen möchten, eine Anwendung erzeugen. Genauere Informationen zu diesen und weiteren Arten der Portabilität finden Sie im Dokument  [application portability type (Typen der Portabilität von Anwendungen) ](../deploying/index.md). 
 

@@ -4,21 +4,21 @@ description: "Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweise
 keywords: ".NET Core, Windows, Voraussetzungen, Abhängigkeiten, Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 01/05/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: e374b924bf78d62227cb9607641130dfd9128186
-ms.openlocfilehash: 6383a0ce253f6f7000ed8a81b29b9e1d58914acc
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: 13947fd81940c1ccb606cb4cd765dc230fe95c0f
+ms.lasthandoff: 03/20/2017
 
 ---
 
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
-In diesen Artikeln erfahren Sie, welche Abhängigkeiten Sie benötigen, um .NET Core-Anwendungen auf Windows-Computern bereitzustellen und auszuführen sowie mit Visual Studio zu entwickeln.
+In diesem Artikel erfahren Sie, welche Abhängigkeiten Sie benötigen, um .NET Core-Anwendungen auf Windows-Computern bereitzustellen und auszuführen sowie mit Visual Studio zu entwickeln.
 
 ## <a name="supported-windows-versions"></a>Unterstützte Windows-Versionen
 
@@ -32,7 +32,7 @@ In diesen Artikeln erfahren Sie, welche Abhängigkeiten Sie benötigen, um .NET 
 * Windows Server 2012 R2 SP1 (vollständiger Server oder Serverkern)
 * Windows Server 2016 (vollständiger Server, Serverkern oder Nano-Server)
 
-Eine umfassende Liste mit [unterstützten Betriebssystemen](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support) finden Sie in den [Versionshinweisen zu .NET Core 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md).
+In den [Versionshinweisen zu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) finden Sie eine umfassende Liste mit unterstützten Betriebssystemen.
 
 ## <a name="net-core-dependencies"></a>.NET Core-Abhängigkeiten
 
@@ -46,9 +46,17 @@ Eine umfassende Liste mit [unterstützten Betriebssystemen](https://github.com/d
 
 Sie können einen beliebigen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core SDK verwenden. Wenn Sie jedoch .NET Core-Anwendungen unter Windows in einer integrierten Entwicklungsumgebung entwickeln möchten, können Sie [Visual Studio 2017](#visual-studio-2017) verwenden.
 
-Wenn Sie Visual Studio 2017 zum Entwickeln von .NET Core-Anwendungen verwenden möchten, müssen Sie die neueste Version von Visual Studio mit dem **plattformübergreifenden .NET Core**-Toolset (im Abschnitt **Andere Toolsets**) installiert haben.
+> [!IMPORTANT]
+> Obwohl Visual Studio 2015 mit einer Vorschauversion von .NET Core-Tools verwendet werden kann, werden diese Projekte *project.json*-basiert sein, was nun veraltet ist. Visual Studio 2017 verwendet auf MSBuild basierende Projektdateien. Weitere Informationen über die Formatänderungen finden Sie unter [High-level overview of changes](./tools/cli-msbuild-architecture.md) (Globale Übersicht der Änderungen).
 
-Es gibt verschiedene Editionen von Visual Studio 2017. Sie können [Visual Studio Community 2017](https://www.visualstudio.com/vs/visual-studio-2017/#downloadvs) für den Einstieg kostenlos herunterladen.  Weitere Informationen zum Installationsvorgang für Visual Studio finden Sie unter [Installieren von Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+Wenn Sie Visual Studio 2017 zum Entwickeln von .NET Core-Anwendungen verwenden möchten, müssen Sie die neueste Version von Visual Studio mit dem **plattformübergreifenden .NET Core**-Toolset (im Abschnitt **Andere Toolsets**) installiert haben.
+![Screenshot der Visual Studio 2017-Installation mit ausgewählter Arbeitsauslastung „plattformübergreifende .NET Core-Entwicklung“](./media/windows-prerequisites/vs_workloads.jpg)
+
+Es gibt verschiedene Editionen von Visual Studio 2017. Sie können [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) für den Einstieg kostenlos herunterladen.  Weitere Informationen zum Installationsvorgang für Visual Studio finden Sie unter [Installieren von Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+
++Um sicherzustellen, dass Sie die neueste Version von Visual Studio 2017 ausführen, führen Sie folgende Schritte aus:
+ +
+ +*Wählen Sie im**Hilfemenü**die Option**Info zu Microsoft Visual Studio** aus. +* Im Dialogfeld **Info zu Microsoft Visual Studio** muss als Versionsnummer 15.0.26228.4 oder höher angezeigt werden.
 
 Informationen zu den Änderungen in Visual Studio 2017 finden Sie in den [Anmerkungen zur Version](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 
