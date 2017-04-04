@@ -1,50 +1,48 @@
 ---
-title: Befehl dotnet-publish | Microsoft-Dokumentation
+title: "Befehl dotnet-publish – .NET Core CLI | Microsoft-Dokumentation"
 description: "Der dotnet-publish-Befehl veröffentlicht ein .NET Core-Projekt in ein Verzeichnis."
 keywords: dotnet-publish, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 78487673d8fa07286605fb806f30083747b17386
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-publish"></a>dotnet-publish
+
+# <a name="dotnet-publish"></a>dotnet-publish
 
 ## <a name="name"></a>Name
 
-`dotnet-publish`: Packt die Anwendung und alle ihre Abhängigkeiten in einen Ordner, bereit für die Veröffentlichung
+`dotnet-publish`: Packt die Anwendung und ihre Abhängigkeiten in einen Ordner für die Bereitstellung auf einem Hostsystem.
 
 ## <a name="synopsis"></a>Übersicht
 
-```
-dotnet publish [project] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity]
-dotnet publish [-h|--help]
-```
+`dotnet publish [<PROJECT>] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Beschreibung
 
 `dotnet publish` kompiliert die Anwendung, liest ihre Abhängigkeiten, die in der Projektdatei angegeben sind, und veröffentlicht die resultierenden Dateien in einem Verzeichnis. Die Ausgabe wird Folgendes enthalten:
 
-1. Intermediate Language-Code (IL) in einer Assembly mit einer `*.dll`-Erweiterung.
-2. *deps.json*-Datei, die alle Abhängigkeiten des Projekts enthält. 
-3. *Runtime.config.json*-Datei, die gemeinsam genutzte Laufzeit angibt, die die Anwendung erwartet, sowie andere Konfigurationsoptionen für die Laufzeit (z.B. Garbage Collection-Typ).
-4. Alle Abhängigkeiten der Anwendung. Diese werden aus dem NuGet-Cache und in den Ausgabeordner kopiert. 
+* Intermediate Language-Code (IL) in einer Assembly mit einer `*.dll`-Erweiterung.
+* *\*deps.json*-Datei, die alle Abhängigkeiten des Projekts enthält.
+* *\*.runtime.config.json*-Datei, die gemeinsam genutzte Laufzeit angibt, die die Anwendung erwartet, sowie andere Konfigurationsoptionen für die Laufzeit (z.B. Garbage Collection-Typ).
+* Die Abhängigkeiten der Anwendung. Diese werden aus dem NuGet-Cache in den Ausgabeordner kopiert.
 
-Die Ausgabe des `dotnet publish`-Befehls wird auf einem Remotecomputer für die Ausführung bereitgestellt werden und ist die einzige offiziell unterstützte Art zum Vorbereiten der Anwendung für die Bereitstellung auf einem anderen Computer (z.B. ein Server) für die Ausführung. Je nach Art der Bereitstellung, die im Projekt angegeben ist, muss auf den Remotecomputern die freigegebene .NET Core-Laufzeit installiert sein. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md).
+Die `dotnet publish`-Ausgabe des Befehls ist bereit für die Bereitstellung auf einem Hostsystem (z.B. ein Server, PC, Mac, Laptops) für die Ausführung und ist der einzige offiziell unterstützte Weg, um die Anwendung für die Bereitstellung vorzubereiten. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md). Die Verzeichnisstruktur der veröffentlichten Anwendung finden Sie unter [Directory structure (Verzeichnisstruktur)](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure).
 
 ## <a name="arguments"></a>Argumente
 
-`project` 
+`PROJECT` 
 
-Das zu veröffentlichende Projekt – standardmäßig das aktuelle Verzeichnis, wenn `project` nicht angegeben ist. 
+Das zu veröffentlichende Projekt – standardmäßig das aktuelle Verzeichnis, wenn nicht angegeben. 
 
 ## <a name="options"></a>Optionen
 
@@ -54,23 +52,23 @@ Druckt eine kurze Hilfe für den Befehl.
 
 `-f|--framework <FRAMEWORK>`
 
-Veröffentlicht die Anwendung für das angegebene Zielframework. Das Zielframework muss in der Projektdatei angegeben werden.
+Veröffentlicht die Anwendung für das angegebene [Zielframework](../../standard/frameworks.md). Sie müssen das Zielframework in der Projektdatei angeben.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [unabhängige Bereitstellung](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Anwendung](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
+Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
 
-`-o|--output <OUTPUT_PATH>`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Geben Sie den Pfad für das Verzeichnis an. Wenn nicht angegeben, wird standardmäßig *_./bin/[configuration]/[framework]/_* für portable Applikationen oder *_./bin/[configuration]/[framework]/[runtime]_* für eigenständige Bereitstellungen gewählt.
+Gibt den Pfad für das Ausgabeverzeichnis an. Wenn nicht angegeben, wird standardmäßig *./bin/[configuration]/[framework]/* für eine Framework-abhängige Bereitstellung oder *./bin/[configuration]/[framework]/[runtime]* für eine eigenständige Bereitstellung gewählt.
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
 Konfiguration, die beim Erstellen des Projekts verwendet wird. Der Standardwert ist `Debug`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Definiert, durch was `*` im Versionsfeld der Projektdatei ersetzt werden soll.
+Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld der Projektdatei.
 
 `-v|--verbosity <LEVEL>`
 
@@ -78,7 +76,7 @@ Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[ui
 
 ## <a name="examples"></a>Beispiele
 
-Veröffentlichen Sie das Projekt aus dem aktuellen Verzeichnis:
+Veröffentlicht das Projekt im aktuellen Verzeichnis:
 
 `dotnet publish`
 
@@ -86,14 +84,15 @@ Veröffentlichen Sie die Anwendung unter Verwendung der angegebenen Projektdatei
 
 `dotnet publish ~/projects/app1/app1.csproj`
     
-Veröffentlichen Sie das Projekt aus dem aktuellen Verzeichnis unter Verwendung des `netcoreapp1.1`-Framework:
+Veröffentlichen Sie das Projekt aus dem aktuellen Verzeichnis unter Verwendung des `netcoreapp1.1`-Frameworks:
 
 `dotnet publish --framework netcoreapp1.1`
     
-Veröffentlichen der aktuellen Anwendung mithilfe des Frameworks `netcoreapp1.1` und der Runtime für `OS X 10.10` (die RID muss in der Projektdatei vorhanden sein):
+Veröffentlichen der aktuellen Anwendung mithilfe des `netcoreapp1.1`-Frameworks und der Laufzeit für `OS X 10.10` (Sie müssen diese RID in der Projektdatei auflisten).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
 ## <a name="see-also"></a>Siehe auch
-* [Frameworks](../../standard/frameworks.md)
+
+* [Zielframeworks](../../standard/frameworks.md)
 * [Runtime-ID-Katalog (RID)](../rid-catalog.md)

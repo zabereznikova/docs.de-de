@@ -1,21 +1,22 @@
 ---
-title: Befehl dotnet-sln | Microsoft-Dokumentation
+title: "Befehl dotnet-sln – .NET Core CLI | Microsoft-Dokumentation"
 description: "Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten."
 keywords: dotnet-sln, CLI, CLI-Befehl, .NET Core
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 84c2a9cab36dcfa76f90d75c83f4988ba441b0a8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-sln"></a>dotnet-sln
 
 ## <a name="name"></a>Name
@@ -25,11 +26,11 @@ ms.lasthandoff: 03/07/2017
 ## <a name="synopsis"></a>Übersicht
 
 ```
-dotnet sln [<solution_name>] add <project> <project>
-dotnet sln [<solution_name>] add **/**
-dotnet sln [<solution_name>] remove <project> <project>
-dotnet sln [<solution_name>] remove **/**
-dotnet sln [<solution_name>] list
+dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
@@ -39,17 +40,17 @@ Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer P
 
 ## <a name="commands"></a>Befehle
 
-`add <project>`
+`add <PROJECT> ...`
 
 `add **/*`
 
-Fügt mindestens ein Projekt zur Projektmappendatei hinzu. Globmuster wird auf Unix/Linux-basierten Terminals unterstützt.
+Fügt mindestens ein Projekt zur Projektmappendatei hinzu. [Globbing patterns (Globmuster)](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Terminals unterstützt.
 
-`remove <project>`
+`remove <PROJECT> ...`
 
 `remove **/*`
 
-Entfernt mindestens ein Projekt aus der Projektmappendatei. Globmuster wird auf Unix/Linux-basierten Terminals unterstützt.
+Entfernt mindestens ein Projekt aus der Projektmappendatei. [Globbing patterns (Globmuster)](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Terminals unterstützt.
 
 `list`
 
@@ -57,9 +58,9 @@ Listet alle Projekte auf, die in einer Projektmappendatei enthalten sind.
 
 ## <a name="arguments"></a>Argumente
 
-`solution_name`
+`SOLUTION_NAME`
 
-Die zu verwendende Projektmappendatei. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einer Projektmappendatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
+Die zu verwendende Projektmappendatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
 
 ## <a name="options"></a>Optionen
 
@@ -81,7 +82,7 @@ Entfernen Sie ein Projekt aus einer Projektmappe:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Fügen Sie mehrere Projekte zu einer Projektmappe hinzu, indem Sie ein Muster zur Verwendung von Platzhaltern verwenden:
+Fügen Sie mehrere Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster verwenden:
 
 `dotnet sln add **/**/*.fsproj`
 

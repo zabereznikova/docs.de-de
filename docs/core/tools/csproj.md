@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e67270cf713857a5fea16ebdd0abab774f555808
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -36,9 +36,9 @@ Da jetzt implizit auf die `Microsoft.NETCore.App`- oder `NetStandard.Library`-Me
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Standardkompilierung in .NET Core-Projekten
 Beim Wechsel zum *csproj*-Format in den neuesten SDK-Versionen, haben wir die Standardaufnahmen- und ausschlüsse für Compile-Elemente und eingebettete Ressourcen zu den SDK-Eigenschaftendateien verschoben. Dies bedeutet, dass Sie diese Elemente nicht länger in Ihrer Projektdatei angeben müssen. 
 
-Der Hauptgrund dafür ist die Übersichtlichkeit für Ihre Projektdatei. Die Standardeinstellungen im SDK sollten die gängigen Anwendungsbeispiele abdecken. Es besteht keine Notwendigkeit, sie in jedem Projekt zu wiederholen, das Sie erstellen. Dies führt zu kleineren Projektdateien, die viel einfacher zu verstehen und bei Bedarf auch manuell zu bearbeiten sind. 
+Der Hauptgrund dafür ist die Übersichtlichkeit in Ihrer Projektdatei. Die Standardeinstellungen im SDK sollten die gängigen Anwendungsbeispiele abdecken. Es besteht keine Notwendigkeit, sie in jedem Projekt zu wiederholen, das Sie erstellen. Dies führt zu kleineren Projektdateien, die viel einfacher zu verstehen und bei Bedarf auch manuell zu bearbeiten sind. 
 
-Die folgende Tabelle zeigt, welche Elemente und welche Globs im SDK enthalten und ausgeschlossen sind: 
+Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipedia.org/wiki/Glob_(programming)) im SDK enthalten und ausgeschlossen sind: 
 
 | Element              | Glob einschließen                               | Glob ausschließen                                                     | Glob entfernen                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
@@ -62,7 +62,7 @@ Wenn diese Eigenschaft auf `false` festgelegt wird, wird die implizite Aufnahme 
 Diese Änderung ändert die Hauptfunktionsweise anderer Aufnahmen nicht. Wenn Sie z.B. einige Dateien angeben möchten, die mit Ihrer Anwendung veröffentlicht werden, können Sie weiterhin die bekannten Mechanismen in *csproj* dafür nutzen (z.B. das `<Content>`-Element).
 
 ### <a name="recommendation"></a>Empfehlung
-Mit csproj empfehlen wir, dass Sie die Standardglobs aus Ihrem Projekt entfernen und nur Globsdateipfade für diese Artefakte hinzufügen, die Ihre Anwendung/Bibliothek für verschiedene Szenarios benötigt (Laufzeit, NuGet-Paket usw.)
+Mit csproj empfehlen wir, dass Sie die Standardglobs aus Ihrem Projekt entfernen und nur Dateipfade mit Globs für diese Artefakte hinzufügen, die Ihre Anwendung/Bibliothek für verschiedene Szenarios benötigt (Laufzeit, NuGet-Paket usw.)
 
 
 ## <a name="additions"></a>Erweiterungen
@@ -109,11 +109,11 @@ Alternativ kann das Attribut Folgendes enthalten:
 * `None`: Keines der Objekte wird verwendet.
 * `All`: Alle Objekte werden verwendet.
 
-### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-Das `<DotnetCliToolReference>`-Element gibt das CLI-Tool an, das der Benutzer im Kontext des Projekts wiederherstellen möchte. Es ist ein Ersatz für den `tools`-Knoten in *project.json*. 
+### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+Das `<DotNetCliToolReference>`-Element gibt das CLI-Tool an, das der Benutzer im Kontext des Projekts wiederherstellen möchte. Es ist ein Ersatz für den `tools`-Knoten in *project.json*. 
 
 ```xml
-<DotnetCliToolReference Include="<package-id>" Version="" />
+<DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Version
@@ -243,3 +243,4 @@ Der Basispfad für die *.nuspec*-Datei.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Durch Semikolons getrennte Liste der Schlüssel = Wertpaare.
+

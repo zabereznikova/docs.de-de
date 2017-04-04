@@ -4,15 +4,15 @@ description: .NET Core Anwendungsbereitstellung
 keywords: .NET, .NET Core, .NET Core Bereitstellung
 author: rpetrusha
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 03/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 24bca179bc153a6bb469e38067e457fa61a9d2b3
+ms.openlocfilehash: ef742b932a3a76359e3f06129dce0bf127a1977e
+ms.lasthandoff: 03/14/2017
 
 ---
 
@@ -48,11 +48,11 @@ Es gibt auch einige Nachteile:
 
 Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Das Beispiel nutzt das [Dotnet-Dienstprogramm](../tools/dotnet.md) über die Befehlszeile. Sie können allerdings auch eine Entwicklungsumgebung wie Visual Studio oder Visual Studio Code verwenden, um das Beispiel zu kompilieren, zu testen und zu veröffentlichen.
 
-1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile `[dotnet new console](../tools/dotnet-new.md)` ein, um ein neues C#-Konsolenprojekt zu erstellen.
+1. Erstellen Sie ein Verzeichnis für Ihr Projekt, und geben Sie über die Befehlszeile [`dotnet new console`](../tools/dotnet-new.md) ein, um ein neues C#-Konsolenprojekt zu erstellen.
 
 2. Öffnen Sie die `Program.cs`-Datei in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurde, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -89,11 +89,11 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
 3. Führen Sie den Befehl [dotnet restore](../tools/dotnet-restore.md) aus, um die im Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
-4. Erstellen Sie mithilfe des Befehls [Dotnet Build](../tools/dotnet-build.md) einen Debugbuild Ihrer Anwendung.
+4. Erstellen Sie mithilfe des Befehls [dotnet build](../tools/dotnet-build.md) einen Debugbuild Ihrer Anwendung.
 
-5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie mithilfe des `dotnet publish -f netcoreapp1.1 -c release`-Befehls die Dateien erstellen, die mit Ihrer Anwendung bereitgestellt werden. Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung.
+5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie mithilfe des `dotnet publish -f netcoreapp1.1 -c Release`-Befehls die Dateien erstellen, die mit Ihrer Anwendung bereitgestellt werden. Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung.
 
-   Die resultierenden Dateien werden in ein Verzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.1`-Unterverzeichnis Ihres Projekts befindet.
+   Die resultierenden Dateien werden in ein Verzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\Release\netcoreapp1.1`-Unterverzeichnis Ihres Projekts befindet.
 
 6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
@@ -103,7 +103,7 @@ Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung 
 
 ### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>Bereitstellen einer Framework-abhängigen Bereitstellung mit Drittanbieter-Abhängigkeiten ###
 
-Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst drei zusätzliche Schritte vor dem Ausführen des `dotnet restore`-Befehls:
+Das Bereitstellen einer Framework-abhängigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst zwei zusätzliche Schritte vor dem Ausführen des `dotnet restore`-Befehls:
 
 1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer `csproj`-Datei hinzu. Der folgende Abschnitt `<ItemGroup>` zeigt das Element `<ItemGroup>`, das die Abhängigkeiten im Standardprojekt mit Json.NET als Bibliothek eines Drittanbieters enthält.
 
@@ -147,7 +147,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
 2. Öffnen Sie die `Program.cs`-Datei in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurde, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -195,24 +195,22 @@ Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trenn
 5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netcoreapp1.1\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
+Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\Release\netcoreapp1.1\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
 
 6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
 Die veröffentlichten Dateien können so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen. 
 
-Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
+Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -239,8 +237,6 @@ Es folgt die vollständige CSPROJ-Datei dieses Projekts:
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -292,24 +288,22 @@ Dieser Vorgang gibt an, dass unsere App nur die .NET-Standardbibliothek verwende
 5. Nachdem Sie die Anwendung debuggt und getestet haben, können Sie die Dateien, die mit Ihrer Anwendung für jede Plattform bereitgestellt werden, erstellen, indem Sie den `dotnet publish`-Befehl für beide Plattformen wie folgt nutzen:
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\release\netstandard1.6\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
+Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens `publish` platziert, das sich in einem Unterverzeichnis des `.\bin\Release\netstandard1.6\<runtime_identifier>`-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
 
 6. Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist in erster Linie für das Debuggen von Ausnahmen zuständig. Sie können sich dafür entscheiden, sie nicht mit den Dateien Ihrer Anwendung zu verpacken.
 
 Die veröffentlichten Dateien können so bereitgestellt werden, wie Sie möchten. Sie können sie z.B. in einer ZIP-Datei verpacken, und einen einfachen `copy`-Befehl verwenden, oder sie mit jedem Installationspaket Ihrer Wahl bereitstellen. 
 
-Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben.
+Nachfolgend ist die vollständige `csproj`-Datei für dieses Projekt angegeben:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

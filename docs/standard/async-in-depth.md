@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -88,7 +88,7 @@ Beispielsweise richtet in Windows ein Betriebssystemthread einen Aufruf an den N
 
 Wenn die Anforderung erfüllt ist und die Daten über den Gerätetreiber zurückkommen, unterrichtet er die CPU über die neuen, über einen Interrupt empfangenen Daten.  Die Behandlung dieses Interrupts variiert je nach Betriebssystem, aber die Daten werden schließlich über das Betriebssystem übergeben, bis sie einen System-Interopaufruf erreichen (in Linux plant z.B. ein Interrupthandler die untere Hälfte der IRQ zum asynchronen Übergeben der Daten über das Betriebssystem ein).  Beachten Sie, dass dies *auch* asynchron erfolgt!  Das Ergebnis wird in die Warteschlange gestellt, bis der nächste verfügbare Thread die Async-Methode ausführen und das Ergebnis des abgeschlossenen Tasks „enthüllen“ kann.
 
-Ein wesentlicher Punkt bei diesem gesamten Prozess ist, dass **kein Thread für die Ausführung des Tasks dediziert ist**.  Obwohl Arbeit in gewissem Kontext ausgeführt wird (d.h., das Betriebssystem muss Daten an einen Gerätetreiber übergeben und auf einen Interrupt reagieren), ist kein Thread dediziert für das *Warten* auf Daten, die von der Anforderung zurückgegeben werden.  Dadurch kann das System ein viel größeres Arbeitsvolumen bewältigen, anstatt auf den Abschluss eines E/A-Aufrufs zu warten.
+Ein wesentlicher Punkt bei diesem gesamten Prozess ist, dass **kein Thread für die Ausführung des Tasks dediziert ist**.  Obwohl Arbeit in einem gewissen Kontext ausgeführt wird (d.h. das Betriebssystem muss Daten an einen Gerätetreiber übergeben und auf einen Interrupt reagieren), ist kein Thread für das *Warten* auf Daten dediziert, die von der Anforderung zurückgegeben werden.  Dadurch kann das System ein viel größeres Arbeitsvolumen bewältigen, anstatt auf den Abschluss eines E/A-Aufrufs zu warten.
 
 Obwohl das Obige den Eindruck weckt, es sei viel Arbeit zu bewältigen, ist es in der Gesamtbetrachtungszeit winzig verglichen mit der zur Durchführung der eigentlichen E/A-Arbeit benötigten Zeit. Eine potenzielle, wenn auch nicht präzise Zeitachse für solch einen Aufruf sieht wie folgt aus:
 

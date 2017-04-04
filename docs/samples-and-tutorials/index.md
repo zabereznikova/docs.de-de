@@ -10,8 +10,9 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c10736e81d4f43d6ba70b71c25878dc4068a4a10
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -86,6 +87,14 @@ Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemen
 
 Dieses Tutorial veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im core-docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
 
+**[Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs.md)**
+
+Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolenanwendung erstellen.
+
+**[Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs-full-solution.md)**
+
+In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wiederverwendbare Bibliothek und Komponententests enthält.
+
 ## <a name="deploying-to-containers"></a>Bereitstellen in Containern
 
 **[Ausführen von ASP.NET-MVC-Anwendungen in Windows-Docker-Containern](../framework/docker/aspnetmvc.md)**
@@ -96,8 +105,3 @@ Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im core-doc
 **[Ausführen von .NET Framework-Konsolenanwendungen in Windows-Containern](../framework/docker/console.md)**
 
 Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen Konsolenanwendung in einem Windows-Container. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im core-docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
-
-
-<!--HONumber=Jan17_HO3-->
-
-
