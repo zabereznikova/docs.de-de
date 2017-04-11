@@ -13,6 +13,7 @@ ms.assetid: 76e6cacc-1c0c-4a71-8cb8-018c112385ba
 translationtype: Human Translation
 ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
 ms.openlocfilehash: bfbeae49fa3528bb46abee4fa823b7c819d832d8
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -65,9 +66,4 @@ In diesem Abschnitt der Dokumentation erhalten Sie die Informationen, die Sie be
 [System.DateTimeOffset](xref:System.DateTimeOffset)
 
 [System.DateTime](xref:System.DateTime)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

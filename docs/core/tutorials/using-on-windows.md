@@ -12,3 +12,4 @@ ms.lasthandoff: 03/08/2017
 ## <a name="content-retired"></a>Inhalt veraltet!
 
 Die ersten Schritte für .NET Core und Visual Studio 2017 finden Sie unter [(Erstellen einer C#-Hello World-Anwendung mit .NET Core in Visual Studio 2017](../../csharp/getting-started/with-visual-studio.md).
+
