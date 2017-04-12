@@ -2,7 +2,7 @@
 title: "Ausführen von inneren Verknüpfungen"
 description: "So führen Sie innere Verknüpfungen aus."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

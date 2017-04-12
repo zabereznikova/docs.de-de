@@ -2,7 +2,7 @@
 title: "Behandeln von NULL-Werten in Abfrageausdrücken"
 description: "Vorgehensweise: Behandeln von NULL-Werten in Abfrageausdrücken"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

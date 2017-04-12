@@ -2,8 +2,8 @@
 title: "Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017"
 description: "Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017"
 keywords: ".NET, .NET Core, .NET Core-Konsolenanwendung, Veröffentlichung (.NET Core), Bereitstellung (.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

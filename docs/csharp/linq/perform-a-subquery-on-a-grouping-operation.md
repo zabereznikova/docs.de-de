@@ -2,7 +2,7 @@
 title: "Ausführen einer Unterabfrage für eine Gruppierungsoperation"
 description: "So führen Sie eine Unterabfrage für eine Gruppierungsoperation aus."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

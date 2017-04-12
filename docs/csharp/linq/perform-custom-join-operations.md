@@ -2,7 +2,7 @@
 title: "Ausführen von benutzerdefinierten Verknüpfungsoperationen"
 description: "So führen Sie benutzerdefinierte Verknüpfungsoperationen aus."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

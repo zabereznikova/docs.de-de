@@ -2,7 +2,7 @@
 title: Erstellen einer geschachtelten Gruppe
 description: So erstellen Sie eine geschachtelte Gruppe
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

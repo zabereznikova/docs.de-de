@@ -2,8 +2,8 @@
 title: Grundlegende Typen | C#-Handbuch
 description: "Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, Zeichenfolgen und Objekte) in allen C#-Programmen"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net

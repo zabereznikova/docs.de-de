@@ -2,7 +2,7 @@
 title: Windows Presentation Foundation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,8 +23,8 @@ helpviewer_keywords:
 - WPF
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
 caps.latest.revision: 97
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 manager: wpickett
 translationtype: Human Translation
 ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77

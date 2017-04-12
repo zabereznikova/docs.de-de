@@ -2,7 +2,7 @@
 title: Abfrage einer Auflistung von Objekten
 description: Vorgehensweise zum Abfragen von Auflistungen
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

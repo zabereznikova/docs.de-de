@@ -2,7 +2,7 @@
 title: Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 description: "Einführung in die Language Integrated Query (LINQ) in C#"
 keywords: .NET, .NET Core, LINQ, C#
-author: stevehoag
+author: BillWagner
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article

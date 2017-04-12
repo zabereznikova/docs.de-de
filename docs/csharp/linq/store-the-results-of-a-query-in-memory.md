@@ -2,7 +2,7 @@
 title: Speichern der Ergebnisse einer Abfrage im Speicher
 description: So speichern Sie Ergebnisse.
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
