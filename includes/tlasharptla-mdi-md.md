@@ -1,0 +1,1 @@
+Schnittstelle für mehrere Dokumente (Multiple-Document Interfacce, MDI)

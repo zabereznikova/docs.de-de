@@ -1,65 +1,52 @@
 ---
-title: "Auffüllen von Zeichenfolgen"
-description: "Auffüllen von Zeichenfolgen"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 1c8b3b44-d370-49e1-90b5-64ac81c02ae91c8b3b44-d370-49e1-90b5-64ac81c02ae9
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: bc3cc9028b232cc2ba6ca3130c4bdb261c4a0a42
-ms.lasthandoff: 03/02/2017
-
+title: "Auff&#252;llen von Zeichenfolgen in .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Auffüllen von Zeichenfolgen"
+  - "PadLeft-Methode"
+  - "PadRight-Methode"
+  - "Zeichenfolgen [.NET Framework], Abstand"
+  - "Leerraum"
+ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
+caps.latest.revision: 12
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 12
 ---
-
-# <a name="padding-strings"></a>Auffüllen von Zeichenfolgen
-
-Verwenden Sie eine der folgenden [System.String](xref:System.String)-Methoden, um eine neue Zeichenfolge zu erstellen, die aus einer ursprünglichen Zeichenfolge besteht, die mit voran- oder nachgestellten Zeichen auf eine angegebene Gesamtlänge aufgefüllt wird. Als Auffüllzeichen können Leerzeichen oder ein angegebenes Zeichen verwendet werden, sodass die Zeichenfolge entweder rechtsbündig oder linksbündig ausgerichtet angezeigt wird.
-
-Methodenname | Verwendung
------------ | ---
-[String.PadLeft](xref:System.String.PadLeft(System.Int32)) | Füllt eine Zeichenfolge mit vorangestellten Zeichen auf, um eine angegebene Gesamtlänge zu erreichen.
-[String.PadRight](xref:System.String.PadRight(System.Int32)) | Füllt eine Zeichenfolge mit nachgestellten Zeichen auf, um eine angegebene Gesamtlänge zu erreichen.
-
-## <a name="padleft"></a>PadLeft
-
-Die [String.PadLeft](xref:System.String.PadLeft(System.Int32))-Methode erstellt eine neue Zeichenfolge durch die Verkettung einer ausreichenden Anzahl vorangestellter Auffüllzeichen mit einer ursprünglichen Zeichenfolge, um eine angegebene Gesamtlänge zu erreichen. Die [String.PadLeft(Int32)](xref:System.String.PadLeft(System.Int32))-Methode verwendet Leerzeichen als Auffüllzeichen, und mit der Methode [String.PadLeft(Int32, Char)](xref:System.String.PadLeft(System.Int32,System.Char)) können Sie Ihre eigenen Auffüllzeichen angeben.
-
-Im folgenden Codebeispiel wird über die Methode [PadLeft(Int32, Char)](xref:System.String.PadLeft(System.Int32,System.Char)) eine neue Zeichenfolge erstellt, die&20; Zeichen lang ist. In diesem Beispiel wird „`--------Hello World!`“ auf der Konsole angezeigt.
-
-```csharp
-string MyString = "Hello World!";
-Console.WriteLine(MyString.PadLeft(20, '-'));
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.PadLeft(20, "-"c))
-```
-
-## <a name="padright"></a>PadRight
-
-Die [String.PadRight](xref:System.String.PadRight(System.Int32))-Methode erstellt eine neue Zeichenfolge durch die Verkettung einer ausreichenden Anzahl nachgestellter Auffüllzeichen mit einer ursprünglichen Zeichenfolge, um eine angegebene Gesamtlänge zu erreichen. Die [String.PadRight(Int32)](xref:System.String.PadRight(System.Int32))-Methode verwendet Leerzeichen als Auffüllzeichen, und mit der Methode [String.PadRight(Int32, Char)](xref:System.String.PadRight(System.Int32,System.Char)) können Sie Ihre eigenen Auffüllzeichen angeben.
-
-Im folgenden Codebeispiel wird über die Methode [PadRight(Int32, Char)](xref:System.String.PadRight(System.Int32,System.Char)) eine neue Zeichenfolge erstellt, die&20; Zeichen lang ist. In diesem Beispiel wird „`Hello World!--------`“ auf der Konsole angezeigt.
-
-```csharp
-string MyString = "Hello World!";
-Console.WriteLine(MyString.PadRight(20, '-'));
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.PadRight(20, "-"c))
-```
-
-## <a name="see-also"></a>Siehe auch
-
-[Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
-
-
+# Auff&#252;llen von Zeichenfolgen in .NET Framework
+Mit einer der folgenden <xref:System.String>\-Methoden können Sie eine neue Zeichenfolge erstellen, die aus einer ursprünglichen Zeichenfolge sowie den führenden und nachgestellten Zeichen besteht, mit denen diese auf eine angegebene Gesamtlänge aufgefüllt wurde.  Als Auffüllzeichen können Leerzeichen oder ein angegebenes Zeichen verwendet werden. Es wird rechts\- oder linksbündig dargestellt.  
+  
+|Methodenname|Verwendung|  
+|------------------|----------------|  
+|<xref:System.String.PadLeft%2A?displayProperty=fullName>|Füllt eine Zeichenfolge mit führenden Zeichen auf die angegebene Gesamtlänge auf.|  
+|<xref:System.String.PadRight%2A?displayProperty=fullName>|Füllt eine Zeichenfolge mit nachgestellten Zeichen auf die angegebene Gesamtlänge auf.|  
+  
+## PadLeft  
+ Die <xref:System.String.PadLeft%2A?displayProperty=fullName>\-Methode erstellt eine neue Zeichenfolge, indem sie genügend führende Auffüllzeichen mit der ursprünglichen Zeichenfolge verkettet, um die angegebene Gesamtlänge zu erreichen.  Bei der <xref:System.String.PadLeft%28System.Int32%29?displayProperty=fullName>\-Methode wird das Leerzeichen als Auffüllzeichen verwendet. Für die <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=fullName>\-Methode können Sie ein eigenes Auffüllzeichen angeben.  
+  
+ Im folgenden Codebeispiel wird mithilfe der <xref:System.String.PadLeft%2A>\-Methode eine Zeichenfolge erstellt, die 20 Zeichen lang ist.  Auf der Konsole wird dann "`--------Hello World!`" angezeigt.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
+ [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
+ [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
+  
+## PadRight  
+ Die <xref:System.String.PadRight%2A?displayProperty=fullName>\-Methode erstellt eine neue Zeichenfolge, indem sie genügend nachgestellte Auffüllzeichen mit der ursprünglichen Zeichenfolge verkettet, um die angegebene Gesamtlänge zu erreichen.  Bei der <xref:System.String.PadRight%28System.Int32%29?displayProperty=fullName>\-Methode wird das Leerzeichen als Auffüllzeichen verwendet. Für die <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=fullName>\-Methode können Sie ein eigenes Auffüllzeichen angeben.  
+  
+ Im folgenden Codebeispiel wird mithilfe der <xref:System.String.PadRight%2A>\-Methode eine neue Zeichenfolge erstellt, die 20 Zeichen lang ist.  Auf der Konsole wird dann "`Hello World!--------`" angezeigt.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
+ [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
+ [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
+  
+## Siehe auch  
+ [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)

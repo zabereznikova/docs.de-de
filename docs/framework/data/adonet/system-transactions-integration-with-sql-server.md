@@ -1,0 +1,237 @@
+---
+title: "System.Transactions-Integration in SQL Server | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
+caps.latest.revision: 6
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 6
+---
+# System.Transactions-Integration in SQL Server
+Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions>\-Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+  
+ Zusätzlich zu den Erweiterungen bei der Programmierbarkeit können <xref:System.Transactions> und [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte \(lokale\) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
+  
+ Ab [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 unterstützt <xref:System.Data.SqlClient> heraufstufbare Transaktionen beim Arbeiten mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff des Entwicklers.  
+  
+ Heraufstufbare Transaktionen sind nur verfügbar, wenn der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Datenanbieter für SQL Server \(`SqlClient`\) mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] verwendet wird.  
+  
+## Erstellen heraufstufbarer Transaktionen  
+ Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Anbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Namespace von <xref:System.Transactions> behandelt werden. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen\-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
+  
+> [!NOTE]
+>  In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  
+  
+## Szenarien für heraufstufbare Transaktionen  
+ Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC \(Microsoft Distributed Transaction Coordinator\) verwaltet, der alle Ressourcen\-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions>\-Transaktion, die effektiv die Arbeit auf eine einzelne [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]\-Transaktion delegiert.<xref:System.Transactions>, <xref:System.Data.SqlClient> und [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] koordinieren die Arbeit, die zur Behandlung der Transaktion erforderlich ist, und stufen sie bei Bedarf auf eine vollständig verteilte Transaktion hoch.  
+  
+ Der Vorteil der Verwendung heraufstufbarer Transaktionen besteht darin, dass beim Öffnen einer Verbindung mit einer aktiven <xref:System.Transactions.TransactionScope>\-Transaktion die Transaktion als kompakte Transaktion durchgeführt wird, wenn keine weiteren Verbindungen geöffnet sind und der zusätzliche Mehraufwand einer vollständig verteilten Transaktion vermieden werden kann.  
+  
+### Schlüsselwörter für Verbindungszeichenfolgen  
+ Die <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>\-Eigenschaft unterstützt ein Schlüsselwort, `Enlist`, das angibt, ob der <xref:System.Data.SqlClient> Transaktionskontexte erkennt, und die Verbindung automatisch in einer verteilten Transaktion einträgt. Wenn `Enlist=true`, wird die Verbindung automatisch im aktuellen Transaktionskontext des öffnenden Threads eingetragen. Wenn `Enlist=false`, interagiert der `SqlClient` nicht mit einer verteilten Transaktion. Der Standardwert für `Enlist` ist "true". Wenn `Enlist` in der Verbindungszeichenfolge nicht angegeben ist, wird die Verbindung automatisch in einer verteilten Transaktion eingetragen, wenn eine solche zum Zeitpunkt des Öffnens der Verbindung erkannt wird.  
+  
+ Die `Transaction Binding`\-Schlüsselwörter in einer <xref:System.Data.SqlClient.SqlConnection>\-Verbindungszeichenfolge steuern die Zuordnung einer Verbindung mit einer eingetragenen `System.Transactions`\-Transaktion. Diese ist auch verfügbar durch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A>\-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+  
+ In der folgenden Tabelle sind die möglichen Werte beschrieben.  
+  
+|Schlüsselwort|Beschreibung|  
+|-------------------|------------------|  
+|Implicit Unbind|Der Standardwert. Die Verbindung wird von der Transaktion getrennt, wenn diese endet, und wechselt damit zurück in den Autocommit\-Modus.|  
+|Explicit Unbind|Die Verbindung bleibt so lange an die Transaktion gebunden, bis die Transaktion geschlossen wird. Die Verbindung schlägt fehl, wenn die zugehörige Transaktion nicht aktiv ist oder <xref:System.Transactions.Transaction.Current%2A> nicht entspricht.|  
+  
+## Verwenden von "TransactionScope"  
+ Durch die <xref:System.Transactions.TransactionScope>\-Klasse wird ein Codeblock transaktional, indem die Klasse implizit Verbindungen in einer verteilten Transaktion einträgt. Sie müssen die <xref:System.Transactions.TransactionScope.Complete%2A>\-Methode am Ende des <xref:System.Transactions.TransactionScope>\-Blocks vor dem Verlassen aufrufen. Beim Verlassen des Blocks wird die <xref:System.Transactions.TransactionScope.Dispose%2A>\-Methode aufgerufen. Wenn eine Ausnahme aufgerufen wurde, die den Code veranlasst, den Bereich zu verlassen, wird die Transaktion als abgebrochen angesehen.  
+  
+ Es wird empfohlen, einen `using`\-Block zu verwenden, um sicherzustellen, dass <xref:System.Transactions.TransactionScope.Dispose%2A> für das <xref:System.Transactions.TransactionScope>\-Objekt aufgerufen wird, wenn der verwendete Block beendet wird. Durch das Fehlschlagen von Commits oder Rollbacks ausstehender Transaktionen kann die Leistung entscheidend beeinträchtigt werden, da das Zeitlimit für <xref:System.Transactions.TransactionScope> eine Minute beträgt. Wenn Sie keine `using`\-Anweisung verwenden, müssen Sie die gesamte Arbeit in einem `Try`\-Block durchführen und die <xref:System.Transactions.TransactionScope.Dispose%2A>\-Methode im `Finally`\-Block explizit aufrufen.  
+  
+ Wenn innerhalb des <xref:System.Transactions.TransactionScope> eine Ausnahme auftritt, wird die Transaktion als inkonsistent markiert und abgebrochen. Sie wird zurückgesetzt, wenn der <xref:System.Transactions.TransactionScope> verworfen wird. Wenn keine Ausnahme auftritt, werden die beteiligten Transaktionen übernommen.  
+  
+> [!NOTE]
+>  Die `TransactionScope`\-Klasse erstellt standardmäßig eine Transaktion mit dem <xref:System.Transactions.Transaction.IsolationLevel%2A>`Serializable`. Je nach Anwendung möchten Sie möglicherweise den Isolationsgrad senken, um Konfliktpotential in Ihrer Anwendung zu vermeiden.  
+  
+> [!NOTE]
+>  Es wird empfohlen, dass Sie nur Update\-, Einfüge\- und Löschvorgänge in verteilten Transaktionen durchführen, da diese erhebliche Datenbankressorcen beanspruchen. Select\-Anweisungen können Datenbankressourcen unnötigerweise blockieren, und in einigen Szenarien kann es erforderlich sein, Transaktionen für Select\-Vorgänge zu verwenden. Arbeiten, die nicht mit der Datenbank zusammenhängen, sollten außerhalb des Bereichs der Transaktion durchgeführt werden, außer wenn andere transaktive Ressourcen\-Manager verwendet werden. Obwohl eine Ausnahme innerhalb des Bereichs der Transaktion dazu führt, dass die Transaktion keinen Commit ausführt, verfügt die <xref:System.Transactions.TransactionScope>\-Klasse über keine Funktion zum Zurücksetzen von Änderungen, die vom Code außerhalb des Bereichs der Transaktion selbst durchgeführt wurden. Wenn Sie beim Zurücksetzen der Transaktion Maßnahmen ergreifen müssen, müssen Sie Ihre eigene Implementierung der <xref:System.Transactions.IEnlistmentNotification>\-Schnittstelle schreiben und in der Transaktion explizit eintragen.  
+  
+## Beispiel  
+ Das Arbeiten mit <xref:System.Transactions> setzt einen Verweis auf "System.Transactions.dll" voraus.  
+  
+ Die folgende Funktion zeigt das Erstellen einer heraufstufbaren Transaktion für zwei verschiedene SQL Server\-Instanzen, die von zwei verschiedenen <xref:System.Data.SqlClient.SqlConnection>\-Objekten dargestellt werden, die ihrerseits von einem <xref:System.Transactions.TransactionScope>\-Block umschlossen sind. Der Code erstellt den <xref:System.Transactions.TransactionScope>\-Block mit einer `using`\-Anweisung und öffnet die erste Verbindung, durch die er automatisch im <xref:System.Transactions.TransactionScope> eingetragen wird. Die Transaktion wird zuerst als kompakte Transaktion und nicht als vollständig verteilte Transaktion eingetragen. Die zweite Verbindung wird nur dann im <xref:System.Transactions.TransactionScope> eingetragen, wenn der Befehl in der ersten Verbindung keine Ausnahme auslöst. Wenn die zweite Verbindung geöffnet wird, wird die Transaktion automatisch auf eine vollständig verteilte Transaktion hochgestuft. Es wird die <xref:System.Transactions.TransactionScope.Complete%2A>\-Methode aufgerufen, die für die Transaktion nur dann einen Commit ausführt, wenn keine Ausnahmen ausgelöst wurden. Wenn an einem beliebigen Punkt im <xref:System.Transactions.TransactionScope>\-Block eine Ausnahme ausgelöst wurde, wird `Complete` nicht aufgerufen, und die verteilte Transaktion wird zurückgenommen, sobald der <xref:System.Transactions.TransactionScope> am Ende seines `using`\-Blocks verfügbar gemacht wird.  
+  
+```csharp  
+// This function takes arguments for the 2 connection strings and commands in order  
+// to create a transaction involving two SQL Servers. It returns a value > 0 if the  
+// transaction committed, 0 if the transaction rolled back. To test this code, you can   
+// connect to two different databases on the same server by altering the connection string,  
+// or to another RDBMS such as Oracle by altering the code in the connection2 code block.  
+static public int CreateTransactionScope(  
+    string connectString1, string connectString2,  
+    string commandText1, string commandText2)  
+{  
+    // Initialize the return value to zero and create a StringWriter to display results.  
+    int returnValue = 0;  
+    System.IO.StringWriter writer = new System.IO.StringWriter();  
+  
+    // Create the TransactionScope in which to execute the commands, guaranteeing  
+    // that both commands will commit or roll back as a single unit of work.  
+    using (TransactionScope scope = new TransactionScope())  
+    {  
+        using (SqlConnection connection1 = new SqlConnection(connectString1))  
+        {  
+            try  
+            {  
+                // Opening the connection automatically enlists it in the   
+                // TransactionScope as a lightweight transaction.  
+                connection1.Open();  
+  
+                // Create the SqlCommand object and execute the first command.  
+                SqlCommand command1 = new SqlCommand(commandText1, connection1);  
+                returnValue = command1.ExecuteNonQuery();  
+                writer.WriteLine("Rows to be affected by command1: {0}", returnValue);  
+  
+                // if you get here, this means that command1 succeeded. By nesting  
+                // the using block for connection2 inside that of connection1, you  
+                // conserve server and network resources by opening connection2   
+                // only when there is a chance that the transaction can commit.     
+                using (SqlConnection connection2 = new SqlConnection(connectString2))  
+                    try  
+                    {  
+                        // The transaction is promoted to a full distributed  
+                        // transaction when connection2 is opened.  
+                        connection2.Open();  
+  
+                        // Execute the second command in the second database.  
+                        returnValue = 0;  
+                        SqlCommand command2 = new SqlCommand(commandText2, connection2);  
+                        returnValue = command2.ExecuteNonQuery();  
+                        writer.WriteLine("Rows to be affected by command2: {0}", returnValue);  
+                    }  
+                    catch (Exception ex)  
+                    {  
+                        // Display information that command2 failed.  
+                        writer.WriteLine("returnValue for command2: {0}", returnValue);  
+                        writer.WriteLine("Exception Message2: {0}", ex.Message);  
+                    }  
+            }  
+            catch (Exception ex)  
+            {  
+                // Display information that command1 failed.  
+                writer.WriteLine("returnValue for command1: {0}", returnValue);  
+                writer.WriteLine("Exception Message1: {0}", ex.Message);  
+            }  
+        }  
+  
+        // If an exception has been thrown, Complete will not   
+        // be called and the transaction is rolled back.  
+        scope.Complete();  
+    }  
+  
+    // The returnValue is greater than 0 if the transaction committed.  
+    if (returnValue > 0)  
+    {  
+        writer.WriteLine("Transaction was committed.");  
+    }  
+    else  
+    {  
+        // You could write additional business logic here, notify the caller by  
+        // throwing a TransactionAbortedException, or log the failure.  
+        writer.WriteLine("Transaction rolled back.");  
+    }  
+  
+    // Display messages.  
+    Console.WriteLine(writer.ToString());  
+  
+    return returnValue;  
+}  
+```  
+  
+```vb  
+' This function takes arguments for the 2 connection strings and commands in order  
+' to create a transaction involving two SQL Servers. It returns a value > 0 if the  
+' transaction committed, 0 if the transaction rolled back. To test this code, you can   
+' connect to two different databases on the same server by altering the connection string,  
+' or to another RDBMS such as Oracle by altering the code in the connection2 code block.  
+Public Function CreateTransactionScope( _  
+  ByVal connectString1 As String, ByVal connectString2 As String, _  
+  ByVal commandText1 As String, ByVal commandText2 As String) As Integer  
+  
+    ' Initialize the return value to zero and create a StringWriter to display results.  
+    Dim returnValue As Integer = 0  
+    Dim writer As System.IO.StringWriter = New System.IO.StringWriter  
+  
+    ' Create the TransactionScope in which to execute the commands, guaranteeing  
+    ' that both commands will commit or roll back as a single unit of work.  
+    Using scope As New TransactionScope()  
+        Using connection1 As New SqlConnection(connectString1)  
+            Try  
+                ' Opening the connection automatically enlists it in the   
+                ' TransactionScope as a lightweight transaction.  
+                connection1.Open()  
+  
+                ' Create the SqlCommand object and execute the first command.  
+                Dim command1 As SqlCommand = New SqlCommand(commandText1, connection1)  
+                returnValue = command1.ExecuteNonQuery()  
+                writer.WriteLine("Rows to be affected by command1: {0}", returnValue)  
+  
+                ' If you get here, this means that command1 succeeded. By nesting  
+                ' the Using block for connection2 inside that of connection1, you  
+                ' conserve server and network resources by opening connection2   
+                ' only when there is a chance that the transaction can commit.     
+                Using connection2 As New SqlConnection(connectString2)  
+                    Try  
+                        ' The transaction is promoted to a full distributed  
+                        ' transaction when connection2 is opened.  
+                        connection2.Open()  
+  
+                        ' Execute the second command in the second database.  
+                        returnValue = 0  
+                        Dim command2 As SqlCommand = New SqlCommand(commandText2, connection2)  
+                        returnValue = command2.ExecuteNonQuery()  
+                        writer.WriteLine("Rows to be affected by command2: {0}", returnValue)  
+  
+                    Catch ex As Exception  
+                        ' Display information that command2 failed.  
+                        writer.WriteLine("returnValue for command2: {0}", returnValue)  
+                        writer.WriteLine("Exception Message2: {0}", ex.Message)  
+                    End Try  
+                End Using  
+  
+            Catch ex As Exception  
+                ' Display information that command1 failed.  
+                writer.WriteLine("returnValue for command1: {0}", returnValue)  
+                writer.WriteLine("Exception Message1: {0}", ex.Message)  
+            End Try  
+        End Using  
+  
+        ' If an exception has been thrown, Complete will   
+        ' not be called and the transaction is rolled back.  
+        scope.Complete()  
+    End Using  
+  
+    ' The returnValue is greater than 0 if the transaction committed.  
+    If returnValue > 0 Then  
+        writer.WriteLine("Transaction was committed.")  
+    Else  
+        ' You could write additional business logic here, notify the caller by  
+        ' throwing a TransactionAbortedException, or log the failure.  
+       writer.WriteLine("Transaction rolled back.")  
+     End If  
+  
+    ' Display messages.  
+    Console.WriteLine(writer.ToString())  
+  
+    Return returnValue  
+End Function  
+```  
+  
+## Siehe auch  
+ [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

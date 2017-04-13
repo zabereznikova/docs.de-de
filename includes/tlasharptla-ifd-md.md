@@ -1,0 +1,1 @@
+Bilddateiverzeichnis (image file directory, IFD)
