@@ -74,8 +74,8 @@ Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Mar
   
  `</x:Array>`  
   
- Bei benutzerdefinierten Typen, die als Arrayelemente verwendet werden, muss die Klasse auch die entsprechenden Anforderungen unterstützen, damit sie in XAML als Objektelemente instanziiert werden können.  Weitere Informationen finden Sie unter [XAML\- und benutzerdefinierte Klassen für WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Bei benutzerdefinierten Typen, die als Arrayelemente verwendet werden, muss die Klasse auch die entsprechenden Anforderungen unterstützen, damit sie in XAML als Objektelemente instanziiert werden können.  Weitere Informationen finden Sie unter [XAML\- und benutzerdefinierte Klassen für WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## Siehe auch  
- [Markuperweiterungen und WPF\-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

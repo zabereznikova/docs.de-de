@@ -49,4 +49,4 @@ Das `xml:space`\-Attribut ist ein per XML definiertes Attribut, das das relevant
   
 ## Siehe auch  
  [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)   
- [Übersicht über XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

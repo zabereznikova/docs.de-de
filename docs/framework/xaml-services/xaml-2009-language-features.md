@@ -26,7 +26,7 @@ XAML 2009 ist der Kurzbegriff für neue XAML\-Sprachfunktionen, die die vorhande
 ## XAML 2009\-Unterstützung in WPF und Visual Studio  
  In WPF können Sie XAML 2009\-Funktionen verwenden, jedoch nur für XAML, das nicht WPF\-markupkompiliert ist. Markupkompilierte XAML und die BAML\-Form von XAML unterstützen die XAML 2009\-Schlüsselwörter und \-Funktionen derzeit nicht.  
   
- Beachten Sie, dass vorhandene Techniken zum Laden von Loose XAML in WPF auch mögliche Sicherheits\- und Zugriffseinschränkungen auf CLR\-Typen und das Typsystem besitzen, die restriktiver als für markupkompilierte XAML sind. Weitere Informationen finden Sie unter [Sicherheit \(WPF\)](../../../docs/framework/wpf/security-wpf.md) oder [WPF\-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Beachten Sie, dass vorhandene Techniken zum Laden von Loose XAML in WPF auch mögliche Sicherheits\- und Zugriffseinschränkungen auf CLR\-Typen und das Typsystem besitzen, die restriktiver als für markupkompilierte XAML sind. Weitere Informationen finden Sie unter [Sicherheit \(WPF\)](../../../ocs/framework/wpf/security-wpf.md) oder [WPF\-Sicherheitsstrategie – Plattformsicherheit](../../../ocs/framework/wpf/wpf-security-strategy-platform-security.md).  
   
  XAML 2009 führt auch zusätzliche Funktionen ein, die entweder die vorherigen XAML 2006\-Konstrukte oder die grundlegenden Markupformulare ändern.  
   
@@ -40,4 +40,4 @@ XAML 2009 ist der Kurzbegriff für neue XAML\-Sprachfunktionen, die die vorhande
  Für von Ereignissen unterstützte Attribute wird in XAML 2006 davon ausgegangen, dass die Markupkompilierung enthalten ist, und die Ereignisse werden zur Markupkompilierung gesendet. XAML 2009 unterstützt ein Markupformular, das einer Markuperweiterung ähnelt, die die Ereignisverknüpfung bis zur Laufzeitanalyse und dem Laden der XAML zurückstellt. Allerdings verwenden WPF\-Anwendungen und XAML\-Szenarien für WPF\-UI in der Regel nicht diese Funktion. WPF und die XAML 2006\-Implementierung verwenden für einen Großteil der Ereignisattributverarbeitung eine Kombination aus der Ereignishandlerverknüpfung für Routingereignisse definiert auf <xref:System.Windows.UIElement>\-Ebene und dem Markupcompilerschritt. Der Markupcompiler führt auch eine Vorverarbeitung für alle Ereignisattribute in XAML aus, bei denen die Buildvorgänge deklarieren, dass der Markupcompiler verwendet wird.  
   
 ## Siehe auch  
- [Übersicht über XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

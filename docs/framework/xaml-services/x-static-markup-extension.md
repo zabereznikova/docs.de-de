@@ -79,9 +79,9 @@ Verweist auf alle statischen By\-Value\-Codeentitäten, die auf [!INCLUDE[TLA#tl
   
 -   Sie verweisen auf einen Typ aus einer benutzerdefinierten Assembly.  
   
--   Sie verweisen auf einen Typ, der in einer WPF\-Assembly vorhanden ist. Der Typ befindet sich jedoch innerhalb eines CLR\-Namespace, der nicht als Bestandteil des WPF\-Standard\-XAML\-Namespace zugeordnet wurde.  Die Zuordnung von CLR\-Namespaces in den Standard\-XAML\-Namespace für WPF wird von Definitionen in den verschiedenen WPF\-Assemblys ausgeführt \(weitere Informationen zu diesem Konzept finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\).  Nicht zugeordnete CLR\-Namespaces kann vorhanden sein, wenn der CLR\-Namespace hauptssächlich aus Klassendefinitionen besteht, die normalerweise nicht für XAML bestimmt sind, wie z. B. <xref:System.Windows.Threading>.  
+-   Sie verweisen auf einen Typ, der in einer WPF\-Assembly vorhanden ist. Der Typ befindet sich jedoch innerhalb eines CLR\-Namespace, der nicht als Bestandteil des WPF\-Standard\-XAML\-Namespace zugeordnet wurde.  Die Zuordnung von CLR\-Namespaces in den Standard\-XAML\-Namespace für WPF wird von Definitionen in den verschiedenen WPF\-Assemblys ausgeführt \(weitere Informationen zu diesem Konzept finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\).  Nicht zugeordnete CLR\-Namespaces kann vorhanden sein, wenn der CLR\-Namespace hauptssächlich aus Klassendefinitionen besteht, die normalerweise nicht für XAML bestimmt sind, wie z. B. <xref:System.Windows.Threading>.  
   
- Weitere Informationen über die Verwendung von Präfixen und XAML\-Namespaces für WPF finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Weitere Informationen über die Verwendung von Präfixen und XAML\-Namespaces für WPF finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## Siehe auch  
  [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   

@@ -46,9 +46,9 @@ Stellt einen eindeutigen Bezeichner für Markupelemente bereit.  In vielen Szena
  Frameworks können in ihrem Objektmodell eine bestimmte Eigenschaft als Alias für `x:Uid` festlegen, indem das Attributs <xref:System.Windows.Markup.UidPropertyAttribute> für den definierenden Typ übernommen wird.  Wenn ein Framework eine bestimmte Eigenschaft angibt, ist es nicht zulässig, `x:Uid` und den mit einem Alias versehenen Member auf demselben Objekt anzugeben.  Wenn `x:Uid` und der mit einem Alias versehene Member angegeben werden, löst die API der .NET Framework\-XAML\-Dienste in der Regel <xref:System.Xaml.XamlDuplicateMemberException> für diesen Fall aus.  
   
 ## Hinweise zur WPF\-Verwendung  
- Weitere Informationen zur Rolle von `x:Uid` in WPF\-Lokalisierungsprozess und der BAML\-Form von XAML, finden Sie unter [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) oder <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Weitere Informationen zur Rolle von `x:Uid` in WPF\-Lokalisierungsprozess und der BAML\-Form von XAML, finden Sie unter [Globalisierung für WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md) oder <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## Siehe auch  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
  <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [Globalisierung für WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

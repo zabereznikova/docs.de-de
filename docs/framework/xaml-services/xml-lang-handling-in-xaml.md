@@ -51,4 +51,4 @@ Das `xml:lang`\-Attribut ist ein [!INCLUDE[TLA2#tla_xml](../../../includes/tla2s
  Für Elemente, die abgeleitete Klassen von <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> darstellen, können Sie die entsprechende <xref:System.Windows.FrameworkElement.Language%2A>\-Abhängigkeitseigenschaft anstelle des `xml:lang`\-Attributs verwenden. Die <xref:System.Windows.FrameworkElement.Language%2A>\-Eigenschaft verwendet standardmäßig „en\-US“, wenn sie nicht anderweitig festgelegt wird. Dies erfolgt entweder über die Eigenschaft oder durch die Verarbeitung des `xml:lang`\-Attributs.  
   
 ## Siehe auch  
- [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [Globalisierung für WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

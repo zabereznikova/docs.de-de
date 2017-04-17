@@ -58,8 +58,8 @@ caps.handback.revision: 14
  Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie sie nicht öffentlich machen, indem Sie [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) verwenden.  Das [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Instanz der Stammelementklasse aus.  Sie können sowohl `x:Name` als auch `x:FieldModifier` im Stammelement platzieren, wobei hierdurch jedoch nur eine Kopie des öffentlichen Felds des Stammelements erstellt wird und die Zugriffsebene der eigentlichen Stammelementklasse weiterhin vom [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) gesteuert wird.  
   
 ## Siehe auch  
- [XAML\- und benutzerdefinierte Klassen für WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Code\-Behind und XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [XAML\- und benutzerdefinierte Klassen für WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [Code\-Behind und XAML in WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [Erstellen einer WPF\-Anwendung \(WPF\)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [Erstellen einer WPF\-Anwendung \(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

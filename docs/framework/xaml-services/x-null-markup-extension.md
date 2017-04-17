@@ -44,14 +44,14 @@ Gibt `null` als Wert für einen XAML\-Member an.
   
  Die `x:Null`\-Markuperweiterung verwendet wie alle XAML\-Markuperweiterungen die geschweiften Klammern \(`{,}`\), um Attributwerte mit Escapezeichen zu versehen, damit sie nicht als Literale oder Ereignishandlerverweise behandelt werden.  Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax.  Eine Objektelementsyntax `<x:Null />` ist technisch möglich, wird aber selten verwendet, da die `x:Null`\-Markuperweiterung nicht über eine Positionsparameter oder Konstruktionsargumente verfügt.  
   
- Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF\-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
  In .NET Framework XAML Services wird die Handhabung dieser Markuperweiterung durch die Klasse <xref:System.Windows.Markup.NullExtension> definiert.  
   
 ## Hinweise zur WPF\-Verwendung  
- Beachten Sie, dass `null` nicht unbedingt der anfängliche nicht festgelegte Wert einer Verweistyp\-Abhängigkeitseigenschaft ist.  Der ursprüngliche Standardwert kann sich für jede Abhängigkeitseigenschaft ändern und auf eigenschaftenspezifischen Metadaten basieren.  Viele Abhängigkeitseigenschaften akzeptieren `null` nicht als über Markup oder Code festgelegten Wert aufgrund ihrer Validierungsrückrufimplementierung.  Weitere Informationen zu Abhängigkeitseigenschaften finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Beachten Sie, dass `null` nicht unbedingt der anfängliche nicht festgelegte Wert einer Verweistyp\-Abhängigkeitseigenschaft ist.  Der ursprüngliche Standardwert kann sich für jede Abhängigkeitseigenschaft ändern und auf eigenschaftenspezifischen Metadaten basieren.  Viele Abhängigkeitseigenschaften akzeptieren `null` nicht als über Markup oder Code festgelegten Wert aufgrund ihrer Validierungsrückrufimplementierung.  Weitere Informationen zu Abhängigkeitseigenschaften finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../ocs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 ## Siehe auch  
  <xref:System.Windows.DependencyProperty.UnsetValue>   
- [Übersicht über XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Markuperweiterungen und WPF\-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

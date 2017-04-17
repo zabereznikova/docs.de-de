@@ -134,7 +134,7 @@ In diesem Thema werden die Attribute der Common Language Runtime \(CLR\) beschri
   
  Das <xref:System.ComponentModel.TypeConverterAttribute>\-Attribut wird auf Ihren Typ angewendet, und es wird auf die Typkonverterimplementierung verwiesen.  Sie können XAML\-Typkonverter für Klassen, Strukturen oder Schnittstellen definieren.  Sie müssen keine Typkonvertierung für Enumerationen bereitstellen, für die Konvertierung systemintern aktiviert ist.  
   
- Der Typkonverter sollte in der Lage sein, von Zeichenfolgen, die für Attribute oder Initialisierungstext in Markup verwendet werden, in den beabsichtigten Zieltyp zu konvertieren.  Weitere Informationen finden Sie unter [TypeConverter und XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Der Typkonverter sollte in der Lage sein, von Zeichenfolgen, die für Attribute oder Initialisierungstext in Markup verwendet werden, in den beabsichtigten Zieltyp zu konvertieren.  Weitere Informationen finden Sie unter [TypeConverter und XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md).  
   
  Statt für alle Werte eines Typs kann ein Typkonverterverhalten für XAML auch lediglich für eine bestimmte Eigenschaft festgelegt werden.  In diesem Fall wenden Sie <xref:System.ComponentModel.TypeConverterAttribute> auf die Eigenschaftendefinition \(die äußere Definition, nicht die bestimmten `get`\- und `set`\-Definitionen\) an.  
   

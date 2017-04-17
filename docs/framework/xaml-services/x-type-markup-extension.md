@@ -68,7 +68,7 @@ Gibt das <xref:System.Type>\-Objekt in CLR an, das der zugrunde liegende Typ fü
 ## Hinweise zur WPF\-Verwendung  
   
 ### Standardmäßige XAML\-Namespaces und Namespacezuordnung  
- Der Standard\-XAML\-Namespace für WPF\-Programmierung enthält die meisten der XAML\-Typen, die Sie für typische XAML\-Szenarien benötigen, daher können Sie beim Verweisen auf XAML\-Typwerte oft Präfixe vermeiden.  Sie müssen möglicherweise ein Präfix zuordnen, wenn Sie auf einen Typ einer benutzerdefinierten Assembly verweisen, oder bei Typen, die in einer WPF\-Assembly vorliegen, aber aus einem CLR\-Namespace stammen, der nicht dem XAML\-Standardnamespace zugeordnet war.  Weitere Informationen über Präfixe, XAML\-Namespaces und das Zuordnen von CLR\-Namespaces finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Der Standard\-XAML\-Namespace für WPF\-Programmierung enthält die meisten der XAML\-Typen, die Sie für typische XAML\-Szenarien benötigen, daher können Sie beim Verweisen auf XAML\-Typwerte oft Präfixe vermeiden.  Sie müssen möglicherweise ein Präfix zuordnen, wenn Sie auf einen Typ einer benutzerdefinierten Assembly verweisen, oder bei Typen, die in einer WPF\-Assembly vorliegen, aber aus einem CLR\-Namespace stammen, der nicht dem XAML\-Standardnamespace zugeordnet war.  Weitere Informationen über Präfixe, XAML\-Namespaces und das Zuordnen von CLR\-Namespaces finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### Geben Sie Eigenschaften an, die Typnamen\-Als\-Zeichenfolge unterstützen  
  WPF unterstützt Techniken, die das Angeben des Werts einiger Eigenschaften des Typs <xref:System.Type>, ohne die Verwendung einer `x:Type`\-Markuperweiterung zu erfordern.  Stattdessen können Sie den Wert als Zeichenfolge angeben, die den Typ benennt.  Beispiele dafür sind <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> und <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>.  Unterstützung für dieses Verhalten wird nicht durch Typkonverter oder Markuperweiterungen bereitgestellt.  Stattdessen ist dies ein durch <xref:System.Windows.FrameworkElementFactory> implementiertes Aufschiebungsverhalten.  
@@ -88,6 +88,6 @@ Gibt das <xref:System.Type>\-Objekt in CLR an, das der zugrunde liegende Typ fü
   
 ## Siehe auch  
  <xref:System.Windows.Style>   
- [Erstellen von Formaten und Vorlagen](../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Übersicht über XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Markuperweiterungen und WPF\-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Erstellen von Formaten und Vorlagen](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
+ [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
