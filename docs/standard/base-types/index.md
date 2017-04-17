@@ -40,5 +40,5 @@ In diesem Abschnitt werden Basistypoperationen in .NET Framework beschrieben, e
  [Allgemeines Typsystem](../../../docs/standard/base-types/common-type-system.md)  
  Beschreibt die von .NET Framework verwendeten Typen.  
   
- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)  
+ [Datumsangaben, Uhrzeiten und Zeitzonen](../../../ml/index.xml)  
  Beschreibt, wie in zeitzonenfähigen Anwendungen mit Zeitzonen und Zeitzonenkonvertierungen gearbeitet wird.

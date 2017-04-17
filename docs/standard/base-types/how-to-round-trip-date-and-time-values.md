@@ -102,5 +102,5 @@ In vielen Anwendungen soll durch einen Datums\- und Uhrzeitwert ein bestimmter Z
   
 ## Siehe auch  
  [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"](../../../docs/standard/datetime/choosing-between-datetime.md)   
+ [Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"](../../../ocs/standard/datetime/choosing-between-datetime.md)   
  [Standard\-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

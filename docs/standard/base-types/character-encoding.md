@@ -267,4 +267,4 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  <xref:System.Text.DecoderFallback>   
  <xref:System.Text.Encoding>   
  <xref:System.Text.EncoderFallback>   
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+ [Globalisierung und Lokalisierung](../../../ml/index.xml)

@@ -282,7 +282,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 <a name="Events"></a>   
 ### Ereignisse  
- Ein Ereignis definiert ein Ereignis, auf das reagiert werden kann, und definiert Methoden, mit denen das Ereignis ausgelöst und abonniert bzw. sein Abonnement aufgehoben werden kann.  Häufig werden mithilfe von Ereignissen andere Typen über Zustandsänderungen informiert.  Weitere Informationen finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+ Ein Ereignis definiert ein Ereignis, auf das reagiert werden kann, und definiert Methoden, mit denen das Ereignis ausgelöst und abonniert bzw. sein Abonnement aufgehoben werden kann.  Häufig werden mithilfe von Ereignissen andere Typen über Zustandsänderungen informiert.  Weitere Informationen finden Sie unter [Ereignisse](../../../ml/index.xml).  
   
 <a name="NestedTypes"></a>   
 ### Geschachtelte Typen  
@@ -323,5 +323,5 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 ## Siehe auch  
  [.NET Framework\-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [Common Language Runtime](../../../docs/standard/clr.md)   
+ [Common Language Runtime](../../../ocs/standard/clr.md)   
  [Typkonvertierung in .NET Framework](../../../docs/standard/base-types/type-conversion.md)
