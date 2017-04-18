@@ -2,8 +2,8 @@
 title: "Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017"
 description: "Sie erfahren, wie Sie eine in C# geschriebene „Hello World“-App mit Visual Studio 2017 debuggen."
 keywords: .NET Core, .NET Core-Konsolenanwendung, Debuggen von .NET Core
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

@@ -11,9 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d00277ceb7fd1c8a7186da330ab2bc4ad40c59a7
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 978dd62d655d0168b5a9c1c9732bc69ca9b256eb
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -79,7 +79,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Treiber
 
-Der Treiber trägt den Namen [dotnet](dotnet.md) und hat zwei Aufgaben, entweder die Ausführung einer [Framework-abhängigen Anwendung](../app-types.md) oder die Ausführung eines Befehls. `dotnet` wird nur ohne Befehl verwendet, wenn damit eine Anwendung gestartet wird.
+Der Treiber trägt den Namen [dotnet](dotnet.md) und hat zwei Aufgaben, entweder die Ausführung einer [Framework-abhängigen Anwendung](../deploying/index.md) oder die Ausführung eines Befehls. `dotnet` wird nur ohne Befehl verwendet, wenn damit eine Anwendung gestartet wird.
 
 Geben Sie zur Ausführung einer Framework-abhängigen Anwendung nach dem Treiber die Anwendung an, z.B. `dotnet /path/to/my_app.dll`. Führen Sie beim Ausführen des Befehls aus dem Ordner, in dem sich die DLL der Anwendung befindet, einfach `dotnet my_app.dll` aus.
 
@@ -104,5 +104,5 @@ Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)
-* [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs/)
+* [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)
 

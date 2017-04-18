@@ -2,7 +2,7 @@
 title: "Verknüpfen mithilfe eines zusammengesetzten Schlüssels"
 description: "Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

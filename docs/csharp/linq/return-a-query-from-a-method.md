@@ -2,7 +2,7 @@
 title: "Zurückgeben einer Abfrage aus einer Methode"
 description: "Vorgehensweise zum Zurückgeben einer Abfrage aus einer Methode."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
