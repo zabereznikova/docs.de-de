@@ -30,7 +30,7 @@ caps.handback.revision: 35
   
  Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Sammlungen in der <xref:System.Collections.Concurrent> Namespace effiziente threadsichere Operationen für den Zugriff auf Auflistungselemente aus mehreren Threads bereit. Die unveränderlichen Auflistungsklassen im Namespace System.Collections.Immutable ([NuGet-Paket](https://www.nuget.org/packages/System.Collections.Immutable)) sind grundsätzlich threadsicher, da Vorgänge auf eine Kopie der ursprünglichen Auflistung ausgeführt werden und die ursprüngliche Auflistung kann nicht geändert werden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Allgemeine Auflistungsfunktionen  

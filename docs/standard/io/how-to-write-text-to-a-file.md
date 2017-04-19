@@ -35,14 +35,14 @@ Dieses Thema veranschaulicht verschiedene Arten, wie Sie Text in eine Datei für
 ## Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie Text mithilfe der <xref:System.IO.StreamWriter>\-Klasse zeilenweise in eine neue Datei schreiben. Die neue Textdatei wird im Ordner "Eigene Dateien" des Benutzers gespeichert. Da das <xref:System.IO.StreamWriter>\-Objekt in einer `using`\-Anweisung deklariert und instanziiert wird, wird die <xref:System.IO.StreamWriter.Dispose%2A>\-Methode zum automatischen Leeren und Schließen des Datenstroms aufgerufen.  
   
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)]
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
+ <!-- TODO: review snippet reference [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  -->  
   
 ## Beispiel  
  Das folgende Beispiel zeigt, wie Text mithilfe der <xref:System.IO.StreamWriter>\-Klasse an eine vorhandene Datei angefügt wird. Dabei wird die Textdatei aus dem vorherigen Beispiel verwendet.  
   
- [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)]
- [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]  
+ <!-- TODO: review snippet reference [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]  -->  
   
 ## Beispiel  
  Das folgende Beispiel zeigt, wie Sie Text mithilfe der <xref:System.IO.StreamWriter>\-Klasse asynchron in eine neue Datei schreiben. Zum Aufrufen der <xref:System.IO.StreamWriter.WriteAsync%2A>\-Methode muss sich der Methodenaufruf innerhalb einer `async`\-Methode befinden. Die neue Textdatei wird im Ordner "Eigene Dateien" des Benutzers gespeichert.  

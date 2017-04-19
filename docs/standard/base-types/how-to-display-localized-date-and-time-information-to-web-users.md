@@ -83,8 +83,8 @@ Eine Webseite kann an beliebigen Standorten weltweit angezeigt werden kann. Bei 
 ## Beispiel  
  Das folgende Beispiel enthält sowohl den HTML\-Quellcode als auch den Code für ein ASP.NET\-Web Form, in dem der Benutzer aufgefordert wird, einen Datums\- und Uhrzeitwert einzugeben.  Außerdem schreibt ein clientseitiges Skript Informationen zum lokalen Datum und der Ortszeit der Benutzeranforderung sowie zum Offset der Zeitzone des Benutzers von der UTC in ein ausgeblendetes Feld.  Anschließend werden die Informationen vom Server analysiert, der eine Webseite zurückgibt, in der die Benutzereingabe angezeigt wird.  Darüber hinaus werden Datum und Uhrzeit der Benutzeranforderung unter Verwendung der Ortszeit des Benutzers, die Uhrzeit auf dem Server sowie die UTC angezeigt.  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  Das clientseitige Skript ruft die JavaScript\-Methode `toLocaleString` auf.  Auf diese Weise wird eine Zeichenfolge generiert, die den Formatierungskonventionen des Benutzergebietsschemas entspricht und dadurch wahrscheinlich erfolgreicher auf dem Server analysiert werden kann.  
   
