@@ -28,7 +28,7 @@ Die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Klasse mach
   
  Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Klasse aus einer Anwendungskonfigurationsdatei, die festlegt der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, und <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> Eigenschaften in einem einfachen Beispiel 1. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
   
- [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
+ <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
   
  Das genaue Laufzeitverhalten hängt von den Werten der der <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> und <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> Eigenschaften, die steuern, wie viele Nachrichten in einem Vorgang auf einmal und die Lebensdauer des Diensts ausführen können <xref:System.ServiceModel.InstanceContext> relativ zu den eingehenden kanalsitzungen.  
   

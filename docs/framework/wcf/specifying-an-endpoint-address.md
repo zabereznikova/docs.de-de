@@ -48,13 +48,13 @@ Die gesamte Kommunikation mit einem [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definieren von Endpunktadressen in der Konfiguration  
  Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei der [ <> \> ](http://msdn.microsoft.com/de-de/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  Wenn die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> (d. h., wenn die Host-Anwendung versucht, den Dienst zu starten)-Methode aufgerufen wird, sucht das System nach einer [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element mit einem Namensattribut, der angibt, "UE. Samples.HelloService". Wenn die [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element gefunden wird, wird das System lädt die angegebene Klasse und erstellt Endpunkte mithilfe der in der Konfigurationsdatei bereitgestellten Endpunktdefinitionen. Dieser Mechanismus erlaubt Ihnen, mit nur zwei Zeilen Code einen Dienst zu laden und zu starten, ohne dass die Bindungs- und Adressierungsinformationen im Code enthalten sein müssen. Der Vorteil dieses Ansatzes zeigt sich darin, dass diese Änderungen ohne Neukompilierung oder erneute Bereitstellung der Anwendung durchgeführt werden können.  
   
  Die optionalen Header werden in deklariert einen [ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Das folgende Beispiel veranschaulicht die Elemente, die verwendet werden, um Endpunkte in einer Konfigurationsdatei für einen Dienst anzugeben, der zwischen zwei Headern unterscheidet: "Gold"-Clients von http://tempuri1.org/ und "Standard"-Clients von http://tempuri2.org/. Der Client, der diesen Dienst aufruft, müssen die entsprechenden [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) in der Konfigurationsdatei.  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  Header können auch durch einzelne Nachrichten statt (wie vorher gezeigt) durch alle Nachrichten an einem Endpunkt festgelegt werden. Dies erfolgt mithilfe von <xref:System.ServiceModel.OperationContextScope> erstellen einen neuen Kontext in einer Clientanwendung der ausgehenden Nachricht einen benutzerdefinierten Header hinzu, wie im folgenden Beispiel gezeigt.  
   

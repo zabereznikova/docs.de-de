@@ -35,7 +35,7 @@ Dieses Thema enthält einen Überblick über die Schritte zum Aktivieren einer z
   
 3.  Erstellen Sie eine Web.config\-Datei, um einen Endpunkt für `CalculatorService` zu konfigurieren, der <xref:System.ServiceModel.WSHttpBinding> mit aktivierter zuverlässiger Sitzung und erforderlicher Zustellung der Nachrichten in der richtigen Reihenfolge verwendet.  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  Erstellen Sie eine Datei Service.svc, die die folgende Zeile enthält:  
   
@@ -63,7 +63,7 @@ Dieses Thema enthält einen Überblick über die Schritte zum Aktivieren einer z
   
 4.  Svcutil.exe generiert auch die Konfiguration für den Client, der die <xref:System.ServiceModel.WSHttpBinding>\-Klasse verwendet.Diese Datei muss bei Verwendung von [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] App.config genannt werden.  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
   

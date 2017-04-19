@@ -52,8 +52,8 @@ Dieses Thema enthält eine Einführung in Keyframe\-Animationen.  Mit Keyframe\-
   
  Im folgenden Beispiel wird <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> verwendet, um ein <xref:System.Windows.Shapes.Rectangle>\-Element an vier verschiedenen Orten zu animieren.  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
  Wie eine From\/To\/By\-Animation kann eine Keyframe\-Animation mithilfe von <xref:System.Windows.Media.Animation.Storyboard> in Markup und Code oder mithilfe der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>\-Methode in Code auf eine Eigenschaft angewendet werden.  Sie können mit einer Keyframe\-Animation auch eine <xref:System.Windows.Media.Animation.AnimationClock> erstellen und sie auf eine oder mehrere Eigenschaften anwenden.  Weitere Informationen zu den verschiedenen Anwendungsmethoden für Animationen finden Sie unter [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
   
@@ -130,8 +130,8 @@ Dieses Thema enthält eine Einführung in Keyframe\-Animationen.  Mit Keyframe\-
   
 -   Da die <xref:System.Windows.Media.Animation.Timeline.Duration%2A>\-Eigenschaft der Animation auf 10 Sekunden festgelegt war, behält die Animation den Endwert zwei Sekunden lang bei, bevor sie zur Zeit \= 0:0:10 endet.  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
 <a name="interpolationmethods"></a>   
 ## Interpolationsmethoden  
@@ -173,8 +173,8 @@ Dieses Thema enthält eine Einführung in Keyframe\-Animationen.  Mit Keyframe\-
 ### Spline\-Interpolation  
  Mit der Spline\-Interpolation lassen sich realistischere Effekte zur Zeitsteuerung erreichen.  Da Animationen sehr oft dazu eingesetzt werden, Effekte aus der realen Welt zu imitieren, benötigen Entwickler möglicherweise eine Feinsteuerung bei der Beschleunigung und der Verzögerung von Objekten und eine exakte Bearbeitungsmöglichkeit für die Zeitsteuerung von Segmenten.  Sie können Spline\-Keyframes einsetzen, um Animationen mit der Spline\-Interpolation ausführen.  Bei anderen Keyframes geben Sie einen <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> und eine <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> an.  Bei einem Spline\-Keyframe geben Sie auch einen <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> an.  Im folgenden Beispiel wird ein einzelner Spline\-Keyframe für eine <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> dargestellt.  Beachten Sie die <xref:System.Windows.Media.Animation.KeySpline>\-Eigenschaft. Erst dadurch unterscheidet sich ein Spline\-Keyframe von den anderen Keyframe\-Typen.  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  Eine [kubische Bézierkurve](GTMT) wird durch einen Anfangspunkt, einen Endpunkt und zwei Kontrollpunkte definiert.  Die <xref:System.Windows.Media.Animation.KeySpline>\-Eigenschaft eines Spline\-Keyframes definiert die zwei Kontrollpunkte einer Bézierkurve, die von \(0,0\) bis \(1,1\) reicht.  Der erste Kontrollpunkt kontrolliert den Kurvenfaktor der ersten Hälfte der Bézierkurve, und der zweite Kontrollpunkt kontrolliert den Kurvenfaktor der zweiten Hälfte des Béziersegments.  Die resultierende Kurve beschreibt die Änderungsrate für diesen Spline\-Keyframe.  Je steiler die Kurve, desto schneller ändert der Keyframe seine Werte.  Wenn die Kurve flacher wird, ändert der Keyframe seine Werte langsamer.  
   
@@ -185,8 +185,8 @@ Dieses Thema enthält eine Einführung in Keyframe\-Animationen.  Mit Keyframe\-
  ![Eine Bézierkurve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
 Ein Spline für Keyframes mit den Kontrollpunkten \(0,0, 1,0\) und \(1,0, 0,0\)  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  Dieser Keyframe führt die Animation am Anfang schnell aus, wird langsamer und dann wieder schneller, bevor er endet.  
   
@@ -195,15 +195,15 @@ Ein Spline für Keyframes mit den Kontrollpunkten \(0,0, 1,0\) und \(1,0, 0,0\)
  ![Eine Bézierkurve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
 Ein Spline für Keyframes mit den Kontrollpunkten \(0,25, 0,5\) und \(0,75, 1,0\)  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
   
  Da sich die Krümmung der Bézierkurve nur wenig ändert, führt dieser Keyframe die Animation mit fast konstanter Geschwindigkeit aus und wird gegen Ende etwas langsamer.  
   
  Im folgenden Beispiel wird mit <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> die Position eines Rechtecks animiert.  Da <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>\-Objekte verwendet, wird für den Übergang zwischen jedem Keyframe\-Wert die Spline\-Interpolation eingesetzt.  
   
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
   
  Es ist möglicherweise schwierig, die Spline\-Interpolation zu verstehen. Es kann daher hilfreich sein, mit verschiedenen Einstellungen zu experimentieren.  Mit dem [Beispiel für die Animation von Splines für Keyframes](http://go.microsoft.com/fwlink/?LinkID=160011) können Sie Splinewerte für Keyframes ändern und die Auswirkungen auf eine Animation anzeigen.  
   
@@ -213,8 +213,8 @@ Ein Spline für Keyframes mit den Kontrollpunkten \(0,25, 0,5\) und \(0,75, 1,0\
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> erstellt, die lineare Interpolation, Spline\-Interpolation und diskrete Interpolation verwendet.  
   
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
   
 <a name="keytimes"></a>   
 ## Weitere Informationen zu Zeitdauer und Schlüsselzeiten  
@@ -235,8 +235,8 @@ Ein Spline für Keyframes mit den Kontrollpunkten \(0,25, 0,5\) und \(0,75, 1,0\
   
 -   Der vierte Keyframe führt eine Animation von 500 bis 600 aus.  Er wird am Ende des dritten Keyframes \(zur Zeit \= 9 Sekunden\) gestartet, 1 Sekunde lang abgespielt und endet zur Zeit \= 0:0:10.  
   
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
   
 ### Prozentwerte  
  Ein Prozentwert gibt an, dass der Keyframe bei einem bestimmten Prozentsatz der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> der Animation endet.  In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird der Prozentsatz als Zahl angeben, gefolgt vom `%`\-Zeichen.  Im Code verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>\-Methode und übergeben ihr einen <xref:System.Double>\-Wert, der den Prozentsatz angibt.  Der Wert muss mindestens 0 \(null\) und darf maximal 100 Prozent betragen.  Im folgenden Beispiel werden eine Animation mit einer Dauer von 10 Sekunden und vier Keyframes gezeigt, deren Schlüsselzeiten als Prozentsätze angegeben sind.  
@@ -249,8 +249,8 @@ Ein Spline für Keyframes mit den Kontrollpunkten \(0,25, 0,5\) und \(0,75, 1,0\
   
 -   Der vierte Keyframe führt eine Animation von 500 bis 600 aus.  Er wird am Ende des dritten Keyframes \(zur Zeit \= 9 Sekunden\) gestartet, 1 Sekunde lang abgespielt und endet zur Zeit \= 0:0:10 \(1 x 10 \= 10\).  
   
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
   
 ### Spezieller Wert "Uniform"  
  Verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>\-Zeitsteuerung, wenn Sie möchten, dass jeder Keyframe die gleiche Zeitdauer erhält.  
@@ -265,16 +265,16 @@ Ein Spline für Keyframes mit den Kontrollpunkten \(0,25, 0,5\) und \(0,75, 1,0\
   
 -   Der vierte Keyframe führt eine Animation von 500 bis 600 aus.  Er wird am Ende des zweiten Keyframes \(zur Zeit \= 7,5 Sekunden\) gestartet, 2,5 Sekunden lang abgespielt und endet zur Zeit \= 0:0:1.  
   
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
   
 ### Spezieller Wert "Paced"  
  Verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>\-Zeitsteuerung, wenn Sie die Animation mit konstanter Geschwindigkeit ausführen möchten.  
   
  Eine <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>\-Schlüsselzeit weist die verfügbare Zeit entsprechend der Länge der einzelnen Keyframes zu, um die Dauer jedes Frames zu bestimmen.  Auf diese Weise kann sichergestellt werden, dass die Geschwindigkeit der Animation konstant bleibt.  Im folgenden Beispiel werden eine Animation mit einer Dauer von 10 Sekunden und drei Keyframes gezeigt, deren Schlüsselzeiten als <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> angegeben sind.  
   
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
   
  Beachten Sie, dass die aufgelöste Schlüsselzeit auf 100 Prozent festgelegt wird, wenn die Schlüsselzeit des letzten Keyframes <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> oder <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ist.  Wenn der erste Keyframe in einer Multiframe\-Animation einen Paced\-Wert besitzt, wird die aufgelöste Schlüsselzeit auf 0 \(null\) festgelegt.  \(Wenn die Keyframe\-Auflistung nur einen einzelnen Keyframe enthält und es sich dabei um einen Keyframe mit einem Paced\-Wert handelt, wird die aufgelöste Schlüsselzeit auf 100 Prozent festgelegt.\)  
   

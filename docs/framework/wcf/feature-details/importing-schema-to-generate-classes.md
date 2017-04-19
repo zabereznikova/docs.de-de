@@ -68,7 +68,7 @@ Zum Generieren von Klassen aus Schemas, die mit [!INCLUDE[indigo1](../../../../i
   
  Betrachten Sie zum Beispiel das folgende Schema:  
   
- [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  -->  
   
  Im folgenden Beispiel wird die `Namespaces`-Eigenschaft verwendet, um den http://schemas.contoso.com/carSchema-Namespace "Contoso.Cars" zuzuordnen.  
   
@@ -98,18 +98,18 @@ Zum Generieren von Klassen aus Schemas, die mit [!INCLUDE[indigo1](../../../../i
 ### <a name="import-options-choosing-collection-types"></a>Importoptionen: Wählen von Auflistungstypen  
  Zwei spezielle XML-Muster stellen Auflistungen von Elementen dar: Listen mit Elementen und Zuordnungen zwischen einem Element und einem anderen. Unten ist ein Beispiel für eine Liste mit Zeichenfolgen angegeben.  
   
- [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  -->  
   
  Das folgende Beispiel zeigt eine Zuordnung zwischen einer Zeichenfolge und einer Ganzzahl (`city name` und `population`).  
   
- [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  -->  
   
 > [!NOTE]
 >  Jede Zuordnung kann auch als Liste angesehen werden. Sie können die oben angegebene Zuordnung zum Beispiel als Liste mit komplexen `city`-Objekten ansehen, die zwei Felder aufweisen (ein Zeichenfolgenfeld und ein Ganzzahlfeld). Beide Muster verfügen im XSD-Schema über eine Darstellung. Es ist nicht möglich, zwischen einer Liste und einer Zuordnung zu unterscheiden. Aus diesem Grund werden Muster dieser Art immer wie Listen behandelt, es sei denn, das Schema enthält eine bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-spezifische Anmerkung. Die Anmerkung gibt an, dass ein bestimmtes Muster eine Zuordnung darstellt. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  In der Regel wird eine Liste als Auflistungsdatenvertrag importiert, der von einer generischen Liste oder einem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Array abgeleitet ist. Dies hängt davon ab, ob das Schema das standardmäßige Namensmuster für Auflistungen verwendet. Dies wird ausführlicher beschrieben [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Zuordnungen werden normalerweise entweder als ein <xref:System.Collections.Generic.Dictionary%602> oder auflistungsdatenvertrag, die vom Wörterbuchobjekt abgeleitet ist.\</TKey, TValue> Betrachten Sie zum Beispiel das folgende Schema:  
   
- [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  -->  
   
  Der Import wird hierbei wie folgt durchgeführt (aus Gründen der besseren Lesbarkeit werden anstelle von Eigenschaften Felder angezeigt).  
   

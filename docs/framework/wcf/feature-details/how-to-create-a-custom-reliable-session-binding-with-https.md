@@ -35,7 +35,7 @@ Dieses Thema veranschaulicht die Verwendung der Secure Sockets Layer \(SSL\)\-Tr
   
 3.  Erstellen Sie eine Web.config\-Datei, um einen Endpunkt für `CalculatorService` mit einer benutzerdefinierten Bindung namens "reliableSessionOverHttps" zu konfigurieren, die eine zuverlässige Sitzung und HTTPS\-Transport verwendet.  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  Erstellen Sie eine Service.svc\-Datei, die die folgende Zeile enthält:  
   
@@ -63,7 +63,7 @@ Dieses Thema veranschaulicht die Verwendung der Secure Sockets Layer \(SSL\)\-Tr
   
 4.  Konfigurieren Sie eine benutzerdefinierte Bindung mit dem Namen "reliableSessionOverHttps", um den HTTPS\-Transport und zuverlässige Sitzungen zu verwenden.  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
   
