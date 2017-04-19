@@ -1,67 +1,66 @@
 ---
-title: Verwenden von generischen Auflistungen
-description: Verwenden von generischen Auflistungen
-keywords: .NET, .NET Core
+title: Verwenden von generischen Auflistungen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [.NET Framework], generic
+- generic collections [.NET Framework]
+ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
+caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 971e08bd-b63f-4832-9e61-9f65cbedd352
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: bde317c165981775330e1d0d8261d355e2401bc9
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9dcf0802b1d9a1d6b63d108289cbc814b73e8c48
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
-
-Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei generischen Typen keine Notwendigkeit zum Einschließen der Elemente besteht. 
-
-Sie sollten die generischen Sammlungsklassen im [System.Collections.Concurrent](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)-Namespace verwenden, wenn mehrere Threads möglicherweise Elemente gleichzeitig der Sammlung hinzufügen oder daraus entfernen.
-
-Die folgenden generischen Typen entsprechen vorhandenen Auflistungstypen: 
-
-*   [List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) ist die generische Klasse, die [ArrayList](https://docs.microsoft.com/dotnet/core/api/System.Collections.ArrayList) entspricht.
-
-*   [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) und [ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2) sind die generischen Klassen, die [Hashtable](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) entsprechen. 
-
-*   [Collection&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.Collection-1) ist die generische Klasse, die [CollectionBase](https://docs.microsoft.com/dotnet/core/api/System.Collections.CollectionBase) entspricht. `Collection<T>` kann als Basisklasse verwendet werden, ist aber im Gegensatz zu `CollectionBase` nicht abstrakt. Dadurch kann sie viel einfacher verwendet werden.
-
-*   [ReadOnlyCollection&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.ReadOnlyCollection-1) ist die generische Klasse, die [ReadOnlyCollectionBase](https://docs.microsoft.com/dotnet/core/api/System.Collections.ReadOnlyCollectionBase) entspricht. `ReadOnlyCollection<T>` ist nicht abstrakt und verfügt über einen Konstruktor, der es einfach macht, eine vorhandene [List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) als schreibgeschützte Sammlung verfügbar zu machen.
-
-*   Die generischen Klassen [Queue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1), [ConcurrentQueue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentQueue-1), [Stack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1), [ConcurrentStack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentStack-1) und [SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) entsprechen den jeweiligen nicht generischen Klassen mit dem gleichen Namen.
-
-## <a name="additional-types"></a>Zusätzliche Typen
-
-Einige generische Auflistungstypen haben keine nicht generischen Entsprechungen. Hierzu gehören Folgende: 
-
-*   [LinkedList&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.LinkedList-1) ist eine vielfältig einsetzbare verknüpfte Liste, die O(1)-Einfüge- und Löschvorgänge bereitstellt.
-
-*   [SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) ist ein sortiertes Wörterbuch mit O(log n)-Einfüge- und Abrufvorgängen – eine nützliche Alternative zu [SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2). 
-
-*   [KeyedCollection&lt;TKey, TItem&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) ist eine Mischung aus Liste und Wörterbuch und bietet eine Möglichkeit, Objekte zu speichern, die ihre eigenen Schlüssel enthalten.
-
-*   [BlockingCollection&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.BlockingCollection-1) implementiert eine Sammlungsklasse mit Begrenzungs- und Blockadefunktionen.
-
-*   [ConcurrentBag&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentBag-1) ermöglicht das schnelle Einfügen und Entfernen unsortierter Elemente.
-
-## <a name="linq-to-objects"></a>LINQ to Objects
-
-Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, sofern der Objekttyp die [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable)- oder die [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)-Schnittstelle implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern.
-
-## <a name="additional-functionality"></a>Zusätzliche Funktionen
-
-Einige der generischen Typen besitzen Funktionen, die es in den nicht generischen Auflistungstypen nicht gibt. Die [List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1)-Klasse, die der nicht generischen [ArrayList](https://docs.microsoft.com/dotnet/core/api/System.Collections.ArrayList)-Klasse entspricht, hat z.B. eine Reihe von Methoden, die generische Delegaten akzeptieren, z.B. den [Predicate&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Predicate-1)-Delegaten, mit dem Sie Methoden zum Durchsuchen der Liste angeben können, und den [Action&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Action-1)-Delegaten, der Methoden für die einzelnen Listenelemente darstellt.
-
-Mit der [List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1)-Klasse können Sie Ihre eigenen generischen [IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1)-Schnittstellenimplementierungen zum Sortieren und Durchsuchen der Liste angeben. Die Klassen [SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) und [SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) verfügen ebenfalls über diese Funktion. Darüber hinaus ermöglichen Ihnen diese Klassen das Angeben von Vergleichen beim Erstellen der Auflistung. In ähnlicher Weise können Sie mit den Klassen [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) und [KeyedCollection&lt;TKey, TItem&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) eigene Gleichheitsvergleiche angeben.
-
-## <a name="see-also"></a>Siehe auch
-
-[Sammlungen und Datenstrukturen](index.md) 
-
-[Häufig verwendete Sammlungstypen](commonly-used-collection-types.md)
-
+Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei generischen Typen keine Notwendigkeit zum Einschließen der Elemente besteht.  
+  
+ Für Programme, die [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher zum Ziel haben, sollten Sie die generischen Auflistungsklassen im <xref:System.Collections.Concurrent>-Namespace verwenden, wenn mehrere Threads möglicherweise Elemente gleichzeitig der Auflistung hinzufügen oder daraus entfernen.  
+  
+ Die folgenden generischen Typen entsprechen vorhandenen Auflistungstypen:  
+  
+-   <xref:System.Collections.Generic.List%601> ist die generische Klasse, die <xref:System.Collections.ArrayList> entspricht.  
+  
+-   <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sind die generischen Klassen, die <xref:System.Collections.Hashtable> entsprechen.  
+  
+-   <xref:System.Collections.ObjectModel.Collection%601> ist die generische Klasse, die <xref:System.Collections.CollectionBase> entspricht. <xref:System.Collections.ObjectModel.Collection%601> kann als Basisklasse verwendet werden, ist aber im Gegensatz zu <xref:System.Collections.CollectionBase> nicht abstrakt. Dadurch kann sie viel einfacher verwendet werden.  
+  
+-   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> ist die generische Klasse, die <xref:System.Collections.ReadOnlyCollectionBase> entspricht. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> ist nicht abstrakt und verfügt über einen Konstruktor, der es einfach macht, eine vorhandene <xref:System.Collections.Generic.List%601> als schreibgeschützte Auflistung verfügbar zu machen.  
+  
+-   Die generischen Klassen <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> und <xref:System.Collections.Generic.SortedList%602> entsprechen den jeweiligen nicht generischen Klassen mit denselben Namen.  
+  
+## <a name="additional-types"></a>Zusätzliche Typen  
+ Einige generische Auflistungstypen haben keine nicht generischen Entsprechungen. Hierzu gehören Folgende:  
+  
+-   <xref:System.Collections.Generic.LinkedList%601> ist eine vielfältig einsetzbare verknüpfte Liste, die O(1)-Einfüge- und Löschvorgänge bereitstellt.  
+  
+-   <xref:System.Collections.Generic.SortedDictionary%602> ist ein sortiertes Wörterbuch mit O(log `n`)-Einfüge- und Abrufvorgängen – eine nützliche Alternative zu <xref:System.Collections.Generic.SortedList%602>.  
+  
+-   <xref:System.Collections.ObjectModel.KeyedCollection%602> ist eine Mischung aus Liste und Wörterbuch und bietet eine Möglichkeit, Objekte zu speichern, die ihre eigenen Schlüssel enthalten.  
+  
+-   <xref:System.Collections.Concurrent.BlockingCollection%601> implementiert eine Auflistungsklasse mit Begrenzungs- und Blockadefunktionen.  
+  
+-   <xref:System.Collections.Concurrent.ConcurrentBag%601> ermöglicht das schnelle Einfügen und Entfernen unsortierter Elemente.  
+  
+## <a name="linq-to-objects"></a>LINQ to Objects  
+ Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp die <xref:System.Collections.IEnumerable?displayProperty=fullName>- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>-Schnittstelle implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ-zu-Objekte](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) und [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+  
+## <a name="additional-functionality"></a>Zusätzliche Funktionen  
+ Einige der generischen Typen besitzen Funktionen, die es in den nicht generischen Auflistungstypen nicht gibt. Die <xref:System.Collections.Generic.List%601>-Klasse, die der nicht generischen <xref:System.Collections.ArrayList>-Klasse entspricht, hat beispielsweise eine Reihe von Methoden, die generische Delegaten akzeptieren, z.B. den <xref:System.Predicate%601>-Delegaten, mit dem Sie Methoden zum Durchsuchen der Liste angeben können, den <xref:System.Action%601>-Delegaten, der Methoden für die einzelnen Listenelemente darstellt, und den <xref:System.Converter%602>-Delegaten, mit dem Sie Konvertierungen zwischen Typen definieren können.  
+  
+ Mit der <xref:System.Collections.Generic.List%601>-Klasse können Sie Ihre eigenen generischen <xref:System.Collections.Generic.IComparer%601>-Schnittstellenimplementierungen zum Sortieren und Durchsuchen der Liste angeben. Die Klassen <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> verfügen ebenfalls über diese Funktion. Darüber hinaus ermöglichen Ihnen diese Klassen das Angeben von Vergleichen beim Erstellen der Auflistung. In ähnlicher Weise können Sie mit den Klassen<xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.ObjectModel.KeyedCollection%602> eigene Gleichheitsvergleiche angeben.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auflistungen und Datenstrukturen](../../../docs/standard/collections/index.md)   
+ [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)   
+ [Generika](../../../docs/standard/generics/index.md)
