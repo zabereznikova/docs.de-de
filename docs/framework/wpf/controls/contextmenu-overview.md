@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # &#220;bersicht &#252;ber ContextMenu
 Die <xref:System.Windows.Controls.ContextMenu>\-Klasse stellt das Element dar, das durch ein kontextspezifisches <xref:System.Windows.Controls.Menu> Funktionen verfügbar macht.  Ein Benutzer ruft in der Regel das <xref:System.Windows.Controls.ContextMenu> in der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] auf, indem er mit der rechten Maustaste klickt.  In diesem Thema wird das <xref:System.Windows.Controls.ContextMenu>\-Element eingeführt. Außerdem sind Beispiele für dessen Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und Code enthalten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="contextmenu_control"></a>   
 ## ContextMenu\-Steuerelement  

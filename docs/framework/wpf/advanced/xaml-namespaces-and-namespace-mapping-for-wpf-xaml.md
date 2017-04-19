@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # XAML-Namespaces und Namespacezuordnung f&#252;r WPF-XAML
 In diesem Thema werden das Vorhandensein und der Zweck der beiden XAML\-Namespacezuordnungen erläutert, die häufig im Stammtag einer WPF\-XAML\-Datei enthalten sind.  Außerdem wird beschrieben, wie ähnliche Zuordnungen für das Verwenden von Elementen erzeugt werden, die in Ihrem eigenen Code und\/oder innerhalb von separaten Assemblys definiert sind.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Was ist ein XAML\-Namespace?  
  Ein XAML\-Namespace ist eine Erweiterung des Konzepts eines XML\-Namespaces.  Die Techniken zum Angeben eines XAML\-Namespaces sind abhängig von der XML\-Namespacesyntax, der Konvention für die Verwendung von URIs als Namespacebezeichner, der Verwendung von Präfixen zum Verweisen auf mehrere Namespaces aus derselben Markupquelle usw.  Das primäre Konzept, das der XAML\-Definition des XML\-Namespaces hinzugefügt wird, besteht darin, dass ein XAML\-Namespace einen Bereich der Eindeutigkeit für die Markupverwendungen bedeutet und außerdem beeinflusst, wie Markupentitäten potenziell von bestimmten CLR\-Namespaces und Assemblys, auf die verwiesen wird, unterstützt werden.  Die zweite Überlegung wird auch durch das Konzept eines XAML\-Schemakontexts beeinflusst.  Hinsichtlich der Funktionsweise von WPF mit XAML\-Namespaces können Sie sich jedoch im Allgemeinen XAML\-Namespaces in Bezug auf einen Standard\-XAML\-Namespace, den XAML\-Sprachnamespace und weitere XAML\-Namespaces als bestimmten CLR\-Unterstützungsnamespaces und Assemblys, auf die verwiesen wird, von XAML\-Markup direkt zugeordnet vorstellen.  

@@ -27,7 +27,7 @@ Dieses Thema gibt eine Übersicht über das Zeichnen mit <xref:System.Windows.Sh
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste.  Auf der obersten Ebene stehen die benutzerfreundlichen <xref:System.Windows.Shapes.Shape>\-Objekte mit einer Vielzahl von nützlichen Features zur Verfügung, z. B. Layout und Teilnahme am [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Ereignissystem.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## Shape\-Objekte  

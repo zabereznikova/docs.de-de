@@ -23,7 +23,7 @@ caps.handback.revision: 32
 # &#220;bersicht &#252;ber TreeView
 Das <xref:System.Windows.Controls.TreeView>\-Steuerelement bietet eine Möglichkeit, Informationen in einer hierarchischen Struktur durch das Verwenden von reduzierbaren Knoten anzuzeigen.  In diesem Thema werden die Steuerelemente <xref:System.Windows.Controls.TreeView> und <xref:System.Windows.Controls.TreeViewItem> eingeführt. Außerdem sind einfache Beispiele für ihre Verwendung enthalten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Simple_TreeView_Control"></a>   
 ## Was ist ein TreeView?  

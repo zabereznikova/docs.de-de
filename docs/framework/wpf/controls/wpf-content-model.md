@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
  Dieses Thema fasst das Inhaltsmodell für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelement\- und steuerelementähnliche Typen zusammen.  Das Inhaltsmodell beschreibt, welcher Inhalt in einem Steuerelement verwendet werden kann. In diesem Thema sind auch die Inhaltseigenschaften für jedes Inhaltsmodell aufgeführt.  Eine Inhaltseigenschaft ist eine Eigenschaft, mit der der Inhalt des Objekts gespeichert werden kann.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## Klassen, die beliebigen Inhalt enthalten  

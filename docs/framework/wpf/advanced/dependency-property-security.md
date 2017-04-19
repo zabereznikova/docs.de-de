@@ -27,7 +27,7 @@ caps.handback.revision: 7
 # Sicherheit von Abh&#228;ngigkeitseigenschaften
 Abhängigkeitseigenschaften sollten in der Regel als öffentliche Eigenschaften angesehen werden.  Die Beschaffenheit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Eigenschaftensystems verhindert, dass für den Wert einer Abhängigkeitseigenschaft Sicherheitsgarantien aufgestellt werden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AccessSecurity"></a>   
 ## Zugriff und Sicherheit von Wrappern und Abhängigkeitseigenschaften  

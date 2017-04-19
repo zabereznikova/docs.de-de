@@ -34,7 +34,7 @@ caps.handback.revision: 18
 # Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren.  Durch die Behandlung des Ereignisses wird die Route verkürzt.  Bei der Klassenbehandlung handelt es sich um ein Programmierungskonzept, das von Routingereignissen unterstützt wird.  Mit einem Klassenhandler kann ein bestimmtes Routingereignis auf Klassenebene behandelt werden. Der Klassenhandler wird vor den Instanzhandlern und Klasseninstanzen aufgerufen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

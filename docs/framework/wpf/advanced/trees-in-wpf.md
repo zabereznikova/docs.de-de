@@ -23,7 +23,7 @@ caps.handback.revision: 19
 # Strukturen in WPF
 In vielen Technologien sind Elemente und Komponenten in einer Baumstruktur angeordnet, in der Entwickler Objektknoten direkt bearbeiten können, um das Rendering und das Verhalten einer Anwendung zu beeinflussen.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verwendet ebenfalls verschiedene Strukturmodelle, um Beziehungen zwischen Programmelementen zu definieren.  Größtenteils können WPF\-Entwickler eine Anwendung in Code erstellen oder Teile der Anwendung in XAML definieren, während sie sich als Konzept die Objektstrukturmetapher vorstellen. Sie rufen hierfür jedoch eine bestimmte API auf oder verwenden bestimmtes Markup und verwenden keine allgemeine API für die Objektstrukturmanipulation, so wie dies in XML\-DOM der Fall wäre.  WPF macht zwei Hilfsklassen verfügbar, die eine Strukturmetaphernansicht bereitstellen: <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>.  Die Begriffe visuelle Struktur und logische Struktur werden auch in der WPF\-Dokumentation verwendet, da diese Strukturen nützlich sind, um das Verhalten bestimmter WPF\-Schlüsselfunktionen nachzuvollziehen.  In diesem Thema wird definiert, was die visuelle Struktur und die logische Struktur darstellen, es wird der Bezug dieser Strukturen zu einem allgemeinen Objektstrukturkonzept erläutert, und es werden <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s eingeführt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="element_tree"></a>   
 ## Strukturen in WPF  

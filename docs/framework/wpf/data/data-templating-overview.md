@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # &#220;bersicht &#252;ber Datenvorlagen
 Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Templating Datenmodell bietet Ihnen flexibel definieren die Darstellung Ihrer Daten. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Steuerelemente verfügen über integrierte Funktionen, um die Anpassung der Darstellung von Daten zu unterstützen. In diesem Thema veranschaulicht, wie definieren Sie zuerst eine <xref:System.Windows.DataTemplate> und führt dann andere Templating-Features, wie z. B. die Auswahl von Vorlagen, die basierend auf benutzerdefinierte Logik und die Unterstützung für die Anzeige von hierarchischen Daten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
@@ -36,7 +36,7 @@ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>Grundlagen zu Datenvorlagen  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Warum veranschaulichen <xref:System.Windows.DataTemplate> ist wichtig, betrachten wir ein Beispiel für die Daten binden. In diesem Beispiel haben wir eine <xref:System.Windows.Controls.ListBox> Bindung an eine Liste der `Task` Objekte. Jede `Task` Objekt verfügt über eine `TaskName` (Zeichenfolge), ein `Description` (Zeichenfolge), ein `Priority` (Int), und eine Eigenschaft des Typs `TaskType`, also ein `Enum` mit Werten `Home` und `Work`.  
   

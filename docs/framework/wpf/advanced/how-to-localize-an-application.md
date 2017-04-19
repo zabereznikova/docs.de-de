@@ -26,7 +26,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 > [!NOTE]
 >  Das LocBaml\-Tool ist keine einsatzfertige Anwendung.  Es wird als Beispiel präsentiert, das einen Teil der Lokalisierungs\-APIs verwendet und veranschaulicht, wie Sie ein Lokalisierungstool schreiben können.  
 >   
->  [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+>    
   
 <a name="Introduction"></a>   
 ## Übersicht  

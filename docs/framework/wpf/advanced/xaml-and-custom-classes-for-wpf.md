@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # XAML- und benutzerdefinierte Klassen f&#252;r WPF
 XAML, wie in [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Frameworks implementiert bietet die Möglichkeit, eine benutzerdefinierte Klasse oder Struktur in einer beliebigen Sprache [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] definieren und diese Klasse greift dann mithilfe des XAML\-Markups.  Sie können eine Mischung aus [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-definierten Typen und den benutzerdefinierten Typen innerhalb derselben Markupdatei verwenden, in der Regel durch die Zuordnung der benutzerdefinierten Typen zu einem XAML\-Namespace\-Präfix.  In diesem Thema werden die Anforderungen, die eine benutzerdefinierte Klasse erfüllen muss, um als XAML\-Element verwendbar sein.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## Benutzerdefinierte Klassen in Anwendungen oder Assemblys  

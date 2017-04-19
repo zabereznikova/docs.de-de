@@ -21,7 +21,7 @@ caps.handback.revision: 34
 # &#220;bersicht &#252;ber Adorner
 Adorner sind ein besonderer Typ von <xref:System.Windows.FrameworkElement>, mit denen visuelle Hinweise für einen Benutzer angezeigt werden.  Unter anderem können Adorner verwendet werden, um Elementen funktionale Handles hinzuzufügen oder Zustandsinformationen über ein Steuerelement zur Verfügung zu stellen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="about_Adorners"></a>   
 ## Informationen über Adorner  

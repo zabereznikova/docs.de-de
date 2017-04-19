@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # &#220;bersicht &#252;ber Zeichnungsobjekte
 In diesem Thema werden <xref:System.Windows.Media.Drawing>\-Objekte eingeführt. Außerdem wird gezeigt, wie mit ihnen Formen, Bitmaps, Text und Medien effizient gezeichnet werden.  Verwenden Sie <xref:System.Windows.Media.Drawing>\-Objekte, wenn Sie ClipArt erstellen, mit einem <xref:System.Windows.Media.DrawingBrush> zeichnen oder <xref:System.Windows.Media.Visual>\-Objekte verwenden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## Was ist ein Zeichnungsobjekt?  

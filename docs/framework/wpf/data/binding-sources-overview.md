@@ -23,7 +23,7 @@ caps.handback.revision: 24
 # &#220;bersicht &#252;ber Bindungsquellen
 Bei der Datenbindung verweist das [Bindungsquellenobjekt](GTMT) auf das Objekt, von dem Sie Daten abrufen.  In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="binding_sources"></a>   
 ## Typen von Bindungsquellen  

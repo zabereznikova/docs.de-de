@@ -54,7 +54,7 @@ caps.handback.revision: 16
 # WPF-Architektur
 Dieses Thema enthält eine Einführung in die Klassenhierarchie von [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  Es behandelt die meisten der wichtigsten Subsysteme von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und beschreibt deren Interaktion.  Außerdem enthält dieses Thema ausführliche Erläuterungen zu einigen Entscheidungen der Architekten von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="System_Object"></a>   
 ## System.Object  

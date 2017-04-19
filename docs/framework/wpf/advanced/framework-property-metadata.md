@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Framework-Eigenschaftenmetadaten
 Framework\-Eigenschaftenmetadaten werden für die Eigenschaften von Objektelementen berichtet, die sich auf der [WPF\-Frameworkebene](GTMT) der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Architektur befinden.  Normalerweise führt die Bezeichnung [WPF\-Frameworkebene](GTMT) dazu, dass Funktionen wie Rendering, Datenbindung und Anpassungen des Eigenschaftensystems von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Präsentations\-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] und den entsprechenden ausführbaren Dateien verarbeitet werden.  Framework\-Eigenschaftenmetadaten werden von diesen Systemen abgefragt, um funktionsspezifische Merkmale bestimmter Elementeigenschaften zu ermitteln.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

@@ -26,7 +26,7 @@ caps.handback.revision: 10
 # &#220;bersicht &#252;ber angef&#252;gte Ereignisse
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und einen Ereignistyp mit der Bezeichnung *angefügtes Ereignis*.  Das Konzept eines angefügten Ereignisses ermöglicht es, einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element hinzuzufügen, das nicht das Element sein muss, das dieses Ereignis tatsächlich definiert oder erbt.  In diesem Fall wird das Ereignis weder durch das Objekt, das das Ereignis potenziell auslöst, noch durch die behandelnde Zielinstanz definiert oder steht in keiner Weise in einem "Besitzverhältnis" dazu.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

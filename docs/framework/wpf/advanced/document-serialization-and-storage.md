@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # Serialisierung und Speicherung von Dokumenten
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] stellt eine leistungsstarke Umgebung für das Erstellen und Anzeigen qualitativ hochwertiger Dokumente bereit.  Erweiterte Features, die einheitlich dargestellte Dokumente und Flussdokumente unterstützen, und erweiterte Anzeigesteuerelemente in Kombination mit leistungsstarken 2D\- und 3D\-Grafikfunktionen heben [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]\-Anwendungen in Bezug auf Qualität und Benutzerfreundlichkeit auf ein neues Niveau.  Die Möglichkeit der flexiblen Verwaltung einer speicherinternen Darstellung eines Dokument ist ein zentrales Feature von [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], während das effiziente Speichern und Laden von Dokumenten aus einem Datenspeicher eine Anforderung bei fast allen Anwendungen ist.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als [Serialisierung](GTMT) bezeichnet.  Der umgekehrte Prozess, einen Datenspeicher zu lesen und die ursprüngliche speicherinterne Instanz neu zu erstellen, wird als Deserialisierung bezeichnet.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AboutSerialization"></a>   
 ## Informationen zur Dokumentserialisierung  

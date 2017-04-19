@@ -22,7 +22,7 @@ caps.handback.revision: 9
 # &#220;bersicht &#252;ber TextBox
 Mit der <xref:System.Windows.Controls.TextBox>\-Klasse können Sie unformatierten Text anzeigen oder bearbeiten.  <xref:System.Windows.Controls.TextBox> wird häufig verwendet, um unformatierten Text in einem Formular zu bearbeiten.  Zum Beispiel verwendet ein Formular, in dem nach dem Benutzernamen, der Telefonnummer usw. gefragt wird, <xref:System.Windows.Controls.TextBox>\-Steuerelemente für die Texteingabe.  In diesem Thema wird die <xref:System.Windows.Controls.TextBox>\-Klasse eingeführt. Außerdem sind Beispiele für ihre Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] enthalten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## TextBox oder RichTextBox?  

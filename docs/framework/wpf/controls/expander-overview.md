@@ -22,7 +22,7 @@ caps.handback.revision: 19
 # &#220;bersicht &#252;ber Expander-Steuerelemente
 Mit einem <xref:System.Windows.Controls.Expander>\-Steuerelement können Sie Inhalte in einem erweiterbaren Bereich bereitstellen, der einem Fenster ähnelt und einen Header enthält.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="CreatinganExpanderinXAML"></a>   
 ## Erstellen eines einfachen Expander\-Steuerelements  

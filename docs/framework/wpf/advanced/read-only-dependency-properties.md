@@ -22,7 +22,7 @@ caps.handback.revision: 7
 # Schreibgesch&#252;tzte Abh&#228;ngigkeitseigenschaften
 In diesem Thema werden die schreibgeschützten Abhängigkeitseigenschaften, einschließlich vorhandener schreibgeschützter Eigenschaften, sowie die Szenarien und Methoden zum Erstellen einer benutzerdefinierten, schreibgeschützten Abhängigkeitseigenschaft beschrieben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

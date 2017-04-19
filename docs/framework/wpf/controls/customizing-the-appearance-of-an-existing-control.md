@@ -36,7 +36,7 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet
  ![Schaltfläche mit einem roten Rahmen.](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet und auf der sich der Mauszeiger befindet  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # &#220;bersicht &#252;ber Menu
 Die <xref:System.Windows.Controls.Menu> -Klasse können Sie Befehle und Ereignishandler in einer hierarchischen Reihenfolge zugeordneten Elemente zu organisieren. Jede <xref:System.Windows.Controls.Menu> Element enthält eine Auflistung von <xref:System.Windows.Controls.MenuItem> Elemente.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu-Steuerelement  

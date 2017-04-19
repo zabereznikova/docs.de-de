@@ -21,7 +21,7 @@ caps.handback.revision: 42
 # Erstellen einer WPF-Anwendung (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Anwendungen können als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-EXE\-, \-DLL\-Datei oder als Kombination aus beiden Assemblytypen erstellt werden.  In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## Erstellen einer WPF\-Anwendung  

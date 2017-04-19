@@ -28,7 +28,7 @@ Die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] stellt e
 > [!NOTE]
 >  Alle in diesem Dokument aufgeführten Codebeispiele finden Sie unter [Beispiel für die erweiterte Textformatierung](http://go.microsoft.com/fwlink/?LinkID=159965).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereq"></a>   
 ## Vorbereitungsmaßnahmen  

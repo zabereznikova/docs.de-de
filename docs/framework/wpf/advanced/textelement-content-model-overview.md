@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # &#220;bersicht &#252;ber das TextElement-Inhaltsmodell
 In dieser Inhaltsmodellübersicht wird der unterstützte Inhalt für ein <xref:System.Windows.Documents.TextElement> beschrieben.  Die <xref:System.Windows.Documents.Paragraph>\-Klasse ist ein Typ von <xref:System.Windows.Documents.TextElement>.  Ein Inhaltsmodell beschreibt, welche Objekte\/Elemente in anderen enthalten sein können.  In dieser Übersicht wird das Inhaltsmodell zusammengefasst, das für von <xref:System.Windows.Documents.TextElement> abgeleitete Objekte verwendet wird.  Weitere Informationen finden Sie unter [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_element_classes"></a>   
 ## Inhaltsmodelldiagramm  

@@ -24,7 +24,7 @@ caps.handback.revision: 13
 # Zeichnen von formatiertem Text
 Dieses Thema enthält eine Übersicht über die Features des <xref:System.Windows.Media.FormattedText>\-Objekts.  Dieses Objekt bietet eine Steuerung auf niedriger Ebene zum Zeichnen von Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="technology_overview"></a>   
 ## Übersicht über die Technologie  

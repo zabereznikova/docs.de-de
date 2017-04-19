@@ -22,7 +22,7 @@ caps.handback.revision: 33
 # &#220;bersicht &#252;ber Popups
 Das <xref:System.Windows.Controls.Primitives.Popup>\-Steuerelement bietet eine Möglichkeit, Inhalt in einem separaten Fenster auszugeben, das in Relation zu den festgelegten Element\- oder Bildschirmkoordinaten unverankert über anderen Fenstern der Anwendung angezeigt wird.  In diesem Thema wird das <xref:System.Windows.Controls.Primitives.Popup>\-Steuerelement vorgestellt sowie dessen Verwendung veranschaulicht.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="What_Is_a_Popup_"></a>   
 ## Was ist ein Popup?  

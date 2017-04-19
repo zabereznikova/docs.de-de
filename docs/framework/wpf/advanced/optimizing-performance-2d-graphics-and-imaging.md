@@ -26,7 +26,7 @@ caps.handback.revision: 7
 # Optimieren der Leistung: 2D-Grafiken und Bildverarbeitung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zahlreiche Funktionen für 2D\-Grafiken und Bildverarbeitung zur Verfügung, die den Anforderungen Ihrer Anwendung entsprechend optimiert werden können.  Dieses Thema enthält Informationen über die Leistungsoptimierung in diesen Bereichen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drawing_and_Shapes"></a>   
 ## Zeichnen und Formen  

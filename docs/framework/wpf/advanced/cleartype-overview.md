@@ -22,7 +22,7 @@ caps.handback.revision: 12
 # &#220;bersicht &#252;ber ClearType
 Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]\-Technologie im [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## Übersicht über die Technologie  

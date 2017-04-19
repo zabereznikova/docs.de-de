@@ -43,7 +43,7 @@ caps.handback.revision: 65
 > [!NOTE]
 >  In diesem Thema bezieht sich der Begriff "Browser" lediglich auf Browser, die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen hosten können. Gegenwärtig zählen [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] und Firefox zu diesen Browsern.  Die Browserversion wird angegeben, wenn spezielle [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Features nur von einem bestimmten Browser unterstützt werden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAMLBrowserApplications"></a>   
 ## Navigation in WPF\-Anwendungen  

@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  Dieses Thema führt Sie durch eine Anwendung, [Beispiel für das Hosten eines Win32\-Listenfeld\-Steuerelements in Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkID=159998), die ein [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Listenfeldsteuerelement hostet.  Dieses allgemeine Verfahren kann für das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster erweitert werden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Anforderungen  

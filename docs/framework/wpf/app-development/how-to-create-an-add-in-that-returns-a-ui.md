@@ -36,7 +36,7 @@ Dieses Beispiel zeigt, wie Sie ein Add\-In erstellen, das eine [!INCLUDE[TLA#tla
 ## Beispiel  
  Zum Erstellen eines Add\-Ins, das eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zurückgibt, ist spezieller Code für die einzelnen Pipelinesegmente, das Add\-In und die Hostanwendung erforderlich.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## Implementieren des Vertragspipelinesegments  

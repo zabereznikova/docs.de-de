@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Abh&#228;ngigkeitseigenschaften vom Auflistungstyp
 In diesem Thema finden Sie Unterstützung und Mustervorschläge für das Implementieren einer [Abhängigkeitseigenschaft](GTMT), wenn die Eigenschaft zum Auflistungstyp gehört.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## Implementieren einer Abhängigkeitseigenschaft vom Auflistungstyp  

@@ -35,7 +35,7 @@ caps.handback.revision: 33
   
  Darüber hinaus ist es wichtig zu verstehen, Ressourcen, die Stile und Vorlagen für die Wiederverwendung ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Erstellen von Formaten und Beispiel  

@@ -27,7 +27,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 > [!NOTE]
 >  Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft.  Lizenzen, die die Verwendung von Schriftarten steuern, sind von Anbieter zu Anbieter unterschiedlich. Im Allgemeinen lassen es die meisten Lizenzen, darunter auch die für die von [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] in Anwendungen und [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] bereitgestellten Schriftarten, nicht zu, dass die Schriftarten in Anwendungen eingebettet oder anders verbreitet werden.  Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anders verteilen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## Einführung in das Verpacken von Schriftarten  

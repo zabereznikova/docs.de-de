@@ -35,7 +35,7 @@ caps.handback.revision: 20
   
  Um diesen Anwendungssatz zu erstellen, implementiert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eine Reihe von Diensten.  Dieses Thema bietet eine Übersicht über diese Dienste sowie Verweise auf weitere Informationen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Application_Management"></a>   
 ## Anwendungsverwaltung  

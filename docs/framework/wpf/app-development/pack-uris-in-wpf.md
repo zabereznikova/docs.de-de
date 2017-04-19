@@ -46,7 +46,7 @@ In [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] werden [!
   
  Um einen einheitlichen Mechanismus zum Identifizieren und Laden dieser Dateitypen von den Speicherorten bieten zu können, nutzt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] die Erweiterbarkeit des *Paket\-URI\-Schemas*.  In diesem Thema erhalten Sie eine Übersicht über das Schema, und Sie erfahren, wie Sie Paket\-[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] für verschiedene Szenarien erstellen. Außerdem werden absolute und relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] und [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]\-Auflösung behandelt. Anschließend wird gezeigt, wie Sie Paket\-[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] im Markup und im Code verwenden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="The_Pack_URI_Scheme"></a>   
 ## Das Paket\-URI\-Schema  

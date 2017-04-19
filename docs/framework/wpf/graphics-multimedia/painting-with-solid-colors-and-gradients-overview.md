@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # &#220;bersicht &#252;ber das Zeichnen mit Volltonfarben und Farbverl&#228;ufen
 In diesem Thema wird beschrieben, wie die Objekte <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush> verwendet werden, um mit Volltonfarben, linearen Farbverläufen und radialen Farbverläufen zu zeichnen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## Zeichnen eines Bereichs mit einer Volltonfarbe  

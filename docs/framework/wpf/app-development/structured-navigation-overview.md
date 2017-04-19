@@ -25,7 +25,7 @@ Der von einer [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.m
   
  Die <xref:System.Windows.Controls.Page>\-Klasse implementiert keine Unterstützung für die strukturierte Navigation.  Stattdessen wird die <xref:System.Windows.Navigation.PageFunction%601>\-Klasse von <xref:System.Windows.Controls.Page> abgeleitet und erweitert diese um die grundlegenden Konstrukte für die strukturierte Navigation.  In diesem Thema wird gezeigt, wie Sie mithilfe von <xref:System.Windows.Navigation.PageFunction%601> die strukturierte Navigation einrichten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## Strukturierte Navigation  

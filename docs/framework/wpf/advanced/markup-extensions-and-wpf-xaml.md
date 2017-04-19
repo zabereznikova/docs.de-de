@@ -35,7 +35,7 @@ caps.handback.revision: 23
 # Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung in das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zwecks und des zugrunde liegenden Klassenobjektmodells.  Markuperweiterungen sind eine allgemeine Funktion der XAML\-Sprache und der .NET\-Implementierung von XAML\-Diensten.  In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF\-XAML beschrieben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## XAML\-Prozessoren und Markuperweiterungen  

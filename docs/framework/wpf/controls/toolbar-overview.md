@@ -22,7 +22,7 @@ caps.handback.revision: 27
 # &#220;bersicht &#252;berToolBar
 <xref:System.Windows.Controls.ToolBar>\-Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel verwandte Funktionen aufweisen.  Eine <xref:System.Windows.Controls.ToolBar> enthält normalerweise Schaltflächen, die Befehle aufrufen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="ToolBarControl"></a>   
 ## ToolBar\-Steuerelement  

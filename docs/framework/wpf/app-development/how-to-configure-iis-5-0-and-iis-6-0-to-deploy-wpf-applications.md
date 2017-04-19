@@ -32,7 +32,7 @@ Sie können eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
   
  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] und [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] zum Bereitstellen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen konfigurieren.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 > [!NOTE]
 >  Sie können die *UserAgent*\-Zeichenfolge in der Registrierung überprüfen, um zu ermitteln, ob auf einem System [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist.  Ausführliche Informationen und ein Skript, das die *UserAgent*\-Zeichenfolge überprüft, um zu ermitteln, ob auf einem System [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installiert ist, finden Sie unter [Erkennen einer .NET Framework 3.0\-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  

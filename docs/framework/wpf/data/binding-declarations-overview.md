@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # &#220;bersicht &#252;ber Bindungsdeklarationen
 In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bindung erläutert.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## Vorbereitungsmaßnahmen  

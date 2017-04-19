@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # &#220;bersicht &#252;ber Abh&#228;ngigkeitseigenschaften
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt einen Satz von Diensten bereit, mit denen die Funktionalität einer [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Eigenschaft erweitert werden kann.  Zusammen werden diese Dienste normalerweise als [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Eigenschaftensystem bezeichnet.  Eine Eigenschaft, die vom [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Eigenschaftensystem unterstützt wird, wird als [Abhängigkeitseigenschaft](GTMT) bezeichnet. In dieser Übersicht werden das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Eigenschaftensystem und die Funktionen einer [Abhängigkeitseigenschaft](GTMT) beschrieben. Dies beinhaltet auch die Verwendung vorhandener [Abhängigkeitseigenschaften](GTMT) in XAML und Code.  Außerdem werden spezielle Aspekte von Abhängigkeitseigenschaften behandelt, z. B. Abhängigkeitseigenschaft\-Metadaten, sowie die Erstellung Ihrer eigenen Abhängigkeitseigenschaft ein einer benutzerdefinierten Klasse.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

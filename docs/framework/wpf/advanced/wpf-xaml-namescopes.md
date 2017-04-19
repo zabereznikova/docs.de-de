@@ -32,7 +32,7 @@ caps.handback.revision: 18
 # WPF-XAML-Namescopes
 XAML\-Namensbereiche sind ein Konzept zum Identifizieren von Objekten, die in XAML definiert sind.  Die Namen in einem XAML\-Namensbereich können verwendet werden, um Beziehungen zwischen den in XAML definierten Namen von Objekten und ihren Instanzentsprechungen in einer Objektstruktur herzustellen.  In der Regel werden XAML\-Namensbereiche in verwaltetem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Code beim Laden der einzelnen XAML\-Seitenstämme für eine XAML\-Anwendung erstellt.  XAML\-Namescopes als Programmierobjekte werden von der <xref:System.Windows.Markup.INameScope>\-Schnittstelle definiert und zudem von der praktischen Klasse <xref:System.Windows.NameScope> implementiert.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## Namescopes in geladenen XAML\-Anwendungen  

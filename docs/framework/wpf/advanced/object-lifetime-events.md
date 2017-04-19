@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # Objektlebensdauer-Ereignisse
 In diesem Thema werden die spezifischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Ereignisse beschrieben, die die Phasen einer Objektlebensdauer darstellen \(Erstellung, Verwendung und Zerstörung\).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # Vererbung von Eigenschaftswerten
 Das Vererben von Eigenschaftswerten ist ein Feature des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Eigenschaftensystems.  Die Vererbung von Eigenschaftswerten ermöglicht untergeordneten Elementen in einer Elementstruktur, den Wert einer bestimmten Eigenschaft von übergeordneten Elementen so zu übernehmen, wie er im nächsten übergeordneten Element festgelegt wurde.  Das übergeordnete Element hat seinen Wert möglicherweise ebenfalls über die Vererbung des Eigenschaftswerts erhalten, sodass das System bis auf den Seitenstamm zurückgeführt werden kann.  Die Vererbung von Eigenschaftswerten stellt nicht das standardmäßige Verhalten des Eigenschaftensystems dar; eine Eigenschaft muss mit einer bestimmten Metadateneinstellung erstellt worden sein, damit dieses Element die Vererbung von Eigenschaftswerten für untergeordnete Elemente veranlassen kann.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## Vererbung von Eigenschaftswerten ist Kapselungsvererbung  

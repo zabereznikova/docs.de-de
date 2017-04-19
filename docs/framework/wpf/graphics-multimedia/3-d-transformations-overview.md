@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # &#220;bersicht &#252;ber 3D-Transformationen
 In diesem Thema wird beschrieben, wie Transformationen für 3D\-Modelle im [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Grafiksystem angewendet werden.  Mithilfe von Transformationen können Entwickler Modelle neu positionieren, ihre Größe ändern und sie neu ausrichten, ohne die Basiswerte zu ändern, die sie definieren.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 3D\-Koordinatenraum  
  3D\-Grafikinhalte in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] werden in einem Element gekapselt, <xref:System.Windows.Controls.Viewport3D>, das an der zweidimensionalen Elementstruktur beteiligt sein kann.  Das Grafiksystem behandelt Viewport3D in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wie viele andere Elemente als zweidimensionales visuelles Element.  Viewport3D funktioniert als Fenster \(Viewport\) in eine dreidimensionale Szene.  Genauer gesagt handelt es sich um eine Oberfläche, auf die eine 3D\-Szene projiziert wird.  Auch wenn Sie Viewport3D mit anderen 2D\-Zeichnungsobjekten in demselben Szenendiagramm verwenden können, dürfen sich 2D\- und 3D\-Objekte in einem Viewport3D nicht überschneiden.  In der folgenden Erläuterung ist der beschriebene Koordinatenraum im Viewport3D\-Element enthalten.  

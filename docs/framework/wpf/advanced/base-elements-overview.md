@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # &#220;bersicht &#252;ber Basiselemente
 Ein sehr großer Teil der Klassen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist von vier Klassen abgeleitet, die im Allgemeinen in der [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]\-Dokumentation als Basiselementklassen bezeichnet werden.  Diese Klassen sind <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement> und <xref:System.Windows.FrameworkContentElement>.  Die <xref:System.Windows.DependencyObject>\-Klasse ist ebenfalls in diesem Zusammenhang zu sehen, da es sich dabei um eine allgemeine Basisklasse von <xref:System.Windows.UIElement> und von <xref:System.Windows.ContentElement> handelt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## Basiselement\-APIs in WPF\-Klassen  

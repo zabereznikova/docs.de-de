@@ -28,7 +28,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  In diesem Thema werden zunächst die grundlegenden Konzepte der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Datenbindung erläutert, und anschließend wird auf die Verwendung der <xref:System.Windows.Data.Binding>\-Klasse und anderer Datenbindungsfunktionen eingegangen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_data_binding"></a>   
 ## Was ist Datenbindung?  
@@ -64,7 +64,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 <a name="basic_data_binding_concepts"></a>   
 ## Grundlegende Konzepte zur Datenbindung  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Unabhängig davon, was für ein Element Sie binden und welcher Art die Datenquelle ist, geschieht die Bindung immer nach dem in der folgenden Abbildung gezeigten Modell:  
   
@@ -128,7 +128,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 <a name="creating_a_binding"></a>   
 ## Erstellen einer Bindung  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Um nochmals auf die in den vorigen Abschnitten vorgestellten Konzepte einzugehen, richten Sie mithilfe des <xref:System.Windows.Data.Binding>\-Objekts eine Bindung ein. Bindungen bestehen in der Regel aus vier Komponenten: Bindungsziel, Zieleigenschaft, Bindungsquelle sowie ein Pfad zum Quellwert, der verwendet werden soll.  In diesem Abschnitt wird das Einrichten einer Bindung erläutert.  
   
@@ -220,7 +220,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 <a name="binding_to_collections"></a>   
 ## Binden an Auflistungen  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Ein Bindungsquellobjekt kann als einzelnes Objekt behandelt werden, dessen Eigenschaften Daten enthalten, oder als eine Datenauflistung von polymorphen Objekten, die häufig zusammen gruppiert werden \(beispielsweise als Ergebnis einer Datenbankabfrage\).  Bisher wurde nur das Binden an einzelne Objekte behandelt, aber auch das Binden an eine Datenauflistung ist ein gängiges Szenario.  So besteht ein häufiges Szenario darin, ein <xref:System.Windows.Controls.ItemsControl> wie <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView> oder <xref:System.Windows.Controls.TreeView> zu verwenden, um eine Datenauflistung anzuzeigen. Ein Beispiel finden Sie in der Anwendung, die im Abschnitt [Was ist Datenbindung?](#what_is_data_binding) verwendet wird.  
   
@@ -242,7 +242,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ### Auflistungsansichten  
  Nachdem <xref:System.Windows.Controls.ItemsControl> an eine Datenauflistung gebunden wurde, können Sie die Daten sortieren, filtern oder gruppieren.  Hierzu verwenden Sie Auflistungsansichten, bei denen es sich um Klassen handelt, die die <xref:System.ComponentModel.ICollectionView>\-Schnittstelle implementieren.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_are_collection_views"></a>   
 #### Was sind Auflistungsansichten?  
@@ -369,7 +369,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 <a name="data_validation"></a>   
 ## Datenvalidierung  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Die meisten Anwendungen, bei denen Benutzereingaben erfolgen, benötigen Validierungslogik, um sicherzustellen, dass der Benutzer die erwarteten Informationen eingegeben hat.  Die Validierungsüberprüfungen können auf Typ, Bereich, Format oder anderen anwendungsspezifischen Anforderungen basieren.  In diesem Abschnitt wird erklärt, wie Datenvalidierung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funktioniert.  
   

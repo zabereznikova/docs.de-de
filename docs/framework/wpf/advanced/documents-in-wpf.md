@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # Dokumente in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enthält eine Vielzahl von Dokumentfeatures, anhand derer hochwertige Inhalte erstellt werden können, auf die im Vergleich zu vorherigen Generationen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] leichter zugegriffen werden kann, bzw. die einfacher gelesen werden können.  Außer einer verbesserten Leistungsfähigkeit und Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für die Dokumentenanzeige, das Packen und für die Sicherheit.  Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Dokumenttypen und in das Packen von Dokumenten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="types_of_documents"></a>   
 ## Dokumenttypen  

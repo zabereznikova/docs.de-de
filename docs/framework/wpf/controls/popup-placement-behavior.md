@@ -27,7 +27,7 @@ Ein <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zeigt den Inh
 > [!NOTE]
 >  Die <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ContextMenu> Klassen auch definieren diese fünf Eigenschaften und Verhalten sich ähnlich.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>Positionieren von Popups  

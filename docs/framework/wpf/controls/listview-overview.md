@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # &#220;bersicht &#252;ber ListView
 Das <xref:System.Windows.Controls.ListView>\-Steuerelement stellt die Infrastruktur zum Anzeigen eines Satzes von Datenelementen in verschiedenen Layouts oder Ansichten bereit.  Dies ist beispielsweise hilfreich, um Datenelemente in einer Tabelle anzuzeigen und Spalten zu sortieren.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="WhatisaListView"></a>   
 ## Was ist eine ListView?  

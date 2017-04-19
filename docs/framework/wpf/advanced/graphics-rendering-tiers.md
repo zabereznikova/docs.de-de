@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # Renderingebenen f&#252;r Grafiken
 Eine Renderingebene definiert den Umfang der Funktionen und Leistung der Grafikhardware für ein Gerät, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung ausgeführt wird.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## Grafikhardware  

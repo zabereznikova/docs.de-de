@@ -31,7 +31,7 @@ caps.handback.revision: 29
 > [!NOTE]
 >  Es wird dringend davon abgeraten, WPF\-Typen in einem Windows\-Dienst zu verwenden.  Wenn Sie versuchen, WPF\-Typen in einem Windows\-Dienst zu verwenden, funktioniert der Dienst möglicherweise nicht wie erwartet.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## Neue Grafik\- und Multimediafunktionen in WPF 4  

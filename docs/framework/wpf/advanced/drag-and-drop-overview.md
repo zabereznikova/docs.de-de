@@ -26,7 +26,7 @@ caps.handback.revision: 30
 # &#220;bersicht &#252;ber Drag&#160;&amp;&#160;Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop\-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen.  Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus \(oder eines anderen Zeigegeräts\) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drag_and_Drop_Support"></a>   
 ## Drag & Drop\-Unterstützung in WPF  

@@ -22,7 +22,7 @@ caps.handback.revision: 41
 # Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene.  Der Treffertest ermöglicht Ihnen, zu bestimmen, ob ein Geometrie\- oder Punktwert im Bereich des gerenderten Inhalts eines <xref:System.Windows.Media.Visual> liegt, und erlaubt Ihnen die Implementierung von Benutzeroberflächenverhalten wie einem Positionierungsrechteck zum Auswählen mehrerer Objekte.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="hit_testing_scenarios"></a>   
 ## Treffertestszenarien  

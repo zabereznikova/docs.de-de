@@ -24,7 +24,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  Dieses Thema enthält Empfehlungen zur Leistungssteigerung bei der Datenbindung.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## Auflösen von Datenbindungsverweisen  

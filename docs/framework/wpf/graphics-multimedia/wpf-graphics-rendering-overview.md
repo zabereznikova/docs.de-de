@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # &#220;bersicht &#252;ber das WPF-Grafikrendering
 Dieses Thema enthält eine Übersicht über die visuelle Ebene von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Der Schwerpunkt liegt dabei auf der Rolle der <xref:System.Windows.Media.Visual>\-Klasse für die Renderingunterstützung im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Modell.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## Rolle des visuellen Objekts  

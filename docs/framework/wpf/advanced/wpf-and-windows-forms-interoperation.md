@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  Besondere Beachtung findet das Szenario *hybrider Steuerelemente*.  Bei einem hybriden Steuerelement ist ein Steuerelement einer Technologie in einem Steuerelement der anderen Technologie geschachtelt.  Dies wird auch als *geschachtelte Interoperation* bezeichnet.  Ein *hybrides Steuerelement mit mehreren Ebenen* verfügt über mehrere Schachtelungsebenen hybrider Steuerelemente.  Ein Beispiel für eine geschachtelte Interoperation mit mehreren Ebenen ist ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement, das ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelement enthält, das wiederum ein anderes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement enthält.  Hybride Steuerelemente mit mehreren Ebenen werden nicht unterstützt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## Hosten von Windows Forms\-Steuerelementen in WPF  
