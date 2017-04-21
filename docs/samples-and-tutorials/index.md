@@ -1,95 +1,92 @@
 ---
-title: Beispiele und Lernprogramme
-description: Beispiele und Lernprogramme
-keywords: .NET
+title: Beispiele und Tutorials
+description: "Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen."
+keywords: .NET, .NET Core, ASP.NET, C#, sample, tutorial
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/25/2016
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: e9d2ecc6da01a394ab794032f5bd42840311edec
-ms.lasthandoff: 04/10/2017
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
+ms.lasthandoff: 04/12/2017
 
 ---
 
-# <a name="samples-and-tutorials"></a>Beispiele und Lernprogramme
+# <a name="samples-and-tutorials"></a>Beispiele und Tutorials
 
-Es gibt einen umfassenden Katalog an Beispielen und Tutorials, in denen Sie mehr über .NET erfahren können. In diesem Artikel geht es um Beispiele und Tutorials für .NET Core und die Sprache C#.
+Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](http://fsharp.org/learn.html). Wenn Sie C# mit einem Online-Code-Editor erkunden möchten, sehen Sie sich diese [interaktiven Tutorials](http://go.microsoft.com/fwlink/p/?LinkId=817234) an. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
 
-Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](http://fsharp.org/learn.html). 
-
-Ressourcen zum Erlernen von ASP.NET Core finden Sie auf der [Website von ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
-
-Wenn Sie C# in einer Onlinetestumgebung erkunden möchten, sehen Sie sich diese [interaktiven Tutorials](http://go.microsoft.com/fwlink/?LinkId=817234) an.
-
-## <a name="general"></a>Allgemein
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>Proben
 
 **[Komponententests in .NET Core mit „dotnet test“](../core/testing/unit-testing-with-dotnet-test.md)**
 
-Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehörigen Unittests erstellen. Zuerst wird eine einfache Webdienstanwendung erstellt, danach werden Tests hinzugefügt, und im weiteren Verlauf werden weitere Tests erstellt, um die Implementierung neuer Features zu unterstützen. Der vollständige Code steht im [docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) zur Verfügung.
+Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehörigen Komponententests erstellen. Zu Beginn des Leitfadens erstellen Sie eine einfache Webdienst-App und fügen dann Tests hinzu. Anschließend erstellen Sie weitere Tests für die Implementierung neuer Funktionen. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) finden Sie im dotnet/docs-Repository auf GitHub.
 
 ### <a name="tutorials"></a>Lernprogramme
 
 **[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: erweiterte Schritt-für-Schritt-Anleitung](../core/tutorials/using-with-xplat-cli.md)**
 
-In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können.  Dabei wird mit einer ganz einfachen Konsolen-App begonnen, die immer mehr erweitert wird und sich über mehrere Projekte einschließlich Tests erstreckt. Die einzelnen Features werden schrittweise hinzugefügt, wobei die einzelnen Schritte aufeinander aufbauen. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/core/console-apps).
+In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können. Dabei beginnen Sie mit einer einfachen Konsolen-App, die immer mehr erweitert wird und sich schließlich über mehrere Projekte mit zugehörigen Tests erstreckt. Sie fügen nach und nach Funktionen hinzu und erweitern so Ihre Kenntnisse. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Schreiben von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)**
 
-Dieses Beispiel erläutert, wie Sie mithilfe von plattformübergreifenden Befehlszeilenschnittstellentools Bibliotheken für .NET schreiben.  Die Bibliotheken bieten effiziente Funktionalität auf niedriger Ebene, die unter allen unterstützten Betriebssystemen funktioniert.
-Der vollständige Code steht im [docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) zur Verfügung.
+Dieses Beispiel erläutert, wie Sie mithilfe von plattformübergreifenden Befehlszeilenschnittstellentools Bibliotheken für .NET schreiben. Diese Tools ermöglichen eine effiziente Bedienung auf niedriger Ebene, die unter allen unterstützten Betriebssystemen funktioniert. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) finden Sie im dotnet/docs-Repository auf GitHub.
 
-## <a name="c-language"></a>Die Programmiersprache C#
+## <a name="aspnet-core"></a>ASP.NET Core
+
+Informationen hierzu finden Sie in den [ASP.NET Core-Tutorials](https://docs.microsoft.com/aspnet/core/tutorials/). Viele Artikel in der ASP.NET Core-Dokumentation enthalten Links zu Beispielen, die für diese Artikel geschrieben wurden.
+
+## <a name="c-language"></a>C#-Sprache
 
 ### <a name="samples"></a>Proben
 
 **[Iteratoren](../csharp/iterators.md)**
 
-Dieses Beispiel veranschaulicht die Syntax und die Funktionen zum Erstellen und Verwenden von C#-Iteratoren. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators).
+Dieses Beispiel veranschaulicht die Syntax und die Funktionen zum Erstellen und Verwenden von C#-Iteratoren. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Indexer](../csharp/indexers.md)**
 
-Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Indexer. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers).
+Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Indexer. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Delegaten und Ereignisse](../csharp/delegates-events.md)**
 
-Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Delegaten und -Ereignisse. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events). Im [gleichen Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/events) finden Sie ein zweites Beispiel, bei dem es hauptsächlich um Ereignisse geht.
+Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Delegaten und -Ereignisse. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) finden Sie im dotnet/docs-Repository auf GitHub. Im gleichen Repository finden Sie ein [zweites Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/events), bei dem es hauptsächlich um Ereignisse geht.
 
 **[Expression Trees](../csharp/expression-trees.md)**
 
-Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksbaumstrukturen gelöst werden können. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).
+Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksbaumstrukturen gelöst werden können. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **LINQ-Beispiele**
 
-Diese Beispielserie veranschaulicht viele der Funktionen von LINQ.  Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp).
+Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated Query (sprachintegrierte Abfrage, LINQ). Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) finden Sie im dotnet/docs-Repository auf GitHub.
 
 ### <a name="tutorials"></a>Lernprogramme
 
 **[Konsolenanwendung](../csharp/tutorials/console-teleprompter.md)**
 
-Dieses Tutorial veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter).
+Dieses Tutorial veranschaulicht die Konsolen-E/A, die Struktur einer Konsolen-App und die Grundlagen des taskbasierten asynchronen Programmiermodells. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[REST-Client](../csharp/tutorials/console-webapiclient.md)**
 
-Dieses Tutorial veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Dieses Tutorial veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Arbeiten mit LINQ](../csharp/tutorials/working-with-linq.md)**
 
-Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq).
+Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[In Docker gehostete Microservices](../csharp/tutorials/microservices.md)**
 
-Dieses Tutorial veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
+Dieses Tutorial veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs.md)**
 
-Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolenanwendung erstellen.
+Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolen-App erstellen.
 
 **[Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
@@ -99,9 +96,24 @@ In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmap
 
 **[Ausführen von ASP.NET-MVC-Anwendungen in Windows-Docker-Containern](../framework/docker/aspnetmvc.md)**
 
-Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-Anwendung in einem Windows-Docker-Container.
-Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator).
+Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-App in einem Windows-Docker-Container. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub.
 
 **[Ausführen von .NET Framework-Konsolenanwendungen in Windows-Containern](../framework/docker/console.md)**
 
-Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen Konsolenanwendung in einem Windows-Container. Eine vollständige Version des Codes, den Sie erstellen, finden Sie [im docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen Konsolen-App in einem Windows-Container. Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub.
+
+## <a name="viewing-and-downloading-samples"></a>Anzeigen und Herunterladen von Beispielen
+
+Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterladen in GitHub zur Verfügung stehen. Um ein Beispiel anzuzeigen, folgen Sie einfach dem Beispiel-Link. Um den Code herunterzuladen, gehen Sie folgendermaßen vor:
+
+1. Laden Sie mit einem der folgenden Verfahren das Repository herunter, das den Beispielcode enthält:
+   * Laden Sie ein ZIP-Archiv des Repositorys auf Ihr lokales System herunter. Entzippen Sie das komprimierte Archiv.
+   * [Verzweigen](https://help.github.com/articles/fork-a-repo/) Sie das Repository, und [klonen](https://help.github.com/articles/cloning-a-repository/) Sie die Verzweigung in Ihrem lokalen System. Durch Verzweigen und Klonen können Sie zur Dokumentation beitragen, indem Sie Änderungen an Ihrer Verzweigung vornehmen und dann eine Pullanforderung für das offizielle Dokumentrepository erstellen. Weitere Informationen finden Sie im [Leitfaden für Beiträge zur .NET-Dokumentation](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) und im [Leitfaden für Beiträge zur ASP.NET-Dokumentation](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * Klonen Sie das Repository lokal. Wenn Sie ein Dokumentrepository direkt auf Ihrem lokalen System klonen, können Sie Änderungen nicht direkt im offiziellen Repository vornehmen und daher später auch keine Beiträge zur Dokumentation erstellen. Verwenden Sie das oben beschriebene Verfahren zum Verzweigen und Klonen, wenn Sie sich die Möglichkeit vorbehalten möchten, später zur Dokumentation beizutragen.
+1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
+1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:
+   * Verwenden der [dotnet-Befehlszeilentools](../core/tools/index.md): Navigieren Sie in einem Konsolenfenster zum Ordner des Beispiels, und verwenden Sie die dotnet-Befehlszeilentools.
+   * Verwenden von [Visual Studio](https://www.visualstudio.com/) oder [Visual Studio für Mac](https://www.visualstudio.com/vs/visual-studio-mac/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*.csproj* oder *.fsproj*).
+   * Verwenden von[Visual Studio Code](https://code.visualstudio.com/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Ordner öffnen** auswählen und dann den Projektordner des Beispiels auswählen.
+   * Verwenden Sie eine andere IDE, die .NET Core-Projekte unterstützt.
+
