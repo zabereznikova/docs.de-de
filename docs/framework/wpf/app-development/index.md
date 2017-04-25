@@ -39,11 +39,7 @@ ms.lasthandoff: 04/08/2017
   
  Um diesen Anwendungssatz zu erstellen, implementiert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eine Reihe von Diensten. Dieses Thema bietet eine Übersicht über diese Dienste sowie Verweise auf weitere Informationen.  
   
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 6244ff8... remove empty token
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Anwendungsverwaltung  

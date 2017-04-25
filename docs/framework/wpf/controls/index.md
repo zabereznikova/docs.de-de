@@ -25,11 +25,7 @@ ms.lasthandoff: 04/08/2017
 # <a name="controls"></a>Steuerelemente
 <a name="introduction"></a> Im Lieferumfang von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sind viele der üblichen Komponenten der Benutzeroberfläche enthalten, die in fast jeder Windows-Anwendung verwendet werden, wie z.B. <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu> und <xref:System.Windows.Controls.ListBox>. In der Vergangenheit wurden diese Objekte als Steuerelemente bezeichnet. Während im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-SDK weiterhin der Begriff „Steuerelement“ für jede Klasse verwendet wird, die ein sichtbares Objekt in einer Anwendung repräsentiert, ist es wichtig zu beachten, dass eine Klasse nicht notwendigerweise von der <xref:System.Windows.Controls.Control>-Klasse erben muss, um eine sichtbare Präsenz zu haben. Klassen, die von der <xref:System.Windows.Controls.Control>-Klasse erben, enthalten ein <xref:System.Windows.Controls.ControlTemplate>-Objekt, das es dem Benutzer eines Steuerelements ermöglicht, die Darstellung des Steuerelements radikal zu ändern, ohne eine neue Unterklasse erstellen zu müssen.  In diesem Thema wird erläutert, wie Steuerelemente (sowohl die, die von der <xref:System.Windows.Controls.Control>-Klasse erben, als auch die, die nicht von ihr erben) gewöhnlich in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet werden.  
   
-<<<<<<< HEAD
  
-=======
-   
->>>>>>> 6244ff8... remove empty token
   
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Erstellen einer Instanz eines Steuerelements  
