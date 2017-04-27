@@ -24,9 +24,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: cd8012c393050091b801bbe10e53d0c910ca2620
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: a1914325966fc1b65cf4677328a165fbe1e0f776
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="security-in-the-net-framework"></a>Sicherheit in .NET Framework
@@ -51,9 +51,10 @@ Die Common Language Runtime und .NET Framework stellen zahlreiche nützliche Kl
  [Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
  Beschreibt einige bewährte Methoden und Sicherheitsaspekte für das Aufrufen von nicht verwaltetem Code.  
   
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)  
  Beschreibt, wie Sie die anspruchsbasierte Identität in Anwendungen implementieren können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
  Enthält eine Richtlinie für alle wichtigen technologischen Bereiche und Aufgaben für die Anwendungsentwicklung, einschließlich Erstellen, Konfigurieren, Debuggen, Sichern und Bereitstellen der Anwendung, sowie Informationen über dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.
+

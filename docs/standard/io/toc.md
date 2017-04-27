@@ -1,4 +1,4 @@
-# [Datei- und Stream-E/A](file-and-stream-i-o.md)
+# [Datei- und Stream-E/A](index.md)
 ## [Allgemeine E/A-Aufgaben](common-i-o-tasks.md)
 ### [Gewusst wie: Kopieren von Verzeichnissen](how-to-copy-directories.md)
 ### [Gewusst wie: Auflisten von Verzeichnissen und Dateien](how-to-enumerate-directories-and-files.md)
