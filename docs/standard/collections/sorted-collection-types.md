@@ -1,60 +1,62 @@
 ---
-title: Sortierte Auflistungstypen
-description: Sortierte Auflistungstypen
-keywords: .NET, .NET Core
+title: Sortierte Sammlungstypen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SortedDictionary collection type
+- SortedList class, grouping data in collections
+- grouping data in collections, SortedList collection type
+- SortedList collection type
+- collections [.NET Framework], SortedList collection type
+ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
+caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: bdc9c13e-e56a-433b-a293-c92364f6e9cb
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 28d5024f759b3a7474aef1fa344d39f9933b6322
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2ac1552dba8756d033ee02651142476c4a15a485
+ms.lasthandoff: 04/18/2017
 
 ---
-
-# <a name="sorted-collection-types"></a>Sortierte Auflistungstypen  
- 
- Die Klasse [System.Collections.SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList), die generische Klasse [System.Collections.Generic.SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) und die generische Klasse [System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) ähneln der [Hashtable](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable)-Klasse und der generischen Klasse [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) insofern, als dass sie die [IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)-Schnittstelle implementieren. Sie verwalten jedoch ihre Elemente in der Sortierreihenfolge nach Schlüssel, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaft von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
-
- *   Alle drei Klassen implementieren die [System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)-Schnittstelle. Die beiden generischen Klassen implementieren außerdem die generische Schnittstelle [System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2).  
- 
- *   Jedes Element ist ein Schlüssel-Wert-Paar zu Enumerationszwecken.   
+# <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
+Die Klasse <xref:System.Collections.SortedList?displayProperty=fullName>, die generische Klasse <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> und die generische Klasse <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> ähneln der generischen Klasse <xref:System.Collections.Hashtable> und der generischen Klasse <xref:System.Collections.Generic.Dictionary%602> insofern, als sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren, sie behalten jedoch die Sortierreihenfolge ihrer Elemente nach Schlüssel bei und weisen nicht die O(1)-Einfüge- und Entnahmemerkmale von Hashtabellen auf. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
   
-> [!NOTE]  
-> Die nicht generische [SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList)-Klasse gibt bei der Enumeration [DictionaryEntry](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryEntry)-Objekte zurück, obwohl die beiden generischen Typen [KeyValuePair&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.KeyValuePair-2)-Objekte zurückgeben.  
-   
-*   Elemente werden entsprechend einer [System.Collections.IComparer](https://docs.microsoft.com/dotnet/core/api/System.Collections.IComparer)-Implementierung (für eine nicht generische `SortedList`-Klasse) oder einer [System.Collections.Generic.IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1)-Implementierung (für die beiden generischen Klassen) sortiert.  
-   
- *   Jede Klasse enthält Eigenschaften, die Sammlungen zurückgeben, die nur die Schlüssel oder nur die Werte enthalten.  
-   
-Die folgende Tabelle enthält einige Unterschiede zwischen den beiden SortedList-Klassen und der [SortedDictionary<TKey, TValue>](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2)-Klasse.  
-   
- Nicht generische `SortedList`-Klasse und generische `SortedList<TKey, TValue>`-Klasse | Generische `SortedDictionary<TKey, TValue>`-Klasse  
- --------------------------------------------------------------------------------- | ------------------------------  
- Die Eigenschaften, die Schlüssel und Werte zurückgeben, werden indiziert, um einen effizienten Abruf zu ermöglichen. | Kein indizierter Abruf.  
- Abruf erfolgt über „O(log n)“. | Abruf erfolgt über „O(log n)“.  
- Das Einfügen und Entfernen erfolgen im Allgemeinen über „O(n)“. Das Einfügen erfolgt jedoch über „O(1)“ für Daten, die bereits in der Sortierreihenfolge vorliegen, sodass jedes Element am Ende der Liste hinzugefügt wird. (Dies setzt voraus, dass keine Größenänderung erforderlich ist.) | Einfügen und Entfernen erfolgen über „O(log n)“.  
- Benötigt weniger Speicher als `SortedDictionary<TKey, TValue>`. | Benötigt mehr Arbeitsspeicher als die nicht generische Klasse `SortedList` und die generische Klasse `SortedList<TKey, TValue>`.  
+-   Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=fullName>-Schnittstelle. Die zwei generischen Klassen implementieren darüber hinaus die generische Schnittstelle <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
   
- Für sortierte Listen oder Wörterbücher, die gleichzeitig für mehrere Threads zugänglich sein müssen, können Sie einer Klasse Sortierlogik hinzufügen, die von [ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2) abgeleitet wird.  
+-   Jedes Element ist ein Schlüssel-Wert-Paar zu Enumerationszwecken.  
   
- > [!NOTE]  
- > Für Werte, die ihre eigenen Schlüssel enthalten (z.B. Mitarbeiterdatensätze mit einer Mitarbeiter-ID), können Sie durch Ableiten von der generischen Klasse [KeyedCollection&lt;TKey, TItem&gt;]() eine schlüsselgebundene Sammlung erstellen, die einige Merkmale einer Liste und einige Merkmale eines Wörterbuchs aufweist.  
-   
- Die Klasse [SortedSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedSet-1) stellt eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse und die Klasse [HashSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.HashSet-1) implementieren die [ISet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.ISet-1)-Schnittstelle.  
-   
+    > [!NOTE]
+    >  Die nicht generische Klasse <xref:System.Collections.SortedList> gibt bei der Enumerierung <xref:System.Collections.DictionaryEntry>-Objekte zurück, hingegeben geben die zwei generischen Typen <xref:System.Collections.Generic.KeyValuePair%602>-Objekte zurück.  
+  
+-   Elemente werden gemäß einer <xref:System.Collections.IComparer?displayProperty=fullName>-Implementierung (für nicht generische <xref:System.Collections.SortedList>) oder einer <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName>-Implementierung (für die zwei generischen Klassen) sortiert.  
+  
+-   Jede Klasse enthält Eigenschaften, die Sammlungen zurückgeben, die nur die Schlüssel oder nur die Werte enthalten.  
+  
+ Die folgende Tabelle enthält einige Unterschiede zwischen den beiden sortierten Listenklassen und der <xref:System.Collections.Generic.SortedDictionary%602>-Klasse.  
+  
+|Nicht generische Klasse <xref:System.Collections.SortedList> und generische Klasse <xref:System.Collections.Generic.SortedList%602>|Generische Klasse <xref:System.Collections.Generic.SortedDictionary%602>|  
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Die Eigenschaften, die Schlüssel und Werte zurückgeben, werden indiziert, um einen effizienten Abruf zu ermöglichen.|Kein indizierter Abruf.|  
+|Der Abruf erfolgt über O(log `n`).|Der Abruf erfolgt über O(log `n`).|  
+|Das Einfügen und Entfernen erfolgen im Allgemeinen über „O(`n`)“. Das Einfügen erfolgt jedoch über „O(1)“ für Daten, die bereits in der Sortierreihenfolge vorliegen, sodass jedes Element am Ende der Liste hinzugefügt wird. (Dies setzt voraus, dass keine Größenänderung erforderlich ist.)|Einfügen und Entfernen erfolgen über „O(log `n`)“.|  
+|Belegt weniger Speicher als ein <xref:System.Collections.Generic.SortedDictionary%602>.|Belegt mehr Speicher als die nicht generische Klasse <xref:System.Collections.SortedList> und die generische Klasse <xref:System.Collections.Generic.SortedList%602>.|  
+  
+ Für sortierte Listen oder Wörterbücher, die gleichzeitig für mehrere Threads zugänglich sein müssen, können Sie einer Klasse Sortierlogik hinzufügen, die von <xref:System.Collections.Concurrent.ConcurrentDictionary%602> abgeleitet wird.  
+  
+> [!NOTE]
+>  Für Werte, die ihre eigenen Schlüssel enthalten (z.B. Mitarbeiterdatensätze mit einer Mitarbeiter-ID), können Sie durch Ableiten von der generischen Klasse <xref:System.Collections.ObjectModel.KeyedCollection%602> eine schlüsselgebundene Sammlung erstellen, die einige Merkmale einer Liste und einige Merkmale eines Wörterbuchs aufweist.  
+  
+ Von [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] an stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse und die Klasse <xref:System.Collections.Generic.HashSet%601> implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
+  
 ## <a name="see-also"></a>Siehe auch  
-  
-[System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)  
-   
-[System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)  
-   
-[ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2)  
- 
-[Häufig verwendete Sammlungstypen](commonly-used-collection-types.md) 
-
+ <xref:System.Collections.IDictionary?displayProperty=fullName>   
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
