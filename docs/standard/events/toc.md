@@ -1,0 +1,8 @@
+# [Ereignisse](index.md)
+## [Vorgehensweise: Auslösen und Behandeln von Ereignissen](how-to-raise-and-consume-events.md)
+## [Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](how-to-handle-multiple-events-using-event-properties.md)
+## [Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](how-to-consume-events-in-a-web-forms-application.md)
+## [Beobachterentwurfsmuster](observer-design-pattern.md)
+### [Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](observer-design-pattern-best-practices.md)
+### [Gewusst wie: Implementieren eines Anbieters](how-to-implement-a-provider.md)
+### [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md)
