@@ -56,19 +56,19 @@ Wir garantieren, dass alle Pakete zusammen funktionieren, wenn Sie Ihre Abhängi
 
 Es gibt zwar eine umfangreiche Liste aller Pakete und deren Versionen, die mit .NET Core 1.0 veröffentlicht wurden, jedoch müssen Sie diese möglicherweise nicht durchgehen, wenn Ihr Code unter bestimmte Szenarios fällt.
 
-**Sind Sie ausschließlich von ** `NETStandard.Library`** abhängig?**
+**Sind Sie ausschließlich von** `NETStandard.Library` **abhängig?**
 
 Wenn ja, dann sollten Sie Ihr `NETStandard.Library`-Paket zu Version `1.6` korrigieren.  Da es sich um ein geordnetes Metapaket handelt, wird dessen Paketabschluss ebenso auf 1.0 festgelegt.
 
-**Sind Sie ausschließlich von ** `Microsoft.NETCore.App`** abhängig?**
+**Sind Sie ausschließlich von** `Microsoft.NETCore.App` **abhängig?**
 
 Wenn ja, dann sollten Sie Ihr `Microsoft.NETCore.App`-Paket zu Version `1.0.0` korrigieren.  Da es sich um ein geordnetes Metapaket handelt, wird dessen Paketabschluss ebenso auf 1.0 festgelegt.
 
-**[Trimmen](../deploying/reducing-dependencies.md) Sie Ihre ** `NETStandard.Library` ** oder ** `Microsoft.NETCore.App` **-Metapaketabhängigkeiten?**
+**[Trimmen](../deploying/reducing-dependencies.md) Sie Ihre** `NETStandard.Library` **oder** `Microsoft.NETCore.App` **-Metapaketabhängigkeiten?**
 
 Wenn dies der Fall ist, gehen Sie sicher, dass das Metapaket, mit dem Sie beginnen, zu 1.0 korrigiert wurde.  Die einzelnen Pakete, von denen Sie nach dem Trimmen abhängig sind, werden auch zu 1.0 korrigiert.
 
-**Sind Sie von Paketen außerhalb der ** `NETStandard.Library` ** oder ** `Microsoft.NETCore.App` **-Metapakete abhängig?**
+**Sind Sie von Paketen außerhalb der** `NETStandard.Library` **oder** `Microsoft.NETCore.App` **-Metapakete abhängig?**
 
 Wenn dies der Fall ist, müssen Sie Ihre anderen Abhängigkeiten zu 1.0 korrigieren.  Sehen Sie sich die richtigen Paketversionen und Buildnummern am Ende dieses Artikels an.
 
