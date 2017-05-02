@@ -131,7 +131,7 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
  Wenn Sie eine variante generische Schnittstelle erweitern, müssen Sie mit den `in`- und `out`-Schlüsselwörtern explizit angeben, ob Varianz von der abgeleiteten Schnittstelle unterstützt wird. Der Compiler leitet eine Varianz nicht von der Schnittstelle ab, die erweitert wird. Beachten Sie z.B. die folgenden Schnittstellen.  
   
 ```csharp  
-nterface ICovariant<out T> { }  
+interface ICovariant<out T> { }  
 interface IInvariant<T> : ICovariant<T> { }  
 interface IExtCovariant<out T> : ICovariant<T> { }  
 ```  
@@ -204,3 +204,4 @@ class Program
 ## <a name="see-also"></a>Siehe auch  
  [Varianz in generischen Schnittstellen (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+
