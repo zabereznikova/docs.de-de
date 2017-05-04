@@ -1,33 +1,70 @@
 ---
-title: ".NET Framework – Leitfaden"
-description: Informationen zum .NET Framework
-keywords: .NET, .NET Framework, .NET Server, .NET Desktop
-author: BillWagner
-ms.author: wiwagn
-ms.date: 09/28/2016
-ms.topic: article
+title: .NET Framework 4.7, 4.6 und 4.5 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-docker
-ms.devlang: dotnet
-ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- f61f02f2-2f20-483d-8f56-a9c8f3a54986
+helpviewer_keywords:
+- .NET Framework, documentation
+- documentation, .NET Framework
+ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
+caps.latest.revision: 75
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: bd28429d7bd9aca1c114ad9f5545237647c19c87
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
+ms.lasthandoff: 04/08/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework – Leitfaden
 
-Das .NET Framework ist eine Entwicklungsplattform zum Erstellen von Anwendungen für Windows, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt. 
+> [!NOTE]
+>  Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md).  
 
 .NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheitsfunktionalität sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.
 
-## <a name="deployment"></a>Bereitstellung
+ .NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.  
 
-.NET Framework ist im Lieferumgang von Windows enthalten; so können Sie .NET Framework-Anwendungen ausführen. Sie benötigen möglicherweise eine höhere Version von .NET Framework als die, die mit Ihrer Windows-Version geliefert wurde. Unter [Deploying the .NET Framework on Windows (Bereitstellen von .NET Framework unter Windows)](./deployment/windows/index.md) finden Sie Informationen zur Bereitstellung von .NET Framework unter Windows.
+.NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheitsfunktionalität sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.
 
-Lesen Sie [Repair the .NET Framework (Reparieren von .NET Framework)](./deployment/repair.md), um zu erfahren, wie Sie Ihre .NET Framework-Installation reparieren, wenn Fehler bei der Installation von .NET Framework auftreten.
+Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](../../docs/framework/get-started/index.md). Eine Einführung in die Architektur und die Hauptfunktionen von .NET Framework finden Sie unter [Übersicht](../../docs/framework/get-started/overview.md).  
 
-.NET Framework kann mit Docker mit [Windows-Container](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview) verwendet werden. Unter [Bereitstellen von .NET Framework-Anwendungen mit Docker](./docker/index.md) erfahren Sie, wie Sie Ihre Anwendungen mit Docker-Containern ausführen.
+.NET Framework kann mit Docker und mit [Windows-Containern](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview) verwendet werden. Unter [Bereitstellen von .NET Framework-Anwendungen mit Docker](./docker/index.md) erfahren Sie, wie Sie Ihre Anwendungen mit Docker-Containern ausführen.
 
+## <a name="installation"></a>Installation
+
+.NET Framework ist im Lieferumgang von Windows enthalten; so können Sie .NET Framework-Anwendungen ausführen. Sie benötigen möglicherweise eine höhere Version von .NET Framework als die, die mit Ihrer Windows-Version geliefert wurde. Weitere Informationen finden Sie unter [Installieren von .NET Framework unter Windows](./install/index.md).
+
+Lesen Sie [Repair the .NET Framework (Reparieren von .NET Framework)](./install/repair.md), um zu erfahren, wie Sie Ihre .NET Framework-Installation reparieren, wenn Fehler bei der Installation von .NET Framework auftreten.
+
+Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md).  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+[Neuigkeiten](../../docs/framework/whats-new/index.md)  
+Beschreibt wichtige Funktionen und Änderungen in den neuesten Versionen von .NET Framework. Enthält Listen von veralteten Typen und Membern sowie eine Führungslinie für das Migrieren der Anwendungen aus der früheren Version von .NET Framework.  
+  
+[Erste Schritte](../../docs/framework/get-started/index.md)  
+Stellt eine umfassende Übersicht über .NET Framework und Links zu zusätzlichen Ressourcen bereit.  
+  
+[Migrationshandbuch](../../docs/framework/migration-guide/index.md) Stellt Ressourcen und eine Liste der Änderungen bereit, die Sie berücksichtigen müssen, wenn Sie Ihre Anwendung zu einer neuen Version von .NET Framework migrieren.  
+  
+[Entwicklungshandbuch](../../docs/framework/development-guide.md)  
+Enthält eine Richtlinie für alle wichtigen technologischen Bereiche und Aufgaben für die Anwendungsentwicklung, einschließlich Erstellen, Konfigurieren, Debuggen, Sichern und Bereitstellen der Anwendung, sowie Informationen über dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
+  
+[Extras](../../docs/framework/tools/index.md)  
+Beschreibt die Tools, die Sie beim Entwickeln, Konfigurieren und Bereitstellen von Anwendungen mithilfe der .NET Framework-Technologien unterstützen.  
+  
+[.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7) Stellt Syntax- und Codebeispiele sowie weitere Informationen zu jeder in den .NET Framework-Namespaces enthaltenen Klasse zur Verfügung.  
+  
+[Zusätzliche Klassenbibliotheken und APIs](../../docs/framework/additional-apis/index.md)  
+Enthält Dokumentation für Klassen in OOB-Versionen (Out of Band) sowie für Klassen, die auf bestimmte Zielplattformen oder Implementierungen von .NET Framework ausgerichtet sind.
