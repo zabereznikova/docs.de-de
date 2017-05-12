@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ Beschreibt wichtige Funktionen und Änderungen in den neuesten Versionen von .NE
 [Erste Schritte](../../docs/framework/get-started/index.md)  
 Stellt eine umfassende Übersicht über .NET Framework und Links zu zusätzlichen Ressourcen bereit.  
   
-[Migrationshandbuch](../../docs/framework/migration-guide/index.md) Stellt Ressourcen und eine Liste der Änderungen bereit, die Sie berücksichtigen müssen, wenn Sie Ihre Anwendung zu einer neuen Version von .NET Framework migrieren.  
+[Migrationshandbuch](../../docs/framework/migration-guide/index.md)   
+Stellt Ressourcen und eine Liste der Änderungen bereit, die Sie berücksichtigen müssen, wenn Sie Ihre Anwendung zu einer neuen Version von .NET Framework migrieren.  
   
 [Entwicklungshandbuch](../../docs/framework/development-guide.md)  
 Enthält eine Richtlinie für alle wichtigen technologischen Bereiche und Aufgaben für die Anwendungsentwicklung, einschließlich Erstellen, Konfigurieren, Debuggen, Sichern und Bereitstellen der Anwendung, sowie Informationen über dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
@@ -64,7 +66,8 @@ Enthält eine Richtlinie für alle wichtigen technologischen Bereiche und Aufgab
 [Extras](../../docs/framework/tools/index.md)  
 Beschreibt die Tools, die Sie beim Entwickeln, Konfigurieren und Bereitstellen von Anwendungen mithilfe der .NET Framework-Technologien unterstützen.  
   
-[.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7) Stellt Syntax- und Codebeispiele sowie weitere Informationen zu jeder in den .NET Framework-Namespaces enthaltenen Klasse zur Verfügung.  
+[.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7)   
+Stellt Syntax- und Codebeispiele sowie weitere Informationen zu jeder in den .NET Framework-Namespaces enthaltenen Klasse zur Verfügung.  
   
 [Zusätzliche Klassenbibliotheken und APIs](../../docs/framework/additional-apis/index.md)  
 Enthält Dokumentation für Klassen in OOB-Versionen (Out of Band) sowie für Klassen, die auf bestimmte Zielplattformen oder Implementierungen von .NET Framework ausgerichtet sind.
