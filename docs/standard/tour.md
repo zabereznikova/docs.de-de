@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
 ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
-ms.lasthandoff: 03/22/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -62,13 +63,13 @@ Im folgenden Beispiel löst die Laufzeit eine `InvalidIndexException`-Ausnahme a
 
 ## <a name="working-with-unmanaged-resources"></a>Arbeiten mit nicht verwalteten Ressourcen
 
-Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Laufzeit verwaltet werden.  Ein Dateihandle ist z.B. eine nicht verwaltete Ressource.  Ein @System.IO.FileStream-Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist.  Wenn Sie mit FileStream fertig sind, müssen Sie das Dateihandle freigeben.
+Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Laufzeit verwaltet werden.  Ein Dateihandle ist z.B. eine nicht verwaltete Ressource.  Ein @System.IO.FileStream -Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist.  Wenn Sie mit FileStream fertig sind, müssen Sie das Dateihandle freigeben.
 
-In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die @System.IDisposable-Schnittstelle.  Wenn Sie mit dem Objekt fertig sind, können Sie die @System.IDisposable.Dispose-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist.  .NET-Sprachen stellen eine praktische `using`-Syntax für solche Objekte bereit, so wie in folgendem Beispiel gezeigt:
+In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die @System.IDisposable- Schnittstelle.  Wenn Sie mit dem Objekt fertig sind, können Sie die @System.IDisposable.Dispose -Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist.  .NET-Sprachen stellen eine praktische `using`-Syntax für solche Objekte bereit, so wie in folgendem Beispiel gezeigt:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Sobald der `using`-Block abgeschlossen ist, ruft die .NET-Laufzeit automatisch die @System.IDisposable.Dispose-Methode des `stream`-Objekts auf, die das Dateihandle freigibt.  Die Laufzeit wird dies ebenfalls tun, wenn eine Ausnahme das Steuerelement dazu veranlasst, den Block zu verlassen.
+Sobald der `using`-Block abgeschlossen ist, ruft die .NET-Laufzeit automatisch die @System.IDisposable.Dispose -Methode des `stream`-Objekts auf, die das Dateihandle freigibt.  Die Laufzeit wird dies ebenfalls tun, wenn eine Ausnahme das Steuerelement dazu veranlasst, den Block zu verlassen.
 
 Weitere Details finden Sie auf den folgenden Seiten:
 
@@ -108,7 +109,7 @@ Generika wurden in .NET Framework 2.0 ergänzt. Kurz gesagt: Generika ermöglich
 
 Generika wurden hinzugefügt, um Programmierer beim Implementieren generischer Datenstrukturen zu unterstützen. Vor der Einführung von Generika mussten Programmierer mit Elementen vom Typ `object` arbeiten, um z.B. den Typ `List` generisch zu machen. Das führte zu verschiedenen Probleme hinsichtlich der Leistung und der Semantik, von möglichen Laufzeitfehlern ganz zu schweigen. Die bekannteste Variante solcher Fehler tritt auf, wenn eine Datenstruktur z.B. sowohl ganze Zahlen als auch Zeichenfolgen enthält und beim Arbeiten mit den Members der Liste eine `InvalidCastException` ausgelöst wird.
 
-Das folgende Beispiel zeigt ein einfaches Programm, das unter Verwendung einer Instanz von @System.Collections.Generic.List%601-Typen ausgeführt wird.
+Das folgende Beispiel zeigt ein einfaches Programm, das unter Verwendung einer Instanz von @System.Collections.Generic.List%601- Typen ausgeführt wird.
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
