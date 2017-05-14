@@ -17,22 +17,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 3b6835c2e2c8ae590c642d5534cd1bae5645db6f
+ms.sourcegitcommit: ec57b79f67f826dbe61aa81bb5f82e20d61db2e3
+ms.openlocfilehash: cec16529ea93773362715cac7694b451ce3dddfe
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 <a name="introduction"></a> Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden Versionen von .NET Framework:
 
- [.NET Framework 4.7](#v47) 
- [.NET Framework 4.6.2](#v462) 
- [.NET Framework 4.6.1](#v461) 
- [.NET 2015 und .NET Framework 4.6](#v46) 
- [.NET Framework 4.5.2](#v452) 
- [.NET Framework 4.5.1](#v451) 
- [.NET Framework 4.5](#core)
+ [.NET Framework 4.7](#v47)   
+ [.NET Framework 4.6.2](#v462)   
+ [.NET Framework 4.6.1](#v461)   
+ [.NET 2015 und .NET Framework 4.6](#v46)   
+ [.NET Framework 4.5.2](#v452)   
+ [.NET Framework 4.5.1](#v451)   
+ [.NET Framework 4.5](#core)   
 
  Dieser Artikel enthält keine umfassenden Informationen zu jeder neuen Funktion und unterliegt möglichen Änderungen. Allgemeine Informationen zu .NET Framework finden Sie unter [Erste Schritte](../../../docs/framework/get-started/index.md). Informationen zu unterstützten Plattformen finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md). Downloadlinks und Installationsanweisungen finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md).
 
@@ -633,13 +633,11 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
 
  Im folgenden Codebeispiel wird gezeigt, wie einfach es ist, eine Signatur für einen Bytedatenstrom mit der neuen in [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] enthaltenen ECDSA-Unterstützung für X509-Zertifikate zu generieren.
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  Dies steht in deutlichem Gegensatz zu dem Code, der zum Generieren einer Signatur in .NET Framework 4.6 erforderlich war.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -831,13 +829,11 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
 
         - Erweiterungen an der RSA-API, damit für allgemeine Aktionen keine Umwandlung mehr erforderlich ist. Beispielsweise war für das Verschlüsseln von Daten mithilfe eines <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Objekts Code wie der folgende in vorherigen Versionen von .NET Framework erforderlich.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-           [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              Code, der die neuen Kryptografie-APIs in .NET Framework 4.6 verwendet, kann wie folgt umgeschrieben werden, um die Umwandlung zu vermeiden.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-           [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **Unterstützung für das Konvertieren von Datumsangaben und Uhrzeiten zur oder aus der Unix-Zeit**
 
@@ -1406,3 +1402,4 @@ Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenan
  [Neues in Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)   
  [ASP.NET](/aspnet)   
  [Neues in Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
+
