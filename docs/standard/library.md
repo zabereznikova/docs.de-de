@@ -1,55 +1,70 @@
 ---
-title: .NET-Standardbibliothek
-description: .NET-Standardbibliothek
-keywords: .NET, .NET Core
+title: .NET Standard | Microsoft-Dokumentation
+description: "Erfahren Sie mehr über .NET Standard, die Version und die unterstützten Plattformen für .NET."
+keywords: .NET Standard, PCL, .NET
 author: richlander
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
-ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a580e33f756bfb5eb96daeb9decb4acfe3ef2f52
+ms.openlocfilehash: 970c70af2d8e5524e022f38d1ad93697a62985f8
 ms.contentlocale: de-de
-ms.lasthandoff: 03/20/2017
+ms.lasthandoff: 05/11/2017
 
 ---
 
-# <a name="net-standard-library"></a>.NET-Standardbibliothek
+# <a name="net-standard"></a>.NET-Standard
 
-Die .NET-Standardbibliothek ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Laufzeiten verfügbar sein sollen. Die Motivation hinter der Standardbibliothek ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Laufzeitverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek. 
+[.NET-Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Laufzeiten verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Laufzeitverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek. 
 
-Die .NET-Standardbibliothek ermöglicht im Wesentlichen die folgenden Szenarios: 
+.NET Standard ermöglicht im Wesentlichen die folgenden Szenarios: 
 
 - Sie definiert einen einheitlichen Satz von BCL-APIs, die unabhängig von der Arbeitsauslastung für alle .NET-Plattformen implementiert werden.
 - Sie ermöglicht Entwicklern die Erstellung portabler Bibliotheken, die anhand desselben Satzes von APIs übergreifend über .NET-Runtimes hinweg eingesetzt werden können.
 - Sie reduziert und beseitigt idealerweise die bedingte Kompilierung freigegebener Quellen aufgrund von .NET-APIs (nur für Betriebssystem-APIs).
 
-Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen der .NET-Standardbibliothek. Jede .NET-Runtimeversion kündigt die höchste .NET-Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z.B. die .NET-Standardbibliothek 1.3 und macht damit alle APIs verfügbar, die in den Versionen 1.0 bis 1.3 der .NET-Standardbibliotheken definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.2 die .NET-Standardbibliothek 1.5, während .NET Core 1.0 die .NET-Standardbibliothek 1.6 implementiert.
+Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. Jede .NET-Runtimeversion kündigt die höchste .NET-Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z.B. .NET Standard 1.3 und macht damit alle APIs verfügbar, die in den Versionen 1.0 bis 1.3 von .NET Standard definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.1 .NET Standard 1.5, während .NET Core 1.0 .NET Standard 1.6 implementiert.
 
 ## <a name="net-platforms-support"></a>Unterstützung für .NET-Plattformen
 
-Hier sehen Sie den vollständigen Satz von .NET-Runtimes, die die .NET-Standardbibliothek unterstützen.
+In der folgenden Tabelle sind alle Versionen von .NET Standard und die unterstützten Plattformen aufgeführt:
 
-| Plattformname | Alias |  |  |  |  |  | | | |
-| :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|.NET-Standard | netstandard | 1,0 | 1,1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 | 2,0 |
-|.NET Core|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1,0|2.0|
-|.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|vNext|4.6.1|
-|Mono-/Xamarin-Plattformen||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|vNext|
-|Universelle Windows-Plattform|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|&rarr;|&rarr;|vNext|
-|Windows|win|&rarr;|8.0|8.1||||||
-|Windows Phone|wpa|&rarr;|&rarr;|8.1||||||
-|Windows Phone Silverlight|wp|8.0||||||||
+[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+
+Gehen Sie folgendermaßen vor, um die höchste Version von .NET Standard zu suchen, die Sie als Ziel verwenden können:
+1. Suchen Sie die Zeile, die die .NET Plattform enthält, die Sie ausführen möchten.
+2. Suchen Sie in dieser Zeile die Spalte, in der Ihre Version angegeben ist (von rechts nach links).
+3. Die Spaltenüberschrift gibt die .NET Standard-Version an, die Ihr Ziel unterstützt (alle niedrigeren .NET Standard-Versionen werden ebenfalls unterstützt).
+4. Wiederholen Sie diesen Vorgang für jede Plattform, die als Ziel verwendet werden soll. Wenn Sie mehrere Zielplattformen verwenden, sollten Sie die kleinste unterstützten Versionen auswählen. Wenn Sie .NET Standard z.B. auf .NET Framework 4.5 und .NET Core 1.0 ausführen möchten, ist die höchste .NET Standard-Version, die Sie verwenden können, .NET Standard 1.1.
+
+### <a name="which-net-standard-version-to-target"></a>Auswahl der .NET Standard-Zielversion
+
+Bei der Auswahl der .NET Standard-Version sollten Sie diesen Kompromiss berücksichtigen:
+
+- Je höher die Version, desto mehr APIs stehen zur Verfügung.
+- Je niedriger die Version, desto mehr Plattformen unterstützen sie.
+
+Im Allgemeinen sollten Sie als Zielversion die *niedrigste* mögliche Version von .NET Standard verwenden. Nachdem Sie also die höchste .NET Standard-Zielversion gefunden, gehen Sie folgendermaßen vor:
+1. Wählen Sie die nächst niedrigere .NET Standard-Version als Zielversion, und erstellen Sie Ihr Projekt.
+2. Wenn das Projekt erfolgreich erstellt wurde, wiederholen Sie Schritt 1. Andernfalls wählen Sie die nächst höhere Version als Zielversion aus, und das ist die Version, die Sie verwenden sollten.
+
+### <a name="net-standard-versioning-rules"></a>Regeln für die .NET Standard-Versionskontrolle
+
+Es gibt zwei primäre Versionskontrollregeln:
+
+- Additiv: .NET Standard-Versionen sind logisch konzentrische Kreise: höhere Versionen umfassen alle APIs früherer Versionen. Zwischen den Versionen gibt es keine die Lauffähigkeit der Anwendung beeinträchtigenden Änderungen.
+- Unveränderlich. Nach der Auslieferung von .NET Standard-Versionen erfolgen keine Änderungen. Neue APIs werden mit bestimmten .NET-Plattformen wie .NET Core zum ersten Mal verfügbar. Wenn das .NET Standard-Prüfungsgremium der Ansicht ist, dass die neuen APIs allgemein bereitgestellt werden sollten, werden sie in einer neuen Version von .NET Standard hinzugefügt.
 
 ## <a name="comparison-to-portable-class-libraries"></a>Vergleich mit portablen Klassenbibliotheken
 
-Die .NET-Standardbibliothek kann man sich als die nächste Generation [portabler Klassenbibliotheken (PCL)](https://msdn.microsoft.com/library/gg597391.aspx) vorstellen. Die .NET-Standardbibliothek profitiert von der Erfahrung mit der Erstellung portabler Bibliotheken, indem eine Standard-BCL zusammengestellt und damit eine umfassendere Einheitlichkeit über .NET-Runtimes hinweg hergestellt wird. Eine Bibliothek, die die .NET-Standardbibliothek als Ziel verwendet, ist eine PCL oder eine „auf dem .NET-Standard basierende PCL“. Vorhandene PCLs werden als „profilbasierte PCLs“ bezeichnet.
+.NET Standard kann man sich als die nächste Generation [portabler Klassenbibliotheken (PCL)](https://msdn.microsoft.com/library/gg597391.aspx) vorstellen. .NET Standard profitiert von der Erfahrung mit der Erstellung portabler Bibliotheken, indem eine Standard-BCL zusammengestellt und damit eine umfassendere Einheitlichkeit über .NET-Runtimes hinweg hergestellt wird. Eine Bibliothek, die .NET Standard als Ziel verwendet, ist eine PCL oder eine „auf .NET Standard basierende PCL“. Vorhandene PCLs werden als „profilbasierte PCLs“ bezeichnet.
 
-Die .NET-Standardbibliothek und PCL-Profile wurden zu ähnlichen Zwecke erstellt, unterscheiden sich jedoch in wesentlichen Bereichen.
+.NET Standard und PCL-Profile wurden zu ähnlichen Zwecke erstellt, unterscheiden sich jedoch in wesentlichen Bereichen.
 
 Ähnlichkeiten:
 
@@ -57,55 +72,55 @@ Die .NET-Standardbibliothek und PCL-Profile wurden zu ähnlichen Zwecke erstellt
 
 Unterschiede:
 
-- Die .NET-Standardbibliothek ist ein zusammengestellter Satz von APIs, während PCL-Profile durch Schnittpunkte vorhandener Plattformen definiert werden.
-- Die .NET-Standardbibliothek weist im Gegensatz zu PCL-Profilen eine lineare Versionierung auf.
-- PCL-Profile stehen für Microsoft-Plattformen, während die .NET-Standardbibliothek plattformunabhängig ist.
+- .NET Standard ist ein zusammengestellter Satz von APIs, während PCL-Profile durch Schnittpunkte vorhandener Plattformen definiert werden.
+- .NET Standard weist im Gegensatz zu PCL-Profilen eine lineare Versionierung auf.
+- PCL-Profile stehen für Microsoft-Plattformen, während .NET Standard plattformunabhängig ist.
 
 ## <a name="specification"></a>Spezifikation
 
-Die Spezifikation der .NET-Standardbibliothek ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungen der .NET-Runtime verwaltet, insbesondere Microsoft (einschließlich .NET Framework, .NET Core und Mono) und Unity. Im Rahmen der Einrichtung neuer Versionen der .NET-Standardbibliothek wird ein öffentlicher Feedbackprozess verwendet.
+Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungen der .NET-Runtime verwaltet, insbesondere Microsoft (einschließlich .NET Framework, .NET Core und Mono) und Unity. Im Rahmen der Einrichtung neuer Versionen von .NET Standard über [GitHub](https://github.com/dotnet/standard) wird ein öffentlicher Feedbackprozess verwendet.
 
 ### <a name="official-artifacts"></a>Offizielle Artefakte
 
-Die offizielle Spezifikation ist ein Satz von CS-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) für jede [Komponente](https://github.com/dotnet/corefx/tree/master/src) definiert die APIs der .NET-Standardbibliothek. Auch wenn sich die ref-Artefakte im [CoreFX-Repository](https://github.com/dotnet/corefx) befinden, sind sie nicht .NET Core-spezifisch.
+Die offizielle Spezifikation ist ein Satz von CS-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) für jede [Komponente](https://github.com/dotnet/corefx/tree/master/src) definiert die APIs von .NET Standard. Auch wenn sich die ref-Artefakte im [CoreFX-Repository](https://github.com/dotnet/corefx) befinden, sind sie nicht .NET Core-spezifisch.
 
 Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen der .NET-Standardbibliothek definieren.
 
 Eine bestimmte Komponente, wie System.Runtime, beschreibt Folgendes:
 
-- Teil der .NET-Standardbibliothek (nur der Bereich).
-- Mehrere Versionen der .NET-Standardbibliothek für diesen Bereich.
+- Teil von .NET Standard (nur der Bereich).
+- Mehrere Versionen von .NET Standard für diesen Bereich.
 
 Abgeleitete Elemente werden bereitgestellt, um ein einfacheres Lesen und bestimmte Entwicklungsszenarios (z.B. die Verwendung eines Compilers) zu ermöglichen.
 
-- API-Liste in Markdown (TBD)
+- [API-Liste in Markdown](https://github.com/dotnet/standard/tree/master/docs/versions)
 - Referenzassemblys, die als [NuGet-Pakete](../core/packages.md) verteilt und vom Metapaket [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) referenziert werden.
 
 ### <a name="package-representation"></a>Paketdarstellung
 
-Das primäre Verteilungsinstrument für die .NET-Standardbibliothek sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Runtimes geeignet sind.
+Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Runtimes geeignet sind.
 
-NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete der .NET-Standardbibliothek sind für das Framework „.NET Standard“ ausgelegt. Sie können über den [komprimierten TFM](frameworks.md) `netstandard` (z.B. `netstandard1.4`) das .NET Standard Framework als Ziel angeben. Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel verwenden. 
+NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den [komprimierten TFM](frameworks.md) `netstandard` (z.B. `netstandard1.4`) das .NET Standard Framework als Ziel angeben. Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel verwenden. 
 
-Das Metapaket `NETStandard.Library` verweist auf den vollständigen Satz von NuGet-Paketen, die die .NET-Standardbibliothek definieren.  Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die die .NET-Standardbibliothek definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel verwenden, um Zugriff auf weitere APIs zu erhalten. 
+Das Metapaket `NETStandard.Library` verweist auf den vollständigen Satz von NuGet-Paketen, die .NET Standard definieren.  Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die .NET Standard definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel verwenden, um Zugriff auf weitere APIs zu erhalten. 
 
 ### <a name="versioning"></a>Versionskontrolle
 
 Die Spezifikation ist nicht singulär, sondern ein ständig wachsender und linear versionierter Satz von APIs. In der ersten Version des Standards wird ein Basissatz von APIs eingerichtet. Nachfolgende Versionen fügen APIs hinzu und erben APIs, die in früheren Versionen definiert wurden. Es gibt keine festgelegte Möglichkeit zum Entfernen von APIs aus dem Standard.
 
-Die .NET-Standardbibliothek ist weder spezifisch auf eine bestimmte .NET-Runtime ausgelegt, noch entspricht sie dem Versionierungsschema einer dieser Runtimes.
+.NET Standard ist weder spezifisch auf eine bestimmte .NET-Runtime ausgelegt, noch entspricht sie dem Versionierungsschema einer dieser Runtimes.
 
-APIs, die einer der Laufzeiten (z.B. .NET Framework, .NET Core und Mono) hinzugefügt werden, können als Kandidaten für die Spezifikation betrachtet werden, insbesondere, wenn sie von grundlegender Natur sind. Neue [Versionen der .NET-Standardbibliothek](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md#list-of-net-corefx-apis-and-their-associated-net-platform-standard-version) werden basierend auf .NET-Runtimeversionen erstellt, sodass Sie neue APIs über eine .NET-Standard-PCL adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
+APIs, die einer der Laufzeiten (z.B. .NET Framework, .NET Core und Mono) hinzugefügt werden, können als Kandidaten für die Spezifikation betrachtet werden, insbesondere, wenn sie von grundlegender Natur sind. Neue [Versionen von .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) werden basierend auf .NET-Runtimeversionen erstellt, sodass Sie neue APIs über eine .NET-Standard-PCL adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
 
-Die Versionskontrolle der .NET-Standardbibliothek ist wichtig für die Nutzung. Mit einer bestimmten Version der .NET-Standardbibliothek können Sie Bibliotheken verwenden, die auf dieselbe oder eine niedrigere Version ausgerichtet sind. Die folgende Vorgehensweise beschreibt den Workflow für die Verwendung von PCLs der .NET-Standardbibliothek, die auf die .NET-Standardbibliothek ausgerichtet sind.
+Die Versionskontrolle von .NET Standard ist wichtig für die Nutzung. Mit einer bestimmten Version von .NET Standard können Sie Bibliotheken verwenden, die auf dieselbe oder eine niedrigere Version ausgerichtet sind. Die folgende Vorgehensweise beschreibt den Workflow für die Verwendung von PCLs von .NET Standard, die auf .NET Standard ausgerichtet sind.
 
-- Wählen Sie eine Version der .NET-Standardbibliothek für Ihre PCL.
-- Verwenden Sie Bibliotheken, die von derselben oder einer niedrigeren Version der .NET-Standardbibliothek abhängig sind.
-- Wenn Sie eine Bibliothek finden, die von einer höheren Version der .NET-Standardbibliothek abhängig ist, müssen Sie entweder dieselbe Version implementieren oder von der Verwendung dieser Bibliothek absehen.
+- Wählen Sie eine Version von .NET Standard für Ihre PCL.
+- Verwenden Sie Bibliotheken, die von derselben oder einer niedrigeren Version von .NET Standard abhängig sind.
+- Wenn Sie eine Bibliothek finden, die von einer höheren Version von .NET Standard abhängig ist, müssen Sie entweder dieselbe Version implementieren oder von der Verwendung dieser Bibliothek absehen.
 
 ### <a name="pcl-compatibility"></a>PCL-Kompatibilität
 
-Die .NET-Standardbibliothek ist mit einer Teilmenge von PCL-Profilen kompatibel. Die .NET-Standardbibliotheken der Versionen 1.0, 1.1 und 1.2 überschneiden sich jeweils mit einem Satz von PCL-Profilen. Diese Überschneidung wurde aus zwei Gründen erstellt:
+.NET Standard ist mit einer Teilmenge von PCL-Profilen kompatibel. .NET Standard der Versionen 1.0, 1.1 und 1.2 überschneiden sich jeweils mit einem Satz von PCL-Profilen. Diese Überschneidung wurde aus zwei Gründen erstellt:
 
 - Auf dem .NET-Standard basierende PCLs können auf profilbasierte PCLs verweisen.
 - Profilbasierte PCLs können als auf dem .NET-Standard basierende PCLs paketiert werden.
@@ -116,21 +131,25 @@ Profilbasierte PCLs, die als `netstandard` paketiert wurden, sind einfacher zu v
 
 Sehen Sie sich den Satz von PCL-Profilen an, die mit dem .NET-Standard kompatibel sind: 
 
-| Profile | Version des .NET-Plattformstandards |
-| ---------| --------------- |
-| Profile7 .NET Portable Subset (.NET Framework 4.5, Windows 8) | 1,1 |
-| Profile31 .NET Portable Subset (Windows 8.1, Windows Phone Silverlight 8.1)| 1,0 |
-| Profile32 .NET Portable Subset (Windows 8.1, Windows Phone 8.1) | 1.2 |
-| Profile44 .NET Portable Subset (.NET Framework 4.5.1, Windows 8.1) | 1.2 |
-| Profile49 .NET Portable Subset (.NET Framework 4.5, Windows Phone Silverlight 8) | 1,0 |
-| Profile78 .NET Portable Subset (.NET Framework 4.5, Windows 8, Windows Phone Silverlight 8) | 1,0 |
-| Profile84 .NET Portable Subset (Windows Phone 8.1, Windows Phone Silverlight 8.1) | 1,0 |
-| Profile111 .NET Portable Subset (.NET Framework 4.5, Windows 8, Windows Phone 8.1) | 1,1 |
-| Profile151 .NET Portable Subset (.NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1) | 1.2 |
-| Profile157 .NET Portable Subset (Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1) | 1,0 |
-| Profile259 .NET Portable Subset (.NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8) | 1,0 |
+| PCL-Profil | .NET-Standard | PCL-Plattformen
+|:-----------:|:-------------:|------------------------------------------------------------------------------
+| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
+| Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
+| Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
+| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
+| Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
+| Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
+| Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
+| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
+| Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="targeting-net-standard-library"></a>Festlegen der .NET-Standardbibliothek als Ziel
 
-Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem `netstandard`-Framework und dem NETStandard.Library-Metapaket [erstellen](../core/tutorials/libraries.md). Sehen Sie sich Beispiele dafür an, wie [die .NET-Standardbibliothek mithilfe von .NET Core-Tools als Ziel festgelegt wird](../core/packages.md).
+## <a name="targeting-net-standard"></a>Festlegen von .NET Standard als Ziel
+
+Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem `netstandard`-Framework und dem NETStandard.Library-Metapaket [erstellen](../core/tutorials/libraries.md). Sehen Sie sich Beispiele dafür an, wie [.NET Standard mithilfe von .NET Core-Tools als Ziel festgelegt wird](../core/packages.md).
+
+## <a name="see-also"></a>Siehe auch
+[.NET Standard-Versionen](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 
