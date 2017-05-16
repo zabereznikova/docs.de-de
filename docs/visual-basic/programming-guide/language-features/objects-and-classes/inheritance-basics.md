@@ -46,9 +46,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 58aee9f8c348eb06daec2b8c9e332f3f2775bcb6
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -133,7 +134,7 @@ Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklarieren eine
   
  Im folgenden Beispiel werden `Me` und `MyClass`.  
   
-```  
+```vb
 Class baseClass  
     Public Overridable Sub testMethod()  
         MsgBox("Base class string")  
@@ -170,3 +171,4 @@ End Class
 ## <a name="see-also"></a>Siehe auch  
  [Inherits-Anweisung](../../../../visual-basic/language-reference/statements/inherits-statement.md)   
  [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+
