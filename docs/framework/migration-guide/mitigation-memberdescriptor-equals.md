@@ -15,9 +15,10 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 409f06f4dfbe7be50dd2c487e49d3d4d8a477539
+ms.contentlocale: de-de
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -72,7 +73,7 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 ```xml  
   
 <runtime>  
-    \<AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
+    <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
   
 ```  
@@ -80,3 +81,4 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 ## <a name="see-also"></a>Siehe auch  
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)   
  [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
+
