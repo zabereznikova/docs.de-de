@@ -1,4 +1,4 @@
-# [Erste Schritte mit .NET](getting-started.md)
+# [Erste Schritte mit .NET](get-started.md)
 # [Einführung in .NET](tour.md)
 # [.NET-Architekturkomponenten](components.md)
 # [.NET-Standardbibliothek](library.md)

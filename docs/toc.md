@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [Leitfaden für .NET Core](core/index.md)
-## [Erste Schritte](core/getting-started.md)
+## [Erste Schritte](core/get-started.md)
 ## [Erforderliche Komponenten für Windows](core/windows-prerequisites.md)
 ## [Erforderliche Komponenten für macOS](core/macos-prerequisites.md)
 ## [Tutorials](core/tutorials/index.md)
