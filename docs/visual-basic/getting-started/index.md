@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit Visual Basic | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
-ms.lasthandoff: 05/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Wichtige Visual Basic-Änderungen in Visual Studio ](breaking-changes-in-visual-studio.md)  
+
+[Neues bei Visual Basic](whats-new.md)   
+Listet neue Funktionen in jeder Version von Visual Basic .NET auf.
+
+[Wichtige Visual Basic-Änderungen in Visual Studio ](breaking-changes-in-visual-studio.md)  
  Führt Änderungen in dieser Version auf, die die Kompilierung der Anwendung verhindern oder ihr Laufzeitverhalten ändern könnten.  
   
  [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../visual-basic/getting-started/additional-resources.md)  

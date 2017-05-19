@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
@@ -76,9 +77,9 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
   
 -   [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Destruktoren](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+  
+-   [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [Indexer](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
  Einige Methoden und Eigenschaften sind für den Aufruf oder Zugriff von als *Clientcode* bezeichnetem Code außerhalb der Klasse oder Struktur vorgesehen. Andere Methoden und Eigenschaften dienen nur der Verwendung in der Klasse oder Struktur selbst. Es ist wichtig, den Zugriff auf den Code einzuschränken, damit nur der Clientcode darauf zugreifen kann, der dafür vorgesehen ist. Inwieweit Clientcode auf die Typen und deren Member zugreifen kann, können Sie mit den Zugriffsmodifizierern [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) `protected internal` und [private](../../../csharp/language-reference/keywords/private.md) festlegen. Die Standardeinstellung für den Zugriff lautet `private`. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Vererbung  
- Klassen (jedoch nicht Strukturen) unterstützen das Konzept der Vererbung. Eine Klasse, die von einer anderen Klasse (der *Basisklasse*) abgeleitet ist, enthält automatisch alle öffentlichen, geschützten und internen Member der Basisklasse mit Ausnahme der Konstruktoren und Destruktoren. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md) und [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Klassen (jedoch nicht Strukturen) unterstützen das Konzept der Vererbung. Eine Klasse, die von einer anderen Klasse (der *Basisklasse*) abgeleitet ist, enthält automatisch alle öffentlichen, geschützten und internen Member der Basisklasse mit Ausnahme der Konstruktoren und Finalizer. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md) und [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
  Klassen können als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert werden. Das bedeutet, dass mindestens eine ihrer Methoden nicht implementiert ist. Obwohl abstrakte Klassen nicht direkt instanziiert werden können, können Sie als Basisklassen für andere Klassen dienen, von denen die fehlende Implementierung bereitgestellt wird. Klassen können auch als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) deklariert werden, um zu verhindern, dass andere Klassen von ihnen erben. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -98,7 +99,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
  Klassen und Strukturen können von mehreren Schnittstellen erben. Von einer Schnittstelle erben bedeutet, dass der Typ alle in der Schnittstelle definierten Methoden implementiert. Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="generic-types"></a>Generische Typen  
- Klassen und Strukturen können mit einem oder mehreren Typparametern definiert werden. Der Typ wird beim Erstellen einer Instanz des Typs vom Clientcode bereitgestellt. Beispiel: Die <xref:System.Collections.Generic.List%601>-Klasse im <xref:System.Collections.Generic>-Namespace wird mit einem Typparameter definiert. Vom Clientcode wird eine Instanz von `List<string>` oder `List<int>` erstellt, um den Typ anzugeben, den die Liste enthalten soll. Weitere Informationen finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
+ Klassen und Strukturen können mit einem oder mehreren Typparametern definiert werden. Der Typ wird beim Erstellen einer Instanz des Typs vom Clientcode bereitgestellt. Beispielsweise ist die <xref:System.Collections.Generic.List%601>-Klasse im <xref:System.Collections.Generic>-Namespace mit einem Typparameter definiert. Vom Clientcode wird eine Instanz von `List<string>` oder `List<int>` erstellt, um den Typ anzugeben, den die Liste enthalten soll. Weitere Informationen finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
   
 ### <a name="static-types"></a>Statische Typen  
  Klassen (nicht jedoch Strukturen) können als [statisch](../../../csharp/language-reference/keywords/static.md) deklariert werden. Eine statische Klasse kann nur statische Member enthalten und nicht mit dem Schlüsselwort "new" instanziiert werden. Beim Laden des Programms wird eine Kopie der Klasse in den Speicher geladen. Auf deren Member wird über den Klassennamen zugegriffen. Sowohl Klassen als auch Strukturen können statische Member enthalten. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
