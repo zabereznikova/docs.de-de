@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3434dc4b13295101970fd4aadb69d56ddbca7142
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
@@ -59,7 +60,7 @@ Wenn Sie die Methode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayPropert
   
  Starten Sie in der Datei „MainWindow.xaml.cs“ des **CancelAListOfTasks**-Projekts den Übergang, indem Sie die Verarbeitungsschritte für jede Website von der Schleife in `AccessTheWebAsync` zur folgenden asynchronen Methode verschieben.  
   
-```cs  
+```csharp  
 / ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
@@ -81,13 +82,22 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 2.  Erstellen Sie eine Abfrage, die eine Auflistung generischer Aufgaben erstellt, wenn sie ausgeführt wird. Jeder Aufruf an `ProcessURLAsync` gibt <xref:System.Threading.Tasks.Task%601> zurück, wobei `TResult` eine Ganzzahl ist.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Create a query that, when executed, returns a collection of tasks.  
+    IEnumerable<Task<int>> downloadTasksQuery =  
+        from url in urlList select ProcessURLAsync(url, client, ct);  
+    ```  
+  
 3.  Rufen Sie `ToArray` auf, um die Abfrage auszuführen und die Aufgaben zu starten. Die Anwendung der `WhenAny`-Methode im nächsten Schritt würde die Abfrage ohne `ToArray` ausführen und die Aufgaben starten, bei anderen Methoden ist dies möglicherweise nicht der Fall. Die sicherste Methode besteht darin, die Ausführung der Abfrage explizit zu erzwingen.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Use ToArray to execute the query and start the download tasks.   
+    Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
+    ```  
+  
 4.  Rufen Sie `WhenAny` mit der Auflistung von Aufgaben auf. `WhenAny` gibt `Task(Of Task(Of Integer))` oder `Task<Task<int>>` zurück.  Das bedeutet, dass `WhenAny` eine Aufgabe zurückgibt, die zu einem einzelnen `Task(Of Integer)` oder `Task<int>` ausgewertet wird, wenn sie erwartet wird. Diese einzelne Aufgabe ist die erste Aufgabe in der Auflistung, die beendet wird. Die Aufgabe, die als erste beendet wird, wird `firstFinishedTask` zugewiesen. Der Typ von `firstFinishedTask` ist <xref:System.Threading.Tasks.Task%601>, wobei `TResult` eine Ganzzahl ist, da dies der Rückgabetyp von `ProcessURLAsync` ist.  
   
-    ```cs  
+    ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
     // first is assigned to firstFinishedTask.  
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
@@ -95,14 +105,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 5.  In diesem Beispiel sind Sie nur an der Aufgabe interessiert, die zuerst beendet wird. Deshalb sollten Sie <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> verwenden, um die verbleibenden Aufgaben abzubrechen.  
   
-    ```cs  
+    ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
 6.  Schließlich warten Sie ab, dass `firstFinishedTask` die Länge des heruntergeladenen Inhalts abruft.  
   
-    ```cs  
+    ```csharp  
     var length = await firstFinishedTask;  
     resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
     ```  
@@ -112,11 +122,11 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
 ## <a name="complete-example"></a>Vollständiges Beispiel  
  Der folgende Code besteht aus der vollständigen Datei „MainWindow.xaml.cs“ für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden.  
   
- Beachten Sie, dass Sie einen Verweis auf <xref:System.Net.Http> hinzufügen müssen.  
+ Beachten Sie, dass Sie einen Verweis auf <xref:System.Net.Http>. hinzufügen müssen.  
   
  Sie können das Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

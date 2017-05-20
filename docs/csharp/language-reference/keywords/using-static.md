@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c072d365b4ecffb524b57c2328217da05a8af3ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f111ba3db26f247cbc56ee296b652bc04efb837d
+ms.openlocfilehash: 66c68530f5684e4d75b9aaa21334e54dde5b64b6
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="using-static-directive-c-reference"></a>using static-Direktive (C#-Referenz)
@@ -46,7 +47,7 @@ Die `using static`-Direktive gilt für jeden Typ, der über statische Member ver
 
 Die `using static`-Direktive wurde in C# 6 eingeführt.
 
-## <a name="reamrks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
  
 Wenn Sie einen statischen Member aufrufen, geben Sie normalerweise den Typnamen zusammen mit dem Membernamen an. Das wiederholte Eingeben desselben Typnamens zum Aufrufen von Membern dieses Typs kann zu ausführlichem, verwirrendem Code führen. Die folgende Definition einer `Circle`-Klasse verweist z.B. auf mehrere Member der Klasse @System.Math.
   

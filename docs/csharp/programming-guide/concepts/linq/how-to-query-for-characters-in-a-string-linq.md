@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 537a46e918ad9613f01d0c8997bbdc8589c00dab
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 86c763d8f31a7021605d82ecab0664a290934e07
+ms.contentlocale: de-de
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (C#)
@@ -31,9 +32,47 @@ Da die <xref:System.String>-Klasse die generische <xref:System.Collections.Gener
 ## <a name="example"></a>Beispiel  
  In folgendem Beispiel wird eine Zeichenfolge abgefragt, um die Zahl von enthaltenen numerischen Ziffern zu bestimmen. Beachten Sie, dass die Abfrage „wieder verwendet“ wird, nachdem sie zum ersten Mal ausgeführt wurde. Dies ist möglich, da die Abfrage selbst keine Ergebnisse speichert.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+class QueryAString  
+{  
+    static void Main()  
+    {  
+        string aString = "ABCDE99F-J74-12-89A";  
+  
+        // Select only those characters that are numbers  
+        IEnumerable<char> stringQuery =  
+          from ch in aString  
+          where Char.IsDigit(ch)  
+          select ch;  
+  
+        // Execute the query  
+        foreach (char c in stringQuery)  
+            Console.Write(c + " ");  
+  
+        // Call the Count method on the existing query.  
+        int count = stringQuery.Count();  
+        Console.WriteLine("Count = {0}", count);  
+  
+        // Select all characters before the first '-'  
+        IEnumerable<char> stringQuery2 = aString.TakeWhile(c => c != '-');  
+  
+        // Execute the second query  
+        foreach (char c in stringQuery2)  
+            Console.Write(c);  
+  
+        Console.WriteLine(System.Environment.NewLine + "Press any key to exit");  
+        Console.ReadKey();  
+    }  
+}  
+/* Output:  
+  Output: 9 9 7 4 1 2 8 9  
+  Count = 8  
+  ABCDE99F  
+*/  
+```  
+  
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein Projekt, dass das .NET Framework Version 3.5 oder höher zum Ziel setzt, mit einem Verweis auf „System.Core.dll“ und `using`-Verzeichnissen für die Namespaces „System.Linq“ und „System.IO“.  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   

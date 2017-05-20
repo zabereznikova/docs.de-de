@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7843620518dd7965724f0108a8fa008c95bd4793
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 5f3ac26abe3eccc19b928375059e2562c4aa6a80
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)
@@ -35,7 +36,7 @@ Sie können die Methoden erweitern, die Sie für LINQ-Abfragen durch Hinzufügen
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Erweiterungsmethode namens `Median` erstellt wird, um einen Median für eine Zahlensequenz des Typs `double` zu berechnen.  
   
-```cs  
+```csharp  
 public static class LINQExtension  
 {  
     public static double Median(this IEnumerable<double> source)  
@@ -69,26 +70,69 @@ public static class LINQExtension
   
  Im folgenden Codebeispiel wird die Verwendung der `Median`-Methode für ein Array des Typs `double` veranschaulicht.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+*/  
+```  
+  
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Überladen einer Aggregatmethode zum Akzeptieren verschiedener Typen  
  Sie können die Aggregatmethode überladen, sodass diese Sequenzen verschiedener Typen akzeptiert. Die Standardmethode ist die Erstellung einer Überladung für jeden Typ. Ein anderer Ansatz ist das Erstellen einer Überladung, die einen generischen Typ annimmt und diesen mit einem Delegaten in einen bestimmten Typ konvertiert. Sie können auch beide Methoden kombinieren.  
   
 #### <a name="to-create-an-overload-for-each-type"></a>So erstellen Sie eine Überladung für jeden Typ  
  Sie können eine bestimmte Überladung für jeden Typ erstellen, den Sie unterstützen möchten. Im folgenden Codebeispiel wird eine Überladung der `Median`-Methode für den `integer`-Typ veranschaulicht.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+```csharp  
+//int overload  
+  
+public static double Median(this IEnumerable<int> source)  
+{  
+    return (from num in source select (double)num).Median();  
+}  
+```   
  Sie können nun die `Median`-Überladungen für die `integer`- und `double`-Typen aufrufen, so wie im folgenden Code gezeigt:  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+  
+```csharp  
+int[] numbers2 = { 1, 2, 3, 4, 5 };  
+  
+var query2 = numbers2.Median();  
+  
+Console.WriteLine("int: Median = " + query2);  
+```  
+  
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+ Integer: Median = 3  
+*/  
+```  
+
 #### <a name="to-create-a-generic-overload"></a>So erstellen Sie eine generische Überladung  
  Sie können auch eine Überladung erstellen, die eine Sequenz generischer Objekte akzeptiert. Diese Überladung nimmt einen Delegaten als Parameter und verwendet ihn, um eine Sequenz von Objekten eines generischen Typs in einen bestimmten Typ zu konvertieren.  
   
  Der folgende Code zeigt eine Überladung der `Median`-Methode, die den <xref:System.Func%602>-Delegaten als Parameter akzeptiert. Dieser Delegat übernimmt ein Objekt des generischen Typs „T“ und gibt ein Objekt vom Typ `double` zurück.  
   
-```cs  
+```csharp  
 // Generic overload.  
   
 public static double Median<T>(this IEnumerable<T> numbers,  
@@ -102,16 +146,65 @@ public static double Median<T>(this IEnumerable<T> numbers,
   
  Der folgende Beispielcode veranschaulicht, wie eine `Median`-Methode für ein Array aus ganzen Zahlen und ein Array aus Zeichenfolgen aufgerufen wird. Für Zeichenfolgen wird der Median für die Längen der Zeichenfolgen im Array berechnet. Das Beispiel zeigt, wie der Delegatparameter <xref:System.Func%602> an die `Median`-Methode für jeden Fall übergeben wird.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+int[] numbers3 = { 1, 2, 3, 4, 5 };  
+  
+/*   
+  You can use the num=>num lambda expression as a parameter for the Median method   
+  so that the compiler will implicitly convert its value to double.  
+  If there is no implicit conversion, the compiler will display an error message.            
+*/  
+  
+var query3 = numbers3.Median(num => num);  
+  
+Console.WriteLine("int: Median = " + query3);  
+  
+string[] numbers4 = { "one", "two", "three", "four", "five" };  
+  
+// With the generic overload, you can also use numeric properties of objects.  
+  
+var query4 = numbers4.Median(str => str.Length);  
+  
+Console.WriteLine("String: Median = " + query4);  
+  
+/*  
+ This code produces the following output:  
+  
+ Integer: Median = 3  
+ String: Median = 4  
+*/  
+```   
 ## <a name="adding-a-method-that-returns-a-collection"></a>Hinzufügen einer Methode, die eine Auflistung zurückgibt  
  Sie können die Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> mit einer benutzerdefinierten Abfragemethode erweitern, die eine Sequenz von Werten zurückgibt. In diesem Fall muss die Methode eine Auflistung des Typs <xref:System.Collections.Generic.IEnumerable%601> zurückgeben. Solche Methoden können verwendet werden, um Filter oder Datentransformationen auf eine Sequenz von Werten anzuwenden.  
   
  Das folgende Beispiel zeigt, wie eine Erweiterungsmethode mit dem Namen `AlternateElements` erstellt wird, die jedes andere Element in einer Auflistung zurückgibt, beginnend mit dem ersten Element.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+// Extension method for the IEnumerable<T> interface.   
+// The method returns every other element of a sequence.  
+  
+public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)  
+{  
+    List<T> list = new List<T>();  
+  
+    int i = 0;  
+  
+    foreach (var element in source)  
+    {  
+        if (i % 2 == 0)  
+        {  
+            list.Add(element);  
+        }  
+  
+        i++;  
+    }  
+  
+    return list;  
+}  
+```  
  Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Methoden aus der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle aufrufen, so wie im folgenden Code dargestellt:  
   
-```cs  
+```csharp  
 string[] strings = { "a", "b", "c", "d", "e" };  
   
 var query = strings.AlternateElements();  

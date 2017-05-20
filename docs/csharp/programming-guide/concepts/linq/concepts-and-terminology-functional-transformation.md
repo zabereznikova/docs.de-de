@@ -14,10 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3e4ff1807605164afc95eaebf37a131d9dddb79c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -48,7 +49,7 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Weitere Informationen zum funktionalen Programmieren finden Sie unter [Funktionale Programmierung und Imperative Programmierung (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)  
   
 #### <a name="domain-specific-fp-languages"></a>Domänenspezifische FP-Sprachen  
- Während allgemeine FP-Sprachen keine große Verbreitung gefunden haben, konnten sich bestimmte domänenspezifische FP-Sprachen durchsetzen. So wird z. B. das Aussehen vieler Internetseiten durch Cascading Style Sheets (CSS) gesteuert, während für die Bearbeitung von XML-Daten häufig XSLT-Stylesheets (Extensible Stylesheet Language Transformations) verwendet werden. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03).  
+ Während allgemeine FP-Sprachen keine große Verbreitung gefunden haben, konnten sich bestimmte domänenspezifische FP-Sprachen durchsetzen. So wird z. B. das Aussehen vieler Internetseiten durch Cascading Style Sheets (CSS) gesteuert, während für die Bearbeitung von XML-Daten häufig XSLT-Stylesheets (Extensible Stylesheet Language Transformations) verwendet werden. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](../../../../standard/data/xml/xslt-transformations.md).  
   
 ## <a name="terminology"></a>Terminologie  
  Im Folgenden finden Sie Definitionen für eine Reihe von Begriffen, die im Zusammenhang mit der funktionalen Transformation verwendet werden:  
@@ -64,7 +65,7 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Weitere Informationen dazu finden Sie unter [Lambdaausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Auflistung  
- Strukturierter Satz von Daten, die in der Regel alle denselben Typ haben. Damit eine Sammlung mit LINQ kompatibel ist, muss sie die Schnittstelle <xref:System.Collections.IEnumerable> oder <xref:System.Linq.IQueryable> (oder das generische Gegenstück, xref:System.Collections.Generic.IEnumerator%601> oder <xref:System.Linq.IQueryable%601>) implementieren.  
+ Strukturierter Satz von Daten, die in der Regel alle denselben Typ haben. Zur Gewährleistung der Kompatibilität mit LINQ muss eine Auflistung die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Linq.IQueryable>-Schnittstelle (oder eines ihrer generischen Gegenstücke, <xref:System.Collections.Generic.IEnumerator%601> bzw. <xref:System.Linq.IQueryable%601>) implementieren.  
   
  Tupel (anonyme Typen)  
  Begriff aus der Mathematik, der eine endliche Abfolge von Objekten bezeichnet, die jeweils einen bestimmten Typ haben. Ein Tupel wird auch als geordnete Zusammenstellung bezeichnet. Dieses Konzept ist in Programmiersprachen als anonymer Typ implementiert, der es ermöglicht, einen nicht benannten Klassentyp zu deklarieren und gleichzeitig ein Objekt desselben Typs zu instanziieren.  

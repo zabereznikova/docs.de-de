@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string (C#-Referenz)
@@ -125,12 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>Siehe auch  
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)   
  [Werttypen](../../../csharp/language-reference/keywords/value-types.md)   
- [Grundlegende Zeichenfolgenoperationen](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [Erstellen neuer Zeichenfolgen](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)   
+ [Erstellen neuer Zeichenfolgen](../../../standard/base-types/creating-new.md)   
  [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
 
