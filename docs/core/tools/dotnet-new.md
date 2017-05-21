@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 
@@ -97,7 +98,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `-f|--framework`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0` oder `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
-`-au|--authentication`: Der zu verwendende Authentifizierungstyp. Werte: `None` oder `Individual` (Standard: `None`)
+`-au|--auth`: Der zu verwendende Authentifizierungstyp. Werte: `None` oder `Individual` (Standard: `None`)
 
 `-uld|--use-local-db`: Gibt an, ob LocalDB anstelle von SQLite verwendet werden soll. Werte: `true` oder `false` (Standard: `false`)
 
