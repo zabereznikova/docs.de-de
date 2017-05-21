@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 5713faed77786a87dc349a1c7e02ec9703b3700d
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
@@ -82,11 +82,11 @@ ms.lasthandoff: 05/03/2017
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Übersicht](../../../docs/framework/get-started/overview.md)|Enthält ausführliche Informationen für Entwickler, die Anwendungen für .NET Framework erstellen.|
+|[Installationshandbuch](../../../docs/framework/install/index.md)|Stellt Informationen zum Installieren von .NET Framework bereit.|  
 |[.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|Beschreibt die Out-of-Band-Releases von .NET Framework und ihre Verwendung in der App.|
 |[Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)|Führt die Hardware- und Softwareanforderungen für das Ausführen von .NET Framework auf.|
 |[.NET Core und Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md)|Beschreibt, was .NET Core in Bezug auf .NET Framework ist und wie Sie auf die Open-Source-Projekte von .NET Core zugreifen können.|
 |[.NET Core-Dokumentation](https://docs.microsoft.com/dotnet/)|Die konzeptionelle und API-Referenzdokumentation für .NET Core.|
-|[Installationshandbuch](../../../docs/framework/install/guide-for-developers.md)|Stellt Informationen zum Installieren von .NET Framework bereit.|
 
 ## <a name="see-also"></a>Siehe auch
  [.NET Framework – Leitfaden](../../../docs/framework/index.md)   
