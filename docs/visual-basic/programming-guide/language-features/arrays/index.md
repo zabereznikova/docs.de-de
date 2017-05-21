@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1eeccc9b4f1cb00d434b1af61656b64bb860dbb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2b7d76608311e4b29f9ac611885176cc8393fe93
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
@@ -73,7 +74,7 @@ Dim matrix = New Integer(4, 4) {{1, 2}, {3, 4}, {5, 6}, {7, 8}}
 Dim sales()() As Double = New Double(11)() {}  
 ```  
   
- **Inhalt**  
+ **In diesem Thema**  
   
 -   [Arrayelemente in einem einfachen Array](#BKMK_ArrayElements)  
   
@@ -99,7 +100,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 -   [Auflistungen als Alternative zu Arrays](#BKMK_Collections)  
   
-##  <a name="BKMK_ArrayElements"></a>Arrayelemente in einem einfachen Array  
+##  <a name="BKMK_ArrayElements"></a> Arrayelemente in einem einfachen Array  
  Im folgenden Beispiel wird eine Arrayvariable deklariert, die die Schüler der einzelnen Jahrgangsstufe einer Grundschule enthalten soll.  
   
  [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
@@ -121,7 +122,7 @@ Elemente des "students"-Arrays
   
  Sie können auf das Array als Ganzes verweisen, indem Sie nur den Arrayvariablennamen ohne Indizes verwenden.  
   
- Das `students` -Array im vorhergehenden Beispiel verwendet nur einen Index, d. h. es ist eindimensional. Ein Array, das mehr als einen Index oder Feldindex verwendet, wird mehrdimensional genannt. Weitere Informationen finden Sie im weiteren Verlauf dieses Themas und unter [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md) (Array-Dimensionen in Visual Basic).  
+ Das `students` -Array im vorhergehenden Beispiel verwendet nur einen Index, d. h. es ist eindimensional. Ein Array, das mehr als einen Index oder Feldindex verwendet, wird mehrdimensional genannt. Weitere Informationen finden Sie im weiteren Verlauf dieses Themas und unter [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
 ##  <a name="BKMK_CreatingAnArray"></a> Erstellen eines Arrays  
  Es gibt mehrere Möglichkeiten zum Definieren der Größe eines Arrays. Sie können die Größe beim Deklarieren des Arrays angeben, wie im folgenden Beispiel veranschaulicht.  
@@ -154,7 +155,7 @@ Elemente des "students"-Arrays
   
  [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
- Beim Typrückschluss wird der Typ des Arrays anhand des bestimmenden Typs in der Liste der Werte bestimmt, die für das Arrayliteral angegeben wurden. Der bestimmende Typ ist ein eindeutiger Typ, auf den alle anderen Typen im Arrayliteral erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn die für das Arrayliteral angegebene Liste der Werte z. B. Werte vom Typ `Integer`, `Long`und `Double`enthält, weist das erhaltene Array den Typ `Double`auf. Sowohl `Integer` als auch `Long` können nur auf `Double`erweitert werden. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Diese Rückschlussregeln gelten für Typen, die für Arrays abgeleitet werden, die lokale, in einem Klassenmember definierte Variablen darstellen. Sie können zwar Arrayliterale beim Erstellen von Variablen auf Klassenebene verwenden, ein Typrückschluss auf Klassenebene ist jedoch nicht möglich. Daher leiten auf Klassenebene angegebene Arrayliterale die für das Arrayliteral bereitgestellten Werte als `Object`-Typ ab.  
+ Beim Typrückschluss wird der Typ des Arrays anhand des bestimmenden Typs in der Liste der Werte bestimmt, die für das Arrayliteral angegeben wurden. Der bestimmende Typ ist ein eindeutiger Typ, auf den alle anderen Typen im Arrayliteral erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn die für das Arrayliteral angegebene Liste der Werte z. B. Werte vom Typ `Integer`, `Long`und `Double`enthält, weist das erhaltene Array den Typ `Double`auf. Sowohl `Integer` als auch `Long` können nur auf `Double`erweitert werden. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Diese Rückschlussregeln gelten für Typen, die für Arrays abgeleitet werden, die lokale, in einem Klassenmember definierte Variablen darstellen. Sie können zwar Arrayliterale beim Erstellen von Variablen auf Klassenebene verwenden, ein Typrückschluss auf Klassenebene ist jedoch nicht möglich. Daher leiten auf Klassenebene angegebene Arrayliterale die für das Arrayliteral bereitgestellten Werte als `Object`-Typ ab.  
   
  In einem mit einem Arrayliteral erstellten Array kann der Typ der Elemente explizit angegeben werden. In diesem Fall müssen die Werte im Arrayliteral auf den Typ der Elemente des Arrays erweitert werden. Im folgenden Codebeispiel wird ein Array vom Typ `Double` aus einer Liste von ganzen Zahlen erstellt.  
   
@@ -181,11 +182,11 @@ Elemente des "students"-Arrays
 ##  <a name="BKMK_Iterating"></a> Durchlaufen eines Arrays  
  Wenn Sie ein Array durchlaufen, greifen Sie vom niedrigsten Index bis zum höchsten Index auf jedes Element im Array zu.  
   
- Im folgenden Beispiel wird ein eindimensionales Array mit [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md) (For...Next-Anweisung) durchlaufen. Die <xref:System.Array.GetUpperBound%2A>-Methode gibt den höchsten Wert zurück, den der Index aufweisen kann. Der niedrigste Indexwert ist immer 0.  
+ Im folgenden Beispiel wird ein eindimensionales Array mit [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md) (For...Next-Anweisung) durchlaufen. Die <xref:System.Array.GetUpperBound%2A>-Methode gibt den höchsten Wert zurück, den der Index annehmen kann. Der niedrigste Indexwert ist immer 0.  
   
  [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
- Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For...Next` -Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A>-Methode weist einen Parameter auf, der die Dimension angibt. `GetUpperBound(0)` gibt den hohen Indexwert für die erste Dimension und `GetUpperBound(1)` gibt den hohen Indexwert für die zweite Dimension zurück.  
+ Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For...Next` -Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A>-Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` gibt den hohen Indexwert für die erste Dimension und `GetUpperBound(1)` gibt den hohen Indexwert für die zweite Dimension zurück.  
   
  [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
@@ -224,7 +225,7 @@ Elemente des "students"-Arrays
   
  Unter den folgenden Bedingungen müssen Sie eventuell ein Array der Länge 0 (null) erstellen:  
   
--   Ohne eine <xref:System.NullReferenceException>-Ausnahme zu riskieren, muss Ihr Code Member der <xref:System.Array>-Klasse aufrufen, wie etwa „<xref:System.Array.Length%2A>“ oder „<xref:System.Array.Rank%2A>“, oder eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Funktion aufrufen, wie etwa „<xref:Microsoft.VisualBasic.Information.UBound%2A>“.  
+-   Der Code muss, ohne eine <xref:System.NullReferenceException>-Ausnahme auszulösen, auf Member der <xref:System.Array>-Klasse zugreifen, beispielsweise auf <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Funktion wie <xref:Microsoft.VisualBasic.Information.UBound%2A> aufrufen.  
   
 -   Sie möchten den verwendeten Code dadurch vereinfachen, dass eine Überprüfung auf das Vorhandensein von `Nothing` als Sonderfall entfällt.  
   
@@ -241,9 +242,9 @@ Dim prices(3, 4, 5) As Long
   
  Die Gesamtgröße des Arrays in der Variablen `prices` ist (3 + 1) x (4 + 1) x (5 + 1) = 120.  
   
- Sie finden die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A>-Eigenschaft. Sie können die Länge der einzelnen Dimensionen eines mehrdimensionalen Arrays mithilfe der <xref:System.Array.GetLength%2A>-Methode bestimmen.  
+ Sie können die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A>-Eigenschaft bestimmen. Sie können die Länge der einzelnen Dimensionen eines mehrdimensionalen Arrays mithilfe der <xref:System.Array.GetLength%2A>-Methode bestimmen.  
   
- Sie können die Größe einer Arrayvariablen ändern, indem Sie ihr ein neues Arrayobjekt zuweisen oder indem Sie die `ReDim` -Anweisung verwenden.  
+ Sie können die Größe einer Arrayvariablen ändern, indem Sie ihr ein neues Arrayobjekt zuweisen oder indem Sie die `ReDim`-Anweisung verwenden.  
   
  Mehrere Faktoren wirken sich auf die Arraygröße aus.  
   
@@ -261,13 +262,13 @@ Dim prices(3, 4, 5) As Long
   
  Sie können den Datentyp eines Arrays oder seiner Elemente auf verschiedene Arten ermitteln.  
   
--   Sie können die <xref:System.Object.GetType%2A?displayProperty=fullName>-Methode in der Variable aufrufen, um ein <xref:System.Type>-Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type>-Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
+-   Sie können die <xref:System.Object.GetType%2A?displayProperty=fullName>-Methode für die Variable aufrufen, um ein <xref:System.Type>-Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type>-Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
   
--   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A>-Funktion übergeben, um ein `String`-Element zu erhalten, das den Namen des Laufzeittyps enthält.  
+-   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A>-Funktion übergeben, um den Namen des Laufzeittyps als `String` zu erhalten.  
   
--   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.VarType%2A>-Funktion übergeben, um einen `VariantType`-Wert zu erhalten, der die Typklassifizierung der Variable darstellt.  
+-   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.VarType%2A>-Funktion übergeben, um einen `VariantType`-Wert zu erhalten, der die Typklassifikation der Variablen darstellt.  
   
- Im folgenden Beispiel wird die `TypeName` -Funktion aufgerufen, um den Typ des Arrays und den Typ der Elemente im Array zu bestimmen. Der Arraytyp ist `Integer(,)` , und die Elemente im Array sind vom Typ `Integer`.  
+ Im folgenden Beispiel wird die `TypeName`-Funktion aufgerufen, um den Typ des Arrays und den Typ der Elemente im Array zu bestimmen. Der Arraytyp ist `Integer(,)` , und die Elemente im Array sind vom Typ `Integer`.  
   
  [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_21.vb)]  
   
@@ -278,12 +279,12 @@ Dim prices(3, 4, 5) As Long
   
  Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.  
   
- Wenn die Auflistung nur Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
+ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
   
  Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel verwendet die generische [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klasse das <xref:System.Collections.Generic.List%601?displayProperty=fullName>-Element zum Erstellen einer Auflistung von `Customer`-Objekten.  
+ Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klasse <xref:System.Collections.Generic.List%601?displayProperty=fullName> eine Listenauflistung mit `Customer`-Objekten erstellt.  
   
  [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
@@ -293,7 +294,7 @@ Dim prices(3, 4, 5) As Long
   
 |Begriff|Definition|  
 |----------|----------------|  
-|[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md) (Array-Dimensionen in Visual Basic))|Erläutert Rang und Dimensionen in Arrays.|  
+|[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|Erläutert Rang und Dimensionen in Arrays.|  
 |[How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)|Beschreibt das Auffüllen von Arrays mit Anfangswerten.|  
 |[How to: Sort An Array in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-sort-an-array.md) (Gewusst wie: Sortieren eines Arrays in Visual Basic)|Erläutert, wie die Elemente eines Arrays alphabetisch sortiert werden.|  
 |[Gewusst wie: Zuweisen eines Arrays zu einem anderen Array](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|Beschreibt die Regeln und Schritte zum Zuweisen eines Arrays an eine andere Arrayvariable.|  
