@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57c5524a18535778db337500b0a7e9013ce93519
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4762266380b3defab17951fdc4dd5c99d59935c6
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -52,7 +53,7 @@ Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur ang
   
 [!code-csharp[Methodensignatur](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie nicht eine [int](https://msdn.microsoft.com/library/5kzh1b5w.aspx) deklarieren und dieser dann den booleschen Wert [true](https://msdn.microsoft.com/library/06d3w013.aspx) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode. 
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](https://msdn.microsoft.com/library/5kzh1b5w.aspx) nicht deklarieren und dieser dann den booleschen Wert [true](https://msdn.microsoft.com/library/06d3w013.aspx) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode. 
 
 Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](https://msdn.microsoft.com/library/ms173105.aspx).
  

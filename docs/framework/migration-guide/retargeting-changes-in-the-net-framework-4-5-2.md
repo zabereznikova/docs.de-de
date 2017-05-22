@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 10af942724ce0207bc6e64f1ebabfdcd2d3488bd
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="retargeting-changes-in-the-net-framework-452"></a>Neuzuweisung von Änderungen in .NET Framework 4.5.2
@@ -39,9 +40,9 @@ In seltenen Fällen wirken sich Neuausrichtungsänderungen auf Apps aus, die fü
   
 |Funktion|Änderung|Auswirkungen|Bereich|  
 |-------------|------------|------------|-----------|  
-|Abrufen von Daten im HTML-Format aus der Zwischenablage mit der <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>-Methode|Für Apps, die auf [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausgerichtet sind oder unter .NET Framework 4.5.1 oder älteren Versionen ausgeführt werden, ruft <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> entsprechende HTML-formatierte Daten als ASCII-Zeichenfolge ab. Als Resultat werden nicht-ASCII-Zeichen (Zeichen mit ASCII-Codes größer als 0x7F) durch zwei zufällige Zeichen dargestellt. é (0xE9) wird z. B. als Ã© (0xC3 0xA9) dargestellt.<br /><br /> In Apps, die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder eine neuere Version als Ziel verwenden und unter .NET Framework 4.5.2 ausgeführt werden, ruft <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> HTML-formatierte Daten als UTF-8 ab und stellt Zeichen größer als 0x7F korrekt dar.|Wenn Sie eine Problemumgehung für das Codierungsproblem mit HTML-formatierten Zeichenfolgen implementiert haben (z. B. durch explizites Codieren der HTML-Zeichenfolge aus der Zwischenablage durch Übergabe an die <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName>-Methode) und das Ziel Ihrer App von Version 4 zu 4.5 ändern, sollten Sie diese Problemumgehung entfernen.|Gering|  
+|Abrufen von Daten im HTML-Format aus der Zwischenablage mit der <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>-Methode|In Apps, die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] als Ziel verwenden oder die unter .NET Framework 4.5.1 oder älteren Versionen ausgeführt werden, ruft <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> HTML-formatierte Daten als ASCII-Zeichenfolge ab. Als Resultat werden nicht-ASCII-Zeichen (Zeichen mit ASCII-Codes größer als 0x7F) durch zwei zufällige Zeichen dargestellt. é (0xE9) wird z. B. als Ã© (0xC3 0xA9) dargestellt.<br /><br /> In Apps, die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder eine neuere Version als Ziel verwenden und unter .NET Framework 4.5.2 ausgeführt werden, ruft <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> HTML-formatierte Daten als UTF-8 ab und stellt Zeichen größer als 0x7F korrekt dar.|Wenn Sie eine Problemumgehung für das Codierungsproblem mit HTML-formatierten Zeichenfolgen implementiert haben (z. B. durch explizites Codieren der HTML-Zeichenfolge aus der Zwischenablage durch Übergabe an die <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName>-Methode) und das Ziel Ihrer App von Version 4 zu 4.5 ändern, sollten Sie diese Problemumgehung entfernen.|Gering|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Laufzeitänderungen](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-2.md)   
+ [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-2.md)   
  [Anwendungskompatibilität in 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)   
  [Anwendungskompatibilität in 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)

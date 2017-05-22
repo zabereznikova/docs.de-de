@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
-ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 50e5b333f892cf469e9f3fe57a0325ac6d8e641f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -28,7 +28,7 @@ Unter [.NET-Architekturkomponenten](components.md) finden Sie Informationen zu d
 
 ## <a name="how-to-run-the-code-samples"></a>Ausführen der Codebeispiele
 
-Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codebeispiele finden Sie unter [Erste Schritte](getting-started.md).  Sie können Codebeispiele auf dieser Seite kopieren und zum Ausführen in Ihrer Umgebung einfügen. 
+Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codebeispiele finden Sie unter [Erste Schritte](get-started.md).  Sie können Codebeispiele auf dieser Seite kopieren und zum Ausführen in Ihrer Umgebung einfügen. 
 
 > [!NOTE]
 Zukünftig wird diese Dokumentationswebsite die Möglichkeit bieten, diese Codebeispiele in Ihrem Browser auszuführen.
@@ -151,7 +151,7 @@ Wenn Sie sich für eine Einführung in die C#-Features interessieren, lesen Sie 
 
 Wenn Sie sich für eine Einführung in die F#-Features interessieren, lesen Sie [Einführung in F#](../fsharp/tour.md).
 
-Wenn Sie damit beginnen möchten, eigenen Code zu schreiben, lesen Sie [Erste Schritte](getting-started.md).
+Wenn Sie damit beginnen möchten, eigenen Code zu schreiben, lesen Sie [Erste Schritte](get-started.md).
 
 Weitere Informationen zu wichtigen Komponenten von .NET finden Sie unter [.NET-Architekturkomponenten](components.md).
 

@@ -21,10 +21,11 @@ caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d6313cea51b98b3b19363f3c465e5adf241ab3d4
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 46a0ccb9db4d468e68b1e8d1d278308e6e87e85e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalisieren und Lokalisieren von .NET Framework-Anwendungen
@@ -66,13 +67,13 @@ Die Entwicklung einer [weltweit einsetzbaren Anwendung](http://msdn.microsoft.co
  Beschreibt empfohlene Vorgehensweisen zur Durchführung der Globalisierung, Lokalisierung und Entwicklung weltweit einsatzfähiger ASP.NET-Anwendungen.  
   
 ## <a name="reference"></a>Verweis  
- <xref:System.Globalization?displayProperty=fullName> namespace  
+ <xref:System.Globalization?displayProperty=fullName>-Namespace  
  Enthält Klassen, mit denen kulturbezogene Informationen definiert werden. Dazu zählen Sprache, Land/Region, verwendete Kalender, Formatierungsmuster für Datumsangaben, Währungen und Zahlen sowie die Sortierreihenfolge für Zeichenfolgen.  
   
- <xref:System.Resources> namespace  
+ <xref:System.Resources>-Namespace  
  Stellt Klassen zum Erstellen, Bearbeiten und Verwenden von Ressourcen bereit.  
   
- <xref:System.Text> namespace  
+ <xref:System.Text>-Namespace  
  Enthält Klassen, die die ASCII-, ANSI-, Unicode- und andere Zeichencodierungen darstellen.  
   
  [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
