@@ -38,6 +38,7 @@
 ## [Komponententests](core/testing/index.md)
 ### [Komponententests mit dotnet-Test und xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Komponententests mit dotnet-Test und MSTest](core/testing/unit-testing-with-mstest.md)
+### [Ausführen von selektiven Komponententests](core/testing/selective-unit-tests.md)
 ## [Versionskontrolle](core/versions/index.md)
 ### [.NET Core-Unterstützung](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
@@ -132,6 +133,7 @@
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+## C#-Konzepte
 ### [C#-Typsystem](csharp/programming-guide/types/index.md)
 ### [Namespaces](csharp/programming-guide/namespaces/index.md)
 ### [Grundlegende Typen](csharp/basic-types.md)
@@ -184,11 +186,14 @@
 ## [Einführung in F#](fsharp/tour.md)
 
 <!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## Einführung in die funktionale Programmierung
 ### [Funktionen als erstrangige Werte](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+## Lernprogramme
 ### [Erste Schritte](fsharp/tutorials/getting-started/index.md)
 #### [Erste Schritte mit Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [Erste Schritte mit Visual Studio für Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Erste Schritte mit Visual Studio Code und Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [Erste Schritte mit Befehlszeilentools](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
@@ -204,6 +209,7 @@
 #### [Sicherheit von Typanbietern](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Problembehandlung bei Typanbietern](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### Asynchrone und parallele Programmierung
 #### [Asynchrone Programmierung](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
