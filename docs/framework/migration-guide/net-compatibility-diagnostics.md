@@ -479,7 +479,7 @@ Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer,
 |Bereich|Kante|  
 |Version|4.5|  
 |Typ|Laufzeit|  
-|Betroffene APIs|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|Betroffene APIs|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |Analyzer|CD0043|  
   
 <a name="diagnostic44"></a>   
