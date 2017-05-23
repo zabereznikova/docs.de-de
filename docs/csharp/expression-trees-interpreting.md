@@ -456,7 +456,6 @@ public class MethodCallVisitor : Visitor
         }
     }
 }
-
 ```
 
 Und die Ausgabe für die Ausdrucksbaumstruktur wäre:

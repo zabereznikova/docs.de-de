@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: de-de
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   Sie können die Anwendung mit einem Compiler, der auf [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausgerichtet ist, neu kompilieren. Wenn Sie ursprünglich Visual Studio 2003 zum Entwickeln und Kompilieren Ihrer Projektmappe verwendet haben, können Sie die Projektmappe in [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] öffnen. Die Projektmappe und die Projektdateien können dann über das Dialogfeld **Projektkompatibilität** aus den von Visual Studio 2003 verwendeten Formaten in das Format von Microsoft Build Engine (MSBuild) konvertiert werden, das von [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]verwendet wird.  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  In einigen Fällen müssen Sie jedoch möglicherweise den Quellcode ändern und die Anwendung neu kompilieren.  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  Die Auswirkungen veralteter Typen und Member unterscheiden sich geringfügig bei Anwendungen mit neu zugewiesener Zielversion und neu kompilierten Anwendungen. Die Verwendung veralteter Typen und Member wirkt sich nicht auf eine Anwendung mit neuer Zielversion aus, sofern der veraltete Typ oder Member nicht physisch aus seiner Assembly entfernt wurde. Das Neukompilieren eine Anwendung, die veraltete Typen oder Member verwendet, erzeugt in der Regel eher eine Compilerwarnung als einen Compilerfehler. In einigen Fällen wird jedoch ein Compilerfehler verursacht, und Code, in dem der veraltete Typ oder Member verwendet wird, kann nicht erfolgreich kompiliert werden. Sie müssen dann den Quellcode neu schreiben, der den veralteten Typ oder Member aufruft, bevor Sie die Anwendung neu kompilieren. Weitere Informationen zu veralteten Typen und Membern finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md).  
   
  Nähere Informationen zur Bewertung der Auswirkungen von Typen und Membern, die seit dem Release von [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] veraltet sind, finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md). Überprüfen Sie die Listen der veralteten Typen und Member für [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+

@@ -36,17 +36,14 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 -   Sie können sich gegen diese Änderung entscheiden, ohne Ihren Quellcode zu ändern, indem Sie Folgendes zum Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Ihrer app.config-Datei hinzufügen:  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   Sie können Ihren Quellcode ändern, um das vorherige Verhalten wiederherzustellen, indem Sie die Eigenschaften <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> und <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> nach dem Aufrufen der <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>-Methode manuell vergleichen, wie es im folgenden Codefragment geschieht.  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  Für Apps mit [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] und früheren Versionen als Zielplattform können Sie diese Änderung aktivieren, indem Sie Ihrer app.config-Datei den folgenden Wert hinzufügen:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

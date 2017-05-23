@@ -51,7 +51,6 @@ Arrays sind Gruppen von Werten, die logisch miteinander verknüpft sind, z. B. d
  Hier einige Beispiele, bevor wir mit den Erklärungen starten:  
   
 ```vb  
-  
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
@@ -304,3 +303,4 @@ Dim prices(3, 4, 5) As Long
  <xref:System.Array>   
  [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [ReDim-Anweisung](../../../../visual-basic/language-reference/statements/redim-statement.md)
+
