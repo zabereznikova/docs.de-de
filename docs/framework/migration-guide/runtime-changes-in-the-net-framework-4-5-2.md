@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 247fbf574f13985fc941f252c0a6e7268194c079
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-452"></a>Änderungen zur Laufzeit in .NET Framework 4.5.2
@@ -32,7 +33,7 @@ In seltenen Fällen können sich Laufzeitänderungen auf Apps auswirken, die fr�
   
 |Funktion|Änderung|Auswirkungen|Bereich|  
 |-------------|------------|------------|-----------|  
-|`enableViewStateMac`-Attribut des [pages-Elements](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|In ASP.NET sind die folgenden Angaben nicht mehr erlaubt:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> oder:<br /><br /> `<@Page EnableViewStateMac="false" %>`|Der Nachrichtenauthentifizierungscode (MAC) des Ansichtszustands wird nun für alle Anfragen mit eingebettetem Ansichtszustand erzwungen. Es sind nur Apps betroffen, die die <xref:System.Web.UI.Page.EnableViewStateMac%2A>-Eigenschaft explizit auf `false` festlegen.<br /><br /> Weitere Informationen finden Sie unter [Beheben von Fehlern bezüglich des Ansichtszustand-Nachrichtenauthentifizierungscodes (MAC)](http://support.microsoft.com/kb/2915218).|Hauptversion|  
+|`enableViewStateMac`-Attribut des [pages-Elements](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|In ASP.NET sind die folgenden Angaben nicht mehr erlaubt:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> oder:<br /><br /> `<@Page EnableViewStateMac="false" %>`|Der Nachrichtenauthentifizierungscode (MAC) des Ansichtszustands wird nun für alle Anfragen mit eingebettetem Ansichtszustand erzwungen. Nur Apps, die die <xref:System.Web.UI.Page.EnableViewStateMac%2A>-Eigenschaft explizit auf `false` setzen, sind betroffen.<br /><br /> Weitere Informationen finden Sie unter [Beheben von Fehlern bezüglich des Ansichtszustand-Nachrichtenauthentifizierungscodes (MAC)](http://support.microsoft.com/kb/2915218).|Hauptversion|  
   
 <a name="EF"></a>   
 ## <a name="entity-framework-runtime-changes"></a>Entity Framework-Laufzeitänderungen  
