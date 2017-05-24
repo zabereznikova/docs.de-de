@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2856fe19ddc48a14385aaae7b1c331fcb96c0554
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Erstellen Sie eine Variable mit einem [Dim-Anweisung](../../../../visual-basic/l
 1.  Deklarieren Sie die Variable in eine `Dim` Anweisung.  
   
     ```  
-  
     Dim newCustomer  
     ```  
   
@@ -91,3 +91,4 @@ Erstellen Sie eine Variable mit einem [Dim-Anweisung](../../../../visual-basic/l
  [Anweisungen](../../../../visual-basic/language-reference/statements/index.md)   
  [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+

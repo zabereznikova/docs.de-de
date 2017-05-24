@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 40b4b94ac3058dda88b44c82110d4c749566e2b2
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-long-path-support"></a>Entschärfung: Unterstützung für lange Pfade
@@ -37,22 +38,19 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
  Für Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] können Sie sich gegen die Unterstützung von langen Pfaden entscheiden, wenn sie nicht erwünscht ist, indem Sie Folgendes zum Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Ihrer app.config-Datei hinzufügen:  
   
 ```xml  
-  
 <runtime>   
    <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=true" />   
 </runtime>  
-  
 ```  
   
  Anwendungen, die für frühere Versionen von .NET Framework vorgesehen sind, aber unter [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher ausgeführt werden, erlauben die Entscheidung für die Unterstützung von langen Pfaden, indem Folgendes zum Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der app.config-Datei hinzugefügt wird:  
   
 ```xml  
-  
 <runtime>   
    <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=false" />   
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+

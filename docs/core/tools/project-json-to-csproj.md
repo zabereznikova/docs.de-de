@@ -10,16 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/30/2017
 
 ---
 
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
-Von [Nate McMaster](http://github.com/natemcmaster)
+Von [Nate McMaster](https://github.com/natemcmaster)
 
 Bei der Entwicklung von .NET Core-Tools wurde eine wichtige Änderung durchgeführt. *project.json*-Dateien werden nicht länger unterstützt und die .NET Core-Projekte stattdessen in das Format MSBuild/Csproj verschoben.
 
@@ -323,7 +324,7 @@ Es gibt keine Entsprechung in csproj.
 
 ```xml
 <PropertyGroup>
-  <RuntimeIdentifiers>win7-x64;osx.10-11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+  <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
 
@@ -664,7 +665,6 @@ Mit Ausnahme von `Content` erfordern die meisten Artikelgruppen das explizite Hi
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[project.json-Verweis](project-json.md)
 
 [Allgemeine Übersicht über Änderungen in CLI](../tools/cli-msbuild-architecture.md)
 

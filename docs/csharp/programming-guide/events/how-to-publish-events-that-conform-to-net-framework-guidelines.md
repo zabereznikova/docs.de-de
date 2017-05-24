@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 78d069249c8131a091a206703c475faaf641d17b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 6d529e60643966fbabd5290543146977b4dc83c5
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch)
 Das folgende Verfahren veranschaulicht, wie Sie Ereignisse hinzufügen können, die dem [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Standardmuster ihrer Klassen und Strukturen folgen. Alle Ereignisse in der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek basieren auf dem <xref:System.EventHandler>-Delegaten, der wie folgt definiert ist:  
   
-```  
+```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
@@ -49,10 +50,24 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 1.  (Überspringen Sie diesen Schritt, und gehen Sie direkt zu Schritt 3a, wenn Sie keine benutzerdefinierten Daten mit Ihrem Ereignis senden müssen.) Deklarieren Sie die Klasse Ihrer benutzerdefinierten Daten in einem für Ihre Herausgeber- und Ihre Abonnentenklasse sichtbaren Geltungsbereich. Fügen Sie dann die erforderlichen Member hinzu, die Ihre benutzerdefinierten Ereignisdaten enthalten sollen. In diesem Beispiel wird eine einzelne Zeichenfolge zurückgegeben.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    public class CustomEventArgs : EventArgs  
+    {  
+        public CustomEventArgs(string s)  
+        {  
+            msg = s;  
+        }  
+        private string msg;  
+        public string Message  
+        {  
+            get { return msg; }  
+        }   
+    }  
+    ```  
+  
 2.  (Überspringen Sie diesen Schritt, wenn Sie eine generische Version von <xref:System.EventHandler%601> verwenden.) Deklarieren Sie einen Delegaten in Ihrer Herausgeberklasse. Geben Sie ihm einen Namen, der auf *EventHandler* endet. Der zweite Parameter gibt Ihren benutzerdefinierten EventArgs-Typen an.  
   
-    ```  
+    ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
@@ -60,20 +75,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
     1.  Wenn Sie keine benutzerdefinierte EventArgs-Klasse haben, ist Ihr Ereignistyp der nicht generische EventHandler-Delegat. Sie müssen den Delegaten nicht deklarieren, da er schon im <xref:System>-Namespace deklariert wurde, der bei der Erstellung Ihres C#-Projekts erstellt wird. Fügen Sie den folgenden Code in Ihre Herausgeberklasse ein.  
   
-        ```  
+        ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
     2.  Wenn Sie die nicht generische Version von <xref:System.EventHandler> verwenden, und Sie eine benutzerdefinierte Klasse haben, die von <xref:System.EventArgs> abgeleitet ist, deklarieren Sie Ihr Ereignis innerhalb Ihrer Herausgeberklasse, und verwenden Sie Ihren Delegaten aus Schritt 2 als Typ.  
   
-        ```  
+        ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
-  
         ```  
   
     3.  Wenn sie die generische Version verwenden, benötigen Sie keinen benutzerdefinierten Delegaten. Stattdessen geben Sie in Ihrer Herausgeberklasse Ihren Ereignistypen als `EventHandler<CustomEventArgs>` an und fügen den Namen Ihrer eigenen Klasse in die eckigen Klammern ein.  
   
-        ```  
+        ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
         ```  
   

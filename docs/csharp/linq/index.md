@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 099775f5849eefca98a83d2986c5ecbb92b88782
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f63580ba16c2b776ec6f791001cdd48687ce41be
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -43,14 +44,14 @@ Das folgende Beispiel zeigt den vollständigen Abfragevorgang. Der vollständige
   
 -   Für einige Abfragevorgänge, wie z.B. <xref:System.Linq.Enumerable.Count%2A> oder <xref:System.Linq.Enumerable.Max%2A>, gibt es keine entsprechende Abfrageausdrucksklausel, daher müssen diese als Methodenaufruf ausgedrückt werden. Die Methodensyntax kann auf verschiedene Weise mit der Abfragesyntax kombiniert werden. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
--   Abfrageausdrücke können in Ausdrucksbaumstrukturen oder Delegaten kompiliert werden, je nachdem, auf welchen Typ die Abfrage angewendet wird. <xref:System.Collections.Generic.IEnumerable%601>-Abfragen werden in Delegaten kompiliert. <xref:System.Linq.IQueryable>- und <xref:System.Linq.IQueryable%601>-Abfragen werden in Ausdrucksbaumstrukturen kompiliert. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../expression-trees.md).  
+-   Abfrageausdrücke können in Ausdrucksbaumstrukturen oder Delegaten kompiliert werden, je nachdem, auf welchen Typ die Abfrage angewendet wird. <xref:System.Collections.Generic.IEnumerable%601>-Abfragen werden zu Delegaten kompiliert. <xref:System.Linq.IQueryable>- und <xref:System.Linq.IQueryable%601>-Abfragen werden zu Ausdrucksbaumstrukturen kompiliert. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../expression-trees.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfrageausdrücken](query-expression-basics.md) mit einigen grundlegenden Konzepten vertraut, und lesen Sie dann die Dokumentation für die LINQ-Technologie, die Sie interessiert:   
 -   XML-Dokumente: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   .NET-Auflistungen, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 

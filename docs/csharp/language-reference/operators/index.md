@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>C#-Operatoren
@@ -66,9 +67,7 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) – Funktionsaufruf.  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) – Aggregatobjektindizierung.  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) – nullbedingte Indizierung.  Gibt `null` zurück, wenn der linke Operand `null` ist.  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md) – Postfixinkrement.  Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md) – Postfixdekrement.  Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins kleiner ist (für gewöhnlich wird die Ganzzahl 1 subtrahiert).  
@@ -222,15 +221,15 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
 ## <a name="arithmetic-overflow"></a>Arithmetischer Überlauf  
  Die arithmetischen Operatoren ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) können Ergebnisse erzeugen, die sich außerhalb des zulässigen Wertebereichs für den betreffenden numerischen Typ befinden. Einzelheiten zu bestimmten Operatoren finden Sie im entsprechenden Abschnitt, grundsätzlich gilt aber:  
   
-- Arithmetischer Überlauf bei ganzen Zahlen löst entweder eine „<xref:System.OverflowException>“ aus oder verwirft die höchstwertigen Bits des Ergebnisses. Division ganzer Zahlen durch Null löst immer eine @System.DivideByZeroException aus.  
+- Arithmetischer Überlauf bei ganzen Zahlen löst entweder eine <xref:System.OverflowException> aus oder verwirft die höchstwertigen Bits des Ergebnisses. Division ganzer Zahlen durch Null löst immer eine @System.DivideByZeroException aus.  
 
-   Wenn ein Überlauf bei ganzen Zahlen auftritt, hängen die Auswirkungen vom Ausführungskontext ab, bei dem es sich um [checked oder unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) handeln kann. In einem überprüften Kontext wird eine „<xref:System.OverflowException>“ ausgelöst. In einem "unchecked"-Kontext werden die höchstwertigen Bits verworfen, und die Ausführung wird fortgesetzt. Bei C# haben Sie die Wahl, einen Überlauf zu verarbeiten oder zu ignorieren. Standardmäßig erscheinen arithmetische Operationen in einem *unchecked*-Kontext. 
+   Wenn ein Überlauf bei ganzen Zahlen auftritt, hängen die Auswirkungen vom Ausführungskontext ab, bei dem es sich um [checked oder unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) handeln kann. In einem "checked"-Kontext wird eine <xref:System.OverflowException> ausgelöst. In einem "unchecked"-Kontext werden die höchstwertigen Bits verworfen, und die Ausführung wird fortgesetzt. Bei C# haben Sie die Wahl, einen Überlauf zu verarbeiten oder zu ignorieren. Standardmäßig erscheinen arithmetische Operationen in einem *unchecked*-Kontext. 
 
    Neben arithmetischen Operationen können auch Konvertierungen zwischen ganzzahligen Typen (z.B. die Umwandlung von [long](../../../csharp/language-reference/keywords/long.md) nach [int](../../../csharp/language-reference/keywords/int.md)) einen Überlauf verursachen. Sie sind von der Ausführung „checked“ oder „unchecked“ abhängig. Bitweise Operatoren und Schiebeoperatoren verursachen allerdings nie einen Überlauf.  
    
 -   Arithmetischer Überlauf oder Division durch 0 (null) löst bei Gleitkommazahlen nie eine Ausnahme aus, weil die Gleitkommatypen auf IEEE 754 basieren und daher Vorkehrungen für die Darstellung von Unendlich und NaN (Not a Number/Keine Zahl) aufweisen.  
   
--   Der [dezimale](../../../csharp/language-reference/keywords/decimal.md) arithmetische Überlauf löst stets eine „<xref:System.OverflowException>“ aus. Die dezimale Division durch Null löst stets eine „<xref:System.DivideByZeroException>“ aus.  
+-   Arithmetischer Überlauf bei [Decimal](../../../csharp/language-reference/keywords/decimal.md) löst immer eine <xref:System.OverflowException> aus. Dezimale Division durch Null löst immer eine <xref:System.DivideByZeroException> aus.  
   
   
 ## <a name="see-also"></a>Siehe auch  

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
-ms.lasthandoff: 03/31/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilität (C#-Programmierhandbuch)

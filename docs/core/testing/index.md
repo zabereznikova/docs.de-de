@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-translationtype: Human Translation
-ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
-ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 1bef3c8b36218d0cb228e85ef2ccdffd9a2a1bd7
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="unit-testing-in-net-core"></a>Unittests in .NET Core
 
-Von [Steve Smith](http://ardalis.com) und [Bill Wagner](https://github.com/BillWagner)
-
-.NET Core wurde mit Prüfbarkeit als Hintergedanke entwickelt, sodass das Erstellen von Unittests für Ihre Anwendung einfacher als je zuvor ist. Dieser Artikel gibt eine kurze Einführung zu Unittests (und wie sich diese von anderen Arten von Tests unterscheiden).
-Verknüpfte Ressourcen zeigen, wie ein Testprojekt einer Lösung zugeordnet wird und anschließend Unittests mithilfe der Befehlszeile oder Visual Studio ausgeführt werden.
+.NET Core wurde mit Prüfbarkeit als Hintergedanke entwickelt, sodass das Erstellen von Unittests für Ihre Anwendung einfacher als je zuvor ist. Dieser Artikel gibt eine kurze Einführung zu Unittests (und wie sich diese von anderen Arten von Tests unterscheiden). Verknüpfte Ressourcen zeigen, wie ein Testprojekt einer Lösung zugeordnet wird und anschließend Unittests mithilfe der Befehlszeile oder Visual Studio ausgeführt werden.
 
 ## <a name="getting-started-with-testing"></a>Erste Schritte mit Tests
  
@@ -34,9 +32,8 @@ Wenn Sie Unittests schreiben, achten Sie darauf, dass Sie nicht versehentlich Ab
 
 Möchten Sie mehr über Unittests in .NET Core-Projekten erfahren?
 
-Probieren Sie [walkthrough creating unit tests with xUnit and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit xUnit und der .NET-CLI)](unit-testing-with-dotnet-test.md) aus. 
-
-Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [how to use xUnit with .NET Core and Visual Studio (wie xUnit mit .NET Core und Visual Studio verwendet wird)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-
-Wenn Sie lieber MSTest verwenden, versuchen Sie [walkthrough creating unit tests with MSTest and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit MSTest und der .NET-CLI)](unit-testing-with-mstest.md).
+* Probieren Sie [walkthrough creating unit tests with xUnit and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit xUnit und der .NET-CLI)](unit-testing-with-dotnet-test.md) aus. 
+* Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [how to use xUnit with .NET Core and Visual Studio (wie xUnit mit .NET Core und Visual Studio verwendet wird)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Wenn Sie lieber MSTest verwenden, versuchen Sie [walkthrough creating unit tests with MSTest and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit MSTest und der .NET-CLI)](unit-testing-with-mstest.md).
+* Weitere Informationen sowie Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 

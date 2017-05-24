@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08bf434503d92fcf999dc4defb6a0322bceff020
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: fc55d0ead04897f967d8cfe767e0a79f3469427c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)
@@ -141,4 +142,4 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
  [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](http://msdn.microsoft.com/library/e08e4c34-0223-45f7-aa55-a3d8dd979b0f)
+ [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

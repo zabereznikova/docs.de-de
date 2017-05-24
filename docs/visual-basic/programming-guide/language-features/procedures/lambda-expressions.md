@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e50593e76afecfe8807c3cb5bac479245d2feaef
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -108,7 +109,6 @@ Public Class Form1
     End Function  
   
 End Class  
-  
 ```  
   
  Sie können denselben Ereignishandler hinzufügen, indem Sie ein asynchrones Lambda in verwenden ein [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Um diesen Handler hinzuzufügen, fügen Sie einen `Async`-Modifizierer vor der Lambda-Parameterliste, wie im folgenden Beispiel dargestellt, hinzu.  
@@ -131,7 +131,6 @@ Public Class Form1
     End Function  
   
 End Class  
-  
 ```  
   
  Weitere Informationen zum Erstellen und Verwenden von Async-Methoden finden Sie unter [asynchrone Programmierung mit Async und Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -188,3 +187,4 @@ End Class
  [Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
  [Gewusst wie: Erstellen eines Lambda-Ausdrucks](./how-to-create-a-lambda-expression.md)   
  [Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+

@@ -41,7 +41,7 @@
 ### [Private Konstruktoren](private-constructors.md)
 ### [Statische Konstruktoren](static-constructors.md)
 ### [Gewusst wie: Schreiben eines Kopierkonstruktors](how-to-write-a-copy-constructor.md)
-## [Destruktoren](destructors.md)
+## [Finalizer](destructors.md)
 ## [Objekt- und Auflistungsinitialisierer](object-and-collection-initializers.md)
 ### [Gewusst wie: Initialisieren von Objekten mithilfe eines Objektinitialisierers](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Gewusst wie: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer](how-to-initialize-a-dictionary-with-a-collection-initializer.md)

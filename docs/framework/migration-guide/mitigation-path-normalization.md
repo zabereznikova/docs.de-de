@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 0579bb975a62e512062b10d39c2967cdcd23438f
+ms.contentlocale: de-de
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -57,22 +58,19 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
  Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher können sich gegen diese Änderung entscheiden und Legacynormalisierung verwenden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei Folgendes hinzugefügt wird:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
 </runtime>  
-  
 ```  
   
  Apps mit der Zielplattform [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] oder früher, die unter [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher ausgeführt werden, können die Änderungen an der Pfadnormalisierung verwenden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei die folgende Zeile hinzugefügt wird:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+

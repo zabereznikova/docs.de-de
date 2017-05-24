@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: c76168d1c9ae65ef0d17c55aab156a4f16ecea52
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -20,10 +21,10 @@ ms.lasthandoff: 03/20/2017
 
 Visual Studio für Mac bietet eine umfassende integrierte Entwicklungsumgebung (IDE) für die Entwicklung von .NET Core-Anwendungen. Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösung, die eine wiederverwendbare Bibliothek und Komponententests enthält.
 
-Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbegriff und eine Textzeichenfolge vom Benutzer akzeptiert, das Vorkommen des Suchbegriffs in der Zeichenfolge mit einer Methode in einer Klassenbibliothek zählt und das Ergebnis an den Benutzer zurückgibt. Die Lösung umfasst auch Komponententests für die Klassenbibliothek als Einführung in die Konzepte der testgesteuerten Entwicklung (Test-Driven Development, TDD). Wenn Sie das Tutorial lieber mit einem vollständigen Beispiel durchlaufen möchten, laden Sie die [Beispielprojektmappe](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter) herunter.
+Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbegriff und eine Textzeichenfolge vom Benutzer akzeptiert, das Vorkommen des Suchbegriffs in der Zeichenfolge mit einer Methode in einer Klassenbibliothek zählt und das Ergebnis an den Benutzer zurückgibt. Die Lösung umfasst auch Komponententests für die Klassenbibliothek als Einführung in die Konzepte der testgesteuerten Entwicklung (Test-Driven Development, TDD). Wenn Sie das Tutorial lieber mit einem vollständigen Beispiel durchlaufen möchten, laden Sie die [Beispielprojektmappe](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter) herunter. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
-> Visual Studio für Mac ist eine Preview-Software. Wie bei allen Preview-Versionen von Microsoft-Produkten wird Ihr Feedback sehr geschätzt. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:
+> Visual Studio Tools für Mac ist eine Preview-Software. Wie mit allen Preview-Versionen von Microsoft-Produkten, wird Ihr Feedback sehr geschätzt. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:
 > * Wählen Sie in Visual Studio für Mac **Hilfe > Ein Problem melden** aus dem Menü oder **Ein Problem melden** von der Willkommensseite aus, sodass ein Fenster für das Einreichen eines Fehlerberichts geöffnet wird.
 > * Um einen Vorschlag zu machen, wählen Sie **Hilfe > Vorschlag senden** aus dem Menü oder **Vorschlag senden** von der Willkommensseite aus, sodass Sie zur [Visual Studio for Mac UserVoice webpage (UserVoice-Webseite von Visual Studio für Mac)](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac) gelangen.
 

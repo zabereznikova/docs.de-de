@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Dim root As XElement = _
 For Each e As XElement In root.Elements()  
     root.Add(New XElement(e.Name, e.Value))  
 Next  
-  
 ```  
   
  Dieser Code führt zu einer Endlosschleife. Die `foreach`-Anweisung durchläuft die `Elements()`-Achse und fügt dabei dem `doc`-Element neue Elemente hinzu. Das Ergebnis ist, dass die Anweisung auch die gerade hinzugefügten Elemente durchläuft und bei jedem Durchlaufen der Schleife neue Objekte zuweist. Irgendwann wird der gesamte verfügbare Arbeitsspeicher dafür in Beschlag genommen.  
@@ -79,7 +79,6 @@ For Each e As XElement In root.Elements().ToList()
     root.Add(New XElement(e.Name, e.Value))  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Jetzt funktioniert der Code. Die resultierende XML-Struktur sieht wie folgt aus:  
@@ -109,7 +108,6 @@ For Each e As XElement In root.Elements()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Ein solcher Code würde aber nicht zum gewünschten Ergebnis führen. Nachdem Sie das erste Element, A, entfernt haben, würde es aus der im Stamm enthaltenen XML-Struktur entfernt werden, sodass der Code in der <legacyBold>Elements</legacyBold>-Methode, der die Iteration vornimmt, das nächste Element nicht finden könnte.  
@@ -136,7 +134,6 @@ For Each e As XElement In root.Elements().ToList()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Dies erzeugt die folgende Ausgabe:  
@@ -156,7 +153,6 @@ Dim root As XElement = _
     </Root>  
 root.RemoveAll()  
 Console.WriteLine(root)  
-  
 ```  
   
 ## <a name="why-cant-linq-automatically-handle-this"></a>Warum kann LINQ dieses Problem nicht automatisch lösen?  
@@ -169,7 +165,6 @@ Dim z = _
     From e In root.Elements() _  
     Where (TestSomeCondition(e)) _  
     Select DoMyProjection(e)  
-  
 ```  
   
  Solch ein Analysecode müsste die Methoden <legacyBold>TestSomeCondition</legacyBold> und <legacyBold>DoMyProjection</legacyBold> sowie alle von diesen Methoden aufgerufenen Methoden analysieren, um zu bestimmen, ob Code mit Nebenwirkungen vorhanden ist. Der Analysecode kann aber nicht nur einfach nach Code mit Nebenwirkungen suchen. Er dürfte nur den Code auswählen, der in dieser Situation Nebenwirkungen auf die untergeordneten Elemente von `root` hat.  
@@ -197,8 +192,8 @@ Dim root As XElement = _
 Dim newRoot As XElement = New XElement("Root", _  
     root.Elements(), root.Elements())  
 Console.WriteLine(newRoot)  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

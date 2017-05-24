@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1d6cebecd75bedc393b06261c1955a554c9cf18c
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="preserving-white-space-while-serializing"></a>Beibehalten von Leerzeichen beim Serialisieren
@@ -33,7 +34,7 @@ In diesem Thema wird beschrieben, wie Sie das Leerraumverhalten beim Serialisier
  Aber auch dieses Szenario ist häufig anzutreffen: XML-Code, der bereits absichtlich mit Einzügen versehen wurde, wird gelesen und geändert. Sie möchten nicht, dass diese Einzüge irgendwie geändert werden. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] können Sie dies erreichen, indem Sie den Leerraum beim Laden oder Analysieren des XML-Codes beibehalten und dann beim Serialisieren des XML-Codes die Formatierung deaktivieren.  
   
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>Leerraumverhalten von Methoden, die XML-Strukturen serialisieren  
- Die folgenden Methoden der Klassen <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> serialisieren eine XML-Struktur. Sie können eine XML-Struktur in eine Datei, einen <xref:System.IO.TextReader> oder einen <xref:System.Xml.XmlReader> serialisieren. Die `ToString`-Methode nimmt eine Serialisierung in eine Zeichenfolge vor.  
+ Die folgenden Methoden in den Klassen <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> serialisieren eine XML-Struktur. Sie können XML-Strukturen in eine Datei, in einen <xref:System.IO.TextReader> oder in einen <xref:System.Xml.XmlReader> serialisieren. Die `ToString`-Methode nimmt eine Serialisierung in eine Zeichenfolge vor.  
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
   

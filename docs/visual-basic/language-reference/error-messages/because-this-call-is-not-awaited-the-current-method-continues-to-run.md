@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -102,13 +103,11 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
         Await Task.Delay(howLong)  
         ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."  
     End Function  
-  
     ```  
   
      Wenn Sie beispielsweise „Call #1“ oder „Call #2“ wählen, wird die unerwartete asynchrone Methode (`CalledMethodAsync`) beendet, nachdem der Aufrufer (`CallingMethodAsync`) und der Aufrufer des Aufrufers (`StartButton_Click`) abgeschlossen sind. Die letzte Zeile in der folgenden Ausgabe zeigt, wann die aufgerufene Methode beendet ist. Der Eingang und das Ende des Ereignishandlers, der `CallingMethodAsync` im vollständigen Beispiel aufruft, werden in der Ausgabe gekennzeichnet.  
   
     ```  
-  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -138,7 +137,6 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
             <TextBox x:Name="ResultsTextBox" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
      Ein einfaches Fenster, das eine Schaltfläche und ein Textfeld enthält, wird in der **Entwurf** -Ansicht der MainWindow.xaml-Datei angezeigt.  
@@ -148,7 +146,6 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
 4.  Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
   
     ```vb  
-  
     Class MainWindow   
   
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -233,3 +230,4 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
 ## <a name="see-also"></a>Siehe auch  
  [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
  [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+

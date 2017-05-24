@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25c2bf8830d80f0f41855d0fa9e292b0edcbe052
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
@@ -43,19 +44,19 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
  [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- Jede Klasse oder Struktur, die die <xref:System.IEquatable%601>-Schnittstelle implementiert, muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die der Signatur entspricht, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
+ Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   
  Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Die Schnittstelle definiert nur die Signatur. Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind. Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben. Daher können Sie durch die Verwendung von Schnittstellen das Verhalten von mehreren Quellen in einer Klasse einbeziehen.  
   
  Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
- Schnittstellen können Methoden, Eigenschaften, Ereignisse, Indexer oder eine beliebige Kombination aus diesen vier Membertypen enthalten. Links zu den Beispielen finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Eine Schnittstelle kann weder Konstanten, Felder, Operatoren, Instanzkonstruktoren, Destruktoren noch Typen enthalten. Schnittstellenmember sind automatisch öffentlich, und sie können keine Zugriffsmodifizierer enthalten. Member können zudem nicht [statisch](../../../csharp/language-reference/keywords/static.md) sein.  
+ Schnittstellen können Methoden, Eigenschaften, Ereignisse, Indexer oder eine beliebige Kombination aus diesen vier Membertypen enthalten. Links zu den Beispielen finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Eine Schnittstelle kann weder Konstanten, Felder, Operatoren, Instanzkonstruktoren, Finalizer noch Typen enthalten. Schnittstellenmember sind automatisch öffentlich, und sie können keine Zugriffsmodifizierer enthalten. Member können zudem nicht [statisch](../../../csharp/language-reference/keywords/static.md) sein.  
   
  Zum Implementieren eines Schnittstellenmembers muss das entsprechende Member der Implementierungsklasse öffentlich und nicht statisch sein und muss über denselben Namen und die Signatur wie das Schnittstellenmember verfügen.  
   
  Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss die Klasse oder Struktur eine Implementierung für alle Member bereitstellen, die durch die Schnittstelle definiert wird. Die Schnittstelle an sich stellt keine Funktionalität bereit, die eine Klasse oder Struktur dergestalt erben kann, sodass es die Funktionalität der Basisklasse erben kann Wenn eine Basisklasse jedoch eine Schnittstelle implementiert, erbt jede aus der Basisklasse abgeleitete Klasse diese Implementierung.  
   
- Das folgenden Beispiel zeigt eine Implementierung der IEquatable<T\>-Schnittstelle. Die implementierende Klasse,`Car`, muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>-Methode bereitstellen.  
+ Das folgenden Beispiel zeigt eine Implementierung der IEquatable<T\>-Schnittstelle. Die Implementierungsklasse `Car` muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>-Methode bereitstellen.  
   
  [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

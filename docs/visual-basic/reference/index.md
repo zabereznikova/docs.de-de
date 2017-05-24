@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7b1ef288f04a83ef979b36e50cf0d3adc0e80387
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c948ce1162d4c14075beedefc92fb245cc80f6b7
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="reference-visual-basic"></a>Referenz

@@ -12,7 +12,7 @@
 #### [Änderungen zur Laufzeit](runtime-changes-in-the-net-framework-4-5-2.md)
 ### [Anwendungskompatibilität in 4.6](application-compatibility-in-the-net-framework-4-6.md)
 #### [Änderungen zur Laufzeit](runtime-changes-in-the-net-framework-4-6.md)
-##### [Mitigation: New 64-bit JIT Compiler](mitigation-new-64-bit-jit-compiler.md) (Mitigation: New 64-bit JIT Compiler)
+##### [Entschärfung: Neuer 64-Bit-JIT-Compiler](mitigation-new-64-bit-jit-compiler.md)
 ##### [Entschärfung: Produktversionsverwaltung](mitigation-product-versioning.md)
 ##### [Entschärfung: WCF-Dienste und Zertifikatauthentifizierung](mitigation-wcf-services-and-certificate-authentication.md)
 ##### [Entschärfung: Rendern von WPF-Fenstern](mitigation-wpf-window-rendering.md)

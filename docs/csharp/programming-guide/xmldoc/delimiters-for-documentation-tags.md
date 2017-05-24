@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,6 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
     /**   
      * <summary>text</summary>   
     */  
-  
     ```  
   
 -   Der Compiler identifiziert ein gemeinsames Muster von „*“ am Anfang der zweiten und dritten Zeile. Das Muster ist nicht in der Ausgabe enthalten.  
@@ -105,3 +105,4 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
  [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [-doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

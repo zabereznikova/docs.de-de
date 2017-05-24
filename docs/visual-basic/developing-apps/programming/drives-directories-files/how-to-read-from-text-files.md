@@ -34,19 +34,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 362745101d1a8f7dd61b5e3aabe1c27190c46c07
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ea4f6ebfaf06a8b2b5d161d9986eebd28f50d5b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Gewusst wie: Lesen von Textdateien in Visual Basic
-Mit der <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>-Methode des `My.Computer.FileSystem`-Objekts können Sie aus einer Textdatei lesen. Die Dateicodierung kann angegeben werden, wenn beim Inhalt der Datei eine Codierung wie ASCII oder UTF-8 verwendet wird.  
+Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das Lesen aus einer Textdatei. Die Dateicodierung kann angegeben werden, wenn beim Inhalt der Datei eine Codierung wie ASCII oder UTF-8 verwendet wird.  
   
  Wenn Sie aus einer Datei mit erweiterten Zeichen lesen, müssen Sie die Dateicodierung angeben.  
   
 > [!NOTE]
->  Um eine Datei Textzeile für Textzeile zu lesen, verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A>-Methode des `My.Computer.FileSystem`-Objekts. Die `OpenTextFileReader`-Methode gibt ein <xref:System.IO.StreamReader>-Objekt zurück. Können Sie die <xref:System.IO.StreamReader.ReadLine%2A>-Methode des `StreamReader`-Objekts dazu verwenden, eine Datei Zeile für Zeile zu lesen. Sie können mithilfe der <xref:System.IO.StreamReader.EndOfStream%2A>-Methode des `StreamReader`-Objekts auf das Ende der Datei testen.  
+>  Um in einer Datei jeweils eine einzelne Textzeile zu lesen, verwenden Sie die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A>-Methode des `My.Computer.FileSystem`-Objekts. Die `OpenTextFileReader`-Methode gibt ein <xref:System.IO.StreamReader>-Objekt zurück. Mithilfe der <xref:System.IO.StreamReader.ReadLine%2A>-Methode des `StreamReader`-Objekts kann jeweils eine Zeile in einer Datei gelesen werden. Sie können mit der <xref:System.IO.StreamReader.EndOfStream%2A>-Methode des `StreamReader`-Objekts einen Test für das Ende der Datei ausführen.  
   
 ### <a name="to-read-from-a-text-file"></a>So lesen Sie eine Textdatei  
   
@@ -63,17 +64,17 @@ Mit der <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>-M
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (<xref:System.ArgumentException>).  
+-   Der Pfad ist aus einem der folgenden Gründe ungültig: Es handelt sich um eine Zeichenfolge der Länge 0, der Pfad enthält nur Leerzeichen, er enthält ungültige Zeichen, oder es handelt sich um einen Gerätepfad (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` entspricht (<xref:System.ArgumentNullException>).  
+-   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
 -   Die Datei ist nicht vorhanden (<xref:System.IO.FileNotFoundException>).  
   
 -   Die Datei wird von einem anderen Prozess verwendet, oder ein E/A-Fehler tritt auf (<xref:System.IO.IOException>).  
   
--   Der Pfad überschreitet die vom System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+-   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Der Datei- oder Verzeichnisname im Pfad enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+-   Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
   
 -   Es ist nicht genügend Arbeitsspeicher vorhanden, um die Zeichenfolge in den Puffer zu schreiben (<xref:System.OutOfMemoryException>).  
   

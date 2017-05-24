@@ -18,10 +18,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 09f682d9c3a1cf5d42bba878676d84b9328a1a81
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
@@ -34,14 +35,12 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
  Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Elemente hinzu, um die Versionen zu definieren, in denen die App ausgeführt werden kann. Jedes `<supportedRuntime>`-Element führt eine unterstützte Version der Laufzeit auf. Dabei gibt das erste Element die bevorzugte Version der Laufzeit an und das letzte die am wenigsten bevorzugte Version.  
   
 ```xml  
-  
 <configuration>  
    <startup>  
       <supportedRuntime version="v2.0.50727" />  
       <supportedRuntime version="v4.0" />  
    </startup>  
 </configuration>  
-  
 ```  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
@@ -97,3 +96,4 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
  [Anwendungskompatibilität](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Microsoft .NET Framework Support Lifecycle-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
  [Migrationsprobleme in .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+

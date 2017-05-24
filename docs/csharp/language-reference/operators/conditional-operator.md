@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3e60516d1f443528c357eb12612b6149f34c1f7e
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="-operator-c-reference"></a>Operator ?: (C#-Referenz)
@@ -54,7 +55,6 @@ condition ? first_expression : second_expression;
  Sie können mithilfe des bedingten Operators Berechnungen präziser ausdrücken, die andernfalls möglicherweise eine `if-else`-Konstruktion benötigen. Im folgenden Code wird z. B. zuerst eine `if`-Anweisung und anschließend ein bedingter Operator verwendet, um eine ganze Zahl als positiv oder negativ zu klassifizieren.  
   
 ```  
-  
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -66,7 +66,6 @@ else
   
 // ?: conditional operator.  
 classify = (input > 0) ? "positive" : "negative";  
-  
 ```  
   
  Der bedingte Operator ist rechtsassoziativ. Der Ausdruck `a ? b : c ? d : e` wird als `a ? b : (c ? d : e)` und nicht als `(a ? b : c) ? d : e` ausgewertet.  
@@ -83,3 +82,4 @@ classify = (input > 0) ? "positive" : "negative";
  [if-else](../../../csharp/language-reference/keywords/if-else.md)   
  [?.- und ?-Operatoren](../../../csharp/language-reference/operators/null-conditional-operators.md)   
  [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)
+

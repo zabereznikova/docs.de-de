@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5c3012ce057387497f97e713eb625ac2f2a7d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
+ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="c-reference"></a>C#-Referenz
@@ -64,9 +65,10 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  Enthält Zeiger auf die neueste Version der C#-Spezifikation im Microsoft Word-Format.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Häufig gestellte Fragen zu C#](http://go.microsoft.com/fwlink/?LinkId=70367)  
- Enthält eine wachsende Anzahl an häufig gestellten C#-Fragen im C# Developer Center.  
-  
+<!--
+ [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
+ Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
+-->  
  [KB-Artikel zu C# in der Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=70368)  
  Öffnet eine Microsoft-Suchseite für Knowledge Base-Artikel, die auf MSDN verfügbar sind.  
   
@@ -78,3 +80,4 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
   
  [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
  Enthält Informationen zur Verwendung der C#-Programmiersprache.
+

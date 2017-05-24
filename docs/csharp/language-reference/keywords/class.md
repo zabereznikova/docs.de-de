@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 Klassen werden mithilfe des Schlüsselworts `class` deklariert, wie im folgenden Beispiel dargestellt:  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -71,12 +71,12 @@ Klassen werden mithilfe des Schlüsselworts `class` deklariert, wie im folgenden
   
 -   [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Destruktoren](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
 -   [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
+-   [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+
 -   [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
@@ -121,3 +121,4 @@ Console.Write(child1.name);   // Error
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
+

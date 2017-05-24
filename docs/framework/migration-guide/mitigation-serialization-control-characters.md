@@ -2,6 +2,7 @@
 title: "Entschärfung: Serialisierung von Steuerzeichen mit dem DataContractJsonSerializer | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
