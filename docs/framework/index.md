@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: 50f027408357a5d98ef1bfe305ab675fc97abba8
 ms.contentlocale: de-de
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework – Leitfaden
 
 > [!NOTE]
->  Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md).  
+>  Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
-.NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheitsfunktionalität sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.
+ .NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Web, Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.
 
- .NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.  
-
-.NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheitsfunktionalität sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.
+.NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheit sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.  
 
 Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](../../docs/framework/get-started/index.md). Eine Einführung in die Architektur und die Hauptfunktionen von .NET Framework finden Sie unter [Übersicht](../../docs/framework/get-started/overview.md).  
 
@@ -71,3 +69,4 @@ Stellt Syntax- und Codebeispiele sowie weitere Informationen zu jeder in den .NE
   
 [Zusätzliche Klassenbibliotheken und APIs](../../docs/framework/additional-apis/index.md)  
 Enthält Dokumentation für Klassen in OOB-Versionen (Out of Band) sowie für Klassen, die auf bestimmte Zielplattformen oder Implementierungen von .NET Framework ausgerichtet sind.
+
