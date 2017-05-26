@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3cc29c37879a3edafb05b482698393f521b6c3b3
-ms.openlocfilehash: b4b0ac5a58fa37e5b39bcba262ba0fac443725e6
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
 ms.contentlocale: de-de
-ms.lasthandoff: 03/26/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -56,7 +56,7 @@ Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
 
 `--filter <EXPRESSION>`
 
-Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen zur Filterungsunterstützung finden Sie unter [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering).
+Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -98,10 +98,46 @@ Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
 Führen Sie die Tests im Projekt `test1` durch:
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>Details zu Filteroptionen
+
+`--filter <EXPRESSION>`
+
+`<Expression>` weist das Format `<property><operator><value>[|&<Expression>]` auf.
+
+`<property>` ist ein Attribut von `Test Case`. Im Folgenden werden die Eigenschaften aufgeführt, die von gängigen Frameworks für Komponententests unterstützt werden:
+
+| Testframework | Unterstützte Eigenschaften                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Priorität</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Merkmale</li></ul>                                   |
+
+`<operator>` beschreibt die Beziehung zwischen der Eigenschaft und dem Wert:
+
+| Operator | Funktion        |
+| :------: | --------------- |
+| `=`      | Genaue Übereinstimmung     |
+| `!=`     | Keine genaue Übereinstimmung |
+| `~`      | Enthält        |
+
+`<value>` ist eine Zeichenfolge. Bei allen Suchvorgängen ist die Groß-/Kleinschreibung nicht relevant.
+
+Ein Ausdruck ohne `<operator>` gilt automatisch als `contains` für die `FullyQualifiedName`-Eigenschaft (`dotnet test --filter xyz` ist beispielsweise identisch mit `dotnet test --filter FullyQualifiedName~xyz`).
+
+Ausdrücke können mit bedingten Operatoren verknüpft werden:
+
+| Operator | Funktion |
+| :------: | :------: |
+| `|`      | ODER       |
+| `&`      | UND      |
+
+Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren verwenden (Beispiel: `(Name~TestMethod1) | (Name~TestMethod2)`).
+
+Weitere Informationen sowie Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Zielframeworks](../../standard/frameworks.md)
-* [Runtime-ID-Katalog (RID)](../rid-catalog.md)
+[Frameworks und Ziele](../../standard/frameworks.md)   
+[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
 
