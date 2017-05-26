@@ -34,7 +34,7 @@ Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Stan
 
 In der folgenden Tabelle sind alle Versionen von .NET Standard und die unterstützten Plattformen aufgeführt:
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Gehen Sie folgendermaßen vor, um die höchste Version von .NET Standard zu suchen, die Sie als Ziel verwenden können:
 1. Suchen Sie die Zeile, die die .NET Plattform enthält, die Sie ausführen möchten.

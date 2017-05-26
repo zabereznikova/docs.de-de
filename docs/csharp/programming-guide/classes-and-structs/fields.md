@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1e5b1880e6821b2fd4595baad31f7a1bd5599ac4
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -66,7 +67,7 @@ Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](
  Ein Feld kann als [readonly](../../../csharp/language-reference/keywords/readonly.md) deklariert werden. Einem schreibgeschützten Feld kann nur ein Wert während der Initialisierung oder in einem Konstruktor zugewiesen werden. Ein `static``readonly`-Feld ist einer Konstanten sehr ähnlich, außer dass der C#-Compiler nicht auf den Wert eines statischen schreibgeschützten Felds zur Kompilierzeit, sondern nur zur Laufzeit zugreifen kann. Weitere Informationen finden Sie unter [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

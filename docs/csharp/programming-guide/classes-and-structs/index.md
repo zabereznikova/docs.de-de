@@ -123,7 +123,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
  Innerhalb einer Klassen- oder Strukturmethode können Sie implizite Typisierung verwenden, um den Compiler anzuweisen, bei der Kompilierung den richtigen Typ zu bestimmen. Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
