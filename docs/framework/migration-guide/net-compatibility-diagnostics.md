@@ -200,7 +200,7 @@ Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer,
 |Bereich|Kante|  
 |Version|4.5|  
 |Typ|Laufzeit|  
-|Betroffene APIs|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|Betroffene APIs|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |Analyzer|CD0019|  
   
 <a name="diagnostic20"></a>   
