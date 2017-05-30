@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2569e6a07ba1456d8bba9b27bf16190e634d6b47
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-pool-blocking-period"></a>Entschärfung: Poolsperrfrist
@@ -33,8 +33,8 @@ Die Sperrfrist für den Verbindungspool wurde für Verbindungen mit Azure SQL-Da
 ## <a name="impact"></a>Auswirkungen  
  Diese Änderung ermöglicht die sofortige Wiederholung eines Versuchs zum Öffnen einer Verbindung mit Azure SQL-Datenbanken. Dadurch wird die Leistung von cloudfähigen Apps verbessert.  
   
-## <a name="mitigation"></a>Entschärfung  
- Für Apps, die von dieser Änderung negativ betroffen sind, kann die Sperrfrist für den Verbindungspool konfiguriert werden, indem die neue <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>-Eigenschaft festgelegt wird.  Der Wert der Eigenschaft ist ein Member der <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName>-Enumeration, der einen der folgenden drei Werte annehmen kann:  
+## <a name="mitigation"></a>Problemumgehung  
+ Für Apps, die von dieser Änderung negativ betroffen sind, kann die Sperrfrist für den Verbindungspool konfiguriert werden, indem die neue <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>-Eigenschaft festgelegt wird.  Der Wert der Eigenschaft ist ein Mitglied der <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName>-Enumeration, die einen von drei Werten annehmen kann:  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   
@@ -42,7 +42,7 @@ Die Sperrfrist für den Verbindungspool wurde für Verbindungen mit Azure SQL-Da
   
 -   `PoolBlockingPeriod.NeverBlock` 
   
- Das vorherige Verhalten kann durch Festlegen der <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>-Eigenschaft auf `PoolBlockingPeriod.AlwaysBlock` wiederhergestellt werden.  
+ Das vorherige Verhalten kann wiederhergestellt werden, indem Sie die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>-Eigenschaft auf `PoolBlockingPeriod.AlwaysBlock` festlegen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

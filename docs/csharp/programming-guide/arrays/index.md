@@ -59,7 +59,7 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
 -   Arrayelemente können einen beliebigen Typ aufweisen, z. B. auch einen Arraytyp.  
   
--   Arraytypen sind [Referenztypen](../../../csharp/language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden. Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Iteration auf allen Arrays in C# verwenden.  
+-   Arraytypen sind [Referenztypen](../../../csharp/language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden. Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Iteration für alle Arrays in C# verwenden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

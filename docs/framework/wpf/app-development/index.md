@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/08/2017
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Fenster und Dialogfelder  
- Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen. Fenster dienen dazu, Anwendungsinhalte zu hosten und Anwendungsfunktionen, über die Benutzer mit diesen Inhalten interagieren können, verfügbar zu machen. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden Fenster mit der <xref:System.Windows.Window>-Klasse gekapselt, die folgende Vorgänge unterstützt:  
+ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen. Fenster dienen dazu, Anwendungsinhalte zu hosten und Anwendungsfunktionen, über die Benutzer mit diesen Inhalten interagieren können, verfügbar zu machen. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden Fenster von der <xref:System.Windows.Window>-Klasse gekapselt, die folgende Vorgänge unterstützt:  
   
 -   Erstellen und Anzeigen von Fenstern  
   
@@ -87,15 +88,15 @@ ms.lasthandoff: 04/08/2017
   
  <xref:System.Windows.Window> unterstützt die Erstellung einer besonderen Art von Fenster, nämlich von Dialogfeldern. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
   
- Aus Gründen der Benutzerfreundlichkeit sowie der Wiederverwendbarkeit und einer konsistenten Funktionsweise zwischen den einzelnen Anwendungen sind in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] drei gängige [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]-Dialogfelder verfügbar: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> und <xref:System.Windows.Controls.PrintDialog>.  
+ Aus Gründen der Benutzerfreundlichkeit, der Wiederverwendbarkeit und einer anwendungsübergreifed konsistenten Benutzeroberfläche stellt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] drei der gängigen [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]-Dialogfelder zur Verfügung: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> und <xref:System.Windows.Controls.PrintDialog>.  
   
- Ein Meldungsfeld ist eine besondere Art von Dialogfeld, in dem Benutzern wichtige Informationen angezeigt und einfache Ja/Nein/OK/Abbrechen-Fragen gestellt werden. Meldungsfelder werden mit der <xref:System.Windows.MessageBox>-Klasse erstellt und angezeigt.  
+ Ein Meldungsfeld ist eine besondere Art von Dialogfeld, in dem Benutzern wichtige Informationen angezeigt und einfache Ja/Nein/OK/Abbrechen-Fragen gestellt werden. Sie verwenden die <xref:System.Windows.MessageBox>-Klasse zum Erstellen und Anzeigen von Meldungsfeldern.  
   
  Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navigation  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt eine Navigation wie im Web mit Seiten (<xref:System.Windows.Controls.Page>) und Links (<xref:System.Windows.Documents.Hyperlink>). Die Navigation kann unter anderem auf folgende Weise implementiert werden:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt die Navigation im Webstil über Seiten (<xref:System.Windows.Controls.Page>) und Links (<xref:System.Windows.Documents.Hyperlink>). Die Navigation kann unter anderem auf folgende Weise implementiert werden:  
   
 -   Eigenständige Seiten, die in einem Webbrowser gehostet werden  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/08/2017
   
  Zur Unterstützung der Navigation implementiert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] folgende Elemente:  
   
--   <xref:System.Windows.Navigation.NavigationService>: Das allgemeine Navigationsmodul zum Verarbeiten von Navigationsanforderungen, das von <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> und [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s zur Unterstützung der anwendungsinternen Navigation verwendet wird.  
+-   <xref:System.Windows.Navigation.NavigationService>, das freigegebene Navigationsmodul für die Verarbeitung von Navigationsanforderungen, das von <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> und [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] zur Unterstützung der Navigation innerhalb von Anwendungen verwendet wird  
   
 -   Navigationsmethoden zur Einleitung der Navigation  
   
@@ -134,8 +135,8 @@ ms.lasthandoff: 04/08/2017
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Hier finden Sie eine Übersicht über die <xref:System.Windows.Application>-Klasse. Erörtert wird u. a. die Verwaltung von Anwendungslebensdauer, Fenstern, Anwendungsressourcen und Navigation.|  
-|[Fenster in WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Hier finden Sie Informationen zur Verwaltung von Fenstern in der Anwendung. Erörtert wird u. a. die Verwendung der <xref:System.Windows.Window>-Klasse und von Dialogfeldern.|  
+|[Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Hier finden Sie eine Übersicht über die <xref:System.Windows.Application>-Klasse. Erörtert wird u.a. die Verwaltung von Anwendungslebensdauer, Fenstern, Anwendungsressourcen und Navigation.|  
+|[Fenster in WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Hier finden Sie Informationen zur Verwaltung von Fenstern in der Anwendung. Erörtert wird u.a. die Verwendung der <xref:System.Windows.Window>-Klasse und von Dialogfeldern.|  
 |[Übersicht über die Navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Hier finden Sie eine Übersicht über die Verwaltung der Navigation zwischen Seiten der Anwendung.|  
 |[Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Enthält allgemeine Informationen zu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Erstellen und Bereitstellen](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Hier wird beschrieben, wie Sie die WPF-Anwendung erstellen und bereitstellen.|  

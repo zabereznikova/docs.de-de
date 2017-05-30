@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: a6bf9656dee0e6074a8341997abb0e73dc3666f5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-product-versioning"></a>Entschärfung: Produktversionsverwaltung
@@ -31,9 +31,9 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Pro
   
 -   Die Datei- und Produktversionsverwaltung für .NET Framework-Dateien wurde vom früheren Schema der Versionsverwaltung von `4.0.30319.x` in `4.6.X.0` (für .NET Framework 4.6 und dessen Punktreleases) sowie in `4.7.X.0` (für .NET Framework 4.7 und dessen Punktreleases) geändert. Sie können diese neuen Werte anzeigen, wenn Sie die **Eigenschaften** der Datei anzeigen, indem Sie mit der rechten Maustaste auf eine Datei klicken.  
   
--   Die Attribute <xref:System.Reflection.AssemblyFileVersionAttribute> und <xref:System.Reflection.AssemblyInformationalVersionAttribute> für verwaltete Assemblys weisen <xref:System.Version>-Werte der Form `4.6.X.0` für .NET Framework 4.6 und dessen Punktreleases sowie `4.7.X.0` für .NET Framework 4.7 auf.  
+-   Die Attribute <xref:System.Reflection.AssemblyFileVersionAttribute> und <xref:System.Reflection.AssemblyInformationalVersionAttribute> für verwaltete Assemblys verfügen über <xref:System.Version>-Werte im Format `4.6.X.0` für .NET Framework 4.6 und die zugehörigen Punktversionen sowie `4.7.X.0` für .NET Framework 4.7.  
   
--   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 und 4.7 gibt die <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft die feste Versionszeichenfolge `4.0.30319.42000` zurück. In .NET Framework 4, 4.5, 4.5.1 und 4.5.2 hat die Eigenschaft Versionszeichenfolgen im Format `4.0.30319.xxxxx` zurückgegeben (z. B. „4.0.30319.18010“). Beachten Sie, dass es nicht empfohlen wird, dass der Anwendungscode neue Abhängigkeiten von der <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft übernimmt.  
+-   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 und 4.7, gibt die <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft die korrigierte Versionszeichenfolge `4.0.30319.42000` zurück. In .NET Framework 4, 4.5, 4.5.1 und 4.5.2 hat die Eigenschaft Versionszeichenfolgen im Format `4.0.30319.xxxxx` zurückgegeben (z. B. „4.0.30319.18010“). Es wird nicht empfohlen, eine neue Abhängigkeit von der <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft in Anwendungscode zu verwenden.  
   
 ### <a name="handling-the-product-versioning-changes"></a>Behandeln der Änderungen hinsichtlich der Produktversionsverwaltung  
  Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen solcher Faktoren, wie beispielsweise die Laufzeitversion von .NET Framework und das Installationsverzeichnis, abhängen:  
@@ -45,9 +45,9 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Pro
     > [!IMPORTANT]
     >  Der Name des Unterschlüssels ist `NET Framework Setup` und nicht `.NET Framework Setup`.  
   
--   Rufen Sie zum Ermitteln des Verzeichnispfades zur Common Language Runtime von .NET Framework die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=fullName>-Methode auf.  
+-   Um den Verzeichnispfad für die .NET Framework Common Language Runtime zu bestimmen, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=fullName>-Methode auf.  
   
--   Rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=fullName>-Methode auf, um die CLR-Version zu erhalten.   Für .NET Framework 4 und die dazugehörigen Punktreleases (.NET Framework 4.5, 4.5.1, 4.5.2 und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] sowie 4.6.1, 4.6.2 und 4.7) wird die Zeichenfolge `v4.0.30319` zurückgegeben.  
+-   Um die CLR-Version zu erhalten, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=fullName>-Methode auf.   Für .NET Framework 4 und die dazugehörigen Punktreleases (.NET Framework 4.5, 4.5.1, 4.5.2 und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] sowie 4.6.1, 4.6.2 und 4.7) wird die Zeichenfolge `v4.0.30319` zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

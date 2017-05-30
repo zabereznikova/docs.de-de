@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>Entschärfung: Platzzuweisung an mit Stern gekennzeichnete Spalten durch das Rastersteuerelement
@@ -64,7 +64,7 @@ Alle Aussagen über Spalten und Breite in diesem Thema gelten ebenso für Zeilen
 
 Der neue Algorithmus ändert die den \*-Spalten zugewiesene tatsächliche Breite in einer Reihe von Fällen:
 
-- Wenn eine oder mehrere \*-Spalten außerdem eine Minimal- oder Maximalbreite aufweisen, die die proportionale Zuweisung für die betreffende Spalte außer Kraft setzt. (Die Minimalbreite kann aus einer expliziten <xref:System.Windows.FrameworkElement.MinWidth%2A>-Deklaration oder aus einem impliziten Minimalwert abgeleitet werden, der sich aus dem Spalteninhalt ergibt. Die Maximalbreite kann nur explizit in einer <xref:System.Windows.FrameworkElement.MaxWidth%2A>-Deklaration definiert werden.)
+- Wenn eine oder mehrere \*-Spalten außerdem eine Minimal- oder Maximalbreite aufweisen, die die proportionale Zuweisung für die betreffende Spalte außer Kraft setzt. (Die Minimalbreite kann aus einer expliziten <xref:System.Windows.FrameworkElement.MinWidth%2A>-Deklaration oder aus einem impliziten Minimalwert abgeleitet werden, der sich aus dem Spalteninhalt ergibt. Die maximale Breite kann nur explizit aus einer <xref:System.Windows.FrameworkElement.MaxWidth%2A>-Deklaration definiert werden.)
 
 - Wenn eine oder mehrere \*-Spalten eine extrem große \*-Gewichtung deklarieren, größer als 10^298.
 
