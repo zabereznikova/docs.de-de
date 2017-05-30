@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57c49b555d7989a27fb4a2943b72cd2c4849694b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed747cf589e1f4731d78af7cc206ff3674d666b2
+ms.openlocfilehash: b2ce10b3c079ff2c881f6dbe297ead33b8254476
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -35,7 +36,7 @@ Dabei lernen Sie auch einige C#-Sprachfunktionen kennen:
 * Verarbeiten eingehender HTTP-Anforderungen und Generieren der HTTP-Antwort
 * Arbeiten mit Nullable-Werttypen
 
-Sie können den Code aus unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) abrufen.
+Sie können die Beispiel-App für dieses Thema [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Warum Docker?
 
@@ -100,7 +101,7 @@ Sobald Sie die Anwendung erstellen, führen Sie sie über die Befehlszeile aus:
 dotnet run
 ```
 
-Die Standardkonfiguration lauscht auf „http://localhost:5000“. Wenn Sie den Browser öffnen und zu dieser Seite navigieren, sehen Sie ein „Hello World!“. Vorgang nicht gefunden werden konnte.
+Die Standardkonfiguration lauscht auf http://localhost:5000. Wenn Sie den Browser öffnen und zu dieser Seite navigieren, sehen Sie ein „Hello World!“. Vorgang nicht gefunden werden konnte.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomie einer ASP.NET Core-Anwendung
 
@@ -145,13 +146,13 @@ Die Abfrage-Wörterbuchwerte sind vom Typ `StringValue`. Dieser Typ kann eine Au
 
 Als Nächstes müssen Sie die Zeichenfolgen in Double-Werte konvertieren. Die Methode, mit der Sie die Zeichenfolge in einen Double-Wert konvertieren, ist `double.TryParse()`:
 
-```cs
+```csharp
 bool TryParse(string s, out double result);
 ```
 
 Diese Methode nutzt C#-out-Parameter, um anzugeben, ob die Eingabezeichenfolge in einen Double-Wert konvertiert werden kann. Wenn die Zeichenfolge einen gültigen Double-Wert darstellt, gibt die Methode „true“ zurück, und das `result`-Argument enthält den Wert. Wenn die Zeichenfolge keinen gültigen Double-Wert darstellt, gibt die Methode „false“ zurück.
 
-Sie können diese API mithilfe einer *Erweiterungsmethode* anpassen, die einen *Nullable-Double-Wert* zurückgibt. Ein *Nullable-Werttyp* ist ein Typ, der einen Werttyp darstellt und auch einen fehlenden, d.h. NULL-Wert enthalten kann. Ein Nullable-Typ wird durch Anhängen des `?`-Zeichens an die Typdeklaration dargestellt. 
+Sie können diese API mithilfe einer *Erweiterungsmethode* anpassen, die einen *Nullable-Double-Wert*  zurückgibt. Ein *Nullable-Werttyp* ist ein Typ, der einen Werttyp darstellt und auch einen fehlenden, d.h. NULL-Wert enthalten kann. Ein Nullable-Typ wird durch Anhängen des `?`-Zeichens an die Typdeklaration dargestellt. 
 
 Erweiterungsmethoden sind als statische Methoden definierte Methoden, können aber durch Hinzufügen des `this`-Modifizierers zum ersten Parameter so aufgerufen werden, als ob sie Member dieser Klasse sind. Erweiterungsmethoden können nur in statischen Klassen definiert werden. Hier ist die Definition der Klasse, die die Erweiterungsmethode für die Analyse enthält:
 
@@ -173,7 +174,7 @@ An diesem Punkt können Sie die Webanwendung ausführen und prüfen, ob Ihr Anal
 
 Ihre nächste Aufgabe ist das Erstellen einer zufälligen Wettervorhersage. Wir beginnen mit einem Datencontainer, der die Werte enthält, die Sie für einen Wetterbericht wünschen:
 
-```cs
+```csharp
 public class WeatherReport
 {
     private static readonly string[] PossibleConditions = new string[]
@@ -285,10 +286,6 @@ docker build -t weather-microservice .
 
 Dieser Befehl erstellt das Containerimage basierend auf allen Informationen in Ihrer Docker-Datei. Das `-t`-Argument liefert ein Tag, d.h. einen Namen, für dieses Containerimage. In der Befehlszeile oben wird das Tag `weather-microservice` für den Docker-Container verwendet. Nach Abschluss dieses Befehls verfügen Sie über einen Container, in dem Sie den neuen Dienst ausführen können. 
 
-> [!Note]
-> Der Kopierbefehl kopiert alle erstellten Objekte sowie die Quelle für die Anwendung.
-> Entfernen Sie die Verzeichnisse `obj`, `bin` und `out` von Ihrem lokalen Computer, bevor Sie Ihr Docker-Image erstellen.
-
 Führen Sie den folgenden Befehl zum Starten des Containers aus, und starten Sie Ihren Dienst:
 
 ```console
@@ -343,7 +340,7 @@ docker rm hello-docker
 Wenn Sie nicht benutzte Images von Ihrem Computer entfernen möchten, verwenden Sie diesen Befehl:
 
 ```console
-docker rmi hello-docker
+docker rmi weather-microservice
 ```
 
 ## <a name="conclusion"></a>Schlussfolgerung 

@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12e99815d1fd1b9c57706653e41a360802a6d80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94842349ae1c0fa3ccbdb2279b05a0faeb2f5d30
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Gewusst wie: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung (Visual Basic)
@@ -61,7 +62,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 2.  Wählen Sie im Menü **Deklarationen** den Eintrag **Start**aus.  
   
-     Die Anwendung löst vor dem Start der Hauptanwendung das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> aus.  
+     Die Anwendung löst das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> aus, bevor die Hauptanwendung ausgeführt wird.  
   
 3.  Fügen Sie die Methode `My.Application.Log.WriteEntry` zum `Startup` -Ereignishandler hinzu.  
   
@@ -73,7 +74,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 2.  Wählen Sie im Menü **Deklarationen** den Eintrag **Herunterfahren**aus.  
   
-     Die Anwendung löst nach dem Start, aber vor der Beendigung der Hauptanwendung das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> aus.  
+     Die Anwendung löst das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>-Ereignis aus, nachdem der Hauptthread der Anwendung ausgeführt wurde, jedoch bevor er heruntergefahren wird.  
   
 3.  Fügen Sie die Methode `My.Application.Log.WriteEntry` zum `Shutdown` -Ereignishandler hinzu.  
   

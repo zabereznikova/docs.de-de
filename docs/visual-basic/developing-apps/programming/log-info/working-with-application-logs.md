@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 497f4ea3dfd175248ff733cceb691b2aa0c758e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
@@ -54,7 +55,7 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
  ![Konfiguration von „Log“ für „My“](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>Protokollspeicherorte von Meldungen  
- Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung (mithilfe der Klasse <xref:System.Diagnostics.DefaultTraceListener>). Darüber hinaus schreibt das `My.Application.Log`-Objekt in die Protokolldatei der Assembly (mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>-Klasse), während das `My.Log`-Objekt in die Ausgabe der ASP.NET-Website schreibt (mithilfe der <xref:System.Web.WebPageTraceListener>-Klasse).  
+ Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung (mithilfe der <xref:System.Diagnostics.DefaultTraceListener>-Klasse). Darüber hinaus schreibt das `My.Application.Log`-Objekt in die Protokolldatei der Assembly (mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>-Klasse), während das `My.Log`-Objekt in die Ausgabe der ASP.NET-Webseite schreibt (mithilfe der <xref:System.Web.WebPageTraceListener>-Klasse).  
   
  Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug** , zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe** im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
   
@@ -68,10 +69,10 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
   
  Die Werte von `CompanyName`, `ProductName`und `ProductVersion` stammen aus den Assemblyinformationen der Anwendung. Der Name der Protokolldatei hat die Form " *AssemblyName*.log", wobei *AssemblyName* der Dateiname der Assembly ohne Erweiterung ist. Wenn mehr als eine Protokolldatei erforderlich ist, etwa wenn die ursprüngliche Protokolldatei zu dem Zeitpunkt, da die Anwendung versucht, in es zu schreiben, nicht verfügbar ist, hat der Name der Protokolldatei die Form " *AssemblyName*-*iteration*.log", wobei `iteration` ein positiver `Integer`.  
   
- Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern des Ortes, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Konfigurieren von Protokolleinstellungen  
- Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Filterung der Ausgaben von „My.Application.Log“](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  Die Protokollkonfigurationsabschnitte befinden sich im `<system.diagnostics>` -Knoten im `<configuration>` -Hauptknoten der app.config-Datei. Die Protokollinformationen sind in mehreren Knoten definiert:  
   
@@ -118,13 +119,13 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  Berücksichtigen Sie beim Schreiben von Daten in das Protokoll folgende Punkte:  
   
--   **Vermeiden Sie die Preisgabe von Benutzerinformationen.** . Stellen Sie sicher, dass die Anwendung nur genehmigte Informationen in das Protokoll schreibt. Beispielsweise kann es akzeptabel sein, dass ein Anwendungsprotokoll Benutzernamen enthält, in keinem Fall jedoch Benutzerkennwörter.  
+-   **Vermeiden Sie die Preisgabe von Benutzerinformationen** . Stellen Sie sicher, dass die Anwendung nur genehmigte Informationen in das Protokoll schreibt. Beispielsweise kann es akzeptabel sein, dass ein Anwendungsprotokoll Benutzernamen enthält, in keinem Fall jedoch Benutzerkennwörter.  
   
--   **Achten Sie auf sichere Protokollspeicherorte.** . Jedes Protokoll, das möglicherweise vertrauliche Informationen enthält, sollte an einem sicheren Ort gespeichert werden.  
+-   **Achten Sie auf sichere Protokollspeicherorte** . Jedes Protokoll, das möglicherweise vertrauliche Informationen enthält, sollte an einem sicheren Ort gespeichert werden.  
   
--   **Vermeiden Sie irreführende Informationen.** . Im Allgemeinen sollte die Anwendung alle von einem Benutzer eingegeben Daten überprüfen, bevor Sie sie verwendet. Dies umfasst auch das Schreiben von Daten in das Anwendungsprotokoll.  
+-   **Vermeiden Sie irreführende Informationen** . Im Allgemeinen sollte die Anwendung alle von einem Benutzer eingegeben Daten überprüfen, bevor Sie sie verwendet. Dies umfasst auch das Schreiben von Daten in das Anwendungsprotokoll.  
   
--   **Vermeiden Sie Dienstverweigerung.** . Wenn die Anwendung zu viele Informationen in das Protokoll schreibt, kann das Protokolls voll werden, oder die Suche nach wichtigen Informationen gestaltet sich schwierig.  
+-   **Vermeiden Sie Dienstverweigerung** . Wenn die Anwendung zu viele Informationen in das Protokoll schreibt, kann das Protokolls voll werden, oder die Suche nach wichtigen Informationen gestaltet sich schwierig.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
