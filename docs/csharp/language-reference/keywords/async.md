@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8734f639e45f12ddd987a1c34e7f3ac38aa7d73f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
@@ -61,10 +62,10 @@ string contents = await contentsTask;
  Das `async`-Schlüsselwort ist insofern kontextabhängig, dass es nur dann ein Schlüsselwort ist, wenn mit ihm eine Methode, ein Lambda-Ausdruck oder eine anonyme Methode geändert wird. In allen anderen Kontexten wird es als Bezeichner interpretiert.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Struktur und Ablaufsteuerung zwischen einem asynchronen Ereignishandler, `StartButton_Click`, und einer asynchronen Methode, `ExampleMethodAsync`, veranschaulicht. Das Ergebnis der Async-Methode ist die Länge einer heruntergeladenen Website. Der Code ist für eine Windows Presentation Foundation (WPF)- oder Windows Store-Anwendung geeignet, die Sie in Visual Studio erstellen. Informationen hierzu finden Sie in den Codekommentaren für die Installation der Anwendung.  
+ Im folgenden Beispiel werden die Struktur und Ablaufsteuerung zwischen einem asynchronen Ereignishandler, `StartButton_Click`, und einer asynchronen Methode, `ExampleMethodAsync`, veranschaulicht. Das Ergebnis der Async-Methode ist die Länge einer heruntergeladenen Website. Der Code ist für eine Windows Presentation Foundation (WPF)- oder Windows Store-Anwendung geeignet, die Sie in Visual Studio erstellen. Informationen zum Einrichten der Anwendung finden Sie in den Codekommentaren.  
   
 ```csharp  
-// You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
+// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
 // You need a button (StartButton) and a textbox (ResultsTextBox).  
 // Remember to set the names and handler so that you have something like this:  
 // <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  

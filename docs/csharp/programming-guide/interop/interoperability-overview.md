@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1b6d5bf9943c5826685b9cc72c79187c7f51364
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 5084c4af3334c39f844fec67a1ab05dd9443bf27
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
@@ -43,10 +44,10 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
 ## <a name="platform-invoke"></a>Plattformaufruf  
  Der *Plattformaufruf* ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Microsoft Win32-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
   
- Weitere Informationen finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](http://msdn.microsoft.com/library/eca7606e-ebfb-4f47-b8d9-289903fdc045) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ Weitere Informationen finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
->  Die [Common Language Runtime](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [.NET Framework-Sicherheit](http://go.microsoft.com/fwlink/?LinkId=37122).  
+>  Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [.NET Framework-Sicherheit](http://go.microsoft.com/fwlink/?LinkId=37122).  
   
 ## <a name="c-interop"></a>C++ Interop  
  Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET-Programmiersprachen verfügt [!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)] über eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden können. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  

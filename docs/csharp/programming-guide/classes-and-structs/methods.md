@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e44ef58e85fee164ab3b8be73a35083bd44c5df1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
@@ -42,7 +43,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 >  In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="method-signatures"></a>Methodensignaturen  
- Methoden werden in einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) deklariert, indem die Zugriffsebene z.B. `public` oder `private`, optionale Modifizierer wie z.B. `abstract` oder `sealed`, der Rückgabewert, der Name der Methode und die Methodenparameter angegeben werden. Diese Teile bilden zusammen die Signatur der Methode.  
+ Methoden werden in einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) deklariert, indem die Zugriffsebene wie z. B. `public` oder `private`, optionale Modifizierer wie z. B. `abstract` oder `sealed`, der Rückgabewert, der Name der Methode und die Methodenparameter angegeben werden. Diese Teile bilden zusammen die Signatur der Methode.  
   
 > [!NOTE]
 >  Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.  
@@ -111,22 +112,21 @@ static void Main(string[] args)
                 }  
             }  
         }  
-  
 ```  
   
  Weitere Informationen finden Sie unter [return](../../../csharp/language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Asynchrone Methoden  
- Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen. Die Async-Funktion wurde in [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)] eingeführt.  
+ Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen. 
   
- Wenn Sie eine Methode mit dem Modifizierer [async](../../../csharp/language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](../../../csharp/language-reference/keywords/await.md) in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.  
+ Wenn Sie eine Methode mit dem [async](../../../csharp/language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../../csharp/language-reference/keywords/await.md) Operator in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.  
   
 > [!NOTE]
 >  Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.  
   
- Eine asynchrone Methode kann einen Rückgabetyp von <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder „void“ haben. Der void-Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein void-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die „void“ zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen auffangen, die die Methode auslöst.  
+ Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder „void“ haben. Der void-Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein void-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die „void“ zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen auffangen, die die Methode auslöst.  
   
- Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration von `DelayAsync` den Rückgabetyp `Task<int>` haben. Da der Rückgabetyp `Task<int>`ist, ergibt die Auswertung des `await` -Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung veranschaulicht: `int result = await delayTask`.  
+ Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration von `DelayAsync` den Rückgabetyp `Task<int>`haben. Da der Rückgabetyp `Task<int>`ist, ergibt die Auswertung des `await` -Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung veranschaulicht: `int result = await delayTask`.  
   
  Die `startButton_Click` -Methode ist ein Beispiel für eine asynchrone Methode mit void-Rückgabetyp. Da `DoSomethingAsync` eine asynchrone Methode ist, muss die Aufgabe für den Aufruf von `DoSomethingAsync` abgewartet werden, wie in der folgenden Anweisung dargestellt: `await DoSomethingAsync();`. Die `startButton_Click` -Methode muss mit dem `async` -Modifizierer definiert werden, da die Methode über einen `await` -Ausdruck verfügt.  
   
@@ -148,19 +148,19 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);  
 ```  
   
- Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get` -Accessorschlüsselwort.  
+ Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get`-Accessorschlüsselwort.  
   
 ## <a name="iterators"></a>Iteratoren  
- Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](../../../csharp/language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
+ Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](../../../csharp/language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../../csharp/language-reference/keywords/yield.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
   
- Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung auf.  
+ Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md) Anweisung auf.  
   
  Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.  
   
  Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
@@ -174,3 +174,4 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [Übergeben von Parametern](passing-parameters.md)
+

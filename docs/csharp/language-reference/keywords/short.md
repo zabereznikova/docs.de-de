@@ -1,6 +1,6 @@
 ---
 title: short (C#-Referenz) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,79 +30,91 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c14ae463021fbeed9de24610292fa7516a453fe
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 14f9c66bb620e2ad35513abeeba77372904cc1f3
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="short-c-reference"></a>short (C#-Referenz)
-Das Schlüsselwort `short` kennzeichnet einen ganzzahligen Datentyp, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
+
+`short` kennzeichnet einen ganzzahligen Datentyp, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
 |Typ|Bereich|Größe|.NET Framework-Typ|  
 |----------|-----------|----------|-------------------------|  
 |`short`|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|<xref:System.Int16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literale  
- Sie können eine Variable `short` wie im folgenden Beispiel deklarieren und initialisieren:  
+
+Sie können eine `short`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen.  Wenn das Ganzzahlliteral außerhalb des Bereichs von `short` liegt, d.h., wenn es kleiner als <xref:System.Int16.MinValue?displayProperty=fullName> oder größer als <xref:System.Int16.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf. 
+
+Im folgenden Beispiel werden Ganzzahlen wie 1.034, die als dezimale, hexadezimale und binäre Literale dargestellt werden, implizit aus [int](../../../csharp/language-reference/keywords/int.md) in `short`-Werte konvertiert.  
   
-```  
-  
-short x = 32767;  
-```  
-  
- In der vorherigen Deklaration wird das Ganzzahlliteral `32767` implizit von [int](../../../csharp/language-reference/keywords/int.md) zu `short` konvertiert. Wenn das Ganzzahlliteral nicht in einen `short`-Speicherort passt, wird ein Kompilierungsfehler ausgelöst.  
-  
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Short)]  
+
+> [!NOTE] 
+> Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals. Dezimale Literale haben kein Präfix.
+
+Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit verwenden, wie im folgenden Beispiel veranschaulicht.
+
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>Überladungsauflösung des Compiler
+
  Beim Aufrufen überladener Methoden muss eine Typumwandlung durchgeführt werden. Betrachten Sie z.B. die folgenden überladenen Methoden, die die Parameter `short` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(short s) {}  
 ```  
   
  Die Verwendung der `short`-Umwandlung gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:  
   
-```  
+```csharp  
 SampleMethod(5);         // Calling the method with the int parameter  
 SampleMethod((short)5);  // Calling the method with the short parameter  
 ```  
   
 ## <a name="conversions"></a>Konvertierungen  
+
  Es gibt eine vordefinierte implizite Konvertierung von `short` in [int](../../../csharp/language-reference/keywords/int.md), [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md).  
   
  Sie können numerische nonliteral-Typen einer größeren Speichergröße nicht implizit in `short` konvertieren (siehe [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md) für die Speichergrößen ganzzahliger Typen). Betrachten Sie z.B. die folgenden beiden `short`-Variablen `x` und `y`:  
   
-```  
-  
+```csharp  
 short x = 5, y = 12;  
 ```  
   
  Die folgende Zuweisungsanweisung erzeugt einen Kompilierungsfehler, da der arithmetische Ausdruck auf der rechten Seite des Zuweisungsoperators standardmäßig [int](../../../csharp/language-reference/keywords/int.md) ergibt.  
   
- `short`   `z = x + y;   // Error: no conversion from int to short`  
-  
+```csharp
+short z  = x + y;        // Compiler error CS0266: no conversion from int to short
+```
+
  Verwenden Sie eine Umwandlung, um dieses Problem zu lösen:  
   
- `short`   `z = (`  `short`  `)(x + y);   // OK: explicit conversion`  
+```csharp
+short z  = (short)(x + y);   // Explicit conversion
+```
   
- Es ist jedoch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:  
+ Es ist jedoch auch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:  
   
-```  
+```csharp  
 int m = x + y;  
 long n = x + y;  
 ```  
   
  Es gibt keine implizite Konvertierung von Gleitkommadatentypen zu `short`. Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:  
   
-```  
-  
-      short x = 3.0;          // Error: no implicit conversion from double  
+```csharp  
+short x = 3.0;          // Error: no implicit conversion from double  
 short y = (short)3.0;   // OK: explicit conversion  
 ```  
   
- Informationen zu arithmetischen Ausdrücken mit Gleitkomma- und ganzzahligen Typen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).  
+ Informationen zu arithmetischen Ausdrücken mit Gleitkomma- und Ganzzahltypen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).  
   
- Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie unter [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  

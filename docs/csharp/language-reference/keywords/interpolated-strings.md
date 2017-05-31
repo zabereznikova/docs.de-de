@@ -26,22 +26,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.contentlocale: de-de
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>Interpolierte Zeichenfolgen (C#-Referenz)
 
 Zum Erstellen von Zeichenfolgen verwendet.  Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält.  Eine interpolierte Zeichenfolge gibt eine Zeichenfolge zurück, die die interpolierten Ausdrücke, die sie enthält, durch deren Zeichenfolgenrepräsentation ersetzt.  
 
-Die Argumente einer interpolierten Zeichenfolge sind leichter zu verstehen als eine [Zusammengesetzte Formatzeichenfolge](../../../standard/base-types/composite-format.md#composite-format-string).  Beispielsweise enthält die interpolierte Zeichenfolge  
+Die Argumente einer interpolierten Zeichenfolge sind leichter zu verstehen als eine [Zusammengesetzte Formatzeichenfolge](../../../standard/base-types/composite-formatting.md#composite-format-string).  Die interpolierte Zeichenfolgen  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
 ```  
-zwei interpolierte Ausdrücke, ‚{name}‘ und ‚{hours:hh}‘. Die entsprechende zusammengesetzte Zeichenfolge lautet:
+enthält z.B. zwei interpolierte Ausdrücke, „{name}“ und „{hours:hh}“. Die entsprechende zusammengesetzte Zeichenfolge lautet:
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);  
@@ -79,13 +80,13 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
 
 2. Die Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Variable, die es Ihnen ermöglicht, mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt aus einer einzelnen <xref:System.IFormattable>-Instanz zu erstellen. Dies ist nützlich, wenn sie z.B. die richtigen numerischen und Datumsformate für eine einzelne Kultur einfügen möchten.  Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) bleiben bestehen, bis Sie die Zeichenfolge formatieren, indem sie die Methode @System.Object.ToString implizit oder explizit aufrufen.  Alle enthaltenen Interpolationsausdrücke werden in {0}, \{1\} usw. konvertiert.  
 
-   Im folgendem Beispiel wird die Reflektion verwendet, um die Member sowie die Felder- und Eigenschaftwerte der <xref:System.IFormattable>-Variablen anzuzeigen, die aus einer interpolierten Zeichenfolge erstellt wird. Außerdem wird eine <xref:System.IFormattable>-Variable an die @System.Console(System-String)-Methode übergeben.
+   Im folgendem Beispiel wird die Reflektion verwendet, um die Member sowie die Felder- und Eigenschaftwerte der <xref:System.IFormattable>-Variablen anzuzeigen, die aus einer interpolierten Zeichenfolge erstellt wird. Außerdem wird die @System.Console-Variable an die <xref:System.IFormattable>(System-String)-Methode übergeben.
 
    [!code-cs[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
    Beachten Sie, dass die interpolierte Zeichenfolge nur mithilfe von Reflektion überprüft werden kann. Wenn sie an eine Methode zum Formatieren von Zeichenfolgen übergeben wird, wie z.B. @System.Console.WriteLine(System.String), werden ihre Formatelemente aufgelöst und die Ergebniszeichenfolge zurückgegeben. 
 
-3. Die Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Variable, die eine zusammengesetzte Formatzeichenfolge repräsentiert. Das Überprüfen der zusammengesetzten Zeichenfolge und wie diese als Ergebniszeichenfolge rendert, hilft Ihnen z.B möglicherweise dabei, sich gegen einen Einschleusungsangriff zu schützen, während Sie eine Abfrage erstellen.  <xref:System.FormattableString> enthält außerdem <xref:System.FormattableString.ToString>-Überladungen, die es Ihnen ermöglichen, Ergebniszeichenfolgen für @System.Globalization.InvariantCulture und @System.Globalization.CurrentCulture zu erstellen.  Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) bleiben bestehen, bis Sie die Zeichenfolge formatieren.  Alle enthaltenen Interpolationsausdrücke werden in {0}, \{1\} usw. konvertiert.  
+3. Die Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Variable, die eine zusammengesetzte Formatzeichenfolge repräsentiert. Das Überprüfen der zusammengesetzten Zeichenfolge und wie diese als Ergebniszeichenfolge rendert, hilft Ihnen z.B möglicherweise dabei, sich gegen einen Einschleusungsangriff zu schützen, während Sie eine Abfrage erstellen.  <xref:System.FormattableString> enthält auch <xref:System.FormattableString.ToString>-Überladungen, mit denen Sie Ergebniszeichenfolgen für die Objekte @System.Globalization.InvariantCulture und @System.Globalization.CurrentCulture erzeugen können.  Alle Vorkommen von doppelten geschweiften Klammern („{{“ oder „}}“) bleiben bestehen, bis Sie die Zeichenfolge formatieren.  Alle enthaltenen Interpolationsausdrücke werden in {0}, \{1\} usw. konvertiert.  
 
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 

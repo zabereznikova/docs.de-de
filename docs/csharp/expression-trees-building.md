@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4673690c95d1a1fcea950db272cf0685a9d4c888
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 5cce6b538e27f654c1f4fec732a9c69372f8c9ad
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -170,8 +171,7 @@ BlockExpression body = Expression.Block(
 
 Der Code zum Erstellen der Baumstruktur für die Fakultätsfunktion ist etwas länger, komplizierter, und er ist voll von Bezeichnungen und Break-Anweisungen und anderen Elemente, die wir in unseren täglichen Codieraufgaben vermeiden möchten. 
 
-Für diesen Abschnitt habe ich auch den Besuchercode aktualisiert, um jeden Knoten in dieser Ausdrucksbaumstruktur zu finden, und Informationen zu den Knoten, die in diesem Beispiel erstellt wurden, zu schreiben. Sie können den Code im [Abschnitt Beispiele](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) finden.
-Sie können selbst experimentieren: Erstellen und Führen Sie die Beispiele aus.
+Für diesen Abschnitt habe ich auch den Besuchercode aktualisiert, um jeden Knoten in dieser Ausdrucksbaumstruktur zu finden, und Informationen zu den Knoten, die in diesem Beispiel erstellt wurden, zu schreiben. Sie können den Beispielcode vom Repository „dotnet/docs“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees). Experimentieren Sie selbst, indem Sie die Beispiele erstellen und ausführen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Untersuchen der APIs
 

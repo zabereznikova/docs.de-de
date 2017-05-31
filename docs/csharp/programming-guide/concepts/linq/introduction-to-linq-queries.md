@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 957ab9907c16e494f87873934fe4caccc146c975
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a7d963bad57beb968631e1cf79d7e97dd1554de1
+ms.openlocfilehash: d4739a1ba1c09b29aba25d5439592b82610a2092
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Einführung in LINQ-Abfragen (C#)
@@ -77,7 +78,6 @@ IQueryable<Customer> custQuery =
     from cust in db.Customers  
     where cust.City == "London"  
     select cust;  
-  
 ```  
   
  Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Anbieter. Die Grundregel ist jedoch sehr einfach: Eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder eine Schnittstelle unterstützt, die davon erbt.  
@@ -88,7 +88,7 @@ IQueryable<Customer> custQuery =
 ##  <a name="query"></a> Die Abfrage  
  Die Abfrage gibt an, welche Informationen aus der Datenquelle oder den Datenquellen abgerufen werden sollen. Optional kann eine Abfrage auch angeben, wie diese Informationen vor der Rückgabe sortiert, gruppiert und strukturiert werden sollen. Eine Abfrage wird in einer Abfragevariablen gespeichert und mit einem Abfrageausdruck initialisiert. Um das Schreiben von Abfragen zu erleichtern, hat C# eine neue Abfragesyntax eingeführt.  
   
- Die Abfrage im vorherigen Beispiel gibt alle geraden Zahlen aus einem Ganzzahlen-Array zurück. Der Abfrageausdruck enthält drei Klauseln: `from`, `where` und `select`. (Wenn Sie mit SQL vertraut sind, ist Ihnen wahrscheinlich aufgefallen, dass die Klauseln umgekehrt wie in SQL angeordnet sind.) Die `from`-Klausel gibt die Datenquelle an, die `where`-Klausel wendet den Filter an, und die `select`-Klausel gibt den Typ der zurückgegebenen Elemente an. Diese und weitere Abfrageklauseln werden ausführlich im Abschnitt [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md) erläutert. Wichtig ist hier, dass die Abfragevariable selbst in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] keine Aktion ausführt und keine Daten zurückgibt. Sie speichert nur die Informationen, die erforderlich sind, um Ergebnisse zu erzeugen, wenn die Abfrage zu einem späteren Zeitpunkt ausgeführt wird. Weitere Informationen zum Erstellen von Abfragen hinter den Kulissen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) und [Übersicht über Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Die Abfrage im vorherigen Beispiel gibt alle geraden Zahlen aus einem Ganzzahlen-Array zurück. Der Abfrageausdruck enthält drei Klauseln: `from`, `where` und `select`. (Wenn Sie mit SQL vertraut sind, ist Ihnen wahrscheinlich aufgefallen, dass die Klauseln umgekehrt wie in SQL angeordnet sind.) Die `from`-Klausel gibt die Datenquelle an, die `where`-Klausel wendet den Filter an, und die `select`-Klausel gibt den Typ der zurückgegebenen Elemente an. Diese und weitere Abfrageklauseln werden ausführlich im Abschnitt [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md) erläutert. Wichtig ist hier, dass die Abfragevariable selbst in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] keine Aktion ausführt und keine Daten zurückgibt. Sie speichert nur die Informationen, die erforderlich sind, um Ergebnisse zu erzeugen, wenn die Abfrage zu einem späteren Zeitpunkt ausgeführt wird. Weitere Informationen zum Erstellen von Abfragen hinter den Kulissen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 > [!NOTE]
 >  Abfragen können auch unter Verwendung der Methodensyntax ausgedrückt werden. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -122,3 +122,4 @@ IQueryable<Customer> custQuery =
  [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
  [Abfrageschlüsselwörter (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+

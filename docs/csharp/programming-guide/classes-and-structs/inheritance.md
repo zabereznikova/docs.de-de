@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4590130fed9606f0f0592895de548c4bd7865db7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 4ad15bc57b3ec3b6b06f671f560dce426af64ccc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="inheritance-c-programming-guide"></a>Vererbung (C#-Programmierhandbuch)
@@ -47,9 +48,9 @@ Die Vererbung ist, zusammen mit der Kapselung und der Polymorphie, eines der dre
   
  Konzeptuell gesehen ist die abgeleitete Klasse eine Spezialisierung der Basisklasse. Wenn Sie beispielsweise eine Basisklasse `Animal` haben, haben Sie möglicherweise eine abgeleitete Klasse mit dem Namen `Mammal` und eine andere abgeleitete Klasse mit dem Namen `Reptile`. Ein `Mammal` ist ein `Animal`, und ein `Reptile` ist ein `Animal`, aber jede abgeleitete Klasse repräsentiert unterschiedliche Spezialisierungen der Basisklasse.  
   
- Wenn Sie eine Klasse definieren, die von einer anderen Klasse abgeleitet werden soll, erhält die abgeleitete Klasse implizit alle Member der Basisklasse – ausgenommen davon sind deren Konstruktoren und Destruktoren. Die abgeleitete Klasse kann so den Code der Basisklasse wiederverwenden, ohne diesen erneut implementieren zu müssen. Sie können der abgeleiteten Klasse mehr Member hinzufügen. Auf diese Art erweitert die abgeleitete Klasse die Funktionalität der Basisklasse.  
+ Wenn Sie eine Klasse definieren, die von einer anderen Klasse abgeleitet werden soll, erhält die abgeleitete Klasse implizit alle Member der Basisklasse – ausgenommen davon sind deren Konstruktoren und Finalizern. Die abgeleitete Klasse kann so den Code der Basisklasse wiederverwenden, ohne diesen erneut implementieren zu müssen. Sie können der abgeleiteten Klasse mehr Member hinzufügen. Auf diese Art erweitert die abgeleitete Klasse die Funktionalität der Basisklasse.  
   
- Die folgende Abbildung zeigt eine Klasse `WorkItem`, die ein Arbeitselement in einem Geschäftsprozess repräsentiert. Wie alle Klassen leitet sie sich von <xref:System.Object?displayProperty=fullName> ab und erbt dessen Methoden. `WorkItem` fügt von allein fünf Member hinzu. Diese beinhalten einen Konstruktor, weil Konstruktoren nicht vererbt werden. Die Klasse `ChangeRequest` erbt von `WorkItem` und repräsentiert eine bestimmt Art von Arbeitselementen. `ChangeRequest` fügt den von `WorkItem` und <xref:System.Object> geerbten Membern zwei weitere Member hinzu. Es muss seinen eigenen Konstruktor hinzufügen, und es fügt auch `originalItemID` hinzu. Die Eigenschaft `originalItemID` ermöglicht es der `ChangeRequest`-Instanz, mit dem ursprünglichen `WorkItem` verknüpft zu werden, für das die Änderungsanforderung gilt.  
+ Die folgende Abbildung zeigt eine Klasse `WorkItem`, die ein Arbeitselement in einem Geschäftsprozess repräsentiert. Wie alle Klassen leitet es sich von <xref:System.Object?displayProperty=fullName> ab und erbt dessen Methoden. `WorkItem` fügt von allein fünf Member hinzu. Diese beinhalten einen Konstruktor, weil Konstruktoren nicht vererbt werden. Die Klasse `ChangeRequest` erbt von `WorkItem` und repräsentiert eine bestimmt Art von Arbeitselementen. `ChangeRequest` fügt den von `WorkItem` und <xref:System.Object> geerbten Membern zwei weitere Member hinzu. Es muss seinen eigenen Konstruktor hinzufügen, und es fügt auch `originalItemID` hinzu. Die Eigenschaft `originalItemID` ermöglicht es der `ChangeRequest`-Instanz, mit dem ursprünglichen `WorkItem` verknüpft zu werden, für das die Änderungsanforderung gilt.  
   
  ![Klassenvererbung](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Klassenvererbung  
@@ -67,7 +68,7 @@ Klassenvererbung
 ## <a name="interfaces"></a>Schnittstellen  
  Eine *Schnittstelle* ist ein Verweistyp, der einer abstrakten Basisklasse leicht ähnelt, die nur aus zwei abstrakten Membern besteht. Wenn eine Klasse eine Schnittstelle implementiert, muss sie eine Implementierung für alle Member der Schnittstelle bereitstellen. Ein Klasse kann mehrere Schnittstellen implementieren, auch wenn sie nur von einer einzelnen direkten Basisklasse ableiten kann.  
   
- Schnittstellen werden verwendet, um bestimmte Funktionen zu definieren, die nicht unbedingt in einer „ist ein“-Beziehung zueinander stehen. Die <xref:System.IEquatable%601?displayProperty=fullName>-Schnittstelle kann z.B. von jeder beliebigen Klasse oder Struktur implementiert werden, die es Clientcode ermöglichen muss, ermitteln zu können, ob zwei Objekte des Typs äquivalent sind (allerdings definiert der Typ Äquivalenz). <xref:System.IEquatable%601> impliziert nicht dieselbe Art einer „ist ein“-Beziehung, wie sie zwischen einer Basis- und einer abgeleiteten Klasse besteht (z.B. ist ein `Mammal` ein `Animal`). Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
+ Schnittstellen werden verwendet, um bestimmte Funktionen zu definieren, die nicht unbedingt in einer „ist ein“-Beziehung zueinander stehen. Die <xref:System.IEquatable%601?displayProperty=fullName>-Schnittstelle kann z.B. von jeder beliebigen Klasse oder Struktur implementiert werden, die es Clientcode ermöglichen muss, ermitteln zu können, ob zwei Objekte des Typs äquivalent sind (allerdings definiert der Typ Äquivalenz). `Animal` impliziert nicht dieselbe Art einer „ist ein“-Beziehung, wie sie zwischen einer Basis- und einer abgeleiteten Klasse besteht (z.B. ist ein <xref:System.IEquatable%601> ein `Mammal`). Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Weitere Ableitung verhindern  
  Eine Klasse kann andere Klassen daran hindern, von ihr oder einem ihrer Member zu erben, indem sie sich selbst oder den Member als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) deklariert. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join-Klausel (C#-Referenz)
@@ -88,7 +89,7 @@ Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus untersc
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Verknüpfungen für Objektauflistungen vs. relationale Tabellen  
  Verknüpfungsvorgänge in einem [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Abfrageausdruck werden in Objektauflistungen durchgeführt. Objektauflistungen können nicht wie relationale Tabellen „verknüpft“ werden. In [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] sind explizite `join`-Klauseln nur erforderlich, wenn zwei Quellsequenzen nicht durch eine Beziehung verbunden sind. Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] arbeiten, werden Tabellen mit Fremdschlüsseln in einem Objektmodell als Eigenschaften der primären Tabelle repräsentiert. In der Northwind-Datenbank weist die Tabelle „Customers“ (Kunden) beispielsweise eine Fremdschlüsselbeziehung zu der Tabelle „Orders“ (Aufträge) auf. Wenn Sie die Tabellen dem Objektmodell zuordnen, hat die Klasse „Customers“ eine Eigenschaft „Orders“, die die Auflistung der Aufträge enthält, die zu diesem Kunden gehören. Tatsächlich wurde die Verknüpfung bereits für Sie vorgenommen.  
   
- Weitere Informationen zu Abfragen über verknüpfte Quellen hinweg in Bezug auf [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
+ Weitere Informationen zu Abfragen über verknüpfte Quellen hinweg in Bezug auf [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Zusammengesetzte Schlüssel  
  Mithilfe eines zusammengesetzten Schlüssels können Sie auf die Gleichheit mehrerer Werte prüfen. Weitere Informationen finden Sie unter [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Zusammengesetzte Schlüssel können auch in einer `group`-Klausel verwendet werden.  
@@ -99,7 +100,7 @@ Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus untersc
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Hinweise  
- Eine `join`-Klausel, auf die kein `into` folgt, wird in einen Methodenaufruf <xref:System.Linq.Enumerable.Join%2A> übersetzt. Eine `join`-Klausel, auf die kein `into` folgt, wird in einen Methodenaufruf <xref:System.Linq.Enumerable.GroupJoin%2A> übersetzt.  
+ Eine `join`-Klausel, auf die kein `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>-Methodenaufruf übersetzt. Eine `join`-Klausel, auf die `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>-Methodenaufruf übersetzt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   

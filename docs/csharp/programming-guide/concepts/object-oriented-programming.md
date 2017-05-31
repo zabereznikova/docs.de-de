@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
@@ -43,7 +44,7 @@ C# bietet vollständige Unterstützung für objektorientierte Programmierung, ei
   
          [Konstruktoren](#Constructors)  
   
-         [Destruktoren](#Destructors)  
+         [Finalizer](#Finalizers)  
   
          [Ereignisse](#Events)  
   
@@ -197,13 +198,13 @@ public class SampleClass
   
  [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
-####  <a name="Destructors"></a> Destruktoren  
- Destruktoren werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Destruktoren erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Destruktor für eine Klasse geben.  
+####  <a name="Finalizers"></a> Finalizer  
+ Finalizer werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer für eine Klasse geben.  
   
- Weitere Informationen zu Destruktoren und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbagecollection/index.md).  
+ Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 ####  <a name="Events"></a> Ereignisse  
- Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+ Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).  
   
 -   Verwenden Sie das Schlüsselwort [event](../../../csharp/language-reference/keywords/event.md), um ein Ereignis in einer Klasse zu deklarieren.  
   
@@ -413,7 +414,7 @@ sampleObject.Field = "Sample string";
  Ein *Delegat* ist ein Typ, der eine Methodensignatur definiert. Er kann einen Verweis auf jede Methode bereitstellen, die über eine kompatible Signatur verfügt. Sie können die Methode über den Delegaten aufrufen. Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben.  
   
 > [!NOTE]
->  Ereignishandler sind nichts weiter als Methoden, die durch Delegaten aufgerufen werden. Weitere Informationen zur Ereignisbehandlung mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+>  Ereignishandler sind nichts weiter als Methoden, die durch Delegaten aufgerufen werden. Weitere Informationen zur Ereignisbehandlung mit Delegaten finden Sie unter [Ereignisse](../../../standard/events/index.md).  
   
  So erstellen Sie einen Delegaten  
   

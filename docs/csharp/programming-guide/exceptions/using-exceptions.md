@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Verwenden von Ausnahmen (C#-Programmierhandbuch)
@@ -59,7 +60,7 @@ In C# werden Fehler im Programm zur Laufzeit mithilfe von sogenannten Ausnahmen 
   
  Wenn in der Aufrufliste kein kompatibler `catch`-Block gefunden wird, nachdem eine Ausnahme ausgelöst wird, tritt eine der folgenden Situationen auf:  
   
--   Wenn die Ausnahme sich in einem Destruktor befindet, wird der Destruktor abgebrochen und der Basisdestruktor (sofern vorhanden) aufgerufen.  
+-   Wenn die Ausnahme sich in einem Finalizer befindet, wird der Finalizer abgebrochen und der Basisfinalizer (sofern vorhanden) aufgerufen.  
   
 -   Wenn die Aufrufliste einen statischen Konstruktor oder einen statischen Feldinitialisierer enthält, wird <xref:System.TypeInitializationException> ausgelöst und die ursprüngliche Ausnahme der <xref:System.Exception.InnerException%2A>-Eigenschaft der neuen Ausnahme zugewiesen.  
   

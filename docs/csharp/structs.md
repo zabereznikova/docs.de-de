@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1733538c605cb06c7da4d91a6780caa3ea3bec23
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: ff7e67add731324e01b8f2cc323a66e3a8683ec9
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -44,7 +45,7 @@ Strukturen teilen sich einen großen Teil der Syntax mit Klassen, obwohl Struktu
   
 -   Innerhalb einer Strukturdeklaration können Felder nicht initialisiert werden, außer Sie werden als `const` oder `static` deklariert.  
   
--   Eine Struktur kann keinen Standardkonstruktor (ein Konstruktor ohne Parameter) oder Destruktor deklarieren.  
+-   Eine Struktur kann keinen Standardkonstruktor (ein Konstruktor ohne Parameter) oder Finalizer deklarieren.  
   
 -   Strukturen werden bei Zuweisung kopiert. Wenn eine Struktur einer neuen Variable zugewiesen wird, werden alle Daten kopiert, und jede Änderung an der neuen Kopie ändert nicht die Daten für das Original. Es ist wichtig, sich das zu merken, wenn Sie mit Auflistungen von Wertetypen wie Dictionary<string, myStruct> arbeiten.  
   
@@ -70,7 +71,7 @@ Die letzten beiden Beispiele veranschaulichen die Sprachfunktionen, die in C# 7.
 Im zweiten Beispiel werden *binäre Literale* veranschaulicht, mit denen Sie ein Bitmuster direkt angeben können, anstatt Hexadezimalnotation zu verwenden.
 
 ## <a name="nullable-types"></a>Auf NULL festlegbare Typen  
-Gewöhnliche Werttypen können nicht den Wert [NULL](./language-reference/keywords/null.md) aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein **?** anfügen. after the type. Zum Beispiel ist **int?** ein **int**-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) haben kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp @System.Nullable%601. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)](./programming-guide/nullable-types/index.md).
+Gewöhnliche Werttypen können den Wert [NULL](./language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie ein **?** nach dem Typ anfügen. Zum Beispiel ist **int?** ein **int**-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) haben kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp @System.Nullable%601. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 [Klassen](classes.md)

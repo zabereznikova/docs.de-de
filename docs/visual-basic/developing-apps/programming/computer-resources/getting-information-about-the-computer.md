@@ -1,39 +1,55 @@
 ---
-title: "Getting Information about the Computer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Info object, tasks"
+title: "Abrufen von Informationen über den Computer (Visual Basic) | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Computer.Info object, tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Getting Information about the Computer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: dae9f1a693d2e1c2f3b858f85fa088ac8ed511f9
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Das `My.Computer.Info`\-Objekt stellt Eigenschaften für das Abrufen von Informationen über den Arbeitsspeicher des Computers, über geladene Assemblys, Namen und Betriebssysteme bereit.  
+---
+# <a name="getting-information-about-the-computer-visual-basic"></a>Abrufen von Informationen über den Computer (Visual Basic)
+Das `My.Computer.Info`-Objekt stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des Computer, geladene Assemblys, Name und Betriebssystem bereit.  
   
-## Hinweise  
- In dieser Tabelle werden Aufgaben aufgeführt, die im Allgemeinen mithilfe des `My.Computer.Info`\-Objekts abgearbeitet werden. Darüber hinaus wird auf Themen verwiesen, die die Ausführung dieser Aufgaben veranschaulichen.  
+## <a name="remarks"></a>Hinweise  
+ Diese Tabelle listet Aufgaben auf, die häufig über das `My.Computer.Info`-Objekt durchgeführt werden und weist auf Themen hin, die zeigen, wie jede Aufgabe ausgeführt wird.  
   
-|||  
-|-|-|  
-|To|Siehe|  
-|Ermitteln, wie viel virtueller Adressraum auf dem Computer, auf dem die Anwendung installiert wird, verfügbar ist|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
-|Ermitteln des Plattformtyps des Computers, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
-|Ermitteln des Betriebsystemtyps des Computers, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
-|Ermitteln, welche Service Packs auf dem Computer, auf dem die Anwendung ausgeführt wird, installiert worden sind|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
-|Ermitteln, welche `UICulture` auf dem Computer, auf dem die Anwendung ausgeführt wird, installiert ist|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
+|Beschreibung|Siehe|  
+|---|---|   
+|Bestimmen, wie viel virtueller Adressraum für den Computer verfügbar ist, auf dem die Anwendung installiert wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
+|Bestimmen des Plattformtyps des Computers, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
+|Bestimmen des Betriebssystems des Computers, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
+|Bestimmen, welche Service Packs auf dem Computer installiert wurden, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
+|Bestimmen der installierten `UICulture` auf dem Computer, auf dem die Anwendung ausgeführt wird|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

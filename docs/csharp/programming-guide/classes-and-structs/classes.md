@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>Klassen (C#-Programmierhandbuch)
@@ -54,15 +55,15 @@ Ein *Klasse* ist ein Konstrukt, das Ihnen ermöglicht, Ihre eigenen benutzerdefi
   
  [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
- Wenn eine Instanz einer Klasse erstellt wird, wird ein Verweis auf das Objekt an den Programmierer übergeben. Im vorherigen Beispiel ist `object1` ein Verweis auf ein Objekt, das auf `Customer` basiert. Dieser Verweis bezieht sich auf das neue Objekt, enthält jedoch keine der Daten des Objekts selbst. In der Tat können Sie einen Objektverweis erstellen, ohne ein Objekt zu erstellen:  
+ Wenn eine Instanz einer Klasse erstellt wird, wird ein Verweis auf das Objekt an den Programmierer übergeben. Im vorherigen Beispiel ist `object1` ein Verweis auf ein Objekt, das auf `Customer` basiert. Dieser Verweis bezieht sich auf das neue Objekt, enthält jedoch nicht die Objektdaten selbst. In der Tat können Sie einen Objektverweis erstellen, ohne ein Objekt zu erstellen:  
   
  [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
- Es wird nicht empfohlen, einen Objektverweis wie diesen zu erstellen, der auf kein Objekt verweist. Der Versuch, auf ein Objekt über solch einen Verweis zuzugreifen, schlägt während der Laufzeit fehl. Allerdings kann ein solcher Verweis zum Verweisen auf ein Objekt entweder durch Erstellen eines neues Objekts gemacht werden oder indem Sie ihn einem vorhandenen Objekt zuweisen, z.B.:  
+ Es wird nicht empfohlen, einen Objektverweis wie diesen zu erstellen, der auf kein Objekt verweist. Der Versuch, auf ein Objekt über solch einen Verweis zuzugreifen, schlägt während der Laufzeit fehl. Allerdings kann ein solcher Verweis dazu veranlasst werden, auf ein Objekt zu verweisen, indem entweder ein neues Objekt erstellt wird oder indem es einem vorhandenen Objekt zugewiesen wird, z.B.:  
   
  [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
- Dieser Code erstellt zwei Objektverweise, die beide auf dasselbe Objekt verweisen. Aus diesem Grund werden alle Änderungen auf das Objekt, die über `object3` getätigt worden sind, bei nachfolgenden Verwendungen von `object4` berücksichtigt. Da auf Objekte, die auf Klassen basieren, durch Verweise zurückgegriffen werden, sind Klassen als Verweistypen bekannt.  
+ Dieser Code erstellt zwei Objektverweise, die beide auf dasselbe Objekt verweisen. Aus diesem Grund werden alle Änderungen am Objekt, die über `object3` getätigt worden sind, bei nachfolgenden Verwendungen von `object4` berücksichtigt. Da auf Objekte, die auf Klassen basieren, durch Verweise zurückgegriffen werden, sind Klassen als Verweistypen bekannt.  
   
 ## <a name="class-inheritance"></a>Klassenvererbung  
  Die Vererbung erfolgt durch Verwendung einer *Ableitung*, d.h., dass eine Klasse mithilfe einer *Basisklasse* deklariert wird, aus der Sie Daten und das Verhalten erbt. Eine Basisklasse wird durch Anhängen eines Doppelpunkts sowie den Namen der Basisklasse angegeben, die dem abgeleiteten Klassennamen folgt, z.B.:  
@@ -84,14 +85,14 @@ Ein *Klasse* ist ein Konstrukt, das Ihnen ermöglicht, Ihre eigenen benutzerdefi
  [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Objektorientierte Programmierung](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)   
+ [Objektorientierte Programmierung](../concepts/object-oriented-programming.md)   
  [Polymorphismus](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [Mitglieder](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destruktoren](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [Objekte](../../../csharp/programming-guide/classes-and-structs/objects.md)

@@ -1,6 +1,6 @@
 ---
 title: ushort (C#-Referenz) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (C#-Referenz)
+
 Das Schlüsselwort `ushort` kennzeichnet einen ganzzahligen Datentyp, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
 |Typ|Bereich|Größe|.NET Framework-Typ|  
@@ -44,25 +46,32 @@ Das Schlüsselwort `ushort` kennzeichnet einen ganzzahligen Datentyp, der Werte 
 |`ushort`|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literale  
- Sie können eine Variable `ushort` wie in diesem Beispiel deklarieren und initialisieren:  
+
+Sie können eine `ushort`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn das Ganzzahlliteral außerhalb des Bereichs von `ushort` liegt, d.h., wenn es kleiner als <xref:System.UInt16.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt16.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf.
+
+Im folgenden Beispiel werden Ganzzahlen wie 65.034, die als dezimale, hexadezimale und binäre Literale dargestellt werden, implizit aus [int](../../../csharp/language-reference/keywords/int.md) in `ushort`-Werte konvertiert.    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- In der vorherigen Deklaration wird das Ganzzahlliteral `65535` implizit von [int](../../../csharp/language-reference/keywords/int.md) zu `ushort` konvertiert. Wenn das Ganzzahlliteral den Bereich `ushort` überschreitet, tritt ein Compilerfehler auf.  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals. Dezimale Literale haben kein Präfix.
+
+Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit verwenden, wie im folgenden Beispiel veranschaulicht.
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>Überladungsauflösung des Compiler
   
  Beim Aufrufen überladener Methoden muss eine Typumwandlung durchgeführt werden. Betrachten Sie z.B. die folgenden überladenen Methoden, die die Parameter `ushort` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  Die Verwendung der `ushort`-Umwandlung gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,42 +83,39 @@ SampleMethod((ushort)5);
   
  Es gibt eine vordefinierte implizite Konvertierung von [byte](../../../csharp/language-reference/keywords/byte.md) oder [char](../../../csharp/language-reference/keywords/char.md) in `ushort`. Andernfalls muss eine Umwandlung verwendet werden, um eine explizite Konvertierung durchzuführen. Betrachten Sie z.B. die folgenden beiden `ushort`-Variablen `x` und `y`:  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  Die folgende Zuweisungsanweisung erzeugt einen Kompilierfehler, da der arithmetische Ausdruck auf der rechten Seite des Zuweisungsoperators standardmäßig `int` ergibt.  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  Verwenden Sie eine Umwandlung, um dieses Problem zu lösen:  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  Es ist jedoch möglich, die folgenden Anweisungen zu verwenden, bei denen die Zielvariable über dieselbe oder eine größere Speichergröße verfügt:  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
  Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkomma-Datentypen zu `ushort` gibt. Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  
 ushort y = (ushort)3.0;  
 ```  
   
- Informationen zu arithmetischen Ausdrücken mit Gleitkomma- und ganzzahligen Typen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).  
+ Informationen zu arithmetischen Ausdrücken mit ganzzahligen und Gleitkommatypen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).  
   
  Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
