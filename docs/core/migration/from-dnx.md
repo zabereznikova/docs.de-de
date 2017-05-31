@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e30573a60e27314466822935249e2b1b119a9259
+ms.contentlocale: de-de
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +106,7 @@ Entfernen Sie entweder die Eigenschaft, um die Datei `global.json` zu aktualisie
 ```
 
 ### <a name="migrating-the-project-file"></a>Migrieren der Projektdatei
-Die CLI und DNX verwenden dasselbe grundlegende Projektsystem basierend auf der Datei `project.json`. Die Syntax und Semantik der Projektdatei sind weitgehend identisch, abgesehen von kleinen Unterschieden abhängig von den Szenarios. Es gibt auch einige Änderungen am Schema, die Sie in der [Schemadatei](http://json.schemastore.org/project) oder in einem benutzerfreundlicheren [project.json-Verweis](../tools/project-json.md) einsehen können. 
+Die CLI und DNX verwenden dasselbe grundlegende Projektsystem basierend auf der Datei `project.json`. Die Syntax und Semantik der Projektdatei sind weitgehend identisch, abgesehen von kleinen Unterschieden abhängig von den Szenarios. Es gibt auch einige Änderungen am Schema, die Sie in der [Schemadatei](http://json.schemastore.org/project) einsehen können.
 
 Wenn Sie eine Konsolenanwendung erstellen, müssen Sie den folgenden Ausschnitt zu Ihrer Projektdatei hinzufügen:
 

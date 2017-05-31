@@ -4,16 +4,17 @@ description: "Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu e
 keywords: dotnet-sln, CLI, CLI-Befehl, .NET Core
 author: spboyer
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7d7f0864ee1641627c4a55192d81ed76f2f44450
+ms.openlocfilehash: 0a832765d01609aebd10b13387a4317a6a246c30
+ms.contentlocale: de-de
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 03/22/2017
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
@@ -42,13 +43,13 @@ Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer P
 
 `add <PROJECT> ...`
 
-`add **/*`
+`add <GLOBBING_PATTERN>`
 
 Fügt mindestens ein Projekt zur Projektmappendatei hinzu. [Globbing patterns (Globmuster)](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Terminals unterstützt.
 
 `remove <PROJECT> ...`
 
-`remove **/*`
+`remove <GLOBBING_PATTERN>`
 
 Entfernt mindestens ein Projekt aus der Projektmappendatei. [Globbing patterns (Globmuster)](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Terminals unterstützt.
 
@@ -70,19 +71,27 @@ Druckt eine kurze Hilfe für den Befehl.
 
 ## <a name="examples"></a>Beispiele
 
-Fügen Sie ein Projekt zu einer Projektmappe hinzu:
+Fügen Sie ein C#-Projekt zu einer Projektmappe hinzu:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-Fügen Sie ein Projekt zur Projektmappe im aktuellen Verzeichnis hinzu:
-
-`dotnet sln add todo-app.csproj`
-
-Entfernen Sie ein Projekt aus einer Projektmappe:
+Entfernen Sie ein C#-Projekt aus einer Projektmappe:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Fügen Sie mehrere Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster verwenden:
+Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu:
 
-`dotnet sln add **/**/*.fsproj`
+`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Entfernen Sie mehrere C#-Projekte aus einer Projektmappe:
+
+`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster verwenden:
+
+`dotnet sln todo.sln add **/*.csproj`
+
+Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster verwenden:
+
+`dotnet sln todo.sln remove **/*.csproj`
 
