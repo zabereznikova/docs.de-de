@@ -41,7 +41,7 @@ Mit der Compileroption **/appconfig** kann eine C#-Anwendung den Speicherort der
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /appconfig:file  
 ```  
   
@@ -64,7 +64,7 @@ Mit der Compileroption **/appconfig** kann eine C#-Anwendung den Speicherort der
 ## <a name="example"></a>Beispiel  
  In folgendem Beispiel wird eine app.config-Datei gezeigt, die es einer Anwendung ermöglicht, über Verweise sowohl auf die .NET Framework-Implementierung als auch die .NET Framework for Silverlight-Implementierung jeder .NET Framework-Assembly zu verfügen, die in beiden Implementierungen vorhanden ist. Die Compileroption **/appconfig** gibt den Speicherort der app.config-Datei an.  
   
-```  
+```xml  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

@@ -43,7 +43,7 @@ Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mo
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /addmodule:file[;file2]  
 ```  
   
@@ -63,7 +63,7 @@ Mit dieser Option wird ein Modul hinzugefügt, das mit dem Schalter „target:mo
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie die Quelldatei `input.cs`, und fügen Sie Metadaten aus `metad1.netmodule` und `metad2.netmodule` hinzu, um `out.exe` zu erstellen:  
   
-```  
+```console  
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   

@@ -51,7 +51,7 @@ Mit der Option **/filealign** können Sie die Größe der Abschnitte in Ihrer Au
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /filealign:number  
 ```  
   

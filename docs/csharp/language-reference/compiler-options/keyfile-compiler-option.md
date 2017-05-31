@@ -43,7 +43,7 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /keyfile:file  
 ```  
   

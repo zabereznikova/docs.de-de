@@ -43,7 +43,7 @@ Gibt den Namen des kryptografischen Schlüsselcontainers an.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /keycontainer:string  
 ```  
   

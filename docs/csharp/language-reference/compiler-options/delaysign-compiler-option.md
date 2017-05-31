@@ -43,7 +43,7 @@ Durch diese Option reserviert der Compiler Speicherplatz in der Ausgabedatei, da
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /delaysign[ + | - ]  
 ```  
   

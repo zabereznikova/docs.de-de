@@ -43,7 +43,7 @@ Die Option **/lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
@@ -86,7 +86,7 @@ Die Option **/lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie „t2.cs“, um eine EXE-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis und im Stammverzeichnis des Laufwerks C nach Assemblyverweisen.  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   

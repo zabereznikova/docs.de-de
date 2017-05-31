@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c1b49faa2fb388b330c24bdff28d00872828b110
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Die **/highentropyva**-Compileroption informiert den Windows-Kernel, ob eine bes
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /highentropyva[+ | -]  
 ```  
   

@@ -43,7 +43,7 @@ Die Option **/checked** gibt an, ob eine Anweisung der Ganzzahlarithmetik, die e
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -69,7 +69,7 @@ Die Option **/checked** gibt an, ob eine Anweisung der Ganzzahlarithmetik, die e
 ## <a name="example"></a>Beispiel  
  Der folgende Befehl kompiliert `t2.cs`. Die Verwendung von `/checked` im Befehl gibt an, ob eine Anweisung der Ganzzahlarithmetik in der Datei, die einen Wert außerhalb des Bereichs des `checked`- oder `unchecked`-Schlüsselworts enthält und einen Wert außerhalb des Bereichs des Datentyps auslöst, zur Laufzeit eine Ausnahme verursacht.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

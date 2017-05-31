@@ -43,7 +43,7 @@ Die Option **/debug** führt dazu, dass der Compiler Debuginformationen generier
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ Die Option **/debug** führt dazu, dass der Compiler Debuginformationen generier
 ## <a name="example"></a>Beispiel  
  Platzieren Sie die Debuginformationen in der Ausgabedatei `app.pdb`:  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   

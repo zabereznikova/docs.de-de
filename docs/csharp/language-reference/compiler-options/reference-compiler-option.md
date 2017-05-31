@@ -48,7 +48,7 @@ Die Option **/reference** veranlasst den Compiler, [öffentliche](../../../cshar
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ Die Option **/reference** veranlasst den Compiler, [öffentliche](../../../cshar
   
  Dadurch werden die externen Aliase „GridV1“ und „GridV2“ eingerichtet, die Sie in Ihrem Programm über eine extern-Anweisung verwenden:  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  Sobald dies geschehen ist, können Sie auf das Grid-Steuerelement von „grid.dll“ verweisen, indem Sie dem Namen des Steuerelements wie folgt ein „GridV1“ voranstellen:  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  Darüber hinaus können Sie auf das Grid-Steuerelement aus „grid20.dll“ verweisen, indem Sie dem Namen des Steuerelements wie folgt ein „GridV2“ voranstellen:  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

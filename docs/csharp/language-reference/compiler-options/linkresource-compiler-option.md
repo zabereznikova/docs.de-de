@@ -46,7 +46,7 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
@@ -76,14 +76,14 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `in.cs` und verknüpfen Sie die Ressourcendatei `rf.resource`:  
   
-```  
+```console  
 csc /linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `A.cs` in eine DLL, verknüpfen Sie eine native DLL „n.dll“, und fügen Sie die Ausgabe in den globalen Assemblycache (GAC) ein. In diesem Beispiel befinden sich sowohl „a.dll“ als auch „n.dll“ im GAC.  
   
-```  
+```console  
 csc /linkresource:N.dll /t:library A.cs  
 gacutil -i A.dll  
 ```  
@@ -91,7 +91,7 @@ gacutil -i A.dll
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird das Gleiche wie im vorherigen Beispiel erreicht, allerdings mithilfe von Assemblylinkeroptionen.  
   
-```  
+```console  
 csc /t:module A.cs  
 al /out:A.dll A.netmodule /link:N.dll   
 gacutil -i A.dll  
