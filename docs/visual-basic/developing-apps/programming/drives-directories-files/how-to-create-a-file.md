@@ -1,61 +1,78 @@
 ---
-title: "How to: Create a File in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "text files, creating"
-  - "files, creating"
+title: 'Vorgehensweise: Erstellen einer Datei in Visual Basic | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- text files, creating
+- files, creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# How to: Create a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f9e2b11b6eed10bac04d22b202e7e16cfa70225d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-In diesem Beispiel wird unter Verwendung der <xref:System.IO.File.Create%2A>\-Methode in der <xref:System.IO.File>\-Klasse eine Textdatei im angegebenen Pfad erstellt.  
+---
+# <a name="how-to-create-a-file-in-visual-basic"></a>Gewusst wie: Erstellen einer Datei in Visual Basic
+Dieses Beispiel erstellt mithilfe der <xref:System.IO.File.Create%2A>-Methode in der <xref:System.IO.File>-Klasse eine leere Textdatei auf dem bestimmten Pfad.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
   
-## Kompilieren des Codes  
- Verwenden Sie zum Schreiben in die Datei die `file`\-Variable.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Verwenden Sie die Varible `file`, um in die Datei zu schreiben.  
   
-## Robuste Programmierung  
- Wenn die Datei bereits vorhanden ist, wird sie ersetzt.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Wenn die Datei bereits vorhanden ist, wird sie ignoriert.  
   
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfadname ist falsch formatiert.  Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen \(<xref:System.ArgumentException>\).  
+-   Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>).  
   
--   Der Pfad ist schreibgeschützt \(<xref:System.IO.IOException>\).  
+-   Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Pfadname ist `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Pfadname ist zu lang \(<xref:System.IO.PathTooLongException>\).  
+-   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Pfad ist ungültig \(<xref:System.IO.DirectoryNotFoundException>\).  
+-   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Der Pfad besteht nur aus einem Doppelpunkt ":" \(<xref:System.NotSupportedException>\).  
+-   Der Pfad besteht nur aus einem Doppelpunkt „:“ (<xref:System.NotSupportedException>).  
   
-## .NET Framework-Sicherheit  
- In teilweise vertrauenswürdigen Umgebungen kann eine <xref:System.Security.SecurityException> ausgelöst werden.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Eine <xref:System.Security.SecurityException> wir möglicherweise in teilweise vertrauenswürdigen Umgebungen ausgelöst.  
   
- Für den Aufruf der <xref:System.IO.File.Create%2A>\-Methode benötigen Sie <xref:System.Security.Permissions.FileIOPermission>.  
+ Der Aufruf auf die <xref:System.IO.File.Create%2A>-Methode erfordert <xref:System.Security.Permissions.FileIOPermission>.  
   
- Wenn der Benutzer nicht über die Berechtigung zum Erstellen der Datei verfügt, wird eine <xref:System.UnauthorizedAccessException> ausgelöst.  
+ Eine <xref:System.UnauthorizedAccessException> wird ausgelöst, wenn der Benutzer keine Berechtigungen zum Erstellen der Datei besitzt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.IO>   
  <xref:System.IO.File.Create%2A>   
- [Using Libraries from Partially Trusted Code](../Topic/Using%20Libraries%20from%20Partially%20Trusted%20Code.md)   
- [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md)
+ [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
+ [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8)

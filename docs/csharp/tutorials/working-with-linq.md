@@ -4,23 +4,25 @@ description: "In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generi
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 03/06/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8bcbbd02aa3ff4533bfd1e2d248b36a033b8767c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
 ## <a name="introduction"></a>Einführung
-In diesem Tutorial lernen Sie verschiedene Funktionen in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
+
+In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
 *    Generieren von Sequenzen mit LINQ
 *   Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen
@@ -30,13 +32,12 @@ Sie lernen diese Techniken durch Erstellen einer Anwendung, die eine der grundle
 
 Zauberer verwenden diese Technik, weil sie damit nach jedem Mischen genau wissen, welche Karte sich wo befindet, und die Reihenfolge ein sich wiederholendes Muster ist. 
 
-Im vorliegenden Artikel dient die Technik dazu, das Manipulieren von Datensequenzen mit einem anschaulichen Beispiel zu zeigen. Die von Ihnen erstellte Anwendung stellt einen Kartenstapel zusammen und führt dann eine Sequenz aus Mischvorgängen aus, wobei die Sequenz jedes Mal ausgegeben wird.
-Sie werden auch die aktualisierte mit der ursprünglichen Reihenfolge vergleichen.
+Im vorliegenden Artikel dient die Technik dazu, das Manipulieren von Datensequenzen mit einem anschaulichen Beispiel zu zeigen. Die von Ihnen erstellte Anwendung stellt einen Kartenstapel zusammen und führt dann eine Sequenz aus Mischvorgängen aus, wobei die Sequenz jedes Mal ausgegeben wird. Sie werden auch die aktualisierte mit der ursprünglichen Reihenfolge vergleichen.
 
-Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. Sie können sich auch das abgeschlossene Beispiel in unserem [GitHub-Repository](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) ansehen.
-
+Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. Sie können sich auch das [abgeschlossene Beispiel](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) in unserem Repository „dotnet/docs“ auf GitHub ansehen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
+
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Ubuntu Linux, OS X oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
@@ -47,7 +48,7 @@ Wenn Sie C# noch nie verwendet haben, erläutert [dieses Tutorial](console-telep
 
 ## <a name="creating-the-data-set"></a>Erstellen des Datasets
 
-Beginnen wir damit, einen Kartenstapel zu erstellen. Zu diesem Zweck erstellen Sie eine LINQ-Abfrage mit zwei Quellen (eine für die vier Farben, eine für die dreizehn Werte). Diese Quellen werden Sie zu einem aus 52 Karten bestehenden Kartenstapel kombinieren.
+Beginnen wir damit, einen Kartenstapel zu erstellen. Zu diesem Zweck erstellen Sie eine LINQ-Abfrage mit zwei Quellen (eine für die vier Farben, eine für die dreizehn Werte). Diese Quellen werden Sie zu einem aus 52 Karten bestehenden Kartenstapel kombinieren. Ein `Console.WriteLine`-Auszug innerhalb einer `foreach`-Schleife zeigt die Karten an.
 
 Hier ist die Abfrage:
 
@@ -55,10 +56,14 @@ Hier ist die Abfrage:
 var startingDeck = from s in Suits()
                    from r in Ranks()
                    select new { Suit = s, Rank = r };
+
+foreach (var c in startingDeck)
+{
+    Console.WriteLine(c);
+}
 ```
 
-Die verschiedenen `from`-Klauseln erzeugen `SelectMany`, wodurch aus der Kombination jedes Elements in der ersten Sequenz mit jedem Element in der zweiten Sequenz eine einzige Sequenz erstellt wird. Für unsere Zwecke ist die Reihenfolge wichtig. Das erste Element in der ersten Quellsequenz (Farben) wird mit jedem Element in der zweiten Sequenz (Werte) kombiniert.
-Dadurch werden alle dreizehn Karten der ersten Farbe erzeugt. Dieser Vorgang wird mit jedem Element in der ersten Sequenz (Farben) wiederholt. Das Ergebnis ist ein Kartenstapel, der erst nach Farben und innerhalb der Farben nach Werten sortiert ist.
+Die verschiedenen `from`-Klauseln erzeugen `SelectMany`, wodurch aus der Kombination jedes Elements in der ersten Sequenz mit jedem Element in der zweiten Sequenz eine einzige Sequenz erstellt wird. Für unsere Zwecke ist die Reihenfolge wichtig. Das erste Element in der ersten Quellsequenz (Farben) wird mit jedem Element in der zweiten Sequenz (Werte) kombiniert. Dadurch werden alle dreizehn Karten der ersten Farbe erzeugt. Dieser Vorgang wird mit jedem Element in der ersten Sequenz (Farben) wiederholt. Das Ergebnis ist ein Kartenstapel, der erst nach Farben und innerhalb der Farben nach Werten sortiert ist.
 
 Als Nächstes müssen Sie die Methoden „Suits()“ und „Ranks()“ erstellen. Wir beginnen mit einem einfachen Satz von *Iteratormethoden*, die die Sequenz als Enumeration von Zeichenfolgen generieren:
 
@@ -93,6 +98,8 @@ Diese Methoden nutzen beide die `yield return`-Syntax, um während der Ausführu
 
 Führen Sie jetzt das erstellte Beispiel aus. Es werden alle 52 Karten des Kartenstapels angezeigt. Es kann sehr hilfreich sein, dieses Beispiel mit einem Debugger auszuführen, um zu beobachten, wie die Methoden `Suits()` und `Values()` ausgeführt werden. Sie können deutlich erkennen, dass jede Zeichenfolge in jeder Sequenz erst dann erstellt wird, wenn sie benötigt wird.
 
+![Konsolenfenster, das die App zeigt, die 52 Karten schreibt](./media/working-with-linq/console.png)
+
 ## <a name="manipulating-the-order"></a>Ändern der Reihenfolge
 
 Als Nächstes erstellen wir eine Hilfsprogrammmethode, die das Mischen ausführen kann. Der erste Schritt besteht darin, den Kartenstapel in zwei Hälften zu teilen. Die zu den LINQ-APIs gehörenden Methoden `Take()` und `Skip()` stellen uns diese Funktion bereit:
@@ -111,11 +118,9 @@ public static IEnumerable<T> InterleaveSequenceWith<T>
     (this IEnumerable<T> first, IEnumerable<T> second)
 ```
 
-Bei einer Erweiterungsmethode handelt es sich um eine *statische Methode*, die einem bestimmten Zweck dient.
-Sie sehen, dass dem ersten Argument der Methode der `this`-Modifizierer hinzugefügt wurde. Dies bedeutet, dass Sie die Methode so aufrufen können, als wäre sie eine Membermethode vom Typ des ersten Arguments.
+Bei einer Erweiterungsmethode handelt es sich um eine *statische Methode*, die einem bestimmten Zweck dient. Sie sehen, dass dem ersten Argument der Methode der `this`-Modifizierer hinzugefügt wurde. Dies bedeutet, dass Sie die Methode so aufrufen können, als wäre sie eine Membermethode vom Typ des ersten Arguments.
 
-Erweiterungsmethoden können nur innerhalb von `static`-Klassen deklariert werden. Also erstellen wir hierfür eine neue statische Klasse namens `extensions`.
-Im weiteren Verlauf dieses Tutorials werden Sie weitere Erweiterungsmethoden hinzufügen. Diese werden in der gleichen Klasse platziert.
+Erweiterungsmethoden können nur innerhalb von `static`-Klassen deklariert werden. Also erstellen wir hierfür eine neue statische Klasse namens `extensions`. Im weiteren Verlauf dieses Tutorials werden Sie weitere Erweiterungsmethoden hinzufügen. Diese werden in der gleichen Klasse platziert.
 
 Diese Methodendeklaration folgt auch einem Standardidiom, bei dem die Eingabe- und Ausgabetypen `IEnumerable<T>` sind. Auf diese Weise können LINQ-Methoden miteinander verkettet werden, um komplexere Abfragen auszuführen.
 
@@ -141,19 +146,7 @@ Die `IEnumerable`-Schnittstelle weist eine einzige Methode auf: `GetEnumerator()
 
 Hier sehen Sie die Implementierung dieser Methode:
 
-```csharp
-public static IEnumerable<T> InterleaveSequenceWith<T>
-    (this IEnumerable<T> first, IEnumerable<T> second)
-{
-    var firstIter = first.GetEnumerator();
-    var secondIter = second.GetEnumerator();
-    while (firstIter.MoveNext() && secondIter.MoveNext())
-    {
-        yield return firstIter.Current;
-        yield return secondIter.Current;
-    }
-}
-```
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Nachdem Sie diese Methode geschrieben haben, kehren Sie jetzt zur `Main`-Methode zurück und mischen den Kartenstapel ein Mal:
 
@@ -163,15 +156,20 @@ public static void Main(string[] args)
     var startingDeck = from s in Suits()
                        from r in Ranks()
                        select new { Suit = s, Rank = r };
+
     foreach (var c in startingDeck)
+    {
         Console.WriteLine(c);
+    }
         
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
-    
     var shuffle = top.InterleaveSequenceWith(bottom);
+
     foreach (var c in shuffle)
+    {
         Console.WriteLine(c);
+    }
 }
 ```
 
@@ -181,19 +179,7 @@ Sehen wir uns an, wie viele Mischvorgänge benötigt werden, damit der Kartensta
 
 Das Schreiben einer Methode, mit der ermittelt wird, ob die beiden Sequenzen gleich sind, sollte kein Problem sein. Die Methode hat die gleiche Struktur wie die Methode, die Sie zum Mischen des Kartenstapels geschrieben haben. Der Unterschied ist, dass dieses Mal nicht jedes Element zurückgegeben werden soll, sondern dass Sie die übereinstimmenden Elemente jeder Sequenz vergleichen. Wenn die gesamte Sequenz aufgezählt wurde und alle Elemente übereinstimmen, sind die Sequenzen gleich:
 
-```csharp
-public static bool SequenceEquals<T>(this IEnumerable<T> first, IEnumerable<T> second)
-{
-    var firstIter = first.GetEnumerator();
-    var secondIter = second.GetEnumerator();
-    while (firstIter.MoveNext() && secondIter.MoveNext())
-    {
-        if (!firstIter.Current.Equals(secondIter.Current))
-            return false;
-    }
-    return true;
-}
-```
+[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Dies zeigt ein zweites LINQ-Idiom: Terminalmethoden. Diese Methoden akzeptieren eine Sequenz als Eingabe (bzw. in diesem Fall zwei Sequenzen) und geben einen einzelnen Skalarwert zurück. Wenn diese Methoden verwendet werden, sind sie immer die letzten Methoden einer Abfrage. (Sie beenden – englisch: to terminate – die Abfrage, daher der Name.) 
 
@@ -202,16 +188,20 @@ Sie können diese Methode in Aktion sehen, wenn Sie sie verwenden, um zu ermitte
 ```csharp
 var times = 0;
 var shuffle = startingDeck;
+
 do
 {
     shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
 
     foreach (var c in shuffle)
+    {
         Console.WriteLine(c);
+    }
 
     Console.WriteLine();
     times++;
 } while (!startingDeck.SequenceEquals(shuffle));
+
 Console.WriteLine(times);
 ```
 
@@ -229,96 +219,69 @@ Führen Sie das Programm erneut aus, Sie werden feststellen, dass 52 Iterationen
 
 Dafür gibt es eine Anzahl von Gründen. Befassen wir uns mit einem der wichtigsten Gründe: der ineffizienten Nutzung der *verzögerten Auswertung*.
 
-LINQ-Abfragen werden verzögert ausgewertet. Die Sequenzen werden erst generiert, wenn die Elemente angefordert werden.
-Dies ist üblicherweise ein großer Vorteil von LINQ. In Programmen wie diesem verursacht diese Art der Auswertung jedoch ein exponentielles Wachstum der Ausführungszeit.
+LINQ-Abfragen werden verzögert ausgewertet. Die Sequenzen werden erst generiert, wenn die Elemente angefordert werden. Dies ist üblicherweise ein großer Vorteil von LINQ. In Programmen wie diesem verursacht diese Art der Auswertung jedoch ein exponentielles Wachstum der Ausführungszeit.
 
 Der ursprüngliche Kartenstapel wurde mithilfe einer LINQ-Abfrage generiert. Jede Mischung wird durch Ausführung dreier LINQ-Abfragen im vorherigen Kartenstapel generiert. All diese werden verzögert ausgeführt. Das bedeutet auch, dass sie bei jeder Anforderung der Sequenz erneut ausgeführt werden. Zum Zeitpunkt der 52. Iteration haben Sie den ursprünglichen Stapel also sehr häufig neu generiert. Nun schreiben wir ein Protokoll, das dieses Verhalten veranschaulicht. Danach werden wir das Problem beheben.
 
 Im Folgenden finden Sie eine Protokollmethode, die an jede Abfrage angefügt werden kann, um diese Abfrage als „ausgeführt“ zu kennzeichnen.
 
-```csharp
-public static IEnumerable<T> LogQuery<T>(this IEnumerable<T> sequence, string tag)
-{
-    using (var writer = File.AppendText("debug.log"))
-    {
-        writer.WriteLine($"Executing Query {tag}");
-    }
-    return sequence;
-}
-```
+[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Als Nächstes instrumentieren Sie die Definition jeder Abfrage mit einer Protokollmeldung:
 
 ```csharp
 public static void Main(string[] args)
 {
-var startingDeck = (from s in Suits().LogQuery("Suit Generation")
-                    from r in Ranks().LogQuery("Rank Generation")
-                    select new { Suit = s, Rank = r }).LogQuery("Starting Deck");
+    var startingDeck = (from s in Suits().LogQuery("Suit Generation")
+                        from r in Ranks().LogQuery("Rank Generation")
+                        select new { Suit = s, Rank = r }).LogQuery("Starting Deck");
+
     foreach (var c in startingDeck)
+    {
         Console.WriteLine(c);
+    }
         
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
+
     do
     {
-        //shuffle = shuffle.Take(26).LogQuery("Top Half")
-        //    .InterleaveSequenceWith(shuffle.Skip(26).LogQuery("Bottom Half")).LogQuery("Shuffle");
+        /*
+        shuffle = shuffle.Take(26)
+            .LogQuery("Top Half")
+            .InterleaveSequenceWith(shuffle.Skip(26)
+            .LogQuery("Bottom Half"))
+            .LogQuery("Shuffle");
+        */
 
-        shuffle = shuffle.Skip(26).LogQuery("Bottom Half")
-            .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half")).LogQuery("Shuffle");
+        shuffle = shuffle.Skip(26)
+            .LogQuery("Bottom Half")
+            .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
+            .LogQuery("Shuffle");
 
         foreach (var c in shuffle)
+        {
             Console.WriteLine(c);
+        }
+
         times++;
         Console.WriteLine(times);
     } while (!startingDeck.SequenceEquals(shuffle));
+
     Console.WriteLine(times);
 }
 ```
 
-Beachten Sie, dass beim Zugreifen auf eine Abfrage kein Protokolleintrag erstellt wird. Ein Protokolleintrag wird nur erstellt, wenn Sie die ursprüngliche Abfrage erstellen. Die Ausführung des Programms dauert immer noch lang, aber nun sehen Sie den Grund dafür.
-Wenn Sie nicht warten möchten, bis das Mischen nach außen mit aktivierter Protokollierung ausgeführt wurde, wechseln Sie zurück zum Mischen nach innen. Sie sehen immer noch die Auswirkungen der verzögerten Auswertung. In einer Ausführung werden 2592 Abfragen ausgeführt, einschließlich der Generierung aller Werte und Farben.
+Beachten Sie, dass beim Zugreifen auf eine Abfrage kein Protokolleintrag erstellt wird. Ein Protokolleintrag wird nur erstellt, wenn Sie die ursprüngliche Abfrage erstellen. Die Ausführung des Programms dauert immer noch lang, aber nun sehen Sie den Grund dafür. Wenn Sie nicht warten möchten, bis das Mischen nach außen mit aktivierter Protokollierung ausgeführt wurde, wechseln Sie zurück zum Mischen nach innen. Sie sehen immer noch die Auswirkungen der verzögerten Auswertung. In einer Ausführung werden 2592 Abfragen ausgeführt, einschließlich der Generierung aller Werte und Farben.
 
 Es gibt eine einfache Möglichkeit, dieses Programm so zu ändern, dass all diese Ausführungen vermieden werden. Die LINQ-Methoden `ToArray()` und `ToList()` sorgen dafür, dass die Abfrage ausgeführt wird, und speichern die Ergebnisse in einem Array bzw. einer Liste. Sie verwenden diese Methoden dazu, die Datenergebnisse einer Abfrage zwischenzuspeichern, anstatt die Quellabfrage erneut auszuführen.  Fügen Sie die Abfragen, die die Kartenstapel generieren, an einen Aufruf von `ToArray()` an, und führen Sie die Abfrage erneut aus:
 
-```csharp
-public static void Main(string[] args)
-{
-var startingDeck = (from s in Suits().LogQuery("Suit Generation")
-                    from v in Ranks().LogQuery("Rank Generation")
-                    select new { Suit = s, Rank = r })
-                    .LogQuery("Starting Deck")
-                    .ToArray();
-    foreach (var c in startingDeck)
-        Console.WriteLine(c);
-        
-    Console.WriteLine();
-    var times = 0;
-    var shuffle = startingDeck;
-    do
-    {
-        shuffle = shuffle.Take(26).LogQuery("Top Half")
-            .InterleaveSequenceWith(shuffle.Skip(26).LogQuery("Bottom Half")).LogQuery("Shuffle").ToArray();
-
-        //shuffle = shuffle.Skip(26).LogQuery("Bottom Half")
-        //    .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half")).LogQuery("Shuffle");
-
-        foreach (var c in shuffle)
-            Console.WriteLine(c);
-        times++;
-        Console.WriteLine(times);
-    } while (!startingDeck.SequenceEquals(shuffle));
-    Console.WriteLine(times);
-}
-```
+[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Führen Sie das Programm erneut aus – das Mischen nach innen wurde auf 30 Abfragen reduziert. Auch beim Mischen nach außen werden Sie ähnliche Verbesserungen feststellen. (Dabei werden jetzt 162 Abfragen ausgeführt.)
 
-Sie dürfen dieses Beispiel aber nicht so interpretieren, dass alle Abfragen mit strikter Auswertung ausgeführt werden sollten. Dieses Beispiel sollte nur Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Die Ursache des Problems ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird.
-Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat.
-Das verursacht eine Menge zusätzlichen Aufwands. 
+Sie dürfen dieses Beispiel aber nicht so interpretieren, dass alle Abfragen mit strikter Auswertung ausgeführt werden sollten. Dieses Beispiel sollte nur Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Die Ursache des Problems ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird. Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat. Das verursacht eine Menge zusätzlichen Aufwands. 
 
 In der Praxis werden manche Algorithmen besser mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. (Im Allgemeinen eignet sich die verzögerte Auswertung wesentlich besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um ein Datenbankmodul. In diesen Fällen ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip an den Datenbankprozess auszuführen.) LINQ ermöglicht sowohl eine verzögerte als auch eine strikte Auswertung. Wählen Sie die für Ihr jeweiliges Programm am besten geeignete Variante aus.
 
@@ -326,100 +289,31 @@ In der Praxis werden manche Algorithmen besser mit der strikten Auswertung ausge
 
 Der Code, den Sie für diesen Artikel geschrieben haben, ist ein Beispiel für die Erstellung eines einfachen Prototyps, der das gewünschte Ergebnis erzielt. Er eignet sich hervorragend, um einen Problembereich zu untersuchen, und ist für viele Funktionen möglicherweise die beste dauerhafte Lösung. Sie haben *anonyme Typen* für die Karten verwendet, und jede Karte wird durch Zeichenfolgen dargestellt.
 
-*Anonyme Typen* bieten viele Produktivitätsvorteile. Sie müssen nicht selbst eine Klasse definieren, um den Speicher darzustellen. Der Compiler generiert den Typ für Sie. Der vom Compiler generierte Typ nutzt viele der bewährten Methoden für einfache Datenobjekte. Er ist *unveränderlich*, d.h., nach dem Erstellen kann keine seiner Eigenschaften geändert werden. Anonyme Typen sind für eine Assembly intern, gehören also nicht zur öffentlichen API für diese Assembly.
-Anonyme Typen enthalten auch eine Überschreibung der `ToString()`-Methode, die eine formatierte Zeichenfolge mit den jeweiligen Werten zurückgibt.
+*Anonyme Typen* bieten viele Produktivitätsvorteile. Sie müssen nicht selbst eine Klasse definieren, um den Speicher darzustellen. Der Compiler generiert den Typ für Sie. Der vom Compiler generierte Typ nutzt viele der bewährten Methoden für einfache Datenobjekte. Er ist *unveränderlich*, d.h., nach dem Erstellen kann keine seiner Eigenschaften geändert werden. Anonyme Typen sind für eine Assembly intern, gehören also nicht zur öffentlichen API für diese Assembly. Anonyme Typen enthalten auch eine Überschreibung der `ToString()`-Methode, die eine formatierte Zeichenfolge mit den jeweiligen Werten zurückgibt.
 
 Anonyme Typen haben jedoch auch Nachteile. Sie verfügen nicht über aufrufbare Namen, können also nicht als Rückgabewerte oder Argumente verwendet werden. Sie werden feststellen, dass alle oben genannten Methoden, die diese anonymen Typen verwenden, generische Methoden sind. Die Überschreibung von `ToString()` ist möglicherweise nicht wünschenswert, wenn der Anwendung weitere Funktionen hinzugefügt werden. 
 
-Das Beispiel verwendet auch Zeichenfolgen für die Farbe und den Rang jeder Karte. Es ist fast beliebig erweiterbar.
-Mit dem Typsystem von C# lässt sich ein besserer Code erstellen, indem `enum`-Typen für diese Werte verwendet werden.
+Das Beispiel verwendet auch Zeichenfolgen für die Farbe und den Rang jeder Karte. Es ist fast beliebig erweiterbar. Mit dem Typsystem von C# lässt sich ein besserer Code erstellen, indem `enum`-Typen für diese Werte verwendet werden.
 
 Beginnen Sie mit den Farben. Jetzt ist der perfekte Zeitpunkt, einen `enum`-Typ zu verwenden:
 
-```csharp
-public enum Suit
-{
-    Clubs,
-    Diamonds,
-    Hearts,
-    Spades
-}
-```
+[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
 
 Die `Suits()`-Methode ändert auch den Typ und Implementierung:
 
-```csharp
-static IEnumerable<Suit> Suits()
-{
-    yield return Suit.Clubs;
-    yield return Suit.Diamonds;
-    yield return Suit.Hearts;
-    yield return Suit.Spades;
-}
-```
+[!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
 
 Als Nächstes nehmen Sie die gleiche Änderung am Rang der Karten vor:
 
-```csharp
-public enum Rank
-{
-    Two,
-    Three,
-    Four,
-    Five,
-    Six,
-    Seven,
-    Eight,
-    Nine,
-    Ten,
-    Jack,
-    Queen,
-    King,
-    Ace
-}
-```
+[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
 
 Ändern Sie auch die Methode, die den Rang generiert:
 
-```csharp
-static IEnumerable<Rank> Values()
-{
-    yield return Rank.Two;
-    yield return Rank.Three;
-    yield return Rank.Four;
-    yield return Rank.Five;
-    yield return Rank.Six;
-    yield return Rank.Seven;
-    yield return Rank.Eight;
-    yield return Rank.Nine;
-    yield return Rank.Ten;
-    yield return Rank.Jack;
-    yield return Rank.Queen;
-    yield return Rank.King;
-    yield return Rank.Ace;
-}
-```
+[!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
 
 Und um das Ganze abzuschließen, erstellen wir einen Typ zur Darstellung der Karte, statt einen anonymen Typ zu verwenden. Anonyme Typen eignen sich hervorragend für einfache lokale Typen, aber im vorliegenden Beispiel ist die Spielkarte eines der wichtigsten Konzepte. Daher sollte sie einen konkreten Typ aufweisen.
 
-```csharp
-public class PlayingCard
-{
-    public Suit CardSuit { get; }
-    public Rank CardRank { get; }
-    
-    public PlayingCard(Suit s, Rank r)
-    {
-        CardSuit = s;
-        CardRank = r;
-    }
-    
-    public override string ToString()
-    {
-        return $"{CardRank} of {CardSuit}";
-    }
-}
-```
+[!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
 Dieser Typ verwendet *automatisch implementierte, schreibgeschützte Eigenschaften*, die im Konstruktor festgelegt werden und danach nicht mehr geändert werden können. Er verwendet auch die neue Funktion der *Zeichenfolgeninterpolation*, mit der sich die Zeichenfolgenausgabe einfacher formatieren lässt.
 
@@ -439,6 +333,5 @@ Kompilieren Sie den Code, und führen Sie ihn erneut aus. Die Ausgabe ist etwas 
 
 Dieses Beispiel sollte einige der in LINQ verwendeten Methoden veranschaulichen und Ihnen zeigen, wie Sie eigene Methoden erstellen, die sich mit LINQ-aktiviertem Code ganz einfach einsetzen lassen. Das Beispiel hat auch die Unterschiede zwischen verzögerter und strikter Auswertung aufgezeigt und erläutert, wie sich die Entscheidung für die eine oder andere Variante auf die Leistung auswirken kann.
 
-Und Sie haben etwas über die Techniken von Zauberkünstlern erfahren. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet.
-Bei manchen Tricks bittet der Zauberer einen Zuschauer, eine Karte ganz nach oben auf den Stapel zu legen. Dann mischt der Zauberer die Karten einige Male und weiß genau, wo die Karte ist. Für andere Tricks muss der Kartenstapel auf eine ganz bestimmte Art sortiert sein. Der Zauberer bereitet den Stapel vor dem Trick vor. Dann mischt er den Stapel 5-mal nach innen. Auf der Bühne zeigt er den Zuschauern dann einen Kartenstapel, der zufällig gemischt aussieht, mischt ihn noch 3-mal und erzielt so genau die gewünschte Kartenreihenfolge.
+Sie haben etwas über die Techniken von Zauberkünstlern erfahren. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Bei manchen Tricks bittet der Zauberer einen Zuschauer, eine Karte ganz nach oben auf den Stapel zu legen. Dann mischt der Zauberer die Karten einige Male und weiß genau, wo die Karte ist. Für andere Tricks muss der Kartenstapel auf eine ganz bestimmte Art sortiert sein. Der Zauberer bereitet den Stapel vor dem Trick vor. Dann mischt er den Stapel 5-mal nach innen. Auf der Bühne zeigt er den Zuschauern dann einen Kartenstapel, der zufällig gemischt aussieht, mischt ihn noch 3-mal und erzielt so genau die gewünschte Kartenreihenfolge.
 

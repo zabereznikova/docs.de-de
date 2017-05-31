@@ -29,23 +29,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f93a5403660ca850d6650a1a6406395dfa2cc2e5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
-Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Jede Sprache verfügt über zusätzliche Funktionen, die bereits in der anderen Sprache existieren.  
+Visual Studio bietet Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Zu nützlichen C#-Funktionen gehören benannte und optionale Argumente und Rückgabewerte des Typs `dynamic`. Bei der COM-Programmierung können Sie das `ref`-Schlüsselwort weglassen und Zugriff auf indizierte Eigenschaften erhalten. Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambdaausdrücken sowie Auflistungsinitialisierer.
+
+Beide Sprachen ermöglichen das Einbetten von Typinformationen, wodurch Assemblys bereitgestellt werden können, die mit COM-Komponenten interagieren, ohne primäre Interop-Assemblys (PIAs) auf dem Computer des Benutzers bereitzustellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
- Zu den neuen Funktionen in C# gehören benannte und optionale Argumente, Rückgabewerte vom Typ `dynamic` und in der COM-Programmierung die Möglichkeit, das Schlüsselwort `ref` auszulassen und auf indizierte Eigenschaften zuzugreifen. Die neuen Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambda-Ausdrücken sowie Auflistungsinitialisierer.  
-  
- Beide Sprachen ermöglichen das Einbetten von Typinformationen, wodurch Assemblys bereitgestellt werden können, die mit COM-Komponenten interagieren, ohne primäre Interop-Assemblys (PIAs) auf dem Computer des Benutzers bereitzustellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
-  
- Diese exemplarische Vorgehensweise veranschaulicht die neuen Funktionen im Kontext der Office-Programmierung, aber viele von ihnen sind auch bei der allgemeinen Programmierung nützlich. In der exemplarischen Vorgehensweise verwenden Sie zunächst eine Excel-Add-In-Anwendung, um eine Excel-Arbeitsmappe zu erstellen. Sie werden dann ein Word-Dokument erstellen, das einen Link zur Arbeitsmappe enthält. Abschließend sehen Sie, wie die PIA-Abhängigkeit aktiviert oder deaktiviert werden kann.  
+Diese exemplarische Vorgehensweise veranschaulicht diese Funktionen im Kontext der Office-Programmierung, aber viele dieser Funktionen sind auch bei der allgemeinen Programmierung nützlich. In der exemplarischen Vorgehensweise verwenden Sie eine Excel-Add-In-Anwendung, um eine Excel-Arbeitsmappe zu erstellen. Als nächstes erstellen Sie ein Word-Dokument, das einen Link zur Arbeitsmappe enthält. Zum Schluss sehen Sie, wie Sie die PIA-Abhängigkeit aktivieren und deaktivieren können.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Zum Durchführen dieser exemplarischen Vorgehensweise müssen Microsoft Office Excel 2013 (oder Version 2007 oder höher) und Microsoft Office Word 2013 (oder Version 2007 oder höher) auf Ihrem Computer installiert sein.  
+
+Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder neuere Versionen installiert sein, um diese exemplarische Vorgehensweise ausführen zu können.  
   
  Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] installiert ist.  
   
@@ -57,9 +57,9 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-3.  Erweitern Sie im Bereich **Installierte Vorlagen** die Option **Visual Basic** oder **Visual C#**, erweitern Sie dann **Office**, und klicken Sie auf **2013** (oder **2010** oder **2007**).  
+3.  Erweitern Sie im Bereich **Installierte Vorlagen** die Option **Visual Basic** oder **Visual C#**, erweitern Sie dann **Office**, und klicken Sie auf die Jahreszahl der Version des Office-Produkts.  
   
-4.  Klicken Sie im Bereich **Vorlagen** auf **Excel 2013 Add-In** (oder **Excel 2010 Add-In** oder **Excel 2007 Add-In**).  
+4.  Klicken Sie im Bereich **Vorlagen** auf **Excel\<version > Add-in**.  
   
 5.  Sehen Sie am oberen Rand des Bereichs **Vorlagen** nach, um sicherzustellen, dass **.NET Framework 4** oder eine höhere Version im Feld **Zielframework** angezeigt wird.  
   
@@ -73,7 +73,7 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Verweis hinzufügen**. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   
-2.  Wählen Sie auf der Registerkarte **Assemblys** die Option **Microsoft.Office.Interop.Excel**, Version 15.0.0.0 (oder Version 14.0.0.0 für Excel 2010 oder Version 12.0.0.0 für Excel 2007), in der Liste **Komponentenname** aus, und halten Sie dann die STRG-Taste gedrückt, während Sie **Microsoft.Office.Interop.Word**, Version 15.0.0.0 (oder Version 14.0.0.0 für Word 2010 oder 12.0.0.0 für Word 2007), auswählen.  Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Interopassemblys für Office](http://msdn.microsoft.com/library/92948fcc-76c6-4b08-ba63-cab59dd60eb1)).  
+2.  Wählen Sie auf der Registerkarte **Assemblys** die Option **Microsoft.Office.Interop.Excel**, Version `<version>.0.0.0` (einen Schlüssel für die Versionsnummer des Office-Produkts finden Sie unter [Microsoft Versions (in englischer Sprache)](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), in der Liste **Komponentenname** aus, und halten Sie dann die STRG-Taste gedrückt, während Sie **Microsoft.Office.Interop.Word**, `version <version>.0.0.0` auswählen. Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Interopassemblys für Office](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -83,29 +83,25 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 2.  Fügen Sie die folgenden `Imports`-Anweisungen (Visual Basic) oder `using`-Direktiven (C#) am Anfang der Codedatei ein, wenn sie noch nicht vorhanden sind.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)] [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>So erstellen Sie eine Liste mit Bankkonten  
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, klicken Sie auf **Hinzufügen** und dann auf **Klasse**. Benennen Sie die Klasse "Account.vb", wenn Sie Visual Basic verwenden, oder "Account.cs", wenn Sie C# verwenden. Klicken Sie auf **Hinzufügen**.  
   
-2.  Ersetzen Sie die Definition der `Account`-Klasse durch den folgenden Code. Die Klassendefinitionen verwenden *automatisch implementierte Eigenschaften*, die neu in Visual Basic in Visual Studio 2010 sind. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
+2.  Ersetzen Sie die Definition der `Account`-Klasse durch den folgenden Code. Die Klassendefinitionen verwenden *automatisch implementierte Eigenschaften*. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)] [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
-3.  Fügen Sie den folgenden Code in die `bankAccounts`-Methode in "ThisAddIn.vb" oder "ThisAddIn.cs" ein, um eine `ThisAddIn_Startup`-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*, die neu in Visual Basic in Visual Studio 2010 sind. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+3.  Fügen Sie den folgenden Code in die `ThisAddIn_Startup`-Methode in *ThisAddIn.vb* oder *ThisAddIn.cs* ein, um eine `bankAccounts`-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)] [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### <a name="to-export-data-to-excel"></a>So exportieren Sie Daten nach Excel  
   
 1.  Fügen Sie in der gleichen Datei die folgende Methode der `ThisAddIn`-Klasse hinzu. Die Methode richtet eine Excel-Arbeitsmappe ein, in die die Daten exportiert werden.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)] [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      Bei dieser Methode werden zwei neue C#-Funktionen verwendet. Beide Funktionen existieren bereits in Visual Basic.  
   
@@ -127,10 +123,9 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 2.  Fügen Sie den folgenden Code am Ende von `DisplayInExcel` hinzu, um die Spaltenbreite an den Inhalt anzupassen.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)] [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
-     Diese Ergänzungen veranschaulichen eine weitere neue Funktion in C# 2010: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist oder gleichermaßen wenn die [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in Visual C# 2008 und in früheren Sprachversionen erforderliche explizite Umwandlung.  
+     Diese Ergänzungen veranschaulichen eine weitere Funktion in C#: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist oder gleichermaßen wenn die [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in Visual C# 2008 und in früheren Sprachversionen erforderliche explizite Umwandlung.  
   
      `excelApp.Columns[1]` gibt z.B.`Object` zurück, und `AutoFit` ist eine [Range](http://go.microsoft.com/fwlink/?LinkId=210911)-Methode von Excel. Ohne `dynamic` müssen Sie das von `excelApp.Columns[1]` zurückgegebene Objekt als eine Instanz von `Range` umwandeln, bevor Sie die Methode `AutoFit` aufrufen.  
   
@@ -140,10 +135,9 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 ### <a name="to-invoke-displayinexcel"></a>So rufen Sie DisplayInExcel auf  
   
-1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Mehrzeilige Lambdaausdrücke sind eine neue Funktion in Visual Basic 2010. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)] [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  Drücken Sie F5, um das Programm auszuführen. Ein Excel-Arbeitsblatt wird mit den Kontendaten angezeigt.  
   
@@ -151,10 +145,9 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu, um ein Word-Dokument zu erstellen, das einen Link zur Excel-Arbeitsmappe enthält.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)] [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     Dieser Code veranschaulicht mehrere der neuen Funktionen in C#: die Möglichkeit, das `ref`-Schlüsselwort in der COM-Programmierung auszulassen, benannte Argumente sowie optionale Argumente. Diese Funktionen sind bereits in Visual Basic vorhanden. Die Methode [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) verfügt über sieben Parameter, die als optionale Verweisparameter definiert sind. Vor Visual C# 2010 mussten Sie Objektvariablen definieren, die als Argumente für die sieben Parameter verwendet wurden, auch wenn Sie keine aussagekräftigen Werte zum Übertragen hatten. Benannte und optionale Argumente ermöglichen es Ihnen, die Parameter festzulegen, auf die Sie namentlich zugreifen möchten, und Argumente nur an diese Parameter zu senden. In diesem Beispiel werden Argumente gesendet, um anzugeben, dass ein Link zur Arbeitsmappe in der Zwischenablage erstellt werden soll (Parameter `Link`) und dass der Link im Word-Dokument als Symbol angezeigt werden soll (Parameter `DisplayAsIcon`). Visual C# 2010 ermöglicht auch das Weglassen des `ref`-Schlüsselworts für diese Argumente. Vergleichen Sie das folgende Codesegment von Visual C# 2008 mit der einzelnen, in Visual C# 2010 erforderlichen Zeile:  
+     Dieser Code veranschaulicht mehrere der neuen Funktionen in C#: die Möglichkeit, das `ref`-Schlüsselwort in der COM-Programmierung auszulassen, benannte Argumente sowie optionale Argumente. Diese Funktionen sind bereits in Visual Basic vorhanden. Die Methode [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) verfügt über sieben Parameter, die als optionale Verweisparameter definiert sind. Benannte und optionale Argumente ermöglichen es Ihnen, die Parameter festzulegen, auf die Sie namentlich zugreifen möchten, und Argumente nur an diese Parameter zu senden. In diesem Beispiel werden Argumente gesendet, um anzugeben, dass ein Link zur Arbeitsmappe in der Zwischenablage erstellt werden soll (Parameter `Link`) und dass der Link im Word-Dokument als Symbol angezeigt werden soll (Parameter `DisplayAsIcon`). Visual C# ermöglicht auch das Weglassen des `ref`-Schlüsselworts für diese Argumente.
   
 ### <a name="to-run-the-application"></a>So führen Sie die Anwendung aus  
   
@@ -168,20 +161,20 @@ Ab Visual Studio gibt es neue Funktionen in C# und Visual Basic, die die Microso
   
 1.  Führen Sie die Anwendung erneut aus, klicken Sie jedoch nicht auf **Projektmappe bereinigen**.  
   
-2.  Klicken Sie im Menü **Start** auf **Alle Programme**. Klicken Sie anschließend auf **Microsoft Visual Studio 2013**, dann auf **Visual Studio-Tools** und dann auf **Visual Studio-Eingabeaufforderung (2013)**.  
+2.  Wählen Sie **Start** aus. Suchen Sie **Microsoft Visual Studio \<version>** und öffnen Sie eine Developer-Eingabeaufforderung.  
   
-3.  Geben Sie im Fenster „Visual Studio-Eingabeaufforderung (2013)“ `ildasm` ein, und drücken Sie dann die EINGABETASTE. Das IL DASM-Fenster wird angezeigt.  
+3.  Geben Sie im Fenster „Visual Studio-Eingabeaufforderung“ `ildasm` ein, und drücken Sie dann die EINGABETASTE. Das IL DASM-Fenster wird angezeigt.  
   
-4.  Klicken Sie im IL DASM-Fenster im Menü **Datei** auf **Öffnen**. Doppelklicken Sie auf **Visual Studio 2013** und dann noch einmal auf **Projekte**. Öffnen Sie den Ordner für das Projekt, und suchen Sie im Ordner „bin/Debug“ nach der Datei *Projektname*.dll. Doppelklicken Sie auf *Projektname*.dll. In einem neuen Fenster werden die Attribute Ihres Projekts sowie Verweise auf andere Module und Assemblys angezeigt. Beachten Sie, dass die Namespaces `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` in der Assembly enthalten sind. Standardmäßig importiert der Compiler in Visual Studio 2013 die benötigten Typen aus einer referenzierten PIA in Ihre Assembly.  
+4.  Klicken Sie im IL DASM-Fenster im Menü **Datei** auf **Datei** > **Öffnen**. Doppelklicken Sie auf **Visual Studio \<version>** und dann noch einmal auf **Projekte**. Öffnen Sie den Ordner für das Projekt, und suchen Sie im Ordner „bin/Debug“ nach der Datei *Projektname*.dll. Doppelklicken Sie auf *Projektname*.dll. In einem neuen Fenster werden die Attribute Ihres Projekts sowie Verweise auf andere Module und Assemblys angezeigt. Beachten Sie, dass die Namespaces `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` in der Assembly enthalten sind. Standardmäßig importiert der Compiler in Visual Studio die benötigten Typen aus einer referenzierten PIA in Ihre Assembly.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Ansichtsassemblyinhalt](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Ansichtsassemblyinhalt](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 5.  Doppelklicken Sie auf das Symbol **MANIFEST**. Es wird ein Fenster angezeigt, das eine Liste von Assemblys enthält, die vom Projekt referenzierte Elemente enthalten. `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` sind nicht in der Liste enthalten. Da die Typen, die das Projekt benötigt, in die Assembly importiert wurden, sind keine Verweise auf eine PIA erforderlich. Dadurch wird die Bereitstellung vereinfacht. Die PIAs müssen nicht auf dem Computer des Benutzers vorhanden sein, und da für eine Anwendung keine bestimmte PIA-Version bereitgestellt werden muss, können die Anwendungen so konzipiert sein, dass sie mit mehreren Versionen von Office funktionieren, sofern die erforderlichen APIs in allen Versionen vorhanden sind.  
   
      Da die Bereitstellung von primären Interop-Assemblys nicht mehr benötigt wird, können Sie eine Anwendung in erweiterten Szenarien erstellen, bei denen mehrere Versionen von Office, einschließlich früherer Versionen, verwendet werden. Dies funktioniert jedoch nur, wenn Ihr Code keine APIs verwendet, die nicht in der Version von Office verfügbar sind, mit der Sie arbeiten. Es ist nicht immer klar, ob eine bestimmte API in einer früheren Version verfügbar war; daher wird die Arbeit mit früheren Office-Versionen nicht empfohlen.  
   
     > [!NOTE]
-    >  Office hat vor Office 2003 keine PIAs veröffentlicht. Aus diesem Grund besteht die einzige Möglichkeit zum Generieren einer Interop-Assembly für Office 2002 oder früheren Versionen darin, den COM-Verweis zu importieren.  
+    > Office hat vor Office 2003 keine PIAs veröffentlicht. Aus diesem Grund besteht die einzige Möglichkeit zum Generieren einer Interop-Assembly für Office 2002 oder früheren Versionen darin, den COM-Verweis zu importieren.  
   
 6.  Schließen Sie das Manifest-Fenster und das Assembly-Fenster.  
   

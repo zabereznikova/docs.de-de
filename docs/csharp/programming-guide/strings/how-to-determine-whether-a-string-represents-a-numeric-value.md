@@ -1,24 +1,43 @@
 ---
-title: "Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Numerische Zeichenfolgen [C#]"
-  - "Zeichenfolgen [C#], Numerisch"
-  - "Valisieren der numerischen Eingabe [C#]"
+title: 'Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- numeric strings [C#]
+- validating numeric input [C#]
+- strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
 caps.latest.revision: 9
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 9
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 343e7304a83f396b8bdcc9c92e9123eed206be56
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
+
 ---
-# Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt (C#-Programmierhandbuch)
-Um zu bestimmen, ob eine Zeichenfolge eine gültige Darstellung eines angegebenen numerischen Typs ist, verwenden Sie die statische `TryParse`\-Methode, die von allen primitiven numerischen Typen und von Typen, wie z. B. <xref:System.DateTime> und <xref:System.Net.IPAddress>, implementiert werden.  Im folgenden Beispiel wird gezeigt, wie Sie bestimmen können, ob "108" eine gültige [int](../../../csharp/language-reference/keywords/int.md) ist.  
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt (C#-Programmierhandbuch)
+Verwenden Sie die statische `TryParse`-Methode, die von allen primitiven numerischen Typen sowie von Typen wie z.B. <xref:System.DateTime> und <xref:System.Net.IPAddress> implementiert wird, um zu bestimmen, ob eine Zeichenfolge eine gültige Darstellung eines angegebenen numerischen Typs ist. In folgendem Beispiel wird gezeigt, wie Sie bestimmen können, ob „108“ eine zulässige [ganze Zahl](../../../csharp/language-reference/keywords/int.md) ist.  
   
 ```  
 int i = 0;   
@@ -26,25 +45,25 @@ string s = "108";
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
   
- Wenn die Zeichenfolge nicht\-numerische Zeichen enthält oder der numerische Wert zu groß bzw. zu klein für den angegebenen Typ ist, gibt `TryParse` den Wert false zurück und legt den out\-Parameter auf Null fest.  Andernfalls wird true zurückgegeben, und der out\-Parameter wird auf den numerischen Wert der Zeichenfolge festgelegt.  
+ Wenn die Zeichenfolge nicht numerische Zeichen enthält oder der numerische Wert für den Typ, den Sie angegeben haben, zu groß oder zu klein ist, gibt `TryParse` „FALSE“ zurück und legt den Parameter auf 0 (null) fest. Andernfalls wird „TRUE“ zurückgegeben und der Parameter auf den numerischen Wert der Zeichenfolge festgelegt.  
   
 > [!NOTE]
->  Eine Zeichenfolge kann nur numerische Zeichen enthalten und dennoch nicht für den Typ, dessen `TryParse`\-Methode Sie verwenden, gültig sein.  "256" ist beispielsweise kein gültiger Wert für `byte`, aber es ist für `int` gültig. "  98,6" ist kein gültiger Wert für `int`, ist jedoch für `decimal` gültig.  
+>  Eine Zeichenfolge kann auch nur numerische Zeichen enthalten und trotzdem für den Typ unzulässig sein, dessen `TryParse`-Methode Sie verwenden. Beispielsweise ist „256“ kein zulässiger Wert für `byte`, aber zulässig für `int`. „98,6“ ist kein zulässiger Wert für `int`, aber zulässig für `decimal`.  
   
-## Beispiel  
- In den folgenden Beispielen wird gezeigt, wie Sie `TryParse` mit Zeichenfolgenentsprechungen von `long`, `byte` und `decimal` verwenden können.  
+## <a name="example"></a>Beispiel  
+ In folgendem Beispiel wird gezeigt, wie Sie `TryParse` mit einer Zeichenfolgenrepräsentation von den Werten `long`, `byte` und `decimal` verwenden können.  
   
  [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
-## Robuste Programmierung  
- Primitive numerische Typen implementieren auch die statische `Parse`\-Methode, die eine Ausnahme auslöst, wenn die Zeichenfolge keine gültige Zahl ist.  `TryParse` ist im Allgemeinen effektiver, da es nur den Wert false zurückgibt, wenn die Zahl nicht gültig ist.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Primitive numerische Typen implementieren auch die statische `Parse`-Methode, die eine Ausnahme auslöst, wenn die Zeichenfolge keine zulässige Zahl ist. `TryParse` ist für gewöhnlich effizienter, da es einfach „FALSE“ zurückgibt, wenn die Zahl unzulässig ist.  
   
-## .NET Framework-Sicherheit  
- Verwenden Sie immer die `TryParse`\- oder die `Parse`\-Methode, um die Benutzereingaben in Steuerelementen wie Textfelder und Kombinationsfelder zu überprüfen.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Verwenden Sie immer die Methoden `TryParse` oder `Parse`, um Benutzereingaben von Steuerelementen wie Text- oder Kombinationsfeldern zu überprüfen.  
   
-## Siehe auch  
- [Gewusst wie: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
- [Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
- [Gewusst wie: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
- [Verarbeiten numerischer Zeichenfolgen](../Topic/Parsing%20Numeric%20Strings%20in%20the%20.NET%20Framework.md)   
- [Formatierung von Typen](../Topic/Formatting%20Types%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
+ [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
+ [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
+ [Analysieren numerischer Zeichenfolgen](../../../standard/base-types/parsing-numeric.md)   
+ [Formatierung von Typen](../../../standard/base-types/formatting-types.md)
