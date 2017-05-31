@@ -1,6 +1,6 @@
 ---
 title: "C#-Typen und Variablen | Überblick über C#"
-description: "Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C.#"
+description: "Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#."
 keywords: .NET, Csharp, Typ, Verweistyp, Werttyp
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.contentlocale: de-de
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -89,7 +90,7 @@ Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Fun
 
 Ein `delegate`-Typ stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate werden analog zu Funktionstypen von funktionalen Sprachen bereitgestellt. Sie ähneln auch dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 
-Klasse, `struct`-, `interface`- und `delegate`-Typen unterstützen generische Typen, wobei sie mit anderen Typen parametrisiert werden können.
+Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen generische Typen, wobei sie mit anderen Typen parametrisiert werden können.
 
 Ein `enum`-Typ ist ein eigenständiger Typ mit einer benannten Konstante. Jeder `enum`-Typ verfügt über einen zugrunde liegenden Typ, der einer der acht ganzzahligen Typen sein muss. Der Satz von Werten eines `enum`-Typs ist mit dem Satz von Werten des zugrunde liegenden Typs identisch.
 

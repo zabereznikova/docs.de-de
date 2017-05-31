@@ -36,7 +36,7 @@ Dabei lernen Sie auch einige C#-Sprachfunktionen kennen:
 * Verarbeiten eingehender HTTP-Anforderungen und Generieren der HTTP-Antwort
 * Arbeiten mit Nullable-Werttypen
 
-Sie können die Beispiel-App für dieses Thema [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Sie können die Beispiel-App für diese Thema [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Warum Docker?
 
