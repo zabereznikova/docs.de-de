@@ -1,90 +1,109 @@
 ---
-title: "Verarbeiten der XML-Datei (C#&#160;Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "XML [C#], Verarbeiten"
-  - "XML-Verarbeitung [C#]"
+title: "Verarbeiten der XML-Datei (C# Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- XML processing [C#]
+- XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 3a585025063847f93dc2c3b3747bd3406f89eae4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
-# Verarbeiten der XML-Datei (C#&#160;Programmierhandbuch)
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID\-Zeichenfolge generiert.  \(Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).\) Das Konstrukt wird von der ID\-Zeichenfolge eindeutig identifiziert.  Programme, von denen die XML\-Datei verarbeitet wird, können die ID\-Zeichenfolge einsetzen, um das entsprechende .NET Framework\-Metadaten\-\/Reflektionselement zu identifizieren, auf das die Dokumentation angewendet werden kann.  
+# <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
+Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten-/Reflektionselement identifizieren, für das die Dokumentation gilt.  
   
- Die XML\-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine unstrukturierte Liste mit einer generierten ID für jedes Element.  
+ Die XML-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine flache Liste mit einer generierten ID für jedes Element.  
   
- Die folgenden Regeln werden vom Compiler beim Generieren der ID\-Zeichenfolgen beachtet:  
+ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
 -   Die Zeichenfolge darf keinen Leerraum enthalten.  
   
--   Der erste Teil der ID\-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt.  Die folgenden Membertypen werden verwendet:  
+-   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:  
   
     |Zeichen|Beschreibung|  
-    |-------------|------------------|  
-    |N|\-Namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch **cref**\-Verweise hinzugefügt werden.|  
+    |---------------|-----------------|  
+    |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch cref-Verweise hinzugefügt werden.|  
     |T|Typ: Klasse, Schnittstelle, Struktur, Auflistung, Delegat|  
     |F|Feld|  
-    |P|Eigenschaft, einschließlich Indexern oder anderer indizierter Eigenschaften.|  
-    |M|Methode \(einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.\)|  
+    |P|Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften)|  
+    |M|Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.)|  
     |E|event|  
-    |\!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen.  Vom C\#\-Compiler werden Fehlerinformationen für Links, die nicht aufgelöst werden können, erstellt.|  
+    |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Vom C#-Compiler werden Fehlerinformationen für Links erstellt, die nicht aufgelöst werden können.|  
   
--   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace\-Stammverzeichnis.  Der Name des Elements, der bzw. die einschließende\(n\) Typ\(en\) und der Namespace sind durch Punkte getrennt.  Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Nummernzeichen \(**\#**\) ersetzt.  Es wird vorausgesetzt, dass kein Element direkt im Namen ein Nummernzeichen enthält.  Der vollqualifizierte Name des String\-Konstruktors würde beispielsweise "System.String.\#ctor" lauten.  
+-   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, der bzw. die einschließende(n) Typ(en) und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Nummernzeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element direkt im Namen ein Nummernzeichen enthält. Der vollqualifizierte Name des String-Konstruktors würde beispielsweise „System.String.#ctor“ lauten.  
   
--   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste.  Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet.  Die Argumente werden durch Kommas voneinander getrennt.  Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer .NET Framework\-Signatur:  
+-   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer .NET Framework-Signatur:  
   
-    -   Basistypen.  Reguläre Typen, **ELEMENT\_TYPE\_CLASS** oder **ELEMENT\_TYPE\_VALUETYPE**, werden als vollqualifizierter Name des Typs repräsentiert.  
+    -   Basistypen. Reguläre Typen (ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE) werden als vollqualifizierter Name des Typs dargestellt.  
   
-    -   Systeminterne Typen, z. B. ELEMENT\_TYPE\_I4, ELEMENT\_TYPE\_OBJECT, ELEMENT\_TYPE\_STRING, ELEMENT\_TYPE\_TYPEDBYREF.  und ELEMENT\_TYPE\_VOID\) werden als vollqualifizierter Name des entsprechenden vollständigen Typs repräsentiert.  Als Beispiel sei hier System.Int32 oder System.TypedReference aufgeführt.  
+    -   Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typs dargestellt. Als Beispiel sei hier System.Int32 oder System.TypedReference genannt.  
   
-    -   **ELEMENT\_TYPE\_PTR** wird als \*, das auf den geänderten Typ folgt, repräsentiert.  
+    -   ELEMENT_TYPE_PTR wird als * dargestellt, das auf den geänderten Typ folgt.  
   
-    -   **ELEMENT\_TYPE\_PTR** wird als @, das auf den geänderten Typ folgt, repräsentiert.  
+    -   ELEMENT_TYPE_BYREF wird als @ dargestellt, das auf den geänderten Typ folgt.  
   
-    -   **ELEMENT\_TYPE\_PTR** wird als ^, das auf den geänderten Typ folgt, repräsentiert.  Dies wird nie vom C\#\-Compiler generiert.  
+    -   ELEMENT_TYPE_PINNED wird als ^ dargestellt, das auf den geänderten Typ folgt. Dies wird nie vom C#-Compiler generiert.  
   
-    -   ELEMENT\_TYPE\_CMOD\_REQ wird als '&#124;' mit nachstehendem vollqualifizierten Namen der Modifiziererklasse repräsentiert, das auf den geänderten Typ folgt.  Dies wird nie vom C\#\-Compiler generiert.  
+    -   ELEMENT_TYPE_CMOD_REQ wird als &#124; und vollqualifizierter Name der Modifiziererklasse dargestellt, das bzw. der auf den geänderten Typ folgt. Dies wird nie vom C#-Compiler generiert.  
   
-    -   ELEMENT\_TYPE\_CMOD\_OPT wird als '\!' mit nachstehendem vollqualifizierten Namen der Modifiziererklasse repräsentiert, das auf den geänderten Typ folgt.  
+    -   ELEMENT_TYPE_CMOD_OPT wird als ! mit nachstehendem vollqualifizierten Namen der Modifiziererklasse dargestellt, das auf den geänderten Typ folgt.  
   
-    -   **ELEMENT\_TYPE\_SZARRAY** wird als \[\], das auf den Elementtyp des Arrays folgt, repräsentiert.  
+    -   ELEMENT_TYPE_SZARRAY wird als [] dargestellt, das auf den Elementtyp des Arrays folgt.  
   
-    -   **ELEMENT\_TYPE\_GENERICARRAY** wird als \[?\], das auf den Elementtyp des Arrays folgt, repräsentiert.  Dies wird nie vom C\#\-Compiler generiert.  
+    -   ELEMENT_TYPE_GENERICARRAY wird als [?] dargestellt, das auf den Elementtyp des Arrays folgt. Dies wird nie vom C#-Compiler generiert.  
   
-    -   ELEMENT\_TYPE\_ARRAY wird als \[*lowerbound*:`size`,*lowerbound*:`size`\] repräsentiert, wobei die Anzahl der Kommas durch Rang \- 1 berechnet wird und die untere Grenze sowie die Größe jeder Dimension, sofern bekannt, dezimal repräsentiert werden.  Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen.  Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der **:** ebenfalls ausgelassen werden.  \[1:,1:\] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.  
+    -   ELEMENT_TYPE_ARRAY wird als [*lowerbound*:`size`,*lowerbound*:`size`] dargestellt, wobei die Anzahl von Kommas durch den Rang (1) berechnet wird und die untere Grenze sowie die Größe jeder Dimension – sofern bekannt – dezimal dargestellt werden. Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen. Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der Doppelpunkt (:) ebenfalls ausgelassen werden. [1:,1:] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.  
   
-    -   ELEMENT\_TYPE\_FNPTR wird als "\=FUNC:`type`\(*signature*\)" repräsentiert, wobei `type` den Rückgabetyp darstellt und es sich bei *signature* um die Argumente der Methode handelt.  Sind keine Argumente vorhanden, werden keine Klammern verwendet.  Dies wird nie vom C\#\-Compiler generiert.  
+    -   ELEMENT_TYPE_FNPTR wird als „=FUNC:`type`(*signature*)“ dargestellt, wobei `type` den Rückgabetyp angibt und es sich bei *signature* um die Argumente der Methode handelt. Sind keine Argumente vorhanden, werden keine Klammern verwendet. Dies wird nie vom C#-Compiler generiert.  
   
-     Die folgenden Signaturkomponenten werden nicht repräsentiert, weil sie nicht zur Unterscheidung überladener Methoden verwendet werden:  
+     Die folgenden Signaturkomponenten werden nicht dargestellt, weil sie nicht zur Unterscheidung überladener Methoden verwendet werden:  
   
     -   Aufrufkonvention  
   
     -   Rückgabetyp  
   
-    -   ELEMENT\_TYPE\_SENTINEL  
+    -   ELEMENT_TYPE_SENTINEL  
   
--   Nur für Konvertierungsoperatoren, op\_Implicit und op\_Explicit, wird der Rückgabewert der Methode als "~" gefolgt vom Rückgabewert codiert, wie weiter oben gezeigt.  
+-   Nur für Konvertierungsoperatoren („op_Implicit“ und „op_Explicit“) wird der Rückgabewert der Methode als ~ gefolgt vom Rückgabewert codiert, wie weiter oben gezeigt.  
   
--   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, die die Anzahl der generischen Typparameter angibt.  Beispiel:  
+-   Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird.  Beispiel:  
   
-     `<member name="T:SampleClass`2">` ist das Tag für einen Typ, der als `public class SampleClass\<T, U>` definiert wird.  
+     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
   
-     Bei Methoden, die generische Typen als Parameter verwenden, werden die generischen Parameter des Typs als Zahlen mit vorangestelltem Graviszeichen angegeben \(z. B. \`0,\`1\).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.  
+     Bei Methoden, die generische Typen als Parameter verwenden, werden die generischen Parameter des Typs als Zahlen mit vorangestelltem Graviszeichen angegeben (z.B. \`0,`1).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.  
   
-## Beispiele  
- In den folgenden Beispielen wird eine mögliche Generierung von ID\-Zeichenfolgen für eine Klasse und ihre Member gezeigt:  
+## <a name="examples"></a>Beispiele  
+ Die folgenden Beispiele zeigen, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert werden würden:  
   
  [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [\/doc \(Process Documentation Comments\)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
- [XML\-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [/doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

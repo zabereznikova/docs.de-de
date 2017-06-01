@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b12c4b20f65f8cd2b68a55c5d2548b289a560c3c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d65b4050287289df419685127cdbbb18f52ec719
+ms.openlocfilehash: a214f129424fd458decf473ef94ec3c5ed6eed3c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
   
- Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Standardabfrageoperatoren, die den vorhandenen Typen <xref:System.Collections.IEnumerable?displayProperty=fullName> und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> Abfragefunktionen hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint über Instanzmethoden wie z.B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> und so weiter zu verfügen. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung durch Eingabe von „Punkt“ nach einer Instanz eines Typs <xref:System.Collections.Generic.IEnumerable%601> wie z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array> sehen.  
+ Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=fullName>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
   
  Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
@@ -46,7 +47,7 @@ Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohn
   
  Erweiterungsmethoden werden als statische Methoden definiert, jedoch mithilfe einer Instanzmethodensyntax aufgerufen. Der erste Parameter bestimmt, für welchen Typ die Methode gilt, und vor dem Parameter steht der [this](../../../csharp/language-reference/keywords/this.md)-Modifizierer. Erweiterungsmethoden befinden sich nur dann im Bereich, wenn Sie den Namespace explizit mit einer `using`-Direktive in Ihren Quellcode importieren.  
   
- Das folgende Beispiel zeigt eine Erweiterungsmethode, die für die Klasse <xref:System.String?displayProperty=fullName> definiert ist. Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
+ Im folgenden Beispiel wird eine für die <xref:System.String?displayProperty=fullName>-Klasse definierte Erweiterungsmethode veranschaulicht. Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
   
  [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
@@ -73,7 +74,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- (Möglicherweise müssen Sie auch einen Verweis auf System.Core.dll hinzufügen.) Wie Sie sehen, werden die Standardabfrageoperatoren jetzt in IntelliSense als zusätzliche Methoden, die für die meisten Typen von <xref:System.Collections.Generic.IEnumerable%601> verfügbar sind, angezeigt.  
+ (Möglicherweise müssen Sie auch einen Verweis auf System.Core.dll hinzufügen.) Wie Sie sehen, werden die Standardabfrageoperatoren jetzt in IntelliSense als zusätzliche Methoden, die für die meisten <xref:System.Collections.Generic.IEnumerable%601>-Typen verfügbar sind, angezeigt.  
   
 > [!NOTE]
 >  Obwohl Standardabfrageoperatoren nicht in IntelliSense für <xref:System.String> angezeigt werden, sind sie dennoch verfügbar.  
@@ -112,3 +113,4 @@ using System.Linq;
  [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](http://go.microsoft.com/fwlink/?LinkId=112386)   
  [Extension methods and Curried Delegates (Erweiterungsmethoden und Curry-Delegaten)](http://go.microsoft.com/fwlink/?LinkId=112387)   
  [Extension method Binding and Error reporting (Binden von Erweiterungsmethoden und Problemberichten)](http://go.microsoft.com/fwlink/?LinkId=112388)
+

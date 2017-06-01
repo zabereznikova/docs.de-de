@@ -1,6 +1,6 @@
 ---
 title: ulong (C#-Referenz) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C#-Referenz)
+
 Das Schlüsselwort `ulong` kennzeichnet einen ganzzahligen Typ, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
 |Typ|Bereich|Größe|.NET Framework-Typ|  
@@ -44,44 +46,43 @@ Das Schlüsselwort `ulong` kennzeichnet einen ganzzahligen Typ, der Werte anhand
 |`ulong`|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literale  
- Sie können eine `ulong`-Variable wie im folgenden Beispiel deklarieren und initialisieren:  
+
+Sie können eine `ulong`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen.  Wenn das Ganzzahlliteral außerhalb des Bereichs von `ulong` liegt, d.h., wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt64.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf. 
+
+Im folgenden Beispiel werden Ganzzahlen wie 7.934.076.125, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `ulong`-Werten zugewiesen.  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste dieser Typen, in dem sein Wert dargestellt werden kann: [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), `ulong`. Im obigen Beispiel ist der Typ `ulong`.  
-  
- Sie können auch Suffixe verwenden, um den Typ des Literals gemäß den folgenden Regeln anzugeben:  
-  
--   Bei Verwendung von L oder l wird der Typ des Ganzzahlliterals gemäß seiner Größe entweder [long](../../../csharp/language-reference/keywords/long.md) oder `ulong` entsprechen.  
-  
-    > [!NOTE]
-    >  Sie können den Kleinbuchstaben „l“ als Suffix verwenden. Allerdings erzeugt dies eine Compilerwarnung, weil der Buchstabe „l“ leicht mit der Zahl „1“ verwechselt wird. Verwenden Sie aus Gründen der Klarheit „L“.  
-  
--   Wenn Sie `U` oder `u` verwenden, ist der Typ des Ganzzahlliterals gemäß seiner Größe entweder [uint](../../../csharp/language-reference/keywords/uint.md) oder `ulong`.  
-  
--   Wenn Sie UL, ul, Ul, uL, LU, lu oder lU verwenden, wird der Typ des Ganzzahlliterals `ulong` sein.  
-  
-     Beispielsweise wird die Ausgabe der folgenden drei Anweisungen der Systemtyp `UInt64` sein, der dem Alias `ulong` entspricht:  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals. Dezimale Literale haben kein Präfix. 
+
+Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit verwenden, wie im folgenden Beispiel veranschaulicht.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `UL` oder `ul` identifiziert unzweideutig ein numerisches Literal als ein `ulong`-Wert. Das `L`-Suffix kennzeichnet ein `ulong`, wenn der literale Wert <xref:System.Int64.MaxValue?displayProperty=fullName> überschreitet. Und das Suffix `U` oder `u` kennzeichnet ein `ulong`, wenn der literale Wert <xref:System.UInt32.MaxValue?displayProperty=fullName> überschreitet. Im folgenden Beispiel wird das `ul`-Suffix verwendet, um eine lange ganze Zahl anzugeben:
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste der folgenden Typen, in dem sein Wert dargestellt werden kann: 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>Überladungsauflösung des Compiler
   
  Das Suffix wird häufig beim Aufrufen überladener Methoden verwendet. Dies ist z.B. in den folgenden überladenen Methoden der Fall, die die Parameter `ulong` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  Die Verwendung eines Suffixes mit dem Parameter `ulong` gewährleistet, dass der richtige Typ aufgerufen wird, wie z.B.:  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +92,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  Es gibt keine implizite Konvertierung von `ulong` in ganzzahlige Typen. Die folgende Anweisung erzeugt z.B. einen Kompilierungsfehler ohne explizite Umwandlung:  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +100,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkomma-Datentypen in `ulong` gibt. Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

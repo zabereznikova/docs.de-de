@@ -31,7 +31,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  Senden Sie Produktfeedback nicht über den Link **Kommentare** unten auf jeder Seite an uns.  Diese Links sind nur für das Feedback zur Dokumentation gedacht.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Blogs"></a>   
 ## Blogs  

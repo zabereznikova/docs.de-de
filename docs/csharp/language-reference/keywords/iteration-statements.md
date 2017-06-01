@@ -1,25 +1,44 @@
 ---
-title: "Iterationsanweisungen (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Iterationsanweisungen [C#]"
-  - "Schleifenstrukturen [C#]"
+title: Iterationsanweisungen (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- iteration statements [C#]
+- loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: cc3022ec31f93f894f639699cef2a788101bff7b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
-# Iterationsanweisungen (C#-Referenz)
-Mit Iterationsanweisungen können Schleifen erstellt werden.  Iterationsanweisungen bewirken, dass eingebettete Anweisungen so oft ausgeführt werden, bis ein Kriterium für die Schleifenbeendigung erfüllt ist.  Diese Anweisungen werden nacheinander ausgeführt, es sei denn, eine [Sprunganweisung](../../../csharp/language-reference/keywords/jump-statements.md) wird gefunden.  
+# <a name="iteration-statements-c-reference"></a>Iterationsanweisungen (C#-Referenz)
+Mit Iterationsanweisungen können Sie Schleifen erstellen. Iterationsanweisungen bewirken, dass eingebettete Anweisungen mehrmals ausgeführt werden, je nach Beendigungskriterien für Schleifen. Diese Anweisungen werden nacheinander ausgeführt, es sei denn, eine davon ist eine [Sprunganweisung](../../../csharp/language-reference/keywords/jump-statements.md).  
   
- In Iterationsanweisungen werden die folgenden Schlüsselwörter verwendet:  
+ Die folgenden Schlüsselwörter werden in Iterationsanweisungen verwendet:  
   
 -   [do](../../../csharp/language-reference/keywords/do.md)  
   
@@ -31,11 +50,8 @@ Mit Iterationsanweisungen können Schleifen erstellt werden.  Iterationsanweisun
   
 -   [while](../../../csharp/language-reference/keywords/while.md)  
   
-## Enthaltenes Buchkapitel  
- [Flow Control](http://go.microsoft.com/fwlink/?LinkId=221229) in [Beginning Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)

@@ -22,7 +22,7 @@ caps.handback.revision: 11
 # &#220;bersicht &#252;ber TileBrush
 <xref:System.Windows.Media.TileBrush>\-Objekte bieten Ihnen umfangreiche Steuerungsmöglichkeiten beim Zeichnen eines Bereichs mit einem Bild, einer <xref:System.Windows.Media.Drawing> oder einem <xref:System.Windows.Media.Visual>.  In diesem Thema wird die Verwendung der <xref:System.Windows.Media.TileBrush>\-Features beschrieben, um besser steuern zu können, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> oder <xref:System.Windows.Media.VisualBrush> einen Bereich zeichnet.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisite"></a>   
 ## Vorbereitungsmaßnahmen  

@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # Metadaten f&#252;r Abh&#228;ngigkeitseigenschaften
 Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Eigenschaftensystem enthält ein Metadatenberichtssystem, das mehr als nur die Daten von Eigenschaften berichtet, indem die Reflektion verwendet oder allgemeine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Merkmale angegeben werden.  Die Metadaten für eine [Abhängigkeitseigenschaft](GTMT) können auch eindeutig von der Klasse zugewiesen werden, die eine [Abhängigkeitseigenschaft](GTMT) definiert, sie können geändert werden, wenn die [Abhängigkeitseigenschaft](GTMT) einer anderen Klasse hinzugefügt wird, und sie können von allen abgeleiteten Klassen spezifisch überschrieben werden, die die [Abhängigkeitseigenschaft](GTMT) von der definierenden Basisklasse erben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

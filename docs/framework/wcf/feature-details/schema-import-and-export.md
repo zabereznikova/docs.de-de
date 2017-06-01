@@ -53,7 +53,7 @@ caps.handback.revision: 14
   
  Das folgende Schemafragment kann z. B. nicht mit den Standardimporteinstellungen importiert werden.  
   
- [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  -->  
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Wenn ein Schema den Datenvertragsregeln nicht entspricht, verwenden Sie ein anderes Serialisierungsmodul. Zum Beispiel die <xref:System.Xml.Serialization.XmlSerializer> einen eigenen separaten schemaimportmechanismus. Außerdem gibt es einen speziellen Importmodus, der die Bandbreite unterstützter Schemata erweitert. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]im Abschnitt zum Generieren von <xref:System.Xml.Serialization.IXmlSerializable> Typen in [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   

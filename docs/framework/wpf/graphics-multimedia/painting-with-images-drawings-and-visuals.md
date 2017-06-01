@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
 In diesem Thema wird beschrieben, wie mithilfe der Objekte <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> und <xref:System.Windows.Media.VisualBrush>\-ein Bereich mit einem Bild, einer <xref:System.Windows.Media.Drawing> oder einem <xref:System.Windows.Media.Visual> gezeichnet wird.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## Vorbereitungsmaßnahmen  

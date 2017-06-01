@@ -28,7 +28,7 @@ Sie können in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Zertifika
  Wenn Sie HTTPS zur Kommunikation zwischen einem Client und einem Dienst verwenden, muss das Zertifikat, mit dem der Server die Authentifizierung durchführt, standardmäßig Vertrauensketten unterstützen.Es muss eine Verkettung zu einer vertrauenswerten Stammzertifizierungsstelle herstellen,Es wird keine Online\-Überprüfung durchgeführt, um herauszufinden, ob das Zertifikat widerrufen wurde.Sie können dieses Verhalten auch überschreiben, indem Sie einen <xref:System.Net.Security.RemoteCertificateValidationCallback>\-Rückruf registrieren, wie mit dem nachfolgenden Code dargestellt.  
   
  [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
- [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
+ <!-- TODO: review snippet reference [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  -->  
   
  Die Signatur für `ValidateServerCertificate` sieht folgendermaßen aus:  
   

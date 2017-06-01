@@ -34,7 +34,7 @@ caps.handback.revision: 29
 # &#220;bersicht &#252;ber die Bildverarbeitung
 Dieses Thema bietet eine Einführung in [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="_wpfImaging"></a>   
 ## WPF Imaging\-Komponente  

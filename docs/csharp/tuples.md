@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2c81b7e18f36bde5b46c0c6df5c8122cd303931
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
-C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (wird als „arity“ bezeichnet) und Typen von Feldern sowie konsistente Regeln für Kopien und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt über Tupel im Thema [Neues in C# 7](csharp-7.md#tuples) einen Überblick.
+C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (wird als „arity“ bezeichnet) und Typen von Feldern sowie konsistente Regeln für Kopien und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt über Tupel im Thema [Neues in C# 7](whats-new/csharp-7.md#tuples) einen Überblick.
 
 In diesem Thema lernen Sie die Sprachregeln, die Tupel in C# 7 steuern, verschiedene Verwendungsarten und einen ersten Leitfaden über das Arbeiten mit Tupel.
 
@@ -65,7 +66,7 @@ Es ist wichtig, diese zugrunde liegenden Grundlagen der neuen Tupel sowie den `V
 
 ## <a name="assignment-and-tuples"></a>Zuweisung und Tupel
 
-Die Sprache unterstützt die Zuweisung zwischen Tupeltypen, die über die gleiche Anzahl von Feldern sowie die gleichen Typen für jedes dieser Felder verfügen. Diese Typen müssen genau während der Kompilierung übereinstimmen. Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
+Die Sprache unterstützt die Zuweisung zwischen Tupeltypen, die über die gleiche Anzahl von Feldern und implizite Konvertierungen für die Typen für jedes dieser Felder verfügen. Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
 
 Berücksichtigen Sie diese Variablen, die in den folgenden Beispielen verwendet werden:
 
@@ -181,7 +182,7 @@ Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendekla
 ```
 Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern verwenden können, auch wenn jedes Feld im Tupel den selben Typ hat.
 
-### <a name="deconstring-user-defined-types"></a>Dekonstruieren von benutzerdefinierten Typen
+### <a name="deconstructing-user-defined-types"></a>Dekonstruieren von benutzerdefinierten Typen
 
 Jeder Tupeltyp kann dekonstruiert werden, wie oben gezeigt wurde. Es ist genau so einfach, die Dekonstruktion in beliebigen benutzerdefinierten Typen (Klassen, Strukturen oder sogar Oberflächen) zu aktivieren.
 

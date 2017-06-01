@@ -24,7 +24,7 @@ Mit Bitmapeffekten können Designer und Entwickler visuelle Effekte auf gerender
 > [!IMPORTANT]
 >  In [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] oder höher ist die <xref:System.Windows.Media.Effects.BitmapEffect>\-Klasse veraltet.  Wenn Sie versuchen, die <xref:System.Windows.Media.Effects.BitmapEffect>\-Klasse zu verwenden, wird aufgrund der veralteten Klasse eine Ausnahme ausgelöst.  Die nicht veraltete Alternative zur <xref:System.Windows.Media.Effects.BitmapEffect>\-Klasse ist die <xref:System.Windows.Media.Effects.Effect>\-Klasse.  In den meisten Situationen ist die <xref:System.Windows.Media.Effects.Effect>\-Klasse bedeutend schneller.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wpf_effects"></a>   
 ## WPF\-Bitmapeffekte  

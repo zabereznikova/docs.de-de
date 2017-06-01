@@ -30,8 +30,8 @@ caps.handback.revision: 12
   
  Mit dem <xref:System.Windows.Data.XmlNamespaceMapping>\-Element können Sie den Namespace einem <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> zuordnen, wie im folgenden Beispiel.  Sie können dann mit dem <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> auf den [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Namespace verweisen.  Das <xref:System.Windows.Controls.ListBox> in diesem Beispiel zeigt *Titel* und *dc:date* jedes *Elements* an.  
   
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
   
  Beachten Sie, dass das angegebene <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> nicht mit dem in der [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Quelle verwendeten Präfix übereinstimmen muss. Wenn das Präfix in der [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Quelle geändert wird, funktioniert die Zuordnung weiterhin.  
   

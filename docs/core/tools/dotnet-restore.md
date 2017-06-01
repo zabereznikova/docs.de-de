@@ -4,16 +4,17 @@ description: "Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten u
 keywords: dotnet-restore, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 92da0806eb6c365a4622668242edc28d9966ed26
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
+ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 
@@ -37,6 +38,8 @@ Für Abhängigkeiten geben Sie mithilfe des Arguments `--packages` an, wo die wi
 
 Für projektspezifische Tools stellt `dotnet restore` zunächst das Paket wieder her, in dem sich das Tool befindet, und danach die Abhängigkeiten des Tools gemäß seiner Projektdatei.
 
+Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in der *NuGet.Config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *NuGet.Config* platziert z.B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie im [NuGet.Config-Referenzthema](https://docs.microsoft.com/nuget/schema/nuget-config-file).
+
 ## <a name="arguments"></a>Argumente
 
 `ROOT` 
@@ -57,7 +60,7 @@ Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu v
 
 Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiederherstellen von Paketen für Laufzeiten verwendet, die nicht explizit im `<RuntimeIdentifiers>`-Tag in der *.csproj*-Datei aufgeführt sind. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Es können mehrere RIDs bereitgestellt werden, indem diese Option mehrmals angegeben wird.
 
-`--packages <PACKAGES_DIRECTORY]`
+`--packages <PACKAGES_DIRECTORY>`
 
 Gibt das Verzeichnis für wiederhergestellte Pakete an. 
 
@@ -103,7 +106,7 @@ Wiederherstellen der Abhängigkeiten und Tools für das Projekt im aktuellen Ver
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
 
-Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis und nur Anzeige von Fehlern in der Ausgabe:
+Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis und nur Anzeige von nur minimaler Ausgabe:
 
-`dotnet restore --verbosity Error`
+`dotnet restore --verbosity minimal`
 

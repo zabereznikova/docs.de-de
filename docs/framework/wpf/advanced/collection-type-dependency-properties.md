@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Abh&#228;ngigkeitseigenschaften vom Auflistungstyp
 In diesem Thema finden Sie Unterstützung und Mustervorschläge für das Implementieren einer [Abhängigkeitseigenschaft](GTMT), wenn die Eigenschaft zum Auflistungstyp gehört.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## Implementieren einer Abhängigkeitseigenschaft vom Auflistungstyp  
@@ -36,7 +36,7 @@ In diesem Thema finden Sie Unterstützung und Mustervorschläge für das Impleme
   
  Betrachten Sie das folgende Beispiel.  Im nachstehenden Abschnitt des Beispiels wird die Definition für eine `Aquarium`\-Klasse veranschaulicht.  Die Klasse definiert die `AquariumObjects`\-Abhängigkeitseigenschaft vom Auflistungstyp, die den generischen <xref:System.Collections.Generic.List%601>\-Typ mit einer <xref:System.Windows.FrameworkElement>\-Typeinschränkung verwendet.  Im <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>\-Aufruf für die Abhängigkeitseigenschaft legen die Metadaten den Standardwert als neue generische <xref:System.Collections.Generic.List%601> fest.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

@@ -22,7 +22,7 @@ caps.handback.revision: 29
 # &#220;bersicht &#252;ber das Erstellen von Steuerelementen
 Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Steuerelementmodells ist es nur selten erforderlich, ein neues Steuerelement zu erstellen.  In bestimmten Fällen kann es jedoch auch weiterhin erforderlich sein, ein benutzerdefiniertes Steuerelement zu erstellen.  In diesem Thema werden die Features erläutert, dank denen ein benutzerdefiniertes Steuerelement nur noch selten erstellt werden muss, und es werden die verschiedenen Modelle für das Erstellen von Steuerelementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] beschrieben.  Dieses Thema veranschaulicht auch, wie ein neues Steuerelement erstellt wird.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="when_to_write_a_new_control"></a>   
 ## Alternativen zum Schreiben eines neuen Steuerelements  

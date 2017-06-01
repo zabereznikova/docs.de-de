@@ -31,8 +31,8 @@ In diesem Beispiel wird gezeigt, wie ein Steuerelement erstellt wird, das über 
   
  Das <xref:System.Windows.Controls.Label>\-Steuerelement unterstützt keinen Textumbruch.  Wenn Sie eine Bezeichnung benötigen, die auf mehrere Zeilen aufgeteilt werden soll, können Sie ein anderes Element verschachteln, das Textumbruch unterstützt, und dieses Element innerhalb der Bezeichnung stellen.  Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.TextBlock> verwendet werden kann, um eine Bezeichnung zu erstellen, die auf mehrere Textzeilen aufgeteilt ist.  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **Hinzufügen von Tastenkombination und Textumbruch zur Bezeichnung**  
   
@@ -42,8 +42,8 @@ In diesem Beispiel wird gezeigt, wie ein Steuerelement erstellt wird, das über 
   
  Das folgende Beispiel zeigt, wie eine <xref:System.Windows.Controls.Label> erstellt wird, die über eine Tastenkombination verfügt und Textumbruch unterstützt.  Um den Textumbruch zu aktivieren, legt das Beispiel die <xref:System.Windows.Controls.AccessText.TextWrapping%2A>\-Eigenschaft fest. Ein Unterstrichzeichen wird verwendet, um die Tastenkombination anzugeben.  \(Das Zeichen, das unmittelbar auf das Unterstrichzeichen folgt, ist die Tastenkombination.\)  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## Siehe auch  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/de-de/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

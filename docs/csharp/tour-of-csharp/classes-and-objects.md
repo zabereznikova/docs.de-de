@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eca74e69b0377f85deaf4cedbdf7b9edcf1b4b87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.contentlocale: de-de
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
@@ -68,9 +69,9 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
 * `protected`
     - Der Zugriff ist auf diese Klasse oder auf von dieser Klasse abgeleitete Klassen beschränkt.
 * `internal`
-    - Der Zugriff ist auf dieses Programm beschränkt.
+    - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
 * `protected internal`
-    - Der Zugriff ist auf dieses Programm oder auf von dieser Klasse abgeleitete Klassen beschränkt.
+    - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die von der enthaltenden Klasse abgeleitet sind.
 * `private`
     - Der Zugriff ist auf diese Klasse beschränkt.
 
@@ -89,7 +90,7 @@ Ein generischer Typ, für den Typargumente angegeben wurden (siehe `Pair<int,str
 
 ## <a name="base-classes"></a>Basisklassen
 
-Eine Klassendeklaration kann eine Basisklasse angeben, indem ein Doppelpunkt und der Name der Basisklasse an den Klassennamen und die Typparameter angehängt wird. Das Auslassen einer Basisklassenspezifikation ist dasselbe wie eine Ableitung vom Typobjekt. Im folgenden Beispiel ist `Point` die Basisklasse von `Point3D`, und die Basisklasse von `Point` ist `object`:
+Eine Klassendeklaration kann eine Basisklasse angeben, indem ein Doppelpunkt und der Name der Basisklasse an den Klassennamen und die Typparameter angehängt wird. Das Auslassen einer Basisklassenspezifikation ist dasselbe wie eine Ableitung vom Typ `object`. Im folgenden Beispiel ist `Point` die Basisklasse von `Point3D`, und die Basisklasse von `Point` ist `object`:
 
 [!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
@@ -127,15 +128,15 @@ Die *Signatur* einer Methode muss innerhalb der Klasse eindeutig sein, in der di
 
 Parameter werden dazu verwendet, Werte oder Variablenverweise an Methoden zu übergeben. Die Parameter einer Methode erhalten ihre tatsächlichen Werte über *Argumente*, die angegeben werden, wenn die Methode aufgerufen wird. Es gibt vier Arten von Parametern: Wertparameter, Verweisparameter, Ausgabeparameter und Parameterarrays.
 
-Ein *Wertparameter* wird zum Übergeben von Eingabeparametern verwendet. Ein Wertparameter entspricht einer lokalen Variablen, die ihren Anfangswert von dem Argument erhält, das für den Parameter übergeben wurde. Änderungen an einem Wertparameter wirken sich nicht auf das Argument aus, das für den Parameter übergeben wurde. 
+Ein *Wertparameter* wird zum Übergeben von Eingabeargumenten verwendet. Ein Wertparameter entspricht einer lokalen Variablen, die ihren Anfangswert von dem Argument erhält, das für den Parameter übergeben wurde. Änderungen an einem Wertparameter wirken sich nicht auf das Argument aus, das für den Parameter übergeben wurde. 
 
 Wertparameter können optional sein, indem ein Standardwert festgelegt wird, damit die zugehörigen Argumente weggelassen werden können.
 
-Ein *Verweisparameter* wird sowohl für die Übergabe von Eingabe- als auch Ausgabeparametern verwendet. Das für einen Verweisparameter übergebene Argument muss eine Variable sein, und während der Ausführung der Methode repräsentiert der Verweisparameter denselben Speicherort wie die Argumentvariable. Ein Verweisparameter wird mit dem `ref`-Modifizierer deklariert. Das folgende Beispiel veranschaulicht die Verwendung des `ref`-Parameters.
+Ein *Verweisparameter* wird zum Übergeben von Argumenten als Verweis verwendet. Das für einen Verweisparameter übergebene Argument muss eine Variable mit eindeutigem Wert sein, und während der Ausführung der Methode repräsentiert der Verweisparameter denselben Speicherort wie die Argumentvariable. Ein Verweisparameter wird mit dem `ref`-Modifizierer deklariert. Das folgende Beispiel veranschaulicht die Verwendung des `ref`-Parameters.
 
 [!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
-Ein *Ausgabeparameter* wird zum Übergeben von Ausgabeparametern verwendet. Ein Ausgabeparameter ähnelt einem Verweisparameter, mit dem Unterschied, dass der Anfangswert des vom Aufrufer bereitgestellten Arguments nicht von Bedeutung ist. Ein Ausgabeparameter wird mit dem `out`-Modifizierer deklariert. Das folgende Beispiel veranschaulicht die Verwendung des `out`-Parameters.
+Ein *Ausgabeparameter* wird zum Übergeben von Argumenten als Verweis verwendet. Er ist einem Verweisparameter ähnlich, außer dass er nicht erfordert, dass Sie explizit dem vom Aufrufer bereitgestellten Argument einen Wert zuweisen. Ein Ausgabeparameter wird mit dem `out`-Modifizierer deklariert. Das folgende Beispiel zeigt die Verwendung von `out`-Parametern mithilfe der in C# 7 eingeführten Syntax.
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
@@ -201,7 +202,7 @@ Die vorherigen vier Klassen können zum Modellieren arithmetischer Ausdrücke ve
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-Die `Evaluate`-Methode einer `Expression`-Instanz wird aufgerufen, um den vorgegebenen Ausdruck auszuwerten und einen `double`-Wert zu generieren. Die Methode verwendet als Argument ein @`Dctionary`, das Variablennamen (als Schlüssel der Einträge) und Werte (als Werte der Einträge) enthält. Die `Evaluate`-Methode ist eine `virtual abstract`-Methode. Dies bedeutet, dass nicht abstrakte abgeleitete Klassen sie überschreiben müssen, um eine tatsächliche Implementierung bereitzustellen.
+Die `Evaluate`-Methode einer `Expression`-Instanz wird aufgerufen, um den vorgegebenen Ausdruck auszuwerten und einen `double`-Wert zu generieren. Die Methode verwendet ein `Dictionary`-Argument, das Variablennamen (als Schlüssel der Einträge) und Werte (als Werte der Einträge) enthält. Da `Evaluate` eine abstrakte Methode ist, müssen nicht-abstrakte Klassen, die von `Expression` abgeleitet sind, `Evaluate` außer Kraft setzen.
 
 Eine Implementierung von `Constant` für `Evaluate` gibt lediglich die gespeicherte Konstante zurück. Eine Implementierung von `VariableReference` sucht im Wörterbuch nach dem Variablennamen und gibt den Ergebniswert zurück. Eine Implementierung von `Operation` wertet zunächst (durch einen rekursiven Aufruf der zugehörigen `Evaluate`-Methoden) den linken und rechten Operanden aus und führt dann die vorgegebene arithmetische Operation aus.
 

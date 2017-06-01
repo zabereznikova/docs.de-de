@@ -1,56 +1,64 @@
 ---
 title: .NET Core-CLI-Erweiterbarkeitsmodell | Microsoft-Dokumentation
-description: .NET Core-CLI-Erweiterbarkeitsmodell
+description: "Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle (CLI, Command-line Interface) erweitern können."
 keywords: CLI, Erweiterbarkeit, benutzerdefinierte Befehle, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 02/06/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 827b5567400fd8ed1f32e60ba593a3ae71a0d745
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5a9c7ba999e278f4c5fbec51fa547b3e35828f88
+ms.openlocfilehash: 7e5cfdf644b3f4c6c5cc4f4e6f77ec72910b1f47
+ms.contentlocale: de-de
+ms.lasthandoff: 04/26/2017
 
 ---
 
-# <a name="net-core-cli-extensibility-model"></a>.NET Core-CLI-Erweiterbarkeitsmodell
+# <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
-## <a name="overview"></a>Übersicht
-In diesem Dokument werden die Hauptverfahren beschrieben, mit denen die CLI-Tools erweitert werden, und die Szenarios erläutert, die jedes dieser Tools antreiben. Es wird dargestellt, wie die Tools genutzt werden sollen und wie beide Arten der Tools erstellt werden. 
+Dieses Dokument behandelt die unterschiedlichen Möglichkeiten, wie Sie die .NET Core-CLI-Tools erweitern und die Szenarios erklären können, die jedes steuert.
+Sie sehen, wie Sie die Tools verarbeiten und wie unterschiedliche Typen von Tools erstellt werden können.
 
 ## <a name="how-to-extend-cli-tools"></a>So können Sie CLI-Tools erweitern
 Die CLI-Tools können auf drei Arten erweitert werden:
 
-1. Projektweise über NuGet-Pakete
-2. Über NuGet-Pakete mit benutzerdefinierten Zielen  
-3. Über die Systemvariable PATH
+1. [Projektweise über NuGet-Pakete](#per-project-based-extensibility)
 
-Die drei oben beschriebenen Erweiterbarkeitsmechanismen schließen sich nicht gegenseitig aus. Sie können alle oder nur einen verwenden oder sie kombinieren. Welchen Sie auswählen, hängt größtenteils davon ab, welches Ziel Sie mit der Erweiterung erreichen möchten.
+  Die projektbezogenen Tools sind im Kontext des Projekts enthalten, aber sie ermöglichen eine einfache Installation über die Wiederherstellung.
+
+2. [Über NuGet-Pakete mit benutzerdefinierten Zielen](#custom-targets)
+
+  Mithilfe benutzerdefinierter Ziele können Sie den Buildprozess einfach mit benutzerdefinierten Aufgaben erweitern.
+
+3. [Über die Systemvariable PATH](#path-based-extensibility)
+
+  Auf PATH basierende Tools eignen sich für allgemeine projektübergreifende Tools, die auf einem einzelnen Computer verwendet werden.
+
+Die drei oben beschriebenen Erweiterbarkeitsmechanismen schließen sich nicht gegenseitig aus. Sie können beide oder nur einen verwenden. Welchen Sie auswählen, hängt größtenteils davon ab, welches Ziel Sie mit der Erweiterung erreichen möchten.
 
 ## <a name="per-project-based-extensibility"></a>Projektbezogene Erweiterbarkeit
-Projektbezogene Tools sind [frameworkabhängige Bereitstellungen](../deploying/index.md), die als NuGet-Pakete verteilt werden. Tools sind nur im Kontext des Projekts, das auf sie verweist, und für das sie wiederhergestellt werden, verfügbar. Ein Aufruf außerhalb des Projektkontexts (beispielsweise außerhalb des Verzeichnisses, das das Projekt enthält) schlägt fehl, da der Befehl nicht gefunden werden kann.
+Projektbezogene Tools sind [frameworkabhängige Bereitstellungen](../deploying/index.md#framework-dependent-deployments-fdd), die als NuGet-Pakete verteilt werden. Tools sind nur im Kontext des Projekts verfügbar, das auf sie verweist und für das sie gespeichert sind. Ein Aufruf außerhalb des Projektkontexts (z.B. außerhalb des Verzeichnisses, das das Projekt enthält) schlägt fehl, da der Befehl nicht gefunden werden kann.
 
-Diese Tools sind ideal für Buildserver, da nichts außer der Projektdatei erforderlich ist. Der Buildprozess führt die Wiederherstellung für das Projekt, das es erstellt, aus, und die Tools stehen zur Verfügung. Sprachprojekte, wie F#, befinden sich auch in dieser Kategorie. Immerhin kann jedes Projekt nur in einer bestimmten Sprache geschrieben werden. 
+Diese Tools sind ideal für Buildserver, da nichts außer der Projektdatei erforderlich ist. Der Buildprozess führt die Wiederherstellung für das Projekt, das es erstellt, aus, und die Tools stehen zur Verfügung. Sprachprojekte, wie F#, befinden sich auch in dieser Kategorie, da jedes Projekt nur in einer bestimmten Sprache geschrieben werden kann.
 
-Schließlich bietet dieses Erweiterbarkeitsmodell Unterstützung für die Erstellung von Tools, die Zugriff auf die Buildausgabe des Projekts benötigen. Verschiedene Razor-Ansicht-Tools in [ASP.NET](https://www.asp.net/)-MVC-Anwendungen fallen z.B. in diese Kategorie. 
+Schließlich bietet dieses Erweiterbarkeitsmodell Unterstützung für die Erstellung von Tools, die Zugriff auf die Buildausgabe des Projekts benötigen. Verschiedene Razor-Ansicht-Tools in [ASP.NET](https://www.asp.net/)-MVC-Anwendungen fallen z.B. in diese Kategorie.
 
 ### <a name="consuming-per-project-tools"></a>Tools pro Projekt verwenden
-Zum Nutzen dieser Tools müssen Sie das Element `<DotNetCliToolReference>` für jedes Tool hinzufügen, das Sie der Projektdatei verwenden möchten. Im Element `<DotNetCliToolReference>` verweisen Sie auf das Paket, in dem sich das Tool befindet, und geben die Version an, die Sie benötigen. Nach der Ausführung von `dotnet restore` werden das Tool und die zugehörigen Abhängigkeiten wiederhergestellt. 
+Zum Nutzen dieser Tools müssen Sie das Element `<DotNetCliToolReference>` für jedes Tool hinzufügen, das Sie der Projektdatei verwenden möchten. Im Element `<DotNetCliToolReference>` verweisen Sie auf das Paket, in dem sich das Tool befindet, und geben die Version an, die Sie benötigen. Nach der Ausführung von [`dotnet restore`](dotnet-restore.md) werden das Tool und die zugehörigen Abhängigkeiten wiederhergestellt.
 
-Für Tools, die die Buildausgabe des Projekts zur Ausführung laden müssen, gibt es normalerweise eine andere Abhängigkeit, die unter den regulären Abhängigkeiten in der Projektdatei angezeigt wird. Da die CLI als Buildmodul MSBuild verwendet, wird empfohlen, diese Teile des Tools als benutzerdefinierte MSBuild-Ziele und -Aufgaben zu schreiben, da sie auf diese Weise am gesamten Buildprozess teilnehmen können. Außerdem können sie mühelos sämtliche Daten abrufen, die über den Build erstellt werden, z.B. den Speicherort der Ausgabedateien, die aktuell erstellte Konfiguration usw. Alle diese Informationen bilden eine Gruppe von MSBuild-Eigenschaften, die von jedem beliebigen Ziel gelesen werden können. Weiter unten in diesem Dokument erfahren Sie, wie über NuGet ein benutzerdefiniertes Ziel hinzugefügt wird. 
+Für Tools, die die Buildausgabe des Projekts zur Ausführung laden müssen, gibt es normalerweise eine andere Abhängigkeit, die unter den regulären Abhängigkeiten in der Projektdatei angezeigt wird. Da die CLI als Buildmodul MSBuild verwendet, wird empfohlen, diese Teile des Tools als benutzerdefinierte MSBuild-[Ziele](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets) und -[Aufgaben](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks) zu schreiben, da sie auf diese Weise am gesamten Buildprozess teilnehmen können. Außerdem können sie mühelos sämtliche Daten abrufen, die über den Build erstellt werden, z.B. den Speicherort der Ausgabedateien, die aktuell erstellte Konfiguration usw. Alle diese Informationen bilden eine Gruppe von MSBuild-Eigenschaften, die von jedem beliebigen Ziel gelesen werden können. Weiter unten in diesem Dokument erfahren Sie, wie über NuGet ein benutzerdefiniertes Ziel hinzugefügt wird.
 
 Betrachten wir ein Beispiel, bei dem ein Tools-Only-Tool zu einem einfachen Projekt hinzugefügt wird. Für einen Beispielbefehl namens `dotnet-api-search`, mit dem Sie die NuGet-Pakete nach der angegebenen API durchsuchen können, sehen Sie hier die Projektdatei einer Konsolenanwendung, die dieses Tool verwendet:
-
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1/TargetFramework>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
   <!-- The tools reference -->
@@ -60,24 +68,26 @@ Betrachten wir ein Beispiel, bei dem ein Tools-Only-Tool zu einem einfachen Proj
 </Project>
 ```
 
-Das Element `<DotNetCliToolReference>` weist eine ähnliche Struktur auf wie das Element `<PackageReference>`. Er benötigt mindestens die Paket-ID des Pakets mit dem Tool und dessen Version. 
+Das Element `<DotNetCliToolReference>` weist eine ähnliche Struktur auf wie das Element `<PackageReference>`. Er benötigt die Paket-ID des Pakets mit dem Tool und dessen Version, damit ein Wiederherstellungsvorgang ausgeführt werden kann.
 
 ### <a name="building-tools"></a>Erstellen von Tools
-Wie bereits erwähnt, sind Tools nur portable Konsolenanwendungen. Sie würden eins erstellen, so wie Sie alle Konsolenanwendungen erstellen würden. Nachdem Sie es erstellt haben, würden Sie den [`dotnet pack`](dotnet-pack.md)-Befehl ausführen, um ein NuGet-Paket (Nupkg) zu erstellen, das Ihren Code, die Informationen zu seinen Abhängigkeiten usw. enthält. Der Verfasser kann den Paketnamen bestimmen, aber die Anwendung darin, das tatsächliche Binär-Tool, muss der `dotnet-<command>`-Konvention entsprechen, damit `dotnet` es aufrufen kann. 
+Wie bereits erwähnt, sind Tools nur portable Konsolenanwendungen. Sie würden ein Tool erstellen, so wie Sie alle Konsolenanwendungen erstellen würden.
+Nachdem Sie es erstellt haben, führen Sie den [`dotnet pack`](dotnet-pack.md)-Befehl aus, um ein NuGet-Paket (NUPKG-Datei) zu erstellen, das Ihren Code, die Informationen zu seinen Abhängigkeiten usw. enthält. Die können den Paketnamen benennen, aber die Anwendung darin, das tatsächliche Binär-Tool, muss der `dotnet-<command>`-Konvention entsprechen, damit `dotnet` es aufrufen kann.
 
 > [!NOTE]
-> In Vor-RC3-Versionen der .NET Core-Befehlszeilentools hat der Befehl `dotnet pack` einen Fehler, der dazu führt, dass die Datei `runtime.config.json` nicht mit dem Tool gepackt wird. Fehlt diese Datei, treten zur Laufzeit Fehler auf. Wenn dieses Verhalten auftritt, sollten Sie auf die neuesten Tools aktualisieren und erneut versuchen, den Befehl `dotnet pack` auszuführen. 
+> In Vor-RC3-Versionen der .NET Core-Befehlszeilentools hat der Befehl `dotnet pack` einen Fehler, der dazu führt, dass die Datei `runtime.config.json` nicht mit dem Tool gepackt wird. Fehlt diese Datei, treten zur Laufzeit Fehler auf. Wenn dieses Verhalten auftritt, sollten Sie auf die neuesten Tools aktualisieren und erneut versuchen, den Befehl `dotnet pack` auszuführen.
 
-Da Tools portable Anwendungen sind, benötigt der Benutzer des Tools die Version der .NET Core-Bibliotheken, für die das Tool entwickelt wurde, um das Tool auszuführen. Jede andere Abhängigkeit, die das Tool verwendet und nicht in den .NET Core-Bibliotheken enthalten ist, wird wiederhergestellt und im NuGet-Cache gespeichert. Das gesamte Tool wird daher mithilfe der Assemblys aus den .NET Core-Bibliotheken sowie Assemblys aus dem NuGet-Cache ausgeführt. 
+Da Tools portable Anwendungen sind, muss der Benutzer des Tools über die Version der .NET Core-Bibliotheken verfügen, für die das Tool entwickelt wurde, um das Tool auszuführen. Jede andere Abhängigkeit, die das Tool verwendet und nicht in den .NET Core-Bibliotheken enthalten ist, wird wiederhergestellt und im NuGet-Cache gespeichert. Das gesamte Tool wird daher mithilfe der Assemblys aus den .NET Core-Bibliotheken sowie Assemblys aus dem NuGet-Cache ausgeführt.
 
-Diese Art von Tools haben ein Abhängigkeitsdiagramm, das komplett unabhängig ist vom Abhängigkeitsdiagramm des Projekts, welches sie verwendet. Der Wiederherstellungsvorgang wird zuerst die Projektabhängigkeiten wiederherstellen und dann jedes der Tools und deren Abhängigkeiten. 
+Diese Art von Tools haben ein Abhängigkeitsdiagramm, das komplett unabhängig ist vom Abhängigkeitsdiagramm des Projekts, welches sie verwendet. Der Wiederherstellungsvorgang wird zuerst die Projektabhängigkeiten wiederherstellen und dann jedes der Tools und deren Abhängigkeiten.
 
-Umfangreichere Beispiele und verschiedene Kombinationen dessen finden Sie im [.NET Core-CLI-Repository](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestProjects). Sie finden auch die [Implementierung von verwendeten Tools](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages) im gleichen Repository. 
+Umfangreichere Beispiele und verschiedene Kombinationen dessen finden Sie im [.NET Core-CLI-Repository](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
+Sie finden auch die [Implementierung von verwendeten Tools](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) im gleichen Repository.
 
 ### <a name="custom-targets"></a>Benutzerdefinierte Ziele
-NuGet bietet seit geraumer Zeit die Möglichkeit, benutzerdefinierte MSBuild-Ziel- und Eigenschaftendateien zu packen. Sie finden die offizielle Dokumentation dazu auf der [Website der NuGet-Dokumentation](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Mit dem Schritt in der CLI zum Verwenden von MSBuild gilt derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw. 
+NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Mit dem Schritt der .NET Core-CLI-Tools zum Verwenden von MSBuild gilt nun derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
 
-Zur Referenz ist die Projektdatei des Beispielziels unten aufgeführt. Sie sehen, wie die neue `csproj`-Syntax genutzt wird, um den Befehl `dotnet pack` anzuweisen, was gepackt werden soll, damit die Zieldateien und Assemblys im Ordner `build` im Paket platziert werden. Beachten Sie das Element `<ItemGroup>` darunter, dessen `Label`-Eigenschaft auf „dotnet pack instructions“ festgelegt ist. 
+Im folgenden Beispiel können Sie die Projektdatei des Ziels mithilfe der `csproj`-Syntax anzeigen. Dies zeigt dem [`dotnet pack`](dotnet-pack.md)-Befehl, was genau gepackt werden soll, wobei die Zieldateien sowie die Assemblys in den Ordner *Erstellen* im Paket platziert werden. Beachten Sie das `<ItemGroup>`-Element, das über die Eigenschaft `Label` verfügt, die auf `dotnet pack instructions` festgelegt ist, sowie das Ziel, das darunter definiert ist.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -93,11 +103,20 @@ Zur Referenz ist die Projektdatei des Beispielziels unten aufgeführt. Sie sehen
     <None Include="build\SampleTargets.PackerTarget.targets" />
   </ItemGroup>
   <ItemGroup Label="dotnet pack instructions">
-    <Content Include="build\*.targets;$(OutputPath)\*.dll;$(OutputPath)\*.json">
+    <Content Include="build\*.targets">
       <Pack>true</Pack>
       <PackagePath>build\</PackagePath>
     </Content>
   </ItemGroup>
+  <Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">
+    <!-- Collect these items inside a target that runs after build but before packaging. -->
+    <ItemGroup>
+      <Content Include="$(OutputPath)\*.dll;$(OutputPath)\*.json">
+        <Pack>true</Pack>
+        <PackagePath>build\</PackagePath>
+      </Content>
+    </ItemGroup>
+  </Target>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.0.1-beta-000933"/>
     <PackageReference Include="Microsoft.Build.Framework" Version="0.1.0-preview-00028-160627" />
@@ -117,39 +136,33 @@ Zur Referenz ist die Projektdatei des Beispielziels unten aufgeführt. Sie sehen
 </Project>
 ```
 
-Die Nutzung benutzerdefinierter Ziele erfolgt durch Bereitstellung einer `<PackageReference>`, die auf ein Paket und dessen Version innerhalb des Projekts verweist, das erweitert wird. Im Gegensatz zu den Tools wird das benutzerdefinierte Zielpaket in die Hülle der Abhängigkeiten des nutzenden Projekts eingeschlossen. 
+Die Nutzung benutzerdefinierter Ziele erfolgt durch Bereitstellung einer `<PackageReference>`, die auf ein Paket und dessen Version innerhalb des Projekts verweist, das erweitert wird. Im Gegensatz zu den Tools wird das benutzerdefinierte Zielpaket in die Hülle der Abhängigkeiten des nutzenden Projekts eingeschlossen.
 
-Die Verwendung des benutzerdefinierten Ziels hängt ausschließlich von seiner Konfiguration ab. Da es das übliche MSBuild-Ziel ist, kann es von einem angegebenen Ziel abhängen, nach einem anderen Ziel ausgeführt werden und mit dem Befehl `dotnet msbuild /t:<target-name>` auch manuell aufgerufen werden. 
+Die Verwendung des benutzerdefinierten Ziels hängt ausschließlich von seiner Konfiguration ab. Da dies ein MSBuild-Ziel ist, kann es von einem angegebenen Ziel abhängen, nach einem anderen Ziel ausgeführt werden und mit dem Befehl `dotnet msbuild /t:<target-name>` auch manuell aufgerufen werden.
 
-Wenn Sie jedoch Ihren Benutzern eine bessere Erfahrung bieten möchten, können Sie projektbezogene Tools und benutzerdefinierte Ziele kombinieren. In diesem Szenario akzeptiert das projektbezogene Tool lediglich die benötigten Parameter, die in den erforderlichen Aufruf von `dotnet msbuild` übersetzt werden, über den das Ziel ausgeführt wird. Sie sehen ein Beispiel dieser Art von Synergie im Repository mit den [MVP Summit 2016 Hackathon-Beispielen](https://github.com/dotnet/MVPSummitHackathon2016) im Projekt [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer). 
+Wenn Sie jedoch Ihren Benutzern eine bessere Erfahrung bieten möchten, können Sie projektbezogene Tools und benutzerdefinierte Ziele kombinieren. In diesem Szenario akzeptiert das projektbezogene Tool lediglich die benötigten Parameter, die in den erforderlichen Aufruf von [`dotnet msbuild`](dotnet-msbuild.md) übersetzt werden, über den das Ziel ausgeführt wird. Sie sehen ein Beispiel dieser Art von Synergie im Repository mit den [MVP Summit 2016 Hackathon-Beispielen](https://github.com/dotnet/MVPSummitHackathon2016) im Projekt [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
 ### <a name="path-based-extensibility"></a>PFAD-basierte Erweiterbarkeit
 Die PFAD-basierte Erweiterbarkeit wird in der Regel für Entwicklungscomputer verwendet, bei denen Sie ein Tool brauchen, das konzeptionell mehr als ein einzelnes Projekt abdeckt. Der größte Nachteil dieses Extensionsmechanismus ist, dass es mit dem Computer verknüpft ist, auf dem das Tool existiert. Wenn Sie ihn auf einem anderen Computer benötigen, müssten Sie ihn bereitstellen.
 
-Dieses Muster der Erweiterbarkeit des CLI-Toolsets ist sehr einfach. Wie in der [Übersicht über die .NET Core-CLI](index.md) beschrieben, kann der `dotnet`-Treiber jeden Befehl ausführen, der nach der `dotnet-<command>`-Konvention benannt ist. Die Standardaufkösungslogik wird zuerst mehrere Speicherorte überprüfen und schließlich an den SYSTEMPFAD fallen. Wenn der angeforderte Befehl im SYSTEMPFAD vorhanden und eine Binärdatei ist, die aufgerufen werden kann, wird sie der `dotnet`-Treiber aufrufen. 
+Dieses Muster der Erweiterbarkeit des CLI-Toolsets ist sehr einfach. Wie in der [Übersicht über die .NET Core-CLI](index.md) beschrieben, kann der `dotnet`-Treiber jeden Befehl ausführen, der nach der `dotnet-<command>`-Konvention benannt ist. Die Standardauflösungslogik wird zuerst mehrere Speicherorte überprüfen und schließlich an den SYSTEMPFAD fallen. Wenn der angeforderte Befehl im SYSTEMPFAD vorhanden und eine Binärdatei ist, die aufgerufen werden kann, wird sie der `dotnet`-Treiber aufrufen.
 
-Die Binärdatei kann nahezu alles sein, das vom Betriebssystem ausgeführt werden kann. Auf Unix-Systemen bedeutet dies alles, das das ausführbare Bit über `chmod +x` festgelegt hat. Auf Windows bedeutet dies alles, das Windows ausführen kann. 
+Bei der Datei muss es sich um eine ausführbare Datei handeln. Auf Unix-Systemen bedeutet dies alles, das das ausführbare Bit über `chmod +x` festgelegt hat. Unter Windows können Sie *CMD*-Dateien verwenden.
 
-Als Beispiel sehen wir uns eine sehr einfache Implementierung eines `dotnet clean`-Befehls an. Wir verwenden `bash`, um den Befehl zu implementieren. Der Befehl löscht einfach die `bin/`- und `obj/`-Verzeichnisse im aktuellen Verzeichnis. Wenn das `--lock`-Argument übergeben wird, wird es auch die `project.lock.json`-Datei löschen. Der gesamte Befehl wird unten angezeigt. 
+Sehen wir uns nun die einfache Implementierung eines „Hello World“-Tools an. Wir verwenden jeweils `bash` und `cmd` unter Windows.
+Der folgende Befehl liefert einfach „Hello World“ an die Konsole.
 
 ```bash
 #!/bin/bash
 
-# Delete the bin and obj dirs
-rm -rf bin/ obj/
-
-LOCK_FILE=$1
-if [[ "$LOCK_FILE" = "--lock" ]]; then
-    rm project.lock.json
-fi
-
-
-echo "Cleaning complete..."
+echo "Hello World!"
 ```
 
-Auf Mac OS können wir dieses Skript als `dotnet-clean` speichern und sein ausführbares Bit mit `chmod +x dotnet-clean` festlegen. Wir erstellen dann eine symbolische Verknüpfung in `/usr/local/bin` mit dem Befehl `ln -s dotnet-clean /usr/local/bin/`. So kann der Befehl „Bereinigen“ mit der `dotnet clean`-Syntax aufgerufen werden. Sie können dies testen, indem Sie eine App erstellen, `dotnet build` und anschließend `dotnet clean` darauf ausführen. 
+```cmd
+echo "Hello World"
+```
 
-## <a name="conclusion"></a>Schlussfolgerung
-Die .NET Core CLI-Tools lassen drei wichtige Erweiterungsmöglichkeiten zu. Die pprojektbezogenen Tools sind im Kontext des Projekts enthalten, aber sie ermöglichen eine einfache Installation über die Wiederherstellung. Mithilfe benutzerdefinierter Ziele können Sie den Buildprozess einfach mit benutzerdefinierten Aufgaben erweitern. Auf PATH basierende Tools eignen sich für allgemeine projektübergreifende Tools, die auf einem einzelnen Computer verwendet werden. 
+Auf Mac OS können wir dieses Skript als `dotnet-hello` speichern und sein ausführbares Bit mit `chmod +x dotnet-hello` festlegen. Wir erstellen dann eine symbolische Verknüpfung in `/usr/local/bin` mit dem Befehl `ln -s dotnet-hello /usr/local/bin/`. So kann der Befehl mit der `dotnet hello`-Syntax aufgerufen werden.
 
+Wir können unter Windows das Skript als `dotnet-hello.cmd` speichern und es an einem Speicherort speichern, der sich in einem Systempfad befindet (oder Sie können es einem Ordner hinzufügen, der sich bereits im Pfad befindet). Verwenden Sie danach einfach `dotnet hello`, um dieses Beispiel auszuführen.
 

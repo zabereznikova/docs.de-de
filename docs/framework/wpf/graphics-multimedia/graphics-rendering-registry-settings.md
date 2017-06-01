@@ -25,7 +25,7 @@ caps.handback.revision: 17
 # Registrierungseinstellungen f&#252;r das Rendern von Grafiken
 Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Registrierungseinstellungen für das Rendern von Grafiken, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen beeinflussen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## Verwendung von Registrierungseinstellungen für das Rendern von Grafiken  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen aus durch Kommas getrennten Textdateien in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Lesen aus durch Kommas getrennten Textdateien in Visual Basic | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,13 +33,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f894aa1dce23d5c8da7287275123349739152f04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 011e92f1d3c4aa7fae5a1022815dfe83b313685f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Vorgehensweise: Lesen aus durch Kommas getrennten Textdateien in Visual Basic
+# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Gewusst wie: Lesen aus durch Kommas getrennten Textdateien in Visual Basic
 Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien wie Protokolle einfach und effizient zu analysieren. Die `TextFieldType`-Eigenschaft definiert, ob es sich um eine Datei mit Trennzeichen oder mit Textfeldern fester Breite handelt.  
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>Analysieren einer durch Trennzeichen getrennten Textdatei  
@@ -76,7 +77,7 @@ Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien
   
 -   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Benutzer verfügt nicht über ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
+-   Der Benutzer hat keine ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

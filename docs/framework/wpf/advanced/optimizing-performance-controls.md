@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # Optimieren der Leistung: Steuerelemente
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] schließt viele der allgemeinen Benutzeroberflächenkomponenten ein, die in den meisten Windows\-Anwendungen verwendet werden.  In diesem Thema werden Methoden zum Verbessern der Leistung der Benutzeroberfläche beschrieben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Displaying"></a>   
 ## Anzeigen von großen DataSets  

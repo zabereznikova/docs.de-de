@@ -1,5 +1,5 @@
 ---
-title: =&gt;-Operator (C#-Referenz) | Microsoft-Dokumentation
+title: =&gt;-Operator (C# -Referenz) | Microsoft-Dokumentation
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a75967e61d2c674e87e321de1fb6e4062cca4f19
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.contentlocale: de-de
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>=&gt;-Operator (C#-Referenz)
@@ -43,17 +44,40 @@ Das `=>`-Token wird als Lambdaoperator bezeichnet. Es wird in *Lambdaausdrücken
   
  Das folgende Beispiel zeigt zwei Methoden zum Suchen und Anzeigen der Länge der kürzesten Zeichenfolge in einem Array von Zeichenfolgen. Im ersten Teil des Beispiels wird ein Lambdaausdruck (`w => w.Length`) auf jedes Element des `words`-Arrays angewendet, und dann wird die <xref:System.Linq.Enumerable.Min%2A>-Methode verwendet, um die kleinste Länge zu finden. Zum Vergleich zeigt der zweite Teil des Beispiels eine längere Lösung, bei der Abfragesyntax verwendet wird, um das gleiche zu erreichen.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+string[] words = { "cherry", "apple", "blueberry" };  
+  
+// Use method syntax to apply a lambda expression to each element  
+// of the words array.   
+int shortestWordLength = words.Min(w => w.Length);  
+Console.WriteLine(shortestWordLength);  
+  
+// Compare the following code that uses query syntax.  
+// Get the lengths of each word in the words array.  
+var query = from w in words  
+            select w.Length;  
+// Apply the Min method to execute the query and get the shortest length.  
+int shortestWordLength2 = query.Min();  
+Console.WriteLine(shortestWordLength2);  
+  
+// Output:   
+// 5  
+// 5  
+```  
+  
 ## <a name="remarks"></a>Hinweise  
  Der Operator `=>` verfügt über die gleiche Rangfolge wie der Zuweisungsoperator (`=`) und ist rechtsassoziativ.  
   
  Sie können den Typ der Eingabevariable explizit angeben oder vom Compiler ableiten lassen; in jedem Fall ist die Variable zur Kompilierzeit stark typisiert. Wenn Sie einen Typ angeben, müssen Sie den Typnamen und den Variablennamen wie im folgenden Beispiel gezeigt in Klammern setzen.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+int shortestWordLength = words.Min((string w) => w.Length);  
+```  
+  
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck für die Überladung des Standardabfrageoperators <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> geschrieben wird, der zwei Argumente akzeptiert. Da der Lambda-Ausdruck über mehr als einen Parameter verfügt, müssen die Parameter in Klammern stehen. Der zweite Parameter `index` stellt den Index des aktuellen Elements in der Auflistung dar. Der `Where`-Ausdruck gibt alle Zeichenfolgen zurück, deren Länge ihre jeweilige Indexposition im Array unterschreitet.  
   
-```cs  
+```csharp  
 static void Main(string[] args)  
 {  
     string[] digits = { "zero", "one", "two", "three", "four", "five",   

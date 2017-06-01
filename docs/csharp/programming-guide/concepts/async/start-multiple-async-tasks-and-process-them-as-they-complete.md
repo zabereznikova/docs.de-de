@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae131d70af5e4f469b99e2544b8de220fbf92a26
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0ab1c8d117327c9f5805d184b263a0932ab0bc3f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)
@@ -34,7 +35,7 @@ Mit <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> könn
 >  Zum Ausführen des Beispiels muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
   
 ## <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Asynchrones Beispiel: Feinabstimmung von Ihrer Anwendung](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen und anschließend die folgenden Schritte ausführen.  
+ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen und anschließend die folgenden Schritte ausführen.  
   
 1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
@@ -59,27 +60,38 @@ Mit <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> könn
   
  Das Projekt **CancelAfterOneTask** enthält bereits eine Abfrage, die eine Auflistung von Aufgaben erstellt, während sie ausgeführt wird. Jeder Aufruf von `ProcessURLAsync` im folgenden Code gibt <xref:System.Threading.Tasks.Task%601> zurück, wobei `TResult` eine ganze Zahl ist.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<Task<int>> downloadTasksQuery =  
+    from url in urlList select ProcessURL(url, client, ct);  
+```  
+  
  Nehmen Sie in der Datei „MainWindow.xaml.cs“ des Projekts die folgenden Änderungen an der `AccessTheWebAsync`-Methode vor.  
   
 -   Führen Sie die Abfrage aus, indem Sie <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> anstatt <xref:System.Linq.Enumerable.ToArray%2A> verwenden.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
+    ```  
+  
 -   Fügen Sie eine While-Schleife hinzu, die die folgenden Schritte für jede Aufgabe in der Auflistung ausführt.  
   
     1.  Erwartet einen Aufruf von `WhenAny`, um die erste Aufgabe in der Auflistung zu identifizieren, die ihren Download beendet.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+        ```csharp  
+        Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
+        ```  
+  
     2.  Entfernt die entsprechende Aufgabe aus der Auflistung.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+        ```csharp  
+        downloadTasks.Remove(firstFinishedTask);  
+        ```  
+  
     3.  Erwartet `firstFinishedTask`, das durch einen Aufruf von `ProcessURLAsync` zurückgegeben wird. Die Variable `firstFinishedTask` ist ein <xref:System.Threading.Tasks.Task%601>, wobei `TReturn` eine ganze Zahl ist. Die Aufgabe ist bereits abgeschlossen, aber es darauf gewartet, dass von ihr die Länge der heruntergeladenen Website abgerufen wird, wie im folgenden Beispiel dargestellt.  
   
-        ```cs  
+        ```csharp  
         int length = await firstFinishedTask;  
         resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);  
-        VBCopy Code  
-        Dim length = Await firstFinishedTask  
         ```  
   
  Sie sollten das Projekt mehrmals ausführen, um zu überprüfen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.  
@@ -92,9 +104,9 @@ Mit <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> könn
   
  Beachten Sie, dass Sie einen Verweis auf <xref:System.Net.Http>. hinzufügen müssen.  
   
- Sie können das Projekt von [Asynchrones Beispiel: Feinabstimmung von Ihren Anwendungen](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
+ Sie können das Projekt von [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -233,5 +245,5 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.Tasks.Task.WhenAny%2A>   
  [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Asynchrone Programmierung mit Async und Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Asynchrones Beispiel: Feinabstimmung von Ihrer Anwendung](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
+ [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)

@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # &#220;bersicht &#252;ber WPF-Add-Ins
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] beinhaltet ein Add\-In\-Modell, mit dem Entwickler Anwendungen erstellen können, die Add\-In\-Erweiterbarkeit unterstützen.  Dieses Add\-In\-Modell ermöglicht die Erstellung von Add\-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern.  In einigen Szenarien müssen Anwendungen auch [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] anzeigen, die von Add\-Ins bereitgestellt werden.  In diesem Thema wird gezeigt, wie durch [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add\-In\-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] erweitert wird, um diese Szenarien sowie die zugrunde liegende Architektur, die Vorteile und die Einschränkungen zu ermöglichen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Requirements"></a>   
 ## Vorbereitungsmaßnahmen  

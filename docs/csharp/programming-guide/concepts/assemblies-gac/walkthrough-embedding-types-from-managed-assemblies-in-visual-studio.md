@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c821afbbe8571d9573321b9d11b069aa0f7cd342
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3bb7e2c9665cf98fe48e1445dfcf8009b329a39a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
@@ -48,7 +49,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 -   Konstanten werden nicht eingebettet.  
   
--   Die Klasse <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> unterstützt keine eingebetteten Typen als Schlüssel. Sie können Ihren eigenen Wörterbuchtyp implementieren, um einen eingebetteten Typ als Schlüssel zu unterstützen.  
+-   Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>-Klasse unterstützt keinen eingebetteten Typ als Schlüssel. Sie können Ihren eigenen Wörterbuchtyp implementieren, um einen eingebetteten Typ als Schlüssel zu unterstützen.  
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
@@ -62,7 +63,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 -   Führen Sie das Clientprogramm aus, um zu prüfen, dass die neue Version der Runtime-Assembly verwendet wird, ohne dass das Clientprogramm erneut kompiliert werden muss.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>Erstellen einer Schnittstelle  
   
@@ -72,7 +73,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceInterface` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei Class1.cs, und klicken Sie auf **Umbenennen**. Benennen Sie die Datei in `ISampleInterface.cs` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `ISampleInterface` umbenannt. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
+3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei „Class1.cs“, und klicken Sie auf **Umbenennen**. Benennen Sie die Datei in `ISampleInterface.cs` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `ISampleInterface` umbenannt. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
   
 4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Erstellen**. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer fest, z.B. auf `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet.  
   
@@ -80,14 +81,32 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 6.  Öffnen Sie die Datei „ISampleInterface.cs“. Fügen Sie den folgenden Code zur Klasse „ISampleInterface“ hinzu, um die ISampleInterface-Schnittstelle zu erstellen.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Runtime.InteropServices;  
+  
+    namespace TypeEquivalenceInterface  
+    {  
+        [ComImport]  
+        [Guid("8DA56996-A151-4136-B474-32784559F6DF")]  
+        public interface ISampleInterface  
+        {  
+            void GetUserInput();  
+            string UserInput { get; }  
+        }  
+    }  
+    ```  
+  
 7.  Klicken Sie im Menü **Extras** auf den Befehl **GUID erstellen**. Klicken Sie im Dialogfeld **GUID erstellen** auf **Registrierungsformat** und anschließend auf **Kopieren**. Klicken Sie auf **Schließen**.  
   
 8.  Löschen Sie die Beispiel-GUID im Attribut `Guid`, und fügen Sie die GUID ein, die Sie aus dem Dialogfeld **GUID erstellen** kopiert haben. Entfernen Sie die geschweiften Klammern ({}) aus der kopierten GUID.  
   
 9. Erweitern Sie im **Projektmappen-Explorer** den Ordner **Eigenschaften**. Doppelklicken Sie auf die Datei „AssemblyInfo.cs“. Fügen Sie folgendes Attribut zur Datei hinzu.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    [assembly: ImportedFromTypeLib("")]  
+    ```  
+  
      Speichern Sie die Datei.  
   
 10. Speichern Sie das Projekt.  
@@ -114,7 +133,29 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 8.  Fügen Sie den folgenden Code zur Klassendatei „SampleClass“ hinzu, um die Klasse SampleClass zu erstellen.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+  
+    namespace TypeEquivalenceRuntime  
+    {  
+        public class SampleClass : ISampleInterface  
+        {  
+            private string p_UserInput;  
+            public string UserInput { get { return p_UserInput; } }  
+  
+            public void GetUserInput()  
+            {  
+                Console.WriteLine("Please enter a value:");  
+                p_UserInput = Console.ReadLine();  
+            }  
+        }  
+    )  
+    ```  
+  
 9. Speichern Sie das Projekt.  
   
 10. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Erstellen**. Die DLL-Datei der Klassenbibliothek wird kompiliert und im angegebenen Buildausgabepfad gespeichert (z.B. C:\TypeEquivalenceSample).  
@@ -135,7 +176,32 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 6.  Fügen Sie folgenden Code zur Datei „Program.cs“ hinzu, um das Clientprogramm zu erstellen.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+    using System.Reflection;  
+  
+    namespace TypeEquivalenceClient  
+    {  
+        class Program  
+        {  
+            static void Main(string[] args)  
+            {  
+                Assembly sampleAssembly = Assembly.Load("TypeEquivalenceRuntime");  
+                ISampleInterface sampleClass =   
+                    (ISampleInterface)sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass");  
+                sampleClass.GetUserInput();  
+                Console.WriteLine(sampleClass.UserInput);  
+                Console.WriteLine(sampleAssembly.GetName().Version.ToString());  
+                Console.ReadLine();  
+            }  
+        }  
+    }  
+    ```  
+  
 7.  Drücken Sie STRG+F5, um das Programm zu erstellen und auszuführen.  
   
 ## <a name="modifying-the-interface"></a>Ändern der Schnittstelle  
@@ -148,7 +214,10 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 3.  Öffnen Sie die Datei „SampleInterface.cs“. Fügen Sie der ISampleInterface-Schnittstelle die folgende Codezeile hinzu.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+    ```csharp  
+    DateTime GetDate();  
+    ```  
+  
      Speichern Sie die Datei.  
   
 4.  Speichern Sie das Projekt.  
@@ -165,7 +234,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 3.  Öffnen Sie die Datei „SampleClass.cs“. Fügen Sie folgenden Codezeilen zur Klasse „SampleClass“ hinzu.  
   
-    ```cs  
+    ```csharp  
     public DateTime GetDate()  
     {  
         return DateTime.Now;  
@@ -183,6 +252,6 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
 ## <a name="see-also"></a>Siehe auch  
  [/link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
  [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Programmieren mit Assemblys](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
+ [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)   
  [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 

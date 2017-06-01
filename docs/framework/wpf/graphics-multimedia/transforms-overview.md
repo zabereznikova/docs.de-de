@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # &#220;bersicht &#252;ber Transformationen
 In diesem Thema wird die Verwendung von [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>\-Klassen zum Drehen, Skalieren, Verschieben \(Übersetzen\) und Neigen von <xref:System.Windows.FrameworkElement>\-Objekten beschrieben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## Was ist eine Transformation?  

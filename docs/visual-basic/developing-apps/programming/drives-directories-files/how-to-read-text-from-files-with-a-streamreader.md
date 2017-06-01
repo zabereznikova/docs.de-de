@@ -1,51 +1,68 @@
 ---
-title: "How to: Read Text from Files with a StreamReader (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "reading files, text"
-  - "text, reading from files"
-  - "reading text from files"
-  - "files, reading"
+title: 'Vorgehensweise: Lesen von Text aus Dateien mit einem StreamReader (Visual Basic) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- reading files, text
+- text, reading from files
+- reading text from files
+- files, reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# How to: Read Text from Files with a StreamReader (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: e53fe99a3b3292fc465271d667ef76053e61af51
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Das `My.Computer.FileSystem`\-Objekt stellt Methoden bereit, mit denen ein <xref:System.IO.TextReader> und ein <xref:System.IO.TextWriter> geöffnet werden kann.  Die `OpenTextFileWriter`\-Methode und die `OpenTextFileReader`\-Methode sind erweiterte Methoden, die in IntelliSense nur dann angezeigt werden, wenn Sie die Registerkarte **Alle** auswählen.  
+---
+# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Gewusst wie: Lesen von Text aus Dateien mit einem StreamReader (Visual Basic)
+Das `My.Computer.FileSystem`-Objekt bietet Methoden, mit denen Sie ein <xref:System.IO.TextReader>- und ein <xref:System.IO.TextWriter>-Objekt öffnen können. Diese Methoden, `OpenTextFileWriter` und `OpenTextFileReader`, sind fortgeschrittene Methoden, die nicht in IntelliSense angezeigt werden, es sei denn, Sie wählen die Registerkarte **Alle** aus.  
   
-### So lesen mit einem Textreader eine Zeile aus einer Datei  
+### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Lesen einer Zeile aus einer Datei mit einem Textreader  
   
--   Verwenden Sie die `OpenTextFileReader`\-Methode, um den <xref:System.IO.TextReader> unter Angabe einer Datei zu öffnen.  In diesem Beispiel wird die Datei `testfile.txt` geöffnet, es wird eine Zeile aus der Datei gelesen, und die Zeile wird in einem Meldungsfeld angezeigt.  
+-   Verwenden Sie die `OpenTextFileReader`-Methode, um das <xref:System.IO.TextReader>-Objekt zu öffnen. und geben Sie die Datei an. In diesem Beispiel wird die Datei `testfile.txt` geöffnet, eine Zeile daraus gelesen und in einem Meldungsfenster angezeigt.  
   
      [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
-## Robuste Programmierung  
- Bei der zu lesenden Datei muss es sich um eine Textdatei handeln.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die Datei, die gelesen wird, muss eine Textdatei sein.  
   
- Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens.  Bei der Datei Form1.vb handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic\-Quelldatei.  
+ Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei "Form1.vb" handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei.  
   
- Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  
+ Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden. Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  
   
-## .NET Framework-Sicherheit  
- Zum Lesen einer Datei benötigt die Assembly eine Berechtigungsebene, die von der <xref:System.Security.Permissions.FileIOPermission>\-Klasse gewährt werden muss.  Bei Ausführung in einem teilweise vertrauenswürdigen Kontext kann der Code aufgrund fehlender Berechtigungen eine Ausnahme auslösen.  Weitere Informationen finden Sie unter [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md).  Der Benutzer muss außerdem über ausreichende Berechtigungen für den Zugriff auf die Datei verfügen.  Weitere Informationen finden Sie unter [ACL Technology Overview](http://msdn.microsoft.com/de-de/06fbf66d-6f02-4378-b863-b2f12e349045).  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Die Assembly benötigt zum Lesen aus dieser Datei eine von der <xref:System.Security.Permissions.FileIOPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Code möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8). Außerdem benötigt der Benutzer Zugriff auf die Datei. Weitere Informationen finden Sie unter [Übersicht über die ACL-Technologie](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:System.Windows.Forms.OpenFileDialog>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>   
- [SaveFileDialog\-Komponente](../Topic/SaveFileDialog%20Component%20\(Windows%20Forms\).md)   
- [Reading from Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+ [SaveFileDialog-Komponente](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)   
+ [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

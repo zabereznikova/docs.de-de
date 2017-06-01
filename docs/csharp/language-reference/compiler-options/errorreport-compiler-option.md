@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (C#-Compileroptionen)
@@ -45,7 +46,7 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   
@@ -75,15 +76,15 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**Seite des Projekts. Weitere Informationen finden Sie unter [Seite „Erstellen“, Projekt-Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Öffnen Sie die **Eigenschaftenseite** des Projekts. Weitere Informationen finden Sie unter [Seite „Erstellen“, Projekt-Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
   
 3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
   
 4.  Ändern Sie die Eigenschaft **Bericht für internen Compilerfehler**.  
   
- Informationen zum programmatischen Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

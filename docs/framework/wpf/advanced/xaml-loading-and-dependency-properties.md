@@ -23,7 +23,7 @@ caps.handback.revision: 7
 # Laden von XAML und Abh&#228;ngigkeitseigenschaften
 Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessors berücksichtigt Abhängigkeitseigenschaften.  Der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor verwendet beim Laden binärer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Daten und beim Verarbeiten von Attributen, bei denen es sich um Abhängigkeitseigenschaften handelt, Methoden des Eigenschaftensystems für Abhängigkeitseigenschaften.  Hierdurch werden die Eigenschaftenwrapper erfolgreich umgangen.  Wenn Sie benutzerdefinierte Abhängigkeitseigenschaften implementieren, müssen Sie dieses Verhalten berücksichtigen. Fügen Sie keinen anderen Code in den Eigenschaftenwrapper ein als die Methoden <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> des Eigenschaftensystems.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

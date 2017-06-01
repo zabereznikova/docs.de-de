@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # Richtlinien zum Entwerfen formatierbarer Steuerelemente
 In diesem Dokument werden die bewährten Methoden zusammengefasst, die beim Entwickeln eines Steuerelements zu berücksichtigen sind, das Sie auf einfache Weise formatieren und als Vorlage verwenden möchten.  Diese bewährten Methoden sind während der Arbeit an den Formatvorlagen für Designsteuerelemente für die integrierte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelementgruppe durch Versuch und Irrtum zusammengestellt worden.  Es hat sich gezeigt, dass eine erfolgreiche Formatierung sowohl eine Funktion eines gut entworfenen Objektmodells als auch des eigentlichen Stils darstellt.  Dieses Dokument richtet sich an Autoren von Steuerelementen und nicht an Autoren von Stilen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Terminology"></a>   
 ## Terminologie  

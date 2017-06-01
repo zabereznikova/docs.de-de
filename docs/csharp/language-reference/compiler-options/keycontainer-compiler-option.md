@@ -1,54 +1,73 @@
 ---
-title: "/keycontainer (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/keycontainer"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/keycontainer compiler option [C#]"
-  - "keycontainer compiler option [C#]"
-  - "-keycontainer compiler option [C#]"
+title: -keycontainer (C#-Compileroptionen) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /keycontainer
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /keycontainer compiler option [C#]
+- keycontainer compiler option [C#]
+- -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 30b851a3e44c90582227beda7245a7c4b0d57b47
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
+
 ---
-# /keycontainer (C# Compiler Options)
-Gibt den Namen des Kryptografieschlüsselcontainers an.  
+# <a name="keycontainer-c-compiler-options"></a>/keycontainer (C#-Compileroptionen)
+Gibt den Namen des kryptografischen Schlüsselcontainers an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /keycontainer:string  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `string`  
- Der Name des Schlüsselcontainers mit starkem Namen.  
+ Der Name des Containers mit dem Schlüssel für einen starken Namen  
   
-## Hinweise  
- Wenn Sie die Option **\/keycontainer** verwenden, erstellt der Compiler eine gemeinsam zu verwendende Komponente, indem er dem Assemblymanifest einen öffentlichen Schlüssel aus dem angegebenen Container hinzufügt und die generierte Assembly mit dem privaten Schlüssel signiert.  Um eine Schlüsseldatei zu erstellen, geben Sie Sn \- k `file` an der Befehlszeile ein. Sn \- i installiert das Schlüsselpaar in einen Container.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die Option **/keycontainer** verwendet wird, erstellt der Compiler eine teilbare Komponente, indem er einen öffentlichen Schlüssel aus dem angegebenen Container in das Assemblymanifest einfügt und die endgültige Assembly mit dem privaten Schlüssel signiert. Geben Sie sn -k `file` in die Befehlszeile ein, um eine Schlüsseldatei zu generieren. „sn -i“ installiert das Schlüsselpaar im Container.  
   
- Wenn Sie mit [\/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) kompilieren, wird der Name der Schlüsseldatei im Modul gespeichert und in die Assembly aufgenommen, wenn das Modul mit [\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) in eine Assembly kompiliert wird.  
+ Wenn Sie mit der Option [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) kompilieren, wird der Name der Schlüsseldatei im Modul aufbewahrt und in die Assembly integriert, wenn Sie dieses Modul in eine Assembly mit [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) kompilieren.  
   
- Sie können diese Option auch als benutzerdefiniertes Attribut \(<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>\) im Quellcode für ein beliebiges MSIL\-Modul \(Microsoft Intermediate Language\) angeben.  
+ Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>) im Quellcode für ein beliebiges MSIL-Modul (Microsoft Intermediate Language) angeben.  
   
- Die Verschlüsselungsinformationen können auch mit [\/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) an den Compiler übergeben werden.  Verwenden Sie [\/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md), wenn Sie dem Assemblymanifest den öffentlichen Schlüssel hinzufügen, die Assembly aber erst nach Abschluss des Testens signieren möchten.  
+ Außerdem können Sie Ihre Verschlüsselungsinformationen mit [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) an den Compiler übergeben. Verwenden Sie [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md), wenn Sie den in das Assemblymanifest eingefügten Schlüssel verwenden, aber das Signieren der Assembly bis nach deren Prüfung verzögern möchten.  
   
- Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md) und [Verzögertes Signieren einer Assembly](../Topic/Delay%20Signing%20an%20Assembly.md).  
+ Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617) und [Verzögertes Signieren einer Assembly](../../../framework/app-domains/delay-sign-assembly.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Die Compileroption ist in der Visual Studio\-Entwicklungsumgebung nicht verfügbar.  
+1.  Diese Compileroption ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar.  
   
- Der programmgesteuerte Zugriff auf diese Compileroption erfolgt mithilfe von <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
+ Sie können mit <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> programmgesteuert auf diese Compileroption zugreifen.  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [NIB: Vorgehensweise: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

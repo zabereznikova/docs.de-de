@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cea1f48f336e4c73fa317d1cbbab3d06ceb6045f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 2eeb2f0b833d3b5cc658ec96570d95c2d167b40b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generische Typen und Reflektion (C#-Programmierhandbuch)
 Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur Laufzeit verfügt, können Sie die Reflektion zum Abrufen von Informationen über generische Typen genauso wie für nicht generische Typen verwenden. Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- In [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] wurden mehrere neue Member zur <xref:System.Type>-Klasse hinzugefügt, um Laufzeitinformationen für generische Typen zu ermöglichen. Weitere Informationen zur Verwendung dieser Methoden und Eigenschaften finden Sie in der Dokumentation zu diesen Klassen. Der Namespace <xref:System.Reflection.Emit> enthält auch neue Member, die generische Typen unterstützen. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](http://msdn.microsoft.com/library/07d5f01a-7b5b-40ea-9b15-f21561098fe4).  
+ In [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] wurden mehrere neue Member zur <xref:System.Type>-Klasse hinzugefügt, um Laufzeitinformationen für generische Typen zu ermöglichen. Weitere Informationen zur Verwendung dieser Methoden und Eigenschaften finden Sie in der Dokumentation zu diesen Klassen. Der <xref:System.Reflection.Emit>-Namespace enthält auch neue Member, die generische Typen unterstützen. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Eine Liste der invarianten Bedingungen für Begriffe, für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie in den Hinweisen zur Eigenschaft <xref:System.Type.IsGenericType%2A>.  
   
@@ -55,7 +56,7 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
 |<xref:System.Type.DeclaringMethod%2A>|Gibt die generische Methode, die den aktuellen generischen Typparameter definiert, oder null zurück, wenn der Typparameter nicht von einer generischen Methode definiert wurde|  
 |<xref:System.Type.MakeGenericType%2A>|Ersetzt die Typparameter der aktuellen generischen Typdefinition durch die Elemente eines Arrays von Typen und gibt ein <xref:System.Type>-Objekt zurück, das den resultierenden konstruierten Typ darstellt.|  
   
- Außerdem wurden neue Member zur <xref:System.Reflection.MethodInfo>-Klasse hinzugefügt, um Laufzeitinformationen für generische Methoden zu ermöglichen. Eine Liste der Liste der invarianten Bedingungen für Begriffe, für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie in den Hinweisen zur Eigenschaft <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
+ Zusätzlich wurden neue Member zur <xref:System.Reflection.MethodInfo>-Klasse hinzugefügt, um Laufzeitinformationen für generische Methoden zu ermöglichen. Eine Liste der invarianten Bedingungen für Begriffe, die für die Reflektion mit generischen Methoden verwendet werden, finden Sie unter den Hinweisen zur Eigenschaft <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
   
 |System.Reflection.MemberInfo-Membername|Beschreibung|  
 |----------------------------------------------|-----------------|  
@@ -63,11 +64,11 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Gibt ein Array von Type-Objekten zurück, die die Typargumente einer konstruierten generischen Methode oder die Typparameter einer generischen Methodendefinition darstellen|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Gibt die zugrunde liegende generische Methodendefinition für die aktuelle konstruierte Methode zurück|  
 |<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Gibt TRUE zurück, wenn die Methode oder einer ihrer einschließenden Typen Typparameter enthält, für die keine bestimmten Typen angegeben wurden|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Gibt TRUE zurück, wenn der aktuelle <xref:System.Reflection.MethodInfo>-Member die Definition einer generischen Methode darstellt|  
+|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Gibt TRUE zurück, wenn die aktuelle <xref:System.Reflection.MethodInfo> die Definition eines generischen Typs darstellt|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Ersetzt die Typparameter der aktuellen generischen Methodendefinition durch die Elemente eines Arrays von Typen und gibt ein <xref:System.Reflection.MethodInfo>-Objekt zurück, das die sich ergebende konstruierte Methode darstellt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Generika](../../../csharp/programming-guide/generics/index.md)   
- [Reflektion und generische Typen](http://msdn.microsoft.com/library/f7180fc5-dd41-42d4-8a8e-1b34288e06de)   
+ [Reflektion und generische Typen](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
  [Generika](https://msdn.microsoft.com/library/ms172192)

@@ -21,7 +21,7 @@ caps.handback.revision: 27
 # &#220;bersicht &#252;ber angef&#252;gte Eigenschaften
 Angefügte Eigenschaft ist ein in XAML definierter Begriff.  Angefügte Eigenschaften sollen als Typ einer globalen Eigenschaft verwendet werden, die für jedes Objekt festgelegt werden können.  In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]angefügte Eigenschaften werden in der Regel als Sonderform der Abhängigkeitseigenschaft definiert, die nicht die herkömmliche Eigenschaft besitzt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

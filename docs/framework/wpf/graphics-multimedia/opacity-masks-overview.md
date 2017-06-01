@@ -89,8 +89,8 @@ Beispiel für eine Durchlässigkeitsmaske mit DrawingBrush
 ## Verwenden eines Farbverlaufs als Durchlässigkeitsmaske  
  Um eine graduelle Füllung zu erstellen, werden zwei oder mehr Farbverlaufsunterbrechungspunkte angegeben.  Jeder Farbverlaufsunterbrechungspunkt beschreibt eine Farbe und eine Position \(weitere Informationen über das Erstellen und Verwenden von Farbverläufen finden Sie unter [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)\).  Es handelt sich um den gleichen Vorgang wie bei der Verwendung eines Farbverlaufs als Durchlässigkeitsmaske. Nur werden durch den Farbverlauf der Durchlässigkeitsmaske nicht Farben gemischt, sondern Alphakanalwerte.  Daher spielt die tatsächliche Farbe der Farbverlaufsinhalte keine Rolle. Nur der Alphakanal bzw. die Durchlässigkeit jeder Farbe ist relevant.  Im Folgenden finden Sie ein Beispiel.  
   
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->  
   
 <a name="specifyinggradientcolors"></a>   
 ## Angeben von Farbverlaufsunterbrechungspunkten für eine Durchlässigkeitsmaske  
@@ -106,8 +106,8 @@ Beispiel für eine Durchlässigkeitsmaske mit DrawingBrush
   
  In der vorangehenden Zeile steht *aa* für einen zweistelligen Hexadezimalwert, der verwendet wird, um die Deckkraft der Farbe anzugeben.  *rr*, *gg* und *bb* stehen jeweils für einen zweistelligen Hexadezimalwert, der verwendet wird, um die Anteile von Rot, Grün und Blau in einer Farbe anzugeben.  Jede Hexadezimalziffer kann einen Wert von 0\-9 oder A\-F haben.  0 \(null\) ist der kleinste Wert, und F ist der größte.  Der Alphawert 00 gibt eine Farbe an, die vollständig transparent ist, während ein Alphawert  FF eine vollständig deckende Farbe erzeugt.  Im folgenden Beispiel wird die [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]\-Hexadezimalnotation verwendet, um zwei Farben anzugeben.  Die erste Farbe ist vollständig deckend, während die zweite vollkommen transparent ist.  
   
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->  
   
 <a name="usingimageasopacitymask"></a>   
 ## Verwenden eines Bilds als Durchlässigkeitsmaske  
@@ -118,15 +118,15 @@ Beispiel für eine Durchlässigkeitsmaske
   
  Um ein Bild als Durchlässigkeitsmaske zu verwenden, verwenden Sie einen <xref:System.Windows.Media.ImageBrush>, der das Bild enthalten soll.  Wenn Sie ein Bild erstellen, das als Durchlässigkeitsmaske dienen soll, speichern Sie das Bild in einem Format, das mehrere Transparenzgrade unterstützt, z. B. [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)].  Das folgende Beispiel enthält den Code, mit dem die vorherige Abbildung erstellt wurde.  
   
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  -->  
   
 <a name="tilingimageopacitymask"></a>   
 ### Verwenden eines gekachelten Bilds als Durchlässigkeitsmaske  
  Im folgenden Beispiel wird dasselbe Bild mit einem anderen <xref:System.Windows.Media.ImageBrush> verwendet, aber mit den Unterteilungsfeatures des Pinsels werden Bildkacheln als Quadrat mit 500 Pixeln Größe erzeugt.  
   
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## Erstellen einer Durchlässigkeitsmaske aus einer Zeichnung  
@@ -137,15 +137,15 @@ Beispiel für eine Durchlässigkeitsmaske mit DrawingBrush
   
  Um eine Zeichnung als Durchlässigkeitsmaske zu verwenden, verwenden Sie einen <xref:System.Windows.Media.DrawingBrush>, der die Zeichnung enthalten soll.  Das folgende Beispiel enthält den Code, mit dem die vorherige Abbildung erstellt wurde:  
   
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->  
   
 <a name="tileddrawingbrush"></a>   
 ### Verwenden einer gekachelten Zeichnung als Durchlässigkeitsmaske  
  Wie der <xref:System.Windows.Media.ImageBrush> kann auch der <xref:System.Windows.Media.DrawingBrush> so eingesetzt werden, dass die Zeichnung gekachelt angezeigt wird.  Im folgenden Beispiel wird mit einem Zeichenpinsel eine gekachelte Durchlässigkeitsmaske erstellt.  
   
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->  
   
 ## Siehe auch  
  [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   

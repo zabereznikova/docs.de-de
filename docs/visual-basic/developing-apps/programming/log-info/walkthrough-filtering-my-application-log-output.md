@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von "My.Application.Log" (Visual Basic)
@@ -51,7 +52,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 2.  Fügen Sie eine Schaltfläche mit dem Namen „Button1“ zu „Form1“ hinzu.  
   
-3.  Fügen Sie im <xref:System.Windows.Forms.Control.Click>-Ereignishandler für Button1 folgenden Code hinzu:  
+3.  Fügen Sie im <xref:System.Windows.Forms.Control.Click>-Ereignishandler den folgenden Code für „Button1“ hinzu:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
@@ -72,10 +73,10 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
     > [!NOTE]
     >  Standardmäßig leert die Anwendung die Ausgabe der Protokolldatei, wenn die Anwendung geschlossen wird.  
   
-     Im obigen Beispiel erzeugen der zweite Aufruf der Methode <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> und der Aufruf der Methode <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> Protokollausgaben. Der erste und letzte Aufruf der Methode `WriteEntry` erzeugt keine Ausgabe. Dies liegt daran, dass die Schweregrade von `WriteEntry` und `WriteException` „Information“ und „Error“ sind, die beide durch das standardmäßige Filtern von Protokollen des Objekts `My.Application.Log` zugelassen sind. Bei Ereignissen mit den Schweregraden „Start“ und „Stop“ wird das Erzeugen von Protokollausgaben verhindert.  
+     Im oben stehenden Beispiel erzeugt der zweite Aufruf der <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>-Methode und der Aufruf der <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>-Methode eine Protokollausgabe, während dies bei dem ersten und letzten Aufruf der `WriteEntry`-Methode nicht passiert. Dies liegt daran, dass die Schweregrade von `WriteEntry` und `WriteException` „Information“ und „Error“ sind, die beide durch das standardmäßige Filtern von Protokollen des Objekts `My.Application.Log` zugelassen sind. Bei Ereignissen mit den Schweregraden „Start“ und „Stop“ wird das Erzeugen von Protokollausgaben verhindert.  
   
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filterung für alle „My.Application.Log“-Listener  
- Das Objekt `My.Application.Log` verwendet einen <xref:System.Diagnostics.SourceSwitch> mit dem Namen `DefaultSwitch`, um zu steuern, welche Meldungen von den Methoden `WriteEntry` und `WriteException` an die Protokolllistener übergeben werden. Sie können `DefaultSwitch` in der Konfigurationsdatei der Anwendung konfigurieren, indem Sie dessen Wert auf einen der <xref:System.Diagnostics.SourceLevels>-Enumerationswerte festlegen. Standardmäßig ist der Wert „Information“.  
+ Das `My.Application.Log`-Objekt verwendet einen <xref:System.Diagnostics.SourceSwitch> mit dem Namen `DefaultSwitch`, um zu steuern, welche Meldungen von den Methoden `WriteEntry` und `WriteException` an die Protokolllistener übergeben werden. Sie können `DefaultSwitch` in der Konfigurationsdatei der Anwendung konfigurieren, indem Sie dessen Wert auf einen der <xref:System.Diagnostics.SourceLevels>-Enumerationswerte festlegen. Standardmäßig ist der Wert „Information“.  
   
  In dieser Tabelle werden die Schweregrade gezeigt, die von Protokollen für das Schreiben einer Nachricht an die Listener in einer bestimmten `DefaultSwitch`-Einstellung benötigt werden.  
   
@@ -161,7 +162,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
 9. Ändern Sie den Wert des `value`-Attributs zurück zu „Information“.  
   
     > [!NOTE]
-    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassen <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> wird nicht geändert.  
+    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> wird dadurch nicht verändert.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für alle „My.Application.Log“-Listener  
  Im vorherige Beispiel wurde gezeigt, wie Sie die Filterung für alle `My.Application.Log`-Ausgaben ändern können. In diesem Beispiel wird veranschaulicht, wie Sie einen einzelnen Protokolllistener filtern. Standardmäßig verwendet eine Anwendung zwei Listener, die in die Debugausgabe und die Protokolldatei der Anwendung schreiben.  
@@ -212,7 +213,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
     </add>  
     ```  
   
-     Der Filter <xref:System.Diagnostics.EventTypeFilter> verwendet einen der <xref:System.Diagnostics.SourceLevels>-Enumerationswerte als `initializeData`-Attribut.  
+     Der <xref:System.Diagnostics.EventTypeFilter>-Filter akzeptiert einen der <xref:System.Diagnostics.SourceLevels>-Enumerationswerte als sein `initializeData`-Attribut.  
   
 7.  Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
   
@@ -278,5 +279,5 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
  [Walkthrough: Changing Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [Walkthrough: Creating Custom Log Listeners (Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
  [How to: Write Log Messages (Vorgehensweise: Schreiben von Protokollmeldungen)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Trace Switches (Ablaufverfolgungsschalter)](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [Trace Switches (Ablaufverfolgungsschalter)](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

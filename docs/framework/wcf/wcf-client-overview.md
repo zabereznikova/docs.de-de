@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Beispielsweise beinhaltet eine generierte Konfigurationsdatei für einen in den vorherigen Beispielen verwendeten `ISampleService` die folgenden Endpunktinformationen.  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  Mit dieser Konfigurationsdatei wird ein Zielendpunkt im `<client>`-Element angegeben. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Verwenden mehrerer Zielendpunkte finden Sie unter der <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName> oder <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName> Konstruktoren.  
   

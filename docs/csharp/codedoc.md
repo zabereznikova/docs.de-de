@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3f4add34162d8b63d033d7cb32828af67901eb11
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d91daf2005998d81609803982f5fc2c231fe7ad3
+ms.openlocfilehash: 4e873d15ae2b2e7a475ea758678423f6ec3b14b3
+ms.contentlocale: de-de
+ms.lasthandoff: 05/16/2017
 
 ---
 
@@ -44,14 +45,7 @@ Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folge
 
 XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Zum Beispiel:
 
-```csharp
-/// <summary>
-/// This class does something.
-/// </summary>
-public class SomeClass
-{
-}
-```
+[!code-csharp[XML-Dokumentationskommentar](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>Exemplarische Vorgehensweise
 
@@ -59,70 +53,7 @@ Betrachten wir das Dokumentieren einer sehr einfachen math-Bibliothek, um neuen 
 
 Hier der Code für die einfache math-Bibliothek:
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-public class Math
-{
-    // Adds two integers and returns the result
-    public static int Add(int a, int b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    // Adds two doubles and returns the result
-    public static double Add(double a, double b)
-    {
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    // Subtracts an integer from another and returns the result
-    public static int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-
-    // Subtracts a double from another and returns the result
-    public static double Subtract(double a, double b)
-    {
-        return a - b;
-    }
-
-    // Multiplies two integers and returns the result
-    public static int Multiply(int a, int b)
-    {
-        return a * b;
-    }
-
-    // Multiplies two doubles and returns the result
-    public static double Multiply(double a, double b)
-    {
-        return a * b;
-    }
-
-    // Divides an integer by another and returns the result
-    public static int Divide(int a, int b)
-    {
-        return a / b;
-    }
-
-    // Divides a double by another and returns the result
-    public static double Divide(double a, double b)
-    {
-        return a / b;
-    }
-}
-```
+[!code-csharp[Beispielbibliothek](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
 Die Beispielbibliothek unterstützt die vier wichtigen arithmetischen Operationen `add`, `subtract`, `multiply` und `divide` auf den Datentypen `int` und `double`.
 
@@ -132,34 +63,9 @@ Wie bereits erwähnt kann dies mit XML-Dokumentationstags erreicht werden. Sie e
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 
 Das `<summary>`-Tag fügt kurze Informationen über einen Typ oder Member hinzu.
-Die Verwendung wird veranschaulicht, indem das Tag zur `Math`-Klassendefinition und zur ersten `Add`-Methode hinzugefügt wird. Sie können es gerne auf den Rest Ihres Codes anwenden.
+Die Verwendung wird veranschaulicht, indem es zur `Math`-Klassendefinition und zur ersten `Add`-Methode hinzugefügt wird. Sie können es gerne auf den Rest Ihres Codes anwenden.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main Math class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    // Adds two integers and returns the result
-    /// <summary>
-    /// Adds two integers and returns the result.
-    /// </summary>
-    public static int Add(int a, int b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-}
-```
+[!code-csharp[Summary-Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 Das `<summary>`-Tag ist sehr wichtig, und es wird empfohlen, dass Sie es einfügen, da sein Inhalt die primäre Quelle für Informationen über Typ oder Member in IntelliSense oder in einem API-Referenzdokument ist.
 
@@ -167,131 +73,37 @@ Das `<summary>`-Tag ist sehr wichtig, und es wird empfohlen, dass Sie es einfüg
 
 Das `<remarks>`-Tag ergänzt die Informationen über Typen oder Member, die das `<summary>`-Tag enthält. In diesem Beispiel fügen Sie es einfach der Klasse hinzu.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main Math class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-/// <remarks>
-/// This class can add, subtract, multiply and divide.
-/// </remarks>
-public class Math
-{
-
-}
-```
+[!code-csharp[Remarks-Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ### <a name="ltreturnsgt"></a>&lt;returns&gt;
 
 Das `<returns>`-Tag beschreibt den Rückgabewert der Deklaration einer Methode.
 Wie zuvor veranschaulicht das folgende Beispiel das `<returns>`-Tag bei der ersten `Add`-Methode. Sie können dasselbe bei anderen Methoden vornehmen.
 
-```csharp
-// Adds two integers and returns the result
-/// <summary>
-/// Adds two integers and returns the result.
-/// </summary>
-/// <returns>
-/// The sum of two integers.
-/// </returns>
-public static int Add(int a, int b)
-{
-    // If any parameter is equal to the max value of an integer
-    // and the other is greater than zero
-    if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-        throw new System.OverflowException();
-
-    return a + b;
-}
-```
+[!code-csharp[Returns-Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ### <a name="ltvaluegt"></a>&lt;value&gt;
 
 Das `<value>`-Tag ist mit dem `<returns>`-Tag vergleichbar, wird aber für Eigenschaften verwendet.
 Falls Ihre `Math`-Bibliothek über eine statische Eigenschaft namens `PI` verfügt, können Sie dieses Tag wie folgt verwenden:
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main Math class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-/// <remarks>
-/// This class can add, subtract, multiply and divide.
-/// These operations can be performed on both integers and doubles
-/// </remarks>
-public class Math
-{
-    /// <value>Gets the value of PI.</value>
-    public static double PI { get; }
-}
-```
+[!code-csharp[Value-Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ### <a name="ltexamplegt"></a>&lt;example&gt;
 
 Das `<example>`-Tag wird verwendet, um ein Beispiel in die XML-Dokumentation aufzunehmen.
 Dies beinhaltet die Verwendung des untergeordneten `<code>`-Tags.
 
-```csharp
-// Adds two integers and returns the result
-/// <summary>
-/// Adds two integers and returns the result.
-/// </summary>
-/// <returns>
-/// The sum of two integers.
-/// </returns>
-/// <example>
-/// <code>
-/// int c = Math.Add(4, 5);
-/// if (c > 10)
-/// {
-///     Console.WriteLine(c);
-/// }
-/// </code>
-/// </example>
-public static int Add(int a, int b)
-{
-    // If any parameter is equal to the max value of an integer
-    // and the other is greater than zero
-    if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-        throw new System.OverflowException();
-
-    return a + b;
-}
-```
+[!code-csharp[Example-Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 Das `code`-Tag behält Zeilenumbrüche und Einzug für längere Beispiele bei.
 
 ### <a name="ltparagt"></a>&lt;para&gt;
 
 Das `<para>`-Tag wird verwendet, um den Inhalt innerhalb seines übergeordneten Tags zu formatieren. `<para>` wird in der Regel innerhalb eines Tags wie `<remarks>` oder `<returns>` verwendet, um Text in Absätze zu unterteilen.
-Sie können fortfahren und die Inhalte des `<remarks>`-Tags für Ihre Klassendefinition formatieren.
+Sie können die Inhalte des `<remarks>`-Tags für Ihre Klassendefinition formatieren.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main Math class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-/// <remarks>
-/// <para>This class can add, subtract, multiply and divide.</para>
-/// <para>These operations can be performed on both integers and doubles.</para>
-/// </remarks>
-public class Math
-{
-
-}
-```
+[!code-csharp[Para-Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ### <a name="ltcgt"></a>&lt;c&gt;
 
@@ -299,165 +111,23 @@ Bei der Formatierung wird außerdem das `<c>`-Tag verwendet, um einen Teil des T
 Es ist wie das `<code>`-Tag, aber inline. Es ist nützlich, wenn Sie ein schnelles Codebeispiel als Teil des Taginhalts anzeigen möchten.
 Aktualisieren wir die Dokumentation für die `Math`-Klasse.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-
-}
-```
+[!code-csharp[C-Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ### <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 Mithilfe des `<exception>`-Tags können Sie Ihre Entwickler wissen lassen, dass eine Methode bestimmte Ausnahmen auslösen kann.
 In Ihrer `Math`-Bibliothek sehen Sie, dass beide `Add`-Methoden eine Ausnahme auslösen, wenn eine bestimmte Bedingung erfüllt ist. Nicht so offensichtlich ist jedoch, dass die ganzzahlige `Divide`-Methode auch auslöst, wenn der `b`-Parameter null ist. Fügen Sie nun eine Ausnahmendokumentation zu dieser Methode hinzu.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Adds two integers and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Add(4, 5);
-    /// if (c > 10)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than 0.</exception>
-    public static int Add(int a, int b)
-    {
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    /// <summary>
-    /// Adds two doubles and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two doubles.
-    /// </returns>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than zero.</exception>
-    public static double Add(double a, double b)
-    {
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    /// <summary>
-    /// Divides an integer by another and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The division of two integers.
-    /// </returns>
-    /// <exception cref="System.DivideByZeroException">Thrown when a division by zero occurs.</exception>
-    public static int Divide(int a, int b)
-    {
-        return a / b;
-    }
-
-    /// <summary>
-    /// Divides a double by another and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The division of two doubles.
-    /// </returns>
-    public static double Divide(double a, double b)
-    {
-        return a / b;
-    }
-}
-```
+[!code-csharp[Exception-Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 Das `cref`-Attribut stellt einen Verweis auf eine Ausnahme dar, die von der aktuellen Kompilierungsumgebung verfügbar ist.
-Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf die verwiesen wird. Der Compiler gibt eine Warnung aus, wenn der Wert nicht aufgelöst werden kann.
+Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf die verwiesen wird. Der Compiler wird eine Warnung ausgeben, wenn sein Wert nicht aufgelöst werden kann.
 
 ### <a name="ltseegt"></a>&lt;see&gt;
 
 Das `<see>`-Tag ermöglicht die Erstellung eines klickbaren Links zu einer Dokumentationsseite für ein anderes Codeelement. Im nächsten Beispiel wird ein klickbarer Link zwischen den beiden `Add`-Methoden erstellt.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Adds two integers and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Add(4, 5);
-    /// if (c > 10)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than 0.</exception>
-    /// See <see cref="Math.Add(double, double)"/> to add doubles.
-    public static int Add(int a, int b)
-    {
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    /// <summary>
-    /// Adds two doubles and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two doubles.
-    /// </returns>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than zero.</exception>
-    /// See <see cref="Math.Add(int, int)"/> to add integers.
-    public static double Add(double a, double b)
-    {
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-}
-```
+[!code-csharp[See-Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 Das `cref`-Attribut ist ein **erforderliches** Attribut, das einen Verweis auf einen Typ oder auf dessen Member darstellt, der von der aktuellen Kompilierungsumgebung verfügbar ist. Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf die verwiesen wird.
 
@@ -465,47 +135,7 @@ Das `cref`-Attribut ist ein **erforderliches** Attribut, das einen Verweis auf e
 
 Das `<seealso>`-Tag wird auf die gleiche Weise verwendet wie das `<see>`-Tag. Der einzige Unterschied ist, dass dessen Inhalt in der Regel in einem „See Also“-Abschnitt („Siehe auch“) platziert wird. Hier fügen wir ein `seealso`-Tag auf die ganzzahlige `Add`-Methode hinzu, um auf andere Methoden in der Klasse zu verweisen, die ganzzahlige Parameter akzeptieren:
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Adds two integers and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Add(4, 5);
-    /// if (c > 10)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than 0.</exception>
-    /// See <see cref="Math.Add(double, double)"/> to add doubles.
-    /// <seealso cref="Math.Subtract(int, int)"/>
-    /// <seealso cref="Math.Multiply(int, int)"/>
-    /// <seealso cref="Math.Divide(int, int)"/>
-    public static int Add(int a, int b)
-    {
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-}
-```
+[!code-csharp[Seealso-Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 Das `cref`-Attribut stellt einen Verweis auf einen Typ oder auf dessen Member dar, der von der aktuellen Kompilierungsumgebung verfügbar ist.
 Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf die verwiesen wird.
@@ -514,439 +144,44 @@ Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf 
 
 Das `<param>`-Tag wird verwendet, um die Parameter einer Methode zu beschreiben. Hier ist ein Beispiel für die doppelte `Add`-Methode: Der Parameter, den das Tag beschreibt, wird im **erforderlichen** `name`-Attribut angegeben.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Adds two doubles and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two doubles.
-    /// </returns>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than zero.</exception>
-    /// See <see cref="Math.Add(int, int)"/> to add integers.
-    /// <param name="a">A double precision number.</param>
-    /// <param name="b">A double precision number.</param>
-    public static double Add(double a, double b)
-    {
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-}
-```
+[!code-csharp[Param-Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
 
 Das `<typeparam>`-Tag wird genau wie das `<param>`-Tag verwendet, aber für den generischen Typ oder Methodendeklarationen, um einen generischen Parameter zu beschreiben.
 Fügen Sie der `Math`-Klasse eine schnelle generische Methode hinzu, um zu überprüfen, ob eine Menge größer als die andere ist.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Checks if an IComparable is greater than another.
-    /// </summary>
-    /// <typeparam name="T">A type that inherits from the IComparable interface.</typeparam>
-    public static bool GreaterThan<T>(T a, T b) where T : IComparable
-    {
-        return a.CompareTo(b) > 0;
-    }
-}
-```
+[!code-csharp[Typeparam-Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ### <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
-Manchmal beschreiben Sie eventuell gerade die Funktionsweise einer Methode in einem möglichen `<summary>`-Tag, wollen aber dann auf einen Parameter verweisen. Dafür eignet sich das `<paramref>`-Tag hervorragend. Aktualisieren wir die Zusammenfassung der doppelt basierten `Add`-Methode. Wie beim `<param>`-Tag wird der Name des Parameters im **erforderlichen** `name`-Attribut angegeben.
+Manchmal beschreiben Sie möglicherweise gerade die Funktionsweise einer Methode in einem möglichen `<summary>`-Tag und wollen dann auf einen Parameter verweisen. Der `<paramref>`-Tag eignet sich hervorragend dafür. Aktualisieren wir die Zusammenfassung der doppelt basierten `Add`-Methode. Wie beim `<param>`-Tag wird der Name des Parameters im **erforderlichen** `name`-Attribut angegeben.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Adds two doubles <paramref name="a"/> and <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two doubles.
-    /// </returns>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than zero.</exception>
-    /// See <see cref="Math.Add(int, int)"/> to add integers.
-    /// <param name="a">A double precision number.</param>
-    /// <param name="b">A double precision number.</param>
-    public static double Add(double a, double b)
-    {
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-}
-```
+[!code-csharp[Paramref-Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
 
 Das `<typeparamref>`-Tag wird genau wie das `<paramref>`-Tag verwendet, aber für den generischen Typ oder Methodendeklarationen, um einen generischen Parameter zu beschreiben.
 Sie können die gleiche generische Methode verwenden, die Sie zuvor erstellt haben.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// </summary>
-public class Math
-{
-    /// <summary>
-    /// Checks if an IComparable <typeparamref name="T"/> is greater than another.
-    /// </summary>
-    /// <typeparam name="T">A type that inherits from the IComparable interface.</typeparam>
-    public static bool GreaterThan<T>(T a, T b) where T : IComparable
-    {
-        return a.CompareTo(b) > 0;
-    }
-}
-```
+[!code-csharp[Typeparamref-Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ### <a name="ltlistgt"></a>&lt;list&gt;
 
 Das `<list>`-Tag wird verwendet, um Dokumentationsinformationen als sortierte Liste, unsortierte Liste oder Tabelle zu formatieren.
-Sie erstellen eine unsortierte Liste aller mathematischen Operationen, die Ihre `Math`-Bibliothek unterstützt.
+Erstellen Sie eine unsortierte Liste aller mathematischen Operationen, die Ihre `Math`-Bibliothek unterstützt.
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// <list type="bullet">
-/// <item>
-/// <term>Add</term>
-/// <description>Addition Operation</description>
-/// </item>
-/// <item>
-/// <term>Subtract</term>
-/// <description>Subtraction Operation</description>
-/// </item>
-/// <item>
-/// <term>Multiply</term>
-/// <description>Multiplication Operation</description>
-/// </item>
-/// <item>
-/// <term>Divide</term>
-/// <description>Division Operation</description>
-/// </item>
-/// </list>
-/// </summary>
-public class Math
-{
+[!code-csharp[List-Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-}
-```
-
-Sie können eine sortierte Liste oder eine Tabelle erstellen, indem Sie das `type`-Attribut auf `number` bzw. `table` ändern.
+Sie können eine sortierte Liste oder eine Tabelle erstellen, indem Sie das Attribut `type` auf `number` bzw. `table` ändern.
 
 ### <a name="putting-it-all-together"></a>Zusammenfassung
 
-Sie sind diesem Tutorial gefolgt und haben die Tags soweit erforderlich für Ihren Code übernommen. Ihr Code sollte nun ähnlich wie der folgende aussehen:
+Wenn Sie diesem Tutorial gefolgt sind und die Tags soweit erforderlich für Ihren Code übernommen haben, sollte Ihr Code nun ähnlich wie der folgende aussehen:
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <summary>
-/// The main <c>Math</c> class.
-/// Contains all methods for performing basic math functions.
-/// <list type="bullet">
-/// <item>
-/// <term>Add</term>
-/// <description>Addition Operation</description>
-/// </item>
-/// <item>
-/// <term>Subtract</term>
-/// <description>Subtraction Operation</description>
-/// </item>
-/// <item>
-/// <term>Multiply</term>
-/// <description>Multiplication Operation</description>
-/// </item>
-/// <item>
-/// <term>Divide</term>
-/// <description>Division Operation</description>
-/// </item>
-/// </list>
-/// </summary>
-/// <remarks>
-/// <para>This class can add, subtract, multiply and divide.</para>
-/// <para>These operations can be performed on both integers and doubles.</para>
-/// </remarks>
-public class Math
-{
-    // Adds two integers and returns the result
-    /// <summary>
-    /// Adds two integers <paramref name="a"/> and <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Add(4, 5);
-    /// if (c > 10)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than 0.</exception>
-    /// See <see cref="Math.Add(double, double)"/> to add doubles.
-    /// <seealso cref="Math.Subtract(int, int)"/>
-    /// <seealso cref="Math.Multiply(int, int)"/>
-    /// <seealso cref="Math.Divide(int, int)"/>
-    /// <param name="a">An integer.</param>
-    /// <param name="b">An integer.</param>
-    public static int Add(int a, int b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
+[!code-csharp[Tagged-Bibliothek](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
-        return a + b;
-    }
-
-    // Adds two doubles and returns the result
-    /// <summary>
-    /// Adds two doubles <paramref name="a"/> and <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The sum of two doubles.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// double c = Math.Add(4.5, 5.4);
-    /// if (c > 10)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.OverflowException">Thrown when one parameter is max 
-    /// and the other is greater than 0.</exception>
-    /// See <see cref="Math.Add(int, int)"/> to add integers.
-    /// <seealso cref="Math.Subtract(double, double)"/>
-    /// <seealso cref="Math.Multiply(double, double)"/>
-    /// <seealso cref="Math.Divide(double, double)"/>
-    /// <param name="a">A double precision number.</param>
-    /// <param name="b">A double precision number.</param>
-    public static double Add(double a, double b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    // Subtracts an integer from another and returns the result
-    /// <summary>
-    /// Subtracts <paramref name="b"/> from <paramref name="a"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The difference between two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Subtract(4, 5);
-    /// if (c > 1)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// See <see cref="Math.Subtract(double, double)"/> to subtract doubles.
-    /// <seealso cref="Math.Add(int, int)"/>
-    /// <seealso cref="Math.Multiply(int, int)"/>
-    /// <seealso cref="Math.Divide(int, int)"/>
-    /// <param name="a">An integer.</param>
-    /// <param name="b">An integer.</param>
-    public static int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-
-    // Subtracts a double from another and returns the result
-    /// <summary>
-    /// Subtracts a double <paramref name="b"/> from another double <paramref name="a"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The difference between two doubles.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// double c = Math.Subtract(4.5, 5.4);
-    /// if (c > 1)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// See <see cref="Math.Subtract(int, int)"/> to subtract integers.
-    /// <seealso cref="Math.Add(double, double)"/>
-    /// <seealso cref="Math.Multiply(double, double)"/>
-    /// <seealso cref="Math.Divide(double, double)"/>
-    /// <param name="a">A double precision number.</param>
-    /// <param name="b">A double precision number.</param>
-    public static double Subtract(double a, double b)
-    {
-        return a - b;
-    }
-
-    // Multiplies two integers and returns the result
-    /// <summary>
-    /// Multiplies two integers <paramref name="a"/> and <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The product of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Multiply(4, 5);
-    /// if (c > 100)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// See <see cref="Math.Multiply(double, double)"/> to multiply doubles.
-    /// <seealso cref="Math.Add(int, int)"/>
-    /// <seealso cref="Math.Subtract(int, int)"/>
-    /// <seealso cref="Math.Divide(int, int)"/>
-    /// <param name="a">An integer.</param>
-    /// <param name="b">An integer.</param>
-    public static int Multiply(int a, int b)
-    {
-        return a * b;
-    }
-
-    // Multiplies two doubles and returns the result
-    /// <summary>
-    /// Multiplies two doubles <paramref name="a"/> and <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The product of two doubles.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// double c = Math.Multiply(4.5, 5.4);
-    /// if (c > 100.0)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// See <see cref="Math.Multiply(int, int)"/> to multiply integers.
-    /// <seealso cref="Math.Add(double, double)"/>
-    /// <seealso cref="Math.Subtract(double, double)"/>
-    /// <seealso cref="Math.Divide(double, double)"/>
-    /// <param name="a">A double precision number.</param>
-    /// <param name="b">A double precision number.</param>
-    public static double Multiply(double a, double b)
-    {
-        return a * b;
-    }
-
-    // Divides an integer by another and returns the result
-    /// <summary>
-    /// Divides an integer <paramref name="a"/> by another integer <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The quotient of two integers.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// int c = Math.Divide(4, 5);
-    /// if (c > 1)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// <exception cref="System.DivideByZeroException">Thrown when <paramref name="b"/> is equal to 0.</exception>
-    /// See <see cref="Math.Divide(double, double)"/> to divide doubles.
-    /// <seealso cref="Math.Add(int, int)"/>
-    /// <seealso cref="Math.Subtract(int, int)"/>
-    /// <seealso cref="Math.Multiply(int, int)"/>
-    /// <param name="a">An integer dividend.</param>
-    /// <param name="b">An integer divisor.</param>
-    public static int Divide(int a, int b)
-    {
-        return a / b;
-    }
-
-    // Divides a double by another and returns the result
-    /// <summary>
-    /// Divides a double <paramref name="a"/> by another double <paramref name="b"/> and returns the result.
-    /// </summary>
-    /// <returns>
-    /// The quotient of two doubles.
-    /// </returns>
-    /// <example>
-    /// <code>
-    /// double c = Math.Divide(4.5, 5.4);
-    /// if (c > 1.0)
-    /// {
-    ///     Console.WriteLine(c);
-    /// }
-    /// </code>
-    /// </example>
-    /// See <see cref="Math.Divide(int, int)"/> to divide integers.
-    /// <seealso cref="Math.Add(double, double)"/>
-    /// <seealso cref="Math.Subtract(double, double)"/>
-    /// <seealso cref="Math.Multiply(double, double)"/>
-    /// <param name="a">A double precision dividend.</param>
-    /// <param name="b">A double precision divisor.</param>
-    public static double Divide(double a, double b)
-    {
-        return a / b;
-    }
-}
-```
-
-Aus Ihrem Code können Sie eine ausführliche Dokumentationswebsite mit klickbaren Querverweisen generieren, aber dann tritt ein anderes Problem auf, da der Code nun schwer zu lesen ist.
+Aus Ihrem Code können Sie eine detaillierte Dokumentationswebsite mit klickbaren Querverweisen generieren. Sie sehen sich jedoch mit einem anderen Problem konfrontiert: Ihr Code ist schwer zu lesen.
 Dies ist ein Albtraum für jeden Entwickler, der zu diesem Code beitragen möchte, da er so viele Informationen durchsuchen muss. Zum Glück gibt es ein XML-Tag, das Ihnen dabei helfen kann:
 
 ### <a name="ltincludegt"></a>&lt;include&gt;
@@ -955,289 +190,11 @@ Mit dem `<include>`-Tag kann auf Kommentare in einer separaten XML-Datei verwies
 
 Nun verschieben Sie alle XML-Tags in eine separate XML-Datei mit dem Namen `docs.xml`. Sie können die Datei beliebig benennen.
 
-```xml
-<docs>
-    <members name="math">
-        <Math>
-            <summary>
-            The main <c>Math</c> class.
-            Contains all methods for performing basic math functions.
-            </summary>
-            <remarks>
-            <para>This class can add, subtract, multiply and divide.</para>
-            <para>These operations can be performed on both integers and doubles.</para>
-            </remarks>
-        </Math>
-        <AddInt>
-            <summary>
-            Adds two integers <paramref name="a"/> and <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The sum of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Add(4, 5);
-            if (c > 10)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="System.OverflowException">Thrown when one parameter is max 
-            and the other is greater than 0.</exception>
-            See <see cref="Math.Add(double, double)"/> to add doubles.
-            <seealso cref="Math.Subtract(int, int)"/>
-            <seealso cref="Math.Multiply(int, int)"/>
-            <seealso cref="Math.Divide(int, int)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </AddInt>
-        <AddDouble>
-            <summary>
-            Adds two doubles <paramref name="a"/> and <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The sum of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Add(4.5, 5.4);
-            if (c > 10)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="System.OverflowException">Thrown when one parameter is max 
-            and the other is greater than 0.</exception>
-            See <see cref="Math.Add(int, int)"/> to add integers.
-            <seealso cref="Math.Subtract(double, double)"/>
-            <seealso cref="Math.Multiply(double, double)"/>
-            <seealso cref="Math.Divide(double, double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </AddDouble>
-        <SubtractInt>
-            <summary>
-            Subtracts <paramref name="b"/> from <paramref name="a"/> and returns the result.
-            </summary>
-            <returns>
-            The difference between two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Subtract(4, 5);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="Math.Subtract(double, double)"/> to subtract doubles.
-            <seealso cref="Math.Add(int, int)"/>
-            <seealso cref="Math.Multiply(int, int)"/>
-            <seealso cref="Math.Divide(int, int)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </SubtractInt>
-        <SubtractDouble>
-            <summary>
-            Subtracts a double <paramref name="b"/> from another double <paramref name="a"/> and returns the result.
-            </summary>
-            <returns>
-            The difference between two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Subtract(4.5, 5.4);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="Math.Subtract(int, int)"/> to subtract integers.
-            <seealso cref="Math.Add(double, double)"/>
-            <seealso cref="Math.Multiply(double, double)"/>
-            <seealso cref="Math.Divide(double, double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </SubtractDouble>
-        <MultiplyInt>
-            <summary>
-            Multiplies two integers <paramref name="a"/> and <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The product of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Multiply(4, 5);
-            if (c > 100)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="Math.Multiply(double, double)"/> to multiply doubles.
-            <seealso cref="Math.Add(int, int)"/>
-            <seealso cref="Math.Subtract(int, int)"/>
-            <seealso cref="Math.Divide(int, int)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </MultiplyInt>
-        <MultiplyDouble>
-            <summary>
-            Multiplies two doubles <paramref name="a"/> and <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The product of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Multiply(4.5, 5.4);
-            if (c > 100.0)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="Math.Multiply(int, int)"/> to multiply integers.
-            <seealso cref="Math.Add(double, double)"/>
-            <seealso cref="Math.Subtract(double, double)"/>
-            <seealso cref="Math.Divide(double, double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </MultiplyDouble>
-        <DivideInt>
-            <summary>
-            Divides an integer <paramref name="a"/> by another integer <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The quotient of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Divide(4, 5);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="System.DivideByZeroException">Thrown when <paramref name="b"/> is equal to 0.</exception>
-            See <see cref="Math.Divide(double, double)"/> to divide doubles.
-            <seealso cref="Math.Add(int, int)"/>
-            <seealso cref="Math.Subtract(int, int)"/>
-            <seealso cref="Math.Multiply(int, int)"/>
-            <param name="a">An integer dividend.</param>
-            <param name="b">An integer divisor.</param>
-        </DivideInt>
-        <DivideDouble>
-            <summary>
-            Divides a double <paramref name="a"/> by another double <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The quotient of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Divide(4.5, 5.4);
-            if (c > 1.0)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="Math.Divide(int, int)"/> to divide integers.
-            <seealso cref="Math.Add(double, double)"/>
-            <seealso cref="Math.Subtract(double, double)"/>
-            <seealso cref="Math.Multiply(double, double)"/>
-            <param name="a">A double precision dividend.</param>
-            <param name="b">A double precision divisor.</param>
-        </DivideDouble>
-    </members>
-</docs>
-```
+[!code-xml[Beispiel-XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 Im obigen XML werden die Dokumentationskommentare jedes Members direkt innerhalb eines Tags angezeigt, das nach der Funktion benannt ist. Sie können Ihre eigene Strategie auswählen. Ihre XML-Kommentare befinden sich nun in einer separaten Datei. Sehen wir uns an, wie der Code mit dem `<include>`-Tag besser lesbar gemacht werden kann:
 
-```csharp
-/*
-    The main Math class
-    Contains all methods for performing basic math functions
-*/
-/// <include file='docs.xml' path='docs/members[@name="math"]/Math/*'/>
-public class Math
-{
-    // Adds two integers and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/AddInt/*'/>
-    public static int Add(int a, int b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == int.MaxValue && b > 0) || (b == int.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    // Adds two doubles and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/AddDouble/*'/>
-    public static double Add(double a, double b)
-    {
-        // If any parameter is equal to the max value of an integer
-        // and the other is greater than zero
-        if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
-            throw new System.OverflowException();
-
-        return a + b;
-    }
-
-    // Subtracts an integer from another and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/SubtractInt/*'/>
-    public static int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-
-    // Subtracts a double from another and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/SubtractDouble/*'/>
-    public static double Subtract(double a, double b)
-    {
-        return a - b;
-    }
-
-    // Multiplies two integers and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/MultiplyInt/*'/>
-    public static int Multiply(int a, int b)
-    {
-        return a * b;
-    }
-
-    // Multiplies two doubles and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/MultiplyDouble/*'/>
-    public static double Multiply(double a, double b)
-    {
-        return a * b;
-    }
-
-    // Divides an integer by another and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/DivideInt/*'/>
-    public static int Divide(int a, int b)
-    {
-        return a / b;
-    }
-
-    // Divides a double by another and returns the result
-    /// <include file='docs.xml' path='docs/members[@name="math"]/DivideDouble/*'/>
-    public static double Divide(double a, double b)
-    {
-        return a / b;
-    }
-}
-```
+[!code-csharp[Include-Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Nun ist der Code wieder gut lesbar, und es sind keine Dokumentationsinformationen verloren gegangen. 
 

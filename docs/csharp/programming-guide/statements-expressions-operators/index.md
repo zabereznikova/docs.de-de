@@ -1,27 +1,46 @@
 ---
-title: "Anweisungen, Ausdr&#252;cke und Operatoren (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Ausdrücke"
-  - "C#-Sprache, Operatoren"
-  - "C#-Sprache, Anweisungen"
-  - "Ausdrücke [C#]"
-  - "Operatoren [C#]"
-  - "Anweisungen [C#]"
+title: "Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- operators [C#]
+- C# language, statements
+- C# language, operators
+- C# language, expressions
+- statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d7c648786e7f507fe2ca58ffd2480da6b204aafa
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
+
 ---
-# Anweisungen, Ausdr&#252;cke und Operatoren (C#-Programmierhandbuch)
-Der C\#\-Code, aus dem eine Anwendung besteht, setzt sich aus Anweisungen zusammen, die Schlüsselwörter, Ausdrücke und Operatoren beinhalten können.  Dieser Abschnitt enthält Informationen zu diesen wesentlichen Bestandteilen eines C\#\-Programms.  
+# <a name="statements-expressions-and-operators-c-programming-guide"></a>Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch)
+Der C#-Code, der eine Anwendung umfasst, besteht aus Anweisungen, die aus Schlüsselwörtern, Ausdrücken und Operatoren bestehen. Dieser Abschnitt enthält Informationen bezüglich dieser wichtigen Elemente eines C#-Programms.  
   
  Weitere Informationen finden Sie unter:  
   
@@ -29,6 +48,8 @@ Der C\#\-Code, aus dem eine Anwendung besteht, setzt sich aus Anweisungen zusamm
   
 -   [Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
+    -   [Ausdruckskörpermember](expression-bodied-members.md)
+ 
 -   [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 -   [Anonyme Funktionen](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
@@ -45,9 +66,9 @@ Der C\#\-Code, aus dem eine Anwendung besteht, setzt sich aus Anweisungen zusamm
   
 -   [Übereinstimmungsvergleiche](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

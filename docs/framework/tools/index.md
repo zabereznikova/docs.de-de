@@ -21,10 +21,15 @@ helpviewer_keywords:
   - "running .NET Framework tools"
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 caps.latest.revision: 65
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 63
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: baaf365a21661b377f8151e5d97ac16542aa2c36
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
 # .NET Framework Tools
 Die .NET Framework\-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  

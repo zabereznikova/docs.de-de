@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # &#220;bersicht &#252;ber die QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger über ein Element hält, z. B. über eine <xref:System.Windows.Controls.Button>.  In diesem Thema wird die QuickInfo vorgestellt und erläutert, wie Sie QuickInfo\-Inhalte erstellen und anpassen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_tooltip"></a>   
 ## Was ist eine QuickInfo?  

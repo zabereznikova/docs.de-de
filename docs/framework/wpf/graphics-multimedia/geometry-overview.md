@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # &#220;bersicht &#252;ber die Geometrie
 In dieser Übersicht wird beschrieben, wie die <xref:System.Windows.Media.Geometry>\-Klassen von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verwendet werden, um Formen zu beschreiben.  In diesem Thema werden auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry>\-Objekten und <xref:System.Windows.Shapes.Shape>\-Elementen verglichen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## Was ist eine Geometrie?  

@@ -38,7 +38,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl anze
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]können Sie mehrere Typen von Dialogfeldern, einschließlich Meldungsfelder, häufig verwendete Dialogfelder und benutzerdefinierte Dialogfelder erstellen. In diesem Thema wird erläutert, und die [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) enthält entsprechende Beispiele.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Meldungsfelder  

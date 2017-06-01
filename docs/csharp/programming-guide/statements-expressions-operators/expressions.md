@@ -1,83 +1,103 @@
 ---
-title: "Ausdr&#252;cke (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Ausdrücke"
-  - "Ausdrücke [C#]"
+title: "Ausdrücke (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+ms.date: 2017-05-11
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 79efbca3d8d0b32c83dc3909e0a33839ecc0ef3e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
-# Ausdr&#252;cke (C#-Programmierhandbuch)
-Ein *Ausdruck* ist eine Folge von mindestens einem Operanden und optionalen Operatoren, die zu einem einzelnen Wert, einem einzelnen Objekt, einer einzelnen Methode oder einem einzelnen Namespace ausgewertet werden kann.  Ausdrücke können aus einem literalen Wert, einem Methodenaufruf, einem Operator und dessen Operanden oder einem *einfachen Namen* bestehen.  Einfache Namen können der Name einer Variablen bzw. eines Typmembers, Methodenparameters, Namespaces oder Typs sein.  
+# <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
+Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
   
- Ausdrücke können Operatoren verwenden. Diese können wiederum andere Ausdrücke als Parameter oder Methodenaufrufe verwenden, deren Parameter wiederum andere Methodenaufrufe darstellen. Die Bandbreite der möglichen Ausdrücke reicht also von einfach bis sehr komplex.  Im Folgenden sind zwei Beispiele für Ausdrücke aufgeführt:  
+ Ausdrücke können Operatoren verwenden, die wiederum andere Ausdrücke als Parameter oder Methodenaufrufe verwenden können, deren Parameter wiederum andere Methodenaufrufe darstellen. Ausdrücke können also einfach aber auch sehr komplex sein. Nachstehend sind zwei Beispiele für Ausdrücke:  
   
+```csharp  
+((x < 10) && ( x > 5)) || ((x > 20) && (x < 25));
+   
+System.Convert.ToInt32("35");  
 ```  
-((x < 10) && ( x > 5)) || ((x > 20) && (x < 25))   
-System.Convert.ToInt32("35")  
-```  
   
-## Ausdruckswerte  
- In den meisten Zusammenhängen, in denen Ausdrücke verwendet werden, beispielsweise in Anweisungen oder Methodenparametern, muss der Ausdruck zu einem Wert ausgewertet werden.  Wenn x und y ganze Zahlen sind, ergibt der Ausdruck `x + y` einen numerischen Wert.  Der Ausdruck `new MyClass()` wird zu einem Verweis auf eine neue Instanz eines `MyClass`\-Objekts ausgewertet.  Der Ausdruck `myClass.ToString()` wird zu einer Zeichenfolge ausgewertet, da dies der Rückgabetyp der Methode ist.  Auch wenn ein Namespacename als Ausdruck klassifiziert ist, wird dieser jedoch nicht zu einem Wert ausgewertet und kann daher nicht als Endergebnis eines Ausdrucks auftreten.  Ein Namespacename kann nicht einem Methodenparameter übergeben, in einem neuen Ausdruck verwendet oder einer Variablen zugewiesen werden.  Er kann nur als Unterausdruck in einem größeren Ausdruck verwendet werden.  Das Gleiche gilt für Typen \(im Unterschied zu <xref:System.Type?displayProperty=fullName>\-Objekten\), Methodengruppennamen \(im Unterschied zu spezifischen Methoden\) sowie [add](../../../csharp/language-reference/keywords/add.md)\-Ereignisaccessoren und [remove](../../../csharp/language-reference/keywords/remove.md)\-Ereignisaccessoren.  
+## <a name="expression-values"></a>Ausdruckswerte  
+ In den meisten Fällen, in denen Ausdrücke verwendet werden, z.B. in Ausdrücken oder Methodenparametern, wird erwartet, dass der Ausdruck einen Wert ergibt. Wenn x und y ganze Zahlen sind, ergibt der Ausdruck `x + y` einen numerischen Wert. Der Ausdruck `new MyClass()` ergibt einen Verweis auf einen neue Instanz eines `MyClass`-Objekts. Der Ausdruck `myClass.ToString()` ergibt eine Zeichenfolge, da dies der Rückgabetyp der Methode ist. Obwohl ein Namespacename jedoch als Ausdruck klassifiziert ist, ergibt er keinen Wert und kann deshalb nie das Endergebnis eines Ausdrucks sein. Sie können keinen Namespacenamen einem Methodenparameter übergeben oder ihn in einem neuen Ausdruck verwenden bzw. ihn einer Variable zuweisen. Sie können ihn nur als Unterausdruck in einem größeren Ausdruck verwenden. Das gleiche gilt auch für Typen (im Unterschied zu <xref:System.Type?displayProperty=fullName>-Objekten), Methodengruppennamen (im Unterschied zu bestimmten Methoden) und Ereignisaccessoren [add](../../../csharp/language-reference/keywords/add.md) und [remove](../../../csharp/language-reference/keywords/remove.md).  
   
- Jeder Wert verfügt über einen zugeordneten Typ.  Wenn beispielsweise x und y Variablen vom Typ `int` sind, wird der Wert des Ausdrucks `x + y` ebenfalls als `int` typisiert.  Wenn der Wert einer Variablen eines anderen Typs zugewiesen wird, oder wenn x und y von unterschiedlichen Typen sind, werden die Regeln der Typkonvertierung angewendet.  Weitere Informationen über die Funktionsweise solcher Konvertierungen finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
+ Jeder Wert verfügt über einen zugeordneten Typ. Wenn z.B. x und y jeweils Variablen vom Typ `int` sind, wird der Wert des Ausdrucks `x + y` auch als `int` geschrieben. Wenn der Wert einer Variable eines anderen Typs zugewiesen ist oder wenn x und y unterschiedliche Typen sind, werden die Regeln der Typkonvertierung angewendet. Weitere Informationen darüber, wie Konvertierungen funktionieren, finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
-## Überläufe  
- Numerische Ausdrücke können Überläufe zur Folge haben, wenn ihr Wert größer ist als der maximale Wert des Typs des Werts.  Weitere Informationen finden Sie unter [Checked und Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) und [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
+## <a name="overflows"></a>Überläufe  
+ Numerische Ausdrücke können zu Überläufen führen, wenn der Wert größer als der Maximalwert des Typs des Werts ist. Weitere Informationen finden Sie [Checked und Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) und [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
-## Operatorrangfolge und Assoziativität  
- Die Auswertung eines Ausdrucks wird durch die Regeln der Assoziativität und der Operatorrangfolge bestimmt.  Weitere Informationen finden Sie unter [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md).  
+## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität  
+ Die Art und Weise, wie ein Ausdruck ausgewertet wird, unterliegt den Regeln der Assoziativität und Operatorrangfolge. Weitere Informationen finden Sie unter [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md).  
   
- Die meisten Ausdrücke, mit Ausnahme von Zuweisungsausdrücken und Ausdrücken für Methodenaufrufe, müssen in eine Anweisung eingebettet werden.  Weitere Informationen finden Sie unter [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
+ Die meisten Ausdrücke, außer Zuweisungsausdrücke und Methodenaufrufausdrücke, müssen in einer Anweisung eingebettet sein. Weitere Informationen finden Sie unter [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
   
-## Literale und einfache Namen  
- Die zwei einfachsten Typen von Ausdrücken sind Literale und einfache Namen.  Ein Literal ist ein konstanter Wert, der keinen Namen hat.  Im folgenden Codebeispiel sind sowohl `5` als auch `"Hello World"` literale Werte:  
+## <a name="literals-and-simple-names"></a>Literale und einfache Namen  
+ Die zwei einfachsten Typen von Ausdrücken sind Literale und einfache Namen. Ein Literal ist ein konstanter Wert, der keinen Namen besitzt. Im folgenden Codebeispiel sind z.B. `5` und `"Hello World"` jeweils Literalwerte:  
   
  [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
- Weitere Informationen zu literalen Werten finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).  
+ Weitere Informationen zu Literalen finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).  
   
- Im vorhergehenden Beispiel sind sowohl `i` als auch `s` einfache Namen, die lokale Variablen identifizieren.  Wenn diese Variablen in einem Ausdruck verwendet werden, wird der Name der Variablen zum aktuell am Speicherort der Variablen gespeicherten Wert ausgewertet.  Dies wird im folgenden Beispiel dargestellt:  
+ Im vorherigen Beispiel sind `i` und `s` jeweils einfache Namen, die lokale Variablen identifizieren. Wenn diese Variablen in einem Ausdruck verwendet werden, ergibt der Variablenname einen Wert, der derzeit am Speicherort der Variable im Speicher gespeichert ist. Dies wird im folgenden Beispiel gezeigt:  
   
  [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
-  
-## Aufrufausdrücke  
+## <a name="invocation-expressions"></a>Aufrufausdrücke  
  Im folgenden Codebeispiel ist der Aufruf von `DoWork` ein Aufrufausdruck.  
   
-```  
+```csharp
 DoWork();  
 ```  
   
- Für einen Methodenaufruf werden der Name der Methode \(entweder als Name wie im vorigen Beispiel oder als Ergebnis eines anderen Ausdrucks\) und eine Klammer mit allen Methodenparametern benötigt.  Weitere Informationen finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md).  Ein Delegataufruf verwendet den Namen des Delegaten mit den Methodenparametern in Klammern.  Weitere Informationen finden Sie unter [Delegaten](../../../csharp/programming-guide/delegates/index.md).  Wenn die Methode einen Wert zurückgibt, wertet der Methodenaufruf bzw. der Delegataufruf den Rückgabewert der Methode aus.  Methoden, die void zurückgeben, können in einem Ausdruck nicht anstelle eines Werts verwendet werden.  
+ Ein Methodenaufruf erfordert den Namen der Methode entweder als Name wie im vorherigen Beispiel oder als Ergebnis eines anderen Ausdrucks, gefolgt von einer Klammer und beliebigen Methodenparametern. Weitere Informationen finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md). Ein Delegataufruf verwendet den Namen eines Delegaten sowie Methodenparameter in Klammern. Weitere Informationen finden Sie unter [Delegaten](../../../csharp/programming-guide/delegates/index.md). Methodenaufrufe und Delegataufrufe ergeben den Rückgabewert der Methode, wenn die Methode einen Wert zurückgibt. Methoden, die „void“ zurückgeben, können nicht anstatt eines Werts in einem Ausdruck verwendet werden.  
+
+## <a name="query-expressions"></a>Abfrageausdrücke  
+ Die gleichen Regeln für Ausdrücke gelten allgemein für Abfrageausdrücke. Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md).  
   
-## Abfrageausdrücke  
- Die gleichen Regeln für Ausdrücke gelten im Allgemeinen für Abfrageausdrücke.  Weitere Informationen finden Sie unter [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md).  
+## <a name="lambda-expressions"></a>Lambdaausdrücke  
+ Lambdaausdrücke stellen „Inlinemethoden“ dar, die keinen Namen haben, jedoch über Eingabeparameter und mehrere Anweisungen verfügen können. Sie werden häufig in LINQ verwendet, um Argumente Methoden zu übergeben. Lambdaausdrücke werden entweder zu Delegaten oder Ausdrucksbaumstrukturen kompiliert. Dies hängt vom Kontext ab, in dem sie verwendet werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
-## Lambda\-Ausdrücke  
- Lambda\-Ausdrücke stellen "Inlinemethoden" dar, die keinen Namen haben, aber Eingabeparameter und mehrere Anweisungen umfassen können.  Sie werden häufig in LINQ verwendet, um Argumente an Methoden zu übergeben.  Lambda\-Ausdrücke werden, je nach dem Kontext, in dem sie verwendet werden, entweder zu Delegaten oder Ausdrucksbaumstrukturen kompiliert.  Weitere Informationen finden Sie unter [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+## <a name="expression-trees"></a>Ausdrucksbaumstrukturen  
+ Mithilfe von Ausdrucksbaumstrukturen können Ausdrücke als Datenstrukturen dargestellt werden. Sie werden häufig von LINQ-Anbietern verwendet, um Abfrageausdrücke in Code zu übersetzen, der in einem anderen Kontext aussagekräftig ist, z.B. als SQL-Datenbank. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
-## Ausdrucksbaumstrukturen  
- Ausdrucksbaumstrukturen aktivieren Ausdrücke, um als Datenstrukturen dargestellt zu werden.  Sie werden häufig von LINQ\-Anbietern zum Übersetzen von Abfrageausdrücken in für andere Kontexte, z. B. eine SQL\-Datenbank, verständlichen Code verwendet.  Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md).  
-  
-## Hinweise  
- Wenn in einem Ausdruck eine Variable, ein Objekteigenschaftenzugriff oder ein Objektindexerzugriff erkannt wird, wird der Wert dieses Elements als Wert des Ausdrucks verwendet.  In C\# kann ein Ausdruck an jeder Stelle positioniert sein, an der ein Wert oder Objekt erwartet wird, solange der Ausdruck letztlich zu dem erforderlichen Typ ausgewertet wird.  
-  
-## Enthaltenes Buchkapitel  
- [Variables and Expressions](http://go.microsoft.com/fwlink/?LinkId=221228) in [Beginning Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen
+
+C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrückskörperdefiniton für Methoden, Konstruktoren, Finalizer, Eigenschaften und Indexer angeben können. Weitere Informationen finden Sie unter [Ausdruckskörpermember](expression-bodied-members.md).
+
+## <a name="remarks"></a>Hinweise  
+ Wann immer eine Variable, eine Objekteigenschaft oder ein Objektindexerzugriff von einem Ausdruck identifiziert wird, wird der Wert dieses Elements als Wert des Ausdrucks verwendet. Ein Ausdruck kann dort in C# platziert werden, wo ein Wert oder Objekt benötigt wird, solange der Ausdruck letztendlich den geforderten Typ ergibt.  
+
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Delegaten](../../../csharp/programming-guide/delegates/index.md)   
  [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
  [Typen](../../../csharp/programming-guide/types/index.md)   
- [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
+ [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

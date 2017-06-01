@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -39,7 +40,7 @@ Sie können verknüpfte Daten anzeigen, indem Sie mithilfe von zwei oder mehr <x
   
  Verknüpfte Daten anzuzeigen, ziehen Sie Detailelemente, die die gleichen Mastertabelle befinden, aus der **Datenquellen** auf eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>Steuerelement.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Z. B. Wenn Sie eine Datenquelle, die einer Kundentabelle und einer verknüpften Auftragstabelle verfügt haben, Sie finden Sie in beide Tabellen als Knoten der obersten Ebene in der Strukturansicht der **Datenquellen** Fenster. Erweitern Sie den Knoten Kunden aus, sodass die Spalten angezeigt werden können. Beachten Sie, dass die letzte Spalte in der Liste einen erweiterbaren Knoten handelt, der die Orders-Tabelle darstellt. Dieser Knoten entspricht den verknüpften Bestellungen eines Kunden.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-related-data-in-two-datarepeater-controls"></a>Um verknüpfte Daten in zwei DataRepeater-Steuerelementen anzuzeigen.  
   

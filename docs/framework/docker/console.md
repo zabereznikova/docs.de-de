@@ -10,9 +10,9 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 42a7ca49641c6a3c029aa5feef5705bb5cfc5863
-ms.lasthandoff: 01/18/2017
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -26,7 +26,7 @@ Als Beispiel dient eine einfache Konsolenanwendung, die ein Argument akzeptiert 
 
 Zusätzlich zur Antwort wurde der Antwort auch der `Environment.MachineName` hinzugefügt, um den Unterschied zwischen der Ausführung der Anwendung im lokalen System oder in einem Windows-Container zu zeigen. Wenn die Anwendung lokal ausgeführt wird, wird der Name des lokalen Computers zurückgegeben. Bei Ausführung in einem Windows-Container wird die ID der Containersitzung zurückgegeben.
 
-Das vollständige Beispiel finden Sie im [dotnet/core-docs-Repository auf GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Sie müssen sich mit einigen Docker-Begriffen vertraut machen, bevor Sie damit beginnen, Ihre Anwendung in einen Container zu verlagern.
 

@@ -25,7 +25,7 @@ caps.handback.revision: 11
 # Optimieren der Leistung: Objektverhalten
 Wenn Sie das systeminterne Verhalten von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Objekten kennen, können Sie leichter zwischen Funktionalität und Leistung abwägen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Not_Removing_Event_Handlers"></a>   
 ## Durch nicht entfernte Ereignishandler am Objekt werden die Objekte möglicherweise als aktiv beibehalten  

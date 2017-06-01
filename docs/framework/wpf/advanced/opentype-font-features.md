@@ -23,7 +23,7 @@ caps.handback.revision: 37
 # Features f&#252;r OpenType-Schriftarten
 Dieses Thema enthält eine Übersicht über einige der wichtigsten Features von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType-Schriftarten  

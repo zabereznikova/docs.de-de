@@ -1,5 +1,5 @@
 ---
-title: "Leitfaden für C#"
+title: "Leitfaden für C# | Microsoft-Dokumentation"
 description: "Leitfaden für C#"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
-translationtype: Human Translation
-ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
-ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: b87601e339a73b7d9f3132d80496742317439ffa
+ms.contentlocale: de-de
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -24,10 +25,10 @@ Der Leitfaden für C# enthält zahlreiche Informationen über die C#-Sprache. Di
     - Beginnen Sie mit unserem Abschnitt [Tutorials](tutorials/index.md). Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Sie lernen die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen. Wenn Sie zunächst lieber die Informationen in der Übersicht lesen möchten, testen Sie unsere [Einführung in C#](tour-of-csharp/index.md). Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
 
 * Für neue C#-Entwickler: 
-    - Wenn Sie vorher schon entwickelt haben, aber neu bei C# sind, lesen Sie einfach die [Einführung in C#](tour-of-csharp/index.md). Sie lernen die grundlegende Syntax und Struktur der Sprache kennen und können die Einführung verwenden, um die Unterschiede zwischen C# und anderen von Ihnen verwendeten Sprachen kennenzulernen. Sie können auch die [Tutorials](tutorials/index.md) durchsuchen, um grundlegende C#-Programme zu testen. Oder Sie sehen sich die [C#-Konzepte](concepts.md) an, um die Funktionen von C# genau kennenzulernen.
+    - Wenn Sie vorher schon entwickelt haben, aber neu bei C# sind, lesen Sie einfach die [Einführung in C#](tour-of-csharp/index.md). Sie lernen die grundlegende Syntax und Struktur der Sprache kennen und können die Einführung verwenden, um die Unterschiede zwischen C# und anderen von Ihnen verwendeten Sprachen kennenzulernen. Sie können auch die [Tutorials](tutorials/index.md) durchsuchen, um grundlegende C#-Programme zu testen.
 
 * Erfahrene C#-Entwickler:
-    - Wenn Sie C# bereits verwendet haben, sollten Sie zunächst lesen, was sich in der neuesten Version der Sprache geändert hat. Informieren Sie sich unter [Neues in C#](whats-new/index.md) über die neuen Funktionen in der aktuellen Version. Erkunden Sie dann die [C#-Konzepte](concepts.md), die Sie genauer kennenlernen möchten.
+    - Wenn Sie C# bereits verwendet haben, sollten Sie zunächst lesen, was sich in der neuesten Version der Sprache geändert hat. Informieren Sie sich unter [Neues in C#](whats-new/index.md) über die neuen Funktionen in der aktuellen Version.
  
 ## <a name="how-the-c-guide-is-organized"></a>Organisation des Leitfadens für C#
 
@@ -45,15 +46,12 @@ Der Leitfaden für C# verfügt über sieben Abschnitte. Sie können diese nachei
 * [Neueste Funktionen](whats-new/index.md):
     - Informationen zu neuen Funktionen in der Sprache Informationen zu neuen Tools wie C# Interactive (die REPL von C#) und .NET Compiler Platform SDK. Sie lernen, wie sich die Sprache entwickelt. Sie werden sehen, wie die neuen Tools Ihre Produktivität bei der Erkundung der Sprache steigern und Aufgaben automatisieren. 
 
-* [C# Interactive](interactive/index.md):
-    - C# Interactive ist eine read-eval-print-Loop (REPL), die Sie zur interaktiven Erkundung der Sprache verwenden können. Sie kann auch verwendet werden, um die verschiedenen Bibliotheken und Frameworks zu erkunden, indem verschiedene Aktionen mit einem interaktiven Ansatz getestet werden. In diesem Abschnitt erfahren Sie, wie Sie C# Interactive installieren und starten und damit APIs erkunden. Sie erfahren außerdem, wie in C# Interactive getestete Klassen zur späteren Verwendung exportiert werden.  
-
-* [C#-Konzepte](concepts.md):
-    - Lernen Sie die Konzepte kennen, die für C#-Programmierer besonders nützlich sind. Dieser Abschnitt enthält mehrere End-to-End-Szenarien, die verschiedene Techniken für die C#-Entwicklung veranschaulichen. Der Schwerpunkt liegt auf der Sprache. Die Art der End-to-End-Szenarien beinhaltet allerdings, dass dieser Abschnitt mehrere Programme enthält, die die verschiedenen Frameworks und Bibliotheken veranschaulichen, die Teil des .NET-Ökosystems sind.
-
-* [.NET Compiler Platform SDK](roslyn/index.md):
-    - Mit dem .NET Compiler Platform SDK können Sie Komponenten schreiben, die Code analysieren und Vorschläge dazu unterbreiten oder Verbesserungen daran vornehmen. In diesem Abschnitt erfahren Sie, wie die APIs organisiert sind und wie Sie Code erstellen, der Regeln und Methoden für Ihr Team ermöglicht. Sie sehen auch Beispiele, End-to-End-Szenarien und Links zu anderen Bibliotheken mit weiteren Beispielen zur Verwendung dieser APIs.
-
+<!--* [C# Interactive](interactive/index.md):
+    - C# Interactive is a Read-Eval-Print Loop (REPL) that you can use to interactively explore the language. It can also be used to explore different libraries and frameworks by trying different actions using an interactive approach. In this section you'll learn how to install and start C# interactive, and how to explore APIs with it. You'll also learn how to use C# interactive to export tested classes for later use.  
+-->
+<!--* [.NET Compiler Platform SDK](roslyn/index.md):
+    - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
+-->
 * [Sprachreferenz](language-reference/index.md):
     - Dieser Abschnitt enthält das Referenzmaterial zur C#-Sprache. Dieses Material hilft Ihnen beim Verständnis der Syntax und der Semantik von C#. 
 

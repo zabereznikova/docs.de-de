@@ -23,7 +23,7 @@ caps.handback.revision: 12
 # TypeConverter und XAML
 Dieses Thema beschreibt zum ersten Mal, welchem Zweck die Typkonvertierung aus einer Zeichenfolge als allgemeines XAML\-Sprachfeature dient.  In .NET Framework ist die <xref:System.ComponentModel.TypeConverter>\-Klasse Teil der Implementierung für eine verwaltete benutzerdefinierte Klasse, die als Eigenschaftswert in der XAML\-Attributverwendung eingesetzt werden kann.  Wenn Sie eine benutzerdefinierte Klasse erstellen und möchten, dass Instanzen dieser Klasse als festlegbare XAML\-Attributwerte fungieren, müssen Sie unter Umständen ein <xref:System.ComponentModel.TypeConverterAttribute> auf die Klasse anwenden, eine benutzerdefinierte <xref:System.ComponentModel.TypeConverter>\-Klasse erstellen oder beides.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Typkonvertierungsbegriffe  
   

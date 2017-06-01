@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20e04ca70444de99076d3d59f98f19ee862a244a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Zugreifen auf die Anschlüsse des Computers (Visual Basic)
@@ -58,14 +59,14 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
   
 ## <a name="reference"></a>Verweis  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Beschreibt das `My.Computer.Ports`-Objekt und dessen Member.  
+ Beschreibt das `My.Computer.Ports`-Objekt und dessen Member  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
  Beschreibt die `SerialPortNames`-Eigenschaft, die eine Auflistung der Namen der seriellen Anschlüsse eines Computers abruft.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Beschreibt die `OpenSerialPort`-Methode, die ein <xref:System.IO.Ports.SerialPort?displayProperty=fullName>-Objekt erstellt und öffnet.  
+ Beschreibt die `OpenSerialPort`-Methode, mit der ein <xref:System.IO.Ports.SerialPort?displayProperty=fullName>-Objekt erstellt und geöffnet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  <xref:System.IO.Ports.SerialPort>  
- Beschreibt die <xref:System.IO.Ports.SerialPort>-Klasse von .NET-Framework.
+ Beschreibt die .NET Framework-Klasse <xref:System.IO.Ports.SerialPort>.

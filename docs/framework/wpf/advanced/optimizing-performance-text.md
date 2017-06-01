@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  Dieses Thema enthält Text leistungsempfehlungen gerendert.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Rendern von Text auf der Symbolebene  

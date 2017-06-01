@@ -64,7 +64,7 @@ Wenn ein Dienst in einer verwalteten Anwendung gehostet werden soll, betten Sie 
 8.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.ServiceHost>\-Klasse, wobei Sie ein <xref:System.Type>\-Objekt, das den Diensttyp darstellt, und den URI \(Uniform Resource Identifier\) der Basisadresse [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29> übergeben.Aktivieren Sie die Veröffentlichung von Metadaten, und rufen Sie die <xref:System.ServiceModel.ICommunicationObject.Open%2A>\-Methode für das <xref:System.ServiceModel.ServiceHost>\-Objekt auf, um den Dienst zu initialisieren und auf den Empfang von Nachrichten vorzubereiten.  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  
+     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
   
     > [!NOTE]
     >  In diesem Beispiel werden Standardendpunkte verwendet. Für diesen Dienst ist keine Konfigurationsdatei erforderlich.Wenn keine Endpunkte konfiguriert sind, wird von der Runtime ein Standardendpunkt für alle Basisadressen in jedem Dienstvertrag hinzugefügt, der vom Dienst implementiert wird.[!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten finden Sie unter [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  

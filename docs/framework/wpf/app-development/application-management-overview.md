@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # &#220;bersicht &#252;ber die Anwendungsverwaltung
 Alle Anwendungen neigen, eine einheitliche freizugeben, die von der Funktion festgelegt wird, an die Implementierung und Verwaltung von Anwendungen gelten soll.  Dieses Thema bietet eine Übersicht über die Funktionen in der <xref:System.Windows.Application>\-Klasse zum Erstellen und Verwalten von Anwendungen bereit.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Die Application\-Klasse  
  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]allgemeinen anwendungsspezifischen Funktionen wird in der <xref:System.Windows.Application>\-Klasse gekapselt.  Die <xref:System.Windows.Application>\-Klasse umfasst die folgenden Funktionen:  
@@ -133,7 +133,7 @@ Alle Anwendungen neigen, eine einheitliche freizugeben, die von der Funktion fes
 ## Lebensdauer der Anwendung  
  Die Lebensdauer einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Anwendung ist durch verschiedene Ereignisse gekennzeichnet, die von <xref:System.Windows.Application> ausgelöst werden. Sie informieren darüber, wann die Anwendung gestartet, aktiviert und deaktiviert sowie heruntergefahren wurde.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### Begrüßungsbildschirm  

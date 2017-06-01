@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # &#220;bersicht &#252;ber Multimedia
 Mit den Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] können Sie Audio\- und Videoinhalte in Ihre Anwendungen integrieren, um die Benutzerfreundlichkeit zu verbessern. In diesem Thema werden die Multimediafunktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="mediaapi"></a>   
 ## Medien\-API  

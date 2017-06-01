@@ -22,7 +22,7 @@ caps.handback.revision: 14
 # Lokalisierungsattribute und -kommentare
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]\-Quellcodes, die von Entwicklern geliefert werden, um Regeln und Hinweise für die Lokalisierung bereitzustellen.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Lokalisierungskommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare.  Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Lokalisierungs\-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen.  Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler einschließen möchte.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Localizer_Comments_"></a>   
 ## Lokalisierungskommentare  

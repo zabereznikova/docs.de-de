@@ -1,88 +1,111 @@
 ---
-title: "group-Klausel (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "group"
-  - "group_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "group-Klausel [C#]"
-  - "group-Schlüsselwort [C#]"
+title: group-Klausel (C#-Referenz) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- group
+- group_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- group keyword [C#]
+- group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
+ms.openlocfilehash: d054a0824e9f072d38c01c2894606c5c492a2481
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
-# group-Klausel (C#-Referenz)
-Die `group`\-Klausel gibt eine Sequenz von <xref:System.Linq.IGrouping%602>\-Objekten zurück, die Null oder mehr Elemente enthält, die dem Schlüsselwert für die Gruppe entsprechen.  Zum Beispiel können Sie eine Sequenz von Zeichenfolgen nach dem ersten Buchstaben in jeder Zeichenfolge gruppieren.  In diesem Fall ist der erste Buchstabe der Schlüssel und weist den Typ [char](../../../csharp/language-reference/keywords/char.md) auf. Er wird in der `Key`\-Eigenschaft jedes <xref:System.Linq.IGrouping%602>\-Objekts gespeichert.  Der Compiler leitet den Typ des Schlüssels ab.  
+# <a name="group-clause-c-reference"></a>group-Klausel (C#-Referenz)
+Die `group`-Klausel gibt eine Sequenz von <xref:System.Linq.IGrouping%602>-Objekten zurück, die null oder mehr Elemente enthalten, die mit dem Schlüsselwert für die Gruppe übereinstimmen. Sie können z.B. eine Sequenz von Zeichenfolgen entsprechend des ersten Buchstaben in jeder Zeichenfolge gruppieren. In diesem Fall ist der erste Buchstabe der Schlüssel, verfügt über einen Typ [char](../../../csharp/language-reference/keywords/char.md) und wird in der `Key`-Eigenschaft jedes <xref:System.Linq.IGrouping%602>-Objekts gespeichert. Der Compiler leiten den Typ des Schlüssels her.  
   
- Sie können einen Abfrageausdruck mit einer `group`\-Klausel beenden, wie im folgenden Beispiel gezeigt:  
+ Sie können einen Abfrageausdruck mit einer `group`-Klausel beenden, so wie in folgendem Beispiel gezeigt:  
   
  [!code-cs[cscsrefQueryKeywords#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_1.cs)]  
   
- Wenn Sie zusätzliche Abfrageoperationen für jede Gruppe durchführen möchten, können Sie einen temporären Bezeichner festlegen, indem Sie das [into](../../../csharp/language-reference/keywords/into.md)\-Kontextschlüsselwort verwenden.  Wenn Sie `into` verwenden, müssen Sie mit der Abfrage fortfahren und sie letztendlich entweder mit einer `select`\-Anweisung oder einer anderen `group`\-Klausel wie im folgenden Auszug gezeigt beenden:  
+ Wenn Sie zusätzliche Abfragevorgänge für jede Gruppe ausführen möchten, können Sie einen temporären Bezeichner mithilfe des kontextuellen Schlüsselworts [into](../../../csharp/language-reference/keywords/into.md) angeben. Wenn Sie `into` verwenden, müssen Sie mit der Abfrage fortfahren und sie entweder mit einer `select`-Anweisung oder einer anderen `group`-Klausel beenden, so wie im folgenden Auszug dargestellt:  
   
  [!code-cs[cscsrefQueryKeywords#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_2.cs)]  
   
- Ausführlichere Beispiele zur Verwendung von `group` mit und ohne `into` finden Sie im Beispielabschnitt in diesem Thema.  
+ Weitere vollständige Beispiele des Gebrauchs von `group` mit und ohne `into` stehen im Abschnitt über Beispiele in diesem Thema bereit.  
   
-## Auflisten der Ergebnisse einer Gruppenabfrage  
- Da die <xref:System.Linq.IGrouping%602>\-Objekte, die durch eine `group`\-Abfrage erzeugt wurden, im Grunde eine Liste mit Listen sind, müssen Sie eine geschachtelte [foreach](../../../csharp/language-reference/keywords/foreach-in.md)\-Schleife verwenden, um auf die Elemente in jeder Gruppe zuzugreifen.  Die äußere Schleife durchläuft die Gruppenschlüssel, und die innere Schleife durchläuft die Elemente in der Gruppe.  Eine Gruppe verfügt möglicherweise über einen Schlüssel, jedoch nicht über Elemente.  Die `foreach`\-Schleife, die die Abfrage in den vorherigen Codebeispielen ausführt, sieht folgendermaßen aus:  
+## <a name="enumerating-the-results-of-a-group-query"></a>Auflisten der Ergebnisse einer Gruppenabfrage  
+ Da die <xref:System.Linq.IGrouping%602>-Objekte, die von einer `group`-Abfrage erstellt wurden, praktisch eine Liste von Listen sind, müssen Sie eine geschachtelte [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Schleife verwenden, um auf die Elemente in jeder Gruppe zuzugreifen. Die äußere Schleife durchläuft die Gruppenschlüssel, und die innere Schleife durchläuft jedes Element in der Gruppe selbst. Eine Gruppe kann womöglich über einen Schlüssel verfügen, jedoch nicht über Elemente. Nachstehend finden Sie die `foreach`-Schleife, die die Abfrage in den vorherigen Codebeispielen ausführen:  
   
  [!code-cs[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_3.cs)]  
   
-## Schlüsseltypen  
- Gruppenschlüssel können ein beliebiger Typ sein, z. B. eine Zeichenfolge, ein integrierter numerischer Typ oder ein benutzerdefinierter benannter Typ bzw. anonymer Typ.  
+## <a name="key-types"></a>Schlüsseltypen  
+ Gruppenschlüssel können von jedem Typ sein, z.B. eine Zeichenfolge, ein integrierter numerischer Typ oder ein benutzerdefinierter benannter oder anonymer Typ.  
   
-### Gruppieren nach Zeichenfolge  
- In den vorherigen Codebeispielen wurde ein `char` verwendet.  Ein Zeichenfolgenschlüssel hätte mühelos stattdessen festgelegt werden können, z. B. der vollständige Nachname:  
+### <a name="grouping-by-string"></a>Gruppieren nach Zeichenfolge  
+ Das vorherige Codebeispiel verwendete einen `char`. Es hätte stattdessen einfach ein Zeichenfolgenschlüssel angegeben werden können, z.B. der vollständige letzte Name.  
   
  [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_4.cs)]  
   
-### Gruppieren nach bool  
- Im folgenden Beispiel wird die Verwendung eines booleschen Werts für einen Schlüssel gezeigt, um die Ergebnisse in zwei Gruppen zu teilen.  Beachten Sie, dass der Wert von einem Unterausdruck in der `group`\-Klausel erzeugt wird.  
+### <a name="grouping-by-bool"></a>Gruppieren nach Bool  
+ Das folgende Beispiel zeigt die Verwendung eines booleschen Werts für einen Schlüssel, um die Ergebnisse in zwei Gruppen zu unterteilen. Beachten Sie, dass der Wert durch einen Unterausdruck in der `group`-Klausel erstellt wird.  
   
  [!code-cs[cscsrefQueryKeywords#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_5.cs)]  
   
-### Gruppieren nach numerischem Bereich  
- Im nächsten Beispiel wird ein Ausdruck verwendet, um numerische Gruppenschlüssel zu erstellen, die einen prozentualen Bereich darstellen.  Beachten Sie die Auswahl von [let](../../../csharp/language-reference/keywords/let-clause.md) als geeigneten Speicherort, um ein Ergebnis eines Methodenaufrufs zu speichern, sodass Sie die Methode nicht zweimal in der `group`\-Klausel aufrufen müssen.  Beachten Sie in der `group`\-Klausel auch, dass der Code überprüft, ob der Student keinen Durchschnitt von Null hat, um eine Nulldivisionsausnahme zu vermeiden.  Weitere Informationen zum sicheren Verwenden von Methoden in Abfrageausdrücken finden Sie unter [Gewusst wie: Behandeln von Ausnahmen in Abfrageausdrücken](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).  
+### <a name="grouping-by-numeric-range"></a>Gruppieren nach numerischen Bereich  
+ Das nächste Beispiel verwendet einen Ausdruck, um einen nummerischen Gruppenschlüssel zu erstellen, der einen Prozentbereich darstellt. Beachten Sie den Gebrauch von [let](../../../csharp/language-reference/keywords/let-clause.md) an einer komfortablen Position zur Speicherung eines Ergebnisses eines Methodenaufrufs, damit Sie die Methode nicht zweimal in der `group`-Klausel aufrufen müssen. Beachten Sie außerdem, dass in der `group`-Klausel eine Ausnahme durch Nulldivision vermieden wird, indem der Code überprüft, dass der Student keinen Durchschnitt von 0 hat. Weitere Informationen zur sicheren Verwendung von Methoden in Abfrageausdrücken finden Sie unter [Vorgehensweise: Behandeln von Ausnahmen in Abfrageausdrücken](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).  
   
  [!code-cs[cscsrefQueryKeywords#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_6.cs)]  
   
-### Gruppieren nach zusammengesetzten Schlüsseln  
- Verwenden Sie einen zusammengesetzten Schlüssel, wenn Sie Elemente anhand mehr als einem Schlüssel gruppieren möchten.  Zusammengesetzte Schlüssel können Sie erstellen, indem Sie einen anonymen oder benannten Typ verwenden, der das Schlüsselelement enthalten soll.  Im folgenden Beispiel wird angenommen, dass eine Klasse `Person` mit Member mit den Namen `surname` und `city` deklariert wurde.  Die `group`\-Klausel bewirkt, dass eine separate Gruppe für jeden Satz an Personen mit dem gleichen Nachnamen und der gleichen Stadt erstellt werden kann.  
+### <a name="grouping-by-composite-keys"></a>Gruppieren nach zusammengesetzten Schlüsseln  
+ Verwenden Sie einen zusammengesetzten Schlüssel, wenn Sie Elemente gemäß mehrerer Schlüssel gruppieren möchten. Sie erstellen einen zusammengesetzten Schlüssel, indem Sie einen anonymen Typ oder einen benannten Typ verwenden, um das Schlüsselelement aufzunehmen. Im folgenden Beispiel wird davon ausgegangen, dass eine `Person`-Klasse mit Elementen namens `surname` und `city` deklariert wurde. Die `group`-Klausel bewirkt, dass eine separate Gruppe für jede Gruppe von Personen mit dem gleichen Nachnamen und der gleichen Stadt erstellt wird.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen.  Erstellen Sie eine Sonderklasse mit automatisch implementierten Eigenschaften für die Schlüssel, und überschreiben Sie dann die <xref:System.Object.Equals%2A>\-Methode und die <xref:System.Object.GetHashCode%2A>\-Methode.  Sie können auch eine Struktur verwenden, sodass es nicht unbedingt erforderlich ist, diese Methoden zu überschreiben.  Weitere Informationen finden Sie unter [Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und [How to: Query for Duplicate Files in a Directory Tree \(LINQ\)](../Topic/How%20to:%20Query%20for%20Duplicate%20Files%20in%20a%20Directory%20Tree%20\(LINQ\).md).  Das zuletzt genannte Thema zeigt anhand eines Codebeispiels, wie ein zusammengesetzter Schlüssel mit einem benannten Typ verwendet wird.  
+```csharp  
+group person by new {name = person.surname, city = person.city};  
+```  
   
-## Beispiel  
- Das folgende Beispiel zeigt das Standardmuster zum Sortieren von Quelldaten in Gruppen, wenn keine zusätzliche Abfragelogik auf die Gruppen angewendet wurde.  Dies wird als Gruppierung ohne Fortsetzung bezeichnet.  Die Elemente in einem Zeichenfolgenarray werden nach ihrem ersten Buchstaben gruppiert.  Das Ergebnis der Abfrage ist ein <xref:System.Linq.IGrouping%602>\-Typ, der eine öffentliche `Key`\-Eigenschaft vom Typ `char` und eine <xref:System.Collections.Generic.IEnumerable%601>\-Auflistung enthält, die wiederum jedes Element in der Gruppierung umfasst.  
+ Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen. Erstellen Sie eine bestimmte Klasse mithilfe automatisch implementierter Eigenschaften für die Schlüssel, und überschreiben Sie die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A>. Sie können auch eine Struktur verwenden. In diesem Fall müssen Sie diese Methoden nicht unbedingt außer Kraft setzen. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Das zweite Thema verfügt über ein Codebeispiel, das darstellt, wie ein zusammengesetzter Schlüssel mit benannten Typen verwendet wird.  
   
- Das Ergebnis einer `group`\-Klausel ist eine Sequenz von Sequenzen.  Verwenden Sie daher zum Zugriff auf die einzelnen Elemente in jeder zurückgegebenen Gruppe eine geschachtelte `foreach`\-Schleife in der Schleife, die die Gruppenschlüssel wie im folgenden Beispiel gezeigt durchläuft.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt das Standardmuster für das Sortieren von Quelldaten in Gruppen, wenn keine zusätzliche Abfragelogik auf die Gruppen angewendet wird. Dies wird Gruppierung ohne Fortsetzung genannt. Die Elemente in einem Zeichenfolgenarray werden gemäß des ersten Buchstabens gruppiert. Das Abfrageergebnis ist ein <xref:System.Linq.IGrouping%602>-Typ, der eine öffentliche `Key`-Eigenschaft des Typs `char` enthält sowie eine <xref:System.Collections.Generic.IEnumerable%601>-Auflistung, die jedes Element in der Gruppierung enthält.  
+  
+ Das Ergebnis einer `group`-Klausel ist eine Sequenz von Sequenzen. Verwenden Sie deshalb eine geschachtelte `foreach`-Schleife innerhalb der Schleife, die die Gruppenschlüssel durchläuft – so wie in folgendem Beispiel gezeigt – um auf die einzelnen Elemente innerhalb jeder zurückgegebenen Gruppe zuzugreifen.  
   
  [!code-cs[cscsrefQueryKeywords#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_7.cs)]  
   
-## Beispiel  
- Dieses Beispiel zeigt, wie Sie zusätzliche Logik auf die Gruppen anwenden können, nachdem Sie sie erstellt haben, indem Sie eine *Fortsetzung* mit `into` verwenden.  Weitere Informationen finden Sie unter [into](../../../csharp/language-reference/keywords/into.md).  Im folgenden Beispiel wird jede Gruppe abgefragt, um nur jene auszuwählen, deren Schlüsselwert ein Vokal ist.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt, wie zusätzliche Logik auf die Gruppen ausgeführt wird, nachdem Sie diese erstellt haben, indem eine *Fortsetzung* mit `into` verwendet wird. Weitere Informationen finden Sie unter [into](../../../csharp/language-reference/keywords/into.md). Das folgende Beispiel fragt jede Gruppe ab, wobei nur die Gruppe ausgewählt werden soll, dessen Schlüsselwert ein Vokal ist.  
   
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
-## Hinweise  
- Zum Zeitpunkt der Kompilierung werden `group`\-Klauseln in Aufrufe der <xref:System.Linq.Enumerable.GroupBy%2A>\-Methode übersetzt.  
+## <a name="remarks"></a>Hinweise  
+ Zur Kompilierzeit werden `group`-Klauseln in Aufrufe auf die <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.IGrouping%602>   
  <xref:System.Linq.Enumerable.GroupBy%2A>   
  <xref:System.Linq.Enumerable.ThenBy%2A>   
  <xref:System.Linq.Enumerable.ThenByDescending%2A>   
- [Abfrageschlüsselwörter \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ\-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Gewusst wie: Erstellen einer geschachtelten Gruppe](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
- [Gewusst wie: Gruppieren von Abfrageergebnissen](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
+ [Query keywords (LINQ) (Abfrageschlüsselwörter (LINQ))](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Vorgehensweise: Erstellen einer geschachtelten Gruppe](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
+ [Vorgehensweise: Gruppieren von Abfrageergebnissen](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
  [Gewusst wie: Ausführen einer Unterabfrage für eine Gruppierungsoperation](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+

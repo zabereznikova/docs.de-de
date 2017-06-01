@@ -46,7 +46,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 > [!NOTE]
 >  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und Loose [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Seiten, stellen keine eigenen Fenster zur Verfügung.  Stattdessen werden sie in von [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] bereitgestellten Fenstern gehostet.  Weitere Informationen finden Sie unter [Übersicht über WPF\-XAML\-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="TheWindowClass"></a>   
 ## Die Fensterklasse  
@@ -136,7 +136,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
 ## Fensterlebensdauer  
  Wie alle Klassen hat auch ein Fenster eine Lebensdauer, die mit dem erstmaligen Instanziieren beginnt. Anschließend wird es geöffnet, aktiviert, deaktiviert und schließlich geschlossen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Opening_a_Window"></a>   
 ### Öffnen eines Fensters  
@@ -414,7 +414,7 @@ Benutzer interagieren über Fenster mit eigenständigen [!INCLUDE[TLA#tla_wpf](.
   
  Außerdem können Sie die Darstellung und das Verhalten des Rahmens im Nicht\-Clientbereich ändern, indem Sie den Größenänderungsmodus, den Fensterstil und die Tatsache konfigurieren, ob es als Schaltfläche in der Desktoptaskleiste angezeigt wird.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resize_Mode"></a>   
 ### Größenänderungsmodus  

@@ -22,7 +22,7 @@ caps.handback.revision: 10
 # &#220;bersicht &#252;ber RichTextBox
 Das <xref:System.Windows.Controls.RichTextBox>\-Steuerelement ermöglicht es Ihnen, fortlaufenden Inhalt, einschließlich Absätze, Bilder, Tabellen und mehr, anzuzeigen oder zu bearbeiten.  In diesem Thema wird die <xref:System.Windows.Controls.TextBox>\-Klasse eingeführt. Außerdem sind Beispiele für ihre Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] enthalten.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## TextBox oder RichTextBox?  

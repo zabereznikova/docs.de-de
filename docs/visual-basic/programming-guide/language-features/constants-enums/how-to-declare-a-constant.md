@@ -49,9 +49,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 401d0feb85fccf94a25308d38c3c75198ef9294c
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -62,7 +63,7 @@ Sie verwenden die `Const` -Anweisung zum Deklarieren einer Konstante und legen S
   
  Die Konstante muss einen gültigen symbolischen Namen (die Regeln sind identisch mit denen für das Erstellen von Variablennamen) und einen Ausdruck aus der numerischen oder Zeichenfolgenausdruck Konstanten und Operatoren (aber keine Funktionsaufrufe) enthalten.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-declare-a-constant"></a>So deklarieren Sie eine Konstante  
   

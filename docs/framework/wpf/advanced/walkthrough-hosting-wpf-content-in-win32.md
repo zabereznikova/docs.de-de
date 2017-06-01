@@ -23,7 +23,7 @@ caps.handback.revision: 20
   
  Dieses Lernprogramm führt Sie durch die Anwendung [Beispiel für das Hosten von WPF\-Inhalt in einem Win32\-Fenster](http://go.microsoft.com/fwlink/?LinkID=160004), in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Inhalt in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster gehostet wird.  Dieses Beispiel kann auf das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster erweitert werden.   Da verwalteter und nicht verwalteter Code kombiniert werden muss, wird die Anwendung in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] geschrieben.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Anforderungen  

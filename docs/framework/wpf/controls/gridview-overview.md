@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # &#220;bersicht &#252;ber GridView
 Der <xref:System.Windows.Controls.GridView>\-Ansichtsmodus ist einer der Ansichtsmodi für ein <xref:System.Windows.Controls.ListView>\-Steuerelement.  Die <xref:System.Windows.Controls.GridView>\-Klasse und ihre unterstützenden Klassen ermöglichen Ihnen und Ihren Benutzern das Anzeigen von Elementauflistungen in einer Tabelle, die in der Regel Schaltflächen als interaktive Spaltenheader verwendet.  Dieses Thema führt die <xref:System.Windows.Controls.GridView>\-Klasse ein und gibt einen Überblick über ihre Verwendung.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## Was ist eine GridView\-Ansicht?  

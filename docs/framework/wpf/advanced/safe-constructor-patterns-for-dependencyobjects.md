@@ -23,7 +23,7 @@ caps.handback.revision: 11
 # Sichere Konstruktormuster f&#252;r DependencyObjects
 Im Allgemeinen sollten Klassenkonstruktoren keine Rückrufe wie virtuelle Methoden oder Delegate aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können.  Der Eintritt in das Virtuelle findet dann möglicherweise zu einem unvollständigen Initialisierungszustand eines Objekts statt.  Das Eigenschaftensystem selbst ruft jedoch Rückrufe als Teil des Systems von Abhängigkeitseigenschaften intern auf und stellt sie bereit.  Ein einfacher Vorgang wie das Festlegen eines Abhängigkeitseigenschaftswerts mit dem <xref:System.Windows.DependencyObject.SetValue%2A>\-Aufruf umfasst potenziell einen Rückruf in der Bestimmung.  Aus diesem Grund sollten Sie beim Festlegen von Abhängigkeitseigenschaftswerten im Text eines Konstruktors vorsichtig vorgehen, da dies zu Problemen führen kann, wenn der Typ als Basisklasse verwendet wird.  Es gibt ein bestimmtes Muster zum Implementieren von <xref:System.Windows.DependencyObject>\-Konstruktoren, mit dem gewisse Probleme mit Abhängigkeitseigenschaftenzuständen und den inhärenten Rückrufen vermieden werden können, wie hier aufgeführt.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## Virtuelle Methoden des Eigenschaftensystems  

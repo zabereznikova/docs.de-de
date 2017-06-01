@@ -50,9 +50,9 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 1.  Typ des Importprogramms zum Hinzufügen der `<extensions>` Element innerhalb der [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Clientkonfigurationsdatei.  
   
-     [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]
-     [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
-     [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  
+     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
   
 2.  Verwenden Sie in der Clientanwendung die <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName> oder <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> zum Auflösen der Metadaten das Importprogramm wird daraufhin automatisch ausgelöst.  
   

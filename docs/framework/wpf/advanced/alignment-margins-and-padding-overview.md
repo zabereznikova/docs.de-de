@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # &#220;bersicht &#252;ber Alignment, Margin und Padding
 Von der <xref:System.Windows.FrameworkElement>\-Klasse werden verschiedene Eigenschaften verfügbar gemacht, die verwendet werden können, um untergeordnete Elemente genau zu positionieren.  In diesem Thema werden vier der wichtigsten Eigenschaften erläutert: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  Es ist wichtig, die Auswirkungen dieser Eigenschaften zu verstehen, da sie die Grundlage zur Steuerung der Elementpositionierung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen darstellen.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## Einführung in die Elementpositionierung  

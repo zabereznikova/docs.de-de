@@ -1,98 +1,101 @@
 ---
-title: "Behandeln und Ausl&#246;sen von Ereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsentwicklung [.NET Framework], Ereignisse"
-  - "Delegatmodell für Ereignisse"
-  - "Ereignisse [.NET Framework]"
+title: "Behandeln und Auslösen von Ereignissen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- delegate model for events
+- application development [.NET Framework], events
+- events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 59e11b0da28f28008f4440ca5c88ca8210fc2191
+ms.lasthandoff: 04/08/2017
+
 ---
-# Behandeln und Ausl&#246;sen von Ereignissen
-Ereignisse in .NET Framework basieren auf dem Delegatmodell.  Das Delegatmodell folgt dem Beobachter\-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann.  Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert.  In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
+# <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
+Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
   
- Informationen zur Ereignisbehandlung bei [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]\-Apps finden Sie unter [Übersicht über Ereignisse und Routingereignisse](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
+ Informationen zur Ereignisbehandlung bei [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps finden Sie unter [Übersicht über Ereignisse und Routingereignisse (Windows Store-Apps)](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
   
-## Ereignisse  
- Ein Ereignis ist eine Meldung, die von einem Objekt gesendet wird, um das Auftreten einer Aktion zu signalisieren.  Die Aktion kann durch Benutzerinteraktion, wie das Anklicken einer Schaltfläche, verursacht werden, oder sie kann durch eine andere Programmlogik, wie das Ändern eines Eigenschaftswerts, ausgelöst werden.  Das Objekt, von dem das Ereignis ausgelöst wird, wird als *Ereignissender* bezeichnet.  Dem Ereignissender ist nicht bekannt, welches Objekt oder welche Methode die ausgelösten Ereignisse empfangen \(behandeln\) wird.  Das Ereignis ist in der Regel ein Member des Ereignissenders. Beispielsweise ist das <xref:System.Web.UI.WebControls.Button.Click>\-Ereignis ein Member der Klasse <xref:System.Web.UI.WebControls.Button>, und das <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>\-Ereignis ist ein Member der Klasse, von der die <xref:System.ComponentModel.INotifyPropertyChanged>\-Schnittstelle implementiert wird.  
+## <a name="events"></a>Ereignisse  
+ Ein Ereignis ist eine Meldung, die von einem Objekt gesendet wird, um das Auftreten einer Aktion zu signalisieren. Die Aktion kann durch Benutzerinteraktion, wie das Anklicken einer Schaltfläche, verursacht werden, oder sie kann durch eine andere Programmlogik, wie das Ändern eines Eigenschaftswerts, ausgelöst werden. Das Objekt, von dem das Ereignis ausgelöst wird, wird als *Ereignissender* bezeichnet. Dem Ereignissender ist nicht bekannt, welches Objekt oder welche Methode die ausgelösten Ereignisse empfangen (behandeln) wird. Das Ereignis ist in der Regel ein Member des Ereignissenders. Beispielsweise ist das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis ein Member der Klasse <xref:System.Web.UI.WebControls.Button>, und das <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>-Ereignis ist ein Member der Klasse, von der die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementiert wird.  
   
- Zum Definieren eines Ereignisses verwenden Sie entweder das Schlüsselwort `event` \(in C\#\) oder das Schlüsselwort `Event` \(in Visual Basic\) in der Signatur der Ereignisklasse und geben den Typ des Delegaten für das Ereignis an.  Delegaten werden im nächsten Abschnitt erläutert.  
+ Zum Definieren eines Ereignisses verwenden Sie entweder das Schlüsselwort `event` (in C#) oder das Schlüsselwort `Event` (in Visual Basic) in der Signatur der Ereignisklasse und geben den Typ des Delegaten für das Ereignis an. Delegaten werden im nächsten Abschnitt erläutert.  
   
- In der Regel fügen Sie zum Auslösen eines Ereignisses eine Methode hinzu, die als `protected` und `virtual` \(in C\#\) bzw. `Protected` und `Overridable` \(in Visual Basic\) gekennzeichnet ist.  Nennen Sie diese Methode `On`*EventName* \(zum Beispiel: `OnDataReceived`\).  Von dieser Methode sollte ein Parameter akzeptiert werden, der ein Ereignisdatenobjekt angibt.  Sie stellen diese Methode bereit, damit abgeleitete Klassen die Logik zum Auslösen des Ereignisses überschreiben können.  Eine abgeleitete Klasse sollte immer die `On`*EventName*\-Methode der Basisklasse aufrufen, um sicherzustellen, dass registrierte Delegaten das Ereignis empfangen.  
+ In der Regel fügen Sie zum Auslösen eines Ereignisses eine Methode hinzu, die als `protected` und `virtual` (in C#) bzw. `Protected` und `Overridable` (in Visual Basic) gekennzeichnet ist. Nennen Sie diese Methode `On`*EventName* (zum Beispiel `OnDataReceived`). Von dieser Methode sollte ein Parameter akzeptiert werden, der ein Ereignisdatenobjekt angibt. Sie stellen diese Methode bereit, damit abgeleitete Klassen die Logik zum Auslösen des Ereignisses überschreiben können. Eine abgeleitete Klasse sollte immer die `On`*EventName*-Methode der Basisklasse aufrufen, um sicherzustellen, dass registrierte Delegaten das Ereignis empfangen.  
   
- Im folgenden Beispiel wird die Deklaration eines Ereignisses namens `ThresholdReached`erläutert.  Das Ereignis wird dem <xref:System.EventHandler>\-Delegaten zugeordnet, und es wird in einer Methode namens `OnThresholdReached` ausgelöst.  
+ Im folgenden Beispiel wird die Deklaration eines Ereignisses namens `ThresholdReached`erläutert. Das Ereignis wird dem <xref:System.EventHandler>-Delegaten zugeordnet, und es wird in einer Methode namens `OnThresholdReached` ausgelöst.  
   
  [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
  [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
-## Delegaten  
- Ein Delegat ist ein Typ, der einen Verweis auf eine Methode enthält.  Ein Delegat wird mit einer Signatur deklariert, die den Rückgabetyp und die Parameter für die Methoden angibt, auf die er verweist. Er kann nur Verweise auf Methoden enthalten, die mit der Signatur übereinstimmen.  Ein Delegat entspricht insofern einem typsicheren Funktionszeiger oder einem Rückruf.  Mit einer Delegatdeklaration ist eine Delegatklasse ausreichend definiert.  
+## <a name="delegates"></a>Delegaten  
+ Ein Delegat ist ein Typ, der einen Verweis auf eine Methode enthält. Ein Delegat wird mit einer Signatur deklariert, die den Rückgabetyp und die Parameter für die Methoden angibt, auf die er verweist. Er kann nur Verweise auf Methoden enthalten, die mit der Signatur übereinstimmen. Ein Delegat entspricht insofern einem typsicheren Funktionszeiger oder einem Rückruf. Mit einer Delegatdeklaration ist eine Delegatklasse ausreichend definiert.  
   
- Delegaten können in .NET Framework vielfältig verwendet werden.  Im Kontext der Ereignisse ist ein Delegat ein Mittler \(oder ein zeigerähnlicher Mechanismus\) zwischen der Ereignisquelle und dem Code, mit dem das Ereignis behandelt wird.  Sie weisen einen Delegaten einem Ereignis zu, indem Sie den Delegattyp in der Ereignisdeklaration, wie im Beispiel des vorherigen Abschnitts veranschaulicht, einschließen.  Weitere Informationen zu Delegaten finden Sie unter der <xref:System.Delegate>\-Klasse.  
+ Delegaten können in .NET Framework vielfältig verwendet werden. Im Kontext der Ereignisse ist ein Delegat ein Mittler (oder ein zeigerähnlicher Mechanismus) zwischen der Ereignisquelle und dem Code, mit dem das Ereignis behandelt wird. Sie weisen einen Delegaten einem Ereignis zu, indem Sie den Delegattyp in der Ereignisdeklaration, wie im Beispiel des vorherigen Abschnitts veranschaulicht, einschließen. Weitere Informationen zu Delegaten finden Sie unter der <xref:System.Delegate>-Klasse.  
   
- .NET Framework stellt die <xref:System.EventHandler> und <xref:System.EventHandler%601>\-Delegaten zur Unterstützung der meisten Ereignisszenarien bereit.  Verwenden Sie den <xref:System.EventHandler>\-Delegaten für alle Ereignisse, in denen keine Ereignisdaten enthalten sind.  Verwenden Sie den <xref:System.EventHandler%601>\-Delegaten für Ereignisse, die Daten über das Ereignis enthalten.  Diese Delegaten verfügen über keinen Rückgabetypwert und akzeptieren zwei Parameter \(ein Objekt für die Ereignisquelle sowie ein Objekt für Ereignisdaten\).  
+ .NET Framework stellt die <xref:System.EventHandler>- und <xref:System.EventHandler%601> -Delegaten zur Unterstützung der meisten Ereignisszenarios bereit. Verwenden Sie den <xref:System.EventHandler>-Delegaten für alle Ereignisse, in denen keine Ereignisdaten enthalten sind. Verwenden Sie den <xref:System.EventHandler%601>-Delegaten für Ereignisse, die Daten über das Ereignis enthalten. Diese Delegaten verfügen über keinen Rückgabetypwert und akzeptieren zwei Parameter (ein Objekt für die Ereignisquelle sowie ein Objekt für Ereignisdaten).  
   
- Delegaten sind Multicastdelegaten, d. h., sie können Verweise auf mehrere Methoden für die Ereignisbehandlung enthalten.  Weitere Informationen finden Sie auf der <xref:System.Delegate>\-Referenzseite.  Delegaten bieten Flexibilität und eine genaue Steuerung bei der Ereignisbehandlung.  Ein Delegat fungiert als ein Ereignisverteiler für die Klasse, die das Ereignis auslöst, indem er eine Liste der registrierten Ereignishandler für das Ereignis verwaltet.  
+ Delegaten sind Multicastdelegaten, d. h., sie können Verweise auf mehrere Methoden für die Ereignisbehandlung enthalten. Weitere Informationen finden Sie auf der <xref:System.Delegate>-Referenzseite. Delegaten bieten Flexibilität und eine genaue Steuerung bei der Ereignisbehandlung. Ein Delegat fungiert als ein Ereignisverteiler für die Klasse, die das Ereignis auslöst, indem er eine Liste der registrierten Ereignishandler für das Ereignis verwaltet.  
   
- Für Szenarien, in denen die Delegaten <xref:System.EventHandler> und <xref:System.EventHandler%601> nicht funktionieren, können Sie einen Delegaten definieren.  Szenarien, für die Sie einen Delegaten definieren müssen, sind sehr selten, z. B. bei der Arbeit mit Code, von dem keine Generika erkannt werden.  Markieren Sie einen Delegaten in der Deklaration mit dem Schlüsselwort `delegate` \(in C\#\) bzw. dem Schlüsselwort `Delegate` \(in Visual Basic\).  Im folgenden Beispiel wird die Deklaration eines Delegaten namens `ThresholdReachedEventHandler` erläutert.  
+ Für Szenarios, in denen die Delegaten <xref:System.EventHandler> und <xref:System.EventHandler%601> nicht funktionieren, können Sie einen Delegaten definieren. Szenarien, für die Sie einen Delegaten definieren müssen, sind sehr selten, z. B. bei der Arbeit mit Code, von dem keine Generika erkannt werden. Markieren Sie einen Delegaten in der Deklaration mit dem Schlüsselwort `delegate` (in C#) bzw. dem Schlüsselwort `Delegate` (in Visual Basic). Im folgenden Beispiel wird die Deklaration eines Delegaten namens `ThresholdReachedEventHandler` erläutert.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
-## Ereignisdaten  
- Daten, die einem Ereignis zugewiesen sind, können durch eine Ereignisdatenklasse bereitgestellt werden.  Im .NET Framework werden viele Ereignisdatenklassen für die Verwendung in Ihren Anwendungen bereitgestellt.  Zum Beispiel ist die <xref:System.IO.Ports.SerialDataReceivedEventArgs>\-Klasse die Ereignisdatenklasse für das <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>\-Ereignis.  Das .NET Framework folgt einem Benennungsmuster, bei dem alle Ereignisdatenklassen auf `EventArgs` enden.  Sie bestimmen, welche Ereignisdatenklasse einem Ereignis zugeordnet wird, indem Sie den Delegaten nach dem Ereignis durchsuchen.  Zum Beispiel enthält der <xref:System.IO.Ports.SerialDataReceivedEventHandler>\-Delegat die <xref:System.IO.Ports.SerialDataReceivedEventArgs>\-Klasse als einen seiner Parameter.  
+## <a name="event-data"></a>Ereignisdaten  
+ Daten, die einem Ereignis zugewiesen sind, können durch eine Ereignisdatenklasse bereitgestellt werden. Im .NET Framework werden viele Ereignisdatenklassen für die Verwendung in Ihren Anwendungen bereitgestellt. Zum Beispiel ist die <xref:System.IO.Ports.SerialDataReceivedEventArgs>-Klasse die Ereignisdatenklasse für das <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>-Ereignis. Das .NET Framework folgt einem Benennungsmuster, bei dem alle Ereignisdatenklassen auf `EventArgs` enden. Sie bestimmen, welche Ereignisdatenklasse einem Ereignis zugeordnet wird, indem Sie den Delegaten nach dem Ereignis durchsuchen. Zum Beispiel enthält der <xref:System.IO.Ports.SerialDataReceivedEventHandler>-Delegat die <xref:System.IO.Ports.SerialDataReceivedEventArgs>-Klasse als einen seiner Parameter.  
   
- Die <xref:System.EventArgs>\-Klasse ist der Basistyp aller Ereignisdatenklassen.  <xref:System.EventArgs> ist auch die Klasse, die bei einem Ereignis verwendet wird, dem keine Daten zugeordnet sind.  Wenn Sie ein Ereignis erstellen, nur um andere Klassen über ein Geschehnis zu benachrichtigen, ohne dass Daten übergeben werden, schließen Sie die <xref:System.EventArgs>\-Klasse als zweiten Parameter im Delegaten ein.  Sie können den <xref:System.EventArgs.Empty?displayProperty=fullName>\-Wert übergeben, wenn keine Daten bereitgestellt werden.  Im <xref:System.EventHandler>\-Delegat ist die <xref:System.EventArgs>\-Klasse als Parameter enthalten.  
+ Die <xref:System.EventArgs>-Klasse ist der Basistyp aller Ereignisdatenklassen. <xref:System.EventArgs> ist auch die Klasse, die bei einem Ereignis verwendet wird, dem keine Daten zugeordnet sind. Wenn Sie ein Ereignis erstellen, nur um andere Klassen über ein Geschehnis zu benachrichtigen, ohne dass Daten übergeben werden, schließen Sie die <xref:System.EventArgs>-Klasse als zweiten Parameter im Delegaten ein. Sie können den <xref:System.EventArgs.Empty?displayProperty=fullName>-Wert übergeben, wenn keine Daten bereitgestellt werden. Im <xref:System.EventHandler>-Delegat ist die <xref:System.EventArgs>-Klasse als Parameter enthalten.  
   
- Wenn Sie eine benutzerdefinierte Ereignisdatenklasse erstellen möchten, erstellen Sie eine von <xref:System.EventArgs> abgeleitete Klasse, und stellen Sie dann alle Member bereit, die zum Übergeben der mit dem Ereignis verknüpften Daten erforderlich sind.  In der Regel sollten Sie dem Benennungsmuster von .NET Framework folgen und den Ereignisdatenklassennamen auf `EventArgs` enden lassen.  
+ Wenn Sie eine benutzerdefinierte Ereignisdatenklasse erstellen möchten, erstellen Sie eine von <xref:System.EventArgs> abgeleitete Klasse, und stellen Sie dann alle Member bereit, die zum Übergeben der mit dem Ereignis verknüpften Daten erforderlich sind. In der Regel sollten Sie dem Benennungsmuster von .NET Framework folgen und den Ereignisdatenklassennamen auf `EventArgs` enden lassen.  
   
- Im folgenden Beispiel wird eine Ereignisdatenklasse `ThresholdReachedEventArgs` veranschaulicht.  Darin sind Eigenschaften enthalten, die für das ausgelöste Ereignis spezifisch sind.  
+ Im folgenden Beispiel wird eine Ereignisdatenklasse `ThresholdReachedEventArgs` veranschaulicht. Darin sind Eigenschaften enthalten, die für das ausgelöste Ereignis spezifisch sind.  
   
  [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
  [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
-## Ereignishandler  
- Um auf ein Ereignis zu reagieren, definieren Sie eine Ereignishandlermethode im Ereignisempfänger.  Diese Methode muss der Signatur des Delegaten für das von Ihnen behandelte Ereignis entsprechen.  Im Ereignishandler führen Sie die Aktionen aus, die beim Auslösen des Ereignisses erforderlich sind, zum Beispiel das Sammeln von Benutzereingaben, nachdem der Benutzer auf eine Schaltfläche geklickt hat.  Um bei Auftreten des Ereignisses Benachrichtigungen zu empfangen, muss die Ereignishandlermethode das Ereignis abonnieren.  
+## <a name="event-handlers"></a>Ereignishandler  
+ Um auf ein Ereignis zu reagieren, definieren Sie eine Ereignishandlermethode im Ereignisempfänger. Diese Methode muss der Signatur des Delegaten für das von Ihnen behandelte Ereignis entsprechen. Im Ereignishandler führen Sie die Aktionen aus, die beim Auslösen des Ereignisses erforderlich sind, zum Beispiel das Sammeln von Benutzereingaben, nachdem der Benutzer auf eine Schaltfläche geklickt hat. Um bei Auftreten des Ereignisses Benachrichtigungen zu empfangen, muss die Ereignishandlermethode das Ereignis abonnieren.  
   
- Im folgenden Beispiel wird die Ereignishandlermethode `c_ThresholdReached` dargestellt, die der Signatur für den <xref:System.EventHandler>\-Delegaten entspricht.  Die Methode abonniert das `ThresholdReached`\-Ereignis.  
+ Im folgenden Beispiel wird die Ereignishandlermethode `c_ThresholdReached` dargestellt, die der Signatur für den <xref:System.EventHandler>-Delegaten entspricht. Die Methode abonniert das `ThresholdReached`-Ereignis.  
   
  [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
-## Statische und dynamische Ereignishandler  
- Mit dem .NET Framework können sich Abonnenten entweder statisch oder dynamisch für Ereignisbenachrichtigungen registrieren.  Statische Ereignishandler sind für die gesamte Lebensdauer der Klasse gültig, deren Ereignisse sie behandeln.  Dynamische Ereignishandler werden bei der Programmausführung explizit aktiviert und deaktiviert. Dies erfolgt in der Regel als Reaktion auf eine bedingte Programmlogik.  So können sie beispielsweise verwendet werden, wenn Ereignisbenachrichtigungen nur unter bestimmten Bedingungen erforderlich sind, oder wenn eine Anwendung mehrere Ereignishandler bereitstellt und über die Laufzeitbedingungen definiert wird, welcher davon verwendet wird.  Im Beispiel des vorherigen Abschnitts wird das dynamische Hinzufügen eines Ereignishandlers veranschaulicht.  Weitere Informationen finden Sie unter [Events](../Topic/Events%20\(Visual%20Basic\).md) und [Ereignisse](../Topic/Events%20\(C%23%20Programming%20Guide\).md).  
+## <a name="static-and-dynamic-event-handlers"></a>Statische und dynamische Ereignishandler  
+ Mit dem .NET Framework können sich Abonnenten entweder statisch oder dynamisch für Ereignisbenachrichtigungen registrieren. Statische Ereignishandler sind für die gesamte Lebensdauer der Klasse gültig, deren Ereignisse sie behandeln. Dynamische Ereignishandler werden bei der Programmausführung explizit aktiviert und deaktiviert. Dies erfolgt in der Regel als Reaktion auf eine bedingte Programmlogik. So können sie beispielsweise verwendet werden, wenn Ereignisbenachrichtigungen nur unter bestimmten Bedingungen erforderlich sind, oder wenn eine Anwendung mehrere Ereignishandler bereitstellt und über die Laufzeitbedingungen definiert wird, welcher davon verwendet wird. Im Beispiel des vorherigen Abschnitts wird das dynamische Hinzufügen eines Ereignishandlers veranschaulicht. Weitere Informationen finden Sie unter [Ereignisse (Visual Basic)](http://msdn.microsoft.com/library/8fb0353a-e41b-4e23-b78f-da65db832f70) und [Ereignisse (C#-Programmierhandbuch)](http://msdn.microsoft.com/library/a8e51b22-d294-44fb-9539-0072f06c4cb3).  
   
-## Auslösen mehrerer Ereignisse  
- Wenn von der Klasse mehrere Ereignisse ausgelöst werden, generiert der Compiler ein Feld pro Ereignisdelegatinstanz.  Ist die Anzahl der Ereignisse sehr hoch, wird u. U. zu viel Speicher beansprucht, wenn für jeden Delegaten ein Feld generiert wird.  Für solche Situationen werden im .NET Framework Ereigniseigenschaften bereitgestellt, die Sie mit einer weiteren beliebig wählbaren Datenstruktur zum Speichern von Ereignisdelegaten verwenden können.  
+## <a name="raising-multiple-events"></a>Auslösen mehrerer Ereignisse  
+ Wenn von der Klasse mehrere Ereignisse ausgelöst werden, generiert der Compiler ein Feld pro Ereignisdelegatinstanz. Ist die Anzahl der Ereignisse sehr hoch, wird u. U. zu viel Speicher beansprucht, wenn für jeden Delegaten ein Feld generiert wird. Für solche Situationen werden im .NET Framework Ereigniseigenschaften bereitgestellt, die Sie mit einer weiteren beliebig wählbaren Datenstruktur zum Speichern von Ereignisdelegaten verwenden können.  
   
- Ereigniseigenschaften bestehen aus Ereignisdeklarationen, die von Ereignisaccessoren begleitet werden.  Ereignisaccessoren sind die von Ihnen definierten Methoden, mit denen Ereignisdelegatinstanzen der Speicherdatenstruktur hinzugefügt oder daraus entfernt werden können.  Beachten Sie, dass Ereigniseigenschaften langsamer als Ereignisfelder sind, da jeder Ereignisdelegat abgerufen werden muss, bevor er aufgerufen werden kann.  Sie müssen daher einen Kompromiss zwischen hoher Speicherauslastung und verminderter Geschwindigkeit finden.  Wenn die Klasse viele Ereignisse definiert, die selten ausgelöst werden, können Sie Ereigniseigenschaften implementieren.  Weitere Informationen finden Sie unter [Gewusst wie: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Ereigniseigenschaften bestehen aus Ereignisdeklarationen, die von Ereignisaccessoren begleitet werden. Ereignisaccessoren sind die von Ihnen definierten Methoden, mit denen Ereignisdelegatinstanzen der Speicherdatenstruktur hinzugefügt oder daraus entfernt werden können. Beachten Sie, dass Ereigniseigenschaften langsamer als Ereignisfelder sind, da jeder Ereignisdelegat abgerufen werden muss, bevor er aufgerufen werden kann. Sie müssen daher einen Kompromiss zwischen hoher Speicherauslastung und verminderter Geschwindigkeit finden. Wenn die Klasse viele Ereignisse definiert, die selten ausgelöst werden, können Sie Ereigniseigenschaften implementieren. Weitere Informationen finden Sie unter [Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|**Beschreibung**|  
-|-----------|----------------------|  
-|[Gewusst wie: Auslösen und Behandeln von Ereignissen](../../../docs/standard/events/how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
-|[Gewusst wie: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
+|Titel|Beschreibung|  
+|-----------|-----------------|  
+|[Vorgehensweise: Auslösen und Behandeln von Ereignissen](../../../docs/standard/events/how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
+|[Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
 |[Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern.md)|Das Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann, wird beschrieben.|  
-|[Gewusst wie: Verarbeiten von Ereignissen in einer Web Forms\-Anwendung](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms\-Steuerelement ausgelöst wird, veranschaulicht.|  
+|[Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms-Steuerelement ausgelöst wird, veranschaulicht.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.EventHandler>   
  <xref:System.EventHandler%601>   
  <xref:System.EventArgs>   
  <xref:System.Delegate>   
- [Ereignis\- und Routingereignisübersicht \(Windows\-Speicher\-Apps\)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [Events](../Topic/Events%20\(Visual%20Basic\).md)   
- [Ereignisse](../Topic/Events%20\(C%23%20Programming%20Guide\).md)
+ [Übersicht über Ereignisse und Routingereignisse (Windows Store-Apps)](http://go.microsoft.com/fwlink/?LinkId=261485)   
+ [Ereignisse](http://msdn.microsoft.com/library/8fb0353a-e41b-4e23-b78f-da65db832f70)   
+ [Ereignisse](http://msdn.microsoft.com/library/a8e51b22-d294-44fb-9539-0072f06c4cb3)

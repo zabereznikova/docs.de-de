@@ -25,7 +25,7 @@ Das Niederschreiben von Notizen und Kommentaren auf Papierdokumenten ist eine so
   
  Dieses Thema bietet eine Übersicht über verschiedene häufig verwendete Anmerkungstypen, insbesondere Kurznotizen und Hervorhebungen, und zeigt, wie [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] diese Anmerkungstypen in Anwendungen über die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Dokumentanzeigesteuerelemente ermöglicht.  Zu den [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Dokumentanzeigesteuerelementen, die Anmerkungen unterstützen, gehören die Elemente <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> sowie von <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitete Steuerelemente wie <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="caf1_type_stickynotes"></a>   
 ## Kurznotizen  

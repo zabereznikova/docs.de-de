@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen aus einer Textdatei mit fester Breite in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Lesen aus einer Textdatei mit fester Breite in Visual Basic | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,13 +34,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1ce67620d96a35ccf1223cc4de9d34ca1aaa722
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f0cd02a26be70d2d3272ecd56b11e31e3d26f83a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Vorgehensweise: Lesen aus einer Textdatei mit fester Breite in Visual Basic
+# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Gewusst wie: Lesen aus einer Textdatei mit fester Breite in Visual Basic
 Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien wie Protokolle einfach und effizient zu analysieren.  
   
  Die `TextFieldType`-Eigenschaft definiert, ob es sich bei der analysierten Datei um eine Datei mit Trennzeichen oder mit Textfeldern fester Breite handelt. In einer Textdatei mit fester Breite kann das Feld am Ende über eine variable Breite verfügen. Um anzugeben, dass das Feld am Ende eine variable Breite besitzt, definieren Sie seine Breite kleiner als oder gleich 0 (null).  
@@ -75,11 +76,11 @@ Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien
   
 -   Die angegebene Datei ist nicht vorhanden (<xref:System.IO.FileNotFoundException>).  
   
--   Eine teilweise vertrauenswürdige Situation, in der der Benutzer nicht über ausreichende Berechtigungen für den Dateizugriff verfügt  (<xref:System.Security.SecurityException>).  
+-   Eine teilweise vertrauenswürdige Situation, in der der Benutzer nicht über ausreichende Berechtigungen für den Dateizugriff verfügt. (<xref:System.Security.SecurityException>).  
   
 -   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Benutzer verfügt nicht über ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
+-   Der Benutzer hat keine ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

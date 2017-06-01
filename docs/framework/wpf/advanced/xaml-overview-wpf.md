@@ -33,7 +33,7 @@ caps.handback.revision: 50
 # &#220;bersicht &#252;ber XAML (WPF)
 In diesem Thema werden die Funktionen der Sprache XAML beschrieben, und es wird gezeigt, wie Sie mithilfe von XAML [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen schreiben können.  Es wird in erster Linie die Implementierung von XAML in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] beschrieben.  XAML stellt ein größeres Sprachkonzept dar als [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_xaml"></a>   
 ## Was ist XAML?  

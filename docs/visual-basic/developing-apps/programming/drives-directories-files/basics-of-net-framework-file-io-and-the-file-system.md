@@ -36,16 +36,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9623d1c3076d622d69a0f7c4e711274f6e244023
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f471bac04a853e5876b9da52b7b858e1e1766e28
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
-Klassen im <System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
+Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
   
- Der <System.IO>-Namespace enthält die Klassen <xref:System.IO.File> und <xref:System.IO.Directory>, die die Funktionalität von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] bereitstellen, die Dateien und Verzeichnisse ändert. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Diesen Klassen sind die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> zugeordnet, die den Benutzern der `My`-Funktion bekannt sind. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+ Der <xref:System.IO>-Namespace enthält die <xref:System.IO.File>- und <xref:System.IO.Directory>-Klassen, die die Funktionalität von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] bereitstellen, die Dateien und Verzeichnisse verändert. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> werden diesen Klassen zugeordnet und sind den Benutzern der `My`-Funktion bekannt. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
 >  Weitere Themen in diesem Abschnitt verwenden das Objekt `My.Computer.FileSystem` anstelle der `System.IO` -Klassen zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen. Das Objekt `My.Computer.FileSystem` dient in erster Linie zur Verwendung in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Programmen. `System.IO`-Klassen sind für die Verwendung durch eine beliebige Sprache vorgesehen, die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], einschließlich [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], unterstützen.  
@@ -67,9 +68,9 @@ Klassen im <System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und
  Weitere Informationen finden Sie unter [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
   
 ## <a name="types-of-streams"></a>Arten von Streams  
- In [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] wird ein Datenstrom durch die Klasse <xref:System.IO.Stream> dargestellt, die die abstrakte Klasse für alle anderen Datenströme bildet. Sie können eine Instanz der Klasse <xref:System.IO.Stream> nicht direkt erstellen, sondern müssen eine der Klassen verwenden, die diese implementiert.  
+ In [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] wird ein Stream von der <xref:System.IO.Stream>-Klasse dargestellt, die die abstrakte Klasse für alle anderen Streams bildet. Sie können nicht direkt eine Instanz der <xref:System.IO.Stream>-Klasse erstellen, doch Sie müssen eine der Klassen verwenden, die diese implementiert.  
   
- Es gibt viele Arten von Datenströmen, doch für die Arbeit mit Dateieingabe und -ausgabe (E/A) sind die wichtigsten Typen die <xref:System.IO.FileStream>-Klasse, die eine Möglichkeit bietet, aus Dateien zu lesen und in diese zu schreiben, sowie die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Klasse, die die Möglichkeit bietet, Dateien und Verzeichnisse in einem isolierten Speicher zu erstellen. Andere Streams, die für die Arbeit mit Dateieingabe und -ausgabe verwendet werden können, sind:  
+ Es existieren viele Arten von Streams, doch für die Arbeit mit Dateieingabe und-ausgabe sind die wichtigsten Typen die <xref:System.IO.FileStream>-Klasse, die eine Möglichkeit bietet, aus Dateien zu lesen und in diese zu schreiben sowie die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Klasse, die die Möglichkeit bietet, Dateien und Verzeichnisse in einem isolierten Speicher zu erstellen. Andere Streams, die für die Arbeit mit Dateieingabe und -ausgabe verwendet werden können, sind:  
   
 -   <xref:System.IO.BufferedStream>  
   
@@ -92,9 +93,9 @@ Klassen im <System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und
 |Entschlüsseln von Daten|[Entschlüsseln von Daten](https://msdn.microsoft.com/library/te15te69.aspx)|  
   
 ## <a name="file-access-and-attributes"></a>Dateizugriff und Dateiattribute  
- Mit den Enumerationen <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> und <xref:System.IO.FileShare> können Sie steuern, wie Dateien erstellt, geöffnet und freigegeben werden; diese Enumerationen enthalten die von den Konstruktoren der <xref:System.IO.FileStream>-Klasse verwendeten Flags. Wenn Sie z.B. einen neuen <xref:System.IO.FileStream> öffnen oder erstellen, können Sie über die <xref:System.IO.FileMode>-Enumeration angeben, ob die Datei zum Anfügen geöffnet ist, ob eine neue Datei erstellt wird, falls die angegebene Datei nicht vorhanden ist, ob die Datei überschrieben wird usw.  
+ Sie können steuern, wie Dateien erstellt, geöffnet und mit den Enumerationen <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> und <xref:System.IO.FileShare> freigegeben werden, die die von den Konstruktoren der <xref:System.IO.FileStream>-Klasse verwendeten Flags enthalten. Wenn Sie z.B. einen neuen <xref:System.IO.FileStream> öffnen oder erstellen, lässt die <xref:System.IO.FileMode>-Enumeration zu, dass Sie angeben, ob die Datei zum Anfügen geöffnet ist, ob eine neue Datei erstellt wird, falls die angegebene Datei nicht vorhanden ist, ob die Datei überschrieben wird usw.  
   
- Die xref:System.IO.FileAttributes>-Enumeration ermöglicht das Sammeln dateispezifischer Informationen. Die <xref:System.IO.FileAttributes>-Enumeration gibt die gespeicherten Attribute der Datei zurück, die z.B. festlegen, ob sie komprimiert, verschlüsselt, ausgeblendet, schreibgeschützt, ein Archiv, ein Verzeichnis, eine Systemdatei oder eine temporäre Datei ist.  
+ Die <xref:System.IO.FileAttributes>-Enumeration ermöglicht das Sammeln von dateispezifischen Informationen. Die <xref:System.IO.FileAttributes>-Enumeration gibt die gespeicherten Attribute der Datei zurück, z.B. ob sie komprimiert, verschlüsselt, ausgeblendet, schreibgeschützt, ein Archiv, ein Verzeichnis, eine Systemdatei oder eine temporäre Datei ist.  
   
  In der folgenden Tabelle sind die Tasks bezüglich Dateizugriff und Dateiattributen aufgelistet.  
   
@@ -104,7 +105,7 @@ Klassen im <System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dateiberechtigungen  
- Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann über die <xref:System.Security.Permissions.FileIOPermission>-Klasse erfolgen. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] und [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) und <xref:System.Security.Permissions.FileIOPermission>.  
+ Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann mit der <xref:System.Security.Permissions.FileIOPermission>-Klasse vorgenommen werden. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] und [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) und unter <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Isolierte Dateispeicherung  
  Die isolierte Speicherung versucht die Probleme zu lösen, die bei der Arbeit mit Dateien auftreten, wenn der Benutzer oder der Code nicht die notwendigen Berechtigungen aufweist. Die isolierte Speicherung weist jedem Benutzer ein Datendepot zu, das einen oder mehrere Speicher enthalten kann. Speicher können voneinander nach Benutzer und Assembly isoliert werden. Nur der Benutzer oder die Assembly, der bzw. die einen Speicher erstellt hat, verfügt über Zugriff auf ihn. Ein Speicher verhält sich wie ein vollständiges virtuelles Dateisystem. Sie können innerhalb eines Speichers Verzeichnisse und Dateien erstellen und bearbeiten.  
@@ -122,7 +123,7 @@ Klassen im <System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und
 |Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
   
 ## <a name="file-events"></a>Dateiereignisse  
- Mit der <xref:System.IO.FileSystemWatcher>-Komponente können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer überwachen, auf den Sie über das Netzwerk zugreifen können. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, wird mindestens ein Ereignis ausgelöst, in einem Puffer gespeichert und zur Verarbeitung an die <xref:System.IO.FileSystemWatcher>-Komponente übergeben.  
+ Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Datenströmen](https://msdn.microsoft.com/library/e4y2dch9)   

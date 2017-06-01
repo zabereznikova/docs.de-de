@@ -25,7 +25,7 @@ caps.handback.revision: 16
 # R&#252;ckrufe und Validierung von Abh&#228;ngigkeitseigenschaften
 In diesem Thema wird erläutert, wie Abhängigkeitseigenschaften unter Verwendung alternativer benutzerdefinierter Implementierungen für eigenschaftsbezogene Features erstellt werden, z. B. Validierungsbestimmung, Rückrufe, die aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher äußerer Einflüsse auf die Wertbestimmung.  In diesem Thema werden auch Szenarien diskutiert, bei denen eine Erweiterung der Standardsystemverhaltensweisen von Eigenschaften mithilfe dieser Verfahren angemessen ist.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

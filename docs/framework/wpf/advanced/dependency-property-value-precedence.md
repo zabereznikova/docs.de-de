@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # Priorit&#228;t von Abh&#228;ngigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird beschrieben, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Eigenschaftensystems den Wert einer [Abhängigkeitseigenschaft](GTMT) beeinflussen kann und mit welcher Priorität Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

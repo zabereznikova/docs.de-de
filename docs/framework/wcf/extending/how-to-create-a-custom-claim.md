@@ -59,7 +59,7 @@ Die identitätsmodellinfrastruktur in [!INCLUDE[indigo1](../../../../includes/in
          Im folgenden Codebeispiel wird ein benutzerdefinierter Ressourcetyp mit der Bezeichnung `MyResourceType` definiert.  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
-         [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  
+         <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  -->  
   
     3.  Wählen Sie ein von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definiertes Recht oder einen eindeutigen Wert für ein benutzerdefiniertes Recht aus.  
   
@@ -70,7 +70,7 @@ Die identitätsmodellinfrastruktur in [!INCLUDE[indigo1](../../../../includes/in
          Das folgende Codebeispiel erstellt einen benutzerdefinierten Anspruch mit einem Anspruchstyp `http://example.org/claims/complexcustomclaim`, einem benutzerdefinierten Ressourcentyp `MyResourceType`, und mit der <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> rechten.  
   
      [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
-     [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  
+     <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  -->  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht, wie ein benutzerdefinierter Anspruch mit einem primitiven Ressourcentyp und ein benutzerdefinierter Anspruch mit einem nicht primitiven Ressourcentyp erstellt wird.  

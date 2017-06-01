@@ -28,7 +28,7 @@ caps.handback.revision: 24
 # Benutzerdefinierte Abh&#228;ngigkeitseigenschaften
 In diesem Thema sind die Gründe beschrieben, aus denen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungs\- und Komponentenentwickler ggf. benutzerdefinierte [Abhängigkeitseigenschaften](GTMT) erstellen. Außerdem werden die Implementierungsschritte und einige Implementierungsoptionen beschrieben, mit denen Sie die Leistung, die Verwendbarkeit oder die Vielseitigkeit der Eigenschaft verbessern können.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  

@@ -26,7 +26,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
  Die <xref:System.Windows.Input.Keyboard>\-Klasse gilt vornehmlich dem Tastaturfokus und die <xref:System.Windows.Input.FocusManager>\-Klasse dem logischen Fokus, dies ist jedoch keine absolute Unterscheidung.  Ein Element mit Tastaturfokus verfügt auch über den logischen Fokus, ein Element mit logischem Fokus weist jedoch nicht unbedingt auch den Tastaturfokus auf.  Dies wird deutlich, wenn Sie mit der <xref:System.Windows.Input.Keyboard>\-Klasse das Element mit dem Tastaturfokus festlegen, da das Element hierdurch auch den logischen Fokus erhält.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Keyboard_Focus"></a>   
 ## Tastaturfokus  

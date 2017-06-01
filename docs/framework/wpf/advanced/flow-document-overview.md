@@ -24,7 +24,7 @@ caps.handback.revision: 29
 # &#220;bersicht &#252;ber Flussdokumente
 Flussdokumente sollen die Anzeige und die Lesbarkeit optimieren.  Flussdokumente sind nicht auf ein vordefiniertes Layout festgelegt, sondern passen Inhalte dynamisch an und bauen sie neu auf. Dies geschieht auf der Basis von Laufzeitvariablen, wie z. B. Fenstergröße, Geräteauflösung und optionalen Benutzereinstellungen.  Außerdem bieten Flussdokumente erweiterte Dokumentfeatures, z. B. Paginierung und Spalten.  Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_flow_document"></a>   
 ## Was ist ein Flussdokument?  

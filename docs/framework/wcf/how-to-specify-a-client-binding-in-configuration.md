@@ -49,7 +49,7 @@ In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechner
   
 4.  Svcutil.exe generiert auch die Konfiguration für den Client, verwendet die <xref:System.ServiceModel.BasicHttpBinding> Klasse. Nennen Sie diese Datei bei Verwendung von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] "App.config". Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
   
-     [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
   
 5.  Erstellen Sie eine Instanz des `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
   

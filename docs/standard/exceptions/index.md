@@ -1,130 +1,82 @@
 ---
-title: "Behandeln und Ausl&#246;sen von Ausnahmen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Common Language Runtime, Ausnahmen"
-  - "Fehler [.NET Framework], Ausnahmen"
-  - "Ausnahmen [.NET Framework]"
-  - "Ausnahmen [.NET Framework], Behandlung"
-  - "Ausnahmen [.NET Framework], Auslösen"
-  - "Filtern von Ausnahmen"
-  - "Laufzeit, Ausnahmen"
+title: "Behandeln und Auslösen von Ausnahmen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions [.NET Framework], handling
+- runtime, exceptions
+- filtering exceptions
+- errors [.NET Framework], exceptions
+- exceptions [.NET Framework], throwing
+- exceptions [.NET Framework]
+- common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 caps.latest.revision: 16
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c8c5962db342dba6ff22c409d145af5e628eed3d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/04/2017
+
 ---
-# Behandeln und Ausl&#246;sen von Ausnahmen
-<a name="top"></a> Anwendungen müssen in der Lage sein, Fehler zu behandeln, die während der Ausführung konsistent auftreten.  Die Common Language Runtime \(CLR\) verfügt über ein Modell zur einheitlichen Fehlerbenachrichtigung für Anwendungen. Alle Vorgänge in .NET Framework geben  Fehler durch Auslösen von Ausnahmen an.  
-  
- Dieses Thema enthält folgende Abschnitte:  
-  
--   [Ausnahmen in .NET Framework](#exceptions_in_the_net_framework)  
-  
--   [Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden](#exceptions_vs_traditional_errorhandling_methods)  
-  
--   [Verwalten von Ausnahmen durch die Laufzeit](#how_the_runtime_manages_exceptions)  
-  
--   [Filtern von Laufzeitausnahmen](#filtering_runtime_exceptions)  
-  
--   [Verwandte Themen](#related_topics)  
-  
--   [Verweis](#reference)  
-  
-<a name="exceptions_in_the_net_framework"></a>   
-## Ausnahmen in .NET Framework  
- Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verhalten beim Ausführen eines Programms. Ausnahmen können durch Fehler in Ihrem oder aufgerufenem Code \(z. B. bei freigegebenen Bibliotheken\), nicht verfügbare Betriebssystemressourcen, unerwartete, von der CLR \(Common Language Runtime\) festgestellte Fehlerzustände \(z. B. durch nicht überprüfbaren Code\) und andere Ereignisse ausgelöst werden. Anwendungen können in einigen, aber nicht allen Fällen wiederhergestellt werden. Obwohl bei den meisten Anwendungsausnahmen eine Wiederherstellung möglich ist, ist dies beim Großteil der Laufzeitausnahmen nicht der Fall.  
-  
- In .NET Framework stellt eine Ausnahme ein Objekt dar, das von der <xref:System.Exception?displayProperty=fullName>\-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.  
-  
- [Zurück nach oben](#top)  
-  
-<a name="exceptions_vs_traditional_errorhandling_methods"></a>   
-## Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden  
- Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und \-behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems. Die Laufzeit implementiert eine Ausnahmebehandlung mit folgenden Merkmalen:  
-  
--   Behandelt Ausnahmen ohne Berücksichtigung der Sprache, die die Ausnahme generiert oder behandelt.  
-  
--   Eine besondere Sprachsyntax ist für die Ausnahmebehandlung nicht erforderlich, trotzdem kann jede Sprache ihre eigene Syntax definieren.  
-  
--   Ausnahmen können prozess\- und sogar computerübergreifend ausgelöst werden.  
-  
- Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerbenachrichtigung, z. B. Rückgabecodes. Fehler können nicht unerkannt bleiben. Ungültige Werte werden im System nicht mehr weitergegeben. Sie müssen keine Rückgabecodes überprüfen. Der Ausnahmebehandlungscode kann leicht erweitert werden, um die Programmzuverlässigkeit zu erhöhen. Und schließlich ist die Ausnahmebehandlung der Laufzeit schneller als die auf Windows basierende C\+\+\-Fehlerbehandlung.  
-  
- Da Ausführungsthreads üblicherweise verwaltete und nicht verwaltete Codeblöcke abarbeiten, können Ausnahmen durch die Laufzeit entweder in verwaltetem oder nicht verwaltetem Code ausgelöst und abgefangen werden. Nicht verwalteter Code kann sowohl SEH\-Ausnahmen im C\+\+\-Format als auch COM\-basierte HRESULTS enthalten.  
-  
-<a name="how_the_runtime_manages_exceptions"></a>   
-## Verwalten von Ausnahmen durch die Laufzeit  
- Die Laufzeit verwendet ein auf Ausnahmeobjekten und geschützten Codeblöcken basierendes Modell der Ausnahmebehandlung. Ein <xref:System.Exception>\-Objekt wird zur Darstellung einer auftretenden Ausnahme erstellt.  
-  
- Durch die Laufzeit wird eine Tabelle mit Ausnahmeinformationen für jede ausführbare Datei erstellt. Jeder Methode einer ausführbaren Datei wird in dieser Tabelle ein \(ggf. leeres\) Array mit Informationen zur Ausnahmebehandlung zugeordnet. Jeder Eintrag in diesem Array beschreibt einen geschützten Codeblock, alle mit diesem Code verknüpften Ausnahmefilter und alle Ausnahmehandler \(`catch`\-Anweisungen\). Die Ausnahmetabelle ist sehr effizient und führt nicht zu Leistungseinbußen bei der Prozessorzeit oder Speichernutzung, wenn eine Ausnahme nicht auftritt. Nur bei Auftreten einer Ausnahme werden Systemressourcen in Anspruch genommen.  
-  
- Die Ausnahmetabelle enthält vier Typen von Ausnahmehandlern für geschützte Blöcke:  
-  
--   Ein `finally`\-Handler wird immer ausgeführt, wenn der Block durch die normale Ablaufsteuerung oder eine unbehandelte Ausnahme beendet wird.  
-  
--   Ein fault\-Handler wird immer beim Auftreten einer Ausnahme ausgeführt, aber nicht nach Abschluss der normalen Ablaufsteuerung.  
-  
--   Ein typgefilterter Handler behandelt alle Ausnahmen einer angegebenen Klasse oder einer davon abgeleiteten Klasse.  
-  
--   Ein benutzergefilterter Handler führt benutzerdefinierten Code aus, um zu entscheiden, ob die Ausnahme vom zugeordneten Handler behandelt oder dem nächsten geschützten Block übergeben wird.  
-  
- Jede Sprache implementiert diese Ausnahmehandler entsprechend ihrer Spezifikationen. Visual Basic bietet zum Beispiel Zugriff auf den benutzergefilterten Handler über einen Variablenvergleich in der `catch`\-Anweisung \(mit dem `When`\-Schlüsselwort\). In C\# dagegen kann dieser Handler nicht implementiert werden.  
-  
- Tritt eine Ausnahme auf, führt die Laufzeit die beiden folgenden Schritte durch:  
-  
-1.  Die Laufzeit durchsucht das Array nach dem ersten geschützten Block, der folgende Eigenschaften besitzt:  
-  
-    -   Schützt einen Bereich, der die gerade ausgeführte Anweisung enthält.  
-  
-    -   Enthält einen Ausnahmehandler oder einen Filter zur Ausnahmebehandlung.  
-  
-2.  Im Fall einer Übereinstimmung wird von der Laufzeit ein <xref:System.Exception>\-Objekt erstellt, das die Ausnahme beschreibt. Daraufhin werden alle `finally`\- oder fault\-Anweisungen zwischen der Anweisung, bei der die Ausnahme auftrat, und derjenigen, die sie behandelt, ausgeführt. Die Reihenfolge der Ausnahmehandler ist wichtig: Der innerste Ausnahmehandler wird zuerst ausgewertet. Beachten Sie außerdem, dass Ausnahmehandler auf lokale Variablen und lokalen Arbeitsspeicher der Routine zugreifen können, durch die die Ausnahme abgefangen wurde, aber alle Zwischenwerte zum Zeitpunkt des Auslösens der Ausnahme verloren gehen.  
-  
-     Enthält die aktuelle Methode keine Übereinstimmungen, durchsucht die Laufzeit jeden Aufrufer der aktuellen Methode und verfährt so weiter für den ganzen Stapel. Gibt es bei keinem Aufrufer eine Übereinstimmung, wird dem Debugger der Zugriff auf die Ausnahme gestattet. Wenn die Ausnahme durch den Debugger nicht behandelt wird, löst die Laufzeit das <xref:System.AppDomain.UnhandledException?displayProperty=fullName>\-Ereignis aus. Sind keine Listener für dieses Ereignis vorhanden, gibt die Laufzeit eine Stapelüberwachung aus und beendet die Anwendung.  
-  
- [Zurück nach oben](#top)  
-  
-<a name="filtering_runtime_exceptions"></a>   
-## Filtern von Laufzeitausnahmen  
- Sie können die abgefangenen Ausnahmen filtern und entweder nach Typ oder nach benutzerdefinierten Kriterien behandeln.  
-  
- Typgefilterte Handler verwalten einen bestimmten Ausnahmetyp \(oder davon abgeleitete Klassen\). Das folgende Beispiel zeigt einen typgefilterten Handler, der für das Erfassen einer bestimmten Ausnahme konzipiert ist, in diesem Fall <xref:System.IO.FileNotFoundException>.  
-  
- [!code-cpp[CatchException#5](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception3.cpp#5)]
- [!code-csharp[CatchException#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception3.cs#5)]
- [!code-vb[CatchException#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception3.vb#5)]  
-  
- Benutzergefilterte Handler fangen und behandeln Ausnahmen gemäß benutzerdefinierten Ausnahmebedingungen. Weitere Informationen über das Filtern von Ausnahmen mit dieser Methode finden Sie unter [Verwenden spezifischer Ausnahmen in einem Catch\-Block](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md).  
-  
- [Zurück nach oben](#top)  
-  
-<a name="related_topics"></a>   
-## Verwandte Themen  
-  
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Exception\-Klasse und Exception\-Eigenschaften](../../../docs/standard/exceptions/exception-class-and-properties.md)|Beschreibt die Elemente eines Ausnahmeobjekts.|  
-|[Ausnahmenhierarchie](../../../docs/standard/exceptions/exception-hierarchy.md)|Beschreibt die grundlegendsten Ausnahmen.|  
-|[Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Erläutert das Behandeln von Ausnahmen mit den catch\-, throw\- und finally\-Anweisungen.|  
-|[Best Practices für Ausnahmen](../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Beschreibt empfohlene Methoden zur Ausnahmebehandlung.|  
-|[Behandeln von COM\-Interop\-Ausnahmen](../../../docs/standard/exceptions/handling-com-interop-exceptions.md)|Erläutert die Behandlung von Ausnahmen, die in nicht verwaltetem Code ausgelöst und abgefangen wurden.|  
-|[How to: Map HRESULTs and Exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Erläutert die Zuordnung von Ausnahmen bei Übergängen zwischen verwaltetem und nicht verwaltetem Code.|  
-  
-<a name="reference"></a>   
-## Verweis  
- <xref:System.Exception?displayProperty=fullName>  
-  
- <xref:System.ApplicationException?displayProperty=fullName>  
-  
- <xref:System.SystemException?displayProperty=fullName>
+# <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
+
+Anwendungen müssen in der Lage sein, Fehler zu behandeln, die während der Ausführung konsistent auftreten.  .NET bietet ein Modell, um Anwendungen auf einheitliche Weise über Fehler zu benachrichtigen: .NET-Vorgänge geben Fehler durch Auslösen von Ausnahmen an.
+
+## <a name="exceptions"></a>Ausnahmen
+
+Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verhalten beim Ausführen eines Programms. Ausnahmen können durch Fehler in Ihrem oder in aufgerufenem Code (z.B. bei freigegebenen Bibliotheken), nicht verfügbare Betriebssystemressourcen, unerwartete, von der Runtime festgestellte Fehlerzustände (z.B. durch nicht überprüfbaren Code) und andere Ereignisse ausgelöst werden. Anwendungen können in einigen, aber nicht allen Fällen wiederhergestellt werden. Obwohl bei den meisten Anwendungsausnahmen eine Wiederherstellung möglich ist, ist dies beim Großteil der Laufzeitausnahmen nicht der Fall.
+
+In .NET stellt eine Ausnahme ein Objekt dar, das von der [System.Exception](xref:System.Exception)-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
+
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden
+
+Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und -behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems. Die Art und Weise, in der die Ausnahmebehandlung in .NET implementiert ist, bietet folgende Vorteile:
+
+- Das Auslösen und Behandeln von Ausnahmen funktioniert für alle .NET-Programmiersprachen gleich.
+
+- Eine besondere Sprachsyntax ist für die Ausnahmebehandlung nicht erforderlich, trotzdem kann jede Sprache ihre eigene Syntax definieren.
+
+- Ausnahmen können prozess- und sogar computerübergreifend ausgelöst werden.
+
+- Einer Anwendung kann Ausnahmebehandlungscode hinzugefügt werden, um die Programmzuverlässigkeit zu erhöhen.
+
+Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerbenachrichtigung, z.B. Rückgabecodes. Fehler bleiben nicht unerkannt, da die Runtime Ihre Anwendung beendet, wenn eine Ausnahme ausgelöst wurde und diese nicht behandelt wird. Ungültige Werte werden nicht weiter im System weitergegeben – was passieren kann, wenn im Code nicht geprüft wird, ob ein Fehlerrückgabecode vorhanden ist. 
+
+## <a name="common-exceptions"></a>Allgemeine Ausnahmen
+
+In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgeführt, die die Ausnahmen verursachen können.
+
+| Ausnahmetyp | Basistyp | Beschreibung | Beispiel |
+| -------------- | --------- | ----------- | ------- |
+| @System.Exception | @System.Object | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
+| @System.IndexOutOfRangeException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Bereichs: `arr[arr.Length+1]` |
+| @System.NullReferenceException | @System.Exception | Wird von der Runtime nur dann ausgelöst, wenn auf ein NULL-Objekt verwiesen wird. | `object o = null; o.ToString();` |
+| @System.InvalidOperationException | @System.Exception | Wird von Methoden ausgelöst, wenn ein ungültiger Status vorliegt. | Aufrufen von `Enumerator.GetNext()` nach Entfernen eines Elements aus der zugrunde liegenden Auflistung. |
+| @System.ArgumentException | @System.Exception | Die Basisklasse für alle Argumentausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
+| @System.ArgumentNullException | @System.Exception | Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf. | `String s = null; "Calculate".IndexOf (s);` |
+| @System.ArgumentOutOfRangeException | @System.Exception | Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen. | `String s = "string"; s.Substring(s.Length+1);` |
+
+## <a name="see-also"></a>Siehe auch
+
+* [Exception-Klasse und Exception-Eigenschaften](exception-class-and-properties.md)
+* [Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [Vorgehensweise: Explizites Auslösen von Ausnahmen](how-to-explicitly-throw-exceptions.md)
+* [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
+* [Verwenden benutzergefilterter Ausnahmehandler](using-user-filtered-exception-handlers.md)
+* [Gewusst wie: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)
+* [Behandeln von COM-Interop-Ausnahmen](handling-com-interop-exceptions.md)
+* [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)
+
+Weitere Informationen zur Funktionsweise von Ausnahmen in .NET finden Sie in [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss).
+

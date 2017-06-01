@@ -29,7 +29,7 @@ caps.handback.revision: 28
 # &#220;bersicht &#252;ber Routingereignisse
 In diesem Thema wird das Konzept der Routingereignisse in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] beschrieben.  Das Thema enthält Definitionen zu den im Zusammenhang mit Routingereignissen verwendeten Begriffen, eine Beschreibung der Weiterleitung von Routingereignissen in einer Elementstruktur, eine Übersicht über die Behandlung von Routingereignissen sowie eine Einführung in die Erstellung benutzerdefinierter Routingereignisse.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Vorbereitungsmaßnahmen  
