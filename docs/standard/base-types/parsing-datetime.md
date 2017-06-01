@@ -1,193 +1,71 @@
 ---
-title: "Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET"
-description: "Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/29/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e61514cd-5329-4eb8-b122-482fffb54ab7
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f0131baa0874880b6697458426da5ae9ce1705b7
-ms.lasthandoff: 03/02/2017
-
+title: "Analysieren von Zeichenfolgen f&#252;r Datum und Uhrzeit in .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Basistypen, Analysieren von Zeichenfolgen"
+  - "Datum- und Uhrzeitzeichenfolgen"
+  - "DateTime-Objekt"
+  - "Enumerationen [.NET Framework], Analysieren von Zeichenfolgen"
+  - "ParseExact-Methode"
+  - "Analysieren von Zeichenfolgen, Datum- und Uhrzeitzeichenfolgen"
+  - "Uhrzeitzeichenfolgen"
+ms.assetid: 43bae51e-9b1d-41a6-a187-772c0d096d90
+caps.latest.revision: 24
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 24
 ---
-
-# <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
-
-Durch die Analyse wird die Zeichenfolgendarstellung eines Datums und einer Uhrzeit in ein entsprechendes [DateTime](xref:System.DateTime)-Objekt konvertiert. Die Methoden [Parse](xref:System.DateTime.Parse(System.String)) und [TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) konvertieren beliebige aus mehreren gängigen Darstellungen von Datum und Uhrzeit. Die Methoden [ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)) und [TryParseExact](xref:System.DateTime.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTime@)) konvertieren eine Zeichenfolgendarstellung entsprechend dem Muster, das durch eine Formatzeichenfolge für Datum und Uhrzeit angegeben wird. (Informationen hierzu finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-datetime.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-datetime.md).) 
-
-Die Analyse wird durch die Eigenschaften eines Formatanbieters beeinflusst. Dieser stellt Informationen wie die Zeichenfolgen, die als Datums- und Zeittrennzeichen verwendet werden, und die Namen von Monaten, Tagen und Zeiträumen bereit. Der Formatanbieter ist das aktuelle [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekts, das implizit durch die aktuelle Threadkultur oder explizit durch den [IFormatProvider](xref:System.IFormatProvider)-Parameter einer Analysemethode bereitgestellt wird. Für den [IFormatProvider](xref:System.IFormatProvider)-Parameter geben Sie ein [CultureInfo](xref:System.Globalization.CultureInfo)-Objekt, das eine Kultur darstellt, oder ein [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt an. 
-
-Die Zeichenfolgendarstellung eines zu analysierenden Datums muss den Monat und mindestens einen Tag oder das Jahr enthalten. Die Zeichenfolgendarstellung einer Uhrzeit muss die Stundenangabe und mindestens die Minuten oder den AM/PM-Kennzeichner enthalten. Bei der Analyse werden jedoch nach Möglichkeit Standardwerte für ausgelassene Komponenten ergänzt. Für ein fehlendes Datum wird standardmäßig das aktuelle Datum eingesetzt, für eine fehlende Jahresangabe das aktuelle Jahr, für einen fehlenden Monatstag der erste Tag im Monat, und für eine fehlende Uhrzeit wird standardmäßig Mitternacht angenommen. 
-
-Wenn die Zeichenfolgendarstellung nur eine Uhrzeit angibt, wird durch die Analyse ein [DateTime](xref:System.DateTime)-Objekt zurückgegeben, dessen [Year](xref:System.DateTime.Year)-, [Month](xref:System.DateTime.Month)- und [Day](xref:System.DateTime.Day)-Eigenschaften auf die entsprechenden Werte der Eigenschaft [Today](xref:System.DateTime.Today) festgelegt sind. Wenn jedoch die [DateTimeStyles.NoCurrentDateDefault](xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault)-Konstante in der Analysemethode angegeben wird, werden die year-, month- und day-Eigenschaften auf den Wert 1 festgelegt.
-
-Zusätzlich zu einer Datums- und Zeitkomponente kann die Zeichenfolgendarstellung einer Datums- und Uhrzeitangabe einen Zeitraum enthalten, der angibt, um wie viel die Zeit von der koordinierten Weltzeit (UTC) abweicht. Beispielsweise definiert die Zeichenfolge „2/14/2007 5:32:00 -7:00“ eine Uhrzeit, die sieben Stunden vor UTC liegt. Wenn die Abweichung in der Zeichenfolgendarstellung einer Uhrzeit fehlt, gibt die Analyse ein [DateTime](xref:System.DateTime)-Objekt zurück, dessen [Kind](xref:System.DateTime.Kind)-Eigenschaft auf [DateTimeKind.Unspecified](xref:System.DateTimeKind.Unspecified) festgelegt ist. Wird eine Abweichung angegeben, gibt die Analyse ein [DateTime](xref:System.DateTime)-Objekt zurück, dessen [Kind](xref:System.DateTime.Kind)-Eigenschaft auf [Local](xref:System.DateTimeKind.Local) festgelegt ist und dessen Wert an die lokale Zeitzone des Computers angepasst wird. Sie können dieses Verhalten ändern, indem Sie eine [DateTimeStyles](xref:System.Globalization.DateTimeStyles)-Konstante mit der Analysemethode verwenden.
-
-Der Formatanbieter wird auch zum Interpretieren mehrdeutiger numerischer Datumsangaben verwendet. Beispielsweise ist nicht eindeutig zu erkennen, welche Komponenten des in der Zeichenfolge „02/03/04“ dargestellten Datums für den Monat, den Tag und das Jahr stehen. In diesem Fall werden die Komponenten entsprechend der Reihenfolge ähnlicher Datumsformate im Formatanbieter interpretiert. 
-
-## <a name="parse"></a>Parse
-
-Das folgende Codebeispiel veranschaulicht die Verwendung der `Parse`-Methode zum Konvertieren einer Zeichenfolge in einen `DateTime`-Wert. In diesem Beispiel wird die dem aktuellen Thread zugeordnete Kultur zum Durchführen der Analyse verwendet. Wenn die [CultureInfo](xref:System.Globalization.CultureInfo), die der aktuellen Kultur zugeordnet ist, die Eingabezeichenfolge nicht analysieren kann, wird eine [FormatException](xref:System.FormatException) ausgelöst.
-
-```csharp
-string MyString = "Jan 1, 2009";
-DateTime MyDateTime = DateTime.Parse(MyString);
-Console.WriteLine(MyDateTime);
-// Displays the following output on a system whose culture is en-US:
-//       1/1/2009 12:00:00 AM
-```
-
-```vb
-Dim MyString As String = "Jan 1, 2009"
-Dim MyDateTime As DateTime = DateTime.Parse(MyString)
-Console.WriteLine(MyDateTime)
-' Displays the following output on a system whose culture is en-US:
-'       1/1/2009 12:00:00 AM
-```
-
-Sie können auch eine `CultureInfo` angeben, die auf eine der durch dieses Objekt definierten Kulturen festgelegt ist, oder Sie können eines der [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Standardobjekte angeben, das von der [CultureInfo.DateTimeFormat](xref:System.Globalization.CultureInfo.DateTimeFormat)-Eigenschaft zurückgegeben wird. Im folgenden Codebeispiel wird ein Formatanbieter verwendet, um eine deutsche Zeichenfolge in einen `DateTime`-Wert zu analysieren. Eine `CultureInfo`, die für die Kultur „de-DE“ steht, wird definiert und mit der zu analysierenden Zeichenfolge übergeben, um eine erfolgreiche Analyse dieser Zeichenfolge sicherzustellen. Hierdurch wird jegliche Einstellung in der `CurrentCulture` von `CurrentThread` ausgeschlossen.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {
-      CultureInfo MyCultureInfo = new CultureInfo("de-DE");
-      string MyString = "12 Juni 2008";
-      DateTime MyDateTime = DateTime.Parse(MyString, MyCultureInfo);
-      Console.WriteLine(MyDateTime);
-   }
-}
-// The example displays the following output:
-//       6/12/2008 12:00:00 AM
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim MyCultureInfo As CultureInfo = new CultureInfo("de-DE")
-      Dim MyString As String = "12 Juni 2008"
-      Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo)
-      Console.WriteLine(MyDateTime)
-   End Sub
-End Module
-' The example displays the following output:
-'       6/12/2008 12:00:00 AM
-```
-
-Auch wenn Sie Überladungen der [Parse](xref:System.DateTime.Parse(System.String))-Methode zur Angabe benutzerdefinierter Formatanbieter verwenden können, werden nicht dem Standard entsprechende Formatanbieter nicht von der Methode unterstützt. Um ein Datum und eine Uhrzeit in einem nicht dem Standard entsprechenden Format zu analysieren, verwenden Sie stattdessen die [ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider))-Methode.
-
-Im folgenden Codebeispiel wird anhand der [DateTimeStyles](xref:System.Globalization.DateTimeStyles)-Enumeration angegeben, dass die aktuellen Datums- und Uhrzeitinformationen dem `DateTime`-Wert nicht hinzugefügt werden sollen für Felder, die nicht durch die Zeichenfolge definiert werden.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {
-      CultureInfo MyCultureInfo = new CultureInfo("de-DE");
-      string MyString = "12 Juni 2008";
-      DateTime MyDateTime = DateTime.Parse(MyString, MyCultureInfo, 
-                                           DateTimeStyles.NoCurrentDateDefault);
-      Console.WriteLine(MyDateTime);
-   }
-}
-// The example displays the following output if the current culture is en-US:
-//      6/12/2008 12:00:00 AM
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim MyCultureInfo As CultureInfo = new CultureInfo("de-DE")
-      Dim MyString As String = "12 Juni 2008"
-      Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo)
-      Console.WriteLine(MyDateTime)
-   End Sub
-End Module
-' The example displays the following output:
-'       6/12/2008 12:00:00 AM
-```
-
-## <a name="parseexact"></a>ParseExact
-
-Die Methode [DateTime.ParseExact]((Xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)) konvertiert eine Zeichenfolge, die einem bestimmten Zeichenfolgenmuster für ein `DateTime`-Objekt entspricht. Wenn eine Zeichenfolge, die nicht der angegebenen Form entspricht, an diese Methode übergeben wird, wird eine [FormatException](xref:System.FormatException) ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine begrenzte Kombination der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-datetime.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-datetime.md). 
-
-Jede Überladung der [ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider))-Methode enthält auch einen [IFormatProvider](xref:System.IFormatProvider)-Parameter, der normalerweise kulturspezifische Informationen zur Formatierung der Zeichenfolge enthält. In der Regel handelt es sich bei diesem [IFormatProvider](xref:System.IFormatProvider)-Objekt um ein [CultureInfo](xref:System.Globalization.CultureInfo)-Objekt, das eine Standardkultur darstellt, bzw. um ein [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)-Objekt, das von der [CultureInfo.DateTimeFormat](xref:System.Globalization.CultureInfo.DateTimeFormat)-Eigenschaft zurückgegeben wird. Im Gegensatz zu anderen Funktionen zur Datums- und Uhrzeitanalyse unterstützt diese Methode jedoch auch einen [IFormatProvider](xref:System.IFormatProvider), der ein nicht dem Standard entsprechendes Datums- und Zeitformat definiert. 
-
-Im folgenden Codebeispiel wird die `ParseExact`-Methode an ein zu analysierendes Zeichenfolgenobjekt übergeben, gefolgt von einem Formatbezeichner, gefolgt von einem `CultureInfo`-Objekt. Diese `ParseExact`-Methode kann nur Zeichenfolgen analysieren, die in der en-US-Kultur das lange Datumsmuster aufweisen.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {
-      CultureInfo MyCultureInfo = new CultureInfo("en-US");
-      string[] MyString = {" Friday, April 10, 2009", "Friday, April 10, 2009"};
-      foreach (string dateString in MyString)
-      {
-         try {
-            DateTime MyDateTime = DateTime.ParseExact(dateString, "D", MyCultureInfo);
-            Console.WriteLine(MyDateTime);
-         }
-         catch (FormatException) {
-            Console.WriteLine("Unable to parse '{0}'", dateString);
-         }
-      }
-   }
-}
-// The example displays the following output:
-//       Unable to parse ' Friday, April 10, 2009'
-//       4/10/2009 12:00:00 AM
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim MyCultureInfo As CultureInfo = new CultureInfo("en-US")
-      Dim MyString() As String = {" Friday, April 10, 2009", "Friday, April 10, 2009"}
-      For Each dateString As String In MyString
-         Try
-            Dim MyDateTime As DateTime = DateTime.ParseExact(dateString, "D", _
-                                                             MyCultureInfo)
-            Console.WriteLine(MyDateTime)
-         Catch e As FormatException
-            Console.WriteLine("Unable to parse '{0}'", dateString)
-         End Try
-      Next
-   End Sub
-End Module
-' The example displays the following output:
-'       Unable to parse ' Friday, April 10, 2009'
-'       4/10/2009 12:00:00 AM
-```
-
-## <a name="see-also"></a>Siehe auch
-
-[Analysieren von Zeichenfolgen in .NET](parsing-strings.md)
-
-[Formatieren von Typen in .NET](formatting-types.md)
-
-[Typkonvertierung in .NET](type-conversion.md)
-
-
+# Analysieren von Zeichenfolgen f&#252;r Datum und Uhrzeit in .NET Framework
+Analysemethoden konvertieren die Zeichenfolgendarstellung eines Datums und einer Uhrzeit in ein entsprechendes <xref:System.DateTime>\-Objekt.  Die <xref:System.DateTime.Parse%2A>\-Methode und die <xref:System.DateTime.TryParse%2A>\-Methode konvertieren alle gemeinsamen Darstellungen eines Datums und einer Uhrzeit.  Die <xref:System.DateTime.ParseExact%2A>\-Methode und die <xref:System.DateTime.TryParseExact%2A>\-Methode konvertieren eine Zeichenfolgendarstellung, die genau mit dem von einer Formatzeichenfolge für Datum und Uhrzeit angegebenen Muster übereinstimmt. \(Entsprechende Informationen finden Sie in den Themen zu [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) und zu [benutzerdefinierten Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).\)  
+  
+ Die Verarbeitung wird durch die Eigenschaften eines Formatanbieters beeinflusst, der Informationen wie die Trennzeichen für Datumsangaben und Zeitangaben sowie die Namen von Monaten, Tagen und Zeiträumen bereitstellt.  Der Formatanbieter ist das aktuelle <xref:System.Globalization.DateTimeFormatInfo>\-Objekt, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>\-Parameter einer Analysemethode bereitgestellt wird.  Geben Sie für den <xref:System.IFormatProvider>\-Parameter ein <xref:System.Globalization.CultureInfo>\-Objekt an, das eine Kultur oder ein <xref:System.Globalization.DateTimeFormatInfo>\-Objekt darstellt.  
+  
+ Die Zeichenfolgendarstellung eines zu verarbeitenden Datums muss den Monat und zumindest einen Tag oder ein Jahr enthalten.  Die Zeichenfolgendarstellung einer Uhrzeit muss die Stunde und zumindest die Minuten oder den AM\/PM\-Indikator enthalten.  Bei der Verarbeitung werden jedoch Standardwerte für weggelassene Komponenten bereitgestellt, sofern dies möglich ist.  Für ein fehlendes Datum wird standardmäßig das aktuelle Datum angegeben, für ein fehlendes Jahr das aktuelle Jahr und für einen fehlenden Tag eines Monats der erste Tag des Monats. Für eine fehlende Uhrzeit wird standardmäßig Mitternacht angegeben.  
+  
+ Falls die Zeichenfolgendarstellung nur eine Uhrzeit angibt, wird bei der Verarbeitung ein <xref:System.DateTime>\-Objekt zurückgegeben, dessen Eigenschaften <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> und <xref:System.DateTime.Day%2A> auf die entsprechenden Werte der <xref:System.DateTime.Today%2A>\-Eigenschaft festgelegt sind.  Ist jedoch die <xref:System.Globalization.DateTimeStyles>\-Konstante in der Analysemethode angegeben, werden die Eigenschaften für Jahr, Monat und Tag auf den Wert `1` festgelegt.  
+  
+ Außer einer Datums\- und Uhrzeitkomponente kann die Zeichenfolgendarstellung eines Datums oder einer Uhrzeit auch einen Offset umfassen, der angibt, inwieweit die Uhrzeit von der koordinierten Weltzeit \(Coordinated Universal Time, UTC\) abweicht.  So definiert zum Beispiel die Zeichenfolge "2\/14\/2007 5:32:00 \-7:00" eine Uhrzeit, die sieben Stunden vor der koordinierten Weltzeit \(UTC\) liegt.  Falls ein Offset in der Zeichenfolgendarstellung einer Uhrzeit weggelassen wurde, wird bei der Verarbeitung ein <xref:System.DateTime>\-Objekt zurückgegeben, dessen <xref:System.DateTime.Kind%2A>\-Eigenschaft auf <xref:System.DateTimeKind?displayProperty=fullName> festgelegt ist.  Wenn ein Offset angegeben ist, wird bei der Verarbeitung ein <xref:System.DateTime>\-Objekt zurückgegeben, dessen <xref:System.DateTime.Kind%2A>\-Eigenschaft auf <xref:System.DateTimeKind> festgelegt und dessen Wert an die lokale Zeitzone des Computers angepasst ist.  Sie können dieses Verhalten ändern, indem Sie gemeinsam mit der Analysemethode eine <xref:System.Globalization.DateTimeStyles>\-Konstante verwenden.  
+  
+ Mit dem Formatanbieter werden auch mehrdeutige numerische Daten interpretiert.  So ist beispielsweise nicht eindeutig, bei welchen Komponenten des durch die Zeichenfolge "02\/03\/04" dargestellten Datums es sich um den Monat, den Tag und das Jahr handelt.  In diesem Fall werden die Komponenten entsprechend der Reihenfolge ähnlicher Datumsformate im Formatanbieter interpretiert.  
+  
+## Parse  
+ Der folgende Beispielcode veranschaulicht die Verwendung der **Parse**\-Methode, um eine Zeichenfolge in eine **DateTime** zu konvertieren.  Um die Verarbeitung durchzuführen, wird die Kultur verwendet, die dem aktuellen Thread zugeordnet ist.  Wenn die der aktuellen Kultur zugeordnete <xref:System.Globalization.CultureInfo> die eingegebene Zeichenfolge nicht verarbeiten kann, wird eine <xref:System.FormatException> ausgelöst.  
+  
+ [!code-csharp[Parsing.DateAndTime#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example.cs#1)]
+ [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example.vb#1)]  
+  
+ Sie können auch eine **CultureInfo** angeben, die auf eine der vom Objekt definierten Kulturen festgelegt ist, oder Sie können eines der standardmäßigen <xref:System.Globalization.DateTimeFormatInfo>\-Objekte angeben, die von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=fullName>\-Eigenschaft zurückgegeben werden.  Im folgenden Beispielcode wird ein Formatanbieter verwendet, um eine deutsche Zeichenfolge in eine **DateTime** umzuwandeln.  Eine **CultureInfo**, die die Kultur de\-DE repräsentiert, wird zusammen mit der verarbeiteten Zeichenfolge definiert und übergeben, um eine erfolgreiche Verarbeitung dieser bestimmten Zeichenfolge zu gewährleisten.  Dadurch wird die unter **CurrentCulture** des **CurrentThread** vorhandene Einstellung irrelevant.  
+  
+ [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example2.cs#2)]
+ [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example2.vb#2)]  
+  
+ Obwohl Sie Überladungen der <xref:System.DateTime.Parse%2A>\-Methode zum Festlegen von benutzerdefinierten Formatanbietern verwenden können, unterstützt die Methode nur die Verwendung standardmäßiger Formatanbieter und keiner anderen.  Um ein Datum und eine Uhrzeit in einem nicht standardmäßigen Format zu verarbeiten, verwenden Sie stattdessen die <xref:System.DateTime.ParseExact%2A>\-Methode.  
+  
+ Im folgenden Codebeispiel wird die <xref:System.Globalization.DateTimeStyles>\-Enumeration verwendet, um festzulegen, dass die aktuellen Informationen zu Datum und Uhrzeit nicht in Felder für **DateTime** eingetragen werden, die durch die Zeichenfolge nicht definiert werden.  
+  
+ [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example3.cs#3)]
+ [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example3.vb#3)]  
+  
+## ParseExact  
+ Die <xref:System.DateTime.ParseExact%2A?displayProperty=fullName>\-Methode konvertiert eine Zeichenfolge, die mit einem bestimmten Zeichenfolgenmuster eines **DateTime**\-Objekts übereinstimmt.  Wenn eine Zeichenfolge, die nicht der angegebenen Form entspricht, an diese Methode übergeben wird, wird eine <xref:System.FormatException> ausgelöst.  Sie können einen der gebräuchlichen Formatbezeichner für Datum und Uhrzeit oder eine begrenzte Kombination benutzerdefinierter Formatbezeichner angeben.  Mithilfe der benutzerdefinierten Formatbezeichner können Sie Zeichenfolgen mit benutzerdefinierter Erkennung konstruieren.  Eine Erläuterung der Bezeichner finden Sie in den Themen zu [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) und zu [benutzerdefinierten Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+ Jede Überladung der <xref:System.DateTime.ParseExact%2A>\-Methode verfügt außerdem über einen <xref:System.IFormatProvider>\-Parameter, der normalerweise kulturspezifische Daten zur Formatierung der Zeichenfolge enthält.  In der Regel handelt es sich bei diesem <xref:System.IFormatProvider>\-Objekt um ein <xref:System.Globalization.CultureInfo>\-Objekt, das eine Standardkultur darstellt, oder ein <xref:System.Globalization.DateTimeFormatInfo>\-Objekt, das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=fullName>\-Eigenschaft zurückgegeben wird.  Im Gegensatz zu anderen Verarbeitungsfunktionen für Datum und Uhrzeit unterstützt diese Methode jedoch auch einen <xref:System.IFormatProvider>, der nicht standardmäßige Datums\- und Uhrzeitformate definiert.  
+  
+ Im folgenden Codebeispiel wird der **ParseExact**\-Methode ein Zeichenfolgenobjekt zur Verarbeitung übergeben, gefolgt von einem Formatbezeichner und einem **CultureInfo**\-Objekt.  Diese **ParseExact**\-Methode kann nur Zeichenfolgen im langen Datumsformat verarbeiten, das in der Kultur en\-US verwendet wird.  
+  
+ [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example4.cs#4)]
+ [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example4.vb#4)]  
+  
+## Siehe auch  
+ [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)   
+ [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)   
+ [Typkonvertierung in .NET Framework](../../../docs/standard/base-types/type-conversion.md)

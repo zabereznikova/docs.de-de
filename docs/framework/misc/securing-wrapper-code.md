@@ -1,0 +1,129 @@
+---
+title: "Securing Wrapper Code | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "security [.NET Framework], wrapper code"
+  - "wrapper code, securing"
+  - "secure coding, wrapper code"
+  - "code security, wrapper code"
+ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
+caps.latest.revision: 11
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 9
+---
+# Securing Wrapper Code
+Wrappercode kann vor allem dann, wenn der Wrapper eine höhere Vertrauensstellung als Code besitzt, der ihn verwendet, einen eindeutigen Satz von Sicherheitsrisiken eröffnen. Alle Aktionen, die im Auftrag eines Aufrufers vorgenommen werden, bei denen die eingeschränkten Berechtigungen des Aufrufers nicht in der entsprechenden Sicherheitsüberprüfung enthalten sind, stellen eine potenzielle Schwachstelle dar, die ausgenutzt werden kann.  
+  
+ Aktivieren Sie niemals Aktionen über den Wrapper, die der Aufrufer nicht selbst ausführen könnte. Dies ist besonders riskant, wenn Aktionen ausgeführt werden, die eine eingeschränkte Sicherheitsüberprüfung im Gegensatz zu einer vollständigen Stapelanforderung beinhalten. Wenn Überprüfungen einer Ebene ausgeführt werden, kann das Einfügen des Wrappercodes zwischen dem tatsächlichen Aufrufer und dem betreffenden API\-Element leicht bewirken, dass die Sicherheitsüberprüfung erfolgreich ist, obwohl sie es nicht sein sollte. Auf diese Weise wird die Sicherheit geschwächt.  
+  
+> [!CAUTION]
+>  Codezugriffssicherheit und teilweise vertrauenswürdiger Code  
+>   
+>  .NET Framework bietet einen Mechanismus namens Codezugriffssicherheit \(Code Access Security, CAS\) zur Erzwingung verschiedener Vertrauensebenen für anderen Code, der in der gleichen Anwendung ausgeführt wird.  Sie sollten die Codezugriffssicherheit in .NET Framework nicht als Sicherheitsbegrenzung bei teilweise vertrauenswürdigem Code verwenden. Dies gilt insbesondere für Code unbekannter Herkunft. Wir raten davon ab, Code unbekannter Herkunft zu laden und auszuführen, ohne alternative Sicherheitsmaßnahmen zu treffen.  
+>   
+>  Diese Richtlinie gilt für alle Versionen von .NET Framework, außer für die in Silverlight enthaltene .NET Framework\-Version.  
+  
+## Delegaten  
+ Die Delegatsicherheit unterscheidet sich in den verschiedenen Versionen von .NET Framework.  Dieser Abschnitt beschreibt das verschiedene Delegatverhalten und die damit verbundenen Sicherheitsüberlegungen.  
+  
+### In Version 1.0 und 1.1 von .NET Framework  
+ Die Versionen 1.0 und 1.1 von .NET Framework führen die folgenden Sicherheitsaktionen für einen Delegatersteller und einen Delegataufrufer aus.  
+  
+-   Wenn ein Delegat erstellt wird, werden Sicherheitslinkanforderungen für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
+  
+-   Wenn der Delegat aufgerufen wird, werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
+  
+ Jedes Mal, wenn der Code einen <xref:System.Delegate> von weniger vertrauenswürdigem Code annimmt, der ihn aufrufen kann, müssen Sie sicherstellen, dass Sie den weniger vertrauenswürdigen Code nicht ermöglichen, seine Berechtigungen auszuweiten. Wenn Sie einen Delegaten annehmen und später verwenden, befindet sich der Code, der den Delegaten erstellt hat, nicht in der Aufrufliste, und seine Berechtigungen werden nicht getestet, wenn Code in oder unter dem Delegaten versucht, einen geschützten Vorgang auszuführen. Wenn Ihr Code und und der Aufrufercode über höhere Berechtigungen als der Ersteller verfügen, kann der Ersteller den Aufrufpfad orchestrieren, ohne Teil der Aufrufliste zu sein.  
+  
+### In Version 2.0 oder höher von .NET Framework  
+ Im Gegensatz zu früheren Versionen führt Version 2.0 von .NET Framework Sicherheitsaktionen für den Delegatersteller aus, wenn der Delegat erstellt und aufgerufen wird.  
+  
+-   Wenn ein Delegat erstellt wird, werden Sicherheitsverknüpfungsaufrufe für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
+  
+-   Der Berechtigungssatz des Delegaterstellers wird auch während der Delegaterstellung erfasst und zusammen mit dem Delegaten gespeichert.  
+  
+-   Wenn der Delegat aufgerufen wird, wird der erfasste Berechtigungssatz des Delegaterstellers zuerst anhand aller Forderungen im aktuellen Kontext ausgewertet, wenn der Delegatersteller und der Aufrufer zu unterschiedlichen Assemblys gehören.  Im nächsten Schritt werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
+  
+## Verknüpfungsaufrufe und Wrapper  
+ In der Sicherheitsinfrastruktur wurde ein besonderer Schutzmechanismus mit Verknüpfungsaufrufen verstärkt. Dies stellt jedoch noch immer eine Quelle für potenzielle Schwachstellen in Ihrem Code dar.  
+  
+ Wenn vollständig vertrauenswürdiger Code eine Eigenschaft, ein Ereignis oder ein durch [LinkDemand](../../../docs/framework/misc/link-demands.md) geschützte Methode aufruft, ist der Aufruf erfolgreich, wenn **LinkDemand** die Berechtigungsüberprüfung für den Aufrufer erfüllt wird. Wenn der vollständig vertrauenswürdige Code eine Klasse bereitstellt, die den Namen einer Eigenschaft annimmt und deren **get**\-Accessor aufruft, ist außerdem der Aufruf des **et**\-Accessors erfolgreich, obwohl der Benutzercode nicht das über das Recht für den Zugriff auf diese Eigenschaft verfügt. Dies liegt daran, dass **LinkDemand** nur den unmittelbaren Aufrufer überprüft, also den voll vertrauenswürdigen Code. Im Wesentlichen nimmt der vollständig vertrauenswürdige Code einen privilegierten Aufruf im Auftrag von Benutzercode vor, ohne sicherzustellen, dass der Code über die Berechtigung zum Ausführen dieses Aufrufs verfügt.  
+  
+ Zur Vermeidung solcher Sicherheitslücken erweitert die CLR \(Common Language Runtime\) die Überprüfung in eine vollständige Stapelforderung für jeden indirekten Aufruf einer durch **LinkDemand** geschützten Methode, eines Konstruktors, einer Eigenschaft oder eines Ereignisses. Dieser Schutz geht zu Lasten der Leistung und ändert die Semantik der Sicherheitsüberprüfung. Für die vollständige Stapelforderung kann ein Fehler auftreten, der bei der schnelleren Überprüfung einer Ebene nicht auftreten würde.  
+  
+> [!NOTE]
+>  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wurde teilweise vertrauenswürdiger Code als transparenter Code neu definiert. Das Transparenzmodell unterscheidet zwischen Code, in dem privilegierte Aktionen wie das Aufrufen von systemeigenem Code ausgeführt werden können \(sicherheitsrelevanter Code\), und Code, in dem dies nicht möglich ist \(transparenter Code\). Transparenz ersetzt die Verwendung von <xref:System.Security.Permissions.SecurityAction> für vollständige Vertrauenswürdigkeit zum Identifizieren von vollständig vertrauenswürdigem Code mit <xref:System.Security.SecurityCriticalAttribute>. Weitere Informationen über diese und andere Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+  
+## Wrapper zum Laden von Assemblys  
+ Mehrere Methoden werden zum Laden von verwaltetem Code verwendet, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>. Dabei werden Assemblys mit dem Beweis des Aufrufers geladen. Wenn Sie eine dieser Methoden in einen Wrapper einschließen, könnte das Sicherheitssystem die Berechtigung Ihres Codes anstelle der Berechtigungen des Aufrufers Ihres Wrappers zum Laden von Assemblys verwenden. Sie sollten nicht zulassen, dass wenig vertrauenswürdiger Code anderen Code laden kann, dem höhere Berechtigungen als dem Aufrufer Ihres Wrappers gewährt wurden.  
+  
+ Jeglicher Code, der eine vollständige Vertrauensstellung oder eine höhere Vertrauensstellung als ein möglicher Aufrufer \(einschließlich eines Aufrufers mit Berechtigungen auf Internetebene\) aufweist, kann die Sicherheit auf diese Weise herabsetzen. Wenn Ihr Code eine öffentliche Methode verwendet, die ein Bytearray annimmt und dieses an **Assembly.Load** übergibt \(und auf diese Weise eine Assembly im Auftrag des Aufrufers erstellt\), kann dies ein Sicherheitsrisiko darstellen.  
+  
+ Dieses Problem betrifft die folgenden API\-Elemente:  
+  
+-   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName>  
+  
+-   <xref:System.AppDomain.Load%2A?displayProperty=fullName>  
+  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+  
+-   <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>  
+  
+## "Demand" im Vergleich zu "LinkDemand"  
+ Die deklarative Sicherheit stellt zwei Arten von Sicherheitsüberprüfungen bereit, die zwar ähnlich sind, jedoch sehr unterschiedliche Überprüfungen ausführen. Sie sollten beide Formen kennen, weil die falsche Auswahl zu schwacher Sicherheit oder Leistungverlusten führen kann.  
+  
+ Die deklarative Sicherheit bietet die folgenden Sicherheitsüberprüfungen:  
+  
+-   <xref:System.Security.Permissions.SecurityAction> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen.**Demand** tritt bei jedem Aufruf auf, weil der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf.**Demand** stellt einen wirksamen Schutz vor Lockangriffen dar. Nicht autorisierter Code, der versucht, den Schutz zu durchbrechen, wird erkannt.  
+  
+-   [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur JIT\-Kompilierungszeit \(Just\-In\-Time\) und überprüft nur den unmittelbaren Aufrufer. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand** kann beliebiger Code, der den Test besteht und auf Ihren Code verweisen kann, ein mögliches Sicherheitsrisiko darstellen, weil bösartigem Code ein Aufruf mithilfe des autorisierten Codes ermöglicht wird. Verwenden Sie **LinkDemand** daher nur, wenn alle potenziellen Risiken ausdrücklich vermieden werden können.  
+  
+    > [!NOTE]
+    >  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wurden Verknüpfungsaufrufe durch das Attribut <xref:System.Security.SecurityCriticalAttribute> in den <xref:System.Security.SecurityRuleSet>\-Assemblys ersetzt. Das <xref:System.Security.SecurityCriticalAttribute> entspricht einem Verknüpfungsaufruf für eine vollständige Vertrauensstellung. Es wirkt sich allerdings auch auf die Vererbungsregeln aus. Weitere Informationen über diese Änderung finden Sie unter [Security\-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+  
+ Die zusätzlichen Vorsichtsmaßnahmen, die bei der Verwendung von **LinkDemand** erforderlich sind, müssen einzeln programmiert werden. Das Sicherheitssytem kann bei Sie ihrer Durchsetzung unterstützen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
+  
+-   Einschränken des Zugriffs des aufrufenden Codes auf die Klasse oder Assembly.  
+  
+-   Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Wenn Sie z. B. Code schreiben, der eine Methode aufruft, die mit einem **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit der angegebenen Kennzeichnung <xref:System.Security.Permissions.SecurityPermissionFlag> geschützt wird, sollte die Methode auch einen **LinkDemand** \(oder **Demand**, der stärker ist\) für diese Berechtigung verwenden. Eine Ausnahme liegt vor, wenn der Code die durch **LinkDemand** geschützte Methode auf eingeschränkte Weise verwendet, die Sie als sicher betrachten, weil im Code andere Schutzmechanismen \(z. B. Forderungen\) greifen. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
+  
+-   Sicherstellen, dass die Aufrufer Ihres Codes den Code nicht veranlassen können, den geschützten Code in ihrem Auftrag aufzurufen. Dies bedeutet, dass Aufrufer den autorisierten Code nicht zwingen können, bestimmte Parameter an den geschützten Code zu übergeben oder Ergebnisse aus ihm abzurufen.  
+  
+### Schnittstellen und Verknüpfungsaufrufe  
+ Wenn eine virtuelle Methode, eine Eigenschaft oder ein Ereignis mit **LinkDemand** eine Basisklassenmethode außer Kraft setzt, muss die Basisklassenmethode den gleichen **LinkDemand** für die außer Kraft gesetzte Methode aufweisen, um effizient zu sein. Es ist möglich, dass bösartiger Code eine erneute Umwandlung in den Basistyp ausführt und die Methode der Basisklasse aufruft. Beachten Sie außerdem, dass Verknüpfungsaufrufe Assemblys implizit hinzugefügt werden können, für die das Attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nicht auf Assemblyebene festgelegt ist.  
+  
+ Eine bewährte Methode besteht darin, Methodenimplementierungen durch Verknüpfungsaufrufen zu schützen, wenn Schnittstellenmethoden ebenfalls Verknüpfungsaufrufe aufweisen. Beachten Sie hinsichtlich der Verwendung von Verknüpfungsaufrufen mit Schnittstellen Folgendes:  
+  
+-   Das Attribut **AllowPartiallyTrustedCallersAttribute** gilt auch für Schnittstellen.  
+  
+-   Sie können Verknüpfungsaufrufe für Schnittstellen festlegen, um bestimmte Schnittstellen selektiv davor zu schützen, von teilweise vertrauenswürdigem Code verwendet zu werden, z. B. bei Verwendung des Attributs **AllowPartiallyTrustedCallersAttribute**.  
+  
+-   Wenn eine Schnittstelle in einer Assembly definiert ist, die das Attribut **AllowPartiallyTrustedCallersAttribute** nicht enthält, können Sie diese Schnittstelle für eine teilweise vertrauenswürdige Klasse implementieren.  
+  
+-   Wenn Sie einen **LinkDemand** für eine öffentliche Methode einer Klasse festlegen, die eine Schnittstellenmethode implementiert, wird der **LinkDemand** nicht erzwungen, wenn Sie anschließend eine Umwandlung in die Schnittstelle ausführen und die Methode aufrufen. In diesem Fall wird nur der **LinkDemand** für die Schnittstelle berücksichtigt, weil eine Verknüpfung mit der Schnittstelle erfolgt ist.  
+  
+ Überprüfen Sie die folgenden Elemente auf Sicherheitsprobleme:  
+  
+-   Explizite Verknüpfungsaufrufe für Schnittstellenmethoden. Stellen Sie sicher, dass diese Verknüpfungsaufrufe den erwarteten Schutz bieten. Ermitteln Sie, ob bösartiger Code mithilfe einer Umwandlung die Verknüpfungsaufrufe wie oben beschrieben umgehen kann.  
+  
+-   Virtuelle Methoden mit angewendeten Verknüpfungsaufrufen.  
+  
+-   Typen und Schnittstellen, die sie implementieren. Diese sollten Verknüpfungsaufrufe einheitlich verwenden.  
+  
+## Siehe auch  
+ [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)

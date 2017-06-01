@@ -1,0 +1,165 @@
+---
+title: "Application Domain Resource Monitoring (ARM) ETW Events | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ETW, application domain monitoring events"
+  - "application domain monitoring events [.NET Framework]"
+ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
+caps.latest.revision: 8
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 8
+---
+# Application Domain Resource Monitoring (ARM) ETW Events
+<a name="top"></a> Diese Ereignisse bieten detaillierte Diagnoseinformationen zum Status einer Anwendungsdomäne. Sie können diese Ereignisse oder die Funktion zur Überwachung von Anwendungsdomänenressourcen \(ARM\) verwenden, um dieselben Informationen zu erhalten.  
+  
+ Diese Kategorie umfasst die folgenden Ereignisse:  
+  
+-   [ThreadCreated\-Ereignis](#threadcreated_event)  
+  
+-   [AppDomainMemAllocated\-Ereignis](#appdomainmemallocated_event)  
+  
+-   [AppDomainMemSurvived\-Ereignis](#appdomainmemsurvived_event)  
+  
+-   [ThreadAppDomainEnter\-Ereignis](#threadappdomainenter_event)  
+  
+-   [ThreadTerminated\-Ereignis](#threadterminated_event)  
+  
+<a name="threadcreated_event"></a>   
+## ThreadCreated\-Ereignis  
+ Dieses Ereignis wird auch unter dem Rundownanbieter als `ThreadDC` ausgelöst \(unter dem Schlüsselwort `AppDomainResourceManagementRundownKeyword`\). Dies ist das einzige Ereignis, das unter dem Rundownanbieter in dieser Kategorie ausgelöst wird.  
+  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. \(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).\)  
+  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|------------------------------------------------|-----------|  
+|`AppDomainResourceManagementKeyword` \(0x800\)|Information \(4\)|  
+|`ThreadingKeyword` \(0x10000\)|Information \(4\)|  
+  
+ Die folgende Tabelle zeigt die Ereignisinformationen an.  
+  
+|Ereignis|Ereignis\-ID|Wird ausgelöst, wenn|  
+|--------------|------------------|--------------------------|  
+|`ThreadCreated`|85|Ein Thread wurde für die Anwendungsdomäne erstellt.|  
+  
+ Die folgende Tabelle zeigt die Ereignisdaten an.  
+  
+|Feldname|Datentyp|Beschreibung|  
+|--------------|--------------|------------------|  
+|ThreadID|win:UInt64|Die ID des Threads, der erstellt wurde.|  
+|AppDomainID|win:UInt64|Der Bezeichner der Anwendungsdomäne, für die die Threadaktivität gemeldet wird.|  
+|Flags|win:UInt32|Threaderstellungs\-Flags.|  
+|ManagedThreadIndex|win:UInt32|Der verwaltete Index des Threads, der erstellt wurde.|  
+|OSThreadID|win:UInt32|Die Betriebssystem\-ID des Threads, der erstellt wurde.|  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+  
+ [Zurück nach oben](#top)  
+  
+<a name="appdomainmemallocated_event"></a>   
+## AppDomainMemAllocated\-Ereignis  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|------------------------------------------------|-----------|  
+|`AppDomainResourceManagementKeyword` \(0x800\)|Information \(4\)|  
+  
+ Die folgende Tabelle zeigt die Ereignisinformationen an.  
+  
+|Ereignis|Ereignis\-ID|Wird ausgelöst, wenn|  
+|--------------|------------------|--------------------------|  
+|`AppDomainMemAllocated`|83|Jede 4 MB des Arbeitsspeichers \(ungefähr\) werden in der Anwendungsdomäne zugeordnet.|  
+  
+ Die folgende Tabelle zeigt die Ereignisdaten an.  
+  
+|Feldname|Datentyp|Beschreibung|  
+|--------------|--------------|------------------|  
+|AppDomainID|win:UInt64|Der Bezeichner der Anwendungsdomäne, für den die Ressourcenauslastung gemeldet wird.|  
+|Zugeordnet|win:UInt64|Die Gesamtzahl von Bytes, die in dieser Anwendungsdomäne seit ihrer Erstellung zugeordnet wurden \(die Menge des freigegebenen Speichers wird nicht abgezogen\).|  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+  
+ [Zurück nach oben](#top)  
+  
+<a name="appdomainmemsurvived_event"></a>   
+## AppDomainMemSurvived\-Ereignis  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|------------------------------------------------|-----------|  
+|`AppDomainResourceManagementKeyword` \(0x800\)|Information \(4\)|  
+  
+ Die folgende Tabelle zeigt die Ereignisinformationen an.  
+  
+|Ereignis|Ereignis\-ID|Wird ausgelöst, wenn|  
+|--------------|------------------|--------------------------|  
+|`AppDomainMemSurvived`|84|Jede Garbage Collection wurde beendet.|  
+  
+ Die folgende Tabelle zeigt die Ereignisdaten an.  
+  
+|Feldname|Datentyp|Beschreibung|  
+|--------------|--------------|------------------|  
+|AppDomainID|win:UInt64|Der Bezeichner der Domäne, für den die Ressourcenauslastung gemeldet wird.|  
+|Noch vorhanden|win:UInt64|Die Anzahl von Bytes, die nach der letzten Auflistung noch vorhanden sind und die bekanntermaßen von dieser Anwendungsdomäne aufgenommen werden. Diese Anzahl ist genau und nach einer vollständigen Auflistung abgeschlossen, aber nach einer kurzlebiger Auflistung unvollständig.|  
+|ProcessSurvived|win:UInt64|Die Gesamtanzahl der Bytes, die seit der letzten Auflistung noch vorhanden sind. Nach einer vollständigen Auflistung stellt diese Anzahl die Anzahl der Bytes dar, die in verwalteten Heaps live gespeichert werden. Nach einer kurzlebigen Auflistung stellt diese Anzahl die Anzahl der Bytes dar, die in kurzlebigen Generationen live gespeichert werden.|  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+  
+ [Zurück nach oben](#top)  
+  
+<a name="threadappdomainenter_event"></a>   
+## ThreadAppDomainEnter\-Ereignis  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|------------------------------------------------|-----------|  
+|`AppDomainResourceManagementKeyword` \(0x800\)|Information \(4\)|  
+|`ThreadingKeyword` \(0x10000\)|Information \(4\)|  
+  
+ Die folgende Tabelle zeigt die Ereignisinformationen an.  
+  
+|Ereignis|Ereignis\-ID|Wird ausgelöst, wenn|  
+|--------------|------------------|--------------------------|  
+|`ThreadAppDomainEnter`|87|Ein Thread wechselt in eine Anwendungsdomäne.|  
+  
+ Die folgende Tabelle zeigt die Ereignisdaten an.  
+  
+|Feldname|Datentyp|Beschreibung|  
+|--------------|--------------|------------------|  
+|ThreadID|win:UInt64|Der Threadbezeichner.|  
+|AppDomainID|win:UInt64|Der Bezeichner der Anwendungsdomäne.|  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+  
+ [Zurück nach oben](#top)  
+  
+<a name="threadterminated_event"></a>   
+## ThreadTerminated\-Ereignis  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|------------------------------------------------|-----------|  
+|`AppDomainResourceManagementKeyword` \(0x800\)|Information \(4\)|  
+|`ThreadingKeyword` \(0x10000\)|Information \(4\)|  
+  
+ Die folgende Tabelle zeigt die Ereignisinformationen an.  
+  
+|Ereignis|Ereignis\-ID|Wird ausgelöst, wenn|  
+|--------------|------------------|--------------------------|  
+|`ThreadTerminated`|86|Ein Thread wird beendet.|  
+  
+ Die folgende Tabelle zeigt die Ereignisdaten an:  
+  
+|Feldname|Datentyp|Beschreibung|  
+|--------------|--------------|------------------|  
+|ThreadID|win:UInt64|Der Threadbezeichner.|  
+|AppDomainID|win:UInt64|Der Bezeichner der Anwendungsdomäne.|  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+  
+## Siehe auch  
+ [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md)

@@ -1,0 +1,147 @@
+---
+title: "XMLSerializer-Beispiel | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
+caps.latest.revision: 23
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 23
+---
+# XMLSerializer-Beispiel
+Dieses Beispiel veranschaulicht die Serialisierung und Deserialisierung von Typen, die mit dem <xref:System.Xml.Serialization.XmlSerializer> kompatibel sind.Der standardmäßige [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Formatierer ist die <xref:System.Runtime.Serialization.DataContractSerializer>\-Klasse.Die <xref:System.Xml.Serialization.XmlSerializer>\-Klasse kann auch zum Serialisieren und Deserialisieren von Typen verwendet werden, wenn die <xref:System.Runtime.Serialization.DataContractSerializer>\-Klasse nicht verwendet werden kann.Dies ist oft der Fall, wenn die präzise Steuerung von XML wichtig ist – beispielsweise, wenn es sich bei einem Datenelement um ein XML\-Attribut und nicht um ein XML\-Element handeln muss.Auch wird der <xref:System.Xml.Serialization.XmlSerializer> oft automatisch ausgewählt, wenn Clients für Nicht\-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste erstellt werden.  
+  
+ In diesem Beispiel ist der Client eine Konsolenanwendung \(.exe\), und der Dienst wird von IIS \(Internet Information Services, Internetinformationsdienste\) gehostet.  
+  
+> [!NOTE]
+>  Die Setupprozedur und die Erstellungsanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+  
+ Das <xref:System.ServiceModel.ServiceContractAttribute> und das <xref:System.ServiceModel.XmlSerializerFormatAttribute> müssen wie im folgenden Beispielcode gezeigt auf die Schnittstelle angewendet werden.  
+  
+```  
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
+public interface IXmlSerializerCalculator  
+{  
+    [OperationContract]  
+    ComplexNumber Add(ComplexNumber n1, ComplexNumber n2);  
+    [OperationContract]  
+    ComplexNumber Subtract(ComplexNumber n1, ComplexNumber n2);  
+    [OperationContract]  
+    ComplexNumber Multiply(ComplexNumber n1, ComplexNumber n2);  
+    [OperationContract]  
+    ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
+}  
+  
+```  
+  
+ Die öffentlichen Member der `ComplexNumber`\-Klasse werden vom <xref:System.Xml.Serialization.XmlSerializer> als XML\-Attribute serialisiert.Der <xref:System.Runtime.Serialization.DataContractSerializer> kann nicht zum Erstellen solcher XML\-Instanzen verwendet werden.  
+  
+```  
+public class ComplexNumber  
+{  
+    private double real;  
+    private double imaginary;  
+  
+    [XmlAttribute]  
+    public double Real  
+    {  
+        get { return real; }  
+        set { real = value; }  
+    }  
+  
+    [XmlAttribute]  
+    public double Imaginary  
+    {  
+        get { return imaginary; }  
+        set { imaginary = value; }  
+    }  
+  
+    public ComplexNumber(double real, double imaginary)  
+    {  
+        this.Real = real;  
+        this.Imaginary = imaginary;  
+    }  
+    public ComplexNumber()  
+    {  
+        this.Real = 0;  
+        this.Imaginary = 0;  
+    }  
+  
+}  
+```  
+  
+ Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück. Dabei werden Werte vom Typ `ComplexNumber` akzeptiert und zurückgegeben.  
+  
+```  
+public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
+{  
+    public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
+    {  
+        return new ComplexNumber(n1.Real + n2.Real, n1.Imaginary +  
+                                                      n2.Imaginary);  
+    }  
+    …  
+}  
+  
+```  
+  
+ Die Clientimplementierung verwendet ebenfalls komplexe Zahlen.Sowohl der Dienstvertrag als auch die Datentypen sind in der Quelldatei generatedClient.cs definiert, die vom [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus Dienstmetadaten generiert wird.Svcutil.exe kann erkennen, wenn ein Vertrag nicht mit dem <xref:System.Runtime.Serialization.DataContractSerializer> serialisierbar ist, und gibt in diesem Fall `XmlSerializable`\-Typen aus.Wenn Sie die Verwendung des <xref:System.Xml.Serialization.XmlSerializer> erzwingen möchten, können Sie die Befehlsoption "\/serializer:XmlSerializer" \(XmlSerializer verwenden\) an das Tool "Svcutil.exe" übergeben.  
+  
+```  
+// Create a client.  
+XmlSerializerCalculatorClient client = new  
+                         XmlSerializerCalculatorClient();  
+  
+// Call the Add service operation.  
+ComplexNumber value1 = new ComplexNumber();  
+value1.Real = 1;  
+value1.Imaginary = 2;  
+ComplexNumber value2 = new ComplexNumber();  
+value2.Real = 3;  
+value2.Imaginary = 4;  
+ComplexNumber result = client.Add(value1, value2);  
+Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
+    value1.Real, value1.Imaginary, value2.Real, value2.Imaginary,   
+    result.Real, result.Imaginary);  
+    …  
+}  
+  
+```  
+  
+ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+  
+```  
+Add(1 + 2i, 3 + 4i) = 4 + 6i  
+Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
+Multiply(2 + 3i, 4 + 7i) = -13 + 26i  
+Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 1.41379310344828i  
+  
+Press <ENTER> to terminate client.  
+```  
+  
+### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+  
+1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+  
+2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+  
+3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+  
+> [!IMPORTANT]
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>   
+>  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>   
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>   
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
+  
+## Siehe auch
