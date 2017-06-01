@@ -129,7 +129,7 @@ Wir können dann die Reflektion (die uns ermöglicht, die Metadaten eines Typs z
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
-Implizite Vererbung von der @System.Object-Klasse macht diese Methoden der `SimpleClass`-Klasse verfügbar:
+Implizite Vererbung von der @System.Object -Klasse macht diese Methoden der `SimpleClass`-Klasse verfügbar:
 
 - Die öffentliche `ToString`-Methode, die ein `SimpleClass`-Objekt in seine Zeichenfolgendarstellung konvertiert, den vollqualifizierten Typnamen. In diesem Fall gibt die `ToString`-Methode die Zeichenfolge „SimpleClass“ zurück.
 
@@ -137,11 +137,11 @@ Implizite Vererbung von der @System.Object-Klasse macht diese Methoden der `Simp
 
 - Die öffentliche `GetHashCode`-Methode, die einen Wert, berechnet, der die Verwendung einer Instanz des Typs in Hashauflistungen ermöglicht.
 
-- Die öffentliche `GetType`-Methode, die ein @System.Type -Objekt zurückgibt, das den `SimpleClass` -Typ darstellt.
+- Die öffentliche `GetType` -Methode, die ein @System.Type -Objekt zurückgibt, das den `SimpleClass` -Typ darstellt.
 
-- Die geschützte @System.Object.Finalize-Methode, die nicht verwaltete Ressourcen freigeben soll, bevor der Speicher eines Objekts durch den Garbage Collector freigegeben wird.
+- Die geschützte @System.Object.Finalize -Methode, die nicht verwaltete Ressourcen freigeben soll, bevor der Speicher eines Objekts durch den Garbage Collector freigegeben wird.
 
-- Die geschützte @System.Object.MemberwiseClone-Methode, die einen flachen Klon des aktuellen Objekts erstellt.
+- Die geschützte @System.Object.MemberwiseClone -Methode, die einen flachen Klon des aktuellen Objekts erstellt.
 
 Aufgrund der impliziten Vererbung können wir alle geerbten Member aus einem `SimpleClass`-Objekt einfach aufrufen, als wären sie tatsächlich in der `SimpleClass`-Klasse definierte Member. Im folgenden Beispiel wird die `SimpleClass.ToString`-Methode aufgerufen, die `SimpleClass` von @System.Object erbt.
 
@@ -162,7 +162,7 @@ Mit Vererbung wird normalerweise eine „ist ein“-Beziehung zwischen einer Bas
 
    [!NOTE] Eine Klasse oder Struktur kann eine oder mehrere Schnittstellen implementieren. Die Schnittstellenimplementierung wird zwar oft als Problemumgehung für einzelne Vererbung oder Möglichkeit der Verwendung von Vererbung mit Strukturen dargestellt, doch sie soll eine andere Beziehung (eine „tun können“-Beziehung) zwischen einer Schnittstelle und ihrem implementierenden Typ ausdrücken als Vererbung. Eine Schnittstelle definiert eine Teilmenge der Funktionalität (z.B. die Möglichkeit zum Testen auf Gleichheit, zum Vergleichen oder Sortieren von Objekten oder zum Unterstützen kulturspezifischer Analyse und Formatierung), die die Schnittstelle den implementierenden Typen zur Verfügung stellt.
 
-Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Moke`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile`-Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die @System.Object.ToString-Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile`-Instanz anstelle der `Automobile`-Klasse identifiziert.
+Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Moke`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile` -Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die @System.Object.ToString -Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile` -Instanz anstelle der `Automobile` -Klasse identifiziert.
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
@@ -239,9 +239,9 @@ Das folgende Beispiel zeigt sowohl den Quellcode für die `Publication`-Klasse a
 
 - Eine Überschreibung der `ToString`-Methode
 
-  Wenn ein Typ die @System.Object.ToString-Methode nicht überschreibt, gibt sie den vollqualifizierten Namen des Typs zurück, was zur Unterscheidung einer Instanz von einer anderen von geringem Nutzen ist. Die `Publication`-Klasse überschreibt @System.Object.ToString, um den Wert der Eigenschaft `Title` zurückzugeben.
+  Wenn ein Typ die @System.Object.ToString -Methode nicht überschreibt, gibt sie den vollqualifizierten Namen des Typs zurück, was zur Unterscheidung einer Instanz von einer anderen von geringem Nutzen ist. Die `Publication`-Klasse überschreibt @System.Object.ToString, um den Wert der Eigenschaft `Title` zurückzugeben.
 
-Die folgende Abbildung veranschaulicht die Beziehung zwischen unserer Basis-`Publication`-Klasse und der implizit geerbten @System.Object-Klasse.
+Die folgende Abbildung veranschaulicht die Beziehung zwischen unserer Basis-`Publication` -Klasse und der implizit geerbten @System.Object -Klasse.
 
 ![Die Klassen „Object“ und „Publication“](media/publication-class.jpg)
 
@@ -269,11 +269,11 @@ Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`
 
 - Eine `SetPrice`-Methode, die die Werte der Felder `bookPrice` und `ISOCurrencySymbol` festlegt. Dies sind die Rückgabewerte der Eigenschaften `Price` und `Currency`.
 
-- Überschreibt die `ToString`-Methode (geerbt von `Publication`) und die Methoden @System.Object.Equals(System.Object) und @System.Object.GetHashCode (geerbt von @System.Object).
+- Überschreibt die `ToString` -Methode (geerbt von `Publication`) und die Methoden @System.Object.Equals(System.Object) und @System.Object.GetHashCode (geerbt von @System.Object).
 
   Sofern sie nicht überschrieben wird, führt die Methode @System.Object.Equals(System.Object) Tests hinsichtlich der Verweisgleichheit durch. D.h., zwei Objektvariablen werden als gleich betrachtet, wenn sie auf das gleiche Objekt verweisen. Andererseits sollten im Fall der `Book`-Klasse zwei `Book`-Objekte gleich sein, wenn sie die gleiche ISBN haben.
 
-  Wenn Sie die @System.Object.Equals(System.Object)-Methode überschreiben, müssen Sie auch die @System.Object.GetHashCode-Methode überschreiben, die einen Wert zurückgibt, den die Laufzeit zum Speichern von Elementen in Hashauflistungen für den effizienten Abruf verwendet. Der Hashcode sollte einen Wert zurückgeben, der mit dem Test auf Gleichheit konsistent ist. Da wir @System.Object.Equals(System.Object) derart überschrieben haben, dass `true` zurückgegeben wird, wenn die ISBN-Eigenschaften von zwei `Book`-Objekten gleich sind, geben wir den Hashcode durch Aufrufen der @System.String.GetHashCode-Methode der Zeichenfolge, die die Eigenschaft `ISBN` zurückgegeben hat, berechnet zurück.
+  Wenn Sie die @System.Object.Equals(System.Object)-Methode überschreiben, müssen Sie auch die @System.Object.GetHashCode -Methode überschreiben, die einen Wert zurückgibt, den die Laufzeit zum Speichern von Elementen in Hashauflistungen für den effizienten Abruf verwendet. Der Hashcode sollte einen Wert zurückgeben, der mit dem Test auf Gleichheit konsistent ist. Da wir @System.Object.Equals(System.Object) derart überschrieben haben, dass `true` zurückgegeben wird, wenn die ISBN-Eigenschaften von zwei `Book` -Objekten gleich sind, geben wir den Hashcode durch Aufrufen der @System.String.GetHashCode -Methode der Zeichenfolge, die die Eigenschaft `ISBN` zurückgegeben hat, berechnet zurück.
 
 Die folgende Abbildung veranschaulicht die Beziehung zwischen der `Book`-Klasse und `Publication`, ihrer Basisklasse.
 
@@ -289,7 +289,7 @@ Im vorherigen Beispiel definierten wir eine Basisklasse, die eine Implementierun
 
 Jede geschlossene zweidimensionale geometrische Form besitzt beispielsweise zwei Eigenschaften: den Flächeninhalt, die innere Ausdehnung der Form; und den Umfang, d.h. die Länge der Kanten der Form. Wie diese Eigenschaften berechnet werden, hängt jedoch vollständig von der jeweiligen Form ab. Die Formel zum Berechnen des Umfangs eines Kreises unterscheidet sich z.B. grundlegend von der zum Berechnen des Umfangs eines Dreiecks.
 
-Das folgende Beispiel definiert eine abstrakte Basisklasse mit dem Namen `Shape`, die zwei Eigenschaften definiert: `Area` und `Perimeter`. Beachten Sie, dass zusätzlich zum Markieren der Klasse mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort auch jeder Instanzmember mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort markiert wird. In diesem Fall überschreibt `Shape` auch die @System.Object.ToString-Methode, um den Namen des Typs anstelle dessen vollqualifizierten Namens zurückzugeben. Außerdem definiert sie zwei statische Member, `GetArea` und `GetPerimeter`, die Aufrufern ermöglichen, mühelos Fläche und Umfang einer Instanz einer beliebigen abgeleiteten Klasse abzurufen. Wenn wir eine Instanz einer abgeleiteten Klasse an eine der beiden Methoden übergeben, ruft die Laufzeit die Methodenüberschreibung der abgeleiteten Klasse auf.
+Das folgende Beispiel definiert eine abstrakte Basisklasse mit dem Namen `Shape`, die zwei Eigenschaften definiert: `Area` und `Perimeter`. Beachten Sie, dass zusätzlich zum Markieren der Klasse mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort auch jeder Instanzmember mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort markiert wird. In diesem Fall überschreibt `Shape` auch die @System.Object.ToString -Methode, um den Namen des Typs anstelle dessen vollqualifizierten Namens zurückzugeben. Außerdem definiert sie zwei statische Member, `GetArea` und `GetPerimeter`, die Aufrufern ermöglichen, mühelos Fläche und Umfang einer Instanz einer beliebigen abgeleiteten Klasse abzurufen. Wenn wir eine Instanz einer abgeleiteten Klasse an eine der beiden Methoden übergeben, ruft die Laufzeit die Methodenüberschreibung der abgeleiteten Klasse auf.
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
