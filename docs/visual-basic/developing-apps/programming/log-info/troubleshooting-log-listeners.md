@@ -50,7 +50,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 ### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>Bestimmen der Protokolllistener für das Protokollobjekt im Code  
   
-1.  Importieren Sie den Namespace <xref:System.Diagnostics> am Anfang der Codedatei. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+1.  Importieren Sie am Anfang der Codedatei den <xref:System.Diagnostics>-Namespace. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
      [!code-vb[VbVbalrMyApplicationLog#13](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_1.vb)]  
   

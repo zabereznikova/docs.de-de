@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Gewusst wie: Hochladen einer Datei in Visual Basic
-Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei verwendet werden und um diese an einem bestimmten Remotespeicherort zu speichern. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Downloads anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.  
+Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei und zum Speichern derselben an einem Remotespeicherort verwendet werden. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Downloads anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.  
   
 ### <a name="to-upload-a-file"></a>Hochladen einer Datei  
   
@@ -65,11 +65,11 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum 
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der lokale Dateipfad ist ungültig (<xref:System.ArgumentException>).  
+-   Der Dateipfad ist ungültig (<xref:System.ArgumentException>).  
   
 -   Die Authentifizierung ist fehlgeschlagen (<xref:System.Security.SecurityException>).  
   
--   Die Verbindung ist abgelaufen (<xref:System.TimeoutException>).  
+-   Verbindungstimeout (<xref:System.TimeoutException>)  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   

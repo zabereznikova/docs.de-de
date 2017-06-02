@@ -62,11 +62,11 @@ Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
   
 -   Der Name des Schlüssels lautet `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Benutzer ist nicht berechtigt, diese Registrierungsschlüssel zu löschen (<xref:System.Security.SecurityException>).  
+-   Der Benutzer ist nicht zum Löschen von Registrierungsschlüsseln berechtigt (<xref:System.Security.SecurityException>).  
   
--   Der Schlüsselname überschreitet die maximale Anzahl von 255 Zeichen (<xref:System.ArgumentException>).  
+-   Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
   
--   Der Registrierungschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
+-   Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Registrierungsaufrufe schlagen fehl, wenn die notwendigen Laufzeitberechtigungen fehlen (<xref:System.Security.Permissions.RegistryPermission>), oder wenn der Benutzer nicht über den korrekten Zugriff (wie von den ACLs angegeben) für das Erstellen von und Schreiben in Einstellungen verfügt. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung.  

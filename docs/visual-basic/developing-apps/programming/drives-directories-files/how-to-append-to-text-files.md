@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Gewusst wie: Anfügen an Textdateien in Visual Basic
-Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann verwendet werden, um sie an eine Textdatei anzufügen, indem angegeben wird, dass der `append`-Parameter auf `True` festgelegt wird.  
+Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann zum Anfügen an eine Textdatei verwendet werden. Dazu müssen Sie den Parameter `append` auf `True` festlegen.  
   
 ### <a name="to-append-to-a-text-file"></a>Anfügen an eine Textdatei  
   
@@ -53,17 +53,17 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann 
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0 (null), er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+-   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` entspricht (<xref:System.ArgumentNullException>).  
+-   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
--   `File` zeigt auf einen Pfad, der nicht existiert (<xref:System.IO.FileNotFoundException> oder <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` verweist auf einen Pfad, der nicht vorhanden ist (<xref:System.IO.FileNotFoundException> oder<xref:System.IO.DirectoryNotFoundException>).  
   
 -   Die Datei wird von einem anderen Prozess verwendet, oder ein E/A-Fehler tritt auf (<xref:System.IO.IOException>).  
   
--   Der Pfad überschreitet die vom System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+-   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Der Datei- oder Verzeichnisname im Pfad enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+-   Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
   
 -   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
   

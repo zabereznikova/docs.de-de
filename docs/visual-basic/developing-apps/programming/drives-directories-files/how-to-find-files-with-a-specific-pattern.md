@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Gewusst wie: Suchen nach Dateien mit einem bestimmten Muster in Visual Basic
-Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die für die Pfadnamen der Dateien stehen. Sie können den `wildCards` -Parameter verwenden, um ein bestimmtes Muster anzugeben. Legen Sie zum Einschließen der Unterverzeichnisse in die Suche den Parameter `searchType` auf `SearchOption.SearchAllSubDirectories` fest.  
+Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen. Sie können den `wildCards` -Parameter verwenden, um ein bestimmtes Muster anzugeben. Legen Sie zum Einschließen der Unterverzeichnisse in die Suche den Parameter `searchType` auf `SearchOption.SearchAllSubDirectories` fest.  
   
  Es wird eine leere Sammlung zurückgegeben, wenn keine Dateien dem angegebenen Muster entsprechen.  
   
@@ -56,21 +56,21 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0 (null), er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+-   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` entspricht (<xref:System.ArgumentNullException>).  
+-   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
 -   `directory` ist nicht vorhanden (<xref:System.IO.DirectoryNotFoundException>).  
   
 -   `directory` verweist auf eine vorhandene Datei (<xref:System.IO.IOException>).  
   
--   Der Pfad überschreitet die vom System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+-   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Ein Datei- oder Ordnername im Pfad enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+-   Der Pfad eines Datei- oder Ordnernamens enthält einen Doppelpunkt (:) oder weist ein ungültiges Format auf (<xref:System.NotSupportedException>).  
   
 -   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
   
--   Dem Benutzer fehlen die erforderlichen Berechtigungen (<xref:System.UnauthorizedAccessException>).  
+-   Der Benutzer verfügt nicht über die erforderlichen Berechtigungen (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>   

@@ -64,13 +64,13 @@ Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das L�
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0 (null), er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+-   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` entspricht (<xref:System.ArgumentNullException>).  
+-   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
--   Der Pfad überschreitet die vom System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+-   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Ein Datei- oder Ordnername im Pfad enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+-   Der Pfad eines Datei- oder Ordnernamens enthält einen Doppelpunkt (:) oder weist ein ungültiges Format auf (<xref:System.NotSupportedException>).  
   
 -   Die Datei wird gerade verwendet (<xref:System.IO.IOException>).  
   
@@ -80,7 +80,7 @@ Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das L�
   
 -   Der Benutzer verfügt nicht über die nötigen Berechtigungen, um die Datei zu löschen, oder die Datei ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
--   Es gibt eine teilweise vertrauenswürdige Situation, in der der Benutzer nicht über ausreichende Berechtigungen verfügt (<xref:System.Security.SecurityException>).  
+-   Ein teilweise vertrauenswürdiger Kontext, in dem der Benutzer nicht über ausreichende Berechtigungen für den Dateizugriff verfügt (<xref:System.Security.SecurityException>).  
   
 -   Der Benutzer hat den Vorgang abgebrochen, und `onUserCancel` wird auf `ThrowException` festgelegt (<xref:System.OperationCanceledException>).  
   

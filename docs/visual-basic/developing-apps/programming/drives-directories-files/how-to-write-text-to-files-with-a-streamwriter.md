@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter in Visual Basic
-In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mithilfe der `My.Computer.FileSystem.OpenTextFileWriter`-Methode geöffnet. Es wird für das Schreiben einer Zeichenfolge in einer Textdatei mit der <xref:System.IO.TextWriter.WriteLine%2A>-Methode der <xref:System.IO.StreamWriter>-Klasse verwendet.  
+In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mit der `My.Computer.FileSystem.OpenTextFileWriter`-Methode geöffnet. Es wird dazu verwendet, eine Zeichenfolge mit der <xref:System.IO.TextWriter.WriteLine%2A>-Methode der <xref:System.IO.StreamWriter>-Klasse in eine Textdatei zu schreiben.  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
@@ -48,7 +48,7 @@ In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mithilfe der `M
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Datei ist vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+-   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
   
 -   Der Datenträger ist voll (<xref:System.IO.IOException>).  
   

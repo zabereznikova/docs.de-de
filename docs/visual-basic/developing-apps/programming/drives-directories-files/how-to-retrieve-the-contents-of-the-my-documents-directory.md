@@ -38,7 +38,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Gewusst wie: Abrufen des Inhalts des Verzeichnisses "Eigene Dateien" in Visual Basic
-Das <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>-Objekt kann verwendet werden, um aus vielen **Alle Benutzer**-Verzeichnissen zu lesen, z.B. **Dokumente** oder **Desktop**.  
+Das <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>-Objekt kann verwendet werden, um aus vielen **All Users**-Verzeichnissen zu lesen, z.B. **Dokumente** oder **Desktop**.  
   
 ### <a name="to-read-from-the-my-documents-folder"></a>Lesen aus dem Ordner „Dokumente“  
   

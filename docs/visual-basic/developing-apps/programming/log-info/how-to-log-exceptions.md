@@ -55,7 +55,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 3.  Fügen Sie den Code, der eine Ausnahme generieren kann, in den `Try`-Block ein.  
   
-     Heben Sie die Auskommentierungen der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen.  
+     Heben Sie die Auskommentierung der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
@@ -81,7 +81,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 5.  Wählen Sie im Menü **Deklarationen** den Eintrag **UnhandledException** aus.  
   
-     Die Anwendung löst vor dem Start der Hauptanwendung das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> aus.  
+     Die Anwendung löst das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> aus, bevor die Hauptanwendung ausgeführt wird.  
   
 6.  Fügen Sie die Methode `My.Application.Log.WriteException` zum `UnhandledException` -Ereignishandler hinzu.  
   

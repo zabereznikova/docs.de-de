@@ -62,7 +62,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 3.  Fügen Sie dem `<listeners>` -Abschnitt dieses Element hinzu:  
   
-    ```xml  
+    ```  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 5.  Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
   
-    ```xml  
+    ```  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
