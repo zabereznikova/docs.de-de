@@ -1,0 +1,26 @@
+---
+title: "Zuverl&#228;ssiges Messaging | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 46d41fdf-b1f8-4968-8e54-c896848885fa
+caps.latest.revision: 5
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 5
+---
+# Zuverl&#228;ssiges Messaging
+In diesem Thema werden alle vom zuverlässigen Messaging erzeugten Ausnahmen aufgeführt.  
+  
+## Ausnahmeliste  
+  
+|Ressourcencode|Ressourcenzeichenfolge|  
+|--------------------|----------------------------|  
+|InvalidBufferRemaining|Der Puffer hat eine Nachricht empfangen, in der die verbleibende Größe angegeben wird.Der verbleibende Puffer darf nicht unter 0 \(null\) liegen.|

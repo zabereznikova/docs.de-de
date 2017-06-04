@@ -1,0 +1,1 @@
+Erweiterte Metadatei (Enhanced Metafile, EMF)

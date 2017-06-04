@@ -1,0 +1,65 @@
+---
+title: "SqlClient f&#252;r das Entity Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
+caps.latest.revision: 4
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 3
+---
+# SqlClient f&#252;r das Entity Framework
+Dieser Abschnitt beschreibt den .NET Framework\-Datenanbieter für SQL Server \(SqlClient\), der dem Entity Framework die Arbeit mit Microsoft SQL Server ermöglicht.  
+  
+## Anbieterschemaattribut  
+ `Provider` ist ein Attribut des `Schema`\-Elements der Datenspeicherschema\-Definitionssprache \(Store Schema Definition Language, SSDL\).  
+  
+ Um SqlClient zu verwenden, weisen Sie dem `Provider`\-Attribut des `Schema`\-Elements die Zeichenfolge "System.Data.SqlClient" zu.  
+  
+## 'ProviderManifestToken'\-Schemaattribut  
+ Das `ProviderManifestToken`\-Element ist ein erforderliches Attribut des `Schema`\-Elements.  Dieses Token wird verwendet, um das Anbietermanifest für Offlineszenarien zu laden.  Weitere Informationen über das `ProviderManifestToken`\-Attribut finden Sie unter [Schema Element \(SSDL\)](http://msdn.microsoft.com/de-de/fec75ae4-7f16-4421-9265-9dac61509222).  
+  
+ SqlClient kann als Datenanbieter für verschiedene Versionen von [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] verwendet werden.  Diese Versionen haben verschiedene Funktionen.  Beispielsweise unterstützt [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] die mit [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] eingeführten Typen `varchar(max)` und `nvarchar(max)` nicht.  
+  
+ SqlClient erzeugt und akzeptiert die folgenden Anbietermanifesttoken für die verschiedenen Versionen von SQL Server.  
+  
+||||  
+|-|-|-|  
+|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
+|2000|2005|2008|  
+  
+> [!NOTE]
+>  Ab [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010 unterstützen die [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/de-de/91076853-0881-421b-837a-f582f36be527) SQL Server 2000 nicht mehr.  
+  
+## Anbieternamespacename  
+ Alle Anbieter müssen einen Namespace angeben.  Anhand dieser Eigenschaft ermittelt Entity Framework, welches Präfix von diesem Anbieter für spezifische Konstrukte wie Typen und Funktionen verwendet wird.  Der Namespace für SqlClient\-Anbietermanifeste lautet `SqlServer`.  Weitere Informationen über Namespaces finden Sie unter [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  
+  
+## Typen  
+ Der SqlClient\-Anbieter für das Entity Framework stellt Zuordnungsinformationen zwischen Typen des konzeptionellen Modells und SQL Server\-Typen bereit.  Weitere Informationen finden Sie unter [SqlClient für Entity Framework\-Typen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+  
+## Funktionen  
+ Der SqlClient\-Anbieter für das Entity Framework definiert die Liste der vom Anbieter unterstützten Funktionen.  Eine Liste dieser unterstützen Funktionen finden Sie unter [SqlClient für Entity Framework\-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+  
+## In diesem Abschnitt  
+ [SqlClient für Entity Framework\-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+  
+ [SqlClient für Entity Framework\-Typen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+  
+ [Bekannte Probleme mit SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+  
+## Siehe auch  
+ [Entity SQL\-Sprache](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)   
+ [Sprachreferenz](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)   
+ [Known Issues in SqlClient Provider for Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

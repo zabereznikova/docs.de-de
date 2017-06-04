@@ -1,0 +1,83 @@
+---
+title: "Abrufen von Schemainformationen aus einer Datenbank | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
+caps.latest.revision: 3
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 3
+---
+# Abrufen von Schemainformationen aus einer Datenbank
+Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abgerufen.  Mit der Schemasuche können Anwendungen anfordern, dass verwaltete Anbieter Informationen über das Datenbankschema einer angegebenen Datenbank, auch als *Metadaten* bezeichnet, suchen und zurückgeben.  Verschiedene Schemaelemente von Datenbanken \(z. B. Tabellen, Spalten und gespeicherte Prozeduren\) werden über Schemaauflistungen verfügbar gemacht.  Jede Schemaauflistung enthält eine Vielzahl von Schemainformationen, die für den verwendeten Anbieter spezifisch sind.  
+  
+ Alle von .NET Framework verwalteten Anbieter implementieren die **GetSchema**\-Methode in die **Connection**\-Klasse, und die von der **GetSchema**\-Methode zurückgegebenen Schemainformationen werden als <xref:System.Data.DataTable> abgerufen.  Bei der **GetSchema**\-Methode handelt es sich um eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden Schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
+  
+ Die .NET Framework\-Datenanbieter für OLE DB, ODBC, Oracle und SqlClient stellen eine **GetSchemaTable**\-Methode bereit, die eine DataTable zurückgibt, in der die Spaltenmetadaten des **DataReader** beschrieben werden.  
+  
+ Der .NET Framework\-Datenanbieter für OLE DB stellt außerdem Schemainformationen mithilfe der <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A>\-Methode des <xref:System.Data.OleDb.OleDbConnection>\-Objekts zur Verfügung.  Die **GetOleDbSchemaTable**\-Methode akzeptiert ein <xref:System.Data.OleDb.OleDbSchemaGuid>\-Objekt, das die zurückzugebenden Schemainformationen identifiziert, und ein Array mit Einschränkungen für diese zurückgegebenen Spalten als Argument.  Die **GetOleDbSchemaTable**\-Methode gibt eine mit den abgefragten Schemainformationen aufgefüllte <xref:System.Data.DataTable> zurück.  
+  
+## In diesem Abschnitt  
+ ['GetSchema' und Schemaauflistungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ Beschreibt die **GetSchema**\-Methode und deren Verwendung zum Abrufen und Einschränken von Schemainformationen aus einer Datenbank.  
+  
+ Schemaeinschränkungen  
+ Beschreibt Schemaeinschränkungen, die mit **GetSchema** verwendet werden können.  
+  
+ [Allgemeine Schemaauflistungen](../../../../docs/framework/data/adonet/common-schema-collections.md)  
+ Beschreibt alle allgemeinen Schemaauflistungen, die von allen in .NET Framework verwalteten Anbietern unterstützt werden.  
+  
+ [SQL Server\-Schemaauflistungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
+ Beschreibt die Schemaauflistung, die vom .NET Framework\-Anbieter für SQL Server unterstützt wird.  
+  
+ [Oracle\-Schemaauflistungen](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
+ Beschreibt die Schemaauflistung, die vom .NET Framework\-Anbieter für Oracle unterstützt wird.  
+  
+ [ODBC\-Schemaauflistungen](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
+ Beschreibt die Schemaauflistungen für ODBC\-Treiber.  
+  
+ [OLE DB\-Schemaauflistungen](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
+ Beschreibt die Schemaauflistungen für OLE DB\-Anbieter.  
+  
+## Referenz  
+ <xref:System.Data.Common.DbConnection.GetSchema%2A>  
+ Beschreibt die **GetSchema**\-Methode der <xref:System.Data.Common.DbConnection>\-Klasse.  
+  
+ <xref:System.Data.Odbc.OdbcConnection.GetSchema%2A>  
+ Beschreibt die **GetSchema**\-Methode der <xref:System.Data.Odbc.OdbcConnection>\-Klasse.  
+  
+ <xref:System.Data.OleDb.OleDbConnection.GetSchema%2A>  
+ Beschreibt die **GetSchema**\-Methode der <xref:System.Data.OleDb.OleDbConnection>\-Klasse.  
+  
+ <xref:System.Data.OracleClient.OracleConnection.GetSchema%2A>  
+ Beschreibt die **GetSchema**\-Methode der <xref:System.Data.OracleClient.OracleConnection>\-Klasse.  
+  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>  
+ Beschreibt die **GetSchema**\-Methode der <xref:System.Data.SqlClient.SqlConnection>\-Klasse.  
+  
+ <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>  
+ Beschreibt die **GetSchemaTable**\-Methode der <xref:System.Data.Common.DbDataReader>\-Klasse.  
+  
+ <xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A>  
+ Beschreibt die **GetSchemaTable**\-Methode der <xref:System.Data.Odbc.OdbcDataReader>\-Klasse.  
+  
+ <xref:System.Data.OleDb.OleDbDataReader.GetSchemaTable%2A>  
+ Beschreibt die **GetSchemaTable**\-Methode der <xref:System.Data.OleDb.OleDbDataReader>\-Klasse.  
+  
+ <xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A>  
+ Beschreibt die **GetSchemaTable**\-Methode der <xref:System.Data.OracleClient.OracleDataReader>\-Klasse.  
+  
+ <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
+ Beschreibt die **GetSchemaTable**\-Methode der <xref:System.Data.SqlClient.SqlDataReader>\-Klasse.  
+  
+## Siehe auch  
+ [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
+ [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)

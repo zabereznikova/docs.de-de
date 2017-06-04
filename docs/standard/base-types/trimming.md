@@ -1,208 +1,94 @@
 ---
-title: Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen
-description: Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 95d818bc-2661-43f6-adb8-13b53abf9682
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2508dd93f7ece9274180bec8f4b6ac92a62e9bf8
-ms.lasthandoff: 01/18/2017
-
+title: "Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen in .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Remove-Methode"
+  - "Entfernen von Zeichen"
+  - "Zeichenfolgen [.NET Framework], Entfernen von Zeichen"
+  - "Trim-Methode"
+  - "TrimEnd-Methode"
+  - "Entfernen von Zeichen"
+  - "TrimStart-Methode"
+ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
+caps.latest.revision: 13
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 13
 ---
-
-# <a name="trimming-and-removing-characters-from-strings"></a>Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen
-
-Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise Wörter mit Leerzeichen (auch als Leerräume bezeichnet) auf beiden Seiten des jeweiligen Wortes. In diesem Fall können Sie eine der Entfernungsmethoden aus der [System.String](xref:System.String)-Klasse verwenden, um an einer bestimmten Position der Zeichenfolge eine beliebige Anzahl von Leerzeichen oder anderen Zeichen zu entfernen. In der folgenden Tabelle sind die verfügbaren Entfernungsmethoden aufgeführt.
-
-Methodenname | Verwendung
------------ | ---
-[String.Trim](xref:System.String.Trim) | Entfernt in einem Zeichenarray angegebene Leerzeichen am Anfang und Ende einer Zeichenfolge.
-[String.TrimEnd](xref:System.String.TrimEnd(System.Char[])) | Entfernt in einem Zeichenarray angegebene Zeichen am Ende einer Zeichenfolge.
-[String.TrimStart](xref:System.String.TrimStart(System.Char[])) | Entfernt in einem Zeichenarray angegebene Zeichen am Anfang einer Zeichenfolge.
-[String.Remove](xref:System.String.Remove(System.Int32)) | Entfernt eine festgelegte Anzahl von Zeichen an der angegebenen Indexposition in einer Zeichenfolge.
-
-
-## <a name="trim"></a>Trim
-
-Wie das folgende Beispiel zeigt, lassen sich mit der [String.Trim](xref:System.String.Trim)-Methode Leerzeichen an beiden Enden einer Zeichenfolge auf einfache Weise entfernen.
-
-```csharp
-string MyString = " Big   ";
-Console.WriteLine("Hello{0}World!", MyString);
-string TrimString = MyString.Trim();
-Console.WriteLine("Hello{0}World!", TrimString);
-//       The example displays the following output:
-//             Hello Big   World!
-//             HelloBigWorld!
-```
-
-```vb
-Dim MyString As String = " Big   "
-Console.WriteLine("Hello{0}World!", MyString)
-Dim TrimString As String = MyString.Trim()
-Console.WriteLine("Hello{0}World!", TrimString)
-' The example displays the following output:
-'       Hello Big   World!
-'       HelloBigWorld!
-```
-
-Sie können auch Zeichen am Anfang und am Ende einer Zeichenfolge entfernen, die Sie in einem Zeichenarray angeben. Im folgenden Beispiel werden Leerzeichen, Punkte und Sternchen entfernt.
-
-```csharp
-using System;
-
-public class Example
-{
-   public static void Main()
-   {
-      String header = "* A Short String. *";
-      Console.WriteLine(header);
-      Console.WriteLine(header.Trim( new Char[] { ' ', '*', '.' } ));
-   }
-}
-// The example displays the following output:
-//       * A Short String. *
-//       A Short String
-```
-
-```vb
-Module Example
-   Public Sub Main()
-      Dim header As String = "* A Short String. *"
-      Console.WriteLine(header)
-      Console.WriteLine(header.Trim( { " "c, "*"c, "."c } ))
-   End Sub
-End Module
-' The example displays the following output:
-'       * A Short String. *
-'       A Short String
-```
-
-## <a name="trimend"></a>TrimEnd
-
-Mit der [String.TrimEnd](xref:System.String.TrimEnd(System.Char[]))-Methode werden Zeichen am Ende einer Zeichenfolge entfernt, wodurch ein neues Zeichenfolgenobjekt entsteht. An diese Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Die Reihenfolge der Elemente im Zeichenarray hat keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.
-
-Im folgenden Beispiel werden die letzten Buchstaben einer Zeichenfolge mit der TrimEnd-Methode entfernt. In diesem Beispiel werden die Positionen der Zeichen `'r'` und `'W'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt. Beachten Sie, dass durch diesen Code das letzte Wort von `MyString` sowie ein Teil des ersten Wortes entfernt wird.
-
-```csharp
-string MyString = "Hello World!";
-char[] MyChar = {'r','o','W','l','d','!',' '};
-string NewString = MyString.TrimEnd(MyChar);
-Console.WriteLine(NewString);
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Dim MyChar() As Char = {"r","o","W","l","d","!"," "}
-Dim NewString As String = MyString.TrimEnd(MyChar)
-Console.WriteLine(NewString)
-```
-
-Durch diesen Code wird `He` auf der Konsole angezeigt.
-
-Im folgenden Beispiel wird das letzte Wort einer Zeichenfolge mit der [TrimEnd](xref:System.String.TrimEnd(System.Char[]))-Methode entfernt. Im Code folgt auf das Wort `Hello` ein Komma. Da das Komma im Zeichenarray nicht als zu entfernendes Zeichen angegeben ist, wird der Vorgang beim Komma beendet.
-
-```csharp
-string MyString = "Hello, World!";
-char[] MyChar = {'r','o','W','l','d','!',' '};
-string NewString = MyString.TrimEnd(MyChar);
-Console.WriteLine(NewString);
-```
-
-```vb
-Dim MyString As String = "Hello, World!"
-Dim MyChar() As Char = {"r","o","W","l","d","!"," "}
-Dim NewString As String = MyString.TrimEnd(MyChar)
-Console.WriteLine(NewString)
-```
-
-Durch diesen Code wird `Hello,` auf der Konsole angezeigt.
-
-## <a name="trimstart"></a>TrimStart
-
-Die [String.TrimStart](xref:System.String.TrimStart(System.Char[]))-Methode ist mit der [String.TrimEnd](xref:System.String.TrimEnd(System.Char[]))-Methode vergleichbar, außer dass eine neue Zeichenfolge erstellt wird, indem Zeichen am Anfang eines bestehenden Zeichenfolgenobjekts entfernt werden. An die [TrimStart](xref:System.String.TrimStart(System.Char[]))-Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Wie bei der [TrimEnd](xref:System.String.TrimEnd(System.Char[]))-Methode hat die Reihenfolge der Elemente im Zeichenarray keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.
-
-Im folgenden Beispiel wird das erste Wort einer Zeichenfolge entfernt. In diesem Beispiel werden die Positionen der Zeichen `'l'` und `'H'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt.
-
-```csharp
-string MyString = "Hello World!";
-char[] MyChar = {'e', 'H','l','o',' ' };
-string NewString = MyString.TrimStart(MyChar);
-Console.WriteLine(NewString);
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Dim MyChar() As Char = {"e","H","l","o"," " }
-Dim NewString As String = MyString.TrimStart(MyChar)
-Console.WriteLine(NewString)
-```
-
-Durch diesen Code wird `World!` auf der Konsole angezeigt.
-
-## <a name="remove"></a>Remove
-
-Mit der [String.Remove](xref:System.String.Remove(System.Int32))-Methode wird an einer festgelegten Position innerhalb einer bestehenden Zeichenfolge eine festgelegte Anzahl von Zeichen entfernt. Diese Methode setzt einen nullbasierten Index voraus.
-
-Im folgenden Beispiel werden ausgehend von der fünften Position des nullbasierten Zeichenfolgenindizes zehn Zeichen aus einer Zeichenfolge entfernt.
-
-```csharp
-string MyString = "Hello Beautiful World!";
-Console.WriteLine(MyString.Remove(5,10));
-// The example displays the following output:
-//         Hello World!  
-```
-
-```vb
-Dim MyString As String = "Hello Beautiful World!"
-Console.WriteLine(MyString.Remove(5,10))
-' The example displays the following output:
-'         Hello World!
-```
-
-Sie können auch ein bestimmtes Zeichen oder eine Teilzeichenfolge aus einer Zeichenfolge entfernen, indem Sie die [String.Replace(String, String)](xref:System.String.Replace(System.String,System.String))-Methode aufrufen und eine leere Zeichenfolge ([String.Empty](xref:System.String.Empty)) zum Ersetzen angeben. Im folgenden Beispiel werden alle Kommas in einer Zeichenfolge entfernt.
-
-```csharp
-using System;
-
-public class Example
-{
-   public static void Main()
-   {
-      String phrase = "a cold, dark night";
-      Console.WriteLine("Before: {0}", phrase);
-      phrase = phrase.Replace(",", "");
-      Console.WriteLine("After: {0}", phrase);
-   }
-}
-// The example displays the following output:
-//       Before: a cold, dark night
-//       After: a cold dark night
-```
-
-```vb
-Module Example
-   Public Sub Main()
-      Dim phrase As String = "a cold, dark night"
-      Console.WriteLine("Before: {0}", phrase)
-      phrase = phrase.Replace(",", "")
-      Console.WriteLine("After: {0}", phrase)
-   End Sub
-End Module
-' The example displays the following output:
-'       Before: a cold, dark night
-'       After: a cold dark night
-```
-
-## <a name="see-also"></a>Siehe auch
-
-[Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
-
-
+# Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen in .NET Framework
+Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise Wörter mit Leerzeichen \(auch als Leerräume bezeichnet\) auf beiden Seiten des jeweiligen Wortes.  In diesem Fall können Sie eine der Entfernungsmethoden aus der **System.String**\-Klasse verwenden, um an einer bestimmten Position der Zeichenfolge eine beliebige Anzahl von Leerzeichen oder anderen Zeichen zu entfernen.  In der folgenden Tabelle sind die verfügbaren Entfernungsmethoden aufgeführt.  
+  
+|Methodenname|Verwendung|  
+|------------------|----------------|  
+|<xref:System.String.Trim%2A?displayProperty=fullName>|Entfernt in einem Zeichenarray angegebene Leerzeichen am Anfang und Ende einer Zeichenfolge.|  
+|<xref:System.String.TrimEnd%2A?displayProperty=fullName>|Entfernt in einem Zeichenarray angegebene Zeichen am Ende einer Zeichenfolge.|  
+|<xref:System.String.TrimStart%2A?displayProperty=fullName>|Entfernt in einem Zeichenarray angegebene Zeichen am Anfang einer Zeichenfolge.|  
+|<xref:System.String.Remove%2A?displayProperty=fullName>|Entfernt eine festgelegte Anzahl von Zeichen an der angegebenen Indexposition in einer Zeichenfolge.|  
+  
+## Trim  
+ Wie das folgende Beispiel zeigt, lassen sich mit der <xref:System.String.Trim%2A?displayProperty=fullName>\-Methode Leerzeichen an beiden Enden einer Zeichenfolge auf einfache Weise entfernen.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
+ [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
+ [!code-vb[Conceptual.String.BasicOps#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#17)]  
+  
+ Sie können auch Zeichen am Anfang und am Ende einer Zeichenfolge entfernen, die Sie in einem Zeichenarray angeben.  Im folgenden Beispiel werden Leerzeichen, Punkte und Sternchen entfernt.  
+  
+ [!code-csharp[Conceptual.String.BasicOps#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trim2.cs#22)]
+ [!code-vb[Conceptual.String.BasicOps#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trim2.vb#22)]  
+  
+## TrimEnd  
+ Mit der **String.TrimEnd**\-Methode werden Zeichen am Ende einer Zeichenfolge entfernt, wodurch ein neues Zeichenfolgenobjekt entsteht.  An diese Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält.  Die Reihenfolge der Elemente im Zeichenarray hat keine Auswirkungen auf den Entfernungsvorgang.  Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
+  
+ Im folgenden Beispiel werden die letzten Buchstaben einer Zeichenfolge mit der **TrimEnd**\-Methode entfernt.  In diesem Beispiel werden die Positionen der Zeichen `'r'` und `'W'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt.  Beachten Sie, dass durch diesen Code das letzte Wort von `MyString` sowie ein Teil des ersten Wortes entfernt wird.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
+ [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
+ [!code-vb[Conceptual.String.BasicOps#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#18)]  
+  
+ Durch diesen Code wird `He` auf der Konsole angezeigt.  
+  
+ Im folgenden Beispiel wird das letzte Wort einer Zeichenfolge mit der **TrimEnd**\-Methode entfernt.  Im Code folgt auf das Wort `Hello` ein Komma. Da das Komma im Zeichenarray nicht als zu entfernendes Zeichen angegeben ist, wird der Vorgang beim Komma beendet.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
+ [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
+ [!code-vb[Conceptual.String.BasicOps#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#19)]  
+  
+ Durch diesen Code wird `Hello,` auf der Konsole angezeigt.  
+  
+## TrimStart  
+ Die **String.TrimStart**\-Methode ist mit der **String.TrimEnd**\-Methode vergleichbar, außer dass eine neue Zeichenfolge erstellt wird, indem Zeichen am Anfang eines bestehenden Zeichenfolgenobjekts entfernt werden.  An die **TrimStart**\-Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält.  Wie bei der **TrimEnd**\-Methode hat die Reihenfolge der Elemente im Zeichenarray keine Auswirkungen auf den Entfernungsvorgang.  Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
+  
+ Im folgenden Beispiel wird das erste Wort einer Zeichenfolge entfernt.  In diesem Beispiel werden die Positionen der Zeichen `'l'` und `'H'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#20)]
+ [!code-csharp[Conceptual.String.BasicOps#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#20)]
+ [!code-vb[Conceptual.String.BasicOps#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#20)]  
+  
+ Durch diesen Code wird `World!` auf der Konsole angezeigt.  
+  
+## Entfernen  
+ Mit der <xref:System.String.Remove%2A?displayProperty=fullName>\-Methode wird an einer festgelegten Position innerhalb einer bestehenden Zeichenfolge eine festgelegte Anzahl von Zeichen entfernt.  Diese Methode setzt einen nullbasierten Index voraus.  
+  
+ Im folgenden Beispiel werden ausgehend von der fünften Position des nullbasierten Zeichenfolgenindizes zehn Zeichen aus einer Zeichenfolge entfernt.  
+  
+ [!code-cpp[Conceptual.String.BasicOps#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#21)]
+ [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
+ [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
+  
+ Sie können auch ein bestimmtes Zeichen oder eine Teilzeichenfolge aus einer Zeichenfolge entfernen, indem Sie die <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=fullName>\-Methode aufrufen und eine leere Zeichenfolge \(<xref:System.String.Empty?displayProperty=fullName>\) zum Ersetzen angeben.  Im folgenden Beispiel werden alle Kommas in einer Zeichenfolge entfernt.  
+  
+ [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
+ [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
+  
+## Siehe auch  
+ [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)

@@ -1,0 +1,128 @@
+---
+title: "Migrieren von der XslTransform-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
+caps.latest.revision: 3
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 3
+---
+# Migrieren von der XslTransform-Klasse
+[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wartet mit einer umgestalteten XSLT\-Architektur auf.  Die <xref:System.Xml.Xsl.XslTransform>\-Klasse wurde durch die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse ersetzt.  
+  
+ In den folgenden Abschnitten werden einige der Hauptunterschiede zwischen der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse und der <xref:System.Xml.Xsl.XslTransform>\-Klasse beschrieben.  
+  
+## Leistung  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse weist eine Reihe von Leistungsverbesserungen auf.  Der neue XSLT\-Prozessor kompiliert das XSLT\-Stylesheet in ein allgemeines Zwischenformat, ähnlich wie dies von der CLR \(Common Language Runtime\) für andere Programmiersprachen erfolgt.  Sobald das Stylesheet kompiliert ist, kann es zwischengespeichert und wiederverwendet werden.  
+  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse enthält zudem weitere Optimierungen, wodurch sie viel schneller als die <xref:System.Xml.Xsl.XslTransform>\-Klasse ist.  
+  
+> [!NOTE]
+>  Obwohl die Gesamtleistung der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse besser ist als die der <xref:System.Xml.Xsl.XslTransform>\-Klasse, ist die Leistung der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>\-Methode der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse möglicherweise langsamer als die <xref:System.Xml.Xsl.XslTransform.Load%2A>\-Methode der <xref:System.Xml.Xsl.XslTransform>\-Klasse, wenn sie zum ersten Mal für eine Transformation aufgerufen wird.  Dies liegt daran, dass die XSLT\-Datei zunächst kompiliert werden muss, bevor sie geladen wird.  Weitere Informationen finden Sie im folgenden Blogbeitrag: [XslCompiledTransform Slower than XslTransform?](http://go.microsoft.com/fwlink/?LinkId=130590)  
+  
+## Sicherheit  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse deaktiviert standardmäßig die Unterstützung für die XSLT\-Funktion `document()` und die Erstellung eingebetteter Skripts.  Diese Funktionen können durch Erstellen eines <xref:System.Xml.Xsl.XsltSettings>\-Objekts aktiviert werden, in dem diese Funktionen aktiviert sind und das an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>\-Methode übergeben wird.  Das folgende Beispiel zeigt, wie Sie Skripts aktivieren und eine XSLT\-Transformation durchführen können.  
+  
+ [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
+ [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
+  
+ Weitere Informationen finden Sie unter [XSLT\-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md).  
+  
+## Neue Funktionen  
+  
+### Temporäre Dateien  
+ Bei der XSLT\-Verarbeitung werden mitunter temporäre Dateien angelegt.  Diese temporären Dateien werden z. B. dann erstellt und im Ordner \<legacyBold\>%TEMP%\<\/legacyBold\> abgelegt, wenn ein Stylesheet Skriptblöcke enthält oder beim Kompilieren die Debugeinstellung auf \<legacyBold\>true\<\/legacyBold\> gesetzt ist.  Es kann vorkommen, dass diese temporären Dateien aufgrund von Timingproblemen nicht wieder gelöscht werden.  Dies ist z. B. der Fall, wenn die Dateien von der aktuellen AppDomain oder vom Debugger verwendet werden. Die \<legacyBold\>Finalize\<\/legacyBold\>\-Methode des <xref:System.CodeDom.Compiler.TempFileCollection>\-Objekts ist dann nicht in der Lage, die temporären Dateien zu entfernen.  
+  
+ Um sicherzustellen, dass alle temporären Dateien vom Client entfernt werden, können Sie die <xref:System.Xml.Xsl.XslCompiledTransform.TemporaryFiles%2A>\-Methode einsetzen, um den Ordner \<legacyBold\>%TEMP%\<\/legacyBold\> entsprechend aufzuräumen.  
+  
+### Unterstützung für das "xsl:output"\-Element und "XmlWriter"  
+ Die <xref:System.Xml.Xsl.XslTransform>\-Klasse hat `xsl:output`\-Einstellungen ignoriert, wenn die Transformationsausgabe an ein <xref:System.Xml.XmlWriter>\-Objekt gesendet wurde.  Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse verfügt über die <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A>\-Eigenschaft, die ein <xref:System.Xml.XmlWriterSettings>\-Objekt mit den Ausgabeinformationen enthält, die aus dem `xsl:output`\-Element des Stylesheets abgeleitet wurden.  Das <xref:System.Xml.XmlWriterSettings>\-Objekt wird zur Erstellung eines <xref:System.Xml.XmlWriter>\-Objekts verwendet, das mit den korrekten Einstellungen versehen ist und an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode übergeben werden kann.  Der folgende C\#\-Code veranschaulicht dieses Verhalten:  
+  
+```  
+// Create the XslTransform object and load the style sheet.  
+XslCompiledTransform xslt = new XslCompiledTransform();  
+xslt.Load(stylesheet);  
+  
+// Load the file to transform.  
+XPathDocument doc = new XPathDocument(filename);  
+  
+// Create the writer.  
+XmlWriter writer = XmlWriter.Create(Console.Out, xslt.OutputSettings);  
+  
+// Transform the file and send the output to the console.  
+xslt.Transform(doc, writer);  
+writer.Close();  
+```  
+  
+### Debugoption  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse kann Debuginformationen generieren, mit denen Sie unter Verwendung des Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]\-Debuggers Fehler im Stylesheet beheben können.  Weitere Informationen finden Sie unter <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+  
+## Verhaltensunterschiede  
+  
+### Transformation in einen "XmlReader"  
+ Die <xref:System.Xml.Xsl.XslTransform>\-Klasse verfügt über mehrere Transformationsüberladungen, die Transformationsergebnisse in Form eines <xref:System.Xml.XmlReader>\-Objekts zurückgeben.  Diese Überladungen können verwendet werden, um die Transformationsergebnisse in eine Darstellung im Arbeitsspeicher zu laden \(z. B. <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathDocument>\), ohne dass dabei unnötig viele Ressourcen für die Serialisierung und Deserialisierung der resultierenden XML\-Struktur verbraucht werden.  Im folgenden C\#\-Code wird gezeigt, wie die Transformationsergebnisse in ein <xref:System.Xml.XmlDocument>\-Objekt geladen werden:  
+  
+```  
+// Load the style sheet  
+XslTransform xslt = new XslTransform();  
+xslt.Load("MyStylesheet.xsl");  
+  
+// Transform input document to XmlDocument for additional processing  
+XmlDocument doc = new XmlDocument();  
+doc.Load(xslt.Transform(input, (XsltArgumentList)null));  
+```  
+  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse bietet keine Unterstützung für das Transformieren in ein <xref:System.Xml.XmlReader>\-Objekt.  Einen ähnlichen Effekt erreichen Sie aber, indem Sie die <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A>\-Methode verwenden, um die resultierende XML\-Struktur direkt aus einem <xref:System.Xml.XmlWriter> zu laden.  Im folgenden C\#\-Code wird gezeigt, wie Sie die gleiche Aufgabe mit <xref:System.Xml.Xsl.XslCompiledTransform> erledigen können:  
+  
+```  
+// Transform input document to XmlDocument for additional processing  
+XmlDocument doc = new XmlDocument();  
+using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {  
+    xslt.Transform(input, (XsltArgumentList)null, writer);  
+}  
+```  
+  
+### Freigegebene Verhaltensweisen  
+ Im W3C\-Dokument "XSL Transformations \(XSLT\) Version 1.0" gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht.  Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet.  Es gibt mehrere Bereiche, in denen sich die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse anders verhält als die <xref:System.Xml.Xsl.XslTransform>\-Klasse.  Weitere Informationen finden Sie unter [Wiederherstellbare XSLT\-Fehler](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).  
+  
+### Erweiterungsobjekte und Skriptfunktionen  
+ <xref:System.Xml.Xsl.XslCompiledTransform> führt zwei neue Beschränkungen für die Verwendung von Skriptfunktionen ein:  
+  
+-   Von XPath\-Ausdrücken aus dürfen nur öffentliche Methoden aufgerufen werden.  
+  
+-   Überladungen können anhand der Anzahl der Argumente voneinander unterschieden werden.  Wenn mehrere Überladungen über die gleiche Anzahl von Argumenten verfügen, wird eine Ausnahme ausgelöst.  
+  
+ In <xref:System.Xml.Xsl.XslCompiledTransform> erfolgt beim Kompilieren eine Bindung \(Methodennamensuche\) an Skriptfunktionen, und Stylesheets, die zusammen mit \<legacyBold\>XslTranform\<\/legacyBold\> funktioniert haben, können eine Ausnahme auslösen, wenn sie zusammen mit <xref:System.Xml.Xsl.XslCompiledTransform> geladen werden.  
+  
+ <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt die Verwendung von untergeordneten `msxsl:using`\- und `msxsl:assembly`\-Elementen innerhalb des `msxsl:script`\-Elements.  Die Elemente `msxsl:using` und `msxsl:assembly` werden verwendet, um zusätzliche Namespaces und Assemblys für die Verwendung im Skriptblock zu deklarieren.  Weitere Informationen finden Sie unter [Skriptblöcke, die "msxsl:script" verwenden](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md).  
+  
+ <xref:System.Xml.Xsl.XslCompiledTransform> verhindert Erweiterungsobjekte, die über mehrere Überladungen mit derselben Anzahl von Argumenten verfügen.  
+  
+### MSXML\-Funktionen  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse wurde um die Unterstützung für zusätzliche MSXML\-Funktionen erweitert.  In der folgenden Liste werden die neuen oder verbesserten Funktionen aufgeführt:  
+  
+-   \<legacyBold\>msxsl:node\-set\<\/legacyBold\>: Bei <xref:System.Xml.Xsl.XslTransform> musste das Argument der [node\-set\-Funktion](http://msdn.microsoft.com/de-de/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7)\-Funktion ein Ergebnisstrukturfragment sein.  Bei <xref:System.Xml.Xsl.XslCompiledTransform> ist dies nicht erforderlich.  
+  
+-   msxsl:version: Diese Funktion wird in <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt.  
+  
+-   XPath\-Erweiterungsfunktionen: Folgende Funktionen werden jetzt unterstützt: [ms:string\-compare\-Funktion](http://msdn.microsoft.com/de-de/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc\-Funktion](http://msdn.microsoft.com/de-de/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace\-uri\-Funktion](http://msdn.microsoft.com/de-de/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local\-name\-Funktion](http://msdn.microsoft.com/de-de/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number\-Funktion](http://msdn.microsoft.com/de-de/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format\-date\-Funktion](http://msdn.microsoft.com/de-de/51f35609-89a9-4098-a166-88bf01300bf5) und [ms:format\-time\-Funktion](http://msdn.microsoft.com/de-de/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5).  
+  
+-   Schemabezogene XPath\-Erweiterungsfunktionen: Diese Funktionen werden von <xref:System.Xml.Xsl.XslCompiledTransform> nicht als systemeigene Funktionen unterstützt.  Sie können aber als Erweiterungsfunktionen implementiert werden.  
+  
+## Siehe auch  
+ [XSLT\-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)   
+ [Verwenden der XslCompiledTransform\-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

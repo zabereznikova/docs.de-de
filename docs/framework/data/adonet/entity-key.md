@@ -1,0 +1,51 @@
+---
+title: "Entit&#228;tsschl&#252;ssel | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
+caps.latest.revision: 4
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 4
+---
+# Entit&#228;tsschl&#252;ssel
+Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) oder eine Reihe von Eigenschaften eines [Entitätstyps](../../../../docs/framework/data/adonet/entity-type.md), mit denen die Identität bestimmt wird.  Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt.  Die Werte von Entitätsschlüsseleigenschaften müssen zur Laufzeit eindeutig eine Entitätstypinstanz innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md) identifizieren.  Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
+  
+ Nachfolgend werden die Voraussetzungen für eine Reihe von Eigenschaften für einen Entitätsschlüssel gezeigt:  
+  
+-   Zwei Entitätsschlüssel innerhalb einer Entitätenmenge können nicht identisch sein.  Dies bedeutet, dass für zwei Entitäten innerhalb einer Entitätenmenge die Werte für alle Eigenschaften, die einen Schlüssel bilden, nicht gleich sein können.  Allerdings können einige \(aber nicht alle\) Werte, die eine Entitätsschlüssel bilden, gleich sein.  
+  
+-   Ein Entitätsschlüssel muss aus einer Reihe unveränderlicher [primitiver Typeigenschaften](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md) bestehen, die keine NULL\-Werte zulassen.  
+  
+-   Die Eigenschaften, die einen Entitätsschlüssel für einen bestimmten Entitätstyp bilden, können sich nicht ändern.  Sie können nicht mehr als einen möglichen Entitätsschlüssel für einen bestimmte Entitätstyp zulassen. Ersatzschlüssel werden nicht unterstützt.  
+  
+-   Wenn eine Entität an einer Vererbungshierarchie beteiligt ist, muss die Stammentität alle Eigenschaften enthalten, die den Entitätsschlüssel bilden, und der Entitätsschlüssel muss für den Stammentitätstyp definiert sein.  Weitere Informationen finden Sie unter [Entity Data Model: Vererbung](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+  
+## Beispiel  
+ Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit drei Entitätstypen: `Book`, `Publisher` und `Author`.  Die Eigenschaften jedes Entitätstyps, die den entsprechenden Entitätsschlüssel bilden, werden mit "\(Schlüssel\)" angegeben.  Beachten Sie, dass der Entitätstyp `Author` über einen Entitätsschlüssel verfügt, der aus zwei Eigenschaften besteht: `Name` und `Address`.  
+  
+ ![Beispielmodell](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+  
+ Das [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache \(DSL\) mit der Bezeichnung konzeptionelle Schemadefinitionssprache \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), um konzeptionelle Modelle zu definieren.  Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Book`\-Entitätstyp.  Der Entitätsschlüssel wird definiert, indem auf die `ISBN`\-Eigenschaft des Entitätstyps verwiesen wird.  
+  
+ [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
+  
+ Die `ISBN`\-Eigenschaft ist für den Entitätsschlüssel gut geeignet, da durch die ISBN ein Buch eindeutig identifiziert wird.  
+  
+ Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Author`\-Entitätstyp.  Beachten Sie, dass der Entitätsschlüssel aus zwei Eigenschaften besteht: `Name` und `Address`.  
+  
+ [!code-xml[EDM_Example_Model#CompositeKeyExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#compositekeyexample)]  
+  
+ Die Verwendung von `Name` und `Address` für den Entitätsschlüssel ist empfehlenswert, da zwei Autoren mit demselben Namen sehr wahrscheinlich nicht die gleiche Adresse besitzen.  Dieser Entitätsschlüssel garantiert jedoch nicht absolut eindeutige Entitätsschlüssel in einem Entitätssatz.  In diesem Fall wäre das Hinzufügen einer Eigenschaft, z. B. `AuthorId`, zur eindeutigen Identifikation eines Autors empfehlenswert.  
+  
+## Siehe auch  
+ [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
+ [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
