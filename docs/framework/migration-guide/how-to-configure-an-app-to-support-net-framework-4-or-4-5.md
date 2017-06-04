@@ -59,7 +59,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
   
 2.  Fügen Sie das [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Anwendungskonfigurationsdatei wie folgt hinzu:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

@@ -43,7 +43,7 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
   
 -   Unter bestimmten Bedingungen ist der Vergleich von <xref:System.UInt16>-Werten mit festgelegtem hohem Bit fehlerhaft, wenn Optimierung aktiviert ist.  
   
--   Unter bestimmten Umständen, insbesondere beim Initialisieren von Arraywerten, kann die Speicherinitialisierung durch die <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName>-IL-Anweisung mit einem falschen Wert erfolgen. Dies kann entweder zu einem Ausnahmefehler oder zu einer falschen Ausgabe führen.  
+-   Unter bestimmten Umständen, insbesondere beim Initialisieren von Arraywerten, kann die Speicherinitialisierung durch die IL-Anweisung <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> mit einem falschen Wert erfolgen. Dies kann entweder zu einem Ausnahmefehler oder zu einer falschen Ausgabe führen.  
   
 -   Unter bestimmten seltenen Bedingungen kann ein bedingter Bittest den falschen <xref:System.Boolean>-Wert zurückgeben oder eine Ausnahme auslösen, wenn Compileroptimierungen aktiviert sind.  
   

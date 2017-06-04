@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>Literale  
 
- Sie können eine `byte`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (ab C# 7) ein binäres Literal zuweisen. Wenn das Ganzzahlliteral außerhalb des Bereichs von `byte` liegt, d.h., wenn es kleiner als <xref:System.Byte.MinValue?displayProperty=fullName> oder größer als <xref:System.Byte.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf.
+ Sie können eine `byte`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `byte` befindet – sprich, wenn es kleiner als <xref:System.Byte.MinValue?displayProperty=fullName> oder größer als <xref:System.Byte.MaxValue?displayProperty=fullName> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden ganze Zahlen, die gleich 201 sind und von dezimalen, hexadezimalen und binären Literalen dargestellt werden, implizit von [int](../../../csharp/language-reference/keywords/int.md)- in `byte`-Werte konvertiert.    
   
@@ -66,7 +66,6 @@ Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbe
  Sie können nicht literale numerische Typen mit einer größeren Speichergröße nicht implizit zu `byte` konvertieren. Weitere Informationen zu Speichergrößen ganzzahliger Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md). Betrachten Sie z.B. die folgenden beiden `byte`-Variablen `x` und `y`:  
   
 ```  
-  
 byte x = 10, y = 20;  
 ```  
   
@@ -133,3 +132,4 @@ SampleMethod((byte)5);
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

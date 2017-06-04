@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Gewusst wie: Lesen aus Textdateien mit mehreren Formaten in Visual Basic
-Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet die Möglichkeit, strukturierte Textdateien (z.B. Protokolle) einfach und effizient zu analysieren. Sie können eine Datei mit mehreren Formaten verarbeiten, indem Sie die `PeekChars`-Methode verwenden, um das Format jeder Zeile zu bestimmen, während Sie eine Datei analysieren.  
+Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet eine Möglichkeit, strukturierte Textdateien wie Protokolle einfach und effizient zu analysieren. Sie können eine Datei mit mehreren Formaten verarbeiten, indem Sie die `PeekChars`-Methode verwenden, um das Format jeder Zeile zu bestimmen, während Sie eine Datei analysieren.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Analysieren einen Textdatei mit mehreren Formaten  
   
@@ -64,7 +64,7 @@ Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet die Mögli
   
      [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
-3.  Erstellen Sie ein neues <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt, und definieren Sie die Breite und das Format.  
+3.  Erstellen Sie ein neues <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt, das die Breite und das Format definiert.  
   
      [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
@@ -92,7 +92,7 @@ Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet die Mögli
   
 -   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Benutzer verfügt nicht über ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
+-   Der Benutzer hat keine ausreichende Berechtigungen für den Dateizugriff (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

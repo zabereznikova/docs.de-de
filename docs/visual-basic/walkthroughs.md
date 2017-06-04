@@ -92,7 +92,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht, wie man überprüft, ob sichere Kennworteigenschaften gewählt wurden, und wie man einen Zeichenfolgeparameter mit Informationen darüber aktualisiert, welchen Überprüfungen ein Kennwort nicht standgehalten hat  
   
  [ (Verschlüsseln und Entschlüsseln von Zeichenfolgen in Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Veranschaulicht die Verwendung der Klasse <xref:System.Security.Cryptography.DESCryptoServiceProvider> zum Verschlüsseln und Entschlüsseln von Zeichenfolgen  
+ Zeigt, wie Sie die Klasse <xref:System.Security.Cryptography.DESCryptoServiceProvider> verwenden, um Zeichenfolgen zu verschlüsseln bzw. zu entschlüsseln  
   
  [Manipulating Files and Folders in Visual Basic (Bearbeiten von Dateien und Ordnern in Visual Basic)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Veranschaulicht die Verwendung von [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  

@@ -81,10 +81,10 @@ Die `group`-Klausel gibt eine Sequenz von <xref:System.Linq.IGrouping%602>-Objek
 group person by new {name = person.surname, city = person.city};  
 ```  
   
- Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen. Erstellen Sie eine bestimmte Klasse mithilfe automatisch implementierter Eigenschaften für die Schlüssel, und überschreiben Sie die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A>. Sie können auch eine Struktur verwenden. In diesem Fall müssen Sie diese Methoden nicht unbedingt außer Kraft setzen. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Das zweite Thema verfügt über ein Codebeispiel, das darstellt, wie ein zusammengesetzter Schlüssel mit benannten Typen verwendet wird.  
+ Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen. Erstellen Sie eine spezielle Klasse mit automatisch implementierten Eigenschaften für die Schlüssel, und setzen Sie anschließend die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> außer Kraft. Sie können auch eine Struktur verwenden. In diesem Fall müssen Sie diese Methoden nicht unbedingt außer Kraft setzen. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Das zweite Thema verfügt über ein Codebeispiel, das darstellt, wie ein zusammengesetzter Schlüssel mit benannten Typen verwendet wird.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt das Standardmuster für das Sortieren von Quelldaten in Gruppen, wenn keine zusätzliche Abfragelogik auf die Gruppen angewendet wird. Dies wird Gruppierung ohne Fortsetzung genannt. Die Elemente in einem Zeichenfolgenarray werden gemäß des ersten Buchstabens gruppiert. Das Abfrageergebnis ist ein <xref:System.Linq.IGrouping%602>-Typ, der eine öffentliche `Key`-Eigenschaft des Typs `char` enthält sowie eine <xref:System.Collections.Generic.IEnumerable%601>-Auflistung, die jedes Element in der Gruppierung enthält.  
+ Das folgende Beispiel zeigt das Standardmuster für das Sortieren von Quelldaten in Gruppen, wenn keine zusätzliche Abfragelogik auf die Gruppen angewendet wird. Dies wird Gruppierung ohne Fortsetzung genannt. Die Elemente in einem Zeichenfolgenarray werden gemäß des ersten Buchstabens gruppiert. Das Ergebnis der Abfrage ist ein <xref:System.Linq.IGrouping%602>-Typ, der eine öffentliche `Key`-Eigenschaft des Typs `char` und eine <xref:System.Collections.Generic.IEnumerable%601>-Sammlung enthält, die jedes Element in der Gruppierung enthält.  
   
  Das Ergebnis einer `group`-Klausel ist eine Sequenz von Sequenzen. Verwenden Sie deshalb eine geschachtelte `foreach`-Schleife innerhalb der Schleife, die die Gruppenschlüssel durchläuft – so wie in folgendem Beispiel gezeigt – um auf die einzelnen Elemente innerhalb jeder zurückgegebenen Gruppe zuzugreifen.  
   
@@ -96,14 +96,14 @@ group person by new {name = person.surname, city = person.city};
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>Hinweise  
- Zur Kompilierzeit werden `group`-Klauseln in Aufrufe auf die <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.  
+ `group`-Klauseln werden zur Kompilierzeit in Aufrufe der <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq.IGrouping%602>   
  <xref:System.Linq.Enumerable.GroupBy%2A>   
  <xref:System.Linq.Enumerable.ThenBy%2A>   
  <xref:System.Linq.Enumerable.ThenByDescending%2A>   
- [Query keywords (LINQ) (Abfrageschlüsselwörter (LINQ))](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Vorgehensweise: Erstellen einer geschachtelten Gruppe](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
  [Vorgehensweise: Gruppieren von Abfrageergebnissen](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   

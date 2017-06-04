@@ -47,10 +47,10 @@ In diesem Beispiel wird die `Shell`-Funktion verwendet, um die Anwendung „Rech
  [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Eine <xref:System.ArgumentException> -Ausnahme wird ausgegeben, wenn eine Anwendung mit dem angeforderten Prozessbezeichner nicht gefunden werden kann.  
+ Eine <xref:System.ArgumentException>-Ausnahme wird ausgegeben, wenn eine Anwendung mit dem angeforderten Prozessbezeichner nicht gefunden werden kann.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Der Aufruf der `Shell`-Funktion erfordert volles Vertrauen (<xref:System.Security.SecurityException>-Klasse).  
+ Ein Aufruf der `Shell`-Funktion erfordert volles Vertrauen (<xref:System.Security.SecurityException>-Klasse).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   

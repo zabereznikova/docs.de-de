@@ -56,15 +56,15 @@ Verwenden Sie die `CreateDirectory`-Methode des `My.Computer.FileSystem`-Objekts
   
 -   Das übergeordnete Verzeichnis des zu erstellenden Verzeichnisses ist schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Name des Verzeichnisses lautet `Nothing` (<xref:System.ArgumentNullException>).  
+-   Der Name des Verzeichnisses ist `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Der Name des Verzeichnisses ist zu lang (<xref:System.IO.PathTooLongException>).  
   
 -   Der Name des Verzeichnisses ist ein Doppelpunkt „:“ (<xref:System.NotSupportedException>).  
   
--   Der Benutzer verfügt nicht über die Berechtigung zum Erstellen des Verzeichnisses (<xref:System.UnauthorizedAccessException>).  
+-   Der Benutzer verfügt über keine Berechtigungen zum Erstellen des Verzeichnisses (<xref:System.UnauthorizedAccessException>).  
   
--   Der Benutzer verfügt nicht über die Berechtigungen in einem teilweise vertrauenswürdigen Kontext (<xref:System.Security.SecurityException>).  
+-   Der Benutzer verfügt über keine Berechtigung in einem teilweise vertrauenswürdigen Kontext (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

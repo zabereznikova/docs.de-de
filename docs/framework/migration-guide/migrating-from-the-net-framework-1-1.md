@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   Sie können der Anwendung [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] als neue Zielversion zuweisen. Für die Zuweisung einer neuen Zielversion müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ermöglicht, ein [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>Die Lauffähigkeit der Anwendung beeinträchtigende Änderungen  
  Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z. B. die in [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  

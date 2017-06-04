@@ -75,9 +75,9 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
   
  Wenn Sie die Registrierung von einer Webanwendung lesen, hängt der aktuelle Benutzer von der Authentifizierung und dem Identitätswechsel ab, die in der Webanwendung implementiert sind.  
   
- Es ist sicherer, die Daten in den Benutzerordner (<xref:Microsoft.Win32.Registry.CurrentUser>) zu schreiben, als in den lokalen Computer (<xref:Microsoft.Win32.Registry.LocalMachine>).  
+ Es ist sicherer, die Daten in den Benutzerordner (<xref:Microsoft.Win32.Registry.CurrentUser>) anstatt auf den lokalen Computer (<xref:Microsoft.Win32.Registry.LocalMachine>) zu schreiben.  
   
- Wenn Sie einen Registrierungswert erstellen, müssen Sie festlegen, was geschehen soll, wenn der Wert bereits vorhanden ist. Möglicherweise wurde der Wert bereits von einem bösartigen Prozess erstellt, der nun darauf zugreifen kann. Wenn Sie dem Registrierungswert Daten hinzufügen, kann der andere Prozess darauf zugreifen. Sie können dies mithilfe der <xref:Microsoft.Win32.RegistryKey.GetValue%2A>-Methode verhindern. Die Methode gibt `Nothing` zurück, wenn der Schlüssel noch nicht vorhanden ist.  
+ Wenn Sie einen Registrierungswert erstellen, müssen Sie festlegen, was geschehen soll, wenn der Wert bereits vorhanden ist. Möglicherweise wurde der Wert bereits von einem bösartigen Prozess erstellt, der nun darauf zugreifen kann. Wenn Sie dem Registrierungswert Daten hinzufügen, kann der andere Prozess darauf zugreifen. Um dies zu verhindern, verwenden Sie die <xref:Microsoft.Win32.RegistryKey.GetValue%2A>-Methode. Die Methode gibt `Nothing` zurück, wenn der Schlüssel noch nicht vorhanden ist.  
   
  Es ist nicht sicher, geheime Daten wie Kennwörter in der Registrierung als Klartext zu speichern. Dies gilt auch, wenn der Registrierungsschlüssel durch Zugriffssteuerungslisten (ACLs) geschützt ist.  
   
@@ -85,16 +85,16 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
   
 -   Der Name des Schlüssels lautet `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Benutzer ist nicht berechtigt, diese Registrierungsschlüssel zu erstellen (<xref:System.Security.SecurityException>).  
+-   Der Benutzer ist nicht zum Erstellen von Registrierungsschlüsseln berechtigt (<xref:System.Security.SecurityException>).  
   
--   Der Schlüsselname überschreitet die maximale Anzahl von 255 Zeichen (<xref:System.ArgumentException>).  
+-   Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
   
 -   Der Schlüssel ist geschlossen (<xref:System.IO.IOException>).  
   
--   Der Registrierungschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
+-   Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Um diesen Prozess auszuführen, benötigt Ihre Assembly eine Berechtigungsebene, die von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährt wird. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8).  
+ Die Assembly benötigt zum Ausführen dieses Prozesses eine von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

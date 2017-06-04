@@ -102,11 +102,11 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Das folgende Beispiel gibt an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
-       ```xml
-        <PropertyGroup>
-          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-        </PropertyGroup>
-       ```
+```xml
+<PropertyGroup>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
    Beachten Sie, dass das Element `<RuntimeIdentifiers>` jedem `<PropertyGroup>`-Element in Ihrer Datei *CSPROJ* hinzugefügt werden kann. Eine vollständige *CSPROJ*-Beispieldatei wird später in diesem Abschnitt angezeigt.
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
