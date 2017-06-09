@@ -1,34 +1,51 @@
 ---
-title: "How to: Retrieve the Contents of the My Documents Directory in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My Documents directory"
+title: "Vorgehensweise: Abrufen des Inhalts des Verzeichnisses „Eigene Dateien“ in Visual Basic | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# How to: Retrieve the Contents of the My Documents Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 39e1d8b4d7e613bf245769816ef24a7787f41e04
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Mit dem <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>\-Objekt können Inhalte aus vielen der **Alle Benutzer**\-Verzeichnisse gelesen werden, z. B. aus **Eigene Dateien** oder **Desktop**.  
+---
+# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Gewusst wie: Abrufen des Inhalts des Verzeichnisses "Eigene Dateien" in Visual Basic
+Das <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>-Objekt kann verwendet werden, um aus vielen **All Users**-Verzeichnissen zu lesen, z.B. **Dokumente** oder **Desktop**.  
   
-### So lesen Sie Inhalte aus dem Ordner Eigene Dateien  
+### <a name="to-read-from-the-my-documents-folder"></a>Lesen aus dem Ordner „Dokumente“  
   
--   Mit der `ReadAllText`\-Methode können Sie den Text aus jeder Datei in einem bestimmten Verzeichnis lesen.  Im folgenden Code wird ein Verzeichnis und eine Datei angegeben und deren Inhalt mithilfe von `ReadAllText` in eine Zeichenfolge mit dem Namen `patients` eingelesen.  
+-   Verwenden Sie die `ReadAllText`-Methode, um Text aus jeder Datei in einem bestimmten Verzeichnis zu lesen. Der folgende Code gibt ein Verzeichnis und eine Datei an und verwendet dann `ReadAllText`, um sie in die Zeichenfolge namens `patients` zu lesen.  
   
      [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-retrieve-the-contents-of-the-my-documents-directory_1.vb)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>

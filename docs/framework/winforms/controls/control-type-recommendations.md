@@ -1,0 +1,93 @@
+---
+title: "Empfehlungen zum Typ von Steuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-winforms"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "jsharp"
+helpviewer_keywords: 
+  - "Steuerelemente [Windows Forms], Erstellen"
+  - "Benutzerdefinierte Steuerelemente [Windows Forms], Typen"
+  - "Vererbung, Benutzerdefinierte Windows Forms-Steuerelemente"
+  - "Benutzersteuerelemente [Windows Forms], Empfohlene Verwendung"
+ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
+caps.latest.revision: 15
+author: "dotnet-bot"
+ms.author: "dotnetcontent"
+manager: "wpickett"
+caps.handback.revision: 15
+---
+# Empfehlungen zum Typ von Steuerelementen
+.NET Framework bietet Ihnen die Möglichkeit, neue Steuerelemente zu entwickeln und zu implementieren.  Zusätzlich zu den bekannten Benutzersteuerelementen können Sie nun benutzerdefinierte Steuerelemente schreiben, die ihre eigene Grafikausgabe ausführen und über Vererbung sogar die Funktionalität von vorhandenen Steuerelementen erweitern können.  Das Treffen einer Entscheidung, welcher Typ von Steuerelement erstellt werden soll, kann verwirrend sein kann.  In diesem Abschnitt werden die Unterschiede aufgezeigt, die es zwischen den verschiedenen Typen von Steuerelementen gibt, von denen geerbt werden kann, und werden Aspekte hinsichtlich des Typs vorgestellt, den Sie für Ihr Projekt wählen sollten.  
+  
+> [!NOTE]
+>  Wenn Sie ein Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md) lesen.  
+  
+## Erben von einem Windows Forms\-Steuerelement  
+ Sie können ein geerbtes Steuerelement aus jedem vorhandenen Windows Forms\-Steuerelement ableiten.  Diese Vorgehensweise ermöglicht es Ihnen, die in einem Windows Forms\-Steuerelement implementierte Funktionalität zu übernehmen und diese Funktionalität dann durch Hinzufügen von benutzerdefinierten Eigenschaften, Methoden oder weiteren Funktionen zu erweitern.  Sie könnten z. B. ein aus <xref:System.Windows.Forms.TextBox> abgeleitetes Steuerelement erstellen, das nur Zahlen akzeptiert und die jeweilige Eingabe automatisch in einen Wert konvertiert.  Ein solches Steuerelement könnte Validierungscode enthalten, der immer dann aufgerufen wird, wenn der Text im Textfeld geändert wurde, und könnte die zusätzliche Eigenschaft "Wert" haben.  Bei einigen Steuerelementen können Sie auch eine benutzerdefinierte Darstellung der grafischen Oberfläche des Steuerelements hinzufügen, indem Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode der Basisklasse überschreiben.  
+  
+ Verwenden Sie Vererbung von einem Windows Forms\-Steuerelement, wenn Folgendes zutrifft:  
+  
+-   Ein Großteil der Funktionalität, die Sie benötigen, mit ist der Funktionalität eines vorhandenen Windows Forms\-Steuerelements identisch.  
+  
+-   Sie benötigen keine benutzerdefinierte grafische Oberfläche, oder Sie möchten ein neues grafisches Front\-End für ein vorhandenes Steuerelement entwerfen.  
+  
+## Erben von der UserControl\-Klasse  
+ Ein Benutzersteuerelement ist eine Sammlung von Windows Forms\-Steuerelementen, die in einem gemeinsamen Container gekapselt sind.  Der Container enthält die gesamte Funktionalität, die in jedem der Windows Forms\-Steuerelemente implementiert ist, und ermöglicht es Ihnen, deren Eigenschaften selektiv verfügbar zu machen und zu binden.  Ein Beispiel für ein Benutzersteuerelement könnte ein Steuerelement sein, das erstellt wurde, um Kundenadressdaten aus einer Datenbank anzuzeigen.  Dieses Steuerelement würde mehrere Textfelder zum Anzeigen jedes Felds sowie Schaltflächensteuerelemente enthalten, mit denen durch die Datensätze navigiert werden kann.  Datenbindungseigenschaften könnten selektiv verfügbar gemacht werden, und das gesamte Steuerelement könnte paketiert und von Anwendung zu Anwendung wiederverwendet werden.  
+  
+ Verwenden Sie Vererbung von der <xref:System.Windows.Forms.UserControl>\-Klasse, wenn Folgendes zutrifft:  
+  
+-   Sie möchten die Funktionalität mehrerer Windows Forms\-Steuerelemente in einer einzigen wiederverwendbaren Einheit kombinieren.  
+  
+## Erben von der Control\-Klasse  
+ Eine weitere Möglichkeit zum Erstellen eines Steuerelements besteht darin, ein Steuerelement von Grund auf neu zu erstellen, indem es von <xref:System.Windows.Forms.Control> erbt.  Die <xref:System.Windows.Forms.Control>\-Klasse stellt die gesamte grundlegende Funktionalität bereit, die für Steuerelemente erforderlich ist \(z. B. Ereignisse\), stellt aber weder steuerelementspezifische Funktionalität noch eine grafische Oberfläche bereit.  Ein Erstellen eines Steuerelement durch Erben von der <xref:System.Windows.Forms.Control>\-Klasse erfordert viel mehr Überlegungen und Anstrengungen als ein Erben von einem Benutzersteuerelement oder einem vorhandenen Windows Forms\-Steuerelement.  Der Autor muss sowohl Code für das <xref:System.Windows.Forms.Control.OnPaint%2A>\-Ereignis des Steuerelements als auch jeglichen für die jeweilige Funktionalität erforderlichen Code schreiben.  Es ist jedoch größere Flexibilität möglich, und Sie können ein Steuerelement so anpassen, das es exakt Ihren Anforderungen entspricht.  Ein Beispiel für ein benutzerdefiniertes Steuerelement ist ein Uhren\-Steuerelement, das das Erscheinungsbild und die Aktion einer analogen Uhr dupliziert.  Benutzerdefiniertes Zeichnen würde aufgerufen, um die Zeiger der Uhr als Reaktion auf <xref:System.Windows.Forms.Timer.Tick>\-Ereignisse zu bewegen, die aus einer internen Timer\-Komponente stammen.  
+  
+ Verwenden Sie Vererbung von der <xref:System.Windows.Forms.Control>\-Klasse, wenn Folgendes zutrifft:  
+  
+-   Sie möchten eine benutzerdefinierte grafische Darstellung Ihres Steuerelements bereitstellen.  
+  
+-   Sie müssen benutzerdefinierte Funktionalität implementieren, die über Standardsteuerelemente nicht verfügbar ist.  
+  
+-   [Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Vererben von einem Windows Forms\-Steuerelement mit Visual C\#](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+  
+-   [Gewusst wie: Bereitstellen einer Toolboxbitmap für ein Steuerelement](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+  
+-   [Gewusst wie: Erben von vorhandenen Windows Forms\-Steuerelementen](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms\-Steuerelementen zur Entwurfszeit](http://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+  
+-   [Gewusst wie: Erben von der Control\-Klasse](http://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+  
+-   [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
+  
+-   [Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+  
+-   [Gewusst wie: Erben von der UserControl\-Klasse](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+  
+-   [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](http://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+  
+-   [Gewusst wie: Erstellen von zusammengesetzten Steuerelementen](http://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C\#](http://msdn.microsoft.com/de-de/library/a6h7e207\(v=vs.110\))  
+  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+  
+-   [Gewusst wie: Erstellen eines Windows Forms\-Steuerelements, das Entwurfszeitfeatures nutzt](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+  
+-   [Gewusst wie: Erstellen eines Windows Forms\-Steuerelements, das Entwurfszeitfeatures nutzt](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+  
+## Siehe auch  
+ [Gewusst wie: Entwickeln eines einfachen Windows Forms\-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
+ [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

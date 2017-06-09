@@ -1,69 +1,88 @@
 ---
-title: "Instanzkonstruktoren (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Konstruktoren [C#], Instanzkonstruktoren"
-  - "Instanzkonstruktoren [C#]"
+title: Instanzkonstruktoren (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- constructors [C#], instance constructors
+- instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 5c579c28c6b298cc0aefe0cb9eb41993b84a23d8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
+
 ---
-# Instanzkonstruktoren (C#-Programmierhandbuch)
-Wenn Sie mit dem Ausdruck [new](../../../csharp/language-reference/keywords/new.md) ein Objekt einer [Klasse](../../../csharp/language-reference/keywords/class.md) erstellen, werden alle Instanzmembervariablen mit Instanzkonstruktoren erstellt und initialisiert.  Um eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse oder statische Variablen in einer nicht statischen Klasse zu initialisieren, müssen Sie einen statischen Konstruktor definieren.  Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+# <a name="instance-constructors-c-programming-guide"></a>Instanzkonstruktoren (C#-Programmierhandbuch)
+Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmembervariablen verwendet, wenn Sie die Ausdruck [new](../../../csharp/language-reference/keywords/new.md) verwenden, um ein Objekt einer [Klasse](../../../csharp/language-reference/keywords/class.md) zu erstellen. Sie müssen einen statischen Konstruktor definieren um eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse oder eine statische Variable in einer nicht statischen Klasse zu initialisieren. Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
- Im folgenden Beispiel wird ein Instanzenkonstruktor dargestellt:  
+ Im folgenden Beispiel wird die Verwendung eines Instanzkonstruktors veranschaulicht:  
   
  [!code-cs[csProgGuideObjects#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_1.cs)]  
   
 > [!NOTE]
->  Der Übersichtlichkeit halber enthält diese Klasse öffentliche Felder.  Die Verwendung von öffentlichen Feldern zum Programmieren wird nicht empfohlen, da auf diese Weise jeder Methode an einer beliebigen Stelle im Programm uneingeschränkter und ungeprüfter Zugriff auf die interne Funktionsweise eines Objekts eingeräumt wird.  Im Allgemeinen sollten Datenmember privat sein, und der Zugriff auf sie sollte ausschließlich über Klassenmethoden und Eigenschaften erfolgen.  
+>  Der Deutlichkeit halber enthält diese Klasse öffentliche Felder. Das Verwenden von öffentlichen Felder wird beim Programmieren nicht empfohlen, da so jede Methode im Programm uneingeschränkten und ungeprüften Zugriff auf das Innenleben eines Objekts erhält. Datenmember sollten im Allgemeinen privat sein. Außerdem sollte auf sie nur über Klassenmethoden und Eigenschaften zugegriffen werden.  
   
- Dieser Instanzenkonstruktor wird jedes Mal aufgerufen, wenn ein auf der `CoOrds`\-Klasse basierendes Objekt erstellt wird.  Ein Konstruktor wie dieser, der keine Argumente annimmt, wird *Standardkonstruktor* genannt.  Häufig erweist es sich jedoch als nützlich, zusätzliche Konstruktoren bereitzustellen.  Sie können beispielsweise der `CoOrds`\-Klasse einen Konstruktor hinzufügen, um die Anfangswerte für die Datenmember anzugeben:  
+ Dieser Instanzkonstruktor wird aufgerufen, wenn ein Objekt basierend auf der `CoOrds`-Klasse erstellt wird. Ein derartiger Konstruktor, der keine Argumente akzeptiert, wird als *Standardkonstruktor* bezeichnet. Es kann jedoch oft hilfreich sein, weitere Konstruktoren bereitzustellen. Sie können beispielsweise einen Konstruktor in die `CoOrds`-Klasse einfügen, mit dem Sie die Anfangswerte der Datenmember angeben können:  
   
  [!code-cs[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
   
- Auf diese Weise können `CoOrd`\-Objekte mit Standardwerten oder mit bestimmten Anfangswerten erstellt werden:  
+ Damit können `CoOrd`-Objekte mit Standard- oder spezifischen Anfangswerten erstellt werden. Dies geschieht wie folgt:  
   
  [!code-cs[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
   
- Bei Klassen ohne Konstruktor wird automatisch ein Standardkonstruktor generiert, und die Objektfelder werden mit Standardwerten initialisiert.  Ein [int](../../../csharp/language-reference/keywords/int.md) wird z. B. mit 0 initialisiert.  Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  Da der Standardkonstruktor der `CoOrds`\-Klasse alle Datenmember auf 0 \(null\) initialisiert, kann er einfach entfernt werden, ohne dass sich dies auf die Funktionsweise der Klasse auswirkt.  Ein vollständiges Beispiel mit mehreren Konstruktoren bietet Beispiel 1 weiter unten in diesem Thema, und in Beispiel 2 wird ein automatisch generierter Konstruktor dargestellt.  
+ Wenn eine Klasse über keinen Konstruktor verfügt, wird automatisch ein Standardkonstruktor generiert, und die Objektfelder werden mit Standardwerte initialisiert. Ein [int](../../../csharp/language-reference/keywords/int.md)-Objekt wird beispielsweise auf 0 (null) initialisiert. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md). Da der Standardkonstruktor der `CoOrds`-Klasse alle Datenmember auf 0 (null) initialisiert, kann er komplett entfernt werden, ohne dass die Arbeitsweise der Klasse geändert wird. Unter Beispiel 1 weiter unten in diesem Thema finden Sie ein vollständiges Beispiel mit mehreren Konstruktoren. Unter Beispiel 2 finden Sie ein Beispiel für einen automatisch generierten Konstruktor.  
   
- Mithilfe von Instanzkonstruktoren können Sie auch die Instanzkonstruktoren von Basisklassen aufrufen.  Der Klassenkonstruktor kann den Konstruktor der Basisklasse wie folgt über die Initialisierung aufrufen:  
+ Instanzkonstruktoren können ebenfalls dazu verwendet werden, die Instanzkonstruktoren von Basisklassen aufzurufen. Der Klassenkonstruktor kann den Konstruktor der Basisklasse mit dem Initialisierer wie folgt aufrufen:  
   
  [!code-cs[csProgGuideObjects#78](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_4.cs)]  
   
- In diesem Beispiel übergibt die `Circle`\-Klasse Werte für den Radius und die Höhe an den Konstruktor, der von `Shape` bereitgestellt wird, wovon `Circle` abgeleitet wird.  Beispiel 3 in diesem Thema liefert ein vollständiges Beispiel mit `Shape` und `Circle`.  
+ In diesem Beispiel übergibt die `Circle`-Klasse die Werte des Radius und der Höhe an den Konstruktor, der von `Shape` bereitgestellt wird, von dem `Circle` abgeleitet wird. Unter Beispiel 3 in diesem Thema finden Sie ein vollständiges Beispiel mit `Shape` und `Circle`.  
   
-## Beispiel 1  
- Das folgende Beispiel stellt eine Klasse mit zwei Klassenkonstruktoren dar \(einer ohne Argument und ein weiterer mit zwei Argumenten\).  
+## <a name="example-1"></a>Beispiel 1  
+ Das folgende Beispiel veranschaulicht eine Klasse mit zwei Klassenkonstruktoren. Einer der Konstruktoren hat kein Argument und der andere verfügt über zwei.  
   
  [!code-cs[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]  
   
-## Beispiel 2  
- In diesem Beispiel besitzt die `Person`\-Klasse keinen Konstruktor, d. h, ein Standardkonstruktor wird automatisch bereitgestellt, und die Felder werden auf ihre Standardwerte initialisiert.  
+## <a name="example-2"></a>Beispiel 2  
+ In diesem Beispiel hat die `Person`-Klasse keine Konstruktoren. In einem solchen Fall wird automatisch ein Standardkonstruktor bereitgestellt, und die Felder werden auf ihre Standardwerte initialisiert.  
   
  [!code-cs[csProgGuideObjects#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_6.cs)]  
   
- Beachten Sie, dass `age` den Standardwert `0` und `name` den Standardwert `null` besitzt.  Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Beachten Sie, dass der Standardwert von `age` `0` ist, und der Standardwert von `name` ist `null`. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
   
-## Beispiel 3  
- Das folgende Beispiel veranschaulicht die Verwendung der Basisklasseninitialisierung.  Die `Circle`\-Klasse wird von der allgemeinen `Shape`\-Klasse abgeleitet, die `Cylinder`\-Klasse wiederum von der `Circle`\-Klasse.  Der Konstruktor jeder abgeleiteten Klasse verwendet die jeweilige Basisklasseninitialisierung.  
+## <a name="example-3"></a>Beispiel 3  
+ Im folgenden Beispiel wird die Verwendung vom Basisklasseninitialisierer veranschaulicht. Die `Circle`-Klasse wird von der allgemeinen Klasse `Shape` abgeleitet, und die `Cylinder`-Klasse wird von der `Circle`-Klasse abgeleitet. Der Konstruktor von jeder abgeleiteten Klasse verwendet deren Basisklasseninitialisierer.  
   
  [!code-cs[csProgGuideObjects#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_7.cs)]  
   
- Weitere Beispiele zum Aufrufen von Basisklassenkonstruktoren finden Sie unter [Virtuell](../../../csharp/language-reference/keywords/virtual.md), [override](../../../csharp/language-reference/keywords/override.md) und [Basis](../../../csharp/language-reference/keywords/base.md).  
+ Weitere Beispiele für das Aufrufen des Basisklassenkonstruktors finden Sie unter [virtual](../../../csharp/language-reference/keywords/virtual.md), [override](../../../csharp/language-reference/keywords/override.md) und [base](../../../csharp/language-reference/keywords/base.md).  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destruktoren](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Statische](../../../csharp/language-reference/keywords/static.md)
+ [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [static](../../../csharp/language-reference/keywords/static.md)

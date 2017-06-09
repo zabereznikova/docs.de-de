@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3dc9347aa3c4090b71d473d13b5c7ad68f1fbc76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: a3ee06e9e177fe3c0a41e99361ba9289943c1cf5
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -52,8 +53,7 @@ Indexer unterscheiden sich durch das Vorhandensein von Argumenten, die auf ein E
 Sie definieren *Indexer* in Ihrem Typ, wenn dessen API eine Auflistung modelliert, in der Sie die Argumente der Auflistung definieren. Ihre Indexer ordnen möglicherweise direkt zu Ihren Auflistungstypen zu, die Teil des .NET Core Frameworks sind. Ihr Typ hat möglicherweise andere Verpflichtungen als nur das Modellieren einer Auflistung.
 Mit Indexern können Sie die API bereitstellen, die mit der Abstraktion Ihres Typs übereinstimmt, ohne die inneren Details offen zu legen, wie die Werte dieser Abstraktion gespeichert oder berechnet werden.
 
-Die häufigsten Szenarios für das Verwenden von *Indexern*.
-Der Code für alle Beispiele steht im [core-docs-Repository auf GitHub](https://github.com/dotnet/core-docs) zur Verfügung. Sie können auch direkt auf den [Beispielordner](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) zugreifen.
+Die häufigsten Szenarios für das Verwenden von *Indexern*. Sie können auf den [Beispielordner für Indexer](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) zugreifen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Arrays und Vektoren
 

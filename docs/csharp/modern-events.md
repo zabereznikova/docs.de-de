@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d750209f2d970044aac2f3b8b119412a58595171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 8fc483fb52babd27f897958b17c0303710c6cce4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 03/13/2017
 Im vorherigen Artikel wurden die am häufigsten verwendeten Ereignismuster erläutert. .NET Core ist ein lockereres Muster. Die `EventHandler<TEventArgs>`-Definition hat in dieser Version nicht länger die Einschränkung, dass `TEventArgs` eine von `System.EventArgs` abgeleitete Klasse sein muss.
 
 Dies erhöht die Flexibilität für Sie und ist abwärtskompatibel. Beginnen wir mit der Flexibilität. Die System.EventArgs-Klasse leitet eine Methode ein: `MemberwiseClone()`, die eine flache Kopie des Objekts erstellt.
-Diese Methode muss [Reflektion](reflection.md) verwenden, um ihre Funktionalität für jede von `EventArgs` abgeleitete Klasse zu implementieren. Diese Funktionalität lässt sich in einer bestimmten abgeleiteten Klasse einfacher erstellen. Das bedeutet, dass das Ableiten von System.EventArgs eine Einschränkung ist, die Ihre Entwürfe beschränkt, aber keine zusätzlichen Vorteile bietet.
+Diese Methode muss Reflektion verwenden, um ihre Funktionalität für jede von `EventArgs` abgeleitete Klasse zu implementieren. Diese Funktionalität lässt sich in einer bestimmten abgeleiteten Klasse einfacher erstellen. Das bedeutet, dass das Ableiten von System.EventArgs eine Einschränkung ist, die Ihre Entwürfe beschränkt, aber keine zusätzlichen Vorteile bietet.
 Tatsächlich können Sie die Definitionen von `FileFoundArgs` und `SearchDirectoryArgs` ändern, sodass sie nicht von `EventArgs` abgeleitet werden.
 Das Programm funktioniert genauso.
 
@@ -59,9 +60,9 @@ Nach derselben Logik würden alle erstellten Ereignisargumenttypen keine Abonnen
 
 ## <a name="events-with-async-subscribers"></a>Ereignisse mit asynchronen Abonnenten
 
-Das letzte, in diesem Artikel behandelte Muster ist die richtige Schreibweise von Ereignisabonnenten, die asynchronen Code aufrufen. Informationen hierzu finden Sie im Artikel zu [Async und Await](async.md). Asynchrone Methoden können einen Rückgabetyp „Void“ haben, aber davon ist dringend abzuraten. Wenn Ihr Ereignisabonnent eine asynchrone Methode aufruft, erfordert die Signatur des Ereignishandlers, dass Sie eine `async void`-Methode erstellen.
+Das letzte, in diesem Artikel behandelte Muster ist die richtige Schreibweise von Ereignisabonnenten, die asynchronen Code aufrufen. Informationen hierzu finden Sie im Artikel zu [Async und Await](async.md). Asynchrone Methoden können einen Rückgabetyp „Void“ haben, aber davon ist dringend abzuraten. Wenn Ihr Ereignisabonnent eine asynchrone Methode aufruft, haben Sie keine Wahl, außer eine `async void`-Methode zu erstellen. Sie wird von der Signatur des Ereignishandlers benötigt.
 
-Sie müssen diese gegensätzlichen Vorgaben dann in Einklang bringen und eine sichere `async void`-Methode erstellen. Die Grundlagen des Musters, das Sie implementieren müssen, finden Sie untenan:
+Sie müssen diesen entgegengesetzten Leitfaden abstimmen. Sie müssen irgendwie eine sichere `async void`-Methode erstellen. Die Grundlagen des Musters, das Sie implementieren müssen, finden Sie untenan:
 
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>

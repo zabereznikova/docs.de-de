@@ -1,6 +1,6 @@
 ---
 title: long (C#-Referenz) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,67 +30,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c28c8308d7ed32f7240f56113a77a0794cb1ba62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0ea7f109ab934660418aab1a88bff7206ef23a37
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="long-c-reference"></a>long (C#-Referenz)
-Das Schlüsselwort `long` kennzeichnet einen ganzzahligen Typ, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
+
+`long` kennzeichnet einen Ganzzahltyp, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
 |Typ|Bereich|Größe|.NET Framework-Typ|  
 |----------|-----------|----------|-------------------------|  
 |`long`|–9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807|64-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int64?displayProperty=fullName>|  
   
-## <a name="literals"></a>Literale  
- Sie können eine `long`-Variable wie im folgenden Beispiel deklarieren und initialisieren:  
+## <a name="literals"></a>Literale 
+
+Sie können eine `long`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. 
+
+Im folgenden Beispiel werden Ganzzahlen wie 4294967296, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `long`-Werten zugewiesen.  
   
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
+
+> [!NOTE] 
+> Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals. Dezimale Literale haben kein Präfix. 
+
+Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit verwenden, wie im folgenden Beispiel veranschaulicht.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `L` kennzeichnet ein `long`. Im folgenden Beispiel wird das `L`-Suffix verwendet, um eine lange ganze Zahl anzugeben:
+ 
+```csharp
+long value = 4294967296L;  
 ```  
+
+> [!NOTE]
+>  Sie können auch Kleinbuchstabe „l“ als Suffix verwenden. Allerdings erzeugt dies eine Compilerwarnung, weil der Buchstabe „l“ leicht mit der Zahl „1“ verwechselt wird. Verwenden Sie aus Gründen der Klarheit „L“.  
   
-long long1 = 4294967296;  
-```  
+ Wenn Sie das Suffix `L` verwenden, wird der Typ des Ganzzahlliterals entweder als `long` oder [ulong](../../../csharp/language-reference/keywords/ulong.md) bestimmt, abhängig von seiner Größe. In diesem Fall ist er `long`, weil er kleiner als der Bereich von [ulong](../../../csharp/language-reference/keywords/ulong.md) ist.  
   
- Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste dieser Typen, in dem sein Wert dargestellt werden kann: [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), `long` und [ulong](../../../csharp/language-reference/keywords/ulong.md). Im vorhergehenden Beispiel ist der Typ `long`, da er den Bereich von [uint](../../../csharp/language-reference/keywords/uint.md) überschreitet (Speichergrößen von ganzzahligen Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)).  
+ Das Suffix wird häufig zum Aufrufen überladener Methoden verwendet. Die folgenden überladenen Methoden z.B. verfügen über Parameter des Typs `long` und [int](../../../csharp/language-reference/keywords/int.md):  
   
- Sie können auch das Suffix „L“ mit dem Typ `long` wie folgt verwenden:  
-  
-```  
-  
-long long2 = 4294967296L;  
-```  
-  
- Wenn Sie das Suffix „L“ verwenden, wird der Typ des Ganzzahlliterals entweder als `long` oder [ulong](../../../csharp/language-reference/keywords/ulong.md) bestimmt, gemäß seiner Größe. In diesem Fall ist er `long`, weil er kleiner als der Bereich von [ulong](../../../csharp/language-reference/keywords/ulong.md) ist.  
-  
- Das Suffix wird häufig beim Aufrufen überladener Methoden verwendet. Betrachten Sie z.B. die folgenden überladenen Methoden, die Parameter `long` und [int](../../../csharp/language-reference/keywords/int.md) verwenden:  
-  
-```  
+```csharp
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(long l) {}  
 ```  
   
- Die Verwendung des Suffixes „L“ gewährleistet, dass der richtige Typ aufgerufen wird, z.B.:  
+ Das `L`-Suffix gewährleistet, dass die richtige Überladung aufgerufen wird:  
   
+```csharp  
+SampleMethod(5);    // Calls the method with the int parameter  
+SampleMethod(5L);   // Calls the method with the long parameter  
 ```  
-SampleMethod(5);    // Calling the method with the int parameter  
-SampleMethod(5L);   // Calling the method with the long parameter  
-```  
+Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste der folgenden Typen, in dem sein Wert dargestellt werden kann: 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. `long`
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+
+Das Literal 4294967296 im vorhergehenden Beispiel ist vom Typ `long`, da er den Bereich von [uint](../../../csharp/language-reference/keywords/uint.md) überschreitet (Speichergrößen von ganzzahligen Typen finden Sie unter [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)).  
   
- Sie können den Typ `long` mit anderen numerischen ganzzahligen Typen im selben Ausdruck verwenden, wobei in diesem Fall der Ausdruck als `long` (oder [bool](../../../csharp/language-reference/keywords/bool.md) im Fall von relationalen oder booleschen Ausdrücken) ausgewertet wird. Der folgende Ausdruck wird z.B. als `long` ausgewertet:  
+ Wenn Sie den `long`-Typ mit anderen ganzzahligen Typen im selben Ausdruck verwenden, wird der Ausdruck als `long` ausgewertet (oder [bool](../../../csharp/language-reference/keywords/bool.md) im Fall von relationalen oder booleschen Ausdrücken). Der folgende Ausdruck wird z.B. als `long` ausgewertet:  
   
-```  
+```csharp  
 898L + 88  
 ```  
-  
-> [!NOTE]
->  Sie können auch Kleinbuchstabe „l“ als Suffix verwenden. Allerdings erzeugt dies eine Compilerwarnung, weil der Buchstabe „l“ leicht mit der Zahl „1“ verwechselt wird. Verwenden Sie aus Gründen der Klarheit „L“.  
   
  Informationen zu arithmetischen Ausdrücken mit Gleitkomma- und Ganzzahltypen finden Sie unter [float](../../../csharp/language-reference/keywords/float.md) und [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="conversions"></a>Konvertierungen  
  Es gibt eine vordefinierte implizite Konvertierung von `long` in [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md). Ansonsten muss eine Umwandlung verwendet werden. Die folgende Anweisung erzeugt z.B. einen Kompilierungsfehler ohne explizite Umwandlung:  
   
-```  
+```csharp  
 int x = 8L;        // Error: no implicit conversion from long to int  
 int x = (int)8L;   // OK: explicit conversion to int  
 ```  
@@ -99,9 +113,8 @@ int x = (int)8L;   // OK: explicit conversion to int
   
  Beachten Sie auch, dass es keine implizite Konvertierung von Gleitkomma-Datentypen in `long` gibt. Die folgende Anweisung erzeugt z.B. einen Compilerfehler, außer es wird eine explizite Umwandlung verwendet:  
   
-```  
-  
-      long x = 3.0;         // Error: no implicit conversion from double  
+```csharp  
+long x = 3.0;         // Error: no implicit conversion from double  
 long y = (long)3.0;   // OK: explicit conversion  
 ```  
   

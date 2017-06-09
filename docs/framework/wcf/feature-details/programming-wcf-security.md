@@ -1,0 +1,110 @@
+---
+title: "Programmieren der WCF-Sicherheit | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Nachrichtensicherheit [WCF], Programmierung, Übersicht"
+ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
+caps.latest.revision: 25
+author: "BrucePerlerMS"
+ms.author: "bruceper"
+manager: "mbaldwin"
+caps.handback.revision: 25
+---
+# Programmieren der WCF-Sicherheit
+In diesem Thema werden die grundlegenden Programmierungsaufgaben beschrieben, mit denen eine sichere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Anwendung erstellt werden kann.Dieses Thema behandelt nur die Aspekte Authentifizierung, Vertraulichkeit und Integrität, die unter dem Begriff *Transportsicherheit* zusammengefasst werden.Dieses Thema deckt nicht den Aspekt Autorisierung \(die Kontrolle über den Zugriff auf Ressourcen oder Dienste\) ab. Informationen zur Autorisierung finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+  
+> [!NOTE]
+>  Eine nützliche Einführung zu Sicherheitsbegriffen, insbesondere in Bezug auf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie in einem Satz an Beispielen und praktischen Lernprogrammen auf MSDN unter [Szenarien, Muster und Implementierungsleitfaden für Web Services Enhancements \(WSE\) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250). \(Seite ist möglicherweise nur in englischer Sprache verfügbar.\)  
+  
+ Die Programmierung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sicherheit besteht aus drei Schritten, mit denen Folgendes festgelegt wird: der Sicherheitsmodus, ein Clientanmeldeinformationstyp und Anmeldeinformationswerte.Sie können diese Schritte durch Code oder die Konfiguration durchführen.  
+  
+## Festlegen des Sicherheitsmodus  
+ Das folgende Beispiel erläutert die allgemeinen Schritte zum Programmieren mit dem Sicherheitsmodus in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+  
+1.  Wählen Sie eine der vordefinierten Bindungen, die den Anwendungsanforderungen entsprechen.Eine Liste der Bindungsmöglichkeiten finden Sie unter [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).Standardmäßig ist beinahe jede Bindung sicherheitsaktiviert.Eine Ausnahme ist die <xref:System.ServiceModel.BasicHttpBinding>\-Klasse \(unter Verwendung der Konfiguration: das [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)\).  
+  
+     Durch die von Ihnen ausgewählte Bindung bestimmen Sie auch den Transport.<xref:System.ServiceModel.WSHttpBinding> verwendet beispielsweise HTTP als Transportmethode, <xref:System.ServiceModel.NetTcpBinding> verwendet TCP.  
+  
+2.  Wählen Sie einen der Sicherheitsmodi für die Bindung aus.Beachten Sie, dass die von Ihnen ausgewählte Bindung auch die Verfügbarkeit der Modi beeinflusst.Die <xref:System.ServiceModel.WSDualHttpBinding> ermöglicht beispielsweise keine Transportsicherheit. \(Sie steht nicht als Option zur Verfügung.\)Auf ähnliche Weise ermöglichen weder <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> noch <xref:System.ServiceModel.NetNamedPipeBinding> die Nachrichtensicherheit.  
+  
+     Sie haben drei Möglichkeiten:  
+  
+    1.  `Transport`  
+  
+         Die Transportsicherheit ist vom Mechanismus abhängig, den die ausgewählte Bindung verwendet.Wenn Sie beispielsweise `WSHttpBinding` verwenden, wird als Sicherheitsmechanismus Secure Sockets Layer \(SSL\) verwendet, was auch der Mechanismus für das HTTPS\-Protokoll ist.Der Hauptvorteil der Transportsicherheit besteht im Allgemeinen darin, dass sie unabhängig von der Transportmethode einen guten Durchsatz ermöglicht.Es gibt jedoch zwei Einschränkungen: Der Transportmechanismus bestimmt den Anmeldeinformationstyp, der zum Authentifizieren eines Benutzers verwendet wird.Dies ist jedoch nur dann von Nachteil, wenn ein Dienst mit anderen Diensten zusammenarbeiten muss, für die unterschiedliche Anmeldeinformationstypen notwendig sind.Darüber hinaus wird die Sicherheit nicht auf Nachrichtenebene angewendet, vielmehr wird die Sicherheit per Hop\-by\-Hop\-Methode anstelle einer End\-to\-End\-Methode implementiert.Diese zweite Einschränkung ist nur dann ein Problem, wenn der Nachrichtenpfad zwischen Client und Dienst Vermittler umfasst.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum zu verwendenden Transport finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Verwenden der Transportsicherheit finden Sie unter [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+  
+    2.  `Message`  
+  
+         Nachrichtensicherheit bedeutet, dass jede Nachricht die notwendigen Header und Daten enthält, um die Nachricht zu sichern.Da die Struktur der Header unterschiedlich ist, können Sie beliebig viele Anmeldeinformationen umfassen.Dies spielt eine Rolle, wenn Sie mit anderen Diensten zusammenarbeiten, die einen bestimmten Anmeldeinformationstyp erfordern, den ein Transportmechanismus nicht bereitstellen kann, oder wenn die Nachricht mit mehr als einem Dienst verwendet werden muss, wobei jeder Dienst einen unterschiedlichen Anmeldeinformationstyp erfordert.  
+  
+         [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+  
+    3.  `TransportWithMessageCredential`  
+  
+         Diese Auswahl verwendet die Transportschicht, um die Nachrichtenübertragung zu sichern, während jede Nachricht die komplexen Anmeldeinformationen enthält, die andere Dienste benötigen.Dadurch wird der Leistungsvorteil der Transportsicherheit mit dem Vorteil komplexer Anmeldeinformationen der Nachrichtensicherheit kombiniert.Dies ist mit den folgenden Bindungen verfügbar: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> und <xref:System.ServiceModel.WSHttpBinding>.  
+  
+3.  Wenn Sie für HTTP eine Transportsicherheit verwenden möchten \(d. h. HTTPS\), müssen Sie auch den Host mit einem SSL\-Zertifikat konfigurieren und SSL auf einem Port aktivieren.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP\-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+  
+4.  Wenn Sie <xref:System.ServiceModel.WSHttpBinding> verwenden und keine sichere Sitzung einrichten müssen, legen Sie für die <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>\-Eigenschaft den Wert `false` fest.  
+  
+     Eine sichere Sitzung entsteht, wenn ein Client und ein Dienst einen Kanal mithilfe eines symmetrischen Schlüssels erstellen \(sowohl Client als auch Server verwenden den gleichen Schlüssel für die Dauer einer Konversation und bis der Dialog geschlossen wird\).  
+  
+## Festlegen des Clientanmeldeinformationstyps  
+ Wählen Sie wie erforderlich einen Clientanmeldeinformationstyp aus.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Wählen eines Typs von Anmeldeinformationen](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).Die folgenden Clientanmeldeinformationstypen sind verfügbar:  
+  
+-   `Windows`  
+  
+-   `Certificate`  
+  
+-   `Digest`  
+  
+-   `Basic`  
+  
+-   `UserName`  
+  
+-   `NTLM`  
+  
+-   `IssuedToken`  
+  
+ Die Art und Weise, wie Sie den Modus festlegen, bestimmt auch die Festlegung des Anmeldeinformationstyps.Wenn Sie beispielsweise `wsHttpBinding` ausgewählt haben und als Modus "Message" festgelegt haben, können Sie auch das `clientCredentialType`\-Attribut des Nachrichtenelements auf einen der folgenden Werte festlegen: `None`, `Windows`, `UserName`, `Certificate` und `IssuedToken`, wie im folgenden Konfigurationsbeispiel gezeigt wird.  
+  
+```  
+<system.serviceModel>  
+<bindings>  
+  <wsHttpBinding>  
+    <binding name="myBinding">  
+      <security mode="Message"/>  
+      <message clientCredentialType="Windows"/>  
+    </binding>  
+</bindings>  
+</system.serviceModel>  
+```  
+  
+ Oder in Code:  
+  
+ [!code-csharp[c_WsHttpService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#1)]
+ [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
+  
+## Festlegen von Dienstanmeldeinformationswerten  
+ Nachdem Sie einen Dienstanmeldeinformationstyp ausgewählt haben, müssen Sie die tatsächlichen Anmeldeinformationen für den zu verwendenden Dienst und Client festlegen.Für den Dienst werden die Anmeldeinformationen mit der <xref:System.ServiceModel.Description.ServiceCredentials>\-Klasse festgelegt und von der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>\-Eigenschaft der <xref:System.ServiceModel.ServiceHostBase>\-Klasse zurückgegeben.Die verwendete Bindung gibt den Dienstanmeldeinformationstyp, den ausgewählten Sicherheitsmodus und den Typ der Clientanmeldeinformationen an.Mit dem folgenden Code wird ein Zertifikat für die Dienstanmeldeinformationen festgelegt:  
+  
+ [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
+ [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
+  
+## Festlegen der Werte der Clientanmeldeinformationen  
+ Für den Client werden die Clientanmeldeinformationswerte mit der <xref:System.ServiceModel.Description.ClientCredentials>\-Klasse festgelegt und von der <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>\-Eigenschaft der <xref:System.ServiceModel.ClientBase%601>\-Klasse zurückgegeben.Mit dem folgenden Code wird ein Zertifikat als Anmeldeinformationen auf einem Client mit dem TCP\-Protokoll festgelegt.  
+  
+ [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
+ [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
+  
+## Siehe auch  
+ [Basis\-WCF\-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)   
+ [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

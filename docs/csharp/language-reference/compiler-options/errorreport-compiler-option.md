@@ -46,7 +46,7 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   

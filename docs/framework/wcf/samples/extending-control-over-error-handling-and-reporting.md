@@ -1,0 +1,168 @@
+---
+title: "Erweitern der Kontrolle &#252;ber Fehlerbehandlung und -meldung | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
+caps.latest.revision: 28
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 28
+---
+# Erweitern der Kontrolle &#252;ber Fehlerbehandlung und -meldung
+Dieses Beispiel veranschaulicht, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle erweitert werden kann.Das Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md) und fügt dem Dienst zusätzlichen Code zum Behandeln von Fehlern hinzu.Der Client erzwingt verschiedene Fehlerbedingungen.Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
+  
+> [!NOTE]
+>  Die Setupprozedur und die Erstellungsanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+  
+ Dienste können Fehler abfangen, Verarbeitungen ausführen und beeinflussen, wie Fehler mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle gemeldet werden.Die Schnittstelle besitzt zwei Methoden, die implementiert werden können: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> und <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>.Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29>\-Methode können Sie eine Fehlermeldung, die bei einer Ausnahme generiert wird, hinzufügen, ändern oder unterdrücken.Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>\-Methode können Sie die Verarbeitung von Fehlern bei einem Fehlerereignis zulassen und steuern, ob eine weitere Fehlerbehandlung ausgeführt werden kann.  
+  
+ In diesem Beispiel implementiert der `CalculatorErrorHandler`\-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle.In der  
+  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>\-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\\logs.Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
+  
+```  
+public class CalculatorErrorHandler : IErrorHandler  
+{  
+        // Provide a fault. The Message fault parameter can be replaced, or set to  
+        // null to suppress reporting a fault.  
+  
+        public void ProvideFault(Exception error, MessageVersion version, ref Message fault)  
+        {  
+        }  
+  
+        // HandleError. Log an error, then allow the error to be handled as usual.  
+        // Return true if the error is considered as already handled  
+  
+        public bool HandleError(Exception error)  
+        {  
+            using (TextWriter tw = File.AppendText(@"c:\logs\error.txt"))  
+            {  
+                if (error != null)  
+                {  
+                    tw.WriteLine("Exception: " + error.GetType().Name + " - " + error.Message);  
+                }  
+                tw.Close();  
+            }  
+            return true;  
+        }  
+    }  
+```  
+  
+ Das `ErrorBehaviorAttribute` dient als Mechanismus zum Registrieren eines Fehlerhandlers mit einem Dienst.Dieses Attribut nimmt einen einzelnen Typparameter entgegen.Dieser Typ sollte die <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle implementieren und einen öffentlichen, leeren Konstruktor besitzen.Das Attribut instanziiert dann eine Instanz dieses Fehlerhandlertyps und installiert sie im Dienst.Dazu wird die <xref:System.ServiceModel.Description.IServiceBehavior>\-Schnittstelle implementiert, und dann werden dem Dienst mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>\-Methode Instanzen des Fehlerhandlers hinzugefügt.  
+  
+```  
+// This attribute can be used to install a custom error handler for a service.  
+public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
+{  
+    Type errorHandlerType;  
+  
+    public ErrorBehaviorAttribute(Type errorHandlerType)  
+    {  
+        this.errorHandlerType = errorHandlerType;  
+    }  
+  
+    void IServiceBehavior.Validate(ServiceDescription description, ServiceHostBase serviceHostBase)  
+    {  
+    }  
+  
+    void IServiceBehavior.AddBindingParameters(ServiceDescription description, ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection<ServiceEndpoint> endpoints, BindingParameterCollection parameters)  
+    {  
+    }  
+  
+    void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
+    {  
+        IErrorHandler errorHandler;  
+  
+        try  
+        {  
+            errorHandler = (IErrorHandler)Activator.CreateInstance(errorHandlerType);  
+        }  
+        catch (MissingMethodException e)  
+        {  
+            throw new ArgumentException("The errorHandlerType specified in the ErrorBehaviorAttribute constructor must have a public empty constructor.", e);  
+        }  
+        catch (InvalidCastException e)  
+        {  
+            throw new ArgumentException("The errorHandlerType specified in the ErrorBehaviorAttribute constructor must implement System.ServiceModel.Dispatcher.IErrorHandler.", e);  
+        }  
+  
+        foreach (ChannelDispatcherBase channelDispatcherBase in serviceHostBase.ChannelDispatchers)  
+        {  
+            ChannelDispatcher channelDispatcher = channelDispatcherBase as ChannelDispatcher;  
+            channelDispatcher.ErrorHandlers.Add(errorHandler);  
+        }                                                  
+    }  
+}  
+```  
+  
+ Das Beispiel implementiert einen Rechnerdienst.Der Client verursacht im Dienst absichtlich zwei Fehler, indem er Parameter mit ungültigen Werten angibt.Der `CalculatorErrorHandler` protokolliert mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle die Fehler in einer lokalen Datei und lässt dann zu, dass sie wieder zurück an den Client gemeldet werden.Der Client erzwingt eine Division durch Null und einen Argument\-außerhalb\-des\-Bereichs\-Zustand.  
+  
+```  
+try  
+{  
+    Console.WriteLine("Forcing an error in Divide");  
+    // Call the Divide service operation - trigger a divide by 0 error.  
+    value1 = 22;  
+    value2 = 0;  
+    result = proxy.Divide(value1, value2);  
+    Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
+}  
+catch (FaultException e)  
+{  
+    Console.WriteLine("FaultException: " + e.GetType().Name + " - " + e.Message);  
+}  
+catch (Exception e)  
+{  
+    Console.WriteLine("Exception: " + e.GetType().Name + " - " + e.Message);  
+}  
+```  
+  
+ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Sie sehen, dass die Division durch Null und die Argument\-außerhalb\-des\-Bereichs\-Zustände als Fehler gemeldet werden.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+  
+```  
+Add(15,3) = 18  
+Subtract(145,76) = 69  
+Multiply(9,81) = 729  
+Forcing an error in Divide  
+FaultException: FaultException - Invalid Argument: The second argument must not be zero.  
+Forcing an error in Factorial  
+FaultException: FaultException - Invalid Argument: The argument must be greater than zero.  
+  
+Press <ENTER> to terminate client.  
+```  
+  
+ Die Datei "C:\\logs\\errors.txt" enthält die vom Dienst zu den Fehlern protokollierten Informationen.Beachten Sie, dass Sie sicherstellen müssen, dass der Prozess, unter dem der Dienst ausgeführt wird \(meist ASP.NET oder Network Service\), über Schreibberechtigungen für das Verzeichnis verfügt, damit der Dienst in das Verzeichnis schreiben kann.  
+  
+```  
+Fault: Reason = Invalid Argument: The second argument must not be zero.  
+Fault: Reason = Invalid Argument: The argument must be greater than zero.  
+```  
+  
+### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+  
+1.  Vergewissern Sie sich, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+  
+2.  Folgen Sie zum Erstellen der Lösung den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+  
+3.  Vergewissern Sie sich, dass Sie das Verzeichnis "c:\\logs" für die Datei "error.txt" erstellt haben.Sie können auch den in `CalculatorErrorHandler.HandleError` verwendeten Dateinamen ändern.  
+  
+4.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder über Computer hinweg ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+  
+> [!IMPORTANT]
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>   
+>  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>   
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>   
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
+  
+## Siehe auch

@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
@@ -84,7 +85,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     Mit dem Aufruf `FolderBrowserDialog1.ShowDialog` wird das Dialogfeld **Ordner suchen** geöffnet. Nachdem der Benutzer auf **OK** geklickt hat, wird die Eigenschaft <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> als Argument an die Methode `ListFiles` gesendet, die im nächsten Schritt hinzugefügt wird.  
+     Mit dem Aufruf `FolderBrowserDialog1.ShowDialog` wird das Dialogfeld **Ordner suchen** geöffnet. Sobald der Benutzer auf **OK** klickt, wird die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>-Eigenschaft als Argument an die `ListFiles`-Methode gesendet, die im nächsten Schritt hinzugefügt wird.  
   
 3.  Fügen Sie die folgende `ListFiles`-Methode hinzu.  
   
@@ -92,7 +93,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
      Dieser Code löscht zuerst **ListBox**.  
   
-     Die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> ruft dann eine Auflistung von Zeichenfolgen ab, eine für jede Datei im Verzeichnis. Die Methode `GetFiles` akzeptiert ein Suchmusterargument, um Dateien abzurufen, die mit einem bestimmten Muster übereinstimmen. In diesem Beispiel werden nur Dateien mit der Dateiendung „.txt“ zurückgegeben.  
+     Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>-Methode ruft anschließend eine Auflistung von Zeichenfolgen ab, eine für jede Datei im Verzeichnis. Die Methode `GetFiles` akzeptiert ein Suchmusterargument, um Dateien abzurufen, die mit einem bestimmten Muster übereinstimmen. In diesem Beispiel werden nur Dateien mit der Dateiendung „.txt“ zurückgegeben.  
   
      Die Zeichenfolgen, die von der Methode `GetFiles` zurückgegeben werden, werden anschließend zu **ListBox** hinzugefügt.  
   
@@ -110,7 +111,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
      [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
-     Der Code stellt sicher, dass ein Element in `ListBox` ausgewählt ist. Anschließend ruft er den Eintrag des Dateipfads aus `ListBox` ab. Die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> wird verwendet, um zu überprüfen, ob die Datei noch vorhanden ist.  
+     Der Code stellt sicher, dass ein Element in `ListBox` ausgewählt ist. Anschließend ruft er den Eintrag des Dateipfads aus `ListBox` ab. Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A>-Methode wird verwendet, um zu überprüfen, ob die Datei noch vorhanden ist.  
   
      Der Dateipfad wird als Argument an die `GetTextForOutput`-Methode gesendet, die im nächsten Schritt hinzugefügt wird. Diese Methode gibt eine Zeichenfolge zurück, die Dateiinformationen enthält. Die Dateiinformationen werden in einer **MessageBox** angezeigt.  
   
@@ -118,9 +119,9 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     Der Code verwendet die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> zum Abrufen von Dateiparametern. Die Dateiparameter werden zu <xref:System.Text.StringBuilder> hinzugefügt.  
+     Der Code verwendet die <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>-Methode zum Abrufen von Dateiparametern. Die Dateiparameter werden einem <xref:System.Text.StringBuilder> hinzugefügt.  
   
-     Die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> liest den Dateiinhalt in einen <xref:System.IO.StreamReader>. Die erste Zeile des Inhalts wird von `StreamReader` abgerufen und zu `StringBuilder` hinzugefügt.  
+     Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>-Methode liest den Dateiinhalt in ein <xref:System.IO.StreamReader>-Element aus. Die erste Zeile des Inhalts wird von `StreamReader` abgerufen und zu `StringBuilder` hinzugefügt.  
   
 4.  Führen Sie die Anwendung aus. Klicken Sie auf **Durchsuchen**, und suchen Sie nach einem Ordner, der .txt-Dateien enthält. Klicken Sie auf **OK**.  
   
@@ -136,7 +137,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
      Der Protokolldateipfad wird vom Code so festgelegt, dass die Protokolldatei in dem Verzeichnis gespeichert wird, das auch das Verzeichnis der ausgewählten Datei ist. Der Text der Protokolldatei wird auf das aktuelle Datum und die Uhrzeit sowie die Dateiinformationen festgelegt.  
   
-     Die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, mit der das Argument `append` auf `True` festgelegt wird, wird zum Erstellen des Protokolleintrags verwendet.  
+     Zum Erstellen des Protokolleintrags wird die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode verwendet, deren `append`-Argument auf `True` festgelegt ist.  
   
 2.  Führen Sie die Anwendung aus. Navigieren Sie zu einer Textdatei, wählen Sie diese in `ListBox` aus, aktivieren Sie das Kontrollkästchen **Save Results** (Ergebnisse speichern), und klicken Sie auf **Examine** (Untersuchen). Stellen Sie sicher, dass der Protokolleintrag in die `log.txt`-Datei geschrieben ist.  
   

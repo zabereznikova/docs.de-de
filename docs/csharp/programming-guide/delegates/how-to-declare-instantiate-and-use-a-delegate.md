@@ -1,49 +1,68 @@
 ---
-title: "Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Delegaten [C#], Deklarieren und Instanziieren von"
+title: 'Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: f80f50d7d6630aa5738c077cc2f278993e792eb8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
+
 ---
-# Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch)
-In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklariert werden.  
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Gewusst wie: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch)
+In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklariert werden.  
   
  [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
   
  [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
   
- C\# 2.0 bietet eine einfachere Möglichkeit zum Schreiben dieser Deklaration, wie im folgenden Beispiel gezeigt.  
+ C# 2.0 bietet eine einfachere Möglichkeit zum Schreiben der vorangegangenen Deklaration, siehe folgendes Beispiel.  
   
  [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
   
- In C\# 2.0 und höher kann auch eine anonyme Methode verwendet werden, um einen [Delegaten](../../../csharp/language-reference/keywords/delegate.md) zu deklarieren und initialisieren, wie im folgenden Beispiel gezeigt.  
+ In C# 2.0 und höher ist es außerdem möglich, eine anonyme Methode zum Deklarieren und Initialisieren eines [Delegaten](../../../csharp/language-reference/keywords/delegate.md) zu verwenden. Dies wird im nachstehenden Beispiel gezeigt.  
   
  [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
   
- In C\# 3.0 und höher können Delegaten auch mit einem Lambda\-Ausdruck deklariert und instanziiert werden, wie im folgenden Beispiel gezeigt.  
+ In C# 3.0 und höher können Delegaten auch mithilfe eines Lamdaausdrucks deklariert und instanziiert werden, wie im folgenden Beispiel dargestellt.  
   
  [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
   
- Weitere Informationen finden Sie unter [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- Im folgenden Beispiel wird verdeutlicht, wie Sie einen Delegaten deklarieren, instanziieren und verwenden.  In der `BookDB`\-Klasse ist eine Buchhandlungsdatenbank gekapselt, die eine Buchtiteldatenbank enthält.  Sie stellt eine `ProcessPaperbackBooks`\-Methode zur Verfügung, durch die alle Taschenbücher in der Datenbank gefunden und für jedes Taschenbuch ein Delegat aufgerufen wird.  Der verwendete `delegate`\-Typ hat den Namen `ProcessBookDelegate`.  Die `Test`\-Klasse verwendet diese Klasse, um die Buchtitel und Durchschnittspreise der Taschenbücher auszugeben.  
+ Im folgenden Beispiel wird verdeutlicht, wie Sie einen Delegaten deklarieren, instanziieren und verwenden. In der `BookDB`-Klasse ist eine Buchhandlungsdatenbank gekapselt, die eine Buchtiteldatenbank enthält. Sie stellt eine `ProcessPaperbackBooks`-Methode zur Verfügung, durch die alle Taschenbücher in der Datenbank gefunden und für jedes Taschenbuch ein Delegat aufgerufen wird. Der verwendete `delegate`-Typ hat den Namen `ProcessBookDelegate`. Die `Test`-Klasse verwendet diese Klasse, um die Buchtitel und Durchschnittspreise der Taschenbücher auszugeben.  
   
- Die Verwendung von Delegaten beinhaltet eine sinnvolle Trennung der Funktionalitäten von Buchhandlungsdatenbank und Clientcode.  Der Clientcode weiß nicht, wie die Bücher archiviert werden oder wie der Buchhandlungscode Taschenbücher sucht.  Der Buchhandlungscode wiederum weiß nicht, wie ein Taschenbuchtitel weiterverarbeitet wird, nachdem er gefunden wurde.  
+ Die Verwendung von Delegaten beinhaltet eine sinnvolle Trennung der Funktionalitäten von Buchhandlungsdatenbank und Clientcode. Der Clientcode hat keine Kenntnis darüber, wie die Bücher archiviert werden oder wie der Buchhandlungscode Taschenbücher sucht. Der Buchhandlungscode wiederum hat keine Kenntnis darüber, wie ein Taschenbuchtitel weiterverarbeitet wird, nachdem er gefunden wurde.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
-## Robuste Programmierung  
+## <a name="robust-programming"></a>Stabile Programmierung  
   
 -   Deklarieren von Delegaten  
   
@@ -51,31 +70,31 @@ In C\# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklar
   
      [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
   
-     Durch die einzelnen Delegattypen werden Anzahl und Typen von Argumenten sowie Rückgabewerte von Methoden beschrieben, die gekapselt können.  Sobald neue Argumenttypen oder ein neuer Rückgabewerttyp erforderlich ist, muss ein neuer Delegattyp deklariert werden.  
+     Durch die einzelnen Delegattypen werden Anzahl und Typen von Argumenten sowie Rückgabewerte von Methoden beschrieben, die gekapselt werden können. Sobald neue Argumenttypen benötigt werden oder ein neuer Rückgabewerttyp erforderlich ist, muss ein neuer Delegattyp deklariert werden.  
   
 -   Instanziieren von Delegaten  
   
-     Nachdem ein Delegattyp deklariert wurde, muss ein Delegatobjekt erstellt und mit einer bestimmten Methode verknüpft werden.  Im vorherigen Beispiel übergeben Sie dazu die `PrintTitle`\-Methode an die `ProcessPaperbackBooks`\-Methode, wie im folgenden Beispiel gezeigt:  
+     Nachdem ein Delegattyp deklariert wurde, muss ein Delegatobjekt erstellt und einer bestimmten Methode zugeordnet werden. Im vorherigen Beispiel übergeben Sie dazu die `PrintTitle`-Methode an die `ProcessPaperbackBooks`-Methode, wie im folgenden Beispiel gezeigt:  
   
      [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
   
-     Hierdurch wird ein neues Delegatobjekt erstellt, das mit der [static](../../../csharp/language-reference/keywords/static.md)\-Methode verknüpft ist `Test.PrintTitle`.  Auf ähnliche Weise wird die nicht statische `AddBookToTotal`\-Methode für das `totaller`\-Objekt wie im folgenden Beispiel übergeben:  
+     Hierdurch wird ein neues Delegatobjekt erstellt, das der [statischen](../../../csharp/language-reference/keywords/static.md) Methode `Test.PrintTitle` zugeordnet ist. Auf ähnliche Weise wird die nicht statische Methode `AddBookToTotal` für das Objekt `totaller` übergeben, wie im folgenden Beispiel gezeigt:  
   
      [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
   
-     In beiden Fällen wird ein neues Delegatobjekt an die `ProcessPaperbackBooks`\-Methode übergeben.  
+     In beiden Fällen wird ein neues Delegatobjekt an die `ProcessPaperbackBooks`-Methode übergeben.  
   
-     Nach der Erstellung eines Delegaten wird die mit diesem verknüpfte Methode nicht mehr geändert. Delegatobjekte sind unveränderlich.  
+     Nach der Erstellung eines Delegaten wird die diesem zugeordnete Methode nicht mehr geändert. Delegatobjekte sind unveränderlich.  
   
 -   Aufrufen von Delegaten  
   
-     Nachdem ein Delegatobjekt erstellt wurde, wird es normalerweise an anderen Code übergeben, durch den der Delegat aufgerufen wird.  Ein Delegatobjekt wird über seinen Namen aufgerufen. Auf den Namen folgen \(in Klammern gesetzte\) Argumente, die an den Delegaten übergeben werden sollen.  Es folgt ein Beispiel für einen Delegataufruf:  
+     Nachdem ein Delegatobjekt erstellt wurde, wird es normalerweise an anderen Code übergeben, durch den der Delegat aufgerufen wird. Ein Delegatobjekt wird über seinen Namen aufgerufen. Auf den Namen folgen (in Klammern gesetzte) Argumente, die an den Delegaten übergeben werden sollen. Es folgt ein Beispiel für einen Delegataufruf:  
   
      [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
   
-     Ein Delegat kann entweder \(wie in diesem Beispiel\) synchron oder mithilfe der `BeginInvoke`\-Methode und der `EndInvoke`\-Methode asynchron aufgerufen werden.  
+     Ein Delegat kann entweder (wie in diesem Beispiel) synchron oder mithilfe der `BeginInvoke`-Methode und der `EndInvoke`-Methode asynchron aufgerufen werden.  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Ereignisse](../../../csharp/programming-guide/events/index.md)   
  [Delegaten](../../../csharp/programming-guide/delegates/index.md)

@@ -1,0 +1,81 @@
+---
+title: "&#220;berbr&#252;ckung und Fehlerbehandlung | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
+caps.latest.revision: 21
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 21
+---
+# &#220;berbr&#252;ckung und Fehlerbehandlung
+In diesem Beispiel wird veranschaulicht, wie der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und einem Dienst mit unterschiedlichen Bindungen verwendet wird.In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird.Der Routingdienst ist eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Komponente, die das Integrieren eines inhaltsbasierten Routers in die Anwendung vereinfacht.In diesem Beispiel wird das standardmäßige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  
+  
+> [!IMPORTANT]
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>   
+>  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>   
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>   
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
+  
+## Beispieldetails  
+ In diesem Beispiel ist der Rechnerclient so konfiguriert, dass er Nachrichten an einen vom Router verfügbar gemachten Endpunkt sendet.Der Routingdienst ist so konfiguriert, dass er alle gesendeten Nachrichten akzeptiert und diese an einen Endpunkt weiterleitet, der dem Rechnerdienst entspricht.Die folgenden Punkte beschreiben die Konfiguration des primären Rechnerdiensts, des Sicherungsrechnerdiensts und des Rechnerclients. Außerdem wird erläutert, wie die Kommunikation zwischen dem Client und dem Dienst mithilfe des Routingdiensts erfolgt:  
+  
+-   Der Rechnerclient ist für die Verwendung von BasicHttpBinding und der Rechnerdienst für die Verwendung von NetTcpBinding eingerichtet.Wenn erforderlich, konvertiert der Routingdienst die Nachrichten automatisch, bevor er sie an den Rechnerdienst sendet, und er konvertiert außerdem die Antworten, damit der Rechnerclient auf sie zugreifen kann.  
+  
+-   Der Routingdienst kennt zwei Rechnerdienste: den primären Rechnerdienst und den Sicherungsrechnerdienst.Der Routingdienst versucht zuerst, mit dem primären Rechnerdienstendpunkt zu kommunizieren.Wenn der Endpunkt deaktiviert ist und dieser Versuch fehlschlägt, versucht der Routingdienst, mit dem Sicherungsrechnerdienstendpunkt zu kommunizieren.  
+  
+ Somit werden vom Client gesendete Nachrichten vom Router empfangen und zum eigentlichen Rechnerdienst umgeleitet.Wenn der Rechnerdienstendpunkt deaktiviert ist, leitet der Routingdienst die Nachricht an den Sicherungsrechnerdienstendpunkt weiter.Nachrichten vom Sicherungsrechnerdienst werden an den Dienstrouter zurückgesendet, der sie dann zurück an den Rechnerclient übergibt.  
+  
+> [!NOTE]
+>  Für eine Sicherungsliste kann mehr als ein Endpunkt definiert sein.Wenn in diesem Fall der Sicherungsdienstendpunkt deaktiviert ist, versucht der Routingdienst solange, eine Verbindung mit dem nächsten Sicherungsendpunkt in der Liste herzustellen, bis die Verbindung besteht.  
+  
+#### So verwenden Sie dieses Beispiel  
+  
+1.  Öffnen Sie RouterBridgingAndErrorHandling.sln in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+  
+2.  Drücken Sie F5 oder STRG\+UMSCHALT\+B in Visual Studio.  
+  
+    1.  Wenn die erforderlichen Projekte automatisch gestartet werden sollen, wenn Sie F5 drücken, klicken Sie mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften** aus. Wählen Sie dann im Knoten **Startprojekt** unter **Allgemeine Eigenschaften** die Option **Mehrere Startprojekte** aus, und legen Sie für alle Projekte die Aktion **Start** fest.  
+  
+    2.  Wenn Sie das Projekt mit STRG\+UMSCHALT\+B erstellen, müssen Sie die folgenden Anwendungen starten:  
+  
+        1.  Rechnerclient \(.\/CalculatorClient\/bin\/client.exe\)  
+  
+        2.  Rechnerdienst \(.\/CalculatorService\/bin\/service.exe\)  
+  
+        3.  Routingdienst \(.\/RoutingService\/bin\/RoutingService.exe\)  
+  
+3.  Drücken Sie auf dem Rechnerclient die EINGABETASTE, um den Client zu starten.  
+  
+     Die folgende Ausgabe wird angezeigt:  
+  
+    ```Output  
+    Add(100,15.99) = 115.99  
+    Subtract(145,76.54) = 68.46  
+    Multiply(9,81.25) = 731.25  
+    Divide(22,7) = 3.14285714285714  
+  
+    ```  
+  
+## Konfigurierbar über Code oder App.config  
+ Das Beispiel wird so konfiguriert geliefert, dass die Datei App.config das Verhalten des Routers definiert.Sie können außerdem den Namen der Datei App.config ändern, damit er nicht erkannt wird, und die Auskommentierung des Methodenaufrufs von `ConfigureRouterViaCode()` aufheben.Beide Methoden führen zum gleichen Routerverhalten.  
+  
+### Szenario  
+ In diesem Beispiel wird die Funktionsweise des Dienstrouters als Protokollbrücke und Fehlerhandler veranschaulicht.In diesem Szenario tritt kein inhaltsbasiertes Routing auf. Der Routingdienst fungiert als transparenter Proxyknoten, der für die direkte Übergabe der Nachrichten an einen vorkonfigurierten Satz von Zielendpunkten eingerichtet wurde.Der Routingdienst führt auch die zusätzlichen Schritte der transparenten Behandlung von Fehlern aus, die auftreten, wenn er versucht, Nachrichten an die Endpunkte zu senden, mit denen er gemäß seiner Konfiguration kommunizieren soll.Indem der Routingdienst als Protokollbrücke fungiert, ermöglicht er dem Benutzer, ein Protokoll für die externe Kommunikation und ein anderes Protokoll für die interne Kommunikation zu definieren.  
+  
+### Reales Szenario  
+ Contoso möchte einen interoperablen Dienstendpunkt für die Umgebung bereitstellen und gleichzeitig die interne Leistung optimieren.Aus diesem Grund werden die Dienste über einen Endpunkt mithilfe von BasicHttpBinding für die Umgebung verfügbar gemacht, während intern der Routingdienst für die Überbrückung der Verbindung mit dem Endpunkt verwendet wird. Dies erfolgt mithilfe der vom Dienst verwendeten NetTcpBinding.Weiterhin soll das Dienstangebot von Contoso gegenüber temporären Ausfällen der Produktionsdienste tolerant sein. Aus diesem Grund werden mehrere Endpunkte hinter dem Routerdienst virtualisiert, und bei einem Fehler erfolgt mithilfe der Fehlerbehandlungsfunktionen ein automatischer Wechsel zu den Sicherungsendpunkten, wenn erforderlich.  
+  
+## Siehe auch  
+ [AppFabric\-Hosting\- und \-Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)

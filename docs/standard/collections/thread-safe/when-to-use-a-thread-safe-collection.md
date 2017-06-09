@@ -15,10 +15,11 @@ caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
@@ -41,21 +42,21 @@ Mit [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] werden fü
  Die Zunahme der Leistung, die proportional zur Anzahl der Kerne des Computers ist. Mit einem Algorithmus, der skaliert wird, werden bei acht Kernen höhere Leistungen erzielt als bei zwei Kernen.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) oder Queue(T)  
- In reinen Producer-Consumer-Szenarien, in denen die Verarbeitungszeit für jedes Element sehr kurz ist (einige Anweisungen), kann <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> geringfügige Leistungsvorteile gegenüber <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> mit einer externen Sperre bieten. In diesem Szenario erzielt <xref:System.Collections.Concurrent.ConcurrentQueue%601> die beste Leistung, wenn sich ein dedizierter Thread in der Warteschlange befindet und ein dedizierter Thread die Warteschlange verlässt. Wenn Sie diese Regel nicht erzwingen, arbeitet <xref:System.Collections.Generic.Queue%601> auf Computern mit mehreren Kernen möglicherweise sogar minimal schneller als <xref:System.Collections.Concurrent.ConcurrentQueue%601>.  
+ In reinen Producer-Consumer-Szenarien, in denen die Verarbeitungszeit für jedes Element sehr kurz ist (einige Anweisungen), kann <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> geringfügige Leistungsvorteile gegenüber <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> mit einer externen Sperre bieten. In diesem Szenario erzielt <xref:System.Collections.Concurrent.ConcurrentQueue%601> die beste Leistung, wenn sich ein dedizierter Thread in der Warteschlange befindet und ein dedizierter Thread die Warteschlange verlässt. Wenn Sie diese Regel nicht erzwingen, kann <xref:System.Collections.Generic.Queue%601> sogar etwas schneller als <xref:System.Collections.Concurrent.ConcurrentQueue%601> auf Computern mit mehreren Kernen ausgeführt werden.  
   
- Wenn die Verarbeitungszeit bei etwa 500 FLOPS (Gleitkommavorgänge) oder höher liegt, gilt die Zwei-Thread-Regel nicht für <xref:System.Collections.Concurrent.ConcurrentQueue%601>, sodass dann eine sehr gute Skalierbarkeit möglich ist. <xref:System.Collections.Generic.Queue%601> skaliert in diesem Szenario nicht gut.  
+ Wenn die Verarbeitungszeit bei etwa 500 FLOPS (Gleitkommavorgänge) oder höher liegt, gilt die Zwei-Thread-Regel nicht für <xref:System.Collections.Concurrent.ConcurrentQueue%601>, sodass dann eine sehr gute Skalierbarkeit möglich ist. <xref:System.Collections.Generic.Queue%601> lässt sich in diesem Szenario nicht vorteilhaft skalieren.  
   
- In gemischten Producer-Consumer-Szenarien mit sehr kurzer Verarbeitungszeit skaliert <xref:System.Collections.Generic.Queue%601> mit einer externen Sperre besser als <xref:System.Collections.Concurrent.ConcurrentQueue%601>. Wenn die Verarbeitungszeit jedoch um 500 FLOPS oder höher liegt, skaliert <xref:System.Collections.Concurrent.ConcurrentQueue%601> besser.  
+ Bei sehr geringer Verarbeitungszeit zeichnet sich <xref:System.Collections.Generic.Queue%601> mit einer externen Sperre in gemischten Producer-Consumer-Szenarien durch eine bessere Skalierbarkeit als <xref:System.Collections.Concurrent.ConcurrentQueue%601> aus. Wenn die Verarbeitungszeit jedoch bei etwa 500 FLOPS oder darüber liegt, kann <xref:System.Collections.Concurrent.ConcurrentQueue%601> besser skaliert werden.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack oder Stapel  
- In reinen Producer-Consumer-Szenarien erzielen <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> und <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> mit einer externen Sperre bei sehr geringer Verarbeitungszeit wahrscheinlich annähernd die gleiche Leistung mit einem dedizierten Thread für Ablegevorgänge und einem dedizierten Thread für Abholvorgänge. Bei wachsender Threadanzahl werden allerdings beide Typen aufgrund steigender Sättigung langsamer, dann ist die Leistung von <xref:System.Collections.Generic.Stack%601> möglicherweise besser als die von <xref:System.Collections.Concurrent.ConcurrentStack%601>. Wenn die Verarbeitungszeit bei rund 500 FLOPS oder darüber liegt, werden beide Typen mit der etwa gleichen Rate skaliert.  
+ In reinen Producer-Consumer-Szenarien erzielen <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> und <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> mit einer externen Sperre bei sehr geringer Verarbeitungszeit wahrscheinlich annähernd die gleiche Leistung mit einem dedizierten Thread für Ablegevorgänge und einem dedizierten Thread für Abholvorgänge. Bei zunehmender Anzahl der Threads werden jedoch beide Typen aufgrund des stärkeren Konflikts langsamer, und mit <xref:System.Collections.Generic.Stack%601> werden unter Umständen bessere Leistungen als mit <xref:System.Collections.Concurrent.ConcurrentStack%601> erzielt. Wenn die Verarbeitungszeit bei rund 500 FLOPS oder darüber liegt, werden beide Typen mit der etwa gleichen Rate skaliert.  
   
- In gemischten Producer-Consumer-Szenarien ist <xref:System.Collections.Concurrent.ConcurrentStack%601> sowohl für kleine als auch für große Arbeitsauslastungen schneller.  
+ In gemischten Producer-Consumer-Szenarien ist <xref:System.Collections.Concurrent.ConcurrentStack%601> für kleine und große Arbeitsauslastungen schneller.  
   
- Die Verwendung von <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> und <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> kann die Zugriffszeiten stark verkürzen.  
+ Die Verwendung von <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> und <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> kann die Zugriffszeiten unter Umständen erheblich beschleunigen.  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary oder Dictionary  
- Verwenden Sie im Allgemeinen in allen Szenarien, in denen Sie Schlüssel oder Werte parallel aus mehreren Threads hinzufügen und aktualisieren, <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>. In Szenarien, in denen häufige Aktualisierungen und relativ wenig Lesezugriffe vorkommen, bietet <xref:System.Collections.Concurrent.ConcurrentDictionary%602> im Allgemeinen geringfügige Vorteile. In Szenarien, die zahlreiche Lesevorgänge und Aktualisierungen umfassen, ist <xref:System.Collections.Concurrent.ConcurrentDictionary%602> im Allgemeinen auf Computern bedeutend schneller, die über eine beliebige Anzahl von Kernen verfügen.  
+ Verwenden Sie <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> im Allgemeinen in jedem Szenario, in dem Sie Schlüssel oder Werte gleichzeitig aus mehreren Threads hinzufügen und aktualisieren. In Szenarien, die häufige Updates und relativ wenige Lesevorgänge umfassen, bietet <xref:System.Collections.Concurrent.ConcurrentDictionary%602> in der Regel geringfügige Vorteile. In Szenarien, die zahlreiche Lesevorgänge und Updates umfassen, ist <xref:System.Collections.Concurrent.ConcurrentDictionary%602> im Allgemeinen auf Computern bedeutend schneller, die über eine beliebige Anzahl von Kernen verfügen.  
   
  In Szenarien, die häufige Updates umfassen, können Sie den Grad der Parallelität in <xref:System.Collections.Concurrent.ConcurrentDictionary%602> erhöhen und anschließend ermitteln, ob sich die Leistung auf Computern mit einer größeren Anzahl von Kernen verbessert. Wenn Sie die Parallelitätsebene ändern, vermeiden Sie so weit wie möglich globale Vorgänge.  
   

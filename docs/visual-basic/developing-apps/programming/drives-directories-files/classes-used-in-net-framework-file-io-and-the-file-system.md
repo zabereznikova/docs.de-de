@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6bf3902995531768b8b065aca70790c16d77b0ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
@@ -53,10 +54,10 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 |<xref:System.IO.FileAccess?displayProperty=fullName>|Definiert Konstanten für den Lese-, Schreib- oder Lese-/Schreibzugriff auf eine Datei.|  
 |<xref:System.IO.FileAttributes?displayProperty=fullName>|Stellt Attribute für Dateien und Verzeichnisse wie `Archive`, `Hidden` und `ReadOnly` bereit.|  
 |<xref:System.IO.FileInfo?displayProperty=fullName>|Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=fullName>|Steuert, wie eine Datei geöffnet wird. Dieser Parameter wird in vielen der Konstruktoren für `FileStream` und `IsolatedStorageFileStream` sowie für die `Open`-Methoden von <xref:System.IO.File>und <xref:System.IO.FileInfo> angegeben.|  
+|<xref:System.IO.FileMode?displayProperty=fullName>|Steuert, wie eine Datei geöffnet wird. Dieser Parameter wird in vielen der Konstruktoren für `FileStream` und `IsolatedStorageFileStream` sowie für die `Open`-Methoden von <xref:System.IO.File> und <xref:System.IO.FileInfo> angegeben.|  
 |<xref:System.IO.FileShare?displayProperty=fullName>|Definiert Konstanten für das Steuern des Zugriffstyps von anderen Dateistreams auf dieselbe Datei.|  
 |<xref:System.IO.Path?displayProperty=fullName>|Stellt Methoden und Eigenschaften für die Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Steuert den Zugriff auf Dateien und Ordner durch Definieren der Berechtigungen <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> und <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Steuert den Zugriff von Dateien und Ordnern durch Definieren der Berechtigungen <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> und <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Klassen zum Erstellen von Streams  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
@@ -75,9 +76,9 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
 |**Klasse**|**Beschreibung**|  
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=fullName>|Liest codierte Zeichenfolgen und primitive Datentypen aus einem <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=fullName>|Schreibt codierte Zeichenfolgen und primitive Datentypen an einen <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|Liest Zeichen aus einem <xref:System.IO.FileStream> und verwendet dabei <xref:System.IO.StreamReader.CurrentEncoding%2A>, um Zeichen in Bytes und umgekehrt zu konvertieren. <xref:System.IO.StreamReader> verfügt über einen Konstruktor, der versucht, das richtige <xref:System.IO.StreamReader.CurrentEncoding%2A> für einen Stream basierend auf dem Vorhandensein einer <xref:System.IO.StreamReader.CurrentEncoding%2A>-spezifischen Präambel wie einer Bytereihenfolge-Marke zu ermitteln.|  
-|<xref:System.IO.StreamWriter?displayProperty=fullName>|Schreibt Zeichen an einen `FileStream` und verwendet dabei <xref:System.IO.StreamWriter.Encoding%2A>, um Zeichen in Bytes zu konvertieren.|  
+|<xref:System.IO.BinaryWriter?displayProperty=fullName>|Schreibt codierte Zeichenfolgen und primitive Datentypen in einen <xref:System.IO.FileStream>.|  
+|<xref:System.IO.StreamReader?displayProperty=fullName>|Liest Zeichen aus einem <xref:System.IO.FileStream>, wobei <xref:System.IO.StreamReader.CurrentEncoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird. <xref:System.IO.StreamReader> verfügt über einen Konstruktor, der basierend auf dem Vorhandensein einer <xref:System.IO.StreamReader.CurrentEncoding%2A>-spezifischen Präambel (z.B. einer Bytereihenfolge-Marke) versucht, die richtige <xref:System.IO.StreamReader.CurrentEncoding%2A> für einen bestimmten Stream zu ermitteln.|  
+|<xref:System.IO.StreamWriter?displayProperty=fullName>|Schreibt Zeichen in einen `FileStream`, wobei <xref:System.IO.StreamWriter.Encoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird.|  
 |<xref:System.IO.StringReader?displayProperty=fullName>|Liest Zeichen aus einem `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
 |<xref:System.IO.StringWriter?displayProperty=fullName>|Schreibt Zeichen an einen `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
   

@@ -1,6 +1,6 @@
 ---
-title: Destruktoren (C#-Programmierhandbuch) Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Finalizer (C#-Programmierhandbuch) | Microsoft-Dokumentation
+ms.date: 2017-05-10
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -8,9 +8,9 @@ ms.topic: article
 dev_langs:
 - CSharp
 helpviewer_keywords:
-- ~ [C#], in destructors
-- C# language, destructors
-- destructors [C#]
+- ~ [C#], in finalizers
+- C# language, finalizers
+- finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 caps.latest.revision: 24
 author: BillWagner
@@ -29,34 +29,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6940be34b6cc15f006901e6d14d2a38ebb5d012a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: b4221d37bd955da98c812dadef3b0dd4a69a21bf
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="destructors-c-programming-guide"></a>Destruktoren (C#-Programmierhandbuch)
-Destruktoren werden zur Zerstörung von Klasseninstanzen verwendet.  
+# <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
+Finalizer werden zur Zerstörung von Klasseninstanzen verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
   
--   Destruktoren können nicht in Strukturen definiert werden. Sie werden nur mit Klassen verwendet.  
+-   Finalizer können nicht in Strukturen definiert werden. Sie werden nur mit Klassen verwendet.  
   
--   Eine Klasse kann nur über einen Destruktor verfügen.  
+-   Eine Klasse kann nur über einen Finalizer verfügen.  
   
--   Destruktoren können nicht vererbt oder überladen werden.  
+-   Finalizer können nicht vererbt oder überladen werden.  
   
--   Destruktoren können nicht aufgerufen werden. Sie werden automatisch aufgerufen.  
+-   Finalizer können nicht aufgerufen werden. Sie werden automatisch aufgerufen.  
   
--   Ein Destruktor kann nicht über Modifizierer oder Parameter verfügen.  
+-   Ein Finalizer kann nicht über Modifizierer oder Parameter verfügen.  
   
- Folgendes ist z.B. eine Deklaration eines Destruktors für die Klasse `Car`:  
+ Folgendes ist z.B. eine Deklaration eines Finalizers für die Klasse `Car`:
   
  [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+
+Ein Finalizer kann auch als Ausdruckstextdefinition implementiert werden, wie im folgenden Beispiel gezeigt.
+
+[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
- Der Destruktor ruft implizit <xref:System.Object.Finalize%2A> für die Basisklasse des Objekts auf. Daher wird der vorige Destruktorcode implizit in den folgenden Code übersetzt:  
+ Der Finalizer ruft <xref:System.Object.Finalize%2A> implizit auf der Basisklasse des Objekts auf. Daher wird der Aufruf eines Finalizers implizit in den folgenden Code übersetzt:  
   
-```  
+```csharp  
 protected override void Finalize()  
 {  
     try  
@@ -73,28 +78,28 @@ protected override void Finalize()
  Dies bedeutet, dass die `Finalize`-Methode für alle Instanzen in der Vererbungskette rekursiv aufgerufen wird, von der am meisten bis zu der am wenigsten abgeleiteten.  
   
 > [!NOTE]
->  Leere Destruktoren sollten nicht verwendet werden. Wenn eine Klasse einen Destruktor enthält, wird ein Eintrag in der `Finalize`-Warteschlange erstellt. Wenn der Destruktor aufgerufen wird, wird der Garbage Collector aufgerufen, um die Warteschlange zu verarbeiten. Wenn der Destruktor leer ist, bewirkt dies einen unnötigen Leistungsverlust.  
+>  Leere Finalizer sollten nicht verwendet werden. Wenn eine Klasse einen Finalizer enthält, wird ein Eintrag in der `Finalize`-Warteschlange erstellt. Wenn der Finalizer aufgerufen wird, wird der Garbage Collector aufgerufen, um die Warteschlange zu verarbeiten. Ein leerer Finalizer führt nur zu einem unnötigen Leistungsverlust.  
   
- Der Programmierer hat keine Kontrolle darüber, wann der Destruktor aufgerufen wird, da dies durch den Garbage Collector bestimmt wird. Der Garbage Collector sucht nach Objekten, die von der Anwendung nicht mehr verwendet werden. Wenn er ein Objekt als zerstörbar angesehen wird, ruft er den Destruktor auf (sofern vorhanden) und fordert den Arbeitsspeicher, der zum Speichern des Objekts verwendet wurde, zurück. Destruktoren werden auch aufgerufen, wenn das Programm beendet wird.  
+ Der Programmierer hat keine Kontrolle darüber, wann der Finalizer aufgerufen wird, da dies durch den Garbage Collector bestimmt wird. Der Garbage Collector sucht nach Objekten, die von der Anwendung nicht mehr verwendet werden. Wenn er ein Objekt als abschließbar angesehen wird, ruft er den Finalizer auf (sofern vorhanden) und fordert den Arbeitsspeicher, der zum Speichern des Objekts verwendet wurde, zurück. Finalizer werden auch aufgerufen, wenn das Programm beendet wird.  
   
  Es ist möglich, die Garbage Collection durch Aufrufen von <xref:System.GC.Collect%2A> zu erzwingen, aber dies sollte meistens vermieden werden, da es Leistungsprobleme hervorrufen kann.  
   
-## <a name="using-destructors-to-release-resources"></a>Verwenden von Destruktoren zum Freigeben von Ressourcen  
- Im Allgemeinen erfordert C# nicht so viel Speicherverwaltung wie benötigt wird, wenn Sie mit einer anderen Sprache entwickeln, die nicht auf eine Laufzeit mit der Garbage Collection abzielt. Der Garbage Collector von .NET Framework verwaltet implizit die Belegung und Freigabe von Arbeitsspeicher für Ihre Objekte. Wenn Ihre Anwendung nicht verwaltete Ressourcen wie z.B. Fenster, Dateien und Netzwerkverbindungen kapselt, sollten Sie Destruktoren verwenden, um die Ressourcen freizugeben. Wenn das Objekt zerstört werden kann, führt der Garbage Collector die `Finalize`-Methode des Objekts aus.  
+## <a name="using-finalizers-to-release-resources"></a>Verwenden von Finalizern zum Freigeben von Ressourcen  
+ Im Allgemeinen erfordert C# nicht so viel Speicherverwaltung wie benötigt wird, wenn Sie mit einer anderen Sprache entwickeln, die nicht auf eine Laufzeit mit der Garbage Collection abzielt. Der Garbage Collector von .NET Framework verwaltet implizit die Belegung und Freigabe von Arbeitsspeicher für Ihre Objekte. Wenn Ihre Anwendung nicht verwaltete Ressourcen wie z.B. Fenster, Dateien und Netzwerkverbindungen kapselt, sollten Sie Finalizer verwenden, um die Ressourcen freizugeben. Wenn das Objekt abgeschlossen werden kann, führt der Garbage Collector die `Finalize`-Methode des Objekts aus.  
   
 ## <a name="explicit-release-of-resources"></a>Explizite Freigabe von Ressourcen  
- Wenn Ihre Anwendung eine umfangreiche externe Ressource verwendet, wird außerdem empfohlen, dass Sie eine Möglichkeit bieten, die Ressource explizit freizugeben, bevor der Garbage Collector das Objekt freigibt. Implementieren Sie dazu eine `Dispose`-Methode aus der Schnittstelle <xref:System.IDisposable>, die die erforderliche Bereinigung für das Objekt durchführt. Dies kann die Leistung der Anwendung erheblich verbessern. Trotz dieser expliziten Kontrolle über Ressourcen, wird der Destruktor Ressourcen sicher bereinigen, wenn der Aufruf der `Dispose`-Methode fehlschlägt.  
+ Wenn Ihre Anwendung eine umfangreiche externe Ressource verwendet, wird außerdem empfohlen, dass Sie eine Möglichkeit bieten, die Ressource explizit freizugeben, bevor der Garbage Collector das Objekt freigibt. Implementieren Sie dazu eine `Dispose`-Methode aus der Schnittstelle <xref:System.IDisposable>, die die erforderliche Bereinigung für das Objekt durchführt. Dies kann die Leistung der Anwendung erheblich verbessern. Trotz dieser expliziten Kontrolle über Ressourcen, wird der Finalizer Ressourcen sicher bereinigen, wenn der Aufruf der `Dispose`-Methode fehlschlägt.  
   
  Weitere Informationen zum Bereinigen von Ressourcen finden Sie unter den folgenden Themen:  
   
--   [Bereinigen von nicht verwalteten Ressourcen](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)  
+-   [Bereinigen von nicht verwalteten Ressourcen](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementieren einer Dispose-Methode](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)  
+-   [Implementieren einer Dispose-Methode](../../../standard/garbage-collection/implementing-dispose.md)  
   
 -   [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Destruktoren. In `Main()` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Destruktoren der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  
+ Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Finalizer. In `Main` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Finalizer der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  
   
  [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
@@ -105,4 +110,4 @@ protected override void Finalize()
  <xref:System.IDisposable>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Garbage Collection](../../../standard/garbagecollection/index.md)
+ [Garbage Collection](../../../standard/garbage-collection/index.md)

@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
-ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: de-de
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
@@ -61,9 +61,9 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
   
 -   Bereitstellen von .NET Framework mit einer Clientanwendung (für Entwickler):  
   
-    -   [Verwenden von InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield) in einem Setup- und Bereitstellungsprojekt  
+    -   [Verwenden von InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment) in einem Setup- und Bereitstellungsprojekt  
   
-    -   [Verwenden einer Visual Studio-ClickOnce-Anwendung](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
+    -   [Verwenden einer Visual Studio-ClickOnce-Anwendung](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
   
     -   [Erstellen eines WiX-Installationspakets](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,12 +171,12 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Beschreibt, wie die Common Language Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.|  
-|[Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Beschreibt Möglichkeiten, Probleme mit der Typidentität zu vermeiden, die zu <xref:System.InvalidCastException>-, <xref:System.MissingMethodException>- und anderen Fehlern führen können.|  
+|[Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.|  
 |[Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)|Beschreibt den Neustart-Manager, der Neustarts nach Möglichkeit verhindert, und erläutert, wie Anwendungen, mit denen .NET Framework installiert wird, den Neustart-Manager nutzen können.|  
 |[Bereitstellungshandbuch für Administratoren](../../../docs/framework/deployment/guide-for-administrators.md)|Hierin wird erläutert, wie ein Systemadministrator mit System Center Configuration Manager (SCCM) .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.|  
 |[Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Es wird erklärt, wie Entwickler .NET Framework auf den Computern der Benutzer mit ihren Anwendungen installieren können.|  
 |[Bereitstellen von Anwendungen, Diensten und Komponenten](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Erläutert Bereitstellungsoptionen in Visual Studio, einschließlich Anweisungen zum Veröffentlichen einer Anwendung mit ClickOnce- und Windows Installer-Technologie.| 
-|[Veröffentlichen von ClickOnce-Anwendungen](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|Beschreibt, wie eine Windows Forms-Anwendung verpackt und mit ClickOnce auf Clientcomputern in einem Netzwerk bereitgestellt wird.|  
+|[Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)|Beschreibt, wie eine Windows Forms-Anwendung verpackt und mit ClickOnce auf Clientcomputern in einem Netzwerk bereitgestellt wird.|  
 |[Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Beschreibt das sternenförmige Modell von .NET Framework zum Verpacken und Bereitstellen von Ressourcen und enthält Informationen zu Namenskonventionen für Ressourcen, Fallbackprozessen und Verpackungsalternativen.|  
 |[Bereitstellen einer Interop-Anwendung](../../../docs/framework/interop/deploying-an-interop-application.md)|Erläutert, wie Interop-Anwendungen verteilt und installiert werden, die üblicherweise eine .NET Framework-Clientassembly enthalten. Außerdem wird beschrieben, wie Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie registrierte COM-Komponenten verteilt und installiert werden.|  
 |[Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Beschreibt, wie der .NET Framework-Setupvorgang automatisch gestartet und nachverfolgt und dabei eine eigene Ansicht des Setupstatus angezeigt werden kann.|  

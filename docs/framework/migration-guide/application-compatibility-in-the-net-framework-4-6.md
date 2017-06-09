@@ -1,40 +1,33 @@
 ---
-title: "Anwendungskompatibilität in .NET Framework 4.6| Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- application compatibility, .NET Framework
-- application compatibility. NET Framework 4.6
+title: "Anwendungskompatibilit&#228;t in .NET Framework 4.6 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 7a3fd352-a8ba-4f9a-8250-951f2c994248
 caps.latest.revision: 7
-author: rpetrusha
-ms.author: ronpet
-manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 32bbbf7cb9acd71f5b8e28b7b12aab706221fab9
-ms.lasthandoff: 04/18/2017
-
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 7
 ---
-# <a name="application-compatibility-in-the-net-framework-46"></a>Anwendungskompatibilität in .NET Framework 4.6
-Dieses Thema enthält Links zu Informationen über Anwendungskompatibilitätsprobleme zwischen .NET Framework 4.5.2 und 4.6. Die Probleme sind in zwei Kategorien unterteilt:  
+# Anwendungskompatibilit&#228;t in .NET Framework 4.6
+Dieses Thema enthält Links zu Informationen über Anwendungskompatibilitätsprobleme zwischen .NET Framework 4.5.2 und 4.6.  Die Probleme sind in zwei Kategorien unterteilt:  
   
- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
+ [Laufzeitänderungen](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  Laufzeitänderungen beeinflussen alle Apps, die in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ausgeführt werden und die eine bestimmte Funktion verwenden.  
   
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)  
- Neuausrichtungsänderungen können sich auf Apps auswirken, die für .NET Framework 4.5, 4.5.1, 4.5.2 oder 4.6 neu kompiliert wurden. Dazu zählen:  
+ Neuausrichtungsänderungen können sich auf Apps auswirken, die für .NET Framework 4.5, 4.5.1, 4.5.2 oder 4.6 neu kompiliert wurden.  Dazu zählen:  
   
--   Änderungen in der Entwurfszeitumgebung. Beispielsweise können Buildtools Warnungen ausgeben, obwohl dies zuvor nicht der Fall war.  
+-   Änderungen in der Entwurfszeitumgebung.  Beispielsweise können Buildtools Warnungen ausgeben, obwohl dies zuvor nicht der Fall war.  
   
--   Änderungen in der Laufzeitumgebung. Diese betreffen nur Apps, die speziell auf [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] abzielen. Apps, die auf frühere Versionen von .NET Framework abzielen, verhalten sich so, als würden sie in diesen Versionen ausgeführt.  
+-   Änderungen in der Laufzeitumgebung.  Diese betreffen nur Apps, die speziell auf [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] abzielen.  Apps, die auf frühere Versionen von .NET Framework abzielen, verhalten sich so, als würden sie in diesen Versionen ausgeführt.  
   
  In den Themen, die die Laufzeitänderungen und Neuausrichtungsänderungen beschreiben, haben wir die einzelnen Punkte entsprechend ihrer erwarteten Auswirkung eingestuft:  
   
@@ -48,9 +41,9 @@ Dieses Thema enthält Links zu Informationen über Anwendungskompatibilitätspro
  Diese Änderung beeinflusst Apps nur in sehr spezifischen Szenarien, die nicht üblich sind.  
   
  Transparent  
- Diese Änderung hat keine nennenswerten Auswirkungen, die Entwickler oder Benutzer beachten müssten. Die App sollte keine Änderung benötigen.  
+ Diese Änderung hat keine nennenswerten Auswirkungen, die Entwickler oder Benutzer beachten müssten.  Die App sollte keine Änderung benötigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## Siehe auch  
  [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
  [Anwendungskompatibilität](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Anwendungskompatibilität in 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)   

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df6e493f4dfb72ac59951832773cc818627f4c2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 7fea22be3b98c3218d173e5d80f1f22ef7ecf7e2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -29,6 +30,8 @@ Sie erstellen auch Iteratormethoden, die einen Iterator für die Elemente dieser
 + Erstellen einer Datenpipeline, in der Daten Iteratormethoden effizient durchlaufen
 
 Die Programmiersprache C# bietet Funktionen für diese beiden Szenarien. Dieser Artikel enthält eine Übersicht über diese Funktionen.
+
+Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. [Hier](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) können Sie das vollständige Beispiel für dieses Thema anzeigen oder herunterladen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Durchlaufen mit foreach
 

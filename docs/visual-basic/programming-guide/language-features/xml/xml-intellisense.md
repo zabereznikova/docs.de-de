@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8c43db3d2010e4fa92eebeec8a973c50052b1340
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -73,7 +74,7 @@ IntelliSense für XML
   
  Betrachten Sie beispielsweise das folgende XSD-Schema.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema attributeFormDefault="unqualified"   
            elementFormDefault="qualified"   
@@ -101,7 +102,7 @@ IntelliSense für XML
   
  Gültiges XML für das XSD-Schema würde wie folgt aussehen.  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <PurchaseOrders xmlns="http://SamplePurchaseOrder">  
   <PurchaseOrder PurchaseOrderNumber="12345" OrderDate="2000-1-1">  

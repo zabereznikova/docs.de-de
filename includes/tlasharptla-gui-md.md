@@ -1,0 +1,1 @@
+Graphische Benutzeroberfläche (Graphical User Interface, GUI)

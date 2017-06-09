@@ -1,58 +1,75 @@
 ---
-title: "How to: Write Text to Files in the My Documents Directory in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "files, writing to"
-  - "text, writing to files"
-  - "examples [Visual Basic], text files"
-  - "writing to files, in My Documents"
+title: 'Vorgehensweise: Schreiben von Text in Dateien im Verzeichnis &quot;Eigene Dateien&quot; in Visual Basic | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- files, writing to
+- text, writing to files
+- examples [Visual Basic], text files
+- writing to files, in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# How to: Write Text to Files in the My Documents Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 848f7c3eac56f85d2af4c613645d54b70061d072
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Mit dem `My.Computer.FileSystem.SpecialDirectories`\-Objekt können Sie auf besondere Verzeichnisse zugreifen, z. B. das Verzeichnis **Eigene Dateien**.  
+---
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Gewusst wie: Schreiben von Text in Dateien im Verzeichnis "Eigene Dateien" in Visual Basic
+Mit dem `My.Computer.FileSystem.SpecialDirectories`-Objekt können Sie auf besondere Verzeichnisse zugreifen, wie z.B. das Verzeichnis **MyDocuments**.  
   
-## Verfahren  
+## <a name="procedure"></a>Prozedur  
   
-#### So schreiben Sie neue Textdateien im Verzeichnis Eigene Dateien  
+#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“  
   
-1.  Verwenden Sie die `My.Computer.FileSystem.SpecialDirectories.MyDocuments`\-Eigenschaft, um den Pfad anzugeben.  
+1.  Verwenden Sie die `My.Computer.FileSystem.SpecialDirectories.MyDocuments`-Eigenschaft, um den Pfad bereitzustellen.  
   
      [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_1.vb)]  
   
-2.  Verwenden Sie die `WriteAllText`\-Methode, um Text in die angegebene Datei zu schreiben.  
+2.  Verwenden Sie die `WriteAllText`-Methode, um Text in eine angegebene Datei zu schreiben.  
   
      [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_2.vb)]  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-vb[VbFileIOWrite#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_3.vb)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Ersetzen Sie `test.txt` durch den Namen der Datei, in die Sie schreiben möchten.  
   
-## Robuste Programmierung  
- Dieser Code löst alle Ausnahmen erneut aus, die beim Schreiben von Text in die Datei auftreten.  Sie können die Wahrscheinlichkeit von Ausnahmen durch Verwendung von Windows Forms\-Steuerelementen wie der [OpenFileDialog](../Topic/OpenFileDialog%20Component%20\(Windows%20Forms\).md)\-Komponente oder der [SaveFileDialog](../Topic/SaveFileDialog%20Component%20\(Windows%20Forms\).md)\-Komponente reduzieren. Diese schränken die Benutzerauswahl auf gültige Dateinamen ein.  Die Verwendung dieser Steuerelemente bietet jedoch keine absolute Sicherheit.  Das Dateisystem kann sich zwischen dem Zeitpunkt der Dateiauswahl und dem Zeitpunkt der Codeausführung ändern.  Beim Arbeiten mit Dateien ist daher fast immer eine Ausnahmebehandlung erforderlich.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Durch diesen Code werden die Ausnahmen erneut ausgelöst, die möglicherweise beim Schreiben von Text in eine Datei auftreten. Sie können die Wahrscheinlichkeit des Auftretens von Ausnahmen verringern, indem Sie Steuerelemente von Windows Forms, wie z.B. die Komponenten [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) und [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) verwenden, die den Benutzer nur aus zulässigen Namen wählen lassen. Das Verwenden dieser Steuerelemente ist jedoch nicht narrensicher. Das Dateisystem kann sich zwischen dem Zeitpunkt, an dem der Benutzer eine Datei auswählt, und dem Ausführen des Codes ändern. Das Behandeln von Ausnahmen ist deshalb beim Arbeiten mit Dateien fast immer notwendig.  
   
-## .NET Framework-Sicherheit  
- Bei Ausführung in einem teilweise vertrauenswürdigen Kontext kann der Code aufgrund fehlender Berechtigungen eine Ausnahme auslösen.  Weitere Informationen finden Sie unter [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md).  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Code möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8).  
   
- In diesem Beispiel wird eine neue Datei erstellt.  Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine Erstellungsberechtigung für den Ordner.  Berechtigungen werden unter Verwendung von Zugriffssteuerungslisten festgelegt.  Wenn die Datei bereits existiert, benötigt die Anwendung lediglich die Schreibberechtigung, also eine geringere Berechtigung.  Aus Sicherheitsgründen sollte die Datei nach Möglichkeit während der Bereitstellung erstellt werden. Außerdem sollte nur die Leseberechtigung für eine einzelne Datei erteilt werden \(anstatt die Erstellungsberechtigung für einen Ordner zu gewähren\).  Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in den Stammordner oder den Ordner **Programme** zu schreiben.  Weitere Informationen finden Sie unter [ACL Technology Overview](http://msdn.microsoft.com/de-de/06fbf66d-6f02-4378-b863-b2f12e349045).  
+ In diesem Beispiel wird eine neue Datei erstellt. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine Berechtigung zum Erstellen für den Ordner. Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich eine Schreibberechtigung, was einer geringeren Berechtigung entspricht. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die Leseberechtigung für eine einzelne Datei erteilt werden (anstatt Erstellberechtigungen für den gesamten Ordner zu gewähren). Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner **Programme** zu schreiben. Weitere Informationen finden Sie unter [Übersicht über die ACL-Technologie](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.IO.Path.Combine%2A?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Devices.Computer>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   

@@ -20,19 +20,19 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: 50f027408357a5d98ef1bfe305ab675fc97abba8
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: a2ef49f9192c7fa414b02e7e41a270606f52bb3c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework – Leitfaden
 
 > [!NOTE]
->  Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md). 
+> Dieser .NET Framework-Inhaltssatz enthält Informationen für die .NET Framework-Versionen 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 und 4.7. Weitere Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md). Eine Liste der neuen Features und Änderungen in .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], deren Nebenversionen und .NET Framework 4.7 finden Sie unter [Neuerungen](../../docs/framework/whats-new/index.md). Eine Liste der unterstützten Plattformen finden Sie unter [Systemanforderungen für .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
- .NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Web, Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.
+.NET Framework ist eine Entwicklungsplattform zum Erstellen von Apps für Web, Windows, Windows Phone, Windows Server und Microsoft Azure. Es besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek, die eine breite Palette von Funktionen sowie Unterstützung für viele Branchenstandards bereitstellt.
 
 .NET Framework stellt viele Dienste bereit, einschließlich der Verwaltung des Arbeitsspeichers, Sicherheit für den Typ und Arbeitsspeicher, Sicherheit sowie Netzwerk- und Anwendungsbereitstellung. Es bietet einfach zu bedienende Datenstrukturen und APIs, die auf niedrigerer Ebene des Windows-Betriebssystems abstrahieren. Sie können eine Vielzahl von Programmiersprachen mit .NET Framework verwenden, einschließlich C#, F# und Visual Basic.  
 
@@ -46,9 +46,10 @@ Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhal
 
 Lesen Sie [Repair the .NET Framework (Reparieren von .NET Framework)](./install/repair.md), um zu erfahren, wie Sie Ihre .NET Framework-Installation reparieren, wenn Fehler bei der Installation von .NET Framework auftreten.
 
-Informationen zum Herunterladen von .NET Framework finden Sie unter [Installieren von .NET Framework](../../docs/framework/install/guide-for-developers.md).  
+Informationen zum Herunterladen von .NET Framework finden Sie unter [Install the .NET Framework for developers (Installieren von .NET Framework für Entwickler)](../../docs/framework/install/guide-for-developers.md).  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt
+
 [Neuigkeiten](../../docs/framework/whats-new/index.md)  
 Beschreibt wichtige Funktionen und Änderungen in den neuesten Versionen von .NET Framework. Enthält Listen von veralteten Typen und Membern sowie eine Führungslinie für das Migrieren der Anwendungen aus der früheren Version von .NET Framework.  
   

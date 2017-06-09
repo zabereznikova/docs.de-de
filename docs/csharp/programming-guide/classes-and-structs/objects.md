@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ab83f765d6cc66bc0808a316cecabf65af7a3843
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
@@ -51,7 +52,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection im [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] finden Sie unter [Garbage Collection](../../../standard/garbagecollection/index.md).  
+ Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection im [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  Die Belegung und Freigabe von Arbeitsspeicher auf dem verwalteten Heap ist in der Common Language Runtime stark optimiert. In den meisten Fällen besteht kein wesentlicher Unterschied zwischen den Leistungskosten beim Zuweisen einer Klasseninstanz auf dem Heap im Vergleich zum Zuweisen einer Strukturinstanz im Stapel.  
@@ -59,15 +60,15 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 ## <a name="object-identity-vs-value-equality"></a>Objektidentität im Vergleich zur Wertgleichheit  
  Wenn Sie zwei Objekte auf Gleichheit vergleichen, müssen Sie zuerst unterscheiden, ob Sie wissen möchten, ob die zwei Variablen das gleiche Objekt im Speicher darstellen, oder ob die Werte von einem oder mehreren Feldern gleich sind. Wenn Sie planen, Werte zu vergleichen, müssen Sie berücksichtigen, ob die Objekte Instanzen von Werttypen (Strukturen) oder Referenztypen (Klassen, Delegate, Arrays) sind.  
   
--   Verwenden Sie die statische Methode <xref:System.Object.Equals%2A>, um zu bestimmten, ob zwei Klasseninstanzen auf den gleichen Speicherort im Arbeitsspeicher verweisen (d. h., sie haben die gleiche *Identität*). (<xref:System.Object?displayProperty=fullName> ist die implizite Basisklasse für alle Wert- und Referenztypen, einschließlich benutzerdefinierter Strukturen und Klassen.)  
+-   Verwenden Sie die statische Methode <xref:System.Object.Equals%2A>, um zu bestimmen, ob zwei Klasseninstanzen auf den gleichen Speicherort im Arbeitsspeicher verweisen (d.h., sie haben die gleiche *Identität*). (<xref:System.Object?displayProperty=fullName> ist die implizite Basisklasse für alle Wert- und Referenztypen, einschließlich benutzerdefinierter Strukturen und Klassen.)  
   
 -   Verwenden Sie die Methode <xref:System.ValueType.Equals%2A?displayProperty=fullName>, um zu bestimmen, ob die Instanzfelder in zwei Strukturinstanzen die gleichen Werte haben. Da alle Strukturen implizit von <xref:System.ValueType?displayProperty=fullName> erben, rufen Sie die Methode direkt an Ihrem Objekt auf, wie im folgenden Beispiel gezeigt wird:  
   
  [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
- Die <xref:System.ValueType?displayProperty=fullName>-Implementierung von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
+ Die Implementierung <xref:System.ValueType?displayProperty=fullName> von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
   
--   Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-comparison-operator.md) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse könnte auch die Schnittstelle <xref:System.IEquatable%601> oder <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die Richtlinien zu befolgen, die in [Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> aufgeführt sind.  
+-   Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-comparison-operator.md) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die Richtlinien zu befolgen, die in [Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> aufgeführt sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   
@@ -78,7 +79,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
 -   [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Destruktoren](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+-   [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [Ereignisse](../../../csharp/programming-guide/events/index.md)  
   
@@ -89,4 +90,4 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
  [Klasse](../../../csharp/language-reference/keywords/class.md)   
  [Struktur](../../../csharp/language-reference/keywords/struct.md)   
  [new-Operator](../../../csharp/language-reference/keywords/new-operator.md)   
- [Allgemeines Typsystem](http://msdn.microsoft.com/library/53c57c96-83e1-4ee3-9543-9ac832671a89)
+ [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md)

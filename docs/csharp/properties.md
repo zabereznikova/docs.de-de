@@ -4,16 +4,17 @@ description: Eigenschaften
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 871beb36f9801a0456eec1501fdbf07375c9b418
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9eab74a3b259037aff30320753191eee95aa974
+ms.openlocfilehash: 763a76a8ea0e48fd6935c951ce584efad50dabb9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/25/2017
 
 ---
 
@@ -25,6 +26,7 @@ Eigenschaften verhalten sich wie Felder, wenn darauf zugegriffen wird.
 Jedoch sind Eigenschaften im Gegensatz zu Feldern mit Accessoren implementiert, die die ausgeführten Anweisungen definieren, wenn auf eine Eigenschaft zugegriffen oder sie zugewiesen wird.
 
 ## <a name="property-syntax"></a>Eigenschaftssyntax
+
 Die Syntax für Eigenschaften ist eine natürliche Erweiterung von Feldern. Ein Feld definiert einen Speicherort:
 
 ```csharp
@@ -40,16 +42,27 @@ Eine Eigenschaftendefinition enthält Deklarationen für einen `get`- und `set`-
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 Die oben dargestellte Syntax ist die *Auto-Eigenschaft*-Syntax. Der Compiler generiert den Speicherort für das Feld, das die Eigenschaft sichert. Der Compiler implementiert außerdem den Text der `get`- und `set`-Accessoren.
+
+In einigen Fällen müssen Sie eine Eigenschaft auf einen anderen Wert als den Standardwert für seinen Datentyp initialisieren.  C# ermöglicht dies, indem nach der schließenden Klammer für die Eigenschaft ein Wert festgelegt wird. Möglicherweise bevorzugen Sie den Anfangswert für die Eigenschaft `FirstName` als leere Zeichenfolge und nicht `null`. Sie würden dies wie unten dargestellt angeben:
+
+```csharp
+public class Person
+{
+    public string FirstName { get; set; } = string.Empty;
+
+    // remaining implementation removed from listing
+}
+```
+
+Dies eignet sich am besten für schreibgeschützte Eigenschaften, wie Sie später in diesem Artikel sehen werden.
+
 Sie können den Speicher auch selbst definieren, wie unten dargestellt:
 
 ```csharp
@@ -64,14 +77,31 @@ public class Person
     // remaining implementation removed from listing
 }
 ```
- 
+
+Wenn die Implementierung einer Eigenschaft ein einzelner Ausdruck ist, können Sie *Ausdruckskörpermember* für die Getter oder Setter verwenden:
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get => firstName;
+        set => firstName = value;
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
+```
+
+Diese vereinfachte Syntax wird gegebenenfalls in diesem Thema verwendet werden.
+
 Die oben gezeigte Eigenschaftendefinition ist eine Schreib-Lese-Eigenschaft. Beachten Sie das Schlüsselwort `value` im set-Accessor. Der `set`-Accessor verfügt immer über einen einzelnen Parameter namens `value`. Der `get`-Accessor muss einen Wert zurückgeben, der in den Typ der Eigenschaft konvertiert werden kann (`string` in diesem Beispiel).
  
-Das sind die Grundlagen der Syntax. Es gibt viele verschiedene Varianten, die eine Vielzahl von verschiedenen Entwürfen unterstützen. Lassen Sie uns diese erforschen, und lernen Sie die Syntaxoptionen für jede kennen. 
+Das sind die Grundlagen der Syntax. Es gibt viele verschiedene Varianten, die eine Vielzahl von verschiedenen Entwürfen unterstützen. Lassen Sie uns diese erforschen, und lernen Sie die Syntaxoptionen für jede kennen.
 
 ## <a name="scenarios"></a>Szenarien
 
-In den Beispielen oben wurde eine der einfachsten Fälle von Eigenschaftendefinition gezeigt: eine Schreib-Lese-Eigenschaft ohne Überprüfung. Durch das Schreiben des Codes, den Sie in den `get`- und `set`-Accessoren möchten, können Sie viele verschiedene Szenarios erstellen.  
+In den Beispielen oben wurde eine der einfachsten Fälle von Eigenschaftendefinition gezeigt: eine Schreib-Lese-Eigenschaft ohne Überprüfung. Durch das Schreiben des Codes, den Sie in den `get`- und `set`-Accessoren möchten, können Sie viele verschiedene Szenarios erstellen.
 
 ### <a name="validation"></a>Validierung
 
@@ -82,7 +112,7 @@ public class Person
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -96,9 +126,11 @@ public class Person
 ```
 
 Das obige Beispiel erzwingt die Regel, dass der erste Name nicht leer oder kein Leerzeichen sein darf. Wenn ein Entwickler schreibt
+
 ```csharp
 hero.FirstName = "";
 ```
+
 Die Zuweisung löst eine `ArgumentException` aus. Da der set-Accessor einen void-Rückgabetyp aufweisen muss, melden Sie Fehler im set-Accessor durch Auslösen einer Ausnahme.
 
 Das ist ein einfacher Fall der Überprüfung. Sie können die gleiche Syntax auf alles andere in Ihrem Szenario erweitern, was benötigt wird. Sie können die Beziehungen zwischen unterschiedlichen Eigenschaften oder gegen externe Bedingungen überprüfen. Gültige C#-Anweisungen sind in einem Eigenschaftenaccessor gültig.
@@ -111,20 +143,43 @@ Sie können schreibgeschützte Eigenschaften erstellen, oder den set- und get-Ac
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        private set;
-    }
+    public string FirstName { get; private set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 Nun, kann auf die `FirstName`-Eigenschaft von einem beliebigen Code zugegriffen werden, aber es kann nur von einem anderem Code in der `Person`-Klasse zugewiesen werden.
+
 Sie können einen restriktiven Zugriffsmodifizierer zum set- oder get-Accessor hinzufügen. Jeder Zugriffsmodifizierer, den Sie auf den einzelnen Accessor platzieren, muss eingeschränkter sein als der Zugriffsmodifizierer für die Eigenschaftsdefinition. Das Obige ist zulässig, da die `FirstName`-Eigenschaft `public` ist, aber der set-Accessor ist `private`. Sie können keine `private`-Eigenschaft mit einem `public`-Accessor deklarieren. Eigenschaftendeklarationen können ebenfalls als `protected`, `internal`, `protected internal` oder sogar `private` deklariert werden.   
 
 Es ist auch zulässig, den restriktiveren Modifizierer auf dem `get`-Accessor zu platzieren. Sie verfügen z.B. über eine `public`-Eigenschaft, schränken jedoch den `get`-Accessor auf `private` ein. Dieses Szenario wird in der Praxis nur selten ausgeführt.
- 
+
+Sie können auch Änderungen an einer Eigenschaft beschränken, sodass sie nur in einem Konstruktor oder einem Eigenschafteninitialisierer festgelegt werden kann. Sie können die `Person`-Klasse daher wie folgt ändern:
+
+```csharp
+public class Person
+{
+    public Person(string firstName)
+    {
+        this.FirstName = firstName;
+    }
+
+    public string FirstName { get; }
+
+    // remaining implementation removed from listing
+}
+```
+
+Diese Funktion wird am häufigsten für die Initialisierung von Auflistungen verwendet, die als schreibgeschützte Eigenschaften verfügbar gemacht werden:
+
+```csharp
+public class Measurements
+{
+    public ICollection<DataPoint> points { get; } = new List<DataPoint>();
+}
+```
+
 ### <a name="computed-properties"></a>Berechnete Eigenschaften
 
 Eine Eigenschaft muss nicht einfach den Wert eines Memberfelds zurückgeben. Sie können Eigenschaften erstellen, die einen berechneten Wert zurückgeben. Lassen Sie uns das `Person`-Objekt so erweitern, dass es den vollständigen Namen zurückgibt, berechnet durch die Verkettung des ersten und letzten Namens:
@@ -132,25 +187,11 @@ Eine Eigenschaft muss nicht einfach den Wert eines Memberfelds zurückgeben. Sie
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
-    public string FullName
-    {
-        get
-        {
-            return $"{FirstName} {LastName}";
-        }
-    }
+    public string FullName { get { return $"{FirstName} {LastName}"; } }
 }
 ```
 
@@ -161,17 +202,9 @@ Sie können auch *Ausdruckskörpermember* verwenden, das eine kompaktere Möglic
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     public string FullName =>  $"{FirstName} {LastName}";
 }
@@ -186,17 +219,9 @@ Sie können das Konzept einer berechneten Eigenschaft mit dem Speicher mischen u
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     private string fullName;
     public string FullName
@@ -219,7 +244,7 @@ public class Person
     private string firstName;
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             firstName = value;
@@ -230,7 +255,7 @@ public class Person
     private string lastName;
     public string LastName
     {
-        get { return lastName; }
+        get => lastName;
         set
         {
             lastName = value;
@@ -252,7 +277,7 @@ public class Person
 ```
 
 Diese endgültige Version wertet die `FullName`-Eigenschaft nur bei Bedarf aus.
-Wenn die zuvor berechnete Version gültig ist, wird sie verwendet. Wenn eine andere Änderung des Zustands die zuvor berechnete Version ungültig macht, wird sie neu berechnet. Entwickler, die diese Klasse verwenden, müssen die Details der Implementierung nicht kennen. Keine dieser interne Änderungen hat Einfluss auf die Verwendung des Person-Objekts. Das ist der Hauptgrund für die Verwendung von Eigenschaften, um Datenmember eines Objekts verfügbar zu machen. 
+Wenn die zuvor berechnete Version gültig ist, wird sie verwendet. Wenn eine andere Änderung des Zustands die zuvor berechnete Version ungültig macht, wird sie neu berechnet. Entwickler, die diese Klasse verwenden, müssen die Details der Implementierung nicht kennen. Keine dieser interne Änderungen hat Einfluss auf die Verwendung des Person-Objekts. Das ist der Hauptgrund für die Verwendung von Eigenschaften, um Datenmember eines Objekts verfügbar zu machen.
  
 ### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
 
@@ -263,7 +288,7 @@ public class Person : INotifyPropertyChanged
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -288,7 +313,7 @@ Mithilfe von `nameof` können Fehler reduziert werden, bei denen Sie den Namen d
 
 Erneut ist dies ein Beispiel für einen Fall, in dem Sie Code in Ihren Accessoren schreiben können, um die benötigten Szenarios zu unterstützen.
 
-## <a name="summing-up"></a>Schlussbemerkung 
+## <a name="summing-up"></a>Schlussbemerkung
 
 Eigenschaften sind eine Form intelligenter Felder in einer Klasse oder einem Objekt. Außerhalb des Objekts wirken diese wie Felder in dem Objekt. Eigenschaften können jedoch mithilfe der vollständigen Palette der C#-Funktionalität implementiert werden.
 Sie können Überprüfung, verschiedene Eingabehilfen, verzögerte Auswertung oder alle Anforderungen, die Ihre Szenarios benötigen, bereitstellen.

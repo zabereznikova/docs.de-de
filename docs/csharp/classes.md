@@ -2,18 +2,19 @@
 title: Klassen | C#-Handbuch
 description: "Erfahren Sie etwas über die Klassentypen und wie Sie diese erstellen"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -25,7 +26,7 @@ Ein Typ, der als [Klasse](https://msdn.microsoft.com/library/0b0thckt.aspx) defi
 
 [!code-csharp[Verweistypen](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-Beim Erstellen des Objekts wird der Speicher im verwalteten Heap belegt. Die Variable enthält lediglich einen Verweis auf den Speicherort des Objekts. Für Typen im verwalteten Heap ist Mehraufwand erforderlich, wenn sie zugewiesen werden und wenn sie von der automatischen Speicherverwaltungsfunktion der CLR freigegeben werden, was als *Garbage Collection* bezeichnet wird. Die Garbage Collection ist jedoch auch stark optimiert. In den meisten Szenarios führt sie nicht zu einem Leistungsproblem. Weitere Informationen zur Garbage Collection finden Sie unter [Automatische Speicherverwaltung und Garbage Collection](../standard/garbagecollection/gc.md).  
+Beim Erstellen des Objekts wird der Speicher im verwalteten Heap belegt. Die Variable enthält lediglich einen Verweis auf den Speicherort des Objekts. Für Typen im verwalteten Heap ist Mehraufwand erforderlich, wenn sie zugewiesen werden und wenn sie von der automatischen Speicherverwaltungsfunktion der CLR freigegeben werden, was als *Garbage Collection* bezeichnet wird. Die Garbage Collection ist jedoch auch stark optimiert. In den meisten Szenarios führt sie nicht zu einem Leistungsproblem. Weitere Informationen zur Garbage Collection finden Sie unter [Automatische Speicherverwaltung und Garbage Collection](../standard/garbage-collection/gc.md).  
   
 Verweistypen unterstützen die *Vererbung* vollständig. Dies ist ein wesentliches Merkmal der objektorientierten Programmierung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](https://msdn.microsoft.com/library/88c54tsw.aspx) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben. Weitere Informationen finden Sie unter [Vererbung](https://msdn.microsoft.com/library/ms173149.aspx).
 
@@ -62,7 +63,7 @@ Wenn eine Klasse eine Basisklasse deklariert, erbt sie alle Member der Basisklas
   
 Anders als in C++ kann eine Klasse in C# nur direkt von einer Basisklasse erben. Da jedoch eine Basisklasse von einer anderen Klasse erben kann, kann eine Klasse indirekt von mehreren Basisklassen erben. Darüber hinaus kann eine Klasse mehr als eine Schnittstelle direkt implementieren. Weitere Informationen finden Sie unter [Schnittstellen](programming-guide/interfaces/index.md).  
   
-Eine Klasse kann als [abstrakt](https://msdn.microsoft.com/library/sf985hc5.aspx) deklariert werden. Eine abstrakte Klasse enthält abstrakte Methoden, die über eine Signaturdefinition aber keine Implementierung verfügen. Abstrakte Klassen dürfen nicht instanziiert werden. Sie können nur mithilfe von abgeleiteten Klassen verwendet werden, die die abstrakten Methoden implementieren. Im Gegensatz dazu lässt eine [versiegelte](https://msdn.microsoft.com/library/88c54tsw.aspx) Klasse nicht zu, dass andere Klassen von ihr ableiten. Weitere Informationen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](https://msdn.microsoft.com/library/ms173150.aspx).  
+Eine Klasse kann als [abstrakt](https://msdn.microsoft.com/library/sf985hc5.aspx) deklariert werden. Eine abstrakte Klasse enthält abstrakte Methoden, die über eine Signaturdefinition, aber keine Implementierung verfügen. Abstrakte Klassen dürfen nicht instanziiert werden. Sie können nur mithilfe von abgeleiteten Klassen verwendet werden, die die abstrakten Methoden implementieren. Im Gegensatz dazu lässt eine [versiegelte](https://msdn.microsoft.com/library/88c54tsw.aspx) Klasse nicht zu, dass andere Klassen von ihr ableiten. Weitere Informationen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](https://msdn.microsoft.com/library/ms173150.aspx).  
   
 Klassendefinitionen können zwischen verschiedenen Quelldateien aufgeteilt werden. Weitere Informationen finden Sie unter [Partielle Klassendefinitionen](https://msdn.microsoft.com/library/wa80x488.aspx).  
   
@@ -81,7 +82,7 @@ Weitere Informationen finden Sie unter [C#-Sprachspezifikation](https://msdn.mic
 [Class and struct members (Klassen- und Strukturmember)](https://msdn.microsoft.com/library/ms173113.aspx)   
 [Class and struct methods (Klassen- und Strukturmethoden)](https://msdn.microsoft.com/library/ms173114.aspx)   
 [Konstruktoren](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[Destruktoren](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[Finalizer](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [Objekte](https://msdn.microsoft.com/library/ms173110.aspx)
 
 

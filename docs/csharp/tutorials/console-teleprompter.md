@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41e8976e7b133380687a65265fd5ebe9a810a4ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -33,7 +34,7 @@ In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an.
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
-Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine grundlegende Hello World-Anwendung erstellt.
+Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
 Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur Ausführung der einfachen Hello World-Anwendung durch. Geben Sie nach dem Erstellen der Anwendung den Befehl `dotnet restore` an der Eingabeaufforderung ein. Mit diesem Befehl wird der Prozess zur NuGet-Paketwiederherstellung ausgeführt. NuGet ist ein .NET-Paket-Manager. Mit diesem Befehl werden alle fehlenden abhängigen Komponenten für Ihr Projekt heruntergeladen. Da es sich um ein neues Projekt handelt, ist keine der abhängigen Komponenten vorhanden, deshalb wird zunächst das .NET Core-Framework heruntergeladen. Nach diesem ersten Schritt müssen Sie `dotnet restore` nur ausführen, wenn Sie neue abhängige Pakete hinzufügen oder die Versionen abhängiger Komponenten aktualisieren. Bei diesem Vorgang wird auch die Projektsperrdatei (project.lock.json) in Ihrem Projektverzeichnis erstellt. Diese Datei bietet Unterstützung beim Verwalten der Projektabhängigkeiten. Sie enthält den lokalen Speicherort für alle Projektabhängigkeiten. Es ist nicht erforderlich, die Datei in der Quellcodeverwaltung zu platzieren, sie wird beim Ausführen von `dotnet restore` generiert. 
 
@@ -53,7 +54,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Lesen und Ausgeben der Datei
-Das erste Feature besteht darin, eine Textdatei einzulesen und den gesamten Text in der Konsole auszugeben. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung.
+Das erste Feature besteht darin, die Möglichkeit zum Lesen einer Textdatei hinzuzufügen und den gesamten Text in der Konsole auszugeben. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung. Wenn Sie Informationen erhalten möchten, wie Sie die Beispiel-App für diese Thema herunterladen, finden Sie Anweisungen im Thema [Beispiele und Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Fügen Sie als Nächstes die folgenden Methoden in Ihre Program-Klasse ein (rechts neben der `Main`-Methode):
 

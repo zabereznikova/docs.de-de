@@ -1,62 +1,79 @@
 ---
-title: "How to: Delete a Registry Key in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.DeleteSetting"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "GetSetting function"
-  - "registry, deleting values"
-  - "GetAllSettings function"
-  - "registry keys, deleting"
-  - "registry, deleting keys"
-  - "examples [Visual Basic], registry"
+title: "Vorgehensweise: Löschen von Registrierungsschlüsseln in Visual Basic | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.DeleteSetting
+dev_langs:
+- VB
+helpviewer_keywords:
+- GetSetting function
+- registry, deleting values
+- GetAllSettings function
+- registry keys, deleting
+- registry, deleting keys
+- examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
----
-# How to: Delete a Registry Key in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a50ee5a0853e6209c3bf5d5224d536f4cc6bbe11
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Die <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29>\-Methode und die <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29>\-Methode können zum Löschen von Registrierungsschlüsseln verwendet werden.  
+---
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Gewusst wie: Löschen von Registrierungsschlüsseln in Visual Basic
+Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> und <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> können zum Löschen von Registrierungsschlüsseln verwendet werden.  
   
-## Verfahren  
+## <a name="procedure"></a>Prozedur  
   
-#### So löschen Sie einen Registrierungsschlüssel  
+#### <a name="to-delete-a-registry-key"></a>Löschen von Registrierungsschlüsseln  
   
--   Verwenden Sie die `DeleteSubKey`\-Methode, um einen Registrierungsschlüssel zu löschen.  In diesem Beispiel wird der Schlüssel Software\/TestApp im CurrentUser\-Hive gelöscht.  Sie können im Code die entsprechende Zeichenfolge ändern oder die entsprechenden Informationen vom Benutzer eingeben lassen.  
+-   Verwenden Sie die `DeleteSubKey`-Methode zum Löschen von Registrierungsschlüsseln. In diesem Beispiel wird der Schlüssel „Software/TestApp“ aus der Struktur „CurrentUser“ gelöscht. Dies können Sie im Code in die entsprechende Zeichenfolge ändern, oder Sie können es von vom Benutzer zur Verfügung gestellten Informationen abhängig machen.  
   
      [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
-## Robuste Programmierung  
- Die `DeleteSubKey`\-Methode gibt eine leere Zeichenfolge zurück, wenn das Schlüssel\/Wert\-Paar nicht vorhanden ist.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die `DeleteSubKey`-Methode gibt eine leere Zeichenfolge zurück, wenn das Schlüssel-Wert-Paar nicht vorhanden ist.  
   
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Name des Schlüssels lautet `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Der Name des Schlüssels lautet `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Benutzer ist nicht berechtigt, Registrierungsschlüssel zu löschen \(<xref:System.Security.SecurityException>\).  
+-   Der Benutzer ist nicht zum Löschen von Registrierungsschlüsseln berechtigt (<xref:System.Security.SecurityException>).  
   
--   Der Name des Schlüssels ist länger als 255 Zeichen \(<xref:System.ArgumentException>\).  
+-   Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
   
--   Der Registrierungsschlüssel ist schreibgeschützt \(<xref:System.UnauthorizedAccessException>\).  
+-   Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
-## .NET Framework-Sicherheit  
- Registrierungsaufrufe schlagen fehl, wenn nicht genügend Laufzeitberechtigungen erteilt wurden \(<xref:System.Security.Permissions.RegistryPermission>\) oder wenn der Benutzer nicht über die entsprechenden Zugriffsrechte \(die durch die ACLs festgelegt werden\) zum Erstellen oder Schreiben von Einstellungen verfügt.  Eine lokale Anwendung, die über die Berechtigung zum Zugriff auf Code verfügt, ist nicht automatisch zum Zugriff auf das Betriebssystem berechtigt.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Registrierungsaufrufe schlagen fehl, wenn die notwendigen Laufzeitberechtigungen fehlen (<xref:System.Security.Permissions.RegistryPermission>), oder wenn der Benutzer nicht über den korrekten Zugriff (wie von den ACLs angegeben) für das Erstellen von und Schreiben in Einstellungen verfügt. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
  <xref:Microsoft.Win32.RegistryKey>   
- [Security and the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
- [Reading from and Writing to the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+ [Sicherheit und die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
+ [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

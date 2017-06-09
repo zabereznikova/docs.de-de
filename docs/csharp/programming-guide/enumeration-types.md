@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
@@ -82,7 +82,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 ## <a name="enumeration-types-as-bit-flags"></a>Enumerationstypen als Bitflags  
  Sie können einen Enumerationstyp zum Definieren von Bitflags verwenden. Dadurch kann eine Instanz des Enumerationstyps eine beliebige Kombination der Werte speichern, die in der Enumeratorliste definiert sind. (Natürlich können einige Kombinationen nicht sinnvoll oder in Ihrem Programmcode nicht zulässig sein.)  
   
- Sie erstellen ein Bitflags-Enum durch Anwenden des Attribut <xref:System.FlagsAttribute?displayProperty=fullName>, und definieren die Werte entsprechend, damit die bitweisen Operationen `AND`, `OR`, `NOT` und `XOR` ausgeführt werden können. In einem Bitflag-Enum ist eine benannte Konstante mit dem Wert Null enthalten, das bedeutet, dass „keine Flags festgelegt sind“. Geben Sie einem Flag keinen Wert Null, wenn es nicht bedeutet, dass „keine Flags festgelegt sind“.  
+ Sie erstellen ein Bitflags-Enum durch Anwenden des Attributs <xref:System.FlagsAttribute?displayProperty=fullName> und definieren die Werte entsprechend, damit die bitweisen Operationen `AND`, `OR`, `NOT` und `XOR` ausgeführt werden können. In einem Bitflag-Enum ist eine benannte Konstante mit dem Wert Null enthalten, das bedeutet, dass „keine Flags festgelegt sind“. Geben Sie einem Flag keinen Wert Null, wenn es nicht bedeutet, dass „keine Flags festgelegt sind“.  
   
  Im folgenden Beispiel ist eine andere Version der `Days`-Enum mit dem Namen `Days2` definiert. `Days2` verfügt über das `Flags`-Attribut, und jedem Wert wird die nächste höhere Potenz von 2 zugewiesen. Dies ermöglicht Ihnen die Erstellung einer `Days2`-Variable, deren Wert `Days2.Tuesday` und `Days2.Thursday` ist.  
   
@@ -96,10 +96,10 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- Weitere Informationen darüber, was Sie beim Definieren von Enumerationstypen mit dem Attribut <xref:System.FlagsAttribute?displayProperty=fullName> berücksichtigen müssen, finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
+ Weitere Informationen zu den notwendigen Überlegungen beim Definieren von Enumerationstypen mit dem <xref:System.FlagsAttribute?displayProperty=fullName>-Attribut finden Sie unter <xref:System.Enum?displayProperty=fullName>.  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Verwenden der Methoden System.Enum zum Ermitteln und Bearbeiten der Enumerationswerte  
- Alle Enumerationen sind Instanzen des Typs <xref:System.Enum?displayProperty=fullName>. Sie können keine neuen Klassen von <xref:System.Enum?displayProperty=fullName> ableiten, aber Sie können seine Methoden verwenden, um Informationen zu ermitteln und Werte in einer enum-Instanz zu bearbeiten.  
+ Alle Enumerationen sind Instanzen des Typs <xref:System.Enum?displayProperty=fullName>. Sie können keine neuen Klassen von <xref:System.Enum?displayProperty=fullName> ableiten, aber Sie können die zugehörigen Methoden verwenden, um Informationen zu ermitteln und Werte in einer enum-Instanz zu bearbeiten.  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   

@@ -93,7 +93,7 @@ Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, m�
 -   [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   

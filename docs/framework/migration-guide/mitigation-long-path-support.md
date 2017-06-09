@@ -23,16 +23,16 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-long-path-support"></a>Entschärfung: Unterstützung für lange Pfade
-Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an lösen E/A-Methoden des Dateisystems nicht mehr automatisch eine <xref:System.IO.PathTooLongException>-Ausnahme aus, wenn ein Pfad oder ein vollqualifizierter Dateiname 260 (oder `MAX_PATH`) Zeichen überschreitet. Stattdessen werden lange Pfade mit bis zu 32.000 Zeichen unterstützt.  
+Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an lösen E/A-Methoden des Dateisystems nicht mehr automatisch eine <xref:System.IO.PathTooLongException> aus, wenn ein Pfad oder ein vollqualifizierter Dateiname 260 (oder `MAX_PATH`) Zeichen überschreitet. Stattdessen werden lange Pfade mit bis zu 32.000 Zeichen unterstützt.  
   
 ## <a name="impact"></a>Auswirkungen  
- Für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] neu kompilierte Anwendungen, die zuvor automatisch eine <xref:System.IO.PathTooLongException>-Ausnahme auslösten, wenn ein Pfad die Länge von 260 Zeichen überschritt, lösen jetzt nur unter den folgenden Bedingungen eine <xref:System.IO.PathTooLongException>-Ausnahme aus:  
+ Für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] neu kompilierte Anwendungen, die zuvor automatisch eine <xref:System.IO.PathTooLongException>-Ausnahme auslösten, wenn ein Pfad die Länge von 260 Zeichen überschritt, lösen jetzt nur unter den folgenden Bedingungen eine <xref:System.IO.PathTooLongException> aus:  
   
--   Die Länge des Pfads ist größer als <xref:System.Int16.MaxValue?displayProperty=fullName> (32.767) Zeichen.  
+-   Die Länge des Pfads umfasst mehr als <xref:System.Int16.MaxValue?displayProperty=fullName> (32.767) Zeichen.  
   
 -   Das Betriebssystem gibt `COR_E_PATHTOOLONG` oder einen dazu äquivalenten Wert zurück.  
   
- Das Legacyverhalten für Apps mit der Zielplattform [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] und früher ist, dass die Runtime automatisch eine <xref:System.IO.PathTooLongException>-Ausnahme auslöst, wenn ein Pfad die Länge von 260 Zeichen überschreitet.  
+ Das Legacyverhalten für Apps mit der Zielplattform [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] und früher ist, dass die Runtime automatisch eine <xref:System.IO.PathTooLongException> auslöst, wenn ein Pfad die Länge von 260 Zeichen überschreitet.  
   
 ## <a name="mitigation"></a>Problemumgehung  
  Für Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] können Sie sich gegen die Unterstützung von langen Pfaden entscheiden, wenn sie nicht erwünscht ist, indem Sie Folgendes zum Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Ihrer app.config-Datei hinzufügen:  

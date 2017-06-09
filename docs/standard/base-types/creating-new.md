@@ -1,167 +1,86 @@
 ---
-title: Erstellen neuer Zeichenfolgen
-description: Erstellen neuer Zeichenfolgen
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 639397c7-e694-43e0-845b-1681c62bd9fd
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 793b5bc4b26967104459fa2559c6127bb82f3a9d
-ms.lasthandoff: 03/02/2017
-
+title: "Erstellen neuer Zeichenfolgen in .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Concat-Methode"
+  - "CopyTo-Methode"
+  - "Format-Methode"
+  - "Insert-Methode"
+  - "Join-Methode"
+  - "Zeichenfolgen [.NET Framework], Erstellen"
+ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
+caps.latest.revision: 11
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 11
 ---
-
-# <a name="creating-new-strings"></a>Erstellen neuer Zeichenfolgen
-
-.NET ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. .NET stellt auch verschiedene Methoden in der [System.String](xref:System.String)-Klasse bereit, die durch Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen. 
-
-## <a name="creating-strings-using-assignment"></a>Erstellen von Zeichenfolgen mithilfe von Zuweisung
-
-Die einfachste Möglichkeit, ein neues [String](xref:System.String)-Objekt zu erstellen, ist die Zuweisung eines Zeichenfolgenliterals zu einem [String](xref:System.String)-Objekt. 
-
-## <a name="creating-strings-using-a-class-constructor"></a>Erstellen von Zeichenfolgen mithilfe eines Klassenkonstruktors
-
-Sie können Überladungen des [String](xref:System.String)-Klassenkonstruktors verwenden, um Zeichenfolgen aus Zeichenarrays zu erstellen. Sie können auch eine neue Zeichenfolge erstellen, indem Sie ein bestimmtes Zeichen eine angegebene Anzahl von Malen duplizieren. 
-
-## <a name="methods-that-return-strings"></a>Methoden, die Zeichenfolgen zurückgeben
-
-Die folgende Tabelle führt verschiedene nützliche Methoden auf, die neue Zeichenfolgenobjekte zurückgeben.
-
-Methodenname | Verwendung
------------ | ---
-[String.Format](xref:System.String.Format(System.String,System.Object)) | Erstellt eine formatierte Zeichenfolge aus einem Satz von Eingabeobjekten.
-[String.Concat](xref:System.String.Concat(System.String,System.String)) | Erstellt Zeichenfolgen aus mindestens zwei Zeichenfolgen.
-[String.Join](xref:System.String.Join(System.String,System.String[])) |Erstellt eine neue Zeichenfolge durch Kombinieren eines Arrays aus Zeichenfolgen.
-[String.Insert](xref:System.String.Insert(System.Int32,System.String)) | Erstellt eine neue Zeichenfolge durch Einfügen einer Zeichenfolge in den angegebenen Index einer vorhandenen Zeichenfolge.
-[String.CopyTo](xref:System.String.CopyTo(System.Int32,System.Char[],System.Int32,System.Int32)) | Kopiert angegebene Zeichen in einer Zeichenfolge in eine bestimmte Position in einem Array aus Zeichen.
-
-### <a name="format"></a>Format
-
-Sie können die `String.Format`-Methode verwenden, um formatierte Zeichenfolgen zu erstellen und Zeichenfolgen zu verketten, die mehrere Objekte darstellen. Diese Methode konvertiert automatisch alle übergebenen Objekte in eine Zeichenfolge. Wenn Ihre Anwendung z.B. dem Benutzer einen [Int32](xref:System.Int32)-Wert und einen [DateTime](xref:System.DateTime)-Wert anzeigen soll, können Sie ganz einfach mithilfe der `Format`-Methode eine Zeichenfolge erstellen, um diese Werte darzustellen. Informationen zu den mit dieser Methode verwendeten Formatierungskonventionen finden Sie im Abschnitt [Zusammengesetzte Formatierung](composite-format.md).
-
-Das folgende Beispiel verwendet die `Format`-Methode, um eine Zeichenfolge zu erstellen, die eine ganzzahlige Variable verwendet.
-
-```csharp
-int numberOfFleas = 12;
-string miscInfo = String.Format("Your dog has {0} fleas. " +
-                                "It is time to get a flea collar. " + 
-                                "The current universal date is: {1:u}.", 
-                                numberOfFleas, DateTime.Now);
-Console.WriteLine(miscInfo);
-// The example displays the following output:
-//       Your dog has 12 fleas. It is time to get a flea collar. 
-//       The current universal date is: 2008-03-28 13:31:40Z.
-```
-
-```vb
-Dim numberOfFleas As Integer = 12
-Dim miscInfo As String = String.Format("Your dog has {0} fleas. " & _
-                                       "It is time to get a flea collar. " & _ 
-                                       "The current universal date is: {1:u}.", _ 
-                                       numberOfFleas, Date.Now)
-Console.WriteLine(miscInfo)
-' The example displays the following output:
-'       Your dog has 12 fleas. It is time to get a flea collar. 
-'       The current universal date is: 2008-03-28 13:31:40Z.
-```
-
-In diesem Beispiel zeigt [DateTime.Now](xref:System.DateTime.Now) das aktuelle Datum und die aktuelle Uhrzeit so an, wie es von der mit dem aktuellen Thread verknüpften Kultur angegeben ist.
-
-### <a name="concat"></a>Concat
-
-Die `String.Concat`-Methode kann verwendet werden, um ganz einfach aus mindestens zwei vorhandenen Objekten ein neues Zeichenfolgenobjekt zu erstellen. Die Methode bietet eine sprachunabhängige Möglichkeit zum Verketten von Zeichenfolgen. Diese Methode akzeptiert alle von `System.Object` abgeleiteten Klassen. Das folgende Beispiel erstellt eine Zeichenfolge aus zwei vorhandenen Zeichenfolgenobjekten und einem Trennzeichen.
-
-```csharp
-string helloString1 = "Hello";
-string helloString2 = "World!";
-Console.WriteLine(String.Concat(helloString1, ' ', helloString2));
-// The example displays the following output:
-//      Hello World!
-```
-
-```vb
-Dim helloString1 As String = "Hello"
-Dim helloString2 As String = "World!"
-Console.WriteLine(String.Concat(helloString1, " "c, helloString2))
-' The example displays the following output:
-'      Hello World!
-```
-
-### <a name="join"></a>Join
-
-Die `String.Join`-Methode erstellt eine neue Zeichenfolge aus einem Array aus Zeichenfolgen und einem Trennzeichen. Diese Methode ist nützlich, wenn Sie mehrere Zeichenfolgen miteinander verketten möchten. Sie erstellt eine Liste, die z.B. durch ein Komma getrennt sein kann.
-
-Das folgende Beispiel verwendet ein Leerzeichen, um ein Zeichenfolgenarray zu binden.
-
-```csharp
-string[] words = {"Hello", "and", "welcome", "to", "my" , "world!"};
-Console.WriteLine(String.Join(" ", words));
-// The example displays the following output:
-//      Hello and welcome to my world!
-```
-
-```vb
-Dim words() As String = {"Hello", "and", "welcome", "to", "my" , "world!"}
-Console.WriteLine(String.Join(" ", words))
-' The example displays the following output:
-'      Hello and welcome to my world!
-```
-
-### <a name="insert"></a>Insert
-
-Die `String.Insert`-Methode erstellt eine neue Zeichenfolge, indem sie eine Zeichenfolge an einer angegebenen Position in einer anderen Zeichenfolge einfügt. Diese Methode verwendet einen nullbasierten Index. Das folgende Beispiel fügt eine Zeichenfolge an der fünften Indexposition von `MyString` ein und erstellt mit diesem Wert eine neue Zeichenfolge.
-
-```csharp
-string sentence = "Once a time.";   
- Console.WriteLine(sentence.Insert(4, " upon"));
- // The example displays the following output:
- //      Once upon a time.
-```
-
-```vb
-Dim sentence As String = "Once a time."   
- Console.WriteLine(sentence.Insert(4, " upon"))
- ' The example displays the 
-```
-
-### <a name="copyto"></a>CopyTo
-
-Die `String.CopyTo`-Methode kopiert Teile einer Zeichenfolge in ein Zeichenarray. Sie können sowohl den Startindex der Zeichenfolge als auch die Anzahl der zu kopierenden Zeichen angeben. Diese Methode akzeptiert den Quellindex, ein Array aus Zeichen, den Zielindex und die Anzahl der zu kopierenden Zeichen. Alle Indizes sind nullbasiert.
-
-Das folgende Beispiel verwendet die `CopyTo`-Methode, um die Zeichen des Worts „Hello“ aus einem Zeichenfolgenobjekt in die erste Indexposition eines Zeichenarrays zu kopieren.
-
-```csharp
-string greeting = "Hello World!";
-char[] charArray = {'W','h','e','r','e'};
-Console.WriteLine("The original character array: {0}", new string(charArray));
-greeting.CopyTo(0, charArray,0 ,5);
-Console.WriteLine("The new character array: {0}", new string(charArray));
-// The example displays the following output:
-//       The original character array: Where
-//       The new character array: Hello
-```
-
-```vb
-Dim greeting As String = "Hello World!"
-Dim charArray() As Char = {"W"c, "h"c, "e"c, "r"c, "e"c}
-Console.WriteLine("The original character array: {0}", New String(charArray))
-greeting.CopyTo(0, charArray,0 ,5)
-Console.WriteLine("The new character array: {0}", New String(charArray))
-' The example displays the following output:
-'       The original character array: Where
-'       The new character array: Hello
-```
-
-## <a name="see-also"></a>Siehe auch
-
-[Grundlegende Zeichenfolgenoperationen](basic-string-operations.md)
-
-[Kombinierte Formatierung](composite-format.md)
-
-
+# Erstellen neuer Zeichenfolgen in .NET Framework
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht mit einer einfachen Zuweisung das Erstellen von Zeichenfolgen und überlädt gleichzeitig einen Klassenkonstruktor, um das Erstellen von Zeichenfolgen mit einer Reihe verschiedener Parameter zu unterstützen.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ebenfalls mehrere Methoden in der <xref:System.String?displayProperty=fullName>\-Klasse zur Verfügung, mit denen neue Zeichenfolgenobjekte erstellt werden, indem verschiedene Zeichenfolgen, Arrays von Zeichenfolgen oder Objekte kombiniert werden.  
+  
+## Zeichenfolgen mit einer Zuweisung erstellen  
+ Der einfachste Weg zum Erstellen eines neuen <xref:System.String>\-Objekts besteht aus dem einfachen Zuweisen eines Zeichenfolgenliterals zu einem <xref:System.String>\-Objekt.  
+  
+## Zeichenfolgen mit einem Klassenkonstruktor erstellen  
+ Sie können Überladungen des <xref:System.String>\-Klassenkonstruktors verwenden, um Zeichenfolgen aus Zeichenarrays zu erstellen.  Sie können eine neue Zeichenfolge auch erstellen, indem Sie ein bestimmtes Zeichen mit einer festgelegten Häufigkeit duplizieren.  
+  
+## Methoden, die Zeichenfolgen zurückgeben  
+ In der folgenden Tabelle sind mehrere nützliche Methoden aufgeführt, die neue Zeichenfolgenobjekte zurückgeben.  
+  
+|Methodenname|Verwendung|  
+|------------------|----------------|  
+|<xref:System.String.Format%2A?displayProperty=fullName>|Erstellt aus einer Reihe von Eingabeobjekten eine formatierte Zeichenfolge.|  
+|<xref:System.String.Concat%2A?displayProperty=fullName>|Erstellt Zeichenfolgen aus zwei oder mehreren Zeichenfolgen.|  
+|<xref:System.String.Join%2A?displayProperty=fullName>|Erstellt eine neue Zeichenfolge, indem ein Array von Zeichenfolgen kombiniert wird.|  
+|<xref:System.String.Insert%2A?displayProperty=fullName>|Erstellt eine neue Zeichenfolge, indem eine Zeichenfolge in den angegebenen Index einer bestehenden Zeichenfolge eingefügt wird.|  
+|<xref:System.String.CopyTo%2A?displayProperty=fullName>|Kopiert die angegebenen Zeichen in einer Zeichenfolge an die angegebene Position in einem Zeichenarray.|  
+  
+### Format  
+ Mit der **String.Format**\-Methode können Sie formatierte Zeichenfolgen erstellen und Zeichenfolgen verketten, die mehrere Objekte darstellen.  Diese Methode konvertiert automatisch alle übergebenen Objekte in eine Zeichenfolge.  Wenn in der Anwendung beispielsweise ein **Int32**\-Wert und ein **DateTime**\-Wert für den Benutzer angezeigt werden sollen, können Sie mit der **Format**\-Methode problemlos eine Zeichenfolge erstellen, die diese Werte darstellt.  Weitere Informationen zu Formatierungskonventionen für diese Methode finden Sie im Abschnitt [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md).  
+  
+ Im folgenden Beispiel wird mit der **Format**\-Methode eine Zeichenfolge erstellt, die eine ganzzahlige Variable verwendet.  
+  
+ [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
+ [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
+  
+ In diesem Beispiel zeigt <xref:System.DateTime.Now%2A?displayProperty=fullName> das aktuelle Datum und die aktuelle Uhrzeit entsprechend der mit dem aktuellen Thread verknüpften Kultur an.  
+  
+### Concat  
+ Mit der **String.Concat**\-Methode können Sie auf einfache Weise ein neues Zeichenfolgenobjekt aus zwei oder mehreren bestehenden Objekten erstellen.  Sie stellt eine sprachunabhängige Methode zur Verkettung von Zeichenfolgen dar.  Diese Methode akzeptiert jede Klasse, die von **System.Object** ableitet.  Im folgenden Beispiel wird eine Zeichenfolge aus zwei vorhandenen Zeichenfolgenobjekten und einem Trennzeichen erstellt.  
+  
+ [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
+ [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
+  
+### Join  
+ Mit der **String.Join**\-Methode wird aus einem Array von Zeichenfolgen und einer aus Trennzeichen bestehenden Zeichenfolge eine neue Zeichenfolge erstellt.  Diese Methode ist hilfreich, wenn Sie mehrere Zeichenfolgen verketten möchten, etwa in einer durch Kommas getrennten Liste.  
+  
+ Im folgenden Beispiel wird ein Leerzeichen verwendet, um ein Zeichenfolgenarray zu binden.  
+  
+ [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
+ [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
+  
+### Insert  
+ Mit der **String.Insert**\-Methode wird eine neue Zeichenfolge erstellt, indem eine Zeichenfolge an einer bestimmten Position in eine andere Zeichenfolge eingefügt wird.  Diese Methode verwendet einen nullbasierten Index.  Im folgenden Beispiel wird eine Zeichenfolge an der fünften Indexposition von `MyString` eingefügt und mit diesem Wert eine neue Zeichenfolge erstellt.  
+  
+ [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
+ [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
+  
+### CopyTo  
+ Mit der **String.CopyTo**\-Methode werden Teile einer Zeichenfolge in ein Zeichenarray kopiert.  Sie können sowohl den Startindex der Zeichenfolge als auch die Anzahl der zu kopierenden Zeichen angeben.  Diese Methode nimmt den Quellindex, ein Zeichenarray, den Zielindex und die Anzahl der zu kopierenden Zeichen an.  Alle Indizes sind nullbasiert.  
+  
+ Im folgenden Beispiel wird die **CopyTo**\-Methode verwendet, um die Zeichen des Begriffs "Hello" aus einem Zeichenfolgenobjekt an die erste Indexposition eines Zeichenarrays zu kopieren.  
+  
+ [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
+ [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
+  
+## Siehe auch  
+ [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)   
+ [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

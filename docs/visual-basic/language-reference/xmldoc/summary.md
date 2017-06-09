@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ad2053e21e58c49205fe869a484cb2dffd2169ee
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Gibt die Zusammenfassung des Elements an.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <summary>description</summary>  
 ```  
   

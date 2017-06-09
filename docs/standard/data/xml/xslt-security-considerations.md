@@ -1,0 +1,71 @@
+---
+title: "XSLT-Sicherheitsaspekte | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+ms.assetid: fea695be-617c-4977-9567-140e820436fc
+caps.latest.revision: 3
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 3
+---
+# XSLT-Sicherheitsaspekte
+Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität.  Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können.  Um die XSLT\-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  
+  
+## XSLT\-Erweiterungen  
+ Zwei häufig verwendete XSLT\-Erweiterungen sind Stylesheet\-Skriptobjekte und Erweiterungsobjekte.  Diese Erweiterungen ermöglichen dem XSLT\-Prozessor das Ausführen von Code.  
+  
+-   Mit Erweiterungsobjekten werden XSL\-Transformationen Programmierfunktionen hinzugefügt.  
+  
+-   Skripts können mithilfe des `msxsl:script`\-Erweiterungselements in das Stylesheet eingebettet werden.  
+  
+### Erweiterungsobjekte  
+ Erweiterungsobjekte werden mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>\-Methode hinzugefügt.  Für die Unterstützung von Erweiterungsobjekten muss der FullTrust\-Berechtigungssatz festgelegt sein.  Dadurch wird sichergestellt, dass beim Ausführen von Erweiterungsobjektcode keine Erhöhung der Berechtigungen auftritt.  Ohne FullTrust\-Berechtigung wird durch den Versuch, die <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>\-Methode aufzurufen, eine Sicherheitsausnahme ausgelöst.  
+  
+### Stylesheetskripts  
+ Skripts können mithilfe des `msxsl:script`\-Erweiterungselements in ein Stylesheet eingebettet werden.  Die Skriptunterstützung ist eine optionale Funktion der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse, die in der Standardeinstellung deaktiviert ist.  Die Skriptunterstützung kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=fullName>\-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>\-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>\-Methode übergeben wird.  
+  
+#### Richtlinien  
+ Aktivieren Sie die Skriptunterstützung nur, wenn das Stylesheet aus einer vertrauenswürdigen Quelle stammt.  Wenn Sie die Quelle des Stylesheets nicht überprüfen können oder das Stylesheet nicht aus einer vertrauenswürdigen Quelle stammt, übergeben Sie `null` für das Argument der XSLT\-Einstellungen.  
+  
+## Externe Ressourcen  
+ Die Sprache XSLT verfügt über Funktionen wie `xsl:import`, `xsl:include` oder die `document()`\-Funktion, in denen der Prozessor URI\-Verweise auflösen muss.  Die <xref:System.Xml.XmlResolver>\-Klasse wird zum Auflösen externer Ressourcen verwendet.  Externe Ressourcen müssen u. U. in den folgenden zwei Fällen aufgelöst werden:  
+  
+-   Beim Kompilieren eines Stylesheets wird der <xref:System.Xml.XmlResolver> für die Auflösung von `xsl:import` und `xsl:include` verwendet.  
+  
+-   Beim Ausführen der Transformation wird die `document()`\-Funktion mithilfe des <xref:System.Xml.XmlResolver> aufgelöst.  
+  
+    > [!NOTE]
+    >  Die `document()`\-Funktion ist für die <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse in der Standardeinstellung deaktiviert.  Diese Funktion kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=fullName>\-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>\-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>\-Methode übergeben wird.  
+  
+ Die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>\-Methode und die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode enthalten Überladungen, die einen <xref:System.Xml.XmlResolver> als eines ihrer Argumente akzeptieren.  Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, wird ein Standard\-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen verwendet.  
+  
+#### Richtlinien  
+ Aktivieren Sie die `document()`\-Funktion nur, wenn das Stylesheet aus einer vertrauenswürdigen Quelle stammt.  
+  
+ In der folgenden Liste wird erläutert, wann ein <xref:System.Xml.XmlResolver>\-Objekt angegeben werden kann.  
+  
+-   Wenn der XSLT\-Vorgang auf eine Netzwerkressource zugreifen muss, die eine Authentifizierung erfordert, können Sie einen <xref:System.Xml.XmlResolver> mit den notwendigen Anmeldeinformationen verwenden.  
+  
+-   Wenn Sie die Ressourcen einschränken möchten, auf die der XSLT\-Vorgang zugreifen kann, können Sie einen <xref:System.Xml.XmlSecureResolver> mit den korrekt festgelegten Einstellungen verwenden.  Verwenden Sie die <xref:System.Xml.XmlSecureResolver>\-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist.  
+  
+-   Wenn Sie das Verhalten anpassen möchten, können Sie eine eigene <xref:System.Xml.XmlResolver>\-Klasse implementieren und diese zum Auflösen von Ressourcen verwenden.  
+  
+-   Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das <xref:System.Xml.XmlResolver>\-Argument `null` angeben.  
+  
+## Siehe auch  
+ [XSLT\-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)   
+ [Auflösen von externen Ressourcen während der XSLT\-Verarbeitung](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)   
+ [Code Access Security](http://msdn.microsoft.com/de-de/23a20143-241d-4fe5-9d9f-3933fd594c03)

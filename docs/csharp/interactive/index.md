@@ -1,5 +1,5 @@
 ---
-title: "C# Interactive | Leitfaden für C#"
+title: "C# Interactive (Leitfaden für C#) | Microsoft-Dokumentation"
 description: Erkunden Sie die C# Interactive-Shell, und verwenden Sie diese, um APIs und Frameworks zu untersuchen.
 keywords: .NET, .NET Core, C#
 ms.date: 06/25/2016
@@ -10,10 +10,10 @@ ms.devlang: csharp
 ms.assetid: abed9e00-2ddc-468e-9cca-d033bd6a7e36
 redirect_url: /dotnet/articles/csharp/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
-ms.openlocfilehash: be503f6bc60ab615be58ebd1531b5363241c9ab3
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 10da3bd3f6e30c2eed56b9c566f5b8edd2a9b242
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e1e95d92123b2874aace0c36005a8a07a6203fc
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Programmierhandbuch (LINQ to XML) (C#)
@@ -39,8 +40,8 @@ Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Program
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Bietet eine Übersicht über die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Klassen und detaillierte Informationen zu drei der wichtigsten Klassen: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, und <xref:System.Xml.Linq.XDocument>.|  
-|[Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Enthält konzeptuelle und aufgabenbasierte Informationen zum Erstellen von XML-Strukturen. XML-Strukturen können mittels funktionaler Konstruktion oder durch Analysieren von XML-Text aus einer Zeichenfolge oder Datei erstellt werden. Sie können auch <xref:System.Xml.XmlReader> verwenden, um eine XML-Struktur aufzufüllen.|  
+|[LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Bietet eine Übersicht über die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> und <xref:System.Xml.Linq.XDocument>.|  
+|[Erstellen von XML-Bäumen (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Enthält konzeptuelle und aufgabenbasierte Informationen zum Erstellen von XML-Strukturen. XML-Strukturen können mittels funktionaler Konstruktion oder durch Analysieren von XML-Text aus einer Zeichenfolge oder Datei erstellt werden. Sie können auch einen <xref:System.Xml.XmlReader> verwenden, um eine XML-Struktur aufzufüllen.|  
 |[Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Enthält ausführliche Informationen zum Erstellen von XML-Strukturen, die Namespaces verwenden.|  
 |[Serializing XML Trees (C#) (Serialisieren von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|Beschreibt mehrere Ansätze für das Serialisieren einer XML-Struktur und enthält Hilfestellung bei der Auswahl des richtigen Ansatzes.|  
 |[LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enthält eine Auflistung und Beschreibung der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Achsenmethoden, die Sie kennen müssen, bevor Sie [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Abfragen schreiben können.|  

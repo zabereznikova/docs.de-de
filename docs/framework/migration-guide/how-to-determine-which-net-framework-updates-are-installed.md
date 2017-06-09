@@ -17,10 +17,11 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e94e4e1036aa474ff011a50daa4a683fbe0ab47d
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 6237bdaf1d12743bee71633acf8cef69c21b414e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Gewusst wie: Bestimmen der installierten .NET Framework-Updates
@@ -43,8 +44,7 @@ Die installierten Updates für jede auf einem Computer installierten Version von
 ## <a name="example"></a>Beispiel  
  Der folgende Code ermittelt programmgesteuert die auf einem Computer installierten .NET Framework-Updates. Sie müssen über Administratorrechte verfügen, um dieses Beispiel ausführen zu können.  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  Das Beispiel führt zu einer Ausgabe, die der folgenden Ausgabe ähnelt:  
   
@@ -80,3 +80,4 @@ Microsoft .NET Framework 4 Extended
  [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
  [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md)   
  [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+

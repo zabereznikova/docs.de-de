@@ -1,0 +1,1 @@
+Punkte pro Zoll (dots per inch, dpi)

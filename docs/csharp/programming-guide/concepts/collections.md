@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8fb5101eabd95dd6574caf344a428afcd4bf648c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 6ce347ec50378590946c756b3adbf64fe855874d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
@@ -31,7 +32,7 @@ Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandte
   
  Eine Auflistung ist eine Klasse. Daher müssen Sie eine Instanzen der Klasse deklarieren, bevor Sie dieser Auflistung Elemente hinzufügen können.  
   
- Wenn die Auflistung nur Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
+ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
   
 > [!NOTE]
 >  Schließen Sie bei den Beispielen in diesem Thema [using](../../../csharp/language-reference/keywords/using-directive.md)-Anweisungen für die `System.Collections.Generic`- und `System.Linq`-Namespaces ein.  
@@ -156,7 +157,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8  
 ```  
   
- Für den Typ der Elemente in der <xref:System.Collections.Generic.List%601> können Sie auch eine eigene Klasse definieren. Im folgenden Beispiel wird die `Galaxy`-Klasse, die von <xref:System.Collections.Generic.List%601> verwendet wird, im Code definiert.  
+ Für den Typ der Elemente in <xref:System.Collections.Generic.List%601> können Sie auch eine eigene Klasse definieren. Im folgenden Beispiel wird die `Galaxy`-Klasse, die von <xref:System.Collections.Generic.List%601> verwendet wird, im Code definiert.  
   
 ```csharp  
 private static void IterateThroughList()  
@@ -204,7 +205,7 @@ public class Galaxy
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic-Klassen  
  Zum Erstellen einer generischen Auflistung verwenden Sie eine der Klassen im <xref:System.Collections.Generic>-Namespace. Eine generische Auflistung ist sinnvoll, wenn jedes Element der Auflistung zum gleichen Datentyp gehört. Eine generische Auflistung erzwingt eine starke Typisierung, da ihr nur Elemente des gewünschten Datentyps hinzugefügt werden können.  
   
- Die folgende Tabelle enthält einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=fullName>-Namespace:  
+ In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=fullName>-Namespace aufgelistet:  
 
 |Klasse|Beschreibung| 
 |---|---|  
@@ -218,17 +219,17 @@ public class Galaxy
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent-Klassen  
- In .NET Framework 4 oder neuer stellen die Auflistungen im <xref:System.Collections.Concurrent>-Namespace effiziente, threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit.  
+ In .NET Framework 4 oder höher stellen die Auflistungen im Namespace <xref:System.Collections.Concurrent> effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit.  
   
- Die Klassen im <xref:System.Collections.Concurrent>-Namespace sollten anstatt den entsprechenden Typen in den <xref:System.Collections.Generic?displayProperty=fullName>- und <xref:System.Collections?displayProperty=fullName>-Namespaces verwendet werden, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../standard/collections/threadsafe/index.md) und <xref:System.Collections.Concurrent>.  
+ Die Klassen im <xref:System.Collections.Concurrent>-Namespace sollten anstelle von entsprechenden Typen in <xref:System.Collections.Generic?displayProperty=fullName>- und <xref:System.Collections?displayProperty=fullName>-Namespaces verwendet werden, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../standard/collections/thread-safe/index.md) und <xref:System.Collections.Concurrent>.  
   
- Einige Klassen im <xref:System.Collections.Concurrent>-Namespace sind <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> und <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ Einige der in die <xref:System.Collections.Concurrent>-Namespaces aufgenommenen Klassen sind <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> und <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections-Klassen  
  Bei den Klassen im <xref:System.Collections?displayProperty=fullName>-Namespace werden Elemente nicht als speziell typisierte Objekte, sondern als Objekte vom Typ `Object` gespeichert.  
   
- Wann immer möglich, sollten Sie die generischen Auflistungen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace oder im <xref:System.Collections.Concurrent>-Namespace anstelle der älteren Typen im `System.Collections`-Namespace verwenden.  
+ Sofern möglich sollten die generischen Auflistungen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace oder <xref:System.Collections.Concurrent>-Namespace anstelle der älteren Typen im `System.Collections`-Namespace verwendet werden.  
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen im `System.Collections`-Namespace aufgelistet:  
   
@@ -313,7 +314,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }  
 ```  
   
- Im folgenden Beispiel wird die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und die <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft des `Dictionary` zum schnellen Auffinden eines Elements durch einen Schlüssel verwendet. Die `Item`-Eigenschaft ermöglicht den Zugriff auf ein Element in der `elements`-Auflistung unter Verwendung des `elements[symbol]`-Codes in C#.  
+ Im folgenden Beispiel werden die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und die <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft von `Dictionary` verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen. Die `Item`-Eigenschaft ermöglicht den Zugriff auf ein Element in der `elements`-Auflistung unter Verwendung des `elements[symbol]`-Codes in C#.  
   
 ```csharp  
 private static void FindInDictionary(string symbol)  
@@ -332,7 +333,7 @@ private static void FindInDictionary(string symbol)
 }  
 ```  
   
- Das folgende Beispiel verwendet stattdessen die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zum schnellen Auffinden eines Elements durch einen Schlüssel.  
+ Im folgenden Beispiel wird stattdessen die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen.  
   
 ```csharp  
 private static void FindInDictionary2(string symbol)  
@@ -396,11 +397,11 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 ## <a name="sorting-a-collection"></a>Sortieren einer Auflistung  
- Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. Im Beispiel werden Instanzen der `Car`-Klasse sortiert, die in <xref:System.Collections.Generic.List%601> gespeichert sind. Die `Car`-Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die erfordert, dass die <xref:System.IComparable%601.CompareTo%2A>-Methode implementiert wird.  
+ Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. In dem Beispiel werden Instanzen der `Car`-Klasse sortiert, die in <xref:System.Collections.Generic.List%601> gespeichert sind. Die `Car`-Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die die Implementierung der <xref:System.IComparable%601.CompareTo%2A>-Methode erfordert.  
   
  Jeder Aufruf der <xref:System.IComparable%601.CompareTo%2A>-Methode führt einen einzelnen Vergleich aus, der für die Sortierung verwendet wird. Vom Benutzer erstellter Code in der `CompareTo`-Methode gibt einen Wert für jeden Vergleich des aktuellen Objekts mit einem anderen Objekt zurück. Der zurückgegebene Wert ist kleiner als Null, wenn das aktuelle Objekt kleiner ist als das andere Objekt, größer als Null, wenn das aktuelle Objekt größer als das andere Objekt ist und Null, wenn beide Objekt gleich groß sind. Dies ermöglicht es Ihnen, in dem Code die Kriterien für größer als, kleiner als und gleich zu definieren.  
   
- In der `ListCars`-Methode sortiert die `cars.Sort()`-Anweisung die Liste. Dieser Aufruf der <xref:System.Collections.Generic.List%601.Sort%2A>-Methode der <xref:System.Collections.Generic.List%601> bewirkt, dass die `CompareTo`-Methode automatisch für die `Car`-Objekte in `List` aufgerufen wird.  
+ In der `ListCars`-Methode sortiert die `cars.Sort()`-Anweisung die Liste. Dieser Aufruf der <xref:System.Collections.Generic.List%601.Sort%2A>-Methode von <xref:System.Collections.Generic.List%601> führt dazu, dass die `CompareTo`-Methode für die `Car`-Objekte in der `List` automatisch aufgerufen wird.  
   
 ```csharp  
 private static void ListCars()  
@@ -474,13 +475,13 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung  
- Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder die <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Vorgehensweise: Zugreifen auf Auflistungsklassen mit Foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
+ Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Vorgehensweise: Zugreifen auf Auflistungsklassen mit Foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
   
  Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#BKMK_KindsOfCollections) weiter oben in diesem Thema beschrieben.  
   
- Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, für die die Implementierung der Methode <xref:System.Collections.IEnumerable.GetEnumerator%2A> erforderlich ist.  
+ Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert.  
   
- Die `GetEnumerator`-Methode gibt eine Instanz der `ColorEnumerator`-Klasse zurück. `ColorEnumerator` implementiert die <xref:System.Collections.IEnumerator>-Schnittstelle, die erfordert, dass die <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft, die <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode und die <xref:System.Collections.IEnumerator.Reset%2A>-Methode implementiert werden.  
+ Die `GetEnumerator`-Methode gibt eine Instanz der `ColorEnumerator`-Klasse zurück. `ColorEnumerator` implementiert die <xref:System.Collections.IEnumerator>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft, der <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode und der <xref:System.Collections.IEnumerator.Reset%2A>-Methode erfordert.  
   
 ```csharp  
 private static void ListColors()  
@@ -593,7 +594,7 @@ private static IEnumerable<int> EvenSequence(
  [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)   
  [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [Paralleles LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
+ [Paralleles LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
  [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)   
  [Erstellen und Bearbeiten von Auflistungen](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
  [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)   

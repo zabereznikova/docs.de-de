@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 84af19189fa3fc510c8d4f8e408cbb2a393d8b8f
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -52,7 +53,7 @@ IntelliSense für XML in Visual Basic bietet wortvervollständigung für Element
   
  Weitere Informationen über die Funktionen von IntelliSense für XML in Visual Basic finden Sie unter [IntelliSense für XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md). Weitere Informationen zum Importieren von XML-Namespaces finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) oder [Seite "Verweise", Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![Link zu Video](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") eine Videoversion dieses Themas finden Sie unter [Video How to: Enable XML IntelliSense in Visual Basic](http://go.microsoft.com/fwlink/?LinkId=102466). Eine entsprechende Videodemo finden Sie unter [Gewusst wie: Aktivieren von XML IntelliSense und Verwenden von XML-Namespaces?](http://go.microsoft.com/fwlink/?LinkId=143035).  
   

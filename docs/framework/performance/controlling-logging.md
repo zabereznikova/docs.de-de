@@ -1,0 +1,118 @@
+---
+title: "Controlling .NET Framework Logging | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "CLR ETW events, logging"
+ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
+caps.latest.revision: 40
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 40
+---
+# Controlling .NET Framework Logging
+Sie können mithilfe der Ereignisablaufverfolgung für Windows \(ETW\) Common Language Runtime \(CLR\)\-Ereignisse aufzeichnen.  Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
+  
+-   Mit den Befehlszeilentools [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) und [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919), die im Windows\-Betriebssystem enthalten sind.  
+  
+-   Mit den [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx)\-Tools im [Windows Performance Toolkit](http://msdn.microsoft.com/library/windows/hardware/hh162945.aspx).  Weitere Informationen zu Xperf finden Sie im [Blog zur Windows\-Leistung](http://go.microsoft.com/fwlink/?LinkId=179509).  
+  
+ Wenn Sie CLR\-Ereignisinformationen erfassen möchten, muss der CLR\-Anbieter auf dem Computer installiert werden.  Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist.  Eine Anbieterliste wird angezeigt.  Diese Liste sollte wie folgt einen Eintrag für den CLR\-Anbieter enthalten.  
+  
+```  
+Provider                                 GUID  
+-------------------------------------------------------------------------------  
+.NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
+```  
+  
+ Wenn der CLR\-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows\-Befehlszeilentools [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) installieren.  Öffnen Sie das Eingabeaufforderungsfenster als Administrator.  Ändern Sie das Eingabeaufforderungsverzeichnis in den Ordner "[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]" \(%WINDIR%\\Microsoft.NET\\Framework\[64\]\\v4.\<.NET\-Version\>\\ \).  Dieser Ordner enthält die Datei "CLR\-ETW.man".  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR\-Anbieter zu installieren:  
+  
+ `wevtutil im CLR-ETW.man`  
+  
+## Erfassen von CLR\-ETW\-Ereignissen  
+ Sie können die Befehlszeilentools [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) und [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) verwenden, um ETW\-Ereignisse zu erfassen. Mit den Tools [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) und [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) können Sie die Ablaufverfolgungsereignisse dekodieren.  
+  
+ Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:  
+  
+-   Anbieter, mit dem kommuniziert werden soll.  
+  
+-   Eine 64\-Bit\-Zahl, die einen Satz von Schlüsselwörtern darstellt.  Jedes Schlüsselwort stellt einen Satz von Ereignissen dar, den der Anbieter aktivieren kann.  Die Zahl stellt einen kombinierten Satz von Schlüsselwörtern dar, die aktiviert werden sollen.  
+  
+-   Eine kleine Zahl, die die Ebene \(den Ausführlichkeitsgrad\) der Protokollierung darstellt.  Ebene 1 ist die am wenigsten ausführliche, Ebene 5 die ausführlichste.  Ebene 0 ist ein Standard mit anbieterspezifischer Bedeutung.  
+  
+#### So erfassen Sie CLR\-ETW\-Ereignisse mit Logman  
+  
+1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+  
+     `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
+  
+     Dabei gilt:  
+  
+    -   Durch den `-p`\-Parameter wird die Anbieter\-GUID identifiziert.  
+  
+    -   `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
+  
+    -   `0x5` legt die Ebene der Protokollierung fest \(in diesem Fall "Ausführlich" \(5\)\).  
+  
+    -   Mit dem `-ets`\-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs\-Sitzungen zu senden.  
+  
+    -   Der `-ct perf`\-Parameter gibt an, dass mit der `QueryPerformanceCounter`\-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
+  
+2.  Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
+  
+     `logman stop clrevents -ets`  
+  
+     Mit diesem Befehl wird eine binäre Ablaufverfolgungsdatei mit dem Namen "clrevents.etl" erstellt.  
+  
+#### So erfassen Sie CLR\-ETW\-Ereignisse mit XPerf  
+  
+1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+  
+     `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
+  
+     Dabei ist die GUID die GUID des CLR\-ETW\-Anbieters, und `0x1CCBD:5` verfolgt sämtliche Vorgänge auf und unterhalb von Ebene 5 \(Ausführlich\).  
+  
+2.  Geben Sie Folgendes ein, um die Ablaufverfolgung zu beenden:  
+  
+     `Xperf -stop clr`  
+  
+     Mit diesem Befehl wird eine Ablaufverfolgungsdatei mit dem Namen "clrevents.etl" erstellt.  
+  
+## Anzeigen von CLR\-ETW\-Ereignissen  
+ Verwenden Sie die unten aufgeführten Befehle, um die CLR\-ETW\-Ereignisse anzuzeigen.  Eine Beschreibung der Ereignisse finden Sie unter [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md).  
+  
+#### So zeigen Sie CLR\-ETW\-Ereignisse mit Tracerpt an  
+  
+-   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+  
+     `tracerpt clrevents.etl`  
+  
+     Mit diesem Befehl werden zwei Dateien erstellt: "dumpfile.xml" und "summary.txt".  In der Datei "dumpfile.xml" werden alle Ereignisse aufgeführt, wohingegen "summary.txt" eine Zusammenfassung der Ereignisse enthält.  
+  
+#### So zeigen Sie CLR\-ETW\-Ereignisse mit Xperf an  
+  
+-   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+  
+     `xperf clrevents.etl`  
+  
+     Mit diesem Befehl wird der ETL\-Datei\-Viewer von Xperf geöffnet.  In diesem Viewer werden die CLR\-Ereignisse in der Ansicht **Generische Ereignisse** angezeigt.  Zum Anzeigen eines nach Typen kategorisierten Datenrasters von Ereignissen wählen Sie in der Ansicht einen Zeitraum aus, klicken Sie dann mit der rechten Maustaste, und wählen Sie **Zusammenfassung** aus.  
+  
+#### So konvertieren Sie die ETL\-Datei in eine CSV\-Datei  
+  
+-   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+  
+     `xperf -i clrevents.etl -f clrevents.csv`  
+  
+     Dieser Befehl bewirkt, dass XPerf die Ereignisse als CSV\-Datei \(CSV\) sichert, die Sie anzeigen können.  Da für unterschiedliche Ereignisse auch unterschiedliche Felder verfügbar sind, enthält diese CSV\-Datei vor den Daten mehrere Headerzeilen.  Das erste Feld jeder Zeile ist für den Ereignistyp vorgesehen, der den Header angibt, der zum Ermitteln der weiteren Felder verwendet werden soll.  
+  
+## Siehe auch  
+ [Windows Performance Toolkit](http://go.microsoft.com/fwlink/?LinkID=161141)   
+ [ETW Events in the Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

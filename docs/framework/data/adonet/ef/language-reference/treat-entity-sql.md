@@ -1,0 +1,84 @@
+---
+title: "TREAT (Entity SQL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "ESQL"
+ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
+caps.latest.revision: 4
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 4
+---
+# TREAT (Entity SQL)
+Behandelt ein Objekt eines bestimmten Basistyps als Objekt des angegebenen abgeleiteten Typs.  
+  
+## Syntax  
+  
+```  
+  
+TREAT (expression as type)  
+```  
+  
+## Argumente  
+ `expression`  
+ Jeder gültige Abfrageausdruck, der eine Entität zurückgibt.  
+  
+> [!NOTE]
+>  Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
+  
+ `type`  
+ Ein Entitätstyp. Der Typ muss mit einem Namespace qualifiziert werden.  
+  
+> [!NOTE]
+>  Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
+  
+## Rückgabewert  
+ Ein Wert des angegebenen Datentyps.  
+  
+## Hinweise  
+ TREAT wird zum Umwandeln zwischen verknüpften Klassen verwendet. Wenn z. B. `Employee` von `Person` abgeleitet ist und "p" vom Typ `Person` ist, wandelt `TREAT(p AS NamespaceName.Employee)` eine generische `Person`\-Instanz in `Employee` um. Das bedeutet, dass "p" als `Employee` behandelt werden kann.  
+  
+ TREAT wird in Vererbungsszenarios verwendet, in denen eine Abfrage wie die folgende möglich ist:  
+  
+```  
+SELECT TREAT(p AS NamespaceName.Employee)  
+FROM ContainerName.Person AS p  
+WHERE p IS OF (NamespaceName.Employee)   
+```  
+  
+ In dieser Abfrage werden `Person`\-Entitäten in den `Employee`\-Typ umgewandelt. Wenn der Wert von "p" nicht tatsächlich vom Typ `Employee` ist, gibt der Ausdruck den Wert `null` zurück.  
+  
+> [!NOTE]
+>  Beim Typ des angegebenen Ausdrucks```Employee```muss es sich um einen Untertyp des angegebenen Datentyps `Person` oder umgekehrt handeln. Andernfalls führt der Ausdruck zu einem Kompilierungsfehler.  
+  
+ In der folgenden Tabelle wird das Verhalten von TREAT für einige typische und weniger typische Muster dargestellt. Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:  
+  
+|Muster|Verhalten|  
+|------------|---------------|  
+|`TREAT (null AS EntityType)`|Gibt `DbNull`zurück.|  
+|`TREAT (null AS ComplexType)`|Löst eine Ausnahme aus.|  
+|`TREAT (null AS RowType)`|Löst eine Ausnahme aus.|  
+|`TREAT (EntityType AS EntityType)`|Gibt einen `EntityType` oder `null` zurück.|  
+|`TREAT (ComplexType AS ComplexType)`|Löst eine Ausnahme aus.|  
+|`TREAT (RowType AS RowType)`|Löst eine Ausnahme aus.|  
+  
+## Beispiel  
+ In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Abfrage wird der TREAT\-Operator verwendet, um ein Objekt des Typs "Kurs" in eine Auflistung von Objekten des Typs "OnsiteCourse" umzuwandeln. Die Abfrage basiert auf dem [Modell "School"](http://msdn.microsoft.com/de-de/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+  
+ [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
+  
+## Siehe auch  
+ [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
+ [Strukturierte Typen, die NULL\-Werte zulassen](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

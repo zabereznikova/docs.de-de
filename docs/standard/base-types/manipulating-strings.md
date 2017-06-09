@@ -1,40 +1,43 @@
 ---
-title: Bearbeiten von Zeichenfolgen
-description: Bearbeiten von Zeichenfolgen
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: da3c277e-b06e-48bd-ae1f-1e7e4240b93e
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 0ad6a7ef456e7967b3c23e58cd7afa97a4b786de
-ms.lasthandoff: 03/02/2017
-
+title: "Bearbeiten von Zeichenfolgen in .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Bearbeiten von Zeichenfolgen"
+  - "Zeichenfolgen [.NET Framework], Bearbeiten"
+ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
+caps.latest.revision: 11
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 11
 ---
-
-# <a name="manipulating-strings"></a>Bearbeiten von Zeichenfolgen
-
-.NET bietet einen umfangreichen Satz von Routinen, mit denen Sie Zeichenfolgen effizient erstellen, vergleichen und ändern sowie große Mengen von Text und Daten schnell analysieren können, um Textmuster zu suchen, zu entfernen und zu ersetzen.
-
-## <a name="in-this-section"></a>In diesem Abschnitt
-
-[Best Practices für die Verwendung von Zeichenfolgen:](best-practices-strings.md) untersucht die Methoden für Sortierung, Vergleich und Schreibweise in .NET und stellt Empfehlungen für das Auswählen einer Methode zur Zeichenfolgenverarbeitung bereit. 
-
-[Reguläre Ausdrücke:](regular-expressions.md) enthält ausführliche Informationen zu regulären .NET-Ausdrücken, einschließlich Sprachelementen, Verhalten von regulären Ausdrücken und Beispielen.
-
-[Grundlegende Zeichenfolgenoperationen:](basic-string-operations.md) beschreibt Zeichenfolgenoperationen, die von den Klassen @System.String und @System.Text.StringBuilder bereitgestellt werden, einschließlich der Erstellung neuer Zeichenfolgen aus Bytearrays, des Vergleichs von Zeichenfolgenwerten und der Änderung vorhandener Zeichenfolgen.
-
-[Zeichencodierung in .NET:](character-encoding.md) beschreibt, wie Zeichenformate wie Unicode codiert und decodiert werden.
-
-[Typkonvertierung](type-conversion.md): Beschreibt, wie Sie einen Typ in einen anderen konvertieren.
-
-[Formatieren von Typen](formatting-types.md): Beschreibt, wie Zeichenfolgen über die Zeichenfolgen-Formatbezeichner formatiert werden.
-
-[Analysieren von Zeichenfolgen:](parsing-strings.md) beschreibt das Konvertieren von Zeichenfolgen in Typen.
-
-
+# Bearbeiten von Zeichenfolgen in .NET Framework
+.NET Framework stellt eine umfangreiche Palette an effektiven Routinen bereit, mit denen Sie Zeichenfolgen erstellen, vergleichen und ändern können. Außerdem lassen sich große Text\- oder Datenmengen schnell analysieren, um nach Textmustern zu suchen, diese zu entfernen bzw. zu ersetzen.  
+  
+## In diesem Abschnitt  
+ [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)  
+ Untersucht Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen im .NET Framework und enthält Empfehlungen für die Auswahl einer Zeichenfolgenbehandlungsmethode.  
+  
+ [Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md)  
+ Enthält ausführliche Informationen zu regulären .NET Framework\-Ausdrücken. Dies beinhaltet Sprachelemente, das Verhalten regulärer Ausdrücke und Beispiele.  
+  
+ [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
+ Beschreibt von den <xref:System.String?displayProperty=fullName>\- und <xref:System.Text.StringBuilder?displayProperty=fullName>\-Klassen bereitgestellte Zeichenfolgenvorgänge. Dazu zählen das Erstellen neuer Zeichenfolgen aus Bytearrays, Vergleichen von Zeichenfolgenwerten und Ändern von vorhandenen Zeichenfolgen.  
+  
+## Verwandte Abschnitte  
+ [Typkonvertierung in .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
+ Erklärt die verschiedenen Techniken und Regeln für die Typkonvertierung mit .NET Framework.  
+  
+ [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
+ Bietet eine Übersicht über das Verwenden der Basisklassenbibliothek zum Implementieren der Formatierung, über das Formatieren numerischer Typen, das Formatieren von Zeichenfolgentypen und das Formatieren für eine bestimmte Kultur.  
+  
+ [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)  
+ Beschreibt, wie Objekte mit den Werten initialisiert werden, die durch Zeichenfolgenentsprechungen dieser Objekte beschrieben werden.  Das Verarbeiten ist die Umkehroperation zum Formatieren.

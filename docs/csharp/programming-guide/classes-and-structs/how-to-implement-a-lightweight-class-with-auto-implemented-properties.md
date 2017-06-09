@@ -1,42 +1,61 @@
 ---
-title: "Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Automatisch implementierte Eigenschaften [C#]"
-  - "Eigenschaften [C#], Automatisch implementiert"
+title: 'Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- auto-implemented properties [C#]
+- properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 78f84351910ff542df13697005a0257882cae623
+ms.contentlocale: de-de
+ms.lasthandoff: 05/15/2017
+
 ---
-# Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)
-In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse gezeigt, die nur zum Kapseln einer Reihe von automatisch implementierten Eigenschaften dient.  Verwenden Sie diese Konstruktart anstelle einer Struktur, wenn Sie eine Verweistypsemantik verwenden müssen.  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)
+In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse gezeigt, die nur zum Kapseln einer Reihe von automatisch implementierten Eigenschaften dient. Verwenden Sie diese Konstruktart anstelle einer Struktur, wenn Sie eine Verweistypsemantik verwenden müssen.  
   
- Für das Erstellen einer unveränderlichen Eigenschaft gibt es zwei Möglichkeiten.  Sie können deklarieren, dass der [set](../../../csharp/language-reference/keywords/set.md)\-Accessor [privat](../../../csharp/language-reference/keywords/private.md) ist.  Die Eigenschaft kann nur im Typ festgelegt werden. Kunden können sie jedoch nicht verändern.  Sie können stattdessen einfach den [get](../../../csharp/language-reference/keywords/get.md)\-Accessor deklarieren. Dieser macht die Eigenschaft mit Ausnahme im Konstruktor des Typs überall unveränderlich.  
+ Für das Erstellen einer unveränderlichen Eigenschaft gibt es zwei Möglichkeiten.  Sie können deklarieren, dass die [Set](../../../csharp/language-reference/keywords/set.md)-Zugriffsmethode [privat](../../../csharp/language-reference/keywords/private.md) ist.  Die Eigenschaft kann nur im Typ festgelegt werden. Kunden können sie jedoch nicht verändern.  Sie können stattdessen einfach die [Get](../../../csharp/language-reference/keywords/get.md)-Zugriffsmethode deklarieren. Dieser macht die Eigenschaft mit Ausnahme im Konstruktor des Typs überall unveränderlich.  
   
- Beim Deklarieren eines privaten `set`\-Accessors können Sie einen Objektinitialisierer nicht verwenden, um die Eigenschaft zu initialisieren.  Sie müssen eine Konstruktor oder eine Factorymethode verwenden.  
+ Beim Deklarieren eines privaten `set`-Accessors können Sie einen Objektinitialisierer nicht verwenden, um die Eigenschaft zu initialisieren. Sie müssen eine Konstruktor oder eine Factorymethode verwenden.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei Möglichkeiten für die Implementierung einer unveränderlichen Klasse gezeigt, die über automatisch implementierte Eigenschaften verfügt.  Mit beiden Möglichkeiten wird jeweils eine der Eigenschaften mit einer privaten `set` und eine der Eigenschaft mit einer `get` deklariert.  Die erste Klasse verwendet einen Konstruktor nur zum Initialisieren der Eigenschaften, und die zweite Klasse verwendet eine statische Factorymethode, die einen Konstruktor aufruft.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden zwei Möglichkeiten für die Implementierung einer unveränderlichen Klasse gezeigt, die über automatisch implementierte Eigenschaften verfügt. Mit beiden Möglichkeiten wird jeweils eine der Eigenschaften mit einer privaten `set` und eine der Eigenschaft mit einer `get` deklariert.  Die erste Klasse verwendet einen Konstruktor nur zum Initialisieren der Eigenschaften, und die zweite Klasse verwendet eine statische Factorymethode, die einen Konstruktor aufruft.  
   
-```c#  
-// This class is immutable. After an object is created,   
-    // it cannot be modified from outside the class. It uses a   
-    // constructor to initialize its properties.   
+```csharp  
+// This class is immutable. After an object is created,   
+    // it cannot be modified from outside the class. It uses a   
+    // constructor to initialize its properties.   
     class Contact  
     {  
-        // Read-only properties.   
-        public string Name { get; }  
-        public string Address { get; private set; }  
+        // Read-only properties.   
+        public string Name { get; }  
+        public string Address { get; private set; }  
   
-        // Public constructor.   
+        // Public constructor.   
         public Contact(string contactName, string contactAddress)  
         {  
             Name = contactName;  
@@ -44,60 +63,60 @@ In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse g
         }  
     }  
   
-    // This class is immutable. After an object is created,   
-    // it cannot be modified from outside the class. It uses a   
-    // static method and private constructor to initialize its properties.      
-    public class Contact2  
+    // This class is immutable. After an object is created,   
+    // it cannot be modified from outside the class. It uses a   
+    // static method and private constructor to initialize its properties.      
+    public class Contact2  
     {  
-        // Read-only properties.   
-        public string Name { get; private set; }  
-        public string Address { get; }  
+        // Read-only properties.   
+        public string Name { get; private set; }  
+        public string Address { get; }  
   
-        // Private constructor.   
+        // Private constructor.   
         private Contact2(string contactName, string contactAddress)  
         {  
             Name = contactName;  
             Address = contactAddress;                 
         }  
   
-        // Public factory method.   
-        public static Contact2 CreateContact(string name, string address)  
+        // Public factory method.   
+        public static Contact2 CreateContact(string name, string address)  
         {  
-            return new Contact2(name, address);  
+            return new Contact2(name, address);  
         }  
     }  
   
-    public class Program  
+    public class Program  
     {   
-        static void Main()  
+        static void Main()  
         {  
-            // Some simple data sources.   
+            // Some simple data sources.   
             string[] names = {"Terry Adams","Fadi Fakhouri", "Hanying Feng",   
                               "Cesar Garcia", "Debra Garcia"};  
             string[] addresses = {"123 Main St.", "345 Cypress Ave.", "678 1st Ave",  
                                   "12 108th St.", "89 E. 42nd St."};  
   
-            // Simple query to demonstrate object creation in select clause.   
-            // Create Contact objects by using a constructor.   
+            // Simple query to demonstrate object creation in select clause.   
+            // Create Contact objects by using a constructor.   
             var query1 = from i in Enumerable.Range(0, 5)  
-                        select new Contact(names[i], addresses[i]);  
+                        select new Contact(names[i], addresses[i]);  
   
-            // List elements cannot be modified by client code.   
+            // List elements cannot be modified by client code.   
             var list = query1.ToList();  
             foreach (var contact in list)  
             {  
                 Console.WriteLine("{0}, {1}", contact.Name, contact.Address);  
             }  
   
-            // Create Contact2 objects by using a static factory method.   
+            // Create Contact2 objects by using a static factory method.   
             var query2 = from i in Enumerable.Range(0, 5)  
                          select Contact2.CreateContact(names[i], addresses[i]);  
   
-            // Console output is identical to query1.   
+            // Console output is identical to query1.   
             var list2 = query2.ToList();  
   
-            // List elements cannot be modified by client code.   
-            // CS0272:   
+            // List elements cannot be modified by client code.   
+            // CS0272:   
             // list2[0].Name = "Eugene Zabokritski";   
   
             // Keep the console open in debug mode.  
@@ -113,12 +132,12 @@ In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse g
     Cesar Garcia, 12 108th St.  
     Debra Garcia, 89 E. 42nd St.  
 */  
-  
 ```  
   
- Der Compiler erstellt Unterstützungsfelder für jede automatisch implementierte Eigenschaft.  Es ist nicht möglich, über den Quellcode direkt auf die Felder zuzugreifen.  
+ Der Compiler erstellt Unterstützungsfelder für jede automatisch implementierte Eigenschaft. Es ist nicht möglich, über den Quellcode direkt auf die Felder zuzugreifen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
- [Objekt\- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+ [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+

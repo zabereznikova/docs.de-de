@@ -2,6 +2,7 @@
 title: "Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -16,19 +17,20 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND
 
 Die <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>-Eigenschaft, die in .NET Framework 2.0 eingeführt wurde, ermöglicht einer Anwendung die Registrierung eines Handlewerts für das übergeordnete Fenster, sodass jedes Benutzeroberflächenelement, das auf den Schlüssel zugreifen muss (wie etwa eine PIN-Eingabeaufforderung oder ein Zustimmungsdialogfeld), als untergeordnetes modales Fenster des angegebenen Fensters geöffnet wird. Von Anwendungen mit der Zielplattform .NET Framework 4.7 an kann dieser Eigenschaft ein Fensterhandle (HWND) zugewiesen werden.
 
-In Versionen von .NET Framework bis einschließlich .NET Framework 4.6.2 wurde als zugewiesener Wert der <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>-Eigenschaft ein <xref:System.IntPtr> erwartet, der den Speicherort im Arbeitsspeicher angibt, an dem sich der HWND-Wert befindet. In Windows 7 und früheren Versionen des Windows-Betriebssystems blieb das Festlegen der Eigenschaft auf `form.Handle` ohne Auswirkung, in Windows 8 und späteren Versionen führt es jedoch zu einem <xref:System.Security.Cryptography> mit der Nachricht „Der Parameter ist falsch“.
+In Versionen von .NET Framework bis einschließlich .NET Framework 4.6.2 wurde als zugewiesener Wert der <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>-Eigenschaft ein <xref:System.IntPtr>-Objekt erwartet, das den Speicherort im Arbeitsspeicher angibt, an dem sich der HWND-Wert befindet. In Windows 7 und früheren Versionen des Windows-Betriebssystems blieb das Festlegen der Eigenschaft auf `form.Handle` ohne Auswirkung, in Windows 8 und späteren Versionen führt es jedoch zu einem <xref:System.Security.Cryptography> mit der Nachricht „Der Parameter ist falsch“.
 
-Von Apps für die Zielplattform .NET Framework 4.7 an kann eine Windows Forms-Anwendung die <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>-Eigenschaft mit Code wie dem folgenden festlegen:
+Bei Apps mit .NET Framework 4.7 und höher als Zielplattform kann eine Windows Forms-Anwendung die <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>-Eigenschaft mit Code wie dem folgenden festlegen:
 
 ```csharp
 cspParameters.ParentWindowHandle = form.Handle;
@@ -44,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Problemumgehung
 
-Entwickler, die bestimmt hatten, dass der richtige Wert die Adresse des Speicherorts im Arbeitsspeicher war, der den `form.Handle`-Wert enthielt, können sich gegen dieses geänderte Verhalten entscheiden, indem sie den Schalter <xref:System.Security.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` auf `true` festlegen:
+Entwickler, die bestimmt hatten, dass der richtige Wert die Adresse des Speicherorts im Arbeitsspeicher war, der den `form.Handle`-Wert enthielt, können sich gegen dieses geänderte Verhalten entscheiden, indem sie den <xref:System.Security.AppContext>-Schalter `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` auf `true` festlegen:
 
-- Durch programmgesteuertes Festlegen von Kompatibilitätsoptionen für die [AppContext](assetID:///T:System.Security.AppContext)-Instanz.
+- Durch programmgesteuertes Festlegen von Kompatibilitätsoptionen für die <xref:System.Security.AppContext>-Instanz.
 
 - Durch Hinzufügen der folgenden Zeile zum Abschnitt `<runtime>` der app.config-Datei:
    

@@ -1,54 +1,71 @@
 ---
-title: "How to: Create a Directory in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "directories [Visual Basic], creating"
-  - "folders [Visual Basic], creating"
+title: 'Vorgehensweise: Erstellen eines Verzeichnisses in Visual Basic'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- directories [Visual Basic], creating
+- folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# How to: Create a Directory in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 81afe64204fda468f452f86171b15080f9c3d948
+ms.contentlocale: de-de
+ms.lasthandoff: 05/22/2017
 
-Verwenden Sie die `CreateDirectory`\-Methode des `My.Computer.FileSystem`\-Objekts zum Erstellen von Verzeichnissen.  
+---
+# <a name="how-to-create-a-directory-in-visual-basic"></a>Gewusst wie: Erstellen eines Verzeichnisses in Visual Basic
+Verwenden Sie die `CreateDirectory`-Methode des `My.Computer.FileSystem`-Objekts, um Verzeichnisse zu erstellen.  
   
- Wenn das Verzeichnis bereits vorhanden ist, wird keine Ausnahme ausgelöst.  
+ Wenn das Verzeichnis bereits vorhanden ist, werden keine Ausnahmen ausgelöst.  
   
-### So erstellen Sie ein Verzeichnis  
+### <a name="to-create-a-directory"></a>So erstellen Sie ein Verzeichnis  
   
--   Verwenden Sie die `CreateDirectory`\-Methode, und geben Sie den vollständigen Pfad für das zu erstellende Verzeichnis an.  In diesem Beispiel wird das Verzeichnis `NewDirectory` unter `C:\Documents and Settings\All Users\Documents` erstellt.  
+-   Verwenden Sie die `CreateDirectory`-Methode, indem Sie den vollständigen Pfad des Speicherorts angeben, an dem das Verzeichnis erstellt werden soll. Dieses Beispiel erstellt das Verzeichnis `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.  
   
      [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
   
-## Robuste Programmierung  
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Verzeichnisname ist falsch formatiert.  Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen \(<xref:System.ArgumentException>\).  
+-   Der Name des Verzeichnisses ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>).  
   
--   Das übergeordnete Verzeichnis des zu erstellenden Verzeichnisses ist schreibgeschützt \(<xref:System.IO.IOException>\).  
+-   Das übergeordnete Verzeichnis des zu erstellenden Verzeichnisses ist schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Verzeichnisname ist `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Der Name des Verzeichnisses ist `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Verzeichnisname ist zu lang \(<xref:System.IO.PathTooLongException>\).  
+-   Der Name des Verzeichnisses ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Verzeichnisname besteht nur aus einem Doppelpunkt ":" \(<xref:System.NotSupportedException>\).  
+-   Der Name des Verzeichnisses ist ein Doppelpunkt „:“ (<xref:System.NotSupportedException>).  
   
--   Der Benutzer ist nicht zum Erstellen des Verzeichnisses berechtigt \(<xref:System.UnauthorizedAccessException>\).  
+-   Der Benutzer verfügt über keine Berechtigungen zum Erstellen des Verzeichnisses (<xref:System.UnauthorizedAccessException>).  
   
--   Dem Benutzer fehlen Berechtigungen in einer teilweise vertrauenswürdigen Situation \(<xref:System.Security.SecurityException>\).  
+-   Der Benutzer verfügt über keine Berechtigung in einem teilweise vertrauenswürdigen Kontext (<xref:System.Security.SecurityException>).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   
- [Creating, Deleting, and Moving Files and Directories](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+ [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
