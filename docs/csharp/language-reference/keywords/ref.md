@@ -45,17 +45,17 @@ Das Schlüsselwort `ref` bewirkt, dass ein Argument durch einen Verweis, nicht d
   
  Um einen `ref`-Parameter zu verwenden, müssen sowohl die Methodendefinition als auch die aufrufende Methode explizit das Schlüsselwort `ref` verwenden, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csrefKeywordsMethodParams#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]  
   
  Ein Argument, das an einen `ref`-Parameter übergeben wird, muss vor der Übergabe initialisiert werden. Dies unterscheidet sich von den `out`-Parametern, deren Argumente nicht explizit initialisiert werden müssen, bevor sie übergeben werden. Weitere Informationen finden Sie unter [out](../../../csharp/language-reference/keywords/out.md).  
   
  Member einer Klasse können keine Signaturen haben, die sich nur durch `ref` und `out` voneinander unterscheiden. Es tritt ein Compilerfehler auf, wenn der einzige Unterschied zwischen beiden Member eines Typs der ist, dass einer von ihnen über einen `ref`-Parameter und der andere über einen `out`-Parameter verfügt. Der folgende Code wird z. B. nicht kompiliert.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]  
   
  Allerdings ist eine Überladung möglich, wenn eine Methode einen `ref`- oder `out`-Parameter hat und die andere über einen Werteparameter verfügt, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csrefKeywordsMethodParams#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#7](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]  
   
  In anderen Situationen, die eine Signaturabstimmung benötigen, z. B. beim Ausblenden oder Überschreiben, sind `ref` und `out` Bestandteil der Signatur und passen nicht zueinander.  
   
@@ -72,7 +72,7 @@ Das Schlüsselwort `ref` bewirkt, dass ein Argument durch einen Verweis, nicht d
 ## <a name="example"></a>Beispiel  
  Die vorherigen Beispiele zeigen, was passiert, wenn Sie Werttypen durch einen Verweis übergeben. Sie können auch das Schlüsselwort `ref` verwenden, um Verweistypen zu übergeben. Die Übergabe eines Verweistyps durch einen Verweis ermöglicht es der aufgerufenen Methode, das Objekt in der aufrufenden Methode, auf die der Verweisparameter verweist, zu ersetzen. Der Speicherort des Objekts wird als Wert des Verweisparameters an die Methode übergeben. Wenn Sie den Wert am Speicherort des Parameters ändern (um auf ein neues Objekt zu verweisen), ändern Sie auch den Speicherort, auf den der Aufrufer verweist. Im folgenden Beispiel wird eine Instanz eines Verweistyps als ein `ref`-Parameter übergeben. Weitere Informationen zum Übergeben von Verweistypen durch einen Wert und durch einen Verweis finden Sie unter [Übergeben von Verweistypparametern](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).  
   
- [!code-cs[csrefKeywordsMethodParams#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#8](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
