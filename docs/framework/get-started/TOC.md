@@ -1,5 +1,0 @@
-# [Erste Schritte](index.md)
-## [Übersicht](overview.md)
-## [.NET Framework und Out-of-Band-Releases](the-net-framework-and-out-of-band-releases.md)
-## [.NET Core und Open-Source](net-core-and-open-source.md)
-## [Systemanforderungen](system-requirements.md)
