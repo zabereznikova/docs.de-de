@@ -52,7 +52,7 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
 
 1. Geben Sie `date = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
 
-   Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des @System.DateTime-Werts angezeigt. Darüber hinaus wird der Wert der Variablen in den Fenstern **Auto** und **Lokal** aktualisiert.
+   Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des @System.DateTime -Werts angezeigt. Darüber hinaus wird der Wert der Variablen in den Fenstern **Auto** und **Lokal** aktualisiert.
 
    ![Auto-Fenster und Direktfenster](./media/debugging-with-visual-studio/autosimmediate.png)
 

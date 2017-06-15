@@ -68,7 +68,7 @@ Nachdem Sie diese Änderungen durchgeführt haben, sollten Sie erneut `dotnet re
 Jetzt können Sie damit beginnen, Daten aus dem Web abzurufen. In dieser Anwendung lesen Sie Informationen aus der [GitHub-API](https://developer.github.com/v3/) ein. Beginnen wir damit, Informationen zu den Projekten unterhalb der Kategorie [.NET Foundation](http://www.dotnetfoundation.org/) einzulesen. Hierzu senden Sie zunächst eine Anforderung an die GitHub-API, um Informationen zu den Projekten abzurufen. Der verwendete Endpunkt lautet [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Sie möchten alle Informationen zu diesen Projekten abrufen, deshalb verwenden Sie eine HTTP GET-Anforderung.
 Ihr Browser verwendet ebenfalls HTTP GET-Anforderungen, deshalb können Sie diese URL in Ihren Browser einfügen, um zu sehen, welche Informationen abgerufen und verarbeitet werden.
 
-Sie verwenden die @System.Net.Http.HttpClient Klasse zum Ausführen der Webanforderungen. Wie alle modernen .NET-APIs unterstützt @System.Net.Http.HttpClient nur asynchrone Methoden für APIs mit langer Ausführungszeit.
+Sie verwenden die @System.Net.Http.HttpClient -Klasse zum Ausführen der Webanforderungen. Wie alle modernen .NET-APIs unterstützt @System.Net.Http.HttpClient nur asynchrone Methoden für APIs mit langer Ausführungszeit.
 Sie beginnen mit dem Erstellen einer asynchronen Methode. Sie vervollständigen die Implementierung, wenn Sie die Funktionalität der Anwendung erstellen. Öffnen Sie zunächst die Datei `program.cs` in Ihrem Projektverzeichnis, und fügen Sie der `Program`-Klasse die folgende Methode hinzu:
 
 ```csharp
