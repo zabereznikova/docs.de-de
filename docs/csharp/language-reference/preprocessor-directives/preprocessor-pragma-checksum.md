@@ -1,5 +1,5 @@
 ---
-title: "#pragma-Prüfsumme (C#-Referenz) | Microsoft-Dokumentation"
+title: "#<a name=\"pragma-checksum-c-reference--microsoft-docs\"></a>pragma-Prüfsumme (C#-Referenz) | Microsoft-Dokumentation"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -41,7 +41,7 @@ Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp]
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -66,7 +66,7 @@ Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp]
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -80,3 +80,4 @@ class TestClass
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
+
