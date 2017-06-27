@@ -49,14 +49,14 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
     |Zeichen|Beschreibung|  
     |---------------|-----------------|  
     |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch cref-Verweise hinzugefügt werden.|  
-    |T|Typ: Klasse, Schnittstelle, Struktur, Auflistung, Delegat|  
+    |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|  
     |F|Feld|  
     |P|Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften)|  
     |M|Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.)|  
     |E|event|  
     |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Vom C#-Compiler werden Fehlerinformationen für Links erstellt, die nicht aufgelöst werden können.|  
   
--   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, der bzw. die einschließende(n) Typ(en) und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Nummernzeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element direkt im Namen ein Nummernzeichen enthält. Der vollqualifizierte Name des String-Konstruktors würde beispielsweise „System.String.#ctor“ lauten.  
+-   Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, der oder die einschließenden Typen und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Rautezeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element direkt im Namen ein Rautezeichen enthält. Der vollqualifizierte Name des String-Konstruktors würde beispielsweise „System.String.#ctor“ lauten.  
   
 -   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer .NET Framework-Signatur:  
   
@@ -78,7 +78,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
     -   ELEMENT_TYPE_GENERICARRAY wird als [?] dargestellt, das auf den Elementtyp des Arrays folgt. Dies wird nie vom C#-Compiler generiert.  
   
-    -   ELEMENT_TYPE_ARRAY wird als [*lowerbound*:`size`,*lowerbound*:`size`] dargestellt, wobei die Anzahl von Kommas durch den Rang (1) berechnet wird und die untere Grenze sowie die Größe jeder Dimension – sofern bekannt – dezimal dargestellt werden. Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen. Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der Doppelpunkt (:) ebenfalls ausgelassen werden. [1:,1:] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.  
+    -   ELEMENT_TYPE_ARRAY wird als [*lowerbound*:`size`,*lowerbound*:`size`] dargestellt, wobei die Anzahl von Kommas als Rang minus 1 berechnet wird und die untere Grenze sowie die Größe jeder Dimension – sofern bekannt – dezimal dargestellt werden. Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen. Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der Doppelpunkt (:) ebenfalls ausgelassen werden. [1:,1:] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.  
   
     -   ELEMENT_TYPE_FNPTR wird als „=FUNC:`type`(*signature*)“ dargestellt, wobei `type` den Rückgabetyp angibt und es sich bei *signature* um die Argumente der Methode handelt. Sind keine Argumente vorhanden, werden keine Klammern verwendet. Dies wird nie vom C#-Compiler generiert.  
   
