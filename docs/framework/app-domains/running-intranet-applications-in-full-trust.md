@@ -1,43 +1,48 @@
 ---
-title: "Ausf&#252;hren von Intranetanwendungen mit voller Vertrauensw&#252;rdigkeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Volle Vertrauenswürdigkeit, Ausführen von Intranetanwendungen mit"
-  - "Intranetanwendungen, Ausführen mit voller Vertrauenswürdigkeit"
-  - "Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit"
+title: "Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full trust, running intranet applications in
+- intranet applications, running in full trust
+- running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
+ms.openlocfilehash: f80832a0c0220183a7386bb0273e5a11d9eee6df
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Ausf&#252;hren von Intranetanwendungen mit voller Vertrauensw&#252;rdigkeit
-Ab .NET Framework 3.5 Service Pack 1 \(SP1\) können Anwendungen und ihre Bibliotheksassemblys als vollständig vertrauenswürdige Assemblys von einer Netzwerkfreigabe ausgeführt werden.  Der <xref:System.Security.SecurityZone>\-Zonenbeweis wird automatisch Assemblys hinzugefügt, die von einer Freigabe im Intranet geladen werden.  Dieser Beweis gibt solchen Assemblys denselben Berechtigungssatz \(üblicherweise vollständig vertrauenswürdig\) wie den Assemblys, die sich auf dem Computer befinden.  Diese Funktionalität gilt nicht für ClickOnce\-Anwendungen oder für Anwendungen, die darauf ausgerichtet sind, auf einem Host ausgeführt zu werden.  
+# <a name="running-intranet-applications-in-full-trust"></a>Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit
+Ab .NET Framework version 3.5 Service Pack 1 (SP1) können Anwendungen und deren Bibliothekassemblys als Assemblys mit voller Vertrauenswürdigkeit von einer Netzwerkfreigabe ausgeführt werden. Der Zonenbeweis <xref:System.Security.SecurityZone.MyComputer> wird automatisch zu Assemblys hinzugefügt, die aus einer Intranetfreigabe geladen wurden. Durch diesen Beweis erhalten alle Assemblys den gleichen Satz an Berechtigungen (normalerweise volles Vertrauen) wie die Assemblys, die sich auf dem Computer befinden. Diese Funktion gilt nicht für ClickOnce-Anwendungen oder für Anwendungen, die dafür entwickelt wurden, auf einem Host ausgeführt zu werden.  
   
-## Regeln für Bibliotheksassemblys  
- Die folgenden Regeln gelten für Assemblys, die von einer ausführbaren Datei in einer Netzwerkfreigabe geladen werden:  
+## <a name="rules-for-library-assemblies"></a>Regeln für Bibliothekassemblys  
+ Die folgenden Regeln gelten für Assemblys, die von einer ausführbaren Datei in einer Netzwerkfreigabe geladen wurden:  
   
--   Bibliotheksassemblys müssen sich im gleichen Ordner wie die ausführbare Assembly befinden.  Assemblys, die sich in einem Unterordner befinden oder auf die von einem anderen Pfad verwiesen wird, erhalten nicht den voll vertrauenswürdigen Berechtigungssatz.  
+-   Bibliotheksassemblys müssen sich im gleichen Ordner wie die ausführbaren Assemblys befinden. Assemblys, die sich in einem Unterordner befinden oder auf die mit einem anderen Pfad verwiesen wird, erhalten nicht das Berechtigungsset des vollen Vertrauens.  
   
--   Wenn die ausführbare Datei eine Assembly verzögert lädt, muss sie denselben Pfad verwenden, mit dem auch die ausführbare Datei gestartet wurde.  Wenn Freigaben\\ \\*network\-computer*\\*share* einem Laufwerkbuchstaben zugeordnet ist und die ausführbare Datei von diesem Pfad ausgeführt wird, werden die Assemblys, die durch die ausführbare Datei geladen werden, indem der nicht verwendet, Netzwerkpfad volle Vertrauenswürdigkeit gewährt.  Um eine Assembly in der <xref:System.Security.SecurityZone>\-Zone verzögert zu laden, muss die ausführbare Datei den Pfad mit dem Laufwerkbuchstaben verwenden.  
+-   Wenn die ausführbare Datei eine Assembly verzögert lädt, muss es den gleichen Pfad verwenden, der beim Starten der ausführbaren Datei verwendet wurde. Wenn z.B. die Freigabe \\\\*network-computer*\\*share* einem Laufwerkbuchstaben zugeordnet wird und die ausführbare Datei von diesem Pfad ausgeführt wird, erhalten Assemblys, die von der ausführbaren Datei mithilfe des Netzwerkpfads geladen werden, kein volles Vertrauen. Um eine Assembly in der <xref:System.Security.SecurityZone.MyComputer>-Zone verzögert zu laden, muss die ausführbare Datei den Pfad des Laufwerkbuchstabens verwenden.  
   
-## Wiederherstellen der früheren Intranetrichtlinie  
- In früheren Versionen von .NET Framework wurde freigegebenen Assemblys der <xref:System.Security.SecurityZone>\-Zonenbeweis gewährt.  Sie mussten Sicherheitsrichtlinien für den Codezugriff festlegen, um einer Assembly auf einer Freigabe volle Vertrauenswürdigkeit zu gewähren.  
+## <a name="restoring-the-former-intranet-policy"></a>Wiederherstellen der vorherigen Intranetrichtlinie  
+ In früheren Versionen von .NET Framework wurden freigegebenen Assemblys <xref:System.Security.SecurityZone.Intranet>-Zonenbeweise erteilt. Sie mussten die Codezugriffs-Sicherheitsrichtlinie angeben, um Assemblys einer Freigabe volles Vertrauen zu erteilen.  
   
- Dieses neue Verhalten ist das Standardverhalten für Intranetassemblys.  Sie können zum früheren Verhalten der Bereitstellung des <xref:System.Security.SecurityZone>\-Beweises zurückkehren, indem Sie einen Registrierungsschlüssel festlegen, der für alle Anwendungen auf dem Computer gilt.  Dieser Prozess ist für 32\-Bit\- und 64\-Bit\-Computer unterschiedlich:  
+ Dieses neue Verhalten ist das Standardverhalten für Intranetassemblys. Sie können das vorherige Verhalten (das Angeben von <xref:System.Security.SecurityZone.Intranet>-Beweisen), indem Sie einen Registrierungsschlüssel festlegen, der für alle Anwendungen auf dem Computer gilt. Dieser Prozess ist für 32-Bit- und 64-Bit-Computer unterschiedlich:  
   
--   Erstellen Sie auf 32\-Bit\-Computern in der Systemregistrierung einen Unterschlüssel unter dem Schlüssel HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework.  Verwenden Sie den Schlüsselnamen "LegacyMyComputerZone" mit dem DWORD\-Wert 1.  
+-   Erstellen Sie auf 32-Bit-Computern einen Unterschlüssel unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems. Verwenden Sie den Schlüsselnamen „LegacyMyComputerZone“ mit einem DWORD-Wert von 1.  
   
--   Erstellen Sie auf 64\-Bit\-Computern in der Systemregistrierung einen Unterschlüssel unter dem Schlüssel HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework.  Verwenden Sie den Schlüsselnamen "LegacyMyComputerZone" mit dem DWORD\-Wert 1.  Erstellen Sie den gleichen Unterschlüssel unter dem Schlüssel "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\.NETFramework".  
+-   Erstellen Sie auf 64-Bit-Computern einen Unterschlüssel unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems. Verwenden Sie den Schlüsselnamen „LegacyMyComputerZone“ mit einem DWORD-Wert von 1. Erstellen Sie den gleichen Unterschlüssel unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework“.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

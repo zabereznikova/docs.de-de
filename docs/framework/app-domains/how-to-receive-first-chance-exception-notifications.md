@@ -1,108 +1,103 @@
 ---
-title: "Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ausnahmen, Benachrichtigungen (erste Chance)"
-  - "Ausnahmebenachrichtigungen (erste Chance)"
+title: 'Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance) | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first-chance exception notifications
+- exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
-Sie erhalten vom <xref:System.AppDomain.FirstChanceException>\-Ereignis der <xref:System.AppDomain>\-Klasse eine Benachrichtigung, dass eine Ausnahme ausgelöst wurde, bevor von der Common Language Runtime die Suche nach Ausnahmehandlern gestartet wurde.  
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
+Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.AppDomain>-Klasse erhalten Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme, bevor die CLR mit der Suche nach Ausnahmehandlern beginnt.  
   
- Das Ereignis wird auf der Ebene der Anwendungsdomäne ausgelöst.  Ein Ausführungsthread kann mehrere Anwendungsdomänen durchlaufen, damit eine Ausnahme, die in einer Anwendungsdomäne nicht behandelt wurde, in einer anderen Anwendungsdomäne behandelt werden kann.  Die Benachrichtigung wird so lange in den Anwendungsdomänen mit einem Handler für das Ereignis ausgegeben, bis die Ausnahme von einer Anwendungsdomäne behandelt wird.  
+ Das Ereignis wird auf Ebene der Anwendungsdomäne ausgelöst. Ein Ausführungsthread kann verschiedene Anwendungsdomänen durchlaufen. Es ist also möglich, dass ein Ausnahmefehler aus einer Anwendungsdomäne in einer anderen behandelt wird. Die Benachrichtigung findet in jeder Anwendungsdomäne statt, die einen Handler für das Ereignis hinzugefügt hat, bis eine Anwendungsdomäne die Ausnahme behandelt.  
   
- In den Prozeduren und den Beispielen in diesem Artikel wird veranschaulicht, wie Ausnahmebenachrichtigungen \(erste Chance\) in einem einfachen Programm, das eine Anwendungsdomäne aufweist, und in einer vom Benutzer erstellten Anwendungsdomäne empfangen werden.  
+ Die Verfahren und Beispiele in diesem Artikel zeigen, wie Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in einem einfachen Programm mit einer Anwendungsdomäne und in einer von Ihnen selbst erstellten Anwendungsdomäne erhalten.  
   
- Ein komplexeres Beispiel, das mehrere Anwendungsdomänen umfasst, finden Sie im Beispiel für das <xref:System.AppDomain.FirstChanceException>\-Ereignis.  
+ Ein umfangreicheres Beispiel, das mehrere Anwendungsdomänen umfasst, finden Sie im Beispiel zum <xref:System.AppDomain.FirstChanceException>-Ereignis.  
   
-## Empfangen von Ausnahmebenachrichtigungen \(erste Chance\) in der Standardanwendungsdomäne  
- Im folgenden Verfahren \(dem Einstiegspunkt für die Anwendung\) wird die `Main()`\-Methode in der Standardanwendungsdomäne ausgeführt.  
+## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>Empfangen von Benachrichtigungen über Ausnahmefehler der ersten Chance in Standardanwendungsdomänen  
+ In der folgenden Prozedur, dem Einstiegspunkt der Anwendung (`Main()`-Methode), wird in der Standardanwendungsdomäne ausgeführt.  
   
-#### So werden Ausnahmebenachrichtigungen \(erste Chance\) in der Standardanwendungsdomäne dargestellt  
+#### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>So demonstrieren Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in der Standardanwendungsdomäne  
   
-1.  Definieren Sie einen Ereignishandler mit einer Lambda\-Funktion für das <xref:System.AppDomain.FirstChanceException>\-Ereignis, und fügen Sie ihn an das Ereignis an.  In diesem Beispiel gibt der Ereignishandler den Namen der Anwendungsdomäne, in der das Ereignis behandelt wurde, und die <xref:System.Exception.Message%2A>\-Eigenschaft der Ausnahme aus.  
+1.  Definieren Sie mithilfe einer Lambda-Funktion einen Ereignishandler für das <xref:System.AppDomain.FirstChanceException>-Ereignis, und fügen Sie ihn an das Ereignis an. In diesem Beispiel gibt der Ereignishandler den Namen der Anwendungsdomäne, in der das Ereignis behandelt wurde, und die <xref:System.Exception.Message%2A>-Eigenschaft der Ausnahme aus.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]  [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]  
   
-2.  Lösen Sie eine Ausnahme aus, und fangen Sie sie ab.  Bevor der Ausnahmehandler von der Runtime gefunden wird, wird das <xref:System.AppDomain.FirstChanceException>\-Ereignis ausgelöst und eine Meldung angezeigt.  Dieser Meldung folgt die vom Ausnahmehandler angezeigte Meldung.  
+2.  Lösen Sie eine Ausnahme aus, und fangen Sie sie ab. Bevor die Runtime den Ausnahmehandler sucht, wird das <xref:System.AppDomain.FirstChanceException>-Ereignis ausgelöst und eine Meldung angezeigt. Auf diese Nachricht folgt die Nachricht, die vom Ausnahmehandler angezeigt wird.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]  [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]  
   
-3.  Lösen Sie eine Ausnahme aus, fangen Sie sie aber nicht ab.  Bevor der Ausnahmehandler von der Runtime gesucht wird, wird das <xref:System.AppDomain.FirstChanceException>\-Ereignis ausgelöst und eine Meldung angezeigt.  Es ist kein Ausnahmehandler vorhanden. Die Anwendung wird beendet.  
+3.  Lösen Sie eine Ausnahme aus, aber fangen Sie sie nicht ab. Bevor die Runtime nach einem Ausnahmehandler sucht, wird das <xref:System.AppDomain.FirstChanceException>-Ereignis ausgelöst und eine Meldung angezeigt. Da es keinen Ausnahmehandler gibt, wird die Anwendung beendet.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]  [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]  
   
-     Der Code in den ersten drei Schritten dieses Verfahrens bildet eine vollständige Konsolenanwendung.  Die Ausgabe der Anwendung variiert abhängig vom Namen der EXE\-Datei, da sich der Name der Standardanwendungsdomäne aus dem Namen und der Erweiterung der EXE\-Datei zusammensetzt.  Im Folgenden sehen Sie ein Beispiel für die Ausgabe.  
+     Der Code aus den ersten drei Schritten dieser Prozedur stellt eine vollständige Konsolenanwendung dar. Die Ausgabe der Anwendung variiert je nach dem Namen der ausführbaren Datei, denn der Name der Standardanwendungsdomäne besteht aus dem Namen und der Erweiterung der ausführbaren Datei. Ein Beispiel finden Sie in der folgenden Ausgabe.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#5)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#5)]  [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]  
   
-## Empfangen von Ausnahmebenachrichtigungen \(erste Chance\) in einer anderen Anwendungsdomäne  
- Wenn das Programm mehr als eine Anwendungsdomäne enthält, können Sie auswählen, welche Anwendungsdomänen Benachrichtigungen empfangen sollen.  
+## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>Empfangen von Benachrichtigungen über Ausnahmefehler der ersten Chance in einer anderen Anwendungsdomäne  
+ Wenn Ihr Programm mehr als eine Anwendungsdomäne enthält, können Sie auswählen, welche Anwendungsdomänen Benachrichtigungen erhalten.  
   
-#### So empfangen Sie Ausnahmebenachrichtigungen \(erste Chance\) in einer von Ihnen erstellten Anwendungsdomäne  
+#### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>So empfangen Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in einer selbst erstellten Anwendungsdomäne  
   
-1.  Definieren Sie einen Ereignishandler für das <xref:System.AppDomain.FirstChanceException>\-Ereignis.  In diesem Beispiel wird eine `static`\-Methode verwendet \(`Shared`\-Methode in Visual Basic\), die den Namen der Anwendungsdomäne, in der das Ereignis behandelt wurde, sowie die <xref:System.Exception.Message%2A>\-Eigenschaft der Ausnahme druckt.  
+1.  Definieren Sie einen Ereignishandler für das <xref:System.AppDomain.FirstChanceException>-Ereignis. In diesem Beispiel wird eine `static`-Methode verwendet (`Shared`-Methode in Visual Basic), die den Namen der Anwendungsdomäne, in der das Ereignis behandelt wurde, und die <xref:System.Exception.Message%2A>-Eigenschaft der Ausnahme ausgibt.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]  [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]  
   
-2.  Erstellen Sie eine Anwendungsdomäne, und fügen Sie dem <xref:System.AppDomain.FirstChanceException>\-Ereignis den Ereignishandler für diese Anwendungsdomäne hinzu.  In diesem Beispiel trägt die Anwendungsdomäne die Bezeichnung `AD1`.  
+2.  Erstellen Sie eine Anwendungsdomäne, und fügen Sie dem <xref:System.AppDomain.FirstChanceException>-Ereignis dieser Anwendungsdomäne den Ereignishandler hinzu. In diesem Beispiel heißt die Anwendungsdomäne `AD1`.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]  [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]  
   
-     Sie können dieses Ereignis in der Standardanwendungsdomäne auf dieselbe Weise behandeln.  Verwenden Sie die `static` \(`Shared` in Visual Basic\) <xref:System.AppDomain.CurrentDomain%2A?displayProperty=fullName>\-Eigenschaft in `Main()`, um einen Verweis auf die Standardanwendungsdomäne abzurufen.  
+     Sie können dieses Ereignis in der Standardanwendungsdomäne auf dieselbe Weise behandeln. Verwenden Sie die statische (`static`) <xref:System.AppDomain.CurrentDomain%2A?displayProperty=fullName>-Eigenschaft (`Shared` in Visual Basic) in `Main()`, um einen Verweis auf die Standardanwendungsdomäne abzurufen.  
   
-#### So werden Ausnahmebenachrichtigungen \(erste Chance\) in der Anwendungsdomäne dargestellt  
+#### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>So demonstrieren Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in der Anwendungsdomäne  
   
-1.  Erstellen Sie ein `Worker`\-Objekt in der Anwendungsdomäne, die Sie im vorherigen Verfahren erstellt haben.  Die `Worker`\-Klasse muss öffentlich sein und sich von <xref:System.MarshalByRefObject> ableiten, wie im vollständigen Beispiel am Ende dieses Artikels gezeigt.  
+1.  Erstellen Sie ein `Worker`-Objekt in der Anwendungsdomäne, die Sie in der vorherigen Prozedur erstellt haben. Die `Worker`-Klasse muss öffentlich und von <xref:System.MarshalByRefObject> abgeleitet sein, wie im vollständigen Beispiel am Ende dieses Artikels dargestellt.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]  [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]  
   
-2.  Rufen Sie eine Methode des `Worker`\-Objekts auf, die eine Ausnahme auslöst.  In diesem Beispiel wird die `Thrower`\-Methode zweimal aufgerufen.  Beim ersten Mal ist das Methodenargument auf `true` festgelegt, wodurch von der Methode die eigene Ausnahme abgefangen wird.  Beim zweiten Mal ist das Argument auf `false` festgelegt, und von der `Main()`\-Methode wird die Ausnahme in der Standardanwendungsdomäne abgefangen.  
+2.  Rufen Sie eine Methode des `Worker`-Objekts auf, die eine Ausnahme auslöst. In diesem Beispiel wird die `Thrower`-Methode zweimal aufgerufen. Beim ersten Aufruf lautet das Methodenargument `true`, weswegen die Methode ihre eigene Ausnahme abfängt. Beim zweiten Aufruf lautet das Argument `false`, und die `Main()`-Methode fängt die Ausnahme in der Standardanwendungsdomäne ab.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]  [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]  
   
-3.  Platzieren Sie Code in der `Thrower`\-Methode, um zu steuern, ob von der Methode eine eigene Ausnahme behandelt werden soll.  
+3.  Platzieren Sie Code in der `Thrower`-Methode, um zu steuern, ob die Methode ihre eigene Ausnahme behandelt.  
   
-     [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
-     [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]  
+     [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]  [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Anwendungsdomäne mit der Bezeichnung `AD1` erstellt und dem <xref:System.AppDomain.FirstChanceException>\-Ereignis der Anwendungsdomäne ein Ereignishandler hinzugefügt.  Zusätzlich wird eine Instanz der `Worker`\-Klasse in der Anwendungsdomäne erstellt und eine `Thrower`\-Methode aufgerufen, von der eine <xref:System.ArgumentException> ausgelöst wird.  Je nach Wert des Arguments wird von der Methode die Ausnahme entweder abgefangen oder nicht behandelt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine Anwendungsdomäne namens `AD1` erstellt und der Anwendungsdomäne des <xref:System.AppDomain.FirstChanceException>-Ereignisses ein Ereignishandler hinzugefügt. Außerdem wird eine Instanz der `Worker`-Klasse in der Anwendungsdomäne erstellt und eine Methode namens `Thrower` aufgerufen, die <xref:System.ArgumentException> auslöst. Je nach dem Wert des Arguments fängt die Methode die Ausnahme entweder ab, oder es tritt ein Fehler bei der Behandlung auf.  
   
- Jedes Mal, wenn von der `Thrower`\-Methode eine Ausnahme in `AD1` ausgelöst wird, wird das <xref:System.AppDomain.FirstChanceException>\-Ereignis in `AD1` ausgelöst, und vom Ereignishandler wird eine Meldung angezeigt.  Anschließend wird von der Laufzeit nach einem Ausnahmehandler gesucht.  Im ersten Fall wird der Ausnahmehandler in `AD1` gefunden.  Im zweiten Fall wird die Ausnahme in `AD1` nicht behandelt und stattdessen in der Standardanwendungsdomäne abgefangen.  
+ Jedes Mal, wenn die `Thrower`-Methode eine Ausnahme in `AD1` auslöst, wird das <xref:System.AppDomain.FirstChanceException>-Ereignis in `AD1` ausgelöst, und der Ereignishandler zeigt eine Meldung an. Die Runtime sucht nach einem Ausnahmehandler. Im ersten Fall befindet sich der Ausnahmehandler in `AD1`. Im zweiten Fall wird die Ausnahme in `AD1` nicht behandelt und stattdessen in der Standardanwendungsdomäne abgefangen.  
   
 > [!NOTE]
->  Der Name der Standardanwendungsdomäne entspricht dem Namen der EXE\-Datei.  
+>  Der Name der Standardanwendungsdomäne ist identisch mit dem Namen der ausführbaren Datei.  
   
- Wenn Sie der Standardanwendungsdomäne einen Handler für das <xref:System.AppDomain.FirstChanceException>\-Ereignis hinzufügen, wird das Ereignis ausgelöst und behandelt, bevor die Ausnahme von der Standardanwendungsdomäne behandelt wird.  Fügen Sie den C\#\-Code `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` \(in Visual Basic `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`\) am Anfang von `Main()` ein, um diesen Effekt zu erzielen.  
+ Wenn Sie der Standardanwendungsdomäne einen Handler für das <xref:System.AppDomain.FirstChanceException>-Ereignis hinzufügen, wird das Ereignis ausgelöst und behandelt, bevor die Standardanwendungsdomäne die Ausnahme behandelt. Um dies zu veranschaulichen, fügen Sie den C#-Code `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (in Visual Basic `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n) am Anfang von `Main()` ein.  
   
- [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
- [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
+ [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)] [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Dieses Beispiel ist eine Befehlszeilenanwendung.  Zum Kompilieren und Ausführen dieses Codes in [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] fügen Sie den C\#\-Code am Ende von `Console.ReadLine();``Main()`\(in Visual Basic `Console.ReadLine()`\) ein. So wird verhindert, dass das Befehlsfenster geschlossen wird, bevor Sie die Ausgabe lesen können.  
+-   Dieses Beispiel stellt eine Befehlszeilenanwendung dar. Um diesen Codes in [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] zu kompilieren und auszuführen, fügen Sie den C#-Code `Console.ReadLine();` (in Visual Basic `Console.ReadLine()`) am Ende von `Main()` hinzu, um zu verhindern, dass das Befehlsfenster geschlossen wird, bevor Sie die Ausgabe lesen können.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.AppDomain.FirstChanceException>

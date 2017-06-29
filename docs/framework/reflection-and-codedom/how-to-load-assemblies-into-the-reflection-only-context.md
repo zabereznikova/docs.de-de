@@ -1,59 +1,62 @@
 ---
-title: "Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblys [.NET Framework], Laden für Reflektion"
-  - "Assemblys [.NET Framework], Reflektionsbezogener Ladekontext"
-  - "Attribute [.NET Framework], Abrufen"
-  - "Reflektion, Reflektionsbezogener Ladekontext"
-  - "Reflektionsbezogener Ladekontext"
+title: 'Vorgehensweise: Laden von Assemblys in den ReflectionOnly-Kontext | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection, reflection-only loader context
+- assemblies [.NET Framework], loading for reflection
+- attributes [.NET Framework], retrieving
+- assemblies [.NET Framework], reflection-only loader context
+- reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
+ms.openlocfilehash: b61d75598572857e8d7b28547a5b94f3fe07faa5
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext
-Mit dem reflektionsbezogenen Ladekontext können Assemblys untersucht werden, die für andere Plattformen oder für andere Versionen von .NET Framework kompiliert wurden.  In diesen Kontext geladener Code kann nur untersucht, nicht jedoch ausgeführt werden.  Dies bedeutet, dass keine Objekte erstellt werden können, da die Konstruktoren nicht ausgeführt werden können.  Da der Code nicht ausgeführt werden kann, werden Abhängigkeiten nicht automatisch geladen.  Wenn Sie die Abhängigkeiten untersucht werden sollen, müssen Sie diese selbst laden.  
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext
+Mit dem ReflectionOnly-Load-Kontext können Sie Assemblys untersuchen, die für andere Plattformen oder andere Versionen von .NET Framework kompiliert wurden. In diesen Kontext geladener Code kann nur untersucht werden. Er kann nicht ausgeführt werden. Dies bedeutet, dass keine Objekte erstellt werden können, weil Konstruktoren nicht ausgeführt werden können. Da der Code nicht ausgeführt werden kann, werden Abhängigkeiten nicht automatische geladen. Wenn Sie diese untersuchen möchten, müssen Sie sie selbst laden.  
   
-### So laden Sie eine Assembly in den reflektionsbezogenen Ladekontext  
+### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>So können Sie eine Assembly in den ReflectionOnly-Kontext laden  
   
-1.  Laden Sie die Assembly mithilfe der <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29>\-Methodenüberladung, sofern der Anzeigename angegeben ist, oder mithilfe der <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>\-Methode, sofern der Pfad angegeben ist.  Wenn es sich bei der Assembly um ein binäres Bild handelt, verwenden Sie die [ReflectionOnlyLoad\(Byte\<xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29>\-Methodenüberladung.  
-  
-    > [!NOTE]
-    >  Sie können mit dem reflektionsbezogenen Kontext keine Version der mscorlib.dll aus einer anderen Version von .NET Framework als der Version im Ausführungskontext laden.  
-  
-2.  Wenn die Assembly über Abhängigkeiten verfügt, lädt die <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>\-Methode sie nicht.  Wenn Sie die Abhängigkeiten untersuchen müssen, müssen Sie diese selbst laden.  
-  
-3.  Mithilfe der <xref:System.Reflection.Assembly.ReflectionOnly%2A>\-Eigenschaft der Assembly können Sie ermitteln, ob eine Assembly in den reflektionsbezogenen Kontext geladen ist.  
-  
-4.  Wenn auf die Assembly oder die Typen in der Assembly Attribute angewendet wurden, untersuchen Sie diese Attribute mithilfe der <xref:System.Reflection.CustomAttributeData>\-Klasse, um zu gewährleisten, dass nicht versucht wird, Code im reflektionsbezogenen Kontext auszuführen.  Mit der entsprechenden Überladung der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName>\-Methode rufen Sie die <xref:System.Reflection.CustomAttributeData>\-Objekte ab, die die Attribute darstellen, die auf eine Assembly, einen Member, ein Modul oder einen Parameter angewendet wurden.  
+1.  Verwenden Sie die <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29>-Methodenüberladung, um die Assembly mit deren Anzeigenamen zu laden, oder die <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>-Methode, um die Assembly mit deren Pfad zu laden. Wenn die Assembly ein binäres Image ist, verwenden Sie die <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29>-Methodenüberladung.  
   
     > [!NOTE]
-    >  Attribute, die auf die Assembly oder ihren Inhalt angewendet wurden, können in der Assembly oder in einer anderen Assembly definiert sein, die in den reflektionsbezogenen Kontext geladen ist.  Es kann nicht vorausgesagt werden, wo die Attribute definiert werden.  
+    >  Sie können den ReflectionOnly-Kontext nicht zum Laden einer Version von „mscorlib.dll“ aus einer Version von .NET Framework verwenden, wenn sich diese Version von der Version des Ausführungskontexts unterscheidet.  
   
-## Beispiel  
- Im folgenden Beispielcode wird veranschaulicht, wie Sie die Attribute untersuchen, die auf eine in den reflektionsbezogenen Kontext geladene Assembly angewendet wurden.  
+2.  Wenn die Assembly Abhängigkeiten hat, werden diese von der <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>-Methode nicht geladen. Wenn Sie diese untersuchen möchten, müssen Sie sie selbst laden.  
   
- Im Codebeispiel wird ein benutzerdefiniertes Attribut mit zwei Konstruktoren und einer Eigenschaft definiert.  Das Attribut wird auf die Assembly, einen in der Assembly deklarierten Typ, eine Methode des Typs und einen Parameter der Methode angewendet.  Bei der Ausführung lädt die Assembly sich selbst in den reflektionsbezogenen Kontext und zeigt Informationen über die benutzerdefinierten Attribute an, die auf sie und die enthaltenen Typen und Member angewendet wurden.  
+3.  Sie können mit der <xref:System.Reflection.Assembly.ReflectionOnly%2A>-Eigenschaft einer Assembly feststellen, ob die Assembly in einen ReflectionOnly-Kontext geladen wurde.  
+  
+4.  Wenn Attribute auf die Assembly oder auf Typen in der Assembly angewendet wurden, können Sie sich diese Attribute mit der <xref:System.Reflection.CustomAttributeData>-Klasse anschauen, um sicherzustellen, dass der Code nicht im ReflectionOnly-Kontext ausgeführt wird. Verwenden Sie die entsprechende Überladung der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName>-Methode, um <xref:System.Reflection.CustomAttributeData>-Objekte zu erhalten, die die auf eine Assembly, einen Member, ein Modul oder einen Parameter angewendeten Attribute darstellen.  
+  
+    > [!NOTE]
+    >  Auf die Assembly oder auf deren Inhalte angewendete Attribute sind möglicherweise in der Assembly oder in einer anderen in den ReflectionOnly-Kontext geladenen Assembly definiert. Es ist nicht möglich, im Voraus zu bestimmen, wo die Attribute definiert sind.  
+  
+## <a name="example"></a>Beispiel  
+ In folgendem Codebeispiel wird veranschaulicht, wie Sie die Attribute, die auf eine in den ReflectionOnly-Kontext geladene Assembly angewendet wurden, untersuchen können.  
+  
+ Im Codebeispiel wird ein benutzerdefiniertes Attribut mit zwei Konstruktoren und einer Eigenschaft definiert. Das Attribut wird auf die Assembly angewendet sowie auf einen in der Assembly deklarierten Typ, eine Methode dieses Typs und einen Parameter der Methode. Bei der Ausführung lädt die Assembly sich selbst in den ReflectionOnly-Kontext und zeigt Informationen zu den benutzerdefinierten Attributen an, die auf die Assembly und die Typen und Member, die sie enthält, angewendet wurden.  
   
 > [!NOTE]
->  Um das Codebeispiel zu vereinfachen, lädt und untersucht sich die Assembly selbst.  Unter normalen Umständen würden Sie nicht erwarten, dass ein und dieselbe Assembly sowohl in den Ausführungskontext als auch in den reflektionsbezogenen Kontext geladen wird.  
+>  Um das Codebeispiel einfacher zu halten, lädt und untersucht die Assembly sich selbst. Für gewöhnlich ist nicht zu erwarten, dass die gleiche Assembly sowohl in den Ausführungskontext und den ReflectionOnly-Kontext geladen wird.  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
- [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
- [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
  <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
  <xref:System.Reflection.CustomAttributeData>

@@ -1,91 +1,96 @@
 ---
-title: "Programmieren mit Assemblys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblys [.NET Framework], Programmieren"
-  - "Programmieren von Assemblys"
+title: Programmieren mit Assemblys | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], programming
+- programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c319b668becd6a5b3e4077ea709835bb42cafb44
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Programmieren mit Assemblys
-Assemblys sind die Grundbausteine von .NET Framework. Sie bilden die Basiseinheit für Bereitstellung, Versionskontrolle, Wiederverwendung, Aktivierungs\-Scoping und Sicherheitsberechtigungen.  Eine Assembly stellt der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.  Sie stellt eine Auflistung von Typen und Ressourcen dar, die so erstellt wurden, dass sie zusammenarbeiten und eine logische Funktionseinheit bilden.  Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  
+# <a name="programming-with-assemblies"></a>Programmieren mit Assemblys
+Assemblys sind die Bausteine von .NET Framework; sie bilden das Fundament für Bereitstellung, Versionskontrolle, Wiederverwendung, Gültigkeitsbereiche für die Aktivierung und Sicherheitsberechtigungen. Eine Assembly stellt der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  
   
- In diesem Abschnitt werden folgende Vorgänge beschrieben: das Erstellen von Modulen, das Erstellen von Assemblys aus Modulen, das Erstellen eines Schlüsselpaars, das Signieren einer Assembly mit einem starken Namen und das Installieren einer Assembly im globalen Assemblycache.  Außerdem erfahren Sie in diesem Abschnitt, wie mithilfe des [MSIL Disassembler\-Tools \(Ildasm.exe\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Assemblymanifestinformationen angezeigt werden.  
+ In diesem Abschnitt wird beschrieben, wie Module, Assembys aus Modulen und ein Schlüsselpaar erstellt werden, wie eine Assembly mit einem starken Namen signiert wird und wie eine Assembly im globalen Assemblycache installiert wird. Dieser Abschnitt beschreibt zusätzlich, wie Sie [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Informationen aus dem Assemblymanifest anzuzeigen.  
   
 > [!NOTE]
->  Ab .NET Framework, Version 2.0, lädt die Laufzeit keine Assemblys mehr, die mit einer Version von .NET Framework kompiliert wurden, deren Versionsnummer höher ist als die der aktuell geladenen Laufzeit.  Dies gilt für die Kombination aus den Haupt\- und Nebenkomponenten der Versionsnummer.  
+>  Ab der .NET Framework-Version 2.0 lädt die Runtime keine Assembly, die mit einer Version von .NET Framework kompiliert wurde, die eine höhere Versionsnummer als die aktuell geladenen Runtime besitzt. Dies gilt für die Kombination der Haupt- und Nebenkomponenten der Versionsnummer.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
- Bietet eine Übersicht über Einfach\- und Mehrfachdateiassemblys.  
+ Bietet eine Übersicht über Einfach- und Mehrfachdateiassemblys.  
   
  [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md)  
- Bietet eine Übersicht über die Namensvergabe für Assemblys.  
+ Bietet eine Übersicht über die Assemblybenennung.  
   
  [Gewusst wie: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- Beschreibt, wie der vollqualifizierte Name einer Assembly bestimmt wird.  
+ Beschreibt, wie der vollqualifizierte Namen einer Assembly bestimmt wird.  
   
  [Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit](../../../docs/framework/app-domains/running-intranet-applications-in-full-trust.md)  
- Beschreibt, wie eine Legacysicherheitsrichtlinie für voll vertrauenswürdige Assemblys in einer Intranetfreigabe angegeben wird.  
+ Beschreibt, wie Legacysicherheitsrichtlinien für voll vertrauenswürdige Assemblys in einer Intranetfreigabe angegeben werden.  
   
  [Assemblyspeicherort](../../../docs/framework/app-domains/assembly-location.md)  
- Bietet eine Übersicht über das Suchen nach Assemblys.  
+ Bietet eine Übersicht, wo Assemblys zu finden sind.  
   
  [Gewusst wie: Erstellen einer Einzeldateiassembly](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
- Beschreibt das Erstellen einer Einfachdateiassembly.  
+ Beschreibt das Erstellen einer Assembly mit einer einzigen Datei.  
   
  [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)  
- Beschreibt die Gründe für ein Erstellen von Mehrfachdateiassemblys.  
+ Beschreibt Gründe für das Erstellen von Assemblys mit mehreren Dateien.  
   
  [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- Beschreibt das Erstellen einer Mehrfachdateiassembly.  
+ Beschreibt das Erstellen einer Assembly mit mehreren Dateien.  
   
  [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)  
  Beschreibt Assemblyattribute und wie diese festgelegt werden.  
   
  [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- Beschreibt, wie und warum Assemblys mit starkem Namen signiert werden, und enthält Gewusst\-wie\-Themen.  
+ Beschreibt, wie und warum Sie eine Assembly mit einem starken Namen signieren und enthält Themen zur Vorgehensweise.  
   
  [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- Beschreibt das verzögerte Signieren einer Assembly.  
+ Beschreibt, wie eine Assembly verzögert signiert wird.  
   
  [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- Beschreibt, wie und warum Assemblys dem globalen Assemblycache hinzugefügt werden, und enthält Gewusst\-wie\-Themen.  
+ Beschreibt, wie und warum Sie Assemblys zum globalen Assemblycache hinzufügen und enthält Themen zur Vorgehensweise.  
   
- [Gewusst wie: Ansichtsassemblyinhalt](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- Beschreibt das Verwenden des MSIL Disassembler\-Tools \(Ildasm.exe\) zur Anzeige von Assemblyinhalten.  
+ [Gewusst wie: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ Beschreibt, wie Sie MSIL Disassembler (Ildasm.exe) zum Anzeigen von Assemblyinhalten verwenden.  
   
- [Typweiterleitung in der Common Language Runtime](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
- Beschreibt das Verwenden einer Typweiterleitung zum Verschieben eines Typs in eine andere Assembly, ohne die Konsistenz von Code vorhandener Anwendungen zu zerstören.  
+ [Typweiterleitung in der Common Language Runtime](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
+ Beschreibt, wie die Typweiterleitung zum Verschieben eines Typs in eine andere Assembly verwendet wird, ohne dass vorhandene Anwendungen unterbrochen werden.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Reflection.Assembly>  
- Die .NET Framework\-Klasse, die eine Assembly darstellt.  
+ Die .NET Framework-Klasse, die eine Assembly darstellt.  
   
-## Verwandte Abschnitte  
- [Gewusst wie: Abrufen von Typ\- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- Beschreibt das programmgesteuerte Abrufen von Typ\- und anderen Informationen aus einer Assembly.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Gewusst wie: Abrufen von Typ- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ Beschreibt, wie Typen oder andere Informationen programmgesteuert von einer Assembly abgerufen werden.  
   
- [Assemblys in der Common Language Runtime \(CLR\)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Bietet eine konzeptionelle Übersicht über Common Language Runtime\-Assemblys.  
+ [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ Konzeptuelle Übersicht über Assemblys der Common Language Runtime.  
   
  [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)  
- Bietet eine Übersicht über die Assemblybindung sowie über das <xref:System.Reflection.AssemblyVersionAttribute>\-Attribut und <xref:System.Reflection.AssemblyInformationalVersionAttribute>\-Attribut.  
+ Bietet eine Übersicht zur Bindung von Assemblys und der <xref:System.Reflection.AssemblyVersionAttribute>- und <xref:System.Reflection.AssemblyInformationalVersionAttribute>-Attribute.  
   
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- Beschreibt, wie die Common Language Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.  
+ Beschreibt, wie die Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.  
   
  [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Beschreibt das Verwenden der **Reflection**\-Klasse, um Informationen zu einer Assembly zu erhalten.
+ Beschreibt, wie die **Reflektion**-Klasse verwendet wird, um Informationen zu einer Assembly abzurufen.

@@ -1,55 +1,57 @@
 ---
-title: "Gewusst wie: Ansichtsassemblyinhalt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblymanifest, Anzeigen von Informationen"
-  - "Ildasm.exe"
-  - "MSIL-Disassembler"
-  - "Assemblys [.NET Framework], Anzeigen von Inhalten"
-  - "Anzeigen von Assemblyinformationen"
-  - "MSIL"
-  - "Anzeigen von MSIL-Informationen"
+title: 'Vorgehensweise: Ansichtsassemblyinhalt | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest, viewing information
+- Ildasm.exe
+- MSIL Disassembler
+- assemblies [.NET Framework], viewing contents
+- viewing assembly information
+- MSIL
+- viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 38ed309c8d1ef7467b235eb2e751ffb9016a83ab
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Ansichtsassemblyinhalt
-Verwenden Sie [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md), um MSIL\-Informationen \(Microsoft Intermediate Language\) in einer Datei anzuzeigen.  Wenn es sich bei der untersuchten Datei um eine Assembly handelt, können diese Informationen Assemblyattribute sowie Verweise auf andere Assemblys und Module enthalten.  Diese Informationen können Ihnen helfen herauszufinden, ob eine Datei eine Assembly bzw. Teil einer Assembly ist und ob sie Verweise auf andere Module oder Assemblys enthält.  
+# <a name="how-to-view-assembly-contents"></a>Gewusst wie: Ansichtsassemblyinhalt
+Sie können den [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Microsoft Intermediate Language-Informationen (MSIL) in einer Datei anzuzeigen. Wenn die untersuchte Datei eine Assembly ist, kann die Information die Attribute der Assembly enthalten sowie Verweise auf andere Module und Assemblys. Dieses Information kann Ihnen helfen, zu bestimmen, ob eine Datei eine Assembly oder Teil einer Assembly ist und ob die Datei über Verweise auf andere Module oder Assemblys verfügt.  
   
-### So zeigen Sie den Inhalt einer Assembly mit Ildasm.exe an  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>So zeigen Sie die Inhalte einer Assembly mithilfe von „Ildasm.exe“ an  
   
-1.  *Assemblyname*\>\-Typ **ildasm** \<an der Eingabeaufforderung.  Zum Beispiel disassembliert der folgende Befehl die `Hello.exe`\-Assembly.  
+1.  Geben Sie **ildasm** \<*assemblyname*> an der Eingabeaufforderung ein. Beispielsweise disassembliert der folgende Befehl die `Hello.exe`-Assembly.  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### So zeigen Sie Assemblymanifestinformationen an  
+### <a name="to-view-assembly-manifest-information"></a>So zeigen Sie Informationen aus dem Assemblymanifest an  
   
-1.  Doppelklicken Sie auf das MANIFEST\-Symbol im Fenster MSIL Disassembler.  
+1.  Klicken Sie doppelt auf das Symbol MANIFEST im Fenster „MSIL-Disassembler“.  
   
-## Beispiel  
- Das folgende Beispiel beginnt mit einem einfachen "Hello, World"\-Programm.  Verwenden Sie nach dem Kompilieren des Programms Ildasm.exe, um die Hello.exe\-Assembly zu disassemblieren und das Assemblymanifest anzuzeigen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel beginnt mit einem einfachen „Hello, World“-Programm. Nachdem Sie das Programm kompiliert haben, verwenden Sie „Ildasm.exe“, um das „Hello.exe“-Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)]
- [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)]
- [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
   
- Wenn Sie den Befehl ildasm.exe für die Hello.exe\-Assembly ausführen und auf das Symbol MANIFEST im Fenster IL DASM doppelklicken, wird die folgende Ausgabe erstellt:  
+ Führen Sie den Befehl „ildasm.exe“ erneut auf dem „Hello.exe“-Assembly aus, und führen Sie eine Doppelklick auf das Symbol MANIFEST in Fenster IL DASM aus, wodurch folgende Ausgabe erzeugt wird:  
   
 ```  
-  
 // Metadata version: v4.0.30319  
 .assembly extern mscorlib  
 {  
@@ -72,26 +74,26 @@ Verwenden Sie [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ild
 .subsystem 0x0003       // WINDOWS_CUI  
 .corflags 0x00000001    //  ILONLY  
 // Image base: 0x00600000  
-  
 ```  
   
- In der folgenden Tabelle werden alle Direktiven im Assemblymanifest der "Hello.exe"\-Assembly beschrieben, die im Beispiel verwendet wird.  
+ In der folgenden Tabelle wird jede Direktive im Assemblymanifest des „Hello.exe“-Assemblys beschrieben, das im Beispiel verwendet wird.  
   
-|Direktive|**Beschreibung**|  
-|---------------|----------------------|  
-|**.assembly extern \<** *Assemblyname* **\>**|Gibt eine andere Assembly an, die Elemente enthält, auf die im aktuellen Modul verwiesen wird \(in diesem Beispiel `mscorlib`\).|  
-|**.publickeytoken \<** *Token* **\>**|Gibt das Token des tatsächlichen Schlüssels der Assembly an, auf die verwiesen wird.|  
-|**.ver \<** *Versionsnummer* **\>**|Gibt die Versionsnummer der Assembly an, auf die verwiesen wird.|  
-|**.assembly \<** *Assemblyname* **\>**|Gibt den Assemblynamen an.|  
-|**\>** int32\-Wert  **.hash algorithm \<**|Gibt den verwendeten Hashalgorithmus an.|  
-|**.ver \<** *Versionsnummer* **\>**|Gibt die Versionsnummer der Assembly an.|  
-|**.module \<** *Dateiname* **\>**|Gibt den Namen der Module an, aus denen die Assembly besteht.  In diesem Beispiel besteht die Assembly aus nur einer Datei.|  
-|**.subsystem \<** *Wert* **\>**|Gibt die für das Programm benötigte Anwendungsumgebung an.  In diesem Beispiel zeigt der Wert 3 an, dass das Programm von der Konsole aus ausgeführt wird.|  
-|**.corflags**|Momentan ein reserviertes Feld innerhalb der Metadaten.|  
+|Direktive|Beschreibung|  
+|---------------|-----------------|  
+|**.assembly extern \<** *assemblyname* **>**|Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).|  
+|**.publickeytoken \<** *token* **>**|Gibt den Token des tatsächlichen Schlüssels der verwiesenen Assembly an.|  
+|**.ver \<** *versionsnummer* **>**|Gibt die Versionsnummer der verwiesenen Assembly an.|  
+|**.assembly \<** *assemblyname* **>**|Gibt den Assemblynamen an.|  
+|**.hash algorithm \<** *int32-wert* **>**|Gibt den verwendeten Hashalgorithmus an.|  
+|**.ver \<** *versionsnummer* **>**|Gibt die Versionsnummer der Assembly an.|  
+|**.module \<** *dateiname* **>**|Gibt den Namen der Module an, aus die eine Assembly besteht. In diesem Beispiel besteht die Assembly aus nur einer Datei.|  
+|**.subsystem \<** *wert* **>**|Gibt die Anwendungsumgebung an, die für das Programm erforderlich ist. In diesem Beispiel gibt der Wert 3 an, dass diese ausführbare Datei von einer Konsole aus ausgeführt wird.|  
+|**.corflags**|Derzeit ein reserviertes Feld in den Metadaten.|  
   
- Ein Assemblymanifest kann je nach Inhalt der Assembly mehrere verschiedene Direktiven enthalten.  Eine umfassende Liste der Direktiven im Assemblymanifest finden Sie in der ECMA\-Dokumentation, insbesondere in "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set".  Die Dokumentation ist online sein; finden Sie unter [ECMA C\# und Common Language\-Infrastruktur Standards](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA\-335 \- Common Language Infrastructure \(CLI\)](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma\-International\-Website.  
+ Ein Assemblymanifest kann eine Reihe unterschiedlicher Direktiven enthalten, je nach den Inhalten der Assembly. Eine ausführliche Liste mit den Direktiven im Assemblymanifest finden Sie in der ECMA-Dokumentation, besonders unter „Partition II: Metadata Definition and Semantics“ (Partition II: Matadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungssatz). Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
   
-## Siehe auch  
- [Application Domains and Assemblies](http://msdn.microsoft.com/de-de/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [Gewusst\-wie\-Themen zu Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anwendungsdomänen und Assemblys](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
+ [Themen zur Vorgehensweise zu Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
+ [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+

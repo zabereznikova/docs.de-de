@@ -1,113 +1,107 @@
 ---
-title: "Gewusst wie: Erstellen einer Klasse mit CodeDOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Code Document Object Model (CodeDOM), Erstellen von Klassen"
-  - "Code Document Object Model (CodeDOM), Diagramme"
-  - "CodeDOM, Erstellen von Klassen"
-  - "CodeDOM, Diagramme"
-  - "Diagrammerstellung mit CodeDOM"
+title: 'Vorgehensweise: Erstellen einer Klasse mit CodeDOM | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Code Document Object Model, graphs
+- Code Document Object Model, creating classes
+- graphing with CodeDOM
+- CodeDOM, creating classes
+- CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 47d3d8559efa627f1f103b6c1f9f516f567b9dc0
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Erstellen einer Klasse mit CodeDOM
-Die folgenden Verfahren zeigen, wie ein CodeDOM\-Diagramm erstellt und kompiliert wird, das eine Klasse mit zwei Feldern, drei Eigenschaften, einer Methode, einem Konstruktor und einem Einstiegspunkt generiert.  
+# <a name="how-to-create-a-class-using-codedom"></a>Gewusst wie: Erstellen einer Klasse mit CodeDOM
+Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompiliert, das eine Klasse erstellt, die zwei Felder, drei Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
   
-1.  Erstellen Sie eine Konsolenanwendung, die CodeDOM\-Code verwendet, um den Quellcode für eine Klasse zu generieren.  
+1.  Erstellen Sie eine Konsolenanwendung, die den CodeDOM-Code zum Generieren des Quellcodes für eine Klasse verwendet.  
   
-     In diesem Beispiel wird die generierende Klasse als `Sample` bezeichnet, und der generierte Code ist eine Klasse mit dem Namen `CodeDOMCreatedClass` in der Datei SampleCode.  
+     In diesem Beispiel heißt die generierende Klasse `Sample`, und der generierte Code ist eine Klasse namens `CodeDOMCreatedClass` in einer Datei namens „SampleCode“.  
   
-2.  Initialisieren Sie in der generierenden Klasse das CodeDOM\-Diagramm, und verwenden Sie CodeDOM\-Methoden, um die Member, den Konstruktor und den Einstiegspunkt \(`Main`\-Methode\) der generierten Klasse zu definieren.  
+2.  Initialisieren Sie in der generierenden Klasse das CodeDOM-Diagramm, und verwenden Sie CodeDOM-Methoden, um die Member, den Konstruktor und den Einstiegspunkt (`Main`-Methode) der generierten Klasse zu definieren.  
   
-     In diesem Beispiel besitzt die generierte Klasse zwei Felder, drei Eigenschaften, einen Konstruktor, eine Methode und eine `Main`\-Methode.  
+     In diesem Beispiel verfügt die generierte Klasse über zwei Felder, drei Eigenschaften, einen Konstruktor, eine Methode und eine `Main`-Methode.  
   
-3.  Erstellen Sie in der generierenden Klasse einen sprachspezifischen Codeanbieter, und rufen Sie dessen <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>\-Methode auf, um den Code aus dem Diagramm zu generieren.  
+3.  Erstellen Sie in der generierenden Klasse einen sprachspezifischen Codeanbieter, und rufen Sie dessen <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode auf, um den Code aus dem Diagramm zu erstellen.  
   
-4.  Kompilieren und führen Sie die Anwendung aus, um den Code zu generieren.  
+4.  Kompilieren Sie die Anwendung, und führen Sie sie aus, um den Code zu generieren.  
   
-     In diesem Beispiel ist der generierte Code in einer Datei mit dem Namen SampleCode.  Kompilieren und führen Sie diesen Code aus, um die Beispielausgabe zu sehen.  
+     In diesem Beispiel befindet sich der generierte Code in einer Datei namens „SampleCode“. Kompilieren Sie diesen Code, und führen Sie ihn aus, um die Beispielausgabe zu sehen.  
   
-### So erstellen Sie die Anwendung, die den CodeDOM\-Code ausführt  
+### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>So erstellen Sie die Anwendung, die den CodeDOM-Code ausführen wird  
   
--   Erstellen Sie eine Konsolenanwendungsklasse für den CodeDOM\-Code.  Definieren Sie die in der Klasse zu verwendenden globalen Felder, um auf die Assembly \(<xref:System.CodeDom.CodeCompileUnit>\) und die Klasse \(<xref:System.CodeDom.CodeTypeDeclaration>\) zu verweisen, geben Sie den Namen der generierten Quelldatei an, und deklarieren Sie die `Main`\-Methode.  
+-   Erstellen Sie eine Konsolenanwendungsklasse, die den CodeDOM-Code enthalten soll. Definieren Sie die globalen Felder, die in der Klasse verwendet werden sollen, um die Assembly (<xref:System.CodeDom.CodeCompileUnit>) und die Klasse (<xref:System.CodeDom.CodeTypeDeclaration>) zu verweisen, den Namen der generierten Quelldatei anzugeben und die `Main`-Methode zu deklarieren.  
   
-     [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
-     [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)] [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
-### So initialisieren Sie das CodeDOM\-Diagramm  
+### <a name="to-initialize-the-codedom-graph"></a>So initialisieren Sie das CodeDOM-Diagramm  
   
--   Initialisieren Sie im Konstruktor für die Konsolenanwendungsklasse die Assembly und die Klasse, und fügen Sie dem CodeDOM\-Diagramm die geeigneten Deklarationen hinzu.  
+-   Initialisieren Sie im Konstruktor für die Konsolenanwendungsklasse die Assembly und Klasse, und fügen Sie dem CodeDOM-Diagramm die passenden Deklarationen hinzu.  
   
-     [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
-     [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)] [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
-### So fügen Sie dem CodeDOM\-Diagramm Member hinzu  
+### <a name="to-add-members-to-the-codedom-graph"></a>So fügen Sie dem CodeDOM-Diagramm Member hinzu  
   
--   Fügen Sie dem CodeDOM\-Diagramm Felder hinzu, indem Sie <xref:System.CodeDom.CodeMemberField>\-Objekte zur <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>\-Eigenschaft der Klasse hinzufügen.  
+-   Fügen Sie dem CodeDOM-Diagramm Felder hinzu, indem Sie der <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>-Eigenschaft der Klasse <xref:System.CodeDom.CodeMemberField>-Objekte hinzufügen.  
   
-     [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
-     [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)] [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
--   Fügen Sie dem CodeDOM\-Diagramm Eigenschaften hinzu, indem Sie <xref:System.CodeDom.CodeMemberProperty>\-Objekte zur <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>\-Eigenschaft der Klasse hinzufügen.  
+-   Fügen Sie dem CodeDOM-Diagramm Eigenschaften hinzu, indem Sie der <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>-Eigenschaft der Klasse <xref:System.CodeDom.CodeMemberProperty>-Objekte hinzufügen.  
   
-     [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
-     [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)] [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
--   Fügen Sie dem CodeDOM\-Diagramm eine Methode hinzu, indem Sie ein <xref:System.CodeDom.CodeMemberMethod>\-Objekt zur <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>\-Eigenschaft der Klasse hinzufügen.  
+-   Fügen Sie dem CodeDOM-Diagramm eine Methode hinzu, indem Sie der <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>-Eigenschaft der Klasse <xref:System.CodeDom.CodeMemberMethod>-Objekte hinzufügen.  
   
-     [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
-     [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)] [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
--   Fügen Sie dem CodeDOM\-Diagramm einen Konstruktor hinzu, indem Sie ein <xref:System.CodeDom.CodeConstructor>\-Objekt zur <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>\-Eigenschaft der Klasse hinzufügen.  
+-   Fügen Sie dem CodeDOM-Diagramm einen Konstruktor hinzu, indem Sie der <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>-Eigenschaft der Klasse <xref:System.CodeDom.CodeConstructor>-Objekte hinzufügen.  
   
-     [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
-     [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
+     [!code-csharp[CodeDOM Klasse Beispiel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)] [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
--   Fügen Sie dem CodeDOM\-Diagramm einen Einstiegspunkt hinzu, indem Sie ein <xref:System.CodeDom.CodeEntryPointMethod>\-Objekt zur <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>\-Eigenschaft der Klasse hinzufügen.  
+-   Fügen Sie dem CodeDOM-Diagramm einen Einstiegspunkt hinzu, indem Sie der <xref:System.CodeDom.CodeTypeDeclaration.Members%2A>-Eigenschaft der Klasse <xref:System.CodeDom.CodeEntryPointMethod>-Objekte hinzufügen.  
   
-     [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
-     [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)] [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
-### So generieren Sie den Code aus dem CodeDOM\-Diagramm  
+### <a name="to-generate-the-code-from-the-codedom-graph"></a>So generieren Sie den Code aus dem CodeDOM-Diagramm  
   
--   Generieren Sie Quellcode aus dem CodeDOM\-Diagramm, indem Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>\-Methode aufrufen.  
+-   Generieren Sie Quellcode aus dem CodeDOM-Diagramm, indem Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode aufrufen.  
   
-     [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
-     [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)] [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
   
-### So erstellen Sie das Diagramm und generieren den Code  
+### <a name="to-create-the-graph-and-generate-the-code"></a>So erstellen Sie das Diagramm und generieren den Code  
   
-1.  Fügen Sie der im ersten Schritt definierten `Main`\-Methode die in den vorhergehenden Schritten erstellten Methoden hinzu.  
+1.  Fügen Sie die in den vorherigen Schritten erstellten Methoden der `Main`-Methode, die im ersten Schritt definiert ist, hinzu.  
   
-     [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
-     [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
+     [!code-csharp[CodeDOM-Klasse Beispiel#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)] [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Kompilieren und führen Sie die generierende Klasse aus.  
+2.  Kompilieren Sie die generierende Klasse, und führen Sie sie aus.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird der Code der vorangehenden Schritte veranschaulicht.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird der Code aus den vorherigen Schritten gezeigt.  
   
- [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]
- [!code-vb[CodeDOM Class Sample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#1)]  
+ [!code-csharp[CodeDOM-Klasse Beispiel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)] [!code-vb[CodeDOM Class Sample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#1)]  
   
- Wenn das vorangehende Beispiel kompiliert und ausgeführt wird, erzeugt es den folgenden Quellcode.  
+ Wenn das vorherige Beispiel kompiliert und ausgeführt wird, wird der folgende Quellcode erstellt.  
   
- [!code-csharp[CodeDOM Class Sample#99](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/SampleCode.cs#99)]
- [!code-vb[CodeDOM Class Sample#99](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/SampleCode.vb#99)]  
+ [!code-csharp[CodeDOM Klasse Beispiel#99](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/SampleCode.cs#99)] [!code-vb[CodeDOM Class Sample#99](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/SampleCode.vb#99)]  
   
- Der generierte Quellcode erzeugt die folgende Ausgabe, wenn er kompiliert und ausgeführt wird.  
+ Der generierte Quellcode erstellt die folgende Ausgabe, wenn er kompiliert und ausgeführt wird.  
   
 ```  
 The object:  
@@ -116,10 +110,10 @@ The object:
  area = 36.57  
 ```  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Dieses Codebeispiel erfordert den `FullTrust`\-Berechtigungssatz, um erfolgreich ausgeführt werden zu können.  
+-   Dieses Codebeispiel benötigt die festgelegte `FullTrust`-Berechtigung, damit es erfolgreich ausgeführt werden kann.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)   
- [Generieren und Kompilieren von Quellcode aus einem CodeDOM\-Diagramm](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+ [Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

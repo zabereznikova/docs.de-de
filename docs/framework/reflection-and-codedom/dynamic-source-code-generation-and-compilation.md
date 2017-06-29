@@ -1,60 +1,65 @@
 ---
-title: "Generieren und Kompilieren von dynamischem Quellcode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Code Document Object Model (CodeDOM)"
-  - "CodeDOM"
-  - "Sprachunabhängige Quellcodemodellierung"
-  - "Sprachen, Unterstützung mehrerer Sprachen durch CodeDOM"
-  - "Mehrere durch CodeDOM unterstützte Sprachen"
-  - "Quellcode in mehreren Sprachen"
-  - "System.CodeDom-Namespace"
+title: Generieren und Kompilieren von dynamischem Quellcode | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Code Document Object Model
+- System.CodeDom namespace
+- language-independent source code modeling
+- CodeDOM
+- multiple languages supported by CodeDOM
+- source code in multiple languages
+- languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 86483858b93f58b22d8c8440baa76d68250745dd
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Generieren und Kompilieren von dynamischem Quellcode
-.NET Framework enthält einen Mechanismus mit der Bezeichnung Code\-Dokumentobjektmodell \(Code Document Object Model, CodeDOM\), mit dem die Entwickler von Programmen, die Quellcode ausgeben, die Ausgabe von Quellcode in mehreren Programmiersprachen zur Laufzeit generieren können. Die Grundlage hierfür ist ein Modell, das den zu rendernden Code darstellt.  
+# <a name="dynamic-source-code-generation-and-compilation"></a>Generieren und Kompilieren von dynamischem Quellcode
+Das .NET Framework enthält einen Mechanismus, der „Code Document Object Model“ (CodeDOM) genannt wird, und mit dem Programmentwickler, die Quellcode ausgeben, Quellcode in mehreren Programmiersprachen zur Runtime generieren können und das alles auf Grundlage eines einzigen Modells, das den zu rendernden Code darstellt.  
   
- Bei der Darstellung von Quellcode werden CodeDOM\-Elemente miteinander verknüpft, sodass sich eine Datenstruktur ergibt, die die Struktur von Quellcode nachbildet. Diese Struktur wird als CodeDOM\-Diagramm bezeichnet.  
+ Um den Quellcode darzustellen, werden CodeDOM-Elemente miteinander verknüpft, damit sie eine Datenstruktur bilden, die als CodeDOM-Diagramm bekannt ist, der die Struktur von Quellcode modelliert.  
   
- Der `System.CodeDom`\-Namespace definiert Typen, die die logische Struktur von Quellcode unabhängig von einer bestimmten Programmiersprache darstellen können.  Der `System.CodeDom.Compiler`\-Namespace definiert Typen zum Generieren von Quellcode aus CodeDOM\-Diagrammen und zum Verwalten der Quellcodekompilierung in unterstützten Sprachen.  Compilerhersteller und Entwickler können die Gruppe der unterstützten Sprachen erweitern.  
+ Der `System.CodeDom`-Namespace definiert Typen, die die logische Struktur des Quellcodes darstellen können, unabhängig von einer bestimmten Programmiersprache. Der `System.CodeDom.Compiler`-Namespace definiert Typen zum Generieren von Quellcode von CodeDOM-Diagrammen und zum Verwalten der Quellcodekompilierung in unterstützten Sprachen. Compileranbieter oder Entwickler können die Reihe der unterstützten Sprachen erweitern.  
   
- Die sprachunabhängige Quellcodemodellierung eignet sich insbesondere für Programme, die Quellcode für ein Programmiermodell in mehreren Sprachen generieren, oder für den Fall, dass die Zielsprache nicht feststeht.  Beispielsweise können Entwickler CodeDOM als Schnittstelle für die Sprachabstraktion verwenden, um Quellcode in der richtigen Programmiersprache zu erstellen, sofern CodeDOM von der Sprache unterstützt wird.  
+ Sprachunabhängige Quellcodemodellierung kann von Wert sein, wenn ein Programm Quellcode für ein Programm-Modell in mehreren Sprachen oder für eine ungenaue Zielsprache generieren muss. Einige Designer nutzen z.B. CodeDOM als Sprachabstraktions-Schnittstelle, um Quellcode in der korrekten Programmiersprache zu erstellen, falls die CodeDOM-Unterstützung für die Sprache verfügbar ist.  
   
- .NET Framework enthält Code\-Generatoren und Codecompiler für [C\#](frlrfMicrosoftCSharpCSharpCodeProviderClassTopic), [JScript](frlrfMicrosoftJScriptJScriptCodeProviderClassTopic) und [Visual Basic](frlrfMicrosoftVisualBasicVBCodeProviderClassTopic).  
+ Das .NET Framework enthält Codegeneratoren und Codecompiler für <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider> und <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verwenden von CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
- Beschreibt häufige Verwendungsweisen und veranschaulicht das Erstellen eines einfachen Objektdiagramms mithilfe von CodeDOM.  
+ Beschreibt häufige Verwendungen und stellt die Erstellung eines einfachen Objektdiagramms mithilfe von CodeDOM dar.  
   
- [Generieren von Quellcode und Kompilieren eines Programms aus einem CodeDOM\-Diagramm](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
- Beschreibt das Generieren von Quellcode und das Kompilieren von generiertem Code mit einem externen Compiler anhand von Klassen, die im `System.CodeDom.Compiler`\-Namespace definiert sind.  
+ [Generieren von Quellcode und Kompilieren eines Programms aus einem CodeDOM-Diagramm](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ Beschreibt, wie Quellcode generiert und der generierte Code mit einem externen Compiler mithilfe von im `System.CodeDom.Compiler`-Namespace definierten Klassen kompiliert wird.  
   
- [Gewusst wie: Erstellen einer XML\-Dokumentationsdatei mit CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
- Beschreibt die Verwendung von CodeDOM, um Code mit XML\-Dokumentationskommentaren zu generieren und den generierten Code zu kompilieren, sodass die XML\-Dokumentationsausgabe erstellt wird.  
+ [Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ Beschreibt, wie CodeDOM zum Generieren von Code mit Kommentaren der XML-Dokumentation verwendet wird und wie der generierte Code kompiliert wird, damit die Ausgabe der XML-Dokumentation erstellt wird.  
   
- [Gewusst wie: Erstellen einer Klasse mit CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
- Beschreibt die Verwendung von CodeDOM, um eine Klasse mit Feldern, Eigenschaften, einer Methode, einem Konstruktor und einem Einstiegspunkt zu generieren.  
+ [Vorgehensweise: Erstellen einer Klasse mit CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ Beschreibt, wie CodeDOM zum Generieren einer Klasse verwendet wird, die Felder, Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.CodeDom>  
- Definiert Elemente, die Codeelemente in von der Common Language Runtime unterstützten Programmiersprachen darstellen.  
+ Definiert Elemente, die Codeelemente in Programmiersprachen darstellen, die auf die Common Language Runtime abzielen.  
   
  <xref:System.CodeDom.Compiler>  
- Definiert Schnittstellen zum Generieren und Kompilieren von Code zur Laufzeit.  
+ Definiert Schnittstellen zum Generieren und Kompilieren von Code zur Runtime.  
   
-## Verwandte Abschnitte  
- [CodeDOM Quick Reference](http://msdn.microsoft.com/de-de/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
- Vereinfacht Entwicklern das Auffinden von CodeDOM\-Elementen, die Quellcodeelemente darstellen.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Kurzreferenz zum CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ Bietet Entwicklern einen schnellen Weg, die CodeDOM-Elemente zu finden, die Quellcodeelemente darstellen.

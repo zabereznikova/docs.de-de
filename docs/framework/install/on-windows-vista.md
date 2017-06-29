@@ -1,5 +1,5 @@
 ---
-title: Installieren von .NET Framework unter Windows Vista
+title: Installieren von .NET Framework unter Windows Vista | Microsoft-Dokumentation
 description: Informationen zum Installieren von .NET Framework unter Windows Vista
 author: rlander
 keywords: .Net Framework, installieren
@@ -9,15 +9,15 @@ ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g5-5eb5-93e6-5f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: e79b9ba18e4c0d769e76497557dfdb61fc9cd2b9
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 4bfba1da356227518b4f1812018ea5ca62cdaaf5
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-vista"></a>Installieren von .NET Framework unter Windows Vista
+# <a name="install-the-net-framework-on-windows-vista"></a>Installieren von .NET Framework unter Windows Vista
 
 Möglicherweise wird .NET Framework zum Ausführen einer Anwendung auf Windows Vista benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
 

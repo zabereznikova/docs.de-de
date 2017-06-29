@@ -1,26 +1,31 @@
 ---
-title: "Gewusst-wie-Themen zu Anwendungsdom&#228;nen und Assemblys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsdomänen, Gewusst wie"
-  - "Assemblys [.NET Framework], Gewusst wie"
+title: "Themen zur Vorgehensweise zu Anwendungsdomänen und Assemblys | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], how-tos
+- application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: afbedbf1565f698d0bda2afe6e75d68c610f2aa2
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst-wie-Themen zu Anwendungsdom&#228;nen und Assemblys
-In der folgenden Abschnitten sind Links zu allen Gewusst\-wie\-Themen in der Begriffsdokumentation für die Programmierung mit Anwendungsdomänen und Assemblys aufgeführt.  
+# <a name="application-domains-and-assemblies-how-to-topics"></a>Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
+Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  
   
  **Anwendungsdomänen**  
   
@@ -30,9 +35,9 @@ In der folgenden Abschnitten sind Links zu allen Gewusst\-wie\-Themen in der Beg
   
 -   [Gewusst wie: Konfigurieren einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
   
--   [Gewusst wie: Laden von Assemblys in eine Anwendungsdomäne](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+-   [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
   
--   [Gewusst wie: Abrufen von Typ\- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+-   [Gewusst wie: Abrufen von Typ- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
   
  **Assemblys**  
   
@@ -42,13 +47,13 @@ In der folgenden Abschnitten sind Links zu allen Gewusst\-wie\-Themen in der Beg
   
 -   [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [Gewusst wie: Erstellen eines öffentlichen\/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+-   [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
--   [Gewusst wie: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+-   [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
 -   [Gewusst wie: Verweisen auf eine Assembly mit starkem Namen](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
--   [Gewusst wie: Deaktivieren des Strong\-Name\-Bypass\-Features](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+-   [Gewusst wie: Deaktivieren der Strong-Name-Bypass-Funktion](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 -   [Gewusst wie: Installieren einer Assembly in den globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
@@ -56,7 +61,7 @@ In der folgenden Abschnitten sind Links zu allen Gewusst\-wie\-Themen in der Beg
   
 -   [Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
--   [Gewusst wie: Ansichtsassemblyinhalt](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+-   [Gewusst wie: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/index.md)

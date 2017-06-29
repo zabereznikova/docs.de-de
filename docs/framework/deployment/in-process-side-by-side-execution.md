@@ -1,78 +1,83 @@
 ---
-title: "Prozessinterne parallele Ausf&#252;hrung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Prozessinterne parallele Ausführung"
-  - "Parallele Ausführung, Prozessintern"
+title: "Prozessinterne parallele Ausführung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- in-process side-by-side execution
+- side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 25
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 09044e2f604ba9b1b87850eea001492c111d45c9
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Prozessinterne parallele Ausf&#252;hrung
-Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime \(CLR\) in einem einzelnen Prozess ausführen.  Standardmäßig werden verwaltete COM\-Komponenten mit der .NET Framework\-Version verwaltet, mit der sie erstellt wurden, unabhängig von der .NET Framework\-Version, die für den Prozess geladen wird.  
+# <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
+Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
   
-## Hintergrund  
- .NET Framework bietet seit jeher paralleles Hosting für verwaltete Codeanwendungen, doch vor der Version [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] stand diese Funktion nicht für verwaltete COM\-Komponenten zur Verfügung.  Früher wurden verwaltete COM\-Komponenten, die in einem Prozess geladen wurden, entweder mit der Version der Laufzeit, die bereits geladen war, oder mit der am aktuellsten installierten Version von .NET Framework ausgeführt.  Wenn diese Version nicht kompatibel mit der COM\-Komponente wäre, würde die Komponente fehlschlagen.  
+## <a name="background"></a>Hintergrund  
+ Das .NET Framework bot schon immer paralleles Hosting für verwaltete Codeanwendungen, vor [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] gab es diese Funktion jedoch nicht für verwaltete COM-Komponenten. In der Vergangenheit wurden verwaltete COM-Komponenten, die in einen Prozess geladen wurden, entweder mit der Version der bereits geladenen Runtime oder mit der neuesten installierten Version von .NET Framework ausgeführt. Wenn diese Version nicht mit der COM-Komponente kompatibel war, ist die Komponente fehlgeschlagen.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bietet einen neuen Ansatz für paralleles Hosting, durch den Folgendes sichergestellt wird:  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bietet eine neue Herangehensweise des parallelen Hostings, wodurch Folgendes sichergestellt werden kann:  
   
--   Die Installation einer neuen Version von .NET Framework hat keine Auswirkungen auf vorhandene Anwendungen.  
+-   Die Installation einer neuen Version von .NET Framework hat keinen Einfluss auf vorhandene Anwendungen.  
   
--   Anwendungen werden für die Version von .NET Framework ausgeführt, mit der sie erstellt wurden.  Es wird nicht die neue Version von .NET Framework verwendet, sofern keine ausdrückliche Anweisung dazu vorliegt.  Es ist jedoch einfacher, wenn für Anwendungen eine neue Version von .NET Framework verwendet wird.  
+-   Anwendungen werden auf der Version des .NET Framework aufgeführt, mit dem sie erstellt wurden. Sie verwenden nicht die neue Version des .NET Framework, es sei denn, es wird ausdrücklich darauf hingewiesen. Es ist für Anwendungen, zu der ein Übergang stattfindet, jedoch einfacher, eine neue Version von .NET Framework zu verwenden.  
   
-## Auswirkungen auf Benutzer und Entwickler  
+## <a name="effects-on-users-and-developers"></a>Auswirkungen auf Benutzer und Entwickler  
   
--   **Endbenutzer und Systemadministratoren**.  Diese Benutzer können nun mit größerer Wahrscheinlichkeit annehmen, dass bei der Installation einer neuen Version der Laufzeit – entweder unabhängig oder mit einer Anwendung – keine Auswirkungen auf die Computer auftreten.  Vorhandene Anwendungen werden wie bisher ausgeführt.  
+-   **Endbenutzer und Systemadministratoren**. Diese Benutzer können nun bei der Installation einer Version der Runtime sicherer sein, wenn sie diese entweder eigenständig oder mit einer Anwendung erstellen. Dies hat keinen Einfluss auf deren Computer. Vorhandene Anwendungen werden genauso wie vorher ausgeführt.  
   
--   **Anwendungsentwickler**.  Paralleles Hosting hat fast keine Auswirkungen auf Anwendungsentwickler.  Standardmäßig werden Anwendungen immer für die Version von .NET Framework ausgeführt, mit der sie erstellt wurden; dies hat sich nicht geändert.  Allerdings können Entwickler dieses Verhalten außer Kraft setzen und die Anwendung unter einer neueren Version von .NET Framework ausführen \(siehe [Szenario 2](#scenarios)\).  
+-   **Anwendungsentwickler**. Das parallele Hosting hat so gut wie keine Auswirkungen auf Anwendungsentwickler. Standardmäßig werden Anwendungen immer auf der Version des .NET Framework ausgeführt, auf dem sie erstellt wurden; dies hat sich nicht verändert. Jedoch können Entwickler dieses Verhalten außer Kraft setzen und Anwendungen dazu bringen, unter einer neueren Version des .NET Framework zu laufen (siehe [Szenario 2](#scenarios)).  
   
--   **Bibliotheksentwickler und Consumer**.  Paralleles Hosting löst nicht die Kompatibilitätsprobleme von Bibliotheksentwicklern.  Eine Bibliothek, die direkt von einer Anwendung geladen wird – entweder durch einen direkten Verweis oder durch einen <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>\-Aufruf – verwendet weiterhin die Laufzeit des <xref:System.AppDomain>\-Objekts, in das sie geladen wird.  Testen Sie die Bibliotheken für alle Versionen von .NET Framework testen, die Sie unterstützen möchten.  Wenn eine Anwendung mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]\-Laufzeit kompiliert wird, aber eine Bibliothek einschließt, die mit einer früheren Laufzeit erstellt wurde, verwendet diese Bibliothek auch die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]\-Laufzeit.  Wenn Sie jedoch über eine Anwendung verfügen, die mit einer früheren Laufzeit und einer Bibliothek erstellt wurde, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erstellt wurde, muss die Verwendung von [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] durch die Anwendung erzwungen werden \(siehe [Szenario 3](#scenarios)\).  
+-   **Bibliotheksentwickler und Consumer**. Das parallele Hosting löst nicht die Probleme mit der Kompatibilität, denen Bibliotheksentwickler gegenüberstehen. Eine Bibliothek, die direkt durch eine Anwendung geladen wird, entweder durch einen Direktverweis oder einen <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>-Aufruf, verwendet weiterhin die Runtime von <xref:System.AppDomain>, in der sie geladen wurde. Sie sollten Ihre Bibliotheken für alle .NET Framework-Versionen testen, die Sie unterstützen möchten. Wenn eine Anwendung mithilfe der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime kompiliert wird, jedoch eine Bibliothek enthält, die mit einer früheren Runtime erstellt wurde, wird dies Bibliothek ebenso die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime verwenden. Wenn Sie jedoch über eine Anwendung verfügen, die mithilfe einer früheren Runtime erstellt wurde, sowie eine Bibliothek, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erstellt wurde, müssen Sie Ihre Anwendung dazu zwingen, auch [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zu verwenden (siehe [Szenario 3](#scenarios)).  
   
--   **Entwickler von verwalteten COM\-Komponenten**.  Früher wurden verwaltete COM\-Komponenten automatisch mit der neuesten Version der auf dem Computer installierten Laufzeit ausgeführt.  Sie können nun COM\-Komponenten für die Version der Laufzeit ausführen, mit der sie erstellt wurden.  
+-   **Entwickler verwalteter COM-Komponenten**. Früher wurden die verwalteten COM-Komponenten automatisch mithilfe der aktuellsten Version der Runtime ausgeführt, die auf dem Computer installiert war. Sie können nun COM-Komponenten für die Version der Runtime ausführen, mit der sie erstellt wurden.  
   
-     Entsprechend den Angaben in der folgenden Tabelle können Komponenten, die mit .NET Framework, Version 1.1, erstellt wurden, parallel mit Komponenten der Version 4 ausgeführt werden, doch sie können nicht mit Komponenten der Version 2.0, 3.0 oder 3.5 ausgeführt werden, da paralleles Hosting für diese Versionen nicht verfügbar ist.  
+     So wie in der folgenden Tabelle gezeigt, können Komponenten, die mit der .NET Framework-Version 1.1 erstellt wurden, parallel mit Komponenten der Version 4 ausgeführt werden. Sie können jedoch nicht mit Komponenten der Version 2.0, 3.0 oder 3.5 ausgeführt werden, da das parallele Hosting für diese Versionen nicht verfügbar ist.  
   
-    |.NET Framework\-Version|1.1|2.0 \- 3.5|4|  
-    |-----------------------------|---------|----------------|-------|  
-    |1.1|Nicht zutreffend|nein|ja|  
-    |2.0 \- 3.5|nein|Nicht zutreffend|ja|  
-    |4|ja|ja|Nicht zutreffend|  
+    |.NET Framework-Version|1.1|2.0 - 3.5|4|  
+    |----------------------------|---------|----------------|-------|  
+    |1.1|Nicht zutreffend|Nein|Ja|  
+    |2.0 - 3.5|Nein|Nicht zutreffend|Ja|  
+    |4|Ja|Ja|Nicht zutreffend|  
   
 > [!NOTE]
->  Die Versionen 3.0 und 3.5 von .NET Framework werden inkrementell auf Version 2.0 erstellt. Eine parallele Ausführung ist nicht erforderlich.  Grundsätzlich handelt es sich dabei um die gleiche Version.  
+>  .NET Framework-Versionen 3.0 und 3.5 werden inkrementell auf Version 2.0 erstellt und müssen nicht parallel ausgeführt werden. Sie sind an und für sich dieselbe Version.  
   
 <a name="scenarios"></a>   
-## Allgemeine parallele Hostingszenarien  
+## <a name="common-side-by-side-hosting-scenarios"></a>Häufige Szenarios des parallelen Hostings  
   
--   **Szenario 1:** Systemeigene Anwendung, die mit früheren Versionen von .NET Framework erstellte COM\-Komponenten verwendet.  
+-   **Szenario 1:** Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden.  
   
-     Installierte .NET Framework\-Versionen: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und alle anderen Versionen von .NET Framework, die von COM\-Komponenten verwendet werden.  
+     Installierte .NET Framework-Versionen: Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und alle anderen Versionen des .NET Framework, die von den COM-Komponenten verwendet werden.  
   
-     Vorgehensweise: In diesem Szenario sind keine Schritte erforderlich.  Die COM\-Komponenten werden mit der Version von .NET Framework ausgeführt, mit der sie registriert wurden.  
+     Das muss ich tun: In diesem Szenario unternehmen Sie nichts. Die COM-Komponenten werden mit der Version des .NET Framework ausgeführt, mit der sie registriert wurden.  
   
--   **Szenario 2**: Verwaltete Anwendung, die mit [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] erstellt wurde, das Sie mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausführen möchten, wobei Sie jedoch auch [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] für die Ausführung verwenden würden, wenn Version 2.0 nicht vorhanden ist.  
+-   **Szenario 2**: Verwaltete Anwendung, die mit [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] erstellt wurde, die lieber mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausgeführt werden soll, jedoch auch unter [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausgeführt werden kann, wenn Version 2.0 nicht verfügbar ist.  
   
-     Installierte .NET Framework\-Versionen: Eine frühere Version von .NET Framework und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Installierte .NET Framework-Version: Eine frühere Version von .NET Framework und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Vorgehensweise: In [Anwendungskonfigurationsdatei](../../../docs/framework/configure-apps/index.md) im Anwendungsverzeichnis, verwenden Sie [\<Starten\>\-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) und [\<supportedRuntime\>\-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), die festgelegt werden, wie folgt:  
+     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../../../docs/framework/configure-apps/index.md) im Anwendungsverzeichnis das [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) und das [\<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup >  
         <supportedRuntime version="v2.0.50727" />  
@@ -81,13 +86,13 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
     </configuration>  
     ```  
   
--   **Szenario 3:** Systemeigene Anwendung, die mit früheren Versionen von .NET Framework erstellte COM\-Komponenten verwendet, die Sie mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausführen möchten.  
+-   **Szenario 3:** Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden, die Sie mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausführen möchten.  
   
-     Installierte .NET Framework\-Versionen: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Installierte .NET Framework-Versionen: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
   
-     Vorgehensweise: Verwenden Sie in der Anwendungskonfigurationsdatei im Anwendungsverzeichnis das `<startup>`\-Element, wobei das `useLegacyV2RuntimeActivationPolicy`\-Attribut auf `true` und das `<supportedRuntime>`\-Element folgendermaßen festgelegt ist:  
+     Vorgehensweise: Verwenden Sie in der Anwendungskonfigurationsdatei im Anwendungsverzeichnis das `<startup>`-Element, mit mit dem `useLegacyV2RuntimeActivationPolicy`-Attribut, das auf `true` festgelegt ist, sowie das `<supportedRuntime>`-Element, das wie folgt festgelegt ist:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup useLegacyV2RuntimeActivationPolicy="true">  
         <supportedRuntime version="v4.0" />  
@@ -95,10 +100,10 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
     </configuration>  
     ```  
   
-## Beispiel  
- Im folgenden Beispiel wird ein nicht verwalteter COM\-Host gezeigt, auf dem eine verwaltete COM\-Komponente ausgeführt wird. Dabei wird die Version von .NET Framework verwendet, für deren Verwendung die Komponente kompiliert wurde.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel stellt einen nicht verwalteten COM-Host dar, der eine verwaltete COM-Komponente mithilfe der Version von .NET Framework ausführt, für deren Verwendung die Komponente kompiliert wurde.  
   
- Zum Ausführen des folgenden Beispiels, kompilieren und registrieren Sie die folgende verwaltete COM\-Komponente mit [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Um die Komponente, auf dem Menü **Projekt** zu registrieren, klicken auf **Eigenschaften**, auf die Registerkarte **Erstellen** und aktivieren Sie dann das Kontrollkästchen **Für COM\-Interop registrieren**.  
+ Um das folgende Beispiel auszuführen, kompilieren und registrieren Sie die folgende verwaltete COM-Komponente mithilfe von [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Um die Komponente zu registrieren, klicken Sie im **Projekt**-Menü auf **Eigenschaften**, auf die Registerkarte **Erstellen**, und aktivieren Sie dann das Kontrollkästchen **Für COM-Interop registrieren**.  
   
 ```  
 using System;  
@@ -123,7 +128,7 @@ namespace BasicComObject
 }  
 ```  
   
- Kompilieren Sie die folgende nicht verwaltete C\+\+\-Anwendung, von der das COM\-Objekt aktiviert wird, das im vorherigen Beispiel erstellt wurde.  
+ Kompilieren Sie die folgende nicht verwaltete C++-Anwendung, die das COM-Objekt aktiviert, das durch das vorherige Beispiel erstellt wurde.  
   
 ```  
 #include "stdafx.h"  
@@ -181,9 +186,9 @@ int _tmain(int argc, _TCHAR* argv[])
     CoUninitialize();  
     return 0;  
 }  
-  
 ```  
   
-## Siehe auch  
- [\<startup\>\-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
- [\<supportedRuntime\>\-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

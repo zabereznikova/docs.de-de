@@ -1,194 +1,197 @@
 ---
-title: "Verpacken und Bereitstellen von Ressourcen in Desktop-Apps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bereitstellen von Anwendungen [.NET Framework], Ressourcen"
-  - "Ressourcendateien, Bereitstellen"
-  - "Strahlenförmiges Modell zur Bereitstellung von Ressourcen"
-  - "Ressourcendateien, Verpacken"
-  - "Anwendungsressourcen, Verpacken"
-  - "Einzelressourcenassembly"
-  - "Satellitenassemblys"
-  - "Standardkultur für Anwendungen"
-  - "Namen [.NET Framework], Ressourcen"
-  - "Fallbackprozess für Ressourcen"
-  - "Gruppieren von Kulturen"
-  - "Anwendungsressourcen, Bereitstellen"
-  - "Anwendungsressourcen, Namenskonventionen"
-  - "Kultur, Verpacken und Bereitstellen von Ressourcen"
-  - "Ressourcendateien, Namenskonventionen"
-  - "Verpacken von Anwendungsressourcen"
-  - "Anwendungsressourcen, Fallbackprozesse"
-  - "Ressourcendateien, Fallbackprozesse"
-  - "Lokalisieren von Ressourcen"
-  - "Neutrale Kulturen"
+title: Verpacken und Bereitstellen von Ressourcen in Desktop-Apps | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying applications [.NET Framework], resources
+- resource files, deploying
+- hub-and-spoke resource deployment model
+- resource files, packaging
+- application resources, packaging
+- single resource assembly
+- satellite assemblies
+- default culture for applications
+- names [.NET Framework], resources
+- fallback process for resources
+- grouping cultures
+- application resources, deploying
+- application resources, naming conventions
+- culture, packaging and deploying resources
+- resource files, naming conventions
+- packaging application resources
+- application resources, fallback processes
+- resource files, fallback processes
+- localizing resources
+- neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 caps.latest.revision: 26
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 26
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 8f77d86ba453389b8fc5f52797a3ce43377176ae
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Verpacken und Bereitstellen von Ressourcen in Desktop-Apps
-Anwendungen beruhen auf dem .NET Framework Ressourcen\-Manager, dargestellt durch die <xref:System.Resources.ResourceManager>\-Klasse, um lokalisierte Ressourcen abrufen.  Der Ressourcen\-Manager wird davon ausgegangen, dass ein strahlenförmiges Modell verwendet wird, um Ressourcen zu verpacken und bereitzustellen.  Im Mittelpunkt steht dabei die Hauptassembly, die den nicht lokalisierbaren ausführbaren Code sowie die Ressourcen für eine einzelne Kultur enthält, die so genannte neutrale Kultur bzw. Standardkultur.  Diese Standardkultur stellt die Fallbackkultur der Anwendung; es ist die Kultur, deren Ressourcen verwendet werden, wenn keine lokalisierten Ressourcen gefunden werden können.  Jeder Strahl in diesem Modell ist mit einer Satellitenassembly verknüpft, welche die Ressourcen für eine einzelne Kultur – jedoch keinen Code – enthält.  
+# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Verpacken und Bereitstellen von Ressourcen in Desktop-Apps
+Anwendungen sind davon abhängig, dass der .NET Framework-Ressourcen-Manager, der von der Klasse <xref:System.Resources.ResourceManager> dargestellt wird, lokalisierte Ressourcen abruft. Der Ressourcen-Manager geht davon aus, dass ein Speichenarchitektur-Modell (Hub-and-Spoke) verwendet wird, um Ressourcen zu verpacken und bereitzustellen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, deren Ressourcen verwendet werden, wenn keine lokalisierten Ressourcen gefunden werden können. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne Kultur aber keinen Code enthält.  
   
- Dieses Modell besitzt einige Vorteile:  
+ Dieses Modell hat mehrere Vorzüge:  
   
--   Sie können Ressourcen für neue Kulturen inkrementell hinzufügen, nachdem Sie eine Anwendung bereitgestellt haben.  Die nachträgliche Entwicklung von kulturabhängigen Ressourcen beansprucht meist einen erheblichen Zeitaufwand. Mit diesem Modell können Sie zuerst die Hauptanwendung herausgeben und kulturspezifische Ressourcen zu einem späteren Zeitpunkt nachliefern.  
+-   Sie können Ressourcen für neue Kulturen inkrementell hinzufügen, nachdem Sie eine Anwendung bereitgestellt haben. Da die aufeinanderfolgende Entwicklung von kulturspezifischen Ressourcen viel Zeit in Anspruch nehmen kann, können Sie so zunächst Ihre Hauptanwendung veröffentlichen und kulturspezifische Ressourcen zu einem späteren Zeitpunkt nachreichen.  
   
--   Sie können die Satellitenassembly einer Anwendung aktualisieren oder ändern, ohne die Anwendung neu kompilieren zu müssen.  
+-   Sie können die Satellitenassembly einer Anwendung aktualisieren oder ändern, ohne die Anwendung erneut kompilieren zu müssen.  
   
--   Eine Anwendung muss nur jeweils die Satellitenassemblys laden, welche die für eine bestimmte Kultur benötigten Ressourcen enthalten.  Damit verringern sich die benötigten Systemressourcen erheblich.  
+-   Eine Anwendung muss nur die Satellitenassemblys laden, die die für eine bestimmte Kultur benötigten Ressourcen enthalten. Dadurch kann die Auslastung von Systemressourcen deutlich verringert werden.  
   
- Dieses Modell hat jedoch auch Nachteile:  
+ Dennoch hat dieses Modell auch Nachteile:  
   
--   Sie müssen mehrere Sätze von Ressourcen verwalten.  
+-   Sie müssen mehrere Ressourcensätze gleichzeitig verwalten.  
   
--   Die Anfangskosten zum Testen einer Anwendung steigen, da mehrere Konfigurationen getestet werden müssen.  Bedenken Sie jedoch, dass es langfristig gesehen einfacher und preiswerter ist, eine Kernanwendung mit verschiedenen Satelliten zu testen, als mehrere parallele internationale Versionen zu verwalten.  
+-   Der anfängliche Kostenaufwand für das Testen einer Anwendung steigt, da Sie mehrere Konfigurationen überprüfen müssen. Beachten Sie, dass es auf lange Sicht einfacher und kostengünstiger wird, eine Kernanwendung mit mehreren Satelliten zu testen, als mehrere internationale Versionen gleichzeitig zu testen und zu verwalten.  
   
-## Namenskonventionen für Ressourcen  
- Beim Verpacken der Anwendungsressourcen müssen Sie diese entsprechend der Ressourcennamenkonventionen der Common Language Runtime benennen.  Die Common Language Runtime bestimmt eine Ressource über ihren Kulturnamen.  Jede Kultur erhält einen eindeutigen Namen, der normalerweise eine Kombination eines zweistelligen, der mit einer Sprache verknüpft ist, nach Bedarf, einen zweistelligen Teilkulturnamen, Großbuchstaben, der mit einem Land zugeordnet sind oder ein Bereich angegeben.  Der Teilkulturname steht hinter dem Kulturnamen, getrennt durch einen Bindestrich \(\-\).  Beispielsweise steht ja\-JP für Japanisch, wie in Japan, en\-US gesprochene für Englisch, wie in den USA, de\-DE gesprochene für Deutsch, das in Deutschland oder in de\-AT für Deutsch gesprochen, z in Österreich gesprochen.  Siehe in [Nationale Sprachunterstützungs API\-Referenz \(nls\)\-](http://go.microsoft.com/fwlink/?LinkId=200048) dem Sie Global\-Entwicklercenter für eine vollständige Liste der Kulturnamen.  
+## <a name="resource-naming-conventions"></a>Namenskonventionen für Ressourcen  
+ Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Eine vollständige Liste der Kulturnamen finden Sie in der [Referenz zur Unterstützung der Landessprache (NLS)](http://go.microsoft.com/fwlink/?LinkId=200048) im Go Global Developer Center.  
   
 > [!NOTE]
->  Informationen zum Erstellen von Ressourcendateien, finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) in der MSDN Library.  
+>  Informationen zum Erstellen von Ressourcendateien finden Sie in den Artikeln zum [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) und zum [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) in der MSDN Library.  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
-## Der Ressourcenfallback\-Prozess  
- Das sternenförmige Modell zum Verpacken und Bereitstellen von Ressourcen verwendet einen Fallbackprozess, um geeignete Ressourcen zu ermitteln.  Wenn eine Anwendung um eine lokalisierte Ressource anfordert, die nicht verfügbar ist, sucht die Common Language Runtime in der Hierarchie der Kulturen für eine entsprechende Fallbackressource, die am ehesten die Anforderung der Anwendung des Benutzers übereinstimmt, und löst eine Ausnahme nur als letzter Ausweg aus.  Sobald auf einer Ebene der Hierarchie eine passende Ressource gefunden wurde, wird sie von der Common Language Runtime verwendet.  Falls keine Ressource gefunden werden kann, wird die Suche auf der nächsten Ebene fortgesetzt.  
+## <a name="the-resource-fallback-process"></a>Der Ressourcenfallback-Prozess  
+ Das Speichenarchitektur-Modell (Hub-and-Spoke) zum Verpacken und Bereitstellen von Ressourcen setzt einen Fallbackprozess ein, um die passenden Ressourcen zu finden. Wenn eine Anwendung eine lokalisierte Ressource anfordert, die nicht verfügbar ist, durchsucht die CLR die Hierarchie von Kulturen nach einer passenden Ausweichressource, die am ehesten der Anfrage der Anwendung des Benutzers entspricht, und löst eine Ausnahme nur dann aus, wenn es keine andere Möglichkeit gibt. Wenn eine passende Ressource auf einer der Ebenen der Hierarchie gefunden wird, verwendet die Runtime diese. Wenn keine Ressource gefunden wird, wird die Suche auf der nächsten Ebene fortgesetzt.  
   
- Wenden Sie zur Verbesserung der Suchleistung das <xref:System.Resources.NeutralResourcesLanguageAttribute>\-Attribut auf die Hauptassembly an, wobei Sie dieser den Namen der neutralen Sprache übergeben, die für die Hauptassembly verwendet wird.  
+ Um die Suchleistung zu verbessern, wenden Sie das Attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> auf Ihre Hauptassembly an, und übergeben Sie diesem den Namen der neutralen Sprache, die mit Ihrer Hauptassembly funktioniert.  
   
 > [!TIP]
->  Sie sind möglicherweise in der Lage, das Konfigurationselement [\<relativeBindForResources\>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) verwenden, um den Ressourcenfallback\-Prozess und den Prozess zu optimieren, die durch die Laufzeit für Ressourcenassemblys überprüft.  Weitere Informationen finden Sie im Abschnitt [Optimieren des Ressourcen-Fallback-Prozesses](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).  
+>  Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Suchprozess der Runtime nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).  
   
- Der Ressourcenfallback\-Prozess ist auch die folgenden Schritte:  
+ Der Ressourcenfallbackprozess besteht aus folgenden Schritten:  
   
-1.  Die Laufzeit sucht zuerst im [globaler Assemblycache](../../../docs/framework/app-domains/gac.md) nach einer Assembly, die die für die Anwendung angeforderten Kultur übereinstimmt.  
+1.  Zunächst prüft die Runtime den [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) auf eine Assembly, die der angeforderten Kultur für Ihre Anwendung entspricht.  
   
-     Im globalen Assemblycache können Ressourcenassemblys gespeichert werden, die von vielen Anwendungen gemeinsam genutzt werden.  Auf diese Weise müssen Sie nicht länger bestimmte Sätze von Ressourcen in die Verzeichnisstruktur jeder erstellten Anwendung übernehmen.  Findet die Common Language Runtime einen Verweis auf die Assembly gefunden wird, wird diese Assembly nach der angeforderten Ressource durchsucht.  Ist ein Eintrag in der Assembly vorhanden, wird die angeforderte Ressource verwendet.  Ist kein Eintrag vorhanden, wird die Suche fortgesetzt.  
+     Der globale Assemblycache kann Ressourcenassemblys speichern, die in vielen Anwendungen eingesetzt werden. So müssen Sie keine bestimmten Ressourcensätze in die Verzeichnisstruktur von jeder Anwendung, die sie erstellen, einbeziehen. Wenn die Runtime einen Verweis auf die Assembly findet, durchsucht sie die Assembly nach der angeforderten Ressource. Wenn sie den Eintrag in der Assembly findet, verwendet sie die angeforderte Ressource. Wenn sie den Eintrag nicht findet, fährt sie mit der Suche fort.  
   
-2.  Die Common Language Runtime durchsucht anschließend das Verzeichnis der aktuell ausgeführten Assembly nach einem Verzeichnis, das die angeforderte Kultur übereinstimmt.  Ist das Verzeichnis vorhanden, wird es nach einer gültigen Satellitenassembly für die angeforderte Kultur durchsucht.  Die Common Language Runtime durchsucht anschließend die Satellitenassembly nach der angeforderten Ressource.  Ist die Ressource in der Assembly vorhanden, wird sie verwendet.  Wenn es nicht die Ressource gefunden, wird die Suche fortgesetzt.  
+2.  Als Nächstes prüft die Runtime das Verzeichnis der aktuell ausgeführten Assembly auf ein Verzeichnis, das der angeforderten Kultur entspricht. Wenn sie das Verzeichnis findet, durchsucht sie dieses Verzeichnis nach einer gültigen Satellitenassembly für die angeforderte Kultur. Dann durchsucht die Runtime die Satellitenassembly nach der angeforderten Ressource. Wenn sie die Ressource in der Assembly findet, verwendet sie diese. Wenn sie die Ressource nicht findet, fährt sie mit der Suche fort.  
   
-3.  Die folgenden AblaufAbfragen zu bestimmen, Windows Installer, dass die Satellitenassembly bei Bedarf installieren ist.  Wenn ja behandelt die Installation, lädt die Assembly und findet sie oder die angeforderte Ressource.  Ist die Ressource in der Assembly vorhanden, wird sie verwendet.  Wenn es nicht die Ressource gefunden, wird die Suche fortgesetzt.  
+3.  Anschließend fragt die Runtime den Windows Installer ab, um zu bestimmten, ob die Satellitenassembly bei Bedarf installiert werden soll. Wenn dies der Fall ist, kümmert sie sich um die Installation, lädt die Assembly und durchsucht diese nach der angeforderten Ressource. Wenn sie die Ressource in der Assembly findet, verwendet sie diese. Wenn sie die Ressource nicht findet, fährt sie mit der Suche fort.  
   
-4.  Die Laufzeit löst das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>\-Ereignis aus, um anzugeben, dass es nicht möglich ist, die Satellitenassembly zu suchen.  Wenn Sie festlegen, um das Ereignis zu behandeln, kann der Ereignishandler einen Verweis auf die Satellitenassembly zurückgeben, deren Ressourcen für die Suche verwendet werden.  Andernfalls gibt der Ereignishandler `null` zurück und die Suche wird fortgesetzt.  
+4.  Die Runtime löst das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> aus, um anzugeben, dass die Satellitenassembly nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly zurückgeben, deren Ressourcen bei der Suche verwendet werden. Andernfalls gibt der Ereignishandler `null` zurück und die Suche wird fortgesetzt.  
   
-5.  Die Common Language Runtime durchsucht nun erneut den globalen Assemblycache, dieses Mal nach der übergeordneten Assembly der angeforderten Kultur.  Wenn die übergeordnete Assembly im globalen Assemblycache vorhanden ist, durchsucht die Common Language Runtime die Assembly nach der angeforderten Ressource.  
+5.  Als Nächstes durchsucht die Runtime erneut den globalen Assemblycache, aber dieses Mal sucht sie nach der übergeordneten Assembly der angeforderten Kultur. Wenn die übergeordnete Assembly im globalen Assemblycache vorhanden ist, durchsucht die Runtime die Assembly nach der angeforderten Ressource.  
   
-     Die übergeordnete Kultur wird als die entsprechende Fallbackkultur definiert.  Ein übergeordnetes Element für Fallbackkandidaten, da, jede Ressource bereitzustellen zum Auslösen einer Ausnahme vorzuziehen.  Mit diesem Prozess können Ressourcen auch wieder verwendet werden.  Sie sollten eine bestimmte Ressource auf der übergeordneten Ebene ein, wenn die untergeordneten Kultur lokalisiert werden muss, um die angeforderten Ressource zu suchen.  Wenn Sie beispielsweise Satellitenassemblys für "en" \(neutrales Englisch\), "en\-GB" \(Englisch, wie in Großbritannien gesprochene\) und "en\-US" \(Englisch, wie in den USA gesprochene\) zur Verfügung stellen, enthält der " die allgemeine Terminologie enthalten, und die en\-GB\- und en\-US\-Satelliten können Überschreibungen für nur diese Begriffe bereit stellen, die sich unterscheiden.  
+     Die übergeordnete Kultur ist als zulässige Fallbackkultur definiert. Übergeordnete Elemente könne als Fallback genutzt werden, da da Bereitstellen einer Ressource dem Auslösen einer Ausnahme vorzuziehen ist. Durch diesen Prozess könne Sie auch Ressourcen wiederverwenden. Sie sollten auf der Ebene des übergeordneten Elements nur dann eine bestimmte Ressource verwenden, wenn die untergeordnete Kultur die angeforderte Ressource nicht lokalisieren muss. Wenn Sie z.B. eine Satellitenassembly für en (neutrales Englisch), en-GB (britisches Englisch) und en-US (amerikanisches Englisch) bereitstellen, enthält der en-Satellit das gemeinsame Vokabular, und die Satelliten für en-GB und en-US enthalten nur Überschreibungen für Begriffe, die sich in den beiden Kulturen unterscheiden.  
   
-6.  Die Common Language Runtime durchsucht anschließend das Verzeichnis der aktuell ausgeführten Assembly nach einem übergeordneten Verzeichnis.  Ist ein übergeordnetes Verzeichnis vorhanden, wird es nach einer gültigen Satellitenassembly für die übergeordnete Kultur durchsucht.  Ist die Assembly vorhanden, wird diese nach der angeforderten Ressource durchsucht.  Wenn die Ressource vorhanden ist, wird sie verwendet.  Wenn es nicht die Ressource gefunden, wird die Suche fortgesetzt.  
+6.  Als Nächstes prüft die Runtime das Verzeichnis der aktuell ausgeführten Assembly auf übergeordnete Verzeichnisse. Wenn ein übergeordnetes Verzeichnis vorhanden ist, durchsucht die Runtime das Verzeichnis nach einer gültigen Satellitenassembly für die übergeordnete Kultur. Wenn sie die Assembly findet, durchsucht die Runtime die Assembly nach der angeforderten Ressource. Wenn sie die Ressource findet, verwendet sie diese. Wenn sie die Ressource nicht findet, fährt sie mit der Suche fort.  
   
-7.  Die folgenden AblaufAbfragen zu bestimmen, Windows Installer, ob die übergeordnete Satellitenassembly bei Bedarf installieren ist.  Wenn ja behandelt die Installation, lädt die Assembly und findet sie oder die angeforderte Ressource.  Ist die Ressource in der Assembly vorhanden, wird sie verwendet.  Wenn es nicht die Ressource gefunden, wird die Suche fortgesetzt.  
+7.  Anschließend fragt die Runtime den Windows Installer ab, um zu bestimmten, ob die übergeordnete Satellitenassembly bei Bedarf installiert werden soll. Wenn dies der Fall ist, kümmert sie sich um die Installation, lädt die Assembly und durchsucht diese nach der angeforderten Ressource. Wenn sie die Ressource in der Assembly findet, verwendet sie diese. Wenn sie die Ressource nicht findet, fährt sie mit der Suche fort.  
   
-8.  Die Laufzeit löst das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>\-Ereignis aus, um anzugeben, dass es nicht möglich ist, eine äquivalente Fallbackressource zu suchen.  Wenn Sie festlegen, um das Ereignis zu behandeln, kann der Ereignishandler einen Verweis auf die Satellitenassembly zurückgeben, deren Ressourcen für die Suche verwendet werden.  Andernfalls gibt der Ereignishandler `null` zurück und die Suche wird fortgesetzt.  
+8.  Die Runtime löst das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> aus, um anzugeben, dass die entsprechende Fallbackressource nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly zurückgeben, deren Ressourcen bei der Suche verwendet werden. Andernfalls gibt der Ereignishandler `null` zurück und die Suche wird fortgesetzt.  
   
-9. Die Common Language Runtime durchsucht nun übergeordneten Assemblys, wie in den vorhergehenden drei Schritte, viele potenzielle Ebenen.  Jede Kultur verfügt über nur eine übergeordnete, das von der <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=fullName>\-Eigenschaft definiert ist, ein übergeordnetes Element kann ein eigenes übergeordnete Element.  Die Suche für übergeordnete Kulturen stoppt, wenn <xref:System.Globalization.CultureInfo.Parent%2A>\-Eigenschaft einer Kultur <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> zurückgibt; für das Ressourcenfallback gilt der invarianten Kultur keine übergeordnete Kultur oder als eine Kultur, die Ressourcen haben können.  
+9. Als Nächstes durchsucht die Runtime die übergeordnete Assembly genauso wie in den drei vorherigen Schritten auf vielen möglichen Ebenen. Jede Kultur hat nur ein übergeordnetes Element, das durch die <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=fullName>-Eigenschaft definiert wird. Ein übergeordnetes Element kann jedoch wieder sein eigenes übergeordnetes Element haben. Die Suche nach übergeordneten Kulturen ist beendet, wenn die <xref:System.Globalization.CultureInfo.Parent%2A>-Eigenschaft einer Kultur <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> zurückgibt. Beim Ressourcenfallback wird die invariante Kultur nicht als übergeordnete Kultur oder als Kultur angesehen, die Ressourcen haben kann.  
   
-10. Wenn die ursprünglich angegebene Kultur und alle übergeordneten Ebenen durchsucht wurden und die Ressource nicht gefunden werden konnte, wird die Ressource für die \(Fallback\-\)Standardkultur verwendet.  In der Regel werden die Ressourcen für die Standardkultur in der Hauptanwendungsassembly enthalten.  Sie können jedoch dem Wert <xref:System.Resources.UltimateResourceFallbackLocation> für die <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A>\-Eigenschaft des <xref:System.Resources.NeutralResourcesLanguageAttribute>\-Attributs angeben, um, dass die endgültige Fallbackposition für Ressourcen eine Satellitenassembly ist, anstatt die Hauptassembly anzugeben.  
+10. Wenn die ursprünglich angegebene Kultur und alle übergeordneten Elemente durchsucht wurden, und die Ressource immer noch nicht gefunden werden kann, wir die Ressource für die Standardkultur (Fallback) verwendet. Für gewöhnlich werden die Ressourcen der Standardkultur in die Hauptassembly der Anwendung integriert. Sie könne aber einen Wert von <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> für die <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A>-Eigenschaft des <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attributs angeben, um festzulegen, dass der endgültige Fallbackort für Ressourcen eine Satellitenassembly ist und nicht die Hauptassembly.  
   
     > [!NOTE]
-    >  Die Standardressource ist die einzige Ressource, die zusammen mit der Hauptassembly kompiliert werden kann.  Es sei denn, Sie eine Satellitenassembly angeben, indem Sie das <xref:System.Resources.NeutralResourcesLanguageAttribute>\-Attribut verwenden, ist der endgültige Fallback \(die letzte übergeordnete Ebene\).  Daher wird empfohlen, immer einen Standardsatz von Ressourcen in die Hauptassembly einzufügen.  Dies hilft, Ausnahmen an ausgelöst werden.  Durch das Hinzufügen einer Standardressourcendatei steht ein Fallback für alle Ressourcen zur Verfügung. So verfügt der Benutzer immer über mindestens eine Ressource, auch wenn diese nicht kulturspezifisch ist.  
+    >  Die Standardressource ist die einzige Ressource, die mit der Hauptassembly kompiliert werden kann. Wenn Sie nicht mit dem <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut eine Satellitenassembly angegeben haben, ist sie der endgültige Fallback (letztes übergeordnetes Element). Deshalb wird empfohlen, dass Sie immer ein Standardset an Ressourcen in Ihre Hauptassembly integrieren. So werden Ausnahmen verhindert. Durch das Integrieren einer Standardressourcendatei stellen Sie einen Fallback für alle Ressourcen zur Verfügung und stellen sicher, dass immer mindestens eine Ressource für den Benutzer verfügbar ist, auch wenn diese nicht kulturspezifisch ist.  
   
-11. Falls die Common Language Runtime schließlich keine Ressource für eine \(Fallback\-\) Standardkultur findet, wird eine <xref:System.Resources.MissingManifestResourceException> oder <xref:System.Resources.MissingSatelliteAssemblyException> eine Ausnahme ausgelöst, um anzugeben, dass die Ressource nicht gefunden werden konnte.  
+11. Wenn die Runtime keine Ressource für eine Standard(fallback)kultur findet, wird die Ausnahme <xref:System.Resources.MissingManifestResourceException> oder <xref:System.Resources.MissingSatelliteAssemblyException> ausgelöst, um anzugeben, dass die Ressource nicht gefunden werden konnte.  
   
- Angenommen, die Anwendung, die eine Ressource für Spanisch \(Mexiko\) lokalisierte \(die es\-MX\-Kultur\).  Die Laufzeit sucht zunächst den globalen Assemblycache auf die Assembly, es\-MX übereinstimmt, die, findet jedoch diese nicht.  Die Laufzeit durchsucht anschließend das Verzeichnis der aktuell ausgeführten Assembly nach einem es\-MX\-Verzeichnis.  Schlägt dies fehl, durchsucht die Common Language Runtime den globalen Assemblycache erneut nach einer übergeordneten Assembly, die der geeigneten Fallbackkultur entspricht \- in diesem Fall, es gibt \(Spanisch\).  Wenn die übergeordnete Assembly nicht vorhanden, durchsucht die Common Language Runtime alle potenziellen Ebenen nach übergeordneten Assemblys für die es\-MX\-Kultur, bis eine entsprechende Ressource gefunden.  Wenn eine Ressource nicht gefunden wird, verwendet die Runtime die Ressource für die Standardkultur.  
+ Nehmen Sie z.B. an, dass die Anwendung eine lokalisierte Ressource für Spanisch (Mexiko) anfordert (die Kultur es-MX). Zunächst durchsucht die Runtime den globalen Assemblycache nach der Assembly, die es-MX entspricht. Diese kann jedoch nicht gefunden werden. Dann durchsucht die Runtime das Verzeichnis der aktuell ausgeführten Assembly nach dem Verzeichnis es-MX. Da auch dies zu keinem Ergebnis führt, durchsucht die Runtime erneut den globalen Assemblycache nach einer übergeordneten Kultur, die der entsprechenden Fallbackkultur entspricht — in diesem Fall es (Spanisch). Wenn die übergeordnete Assembly nicht gefunden werden kann, durchsucht die Runtime alle potenziellen Ebenen von übergeordneten Assemblys nach der Kultur es-MX, bis sie eine passende Ressource findet. Wenn keine Ressource gefunden werden kann, verwendet die Runtime die Ressource der Standardkultur.  
   
 <a name="Optimizing"></a>   
-### Optimieren des Ressourcen\-Fallback\-Prozesses  
- Unter den folgenden Bedingungen können Sie den Prozess optimieren, durch den die Laufzeit für Ressourcen an Satellitenassemblys sucht  
+### <a name="optimizing-the-resource-fallback-process"></a>Optimieren des Ressourcen-Fallback-Prozesses  
+ Unter folgenden Bedingungen können Sie den Prozess optimieren, mit dem die Runtime nach Ressourcen in den Satellitenassemblys sucht  
   
--   Satellitenassemblys werden demselben Speicherort wie die Codeassembly bereitgestellt.  Wenn die Codeassembly in [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md) installiert ist, werden Satellitenassemblys auch im globalen Assemblycache installiert.  Wenn die Codeassembly in einem Verzeichnis installiert wird, werden in Satellitenassemblys kulturspezifischen Ordner dieses Verzeichnisses installiert.  
+-   Satellitenassemblys werden am gleichen Ort wie die Codeassembly bereitgestellt. Wenn die Codeassembly im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) installiert wird, werden gleichzeitig Satellitenassemblys im globalen Assemblycache installiert. Wenn die Codeassembly in einem Verzeichnis installiert wird, werden Satellitenassemblys in kulturspezifischen Ordnern in diesem Verzeichnisses installiert.  
   
 -   Satellitenassemblys werden nicht bei Bedarf installiert.  
   
--   Anwendungscode behandelt nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>\-Ereignis.  
+-   Der Anwendungscode behandelt nicht das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
   
- Sie optimieren die Überprüfung für Satellitenassemblys, indem Sie das [\<relativeBindForResources\>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)\-Element einschließen und das Attribut `enabled` auf `true` in die Anwendungskonfigurationsdatei, wie im folgenden Beispiel gezeigt fest.  
+ Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut in der Anwendungskonfigurationsdatei auf `true` festlegen, wie in folgendem Beispiel veranschaulicht.  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <relativeBindForResources enabled="true" />  
    </runtime>  
 </configuration>  
-  
 ```  
   
- Die optimierte Überprüfung für Satellitenassemblys ist eine Abonnementfunktion.  Das heißt, folgt die Laufzeit den Schritten, die in [Der Ressourcenfallback-Prozess](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) dokumentiert werden, es sei denn, das [\<relativeBindForResources\>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)\-Element in der Konfigurationsdatei der Anwendung vorhanden ist und sein `enabled`\-Attribut auf `true` festgelegt ist.  Wenn dies der Fall ist, wird der Prozess der Überprüfung für eine Satellitenassembly geändert, wie folgt:  
+ Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das heißt, dass die Runtime die Schritte aus [Der Ressourcenfallback-Prozess](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) durchführt, es sei denn, das Element [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) befindet sich in der Anwendungskonfigurationsdatei, während dessen `enabled`-Attribut auf `true` festgelegt ist. Wenn dies der Fall ist, wird der Suchprozess nach einer Satellitenassembly wie folgt angepasst:  
   
--   Die Laufzeit wird der Speicherort der übergeordneten Code, um die Satellitenassembly zu überprüfen.  Wenn die übergeordnete Assembly im globalen Assemblycache installiert wird, überprüft die Laufzeit im Cache jedoch nicht im Verzeichnis der Anwendung.  Wenn die übergeordnete Assembly in einem Anwendungsverzeichnis installiert wird, überprüft die Laufzeit im Anwendungsverzeichnis jedoch nicht im globalen Assemblycache.  
+-   Die Runtime verwendet den Speicherort der übergeordneten Codeassembly, um nach der Satellitenassembly zu suchen. Wenn die übergeordnete Assembly im globalen Assemblycache installiert ist, durchsucht die Runtime den Cache, aber nicht das Anwendungsverzeichnis. Wenn die übergeordnete Assembly im Anwendungsverzeichnis installiert ist, durchsucht die Runtime das Anwendungsverzeichnis, aber nicht den globalen Assemblycache.  
   
--   Die Laufzeit ruft keine Windows Installer für bedarfsabhängige Installation von Satellitenassemblys ab.  
+-   Die Runtime fragt den Windows Installer nicht nach der On-Demand-Installation von Satellitenassemblys.  
   
--   Wenn die Überprüfung einer bestimmten Ressourcenassembly fehlschlägt, löst die Laufzeit nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>\-Ereignis aus.  
+-   Wenn die Suche nach einer bestimmten Ressourcenassembly fehlschlägt, löst die Runtime nicht das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> aus.  
   
-### Endgültiges Fallback in Satellitenassembly  
- Sie können optional Ressourcen aus der Hauptassembly entfernen und angeben, dass die Laufzeit die endgültigen Fallbackressourcen aus einer Satellitenassembly geladen werden soll, die einer bestimmten Kultur entspricht.  Um den Fallbackprozess zu steuern, verwenden Sie den <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName> konstruktor und stellen einen Wert für den Parameter der <xref:System.Resources.UltimateResourceFallbackLocation> angibt ob Ressourcen\-Manager die Fallbackressourcen aus der Hauptassembly oder eine Satellitenassembly extrahieren soll.  
+### <a name="ultimate-fallback-to-satellite-assembly"></a>Endgültiger Fallback der Satellitenassembly  
+ Sie können optional Ressourcen aus der Hauptassembly entfernen und angeben, dass die Runtime die endgültige Fallbackressource aus einer Satellitenassembly für eine bestimmte Kultur laden soll. Um den Fallbackprozess zu steuern, können Sie den <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName>-Konstruktor verwenden und einen Wert für den Parameter <xref:System.Resources.UltimateResourceFallbackLocation> angeben, der bestimmt, ob der Ressourcen-Manager die Fallbackressource aus der Hauptassembly oder aus einer Satellitenassembly extrahieren soll.  
   
- Im folgenden Beispiel wird das <xref:System.Resources.NeutralResourcesLanguageAttribute>\-Attribut, um einer Anwendung Fallbackressourcen in einer Satellitenassembly für die französische Sprache \(fr\)\- zu speichern.  Das Beispiel enthält zwei textbasierte Ressourcendateien, die eine einzelne Zeichenfolgenressource definieren, die `Greeting` genannt wird.  Der erste, resources.fr.txt, enthält eine Sprachressource französische.  
+ In folgendem Beispiel wird das Attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> dazu verwendet, die Fallbackressource einer Anwendung in einer Satellitenassembly für Französisch (fr) zu speichern.  Im Beispiel werden zwei textbasierte Ressourcendateien verwendet, die eine einzelne Zeichenfolgenressource mit dem Namen `Greeting` definieren. Die erste Datei, „resources.fr.txt“, enthält eine französische Sprachressource.  
   
 ```  
 Greeting=Bon jour!  
 ```  
   
- Der zweite, Ressourcen, ru.txt, enthält eine Sprachressource Russisch.  
+ Die zweite Datei, „resources.ru.txt“, enthält eine russische Sprachressource.  
   
 ```  
 Greeting=Добрый день  
 ```  
   
- Diese beiden Dateien werden RESOURCES\-Dateien kompiliert, mit dem [Resource File Generator\-Tool \(Resgen.exe\)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) über die Befehlszeile ausgeführt wird.  Für Französisch \(Sprachressource ist der Befehl:  
+ Diese beiden Dateien werden zu RESOURCES-Datei kompiliert, indem Sie das [Resource File Generator-Tool („resgen.exe“)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in der Befehlszeile ausführen.  Der Befehl für die französische Sprachressource lautet:  
   
  **resgen.exe resources.fr.txt**  
   
- Für die Sprachressource Russisch ist der Befehl:  
+ Der Befehl für die russische Sprachressource lautet:  
   
  **resgen.exe resources.ru.txt**  
   
- Die Ressourcendateien werden in Dynamic Link Librarys eingebettet, mit dem [Der Assemblylinker \(Al.exe\)](../../../docs/framework/tools/al-exe-assembly-linker.md) über die Befehlszeile für die französische Sprachressource ausführt, wie folgt:  
+ Die RESOURCES-Dateien werden in DLLs (Dynamic Link Libraries) eingebettet, indem Sie den [Assemblylinker („al.exe“)](../../../docs/framework/tools/al-exe-assembly-linker.md) in der Befehlszeile für die französische Sprachressource wie folgt ausführen:  
   
- **al \/t:lib \/embed:resources.fr.resources \/culture:fr \/out:fr\\Example1.resources.dll**  
+ **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
   
- Russisch und für die Sprachressource, wie folgt:  
+ und für die russische Sprachressource:  
   
- **al \/t:lib \/embed:resources.ru.resources \/culture:ru \/out:ru\\Example1.resources.dll**  
+ **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
   
- Der Anwendungsquellcode befindet sich in einer Datei, die Example1.cs oder Example1.vb genannt wird.  Dazu gehören der <xref:System.Resources.NeutralResourcesLanguageAttribute>\-Attribut ein, um anzugeben, dass die Standard\-Anwendungsressource in aus dem Unterverzeichnis ist.  Er instanziiert den Ressourcenmanager, ruft den Wert der `Greeting` Ressource ab und zeigt ihn an der Konsole angezeigt.  
+ Der Quellcode der Anwendung befindet sich in einer Datei mit dem Namen „example1.cs“ oder „example1.vb“. Er beinhaltet das Attribut <xref:System.Resources.NeutralResourcesLanguageAttribute>, um anzugeben, dass sich die Standardanwendungsressource im Unterverzeichnis „fr“ befindet. Er instantiiert den Ressourcen-Manager, ruft den Wert der `Greeting`-Ressource ab und zeigt ihn in der Konsole an.  
   
- [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
- [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)] [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
   
- Sie können C\#\-Quellcode in der Befehlszeile kompilieren, wie folgt:  
+ Dann können Sie den C#-Quellcode aus der Befehlszeile wie folgt kompilieren:  
   
  **csc Example1.cs**  
   
- Der Befehl für den Visual Basic\-Compiler ist sehr ähnlich:  
+ Der Befehl für den Visual Basic-Compiler ist sehr ähnlich:  
   
  **vbc Example1.vb**  
   
- Da keine Ressourcen vorhanden sind, die in die Hauptassembly eingebettet werden, müssen Sie nicht kompilieren, indem Sie den `/resource` \- Schalter verwenden.  
+ Da keine Ressourcen in der Hauptassembly eingebettet sind, müssen Sie nicht mit dem `/resource`-Switch kompilieren.  
   
- Wenn Sie das Beispiel aus einem System ausführen, dessen alle Sprache anders\) ist, wird die folgende Ausgabe angezeigt:  
+ Wenn Sie das Beispiel in einem System durchführen, dessen Sprachen nicht Russisch ist, wird die folgende Ausgabe angezeigt:  
   
 ```  
 Bon jour!  
 ```  
   
-## Empfohlene Verpackungsalternative  
- Zeit oder Haushaltsbeschränkungen hinderten Sie möglicherweise am Erstellen von Ressourcen für jede Teilkultur, die die Anwendung unterstützt.  Stattdessen können Sie für eine übergeordnete Kultur eine einzige Satellitenassembly erstellen, die von allen verwandten Teilkulturen verwenden können.  Beispielsweise, können Sie englische eine einzelne Satellitenassembly \(en\) bereitstellen die von Benutzern abgerufen wird, die englische Ressourcen des Bereichbesonderen anfordern, und eine einzelne Satellitenassembly \(für Deutsch\) für Benutzer, die Bereichbesondere Deutschressourcen anfordern.  So könnte Anforderungen nach Deutsch, das in Deutschland \(de\-DE\), in Österreich \(de\-AT\) und der Schweiz \(de\-CH\) gesprochene zurück auf die Satellitenassembly \(de\) ab.  Die Standardressource ist die letzte übergeordnete Ebene und sollte daher sein, die der Benutzer der Anwendung angefordert werden, damit diese Ressourcen sorgfältig auswählen.  Dieser Ansatz bietet Ressourcen bereit, die weniger kulturspezifisch sind, jedoch kann Lokalisierungskosten der Anwendung deutlich reduzieren.  
+## <a name="suggested-packaging-alternative"></a>Empfohlene Verpackalternative  
+ Möglicherweise können Sie aus Zeit- oder Kostengründen keinen Satz an Ressourcen für jede Subkultur erstellen, die von Ihrer Anwendung unterstützt wird. Stattdessen können Sie eine einzelne Satellitenassembly für eine übergeordnete Kultur erstellen, die von allen verknüpften Subkulturen verwendet werden kann. Sie können z.B eine einzelne englische Satellitenassembly (en) bereitstellen, die von Benutzern abgerufen wird, die regionsspezifische englische Ressourcen angefordert haben, und eine einzelne deutsche Satellitenassembly (de) für Benutzer, die regionsspezifische deutsche Ressourcen angefordert haben. Für Anforderungen von z.B. Deutsch, wie es in Deutschland (de-DE), in Österreich (de-AT) oder der Schweiz (de-CH) gesprochen wird, wird auf die deutsche Satellitenassembly (de) ausgewichen. Die Standardressourcen sind die endgültigen Fallbacks und sollten deshalb die Ressourcen sein, die von der Mehrheit der Benutzer Ihrer Anwendung angefordert werden. Achten Sie also darauf, welche Ressourcen Sie dafür auswählen. Bei dieser Vorgehensweise werden Ressourcen bereitgestellt, die weniger kulturspezifisch sind, aber die Lokalisierungskosten Ihrer Anwendung deutlich verringern können.  
   
-## Siehe auch  
- [Ressourcen in Desktop\-Apps](../../../docs/framework/resources/index.md)   
- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)   
+ [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
  [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
  [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+

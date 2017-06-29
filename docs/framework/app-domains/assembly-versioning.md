@@ -1,29 +1,34 @@
 ---
-title: "Assemblyversionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblys [.NET Framework], Versionskontrolle"
-  - "Versionsinformationen"
-  - "Auflösen von Assemblybindungsanforderungen"
-  - "Versionsnummern, Assemblys"
-  - "Versionskontrolle, Assemblys"
+title: Assemblyversionskontrolle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- informational versions
+- version numbers, assemblies
+- assemblies [.NET Framework], versioning
+- resolving assembly binding requests
+- versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1e6c2e433b5520e0720511c483f1378df8977f13
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Assemblyversionen
-Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt.  Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet.  Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien \(die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer\) überschrieben wird.  
+# <a name="assembly-versioning"></a>Assemblyversionen
+Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
   
 > [!NOTE]
 >  Versionen werden nur bei Assemblys mit starken Namen erstellt.  
@@ -36,47 +41,47 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
   
 3.  Ermittelt die richtige Assembly aus dem ursprünglichen Assemblyverweis und allen Umleitungen, die in den Konfigurationsdateien angegeben sind, und bestimmt die Version, die an die aufrufende Assembly gebunden werden soll.  
   
-4.  Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
+4.  Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
   
  Diese Schritte sind in der folgenden Abbildung dargestellt.  
   
  ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
 Auflösen einer Assemblybindungsanforderung  
   
- Weitere Informationen zum Konfigurieren von Anwendungen finden Sie unter [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md).  Weitere Informationen über Bindungsrichtlinien finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Weitere Informationen zum Konfigurieren von Anwendungen finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md). Weitere Informationen finden Sie unter [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
-## Versionsinformationen  
+## <a name="version-information"></a>Versionsinformationen  
  Jede Assembly besitzt zwei unterschiedliche Methoden zur Darstellung der Versionsinformationen:  
   
--   Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört.  Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.  
+-   Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört. Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.  
   
 -   Eine Informationsversion, d. h. eine Zeichenfolge, die zusätzliche Versionsinformationen enthält und ausschließlich Informationszwecken dient.  
   
-### Assemblyversionsnummer  
- Die Versionsnummer ist Teil der Identität einer Assembly.  Daher betrachtet die Common Language Runtime zwei Assemblys mit unterschiedlichen Versionsnummern als zwei völlig verschiedene Assemblys.  Diese Versionsnummer wird physisch als vierteilige Zeichenfolge im folgenden Format dargestellt:  
+### <a name="assembly-version-number"></a>Assemblyversionsnummer  
+ Die Versionsnummer ist Teil der Identität einer Assembly. Daher betrachtet die Common Language Runtime zwei Assemblys mit unterschiedlichen Versionsnummern als zwei völlig verschiedene Assemblys. Diese Versionsnummer wird physisch als vierteilige Zeichenfolge im folgenden Format dargestellt:  
   
- \<*Hauptversion*\>.\<*Nebenversion*\>.\<*Buildnummer*\>.\<*Revision*\>  
+ \<*hauptversion*>.\<*nebenversion*>.\<*buildnummer*>.\<*revision*>  
   
  Die Version 1.5.1254.0 z. B. gibt 1 als Hauptversion, 5 als Nebenversion, 1254 als Buildnummer und 0 als Revisionsnummer an.  
   
  Die Versionsnummer wird im Assemblymanifest zusammen mit anderen Informationen zur Identität gespeichert, einschließlich des Assemblynamens und des öffentlichen Schlüssels sowie der Informationen über Beziehungen und Identitäten anderer Assemblys, die mit der Anwendung verbunden sind.  
   
- Beim Erstellen einer Assembly zeichnet das Entwicklungstool die Abhängigkeitsinformationen für jede Assembly auf, auf die im Assemblymanifest verwiesen wird.  Die Laufzeit verwendet diese Versionsnummern zusammen mit den Konfigurationsinformationen, die von einem Administrator, einer Anwendung oder einem Herausgeber festgelegt wurden, um die richtige Version einer Assembly zu laden, auf die verwiesen wird.  
+ Beim Erstellen einer Assembly zeichnet das Entwicklungstool die Abhängigkeitsinformationen für jede Assembly auf, auf die im Assemblymanifest verwiesen wird. Die Laufzeit verwendet diese Versionsnummern zusammen mit den Konfigurationsinformationen, die von einem Administrator, einer Anwendung oder einem Herausgeber festgelegt wurden, um die richtige Version einer Assembly zu laden, auf die verwiesen wird.  
   
- Die Laufzeit unterscheidet zum Zweck der Versionskontrolle zwischen normalen Assemblys und Assemblys mit starkem Namen.  Die Version wird nur bei Assemblys mit starkem Namen überprüft.  
+ Die Laufzeit unterscheidet zum Zweck der Versionskontrolle zwischen normalen Assemblys und Assemblys mit starkem Namen. Die Version wird nur bei Assemblys mit starkem Namen überprüft.  
   
- Weitere Informationen über das Festlegen von Versionsbindungsrichtlinien finden Sie unter [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md).  Informationen darüber, wie die Laufzeit die Versionsinformationen bei der Suche nach einer bestimmten Assembly verwendet, finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Weitere Informationen zum Festlegen von Versionsbindungsrichtlinien finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md). Informationen darüber, wie die Runtime die Versionsinformationen bei der Suche nach einer bestimmten Assembly verwendet, finden Sie unter [So sucht die Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
-### Assemblyinformationsversion  
- Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformationen an eine Assembly anfügt und ausschließlich Informationszwecken dient. Die Informationen werden nicht zur Laufzeit verwendet.  Die textbasierte Informationsversion entspricht dem Marketingtext des Produkts, der Verpackung oder dem Produktnamen und wird nicht zur Laufzeit verwendet.  Eine Informationsversion könnte z. B. wie folgt lauten: "Common Language Runtime Version 1.0" oder "NET Control SP 2".  Diese Angabe wird in Microsoft Windows im Eigenschaftendialogfeld der Datei auf der Registerkarte Version als Eintrag "Produktversion" angezeigt.  
+### <a name="assembly-informational-version"></a>Assemblyinformationsversion  
+ Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformationen an eine Assembly anfügt und ausschließlich Informationszwecken dient. Die Informationen werden nicht zur Laufzeit verwendet. Die textbasierte Informationsversion entspricht dem Marketingtext des Produkts, der Verpackung oder dem Produktnamen und wird nicht zur Laufzeit verwendet. Eine Informationsversion könnte z. B. wie folgt lauten: "Common Language Runtime Version 1.0" oder "NET Control SP 2". Diese Angabe wird in Microsoft Windows im Eigenschaftendialogfeld der Datei auf der Registerkarte Version als Eintrag "Produktversion" angezeigt.  
   
 > [!NOTE]
->  Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält.  Sie können diese Warnung ignorieren.  
+>  Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält. Sie können diese Warnung ignorieren.  
   
- Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> dargestellt.  Weitere Informationen über das Informationsversionsattribut finden Sie unter [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)   
  [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)   
- [Assemblys in der Common Language Runtime \(CLR\)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+ [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

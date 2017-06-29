@@ -1,77 +1,82 @@
 ---
-title: "Gewusst wie: Debuggen von CLR-Aktivierungsproblemen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "CLR-Aktivierung, Debugprobleme"
+title: 'Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 2df9b03603c5df6bd803187bd1299f5d730bc32c
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Debuggen von CLR-Aktivierungsproblemen
-Wenn beim Ausführen der Anwendung mit der richtigen Version der Common Language Runtime \(CLR\) Probleme auftreten, können Sie CLR\-Aktivierungsprotokolle anzeigen und debuggen.  Diese Protokolle können sehr hilfreich sein, um die Ursache eines Aktivierungsproblems zu bestimmen, wenn die Anwendung eine andere als die erwartete CLR\-Version lädt oder die CLR überhaupt nicht lädt.  [.NET Framework\-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) erläutert die Erfahrung, wenn kein CLR für eine Anwendung gefunden wird.  
+# <a name="how-to-debug-clr-activation-issues"></a>Gewusst wie: Debuggen von CLR-Aktivierungsproblemen
+Wenn Sie Probleme beim Ausführen Ihrer Anwendung mit Ihrer korrekten Version der Common Language Runtime (CLR) haben, können Sie CLR-Aktivierungsprotokolle anzeigen und debuggen. Diese Protokolle können sehr nützlich beim Bestimmen der zugrunde liegenden Ursache für Probleme bei der Aktivierung sein, wenn Ihre Anwendung entweder eine andere CLR-Version als erwartet lädt oder die CLR überhaupt nicht lädt. Der [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) behandelt die Erfahrung, wenn keine CLR für eine Anwendung gefunden wird.  
   
- Die CLR\-Aktivierungsprotokollierung kann mit einem HKEY\_LOCAL\_MACHINE\-Registrierungsschlüssel oder einer Systemumgebungsvariablen systemweit aktiviert werden.  Das Protokoll wird so lange generiert, bis der Registrierungseintrag bzw. die Umgebungsvariable entfernt wird.  Sie können alternativ auch mit einer Benutzervariablen oder einer für den Prozess lokalen Umgebungsvariablen einen anderen Umfang und eine andere Dauer für die Protokollierung aktivieren.  
+ Die CLR-Aktivierungsprotokollierung kann systemweit mithilfe des Registrierungsschlüssels HKEY_LOCAL_MACHINE oder einer Systemumgebungsvariable aktiviert werden. Das Protokoll wird generiert bis der Registrierungseintrag oder Umgebungsvariable entfernt wird. Sie können alternativ einen Benutzer oder eine prozessbezogene Umgebungsvariable für die Aktivierung der Protokollierung mit einem anderen Bereich und anderer Dauer verwenden.  
   
- CLR\-Aktivierungsprotokolle dürfen nicht mit [Assemblybindungsprotokollen](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwechselt werden. Bei diesen handelt es sich um einen vollständig anderen Protokolltyp.  
+ CLR-Aktivierungsprotokolle dürfen nicht mit [Assemblybindungsprotokollen](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwechselt werden. Bei diesen handelt es sich um einen vollständig anderen Protokolltyp.  
   
-## So aktivieren Sie die CLR\-Aktivierungsprotokollierung  
+## <a name="to-enable-clr-activation-logging"></a>So aktivieren Sie die CLR-Aktivierungsprotokollierung  
   
-#### Mithilfe der Registrierung  
+#### <a name="using-the-registry"></a>Verwendung der Registrierung  
   
-1.  Navigieren Sie im Registrierungs\-Editor zum Ordner HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework \(auf einem 32\-Bit\-Computer\) oder HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\.NETFramework \(auf einem 64\-Bit\-Computer\).  
+1.  Navigieren Sie im Registrierungs-Editor zum Ordner HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework (auf einem 32-Bit-Computer) oder zu HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework (auf einem 64-Bit-Computer).  
   
-2.  Fügen Sie den Zeichenfolgenwert `CLRLoadLogDir` hinzu, und legen Sie für ihn einen Wert eines vollständigen Pfades zu einem vorhandenen Verzeichnis fest, in dem Sie CLR\-Aktivierungsprotokolle speichern möchten.  
+2.  Fügen Sie einen Zeichenfolgenwert namens `CLRLoadLogDir` hinzu, und legen Sie ihn auf den vollständigen Pfad des vorhandenen Verzeichnisses fest, wo Sie die CLR-Aktivierungsprotokolle speichern möchten.  
   
- Die Aktivierungsprotokollierung bleibt aktiviert, bis Sie den Wert der Zeichenfolge entfernen.  
+ Die Aktivierungsprotokollierung bleibt aktiviert, bis Sie den Zeichenfolgenwert entfernen.  
   
-#### Mit einer Umgebungsvariablen  
+#### <a name="using-an-environment-variable"></a>Verwenden einer Umgebungsvariablenname  
   
--   Legen Sie die `COMPLUS_CLRLoadLogDir`\-Umgebungsvariable auf eine Zeichenfolge fest, die den vollständigen Pfad zu einem vorhandenen Verzeichnis darstellt, in dem Sie CLR\-Aktivierungsprotokolle speichern möchten.  
+-   Legen Sie eine `COMPLUS_CLRLoadLogDir`-Zeichenfolgenwert auf eine Zeichenfolge fest, die den vollständigen Pfad des vorhandenen Verzeichnisses darstellt, wo Sie die CLR-Aktivierungsprotokolle speichern möchten.  
   
-     Durch das Festlegen der Umgebungsvariablen bestimmen Sie ihren Bereich:  
+     So legen Sie die Umgebungsvariable fest, die ihren Bereich bestimmt:  
   
-    -   Wenn Sie sie auf Systemebene festlegen, wird die Aktivierungsprotokollierung für alle .NET Framework\-Anwendungen auf diesem Computer aktiviert, bis die Umgebungsvariable entfernt wird.  
+    -   Wenn Sie sie auf Systemebene festlegen, ist die Aktivierungsprotokollierung für alle .NET Framework-Anwendungen auf diesem Computer aktiviert, bis die Umgebungsvariable entfernt wird.  
   
-    -   Wenn Sie die Umgebungsvariable auf Benutzerebene festlegen, wird die Aktivierungsprotokollierung nur für das aktuelle Benutzerkonto aktiviert.  Die Protokollierung wird fortgesetzt, bis die Umgebungsvariable entfernt wird.  
+    -   Wenn Sie sie auf Benutzerebene festlegen, ist die Aktivierungsprotokollierung nur für das aktuellen Benutzerkonto aktiviert. Die Protokollierung wird fortgesetzt, bis die Umgebungsvariable entfernt ist.  
   
-    -   Wenn Sie sie aus dem Prozess festlegen, bevor die CLR geladen wird, ist die Aktivierungsprotokollierung aktiviert, bis der Prozess beendet wird.  
+    -   Wenn Sie sie von innerhalb des Prozesses festlegen, bevor die CLR geladen wird, ist die Aktivierungsprotokollierung so lange aktiviert, bis der Prozess beendet ist.  
   
-    -   Wenn Sie sie mit einer Eingabeaufforderung festlegen, bevor Sie eine Anwendung ausführen, ist die Aktivierungsprotokollierung für jede Anwendung aktiviert, die von dieser Eingabeaufforderung ausgeführt wird.  
+    -   Wenn Sie sie auf eine Eingabeaufforderung festlegen, bevor Sie eine Anwendung ausführen, ist die Aktivierungsprotokollierung für jede Anwendung aktiviert, die von einer Eingabeaufforderung aus ausgeführt wird.  
   
-     Um beispielsweise Aktivierungsprotokolle im Verzeichnis c:\\clrloadlogs mit Prozessebenenumfang zu speichern, öffnen Sie ein Eingabeaufforderungsfenster und geben Sie Folgendes ein, bevor Sie die Anwendung ausführen:  
+     Um z.B. Aktivierungsprotokolle im Verzeichnis „c:\clrloadlogs“ mit dem Bereich auf Prozessebene zu speichern, öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie Folgendes ein, bevor Sie die Anwendung ausführen:  
   
     ```  
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs  
     ```  
   
-## Beispiel  
- CLR\-Aktivierungsprotokolle bieten eine große Menge an Daten zur CLR\-Aktivierung und zur Verwendung der CLR\-Hosting\-APIs.  Die meisten dieser Daten werden intern von Microsoft verwendet. Wie in diesem Artikel beschrieben, können einige der Daten jedoch auch für Entwickler hilfreich sein.  
+## <a name="example"></a>Beispiel  
+ CLR-Aktivierungsprotokolle stellen eine Vielzahl von Daten über die CLR-Aktivierung und die Verwendung der Hosting-APIs der CLR bereit. Der Großteil dieser Daten wird von Microsoft intern benutzt, doch einige Daten können auch für Entwickler nützlich sein, so wie in diesem Artikel beschrieben.  
   
- Das Protokoll gibt die Reihenfolge wieder, in der die CLR\-Hosting\-APIs aufgerufen wurden.  Es enthält außerdem hilfreiche Daten zu dem Satz der installierten Laufzeiten, die auf dem Computer erkannt wurden.  Das Format des CLR\-Aktivierungsprotokolls ist kein dokumentiertes Format, es kann jedoch von Entwicklern zum Beheben von CLR\-Aktivierungsproblemen genutzt werden.  
-  
-> [!NOTE]
->  Sie können ein Aktivierungsprotokoll erst öffnen, wenn der Prozess, der die CLR verwendet, beendet wurde.  
+ Das Protokoll spiegelt die Reihenfolge wider, in der die Hosting-APIs von CLR aufgerufen wurden. Es sind auch praktische Daten über die Festlegung installierter Runtimes enthalten, die auf dem Computer ermittelt werden. Das Format des CLR-Aktivierungsprotokolls ist selbst nicht dokumentiert, kann jedoch benutzt werden, um Entwicklern zu helfen, die Probleme bei der CLR-Aktivierung lösen müssen.  
   
 > [!NOTE]
->  CLR\-Aktivierungsprotokolle werden nicht lokalisiert, sondern immer in Englisch generiert.  
+>  Sie können kein Aktivierungsprotokoll öffnen, bis der Prozess, der die CLR verwendet, beendet ist.  
   
- Im folgenden Beispiel für ein Aktivierungsprotokoll werden die nützlichsten Informationen hervorgehoben und nach dem Protokoll beschrieben.  
+> [!NOTE]
+>  CLR-Aktivierungsprotokolle werden nicht lokalisiert, sondern bleiben immer in Englisch.  
+  
+ Die wichtigste Information im folgenden Beispiel eines Aktivierungsprotokolls ist hervorgehoben und wird nach dem Protokoll beschrieben.  
   
 ```  
 532,205950.367,CLR Loading log for C:\Tests\myapp.exe   
@@ -100,37 +105,33 @@ Wenn beim Ausführen der Anwendung mit der richtigen Version der Common Language
 532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3   
 532,205950.398,FunctionCall: RealDllMain. Reason: 0   
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0  
-  
 ```  
   
--   **CLR Loading log** stellt den Pfad zur ausführbaren Datei bereit, die den Prozess gestartet hat, mit dem der verwaltete Code geladen wurde.  Beachten Sie, dass es sich dabei um einen systemeigenen Host handeln kann.  
+-   **CLR-Ladeprotokoll** stellt den Pfad zur ausführbaren Datei bereit, die den Prozess zum Laden des verwalteten Codes gestartet hat. Beachten Sie, dass dies ein nativer Host sein kann.  
   
     ```  
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe  
-  
     ```  
   
--   **Installed Runtime** ist der Satz der auf dem Computer installierten CLR\-Versionen, für die eine Aktivierungsanforderung erfolgen kann.  
+-   **Installierte Runtime** ist die Reihe der auf dem Computer installierten CLR-Versionen, die Kandidaten für die Aktivierungsaufforderung sind.  
   
     ```  
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0  
-  
     ```  
   
--   **built with version** gibt die Version der CLR an, mit der die für eine Methode, z. B. [ICLRMetaHostPolicy::GetRequestedRuntime](../Topic/ICLRMetaHostPolicy::GetRequestedRuntime%20Method.md), bereitgestellte Binärdatei erstellt wurde.  
+-   **mit Version erstellt** ist die Version der CLR, die zum Erstellen der Binärdatei verwendet wurde, die einer Methode, z.B. [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md), bereitgestellt wurde.  
   
     ```  
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727  
-  
     ```  
   
--   **feature\-on\-demand installation** bezieht sich auf das Aktivieren von .NET Framework 3.5 unter Windows 8.  Weitere Informationen zu diesem Szenario finden Sie unter [.NET Framework\-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
+-   **Feature-on-Demand-Installation** bezieht sich auf die Aktivierung von .NET Framework 3.5 unter Windows 8. Weitere Informationen zu diesem Szenario finden Sie unter [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
     ```  
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
-  
     ```  
   
-## Siehe auch  
- [Bereitstellung](../../../docs/framework/deployment/net-framework-and-applications.md)   
- [Gewusst wie: Konfigurieren einer Anwendung für die Unterstützung von .NET Framework 4 oder 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bereitstellung](../../../docs/framework/deployment/index.md)   
+ [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+

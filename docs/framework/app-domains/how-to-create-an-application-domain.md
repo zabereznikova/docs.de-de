@@ -1,36 +1,38 @@
 ---
-title: "Gewusst wie: Erstellen einer Anwendungsdom&#228;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsdomänen, Erstellen"
+title: "Vorgehensweise: Erstellen einer Anwendungsdomäne | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 928a5d897e7df288f07ec32aff43f28617ef9623
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Erstellen einer Anwendungsdom&#228;ne
-Ein Common Language Runtime\-Host erstellt Anwendungsdomänen automatisch bei Bedarf.  Sie können allerdings auch eigene Anwendungsdomänen erstellen und diese in die Assemblys laden, die Sie persönlich verwalten möchten.  Darüber hinaus können Sie Anwendungsdomänen erstellen, aus denen heraus Code ausgeführt werden kann.  
+# <a name="how-to-create-an-application-domain"></a>Gewusst wie: Erstellen einer Anwendungsdomäne
+Ein Common Language Runtime-Host erstellt automatisch Anwendungsdomänen, wenn sie gebraucht werden. Jedoch können Sie eigene Anwendungsdomänen erstellen und sie in die Assemblys laden, die Sie persönlich verwalten möchten. Sie können auch Anwendungsdomänen erstellen, in denen Sie Code ausführen.  
   
- Sie erstellen eine neue Anwendungsdomäne, indem Sie eine der überladenen **CreateDomain**\-Methoden der <xref:System.AppDomain?displayProperty=fullName>\-Klasse verwenden.  Sie können der Anwendungsdomäne einen Namen zuweisen und durch dessen Verwendung auf die Domäne verweisen.  
+ Sie erstellen eine neue Anwendungsdomäne mit einer der überladenen **CreateDomain**-Methoden in der <xref:System.AppDomain?displayProperty=fullName>-Klasse. Sie können der Anwendungsdomäne einen Namen geben und auf sie mit diesem Namen verweisen.  
   
- Im folgenden Codebeispiel wird eine neue Anwendungsdomäne erstellt, und es wird ihr der Name `MyDomain` zugewiesen. Anschließend wird der Name der Hostdomäne und der neu erstellten, untergeordneten Anwendungsdomäne auf der Konsole ausgegeben.  
+ In folgendem Beispiel wird eine neue Anwendungsdomäne erstellt, weist ihr den Namen `MyDomain` zu, und gibt dann den Namen der Hostdomäne und der neu erstellte untergeordneten Anwendungsdomäne in der Konsole aus.  
   
-## Beispiel  
- [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]
- [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
- [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
+## <a name="example"></a>Beispiel  
+ [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)] [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)] [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## Siehe auch  
- [Hosting Overview](http://msdn.microsoft.com/de-de/ea527626-99e3-4995-81c4-c8f3e60eb6d5)   
- [Programming with Application Domains](http://msdn.microsoft.com/de-de/bd36055b-56bd-43eb-b4d8-820c37172131)   
+## <a name="see-also"></a>Siehe auch  
+ [Programmieren mit Anwendungsdomänen](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)
