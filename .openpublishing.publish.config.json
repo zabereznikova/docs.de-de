@@ -29,9 +29,9 @@
       "branch": "master"
     },
     {
-      "path_to_root": "api_ref",
-      "url": "https://github.com/docascode/coreapi.git",
-      "branch": "master"
+      "path_to_root": "api",
+      "url": "https://github.com/MicrosoftDocs/dotnet-docs-yml4loc",
+      "branch": "ymlExport"
     },
     {
       "path_to_root": "_themes.pdf",
