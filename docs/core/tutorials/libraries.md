@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 
 ## <a name="how-to-target-the-net-standard"></a>So legen Sie .NET Standard als Ziel fest
 
-Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [NET Standard Library (.NET-Standardbibliothek)](../../standard/library.md) weitere Informationen.
+Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [NET Standard Library (.NET-Standardbibliothek)](../../standard/net-standard.md) weitere Informationen.
 
 In diesem Artikel finden Sie eine Tabelle, in der die Versionen von .NET Standard zahlreichen Implementierungen zugeordnet werden:
 
