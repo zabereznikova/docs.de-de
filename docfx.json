@@ -1,41 +1,19 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [
-            "corefx/src/**/ref/**/*.csproj",
-            "wcf/src/**/ref/**/*.csproj"
-          ],
-          "exclude": [ "**/bin/**", "**/obj/**"],
-          "cwd": ".."
-        }
-      ],
-      "dest": "api"
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "corefx/src/**/src/**/*.csproj",
-            "wcf/src/**/src/**/*.csproj",
-            "coreclr/src/mscorlib/System.Private.CoreLib.csproj"
-          ],
-          "exclude": [ "**/bin/**", "**/obj/**"],
-          "cwd": ".."
-        }
-      ],
-      "dest": "api_src"
-    }
-  ],
   "build": {
     "content":
       [
         {
-          "files": ["*.yml"],
-          "src": "api_ref",
-          "dest": "core/api"
-        },
+        "files": [
+          "api/**/*.yml",
+          "api/**/*.md"
+        ],
+        "exclude": [
+          "api/overwrites/**",
+          "samples/**/*.*",
+          "**/includes/**",
+          "***/contributing.md"
+        ]
+      },
         {
           "files": ["**/*.md"],
           "src": "docs",
@@ -101,11 +79,6 @@
 	] 
         },
         {
-          "files": ["*.md"],
-          "src": "api",
-          "dest": "core/api"
-        },
-        {
           "files": ["toc.yml", "index.md"]
         }
       ],
@@ -128,7 +101,12 @@
           ]
         }
       ],
-    "overwrite": "apidoc/*.md",
+        "overwrite": {
+        "files": [
+          "api/overwrites/**/*.md",
+          "apidoc/*.md"
+        ]
+      },
     "externalReference": [
     ],
     "globalMetadata": {
@@ -138,16 +116,17 @@
       "ms.author": "dotnetcontent",
       "manager": "wpickett",
       "searchScope": [".NET"],
-      "uhfHeaderId": "MSDocsHeader-DotNet"
+      "uhfHeaderId": "MSDocsHeader-DotNet",
+      "apiPlatform": "dotnet"
     },
     "fileMetadata": {
       "ms.prod":
       {
-        "api_ref/**.yml": ".net"
+        "api/**.yml": ".net"
       },
       "ms.topic":
       {
-        "api_ref/**.yml": "managed-reference"
+        "api**.yml": "managed-reference"
       }
     },
     "dest": "_site",
