@@ -87,7 +87,7 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ]
+  ],
   "need_generate_pdf_url_template": false,
   "Targets": {
     "Pdf": {
