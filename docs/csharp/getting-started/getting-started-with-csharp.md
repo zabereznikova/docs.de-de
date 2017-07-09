@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-c"></a>Erste Schritte mit C#
@@ -48,7 +48,7 @@ Die folgenden Themen erleichtern Ihnen den Einstieg in die Entwicklung von Anwen
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Verwenden der Visual Studio-Entwicklungsumgebung für C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Enthält eine Anleitung zur Verwendung der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Enthält eine Anleitung zur Verwendung der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
  Enthält Informationen über C#-Programmierkonzepte und beschreibt das Ausführen verschiedener Aufgaben in C#.  
