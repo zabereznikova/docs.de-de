@@ -29,27 +29,27 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c948ce1162d4c14075beedefc92fb245cc80f6b7
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="reference-visual-basic"></a>Referenz
-Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschiedene Aspekte der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Programmierung beziehen.  
+Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschiedene Aspekte der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmierung beziehen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Sprache.  
+ Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio-IDE-Programmen bietet.  
   
  [.NET Framework-Referenzinformationen](../../visual-basic/reference/net-framework-reference-information.md)  
- Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek.  
+ Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  [Visual Basic-Sprachspezifikation](../../visual-basic/reference/language-specification.md)  
- Enthält Links zur vollständigen [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
+ Enthält Links zur vollständigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
   
 ## <a name="reference"></a>Verweis  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
@@ -60,10 +60,10 @@ Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschied
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Allgemeine Elemente der Benutzeroberfläche (Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Enthält Themen zu den in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] verwendeten Dialogfeldern und Fenstern.  
+ Enthält Themen zu den in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendeten Dialogfeldern und Fenstern.  
   
  [XML-Tools in Visual Studio](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Enthält Links zu Themen über verschiedene, in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] verfügbare XML-Tools.  
+ Enthält Links zu Themen über verschiedene, in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verfügbare XML-Tools.  
   
  [Referenz zur Automatisierung und Erweiterbarkeit](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Enthält Links zu Themen über Automatisierung und Erweiterbarkeit – sowohl für freigegebene als auch für sprachspezifische Komponenten in [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].
+ Enthält Links zu Themen über Automatisierung und Erweiterbarkeit – sowohl für freigegebene als auch für sprachspezifische Komponenten in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].

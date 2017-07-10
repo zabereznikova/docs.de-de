@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND
@@ -46,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Problemumgehung
 
-Entwickler, die bestimmt hatten, dass der richtige Wert die Adresse des Speicherorts im Arbeitsspeicher war, der den `form.Handle`-Wert enthielt, können sich gegen dieses geänderte Verhalten entscheiden, indem sie den <xref:System.Security.AppContext>-Schalter `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` auf `true` festlegen:
+Entwickler, die bestimmt hatten, dass der richtige Wert die Adresse des Speicherorts im Arbeitsspeicher war, der den `form.Handle`-Wert enthielt, können sich gegen dieses geänderte Verhalten entscheiden, indem sie den <xref:System.AppContext>-Schalter `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` auf `true` festlegen:
 
-- Durch programmgesteuertes Festlegen von Kompatibilitätsoptionen für die <xref:System.Security.AppContext>-Instanz.
+- Durch programmgesteuertes Festlegen von Kompatibilitätsoptionen für die <xref:System.AppContext>-Instanz.
 
 - Durch Hinzufügen der folgenden Zeile zum Abschnitt `<runtime>` der app.config-Datei:
    
@@ -58,7 +58,7 @@ Entwickler, die bestimmt hatten, dass der richtige Wert die Adresse des Speicher
    </runtime>
    ```
 
-Benutzer, die sich umgekehrt für das neue Verhalten entscheiden, können für Anwendungen, die unter .NET Framework 4.7 ausgeführt werden, jedoch frühere Versionen von .NET Framework als Zielplattform haben, den <xref:System.Security.AppContext>-Schalter auf `false` festlegen.
+Benutzer, die sich umgekehrt für das neue Verhalten entscheiden, können für Anwendungen, die unter .NET Framework 4.7 ausgeführt werden, jedoch frühere Versionen von .NET Framework als Zielplattform haben, den <xref:System.AppContext>-Schalter auf `false` festlegen.
  
 ## <a name="see-also"></a>Siehe auch
 

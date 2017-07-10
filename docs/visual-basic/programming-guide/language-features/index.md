@@ -31,18 +31,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 1cc54088723bf8a7ff644cc418dd4f6212fc91f3
+ms.contentlocale: de-de
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
-In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], einer objektorientierten Programmiersprache, vorgestellt und erläutert. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
+In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], einer objektorientierten Programmiersprache, vorgestellt und erläutert. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
   
- Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Die meisten Konstrukte ähneln denen in anderen Sprachen. Allerdings gibt es aufgrund der ereignisgesteuerten Natur von [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] einige feine Unterschiede.  
+ Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Die meisten Konstrukte ähneln denen in anderen Sprachen. Allerdings gibt es aufgrund der ereignisgesteuerten Natur von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einige feine Unterschiede.  
   
- Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Sobald Sie mit den Grundlagen vertraut sind, können Sie mit [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] leistungsstarke Anwendungen erstellen.  
+ Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Sobald Sie mit den Grundlagen vertraut sind, können Sie mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] leistungsstarke Anwendungen erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -79,7 +80,7 @@ In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb
  Dieser Artikel beschreibt, was Schnittstellen sind und wie Sie diese in Ihren Anwendungen verwenden können.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Dieser Artikel stellt Links zu Themen bereit, die Features und Programmierelemente von [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)] einführen.  
+ Dieser Artikel stellt Links zu Themen bereit, die Features und Programmierelemente von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] einführen.  
   
  [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Dieser Artikel bietet eine Übersicht über Objekte und Klassen, ihre Verwendung, ihre Beziehungen zueinander sowie die Eigenschaften, Methoden und Ereignisse, die sie verfügbar machen.  
@@ -107,4 +108,4 @@ In den folgenden Themen werden die wesentlichen Komponenten von [!INCLUDE[vbprvb
  Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
- Dieser Artikel enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Programmierung.
+ Dieser Artikel enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmierung.

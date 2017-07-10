@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 5ec9d6aebcb38e89aa21b86cbd005c594bf756e6
+ms.sourcegitcommit: 4f1f23bd4d95e617fadc64f4d3a30c5fa1fda85b
+ms.openlocfilehash: 699e9291400797ed1bedcb3686fdfe7848305726
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
@@ -76,7 +76,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |---------------------|--------------------|----------------------|  
 |\\'|Einfaches Anführungszeichen|0x0027|  
 |\\"|Doppeltes Anführungszeichen|0x0022|  
-|\\\|Umgekehrter Schrägstrich|0x005C|  
+|\\\\ |Umgekehrter Schrägstrich|0x005C|  
 |\0|Null|0x0000|  
 |\a|Warnung|0x0007|  
 |\b|Rückschritt|0x0008|  
@@ -134,7 +134,7 @@ string s = String.Empty;
  [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
 ## <a name="strings-extension-methods-and-linq"></a>Zeichenfolgen, Erweiterungsmethoden und LINQ  
- Da der <xref:System.String>-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die Erweiterungsmethode verwenden, die in der <xref:System.Linq.Enumerable>-Klasse auf Zeichenfolgen definiert ist. Um „visuelle Überfrachtung“ zu vermeiden, werden diese Methode für den <xref:System.String>-Typ aus IntelliSense ausgeschlossen, nichtsdestotrotz sind sie weiterhin verfügbar. Sie können auch [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Abfrageausdrücke in Zeichenfolgen verwenden. Weitere Informationen finden Sie unter [LINQ und Zeichenfolgen](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Da der <xref:System.String>-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die Erweiterungsmethode verwenden, die in der <xref:System.Linq.Enumerable>-Klasse auf Zeichenfolgen definiert ist. Um „visuelle Überfrachtung“ zu vermeiden, werden diese Methode für den <xref:System.String>-Typ aus IntelliSense ausgeschlossen, nichtsdestotrotz sind sie weiterhin verfügbar. Sie können auch [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke in Zeichenfolgen verwenden. Weitere Informationen finden Sie unter [LINQ und Zeichenfolgen](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   

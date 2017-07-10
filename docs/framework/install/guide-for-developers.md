@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 348ef65fdb6c1a54abf379278d79ed1a9f626780
+ms.sourcegitcommit: 0248602661b93eb0372e12fbea1055515a9abca3
+ms.openlocfilehash: b7b7cb8d8f10d8d7f437b7bcf91f99237003ca74
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
@@ -151,7 +151,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
 <a name="standalone_language_packs"></a>   
 ## <a name="to-install-language-packs"></a>So installieren Sie Language Packs
 
- Language Packs sind ausführbare Dateien, die die lokalisierten Ressourcen (z. B. übersetzte Fehlermeldungen und Benutzeroberflächentexte) für unterstützte Sprachen enthalten. Wenn Sie kein Language Pack installieren, werden .NET Framework-Fehlermeldungen und anderer Text auf Englisch angezeigt.  Beachten Sie, dass der Webinstaller automatisch das Language Pack installiert, das mit Ihrem Betriebssystem übereinstimmt. Sie können jedoch zusätzliche Language Packs auf den Computer herunterladen. Der Offlineinstaller enthält keine Language Packs. Zudem sind für .NET Framework 4.7 keine Sprachpakete verfügbar.
+ Language Packs sind ausführbare Dateien, die die lokalisierten Ressourcen (z. B. übersetzte Fehlermeldungen und Benutzeroberflächentexte) für unterstützte Sprachen enthalten. Wenn Sie kein Language Pack installieren, werden .NET Framework-Fehlermeldungen und anderer Text auf Englisch angezeigt.  Beachten Sie, dass der Webinstaller automatisch das Language Pack installiert, das mit Ihrem Betriebssystem übereinstimmt. Sie können jedoch zusätzliche Language Packs auf den Computer herunterladen. Der Offlineinstaller enthält keine Language Packs. 
   
 > [!IMPORTANT]
 > Sprachpakete enthalten keine .NET Framework-Komponenten, die zum Ausführen einer App erforderlich sind. Deshalb müssen Sie den Webinstaller oder den Offlineinstaller ausführen, bevor Sie ein Sprachpaket installieren. Wenn Sie bereits ein Sprachpaket installiert haben, deinstallieren Sie es, installieren Sie .NET Framework, und installieren Sie anschließend das Sprachpaket erneut.  

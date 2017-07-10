@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Fehlermeldungen (Visual Basic)
@@ -50,7 +51,7 @@ Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, kö
  Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Laufzeitfehler  
- Wenn eine Visual Basic-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausführen kann, tritt ein Laufzeitfehler auf, und [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] löst ein `Exception`-Objekt aus. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] kann über die `Throw`-Anweisung benutzerdefinierte Fehler jeden Datentyps generieren, einschließlich `Exception`-Objekte. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
+ Wenn eine Visual Basic-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausführen kann, tritt ein Laufzeitfehler auf, und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst ein `Exception`-Objekt aus. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann über die `Throw`-Anweisung benutzerdefinierte Fehler jeden Datentyps generieren, einschließlich `Exception`-Objekte. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
   
  Der Code kann Laufzeitfehler auffangen und untersuchen. Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen. Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
