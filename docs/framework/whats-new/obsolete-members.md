@@ -19,13 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 3a6101e6e2c99ff8321e90dd616230636753d844
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="obsolete-members-in-the-net-framework"></a>Veraltete Member in .NET Framework
+<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
+
+# Veraltete Member in .NET Framework
 In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \(einschließlich Punktversionen wie [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) und in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \(einschließlich der Punktversionen\) veraltet sind. Über die nachfolgenden Links finden Sie eine Liste der veralteten Member und empfohlenen Alternativen in den jeweiligen Assemblys. In diesem Thema werden nicht die Member veralteter Typen aufgeführt. Eine Liste veralteter Typen finden Sie unter [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md).  
   
 -   [Veraltete Member in Systemassemblys](#SystemMembers)  
@@ -95,11 +97,15 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## <a name="obsolete-members-in-system-assemblies"></a>Veraltete Member in Systemassemblys  
+<a id="obsolete-members-in-system-assemblies" class="xliff"></a>
+
+## Veraltete Member in Systemassemblys  
  In den folgenden Tabellen sind die veralteten Member in Systemassemblys aufgeführt. Diese Assemblys werden zur allgemeinen Anwendungsentwicklung für .NET Framework verwendet.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll  
+<a id="assembly-mscorlibdll" class="xliff"></a>
+
+### Assembly: mscorlib.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -125,7 +131,7 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%29>|Die Deklarationssicherheit auf Assemblyebene wurde als veraltet eingestuft und wird von der CLR nicht mehr als Standardeinstellung erzwungen.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
-|<xref:System.AppDomain?displayProperty=fullName>|[\], Byte\<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|Methoden, die Beweise für das Sandboxing verwenden, wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
@@ -138,8 +144,8 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetDynamicBase%2A>|<xref:System.AppDomain.SetDynamicBase%2A> ist veraltet. Erwägen Sie stattdessen die Verwendung von <xref:System.AppDomainSetup.DynamicBase%2A?displayProperty=fullName>.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyFiles%2A>|<xref:System.AppDomain.SetShadowCopyFiles%2A> ist veraltet. Erwägen Sie stattdessen die Verwendung von <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName>.|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyPath%2A>|<xref:System.AppDomain.SetShadowCopyPath%2A> ist veraltet. Erwägen Sie stattdessen die Verwendung von <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName>.|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.IFormatProvider%29>|Das `provider`-Argument wird nicht verwendet. Verwenden Sie <xref:System.Enum.ToString?displayProperty=fullName>.|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.String%2CSystem.IFormatProvider%29>|Das `provider`-Argument wird nicht verwendet. Verwenden Sie <xref:System.Enum.ToString?displayProperty=fullName>.|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString(System.IFormatProvider)>|Das `provider`-Argument wird nicht verwendet. Verwenden Sie <xref:System.Enum.ToString%2A?displayProperty=fullName>.|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%2A>|Das `provider`-Argument wird nicht verwendet. Verwenden Sie <xref:System.Enum.ToString%2A?displayProperty=fullName>.|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.|  
 |<xref:System.Collections.Hashtable?displayProperty=fullName>|<xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Verwenden Sie stattdessen <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=fullName>.|  
@@ -265,7 +271,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|Verwenden Sie stattdessen die <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName>-Eigenschaft.|  
   
 <a name="PresentationCore"></a>   
-### <a name="assembly-presentationcoredll"></a>Assembly: PresentationCore.dll  
+<a id="assembly-presentationcoredll" class="xliff"></a>
+
+### Assembly: PresentationCore.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -300,7 +308,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|Bitmapeffekte sind veraltet und funktionieren nicht mehr. Verwenden Sie bei Bedarf stattdessen <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>.|  
   
 <a name="PresFW"></a>   
-### <a name="assembly-presentationframeworkdll"></a>Assembly: PresentationFramework.dll  
+<a id="assembly-presentationframeworkdll" class="xliff"></a>
+
+### Assembly: PresentationFramework.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -310,7 +320,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|Ersetzt durch <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>.|  
   
 <a name="Act"></a>   
-### <a name="assembly-systemactivitiesdll"></a>Assembly: System.Activities.dll  
+<a id="assembly-systemactivitiesdll" class="xliff"></a>
+
+### Assembly: System.Activities.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -318,22 +330,26 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diesen Konstruktor nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> oder <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>.|  
   
 <a name="ActPres"></a>   
-### <a name="assembly-systemactivitiespresentationdll"></a>Assembly: System.Activities.Presentation.dll  
+<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>
+
+### Assembly: System.Activities.Presentation.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Verwenden Sie stattdessen                                          <!--zz <xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%2CSystem.Windows.Point%29> -->   `System.Activities.Presentation.DragDropHelper.DoDragMove`.|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Diese Methode unterstützt nicht das Ziehen von mehreren Elementen.|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Verwenden Sie stattdessen <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>.|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Erwägen Sie stattdessen die Verwendung von <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%28System.Windows.DragEventArgs%2CSystem.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%29>.|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|Diese Methode unterstützt nicht das Ziehen von mehreren Elementen.|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItem%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Verwenden Sie stattdessen <xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItems%2A>.|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDroppedObject%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Verwenden Sie stattdessen <xref:System.Activities.Presentation.DragDropHelper.GetDroppedObjects%2A>.|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Methode unterstützt nicht das Ziehen von mehreren Elementen. Erwägen Sie stattdessen die Verwendung von                                           <!--zz <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%2A> --> `xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements`.|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|Diese Methode unterstützt nicht das Ziehen von mehreren Elementen.|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsAdded%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsRemoved%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Diese Eigenschaft nicht verwenden. Verwenden Sie stattdessen <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
   
 <a name="core"></a>   
-### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
+<a id="assembly-systemcoredll" class="xliff"></a>
+
+### Assembly: System.Core.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -376,7 +392,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie diese Methode nicht.|  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll  
+<a id="assembly-systemdatadll" class="xliff"></a>
+
+### Assembly: System.Data.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -398,7 +416,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> ist veraltet. Verwenden Sie <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="entity"></a>   
-### <a name="assembly-systemdataentitydll"></a>Assembly: System.Data.Entity.dll  
+<a id="assembly-systemdataentitydll" class="xliff"></a>
+
+### Assembly: System.Data.Entity.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -408,7 +428,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|Verwenden Sie stattdessen <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>.|  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>
+
+### Assembly: System.Data.OracleClient.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -417,7 +439,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> ist veraltet. Verwenden Sie <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll  
+<a id="assembly-systemdesigndll" class="xliff"></a>
+
+### Assembly: System.Design.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -470,7 +494,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>.|  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>Assembly: System.dll  
+<a id="assembly-systemdll" class="xliff"></a>
+
+### Assembly: System.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -492,7 +518,7 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.String%2CSystem.Boolean%29>|Der Konstruktor ist veraltet. Verwenden Sie <xref:System.Uri.%23ctor%28System.String%29>. Der `dontEscape`-Parameter ist veraltet und hat immer den Wert `false`.|  
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%2CSystem.Boolean%29>|Der Konstruktor ist veraltet. Verwenden Sie <xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%29>. Der `dontEscape`-Parameter ist veraltet und hat immer den Wert `false`.|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>-Klasse verwenden. Wenn Objekte von <xref:System.CodeDom.Compiler.CodeDomProvider> erben, müssen diese Objekte diese Schnittstelle trotzdem implementieren. Außerdem sollte diese Warnung ausgeschlossen oder diese Methode ebenfalls als veraltet eingestuft werden.|  
-|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>-Klasse verwenden. Wenn Objekte von <xref:System.CodeDom.Compiler.CodeDomProvider> erben, müssen diese Objekte diese Schnittstelle trotzdem implementieren. Außerdem sollte diese Warnung ausgeschlossen oder diese Methode ebenfalls als veraltet eingestuft werden.|  
+|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>-Klasse verwenden. Wenn Objekte von <xref:System.CodeDom.Compiler.CodeDomProvider> erben, müssen diese Objekte diese Schnittstelle trotzdem implementieren. Außerdem sollte diese Warnung ausgeschlossen oder diese Methode ebenfalls als veraltet eingestuft werden.|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|Aufrufer dürfen die <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=fullName>-Schnittstelle nicht verwenden. Sie sollten stattdessen direkt die Methoden der <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>-Klasse verwenden. Wenn Objekte von <xref:System.CodeDom.Compiler.CodeDomProvider> erben, müssen diese Objekte diese Schnittstelle trotzdem implementieren. Außerdem sollte diese Warnung ausgeschlossen oder diese Methode ebenfalls als veraltet eingestuft werden.|  
 |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|Die CAS-Richtlinie wurde als veraltet eingestuft und wird in einem der nächsten Releases von .NET Framework entfernt. Weitere Informationen finden Sie unter [Änderungen der Sicherheit in .NET Framework 4](http://go2.microsoft.com/fwlink/?LinkId=131738).|  
 |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|Die CAS-Richtlinie wurde als veraltet eingestuft und wird in einem der nächsten Releases von .NET Framework entfernt. Weitere Informationen finden Sie unter [Änderungen der Sicherheit in .NET Framework 4](http://go2.microsoft.com/fwlink/?LinkId=131738).|  
@@ -582,7 +608,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName>, um Ansprüche zu <xref:System.Security.Claims.ClaimsIdentity> hinzuzufügen.|  
   
 <a name="drawing"></a>   
-### <a name="assembly-systemdrawingdll"></a>Assembly: System.Drawing.dll  
+<a id="assembly-systemdrawingdll" class="xliff"></a>
+
+### Assembly: System.Drawing.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -590,7 +618,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Dieser Konstruktor ist veraltet. Verwenden Sie <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|  
   
 <a name="messaging"></a>   
-### <a name="assembly-systemmessagingdll"></a>Assembly: System.Messaging.dll  
+<a id="assembly-systemmessagingdll" class="xliff"></a>
+
+### Assembly: System.Messaging.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -598,7 +628,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Diese Methode gibt ein <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>-Objekt zurück, das die <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName>-Methodenfamilie falsch implementiert. Verwenden Sie stattdessen <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>.|  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll  
+<a id="assembly-systemservicemodeldll" class="xliff"></a>
+
+### Assembly: System.ServiceModel.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -610,7 +642,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|Diese Eigenschaft ist veraltet und wird nur aus Gründen der Abwärtskompatibilität beibehalten. Die lokale Computerrichtlinie wird verwendet, um zu bestimmen, ob NTLM verwendet werden soll.|  
   
 <a name="smDisc"></a>   
-### <a name="assembly-systemservicemodeldiscoverydll"></a>Assembly: System.ServiceModel.Discovery.dll  
+<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>
+
+### Assembly: System.ServiceModel.Discovery.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -618,14 +652,18 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>-Eigenschaft ist veraltet. Verwenden Sie <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName> zum Festlegen der Transporteigenschaften.|  
   
 <a name="datavisualization"></a>   
-### <a name="assembly-systemwebdatavisualizationdll"></a>Assembly: System.Web.DataVisualization.dll  
+<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>
+
+### Assembly: System.Web.DataVisualization.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> ist veraltet. Erwägen Sie stattdessen die Verwendung von <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>.|  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll  
+<a id="assembly-systemwebdll" class="xliff"></a>
+
+### Assembly: System.Web.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -660,20 +698,24 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|Die empfohlene Alternative ist die <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName>-Eigenschaft. Erstellen Sie ein <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName>-Objekt, und rufen Sie <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName> auf, um ein <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>-Objekt zu erstellen.|  
   
 <a name="dynamicdata"></a>   
-### <a name="assembly-systemwebdynamicdatadll"></a>Assembly: System.Web.DynamicData.dll  
+<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>
+
+### Assembly: System.Web.DynamicData.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Verwenden Sie die `EnablePersistedSelection`-Eigenschaft auf einem datengebundenen Steuerelement, z.B. <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> oder <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>.|  
   
 <a name="extensions"></a>   
-### <a name="assembly-systemwebextensionsdll"></a>Assembly: System.Web.Extensions.dll  
+<a id="assembly-systemwebextensionsdll" class="xliff"></a>
+
+### Assembly: System.Web.Extensions.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=fullName>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die <!--zz <xref:System.Web.UI.ScriptReference.Path%2A>--> `System.Web.UI.ScriptReference.Path`-Eigenschaft stattdessen für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=fullName>-Objekt fest.|  
-|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die <xref:System.Web.UI.ScriptReference.Path%2A>-Eigenschaft für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=fullName>-Objekt fest, anstatt <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName> zu verwenden.|  
+|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)-Eigenschaft stattdessen für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=fullName>-Objekt fest.|  
+|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|Diese Eigenschaft ist veraltet. Legen Sie die [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)-Eigenschaft für jedes einzelne <xref:System.Web.UI.ScriptReference?displayProperty=fullName>-Objekt fest, anstatt <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName> zu verwenden.|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|Verwenden Sie <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> ist in Skriptverweisen nicht mehr erforderlich.|  
@@ -681,7 +723,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>.|  
   
 <a name="services"></a>   
-### <a name="assembly-systemwebservicesdll"></a>Assembly: System.Web.Services.dll  
+<a id="assembly-systemwebservicesdll" class="xliff"></a>
+
+### Assembly: System.Web.Services.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -689,7 +733,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Diese Eigenschaft wird in einer der nächsten Versionen entfernt. Das Vorhandensein eines bestimmten Headers in einer SOAP-Meldung wird nicht mehr erzwungen.|  
   
 <a name="forms"></a>   
-### <a name="assembly-systemwindowsformsdll"></a>Assembly: System.Windows.Forms.dll  
+<a id="assembly-systemwindowsformsdll" class="xliff"></a>
+
+### Assembly: System.Windows.Forms.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -706,7 +752,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>-Eigenschaft.|  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
+<a id="assembly-systemxamldll" class="xliff"></a>
+
+### Assembly: System.Xaml.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -714,7 +762,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|Das `expressionType`-Argument wird vom XAML-Parser nicht verwendet. Verwenden Sie <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>, um den erwarteten Rückgabetyp anzugeben. Verwenden Sie <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>, um die benutzerdefinierte Verarbeitung für Ausdruckstypen anzugeben.|  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll  
+<a id="assembly-systemxmldll" class="xliff"></a>
+
+### Assembly: System.Xml.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -736,22 +786,30 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|Diese Methode wurde als veraltet eingestuft und wird in einem der nächsten Releases von .NET Framework entfernt. Verwenden Sie eine Überladung von <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName>, die keinen <xref:System.Security.Policy.Evidence?displayProperty=fullName>-Parameter verwendet.|  
   
 <a name="MicrosoftMembers"></a>   
-## <a name="obsolete-members-in-microsoft-assemblies"></a>Veraltete Member in Microsoft-Assemblys  
+<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>
+
+## Veraltete Member in Microsoft-Assemblys  
  In den folgenden Tabellen sind die veralteten Member in Microsoft-Assemblys aufgeführt. Bei diesen Assemblys handelt es sich um zweckgebundene Assemblys, beispielsweise Assemblys, die auf eine einzelne Sprache (z. B. Microsoft.VisualBasic.dll) oder ein Buildsystem (z. B. Microsoft.Build.Engine.dll) abzielen.  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly: IEHost.dll und IEExec.exe  
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>
+
+### Assembly: IEHost.dll und IEExec.exe  
  Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework entfernt. Alle ihrer Typen und Member sind veraltet und werden in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nicht mehr unterstützt. Diese Assemblys wurden verwendet, um Windows Forms-Steuerelemente zu hosten und ausführbare Dateien in Internet Explorer auszuführen. Alternativen zu dieser Technologie schließen ClickOnce, XAML Browser Applications (XBAP) und Microsoft Silverlight ein.  
   
 <a name="isymwrapper"></a>   
-### <a name="assembly-isymwrapperdll"></a>Assembly: ISymWrapper.dll  
+<a id="assembly-isymwrapperdll" class="xliff"></a>
+
+### Assembly: ISymWrapper.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Die empfohlene Alternative ist <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>.                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> verwendet den Importerschnittstellenzeiger als <xref:System.IntPtr?displayProperty=fullName> statt als <xref:System.Int32?displayProperty=fullName> und funktioniert daher sowohl für 32-Bit- als auch für 64-Bit-Architekturen.|  
   
 <a name="conversion"></a>   
-### <a name="assembly-microsoftbuildconversionv40dll"></a>Assembly: Microsoft.Build.Conversion.v4.0.dll  
+<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>
+
+### Assembly: Microsoft.Build.Conversion.v4.0.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -761,7 +819,9 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|Verwenden Sie stattdessen die parameterlose <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName>-Methode.|  
   
 <a name="engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll  
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>
+
+### Assembly: Microsoft.Build.Engine.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -769,28 +829,36 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Wenn Sie den .NET Framework-Speicherort als <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> übergeben haben, können Sie einfach zum parameterlosen <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName>-Konstruktor wechseln. Andernfalls können Sie benutzerdefinierte Toolsets in der Registrierung oder der Konfigurationsdatei definieren, oder Sie können dem <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName>-Objekt des Moduls Elemente hinzufügen. Verwenden Sie dann stattdessen entweder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName>-Konstruktor oder den <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName>-Konstruktor.|  
   
 <a name="BuildFW"></a>   
-### <a name="assembly-microsoftbuildframeworkdll"></a>Assembly: Microsoft.Build.Framework.dll  
+<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>
+
+### Assembly: Microsoft.Build.Framework.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie stattdessen die <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName>-Eigenschaft.|  
   
 <a name="BuildUtil4"></a>   
-### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Assembly: Microsoft.Build.Utilities.v4.0.dll  
+<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>
+
+### Assembly: Microsoft.Build.Utilities.v4.0.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Verwenden Sie die <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName>-Eigenschaft.|  
   
 <a name="data_entity_tasks"></a>   
-### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Assembly: Microsoft.Data.Entity.Build.Tasks.dll  
+<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>
+
+### Assembly: Microsoft.Data.Entity.Build.Tasks.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Zuerst veraltet in .NET Framework 4.5.<br /><br /> Wird nur für die Abwärtskompatibilität der Version 3.5 verwendet.|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>Assembly: Microsoft.VisualBasic.dll  
+<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>
+
+### Assembly: Microsoft.VisualBasic.dll  
   
 |Typ|Member|Meldung|  
 |----------|------------|-------------|  
@@ -807,6 +875,8 @@ In den Tabellen dieses Artikels werden die Typmember nach Assembly geordnet aufg
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|Die Verwendung dieses Members generiert einen Compilerfehler.<br /><br /> Verwenden Sie diese Methode nicht.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Der Registrierungsschlüssel `DynData` funktioniert nur unter Win9x, was von dieser .NET Framework-Version nicht unterstützt wird. Verwenden Sie stattdessen den Registrierungsschlüssel `PerformanceData`. Diese Eigenschaft wird in einer der nächsten Framework-Versionen entfernt.|  
   
-## <a name="see-also"></a>Siehe auch  
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md)

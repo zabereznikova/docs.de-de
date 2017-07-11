@@ -21,20 +21,24 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: ec4594343c5a78649d7d7a4d151545612da9138b
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/20/2017
 
 ---
-# <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
+<a id="net-framework-system-requirements" class="xliff"></a>
+
+# Systemanforderungen für .NET Framework
 Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für .NET Framework 4.5 und dessen Punktreleases (4.5.1 und 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und dessen Punktreleases (4.6.1 und 4.6.2) sowie .NET Framework 4.7. Für Entwicklungsumgebungen, in denen Anwendungen für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
 
- Downloadinformationen und Links finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md).
+ Downloadinformationen und Links finden Sie unter [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).
 
  Informationen zum Support Lifecycle der .NET Framework-Versionen finden Sie unter [Microsoft Support Lifecycle](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
-## <a name="hardware-requirements"></a>Hardwareanforderungen
+<a id="hardware-requirements" class="xliff"></a>
+
+## Hardwareanforderungen
 
 |||
 |-|-|
@@ -44,11 +48,15 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 |32-Bit|4,5 GB|
 |64-Bit|4,5 GB|
 
-## <a name="installation-requirements"></a>Installationsanforderungen
+<a id="installation-requirements" class="xliff"></a>
+
+## Installationsanforderungen
 
 - Für die Installation von .NET Framework sind Administratorrechte erforderlich. Wenn Sie über keine Administratorrechte für den Computer verfügen, auf dem Sie .NET Framework installieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
 
-## <a name="supported-client-operating-systems"></a>Unterstützte Clientbetriebssysteme
+<a id="supported-client-operating-systems" class="xliff"></a>
+
+## Unterstützte Clientbetriebssysteme
 
 |Betriebssystem|Unterstützte Editionen|Mit vorinstalliertem Betriebssystem|Separat installierbar|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -58,7 +66,7 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 |Windows 10|32 Bit und 64 Bit|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
 |[!INCLUDE[win81](../../../includes/win81-md.md)]|32-Bit, 64-Bit und ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |[!INCLUDE[win8](../../../includes/win8-md.md)]|32-Bit, 64-Bit und ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-|Windows 7 SP1|32 Bit und 64 Bit|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|
+|Windows 7 SP1|32 Bit und 64 Bit|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |Windows Vista SP2|32 Bit und 64 Bit|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
 |Windows XP|32 Bit und 64 Bit|--|.NET Framework 4|
 
@@ -74,7 +82,9 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 - Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
 
-## <a name="supported-server-operating-systems"></a>Unterstützte Serverbetriebssysteme
+<a id="supported-server-operating-systems" class="xliff"></a>
+
+## Unterstützte Serverbetriebssysteme
 
 |Betriebssystem|Unterstützte Editionen|Mit vorinstalliertem Betriebssystem|Separat installierbar|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -96,7 +106,10 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 - Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
 
-## <a name="see-also"></a>Siehe auch
- [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md)   
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch
+ [Installationshandbuch](../../../docs/framework/install/index.md)   
  [Getting Started (Erste Schritte)](../../../docs/framework/get-started/index.md)   
- [Problembehandlung](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+ [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+
