@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
+title: Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017 | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
 keywords: .NET Core, .NET Standard-Klassenbibliothek, Visual Studio 2017
 author: BillWagner
@@ -11,23 +11,27 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1ecccb03bc28da51a580b790b5ba8dd594bb7f18
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
+<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
+
+# Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
 
 Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine mit .NET Core entwickelte Klassenbibliothek unterstützt die .NET Standard-Bibliothek, wodurch die Bibliothek von jeder .NET-Plattform aus aufgerufen werden kann, die diese Version der .NET Standard-Bibliothek unterstützt. Wenn Sie die Klassenbibliothek fertig stellen, können Sie entscheiden, ob Sie sie als Drittanbieterkomponente verteilen oder als Komponente mit einer oder mehreren Anwendungen in ein Paket einbeziehen möchten.
 
 > [!NOTE]
-> Eine Liste der .NET Standard-Versionen und der Plattformen, die sie unterstützen, finden Sie unter [.NET-Standardbibliothek](../../standard/library.md).
+> Eine Liste der .NET Standard-Versionen und der Plattformen, die sie unterstützen, finden Sie unter [.NET-Standard](../../standard/net-standard.md).
 
 In diesem Thema erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält. Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der @System.String Klasse.
 
-## <a name="creating-a-class-library-solution"></a>Erstellen einer Klassenbibliotheks-Projektmappe
+<a id="creating-a-class-library-solution" class="xliff"></a>
+
+## Erstellen einer Klassenbibliotheks-Projektmappe
 
 Zunächst erstellen Sie eine Projektmappe für Ihre Klassenbibliotheksprojekt und die zugehörigen Projekte. Eine Visual Studio-Projektmappe dient nur als Container für ein oder mehrere Projekte. So erstellen Sie die Projektmappe:
 
@@ -37,7 +41,9 @@ Zunächst erstellen Sie eine Projektmappe für Ihre Klassenbibliotheksprojekt un
 
    ![Dialogfeld "Neues Projekt"](./media/library-with-visual-studio/newproject.png)
 
-## <a name="creating-the-class-library-project"></a>Erstellen des Klassenbibliotheksprojekts
+<a id="creating-the-class-library-project" class="xliff"></a>
+
+## Erstellen des Klassenbibliotheksprojekts
 
 Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
@@ -59,7 +65,9 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
    ![Ausgabebereich, der zeigt, dass der Buildvorgang erfolgreich war](./media/library-with-visual-studio/buildsucceeds.png)
 
-## <a name="next-step"></a>Nächster Schritt
+<a id="next-step" class="xliff"></a>
+
+## Nächster Schritt
 
 Sie haben die Bibliothek erfolgreich erstellt. Aber da Sie keine ihrer Methoden aufgerufen haben, wissen Sie nicht, ob sie wie erwartet funktioniert. Der nächste Schritt bei der Entwicklung Ihrer Bibliothek ist ihr Test mithilfe eines [C#-Komponententestprojekts](testing-library-with-visual-studio.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von portierbaren Bibliotheken | C#-Handbuch
+title: "Erstellen portabler Bibliotheken – C#-Leitfaden | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie portierbare Bibliotheken erstellen, und geben Sie die Plattformen und Versionen an, die Ihre Bibliothek unterstützt."
 keywords: "C#, UWP, portierbare Assembly, plattformübergreifend"
 ms.date: 08/24/2016
@@ -9,14 +9,17 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 254836c0-3be7-4549-bd9a-40fc0f445c31
 redirect_url: /dotnet/articles/csharp/tutorials/index
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9cfab61d3efdb62fab588aaf31d539fc546560ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 06430b6b74c472e60ab9bd64507bf3fca37c70e8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="-creating-portable-libraries"></a>🔧 Erstellen von portierbaren Bibliotheken
+<a id="creating-portable-libraries" class="xliff"></a>
+
+# Erstellen von portierbaren Bibliotheken
 
 > **Hinweis**
 > 

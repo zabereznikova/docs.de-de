@@ -1,5 +1,5 @@
 ---
-title: "C#-Typen und Variablen | Überblick über C#"
+title: "C#-Typen und Variablen – Überblick über C# | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#."
 keywords: .NET, Csharp, Typ, Verweistyp, Werttyp
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="types-and-variables"></a>Typen und Variablen
+<a id="types-and-variables" class="xliff"></a>
+
+# Typen und Variablen
 
 Es gibt zwei Arten von Typen in C#: *Werttypen* und *Verweistypen*. Variablen von Werttypen enthalten ihre Daten direkt, Variablen von Verweistypen speichern hingegen Verweise auf ihre Daten – letztere werden als Objekte bezeichnet. Mit Verweistypen können zwei Variablen auf das gleiche Objekt verweisen, und so können an einer Variablen durchgeführte Vorgänge das Objekt beeinflussen, auf das die andere Variable verweist. Bei Werttypen besitzt jede Variable eine eigene Kopie der Daten, und auf eine Variable angewendete Vorgänge können die andere Variable nicht beeinflussen (außer im Fall von `ref`- und `out`-Parametervariablen).
 

@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit LINQ
+title: Arbeiten mit LINQ | Microsoft-Dokumentation
 description: "In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="working-with-linq"></a>Arbeiten mit LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>Einführung
+# Arbeiten mit LINQ
+
+<a id="introduction" class="xliff"></a>
+
+## Einführung
 
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
@@ -36,17 +40,23 @@ Im vorliegenden Artikel dient die Technik dazu, das Manipulieren von Datensequen
 
 Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. Sie können sich auch das [abgeschlossene Beispiel](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) in unserem Repository „dotnet/docs“ auf GitHub ansehen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+<a id="prerequisites" class="xliff"></a>
+
+## Erforderliche Komponenten
 
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Ubuntu Linux, OS X oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
 
-## <a name="create-the-application"></a>Erstellen der Anwendung
+<a id="create-the-application" class="xliff"></a>
+
+## Erstellen der Anwendung
 
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
 Wenn Sie C# noch nie verwendet haben, erläutert [dieses Tutorial](console-teleprompter.md) die Struktur eines C#-Programms. Sie können dieses Tutorial lesen und dann zu diesem Artikel zurückkehren, um mehr über LINQ zu erfahren. 
 
-## <a name="creating-the-data-set"></a>Erstellen des Datasets
+<a id="creating-the-data-set" class="xliff"></a>
+
+## Erstellen des Datasets
 
 Beginnen wir damit, einen Kartenstapel zu erstellen. Zu diesem Zweck erstellen Sie eine LINQ-Abfrage mit zwei Quellen (eine für die vier Farben, eine für die dreizehn Werte). Diese Quellen werden Sie zu einem aus 52 Karten bestehenden Kartenstapel kombinieren. Ein `Console.WriteLine`-Auszug innerhalb einer `foreach`-Schleife zeigt die Karten an.
 
@@ -100,7 +110,9 @@ Führen Sie jetzt das erstellte Beispiel aus. Es werden alle 52 Karten des Karte
 
 ![Konsolenfenster, das die App zeigt, die 52 Karten schreibt](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>Ändern der Reihenfolge
+<a id="manipulating-the-order" class="xliff"></a>
+
+## Ändern der Reihenfolge
 
 Als Nächstes erstellen wir eine Hilfsprogrammmethode, die das Mischen ausführen kann. Der erste Schritt besteht darin, den Kartenstapel in zwei Hälften zu teilen. Die zu den LINQ-APIs gehörenden Methoden `Take()` und `Skip()` stellen uns diese Funktion bereit:
 
@@ -173,7 +185,9 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>Vergleiche
+<a id="comparisons" class="xliff"></a>
+
+## Vergleiche
 
 Sehen wir uns an, wie viele Mischvorgänge benötigt werden, damit der Kartenstapel wieder in seiner ursprünglichen Reihenfolge vorliegt. Sie müssen eine Methode schreiben, die ermittelt, ob zwei Sequenzen gleich sind. Nachdem Sie diese Methode erstellt haben, müssen Sie den Code, der den Stapel mischt, in eine Schleife platzieren und dann prüfen, wann der Stapel wieder die ursprüngliche Reihenfolge aufweist.
 
@@ -207,7 +221,9 @@ Console.WriteLine(times);
 
 Führen Sie das Beispiel aus, und sehen Sie sich an, wie der Kartenstapel nach jedem Mischvorgang neu sortiert wird und nach 8 Durchgängen wieder seine ursprüngliche Konfiguration aufweist.
 
-## <a name="optimizations"></a>Optimierungen
+<a id="optimizations" class="xliff"></a>
+
+## Optimierungen
 
 Das Beispiel, das Sie bisher erstellt haben, führt einen *Mischvorgang nach innen* aus, bei dem die oberste und unterste Karte bei jedem Durchgang gleich bleiben. Als Nächstes führen wir einen *Mischvorgang nach außen* aus, bei dem alle 52 Karten ihre Position ändern. Hierbei werden die Hälften so ineinander gefächert, dass die erste Karte der unteren Hälfte zur ersten Karte des Kartenstapels wird. Das bedeutet, dass die unterste Karte der oberen Hälfte zur untersten Karte des Stapels wird. Dazu muss nur eine Zeile geändert werden. Aktualisieren Sie den Aufruf zum Mischen so, dass die Reihenfolge der oberen und unteren Hälften des Kartenstapels getauscht wird:
 
@@ -285,7 +301,9 @@ Sie dürfen dieses Beispiel aber nicht so interpretieren, dass alle Abfragen mit
 
 In der Praxis werden manche Algorithmen besser mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. (Im Allgemeinen eignet sich die verzögerte Auswertung wesentlich besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um ein Datenbankmodul. In diesen Fällen ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip an den Datenbankprozess auszuführen.) LINQ ermöglicht sowohl eine verzögerte als auch eine strikte Auswertung. Wählen Sie die für Ihr jeweiliges Programm am besten geeignete Variante aus.
 
-## <a name="preparing-for-new-features"></a>Vorbereiten auf neue Funktionen
+<a id="preparing-for-new-features" class="xliff"></a>
+
+## Vorbereiten auf neue Funktionen
 
 Der Code, den Sie für diesen Artikel geschrieben haben, ist ein Beispiel für die Erstellung eines einfachen Prototyps, der das gewünschte Ergebnis erzielt. Er eignet sich hervorragend, um einen Problembereich zu untersuchen, und ist für viele Funktionen möglicherweise die beste dauerhafte Lösung. Sie haben *anonyme Typen* für die Karten verwendet, und jede Karte wird durch Zeichenfolgen dargestellt.
 
@@ -329,7 +347,9 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 Kompilieren Sie den Code, und führen Sie ihn erneut aus. Die Ausgabe ist etwas sauberer, und der Code ist klarer und kann einfacher erweitert werden.
 
-## <a name="conclusion"></a>Schlussfolgerung
+<a id="conclusion" class="xliff"></a>
+
+## Schlussfolgerung
 
 Dieses Beispiel sollte einige der in LINQ verwendeten Methoden veranschaulichen und Ihnen zeigen, wie Sie eigene Methoden erstellen, die sich mit LINQ-aktiviertem Code ganz einfach einsetzen lassen. Das Beispiel hat auch die Unterschiede zwischen verzögerter und strikter Auswertung aufgezeigt und erläutert, wie sich die Entscheidung für die eine oder andere Variante auf die Leistung auswirken kann.
 

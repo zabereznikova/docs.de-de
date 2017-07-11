@@ -1,5 +1,5 @@
 ---
-title: "Klassen und Objekte in C# | Überblick über C#"
+title: "Klassen und Objekte in C# – Überblick über C# | Microsoft-Dokumentation"
 description: "Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung."
 keywords: .NET, csharp, Klasse, Instanz, Objekt, Vererbung, Polymorphie
 author: BillWagner
@@ -11,13 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
 ms.contentlocale: de-de
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="classes-and-objects"></a>Klassen und Objekte
+<a id="classes-and-objects" class="xliff"></a>
+
+# Klassen und Objekte
 
 *Klassen* sind die grundlegendsten der C#-Typen. Eine Klasse ist eine Datenstruktur, die einen Zustand (Felder) und Aktionen (Methoden und andere Funktionsmember) in einer einzigen Einheit kombiniert. Eine Klasse stellt eine Definition für dynamisch erstellte *Instanzen* der Klasse, auch bekannt als *Objekte* bereit. Klassen unterstützen *Vererbung* und *Polymorphie*. Dies sind Mechanismen, durch die *abgeleitete Klassen* erweitert und *Basisklassen* spezialisiert werden können.
 
@@ -33,7 +35,9 @@ Instanzen von Klassen werden mit dem `new`-Operator erstellt. Dieser reserviert 
 
 Der von einem Objekt belegte Speicher wird automatisch wieder freigegeben, wenn das Objekt nicht mehr erreichbar ist. Es ist weder erforderlich noch möglich, die Zuweisung von Objekten in C# explizit aufzuheben.
 
-## <a name="members"></a>Member
+<a id="members" class="xliff"></a>
+
+## Member
 
 Die Member einer Klasse sind entweder statische Member oder Instanzmember. Statische Member gehören zu Klassen, Instanzmember gehören zu Objekten (Instanzen von Klassen).
 
@@ -60,7 +64,9 @@ Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse e
 * Typen
     - Geschachtelte Typen, die von der Klasse deklariert werden
 
-## <a name="accessibility"></a>Zugriff
+<a id="accessibility" class="xliff"></a>
+
+## Zugriff
 
 Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt fünf mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
 
@@ -75,7 +81,9 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
 * `private`
     - Der Zugriff ist auf diese Klasse beschränkt.
 
-## <a name="type-parameters"></a>Typparameter
+<a id="type-parameters" class="xliff"></a>
+
+## Typparameter
 
 Eine Klassendefinition kann einen Satz an Typparametern angeben, indem eine Liste der Typparameternamen in spitzen Klammern an den Klassennamen angehängt wird. Die Typparameter können dann im Körper der Klassendeklarationen zum Definieren der Klassenmember verwendet werden. Im folgenden Beispiel lauten die Typparameter von `Pair` `TFirst` und `TSecond`:
 
@@ -88,7 +96,9 @@ Wenn die generische Klasse verwendet wird, müssen für jeden der Typparameter T
 
 Ein generischer Typ, für den Typargumente angegeben wurden (siehe `Pair<int,string>` oben), wird als *konstruierter Typ* bezeichnet.
 
-## <a name="base-classes"></a>Basisklassen
+<a id="base-classes" class="xliff"></a>
+
+## Basisklassen
 
 Eine Klassendeklaration kann eine Basisklasse angeben, indem ein Doppelpunkt und der Name der Basisklasse an den Klassennamen und die Typparameter angehängt wird. Das Auslassen einer Basisklassenspezifikation ist dasselbe wie eine Ableitung vom Typ `object`. Im folgenden Beispiel ist `Point` die Basisklasse von `Point3D`, und die Basisklasse von `Point` ist `object`:
 
@@ -100,7 +110,9 @@ Ein Klassentyp kann implizit in einen beliebigen zugehörigen Basisklassentyp ko
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>Felder
+<a id="fields" class="xliff"></a>
+
+## Felder
 
 Ein *Feld* ist eine Variable, die einer Klasse oder einer Instanz einer Klasse zugeordnet ist.
 
@@ -114,7 +126,9 @@ Im folgenden Beispiel weist jede Instanz der `Color`-Klasse eine separate Kopie 
 
 Wie im vorherigen Beispiel gezeigt, können *schreibgeschützte Felder* mit einem `readonly`-Modifizierer deklariert werden. Einem `readonly`-Feld können Werte nur als Teil einer Deklaration oder in einem Konstruktor derselben Klasse zugewiesen werden.
 
-## <a name="methods"></a>Methoden
+<a id="methods" class="xliff"></a>
+
+## Methoden
 
 Eine *Methode* ist ein Member, das eine Berechnung oder eine Aktion implementiert, die durch ein Objekt oder eine Klasse durchgeführt werden kann. Auf *statische Methoden* wird über die Klasse zugegriffen. Auf *Instanzmethoden* wird über Instanzen der Klasse zugegriffen.
 
@@ -124,7 +138,9 @@ Ebenso wie Typen können Methoden einen Satz an Typparametern aufweisen, für de
 
 Die *Signatur* einer Methode muss innerhalb der Klasse eindeutig sein, in der die Methode deklariert ist. Die Signatur einer Methode besteht aus dem Namen der Methode, der Anzahl von Typparametern und der Anzahl, den Modifizierern und den Typen der zugehörigen Parameter. Die Signatur einer Methode umfasst nicht den Rückgabetyp.
 
-### <a name="parameters"></a>Parameter
+<a id="parameters" class="xliff"></a>
+
+### Parameter
 
 Parameter werden dazu verwendet, Werte oder Variablenverweise an Methoden zu übergeben. Die Parameter einer Methode erhalten ihre tatsächlichen Werte über *Argumente*, die angegeben werden, wenn die Methode aufgerufen wird. Es gibt vier Arten von Parametern: Wertparameter, Verweisparameter, Ausgabeparameter und Parameterarrays.
 
@@ -152,7 +168,9 @@ Innerhalb einer Methode mit einem Parameterarray verhält sich das Parameterarra
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### <a name="method-body-and-local-variables"></a>Methodenkörper und lokale Variablen
+<a id="method-body-and-local-variables" class="xliff"></a>
+
+### Methodenkörper und lokale Variablen
 
 Der Methodenkörper gibt die Anweisungen an, die beim Aufruf der Methode ausgeführt werden sollen.
 
@@ -164,7 +182,9 @@ In C# muss eine lokale Variable *definitiv zugewiesen* sein, bevor ihr Wert abge
 
 Eine Methode kann `return`-Anweisungen verwenden, um die Steuerung an den zugehörigen Aufrufer zurückzugeben. In einer Methode, die `void` zurückgibt, können `return`-Anweisungen keinen Ausdruck angeben. In einer Methode, die nicht „void“ zurückgibt, müssen`return`-Anweisungen einen Ausdruck enthalten, der den Rückgabewert berechnet.
 
-### <a name="static-and-instance-methods"></a>Statische Methoden und Instanzmethoden
+<a id="static-and-instance-methods" class="xliff"></a>
+
+### Statische Methoden und Instanzmethoden
 
 Eine mit einem statischen Modifizierer deklarierte Methode ist eine *statische Methode*. Eine statische Methode führt keine Vorgänge für eine spezifische Instanz aus und kann nur direkt auf statische Member zugreifen.
 
@@ -184,7 +204,9 @@ Das folgende Beispiel zeigt die Verwendung der Entity-Klasse.
 
 Beachten Sie, dass die statischen Methoden `SetNextSerialNo` und `GetNextSerialNo` für die Klasse aufgerufen werden, während die `GetSerialNo`-Instanzmethode für Instanzen der Klasse aufgerufen wird.
 
-### <a name="virtual-override-and-abstract-methods"></a>Virtuelle, überschriebene und abstrakte Methoden
+<a id="virtual-override-and-abstract-methods" class="xliff"></a>
+
+### Virtuelle, überschriebene und abstrakte Methoden
 
 Wenn die Deklaration einer Instanzmethode einen `virtual`-Modifizierer enthält, wird die Methode als *virtuelle Methode* bezeichnet. Ist kein virtual-Modifizierer vorhanden, spricht man von einer *nicht virtuellen Methode*.
 
@@ -210,7 +232,9 @@ Das folgende Programm verwendet die `Expression`-Klassen zum Auswerten des Ausdr
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### <a name="method-overloading"></a>Methodenüberladung
+<a id="method-overloading" class="xliff"></a>
+
+### Methodenüberladung
 
 Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in derselben Klasse denselben Namen verwenden, solange sie eindeutige Signaturen aufweisen. Beim Kompilieren des Aufrufs einer überladenen Methode verwendet der Compiler die *Überladungsauflösung*, um die spezifische Methode zu ermitteln, die aufgerufen werden soll. Mithilfe der Überladungsauflösung wird die Methode ermittelt, die den Argumenten am besten entspricht, bzw. es wird ein Fehler ausgegeben, wenn keine passende Methode gefunden wird. Das folgende Beispiel zeigt die Verwendung der Überladungsauflösung. Der Kommentar für jeden Aufruf in der `Main`-Methode zeigt, welche Methode tatsächlich aufgerufen wird.
 
@@ -218,7 +242,9 @@ Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in dersel
 
 Wie im Beispiel gezeigt, kann eine bestimmte Methode immer ausgewählt werden, indem die Argumente explizit in die passenden Parametertypen konvertiert und/oder explizit Typargumente angegeben werden.
 
-## <a name="other-function-members"></a>Andere Funktionsmember
+<a id="other-function-members" class="xliff"></a>
+
+## Andere Funktionsmember
 
 Member, die ausführbaren Code enthalten, werden als *Funktionsmember* einer Klasse bezeichnet. In den vorangegangenen Abschnitten wurden die Methoden beschrieben, die wichtigste Form der Funktionsmember. In diesem Abschnitt werden die weiteren Funktionsmember behandelt, die C# unterstützt: Konstruktoren, Eigenschaften, Indexer, Ereignisse, Operatoren und Finalizer.
 
@@ -226,7 +252,9 @@ Das folgende Beispiel zeigt eine generische Klasse namens List<T>, die eine wach
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### <a name="constructors"></a>Konstruktoren
+<a id="constructors" class="xliff"></a>
+
+### Konstruktoren
 
 C# unterstützt sowohl Instanzkonstruktoren als auch statische Konstruktoren. Ein *Instanzkonstruktor* ist ein Member, der die erforderlichen Aktionen zum Initialisieren einer Instanz einer Klasse implementiert. Ein *statischer Konstruktor* ist ein Member, der die zum Initialisieren einer Klasse erforderlichen Aktionen implementiert, um die Klasse beim ersten Laden selbst zu initialisieren.
 
@@ -238,7 +266,9 @@ Instanzkonstruktoren können überladen werden und optionale Parameter verwenden
 
 Im Gegensatz zu anderen Members werden Instanzkonstruktoren nicht geerbt, und eine Klasse weist keine anderen Instanzkonstruktoren auf als diejenigen, die tatsächlich in der Klasse deklariert wurden. Wenn kein Instanzkonstruktor für eine Klasse angegeben ist, wird automatisch ein leerer Instanzkonstruktor ohne Parameter bereitgestellt.
 
-### <a name="properties"></a>Eigenschaften
+<a id="properties" class="xliff"></a>
+
+### Eigenschaften
 
 *Eigenschaften* sind eine natürliche Erweiterung der Felder. Beide sind benannte Member mit zugeordneten Typen, und für den Zugriff auf Felder und Eigenschaften wird dieselbe Syntax verwendet. Im Gegensatz zu Feldern bezeichnen Eigenschaften jedoch keine Speicherorte. Stattdessen verfügen Eigenschaften über *Accessors* zum Angeben der Anweisungen, die beim Lesen oder Schreiben ihrer Werte ausgeführt werden sollen.
 
@@ -256,7 +286,9 @@ Die `List<T>`-Klasse deklariert die zwei Eigenschaften „Count“ und „Capaci
 
 Die Accessors einer Eigenschaft können virtuell sein. Wenn eine Eigenschaftendeklaration einen `virtual`-, `abstract`- oder `override`-Modifizierer enthält, wird dieser auf den Accessor der Eigenschaft angewendet.
 
-### <a name="indexers"></a>Indexer
+<a id="indexers" class="xliff"></a>
+
+### Indexer
 
 Ein *Indexer* ist ein Member, mit dem Objekte wie ein Array indiziert werden können. Ein Indexer wird wie eine Eigenschaft deklariert, abgesehen davon, dass an den Membernamen eine in die Trennzeichen `[` und `]` eingefügte Parameterliste angehängt wird. Die Parameter stehen im Accessor des Indexers zur Verfügung. Ähnlich wie Eigenschaften können Indexer Lese-/Schreibzugriff besitzen, schreibgeschützt und lesegeschützt sein und virtuelle Accessors verwenden.
 
@@ -266,7 +298,9 @@ Die `List`-Klasse deklariert einen einzigen Indexer mit Lese-/Schreibzugriff, de
 
 Indexer können überladen werden, d.h. eine Klasse kann mehrere Indexer deklarieren, solange sich die Anzahl oder Typen ihrer Parameter unterscheiden.
 
-### <a name="events"></a>Ereignisse
+<a id="events" class="xliff"></a>
+
+### Ereignisse
 
 Ein *Ereignis* ist ein Member, der es einer Klasse oder einem Objekt ermöglicht, Benachrichtigungen bereitzustellen. Ein Ereignis wird wie ein Feld deklariert, abgesehen davon, dass es ein event-Schlüsselwort enthält und einen Delegattyp aufweisen muss.
 
@@ -280,7 +314,9 @@ Clients reagieren über *Ereignishandler* auf Ereignisse. Ereignishandler werden
 
 In komplexeren Szenarien, in denen die zugrunde liegende Speicherung eines Ereignisses gesteuert werden soll, können in einer Ereignisdeklaration explizit die `add`- und `remove`-Accessors bereitgestellt werden. Diese ähneln in gewisser Weise dem `set`-Accessor einer Eigenschaft.
 
-### <a name="operators"></a>Operatoren
+<a id="operators" class="xliff"></a>
+
+### Operatoren
 
 Ein *Operator* ist ein Member, der die Bedeutung der Anwendung eines bestimmten Ausdrucksoperators auf Instanzen einer Klasse definiert. Es können drei Arten von Operatoren definiert werden: unäre Operatoren, binäre Operatoren und Konvertierungsoperatoren. Alle Operatoren müssen als `public` und `static` deklariert werden.
 
@@ -290,7 +326,9 @@ Die `List<T>`-Klasse deklariert zwei Operatoren, `operator ==` und `operator !=`
 
 Die erste Methode `Console.WriteLine` gibt `True` aus, weil die zwei Listen dieselbe Anzahl von Objekten mit denselben Werten in derselben Reihenfolge enthalten. Wenn `List<T>` nicht `operator ==` definieren würde, würde die Ausgabe der ersten `Console.WriteLine`-Methode `False` lauten, weil `a` und `b` auf unterschiedliche `List<int>`-Instanzen verweisen.
 
-### <a name="finalizers"></a>Finalizer
+<a id="finalizers" class="xliff"></a>
+
+### Finalizer
 
 Ein *Finalizer* ist ein Member, der die erforderlichen Aktionen zum Bereinigen einer Instanz einer Klasse implementiert. Finalizer können weder Parameter noch Zugriffsmodifizierer aufweisen und können nicht explizit aufgerufen werden. Der Finalizer für eine Instanz wird bei der Garbagecollection automatisch aufgerufen.
 

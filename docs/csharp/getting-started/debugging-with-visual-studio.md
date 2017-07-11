@@ -1,5 +1,5 @@
 ---
-title: "Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017"
+title: "Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017 | Microsoft-Dokumentation"
 description: "Sie erfahren, wie Sie eine in C# geschriebene „Hello World“-App mit Visual Studio 2017 debuggen."
 keywords: .NET Core, .NET Core-Konsolenanwendung, Debuggen von .NET Core
 author: BillWagner
@@ -11,18 +11,22 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017
+<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
+
+# Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017
 
 Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017](.\with-visual-studio.md) (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können.
 
-## <a name="debugging-in-debug-mode"></a>Debuggen im Debugmodus
+<a id="debugging-in-debug-mode" class="xliff"></a>
+
+## Debuggen im Debugmodus
 
 *Debuggen* und *Freigabe* sind zwei Standardbuildkonfigurationen von Visual Studio. Die aktuelle Buildkonfiguration wird auf der Symbolleiste angezeigt. Das folgende Symbolleistenbild zeigt, dass Visual Studio konfiguriert wurde, um Ihre Anwendung im Modus **Debuggen** zu kompilieren.
 
@@ -30,7 +34,9 @@ Bisher haben Sie die Schritte unter [Building a C# Hello World Application with 
 
 Sie sollten immer beginnen, indem Sie Ihr Programm im Debugmodus testen. Im Debugmodus sind die meisten Compileroptimierungen deaktiviert, und werden ausführlichere Informationen während des Buildprozesses bereitgestellt.
 
-## <a name="setting-a-breakpoint"></a>Festlegen eines Haltepunkts
+<a id="setting-a-breakpoint" class="xliff"></a>
+
+## Festlegen eines Haltepunkts
 
 Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunktionen aus:
 
@@ -62,7 +68,9 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und den Debugmodus zu beenden.
 
-## <a name="setting-a-conditional-breakpoint"></a>Festlegen eines bedingten Haltepunkts
+<a id="setting-a-conditional-breakpoint" class="xliff"></a>
+
+## Festlegen eines bedingten Haltepunkts
 
 Ihr Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was geschieht, wenn der Benutzer gar nichts eingibt? Sie können dies mit einer nützlichen Debugfunktion, dem *bedingten Haltepunkt*, testen, der die Programmausführung anhält, wenn mindestens eine Bedingung erfüllt wurde.
 
@@ -104,7 +112,9 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 
 1. Löschen Sie den Haltepunkt durch Klicken auf den Punkt am linken Rand des Codefensters oder Auswählen des Menüelements **Debuggen > Haltepunkt ein/aus** mit der ausgewählten Zeile.
 
-## <a name="stepping-through-a-program"></a>Schrittweises Ausführen eines Programms
+<a id="stepping-through-a-program" class="xliff"></a>
+
+## Schrittweises Ausführen eines Programms
 
 Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die Ausführung jeder einzelnen Zeile überwachen. Normalerweise würden Sie einen Haltepunkt festlegen und mit diesem Feature den Programmablauf in einem kleinen Teil des Programmcodes verfolgen. Da unser Programm klein ist, können folgendermaßen das gesamte Programm durcharbeiten:
 
@@ -132,7 +142,9 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
 
-## <a name="building-a-release-version"></a>Erstellen einer endgültigen Releaseversion
+<a id="building-a-release-version" class="xliff"></a>
+
+## Erstellen einer endgültigen Releaseversion
 
 Nachdem Sie den Debugbuild der Anwendung getestet haben, sollten Sie auch die endgültige Releaseversion kompilieren und testen. Die endgültige Releaseversion umfasst Compileroptimierungen, die manchmal das Verhalten einer Anwendung negativ beeinträchtigen können. Compileroptimierungen, die zur Verbesserung der Leistung entwickelt wurden, können z.B. in asynchronen oder Multithreadanwendungen Racebedingungen erstellen.
 

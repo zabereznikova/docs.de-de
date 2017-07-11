@@ -1,5 +1,5 @@
 ---
-title: "C#-Ausdrücke | Überblick über C#"
+title: "C#-Ausdrücke – Überblick über C# | Microsoft-Dokumentation"
 description: "Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#."
 keywords: .NET, Csharp, Ausdruck, Operator, Operand
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce5f71ab3e797015a26dddbf0579c84dec580750
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="expressions"></a>Ausdrücke
+<a id="expressions" class="xliff"></a>
+
+# Ausdrücke
 
 *Ausdrücke* bestehen aus *Operanden* und *Operatoren*. Die Operatoren eines Ausdrucks geben an, welche Operationen auf die Operanden angewendet werden. Beispiele für Operatoren sind `+`, `-`, `*`, `/` und `new`. Beispiele für Operanden sind Literale, Felder, lokale Variablen und Ausdrücke.
 

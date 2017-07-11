@@ -1,5 +1,5 @@
 ---
-title: Konsolenanwendung
+title: Konsolenanwendung | Microsoft-Dokumentation
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 7e8cc0ed7093a90a51d1b0c50123adb73ca968aa
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="console-application"></a>Konsolenanwendung
+<a id="console-application" class="xliff"></a>
 
-## <a name="introduction"></a>Einführung
+# Konsolenanwendung
+
+<a id="introduction" class="xliff"></a>
+
+## Einführung
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 *    Grundlagen der .NET Core-Befehlszeilenschnittstelle (CLI)
 *    Die Struktur einer C#-Konsolenanwendung
@@ -31,9 +35,13 @@ In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache
 Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole wird so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten < oder > drücken.
 
 In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an. 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+<a id="prerequisites" class="xliff"></a>
+
+## Erforderliche Komponenten
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core](https://www.microsoft.com/net/core). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. 
-## <a name="create-the-application"></a>Erstellen der Anwendung
+<a id="create-the-application" class="xliff"></a>
+
+## Erstellen der Anwendung
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
 Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur Ausführung der einfachen Hello World-Anwendung durch. Geben Sie nach dem Erstellen der Anwendung den Befehl `dotnet restore` an der Eingabeaufforderung ein. Mit diesem Befehl wird der Prozess zur NuGet-Paketwiederherstellung ausgeführt. NuGet ist ein .NET-Paket-Manager. Mit diesem Befehl werden alle fehlenden abhängigen Komponenten für Ihr Projekt heruntergeladen. Da es sich um ein neues Projekt handelt, ist keine der abhängigen Komponenten vorhanden, deshalb wird zunächst das .NET Core-Framework heruntergeladen. Nach diesem ersten Schritt müssen Sie `dotnet restore` nur ausführen, wenn Sie neue abhängige Pakete hinzufügen oder die Versionen abhängiger Komponenten aktualisieren. Bei diesem Vorgang wird auch die Projektsperrdatei (project.lock.json) in Ihrem Projektverzeichnis erstellt. Diese Datei bietet Unterstützung beim Verwalten der Projektabhängigkeiten. Sie enthält den lokalen Speicherort für alle Projektabhängigkeiten. Es ist nicht erforderlich, die Datei in der Quellcodeverwaltung zu platzieren, sie wird beim Ausführen von `dotnet restore` generiert. 
@@ -53,8 +61,10 @@ Diese Anweisung informiert den Compiler, dass alle Typen aus dem `System`-Namesp
 namespace TeleprompterConsole
 ```
 
-## <a name="reading-and-echoing-the-file"></a>Lesen und Ausgeben der Datei
-Das erste Feature besteht darin, die Möglichkeit zum Lesen einer Textdatei hinzuzufügen und den gesamten Text in der Konsole auszugeben. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung. Wenn Sie Informationen erhalten möchten, wie Sie die Beispiel-App für diese Thema herunterladen, finden Sie Anweisungen im Thema [Beispiele und Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<a id="reading-and-echoing-the-file" class="xliff"></a>
+
+## Lesen und Ausgeben der Datei
+Das erste hinzuzufügende Feature ist die Möglichkeit zum Lesen einer Textdatei und zum Anzeigen des gesamten Texts in der Konsole. Fügen wir zunächst eine Textdatei hinzu. Kopieren Sie die Datei [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) aus dem GitHub-Repository für dieses [Beispiel](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) in Ihr Projektverzeichnis. Diese Datei dient als Skript für Ihre Anwendung. Wenn Sie Informationen dazu erhalten möchten, wie Sie die Beispiel-App für dieses Thema herunterladen, finden Sie Anweisungen im Thema [Beispiele und Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Fügen Sie als Nächstes die folgenden Methoden in Ihre Program-Klasse ein (rechts neben der `Main`-Methode):
 
@@ -99,7 +109,9 @@ foreach (var line in lines)
 
 Führen Sie das Programm aus (Sie verwenden hierzu `dotnet run`, und jede Zeile wird einzeln an der Konsole ausgegeben).  
 
-## <a name="adding-delays-and-formatting-output"></a>Hinzufügen von Verzögerungen und Formatieren der Ausgabe
+<a id="adding-delays-and-formatting-output" class="xliff"></a>
+
+## Hinzufügen von Verzögerungen und Formatieren der Ausgabe
 Der Text wird momentan zu schnell ausgegeben, um ihn laut mitzulesen. Jetzt müssen Sie Verzögerungen in der Ausgabe hinzufügen. Zu Beginn erstellen Sie einen Teil des grundlegenden Codes, der eine asynchrone Verarbeitung ermöglicht. Auf diese ersten Schritte folgen jedoch einige Antimuster. Die Antimuster werden in Kommentaren erläutert, die Sie im Code hinzufügen, und der Code wird in späteren Schritten aktualisiert.
 
 Dieser Abschnitt umfasst zwei Schritte. Zunächst aktualisieren Sie die Iteratormethode, um anstelle von ganzen Zeilen einzelne Wörter zurückzugeben. Dies wird durch diese Änderungen erreicht. Ersetzen Sie die `yield return line;`-Anweisung durch den folgenden Code:
@@ -152,7 +164,9 @@ if (lineLength > 70)
  
 Führen Sie das Beispiel aus. Jetzt sollten Sie in der Lage sein, den Text im festgelegten Tempo laut mitzulesen.
 
-## <a name="async-tasks"></a>Asynchrone Tasks
+<a id="async-tasks" class="xliff"></a>
+
+## Asynchrone Tasks
 Zuletzt fügen Sie den Code hinzu, mit dem in einem Task die Ausgabe asynchron geschrieben wird, während in einem weiteren Task Eingaben vom Benutzer gelesen werden, um ggf. die Geschwindigkeit der Textanzeige zu erhöhen oder zu verringern. Hierzu sind einige Schritte erforderlich, damit Sie am Ende über alle benötigten Aktualisierungen verfügen.
 Im ersten Schritt erstellen Sie eine asynchrone @System.Threading.Tasks.Task-Rückgabemethode, die den Code repräsentiert, den Sie bisher zum Lesen und Anzeigen der Datei erstellt haben.
 
@@ -312,7 +326,9 @@ public void SetDone()
 }
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung
+<a id="conclusion" class="xliff"></a>
+
+## Schlussbemerkung
 In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden.
 Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung des taskbasierten asynchronen Programmiermodells vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
  

@@ -1,5 +1,5 @@
 ---
-title: "Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017"
+title: "Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017 | Microsoft-Dokumentation"
 description: "Die Veröffentlichung erstellt eine Reihe von Dateien, die zum Ausführen Ihrer Anwendung benötigt werden."
 keywords: ".NET, .NET Core, Konsolenanwendung, Veröffentlichung, Bereitstellung"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1c4fbefb23fc47cf035085f76ec1c10d5422a6f5
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 49fdae2ada3473463dcb120a35cfc8649a38a14d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="publishing-your-hello-world-application-with-visual-studio-2017"></a>Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017
+<a id="publishing-your-hello-world-application-with-visual-studio-2017" class="xliff"></a>
+
+# Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017
 
 Unter [Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](with-visual-studio.md) erstellen Sie eine Hello World-Konsolenanwendung. In [Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017](debugging-with-visual-studio.md) haben Sie dies mithilfe des Visual Studio-Debuggers getestet. Nun, da Sie sicher sind, dass sie erwartungsgemäß funktioniert, können Sie sie veröffentlichen, damit andere Benutzer sie ausführen können. Bei der Veröffentlichung wird der Satz von Dateien erstellt, die zum Ausführen der Anwendung erforderlich sind. Sie können sie durch Kopieren auf einen Zielcomputer bereitstellen.
 
@@ -52,3 +54,4 @@ So veröffentlichen Sie Ihre Anwendung und führen sie aus:
 Der Veröffentlichungsprozess erstellt eine Framework-abhängige Bereitstellung, was ein Bereitstellungstyp ist, wobei die veröffentlichte Anwendung auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird, wenn .NET Core auf dem System installiert ist. Benutzer können Ihre Anwendung durch Eingabe des `dotnet HelloWorld.dll`-Befehls in einem Konsolenfenster ausführen.
 
 Weitere Informationen zum Veröffentlichen und Bereitstellen von .NET Core-Anwendungen finden Sie unter [.NET Core Anwendungsbereitstellung](../../core/deploying/index.md).
+
