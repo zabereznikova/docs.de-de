@@ -1,69 +1,92 @@
 ---
-title: "COM Interop (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, COM interop"
-  - "COM interop, in Visual Basic"
+title: COM-Interop (Visual Basic) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, COM interop
+- COM interop, in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# COM Interop (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.contentlocale: de-de
+ms.lasthandoff: 05/26/2017
 
-Mit dem Component Object Model \(COM\) kann ein Objekt seine Funktionalität für andere Komponenten und Hostanwendungen verfügbar machen.  Der größte Teil der aktuellen Software enthält COM\-Objekte.  Wenn auch .NET\-Assemblys i. d. R. für neue Anwendungen am besten geeignet sind, müssen Sie in bestimmten Situationen möglicherweise COM\-Objekte verwenden.  In diesem Abschnitt werden einige mit dem Erstellen und Verwenden von COM\-Objekten in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] verbundene Fragen beschrieben.  
+---
+<a id="com-interop-visual-basic" class="xliff"></a>
+
+# COM-Interop (Visual Basic)
+Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.  
   
+<a id="in-this-section" class="xliff"></a>
+
 ## In diesem Abschnitt  
- [Introduction to COM Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Enthält eine Übersicht über die COM\-Interoperabilität.  
+ [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ Stellt eine Übersicht der COM-Interoperabilität bereit.  
   
- [How to: Reference COM Objects from Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Beschreibt das Hinzufügen von Verweisen auf COM\-Objekte, die über Typbibliotheken verfügen.  
+ [Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ Beschreibt, wie COM-Objekten Verweise hinzugefügt werden, die über Typbibliotheken verfügen.  
   
- [How to: Work with ActiveX Controls](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Veranschaulicht, wie der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]\-Toolbox mit vorhandenen ActiveX\-Steuerelementen Funktionen hinzugefügt werden.  
+ [Gewusst wie: Arbeiten mit ActiveX-Steuerelementen](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ Veranschaulicht, wie vorhandene ActiveX-Steuerelemente verwendet werden, um der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Toolbox Funktionen hinzuzufügen.  
   
- [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Führt Sie schrittweise durch den Prozess des Aufrufens der APIs, die Teil des Windows\-Betriebssystems sind.  
+ [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ Führt Sie durch den Prozess, APIs aufzurufen, die Teil des Windows-Betriebssystems sind.  
   
- [How to: Call Windows APIs](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Veranschaulicht, wie die `MessageBox`\-Funktion in User32.dll definiert und aufgerufen wird.  
+ [Gewusst wie: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ Veranschaulicht, wie die `MessageBox`-Funktion in User32.dll definiert und aufgerufen wird.  
   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Veranschaulicht, wie eine Windows\-Funktion aufruft, die einen Parameter des Typs ohne Vorzeichen aufweist.  
+ [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ Veranschaulicht, wie eine Windows-Funktion aufgerufen wird, die über einen Parameter eines unsignierten Typs verfügt.  
   
- [Walkthrough: Creating COM Objects with Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Enthält schrittweise Anweisungen für das Erstellen von COM\-Objekten mit oder ohne COM\-Klassenvorlage.  
+ [Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ Führt Sie durch den Prozess zum Erstellen von COM-Objekten mit und ohne die COM-Klassenvorlage.  
   
- [Troubleshooting Interoperability](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Beschreibt Probleme, die in Verbindung mit der Verwendung von COM auftreten können.  
+ [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ Behandelt einige Probleme, die bei der Verwendung von COM auftreten können.  
   
- [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Bietet eine Übersicht darüber, wie COM\-Objekte und .NET Framework\-Objekte in der gleichen Anwendung verwendet werden.  
+ [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ Bietet eine Übersicht, wie COM-Objekte und .NET Framework-Objekte in derselben Anwendung verwendet werden.  
   
- [Walkthrough: Implementing Inheritance with COM Objects](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Beschreibt die Verwendung vorhandener COM\-Objekte als Basis für neue Objekte.  
+ [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ Beschreibt die Verwendung vorhandener COM-Objekte als Grundlage für neue Objekte.  
   
+<a id="related-sections" class="xliff"></a>
+
 ## Verwandte Abschnitte  
- [Interoperating with Unmanaged Code](../Topic/Interoperating%20with%20Unmanaged%20Code.md)  
- Beschreibt die Interoperabilitätsdienste der Common Language Runtime.  
+ [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
+ Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.  
   
- [Exposing COM Components to the .NET Framework](../Topic/Exposing%20COM%20Components%20to%20the%20.NET%20Framework.md)  
- Beschreibt das Aufrufen von COM\-Typen über COM\-Interop.  
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ Beschreibt den Prozess, wie COM-Typen über COM-Interop aufgerufen werden.  
   
- [Exposing .NET Framework Components to COM](../Topic/Exposing%20.NET%20Framework%20Components%20to%20COM.md)  
- Erläutert die Vorbereitung und Verwendung verwalteter COM\-Typen.  
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ Beschreibt die Vorbereitung und Verwendung von verwalteten Typen von COM.  
   
- [Applying Interop Attributes](../Topic/Applying%20Interop%20Attributes.md)  
- Behandelt Attribute, die Sie beim Arbeiten mit nicht verwaltetem Code verwenden können.
+ [Anwenden von Interop-Attributen](https://msdn.microsoft.com/library/d4w8x20h)  
+ Behandelt Attribute, die Sie verwenden können, wenn Sie mit nicht verwaltetem Code arbeiten.

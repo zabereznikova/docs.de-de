@@ -1,6 +1,6 @@
 ---
 title: Nullable-Typen (C#-Programmierhandbuch) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,26 +30,24 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75726b9864abc0c9b556085e5215c6692d80fb12
+ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
+ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 06/13/2017
 
 ---
-# <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
-Nullable-Typen sind Instanzen der Struktur <xref:System.Nullable%601?displayProperty=fullName>. Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen. Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden. Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden. Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde. Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein.  
+<a id="nullable-types-c-programming-guide" class="xliff"></a>
+
+# Nullable-Typen (C#-Programmierhandbuch)
+Auf NULL festlegbare Typen sind Instanzen der <xref:System.Nullable%601?displayProperty=fullName>-Struktur. Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen. Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden. Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden. Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde. Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein. 
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
- Das Beispiel zeigt die Ausgabe:  
+Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
   
- `num = Null`  
-  
- `Nullable object must have a value.`  
-  
- Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
-  
-## <a name="nullable-types-overview"></a>Übersicht über Nullable-Typen  
+<a id="nullable-types-overview" class="xliff"></a>
+
+## Übersicht über Nullable-Typen  
  Nullable-Typen weisen die folgenden Eigenschaften auf:  
   
 -   Nullable-Typen stellen Werttypvariablen dar, denen der Wert `null` zugewiesen werden kann. Sie können keinen Nullable-Typ basierend auf einem Verweistyp erstellen. (Verweistypen unterstützen immer den `null`-Wert.)  
@@ -60,7 +58,7 @@ Nullable-Typen sind Instanzen der Struktur <xref:System.Nullable%601?displayProp
   
 -   Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName>-Methode, um entweder den zugewiesenen Wert oder den Standardwert für den zugrunde liegenden Typ zurückzugeben, wenn der Wert `null` ist, z.B. `int j = x.GetValueOrDefault();`  
   
--   Verwenden Sie die schreibgeschützten Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>, um auf Null zu testen und den Wert abzurufen, wie in folgendem Beispiel gezeigt: `if(x.HasValue) j = x.Value;`  
+-   Verwenden Sie die schreibgeschützten Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>, um auf NULL zu prüfen und den Wert abzurufen, wie im folgenden Beispiel gezeigt: `if(x.HasValue) j = x.Value;`  
   
     -   Die Eigenschaft `HasValue` gibt `true` zurück, wenn die Variable einen Wert enthält, oder sie gibt `false` zurück, wenn die Variable `null` ist.  
   
@@ -74,7 +72,9 @@ Nullable-Typen sind Instanzen der Struktur <xref:System.Nullable%601?displayProp
   
 -   Geschachtelte Nullable-Typen sind nicht zulässig. Die folgende Zeile wird nicht kompiliert: `Nullable<Nullable<int>> n;`  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
+<a id="related-sections" class="xliff"></a>
+
+## Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   
   
 -   [Verwenden von Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,10 +83,14 @@ Nullable-Typen sind Instanzen der Struktur <xref:System.Nullable%601?displayProp
   
 -   [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+<a id="c-language-specification" class="xliff"></a>
+
+## C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch  
  <xref:System.Nullable>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   
