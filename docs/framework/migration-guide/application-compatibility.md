@@ -27,13 +27,11 @@ ms.lasthandoff: 05/31/2017
 
 ---
 
+# Anwendungskompatibilität im .NET Framework
 <a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 
-# Anwendungskompatibilität im .NET Framework
-
-<a id="introduction" class="xliff"></a>
-
 ## Einführung
+<a id="introduction" class="xliff"></a>
 Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität wird sichergestellt, dass jede Version additiv ist; frühere Versionen funktionieren also weiterhin. Auf der anderen Seite können Änderungen an früheren Versionen (zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden. .NET Framework erkennt Änderungen der Neuzuweisung und Laufzeitänderungen. Die Neuzuweisung von Änderungen beeinflussen Anwendungen, die auf eine bestimmte .NET Framework-Version abzielen, aber auf einer höheren Version ausgeführt werden. Laufzeitänderungen betreffen alle Anwendungen, die auf einer bestimmten Version ausgeführt werden.
 
 Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
@@ -44,21 +42,18 @@ Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folge
 
 Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert.
 
-<a id="runtime-changes" class="xliff"></a>
-
 ## Laufzeitänderungen
+<a id="runtime-changes" class="xliff"></a>
 
 Laufzeitprobleme tauchen auf, wenn eine neue Laufzeit auf einem Gerät bereitgestellt wird und wenn die gleichen Binärdateien ausgeführt werden, es jedoch zu anderem Verhalten kommt. Wenn eine Binärdatei für .NET Framework 4.0 kompiliert wurde, wird Sie im .NET Framework 4.0-Kompatibilitätsmodus auf 4.5 oder späteren Versionen ausgeführt. Viele Änderungen, die 4.5 betreffen, werden für 4.0 kompilierte Binärdateien nicht betreffen. Dies ist spezifisch für AppDomain und ist von den Einstellungen der Einstiegsassembly abhängig.
 
-<a id="retargeting-changes" class="xliff"></a>
-
 ## Neuausrichtungsänderungen
+<a id="retargeting-changes" class="xliff"></a>
 
 Probleme bei der Neuzuweisung erscheinen, wenn eine Assembly, die ursprünglich 4.0 angepeilt hat, nun 4.5 als Ziel hat. Die Assembly wählt nun die neuen Funktionen sowie die potenziellen Kompatibilitätsprobleme für alte Funktionen. Dies wird erneut von der Einstiegsassembly bestimmt, also von der Konsolen-App, die die Assembly verwendet oder der Website, die auf die Assembly verweist.
 
-<a id="net-compatibility-diagnostics" class="xliff"></a>
-
 ## Diagnose der .NET-Kompatibilität
+<a id="net-compatibility-diagnostics" class="xliff"></a>
 
 Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer, die bei der Erkennung von Anwendungskompatibilitätsproblemen zwischen .NET Framework-Versionen helfen. Diese Liste enthält alle verfügbaren Analyzer, obwohl nur eine Teilmenge auf eine bestimmte Migration angewendet werden kann. Die Analyzer ermitteln, welche Probleme auf die geplante Migration zutreffen und beschreibt diese nur kurz.
 
@@ -90,18 +85,16 @@ Jedes Problem umfasst die folgenden Informationen:
 
 -   Die IDs der verfügbaren Diagnosen.
 
-<a id="usage" class="xliff"></a>
-
 ## Verwendung
+<a id="usage" class="xliff"></a>
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
 * [Neuausrichtungsänderungen](./retargeting/index.md)
 * [Änderungen zur Laufzeit](./runtime/index.md)
 
 
-<a id="see-also" class="xliff"></a>
-
 ## Siehe auch
+<a id="see-also" class="xliff"></a>
 
 * [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 * [Neuigkeiten](../../../docs/framework/whats-new/index.md)
