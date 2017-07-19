@@ -5,7 +5,7 @@ author: spboyer
 keywords: .NET, Container, Konsole, Anwendungen
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
@@ -17,9 +17,7 @@ ms.lasthandoff: 06/01/2017
 
 ---
 
-<a id="running-console-applications-in-windows-containers" class="xliff"></a>
-
-# Ausführen von Konsolenanwendungen in Windows-Containern
+# <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
 Konsolenanwendungen werden für verschiedene Zwecke verwendet – vom einfachen Abfragen eines Status bis hin zu Aufgaben zur Verarbeitung von Dokumentbildern mit langer Laufzeit. In allen Fällen wird die Möglichkeit, diese Anwendungen zu starten und zu skalieren, durch Hardwarekäufe, Startzeiten oder die Ausführung mehrerer Instanzen eingeschränkt.
 
@@ -50,9 +48,7 @@ Die Verlagerung Ihrer Konsolenanwendung erfordert nur einige wenige Schritte.
 1. [Erstellen einer Dockerfile-Datei für das Image](#creating-the-dockerfile)
 1. [Erstellen und Ausführen des Docker-Containers](#creating-the-image)
 
-<a id="prerequisites" class="xliff"></a>
-
-## Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Windows-Container werden unter [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) oder [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) unterstützt.
 
 > [!NOTE]
@@ -62,9 +58,7 @@ Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfüg
 
 ![Windows-Container](./media/console/SwitchContainer.png)
 
-<a id="building-the-application" class="xliff"></a>
-
-## Erstellen der Anwendung
+## <a name="building-the-application"></a>Erstellen der Anwendung
 Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt. Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.
 
 In *build.ps1* verwendet das Skript [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
@@ -79,9 +73,7 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-<a id="creating-the-dockerfile" class="xliff"></a>
-
-## Erstellen der Dockerfile-Datei
+## <a name="creating-the-dockerfile"></a>Erstellen der Dockerfile-Datei
 Das für eine .NET Framework-Konsolenanwendung verwendete Basisimage ist `microsoft/windowsservercore`, öffentlich verfügbar im [Docker-Hub](https://hub.docker.com/r/microsoft/windowsservercore/). Das Basisimage umfasst eine Minimalinstallation mit Windows Server 2016 und .NET Framework 4.6.2 und dient als grundlegendes Betriebssystemimage für Windows-Container.
 
 ```
@@ -91,9 +83,7 @@ ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
 Die erste Zeile der Dockerfile-Datei gibt mithilfe der [`FROM`](https://docs.docker.com/engine/reference/builder/#/from)-Anweisung das Basisimage an. Danach kopiert [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) in der Datei die Anwendungsassets aus dem Ordner **publish** in den Stammordner des Containers, und zum Schluss wird mit [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) der Befehl oder die Anwendung festgelegt, der bzw. die beim Starten des Containers ausgeführt wird. 
 
-<a id="creating-the-image" class="xliff"></a>
-
-## Erstellen des Images
+## <a name="creating-the-image"></a>Erstellen des Images
 Um das Docker-Image zu erstellen, wird dem Skript *build.ps1* folgender Code hinzugefügt. Wenn das Skript ausgeführt wird, wird das `console-random-answer-generator`-Image mithilfe der Assets erstellt, die aus dem im Abschnitt [Erstellen der Anwendung](#building-the-application) definierten MSBuild kompiliert wurden.
 
 ```powershell
@@ -116,9 +106,7 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-<a id="running-the-container" class="xliff"></a>
-
-## Ausführen des Containers
+## <a name="running-the-container"></a>Ausführen des Containers
 Sie können den Container mithilfe der Docker-Befehle in der Befehlszeile starten.
 
 ```
@@ -146,9 +134,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 Führen Sie den Befehl mit dieser Option aus, und betrachten Sie dann die Ausgabe des `docker ps -a`-Befehls. Sie werden feststellen, dass sich die Container-ID (`Environment.MachineName`) nicht mehr in der Liste befindet.
 
-<a id="running-the-container-using-powershell" class="xliff"></a>
-
-### Ausführen des Container mithilfe von PowerShell
+### <a name="running-the-container-using-powershell"></a>Ausführen des Container mithilfe von PowerShell
 In den Beispielprojektdateien befindet sich auch die Datei *run.ps1*. Diese ist ein Beispiel dafür, wie Sie PowerShell verwenden, um die Anwendung auszuführen, wobei die Argumente akzeptiert werden.
 
 Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden Befehl:
@@ -157,8 +143,6 @@ Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden B
 .\run.ps1 "Is this easy or what?"
 ```
 
-<a id="summary" class="xliff"></a>
-
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 Sie können Ihre .NET Framework-Konsolenanwendungen in Containern ausführen, indem Sie einfach eine Dockerfile-Datei hinzufügen und die Anwendung veröffentlichen. So können Sie mehrere Instanzen ausführen, sauber starten und beenden und von mehr Windows Server 2016-Funktionen profitieren, ohne den Anwendungscode selbst in irgendeiner Weise zu ändern.
 
