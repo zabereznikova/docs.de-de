@@ -50,4 +50,5 @@ Eine <xref:System.Collections.Generic.Dictionary`2> contains a collection of key
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+
  [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

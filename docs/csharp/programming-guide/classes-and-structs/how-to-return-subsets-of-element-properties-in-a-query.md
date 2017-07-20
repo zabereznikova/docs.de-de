@@ -71,4 +71,5 @@ Console.WriteLine(student.First + " " + student.Last);
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
+
  [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

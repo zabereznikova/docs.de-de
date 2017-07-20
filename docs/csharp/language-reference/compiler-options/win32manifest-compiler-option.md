@@ -92,4 +92,5 @@ Verwenden Sie die Option **/win32manifest**, um eine benutzerdefinierte Win32-An
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
  [/nowin32manifest (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+
  [NIB: Vorgehensweise: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

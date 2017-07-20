@@ -51,4 +51,5 @@ Sie können Erweiterungsmethoden verwenden, um für einen bestimmten Enumeration
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+
  [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
