@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6f8b110e087093bd47573a1a4a05752be91e743
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
@@ -151,11 +151,11 @@ wobei *constant* der zu testende Wert ist. *constant* kann eine der folgenden ko
 
 Der Konstantenausdruck wird wie folgt ausgewertet:
 
-- Wenn *expr* und *constant* ganzzahlige Typen sind, bestimmt der C#-Gleichheitsoperator, ob der Ausdruck `true` (d.h., ob `expr == constant`) zurückgibt.
+- Wenn *expr* und *constant* integrale Typen sind, bestimmt der C#-Gleichheitsoperator, ob der Ausdruck `true` (d.h., ob `expr == constant`) zurückgibt.
 
 - Andernfalls wird der Wert des Ausdrucks durch einen Aufruf der statischen Methode [Object.Equals (expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) bestimmt.  
 
-Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) des heutigen Tags mit den Membern der @System.DayOfWeek-Enumeration. 
+Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) des heutigen Tags mit den Membern der @System.DayOfWeek -Enumeration. 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -176,7 +176,7 @@ Der `case`-Ausdruck ist `true`, wenn eine der folgenden Aussagen zutrifft:
 
 - *expr* ist eine Instanz des gleichen Typs wie *Typ*.
 
-- *expr* ist eine Instanz eines Typs, die von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
+- *expr* ist eine Instanz eines Typs, der von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
 
 - *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *type* ist, und *expr* hat einen Laufzeittyp,der *type* ist oder von *type* abgeleitet wurde. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie es in der Deklaration des Typs definiert wurde. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variable zugewiesen wird.
 

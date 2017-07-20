@@ -1,7 +1,7 @@
 ---
-title: Installieren von .NET Framework 3.5 auf Windows 8, Windows 8.1 und Windows 10 | Microsoft-Dokumentation
+title: Problembehandlung der Installation von .NET Framework 3.5 unter Windows 8, Windows 8.1 und Windows 10 | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 04/20/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,13 +17,14 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f48ef7a29e05824834395fdd9fd850a017a5f7e6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
+
 # <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>Installieren von .NET Framework 3.5 auf Windows 8, Windows 8.1 und Windows 10
 .NET Framework ist integraler Bestandteil vieler Anwendungen unter Windows und stellt allgemeine Funktionen für diese Anwendungen bereit. Für Entwickler bietet .NET Framework ein konsistentes Programmiermodell zum Erstellen von Anwendungen. Wenn Sie Windows als Betriebssystem verwenden, ist .NET Framework möglicherweise bereits auf dem Computer installiert. So ist [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] in [!INCLUDE[win81](../../../includes/win81-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] in Windows 10 enthalten.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/11/2017
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>Aktivieren von .NET Framework 3.5 in der Systemsteuerung  
  Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für diese Option ist eine Internetverbindung erforderlich.  
   
-1.  Drücken Sie die Windows-Taste ![Windows-Logo](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") auf der Tastatur, geben Sie „Windows-Funktionen“ ein, und drücken Sie EINGABETASTE. Daraufhin wird das Dialogfeld **Windows-Features aktivieren oder deaktivieren** angezeigt. Alternativ könnenSie die Systemsteuerung  öffnen, auf die Programmelemente klicken, und anschließend unter „Programme und Funktionen“ auf „Windows-Funktionen ein- oder ausschalten“ klicken.  
+1.  Drücken Sie die Windows-Taste ![Windows-Logo](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") auf der Tastatur, geben Sie „Windows-Funktionen“ ein, und drücken Sie EINGABETASTE. Daraufhin wird das Dialogfeld **Windows-Features aktivieren oder deaktivieren** angezeigt. Alternativ können Sie die Systemsteuerung öffnen, auf die Programmelemente klicken und anschließend unter „Programme und Funktionen“ auf „Windows-Funktionen ein- oder ausschalten“ klicken.  
   
 2.  Aktivieren Sie das Kontrollkästchen **.NET Framework 3.5 (umfasst .NET 2.0 und 3.0)** , klicken Sie auf "OK", und starten Sie den Computer neu, wenn Sie dazu aufgefordert werden.  
   
@@ -73,3 +74,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Installationshandbuch](../../../docs/framework/get-started/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Vererbung in C#
+title: Vererbung in C# | Microsoft-Dokumentation
 description: Lernen Sie die Verwendung der Vererbung in C#-Bibliotheken und -Anwendungen.
 keywords: Vererbung (C#), Basisklassen abgeleitete Klassen, abstrakte Basisklassen
 author: rpetrusha
@@ -12,23 +12,31 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET #
+<a id="inheritance-in-c-and-net" class="xliff"></a>
 
-## <a name="introduction"></a>Einführung ##
+# Vererbung in C# und .NET #
+
+<a id="introduction" class="xliff"></a>
+
+## Einführung ##
 
 Dieses Tutorial macht Sie mit der Vererbung in C# vertraut. Vererbung ist eine Funktion der objektorientierten Programmiersprachen, die Ihnen ermöglicht, eine Basisklasse zu definieren, die eine bestimmte Funktionalität bietet (Daten und Verhalten), und abgeleitete Klassen zu definieren, die diese Funktionalität entweder übernehmen oder außer Kraft setzen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten ##
+<a id="prerequisites" class="xliff"></a>
+
+## Erforderliche Komponenten ##
 
 In diesem Tutorial wird vorausgesetzt, dass Sie .NET Core installiert haben. Installationsanweisungen finden Sie im [.NET Core-Installationshandbuch](https://www.microsoft.com/net/core). Sie benötigen auch einen Code-Editor. In diesem Tutorial wird [Visual Studio Code](https://code.visualstudio.com) verwendet, obwohl Sie einen Code-Editor Ihrer Wahl verwenden können.
 
-## <a name="running-the-examples"></a>Ausführen der Beispiele ##
+<a id="running-the-examples" class="xliff"></a>
+
+## Ausführen der Beispiele ##
 
 Verwenden Sie zum Erstellen und Ausführen der Beispiele in diesem Tutorial das Befehlszeilenhilfsprogramm [dotnet](../../core/tools/dotnet.md). Gehen Sie für jedes Beispiel wie folgt vor:
 
@@ -42,7 +50,9 @@ Verwenden Sie zum Erstellen und Ausführen der Beispiele in diesem Tutorial das 
 
 1. Geben Sie den Befehl [dotnet run](../../core/tools/dotnet-run.md) zum Kompilieren und Ausführen des Beispiels ein.
 
-## <a name="background-what-is-inheritance"></a>Hintergrund: Was ist Vererbung? ##
+<a id="background-what-is-inheritance" class="xliff"></a>
+
+## Hintergrund: Was ist Vererbung? ##
 
 *Vererbung* ist eines der wichtigsten Attribute bei der objektorientierten Programmierung. Sie können damit eine untergeordnete Klasse definieren, die das Verhalten einer übergeordneten Klasse wiederverwendet (erbt), erweitert oder ändert. Die Klasse, deren Member geerbt werden, ist die *Basisklasse*. Die Klasse, die die Member der Basisklasse erbt, ist die *abgeleitete Klasse*.
 
@@ -117,7 +127,9 @@ Vererbung gilt nur für Klassen und Schnittstellen. Andere Typkategorien (Strukt
    }
    ```
 
-## <a name="implicit-inheritance"></a>Implizite Vererbung ##
+<a id="implicit-inheritance" class="xliff"></a>
+
+## Implizite Vererbung ##
 
 Neben Typen, die sie vielleicht über die einzelne Vererbung erben, erben alle Typen im Typensystem von .NET implizit von @System.Object oder einem davon abgeleiteten Typ. Dadurch wird sichergestellt, dass die allgemeine Funktionalität für einen beliebigen Typ verfügbar ist.
 
@@ -156,7 +168,9 @@ Die folgende Tabelle enthält die Kategorien von Typen, die Sie in C# erstellen 
 | enum | @System.Enum, System.ValueType, @System.Object |
 | -Delegat | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Vererbung und eine „ist ein“-Beziehung ##
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a>
+
+## Vererbung und eine „ist ein“-Beziehung ##
 
 Mit Vererbung wird normalerweise eine „ist ein“-Beziehung zwischen einer Basisklasse und einer oder mehreren abgeleiteten Klassen ausgedrückt, wobei die abgeleiteten Klassen spezialisierte Versionen der Basisklasse sind; die abgeleitete Klasse ist ein Typ der Basisklasse. Die `Publication`-Klasse stellt z.B. eine Publikation beliebiger Art dar, und die `Book`- und `Magazine`-Klasse stellen bestimmte Typen von Publikationen dar.
 
@@ -172,11 +186,15 @@ In diesem Fall sollten wir uns nicht auf die Vererbung verlassen, um bestimmte A
 
 Eine auf Vererbung basierende „ist ein“-Beziehung wird am besten auf eine Basisklasse und abgeleitete Klassen angewendet, die der Basisklasse weitere Member hinzufügen oder zusätzliche Funktionalität erfordern, die in der Basisklasse nicht vorhanden ist.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Entwerfen der Basisklasse und abgeleiteter Klassen ##
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a>
+
+## Entwerfen der Basisklasse und abgeleiteter Klassen ##
 
 Wir betrachten das Entwerfen einer Basisklasse und ihrer abgeleiteten Klassen. In diesem Abschnitt definieren wir eine Basisklasse `Publication`, die eine Publikation jeder Art darstellt, z.B. ein Buch, eine Zeitschrift, eine Zeitung, ein Journal, einen Artikel usw. Wir definieren auch eine `Book`-Klasse, die von `Publication` abgeleitet ist. Wir könnten das Beispiel einfach erweitern, um andere abgeleitete Klassen wie `Magazine`, `Journal`, `Newspaper` und `Article` zu definieren.
 
-### <a name="the-base-publication-class"></a>Die Basis-`Publication`-Klasse ###
+<a id="the-base-publication-class" class="xliff"></a>
+
+### Die Basis-`Publication`-Klasse ###
 
 Beim Entwurf unserer `Publication`-Klasse müssen wir einige Entwurfsentscheidungen treffen:
 
@@ -245,7 +263,9 @@ Die folgende Abbildung veranschaulicht die Beziehung zwischen unserer Basis-`Pub
 
 ![Die Klassen „Object“ und „Publication“](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>Die `Book`-Klasse ###
+<a id="the-book-class" class="xliff"></a>
+
+### Die `Book`-Klasse ###
 
 Die `Book`-Klasse stellt ein Buch als einen speziellen Typ der Publikation dar. Das folgende Beispiel zeigt den Quellcode für die `Book`-Klasse.
 
@@ -301,7 +321,9 @@ Im folgenden Beispiel werden von `Shape` abgeleitete Objekte verwendet. Es insta
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Siehe auch ##
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch ##
 
 [Klassen und Objekte](../tour-of-csharp/classes-and-objects.md)</br>
 [ Vererbung (C#-Programmierhandbuch)](../programming-guide/classes-and-structs/inheritance.md)

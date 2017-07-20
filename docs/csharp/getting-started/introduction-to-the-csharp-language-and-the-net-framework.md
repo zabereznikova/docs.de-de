@@ -29,20 +29,20 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Einführung in die Programmiersprache C# und in .NET Framework
-C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickler eine Vielzahl sicherer und robuster Anwendungen erstellen können, die in [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] ausgeführt werden. Mit C# können Sie Windows-Clientanwendungen, XML-Webdienste, verteilte Komponenten, Client-/Serveranwendungen, Datenbankanwendungen und vieles mehr erstellen. Visual C# bietet basierend auf der C#-Sprache und [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] einen erweiterten Code-Editor, komfortable Benutzeroberflächen-Designer, integrierte Debugger und viele weitere Tools zur einfachen Anwendungsentwicklung.  
+C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickler eine Vielzahl sicherer und robuster Anwendungen erstellen können, die in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ausgeführt werden. Mit C# können Sie Windows-Clientanwendungen, XML-Webdienste, verteilte Komponenten, Client-/Serveranwendungen, Datenbankanwendungen und vieles mehr erstellen. Visual C# bietet basierend auf der C#-Sprache und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] einen erweiterten Code-Editor, komfortable Benutzeroberflächen-Designer, integrierte Debugger und viele weitere Tools zur einfachen Anwendungsentwicklung.  
   
 > [!NOTE]
-> Bei der [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)]-Dokumentation werden Kenntnisse zu allgemeinen Programmierkonzepten vorausgesetzt. Als Anfänger sollten Sie sich mit [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)] vertraut machen, das im Web verfügbar ist. Außerdem können Sie sich anhand von Büchern und Webressourcen über C# praktische Programmierkenntnisse aneignen.  
+> Bei der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Dokumentation werden Kenntnisse zu allgemeinen Programmierkonzepten vorausgesetzt. Als Anfänger sollten Sie sich mit [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)] vertraut machen, das im Web verfügbar ist. Außerdem können Sie sich anhand von Büchern und Webressourcen über C# praktische Programmierkenntnisse aneignen.  
   
 ## <a name="c-language"></a>Die Programmiersprache C#  
- Die C#-Syntax ist trotz ihrer Ausdrucksfülle einfach und leicht zu erlernen. Die C#-Syntax mit geschweiften Klammern ist für alle Benutzer sofort erkennbar, die mit C, C++ oder Java vertraut sind. Entwickler, die mit einer dieser Sprachen vertraut sind, können C# normalerweise innerhalb kürzester Zeit produktiv anwenden. Mit der C#-Syntax werden viele der Komplexitäten von C++ vereinfacht. Zugleich stehen leistungsfähige Features zur Verfügung, z.&nbsp;B. auf NULL festlegbare Werttypen, Enumerationen, Delegaten, Lambda-Ausdrücke und direkter Speicherzugriff, die in Java nicht enthalten sind. C# unterstützt generische Methoden und Typen für verbesserte Typsicherheit und Leistung sowie Iteratoren, mit denen Implementierer von Auflistungsklassen benutzerdefiniertes Iterationsverhalten definieren können, das vom Clientcode einfach verwendet werden kann. [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)]-Ausdrücke machen eine Abfrage mit starker Typisierung zu einem erstklassigen Sprachkonstrukt.  
+ Die C#-Syntax ist trotz ihrer Ausdrucksfülle einfach und leicht zu erlernen. Die C#-Syntax mit geschweiften Klammern ist für alle Benutzer sofort erkennbar, die mit C, C++ oder Java vertraut sind. Entwickler, die mit einer dieser Sprachen vertraut sind, können C# normalerweise innerhalb kürzester Zeit produktiv anwenden. Mit der C#-Syntax werden viele der Komplexitäten von C++ vereinfacht. Zugleich stehen leistungsfähige Features zur Verfügung, z.&nbsp;B. auf NULL festlegbare Werttypen, Enumerationen, Delegaten, Lambda-Ausdrücke und direkter Speicherzugriff, die in Java nicht enthalten sind. C# unterstützt generische Methoden und Typen für verbesserte Typsicherheit und Leistung sowie Iteratoren, mit denen Implementierer von Auflistungsklassen benutzerdefiniertes Iterationsverhalten definieren können, das vom Clientcode einfach verwendet werden kann. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]-Ausdrücke machen eine Abfrage mit starker Typisierung zu einem erstklassigen Sprachkonstrukt.  
   
  Als objektorientierte Sprache unterstützt C# die Konzepte der Kapselung, Vererbung und Polymorphie. Alle Variablen und Methoden, einschließlich der `Main`-Methode, die den Einstiegspunkt der Anwendung darstellt, werden innerhalb der Klassendefinition gekapselt. Eine Klasse kann direkt von einer übergeordneten Klasse erben, aber auch eine beliebige Anzahl von Schnittstellen implementieren. Methoden, die virtuelle Methoden in einer übergeordneten Klasse überschreiben, erfordern das `override`-Schlüsselwort als Möglichkeit, eine versehentliche Neudefinition zu verhindern. In C# verhält sich eine Struktur wie eine vereinfachte Klasse. Sie entspricht einem auf dem Stapel reservierten Typ, der Schnittstellen implementieren kann, jedoch keine Vererbung unterstützt.  
   
@@ -56,7 +56,7 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
 -   Inline-XML-Dokumentationskommentare.  
   
--   [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)], die integrierte Abfragefunktionen für eine Vielzahl von Datenquellen bereitstellt.  
+-   [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], die integrierte Abfragefunktionen für eine Vielzahl von Datenquellen bereitstellt.  
   
  Die Interaktion mit weiterer Windows-Software, z.&nbsp;B. COM-Objekten oder systemeigenen Win32-DLLs, wird in C# durch einen Prozess mit dem Namen "Interop" ermöglicht. Mithilfe von Interop bieten C#-Programme dieselbe Funktionalität wie systemeigene C++-Anwendungen. C# unterstützt sogar Zeiger und das Konzept des "unsicheren" Codes für jene Fälle, in denen direkter Speicherzugriff besonders wichtig ist.  
   
@@ -68,12 +68,12 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
 -   Ausführliche Informationen zu bestimmten Aspekte der Programmiersprache C# finden Sie in der [C#-Referenz](../../csharp/language-reference/index.md).  
   
--   Weitere Informationen zu [!INCLUDE[vbteclinq](../../csharp/includes/vbteclinq_md.md)] finden Sie unter [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) (sprachintegrierte Abfrage).  
+-   Weitere Informationen zu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] finden Sie unter [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) (sprachintegrierte Abfrage).  
   
 -   Die neuesten Artikel und Ressourcen des Visual C#-Teams finden Sie im [Visual C# Developer Center](http://go.microsoft.com/fwlink/?LinkId=47811).  
   
 ## <a name="net-framework-platform-architecture"></a>.NET Framework-Plattformarchitektur  
- C#-Programme werden auf Grundlage von [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] ausgeführt, einer integralen Windows-Komponente, die ein virtuelles Ausführungssystem mit dem Namen Common Language Runtime (CLR) sowie einen einheitlichen Satz Klassenbibliotheken enthält. CLR ist die kommerzielle Microsoft-Implementierung der Common Language Infrastructure (CLI), einem internationalen Standard, der die Grundlage für das Erstellen von Ausführungs- und Entwicklungsumgebungen darstellt, in denen Sprachen und Bibliotheken nahtlos zusammenarbeiten.  
+ C#-Programme werden auf Grundlage von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ausgeführt, einer integralen Windows-Komponente, die ein virtuelles Ausführungssystem mit dem Namen Common Language Runtime (CLR) sowie einen einheitlichen Satz Klassenbibliotheken enthält. CLR ist die kommerzielle Microsoft-Implementierung der Common Language Infrastructure (CLI), einem internationalen Standard, der die Grundlage für das Erstellen von Ausführungs- und Entwicklungsumgebungen darstellt, in denen Sprachen und Bibliotheken nahtlos zusammenarbeiten.  
   
  Der in C# geschriebene Quellcode wird in einen Intermediate Language (IL)-Code kompiliert, der der CLI-Spezifikation entspricht. Der IL-Code wird zusammen mit Ressourcen wie z.&nbsp;B. Bitmaps und Zeichenfolgen in einer ausführbaren Datei gespeichert, der so genannten Assembly, die normalerweise die Erweiterung EXE oder DLL aufweist. Eine Assembly enthält ein Manifest, das Informationen über die Typen, die Version, die Kultur und die Sicherheitsanforderungen der Assembly bereitstellt.  
   
@@ -81,9 +81,9 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
  ![Vom C&#35;-Quellcode zur Computerausführung](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
   
- Eines der wichtigsten Features in [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] ist die Sprachinteroperabilität. Da der vom C#-Compiler generierte IL-Code der CTS (Common Type Specification) entspricht, kann er mit Code interagieren, der mit den .NET-Versionen von Visual Basic, Visual C++ oder mit einer der mehr als 20 weiteren CTS-kompatiblen Sprachen generiert wurde. Eine einzelne Assembly kann mehrere in verschiedenen .NET-Sprachen erstellte Module enthalten, und die Typen können aufeinander verweisen, ganz so, als wären sie in derselben Sprache geschrieben worden.  
+ Eines der wichtigsten Features in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist die Sprachinteroperabilität. Da der vom C#-Compiler generierte IL-Code der CTS (Common Type Specification) entspricht, kann er mit Code interagieren, der mit den .NET-Versionen von Visual Basic, Visual C++ oder mit einer der mehr als 20 weiteren CTS-kompatiblen Sprachen generiert wurde. Eine einzelne Assembly kann mehrere in verschiedenen .NET-Sprachen erstellte Module enthalten, und die Typen können aufeinander verweisen, ganz so, als wären sie in derselben Sprache geschrieben worden.  
   
- Zusätzlich zu den Laufzeitdiensten enthält [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] eine ausführliche Bibliothek mit mehr als 4.000 in Namespaces organisierten Klassen, die eine Vielzahl hilfreicher Funktionen bereitstellen, von der Dateieingabe und -ausgabe bis zur Zeichenfolgenbearbeitung, zur XML-Analyse und zu Windows&nbsp;Forms-Steuerelementen. Eine typische C#-Anwendung verwendet für die Ausführung allgemeiner Routinearbeiten ausgiebig die [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek.  
+ Zusätzlich zu den Laufzeitdiensten enthält [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eine ausführliche Bibliothek mit mehr als 4.000 in Namespaces organisierten Klassen, die eine Vielzahl hilfreicher Funktionen bereitstellen, von der Dateieingabe und -ausgabe bis zur Zeichenfolgenbearbeitung, zur XML-Analyse und zu Windows&nbsp;Forms-Steuerelementen. Eine typische C#-Anwendung verwendet für die Ausführung allgemeiner Routinearbeiten ausgiebig die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  Weitere Informationen zu .NET Framework finden Sie unter [Overview of the Microsoft .NET Framework 3.0](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355) (Überblick über Microsoft .NET Framework 3.0).  
   

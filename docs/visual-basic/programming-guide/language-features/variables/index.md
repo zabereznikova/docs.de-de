@@ -1,52 +1,79 @@
 ---
-title: "Variables in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic]"
-  - "values [Visual Basic], storing"
+title: Variablen in Visual Basic | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# Variables in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9a19838abed2d947e8e7ebf96fa4603feb208012
+ms.contentlocale: de-de
+ms.lasthandoff: 05/26/2017
 
-Beim Ausführen von Berechnungen mit [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] müssen häufig Werte gespeichert werden.  Dies ist beispielsweise der Fall, wenn Sie verschiedene Werte berechnen und vergleichen möchten, um dann, in Abhängigkeit von den Ergebnissen des Vergleichs, unterschiedliche Vorgänge mit ihnen auszuführen.  Sie müssen die Werte beibehalten, wenn Sie diese vergleichen möchten.  
+---
+<a id="variables-in-visual-basic" class="xliff"></a>
+
+# Variablen in Visual Basic
+Sie müssen oft Werte speichern, wenn Sie Berechnungen mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] durchführen. Sie möchten z.B. mehrere Werte berechnen, sie vergleichen und je nach Ergebnis des Vergleichs unterschiedliche Vorgänge auf diesen ausführen. Sie müssen die Werte beibehalten, wenn Sie sie vergleichen möchten.  
   
+<a id="usage" class="xliff"></a>
+
 ## Verwendung  
- Wie bei den meisten Programmiersprachen werden in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Werte mithilfe von Variablen gespeichert.  Eine *Variable* besitzt einen Namen \(die von Ihnen verwendete Bezeichnung für den mithilfe der Variablen gespeicherten Wert\).  Eine Variable weist außerdem einen Datentyp aus \(dieser legt die Daten fest, die in der Variablen gespeichert werden können\).  Eine Variable kann ein Array darstellen, wenn ein indizierter Satz verwandter Datenelemente in ihr gespeichert werden soll.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet genauso wie die meisten Programmiersprachen Variablen zum Speichern von Werten. Eine *Variable* besitzt einen Namen (das Wort, das Sie verwenden, wenn Sie sich auf den Wert beziehen, den die Variable enthält). Eine Variable verfügt auch über einen Datentyp (der die Art der Daten bestimmt, die die Variable speichern kann). Eine Variable kann ein Array darstellen, wenn sie einen indizierten Satz von eng verwandten Datenelementen speichern muss.  
   
- Mit lokaler Typableitung können Sie Variablen ohne explizite Angabe eines Datentyps deklarieren.  Stattdessen leitet der Compiler den Typ der Variable vom Typ des Initialisierungsausdrucks ab.  Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Durch den lokalen Typrückschluss können Sie Variablen deklarieren, ohne explizit einen Datentyp angeben zu müssen. Der Compiler leitet stattdessen den Typ der Variablen vom Typ des Initialisiererausdrucks ab. Weitere Informationen finden Sie unter [Local Type Inference (Lokaler Typrückschluss)](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement (Option Infer-Anweisung)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
+<a id="assigning-values" class="xliff"></a>
+
 ## Zuweisen von Werten  
- Mit Zuweisungsanweisungen führen Sie Berechnungen durch und weisen das Ergebnis einer Variablen zu, wie im folgenden Beispiel gezeigt.  
+ Sie verwenden Zuweisungsanweisungen, um Berechnungen durchzuführen und das Ergebnis einer Variable zuzuweisen, so wie im folgenden Beispiel dargestellt.  
   
  [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
->  Das Gleichheitszeichen \(`=`\) entspricht in diesem Beispiel einem Zuweisungsoperator, nicht einem Gleichheitsoperator.  Der Wert wird der Variablen `applesSold` zugewiesen.  
+>  Das Gleichheitszeichen (`=`) ist in diesem Beispiel ein Zuweisungsoperator, kein Gleichheitsoperator. Der Wert wird der `applesSold`-Variablen zugewiesen.  
   
- Weitere Informationen finden Sie unter [How to: Move Data Into and Out of a Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
   
+<a id="variables-and-properties" class="xliff"></a>
+
 ## Variablen und Eigenschaften  
- , wenn das Element zur Auflistung gehört, andernfalls .  Sie ist jedoch komplexer als eine Variable.  Eine Eigenschaft verwendet Codeblöcke, die steuern, wie der Wert der Eigenschaft festgelegt und abgerufen wird.  Weitere Informationen finden Sie unter [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
+ Wie eine Variable stellt auch eine *Eigenschaft* einen Wert dar, auf den Sie zugreifen können. Jedoch ist er komplexer als eine Variable. Eine Eigenschaft verwendet Codeblöcke, die steuern, wie der Wert festgelegt und abgerufen wird. Weitere Informationen finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
+<a id="see-also" class="xliff"></a>
+
 ## Siehe auch  
  [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
+ [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
  [Problembehandlung bei Variablen](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
- [How to: Move Data Into and Out of a Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+ [Vorgehensweise: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
+ [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
+ [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

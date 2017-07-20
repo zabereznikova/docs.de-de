@@ -1,768 +1,2193 @@
+
+
 # [Willkommen](welcome.md)
 
 <!-- Start of .NET Platform Guide -->
+
+
 # [Leitfaden für die .NET-Plattform](standard/index.md)
+
+
 ## [Erste Schritte mit .NET](standard/get-started.md)
+
+
 ## [Einführung in .NET](standard/tour.md)
+
+
+## [.NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](standard/microservices-architecture/)
+
+
 ## [.NET-Architekturkomponenten](standard/components.md)
-## [.NET-Standardbibliothek](standard/library.md)
+
+
+## [.NET-Standard](standard/net-standard.md)
+
+
 ## [Frameworks und Ziele](standard/frameworks.md)
+
+
 ## [Wahl zwischen .NET Core und .NET Framework für Server-Apps](standard/choosing-core-framework-server.md)
+
+
 ## [Was ist „verwalteter Code“?](standard/managed-code.md)
+
+
 ### [Automatische Speicherverwaltung](standard/automatic-memory-management.md) 
+
+
 ## [Common Language Runtime (CLR)](standard/clr.md)
+
+
 ## [Sprachunabhängigkeit](standard/language-independence.md)
+
+
 ### [Sprachunabhängigkeit und sprachunabhängige Komponenten](standard/language-independence-and-language-independent-components.md)
+
+
 ## [Frameworkbibliotheken](standard/framework-libraries.md)
+
+
 ### [Übersicht über die Klassenbibliothek](standard/class-library-overview.md)  
+
+
 ### [Basistypen](standard/base-types/)  
+
+
 ## [.NET-Klassenbibliotheken](standard/class-libraries.md)
+
+
 ## [Portability Analyzer](standard/portability-analyzer.md)
+
+
 ## [Behandeln und Auslösen von Ausnahmen](standard/exceptions/)
+
+
 ## [.NET-Assemblydateiformat](standard/assembly-format.md)
+
+
 ## [Garbage Collection](standard/garbage-collection/)
+
+
 ## [Generische Typen](standard/generics.md)
+
+
 ## [Delegaten und Lambdas](standard/delegates-lambdas.md)
+
+
 ## [LINQ](standard/using-linq.md)
+
+
 ## [Allgemeines Typsystem und Common Language Specification](standard/common-type-system.md)
+
+
 ## [Asynchrone Programmierung](standard/async.md)
+
+
 ## [Ausführliche Informationen zur asynchronen Programmierung](standard/async-in-depth.md)
+
+
 ## [Muster für die asynchrone Programmierung](standard/asynchronous-programming-patterns/)
+
+
 ## [Native Interoperabilität](standard/native-interop.md)
+
+
 ## [Auflistungen und Datenstrukturen](standard/collections/)
+
+
 ## [Numerische Ausdrücke in .NET](standard/numerics.md)
+
+
 ## [Datumsangaben, Uhrzeiten und Zeitzonen](standard/datetime/)
+
+
 ## [Ereignisse](standard/events/)
+
+
 ## [Der verwaltete Ausführungsprozess](standard/managed-execution-process.md)
+
+
 ## [Metadaten und selbstbeschreibende Komponenten](standard/metadata-and-self-describing-components.md)
+
+
 ## [Erstellen von Konsolenanwendungen](standard/building-console-apps.md)
+
+
 ## [Parallelverarbeitung und Concurrency](standard/parallel-processing-and-concurrency.md)
+
+
 ## [Grundlagen der Anwendung](standard/application-essentials.md)
+
+
 ## [Datei- und Stream-E/A](standard/io/index.md)
+
+
 ## [Globalisierung und Lokalisierung](standard/globalization-localization/)
+
+
 ## [Attribute](standard/attributes/)
+
+
 ## [Frameworkentwurfsrichtlinien](standard/design-guidelines/)
+
+
 ## [XML-Dokumente und -Daten](standard/data/xml/)
+
+
 ## [Threading](standard/threading/)
+
+
 ## [Parallele Programmierung](standard/parallel-programming/)
+
+
 ## [Sicherheit](standard/security/)
+
+
 ## [Entwickeln für mehrere Plattformen](standard/cross-platform/)
 <!-- End of .NET Platform Guide -->
 
 <!-- .NET Core Content -->
+
+
 # [Leitfaden für .NET Core](core/index.md)
+
+
 ## [Erste Schritte](core/get-started.md)
+
+
 ## [Erforderliche Komponenten für Windows](core/windows-prerequisites.md)
+
+
 ## [Erforderliche Komponenten für macOS](core/macos-prerequisites.md)
+
+
 ## [Tutorials](core/tutorials/index.md)
+
+
 ### [Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
+
+
 ### [Erste Schritte mit .NET Core unter macOS](core/tutorials/using-on-macos.md)
+
+
 ### [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs.md)
+
+
 ### [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs-full-solution.md)
+
+
 ### [Erste Schritte mit .NET Core unter Verwendung der CLI-Tools](core/tutorials/using-with-xplat-cli.md)
+
+
 #### [Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile](core/tutorials/testing-with-cli.md)
+
+
 ### [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](core/tutorials/libraries.md)
+
+
 ### [Entwickeln von ASP.NET Core-Anwendungen](core/tutorials/aspnet-core.md)
+
+
 ### [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
+
+
 ### [Hosten von .NET Core von nativem Code](core/tutorials/netcore-hosting.md)
+
+
 ## [Pakete, Metapakete und Frameworks](core/packages.md)
+
+
 ## [Änderungen in CLI – Übersicht](core/tools/cli-msbuild-architecture.md)
+
+
 ### [Abhängigkeitsverwaltung](core/tools/dependencies.md)
+
+
 ### [Erweiterungen des CSPROJ-Formats](core/tools/csproj.md)
+
+
 ## Migration
+
+
 ### [Migration in das csproj-Format](core/migration/index.md)
+
+
 ### [Die Zuordnung zwischen project.json und csproj](core/tools/project-json-to-csproj.md)
+
+
 ### [Migrieren von DNX](core/migration/from-dnx.md)
+
+
 ## [Anwendungsbereitstellung](core/deploying/index.md)
+
+
 ### [Bereitstellen von Apps mit CLI-Tools](core/deploying/deploy-with-cli.md)
+
+
 ### [Bereitstellen von Apps mit Visual Studio](core/deploying/deploy-with-vs.md)
+
+
 ### [Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools](core/deploying/creating-nuget-packages.md)
+
+
 ## [Docker](core/docker/index.md)
+
+
 ### [Erstellen von Docker-Images für .NET Core-Anwendungen](core/docker/building-net-docker-images.md)
+
+
 ### [Visual Studio-Tools für Docker](core/docker/visual-studio-tools-for-docker.md)
+
+
 ## [Komponententests](core/testing/index.md)
+
+
 ### [Komponententests mit dotnet-Test und xUnit](core/testing/unit-testing-with-dotnet-test.md)
+
+
 ### [Komponententests mit dotnet-Test und MSTest](core/testing/unit-testing-with-mstest.md)
+
+
 ### [Ausführen von selektiven Komponententests](core/testing/selective-unit-tests.md)
+
+
 ## [Versionskontrolle](core/versions/index.md)
+
+
 ### [.NET Core-Unterstützung](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
+
+
 ## [Runtime-ID-Katalog](core/rid-catalog.md)
+
+
 ## [.NET Core-CLI-Tools](core/tools/index.md)
+
+
 ### [Telemetrie](core/tools/telemetry.md)
+
+
 ### [Erweiterbarkeitsmodell](core/tools/extensibility.md)
+
+
 ### [Continuous Integration](core/tools/using-ci-with-cli.md)
+
+
 ### [dotnet](core/tools/dotnet.md)
+
+
 ### [dotnet-build](core/tools/dotnet-build.md)
+
+
 ### [dotnet-clean](core/tools/dotnet-clean.md)
+
+
 ### [dotnet-install-script](core/tools/dotnet-install-script.md)
+
+
 ### [dotnet-migrate](core/tools/dotnet-migrate.md)
+
+
 ### [dotnet-msbuild](core/tools/dotnet-msbuild.md)
+
+
 ### [dotnet-new](core/tools/dotnet-new.md)
+
+
 ### [dotnet-nuget-delete](core/tools/dotnet-nuget-delete.md)
+
+
 ### [dotnet-nuget-locals](core/tools/dotnet-nuget-locals.md)
+
+
 ### [dotnet-nuget-push](core/tools/dotnet-nuget-push.md)
+
+
 ### [dotnet-pack](core/tools/dotnet-pack.md)
+
+
 ### [dotnet-publish](core/tools/dotnet-publish.md)
+
+
 ### [dotnet-restore](core/tools/dotnet-restore.md)
+
+
 ### [dotnet-run](core/tools/dotnet-run.md)
+
+
 ### [dotnet-sln](core/tools/dotnet-sln.md)
+
+
 ### [dotnet-test](core/tools/dotnet-test.md)
+
+
 ### [dotnet-vstest](core/tools/dotnet-vstest.md)
+
+
 ### Befehle zur Projektänderung
+
+
 #### Verweise
+
+
 ##### [dotnet-add-reference](core/tools/dotnet-add-reference.md)
+
+
 ##### [dotnet-list-reference](core/tools/dotnet-list-reference.md)
+
+
 ##### [dotnet-remove-reference](core/tools/dotnet-remove-reference.md)
+
+
 #### Pakete
+
+
 ##### [dotnet-add-package](core/tools/dotnet-add-package.md)
+
+
 ##### [dotnet-remove-package](core/tools/dotnet-remove-package.md)
+
+
 ### [global.json](core/tools/global-json.md)
+
+
 ## [Portieren aus .NET Framework](core/porting/index.md)
+
+
 ### [Organisieren von Projekten für .NET Core](core/porting/project-structure.md)
+
+
 ### [Analysieren der Abhängigkeiten von Drittanbietern](core/porting/third-party-deps.md)
+
+
 ### [Portieren von Bibliotheken](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
+
+
 ## [VS 2015/project.json-Dokumentation](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
+
+
 # [Leitfaden für .NET Framework](framework/index.md)
+
+
 ## [Neuigkeiten](framework/whats-new/)
+
+
 ## [Erste Schritte](framework/get-started/)
+
+
 ## [Installationshandbuch](framework/install/)
+
+
 ## [Migrationshandbuch](framework/migration-guide/)
+
+
 ## [Leitfaden zu .NET Framework in Docker](framework/docker/index.md)
+
+
 ### [Ausführen von Konsolenanwendungen in Containern](framework//docker/console.md)
+
+
 ## [Entwicklungshandbuch](framework/development-guide.md)
+
+
 ### [Anwendungsdomänen und Assemblys](framework/app-domains/)
+
+
 ### [Ressourcen in Desktop-Apps](framework/resources/)
+
+
 ### [Barrierefreiheit](framework/ui-automation/)
+
+
 ### [Daten und Modellierung](framework/data/)
+
+
 ### [Clientanwendungen](framework/develop-client-apps.md)
+
+
 #### [Allgemeine Clienttechnologien](framework/common-client-technologies/)
+
+
 #### [Windows Presentation Foundation](framework/wpf/)
+
+
 #### [Windows Forms](framework/winforms/)
+
+
 ### [Dienstorientierte Anwendungen mit WCF](framework/wcf/)
+
+
 ### [Windows Workflow Foundation](framework/windows-workflow-foundation/)
+
+
 ### [Windows-Dienstanwendungen](framework/windows-services/)
+
+
 ### [64-Bit-Anwendungen](framework/64-bit-apps.md)
+
+
 ### [Webanwendungen mit ASP.NET](framework/develop-web-apps-with-aspnet.md)
+
+
 ### [Serialisierung](framework/serialization/)
+
+
 ### [Netzwerkprogrammierung in .NET Framework](framework/network-programming/)
+
+
 ### [Konfigurieren von Apps](framework/configure-apps/)
+
+
 ### [Kompilieren von Apps mit .NET Native](framework/net-native/)
+
+
 ### [Windows Identity Foundation](framework/security/)
+
+
 ### [Debuggen, Ablaufverfolgung und Profilerstellung](framework/debug-trace-profile/)
+
+
 ### [Bereitstellung](framework/deployment/)
+
+
 ### [Leistung](framework/performance/)
+
+
 ### [Dynamische Programmierung](framework/reflection-and-codedom/)
+
+
 ### [Managed Extensibility Framework (MEF)](framework/mef/)
+
+
 ### [Add-Ins und Erweiterbarkeit](framework/add-ins/)
+
+
 ### [Interoperabilität mit nicht verwaltetem Code](framework/interop/)
+
+
 ### [Referenz zur nicht verwalteten API](framework/unmanaged-api/)
+
+
 ### [XAML Services](framework/xaml-services/) (XAML-Dienste)
+
+
 ## [Extras](framework/tools/)
+
+
 ## [Zusätzliche Klassenbibliotheken und APIs](framework/additional-apis/)
 <!-- End .NET Framework Content -->
 
 <!-- Start of C# Content -->
+
+
 # [Leitfaden für C#](csharp/index.md)
+
+
 ## [Erste Schritte](csharp/getting-started/)
+
+
 ## [Tutorials](csharp/tutorials/)
+
+
 ## [Einführung in C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+
+
 ## [Neues in C#](csharp/whats-new/index.md) 
+
+
 ### [Neues in C# 7](csharp/whats-new/csharp-7.md)
+
+
 ### [Neues in C# 6](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+
+
 ## C#-Konzepte
+
+
 ### [C#-Typsystem](csharp/programming-guide/types/index.md)
+
+
 ### [Namespaces](csharp/programming-guide/namespaces/index.md)
+
+
 ### [Grundlegende Typen](csharp/basic-types.md)
+
+
 ### [Klassen](csharp/classes.md)
+
+
 ### [Strukturen](csharp/structs.md)
+
+
 ### [Tupel](csharp/tuples.md)
+
+
 ### [Schnittstellen](csharp/programming-guide/interfaces/index.md)
 <!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
+
+
 #### [Methoden](csharp/methods.md)
+
+
 #### [Lambda-Ausdrücke](csharp/lambda-expressions.md)
+
+
 ### [Eigenschaften](csharp/properties.md)
+
+
 ### [Indexer](csharp/indexers.md)
+
+
 ### [Generika](csharp/programming-guide/generics/index.md)
+
+
 ### [Iteratoren](csharp/iterators.md)
+
+
 ### [Delegaten und Ereignisse](csharp/delegates-events.md)
+
+
 #### [Einführung in Delegaten](csharp/delegates-overview.md)
+
+
 #### [System.Delegate und das Delegatschlüsselwort](csharp/delegate-class.md)
+
+
 #### [Stark typisierte Delegate](csharp/delegates-strongly-typed.md)
+
+
 #### [Gängige Muster für Delegate](csharp/delegates-patterns.md)
+
+
 #### [Einführung in Ereignisse](csharp/events-overview.md)
+
+
 #### [Das .NET-Ereignismuster](csharp/event-pattern.md)
+
+
 #### [Das aktualisierte .NET-Ereignismuster](csharp/modern-events.md)
+
+
 #### [Unterscheidung zwischen Delegaten und Ereignissen](csharp/distinguish-delegates-events.md)
+
+
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
+
+
 ### [Asynchrone Programmierung](csharp/async.md)
 <!--### [🔧 Parallel programming](csharp/parallel.md)-->
+
+
 ### [Mustervergleich](csharp/pattern-matching.md)
+
+
 ### [Ausdrucksbaumstrukturen](csharp/expression-trees.md)
+
+
 #### [Ausdrucksbaumstrukturen mit Erläuterung](csharp/expression-trees-explained.md)
+
+
 #### [Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](csharp/expression-classes.md)
+
+
 #### [Ausführen von Ausdrücken](csharp/expression-trees-execution.md)
+
+
 #### [Interpretieren von Ausdrücken](csharp/expression-trees-interpreting.md)
+
+
 #### [Erstellen von Ausdrücken](csharp/expression-trees-building.md)
+
+
 #### [Übersetzen von Ausdrücken](csharp/expression-trees-translating.md)
+
+
 #### [Zusammenfassung](csharp/expression-trees-summary.md)
+
+
 ### [Native Interoperabilität](csharp/programming-guide/interop/index.md)
 <!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
+
+
 ### [Dokumentieren von Code](csharp/codedoc.md)
+
+
 ### [Versionskontrolle](csharp/versioning.md)
 <!-- End of C# Concepts section -->
 <!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+
+
 ## [C#-Programmierhandbuch](csharp/programming-guide/)
+
+
 ## [Sprachreferenz](csharp/language-reference/)
+
+
 ## [Exemplarische Vorgehensweisen](csharp/walkthroughs.md)
 <!-- End of C# Content -->
 
 <!-- F# Content -->
+
+
 # [Leitfaden für F#](fsharp/index.md)
+
+
 
 ## [Einführung in F#](fsharp/tour.md)
 
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+
 ## Lernprogramme
+
+
 ### [Erste Schritte](fsharp/tutorials/getting-started/index.md)
+
+
 #### [Erste Schritte mit Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+
+
 #### [Erste Schritte mit Visual Studio für Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
+
+
 #### [Erste Schritte mit Visual Studio Code und Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
+
+
 #### [Erste Schritte mit Befehlszeilentools](fsharp/tutorials/getting-started/getting-started-command-line.md)
+
+
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
+
+
 #### [F# Interactive-Optionen](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
+
+
 ### [Typanbieter](fsharp/tutorials/type-providers/index.md)
+
+
 #### [Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
+
+
 #### [Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern und Entitäten](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
+
+
 #### [Zugreifen auf einen OData-Dienst mithilfe von Typanbietern](fsharp/tutorials/type-providers/accessing-an-odata-service.md)
+
+
 #### [Zugreifen auf einen Webdienst mithilfe von Typanbietern](fsharp/tutorials/type-providers/accessing-a-web-service.md)
+
+
 #### [Generieren von F#-Typen aus einer DBML-Datei](fsharp/tutorials/type-providers/generating-fsharp-types-from-dbml.md)
+
+
 #### [Generieren von F#-Typen aus einer EDMX-Datei](fsharp/tutorials/type-providers/generating-fsharp-types-from-edmx.md)
+
+
 #### [Erstellen eines Typanbieters](fsharp/tutorials/type-providers/creating-a-type-provider.md)
+
+
 #### [Sicherheit von Typanbietern](fsharp/tutorials/type-providers/type-provider-security.md)
+
+
 #### [Problembehandlung bei Typanbietern](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
 
 <!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+
+
 ## Einführung in die funktionale Programmierung
+
+
 ### [Funktionen als erstrangige Werte](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+
+
 ### Asynchrone und parallele Programmierung
+
+
 #### [Asynchrone Programmierung](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
+
+
 ### [Funktionen der Visual F#-Entwicklungsumgebung](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
+
+
 ### [Konfigurieren von Projekten](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
+
+
 ### [Für ältere Versionen von .NET](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
 
+
+
 ## [Verwenden von F# in Azure](fsharp/using-fsharp-on-azure/index.md)
+
+
 ### [Erste Schritte mit Azure Blob Storage mit F#](fsharp/using-fsharp-on-azure/blob-storage.md)
+
+
 ### [Erste Schritte mit Azure File Storage mit F#](fsharp/using-fsharp-on-azure/file-storage.md)
+
+
 ### [Erste Schritte mit Azure Queue Storage mit F#](fsharp/using-fsharp-on-azure/queue-storage.md)
+
+
 ### [Erste Schritte mit Azure Table Storage mit F#](fsharp/using-fsharp-on-azure/table-storage.md)
 <!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
+
+
 ### [Verwalten von Paketen für F#-Azure-Abhängigkeiten](fsharp/using-fsharp-on-azure/package-management.md)
 
+
+
 ## [F#-Sprachreferenz](fsharp/language-reference/index.md)
+
+
 ### [Schlüsselwortreferenz](fsharp/language-reference/keyword-reference.md)
+
+
 ### [Symbol- und Operatorenreferenz](fsharp/language-reference/symbol-and-operator-reference/index.md)
+
+
 #### [Arithmetische Operatoren](fsharp/language-reference/symbol-and-operator-reference/arithmetic-operators.md)
+
+
 #### [Boolesche Operatoren](fsharp/language-reference/symbol-and-operator-reference/boolean-operators.md)
+
+
 #### [Bitweise Operatoren](fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md)
+
+
 #### [Operatoren, die NULL-Werte zulassen](fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md)
+
+
 ### [Funktionen](fsharp/language-reference/functions/index.md)
+
+
 #### [let-Bindungen](fsharp/language-reference/functions/let-bindings.md)
+
+
 #### [do-Bindungen](fsharp/language-reference/functions/do-bindings.md)
+
+
 #### [Lambdaausdrücke: das fun-Schlüsselwort](fsharp/language-reference/functions/lambda-expressions-the-fun-keyword.md)
+
+
 #### [Rekursive Funktionen: das rec-Schlüsselwort](fsharp/language-reference/functions/recursive-functions-the-rec-keyword.md)
+
+
 #### [Einstiegspunkt](fsharp/language-reference/functions/entry-point.md)
+
+
 #### [Externe Funktionen](fsharp/language-reference/functions/external-functions.md)
+
+
 #### [Inlinefunktionen](fsharp/language-reference/functions/inline-functions.md)
+
+
 ### [Werte](fsharp/language-reference/values/index.md)
+
+
 #### [NULL-Werte](fsharp/language-reference/values/null-values.md)
+
+
 ### [Literale](fsharp/language-reference/literals.md)
+
+
 ### [F#-Typen](fsharp/language-reference/fsharp-types.md)
+
+
 ### [Typableitung](fsharp/language-reference/type-inference.md)
+
+
 ### [Primitive Typen](fsharp/language-reference/primitive-types.md)
+
+
 ### [Unit-Typ](fsharp/language-reference/unit-type.md)
+
+
 ### [Zeichenfolgen](fsharp/language-reference/strings.md)
+
+
 ### [Tupel](fsharp/language-reference/tuples.md)
+
+
 ### [F#-Auflistungstypen](fsharp/language-reference/fsharp-collection-types.md)
+
+
 ### [Listen](fsharp/language-reference/lists.md)
+
+
 ### [Optionen](fsharp/language-reference/options.md)
+
+
 ### [Ergebnisse](fsharp/language-reference/results.md)
+
+
 ### [Sequenzen](fsharp/language-reference/sequences.md)
+
+
 ### [Arrays](fsharp/language-reference/arrays.md)
+
+
 ### [Generika](fsharp/language-reference/generics/index.md)
+
+
 #### [Automatische Verallgemeinerung](fsharp/language-reference/generics/automatic-generalization.md)
+
+
 #### [Einschränkungen](fsharp/language-reference/generics/constraints.md)
+
+
 #### [Statisch aufgelöste Typparameter](fsharp/language-reference/generics/statically-resolved-type-parameters.md)
+
+
 ### [Datensätze](fsharp/language-reference/records.md)
+
+
 ### [Unterscheidbare Unions](fsharp/language-reference/discriminated-unions.md)
+
+
 ### [Enumerationen](fsharp/language-reference/enumerations.md)
+
+
 ### [Referenzzellen](fsharp/language-reference/reference-cells.md)
+
+
 ### [Typabkürzungen](fsharp/language-reference/type-abbreviations.md)
+
+
 ### [Klassen](fsharp/language-reference/classes.md)
+
+
 ### [Strukturen](fsharp/language-reference/structures.md)
+
+
 ### [Vererbung](fsharp/language-reference/inheritance.md)
+
+
 ### [Schnittstellen](fsharp/language-reference/interfaces.md)
+
+
 ### [Abstrakte Klassen](fsharp/language-reference/abstract-classes.md)
+
+
 ### [Mitglieder](fsharp/language-reference/members/index.md)
+
+
 #### [let-Bindungen in Klassen](fsharp/language-reference/members/let-bindings-in-classes.md)
+
+
 #### [do-Bindungen in Klassen](fsharp/language-reference/members/do-bindings-in-classes.md)
+
+
 #### [Eigenschaften](fsharp/language-reference/members/properties.md)
+
+
 #### [Indizierte Eigenschaften](fsharp/language-reference/members/indexed-properties.md)
+
+
 #### [Methoden](fsharp/language-reference/members/methods.md)
+
+
 #### [Konstruktoren](fsharp/language-reference/members/constructors.md)
+
+
 #### [Ereignisse](fsharp/language-reference/members/events.md)
+
+
 #### [Explizite Felder: Das `val`-Schlüsselwort](fsharp/language-reference/members/explicit-fields-the-val-keyword.md)
+
+
 ### [Typerweiterungen](fsharp/language-reference/type-extensions.md)
+
+
 ### [Parameter und Argumente](fsharp/language-reference/parameters-and-arguments.md)
+
+
 ### [Operatorüberladung](fsharp/language-reference/operator-overloading.md)
+
+
 ### [Flexible Typen](fsharp/language-reference/flexible-types.md)
+
+
 ### [Delegaten](fsharp/language-reference/delegates.md)
+
+
 ### [Objektausdrücke](fsharp/language-reference/object-expressions.md)
+
+
 ### [Kopieren und Aktualisieren von Datensatzausdrücken](fsharp/language-reference/copy-and-update-record-expressions.md)
+
+
 ### [Umwandlung und Konvertierungen](fsharp/language-reference/casting-and-conversions.md)
+
+
 ### [Zugriffssteuerung](fsharp/language-reference/access-control.md)
+
+
 ### [Bedingte Ausdrücke: if... then...else](fsharp/language-reference/conditional-expressions-if-then-else.md)
+
+
 ### [Vergleichsausdrücke](fsharp/language-reference/match-expressions.md)
+
+
 ### [Mustervergleich](fsharp/language-reference/pattern-matching.md)
+
+
 ### [Aktive Muster](fsharp/language-reference/active-patterns.md)
+
+
 ### [Schleifen: for...to-Ausdruck](fsharp/language-reference/loops-for-to-expression.md)
+
+
 ### [Schleifen: for...in-Ausdruck](fsharp/language-reference/loops-for-in-expression.md)
+
+
 ### [Schleifen: while...do-Ausdruck](fsharp/language-reference/loops-while-do-expression.md)
+
+
 ### [Assertionen](fsharp/language-reference/assertions.md)
+
+
 ### [Ausnahmebehandlung](fsharp/language-reference/exception-handling/index.md)
+
+
 #### [Ausnahmetypen](fsharp/language-reference/exception-handling/exception-types.md)
+
+
 #### [Der try...with-Ausdruck](fsharp/language-reference/exception-handling/the-try-with-expression.md)
+
+
 #### [Der try...finally-Ausdruck](fsharp/language-reference/exception-handling/the-try-finally-expression.md)
+
+
 #### [Die raise-Funktion](fsharp/language-reference/exception-handling/the-raise-function.md)
+
+
 #### [Die failwith-Funktion](fsharp/language-reference/exception-handling/the-failwith-function.md)
+
+
 #### [Die invalidArg-Funktion](fsharp/language-reference/exception-handling/the-invalidArg-function.md)
+
+
 ### [Attribute](fsharp/language-reference/attributes.md)
+
+
 ### [Ressourcenverwaltung: das use-Schlüsselwort](fsharp/language-reference/resource-management-the-use-keyword.md)
+
+
 ### [Namespaces](fsharp/language-reference/namespaces.md)
+
+
 ### [Module](fsharp/language-reference/modules.md)
+
+
 ### [Importdeklarationen: Das open-Schlüsselwort](fsharp/language-reference/import-declarations-the-open-keyword.md)
+
+
 ### [Signaturen](fsharp/language-reference/signatures.md)
+
+
 ### [Maßeinheiten](fsharp/language-reference/units-of-measure.md)
+
+
 ### [XML-Dokumentation](fsharp/language-reference/xml-documentation.md)
+
+
 ### [Verzögerte Berechnungen](fsharp/language-reference/lazy-computations.md)
+
+
 ### [Berechnungsausdrücke](fsharp/language-reference/computation-expressions.md)
+
+
 ### [Asynchrone Workflows](fsharp/language-reference/asynchronous-workflows.md)
+
+
 ### [Abfrageausdrücke](fsharp/language-reference/query-expressions.md)
+
+
 ### [Zitieren von Code](fsharp/language-reference/code-quotations.md)
+
+
 ### [Fest Schlüsselwort](fsharp/language-reference/fixed.md)
+
+
 ### [Compileranweisungen](fsharp/language-reference/compiler-directives.md)
+
+
 ### [Compileroptionen](fsharp/language-reference/compiler-options.md)
+
+
 ### [Quellzeilen-, Datei- und Pfadbezeichner](fsharp/language-reference/source-line-file-path-identifiers.md)
+
+
 ### [Aufruferinformationen](fsharp/language-reference/caller-information.md)
+
+
 ### [Ausführliche Syntax](fsharp/language-reference/verbose-syntax.md)
+
+
 ### [Richtlinien für das Formatieren von Code](fsharp/language-reference/code-formatting-guidelines.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
+
+
 # [Leitfaden für Visual Basic](visual-basic/index.md)
+
+
 ## [Erste Schritte](visual-basic/getting-started/index.md)
+
+
 ### [Neues bei Visual Basic](visual-basic/getting-started/whats-new.md)
+
+
 ### [Wichtige Visual Basic-Änderungen in Visual Studio 2015](visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)
+
+
 ### [Zusätzliche Ressourcen für Visual Basic-Programmierer](visual-basic/getting-started/additional-resources.md)
+
+
 
 ## [Entwickeln von Anwendungen](visual-basic/developing-apps/index.md)
 
+
+
 ### [Programmieren in Visual Basic](visual-basic/developing-apps/programming/index.md)
+
+
 #### [Zugreifen auf Computerressourcen](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
+
+
 #### [Protokollieren von Informationen aus der Anwendung](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+
+
 #### [Zugreifen auf Benutzerdaten](visual-basic/developing-apps/programming/accessing-user-data.md)
+
+
 #### [Zugreifen auf Anwendungsformulare](visual-basic/developing-apps/programming/accessing-application-forms.md)
+
+
 #### [Zugreifen auf Anwendungswebdienste](visual-basic/developing-apps/programming/accessing-application-web-services.md)
+
+
 ##### [Gewusst wie: Asynchrones Aufrufen eines Webdiensts](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
+
+
 #### [Zugreifen auf Anwendungseinstellungen](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+
+
 #### [Verarbeiten von Laufwerken, Verzeichnissen und Dateien](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
+
+
 ### [Entwicklung mit „My“](visual-basic/developing-apps/development-with-my/index.md)
+
+
 #### [Ausführen von Aufgaben mit My.Application, My.Computer und My.User](visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)
+
+
 #### [Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen](visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)
+
+
 #### [Schnelle Anwendungsentwicklung mit My.Resources und My.Settings](visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)
+
+
 #### [Übersicht über das Visual Basic-Anwendungsmodell](visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+
+
 #### [Merkmale von "My" auf Grundlage des Projekttyps](visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 
+
+
 ### [Zugreifen auf Daten](visual-basic/developing-apps/accessing-data.md)
+
+
 ### [Erstellen und Verwenden von Komponenten](visual-basic/developing-apps/creating-and-using-components.md)
 
+
+
 ### [Drucken und Berichterstellung](visual-basic/developing-apps/printing/printing-and-reporting.md)
+
+
 #### [PrintForm-Komponente](visual-basic/developing-apps/printing/printform-component.md)
+
+
 #### [Gewusst wie: Drucken eines bildlauffähigen Formulars](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+
+
 #### [Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+
+
 #### [Gewusst wie: Drucken des Clientbereichs eines Formulars](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+
+
 #### [Gewusst wie: Drucken eines Formulars mithilfe der PrintForm-Komponente](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
+
+
 #### [Bereitstellen von Anwendungen, die auf die PrintForm-Komponente verweisen](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
+
+
 #### [Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendung](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
+
+
 ### [Grundlagen der Windows Forms-Anwendungen](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
+
+
 ### [Power Packs-Steuerelemente](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+
+
 ### [DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
+
+
 #### [Einführung in das DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+
+
 #### [Virtueller Modus im DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Anzeigen von gebundenen Daten in einem DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Anzeigen von nicht gebundenen Steuerelementen in einem DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Ändern des Layouts eines DataRepeater-Steuerelements](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Deaktivieren des Hinzufügens und Löschens von DataRepeater-Elementen](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
+
+
 #### [Gewusst wie: Suchen von Daten in einem DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
+
+
 #### [Gewusst wie: Erstellen eines Master-/Detailformulars mit zwei DataRepeater-Steuerelementen](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+
+
 #### [Exemplarische Vorgehensweise: Anzeigen von Daten in einem DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
+
+
 #### [Problembehandlung beim DataRepeater-Steuerelement](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+
+
 ### [Das Line-Steuerelement und das Shape-Steuerelement](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
+
+
 #### [Einführung in das Line-Steuerelement und das Shape-Steuerelement](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+
+
 #### [Gewusst wie: Zeichnen von Linien mit dem LineShape-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+
+
 #### [Gewusst wie: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
+
+
 #### [Gewusst wie: Aktivieren des Wechselns zwischen Formen mit der Tabulatortaste](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+
+
 #### [Bereitstellen von Anwendungen, die auf Power Packs-Steuerelemente verweisen](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
 
+
+
 ### [Anpassen von Projekten und Erweitern von „My“ mit Visual Basic](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+
+
 #### [Erweitern des My-Namespaces in Visual Basic](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
+
+
 #### [Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
+
+
 #### [Erweitern des Visual Basic-Anwendungsmodells](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+
+
 #### [Anpassen der verfügbaren Objekte in „My“](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
+
+
 ## [Programmierkonzepte](visual-basic/programming-guide/concepts/index.md)
+
+
 ### [Assemblys und der globale Assemblycache](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+
+
 ### [Asynchrone Programmierung mit Async und Await](visual-basic/programming-guide/concepts/async/index.md)
+
+
 ### [Attribute](visual-basic/programming-guide/concepts/attributes/index.md)
+
+
 ### [Ausdrucksbaumstrukturen](visual-basic/programming-guide/concepts/expression-trees/index.md)
+
+
 ### [Iteratoren](visual-basic/programming-guide/concepts/iterators.md)
+
+
 ### [Language-Integrated Query (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
+
+
 ### [Objektorientierte Programmierung](visual-basic/programming-guide/concepts/object-oriented-programming.md)
+
+
 ### [Reflektion](visual-basic/programming-guide/concepts/reflection.md)
+
+
 ### [Serialisierung](visual-basic/programming-guide/concepts/serialization/index.md)
+
+
 ### [Threading](visual-basic/programming-guide/concepts/threading/index.md)
 
+
+
 ## [Programmstruktur und Codekonventionen](visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+
+
 ### [Struktur eines Programms](visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+
+
 ### [Main-Prozedur](visual-basic/programming-guide/program-structure/main-procedure.md)
+
+
 ### [Verweise und die Imports-Anweisung](visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+
+
 ### [Namespaces](visual-basic/programming-guide/program-structure/namespaces.md)
+
+
 ### [Benennungskonventionen](visual-basic/programming-guide/program-structure/naming-conventions.md)
+
+
 ### [Codierungskonventionen](visual-basic/programming-guide/program-structure/coding-conventions.md)
+
+
 ### [Bedingte Kompilierung](visual-basic/programming-guide/program-structure/conditional-compilation.md)
+
+
 ### [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+
+
 ### [Gewusst wie: Reduzieren und Ausblenden von Codeabschnitten](visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+
+
 ### [Gewusst wie: Bezeichnen von Anweisungen](visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+
+
 ### [Sonderzeichen in Code](visual-basic/programming-guide/program-structure/special-characters-in-code.md)
+
+
 ### [Kommentare in Code](visual-basic/programming-guide/program-structure/comments-in-code.md)
+
+
 ### [Schlüsselwörter als Elementnamen in Code](visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
+
+
 ### [Me, My, MyBase und MyClass](visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+
+
 ### [Einschränkungen](visual-basic/programming-guide/program-structure/limitations.md)
 
+
+
 ## [Sprachfunktionen](visual-basic/programming-guide/language-features/index.md)
+
+
 ### [Arrays](visual-basic/programming-guide/language-features/arrays/index.md)
+
+
 ### [Auflistungsinitialisierer](visual-basic/programming-guide/language-features/collection-initializers/index.md)
+
+
 ### [Konstanten und Enumerationen](visual-basic/programming-guide/language-features/constants-enums/index.md)
+
+
 ### [Ablaufsteuerung](visual-basic/programming-guide/language-features/control-flow/index.md)
+
+
 ### [Datentypen](visual-basic/programming-guide/language-features/data-types/index.md)
+
+
 ### [Deklarierte Elemente](visual-basic/programming-guide/language-features/declared-elements/index.md)
+
+
 ### [Delegaten](visual-basic/programming-guide/language-features/delegates/index.md)
+
+
 ### [Frühes und spätes Binden](visual-basic/programming-guide/language-features/early-late-binding/index.md)
+
+
 ### [Fehlertypen](visual-basic/programming-guide/language-features/error-types.md)
+
+
 ### [Ereignisse](visual-basic/programming-guide/language-features/events/index.md)
+
+
 ### [Schnittstellen](visual-basic/programming-guide/language-features/interfaces/index.md)
+
+
 #### [Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen](visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)
+
+
 ### [LINQ](visual-basic/programming-guide/language-features/linq/index.md)
+
+
 ### [Objekte und Klassen](visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+
+
 ### [Operatoren und Ausdrücke](visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+
+
 ### [Verfahren](visual-basic/programming-guide/language-features/procedures/index.md)
+
+
 ### [Anweisungen](visual-basic/programming-guide/language-features/statements.md)
+
+
 ### [Zeichenfolgen](visual-basic/programming-guide/language-features/strings/index.md)
+
+
 ### [Variablen](visual-basic/programming-guide/language-features/variables/index.md)
+
+
 ### [XML](visual-basic/programming-guide/language-features/xml/index.md)
 
+
+
 ## [COM-Interop](visual-basic/programming-guide/com-interop/index.md)
+
+
 ### [Einführung in COM-Interop](visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+
+
 ### [Gewusst wie: Verweisen auf COM-Objekte](visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)
+
+
 ### [Gewusst wie: Arbeiten mit ActiveX-Steuerelementen](visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)
+
+
 ### [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+
+
 ### [Gewusst wie: Aufrufen von Windows-APIs](visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)
+
+
 ### [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+
+
 ### [Exemplarische Vorgehensweise: Erstellen von COM-Objekten](visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)
+
+
 ### [Problembehandlung bei der Interoperabilität](visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+
+
 ### [COM-Interoperabilität in .NET Framework-Anwendungen](visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+
+
 ### [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
+
+
 ## [Sprachreferenz](visual-basic/language-reference/index.md)
+
+
 ### [Typografische und Codekonventionen](visual-basic/language-reference/typographic-and-code-conventions.md)
+
+
 ### [Member der Visual Basic-Laufzeitbibliothek](visual-basic/language-reference/runtime-library-members.md)
+
+
 ### [Schlüsselwörter](visual-basic/language-reference/keywords/index.md)
+
+
 #### [Arrays: Zusammenfassung](visual-basic/language-reference/keywords/arrays-summary.md)
+
+
 #### [Auflistungsobjekt: Zusammenfassung](visual-basic/language-reference/keywords/collection-object-summary.md)
+
+
 #### [Ablaufsteuerung: Zusammenfassung](visual-basic/language-reference/keywords/control-flow-summary.md)
+
+
 #### [Konvertierung: Zusammenfassung](visual-basic/language-reference/keywords/conversion-summary.md)
+
+
 #### [Datentypen: Zusammenfassung](visual-basic/language-reference/keywords/data-types-summary.md)
+
+
 #### [Datums- und Uhrzeitangaben: Zusammenfassung](visual-basic/language-reference/keywords/dates-and-times-summary.md)
+
+
 #### [Deklarationen und Konstanten: Zusammenfassung](visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
+
+
 #### [Verzeichnisse und Dateien: Zusammenfassung](visual-basic/language-reference/keywords/directories-and-files-summary.md)
+
+
 #### [Fehler: Zusammenfassung](visual-basic/language-reference/keywords/errors-summary.md)
+
+
 #### [Finanzdaten: Zusammenfassung](visual-basic/language-reference/keywords/financial-summary.md)
+
+
 #### [Informationen und Interaktionen: Zusammenfassung](visual-basic/language-reference/keywords/information-and-interaction-summary.md)
+
+
 #### [Eingabe und Ausgabe: Zusammenfassung](visual-basic/language-reference/keywords/input-and-output-summary.md)
+
+
 #### [Mathematische Operationen: Zusammenfassung](visual-basic/language-reference/keywords/math-summary.md)
+
+
 ##### [Abgeleitete mathematische Funktionen](visual-basic/language-reference/keywords/derived-math-functions.md)
+
+
 #### [My-Referenz](visual-basic/language-reference/keywords/my-reference.md)
+
+
 #### [Operatoren: Zusammenfassung](visual-basic/language-reference/keywords/operators-summary.md)
+
+
 #### [Registrierung: Zusammenfassung](visual-basic/language-reference/keywords/registry-summary.md)
+
+
 #### [Zeichenfolgenbearbeitung: Zusammenfassung](visual-basic/language-reference/keywords/string-manipulation-summary.md)
+
+
 ### [Attribute](visual-basic/language-reference/attributes.md)
+
+
 ### [Konstanten und Enumerationen](visual-basic/language-reference/constants-and-enumerations.md)
+
+
 ### [Datentypen: Zusammenfassung](visual-basic/language-reference/data-types/data-type-summary.md)
+
+
 #### [Boolean-Datentyp](visual-basic/language-reference/data-types/boolean-data-type.md)
+
+
 #### [Byte-Datentyp](visual-basic/language-reference/data-types/byte-data-type.md)
+
+
 #### [Char-Datentyp](visual-basic/language-reference/data-types/char-data-type.md)
+
+
 #### [Date-Datentyp](visual-basic/language-reference/data-types/date-data-type.md)
+
+
 #### [Decimal-Datentyp](visual-basic/language-reference/data-types/decimal-data-type.md)
+
+
 #### [Double-Datentyp](visual-basic/language-reference/data-types/double-data-type.md)
+
+
 #### [Integer-Datentyp](visual-basic/language-reference/data-types/integer-data-type.md)
+
+
 #### [Long-Datentyp](visual-basic/language-reference/data-types/long-data-type.md)
+
+
 #### [Object-Datentyp](visual-basic/language-reference/data-types/object-data-type.md)
+
+
 #### [SByte-Datentyp](visual-basic/language-reference/data-types/sbyte-data-type.md)
+
+
 #### [Short-Datentyp](visual-basic/language-reference/data-types/short-data-type.md)
+
+
 #### [Single-Datentyp](visual-basic/language-reference/data-types/single-data-type.md)
+
+
 #### [String-Datentyp](visual-basic/language-reference/data-types/string-data-type.md)
+
+
 #### [UInteger-Datentyp](visual-basic/language-reference/data-types/uinteger-data-type.md)
+
+
 #### [ULong-Datentyp](visual-basic/language-reference/data-types/ulong-data-type.md)
+
+
 #### [Benutzerdefinierter Datentyp](visual-basic/language-reference/data-types/user-defined-data-type.md)
+
+
 #### [UShort-Datentyp](visual-basic/language-reference/data-types/ushort-data-type.md)
+
+
 ### [Anweisungen](visual-basic/language-reference/directives/directives.md)
+
+
 #### [#Const-Anweisung](visual-basic/language-reference/directives/const-directive.md)
+
+
 #### [#ExternalSource-Anweisung](visual-basic/language-reference/directives/externalsource-directive.md)
+
+
 #### [#If...Then...#Else-Anweisungen](visual-basic/language-reference/directives/if-then-else-directives.md)
+
+
 #### [#Region-Anweisung](visual-basic/language-reference/directives/region-directive.md)
 
+
+
 ### [Funktionen](visual-basic/language-reference/functions/index.md)
+
+
 #### [Konvertierungsfunktionen](visual-basic/language-reference/functions/conversion-functions.md)
+
+
 #### [Mathematische Funktionen](visual-basic/language-reference/functions/math-functions.md)
+
+
 #### [String-Funktionen](visual-basic/language-reference/functions/string-functions.md)
+
+
 #### [Typkonvertierungsfunktionen](visual-basic/language-reference/functions/type-conversion-functions.md)
+
+
 ##### [Rückgabewerte für die CStr-Funktion](visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)
+
+
 #### [CType-Funktion](visual-basic/language-reference/functions/ctype-function.md)
+
+
 ### [Modifizierer](visual-basic/language-reference/modifiers/index.md)
+
+
 #### [ANSI](visual-basic/language-reference/modifiers/ansi.md)
+
+
 #### [Assembly](visual-basic/language-reference/modifiers/assembly.md)
+
+
 #### [Async](visual-basic/language-reference/modifiers/async.md)
+
+
 #### [Auto](visual-basic/language-reference/modifiers/auto.md)
+
+
 #### [ByRef](visual-basic/language-reference/modifiers/byref.md)
+
+
 #### [ByVal](visual-basic/language-reference/modifiers/byval.md)
+
+
 #### [Default](visual-basic/language-reference/modifiers/default.md)
+
+
 #### [Friend](visual-basic/language-reference/modifiers/friend.md)
+
+
 #### [In (generischer Modifizierer)](visual-basic/language-reference/modifiers/in-generic-modifier.md)
+
+
 #### [Iterator](visual-basic/language-reference/modifiers/iterator.md)
+
+
 #### [Key](visual-basic/language-reference/modifiers/key.md)
+
+
 #### [Module <keyword>](visual-basic/language-reference/modifiers/module-keyword.md)
+
+
 #### [MustInherit](visual-basic/language-reference/modifiers/mustinherit.md)
+
+
 #### [MustOverride](visual-basic/language-reference/modifiers/mustoverride.md)
+
+
 #### [Narrowing](visual-basic/language-reference/modifiers/narrowing.md)
+
+
 #### [NotInheritable](visual-basic/language-reference/modifiers/notinheritable.md)
+
+
 #### [NotOverridable](visual-basic/language-reference/modifiers/notoverridable.md)
+
+
 #### [Optional](visual-basic/language-reference/modifiers/optional.md)
+
+
 #### [out (generischer Modifizierer)](visual-basic/language-reference/modifiers/out-generic-modifier.md)
+
+
 #### [Overloads](visual-basic/language-reference/modifiers/overloads.md)
+
+
 #### [Overridable](visual-basic/language-reference/modifiers/overridable.md)
+
+
 #### [Overrides](visual-basic/language-reference/modifiers/overrides.md)
+
+
 #### [ParamArray](visual-basic/language-reference/modifiers/paramarray.md)
+
+
 #### [Partial](visual-basic/language-reference/modifiers/partial.md)
+
+
 #### [Private](visual-basic/language-reference/modifiers/private.md)
+
+
 #### [Protected](visual-basic/language-reference/modifiers/protected.md)
+
+
 #### [Public](visual-basic/language-reference/modifiers/public.md)
+
+
 #### [ReadOnly](visual-basic/language-reference/modifiers/readonly.md)
+
+
 #### [Shadows](visual-basic/language-reference/modifiers/shadows.md)
+
+
 #### [Shared](visual-basic/language-reference/modifiers/shared.md)
+
+
 #### [Static](visual-basic/language-reference/modifiers/static.md)
+
+
 #### [Unicode](visual-basic/language-reference/modifiers/unicode.md)
+
+
 #### [Widening](visual-basic/language-reference/modifiers/widening.md)
+
+
 #### [WithEvents](visual-basic/language-reference/modifiers/withevents.md)
+
+
 #### [WriteOnly](visual-basic/language-reference/modifiers/writeonly.md)
+
+
 ### [Module](visual-basic/language-reference/modules.md)
+
+
 ### [Nothing](visual-basic/language-reference/nothing.md)
+
+
 ### [Objekte](visual-basic/language-reference/objects/index.md)
+
+
 #### [My.Application-Objekt](visual-basic/language-reference/objects/my-application-object.md)
+
+
 ##### [My.Application.Info-Objekt](visual-basic/language-reference/objects/my-application-info-object.md)
+
+
 ##### [My.Application.Log-Objekt](visual-basic/language-reference/objects/my-application-log-object.md)
+
+
 #### [My.Computer-Objekt](visual-basic/language-reference/objects/my-computer-object.md)
+
+
 ##### [My.Computer.Audio-Objekt](visual-basic/language-reference/objects/my-computer-audio-object.md)
+
+
 ##### [My.Computer.Clipboard-Objekt](visual-basic/language-reference/objects/my-computer-clipboard-object.md)
+
+
 ##### [My.Computer.Clock-Objekt](visual-basic/language-reference/objects/my-computer-clock-object.md)
+
+
 ##### [My.Computer.FileSystem-Objekt](visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+
+
 ###### [My.Computer.FileSystem.SpecialDirectories-Objekt](visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
+
+
 ##### [My.Computer.Info-Objekt](visual-basic/language-reference/objects/my-computer-info-object.md)
+
+
 ##### [My.Computer.Keyboard-Objekt](visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+
+
 ##### [My.Computer.Mouse-Objekt](visual-basic/language-reference/objects/my-computer-mouse-object.md)
+
+
 ##### [My.Computer.Network-Objekt](visual-basic/language-reference/objects/my-computer-network-object.md)
+
+
 ##### [My.Computer.Ports-Objekt](visual-basic/language-reference/objects/my-computer-ports-object.md)
+
+
 ##### [My.Computer.Registry-Objekt](visual-basic/language-reference/objects/my-computer-registry-object.md)
+
+
 #### [My.Forms-Objekt](visual-basic/language-reference/objects/my-forms-object.md)
+
+
 #### [My.Log-Objekt](visual-basic/language-reference/objects/my-log-object.md)
+
+
 #### [My.Request-Objekt](visual-basic/language-reference/objects/my-request-object.md)
+
+
 #### [My.Response-Objekt](visual-basic/language-reference/objects/my-response-object.md)
+
+
 #### [My.Resources-Objekt](visual-basic/language-reference/objects/my-resources-object.md)
+
+
 #### [My.Settings-Objekt](visual-basic/language-reference/objects/my-settings-object.md)
+
+
 #### [My.User-Objekt](visual-basic/language-reference/objects/my-user-object.md)
+
+
 #### [My.WebServices-Objekt](visual-basic/language-reference/objects/my-webservices-object.md)
+
+
 #### [TextFieldParser-Objekt](visual-basic/language-reference/objects/textfieldparser-object.md)
 
+
+
 ### [Operatoren](visual-basic/language-reference/operators/index.md)
+
+
 #### [Operatorrangfolge](visual-basic/language-reference/operators/operator-precedence.md)
+
+
 #### [Nach Funktionalität sortierte Operatoren](visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+
+
 ##### [&-Operator](visual-basic/language-reference/operators/concatenation-operator.md)
+
+
 ##### [&=-Operator](visual-basic/language-reference/operators/and-assignment-operator.md)
+
+
 ##### [*-Operator](visual-basic/language-reference/operators/multiplication-operator.md)
+
+
 ##### [* =-Operator](visual-basic/language-reference/operators/multiplication-assignment-operator.md)
+
+
 ##### [+-Operator](visual-basic/language-reference/operators/addition-operator.md)
+
+
 ##### [+=-Operator](visual-basic/language-reference/operators/addition-assignment-operator.md)
+
+
 ##### [=-Operator](visual-basic/language-reference/operators/assignment-operator.md)
+
+
 ##### [--Operator](visual-basic/language-reference/operators/subtraction-operator.md)
+
+
 ##### [-=-Operator](visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+
+
 ##### [<<-Operator](visual-basic/language-reference/operators/left-shift-operator.md)
+
+
 ##### [<<=-Operator](visual-basic/language-reference/operators/left-shift-assignment-operator.md)
+
+
 ##### [>>-Operator](visual-basic/language-reference/operators/right-shift-operator.md)
+
+
 ##### [>>=-Operator](visual-basic/language-reference/operators/right-shift-assignment-operator.md)
+
+
 ##### [/-Operator](visual-basic/language-reference/operators/floating-point-division-operator.md)
+
+
 ##### [/=-Operator](visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+
+
 ##### [\-Operator](visual-basic/language-reference/operators/integer-division-operator.md)
+
+
 ##### [\=-Operator](visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+
+
 ##### [^-Operator](visual-basic/language-reference/operators/exponentiation-operator.md)
+
+
 ##### [^=-Operator](visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
+
+
 ##### [AddressOf-Operator](visual-basic/language-reference/operators/addressof-operator.md)
+
+
 ##### [And-Operator](visual-basic/language-reference/operators/and-operator.md)
+
+
 ##### [AndAlso-Operator](visual-basic/language-reference/operators/andalso-operator.md)
+
+
 ##### [Await-Operator](visual-basic/language-reference/operators/await-operator.md)
+
+
 ##### [Function Expression](visual-basic/language-reference/operators/function-expression.md)
+
+
 ##### [GetType-Operator](visual-basic/language-reference/operators/gettype-operator.md)
+
+
 ##### [GetXmlNamespace-Operator](visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+
+
 ##### [If-Operator](visual-basic/language-reference/operators/if-operator.md)
+
+
 ##### [Is-Operator](visual-basic/language-reference/operators/is-operator.md)
+
+
 ##### [IsFalse-Operator](visual-basic/language-reference/operators/isfalse-operator.md)
+
+
 ##### [IsNot-Operator](visual-basic/language-reference/operators/isnot-operator.md)
+
+
 ##### [IsTrue-Operator](visual-basic/language-reference/operators/istrue-operator.md)
+
+
 ##### [Like-Operator](visual-basic/language-reference/operators/like-operator.md)
+
+
 ##### [Mod-Operator](visual-basic/language-reference/operators/mod-operator.md)
+
+
 ##### [Not-Operator](visual-basic/language-reference/operators/not-operator.md)
+
+
 ##### [Or-Operator](visual-basic/language-reference/operators/or-operator.md)
+
+
 ##### [OrElse-Operator](visual-basic/language-reference/operators/orelse-operator.md)
+
+
 ##### [Sub Expression](visual-basic/language-reference/operators/sub-expression.md)
+
+
 ##### [TypeOf-Operator](visual-basic/language-reference/operators/typeof-operator.md)
+
+
 ##### [Xor-Operator](visual-basic/language-reference/operators/xor-operator.md)
+
+
 #### [Datentypen von Operatorergebnissen](visual-basic/language-reference/operators/data-types-of-operator-results.md)
+
+
 #### [DirectCast-Operator](visual-basic/language-reference/operators/directcast-operator.md)
+
+
 #### [TryCast-Operator](visual-basic/language-reference/operators/trycast-operator.md)
+
+
 #### [New-Operator](visual-basic/language-reference/operators/new-operator.md)
+
+
 #### [Arithmetische Operatoren](visual-basic/language-reference/operators/arithmetic-operators.md)
+
+
 #### [Zuweisungsoperatoren](visual-basic/language-reference/operators/assignment-operators.md)
+
+
 #### [Bitverschiebungsoperatoren](visual-basic/language-reference/operators/bit-shift-operators.md)
+
+
 #### [Vergleichsoperatoren](visual-basic/language-reference/operators/comparison-operators.md)
+
+
 #### [Verkettungsoperatoren](visual-basic/language-reference/operators/concatenation-operators.md)
+
+
 #### [Logische bitweise Operatoren](visual-basic/language-reference/operators/logical-bitwise-operators.md)
+
+
 #### [Verschiedene Operatoren](visual-basic/language-reference/operators/miscellaneous-operators.md)
+
+
 ### [Eigenschaften](visual-basic/language-reference/properties.md)
+
+
 ### [Abfragen](visual-basic/language-reference/queries/queries.md)
+
+
 #### [Aggregate-Klausel](visual-basic/language-reference/queries/aggregate-clause.md)
+
+
 #### [Distinct-Klausel](visual-basic/language-reference/queries/distinct-clause.md)
+
+
 #### [Equals-Klausel](visual-basic/language-reference/queries/equals-clause.md)
+
+
 #### [From-Klausel](visual-basic/language-reference/queries/from-clause.md)
+
+
 #### [Group By-Klausel](visual-basic/language-reference/queries/group-by-clause.md)
+
+
 #### [Group Join-Klausel](visual-basic/language-reference/queries/group-join-clause.md)
+
+
 #### [Join-Klausel](visual-basic/language-reference/queries/join-clause.md)
+
+
 #### [Let-Klausel](visual-basic/language-reference/queries/let-clause.md)
+
+
 #### [Order By-Klausel](visual-basic/language-reference/queries/order-by-clause.md)
+
+
 #### [Select-Klausel](visual-basic/language-reference/queries/select-clause.md)
+
+
 #### [Skip-Klausel](visual-basic/language-reference/queries/skip-clause.md)
+
+
 #### [Skip While-Klausel](visual-basic/language-reference/queries/skip-while-clause.md)
+
+
 #### [Take-Klausel](visual-basic/language-reference/queries/take-clause.md)
+
+
 #### [Take While-Klausel](visual-basic/language-reference/queries/take-while-clause.md)
+
+
 #### [Where-Klausel](visual-basic/language-reference/queries/where-clause.md)
+
+
 ### [Anweisungen](visual-basic/language-reference/statements/index.md)
+
+
 #### [Anweisungen A – E](visual-basic/language-reference/statements/a-e-statements.md)
+
+
 ##### [AddHandler-Anweisung](visual-basic/language-reference/statements/addhandler-statement.md)
+
+
 ##### [Call-Anweisung](visual-basic/language-reference/statements/call-statement.md)
+
+
 ##### [Class-Anweisung](visual-basic/language-reference/statements/class-statement.md)
+
+
 ##### [Const-Anweisung](visual-basic/language-reference/statements/const-statement.md)
+
+
 ##### [Continue-Anweisung](visual-basic/language-reference/statements/continue-statement.md)
+
+
 ##### [Declare-Anweisung](visual-basic/language-reference/statements/declare-statement.md)
+
+
 ##### [Delegate-Anweisung](visual-basic/language-reference/statements/delegate-statement.md)
+
+
 ##### [Dim-Anweisung](visual-basic/language-reference/statements/dim-statement.md)
+
+
 ##### [Do...Loop-Anweisung](visual-basic/language-reference/statements/do-loop-statement.md)
+
+
 ##### [Else-Anweisung](visual-basic/language-reference/statements/else-statement.md)
+
+
 ##### [End-Anweisung](visual-basic/language-reference/statements/end-statement.md)
+
+
 ##### [End <keyword>-Anweisung](visual-basic/language-reference/statements/end-keyword-statement.md)
+
+
 ##### [Enum-Anweisung](visual-basic/language-reference/statements/enum-statement.md)
+
+
 ##### [Erase-Anweisung](visual-basic/language-reference/statements/erase-statement.md)
+
+
 ##### [Error-Anweisung](visual-basic/language-reference/statements/error-statement.md)
+
+
 ##### [Event-Anweisung](visual-basic/language-reference/statements/event-statement.md)
+
+
 ##### [Exit-Anweisung](visual-basic/language-reference/statements/exit-statement.md)
+
+
 #### [Anweisungen F – P](visual-basic/language-reference/statements/f-p-statements.md)
+
+
 ##### [For Each...Next-Anweisung](visual-basic/language-reference/statements/for-each-next-statement.md)
+
+
 ##### [For...Next-Anweisung](visual-basic/language-reference/statements/for-next-statement.md)
+
+
 ##### [Function-Anweisung](visual-basic/language-reference/statements/function-statement.md)
+
+
 ##### [Get-Anweisung](visual-basic/language-reference/statements/get-statement.md)
+
+
 ##### [GoTo-Anweisung](visual-basic/language-reference/statements/goto-statement.md)
+
+
 ##### [If...Then...Else-Anweisung](visual-basic/language-reference/statements/if-then-else-statement.md)
+
+
 ##### [Implements-Anweisung](visual-basic/language-reference/statements/implements-statement.md)
+
+
 ##### [Imports-Anweisung (.NET-Namespace und -Typ)](visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+
+
 ##### [Imports-Anweisung (XML-Namespace)](visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+
+
 ##### [Inherits-Anweisung](visual-basic/language-reference/statements/inherits-statement.md)
+
+
 ##### [Interface-Anweisung](visual-basic/language-reference/statements/interface-statement.md)
+
+
 ##### [Mid-Anweisung](visual-basic/language-reference/statements/mid-statement.md)
+
+
 ##### [Module-Anweisung](visual-basic/language-reference/statements/module-statement.md)
+
+
 ##### [Namespace-Anweisung](visual-basic/language-reference/statements/namespace-statement.md)
+
+
 ##### [On Error-Anweisung](visual-basic/language-reference/statements/on-error-statement.md)
+
+
 ##### [Operator-Anweisung](visual-basic/language-reference/statements/operator-statement.md)
+
+
 ##### [Option <keyword> Anweisung](visual-basic/language-reference/statements/option-keyword-statement.md)
+
+
 ##### [Option Compare-Anweisung](visual-basic/language-reference/statements/option-compare-statement.md)
+
+
 ##### [Option Explicit-Anweisung](visual-basic/language-reference/statements/option-explicit-statement.md)
+
+
 ##### [Option Infer-Anweisung](visual-basic/language-reference/statements/option-infer-statement.md)
+
+
 ##### [Option Strict-Anweisung](visual-basic/language-reference/statements/option-strict-statement.md)
+
+
 ##### [Property-Anweisung](visual-basic/language-reference/statements/property-statement.md)
+
+
 #### [Anweisungen Q – Z](visual-basic/language-reference/statements/q-z-statements.md)
+
+
 ##### [RaiseEvent-Anweisung](visual-basic/language-reference/statements/raiseevent-statement.md)
+
+
 ##### [ReDim-Anweisung](visual-basic/language-reference/statements/redim-statement.md)
+
+
 ##### [REM-Anweisung](visual-basic/language-reference/statements/rem-statement.md)
+
+
 ##### [RemoveHandler-Anweisung](visual-basic/language-reference/statements/removehandler-statement.md)
+
+
 ##### [Resume-Anweisung](visual-basic/language-reference/statements/resume-statement.md)
+
+
 ##### [Return-Anweisung](visual-basic/language-reference/statements/return-statement.md)
+
+
 ##### [Select...Case-Anweisung](visual-basic/language-reference/statements/select-case-statement.md)
+
+
 ##### [Set-Anweisung](visual-basic/language-reference/statements/set-statement.md)
+
+
 ##### [Stop-Anweisung](visual-basic/language-reference/statements/stop-statement.md)
+
+
 ##### [Structure-Anweisung](visual-basic/language-reference/statements/structure-statement.md)
+
+
 ##### [Sub-Anweisung](visual-basic/language-reference/statements/sub-statement.md)
+
+
 ##### [SyncLock-Anweisung](visual-basic/language-reference/statements/synclock-statement.md)
+
+
 ##### [Then-Anweisung](visual-basic/language-reference/statements/then-statement.md)
+
+
 ##### [Throw-Anweisung](visual-basic/language-reference/statements/throw-statement.md)
+
+
 ##### [Try...Catch...Finally-Anweisung](visual-basic/language-reference/statements/try-catch-finally-statement.md)
+
+
 ##### [Using-Anweisung](visual-basic/language-reference/statements/using-statement.md)
+
+
 ##### [While...End While-Anweisung](visual-basic/language-reference/statements/while-end-while-statement.md)
+
+
 ##### [With...End With-Anweisung](visual-basic/language-reference/statements/with-end-with-statement.md)
+
+
 ##### [Yield-Anweisung](visual-basic/language-reference/statements/yield-statement.md)
+
+
 #### [Klauseln](visual-basic/language-reference/statements/clauses.md)
+
+
 ##### [Alias-Klausel](visual-basic/language-reference/statements/alias-clause.md)
+
+
 ##### [As-Klausel](visual-basic/language-reference/statements/as-clause.md)
+
+
 ##### [Handles-Klausel](visual-basic/language-reference/statements/handles-clause.md)
+
+
 ##### [Implements-Klausel](visual-basic/language-reference/statements/implements-clause.md)
+
+
 ##### [In-Klausel](visual-basic/language-reference/statements/in-clause.md)
+
+
 ##### [Into-Klausel](visual-basic/language-reference/statements/into-clause.md)
+
+
 ##### [Of-Klausel](visual-basic/language-reference/statements/of-clause.md)
+
+
 #### [Deklarationskontexte und Standardzugriffsebenen](visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)
+
+
 #### [Attributliste](visual-basic/language-reference/statements/attribute-list.md)
+
+
 #### [Parameterliste](visual-basic/language-reference/statements/parameter-list.md)
+
+
 #### [Typliste](visual-basic/language-reference/statements/type-list.md)
+
+
 ### [XML-Kommentartags](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
@@ -781,286 +2206,844 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
+
+
 ### [XML-Achseneigenschaften](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+
+
 #### [XML-Attributachseneigenschaft](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+
+
 #### [Untergeordnete XML-Achseneigenschaft](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+
+
 #### [XML-Nachfolger-Achseneigenschaft](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
+
+
 #### [Erweiterungsindexereigenschaft](visual-basic/language-reference/xml-axis/extension-indexer-property.md)
+
+
 #### [XML-Value-Eigenschaft](visual-basic/language-reference/xml-axis/xml-value-property.md)
+
+
 ### [XML-Literale](visual-basic/language-reference/xml-literals/index.md)
+
+
 #### [XML-Elementliteral](visual-basic/language-reference/xml-literals/xml-element-literal.md)
+
+
 #### [XML-Dokumentliteral](visual-basic/language-reference/xml-literals/xml-document-literal.md)
+
+
 #### [XML-CDATA-Literal](visual-basic/language-reference/xml-literals/xml-cdata-literal.md)
+
+
 #### [XML-Kommentarliteral](visual-basic/language-reference/xml-literals/xml-comment-literal.md)
+
+
 #### [XML-Verarbeitungsanweisungsliteral](visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
 
+
+
 ### [Fehlermeldungen](visual-basic/language-reference/error-messages/index.md)
+
+
 #### ["#ElseIf" muss ein entsprechendes "#If" oder "#ElseIf" voranstehen](visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md)
+
+
 #### [#Region- und #End Region-Anweisungen sind im Methodentext/in mehrzeiligen lambda-Ausdrücken ungültig](visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md)
+
+
 #### ["<attribute>" kann nicht angewendet werden, da das Format von GUID "<number>" falsch ist](visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md)
+
+
 #### ["<classname>" ist nicht CLS-kompatibel, da die <interfacename>-Schnittstelle, von der geerbt wird, nicht CLS-kompatibel ist.](visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md)
+
+
 #### ["<elementname>" ist veraltet (Visual Basic-Warnung)](visual-basic/language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md)
+
+
 #### ["<eventname>" ist ein Ereignis und kann nicht direkt aufgerufen werden](visual-basic/language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md)
+
+
 #### ["<expression>" kann nicht als Typeinschränkung verwendet werden](visual-basic/language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md)
+
+
 #### ["<functionname>" ist nicht deklariert (Compilerfehler für intelligente Geräte/Visual Basic)](visual-basic/language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md)
+
+
 #### ["<interfacename>.<membername>" wird bereits von der Basisklasse "<baseclassname>" implementiert. Die erneute Implementierung von <type> wird angenommen](visual-basic/language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md)
+
+
 #### ["<keyword>" ist nur innerhalb einer Instanzenmethode gültig](visual-basic/language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md)
+
+
 #### ["<membername>" kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> "<containertypename>" verfügbar machen.](visual-basic/language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md)
+
+
 #### ["<membername>" ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle "<interfacename1>" als auch in "<interfacename2>" verwendet](visual-basic/language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md)
+
+
 #### [<message> Dieser Fehler könnte auch auf die Kombination eines Dateiverweises mit einem Projektverweis auf Assembly "<assemblyname>" zurückzuführen sein](visual-basic/language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md)
+
+
 #### ["<methodname>" hat mehrere Definitionen mit identischen Signaturen](visual-basic/language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md)
+
+
 #### ["<name>" ist im Namespace "<namespacename>" nicht eindeutig](visual-basic/language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md)
+
+
 #### ["<name1>" ist nicht eindeutig. Importiert aus den Namespaces oder Typen "<name2>".](visual-basic/language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md)
+
+
 #### [<proceduresignature1> überlädt "<proceduresignature2>", unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen davon und ist daher nicht CLS-kompatibel](visual-basic/language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md)
+
+
 #### [<type1>"<typename>" muss "<membername>" für die "<interfacename>"-Schnittstelle implementieren](visual-basic/language-reference/error-messages/type1-must-implement-membername-for-interface.md)
+
+
 #### [<type1>"<typename>" muss "<methodname>" für die "<interfacename>"-Schnittstelle implementieren](visual-basic/language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md)
+
+
 #### ["<typename>"erweitert den Zugriff der Basis <type> außerhalb der Assembly und kann daher nicht von <type> "<basetypename>" erben](visual-basic/language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md)
+
+
 #### ["<typename>" ist ein Delegattyp](visual-basic/language-reference/error-messages/typename-is-a-delegate-type.md)
+
+
 #### ["<typename>" ist ein Typ und kann nicht als Ausdruck verwendet werden](visual-basic/language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md)
+
+
 #### [Doppelte Anführungszeichen sind kein gültiges Kommentartoken für Felder mit Trennzeichen, bei denen "HasFieldsEnclosedInQuotes" auf "True" festgelegt ist](visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)
+
+
 #### [Ein Aufruf für eine Eigenschaft oder Methode darf keinen Verweis auf ein privates Objekt enthalten - weder als Argument, noch als Rückgabewert](visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)
+
+
 #### [Es wurde ein Verweis auf die eingebettete Interopassembly '<assembly1>' aufgrund eines indirekten Verweises auf diese Assembly aus Assembly "<assembly2>" erstellt](visual-basic/language-reference/error-messages/a-reference-was-created-to-embedded-interop-assembly-assembly1.md)
+
+
 #### [Es wurde kein Startformular angegeben](visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)
+
+
 #### [Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs über eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet](visual-basic/language-reference/error-messages/access-of-shared-member-through-an-instance-qualifying-expression.md)
+
+
 #### [Der "AddressOf"-Operand muss dem Namen einer Methode entsprechen (ohne Klammern)](visual-basic/language-reference/error-messages/addressof-operand-must-be-the-name-of-a-method-without-parentheses.md)
+
+
 #### [Unerwarteter Fehler. Eine Betriebssystemressource, die für den Start einer einzelnen Instanz benötigt wird, ist nicht verfügbar](visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)
+
+
 #### [Der Membername eines anonymen Typs kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden](visual-basic/language-reference/error-messages/anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name.md)
+
+
 #### [Das Argument ist nicht optional.](visual-basic/language-reference/error-messages/argument-not-optional.md)
+
+
 #### [Arraygrenzen können nicht in Typbezeichnern stehen](visual-basic/language-reference/error-messages/array-bounds-cannot-appear-in-type-specifiers.md)
+
+
 #### [Ein Array, das als "For"-Schleifensteuerungsvariable deklariert ist, kann nicht mit einer vorgegebenen Größe deklariert werden](visual-basic/language-reference/error-messages/array-declared-as-for-loop-control-variable-cannot-be-declared.md)
+
+
 #### [Fehlender Arraysubscriptausdruck](visual-basic/language-reference/error-messages/array-subscript-expression-missing.md)
+
+
 #### [Arrays, die als Strukturmember deklariert sind, können nicht mit einer vorgegebenen Größe definiert werden](visual-basic/language-reference/error-messages/arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size.md)
+
+
 #### ["As Any" wird in "Declare"-Anweisungen nicht unterstützt](visual-basic/language-reference/error-messages/as-any-is-not-supported-in-declare-statements.md)
+
+
 #### [Das Attribut "<attributename>" kann nicht mehrmals angewendet werden](visual-basic/language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md)
+
+
 #### [Automatisierungsfehler](visual-basic/language-reference/error-messages/automation-error.md)
+
+
 #### [Ungültiger Prüfsummenwert, keine hexadezimalen Ziffern oder ungerade Anzahl von hexadezimalen Ziffern](visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md)
+
+
 #### [Ungültige DLL-Aufrufkonvention](visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)
+
+
 #### [Ungültiger Dateimodus](visual-basic/language-reference/error-messages/bad-file-mode.md)
+
+
 #### [Dateiname oder -nummer ungültig](visual-basic/language-reference/error-messages/bad-file-name-or-number.md)
+
+
 #### [Ungültige Datensatzlänge](visual-basic/language-reference/error-messages/bad-record-length.md)
+
+
 #### [Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt](visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)
+
+
 #### [Eine Konvertierung des anonymen Typs in eine Ausdrucksbaumstruktur ist nicht möglich, da sie ein Feld enthält, das in der Initialisierung eines anderen Feldes verwendet wird](visual-basic/language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md)
+
+
 #### [ActiveX-Komponente kann nicht erstellt werden](visual-basic/language-reference/error-messages/cannot-create-activex-component.md)
+
+
 #### [Auf "<name>" kann nicht verwiesen werden, da es ein Member des auf Werttypen basierenden Felds "<name>" der Klasse "<classname>" ist, die "System.MarshalByRefObject" als Basisklasse hat](visual-basic/language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md)
+
+
 #### [Auf einen Instanzmember einer Klasse kann nicht ohne explizite Instanz einer Klasse von einer/m freigegebenen Methode/Member aus verwiesen werden](visual-basic/language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md)
+
+
 #### [Die erforderliche temporäre Datei kann nicht erstellt werden](visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md)
+
+
 #### ["<filename>" kann nicht zum Schreiben geöffnet werden](visual-basic/language-reference/error-messages/can-t-open-filename-for-writing.md)
+
+
 #### [Klasse "<classname>" wurde nicht gefunden](visual-basic/language-reference/error-messages/class-classname-cannot-be-found.md)
+
+
 #### [Klasse unterstützt keine Automatisierung oder unterstützt die erwartete Schnittstelle nicht](visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)
+
+
 #### ["Class" muss mit einem entsprechenden "End Class" abgeschlossen werden](visual-basic/language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md)
+
+
 #### [Das Format der Zwischenablage ist ungültig](visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md)
+
+
 #### [Der Konstantenausdruck ist in Typ "<typename>" nicht repräsentierbar](visual-basic/language-reference/error-messages/constant-expression-not-representable-in-type-typename.md)
+
+
 #### [Konstanten müssen einen systeminternen oder aufgezählten Typ aufweisen, keinen Klassen-, Struktur-, Typparameter- oder Arraytyp](visual-basic/language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md)
+
+
 #### [Der Konstruktor "<name>" kann sich nicht selbst aufrufen](visual-basic/language-reference/error-messages/constructor-name-cannot-call-itself.md)
+
+
 #### [Das Zurückkopieren des "ByRef-Parameters" "<parametername>" in das entsprechende Argument führt zu einer Einschränkung von Typ "<typename1>" auf Typ "<typename2>"](visual-basic/language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md)
+
+
 #### [Der "Custom"-Modifizierer ist nicht gültig für Ereignisse, die ohne expliziten Delegattyp deklariert wurden](visual-basic/language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md)
+
+
 #### [Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden](visual-basic/language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md)
+
+
 #### [Deklaration erwartet](visual-basic/language-reference/error-messages/declaration-expected.md)
+
+
 #### [Die "<propertyname1>"-Standardeigenschaft verursacht einen Konflikt mit der "<propertyname2>"-Standardeigenschaft in "<classname>" und sollte daher als "Shadows" deklariert werden](visual-basic/language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md)
+
+
 #### [Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember "<defaultpropertyname>" der Schnittstelle "<interfacename1>" oder "<defaultpropertyname>" der Schnittstelle "<interfacename2>" handeln](visual-basic/language-reference/error-messages/default-property-access-is-ambiguous.md)
+
+
 #### [Die Delegatklasse "<classname>" hat keine "Invoke"-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein](visual-basic/language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md)
+
+
 #### [Abgeleitete Klassen können keine Basisklassenereignisse auslösen](visual-basic/language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md)
+
+
 #### [Geräte-E/A-Fehler](visual-basic/language-reference/error-messages/device-i-o-error.md)
+
+
 #### [Die 'Dir'-Funktion muss zuerst mit einem 'PathName'-Argument aufgerufen werden](visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)
+
+
 #### [Ende der Anweisung erwartet](visual-basic/language-reference/error-messages/end-of-statement-expected.md)
+
+
 #### [Fehler beim Erstellen des Assemblymanifests: <error message>](visual-basic/language-reference/error-messages/error-creating-assembly-manifest-error-message.md)
+
+
 #### [Fehler beim Erstellen von Win32-Ressourcen: <error message>](visual-basic/language-reference/error-messages/error-creating-win32-resources-error-message.md)
+
+
 #### [Fehler beim Laden der DLL](visual-basic/language-reference/error-messages/error-in-loading-dll.md)
+
+
 #### [Fehler beim Speichern der temporären Win32-Ressourcendatei "<filename>": <error message>](visual-basic/language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md)
+
+
 #### [Fehler beim Kompilieren der XML-Schemas im Projekt](visual-basic/language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md)
+
+
 #### [Das Zeitlimit für die Auswertung von Ausdruck oder Anweisung wurde überschritten](visual-basic/language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md)
+
+
 #### [Das "<eventname1>"-Ereignis kann das "<eventname2>"-Ereignis für die "<interface>"-Schnittstelle nicht implementieren, da die entsprechenden Delegattypen "<delegate1>" und "<delegate2>" nicht übereinstimmen](visual-basic/language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md)
+
+
 #### [Ereignisse können nicht mit einem Delegattypen deklariert werden, der einen Rückgabetyp hat](visual-basic/language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md)
+
+
 #### [Ereignisse freigegebener "WithEvents"-Variablen können nicht von freigegebenen Methoden behandelt werden](visual-basic/language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md)
+
+
 #### [Der Ausdruck ergibt keinen Wert](visual-basic/language-reference/error-messages/expression-does-not-produce-a-value.md)
+
+
 #### [Der Ausdruck weist den Typ '<typename>' auf, einen eingeschränkten Typ, der nicht verwendet werden kann, um auf von 'Object' oder 'ValueType' geerbte Member zuzugreifen](visual-basic/language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md)
+
+
 #### [Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden](visual-basic/language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md)
+
+
 #### [Ein Ausdruck vom Typ <type> kann nicht abgefragt werden](visual-basic/language-reference/error-messages/expression-of-type-type-is-not-queryable.md)
+
+
 #### [Der Ausdruck ruft rekursiv die enthaltende <propertyname>-Eigenschaft auf](visual-basic/language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md)
+
+
 #### [Ausdruck zu komplex](visual-basic/language-reference/error-messages/expression-too-complex.md)
+
+
 #### [Das Extension-Attribut darf nur in Module-, Sub- oder Function-Deklarationen verwendet werden](visual-basic/language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)
+
+
 #### [Die Datei ist bereits geöffnet.](visual-basic/language-reference/error-messages/file-already-open.md)
+
+
 #### [Datei ist zu groß, um in ein Bytearray eingelesen zu werden](visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)
+
+
 #### [Der Datei- oder Klassenname wurde während des Automatisierungsvorgangs nicht gefunden](visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)
+
+
 #### [Datei nicht gefunden (Visual Basic-Laufzeitfehler)](visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)
+
+
 #### [Der erste Operand in einem binären If-Ausdruck muss ein Typ, der NULL-Werte zulässt, oder ein Referenztyp sein](visual-basic/language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md)
+
+
 #### [Die erste Anweisung dieses "Sub New" muss ein Aufruf an "MyBase.New" oder "MyClass.New" sein (Zugriff auf Konstruktor ohne Parameter nicht möglich)](visual-basic/language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md)
+
+
 #### [Die erste Anweisung des Sub New-Blocks muss ein expliziter Aufruf an "MyBase.New" oder "MyClass.New" sein, da "<constructorname>" in der <baseclassname>-Basisklasse von "<derivedclassname>" als veraltet markiert ist: "<errormessage>"](visual-basic/language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md)
+
+
 #### ["For Each" für den <typename>-Typ ist mehrdeutig, da der Typ mehrere Instanziierungen von System.Collections.Generic.IEnumerable(Of T) implementiert](visual-basic/language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md)
+
+
 #### [Der Friend-Assemblyverweis <reference> ist ungültig](visual-basic/language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md)
+
+
 #### [Die <procedurename>-Funktion gibt nicht für alle Codepfade einen Wert zurück](visual-basic/language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md)
+
+
 #### [Die Funktionsauswertung ist deaktiviert, da eine frühere Funktionsevaluierung das Zeitlimit überschritten hat](visual-basic/language-reference/error-messages/function-evaluation-is-disabled.md)
+
+
 #### [Generische Parameter, die als optionale Parametertypen verwendet werden, müssen eine Klassenbeschränkung aufweisen](visual-basic/language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md)
+
+
 #### [Auf den Get-Accessor der <propertyname>-Eigenschaft kann nicht zugegriffen werden](visual-basic/language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md)
+
+
 #### [Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird](visual-basic/language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md)
+
+
 #### [Bezeichner erwartet](visual-basic/language-reference/error-messages/identifier-expected.md)
+
+
 #### [Der Bezeichner ist zu lang](visual-basic/language-reference/error-messages/identifier-is-too-long.md)
+
+
 #### [Initialisierer erwartet](visual-basic/language-reference/error-messages/initializer-expected.md)
+
+
 #### [Eingabe nach dem Ende der Datei](visual-basic/language-reference/error-messages/input-past-end-of-file.md)
+
+
 #### [Interner Fehler in <location>](visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)
+
+
 #### [Implizite Konvertierung von "<typename1>" in "<typename2>" beim Zurückkopieren des Wertes des ByRef-Parameters "<parametername>" in das entsprechende Argument](visual-basic/language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md)
+
+
 #### ["Is" erfordert Operanden, die Verweistypen haben. Dieser Operand hat jedoch den Werttyp "<typename>"](visual-basic/language-reference/error-messages/is-requires-operands-that-have-reference-types.md)
+
+
 #### [Ein IsNot-Operand vom Typ „Typname“ kann nur mit „Nothing“ verglichen werden, da „Typname“ ein Typ ist, der NULL-Werte zulässt](visual-basic/language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md)
+
+
 #### [Nach Sprungmarken, die Zahlen sind, muss ein Doppelpunkt stehen](visual-basic/language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md)
+
+
 #### [Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt](visual-basic/language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md)
+
+
 #### [Lambdaausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig](visual-basic/language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md)
+
+
 #### [Spät gebundene Auflösung. Laufzeitfehler sind möglich](visual-basic/language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md)
+
+
 #### [Die spät gebundene Überladungsauflösung kann nicht auf "<procedurename>" angewendet werden, da die zugreifende Instanz ein Schnittstellentyp ist](visual-basic/language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md)
+
+
 #### [Vorangestellte "." oder "!" können nur in einer With-Anweisung verwendet werden](visual-basic/language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md)
+
+
 #### [Zeile ist zu lang](visual-basic/language-reference/error-messages/line-is-too-long.md)
+
+
 #### [Line-Anweisungen werden nicht mehr unterstützt (Visual Basic-Compilerfehler)](visual-basic/language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md)
+
+
 #### [Die Signatur der Methode ist nicht mit dem Delegaten kompatibel](visual-basic/language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md)
+
+
 #### [Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden](visual-basic/language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md)
+
+
 #### [Module-Anweisungen können nur auf Namespace- oder Dateiebene verwendet werden](visual-basic/language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md)
+
+
 #### [Der Name "<membername>" ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/name-membername-is-not-cls-compliant.md)
+
+
 #### [Der Name "<name>" ist nicht deklariert](visual-basic/language-reference/error-messages/name-name-is-not-declared.md)
+
+
 #### [Der Name "<namespacename>" im Stammnamespace "<fullnamespacename>" ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md)
+
+
 #### [Der in Imports '<qualifiedelementname>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden](visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md)
+
+
 #### [Der in Imports '<qualifiedelementname>' auf Projektebene angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden](visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md)
+
+
 #### [Ein Eigenschaftenarrayindex wird benötigt](visual-basic/language-reference/error-messages/need-property-array-index.md)
+
+
 #### [Die geschachtelte Funktion verfügt über keine Signatur, die mit dem Delegaten '<delegatename>' kompatibel ist](visual-basic/language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md)
+
+
 #### [Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in "<name>" gefunden](visual-basic/language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md)
+
+
 #### [<membername> ist nicht CLS-kompatibel und darf in einer CLS-kompatiblen Schnittstelle nicht verwendet werden](visual-basic/language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md)
+
+
 #### [Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt](visual-basic/language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md)
+
+
 #### [Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays](visual-basic/language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md)
+
+
 #### [Das Objekt oder die Klasse unterstützt diese Gruppe von Ereignissen nicht](visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md)
+
+
 #### [Objekt erforderlich](visual-basic/language-reference/error-messages/object-required.md)
+
+
 #### [Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt](visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md)
+
+
 #### [Folgende Operatordeklarationen sind zulässig: +,-,*,\,/,^, &, Like, Mod, And, Or, Xor, Not, <>, =, <>, =, CType, IsTrue, IsFalse](visual-basic/language-reference/error-messages/operator-declaration-must-be-one-of.md)
+
+
 #### ["Optional" erwartet](visual-basic/language-reference/error-messages/optional-expected.md)
+
+
 #### [Optionale Parameter müssen einen Standardwert bestimmen](visual-basic/language-reference/error-messages/optional-parameters-must-specify-a-default-value.md)
+
+
 #### [Ordnungszahl ungültig](visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)
+
+
 #### [Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)](visual-basic/language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md)
+
+
 #### [Nicht genügend Stapelspeicher](visual-basic/language-reference/error-messages/out-of-stack-space.md)
+
+
 #### [Nicht genügend Zeichenfolgenspeicher](visual-basic/language-reference/error-messages/out-of-string-space.md)
+
+
 #### [Überlauf (Visual Basic-Fehler)](visual-basic/language-reference/error-messages/overflow-visual-basic-error.md)
+
+
 #### [Überlauf (Visual Basic-Laufzeitfehler)](visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)
+
+
 #### [Pfad nicht gefunden](visual-basic/language-reference/error-messages/path-not-found.md)
+
+
 #### [Pfad-/Dateizugriffsfehler](visual-basic/language-reference/error-messages/path-file-access-error.md)
+
+
 #### [Berechtigung verweigert](visual-basic/language-reference/error-messages/permission-denied.md)
+
+
 #### [Der Prozeduraufruf oder das Argument ist ungültig](visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)
+
+
 #### [Die <propertyname>-Eigenschaft gibt nicht für alle Codepfade einen Wert zurück](visual-basic/language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md)
+
+
 #### [Ungültiger Eigenschaftenarrayindex](visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)
+
+
 #### [Let-Prozedur der Eigenschaft ist nicht definiert, und Get-Prozedur hat kein Objekt zurückgegeben](visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)
+
+
 #### [Eigenschaft nicht gefunden](visual-basic/language-reference/error-messages/property-not-found.md)
+
+
 #### [Eigenschaft oder Methode nicht gefunden](visual-basic/language-reference/error-messages/property-or-method-not-found.md)
+
+
 #### [Die Bereichsvariable <variable> verbirgt eine Variable in einem einschließenden Block, eine zuvor definierte Bereichsvariable oder eine implizit im Abfrageausdruck deklarierte Variable](visual-basic/language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md)
+
+
 #### [Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden](visual-basic/language-reference/error-messages/range-variable-name-can-be-inferred.md)
+
+
 #### [Es ist ein Verweis auf die Assembly '<assemblyidentity>' erforderlich, die den Typ '<typename>' enthält, aber aufgrund der Mehrdeutigkeit der Projekte '<projectname1>' und '<projectname2>' wurde kein geeigneter Verweis gefunden](visual-basic/language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md)
+
+
 #### [Es ist ein Verweis auf die Assembly "<assemblyname>" erforderlich, die die Basisklasse "<classname>" enthält](visual-basic/language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md)
+
+
 #### [Ohne Fehler fortsetzen](visual-basic/language-reference/error-messages/resume-without-error.md)
+
+
 #### [Der Rückgabetyp der <procedurename>-Funktion ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md)
+
+
 #### [Auf den Set-Accessor der <propertyname>-Eigenschaft kann nicht zugegriffen werden](visual-basic/language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md)
+
+
 #### [Einige Unterschlüssel können nicht gelöscht werden](visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md)
+
+
 #### [Eine Anweisung kann keinen Block außerhalb einer "If"-Zeilenanweisung beenden](visual-basic/language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md)
+
+
 #### [Die Anweisung ist in einem Namespace ungültig](visual-basic/language-reference/error-messages/statement-is-not-valid-in-a-namespace.md)
+
+
 #### [Die Anweisung ist innerhalb einer Methode oder eines mehrzeiligen Lambda-Ausdrucks nicht gültig](visual-basic/language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md)
+
+
 #### [Zeichenfolgenkonstanten müssen mit einem doppelten Anführungszeichen enden](visual-basic/language-reference/error-messages/string-constants-must-end-with-a-double-quote.md)
+
+
 #### [Die Struktur "<structurename>" muss mindestens eine Instanzmembervariable oder Instanzereignisdeklaration enthalten, die nicht als "Custom" markiert ist](visual-basic/language-reference/error-messages/structure-structurename-must-contain.md)
+
+
 #### ["Sub Main" wurde nicht in "<name>" gefunden](visual-basic/language-reference/error-messages/sub-main-was-not-found-in-name.md)
+
+
 #### ["Sub" oder "Function" ist nicht definiert](visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)
+
+
 #### [Indexoperator außerhalb des definierten Bereichs](visual-basic/language-reference/error-messages/subscript-out-of-range.md)
+
+
 #### [TextFieldParser kann den Lesevorgang nicht abschließen, da die maximale Puffergröße überschritten wurde](visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)
+
+
 #### [Der Typ für die Variable '<variablename>' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist](visual-basic/language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md)
+
+
 #### [Das Array ist fixiert oder vorübergehend gesperrt](visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)
+
+
 #### [Dieser Schlüssel ist bereits einem Element dieser Auflistung zugeordnet](visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)
+
+
 #### [Zu viele Dateien](visual-basic/language-reference/error-messages/too-many-files.md)
+
+
 #### [Typ "<typename>" hat keine Konstruktoren](visual-basic/language-reference/error-messages/type-typename-has-no-constructors.md)
+
+
 #### [Typ "<typename>" ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/type-typename-is-not-cls-compliant.md)
+
+
 #### [Typ "<typename>" ist nicht definiert](visual-basic/language-reference/error-messages/type-typename-is-not-defined.md)
+
+
 #### [Typargumente konnten nicht vom Delegaten abgeleitet werden](visual-basic/language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md)
+
+
 #### [Typenkonflikt](visual-basic/language-reference/error-messages/type-mismatch.md)
+
+
 #### [Der Typ von '<variablename>' kann nicht abgeleitet werden, weil die Schleifenbegrenzungen und die "step"-Variable nicht in denselben Typ konvertiert werden](visual-basic/language-reference/error-messages/type-of-variablename-cannot-be-inferred.md)
+
+
 #### [Typ des Members "<membername>" ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md)
+
+
 #### [Typ des optionalen Werts für den optionalen <parametername>-Parameter ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md)
+
+
 #### [Typ des <parametername>-Parameters ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md)
+
+
 #### [Typparameter können nicht als Qualifizierer verwendet werden](visual-basic/language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md)
+
+
 #### [Aus der Schlüsseldatei "<filename>" konnte keine Assembly mit starkem Namen erstellt werden: <error>](visual-basic/language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md)
+
+
 #### [Ressourcendatei "<filename>" konnte nicht eingebettet werden: <error message>](visual-basic/language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md)
+
+
 #### [Assembly wurde nicht generiert: <error message>](visual-basic/language-reference/error-messages/unable-to-emit-assembly-error-message.md)
+
+
 #### [Die erforderliche Datei "<filename>" wurde nicht gefunden](visual-basic/language-reference/error-messages/unable-to-find-required-file-filename.md)
+
+
 #### [Aufgrund eines internen Systemfehlers können die seriellen Anschlussnamen nicht abgerufen werden](visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)
+
+
 #### [Ressourcendatei "<filename>" konnte nicht verknüpft werden: <error message>](visual-basic/language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md)
+
+
 #### [Informationen über die Klasse "<classname>" konnten nicht geladen werden](visual-basic/language-reference/error-messages/unable-to-load-information-for-class-classname.md)
+
+
 #### [Die Ausgabe kann nicht in Arbeitsspeicher geschrieben werden](visual-basic/language-reference/error-messages/unable-to-write-output-to-memory.md)
+
+
 #### [Die temporäre Datei konnte nicht geschrieben werden, da kein temporärer Pfad verfügbar ist](visual-basic/language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md)
+
+
 #### [In die Ausgabedatei "<filename>" konnte nicht geschrieben werden: <error>](visual-basic/language-reference/error-messages/unable-to-write-to-output-file-filename-error.md)
+
+
 #### [Der zugrunde liegende <typename>-Typ der Enumeration ist nicht CLS-kompatibel](visual-basic/language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md)
+
+
 #### [Die Verwendung der Iterationsvariablen in einem Lambdaausdruck kann zu unerwarteten Ergebnissen führen](visual-basic/language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md)
+
+
 #### [Der Wert vom Typ "<typename1>" kann nicht in "<typename2>" konvertiert werden](visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md)
+
+
 #### [Der Wert vom Typ '<typename1>' kann nicht in '<typename2>' konvertiert werden (mehrere Dateiverweise)](visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md)
+
+
 #### [Der Wert vom Typ '<Typ1>' kann nicht zu '<Typ2>' konvertiert werden](visual-basic/language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md)
+
+
 #### [Die Variable "<variablename>" verbirgt eine Variable in einem einschließenden Block](visual-basic/language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md)
+
+
 #### [Die <variablename>-Variable wird verwendet, bevor ihr ein Wert zugewiesen wurde](visual-basic/language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md)
+
+
 #### [Die Variable verwendet einen Automatisierungstyp, der von Visual Basic nicht unterstützt wird](visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)
+
+
 #### [XML-Achseneigenschaften unterstützen keine späte Bindung](visual-basic/language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md)
+
+
 #### [Eine XML-Kommentarausnahme muss ein cref-Attribut aufweisen](visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md)
+
+
 #### [XML-Entitätsverweise werden nicht unterstützt](visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md)
+
+
 #### [XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt](visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md)
+
+
 #### [XML-Namespace-URI '<uri>' kann nur an 'xmlns' gebunden werden](visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md)
+
+
 ## [Referenz](visual-basic/reference/index.md)
+
+
 ### [Befehlszeilencompiler](visual-basic/reference/command-line-compiler/index.md)
+
+
 #### [Erstellen von der Befehlszeile aus](visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+
+
 ##### [Gewusst wie: Aufrufen des Befehlszeilencompilers](visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+
+
 ##### [Beispiele für Kompilierungsbefehlszeilen](visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+
+
 #### [Compileroptionen alphabetisch sortiert](visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+
+
 ##### [@ (Antwortdatei festlegen)](visual-basic/reference/command-line-compiler/specify-response-file.md)
+
+
 ##### [/addmodule](visual-basic/reference/command-line-compiler/addmodule.md)
+
+
 ##### [/baseaddress](visual-basic/reference/command-line-compiler/baseaddress.md)
+
+
 ##### [/bugreport](visual-basic/reference/command-line-compiler/bugreport.md)
+
+
 ##### [/codepage](visual-basic/reference/command-line-compiler/codepage.md)
+
+
 ##### [/debug](visual-basic/reference/command-line-compiler/debug.md)
+
+
 ##### [/define](visual-basic/reference/command-line-compiler/define.md)
+
+
 ##### [/delaysign](visual-basic/reference/command-line-compiler/delaysign.md)
+
+
 ##### [/doc](visual-basic/reference/command-line-compiler/doc.md)
+
+
 ##### [/errorreport](visual-basic/reference/command-line-compiler/errorreport.md)
+
+
 ##### [/filealign](visual-basic/reference/command-line-compiler/filealign.md)
+
+
 ##### [/help, /?](visual-basic/reference/command-line-compiler/help.md)
+
+
 ##### [/highentropyva](visual-basic/reference/command-line-compiler/highentropyva.md)
+
+
 ##### [/imports](visual-basic/reference/command-line-compiler/imports.md)
+
+
 ##### [/keycontainer](visual-basic/reference/command-line-compiler/keycontainer.md)
+
+
 ##### [/keyfile](visual-basic/reference/command-line-compiler/keyfile.md)
+
+
 ##### [/langversion](visual-basic/reference/command-line-compiler/langversion.md)
+
+
 ##### [/libpath](visual-basic/reference/command-line-compiler/libpath.md)
+
+
 ##### [/link](visual-basic/reference/command-line-compiler/link.md)
+
+
 ##### [/linkresource](visual-basic/reference/command-line-compiler/linkresource.md)
+
+
 ##### [/main](visual-basic/reference/command-line-compiler/main.md)
+
+
 ##### [/moduleassemblyname](visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+
+
 ##### [/netcf](visual-basic/reference/command-line-compiler/netcf.md)
+
+
 ##### [/noconfig](visual-basic/reference/command-line-compiler/noconfig.md)
+
+
 ##### [/nologo](visual-basic/reference/command-line-compiler/nologo.md)
+
+
 ##### [/nostdlib](visual-basic/reference/command-line-compiler/nostdlib.md)
+
+
 ##### [/nowarn](visual-basic/reference/command-line-compiler/nowarn.md)
+
+
 ##### [/nowin32manifest](visual-basic/reference/command-line-compiler/nowin32manifest.md)
+
+
 ##### [/optimize](visual-basic/reference/command-line-compiler/optimize.md)
+
+
 ##### [/optioncompare](visual-basic/reference/command-line-compiler/optioncompare.md)
+
+
 ##### [/optionexplicit](visual-basic/reference/command-line-compiler/optionexplicit.md)
+
+
 ##### [/optioninfer](visual-basic/reference/command-line-compiler/optioninfer.md)
+
+
 ##### [/optionstrict](visual-basic/reference/command-line-compiler/optionstrict.md)
+
+
 ##### [/out](visual-basic/reference/command-line-compiler/out.md)
+
+
 ##### [/platform](visual-basic/reference/command-line-compiler/platform.md)
+
+
 ##### [/quiet](visual-basic/reference/command-line-compiler/quiet.md)
+
+
 ##### [/recurse](visual-basic/reference/command-line-compiler/recurse.md)
+
+
 ##### [/reference](visual-basic/reference/command-line-compiler/reference.md)
+
+
 ##### [/removeintchecks](visual-basic/reference/command-line-compiler/removeintchecks.md)
+
+
 ##### [/resource](visual-basic/reference/command-line-compiler/resource.md)
+
+
 ##### [/rootnamespace](visual-basic/reference/command-line-compiler/rootnamespace.md)
+
+
 ##### [/sdkpath](visual-basic/reference/command-line-compiler/sdkpath.md)
+
+
 ##### [/target](visual-basic/reference/command-line-compiler/target.md)
+
+
 ##### [/subsystemversion](visual-basic/reference/command-line-compiler/subsystemversion.md)
+
+
 ##### [/utf8output](visual-basic/reference/command-line-compiler/utf8output.md)
+
+
 ##### [/vbruntime](visual-basic/reference/command-line-compiler/vbruntime.md)
+
+
 ##### [/verbose](visual-basic/reference/command-line-compiler/verbose.md)
+
+
 ##### [/warnaserror](visual-basic/reference/command-line-compiler/warnaserror.md)
+
+
 ##### [/win32icon](visual-basic/reference/command-line-compiler/win32icon.md)
+
+
 ##### [/win32manifest](visual-basic/reference/command-line-compiler/win32manifest.md)
+
+
 ##### [/win32resource](visual-basic/reference/command-line-compiler/win32resource.md)
+
+
 #### [Compileroptionen nach Kategorien sortiert](visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+
+
 ### [.NET Framework-Referenzinformationen](visual-basic/reference/net-framework-reference-information.md)
+
+
 ### [Sprachspezifikation](visual-basic/reference/language-specification.md)
+
+
 ## [Beispielanwendungen](visual-basic/sample-applications.md)
+
+
 ## [Exemplarische Vorgehensweisen](visual-basic/walkthroughs.md)
 
 <!-- End of VB Content -->
+
+
 
 # [Beispiele und Tutorials](samples-and-tutorials/index.md)

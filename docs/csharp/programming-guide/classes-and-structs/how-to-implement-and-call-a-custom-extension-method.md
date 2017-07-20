@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ba08e55e3bc07c2ce6369e2b33ccbe632545d24
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: bcebdd1a6462e651619776549754eacfac9f9573
+ms.contentlocale: de-de
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Gewusst wie: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode (C#-Programmierhandbuch)
@@ -58,7 +59,7 @@ In diesem Thema wird gezeigt, wie eigene Erweiterungsmethoden für jeden Typ in 
  [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um diesen Code auszuführen, kopieren Sie ihn und fügen Sie ihn in ein Visual C#-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] erstellt wurde. Standardmäßig wird dieses Projekt mit [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Version 3.5 verwendet und verfügt über einen Verweis auf System.Core.dll und eine `using`-Direktive für System.Linq. Wenn mindestens eine dieser Anforderungen im Projekt nicht vorhanden sind, können Sie sie manuell hinzufügen.   
+ Um diesen Code auszuführen, kopieren Sie ihn, und fügen Sie ihn in ein Visual C#-Konsolenanwendungsprojekt ein, das in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] erstellt wurde. Standardmäßig wird dieses Projekt mit Version 3.5 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwendet und verfügt über einen Verweis auf „System.Core.dll“ und eine `using`-Anweisung für „System.Linq“. Wenn mindestens eine dieser Anforderungen im Projekt nicht vorhanden sind, können Sie sie manuell hinzufügen.   
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Erweiterungsmethoden enthalten keine speziellen Sicherheitslücken. Sie können nicht dazu verwendet werden, die Identität vorhandener Methoden für einen Typ anzunehmen, da alle Namenskonflikte zugunsten der Instanz oder eine statische Methode gelöst werden, die der Typ selbst definiert. Erweiterungsmethoden können in der erweiterten Klasse nicht auf private Daten zugreifen.  
@@ -72,4 +73,5 @@ In diesem Thema wird gezeigt, wie eigene Erweiterungsmethoden für jeden Typ in 
  [internal](../../../csharp/language-reference/keywords/internal.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
  [this](../../../csharp/language-reference/keywords/this.md)   
+
  [namespace](../../../csharp/language-reference/keywords/namespace.md)

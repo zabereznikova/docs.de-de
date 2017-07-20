@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
+title: Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017 | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die Elemente in einer Klassenbibliothek mit Visual Studio 2017 aufrufen.
 keywords: .NET Core, .NET Core-Klassenbibliothek, .NET Standard, .NET Standard-Klassenbibliotheksdistribution
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
 ms.contentlocale: de-de
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
+<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
+
+# Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
 Nachdem Sie die Schritte in [Erstellen einer C#-Klassenbibliothek mit .NET Core in Visual Studio 2017](./library-with-visual-studio.md) und [Testen einer Klassenbibliothek in .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) zum Erstellen und Testen Ihrer Klassenbibliothek ausgeführt und eine Releaseversion der Bibliothek erstellt haben, besteht der nächste Schritt darin, diese für Aufrufer verfügbar zu machen. Dazu gibt es zwei Möglichkeiten:
 
@@ -26,7 +28,9 @@ Nachdem Sie die Schritte in [Erstellen einer C#-Klassenbibliothek mit .NET Core 
 
 * Wenn die Bibliothek allgemein verfügbar sein soll, können Sie sie als NuGet-Paket verteilen.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>Einschließen einer Bibliothek als Projekt in einer Projektmappe
+<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
+
+## Einschließen einer Bibliothek als Projekt in einer Projektmappe
 
 Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wie Ihre Klassenbibliothek, können Sie Ihre Anwendung als Teil dieser Projektmappe einschließen. Angenommen, Sie können Ihre Klassenbibliothek in einer Konsolenanwendung verwenden, die den Benutzer zur Eingabe einer Zeichenfolge auffordert und meldet, ob das erste Zeichen ein Großbuchstabe ist:
 
@@ -62,7 +66,9 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 
 Sie können die Anwendung, die diese Bibliothek verwendet, debuggen und schließlich veröffentlichen, indem Sie die Schritte in [Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017](debugging-with-visual-studio.md) und [Veröffentlichen Ihrer Hello World-Anwendung mit Visual Studio 2017](publishing-with-visual-studio.md) ausführen.
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>Verteilen der Bibliothek in einem NuGet-Paket
+<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
+
+## Verteilen der Bibliothek in einem NuGet-Paket
 
 Sie können Ihre Klassenbibliothek allgemein verfügbar machen, indem Sie sie als NuGet-Paket veröffentlichen. Visual Studio bietet keine Unterstützung für das Erstellen von NuGet-Paketen. Um ein NuGet-Paket zu erstellen, verwenden Sie das [`dotnet`-Befehlszeilenprogramm ](../../core/tools/dotnet.md):
 

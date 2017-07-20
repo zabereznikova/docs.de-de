@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework | Microsoft-Dokumentation
+title: Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,25 +17,27 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 55228928d5d3d95cf28384e5179a43bfb0f598e9
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 1d3dd5bc21bee91fe997deb8d5000145f4098f9c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
-# <a name="troubleshooting-blocked-net-framework-installations-and-uninstallations"></a>Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework
-Wenn Sie das [Web- oder Offline](../../../docs/framework/install/guide-for-developers.md)-Installationsprogramm für .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 oder 4.7 ausführen, kann ein Problem auftreten, das die Installation von .NET Framework verhindert oder blockiert. Die folgende Tabelle enthält Probleme, die zu Blockierungen führen können, und Links zu den Problembehandlungsinformationen.  
-  
- In Windows 8 und höher ist .NET Framework eine Komponente des Betriebssystems und kann nicht separat deinstalliert werden. Updates für .NET Framework werden auf der Registerkarte **Installierte Updates** der App **Programme und Features** in der Systemsteuerung angezeigt. Für Betriebssysteme, bei denen .NET Framework nicht vorinstalliert ist, wird .NET Framework auf der Registerkarte **Programm deinstallieren oder ändern** (oder auf der Registerkarte **Software**) der App **Programme und Features** in der Systemsteuerung angezeigt. Informationen zu den Windows-Versionen, für die .NET Framework vorinstalliert ist, finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
+
+# <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework
+
+Wenn Sie das [Web- oder Offline](../../../docs/framework/install/guide-for-developers.md)-Installationsprogramm für .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 oder 4.7 ausführen, kann ein Problem auftreten, das die Installation von .NET Framework verhindert oder blockiert. Die folgende Tabelle enthält Probleme, die zu Blockierungen führen können, und Links zu den Problembehandlungsinformationen.
+
+In Windows 8 und höher ist .NET Framework eine Komponente des Betriebssystems und kann nicht separat deinstalliert werden. Updates für .NET Framework werden auf der Registerkarte **Installierte Updates** der App **Programme und Features** in der Systemsteuerung angezeigt. Für Betriebssysteme, bei denen .NET Framework nicht vorinstalliert ist, wird .NET Framework auf der Registerkarte **Programm deinstallieren oder ändern** (oder auf der Registerkarte **Software**) der App **Programme und Features** in der Systemsteuerung angezeigt. Informationen zu den Windows-Versionen, für die .NET Framework vorinstalliert ist, finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).
 
 > [!IMPORTANT]
-> Da die verschiedenen Versionen von .NET Framework 4.x direkte Updates sind, können Sie frühere Versionen von .NET Framework 4.x nicht auf Systemen installieren, auf denen bereits eine neuere Version installiert ist. Auf einem System mit Windows 10 Creator Update können Sie z. B. nicht .NET Framework 4.6.2 installieren, da bei diesem Betriebssystem .NET Framework 4.7 vorinstalliert ist.  
-  
- Sie können ermitteln, welche Versionen von .NET Framework auf einem System installiert sind. Weitere Informationen finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-  
- In dieser Tabelle bezieht sich 4.5.*x* auf .NET Framework 4.5 und dessen Punktreleases 4.5.1 und 4.5.2, während sich 4.6.*x* auf .NET Framework 4.6 und dessen Punktreleases 4.6.1 und 4.6.2 sowie 4.7 auf .NET Framework 4.7 bezieht.  
-  
+> Da die verschiedenen Versionen von .NET Framework 4.x direkte Updates sind, können Sie frühere Versionen von .NET Framework 4.x nicht auf Systemen installieren, auf denen bereits eine neuere Version installiert ist. Auf einem System mit Windows 10 Creator Update können Sie z. B. nicht .NET Framework 4.6.2 installieren, da bei diesem Betriebssystem .NET Framework 4.7 vorinstalliert ist.
+
+Sie können ermitteln, welche Versionen von .NET Framework auf einem System installiert sind. Weitere Informationen finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+
+In dieser Tabelle bezieht sich 4.5.*x* auf .NET Framework 4.5 und dessen Punktreleases 4.5.1 und 4.5.2, während sich 4.6.*x* auf .NET Framework 4.6 und dessen Punktreleases 4.6.1 und 4.6.2 sowie 4.7 auf .NET Framework 4.7 bezieht.
+
 |Blockierungsmeldung|Weitere Informationen und Informationen zur Problembehebung|  
 |----------------------|--------------------------------------------------|  
 |Durch die Deinstallation von Microsoft .NET Framework werden möglicherweise einige Anwendungen nicht mehr ordnungsgemäß arbeiten.|Im Allgemeinen sollten Sie keine der auf dem Computer installierten .NET Framework-Versionen deinstallieren, da möglicherweise eine von Ihnen verwendete Anwendung von einer bestimmten Version von .NET Framework abhängt. Weitere Informationen finden Sie unter [.NET Framework für Benutzer](../../../docs/framework/get-started/index.md#ForUsers) im Handbuch *Erste Schritte*.|  
@@ -61,28 +63,32 @@ Wenn Sie das [Web- oder Offline](../../../docs/framework/install/guide-for-devel
 |.NET Framework 4.5.*x* ist bereits Teil des Betriebssystems, ist jedoch derzeit deaktiviert (nur [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]).|Weitere Informationen finden Sie auf der Windows-Website unter [Aktivieren oder Deaktivieren von Windows-Funktionen](http://go.microsoft.com/fwlink/p/?LinkId=248438).|  
 |Dieses Setupprogramm erfordert einen x86-Computer. Es kann nicht auf einem x64- oder IA64-Computer installiert werden.|Siehe unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md) in der MSDN Library.|  
 |Dieses Setupprogramm erfordert einen x64- oder x86-Computer. Es kann nicht auf einem IA64-Computer installiert werden.|Siehe unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md) in der MSDN Library.|  
-  
-<a name="compat"></a>   
-### <a name="program-compatibility-issues"></a>Programmkompatibilitätsprobleme  
- Die Installation von .NET Framework 4.5 oder eines der Punktreleases verursacht einen Fehler mit Fehlercode 1603 oder blockiert, wenn es im Windows-Programmkompatibilitätsmodus ausgeführt wird. Der **Programmkompatibilitäts-Assistent** zeigt an, dass .NET Framework möglicherweise nicht ordnungsgemäß installiert wurde, und Sie werden aufgefordert, das Programm mit der empfohlenen Einstellung (Programmkompatibilitätsmodus) neu zu installieren. Es ist auch möglich, dass der Programmkompatibilitätsmodus bei zuvor fehlerhaften oder abgebrochenen Versuchen, Setup für .NET Framework auszuführen, durch den Programmkompatibilitäts-Assistenten festgelegt wurde.  
-  
- Das Installationsprogramm für .NET Framework kann im Programmkompatibilitätsmodus nicht ausgeführt werden. Um dieses Blockierungsproblem zu beheben, müssen Sie sicherstellen, dass der Kompatibilitätsmodus im Registrierungs-Editor nicht für das gesamte System aktiviert ist:  
-  
-1.  Klicken Sie auf **Start**, und wählen Sie dann **Ausführen** aus.  
-  
-2.  Geben Sie im Dialogfeld **Ausführen** die Zeichenfolge `regedit` ein, und klicken Sie dann auf **OK**.  
-  
-3.  Navigieren Sie im Registrierungs-Editor zu den folgenden Unterschlüsseln:  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers  
-  
-4.  Suchen Sie in der Spalte „Name“ nach Downloadnamen für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 oder 4.6.2 mit Bezug auf die zu installierende Version, und entfernen Sie diese Einträge. Informationen zu den Namen der Downloads finden Sie im Artikel des [Installationshandbuchs](../../../docs/framework/install/guide-for-developers.md).  
-  
-5.  Führen Sie den .NET Framework-Installer für die Version 4.5, 4.5.1, 4.5.2 oder 4.6, 4.6.1, 4.6.2 oder 4.7 erneut aus.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md)   
- [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+
+<a name="compat"></a>
+### <a name="program-compatibility-issues"></a>Programmkompatibilitätsprobleme
+
+Die Installation von .NET Framework 4.5 oder eines der Punktreleases verursacht einen Fehler mit Fehlercode 1603 oder blockiert, wenn es im Windows-Programmkompatibilitätsmodus ausgeführt wird. Der **Programmkompatibilitäts-Assistent** zeigt an, dass .NET Framework möglicherweise nicht ordnungsgemäß installiert wurde, und Sie werden aufgefordert, das Programm mit der empfohlenen Einstellung (Programmkompatibilitätsmodus) neu zu installieren. Es ist auch möglich, dass der Programmkompatibilitätsmodus bei zuvor fehlerhaften oder abgebrochenen Versuchen, Setup für .NET Framework auszuführen, durch den Programmkompatibilitäts-Assistenten festgelegt wurde.
+
+Das Installationsprogramm für .NET Framework kann im Programmkompatibilitätsmodus nicht ausgeführt werden. Um dieses Blockierungsproblem zu beheben, müssen Sie sicherstellen, dass der Kompatibilitätsmodus im Registrierungs-Editor nicht für das gesamte System aktiviert ist:
+
+1. Klicken Sie auf **Start**, und wählen Sie dann **Ausführen** aus.
+
+1. Geben Sie im Dialogfeld **Ausführen** die Zeichenfolge „regedit“ ein, und klicken Sie dann auf **OK**.
+
+1. Navigieren Sie im Registrierungs-Editor zu den folgenden Unterschlüsseln:
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+
+1. Suchen Sie in der Spalte „Name“ nach Downloadnamen für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 oder 4.6.2 mit Bezug auf die zu installierende Version, und entfernen Sie diese Einträge. Informationen zum Herunterladen von Namen finden Sie im Artikel [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).
+
+1. Führen Sie den .NET Framework-Installer für die Version 4.5, 4.5.1, 4.5.2 oder 4.6, 4.6.1, 4.6.2 oder 4.7 erneut aus.
+
+## <a name="see-also"></a>Siehe auch
+
+[Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)   
+[Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+
+

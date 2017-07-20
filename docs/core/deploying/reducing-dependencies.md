@@ -1,5 +1,5 @@
 ---
-title: "Reduzieren von Paketabhängigkeiten mit „project.json“"
+title: "Reduzieren von Paketabhängigkeiten mit „project.json“ | Microsoft-Dokumentation"
 description: "Reduzieren von Paketabhängigkeiten mit „project.json“"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,24 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.contentlocale: de-de
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>Reduzieren von Paketabhängigkeiten mit „project.json“
+<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
+
+# Reduzieren von Paketabhängigkeiten mit „project.json“
 
 Dieser Artikel beschreibt, was Sie über das Reduzieren Ihrer Paketabhängigkeiten beim Erstellen von `project.json`-Bibliotheken wissen müssen. Am Ende dieses Artikels erfahren Sie, wie Ihre Bibliothek so zusammengesetzt wird, dass sie nur die Abhängigkeiten verwendet, die sie benötigt. 
 
-## <a name="why-its-important"></a>Warum dies wichtig ist
+<a id="why-its-important" class="xliff"></a>
+
+## Warum dies wichtig ist
 
 .NET Core ist ein Produkt, das aus NuGet-Paketen besteht.  Ein wichtiges Paket ist das [.NET Standardbibliothek-Metapaket](https://www.nuget.org/packages/NETStandard.Library), wobei es sich um ein NuGet-Paket handelt, das aus anderen Paketen besteht.  Es stellt die Reihe von Paketen bereit, bei denen gewährleistet wird, dass sie auf mehreren .NET-Implementierungen wie z.B. .NET Framework, .NET Core und Xamarin/Mono funktionieren.
 
 Jedoch ist die Wahrscheinlichkeit hoch, dass Ihre Bibliothek nicht jedes einzelne Paket verwenden wird, das enthalten ist.  Beim Erstellen einer Bibliothek und Verteilen dieser Bibliothek über NuGet ist eine empfohlene Vorgehensweise das „Beschränken“ Ihrer Abhängigkeiten auf nur die Pakete, die Sie tatsächlich verwenden.  Dies führt zu einem kleineren allgemeinen Speicherbedarf für NuGet-Pakete.
 
-## <a name="how-to-do-it"></a>So gehen Sie vor
+<a id="how-to-do-it" class="xliff"></a>
+
+## So gehen Sie vor
 
 Derzeit gibt es keinen offiziellen `dotnet`-Befehl, der Paketverweise beschränkt.  Stattdessen müssen Sie dies manuell tun.  Der allgemeine Prozess sieht folgendermaßen aus:
 
@@ -42,7 +49,9 @@ Auf eine der folgenden Weisen können Sie herausfinden, welche Pakete Sie nicht 
 1. Ausprobieren:  Bei dieser Methode entfernen Sie ein Paket, stellen es wieder her, nehmen zur Kenntnis, ob Ihre Bibliothek immer noch kompiliert, und wiederholen diesen Prozess.
 2. Verwenden eines Tools zum Ansehen von Verweisen wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector), um zu sehen, was Ihr Code tatsächlich verwendet.  Anschließend können Sie Pakete entfernen, die nicht den Typen entsprechen, die Sie verwenden.
 
-## <a name="example"></a>Beispiel 
+<a id="example" class="xliff"></a>
+
+## Beispiel 
 
 Stellen Sie sich vor, dass Sie eine Bibliothek geschrieben haben, die zusätzliche Funktionen für generische Sammlungstypen bereitstellt.  Eine solche Bibliothek müsste von Paketen wie z.B. `System.Collections` abhängen, hängt möglicherweise aber überhaupt nicht von Paketen wie z.B. `System.Net.Http` ab.  Daher wäre es gut, Paketabhängigkeiten auf nur das zu beschränken, was die Bibliothek tatsächlich benötigt.
 

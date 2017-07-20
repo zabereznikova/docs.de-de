@@ -1,104 +1,109 @@
 ---
-title: "&#220;bersicht &#252;ber die Dynamic Language Runtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DLR"
-  - "Dynamic Language Runtime"
-  - "IronPython"
-  - "IronRuby"
+title: "Übersicht über die Dynamic Language Runtime | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dynamic language runtime
+- IronPython
+- DLR
+- IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 caps.latest.revision: 26
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 26
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# &#220;bersicht &#252;ber die Dynamic Language Runtime
-Die *Dynamic Language Runtime* \(DLR\) ist eine Laufzeitumgebung, mit der der Common Language Runtime \(CLR\) eine Reihe von Diensten für dynamische Sprachen hinzugefügt wird.  Die DLR erleichtert die Entwicklung dynamischer Sprachen für die Ausführung in .NET Framework und das Hinzufügen dynamischer Funktionen zu statisch typisierten Sprachen.  
+# <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
+Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt. Die DLR vereinfacht es, dynamische Sprachen für die Ausführung auf dem .NET Framework zu entwickeln und statisch typisierten Sprachen dynamische Funktionen hinzuzufügen.  
   
- Dynamische Sprachen können zur Laufzeit den Typ eines Objekts identifizieren, hingegen müssen Sie in statisch typisierten Sprachen, z. B. C\# und Visual Basic \(wenn Sie `Option Explicit On` verwenden\), Objekttypen zur Entwurfszeit angeben.  Beispiele für dynamische Sprachen sind Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra und Groovy.  
+ Dynamische Sprachen können den Typ eines Objekts zur Runtime identifizieren, wobei Sie in statistisch typisierten Sprachen wie C# und Visual Basic (wenn Sie `Option Explicit On` verwenden) die Objekttypen zur Entwurfszeit angeben müssen. Beispiele für dynamische Sprachen sind Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra und Groovy.  
   
- Die meisten dynamischen Sprachen bieten Entwicklern folgende Vorteile:  
+ Die dynamischsten Sprachen bieten die folgenden Vorteile für Entwickler:  
   
--   Die Möglichkeit, Feedbackschleifen, auch als Read\-Evaluate\-Print\-Schleifen \(REPL\) bezeichnet, zu verwenden.  Auf diese Weise können Sie mehrere Anweisungen eingeben und sofort ausführen, um die Ergebnisse anzuzeigen.  
+-   Die Möglichkeit, schnelle Feedbackschleifen (REPL oder „Lesen-Auswerten-Ausgeben-Schleife“) zu verwenden. Dadurch können Sie mehrere Anweisungen eingeben und sie sofort ausführen, um die Ergebnisse anzuzeigen.  
   
--   Unterstützung für Top\-Down\-Entwicklung und auch die herkömmlichere Bottom\-Up\-Entwicklung.  Wenn Sie eine Top\-Down\-Methode verwenden, können Sie z. B. Funktionen aufrufen, die noch nicht implementiert wurden, und dann bei Bedarf zugrunde liegende Implementierungen hinzufügen.  
+-   Unterstützung für Entwicklung „von oben“ und die traditionellere Entwicklung „von unten“. Wenn Sie z.B. einen „von oben“-Ansatz nutzen, können Sie Funktionen aufrufen, die noch nicht implementiert wurden und dann zugrunde liegende Implementierungen hinzufügen, wenn Sie diese benötigen.  
   
--   Einfachere Umgestaltungen und Codeänderungen, da Sie statische Typdeklarationen nicht im gesamten Code ändern müssen.  
+-   Einfachere Umgestaltung und Codeänderung, da Sie die statischen Typdeklarationen im gesamten Code nicht verändern müssen.  
   
- Dynamische Sprachen bilden ausgezeichnete Skriptsprachen.  Mit neuen Befehlen und Funktionen können Kunden Anwendungen leicht erweitern, die in dynamischen Sprachen erstellt wurden.  Dynamische Sprachen werden häufig auch zum Erstellen von Websites und Testumgebungen, Verwalten von Serverfarmen, Entwickeln verschiedener Dienstprogramme und Ausführen von Datentransformationen verwendet.  
+ Dynamische Sprachen können hervorragende Skriptsprachen sein. Kunden können Anwendungen leicht erweitern, die mithilfe dynamischer Sprachen mit neuen Befehlen und Funktionen erstellt wurden. Dynamische Sprachen werden auch häufig zum Erstellen von Websites und Testumgebungen verwendet, zudem zum Verwalten von Serverfarmen, zum Entwickeln verschiedenster Hilfsprogramme und zum Ausführen von Datentransformationen.  
   
- Der Zweck der DLR besteht darin, die Ausführung eines Systems von dynamischen Sprachen in .NET Framework und dessen Interoperabilität mit .NET zu ermöglichen.  Die DLR führt in Visual Studio 2010 dynamische Objekte für C\# und Visual Basic ein, um dynamisches Verhalten in diesen Sprachen zu unterstützen und deren Interoperation mit dynamischen Sprachen zu ermöglichen.  
+ Der Zweck der DLR ist, einem System von dynamischen Sprachen zu erlauben, unter .NET Framework ausgeführt zu werden und diesen Sprachen .NET-Interoperabilität zu geben. Die DLR führt dynamische Objekte in C# und Visual Basic in Visual Studio 2010 ein, um dynamisches Verhalten in diesen Sprachen zu unterstützen und ihre Interoperation mit dynamischen Sprachen zu ermöglichen.  
   
- Die DLR erleichtert zudem das Erstellen von Bibliotheken, die dynamische Vorgänge unterstützen.  Bei einer Bibliothek, für die XML\- oder JSON\-Objekte \(JavaScript Objekt Notation\) verwendet werden, können diese in Sprachen, für die die DLR verwendet wird, als dynamische Objekte angezeigt werden.  So können die Benutzer der Bibliothek syntaktisch einfacheren und natürlicheren Code für Objekte und den Zugriff auf Objektmember schreiben.  
+ Die DLR hilft Ihnen auch beim Erstellen von Bibliotheken, die dynamische Operationen unterstützen. Wenn Sie beispielsweise über eine Bibliothek verfügen, die XML- oder JavaScript Object Notation-Objekte (JSON-Objekte) verwenden, können Ihre Objekte als dynamische Objekte für Sprachen, die DLR verwenden, erscheinen. Dadurch können Benutzer von Bibliotheken syntaktisch einfacheren und natürlicheren Code für das Arbeiten mit Objekten und den Zugriff auf Objektmember schreiben.  
   
- Beispielsweise können Sie mit dem folgenden Code einen XML\-Indikator in C\# inkrementieren.  
+ Sie verwenden z.B. möglicherweise den folgenden Code, um einen Zähler in XML in C# zu inkrementieren.  
   
  `Scriptobj.SetProperty("Count", ((int)GetProperty("Count")) + 1);`  
   
- Mit der DLR können Sie für denselben Vorgang stattdessen den folgenden Code verwenden.  
+ Mit DLR können Sie den folgenden Code statt des gleichen Vorgangs verwenden.  
   
  `scriptobj.Count += 1;`  
   
- Wie die CLR ist die DLR Teil von .NET Framework und wird mit den Installationspaketen für .NET Framework und Visual Studio ausgeliefert.  Die Open Source\-Version der DLR steht auch auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Website heruntergeladen.  
+ Wie die CLR ist die DLR auch ein Teil von .NET Framework und wird mit dem .NET Framework und Installationspaketen von Visual Studio bereitgestellt. Die Open-Source-Version der DLR ist ebenso zum Download auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website verfügbar.  
   
 > [!NOTE]
->  Die Open Source\-Version der DLR enthält sämtliche Funktionen der DLR in Visual Studio und .NET Framework.  Zudem bietet sie zusätzliche Unterstützung für Sprachimplementierer.  Weitere Informationen finden Sie in der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Dokumentation auf der Website.  
+>  Die Open-Source-Version der DLR verfügt über alle Funktionen der DLR, die in Visual Studio und dem .NET Framework integriert ist. Es wird auch zusätzliche Unterstützung für Sprachimplementierungen geboten. Weitere Informationen finden Sie in der Dokumentation auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website.  
   
- Einige Beispiele für Sprachen, die mit der DLR entwickelt wurden:  
+ Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgendes:  
   
--   IronPython.  Open Source\-Software auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040) Website.  
+-   IronPython. Als Open-Source-Software auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040)-Website verfügbar.  
   
--   IronRuby.  Open Source\-Software auf der [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) Website.  
+-   IronRuby Als Open-Source-Software auf der [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.  
   
-## Wesentliche Vorteile der DLR  
- Die DLR bietet die folgenden Vorteile.  
+## <a name="primary-dlr-advantages"></a>Wesentliche Vorteile der DLR  
+ Die Verwendung der DLR bietet die folgenden Vorteile:  
   
-### Vereinfachte Portierung dynamischer Sprachen nach .NET Framework  
- Mit der DLR müssen Sprachimplementierer lexikalische Analyzer, Parser, semantische Analyzer, Codegeneratoren und andere Tools nicht mehr selbst erstellen.  Zur Verwendung der DLR muss eine Sprache *Ausdrucksbaumstrukturen* erzeugen, die Code auf Sprachenebene in einer baumförmigen Struktur darstellen, sowie Laufzeithilfsroutinen und optionale dynamische Objekte erzeugen, die die <xref:System.Dynamic.IDynamicMetaObjectProvider>\-Schnittstelle implementieren.  Mit der DLR und .NET Framework wird ein großer Teil der Codeanalyse und der Codegenerierungsaufgaben automatisiert.  Damit können sich Sprachimplementierer auf eindeutige Sprachfunktionen konzentrieren.  
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Vereinfacht das Übertragen von dynamischen Sprachen zu .NET Framework  
+ Die DLR ermöglicht Verantwortlichen für die Sprachimplementierung die Erstellung lexikaler Analyzer, Parser, semantischer Analyzer, Codegeneratoren und anderen Tools, die sie normalerweise selbst hätten erstellen müssen. Damit die DLR verwendet werden kann, muss eine Sprache *Ausdrucksbaumstrukturen* erstellen, die den Code auf Sprachebene in einer verzweigten Struktur, in Runtimehilfsfunktionen und optionalen dynamischen Objekten darstellen, die die <xref:System.Dynamic.IDynamicMetaObjectProvider>-Schnittstelle implementieren. Die DLR und .NET Framework automatisieren eine Menge Codeanalysen und Codegenerierungsaufgaben Dadurch können sich Verantwortliche für die Sprachimplementierung auf eindeutige Sprachfunktionen konzentrieren.  
   
-### Verwendung dynamischer Funktionen in statisch typisierten Sprachen  
- In vorhandenen .NET Framework\-Sprachen, z. B. C\# und Visual Basic, können dynamische Objekte erstellt und zusammen mit statisch typisierten Objekten verwendet werden.  In C\# und Visual Basic können beispielsweise dynamische Objekte für die HTML\-, DOM\- \(Document Object Model, Dokumentobjektmodell\) und .NET\-Reflektion verwendet werden.  
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Aktiviert dynamische Funktionen in statisch typisierten Sprachen  
+ Vorhandene .NET Framework-Sprachen wie C# und Visual Basic können dynamische Objekte erstellen und diese zusammen mit statisch typisierten Sprachen verwenden. C# und Visual Basic können z.B: dynamische Objekte für HTML, Dokumentobjektmodell (DOM) und .NET-Reflektion verwenden.  
   
-### Zukünftige Vorteile der DLR und von .NET Framework  
- Mit der DLR implementierte Sprachen können von den Vorteilen zukünftiger DLR\- und .NET Framework\-Verbesserungen profitieren.  Wenn beispielsweise eine neue Version von .NET Framework mit einem verbesserten Garbage Collector oder einer schnelleren Assemblyladezeit veröffentlicht wird, wirkt sich dieser Vorteil sofort auch auf mit der DLR implementierte Sprachen aus.  Wenn der DLR Optimierungen hinzugefügt werden, z. B. eine bessere Kompilierung, verbessert sich auch die Leistung aller mit der DLR implementierten Sprachen.  
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Bietet in der Zukunft Vorteile der DLR und .NET Framework  
+ Sprachen, die mithilfe der DLR erstellt wurden, können von zukünftigen DLR- und .NET Framework-Verbesserungen profitieren. Wenn .NET Framework beispielsweise eine neue Version veröffentlicht, die über einen verbesserten Garbage Collector oder eine schnellere Ladezeit für Assemblys verfügt, erhalten durch die DLR implementierten Sprachen sofort denselben Vorteil. Wenn die DLR Optimierungen hinzufügt, z.B. eine verbesserte Kompilierung, verbessert sich auch die Leistung für alle Sprachen, die mithilfe der DLR implementiert wurden.  
   
-### Freigabe von Bibliotheken und Objekten  
- Die in einer Sprache implementierten Objekte und die Bibliotheken können auch von anderen Sprachen verwendet werden.  Die DLR ermöglicht zudem die Interoperation zwischen statisch typisierten und dynamischen Sprachen.  Beispielsweise kann in C\# ein dynamisches Objekt deklariert werden, das eine in einer dynamischen Sprache geschriebene Bibliothek verwendet.  Gleichzeitig können in dynamischen Sprachen Bibliotheken von .NET Framework verwendet werden.  
+### <a name="enables-sharing-of-libraries-and-objects"></a>Ermöglicht die Freigabe von Bibliotheken und Objekten  
+ Die in einer Sprache implementierten Objekte und Bibliotheken können von anderen Sprachen genutzt werden. Die DLR lässt auch die Interoperation zwischen statistisch typisierten und dynamischen Sprachen zu. Zum Beispiel kann C# ein dynamisches Objekt deklarieren, das eine Bibliothek verwendet, die in einer dynamischen Sprache geschrieben ist. Gleichzeitig können dynamische Sprachen Bibliotheken aus .NET Framework verwenden.  
   
-### Schneller dynamischer Dispatch und Aufruf  
- Die DLR bietet eine schnelle Ausführung dynamischer Vorgänge durch Unterstützung erweiterter polymorpher Zwischenspeicherung.  Die DLR erstellt Regeln, anhand derer Vorgänge mit Objekten an die erforderlichen Laufzeitimplementierungen gebunden werden, und speichert diese Regeln dann im Cache, um während aufeinander folgender Ausführungen desselben Codes für gleiche Objekttypen ressourcenintensive Bindungsberechnungen zu vermeiden.  
+### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Bietet schnellen dynamischen Versand und Aufruf  
+ Die DLR bietet eine schnelle Ausführung dynamischer Vorgänge durch Unterstützung des erweiterten polymorphen Zwischenspeicherns. Die DLR erstellt Regeln für das Binden von Vorgängen, die Objekte für die nötigen Runtime-Implementierungen verwenden, und speichert diese Regeln zwischen, um ressourcenermüdende Bindungsberechnungen während der aufeinander folgenden Ausführungen desselben Codes auf den gleichen Objekttypen zu vermeiden.  
   
-## DLR\-Architektur  
+## <a name="dlr-architecture"></a>DLR-Architektur  
  Die folgende Abbildung zeigt die Architektur der Dynamic Language Runtime.  
   
- ![Übersicht über die DLR&#45;Architektur &#40;Dynamic Language Runtime&#41;](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR\_ArchOverview")  
-DLR\-Architektur  
+ ![Übersicht über die DLR-Architektur (Dynamic Language Runtime)](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
+DLR-Architektur  
   
- Die DLR fügt der CLR eine Reihe von Diensten zur besseren Unterstützung dynamischer Sprachen hinzu.  Zu diesen Diensten gehören die folgenden:  
+ Die DLR fügt der CLR eine Reihe von Diensten hinzu, um dynamische Sprachen besser zu unterstützen. Einige dieser Dienste sind:  
   
--   Ausdrucksbaumstrukturen.  Die DLR stellt mithilfe von Ausdrucksbaumstrukturen die Sprachsemantik dar.  Zu diesem Zweck umfasst die DLR erweiterte LINQ\-Ausdrucksbaumstrukturen mit Ablaufsteuerungs\-, Zuweisungs\- und anderen Sprachmodellierungsknoten.  Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md).  
+-   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
--   Zwischenspeicherung von Aufrufsites.  Als *dynamische Aufrufsite* wird eine Stelle im Code bezeichnet, an der Sie bestimmte Operationen für dynamische Objekte ausführen können, z. B. `a + b` oder `a.b()`.  Die DLR speichert die Merkmale von `a` und `b` \(meist die Typen dieser Objekte\) und Informationen zur Operation im Cache.  Wenn eine solche Operation bereits zuvor ausgeführt wurde, ruft die DLR alle erforderlichen Informationen aus dem Cache ab, um einen schnellen Dispatch zu gewährleisten.  
+-   Zwischenspeichern der Aufrufwebsite. Eine *dynamische Aufrufwebsite* ist ein Ort im Code, an dem Sie einen Vorgang wie `a + b` oder `a.b()` auf dynamischen Objekten ausführen können. Die DLR speichert die Eigenschaften von `a` und `b` (normalerweise die Typen dieser Objekte) sowie Informationen über den Vorgang. Wenn solch ein Vorgang zuvor ausgeführt wurde, ruft die DLR alle nötigen Informationen aus dem Cache für den schnellen Versand ab.  
   
--   Interoperabilität dynamischer Objekte.  Die DLR stellt eine Reihe von Klassen und Schnittstellen bereit, die dynamische Objekte und Operationen darstellen und von Sprachimplementierern und Autoren dynamischer Bibliotheken verwendet werden können.  Zu diesen Klassen und Schnittstellen zählen u. a. <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> und <xref:System.Dynamic.ExpandoObject>.  
+-   Dynamische Objektinteroperabilität Die DLR stellt einen Satz von Klassen und Schnittstellen bereit, die dynamische Objekte und Vorgänge darstellen und von Verantwortlichen für die Sprachimplementierung und Autoren dynamischer Bibliotheken genutzt werden können. Diese Klassen und Schnittstellen enthalten <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> und <xref:System.Dynamic.ExpandoObject>.  
   
- Die DLR kommuniziert mit Bindern in Aufrufsites nicht nur mit .NET Framework, sondern auch mit anderen Infrastrukturen und Diensten, u. a. Silverlight und COM.  Binder kapseln die Semantik einer Sprache und geben an, wie Operationen in einer Aufrufsite mithilfe von Ausdrucksbaumstrukturen ausgeführt werden sollen.  So können dynamische und statisch typisierte Sprachen, die die DLR verwenden, Bibliotheken gemeinsam nutzen und auf alle von der DLR unterstützten Technologien zugreifen.  
+ Die DLR verwendet Binder in Aufrufwebsites, um nicht nur mit .NET Framework zu kommunizieren, sondern auch mit anderen Infrastrukturen und Diensten, einschließlich Silverlight und COM. Binder kapseln die Semantik einer Sprache ein und geben an, wie Vorgänge in einer Aufrufwebsite durchgeführt werden, indem Ausdrucksbaumstrukturen verwendet werden. Dadurch werden dynamische und statisch typisierte Sprachen aktiviert, die die DLR zum Freigeben von Bibliotheken und Erhalten von Zugriff auf alle Technologien verwenden, die die DLR unterstützt.  
   
-## DLR\-Dokumentation  
- Weitere Informationen darüber, wie die Open Source\-Version der DLR verwendet, um dynamisches Verhalten einer Sprache hinzuzufügen oder dazu, wie der Verwendung einer dynamischen Sprache in .NET Framework, finden Sie in der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Dokumentation auf der Website aktiviert.  
+## <a name="dlr-documentation"></a>DLR-Dokumentation  
+ Weitere Informationen zur Verwendung der Open-Source-Version der DLR zum Hinzufügen dynamischen Verhaltens zu einer Sprache oder Informationen darüber, wie Sie die Verwendung einer dynamischer Sprache mit .NET Framework aktivieren, finden Sie in der Dokumentation auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028)-Website.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Dynamic.ExpandoObject>   
  <xref:System.Dynamic.DynamicObject>   
  [Common Language Runtime](../../../docs/standard/clr.md)   
- [Ausdrucksbaumstrukturen](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)   
- [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](../Topic/Walkthrough:%20Creating%20and%20Using%20Dynamic%20Objects%20\(C%23%20and%20Visual%20Basic\).md)
+ [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

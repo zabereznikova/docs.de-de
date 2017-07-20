@@ -1,148 +1,102 @@
 ---
 title: "Anwendungskompatibilität in .NET Framework | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/19/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
+- app-compat
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 caps.latest.revision: 19
+ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 8d4409b2bce36fe056d61633b056c1eac6ff290a
-ms.openlocfilehash: 076a603a6ea9f22ae7d1c554091506efae8b36eb
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
+ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.contentlocale: de-de
+ms.lasthandoff: 05/31/2017
 
 ---
-# <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
-In den folgenden Artikeln werden Anwendungskompatibilitätsprobleme bei neueren Versionen von .NET Framework beschrieben:  
-  
--   Zwischen den Versionen 4 und 4.5: [Anwendungskompatibilität in 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   Zwischen den Versionen 4.5 und 4.5.1: [Anwendungskompatibilität in 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   Zwischen den Versionen 4.5.1 und 4.5.2: [Anwendungskompatibilität in 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   Zwischen den Versionen 4.5.2 und 4.6: [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   Zwischen den Versionen 4.6 und [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   Zwischen den Versionen 4.6.1 und [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-- Zwischen den Versionen 4.6.2 und .NET Framework 4.7: [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
+# Anwendungskompatibilität im .NET Framework
+<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 
-Im Allgemeinen haben wir versucht, einen sehr hohen Grad an Abwärtskompatibilität zwischen den .NET Framework-Versionen zu erzielen, sodass Apps, die auf eine bestimmte Version abzielen, ohne Änderung auch in höheren Versionen ausgeführt werden können. Die meisten Anwendungskompatibilitätsprobleme haben nur geringe Auswirkungen und erfordern keine Programmieränderungen an Ihren Apps. In den Fällen, in denen Änderungen erforderlich sind, finden Sie Informationen in der Spalte "Auswirkungen" der Tabellen in diesen Links.  
-  
-## <a name="migrating-from-versions-before-the-net-framework-4"></a>Migrieren von Versionen vor .NET Framework 4
-  
- Wenn Sie von einer .NET Framework-Version vor .NET Framework 4 migrieren, lesen Sie die folgenden Themen zu Anwendungskompatibilitätsproblemen, die sich möglicherweise auf Ihre App auswirken können:  
-  
--   [Migrationsprobleme in .NET Framework 4](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx)  
-  
--   [Anwendungskompatibilität in 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   [Anwendungskompatibilität in 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Anwendungskompatibilität in 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+## Einführung
+<a id="introduction" class="xliff"></a>
+Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität wird sichergestellt, dass jede Version additiv ist; frühere Versionen funktionieren also weiterhin. Auf der anderen Seite können Änderungen an früheren Versionen (zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden. .NET Framework erkennt Änderungen der Neuzuweisung und Laufzeitänderungen. Die Neuzuweisung von Änderungen beeinflussen Anwendungen, die auf eine bestimmte .NET Framework-Version abzielen, aber auf einer höheren Version ausgeführt werden. Laufzeitänderungen betreffen alle Anwendungen, die auf einer bestimmten Version ausgeführt werden.
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-4"></a>Migrieren von .NET Framework 4  
+Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
 
-Wenn Sie von .NET Framework 4 auf eine neuere Version migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die Ihre App betreffen können:  
-  
--   [Anwendungskompatibilität in 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   [Anwendungskompatibilität in 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Anwendungskompatibilität in 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+* Definieren eines Zielframeworks in Visual Studio
+* Angeben des Zielframeworks in einer Projektdatei
+* Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-45"></a>Migrieren von .NET Framework 4,5  
- Wenn Sie von .NET Framework 4.5 auf eine neuere Version migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die Ihre App betreffen können:  
-  
--   [Anwendungskompatibilität in 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Anwendungskompatibilität in 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert.
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-451"></a>Migrieren von .NET Framework 4.5.1  
+## Laufzeitänderungen
+<a id="runtime-changes" class="xliff"></a>
 
- Wenn Sie von .NET Framework 4.5.1 auf eine neuere Version migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die Ihre App betreffen können:  
-  
--   [Anwendungskompatibilität in 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+Laufzeitprobleme tauchen auf, wenn eine neue Laufzeit auf einem Gerät bereitgestellt wird und wenn die gleichen Binärdateien ausgeführt werden, es jedoch zu anderem Verhalten kommt. Wenn eine Binärdatei für .NET Framework 4.0 kompiliert wurde, wird Sie im .NET Framework 4.0-Kompatibilitätsmodus auf 4.5 oder späteren Versionen ausgeführt. Viele Änderungen, die 4.5 betreffen, werden für 4.0 kompilierte Binärdateien nicht betreffen. Dies ist spezifisch für AppDomain und ist von den Einstellungen der Einstiegsassembly abhängig.
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-452"></a>Migrieren von .NET Framework 4.5.2  
- Wenn Sie von .NET Framework 4.5.2 auf eine neuere Version migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die Ihre App betreffen können:  
-  
--   [Anwendungskompatibilität in 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+## Neuausrichtungsänderungen
+<a id="retargeting-changes" class="xliff"></a>
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-46"></a>Migrieren von .NET Framework 4.6  
- Wenn Sie von .NET Framework 4.6 auf eine neuere Version migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die Ihre App betreffen können:  
-  
--   [Anwendungskompatibilität in 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+Probleme bei der Neuzuweisung erscheinen, wenn eine Assembly, die ursprünglich 4.0 angepeilt hat, nun 4.5 als Ziel hat. Die Assembly wählt nun die neuen Funktionen sowie die potenziellen Kompatibilitätsprobleme für alte Funktionen. Dies wird erneut von der Einstiegsassembly bestimmt, also von der Konsolen-App, die die Assembly verwendet oder der Website, die auf die Assembly verweist.
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-461"></a>Migrieren von .NET Framework 4.6.1  
- Wenn Sie von .NET Framework 4.6.1 migrieren, finden Sie in folgenden Themen weitere Informationen zu den Anwendungskompatibilitätsproblemen, die sich möglicherweise auf Ihre App auswirken können:
- 
-- [Anwendungskompatibilität in 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
+## Diagnose der .NET-Kompatibilität
+<a id="net-compatibility-diagnostics" class="xliff"></a>
 
-- [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
+Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer, die bei der Erkennung von Anwendungskompatibilitätsproblemen zwischen .NET Framework-Versionen helfen. Diese Liste enthält alle verfügbaren Analyzer, obwohl nur eine Teilmenge auf eine bestimmte Migration angewendet werden kann. Die Analyzer ermitteln, welche Probleme auf die geplante Migration zutreffen und beschreibt diese nur kurz.
 
-## <a name="migrating-from-the-net-framework-462"></a>Migrieren von .NET Framework 4.6.2
+Jedes Problem umfasst die folgenden Informationen:
 
-Wenn Sie von .NET Framework 4.6.2 migrieren, finden Sie im Thema [Anwendungskompatibilität in 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md) weitere Informationen zu den Anwendungskompatibilitätsproblemen, die sich möglicherweise auf Ihre App auswirken können.  
+-   Die Beschreibung der Änderungen von einer früheren Version.
 
-## <a name="see-also"></a>Siehe auch  
- [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
- [Neuigkeiten](../../../docs/framework/whats-new/index.md)   
- [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
+-   Wie sich die Änderung auf Kunden auswirkt und ob Problemumgehungen verfügbar sind, um die Kompatibilität zwischen Versionen beizubehalten.
+
+-   Eine Bewertung der Bedeutung der Änderung. Anwendungskompatibilitätsprobleme werden wie folgt kategorisiert:
+
+    |   |   |
+    |---|---|
+    |Hauptversion|Eine wesentliche Änderung, die eine große Anzahl von Apps beeinflusst oder erhebliche Änderungen des Codes erforderlich macht.|
+    |Nebenversion|Eine Änderung, die eine kleine Anzahl von Apps beeinflusst oder geringfügige Änderungen des Codes erforderlich macht.|
+    |Grenzfall|Eine Änderung, die nur Apps in sehr spezifischen, nicht üblichen Szenarien beeinflusst.|
+    |Transparent|Eine Änderung ohne nennenswerte Auswirkungen auf die Entwickler oder Benutzer der Anwendung.|
+
+-   Die Version gibt an, wann die Änderung zum ersten Mal im Framework auftritt. Einige der Änderungen werden in einer bestimmten Version eingeführt und in einer späteren Version zurückgesetzt; dies wird ebenso beschrieben.
+
+-   Art der Änderung:
+
+    |   |   |
+    |---|---|
+    |Neuzuweisung|Die Änderung wirkt sich auf Apps aus, die neu kompiliert werden, um auf eine neue Version von .NET Framework ausgerichtet zu werden.|
+    |Laufzeit|Die Änderung wirkt sich auf eine vorhandene Anwendung aus, die auf eine frühere Version von .NET Framework ausgerichtet ist, aber unter einer höheren Version ausgeführt wird.|
+
+-   Die betroffenen APIs, falls vorhanden.
+
+-   Die IDs der verfügbaren Diagnosen.
+
+## Verwendung
+<a id="usage" class="xliff"></a>
+Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
+
+* [Neuausrichtungsänderungen](./retargeting/index.md)
+* [Änderungen zur Laufzeit](./runtime/index.md)
+
+
+## Siehe auch
+<a id="see-also" class="xliff"></a>
+
+* [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Neuigkeiten](../../../docs/framework/whats-new/index.md)
+* [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
 

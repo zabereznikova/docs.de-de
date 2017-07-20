@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.contentlocale: de-de
 ms.lasthandoff: 03/10/2017
 
 ---
@@ -346,7 +347,7 @@ Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
  
  Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel: 
  
- * Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int`*namens `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
+ * Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int` *namens `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
   ```csharp
   using System;

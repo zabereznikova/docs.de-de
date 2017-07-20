@@ -1,6 +1,6 @@
 ---
-title: "C#-Attribute | Überblick über C#"
-description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C##
+title: "C#-Attribute – Überblick über C# | Microsoft-Dokumentation"
+description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C#
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ef8b93bf0a2cf98c5251b888b61db9ab12d9a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.contentlocale: de-de
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="attributes"></a>Attribute
+<a id="attributes" class="xliff"></a>
+
+# Attribute
 
 Typen, Member und andere Entitäten in einem C#-Programm unterstützen Modifizierer, die bestimmte Aspekte ihres Verhaltens steuern. Der Zugriff auf eine Methode wird beispielsweise mithilfe der Modifizierer `public`, `protected`, `internal` und `private` kontrolliert. C# generalisiert diese Funktionalität, indem benutzerdefinierte Typen deklarativer Informationen an eine Programmentität angefügt und zur Laufzeit abgerufen werden können. Programm geben diese zusätzlichen deklarativen Informationen durch das Definieren und Verwenden von ***Attributen*** an.
 
@@ -25,7 +28,7 @@ Im folgenden Beispiel wird ein `HelpAttribute`-Attribut deklariert, dass in Prog
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Alle Attributklassen werden von der @System.Attribute-Basisklasse abgeleitet, die von der Standardbibliothek bereitgestellt wird. Attribute können durch Angabe ihres Namens angewendet werden, zusammen mit beliebigen Argumenten. Diese müssen in eckigen Klammern genau vor der zugehörigen Deklaration eingefügt werden. Wenn ein Attributname auf `Attribute` endet, kann dieser Teil des Namens beim Verweis auf das Attribut weggelassen werden. Beispielsweise kann das `HelpAttribute`-Attribut wie folgt verwendet werden.
+Alle Attributklassen werden von der @System.Attribute Basisklasse abgeleitet, die von der Standardbibliothek bereitgestellt wird. Attribute können durch Angabe ihres Namens angewendet werden, zusammen mit beliebigen Argumenten. Diese müssen in eckigen Klammern genau vor der zugehörigen Deklaration eingefügt werden. Wenn ein Attributname auf `Attribute` endet, kann dieser Teil des Namens beim Verweis auf das Attribut weggelassen werden. Beispielsweise kann das `HelpAttribute`-Attribut wie folgt verwendet werden.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 

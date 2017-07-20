@@ -1,6 +1,0 @@
-# [Erste Schritte](index.md)
-## [Einführung in WPF in Visual Studio 2015](introduction-to-wpf-in-vs.md)
-## [Neues in WPF Version 4.5](whats-new.md)
-## [Exemplarische Vorgehensweise: Erste Schritte mit WPF](walkthrough-my-first-wpf-desktop-application.md)
-## [Exemplarische Vorgehensweisen für WPF](wpf-walkthroughs.md)
-## [WPF-Communityfeedback](community-feedback.md)

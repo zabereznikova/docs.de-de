@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d94b2238f6908a29efeb2465c1c11babc54a3704
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: debacd82cc2da645a83c21e6557f2805b426e7b1
+ms.contentlocale: de-de
+ms.lasthandoff: 06/21/2017
 
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Vorgehensweise: Erstellen einer Struktur aus XmlReader (C#)
-In diesem Thema wird erläutert, wie eine XML-Struktur direkt aus einem <xref:System.Xml.XmlReader> erstellt wird. Um ein <xref:System.Xml.Linq.XElement> aus einem <xref:System.Xml.XmlReader> zu erstellen, müssen Sie den <xref:System.Xml.XmlReader> in einem Elementknoten positionieren. Der <xref:System.Xml.XmlReader> überspringt Kommentare und Verarbeitungsanweisungen. Wenn der <xref:System.Xml.XmlReader> aber in einem Textknoten positioniert wird, wird eine Fehlermeldung ausgegeben. Diese Fehlermeldung können Sie vermeiden, indem Sie den <xref:System.Xml.XmlReader> immer in einem Element platzieren, bevor Sie ihn als Grundlage für das Erstellen einer XML-Struktur verwenden.  
+In diesem Thema wird erläutert, wie Sie direkt aus einem <xref:System.Xml.XmlReader> eine XML-Struktur erstellen können. Um aus einem <xref:System.Xml.Linq.XElement> ein <xref:System.Xml.XmlReader> zu erstellen, müssen Sie den <xref:System.Xml.XmlReader> in einem Elementknoten positionieren. Der <xref:System.Xml.XmlReader> überspringt Kommentare und Verarbeitungsanweisungen, aber wenn der <xref:System.Xml.XmlReader> in einem Textknoten positioniert wird, wird eine Fehlermeldung ausgegeben. Diese Fehlermeldung können Sie vermeiden, indem Sie den <xref:System.Xml.XmlReader> immer in einem Element platzieren, bevor Sie ihn als Grundlage für das Erstellen einer XML-Struktur verwenden aus der <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
@@ -68,4 +69,4 @@ Console.WriteLine(e);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Parsing XML (C#) (Parsen von XML (C#))](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+ [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

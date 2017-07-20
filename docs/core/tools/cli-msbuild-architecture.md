@@ -9,18 +9,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 515c4d4914fd2a967b4bd9d9947d6835e678388a
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 10e565af67056dee1ea51e4949f32e1e1de54600
+ms.contentlocale: de-de
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Allgemeine Übersicht über Änderungen in .NET Core-Tools
+<a id="high-level-overview-of-changes-in-the-net-core-tools" class="xliff"></a>
+
+# Allgemeine Übersicht über Änderungen in .NET Core-Tools
 
 In diesem Dokument werden die allgemeinen Änderungen beschrieben, die der Wechsel von *project.json* zu MSBuild und zum *.csproj*-Projektsystem mit sich bringt. Erläutert wird die neue Weise, in der Tools in Schichten angeordnet sind, welche neuen Elemente verfügbar sind und wo sie sich im Gesamtbild einordnen. Nach der Lektüre dieses Artikels sollten Sie alle Elemente besser verstehen, die die .NET Core-Tools nach dem Wechsel zu MSBuild und *.csproj* bilden. 
 
-## <a name="moving-away-from-projectjson"></a>Abkehr von „project.json“
+<a id="moving-away-from-projectjson" class="xliff"></a>
+
+## Abkehr von „project.json“
 Die größte Änderung in den Tools für .NET Core ist sicherlich die [Abkehr von „project.json“ hin zu „csproj“](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) als Projektsystem. Die neuesten Versionen der Befehlszeilentools unterstützen keine *project.json*-Dateien. Das heißt, dass diese Version nicht zum Erstellen, Ausführen und Veröffentlichen von auf „project.json“ basierenden Anwendungen und Bibliotheken verwendet werden kann. Um diese Version der Tools verwenden zu können, müssen Sie Ihre vorhandenen Projekte migrieren oder neue beginnen. 
 
 Im Rahmen dieses Wechsels wurde das benutzerdefinierte Buildmodul, das zum Erstellen von „project.json“-Projekten entwickelt wurde, durch ein ausgereiftes und vollausgestattetes Buildmodul namens [MSBuild](https://github.com/Microsoft/msbuild) ersetzt. MSBuild ist ein bekanntes Modul in der .NET-Community, da es seit der ersten Version der Plattform eine wichtige Technologie darstellt. Da mit MSBuild .NET Core-Anwendungen erstellt werden müssen, wurde MSBuild zu .NET Core portiert und kann auf allen Plattformen genutzt werden, auf denen .NET Core ausgeführt wird. Eines der wichtigsten Ziele von .NET Core ist ein plattformübergreifender Entwicklungsstapel, und wir haben dafür gesorgt, dass auch nach diesem Wechsel dieses Ziel erfüllt wird.
@@ -28,14 +33,16 @@ Im Rahmen dieses Wechsels wurde das benutzerdefinierte Buildmodul, das zum Erste
 > [!NOTE]
 > Wenn Sie noch nicht mit MSBuild vertraut sind und mehr darüber erfahren möchten, lesen Sie zum Einstieg den Artikel [MSBuild Concepts](https://docs.microsoft.com/visualstudio/msbuild/msbuild-concepts) (MSBuild-Konzepte). 
 
-## <a name="the-tooling-layers"></a>Die Toolschichten
+<a id="the-tooling-layers" class="xliff"></a>
+
+## Die Toolschichten
 Die Frage, die sich nach der Abkehr vom vorhandenen Projektsystem und aufgrund des Wechsels des Buildmoduls zwangsläufig stellt, ist, ob sich durch diese Änderungen die allgemeinen Schichten des gesamten Ökosystems von .NET Core-Tools ändern? Gibt es neue Bits und Komponenten?
 
 Lassen Sie uns als schnelle Auffrischung mit den Schichten in Preview 2 beginnen, die die folgende Abbildung zeigt:
 
 ![Allgemeine Architektur der Preview 2-Tools](media/cli-msbuild-architecture/p2-arch.png)
 
-Die Schichtung der Tools ist recht einfach. Ganz unten haben wir die .NET Core-Befehlszeilentools als Fundament. Alle anderen Tools auf höherer Ebene wie Visual Studio oder Visual Studio Code hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Dies bedeutete, dass wenn Visual Studio z.B. eine Wiederherstellung durchführen wollte, der Befehl `dotnet restore` in der CLI aufgerufen werden musste. 
+Die Schichtung der Tools ist recht einfach. Ganz unten haben wir die .NET Core-Befehlszeilentools als Fundament. Alle weiteren Tools auf höherer Ebene, z.B. Visual Studio oder Visual Studio Code, hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Dies bedeutete, dass wenn Visual Studio z.B. eine Wiederherstellung durchführen wollte, der Befehl `dotnet restore` in der CLI aufgerufen werden musste. 
 
 Durch den Wechsel zum neuen Projektsystem ändert sich die vorherige Abbildung: 
 
@@ -48,7 +55,9 @@ Der Hauptunterschied besteht darin, dass die CLI nicht mehr die Fundamentschicht
 
 Alle Toolsets nutzen nun die freigegebene SDK-Komponente und ihre Ziele. Das gibt auch für die CLI. Beispielsweise ruft die nächste Version von Visual Studio nicht den Befehl `dotnet restore` auf, um die Abhängigkeiten für .NET Core-Projekte wiederherzustellen, sondern direkt das Ziel von „restore“. Da es sich MSBuild-Ziele handelt, können Sie MSBuild auch „roh“ verwenden, um sie mit dem Befehl [dotnet msbuild](dotnet-msbuild.md) auszuführen. 
 
-### <a name="cli-commands"></a>CLI-Befehle
+<a id="cli-commands" class="xliff"></a>
+
+### CLI-Befehle
 Die freigegebene SDK-Komponente bedeutet, dass die meisten vorhandenen CLI-Befehle als MSBuild-Aufgaben und -Ziele neu implementiert wurden. Was bedeutet dies für die CLI-Befehle und Ihre Nutzung des Toolsets? 
 
 Aus Benutzersicht ändert sich nicht die Art der Verwendung der CLI. Die CLI weist noch immer die Hauptbefehle auf, die in der Preview 2-Version vorhanden sind:

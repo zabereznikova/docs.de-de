@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 59851175865939243260702470955fe0dea38495
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
-Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)]-Projekt als eine Reihe von Prozeduren vorstellen, die nacheinander ausgeführt werden, doch sind die meisten Programme tatsächlich ereignisgesteuert. Das bedeutet, dass der Ausführungsablauf von externen Vorkommnissen bestimmt wird, die als *Ereignisse* bezeichnet werden.  
+Sie können sich ein [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Projekt als eine Reihe von Prozeduren vorstellen, die nacheinander ausgeführt werden, doch sind die meisten Programme tatsächlich ereignisgesteuert. Das bedeutet, dass der Ausführungsablauf von externen Vorkommnissen bestimmt wird, die als *Ereignisse* bezeichnet werden.  
   
  Ein Ereignis ist ein Signal, das eine Anwendung darüber informiert, dass etwas Wichtiges geschehen ist. Wenn ein Benutzer beispielsweise auf ein Steuerelement in einem Formular klickt, löst das Formular ein `Click`-Ereignis aus und ruft eine Prozedur auf, die das Ereignis behandelt. Ereignisse ermöglichen zudem die Kommunikation zwischen separaten Tasks. Beispiel: Die Anwendung führt separat von der Hauptanwendung einen Sortiertask aus. Wenn ein Benutzer den Sortiervorgang abbricht, kann die Anwendung ein Cancel-Ereignis senden, das den Abbruch des Sortiervorgangs veranlasst.  
   
 ## <a name="event-terms-and-concepts"></a>Ereignisse – Begriffe und Konzepte  
- In diesem Abschnitt werden die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] im Zusammenhang mit Ereignissen verwendeten Begriffe und Konzepte erläutert.  
+ In diesem Abschnitt werden die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] im Zusammenhang mit Ereignissen verwendeten Begriffe und Konzepte erläutert.  
   
 ### <a name="declaring-events"></a>Deklarieren von Ereignissen  
  Ereignisse werden innerhalb von Klassen, Strukturen, Modulen und Schnittstellen mithilfe des `Event`-Schlüsselworts deklariert, wie im folgenden Beispiel dargestellt:  
@@ -52,7 +52,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Auslösen von Ereignissen  
- Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] lösen Sie Ereignisse mit der `RaiseEvent`-Anweisung aus, wie im folgenden Beispiel veranschaulicht:  
+ Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lösen Sie Ereignisse mit der `RaiseEvent`-Anweisung aus, wie im folgenden Beispiel veranschaulicht:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -64,7 +64,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)
 ### <a name="event-handlers"></a>Ereignishandler  
  *Ereignishandler* sind Prozeduren, die aufgerufen werden, wenn ein entsprechendes Ereignis eintritt. Jede gültige Unterroutine mit einer übereinstimmenden Signatur kann als Ereignishandler verwendet werden. Funktionen können jedoch nicht als Ereignishandler verwendet werden, da sie keinen Wert an die Ereignisquelle zurückgeben können.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verwendet eine standardmäßige Benennungskonvention für Ereignishandler, die den Namen des Ereignissenders, einen Unterstrich und dem Namen des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet eine standardmäßige Benennungskonvention für Ereignishandler, die den Namen des Ereignissenders, einen Unterstrich und dem Namen des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
   
 > [!NOTE]
 >  Beim Definieren von Ereignishandlern für Ihre Ereignisse empfiehlt sich die Verwendung dieser Benennungskonvention, sie ist jedoch nicht erforderlich. Sie können stattdessen auch jeden gültigen Unterroutinennamen verwenden.  
@@ -89,7 +89,7 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)
   
  Die `Handles`-Klausel ist zwar das Standardverfahren zum Verknüpfen eines Ereignisses mit einem Ereignishandler, ist aber auf das Verknüpfen von Ereignissen mit Ereignishandlern zur Kompilierzeit beschränkt.  
   
- In einigen Fällen, z.B. bei Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] automatisch einen Stub für einen leeren Ereignishandler und ordnet ihn einem Ereignis zu. Wenn Sie z.B. im Entwurfsmodus auf eine Befehlsschaltfläche doppelklicken, erstellt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] einen leeren Ereignishandler und eine `WithEvents`-Variable für die Befehlsschaltfläche, wie im folgenden Code veranschaulicht:  
+ In einigen Fällen, z.B. bei Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch einen Stub für einen leeren Ereignishandler und ordnet ihn einem Ereignis zu. Wenn Sie z.B. im Entwurfsmodus auf eine Befehlsschaltfläche doppelklicken, erstellt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] einen leeren Ereignishandler und eine `WithEvents`-Variable für die Befehlsschaltfläche, wie im folgenden Code veranschaulicht:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -130,6 +130,6 @@ Sie können sich ein [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)
 |[Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das einen asynchronen Aufruf seiner Ereignishandler zulässt.|  
 |[Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das nur bei der Behandlung des Ereignisses Arbeitsspeicher nutzt.|  
 |[Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Führt häufige Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten können.|  
-|[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].|  
+|[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Erstellen von Ereignishandlern in Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
 |[Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Stellt eine Übersicht über Delegaten in Visual Basic bereit.|

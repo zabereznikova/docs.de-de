@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017"
+title: "Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017 | Microsoft-Dokumentation"
 description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung erstellen.
 keywords: .NET Core, .NET Core-Konsolenanwendung, Visual Studio 2017
 author: BillWagner
@@ -11,24 +11,30 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 08c8e18a95c25477eb81bd6df10cf593b284bf64
 ms.contentlocale: de-de
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017
+<a id="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017" class="xliff"></a>
+
+# Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017
 
 Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Veröffentlichen einer einfachen .NET Core-Konsolenanwendung mithilfe von Visual Studio 2017. Visual Studio 2017 bietet eine Entwicklungsumgebung mit vollem Funktionsumfang für die Erstellung von .NET Core-Anwendungen. Sofern die Anwendung keine plattformspezifischen Abhängigkeiten aufweist, kann sie auf jeder von .NET Core unterstützten Plattform und in jedem System mit installiertem .NET Core ausgeführt werden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+<a id="prerequisites" class="xliff"></a>
+
+## Erforderliche Komponenten
 
 [Visual Studio 2017](https://www.visualstudio.com/downloads/) mit installierter Arbeitsauslastung für die „plattformübergreifende .NET Core-Entwicklung“. 
 
 Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../../core/windows-prerequisites.md).
 
-## <a name="a-simple-hello-world-application"></a>Eine einfache „Hello World“-Anwendung
+<a id="a-simple-hello-world-application" class="xliff"></a>
+
+## Eine einfache „Hello World“-Anwendung
 
 Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstellen. Führen Sie folgende Schritte aus:
 
@@ -58,7 +64,9 @@ Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstel
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 
-## <a name="enhancing-the-hello-world-application"></a>Erweitern der Hello World-Anwendung
+<a id="enhancing-the-hello-world-application" class="xliff"></a>
+
+## Erweitern der Hello World-Anwendung
 
 Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeben und diesen mit dem Datum und der Uhrzeit anzuzeigen. Um das Programm zu ändern und zu testen, gehen Sie folgendermaßen vor:
 
@@ -84,7 +92,9 @@ Sie haben Ihre Anwendung erstellt und ausgeführt. Wenn Sie professionelle Anwen
 
 - Informationen zum Entwickeln und Veröffentlichen einer bereitstellbaren Version Ihrer Anwendung finden Sie unter [Veröffentlichen Ihrer „Hello World“-Anwendung mit Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="related-topics"></a>Verwandte Themen
+<a id="related-topics" class="xliff"></a>
+
+## Verwandte Themen
 
 Anstatt eine Konsolenanwendung zu verwenden, können Sie auch mit .NET Core und Visual Studio 2017 eine Klassenbibliothek erstellen. Eine Schrittanleitung dazu finden Sie im Thema [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](library-with-visual-studio.md).
 

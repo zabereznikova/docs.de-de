@@ -1,40 +1,42 @@
 ---
-title: "Gewusst wie: Konfigurieren einer Anwendungsdom&#228;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsdomänen, Konfigurieren"
-  - "ApplicationBase-Eigenschaft"
+title: "Vorgehensweise: Konfigurieren einer Anwendungsdomäne | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, configuring
+- ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 22da4e19b3103892f42e5afee02c6b3ffa2d0581
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Konfigurieren einer Anwendungsdom&#228;ne
-Sie können der Common Language Runtime Konfigurationsinformationen für eine neue Anwendungsdomäne über die <xref:System.AppDomainSetup>\-Klasse zur Verfügung stellen.  Beim Erstellen Ihrer eigenen Anwendungsdomänen ist die <xref:System.AppDomainSetup.ApplicationBase%2A>\-Eigenschaft am wichtigsten.  Alle anderen **AppDomainSetup**\-Eigenschaften werden hauptsächlich von Common Language Runtime\-Hosts zum Konfigurieren einer bestimmten Anwendungsdomäne verwendet.  
+# <a name="how-to-configure-an-application-domain"></a>Gewusst wie: Konfigurieren einer Anwendungsdomäne
+Sie können die Common Language Runtime mit Konfigurationsinformationen mithilfe der <xref:System.AppDomainSetup>-Klasse für eine Anwendungsdomäne bereitstellen. Wenn Sie Ihre eigenen Anwendungsdomänen erstellen, ist die wichtigste Eigenschaft <xref:System.AppDomainSetup.ApplicationBase%2A>. Die anderen **AppDomainSetup**-Eigenschaften werden hauptsächlich von den Runtimehosts zur Konfiguration einer bestimmten Anwendungsdomäne verwendet.  
   
- Die **ApplicationBase**\-Eigenschaft legt das Stammverzeichnis der Anwendung fest.  Erhält die Common Language Runtime eine Typanforderung, wird in dem durch die **ApplicationBase**\-Eigenschaft angegebenen Verzeichnis nach der Assembly gesucht, die diesen Typ enthält.  
+ Die Eigenschaft **ApplicationBase** definiert das Stammverzeichnis der Anwendung. Wenn die Runtime eine Typanforderung erfüllen muss, sucht sie nach der Assembly, die den Typ im Verzeichnis enthält, der von der **ApplicationBase**-Eigenschaft angegeben ist.  
   
 > [!NOTE]
->  Eine neue Anwendungsdomäne erbt ausschließlich die **ApplicationBase**\-Eigenschaft des Erstellers.  
+>  Eine neue Anwendungsdomäne erbt nur die **ApplicationBase**-Eigenschaft des Erstellers.  
   
- Im folgenden Codebeispiel wird eine Instanz der **AppDomainSetup**\-Klasse erzeugt, die zum Erstellen einer neuen Anwendungsdomäne verwendet wird. Anschließend werden die Informationen auf der Konsole ausgegeben, und die Anwendungsdomäne wird entladen.  
+ Das folgende Beispiel erstellt eine Instanz der **AppDomainSetup**-Klasse, verwendet diese Klasse, um eine neue Anwendungsdomäne zu erstellen, schreibt die Informationen in die Konsole und entlädt die Anwendungsdomäne anschließend.  
   
-## Beispiel  
- [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)]
- [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
- [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
+## <a name="example"></a>Beispiel  
+ [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)] [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)] [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## Siehe auch  
- [Hosting Overview](http://msdn.microsoft.com/de-de/ea527626-99e3-4995-81c4-c8f3e60eb6d5)   
- [Programming with Application Domains](http://msdn.microsoft.com/de-de/bd36055b-56bd-43eb-b4d8-820c37172131)   
+## <a name="see-also"></a>Siehe auch  
+ [Programmieren mit Anwendungsdomänen](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)

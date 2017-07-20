@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
-Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden. Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] müssen sich in einer Prozedur befinden.  
+Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden. Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen sich in einer Prozedur befinden.  
   
 ## <a name="calling-a-procedure"></a>Aufrufen einer Prozedur  
  Sie rufen eine Prozedur an einer anderen Stelle im Code auf. Dies wird als *Prozeduraufruf* bezeichnet. Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet. Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.  
@@ -60,7 +60,7 @@ Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](../../../../csharp/programmi
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
   
 ## <a name="types-of-procedures"></a>Prozedurtypen  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verwendet mehrere Prozedurtypen:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet mehrere Prozedurtypen:  
   
 -   [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   

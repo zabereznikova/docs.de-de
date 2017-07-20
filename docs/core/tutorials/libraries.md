@@ -1,5 +1,5 @@
 ---
-title: "Entwickeln von Bibliotheken mit plattformübergreifenden Tools"
+title: "Entwickeln von Bibliotheken mit plattformübergreifenden Tools| Microsoft Docs"
 description: "Entwickeln von Bibliotheken mit plattformübergreifenden Tools"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,11 +42,11 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 
 ## <a name="how-to-target-the-net-standard"></a>So legen Sie .NET Standard als Ziel fest
 
-Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [NET Standard Library (.NET-Standardbibliothek)](../../standard/library.md) weitere Informationen.
+Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [NET Standard Library (.NET-Standardbibliothek)](../../standard/net-standard.md) weitere Informationen.
 
 In diesem Artikel finden Sie eine Tabelle, in der die Versionen von .NET Standard zahlreichen Implementierungen zugeordnet werden:
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Im Folgenden wird erklärt, was diese Tabelle für das Erstellen einer Bibliothek bedeutet:
 
@@ -319,12 +319,13 @@ let doWork data = async {
 Solche Nutzungsszenarios bedeuten, dass die APIs, auf die zugegriffen wird, eine andere Struktur für C# und F# haben müssen.  Eine gängige Methode, dies zu erreichen ist, die gesamte Logik einer Bibliothek in ein Kernprojekt zu zerlegen, in dem C# und F# Projekte die API-Schichten definieren, die das Kernprojekt aufrufen.  Im übrigen Abschnitt werden die folgenden Namen verwendet:
 
 * **AwesomeLibrary.Core** – Ein Kernprojekt, das die gesamte Logik für die Bibliothek enthält
-* **AwesomeLibrary.CSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in C vorgesehen sind#
-* **AwesomeLibrary.FSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in F vorgesehen sind#
+* **AwesomeLibrary.CSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in C# vorgesehen sind
+* **AwesomeLibrary.FSharp** – Ein Projekt mit öffentlichen APIs, die für den Gebrauch in F# vorgesehen sind
 
 Sie können die folgenden Befehle in Ihrem Terminal ausführen, um die gleiche Struktur wie dieses Handbuch zu erstellen:
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 Dadurch werden die drei Projekte von oben in eine Projektmappe hinzugefügt, die sie verknüpft.  Durch das Erstellen der Projektmappe und das Verknüpfen der Projekte können Sie Projekte auf oberster Ebene wiederherstellen und erstellen.
@@ -344,7 +345,7 @@ Dadurch werden die drei Projekte von oben in eine Projektmappe hinzugefügt, die
 Die beste Möglichkeit, auf ein Projekt zu verweisen, ist die Verwendung der .NET-CLI, um einen Projektverweis hinzuzufügen.  Sie können den folgenden Befehl von den Projektverzeichnissen **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** ausführen:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Die Projektdateien für **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** verweisen nun auf **AwesomeLibrary.Core** als `ProjectReference`-Ziel.  Sie können dies überprüfen, indem Sie die Projektdateien prüfen und Folgendes darin sehen:
@@ -360,3 +361,4 @@ Sie können jeder Projektdatei diesen Abschnitt manuell hinzufügen, wenn Sie ni
 ### <a name="structuring-a-solution"></a>Strukturieren einer Lösung
 
 Ein weiterer wichtiger Aspekt bei mehreren Projekten in einer Projektmappe ist es, eine gute allgemeine Projektstruktur einzurichten. Sie können den Code beliebig organisieren, solange Sie jedes Projekt mit Ihrer Projektmappendatei mit `dotnet sln add` verknüpfen. Dadurch können Sie `dotnet restore` und `dotnet build` auf Projektmappenebene ausführen.
+

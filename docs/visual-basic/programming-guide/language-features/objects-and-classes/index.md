@@ -32,21 +32,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 Ein *Objekt* ist eine Kombination aus Code und Daten, die als Einheit behandelt werden kann. Ein Objekt kann ein Teil einer Anwendung sein wie ein Steuerelement oder ein Formular. Eine vollständige Anwendung kann auch ein Objekt sein.
 
-Beim Erstellen einer Anwendung in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] arbeiten Sie stets mit Objekten. Sie können Objekte verwenden, die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bereitgestellt wurden, z.B. Steuerelemente, Formulare und Datenzugriffsobjekte. Sie können auch Objekte aus anderen Anwendungen in Ihrer [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Anwendung verwenden. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.  
+Beim Erstellen einer Anwendung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] arbeiten Sie stets mit Objekten. Sie können Objekte verwenden, die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellt wurden, z.B. Steuerelemente, Formulare und Datenzugriffsobjekte. Sie können auch Objekte aus anderen Anwendungen in Ihrer [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anwendung verwenden. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.  
   
 Dieses Thema beschreibt Objekte im Detail.  
 
 ## <a name="objects-and-classes"></a>Objekte und Klassen
-Jedes Objekt in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] wird anhand einer *Klasse* definiert. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
+Jedes Objekt in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wird anhand einer *Klasse* definiert. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
 
 Um die Beziehung zwischen einem Objekt und seiner Klasse zu verstehen, stellen Sie sich Ausstechformen und Kekse vor. Die Ausstechform ist die Klasse. Sie definiert die Merkmale der einzelnen Kekse, z.B. die Größe und Form. Die Klasse wird verwendet, um Objekte zu erstellen. Die Objekte sind die Kekse.
 
@@ -190,7 +190,7 @@ Andererseits können die in einem Modul deklarierten Member standardmäßig öff
 ## <a name="reusing-classes-and-objects"></a>Wiederverwenden von Klassen und Objekten  
 Mit Objekten können Sie Variablen und Prozeduren einmal deklarieren und anschließend bei Bedarf jederzeit wiederverwenden. Beispiel: Wenn Sie einer Anwendung eine Rechtschreibprüfung hinzufügen möchten, können Sie sämtliche Variablen und Supportfunktionen definieren, um die Rechtschreibprüfungsfunktion bereitzustellen. Wenn Sie Ihre Rechtschreibprüfung als Klasse erstellen, können Sie sie anschließend in anderen Anwendungen wiederverwenden, indem Sie einen Verweis auf die kompilierte Assembly hinzufügen. Sie können sich möglicherweise sogar selbst etwas Arbeit sparen, indem Sie eine Rechtschreibprüfungsklasse verwenden, die bereits von jemand anderem entwickelt wurde.
 
-[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] bietet viele Beispiele von Komponenten, die zur Verwendung verfügbar sind. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bietet viele Beispiele von Komponenten, die zur Verwendung verfügbar sind. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +258,7 @@ Achten Sie darauf, dass der Compiler die Klasse aufrufen kann, von der Ihre neue
 Eine andere Möglichkeit zur Verknüpfung von Objekten ist eine *Einschlussbeziehung*. Containerobjekte schließen andere Objekte logisch ein. Beispielsweise enthält das <xref:System.OperatingSystem>-Objekt ein <xref:System.Version>-Objekt logisch, das es durch seine <xref:System.OperatingSystem.Version%2A>-Eigenschaft zurückgibt. Beachten Sie, dass das Container-Objekt physisch kein anderes Objekt enthält.
 
 #### <a name="collections"></a>Auflistungen
-Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] unterstützt eine spezifische Syntax in der [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md), in der Sie die Elemente einer Auflistung durchlaufen können. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
+Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] unterstützt eine spezifische Syntax in der [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md), in der Sie die Elemente einer Auflistung durchlaufen können. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
 
 ## <a name="related-topics"></a>Verwandte Themen  
  [Exemplarische Vorgehensweise: Definieren von Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +281,3 @@ Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*.
 
  [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Erklärt das Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen. Stellt Beispiele für erfolgreiche und fehlgeschlagene Ableitungen bereit.
-

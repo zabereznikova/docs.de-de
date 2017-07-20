@@ -37,22 +37,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f471bac04a853e5876b9da52b7b858e1e1766e28
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 16b71732272dacd6610b8b32eb74ff07fafec314
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
   
- Der <xref:System.IO>-Namespace enthält die <xref:System.IO.File>- und <xref:System.IO.Directory>-Klassen, die die Funktionalität von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] bereitstellen, die Dateien und Verzeichnisse verändert. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> werden diesen Klassen zugeordnet und sind den Benutzern der `My`-Funktion bekannt. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+ Der <xref:System.IO>-Namespace enthält die <xref:System.IO.File>- und <xref:System.IO.Directory>-Klassen, die die Funktionalität von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bereitstellen, die Dateien und Verzeichnisse verändert. Da die Methoden dieser Objekte statische oder freigegebene Member sind, können Sie diese direkt verwenden, ohne zuerst eine Instanz der Klasse erstellen zu müssen. Die Klassen <xref:System.IO.FileInfo> und <xref:System.IO.DirectoryInfo> werden diesen Klassen zugeordnet und sind den Benutzern der `My`-Funktion bekannt. Zum Verwenden dieser Klassen müssen Sie die Namen vollständig qualifizieren oder die entsprechenden Namespaces durch Einschließen des `Imports` -Arguments (bzw. der Argumente) am Anfang des betreffenden Codes importieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Weitere Themen in diesem Abschnitt verwenden das Objekt `My.Computer.FileSystem` anstelle der `System.IO` -Klassen zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen. Das Objekt `My.Computer.FileSystem` dient in erster Linie zur Verwendung in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Programmen. `System.IO`-Klassen sind für die Verwendung durch eine beliebige Sprache vorgesehen, die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], einschließlich [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], unterstützen.  
+>  Weitere Themen in diesem Abschnitt verwenden das Objekt `My.Computer.FileSystem` anstelle der `System.IO` -Klassen zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen. Das Objekt `My.Computer.FileSystem` dient in erster Linie zur Verwendung in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmen. `System.IO`-Klassen sind für die Verwendung durch eine beliebige Sprache vorgesehen, die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], einschließlich [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], unterstützen.  
   
 ## <a name="definition-of-a-stream"></a>Definition eines Streams  
- [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] verwendet Streams, um Lesen von und Schreiben in Dateien zu unterstützen. Sie können sich einen Stream als eindimensionalen Satz von zusammenhängenden Daten mit einem Anfang und einem Ende vorstellen, bei dem der Cursor die derzeitige Position im Stream anzeigt.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwendet Streams, um Lesen von und Schreiben in Dateien zu unterstützen. Sie können sich einen Stream als eindimensionalen Satz von zusammenhängenden Daten mit einem Anfang und einem Ende vorstellen, bei dem der Cursor die derzeitige Position im Stream anzeigt.  
   
  ![Cursor markiert die aktuelle Position im Dateistream.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
   
@@ -68,7 +68,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
  Weitere Informationen finden Sie unter [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
   
 ## <a name="types-of-streams"></a>Arten von Streams  
- In [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] wird ein Stream von der <xref:System.IO.Stream>-Klasse dargestellt, die die abstrakte Klasse für alle anderen Streams bildet. Sie können nicht direkt eine Instanz der <xref:System.IO.Stream>-Klasse erstellen, doch Sie müssen eine der Klassen verwenden, die diese implementiert.  
+ In [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wird ein Stream von der <xref:System.IO.Stream>-Klasse dargestellt, die die abstrakte Klasse für alle anderen Streams bildet. Sie können nicht direkt eine Instanz der <xref:System.IO.Stream>-Klasse erstellen, doch Sie müssen eine der Klassen verwenden, die diese implementiert.  
   
  Es existieren viele Arten von Streams, doch für die Arbeit mit Dateieingabe und-ausgabe sind die wichtigsten Typen die <xref:System.IO.FileStream>-Klasse, die eine Möglichkeit bietet, aus Dateien zu lesen und in diese zu schreiben sowie die <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Klasse, die die Möglichkeit bietet, Dateien und Verzeichnisse in einem isolierten Speicher zu erstellen. Andere Streams, die für die Arbeit mit Dateieingabe und -ausgabe verwendet werden können, sind:  
   
@@ -105,7 +105,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dateiberechtigungen  
- Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann mit der <xref:System.Security.Permissions.FileIOPermission>-Klasse vorgenommen werden. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] und [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) und unter <xref:System.Security.Permissions.FileIOPermission>.  
+ Die Steuerung des Zugriffs auf Dateien und Verzeichnisse kann mit der <xref:System.Security.Permissions.FileIOPermission>-Klasse vorgenommen werden. Dies kann möglicherweise besonders wichtig für Entwickler sein, die mit Web Forms arbeiten, die standardmäßig im Kontext eines bestimmten lokalen Benutzerkontos namens ASPNET ausgeführt werden, das als Teil der Installationen [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] und [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erstellt wird. Wenn solch eine Anwendung den Zugriff auf eine Ressource anfordert, verfügt das ASPNET-Benutzerkonto über eingeschränkte Berechtigungen, was dazu führen kann, dass der Benutzer an der Ausführung von Aktionen, z.B. dem Schreiben in eine Datei über eine Webanwendung, gehindert wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) und unter <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Isolierte Dateispeicherung  
  Die isolierte Speicherung versucht die Probleme zu lösen, die bei der Arbeit mit Dateien auftreten, wenn der Benutzer oder der Code nicht die notwendigen Berechtigungen aufweist. Die isolierte Speicherung weist jedem Benutzer ein Datendepot zu, das einen oder mehrere Speicher enthalten kann. Speicher können voneinander nach Benutzer und Assembly isoliert werden. Nur der Benutzer oder die Assembly, der bzw. die einen Speicher erstellt hat, verfügt über Zugriff auf ihn. Ein Speicher verhält sich wie ein vollständiges virtuelles Dateisystem. Sie können innerhalb eines Speichers Verzeichnisse und Dateien erstellen und bearbeiten.  

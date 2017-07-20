@@ -1,75 +1,78 @@
 ---
-title: "Gewusst wie: Verweisen auf eine Assembly mit starkem Namen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblys [.NET Framework], Mit starken Namen"
-  - "Assemblybindung, Mit starken Namen"
-  - "Kompilierzeit-Assemblyverweise"
-  - "Assemblys mit starken Namen, Kompilierzeitverweise"
+title: 'Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-named assemblies, compile-time references
+- compile-time assembly referencing
+- assemblies [.NET Framework], strong-named
+- assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: dcdf967312cdcb700b89a4e75d86c451e67eebab
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gewusst wie: Verweisen auf eine Assembly mit starkem Namen
-Der Vorgang des Verweisens auf Typen oder Ressourcen in einer Assembly mit starkem Namen ist in der Regel transparent.  Ein Verweis ist entweder während des Kompilierens \(frühe Bindung\) oder zur Laufzeit möglich.  
+# <a name="how-to-reference-a-strong-named-assembly"></a>Gewusst wie: Verweisen auf eine Assembly mit starkem Namen
+Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
   
- Einen Verweis zur Kompilierungszeit nehmen Sie vor, indem Sie dem Compiler mitteilen, dass Ihre Assembly explizit auf eine andere Assembly verweist.  Wenn Sie einen solchen Verweis einsetzen, erhält der Compiler automatisch den öffentlichen Schlüssel der Assembly mit starkem Namen, auf die verwiesen wurde, und platziert ihn im Assemblyverweis der gerade kompilierten Assembly.  
+ Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen, dass Ihre Assembly explizit auf eine andere Assembly verweist. Beim Verweisen zur Kompilierzeit ruft der Compiler automatisch den öffentlichen Schlüssel der Zielassembly mit starkem Namen ab und platziert ihn in der Assemblyreferenz der Assembly, die aktuell kompiliert wird.  
   
 > [!NOTE]
->  Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden.  Andernfalls ist die Sicherheit der Assembly mit starkem Namen beeinträchtigt.  
+>  Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden. Andernfalls ist die Sicherheit der Assembly mit starkem Namen beeinträchtigt.  
   
-### So verweisen Sie zur Kompilierungszeit auf eine Assembly mit starkem Namen  
+### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>So verweisen Sie zur Kompilierzeit auf eine Assembly mit starkem Namen  
   
 1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
-     \<*compiler command*\> **\/reference:**\<*assembly name*\>  
+     \<*Compilerbefehl*> **/reference:**\<*Assemblyname*>  
   
-     In diesem Befehl bezeichnet *compiler command* den Compilerbefehl für die Sprache, die Sie verwenden, und *assembly name* der Name der Assembly mit starkem Namen, auf die verwiesen wird.  Sie können auch andere Compileroptionen verwenden, z. B. die Option **\/t:library**, um eine Bibliotheksassembly zu erstellen.  
+     In diesem Befehl ist der *Compilerbefehl* der Befehl für die Sprache, die Sie verwenden, und *Assemblyname* ist der Name der Assembly mit starkem Namen, auf die verwiesen wird. Sie können auch andere Compileroptionen verwenden, z.B. die Option **/t:library** zum Erstellen einer Bibliothekassembly.  
   
- Im folgenden Beispiel wird eine Assembly mit dem Namen `myAssembly.dll` erstellt, die aus einem Codemodul mit dem Namen `myAssembly.cs` auf eine Assembly mit starkem Namen, `myLibAssembly.dll`, verweist.  
+ Im folgenden Beispiel wird eine Assembly namens `myAssembly.dll` erstellt, die auf eine Assembly mit starkem Namen namens `myLibAssembly.dll` aus einem Codemodul namens `myAssembly.cs` verweist.  
   
 ```  
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
   
-### So verweisen Sie zur Laufzeit auf eine Assembly mit starkem Namen  
+### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>So verweisen Sie zur Runtime auf eine Assembly mit starkem Namen  
   
-1.  Wenn Sie zur Laufzeit auf eine Assembly mit starkem Namen verweisen \(beispielsweise mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>\-Methode oder der <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>\-Methode\), müssen Sie den Anzeigenamen der Assembly mit starkem Namen verwenden, auf die verwiesen wird.  Anzeigenamen haben folgende Syntax:  
+1.  Wenn Sie zur Runtime auf eine Assembly mit starkem Namen verweisen (z.B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>-Methode), müssen Sie den Anzeigenamen der referenzierten Assembly mit starkem Namen verwenden. Die Syntax eines Anzeigenamens lautet wie folgt:  
   
-     \<*assembly name*\>**,** \<*version number*\>**,** \<*culture*\>**,** \<*public key token*\>  
+     \<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*öffentliches Schlüsseltoken*>  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
     ```  
   
-     In diesem Beispiel ist `PublicKeyToken` die hexadezimale Form des öffentlichen Schlüssels.  Wenn kein Wert für die Kultur vorhanden ist, verwenden Sie `Culture=neutral`.  
+     In diesem Beispiel ist `PublicKeyToken` die hexadezimale Form des öffentlichen Schlüsseltokens. Wenn kein Kulturwert vorhanden ist, verwenden Sie `Culture=neutral`.  
   
- Der folgende Beispielcode zeigt, wie Sie diese Informationen in der <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>\-Methode verwenden können.  
+ Im folgenden Codebeispiel wird gezeigt, wie Sie diese Informationen mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>-Methode verwenden.  
   
- [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)]
- [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)]
- [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
+ [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)] [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)] [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
   
- Sie können mit dem folgenden Befehl von [Strong Name \(Sn.exe\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) den öffentlichen Schlüssel und das entsprechende Token im Hexadezimalformat drucken:  
+ Sie können das Hexadezimalformat des öffentlichen Schlüssels und des öffentlichen Schlüsseltokens für eine bestimmte Assembly mithilfe des folgenden Befehls [Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) ausgeben:  
   
- **sn \-Tp \<** *assembly* **\>**  
+ **sn -Tp \<** *Assembly* **>**  
   
- Falls Sie über die öffentliche Schlüsseldatei verfügen, können Sie stattdessen folgenden Befehl verwenden \(beachten Sie dabei die Kleinschreibung im Unterschied zur oben genannten Option\):  
+ Wenn Sie eine öffentliche Schlüsseldatei haben, können Sie stattdessen den folgenden Befehl verwenden. Beachten Sie aber den Unterschied bei der Groß- und Kleinschreibung bei der Befehlszeilenoption:  
   
- **sn \-tp \<** *assembly* **\>**  
+ **sn -tp \<** *Assembly* **>**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

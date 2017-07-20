@@ -1,30 +1,35 @@
 ---
-title: "Manipulations and Inertia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Manipulationen und Trägheit | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3731bf83-dba5-478c-94a5-1d7c36443073
 caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ece2a4ecf25d361ab6d3dd627f5730c302be24a6
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Manipulations and Inertia
-Die *Manipulations\-* und *Trägheits*prozessorklassen unterstützen die Anwendung beim Verschieben von Benutzeroberflächenelementen auf dem Bildschirm auf natürliche und intuitive Weise.  Mithilfe von Manipulationen können Benutzer Komponenten verschieben, drehen und in der Größe ändern. Dazu können Manipulatoren wie ein Mausgerät, ein Tablettstift oder \(bei einem für die direkte Eingabe per Berührung aktivierten Szenario\) auch ein Finger verwendet werden.  *Trägheit* emuliert für bewegliche Benutzeroberflächenelemente ein wirklichkeitsgetreues Verhalten, indem Reibungskräfte simuliert werden.  So können die Bewegungen von Oberflächenelementen vor dem Stoppen allmählich verlangsamt werden \(sowohl linear als auch winkelförmig\).  
+# <a name="manipulations-and-inertia"></a>Manipulationen und Trägheit
+Die Prozessorklassen *Manipulationen* und *Trägheit* unterstützen Ihre Anwendung beim Verschieben von UI-Elementen (User Interface, Benutzeroberfläche) auf dem Bildschirm auf natürliche und intuitive Weise. Durch Manipulationen können Benutzer Komponenten mit Manipulatoren verschieben, drehen und deren Größe verändern. Solche Manipulatoren sind z.B. Computermäuse, Stifte oder (bei einem Szenario mit Touchscreen) die Finger der Benutzer. *Trägheit* emuliert das Echtzeitverhalten von UI-Elementen, die sich in Bewegung befinden, indem Reibungskräfte für die Elemente simuliert werden. Damit sind Elemente in der Lage, ihre Bewegung (sowohl linear als auch winkelförmig) graduell zu verlangsamen, bevor die Bewegung angehalten wird.  
   
- Sie können die Manipulations\- und Trägheitsverarbeitung in einer Vielzahl von Benutzeroberflächen\-Frameworks verwenden, z. B. Microsoft Windows Presentation Foundation \(WPF\) oder Microsoft XNA.  
+ Das Verarbeiten der Prozessorklassen Manipulationen und Trägheit in verschiedenen Benutzeroberflächen-Frameworks verwendet werden, wie z.B. Microsoft Windows Presentation Foundation (WPF) oder Microsoft XNA.  
   
-## In diesem Abschnitt  
- [Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Überblick über Manipulationen und Trägheit](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
   
- [Using Manipulations and Inertia in an XNA Application](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Verwenden von Manipulationen und Trägheit in einer XNA-Anwendung](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Input.Manipulations>

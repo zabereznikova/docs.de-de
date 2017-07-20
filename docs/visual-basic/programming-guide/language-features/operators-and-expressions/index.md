@@ -1,53 +1,76 @@
 ---
-title: "Operators and Expressions in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], operands"
-  - "operators [Visual Basic]"
-  - "operands, definition"
-  - "Visual Basic code, operators"
-  - "Visual Basic code, expressions"
-  - "operands"
-  - "expressions [Visual Basic]"
+title: "Operatoren und Ausdrücke in Visual Basic | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- operators [Visual Basic], operands
+- operators [Visual Basic]
+- operands, definition
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operands
+- expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Operators and Expressions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.contentlocale: de-de
+ms.lasthandoff: 05/26/2017
 
-Ein *Operator* ist ein Codeelement, das eine Operation für ein oder mehrere Codeelemente ausführt, die Werte enthalten.  Wertelemente sind z. B. Variablen, Konstanten, Literale, Eigenschaften, Rückgaben von der `Function`\-Prozedur und der `Operator`\-Prozedur sowie Ausdrücke.  
+---
+<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
+
+# Operatoren und Ausdrücke in Visual Basic
+Ein *Operator* ist ein Codeelement, das einen Vorgang auf einem oder mehreren Codeelementen ausführt, die Werte halten. Wertelemente sind unter anderem Variablen, Konstanten, Literale, Eigenschaften, Rückgaben von `Function`- und `Operator`-Prozeduren sowie Ausdrücke.  
   
- Ein *Ausdruck* ist eine Reihe von Wertelementen, die mit Operatoren kombiniert werden, und dies ergibt einen neuen Wert.  Die Operatoren behandeln die Wertelemente, indem sie Berechnungen, Vergleiche und andere Operationen ausführen.  
+ Ein *Ausdruck* ist eine Serie von Wertelementen, die mit Operatoren kombiniert sind, was einen neuen Wert ergibt. Die Operatoren werden auf den Wertelementen ausgeführt, indem Berechnungen, Vergleiche oder andere Vorgänge ausgeführt werden.  
   
-## Typen von Operatoren  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] stellt die folgenden Typen von Operatoren bereit:  
+<a id="types-of-operators" class="xliff"></a>
+
+## Arten von Operatoren  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stellt folgende Arten von Operatoren bereit:  
   
--   [Arithmetische Operatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) führen gängige Berechnungen mit numerischen Werten aus, einschließlich des Verschiebens ihrer Bitmuster.  
+-   [Arithmetische Operatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) führen bekannte Berechnungen auf numerischen Werten aus, einschließlich Verschieben der Bitmuster.  
   
--   [Vergleichsoperatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) vergleichen zwei Ausdrücke und geben einen `Boolean`\-Wert zurück, der das Ergebnis des Vergleichs darstellt.  
+-   [Vergleichsoperatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) vergleichen zwei Ausdrücke und geben einen `Boolean`-Wert zurück, der das Ergebnis des Vergleichs darstellt.  
   
--   [Verkettungsoperatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) verknüpfen mehrere Zeichenfolgen zu einer einzigen Zeichenfolge.  
+-   [Verkettungsoperatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) verbinden mehrere Zeichenfolgen zu einer einzelnen Zeichenfolge.  
   
--   [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) kombinieren `Boolean`\-Werte oder numerische Werte und geben im Ergebnis denselben Datentyp zurück, den die Werte aufweisen.  
+-   [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) kombinieren `Boolean` oder numerische Werte und geben ein Ergebnis desselben Datentyps wie die Werte zurück.  
   
- Die mit einem Operator kombinierten Wertelemente werden als *Operanden* dieses Operators bezeichnet.  Mit Wertelementen kombinierte Operatoren bilden Ausdrücke, mit Ausnahme des Zuweisungsoperators, der eine *Anweisung* bildet.  Weitere Informationen finden Sie unter [Statements](../../../../visual-basic/programming-guide/language-features/statements.md).  
+ Die Wertelemente, die mit einem Operator kombiniert sind, werden *Operanden* dieses Operators genannt. Operatoren, die mit Wertelementen kombiniert sind, bilden Ausdrücke. Eine Ausnahme ist der Zuweisungsoperator, der eine *Anweisung* bildet. Weitere Informationen finden Sie unter [Anweisungen](../../../../visual-basic/programming-guide/language-features/statements.md).  
   
-## Evaluierung von Ausdrücken  
- Das Ergebnis eines Ausdrucks stellt einen Wert dar, der i. d. R. einen gängigen Datentyp, z. B. `Boolean`, `String` oder einen numerischen Typ, aufweist.  
+<a id="evaluation-of-expressions" class="xliff"></a>
+
+## Auswertung von Ausdrücken  
+ Das Endergebnis eines Ausdrucks stellt einen Wert dar, der normalerweise ein bekannter Datentyp ist, z.B. `Boolean`, `String` oder ein numerischer Typ.  
   
- Im Folgenden sind einige Beispiele für Ausdrücke aufgeführt.  
+ Nachstehend sind Beispiele für Ausdrücke.  
   
  `5 + 4`  
   
@@ -65,15 +88,17 @@ Ein *Operator* ist ein Codeelement, das eine Operation für ein oder mehrere Cod
   
  `' The preceding expression evaluates to False.`  
   
- Aktionen können von mehrere Operatoren in einem einzigen Ausdruck oder einer einzigen Anweisung ausgeführt werden, wie im folgenden Beispiel veranschaulicht.  
+ Einige Operatoren können Aktionen in einzelnen Ausdrücken oder einer Anweisung ausführen, wie das folgende Beispiel darstellt.  
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- Im vorherigen Beispiel führt [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] die Operationen im Ausdruck auf der rechten Seite des Zuweisungsoperators \(`=`\) aus und weist dann der Variablen `x` auf der linken Seite den Ergebniswert zu.  Es gibt praktisch keine Begrenzung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Sie müssen jedoch die Regeln der [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
+ Im vorhergehenden Beispiel führt [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Vorgänge im Ausdruck auf der rechten Seite des Zuweisungsoperators (`=`) aus und weist den ergebenden Wert dann der Variable `x` auf der linken Seite zu. Es gibt keine festgelegte Einschränkung für die Anzahl der Operatoren, die in einem Ausdruck kombiniert werden können. Jedoch ist es notwendig, die [Operatorrangfolge in Visual Studio](../../../../visual-basic/language-reference/operators/operator-precedence.md) zu verstehen, um sicherzustellen, dass Sie die erwarteten Ergebnisse erhalten.  
   
- Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005 (Operatorüberladung in Visual Basic 2005)](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
+<a id="see-also" class="xliff"></a>
+
 ## Siehe auch  
- [Operators](../../../../visual-basic/language-reference/operators/index.md)   
- [Efficient Combination of Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
- [Statements](../../../../visual-basic/language-reference/statements/index.md)
+ [Operatoren](../../../../visual-basic/language-reference/operators/index.md)   
+ [Effiziente Kombination von Operatoren](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
+ [Anweisungen](../../../../visual-basic/language-reference/statements/index.md)

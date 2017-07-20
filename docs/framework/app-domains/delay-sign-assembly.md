@@ -1,80 +1,83 @@
 ---
-title: "Verz&#246;gertes Signieren einer Assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verzögern der Assemblysignierung"
-  - "Signieren von Assemblys"
-  - "Assemblys [.NET Framework], Signieren"
-  - "Assemblys mit starken Namen, Verzögern der Assemblysignierung"
-  - "Teilweises Signieren von Assemblys"
+title: "Verzögertes Signieren einer Assembly | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deferring assembly signing
+- signing assemblies
+- assemblies [.NET Framework], signing
+- strong-named assemblies, delaying assembly signing
+- partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Verz&#246;gertes Signieren einer Assembly
-Ein Unternehmen kann über ein streng bewachtes Schlüsselpaar verfügen, auf das nicht einmal Entwickler täglich zugreifen können.  Der öffentliche Schlüssel ist häufig frei zugänglich, der private Schlüssel hingegen ist nur einigen ausgewählten Personen bekannt.  Bei der Entwicklung von Assemblys mit starkem Namen enthält jede Assembly, die auf die Zielassembly mit starkem Namen verweist, das Token des öffentlichen Schlüssels, mit dessen Hilfe der Zielassembly ein starker Name zugewiesen wurde.  Aus diesem Grund ist es erforderlich, dass der öffentliche Schlüssel während des Entwicklungsprozesses allgemein zugänglich ist.  
+# <a name="delay-signing-an-assembly"></a>Verzögertes Signieren einer Assembly
+Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, auf das Entwickler nicht täglich zugreifen können. Der öffentliche Schlüssel stünde zur Verfügung, während der Zugriff auf den privaten Schlüssel nur einigen Wenigen erlaubt wäre. Beim Entwickeln von Assemblys mit starken Namen enthält jede Assembly, die auf die Zielassembly mit dem starken Namen verweist, das Token des öffentlichen Schlüssels, mit dem der starke Name der Zielassembly erzeugt wird. Aus diesem Grund muss der öffentliche Schlüssel während des Entwicklungsprozesses verfügbar sein.  
   
- Sie können verzögertes oder teilweises Signieren während des Erstellens verwenden, um in der PE \(Portable Executable\)\-Datei Platz für die starke Namenssignatur zu reservieren. Das tatsächliche Signieren können Sie auf einen späteren Zeitpunkt \(normalerweise unmittelbar vor der Bereitstellung der Assembly\) verschieben.  
+ Mit dem verzögerten Signieren oder dem Teilsignieren zur Buildzeit können Sie Speicherplatz in der portierbaren ausführbaren Datei (portable executable; PE) für die Signatur mit starkem Namen reservieren, das eigentliche Signieren aber auf einen späteren Zeitpunkt verschieben (i.d.R. unmittelbar vor der Weitergabe der Assembly).  
   
- In den folgenden Schritten wird der prinzipielle Ablauf des verzögerten Signierens einer Assembly beschrieben:  
+ Die folgenden Schritte beschreiben das verzögerte Signieren einer Assembly:  
   
-1.  Besorgen Sie sich von der Organisation, die das eigentliche Signieren vornimmt, den öffentlichen Schlüssel des Schlüsselpaares.  Im Normalfall liegt dieser Schlüssel als SNK\-Datei vor, die mit dem [Strong Name\-Tool \(Sn.exe\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) erstellt werden kann, das von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] zur Verfügung gestellt wird.  
+1.  Bringen Sie den öffentlichen Schlüssel des Schlüsselpaars von der Organisation in Erfahrung, die letztendlich signieren wird. In der Regel liegt dieser Schlüssel in Form einer SNK-Datei vor, die mit dem vom [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bereitgestellten [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) erstellt werden kann.  
   
-2.  Fügen Sie dem Quellcode für die Assembly zwei benutzerdefinierte Attribute aus <xref:System.Reflection> hinzu:  
+2.  Kommentieren Sie den Quellcode für die Assembly mit den zwei benutzerdefinierten Attribute aus <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, das den Namen der Datei, die den öffentlichen Schlüssel enthält, als Parameter an seinen Konstruktor übergibt.  
+    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, das den Namen der Datei mit dem öffentlichen Schlüssel als Parameter an den Konstruktor übergibt  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, das die Verwendung von verzögertem Signieren angibt, indem es **true** als Parameter an seinen Konstruktor übergibt.  Beispiel:  
+    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, das angibt, dass beim verzögerten Signieren **TRUE** als Parameter an den Konstruktor übergeben wird Zum Beispiel:  
   
-         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
-         [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
-         [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3.  Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und reserviert in der PE\-Datei Platz für die vollständige starke Namenssignatur.  Der echte öffentliche Schlüssel muss während der Erstellung der Assembly gespeichert werden, damit andere Assemblys, die auf diese verweisen, auf den Schlüssel zugreifen und ihn in ihrem eigenen Assemblyverweis speichern können.  
+3.  Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und reserviert in der PE-Datei Speicherplatz für die vollständige Signatur mit starkem Namen. Der echte öffentliche Schlüssel muss während der Erstellung der Assembly gespeichert werden, damit andere Assemblys, die auf diese Assembly verweisen, den Schlüssel abrufen und in ihrem eigenen Assemblyverweis speichern können.  
   
-4.  Da die Assembly über keine gültige starke Namenssignatur verfügt, muss die Überprüfung dieser Signatur deaktiviert werden.  Diese Deaktivierung können Sie vornehmen, indem Sie die Option **–Vr** zusammen mit dem Strong Name\-Tool verwenden.  
+4.  Da die Assembly über keine gültige Signatur mit starkem Namen verfügt, muss die Überprüfung der Signatur deaktiviert werden. Dies erreichen Sie mit der Option **–Vr** im Strong Name-Tool.  
   
-     Im folgenden Beispiel wird die Überprüfung für eine Assembly mit dem Namen `myAssembly.dll` deaktiviert.  
+     Das folgende Beispiel deaktiviert die Überprüfung für eine Assembly namens `myAssembly.dll`.  
   
     ```  
     sn –Vr myAssembly.dll  
     ```  
   
-     So Überprüfung auf Plattformen deaktivieren, in denen Sie das Strong Name\-Tool, wie die RISC\-Computer \(arm\)\- Mikroprozessoren nicht ausführen können, verwenden Sie die **–Vk** \- Option, eine Registrierungsdatei zu erstellen.  Importieren Sie die ADDIN\-XML\-Registrierungsdatei in die Registrierung auf dem Computer, auf dem Sie Überprüfung ausschalten möchten.  Das folgende Beispiel erstellt eine Registrierungsdatei für `myAssembly.dll`.  
+     Um die Überprüfung auf Plattformen wie Advanced RISC Machine-Mikroprozessoren (ARM) zu deaktivieren, auf denen das Strong Name-Tool nicht ausgeführt werden kann, erstellen Sie mit der Option **–Vk** eine Registrierungsdatei. Importieren Sie die Registrierungsdatei in die Registrierung des Computers, auf dem die Überprüfung deaktiviert werden soll. Im folgenden Beispiel wird eine Registrierungsdatei für `myAssembly.dll` erstellt.  
   
     ```  
     sn –Vk myRegFile.reg myAssembly.dll  
     ```  
   
-     entweder mit **–Vr** oder **–Vk** \- Option können Sie eine SNK\-Datei für Testschlüsselsignierung optional einschließen.  
+     Mit den Optionen **–Vr** oder **–Vk** lässt sich optional eine SNK-Datei zum Testen der Schlüsselsignatur einbeziehen.  
   
     > [!CAUTION]
-    >  Verwenden Sie die Option **\-Vr** oder **–Vk** nur bei der Entwicklung.  Das Überspringen der Überprüfung einer Assembly kann ein erhebliches Sicherheitsrisiko darstellen.  Wenn die Überprüfung einer Assembly übersprungen wird, besteht die Gefahr, dass deren vollständig angegebener Assemblyname \(Assemblyname, Version, Kultur und öffentliches Schlüsseltoken\) als falsche Identität einer böswilligen Assembly verwendet wird.  Dadurch würde auch die Überprüfung der böswilligen Assembly übersprungen.  
+    >  Verwenden Sie die Optionen **-Vr** oder **–Vk** aber nur während der Entwicklung. Das Überspringen der Überprüfung einer Assembly kann ein erhebliches Sicherheitsrisiko darstellen. Wenn die Überprüfung einer Assembly übersprungen wird, besteht die Gefahr, dass deren vollständig angegebener Assemblyname (Assemblyname, Version, Kultur und öffentliches Schlüsseltoken) als falsche Identität einer böswilligen Assembly verwendet wird. Dadurch würde auch die Überprüfung der böswilligen Assembly übersprungen.  
   
     > [!NOTE]
-    >  Wenn Sie während der Entwicklung mit Visual Studio auf einem 64\-Bit\-Computer verzögertes Signieren verwenden und eine Assembly für **Any CPU** kompilieren, müssen Sie die **\-Vr**\-Option möglicherweise zweimal anwenden. \(In Visual Studio ist **Any CPU** ein Wert der Buildeigenschaft **Zielplattform**. Wenn Sie die Kompilierung in der Befehlszeile vornehmen, ist dies der Standard.\) Um die Anwendung in der Befehlszeile oder von Datei vom Explorer auszuführen, verwenden Sie die 64\-Bit\-Version [Sn.exe \(Strong Name Tool\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) die Option **\-Vr** auf die Assembly anzuwenden.  Um die Assembly zur Entwurfszeit in Visual Studio zu laden \(z. B., wenn die Assembly Komponenten enthält, die von anderen Assemblys in der Anwendung verwendet werden\), verwenden Sie die 32\-Bit\-Version des Strong Name\-Tools.  Der Grund dafür besteht darin, dass der JIT \(Just\-In\-Time\)\-Compiler die Assembly bei deren Ausführung in der Befehlszeile zu systemeigenem 64\-Bit\-Code kompiliert, aber zu systemeigenem 32\-Bit\-Code, wenn die Assembly in die Entwurfszeitumgebung geladen wird.  
+    >  Wenn Sie während der Entwicklung mit Visual Studio auf einem 64-Bit-Computer das verzögerte Signieren verwenden und eine Assembly für **Any CPU** (Beliebige CPU) kompilieren, müssen Sie die Option **-Vr** möglicherweise zweimal anwenden. In Visual Studio ist **Beliebige CPU** der Wert der Buildeigenschaft **Zielplattform**. Wenn Sie über die Befehlszeile kompilieren, ist dies der Standardwert. Um Ihre Anwendung über die Befehlszeile oder über den Datei-Explorer auszuführen, nutzen Sie die 64-Bit-Version von [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md), um die Option **-Vr** auf die Assembly anzuwenden. Wenn Sie die Assembly zur Entwurfszeit in Visual Studio laden möchten (z.B., wenn die Assembly Komponenten enthält, die von anderen Assemblys in Ihrer Anwendung verwendet werden), verwenden Sie die 32-Bit-Version des Strong Name-Tools. Dies ist notwendig, weil der Just-in-Time-Compiler (JIT) die Assembly in nativem 64-Bit-Code kompiliert, wenn die Assembly über die Befehlszeile ausgeführt wird, und in nativem 32-Bit-Code, wenn die Assembly in die Entwurfszeitumgebung geladen wird.  
   
-5.  Zu einem späteren Zeitpunkt \(üblicherweise unmittelbar vor der Veröffentlichung des Produkts\) übergeben Sie unter Verwendung der Option **–R** zusammen mit dem Strong Name\-Tool die Assembly der Signierungsstelle Ihrer Organisation, wo dann die eigentliche Signierung mit einem starken Namen erfolgt.  
+5.  Zu einem späteren Zeitpunkt – in der Regel vor der Weitergabe der Assembly – übergeben Sie die Assembly an die Signierungsstelle Ihrer Organisation, um sie mit der Option **–R** und dem Strong Name-Tool mit starkem Namen signieren zu lassen.  
   
-     Im folgenden Beispiel wird die Assembly `myAssembly.dll` unter Verwendung des Schlüsselpaares `sgKey.snk` mit einem starken Namen signiert.  
+     Im folgenden Beispiel wird eine Assembly namens `myAssembly.dll`, die das `sgKey.snk`-Schlüsselpaar enthält, mit starkem Namen signiert.  
   
     ```  
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
- [Gewusst wie: Erstellen eines öffentlichen\/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Sn.exe \(Strong Name Tool\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
+ [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

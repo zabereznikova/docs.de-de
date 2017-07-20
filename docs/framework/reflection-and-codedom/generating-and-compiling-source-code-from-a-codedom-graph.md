@@ -1,101 +1,100 @@
 ---
-title: "Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assemblys [.NET Framework], CodeDOM"
-  - "Codecompiler"
-  - "Code Document Object Model (CodeDOM), Generieren von Quellcode"
-  - "Code Document Object Model (CodeDOM), Diagramme"
-  - "Codegeneratoren"
-  - "CodeDOM, Generieren von Quellcode"
-  - "CodeDOM, Diagramme"
-  - "Kompilieren von Assemblys"
-  - "Kompilieren von Quellcode, Mehrere Sprachen"
-  - "Dynamische Kompilierung"
-  - "Dynamisches Darstellen von Quellcode"
-  - "Generieren von CodeDOM-Diagrammen"
-  - "Generieren von Quellcode in mehreren Sprachen"
-  - "Diagrammerstellung mit CodeDOM"
-  - "Ausgabe von Quellcode durch CodeDOM"
-  - "Quellcodegenerierung"
-  - "Quellcode, Generieren"
-  - "Vorlagenbasierte Codegenerierung"
-  - "Übersetzen aus einer Sprache in eine andere"
+title: Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code compilers
+- CodeDOM, generating source code
+- Code Document Object Model, graphs
+- templated code generation
+- source code, generating
+- dynamically representing source code
+- generating CodeDOM graphs
+- Code Document Object Model, generating source code
+- translating language to language
+- compiling assemblies
+- generating source code in multiple languages
+- graphing with CodeDOM
+- dynamic compilation
+- assemblies [.NET Framework], CodeDOM
+- source code generation
+- outputting source code by CodeDOM
+- code generators
+- compiling source code, multiple languages
+- CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6805c4a98c1a3f4d62984435da708a813f92dde4
+ms.contentlocale: de-de
+ms.lasthandoff: 06/02/2017
+
 ---
-# Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
-Der <xref:System.CodeDom.Compiler>\-Namespace stellt Schnittstellen zum Generieren von Quellcode aus CodeDOM\-Objektdiagrammen und zum Verwalten der Kompilierung mit unterstützten Compilern bereit.   Ein Codeanbieter kann Quellcode in einer bestimmten Programmiersprache entsprechend einem CodeDOM\-Diagramm erstellen.  Eine von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitete Klasse kann normalerweise Methoden bereitstellen, durch die Code für die vom Anbieter unterstützte Sprache generiert und kompiliert wird.  
+# <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
+Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generieren von Sourcecode aus CodeDOM-Objektdiagrammen und zum Verwalten der Kompilierung mit unterstützten Compilern bereit. Ein Codeanbieter kann Quellcode in einer bestimmten Programmiersprache anhand eines CodeDOM-Diagramms erstellen. Eine Klasse, die von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet wurde, kann in der Regel Methoden zum Generieren und Kompilieren von Code für die Sprache bereitstellen, die der Anbieter unterstützt.  
   
-## Verwenden eines CodeDOM\-Codeanbieters zum Generieren von Quellcode  
- Zum Generieren von Quellcode in einer bestimmten Sprache benötigen Sie ein CodeDOM\-Diagramm, das die Struktur des zu generierenden Quellcodes darstellt.  
+## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>Verwenden eines CodeDOM-Codeanbieters zum Generieren von Quellcode  
+ Zum Generieren von Quellcode in einer bestimmten Sprache benötigen Sie ein CodeDOM-Diagramm, das die Struktur des zu generierenden Quellcode darstellt.  
   
- Im folgenden Beispiel wird veranschaulicht, wie eine Instanz von <xref:Microsoft.CSharp.CSharpCodeProvider> erstellt wird:  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Instanz einer <xref:Microsoft.CSharp.CSharpCodeProvider> erstellt wird:  
   
- [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
- [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
- [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
+ [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)] [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)] [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
- Das Diagramm für die Codegenerierung befindet sich normalerweise in einer <xref:System.CodeDom.CodeCompileUnit>.  Zum Generieren von Code für eine **CodeCompileUnit**, die ein CodeDOM\-Diagramm enthält, rufen Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>\-Methode des Codeanbieters auf.  Diese Methode enthält einen Parameter für einen <xref:System.IO.TextWriter>, der zum Generieren des Quellcodes verwendet wird, sodass in einigen Fällen zunächst ein **TextWriter** erstellt werden muss, in den geschrieben werden kann.   Das folgende Beispiel veranschaulicht das Generieren von Code aus einer **CodeCompileUnit** und das Schreiben des generierten Quellcodes in eine Datei mit der Bezeichnung HelloWorld.cs.  
+ Das Diagramm für die Generierung von Code ist in der Regel Bestandteil einer <xref:System.CodeDom.CodeCompileUnit>. Zum Generieren von Code für eine **CodeCompileUnit**, die ein CodeDOM-Diagramm enthält, rufen Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode des Codeanbieters auf. Diese Methode verfügt einen Parameter für eine <xref:System.IO.TextWriter>, die zum Generieren des Quellcodes verwendet wird. Deshalb ist es manchmal erforderlich, zuerst eine **TextWriter**-Klasse zu erstellen, in die geschrieben werden kann. Das folgende Beispiel veranschaulicht die Erstellung von Code aus einer **CodeCompileUnit** und das Schreiben des generierten Quellcodes in eine Datei mit der Bezeichnung „HelloWorld.cs“.  
   
- [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
- [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
- [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
+ [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)] [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)] [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
-## Verwenden eines CodeDOM\-Codeanbieters zum Kompilieren von Assemblys  
+## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>Verwenden eines CodeDOM-Codeanbieters zum Kompilieren von Assemblys  
  **Aufrufen der Kompilierung**  
   
- Zum Kompilieren einer Assembly mithilfe eines CodeDom\-Anbieters benötigen Sie entweder in einer Sprache zu kompilierenden Quellcode, für die ein Compiler vorhanden ist, oder ein CodeDOM\-Diagramm, aus dem der zu kompilierende Quellcode generiert werden kann.  
+ Um eine Assembly mit einem CodeDom-Anbieter zu kompilieren, müssen Sie entweder Quellcode besitzen, um in eine Sprache zu kompilieren, für die Sie einen Compiler oder ein CodeDOM-Diagramm besitzen, von dem der zu kompilierende Quellcode generiert werden kann.  
   
- Wenn Sie aus einem CodeDOM\-Diagramm kompilieren, übergeben Sie die <xref:System.CodeDom.CodeCompileUnit> mit dem Diagramm an die <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A>\-Methode des Codeanbieters.   Bei einer Quellcodedatei in einer vom Compiler unterstützten Sprache übergeben Sie der <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A>\-Methode des CodeDom\-Anbieters den Namen der Datei, die den Quellcode enthält.  Sie können der <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A>\-Methode des CodeDom\-Anbieters auch eine Zeichenfolge übergeben, die den Quellcode in einer vom Compiler unterstützten Sprache enthält.  
+ Wenn Sie aus einem CodeDOM-Diagramm kompilieren, übergeben Sie die <xref:System.CodeDom.CodeCompileUnit> mit dem Diagramm an die <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A>-Methode des Codeanbieters. Wenn Sie über eine Quellcodedatei in einer Sprache verfügen, die der Compiler versteht, übergeben Sie den Namen der Datei, die den Quellcode enthält, an die <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A>-Methode des CodeDom-Anbieters. Sie können auch eine Zeichenfolge an die <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A>-Methode des CodeDom-Anbieters übergeben, die den Quellcode in einer Sprache enthält, die der Compiler versteht.  
   
  **Konfigurieren von Kompilierungsparametern**  
   
- Alle Standardmethoden zum Kompilierungsaufruf eines CodeDom\-Anbieters enthalten einen Parameter vom Typ <xref:System.CodeDom.Compiler.CompilerParameters>, der die Optionen angibt, die zum Kompilieren verwendet werden.  
+ Alle Standardmethoden zum Kompilierungsaufruf eines CodeDom-Anbieters besitzen einen Parameter vom Typ <xref:System.CodeDom.Compiler.CompilerParameters>, der die erforderlichen Optionen für die Kompilierung anzeigt.  
   
- In der <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A>\-Eigenschaft von **CompilerParameters** können Sie einen Dateinamen für die Ausgabeassembly angeben.   Andernfalls wird ein Standardname für die Ausgabedatei verwendet.  
+ Sie können den Dateinamen für die Ausgabeassembly in der <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A>-Eigenschaft der **CompilerParameters** angeben. Andererseits wird ein Standardname für die Ausgabedatei verwendet.  
   
- Beim Initialisieren einer neuen Instanz von **CompilerParameters** wird die <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A>\-Eigenschaft standardmäßig auf **false** festgelegt.   Wenn Sie ein ausführbares Programm kompilieren, müssen Sie die **GenerateExecutable**\-Eigenschaft auf **true** festlegen.  Wenn **GenerateExecutable** auf **false** festgelegt ist, generiert der Compiler eine Klassenbibliothek.  
+ Standardmäßig wird eine **CompilerParameters**-Klasse initialisiert, und deren Eigenschaft <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> ist auf **FALSE** festgelegt. Wenn Sie ein ausführbares Programm kompilieren, müssen Sie die Eigenschaft **GenerateExecutable** auf **TRUE** festlegen. Wenn die **GenerateExecutable** auf **FALSE** festgelegt ist, generiert der Compiler eine Klassenbibliothek.  
   
- Wenn Sie eine ausführbare Datei aus einem CodeDOM\-Diagramm kompilieren, muss im Diagramm eine <xref:System.CodeDom.CodeEntryPointMethod> definiert sein.  Wenn mehrere Codeeinstiegspunkte vorhanden sind, muss die <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A>\-Eigenschaft von **CompilerParameters** möglicherweise auf den Namen der Klasse festgelegt werden, die den zu verwendenden Einstiegspunkt definiert.  
+ Wenn Sie eine ausführbare Datei aus einem CodeDOM-Diagramm kompilieren, muss eine <xref:System.CodeDom.CodeEntryPointMethod> im Diagramm definiert werden. Wenn es mehrere Codeeinstiegspunkte gibt, kann es womöglich erforderlich sein, die <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A>-Eigenschaft der **CompilerParameters** auf den Namen der Klasse festzulegen, die den zu verwendenden Einstiegspunkt definiert.  
   
- Um Debuginformationen in eine generierte ausführbare Datei einzufügen, legen Sie die <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A>\-Eigenschaft auf **true** fest.  
+ Um die Debuginformation in eine generierte ausführbare Datei einzuschließen, legen Sie die <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A>-Eigenschaft auf **TRUE** fest.  
   
- Wenn das Projekt Verweise auf Assemblys enthält, müssen Sie für die <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A>\-Eigenschaft der beim Aufruf der Kompilierung verwendeten **CompilerParameters** die Assemblynamen als Elemente in einer <xref:System.Collections.Specialized.StringCollection> angeben.  
+ Wenn Ihr Projekt auf Assemblys verweist, müssen Sie die Assemblynamen als Elemente in einer <xref:System.Collections.Specialized.StringCollection> als <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A>-Eigenschaft der **CompilerParameters** angeben, die Sie beim Aufruf der Kompilierung verwenden.  
   
- Sie können eine Assembly kompilieren, die nicht auf den Datenträger, sondern in den Speicher geschrieben wird, indem Sie die <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A>\-Eigenschaft auf **true** festlegen.  Wenn eine Assembly im Speicher generiert wird, kann der Code aus der <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A>\-Eigenschaft von <xref:System.CodeDom.Compiler.CompilerResults> einen Verweis auf die generierte Assembly abrufen.  Wenn eine Assembly auf einen Datenträger geschrieben wird, können Sie aus der <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A>\-Eigenschaft von **CompilerResults** den Pfad zur generierten Assembly abrufen.  
+ Sie können eine Assembly kompilieren, die zum Speicher und nicht auf den Datenträger geschrieben wurde, indem Sie die <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A>-Eigenschaft auf **TRUE** festlegen. Wenn eine Assembly im Speicher generiert wird, kann Ihr Code einen Verweis aus einer <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A>-Eigenschaft einer <xref:System.CodeDom.Compiler.CompilerResults> für die generierte Assembly abrufen. Wenn eine Assembly auf den Datenträger geschrieben wird, können Sie den Pfad zur generierten Assembly aus einer <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A>-Eigenschaft einer **CompilerResults** abrufen.  
   
- Um eine benutzerdefinierte Zeichenfolge für Befehlszeilenargumente anzugeben, die beim Aufrufen der Kompilierung verwendet werden soll, legen Sie die Zeichenfolge in der <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A>\-Eigenschaft fest.  
+ Um einen benutzerdefinierte Argumentzeichenfolge auf Befehlszeilenebene anzugeben, die Sie beim Aufruf des Kompilierungsprozesses verwenden, legen Sie die Zeichenfolge in der <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A>-Eigenschaft fest.  
   
- Wenn für den Aufruf des Compilerprozesses ein Win32\-Sicherheitstoken erforderlich ist, geben Sie das Token in der <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A>\-Eigenschaft an.  
+ Wenn ein Win32-Sicherheitstoken erforderlich ist, um den Compilerprozess auszurufen, geben Sie das Token in der <xref:System.CodeDom.Compiler.CompilerParameters.UserToken%2A>-Eigenschaft an.  
   
- Um mit der kompilierten Assembly eine Win32\-Ressourcendatei zu verknüpfen, geben Sie den Namen der Win32\-Ressourcendatei in der <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A>\-Eigenschaft an.  
+ Um eine Win32-Ressourcendatei in der kompilierten Assembly zu verknüpfen, geben Sie den Namen der Win32-Ressourcendatei in der <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A>-Eigenschaft an.  
   
- Wenn Sie eine Warnstufe angeben möchten, bei der die Kompilierung unterbrochen werden soll, legen Sie die <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A>\-Eigenschaft auf eine ganze Zahl fest, die die Warnstufe zum Unterbrechen der Kompilierung darstellt.  Sie können den Compiler auch für die Unterbrechung der Kompilierung beim Auftreten von Warnungen konfigurieren, indem Sie die <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A>\-Eigenschaft auf **true** festlegen.  
+ Wenn Sie eine Warnstufe angeben möchten, an der Sie die Kompilierung anhalten möchten, legen Sie die <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A>-Eigenschaft auf einen Integer fest, der die Warnstufe darstellt, an der die Kompilierung angehalten werden soll. Sie können auch den Compiler konfigurieren, um die Kompilierung anzuhalten, wenn Warnungen aufgetreten sind, indem Sie die <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A>-Eigenschaft auf **TRUE** festlegen.  
   
- Das folgende Codebeispiel veranschaulicht die Kompilierung einer Quelldatei mithilfe eines CodeDom\-Anbieters, der von der <xref:System.CodeDom.Compiler.CodeDomProvider>\-Klasse abgeleitet wurde.  
+ Das folgende Codebeispiel stellt die Kompilierung einer Quelldatei mithilfe des CodeDom-Anbieters dar, der aus der <xref:System.CodeDom.Compiler.CodeDomProvider>-Klasse abgeleitet wurde.  
   
- [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)]
- [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)]
- [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
+ [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)] [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)] [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
-## Von Beginn an unterstützte Sprachen  
- .NET Framework bietet Codecompiler und Codegeneratoren für folgende Sprachen: C\#, Visual Basic, C\+\+ und JScript.  Die CodeDOM\-Unterstützung kann auf andere Sprachen erweitert werden, indem sprachspezifische Code\-Generatoren und Codecompiler implementiert werden.  
+## <a name="languages-with-initial-support"></a>Sprachen mit erweiterter Unterstützung  
+ .NET Framework bietet Codecompiler für Codegeneratoren für die folgenden Sprachen: C#, Visual Basic, C++ und JScript. Die CodeDOM-Unterstützung kann auf andere Sprachen durch Implementierung sprachspezifischer Codegeneratoren und Codecompiler erweitert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.CodeDom>   
  <xref:System.CodeDom.Compiler>   
  [Generieren und Kompilieren von dynamischem Quellcode](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
- [CodeDOM Quick Reference](http://msdn.microsoft.com/de-de/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+ [Kurzreferenz zum CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

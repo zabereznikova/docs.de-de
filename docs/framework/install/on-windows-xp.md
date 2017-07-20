@@ -1,26 +1,26 @@
 ---
-title: Installieren von .NET Framework unter Windows XP
+title: Installieren von .NET Framework unter Windows XP | Microsoft-Dokumentation
 description: Informationen zum Installieren von .NET Framework unter Windows XP
 author: rlander
 keywords: .Net Framework, installieren
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 1355f8d70d9b256e3b0b9bf00ef80889aa35fb69
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3ae323580496e86c45c8bff962f42cca4b0201cd
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-xp"></a>Installieren von .NET Framework unter Windows XP
+# <a name="install-the-net-framework-on-windows-xp"></a>Installieren von .NET Framework unter Windows XP
 
-> [!NOTE] 
-> Für Windows XP wird von Microsoft kein Support mehr zur Verfügung gestellt. Es wird empfohlen, auf Windows 10 zu aktualisieren. Für Windows 10 wird Support bereitgestellt, und es unterstützt die neueste Version von .NET Framework. Dieses Dokument dient ausschließlich als nützlicher Ratgeber zur Problembehandlung. 
+> [!NOTE]
+> Für Windows XP wird von Microsoft kein Support mehr zur Verfügung gestellt. Es wird empfohlen, auf Windows 10 zu aktualisieren. Für Windows 10 wird Support bereitgestellt, und es unterstützt die neueste Version von .NET Framework. Dieses Dokument dient ausschließlich als nützlicher Ratgeber zur Problembehandlung.
 
 Möglicherweise wird .NET Framework zum Ausführen einer Anwendung auf Windows XP benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
 

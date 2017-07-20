@@ -1,5 +1,0 @@
-# [Referenz zur nicht verwalteten API](index.md)
-# [Allgemeine Datentypen](common-data-types-unmanaged-api-reference.md)
-# [Konstanten](constants-unmanaged-api-reference.md)
-# [COR_PRF_ALLOWABLE_AFTER_ATTACH-Bitmaske](cor-prf-allowable-after-attach-bitmask.md)
-# [GUID_ManagedName-Attribut](guid-managedname-attribute.md)
