@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Verbinden von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,15 +20,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
+ms.translationtype: MT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)
-Dieses Beispiel zeigt, wie Sie die <xref:System.Text.RegularExpressions.Regex>Klasse, um einen regulären Ausdruck für komplexere Vergleiche in Zeichenfolgen erstellen.</xref:System.Text.RegularExpressions.Regex> Die LINQ-Abfrage erleichtert Filter genau die Dateien, die Sie mit dem regulären Ausdruck zu suchen, und die Ergebnisse bestimmen möchten.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)
+In diesem Beispiel wird gezeigt, wie Sie die <xref:System.Text.RegularExpressions.Regex>-Klasse verwenden, um einen regulären Ausdruck für komplexere Übereinstimmungen in Textzeichenfolgen erstellen. Die LINQ-Abfrage erleichtert das Filtern nach genau den Dateien, die Sie mithilfe des regulären Ausdrucks suchen möchten, sowie das Formen der Ergebnisse.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -97,12 +97,12 @@ Class LinqRegExVB
 End Class  
 ```  
   
- Beachten Sie, die Sie auch Abfragen können die <xref:System.Text.RegularExpressions.MatchCollection>-Objekt, das von zurückgegeben wird ein `RegEx` suchen.</xref:System.Text.RegularExpressions.MatchCollection> In diesem Beispiel wird nur der Wert jeder Übereinstimmung in den Ergebnissen aufgeführt. Allerdings ist es auch möglich, LINQ zu verwenden, um alle Arten von Filtern, Sortieren und Gruppieren von für diese Auflistung ausführen. Da <xref:System.Text.RegularExpressions.MatchCollection>ist eine nicht generische <xref:System.Collections.IEnumerable>Sammlung, müssen Sie den Typ der Bereichsvariablen in der Abfrage explizit angeben.</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ Beachten Sie, dass Sie auch das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt abfragen können, das von einer `RegEx`-Suche zurückgegeben wird. In diesem Beispiel wird nur der Wert jeder Übereinstimmung in den Ergebnissen angezeigt. Allerdings ist es auch möglich, LINQ zu verwenden, um alle Arten von Filtern, Sortieren und Gruppieren für diese Auflistung ausführen. Da <xref:System.Text.RegularExpressions.MatchCollection> eine nicht generische <xref:System.Collections.IEnumerable>-Auflistung ist, müssen Sie den Typ der Bereichsvariable in der Abfrage explizit angeben.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 
