@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in einen Number-Wert (C#-Programmierhandbuch) | Microsoft Dokumentation'
+title: 'Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: d406f1731db1e0979be8bba8d10301e57a2281e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08d13e40a385ce8e9011b508b04361b2e050f904
 ms.contentlocale: de-de
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
@@ -80,3 +80,4 @@ Sie können eine [Zeichenfolge](../../../csharp/language-reference/keywords/stri
  [Typen](../../../csharp/programming-guide/types/index.md)   
  [Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)   
  [.NET Framework 4-Hilfsprogramm zur Formatierung](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+

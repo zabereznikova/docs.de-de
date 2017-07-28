@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)
-In diesem Beispiel wird das Objekt mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse von einer Klasse in eine XML-Datei geschrieben.  
+Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -68,7 +69,7 @@ public class XMLWrite
   
 -   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
   
--   Die Datei ist vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+-   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
   
 -   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
@@ -81,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

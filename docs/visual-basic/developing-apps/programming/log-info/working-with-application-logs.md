@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Anwendungsprotokollen in Visual Basic | Microsoft-Dokumentation
+title: Arbeiten mit Anwendungsprotokollen in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,18 +33,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
 Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protokollierungs- und Ablaufverfolgungsinformationen in Protokolle zu schreiben.  
   
 ## <a name="how-messages-are-logged"></a>Protokollierung von Meldungen  
- Zuerst wird der Schweregrad der Meldung mithilfe der <xref:System.Diagnostics.TraceSource.Switch%2A>-Eigenschaft der <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>-Eigenschaft des Protokolls überprüft. Standardmäßig werden nur Meldungen vom Schweregrad "Information" und höher an die Nachverfolgungslistener übergeben, die in der `TraceListener` -Auflistung des Protokolls angegeben sind. Anschließend vergleicht jeder Listener den Schweregrad der Meldung mit der Eigenschaft <xref:System.Diagnostics.TraceSource.Switch%2A> des Listeners. Wenn der Schweregrad der Meldung ausreichend hoch ist, schreibt der Listener die Meldung.  
+ Zuerst wird der Schweregrad der Meldung mithilfe der <xref:System.Diagnostics.TraceSource.Switch%2A> -Eigenschaft der <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> -Eigenschaft des Protokolls überprüft. Standardmäßig werden nur Meldungen vom Schweregrad "Information" und höher an die Nachverfolgungslistener übergeben, die in der `TraceListener` -Auflistung des Protokolls angegeben sind. Anschließend vergleicht jeder Listener den Schweregrad der Meldung mit der Eigenschaft <xref:System.Diagnostics.TraceSource.Switch%2A> des Listeners. Wenn der Schweregrad der Meldung ausreichend hoch ist, schreibt der Listener die Meldung.  
   
  Im folgenden Diagramm ist dargestellt, wie eine in die `WriteEntry` -Methode geschriebene Meldung an die `WriteLine` -Methoden der Ablaufverfolgungslistener des Protokolls übergeben wird:  
   
@@ -55,11 +55,11 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
  ![Konfiguration von „Log“ für „My“](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>Protokollspeicherorte von Meldungen  
- Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung (mithilfe der <xref:System.Diagnostics.DefaultTraceListener>-Klasse). Darüber hinaus schreibt das `My.Application.Log`-Objekt in die Protokolldatei der Assembly (mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>-Klasse), während das `My.Log`-Objekt in die Ausgabe der ASP.NET-Webseite schreibt (mithilfe der <xref:System.Web.WebPageTraceListener>-Klasse).  
+ Wenn die Assembly keine Konfigurationsdatei aufweist, schreiben die Objekte `My.Application.Log` und `My.Log` in die Debugausgabe der Anwendung (mithilfe der <xref:System.Diagnostics.DefaultTraceListener> -Klasse). Darüber hinaus schreibt das `My.Application.Log` -Objekt in die Protokolldatei der Assembly (mithilfe der <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse), während das `My.Log` -Objekt in die Ausgabe der ASP.NET-Webseite schreibt (mithilfe der <xref:System.Web.WebPageTraceListener> -Klasse).  
   
- Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug** , zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe** im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
+ Die Debugausgabe kann beim Ausführen der Anwendung im Debugmodus im Fenster [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Ausgabe** angezeigt werden. Klicken Sie zum Öffnen des Fensters **Ausgabe** auf das Menüelement **Debug** , zeigen Sie auf **Fenster**, und klicken Sie dann auf **Ausgabe**. Wählen Sie im Fenster **Ausgabe** im Feld **Ausgabe anzeigen von** den Wert **Debug** aus.  
   
- Standardmäßig schreibt `My.Application.Log` die Protokolldatei in den Pfad für die Anwendungsdaten des Benutzers. Diesen Pfad können Sie aus der Eigenschaft <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> des <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A>-Objekts abrufen. Das Format des Pfades ist wie folgt:  
+ Standardmäßig schreibt `My.Application.Log` die Protokolldatei in den Pfad für die Anwendungsdaten des Benutzers. Diesen Pfad können Sie aus der Eigenschaft <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> des <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> -Objekts abrufen. Das Format des Pfades ist wie folgt:  
   
  `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`  
   
@@ -84,7 +84,7 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
   
  Beispiele für `<sources>`-, `<switches>`- und `<sharedListeners>` -Knoten sind im folgenden Code dargestellt:  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -130,3 +130,4 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

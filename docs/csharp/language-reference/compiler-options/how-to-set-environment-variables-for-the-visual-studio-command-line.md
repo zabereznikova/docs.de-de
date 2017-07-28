@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile | Microsoft-Dokumentation"
+title: "Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -38,11 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: e2cc644bb3b2c51615fe763224505b07e113ad62
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 569683169c6d7ae50c33ed06d3b365a663f16715
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
@@ -63,3 +63,4 @@ Die Umgebungsvariablen, die für Befehlszeilenbuilds erforderlich sind, werden d
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+

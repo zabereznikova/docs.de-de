@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Serialisieren mit XmlSerializer (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Serialisieren mit XmlSerializer (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6721edf0a533d89e8987f4bf231142f3a236d0c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 826c10835da385a0fd7b052db4d6981b706fc6ed
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Vorgehensweise: Serialisieren mit XmlSerializer (C#)
-In diesem Thema finden Sie ein Beispiel für das Serialisieren und Deserialisieren mit <xref:System.Xml.Serialization.XmlSerializer>.  
+Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Xml.Serialization.XmlSerializer> verwendet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Reihe von Objekten erstellt, die <xref:System.Xml.Linq.XElement>-Objekte enthalten. Anschließend serialisiert das Beispiel diese Objekte in einen Speicherstream und deserialisiert sie von dort wieder:  
@@ -107,3 +108,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Siehe auch  
  [Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+

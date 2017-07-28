@@ -1,5 +1,5 @@
 ---
-title: Enumerationstypen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Enumerationstypen (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
@@ -64,7 +64,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   Sie geben für Clientcode eindeutig die Werte an, die für die Variable gültig sind.  
   
--   In [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] listet IntelliSense die definierten Werte auf.  
+-   In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] listet IntelliSense die definierten Werte auf.  
   
  Wenn Sie keine Werte für die Elemente in der Enumeratorliste angeben, werden die Werte automatisch um 1 erhöht. Im vorherigen Beispiel hat `Days.Sunday` den Wert 0, `Days.Monday` hat den Wert 1 und so weiter. Beim Erstellen eines neuen `Days`-Objekt, wird es den Standardwert `Days.Sunday` (0) aufweisen, wenn Sie nicht explizit einen Wert zuweisen. Wenn Sie ein enum erstellen, wählen Sie den logischen Standardwert aus und weisen Sie ihm einen Wert von Null zu. Dadurch werden alle Enumerationen über diesen Standardwert verfügen, wenn sie nicht explizit einen Wert zugewiesen bekommen, wenn sie erstellt werden.  
   
@@ -111,3 +111,4 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
  <xref:System.Enum?displayProperty=fullName>   
  [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
+

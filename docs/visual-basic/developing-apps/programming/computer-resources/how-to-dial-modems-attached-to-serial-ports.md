@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Anwählen von Modems an seriellen Anschlüssen in Visual Basic | Microsoft-Dokumentation"
+title: "Gewusst wie: Wählen mit Modems an seriellen Anschlüssen in Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5670e930324740ca1ef16b3d27b0dee0e934d284
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0daaf35cdebac3d69ddc536124d4c86b96955b11
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Gewusst wie: Wählen mit Modems an seriellen Anschlüssen in Visual Basic
-Dieses Thema beschreibt, wie Sie `My.Computer.Ports` nutzen, um ein Modem in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] anzuwählen.  
+Dieses Thema beschreibt, wie Sie `My.Computer.Ports` nutzen, um ein Modem in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] anzuwählen.  
   
  In der Regel ist das Modem mit einem der seriellen Anschlüsse am Computer verbunden. Damit die Anwendung mit dem Modem kommunizieren kann, muss sie Befehle an den entsprechenden seriellen Anschluss senden.  
   
@@ -65,7 +65,7 @@ Dieses Thema beschreibt, wie Sie `My.Computer.Ports` nutzen, um ein Modem in [!I
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrMyComputer#27](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-dial-modems-attached-to-serial-ports_4.vb)]  
   
- Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl ist er unter **Konnektivität und Netzwerk** zu finden. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl ist er unter **Konnektivität und Netzwerk** zu finden. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für das Beispiel wird ein Verweis auf den <xref:System?displayProperty=fullName>-Namespace benötigt.  
@@ -83,3 +83,4 @@ Dieses Thema beschreibt, wie Sie `My.Computer.Ports` nutzen, um ein Modem in [!I
  [Vorgehensweise: Senden von Zeichenfolgen zu seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
  [Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)   
  [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

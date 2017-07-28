@@ -1,5 +1,5 @@
 ---
-title: Aufruferinformationen (C#) | Microsoft-Dokumentation
+title: Aufruferinformationen (C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,16 +16,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 087b547cfc558fb4c82026e9af6ac621809e0ca0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
   
- Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. Die folgende Tabelle enthält die Aufruferinformationsattribute, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind:  
+ Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind:  
   
 |Attribut|Beschreibung|Typ|  
 |---|---|---|  
@@ -74,7 +75,7 @@ public void TraceMessage(string message,
   
 -   Verwenden der Ablaufverfolgung und der Diagnoseprogramme  
   
--   Das Implementieren der <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle bei der Bindung von Daten. Diese Schnittstelle ermöglicht es der Eigenschaft eines Objekts, ein gebundenes Steuerelement über die Änderung der Eigenschaft zu benachrichtigen, damit das Steuerelement die aktualisierten Informationen anzeigen kann. Ohne das `CallerMemberName`-Attribut müssen Sie den Eigenschaftennamen als Literal angeben.  
+-   Implementieren der <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle beim Binden von Daten Diese Schnittstelle ermöglicht es der Eigenschaft eines Objekts, ein gebundenes Steuerelement über die Änderung der Eigenschaft zu benachrichtigen, damit das Steuerelement die aktualisierten Informationen anzeigen kann. Ohne das `CallerMemberName`-Attribut müssen Sie den Eigenschaftennamen als Literal angeben.  
   
  Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `CallerMemberName`-Attributs zurückgegeben werden.  
   
@@ -93,3 +94,4 @@ public void TraceMessage(string message,
  [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
  [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
+

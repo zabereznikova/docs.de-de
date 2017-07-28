@@ -1,5 +1,5 @@
 ---
-title: "Für Datei-E/A-Vorgänge und Dateisystem in .NET Framework verwendete Klassen (Visual Basic) | Microsoft-Dokumentation"
+title: "Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
 In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Framework-Datei-E/A verwendet werden, kategorisiert in Datei-E/A-Klassen, Klassen zum Erstellen von Streams und Klassen zum Lesen und Schreiben in Streams.  
   
- Für das Betreten der [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]-Dokumentation und eine umfassendere Auflistung siehe [Übersicht über die Klassenbibliothek](https://msdn.microsoft.com/library/hfa3fa08).  
+ Für das Betreten der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]-Dokumentation und eine umfassendere Auflistung siehe [Übersicht über die Klassenbibliothek](https://msdn.microsoft.com/library/hfa3fa08).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Grundlegende E/A-Klassen für Dateien, Laufwerke und Verzeichnisse  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die für Datei-E/A verwendet werden.  
@@ -87,3 +87,4 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
  [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)   
  [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)   
  [Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+

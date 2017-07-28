@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc1b201a807b8e5c060720018195fe3639e748dc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f67bea5244b69013a5f694415ded6f0bc94f77f7
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (C#)
@@ -29,7 +29,7 @@ XPath-Ausdrücke können nach Knoten in einem bestimmten Namespace suchen. Zum A
  `./aw:*`  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel liest eine XML-Struktur, die zwei Namespaces enthält. Er verwendet eine <xref:System.Xml.XmlReader>zum Lesen des XML-Dokuments. Danach wird eine <xref:System.Xml.XmlNameTable> aus der <xref:System.Xml.XmlReader> und eine <xref:System.Xml.XmlNamespaceManager> aus der <xref:System.Xml.XmlNameTable> abgerufen. Beim Auswählen von Elementen wird die <xref:System.Xml.XmlNamespaceManager>-Klasse verwendet.  
+ Das folgende Beispiel liest eine XML-Struktur, die zwei Namespaces enthält. Zum Lesen des XML-Dokuments kommt dabei ein <xref:System.Xml.XmlReader> zum Einsatz. Anschließend werden eine <xref:System.Xml.XmlNameTable> aus dem <xref:System.Xml.XmlReader> und ein <xref:System.Xml.XmlNamespaceManager> aus der <xref:System.Xml.XmlNameTable> abgerufen. Beim Auswählen von Elementen wird der <xref:System.Xml.XmlNamespaceManager> verwendet.  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -88,3 +88,4 @@ Results are identical
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML für XPath-Benutzer (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

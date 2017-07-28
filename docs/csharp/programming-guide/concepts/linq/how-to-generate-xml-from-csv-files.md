@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8297ec6c462a3b01548b156f10a1470b8a5e6173
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)
-In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] und [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
+In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code führt eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfrage für ein Zeichenfolgenarray aus.  
+ Der folgende Code führt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage für ein Zeichenfolgenarray aus.  
   
  Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.  
   
@@ -121,3 +121,4 @@ Console.WriteLine(cust);
   
 ## <a name="see-also"></a>Siehe auch  
  [Projektionen und Transformationen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

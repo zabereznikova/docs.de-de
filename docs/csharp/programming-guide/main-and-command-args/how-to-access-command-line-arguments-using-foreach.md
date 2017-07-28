@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2f0e3bce88beafd45a21773a7b26ffb2bb41215d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 766b5cd0879edec1dc409e07c4f62ee693fd615d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach (C#-Programmierhandbuch)
 Ein weiteres Verfahren zum Durchlaufen von Arrays wird im nachfolgenden Beispiel veranschaulicht: die Verwendung der [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung. Die `foreach`-Anweisung kann verwendet werden, um ein Array, eine .NET Framework-Auflistungsklasse oder eine beliebige Klasse bzw. Struktur zu durchlaufen, die die <xref:System.Collections.IEnumerable>-Schnittstelle implementiert.  
   
 > [!NOTE]
->  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer) angeben.  
+>  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die Ausgabe der Befehlszeilenargumente mithilfe von `foreach` verdeutlicht.  
@@ -55,3 +56,4 @@ Ein weiteres Verfahren zum Durchlaufen von Arrays wird im nachfolgenden Beispiel
  [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

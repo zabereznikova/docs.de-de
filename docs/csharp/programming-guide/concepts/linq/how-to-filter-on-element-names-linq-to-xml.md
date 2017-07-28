@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Filtern nach Elementnamen (LINQ to XML) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Filtern nach Elementnamen (LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5c11af47434ec00e812f966d5937c138a5ac3640
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03f1be79322882e49b7cb619ff4578fda94450a7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Vorgehensweise: Filtern nach Elementnamen (LINQ to XML) (C#)
-Wenn Sie eine der Methoden aufrufen, die <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurückgeben, können Sie nach Elementnamen filtern.  
+Wenn Sie eine Methode aufrufen, die eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurückgibt, können Sie eine Filterung nach Elementnamen vornehmen.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird eine Auflistung mit Nachfolgerelementen abgerufen, die gefiltert wird, damit sie nur die Nachfolgerelemente mit dem angegebenen Namen enthält.  
@@ -46,7 +45,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- Wenn Sie andere Methoden aufrufen, die <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurückgeben, befolgen Auflistungen dasselbe Muster. Ihre Signaturen sind <xref:System.Xml.Linq.XContainer.Elements%2A> und <xref:System.Xml.Linq.XContainer.Descendants%2A> ähnlich. Im Folgenden finden Sie eine vollständige Liste der Methoden, die gleiche Methodensignaturen besitzen:  
+ Die anderen Methoden, die eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>-Auflistungen zurückgeben, folgen dem gleichen Muster. Ihre Signaturen entsprechen denen von <xref:System.Xml.Linq.XContainer.Elements%2A> und <xref:System.Xml.Linq.XContainer.Descendants%2A>. Im Folgenden finden Sie eine vollständige Liste der Methoden, die gleiche Methodensignaturen besitzen:  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -86,3 +85,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

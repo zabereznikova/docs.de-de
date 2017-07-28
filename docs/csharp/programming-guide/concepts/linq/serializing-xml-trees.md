@@ -1,5 +1,5 @@
 ---
-title: Serialisieren von XML-Strukturen (C#) | Microsoft-Dokumentation
+title: Serialisieren von XML-Strukturen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 348f9cab6fa93ada89eb87d0077e0e5838b449d7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3b8ee68065a056cccbf02d96bf5f21e7ccea16b
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-xml-trees-c"></a>Serialisieren von XML-Strukturen (C#)
@@ -36,8 +37,9 @@ Beim Serialisieren einer XML-Struktur wird aus der XML-Struktur XML generiert. E
 |-----------|-----------------|  
 |[Beibehalten von Leerzeichen beim Serialisieren](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Beschreibt, wie Sie beim Serialisieren von XML-Strukturen das Leerraumverhalten steuern können.|  
 |[Serialisieren mit einer XML-Deklaration (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Beschreibt, wie Sie eine XML-Struktur serialisieren können, die eine XML-Deklaration enthält.|  
-|[Serialisieren in Dateien, TextWriters und XmlWriters](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Beschreibt, wie Sie ein Dokument in einen <xref:System.IO.File>, <xref:System.IO.TextWriter> oder einen <xref:System.Xml.XmlWriter> serialisieren können.|  
+|[Serialisieren in Dateien, TextWriters und XmlWriters](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Beschreibt, wie Sie ein Dokument in eine <xref:System.IO.File>, in einen <xref:System.IO.TextWriter> oder in einen <xref:System.Xml.XmlWriter> serialisieren können.|  
 |[Serialisieren in einen XmlReader (XSLT aufrufen) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Beschreibt, wie Sie einen <xref:System.Xml.XmlReader> erstellen können, der einem anderen Modul das Lesen des Inhalts einer XML-Struktur ermöglicht.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+ [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

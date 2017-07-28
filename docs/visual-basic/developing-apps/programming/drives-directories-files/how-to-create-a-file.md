@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Datei in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen einer Datei in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: f9e2b11b6eed10bac04d22b202e7e16cfa70225d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d06d274b31afad0a437405d1679e0be7548f2e14
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Gewusst wie: Erstellen einer Datei in Visual Basic
@@ -76,3 +76,4 @@ Dieses Beispiel erstellt mithilfe der <xref:System.IO.File.Create%2A>-Methode in
  <xref:System.IO.File.Create%2A>   
  [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
  [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8)
+

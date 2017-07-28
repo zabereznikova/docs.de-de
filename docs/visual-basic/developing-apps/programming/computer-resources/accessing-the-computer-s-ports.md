@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf die Computerressourcen (Visual Basic) | Microsoft-Dokumentation
+title: "Zugreifen auf die Anschlüsse des Computers (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Zugreifen auf die Anschlüsse des Computers (Visual Basic)
@@ -55,7 +55,7 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
  Hier erfahren Sie, wie Sie eine Zeichenfolge eines seriellen Anschluss eines Computers empfangen können.  
   
  [Portvorgänge in .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Hier erfahren Sie, wie Sie [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] verwenden können, während Sie Portvorgänge durchführen.  
+ Hier erfahren Sie, wie Sie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwenden können, während Sie Portvorgänge durchführen.  
   
 ## <a name="reference"></a>Verweis  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
@@ -70,3 +70,4 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  <xref:System.IO.Ports.SerialPort>  
  Beschreibt die .NET Framework-Klasse <xref:System.IO.Ports.SerialPort>.
+

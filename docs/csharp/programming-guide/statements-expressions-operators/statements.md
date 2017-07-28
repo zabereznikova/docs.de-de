@@ -1,5 +1,5 @@
 ---
-title: Anweisungen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Anweisungen (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfbd607f614bd8d287dd33f08dd47b12fa651ced
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4df592821f9bebb318138cffac9045fdbec1e759
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
@@ -54,7 +54,7 @@ Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. H�
 |[Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)|Sprunganweisungen übertragen Steuerelemente zu einem anderen Codeabschnitt. Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
 |[Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Mit Ausnahmebehandlungsanweisungen können Sie ordnungsgemäß von Ausnahmebedingungen wiederherstellen, die zur Laufzeit auftreten. Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked und unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Die Anweisungen „checked“ und „unchecked“ helfen Ihnen anzugeben, ob numerische Vorgänge einen Überlauf verursachen dürfen, wenn das Ergebnis in einer Variable gespeichert ist, die zu klein ist, um den resultierenden Wert zu speichern. Weitere Informationen finden Sie unter [checked](../../../csharp/language-reference/keywords/checked.md) und [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
-Die Anweisung `await`|Wenn Sie eine Methode mit dem Modifizierer [async](../../../csharp/language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](../../../csharp/language-reference/keywords/await.md) in der Methode verwenden. Wenn ein Ausdruck `await` in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.<br /><br /> Ein einfaches Beispiel finden Sie im Abschnitt „Async-Methoden“ unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md). Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md).|  
+|Die Anweisung `await`|Wenn Sie eine Methode mit dem [async](../../../csharp/language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../../csharp/language-reference/keywords/await.md) Operator in der Methode verwenden. Wenn ein Ausdruck `await` in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.<br /><br /> Ein einfaches Beispiel finden Sie im Abschnitt „Async-Methoden“ unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md). Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md).|  
 |Die Anweisung `yield return`|Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](../../../csharp/language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.<br /><br /> Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
 |Die Anweisung `fixed`|Die fixed-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Weitere Informationen finden Sie unter [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Die Anweisung `lock`|Die lock-Anweisung hilft Ihnen, den Zugriff auf Codeblöcke auf jeweils einen Thread zu beschränken. Weitere Informationen finden Sie unter [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
@@ -97,3 +97,4 @@ Die Anweisung `await`|Wenn Sie eine Methode mit dem Modifizierer [async](../../.
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+

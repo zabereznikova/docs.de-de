@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e46860ecc2f5062abb440a764443ecee19c5153d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf8a57cce252b3596f0a19c9df643427615467c6
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Gewusst wie: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch)
@@ -43,7 +44,7 @@ Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitge
 |**executable.exe "one two" three**|"one two"<br /><br /> "three"|  
   
 > [!NOTE]
->  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer) angeben.  
+>  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden die Befehlszeilenargumente gezeigt, die an eine Befehlszeilenanwendung übergeben werden. Die Ausgabe wird für den ersten Eintrag in der obigen Tabelle dargestellt.  
@@ -56,3 +57,4 @@ Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitge
  [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

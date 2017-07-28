@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Ordner in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Ordner in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c7078edf6822cc06c7d3c7933c5df7fdd2a73e6f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7e15b85a72c9b2504551174f5b104bdbb01cf3f3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Ordner in Visual Basic
@@ -96,3 +96,4 @@ Verwenden Sie die `My.Computer.FileSystem.CopyFile`-Methode, um die Dateien zu k
  [Gewusst wie: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
  [Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)   
  [Gewusst wie: Umbenennen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+

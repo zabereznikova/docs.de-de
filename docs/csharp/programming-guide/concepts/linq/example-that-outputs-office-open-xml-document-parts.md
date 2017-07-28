@@ -1,5 +1,5 @@
 ---
-title: "Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#) | Microsoft-Dokumentation"
+title: "Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16b9636a914186fe5f2625b045127c6198939cb0
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7b2135a0894e1fa5a553552fa128809d740dea2
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#)
@@ -27,7 +27,7 @@ In diesem Thema wird gezeigt, wie Sie ein Office Open XML-Dokument öffnen und a
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel öffnet ein Office Open XML-Dokument und gibt den Dokumentteil und den Formatvorlagenteil auf der Konsole aus.  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Es verwendet Typen im Namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -80,3 +80,4 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
   
 ## <a name="see-also"></a>Siehe auch  
  [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+

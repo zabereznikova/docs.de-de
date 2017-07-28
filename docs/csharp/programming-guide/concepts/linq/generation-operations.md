@@ -1,5 +1,5 @@
 ---
-title: "Generierungsvorgänge (C#) | Microsoft-Dokumentation"
+title: "Generierungsvorgänge (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a75605af25bebbeb476730013bdefd2815846881
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa3cfe74d96e600463562a8aae92b7caa229dd06
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generation-operations-c"></a>Generierungsvorgänge (C#)
@@ -41,4 +42,5 @@ Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq>   
- [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+ [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Übereinstimmungsvergleiche (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Übereinstimmungsvergleiche (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9f7d8c6e816efe248739d0771d332a784b1e185f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
 ms.contentlocale: de-de
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
@@ -66,7 +66,7 @@ if( b == a)
  Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basieren. Die Basis kann auch eine Teilmenge sein. Wenn Sie Typen von einem anderen Besitzer vergleichen, vergewissern Sie sich, wie die Gleichheit für den jeweiligen Typ definiert ist. Informationen zum Definieren von Wertgleichheit für Ihre eigenen Klassen und Strukturen finden Sie unter [Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Wertgleichheit für Gleitkommawerte  
- Die Übereinstimmungsprüfung für Gleitkommawerte ([double](../../../csharp/language-reference/keywords/double.md) und [float](../../../csharp/language-reference/keywords/float.md)) ist aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Anmerkungen im Thema <xref:System.Double?displayProperty=fullName>.  
+ Die Übereinstimmungsprüfung für Gleitkommawerte ([double](../../../csharp/language-reference/keywords/double.md) und [float](../../../csharp/language-reference/keywords/float.md)) ist aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Hinweisen im Thema <xref:System.Double?displayProperty=fullName>.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -79,3 +79,4 @@ if( b == a)
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+

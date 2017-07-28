@@ -1,5 +1,5 @@
 ---
-title: 'XML-Beispieldatei: Testkonfiguration (LINQ to XML) | Microsoft-Dokumentation'
+title: 'Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5cd2f2d23186d2d5b5afd6862c7dd7be397e9ecd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbf3e3f2830fcff9a03e32d44976edbf91905d18
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei.  
+Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei.  
   
 ## <a name="testconfigxml"></a>TestConfig.xml  
   
@@ -74,3 +75,4 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

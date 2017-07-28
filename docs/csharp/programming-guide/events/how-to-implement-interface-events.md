@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 4a5b5b862a88d7008049e411e6dc0f020952cc5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f8460674aa59170cf75eb2fa93e9d232df07e5e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Gewusst wie: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)
@@ -89,3 +89,4 @@ Eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) k
  [Delegaten](../../../csharp/programming-guide/delegates/index.md)   
  [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   
  [Gewusst wie: Auslösen von Basisklassenereignissen in abgeleiteten Klassen](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Protokollieren von Informationen aus der Anwendung (Visual Basic) | Microsoft-Dokumentation
+title: Protokollieren von Informationen aus der Anwendung (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 25bf4e1d8b9b87c1545272c0d2746dc808d3fa4b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58f21df20425b0164586143ad5af6f363a90c3ef
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Protokollieren von Informationen aus der Anwendung (Visual Basic)
@@ -67,3 +67,4 @@ Dieser Abschnitt enthält Themen zur Protokollierung von Anwendungsinformationen
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Problembehandlung: Protokolllistener](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

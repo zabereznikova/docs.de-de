@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Office Open-Quell-XML-Dokuments (C#) | Microsoft-Dokumentation
+title: Erstellen eines Office Open-Quell-XML-Dokuments (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ec165719341b946055fc89c2e54482320e92a98
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ea055d35982e364a6b77281aca1d1b03474aa0b
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Erstellen eines Office Open-Quell-XML-Dokuments (C#)
@@ -66,4 +66,5 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
     >  Wenn Sie Microsoft Word 2003 verwenden, wählen Sie in der Dropdownliste **Dateityp** die Option **Word 2007-Dokument**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

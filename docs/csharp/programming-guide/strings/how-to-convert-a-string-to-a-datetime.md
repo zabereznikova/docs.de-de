@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch) | Microsoft Dokumentation'
+title: 'Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch)
-Es ist in Programmen üblich, Benutzern die Eingabe von Datumsangaben als Zeichenfolgenwerte zu ermöglichen. Um eine Zeichenfolge in ein <xref:System.DateTime?displayProperty=fullName>-Objekt zu konvertieren können Sie die <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>-Methode oder die statische Methode <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> wie im folgenden Beispiel gezeigt verwenden.  
+Es ist in Programmen üblich, Benutzern die Eingabe von Datumsangaben als Zeichenfolgenwerte zu ermöglichen. Um ein zeichenfolgenbasiertes Datum in ein <xref:System.DateTime?displayProperty=fullName> -Objekt zu konvertieren, können Sie die <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> -Methode oder die statische <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> -Methode verwenden, wie im folgenden Beispiel dargestellt.  
   
  **Kultur**.  Datumsangaben werden weltweit je nach Kultur unterschiedlich geschrieben.  In den USA entspricht 01/20/2008 z. B. dem 20. Januar 2008.  In Frankreich wird dadurch eine InvalidFormatException ausgelöst. Dies liegt daran, dass Datumsangaben in Frankreich als Tag/Monat/Jahr und in den USA als Monat/Tag/Jahr gelesen werden.  
   
@@ -45,7 +46,7 @@ Es ist in Programmen üblich, Benutzern die Eingabe von Datumsangaben als Zeiche
   
  Im Folgenden finden Sie ein einfaches Beispiel für das Konvertieren einer Zeichenfolge in dateTime.  
   
- Weitere Beispiele für Zeichenfolgen finden Sie unter <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ Weitere Beispiele für Datumszeichenfolgen finden Sie unter <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -73,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)
+

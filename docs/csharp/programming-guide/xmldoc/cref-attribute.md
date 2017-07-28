@@ -1,5 +1,5 @@
 ---
-title: Attribut cref (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: cref-Attribut (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,15 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref-Attribut (C#-Programmierhandbuch)
-Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft. Dokumentationstools wie [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) verwenden die Attribute `cref` zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.  
+Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft. Dokumentationstools wie [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die Attribute `cref` zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](../../../csharp/programming-guide/xmldoc/see.md)-Tags verwendet werden.  
@@ -44,7 +44,7 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
   
  Beim Kompilieren erzeugt das Programm die folgende XML-Datei. Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde. Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie Sandcastle erkannt wird. Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  

@@ -1,5 +1,5 @@
 ---
-title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#) | Microsoft-Dokumentation
+title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
@@ -70,7 +70,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
         CancellationTokenSource cts;  
     ```  
   
-2.  Fügen Sie den folgenden Ereignishandler für die Schaltfläche **Abbrechen** hinzu. Der Ereignishandler verwendet die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>-Methode zu Benachrichtigung von `cts`, wenn der Benutzer den Abbruch anfordert.  
+2.  Fügen Sie den folgenden Ereignishandler für die Schaltfläche **Abbrechen** hinzu. Der Ereignishandler verwendet die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>-Methode, um `cts` bei Abbruchanforderungen durch den Benutzer zu benachrichtigen.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -113,7 +113,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
         }  
         ```  
   
-4.  Verwenden Sie in `AccessTheWebAsync` die <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName>-Überladung der `GetAsync`-Methode im <xref:System.Net.Http.HttpClient>-Typ, um den Inhalt einer Website herunterzuladen. Übergeben Sie `ct`, den <xref:System.Threading.CancellationToken>-Parameter von `AccessTheWebAsync`, als zweites Argument. Das Token enthält die Meldung, wenn der Benutzer die Schaltfläche **Abbrechen** auswählt.  
+4.  Verwenden Sie in `AccessTheWebAsync` die <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> - Überladung der `GetAsync`-Methode im <xref:System.Net.Http.HttpClient>-Typ, um den Inhalt einer Website herunterzuladen. Übergeben Sie `ct`, der <xref:System.Threading.CancellationToken>-Parameter von `AccessTheWebAsync`, als zweites Argument. Das Token enthält die Meldung, wenn der Benutzer die Schaltfläche **Abbrechen** auswählt.  
   
      Im folgende Code sind die Änderungen in `AccessTheWebAsync` dargestellt.  
   
@@ -224,7 +224,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
     }  
     ```  
   
-4.  Da `AccessTheWebAsync` die Längen anzeigt, muss die Methode nichts zurückzugeben. Entfernen Sie die return-Anweisung, und ändern Sie den Rückgabetyp der Methode zu <xref:System.Threading.Tasks.Task> anstatt <xref:System.Threading.Tasks.Task%601>.  
+4.  Da `AccessTheWebAsync` die Längen anzeigt, muss die Methode nichts zurückzugeben. Entfernen Sie die return-Anweisung, und ändern Sie den Rückgabetyp der Methode in <xref:System.Threading.Tasks.Task> anstelle von <xref:System.Threading.Tasks.Task%601>.  
   
     ```csharp  
     async Task AccessTheWebAsync(CancellationToken ct)  
@@ -239,7 +239,6 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
 5.  Wenn Sie das Programm nicht abbrechen, wird folgende Ausgabe erzeugt.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      Wenn Sie die Schaltfläche **Abbrechen** auswählen, bevor die Downloads abgeschlossen sind, enthält die Ausgabe die Längen der Downloads, die vor dem Abbruch abgeschlossen wurden.  
@@ -268,11 +266,10 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> Vollständige Beispiele  
- Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis auf <xref:System.Net.Http> hinzufügen müssen.  
+ Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.  
   
  Sie können die Projekte von [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046) herunterladen.  
   
@@ -538,3 +535,4 @@ namespace CancelAListOfTasks
  [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)
+

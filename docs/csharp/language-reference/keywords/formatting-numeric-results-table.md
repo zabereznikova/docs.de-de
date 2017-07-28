@@ -1,5 +1,5 @@
 ---
-title: Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz) | Microsoft-Dokumentation
+title: Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: a3e5d2eef3f0a76fc8e3faa52feca827070a9cab
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 16976f5a59bd4eb0eca29553aff87d4fe0b1d247
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
@@ -59,3 +59,4 @@ Sie können die numerischen Ergebnisse mithilfe der <xref:System.String.Format%2
  [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)   
  [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
  [string](../../../csharp/language-reference/keywords/string.md)
+

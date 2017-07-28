@@ -1,5 +1,5 @@
 ---
-title: "Hinzufügen von Elementen, Attributen und Knoten zu einem XML-Baum (C#) | Microsoft-Dokumentation"
+title: "Hinzufügen von Elementen, Attributen und Knoten zu einem XML-Baum (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,25 +14,25 @@ ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 858d5b2c5ed680a0e52e374b8ec98762d7fde043
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6894e0685d413297c01118df16d01f7d956ee333
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Hinzufügen von Elementen, Attributen und Knoten zu einem XML-Baum (C#)
 Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.  
   
 ## <a name="methods-for-adding-content"></a>Methoden zum Hinzufügen von Inhalt  
- Die folgenden Methoden fügen untergeordneten Inhalt zu einem <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument> hinzu:  
+ Die folgenden Methoden fügen einem <xref:System.Xml.Linq.XElement> oder einem <xref:System.Xml.Linq.XDocument> untergeordneten Inhalt hinzu:  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|Fügt Inhalt am Ende des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer> hinzu.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Fügt Inhalt am Anfang des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer> hinzu.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Fügt Inhalt vor dem untergeordneten Inhalt des <xref:System.Xml.Linq.XContainer> hinzu.|  
   
- Die folgenden Methoden fügen Inhalt als nebengeordnete Knoten eines <xref:System.Xml.Linq.XNode> hinzu. Der am häufigsten verwendete Knoten, zu dem Sie nebengeordneten Inhalt hinzufügen, ist <xref:System.Xml.Linq.XElement>, obwohl Sie gültigen nebengeordneten Inhalt auch zu anderen Knotentypen wie <xref:System.Xml.Linq.XText> oder <xref:System.Xml.Linq.XComment> hinzufügen können.  
+ Die folgenden Methoden fügen Inhalt als nebengeordnete Knoten eines <xref:System.Xml.Linq.XNode> hinzu. Der Knoten, dem Sie am häufigsten nebengeordneten Inhalt hinzufügen, ist <xref:System.Xml.Linq.XElement>, obwohl Sie gültigen nebengeordneten Inhalt auch anderen Knotentypen hinzufügen können, z. B. <xref:System.Xml.Linq.XText> oder <xref:System.Xml.Linq.XComment>.  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
@@ -91,3 +91,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>Siehe auch  
  [Modifying XML Trees (LINQ to XML) (C#) (Ändern von XML-Strukturen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

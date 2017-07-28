@@ -1,5 +1,5 @@
 ---
-title: "Codekonventionen für C# (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Codekonventionen für C# (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
@@ -60,7 +60,7 @@ Die [C#-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) defi
 ## <a name="layout-conventions"></a>Layoutkonventionen  
  Ein gutes Layout verwendet Formatierungen, um die Struktur des Codes hervorzuheben und um den Code verständlicher zu gestalten. Microsoft-Beispiele entsprechen den folgenden Konventionen:  
   
--   Verwenden Sie die Code-Editor-Standardeinstellungen (Intelligenter Einzug, vierstelliger Einzug, als Leerzeichen gespeicherte Tabulatoren). Weitere Informationen finden Sie unter [Optionen, Text-Editor, C#, Formatierung](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Verwenden Sie die Code-Editor-Standardeinstellungen (Intelligenter Einzug, vierstelliger Einzug, als Leerzeichen gespeicherte Tabulatoren). Weitere Informationen finden Sie unter [Optionen, Text-Editor, C#, Formatierung](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
 -   Schreiben Sie pro Zeile nur eine Anweisung.  
   
@@ -221,3 +221,4 @@ Die [C#-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=199552) defi
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Codierungskonventionen](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
  [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md)
+

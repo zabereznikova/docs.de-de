@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic | Microsoft-Dokumentation"
+title: "Gewusst wie: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69b833777629cfd642ab75ac055b96b59c1da70b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Gewusst wie: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic
@@ -56,7 +56,7 @@ Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden,
   
      [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
- Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Er befindet sich in der Codeausschnittauswahl unter **Windows Betriebssystem > Registrierung**. Weitere Informationen finden Sie unter [Codeausschnitte](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. Er befindet sich in der Codeausschnittauswahl unter **Windows Betriebssystem > Registrierung**. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Bestimmen, ob ein Wert in einem Registrierungsschlüssel vorhanden ist  
   
@@ -82,3 +82,4 @@ Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden,
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  <xref:Microsoft.Win32.RegistryHive>   
  [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+

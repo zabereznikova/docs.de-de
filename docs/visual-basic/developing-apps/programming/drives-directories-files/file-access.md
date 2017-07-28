@@ -1,5 +1,5 @@
 ---
-title: Dateizugriff mit Visual Basic | Microsoft-Dokumentation
+title: Dateizugriff mit Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -40,14 +40,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2a2a60f9033d6bdec0b9a0d5905adb2b1953bf66
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-access-with-visual-basic"></a>Dateizugriff mit Visual Basic
-Das `My.Computer.FileSystem`-Objekt bietet Tools zum Arbeiten mit Dateien und Ordnern. Seine Eigenschaften, Methoden und Ereignisse erlauben es Ihnen, Dateien und Ordner zu erstellen, zu kopieren, zu verschieben, zu untersuchen und zu löschen. `My.Computer.FileSystem` bietet eine bessere Leistung als die älteren Funktionen (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` usw.), die von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bereitgestellt werden, um Abwärtskompatibilität zu gewährleisten.  
+Das `My.Computer.FileSystem`-Objekt bietet Tools zum Arbeiten mit Dateien und Ordnern. Seine Eigenschaften, Methoden und Ereignisse erlauben es Ihnen, Dateien und Ordner zu erstellen, zu kopieren, zu verschieben, zu untersuchen und zu löschen. `My.Computer.FileSystem` bietet eine bessere Leistung als die älteren Funktionen (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` usw.), die von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellt werden, um Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
@@ -70,3 +71,4 @@ Das `My.Computer.FileSystem`-Objekt bietet Tools zum Arbeiten mit Dateien und Or
   
  [Problembehandlung: Lesen aus und Schreiben in Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  Listet häufige Probleme beim Lesen und Schreiben in Textdateien auf, und gibt Vorschläge zu entsprechenden Lösungsmöglichkeiten.
+
