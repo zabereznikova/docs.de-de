@@ -1,5 +1,5 @@
 ---
-title: Komponententests in .NET Core mit dotnet test und xUnit | Microsoft-Dokumentation
+title: Komponententests in .NET Core mit dotnet test und xUnit
 description: Unittests in .NET Core mit dotnet-test
 keywords: .NET, .NET Core
 author: ardalis
@@ -9,22 +9,18 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 06e1ecc181847f87df9ed3a527638008ca6857fc
-ms.openlocfilehash: b5c6d162adf363da41c4c60fdd9fe38e1d58d27a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6bb539231e7c0101755193d612e15893f9637fe1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="unit-testing-in-net-core-using-dotnet-test-and-xunit" class="xliff"></a>
-
-# Komponententests in .NET Core mit dotnet test und xUnit
+# <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests in .NET Core mit dotnet test und xUnit
 
 Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Komponententests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-<a id="creating-the-source-project" class="xliff"></a>
-
-### Erstellen des Quellprojekts
+### <a name="creating-the-source-project"></a>Erstellen des Quellprojekts
 
 Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-dotnet-test*, um die Projektmappe zu speichern. Erstellen Sie in diesem neuen Verzeichnis ein *PrimeService*-Verzeichnis. Nachfolgend wird die bisherige Verzeichnisstruktur dargestellt:
 
@@ -50,9 +46,7 @@ namespace Prime.Services
 }
 ```
 
-<a id="creating-the-test-project" class="xliff"></a>
-
-### Erstellen des Testprojekts
+### <a name="creating-the-test-project"></a>Erstellen des Testprojekts
 
 Wechseln Sie wieder in das *unit-testing-using-dotnet-test*-Verzeichnis, und erstellen Sie das *PrimeService.Tests*-Verzeichnis. Die Verzeichnisstruktur wird nachfolgend gezeigt:
 
@@ -102,9 +96,7 @@ Das endgültige Layout der Projektmappe wird unten gezeigt:
         PrimeServiceTests.csproj
 ```
 
-<a id="creating-the-first-test" class="xliff"></a>
-
-## Erstellen des ersten Tests
+## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
 Führen Sie vor dem Erstellen der Bibliothek oder der Tests [`dotnet restore`](../tools/dotnet-restore.md) im *PrimeService.Tests*-Verzeichnis aus. Dieser Befehl stellt alle erforderlichen NuGet-Pakete für jedes Projekt wieder her.
 
@@ -153,9 +145,7 @@ public bool IsPrime(int candidate)
 
 Führen Sie `dotnet test` im *PrimeService.Tests*-Verzeichnis erneut aus. Der `dotnet test`-Befehl führt einen Build für das `PrimeService`-Projekt und anschließend für das `PrimeService.Tests`-Projekt aus. Nachdem beide Projekte erstellt wurden, wird dieser einzelne Test ausgeführt. Er ist erfolgreich.
 
-<a id="adding-more-features" class="xliff"></a>
-
-### Hinzufügen weiterer Features
+### <a name="adding-more-features"></a>Hinzufügen weiterer Features
 
 Nachdem Sie dafür gesorgt haben, dass ein Test erfolgreich verläuft, schreiben Sie weiter. Es gibt einige weitere einfache Fälle für Primzahlen: 0, -1. Sie könnten diese neuen Tests mit dem Attribut `[Fact]` hinzufügen, aber das wird schnell recht mühsam. Es gibt andere xUnit-Attribute, mit deren Hilfe Sie eine Reihe ähnlicher Tests schreiben können.  Ein `[Theory]`-Attribut stellt eine Reihe von Tests dar, die zwar denselben Code ausführen, jedoch unterschiedliche Eingabeargumente verwenden. Sie können das Attribut `[InlineData]` verwenden, um Werte für diese Eingaben anzugeben. 
  
