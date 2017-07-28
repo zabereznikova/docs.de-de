@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit C# | Microsoft-Dokumentation
+title: Erste Schritte mit C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>Erste Schritte mit C#
@@ -47,7 +47,7 @@ Die folgenden Themen erleichtern Ihnen den Einstieg in die Entwicklung von Anwen
  Bietet Links zu Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftretenden Problemen finden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Verwenden der Visual Studio-Entwicklungsumgebung für C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Enthält eine Anleitung zur Verwendung der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
@@ -56,12 +56,13 @@ Die folgenden Themen erleichtern Ihnen den Einstieg in die Entwicklung von Anwen
  [C#-Referenz](../../csharp/language-reference/index.md)  
  Enthält ausführliche Referenzinformationen zu C#-Schlüsselwörtern, -Operatoren, -Präprozessoranweisungen, -Compileroptionen sowie -Compilerfehlern und -warnmeldungen.  
   
- [Visual Studio-Beispiele](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
+ [Visual Studio-Beispiele](/visualstudio/ide/visual-studio-samples)  
  Enthält Informationen darüber, wie Sie auf Onlinebeispiele zugreifen können.  
   
  [Exemplarische Vorgehensweisen](../../csharp/walkthroughs.md)  
  Enthält Links zu exemplarischen Vorgehensweisen für die Programmierung in C# und eine kurze Beschreibung jeder exemplarischen Vorgehensweise.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Entwicklerinformationscenter für Anfänger](http://go.microsoft.com/fwlink/?LinkId=123826)
+
