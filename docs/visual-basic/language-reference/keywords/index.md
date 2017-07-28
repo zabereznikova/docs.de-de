@@ -1,5 +1,5 @@
 ---
-title: "Schlüsselwörter (Visual Basic) | Microsoft-Dokumentation"
+title: "Schlüsselwörter (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# Schlüsselwörter (Visual Basic)
+# <a name="keywords-visual-basic"></a>Schlüsselwörter (Visual Basic)
 In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache aufgeführt.  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## Reservierte Schlüsselwörter  
+## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie nicht als Namen von Programmierelementen wie Variablen oder Prozeduren verwenden können. Sie können diese Beschränkung umgehen, indem Sie den Namen in eckige Klammern (`[``]`) einschließen. Weitere Informationen finden Sie unter „Escaped Names“ (Namen mit Escapezeichen) in [Declared Element Names (Deklarierte Elementnamen)](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/in
 > [!NOTE]
 >  `EndIf`, `GoSub`, `Variant` und `Wend` sind reservierte Schlüsselwörter, die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allerdings nicht mehr verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../../../visual-basic/language-reference/queries/let-clause.md).  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## Nicht reservierte Schlüsselwörter  
+## <a name="unreserved-keywords"></a>Nicht reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind nicht reserviert. Das bedeutet, dass Sie sie als Namen von Programmierelementen verwenden können. Dieses Vorgehen wird jedoch nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  
   
 |||||  
@@ -126,9 +120,7 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/in
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ In den folgenden Tabellen sind alle Schlüsselwörter der [!INCLUDE[vbprvb](~/in
 |[Registrierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/registry-summary.md)|Führt Funktionen auf, die verwendet werden, um Programmeinstellungen zu lesen, zu speichern und zu löschen.|  
 |[Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Führt Funktionen auf, mit denen Zeichenfolgen bearbeitet werden.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
 

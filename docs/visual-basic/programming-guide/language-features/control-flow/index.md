@@ -1,5 +1,5 @@
 ---
-title: Ablaufsteuerung in Visual Basic | Microsoft-Dokumentation
+title: Ablaufsteuerung in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,23 +34,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 86ac374a3c2378d7ac167823ceee008260a4deb0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a764732919c32499a062c9136c261539334688cb
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="control-flow-in-visual-basic" class="xliff"></a>
-
-# Ablaufsteuerung in Visual Basic
+# <a name="control-flow-in-visual-basic"></a>Ablaufsteuerung in Visual Basic
 Verbleibt unkontrolliert; ein Programm durchläuft seine Anweisungen von Anfang bis Ende. Einige sehr einfache Programme können nur mit diesem unidirektionalen Ablauf geschrieben werden. Ein Großteil der Leistung und der Hilfsprogramme einer Programmiersprache stammt jedoch von der Fähigkeit, die Ausführungsreihenfolge mit Steuerungsanweisungen und Schleifen zu ändern.  
   
  Steuerungsstrukturen erlauben Ihnen, den Ablauf der Ausführung Ihres Programms zu steuern. Mithilfe von Steuerungsstrukturen können Sie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Code schreiben, der Entscheidungen trifft oder Aktionen wiederholt. Mit anderen Steuerungsstrukturen können Sie die Freigabe einer Ressource garantieren oder eine Reihe von Anweisungen auf dem gleichen Objektverweis ausführen.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  Beschreibt Steuerungsstrukturen, die für das Verzweigen verwendet werden.  
   
@@ -63,8 +59,7 @@ Verbleibt unkontrolliert; ein Programm durchläuft seine Anweisungen von Anfang 
  [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  Behandelt Steuerungsstrukturen in anderen Steuerungsstrukturen.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Ablaufsteuerung: Zusammenfassung](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
  Enthält Links zu Sprachreferenzseiten zu diesem Thema.
+

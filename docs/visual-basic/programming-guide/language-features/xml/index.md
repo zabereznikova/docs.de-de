@@ -1,5 +1,5 @@
 ---
-title: XML in Visual Basic | Microsoft-Dokumentation
+title: XML in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5dd44fb1d3efe53ce37d17d91d522aeed7442ef9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cfa2abbc5ec68f26561813552d491a4131d54b0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xml-in-visual-basic"></a>XML in Visual Basic
@@ -57,3 +57,4 @@ ms.lasthandoff: 05/26/2017
  [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md)   
  [XML-Achseneigenschaften](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+

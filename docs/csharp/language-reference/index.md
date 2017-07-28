@@ -1,5 +1,5 @@
 ---
-title: C#-Referenz | Microsoft-Dokumentation
+title: C#-Referenz
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>C#-Referenz
@@ -61,7 +61,7 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  [C#-Compilerfehler](../../csharp/language-reference/compiler-messages/index.md)  
  Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.  
   
- [C#-Programmiersprachenspezifikation](../../csharp/language-reference/language-specification.md)  
+ [C#-Programmiersprachenspezifikation](../../csharp/language-reference/language-specification/index.md)  
  Enthält Zeiger auf die neueste Version der C#-Spezifikation im Microsoft Word-Format.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
@@ -75,7 +75,7 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  [C#](../../csharp/csharp.md)  
  Enthält ein Portal für die Visual C#-Dokumentation.  
   
- [Verwenden der Visual Studio-Entwicklungsumgebung für C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.  
   
  [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  

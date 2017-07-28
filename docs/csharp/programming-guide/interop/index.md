@@ -1,5 +1,5 @@
 ---
-title: "Interoperabilität (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Interoperabilität (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df2f33c4599baef6d606738cbe5766fdd88e4ef3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilität (C#-Programmierhandbuch)
@@ -69,3 +69,4 @@ Interoperabilität ermöglicht es Ihnen, vorhandene Investitionen in nicht verwa
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)   
  [Exemplarische Vorgehensweise: Office-Programmierung](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+

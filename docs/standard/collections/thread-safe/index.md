@@ -1,5 +1,5 @@
 ---
-title: Threadsichere Auflistungen | Microsoft-Dokumentation
+title: Threadsichere Auflistungen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,11 +15,11 @@ caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e237cb676be3f767bb3b7b967b3362a0f3a3e0d1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8d0fa0af8f6a78a6d209fdb4956cbbe9448b5204
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-safe-collections"></a>Threadsichere Auflistungen
@@ -65,3 +65,4 @@ ms.lasthandoff: 05/19/2017
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Collections.Concurrent?displayProperty=fullName>
+

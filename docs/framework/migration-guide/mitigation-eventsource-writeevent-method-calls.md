@@ -1,5 +1,5 @@
 ---
-title: "Entschärfung: EventSource.WriteEvent-Methodenaufrufe | Microsoft-Dokumentation"
+title: 'Minderung: EventSource.WriteEvent-Methodenaufrufe'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,15 +14,15 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: cde809989d89c10caeb97ec853c8649a108cd72d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 270f89183bced5d07598b1731f18acf90ec9715a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-eventsourcewriteevent-method-calls"></a>Entschärfung: EventSource.WriteEvent-Methodenaufrufe
-[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] erzwingt einen Vertrag zwischen einer ETW-Ereignismethode in einer von <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> abgeleiteten Klasse und der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A>-Methode ihrer Basisklasse. Die ETW-Ereignismethode muss der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A>-Methode die Ereignis-ID gefolgt von den gleichen Argumenten übergeben, die an die Ereignismethode übergeben wurden.  
+# <a name="mitigation-eventsourcewriteevent-method-calls"></a>Minderung: EventSource.WriteEvent-Methodenaufrufe
+[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] setzt einen Vertrag zwischen einer ETW-Ereignismethode in einer Klasse, die von <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> abgeleitet wird, und der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> -Methode der Basisklasse durch. Die ETW-Ereignismethode muss der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> -Methode die Ereignis-ID gefolgt von den gleichen Argumenten übergeben, die an die Ereignismethode übergeben wurden.  
   
 ## <a name="impact"></a>Auswirkungen  
  Eine ETW-Ereignismethode, die folgendermaßen definiert ist, verstößt gegen den Vertrag:  
@@ -35,7 +35,7 @@ public void Info2(string message)
 }  
 ```  
   
- Wenn gegen diesen Vertrag verstoßen wird, wird zur Laufzeit eine <xref:System.IndexOutOfRangeException>-Ausnahme ausgelöst, wenn ein <xref:System.Diagnostics.Tracing.EventListener>-Objekt in Verarbeitung befindliche <xref:System.Diagnostics.Tracing.EventSource>-Daten liest.  
+ Wenn gegen diesen Vertrag verstoßen wird, wird eine <xref:System.IndexOutOfRangeException> -Ausnahme zur Laufzeit ausgelöst, wenn ein <xref:System.Diagnostics.Tracing.EventListener> -Objekt <xref:System.Diagnostics.Tracing.EventSource> -Daten im Prozess liest.  
   
  Die Definition für diese ETW-Ereignismethode sollte diesem Muster folgen:  
   
@@ -50,7 +50,7 @@ public void Info2(string message)
 ## <a name="mitigation"></a>Minderung  
  Sie müssen vorhandenen Code so ändern, dass dieser dem erforderlichen Muster entspricht.  
   
- Sie können den Code, den Sie ändern müssen, minimieren, indem Sie wie folgt zwei Methoden zum Aufrufen der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A>-Methode definieren:  
+ Sie können den Code, den Sie ändern müssen, minimieren, indem Sie wie folgt zwei Methoden zum Aufrufen der <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> -Methode definieren:  
   
 ```  
 [NonEvent]  

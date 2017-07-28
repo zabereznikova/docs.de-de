@@ -1,5 +1,5 @@
 ---
-title: Delegaten (Visual Basic) | Microsoft-Dokumentation
+title: Delegaten (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 2dac1828a49bbf0d07e6134464e50eeb7c9cddd1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="delegates-visual-basic" class="xliff"></a>
-
-# Delegaten (Visual Basic)
+# <a name="delegates-visual-basic"></a>Delegaten (Visual Basic)
 Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=fullName>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
   
-<a id="delegates-and-events" class="xliff"></a>
-
-## Delegaten und Ereignisse  
+## <a name="delegates-and-events"></a>Delegaten und Ereignisse  
  Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht die dynamische Zuordnung von Ereignishandlern zu Ereignissen, indem ein Delegat für Sie erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.  
   
  Sie können zwar auch eigene Delegaten erstellen, doch in den meisten Fällen generiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Delegaten und verarbeitet die Details. Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis. Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist. Die folgenden beiden Codezeilen sind gleichwertig. In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird. Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.  
@@ -54,27 +50,21 @@ Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typ
   
  Die schnelle Methode zum Erstellen von Delegaten können Sie immer dort verwenden, wo der Compiler den Delegattyp anhand des Kontexts bestimmen kann.  
   
-<a id="declaring-events-that-use-an-existing-delegate-type" class="xliff"></a>
-
-## Deklarieren von Ereignissen, die einen vorhandenen Delegattyp verwenden  
+## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Deklarieren von Ereignissen, die einen vorhandenen Delegattyp verwenden  
  In manchen Situationen empfiehlt es sich, ein Ereignis so zu deklarieren, dass es einen vorhandenen Delegattyp als zugrunde liegenden Delegaten verwendet. Die folgende Syntax veranschaulicht dies:  
   
  [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
   
  Dies ist nützlich, wenn mehrere Ereignisse an den gleichen Handler weitergeleitet werden sollen.  
   
-<a id="delegate-variables-and-parameters" class="xliff"></a>
-
-## Delegatvariablen und -parameter  
+## <a name="delegate-variables-and-parameters"></a>Delegatvariablen und -parameter  
  Sie können Delegaten für andere, nicht auf Ereignisse bezogene Tasks (z.B. freies Threading) oder für Prozeduren verwenden, die zur Laufzeit verschiedene Versionen von Funktionen aufrufen müssen.  
   
  Ein Beispiel: Eine Anwendung für Gebrauchtwagen-Kleinanzeigen enthält ein Listenfeld mit den Namen von Fahrzeugen. Die Anzeigen sind nach Titel sortiert, wobei es sich in der Regel um die Marke handelt. Ein Problem kann dann auftreten, wenn bei einigen Autos das Baujahr vor der Marke steht. Das Problem besteht darin, dass die integrierte Suchfunktion des Listenfelds nur nach Zeichencodes sortiert. Daher werden alle Anzeigen, die mit dem Jahr beginnen, an den Beginn der Liste sortiert, erst dann folgen die Anzeigen, die mit der Marke beginnen.  
   
  Um dies zu beheben, können Sie eine Sortierprozedur in einer Klasse erstellen, die in den meisten Listenfeldern die standardmäßige alphabetische Sortierung verwendet, jedoch zur Laufzeit auf die benutzerdefinierte Sortierung für Gebrauchtwagenanzeigen umgestellt werden kann. Dafür übergeben Sie die benutzerdefinierte Sortierprozedur mithilfe von Delegaten zur Laufzeit an die Sortierklasse.  
   
-<a id="addressof-and-lambda-expressions" class="xliff"></a>
-
-## AddressOf- und Lambda-Ausdrücke  
+## <a name="addressof-and-lambda-expressions"></a>AddressOf- und Lambda-Ausdrücke  
  Jede Delegatklasse definiert einen Konstruktor, dem die Spezifikation einer Objektmethode übergeben wird. Ein Argument für einen Delegatkonstruktor muss ein Verweis auf eine Methode oder ein Lambda-Ausdruck sein.  
   
  Verwenden Sie die folgende Syntax, um einen Verweis auf eine Methode festzulegen:  
@@ -93,9 +83,7 @@ Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typ
   
  Die Signatur der Funktion muss mit der des Delegattyps übereinstimmen. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Beispiele für Lambda-Ausdrücke und `AddressOf`-Zuweisungen zu Delegaten finden Sie unter [Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-<a id="related-topics" class="xliff"></a>
-
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
@@ -103,3 +91,4 @@ Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typ
 |[Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.|  
 |[Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.|  
 |[Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)|Stellt eine Übersicht über Ereignisse in Visual Basic bereit.|
+

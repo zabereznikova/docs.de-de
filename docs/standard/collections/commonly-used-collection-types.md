@@ -1,5 +1,5 @@
 ---
-title: "Häufig verwendete Auflistungstypen | Microsoft-Dokumentation"
+title: "Häufig verwendete Auflistungstypen"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -22,16 +22,14 @@ caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1f8d938d61492b4da4b35a56fba169a12ed4787e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a3ac4cbdee87e71f9a0de8aae701d84bfc96137
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="commonly-used-collection-types" class="xliff"></a>
-
-# Häufig verwendete Auflistungstypen
+# <a name="commonly-used-collection-types"></a>Häufig verwendete Auflistungstypen
 Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. Hashtabellen, Warteschlangen, Stapel, Sammlungen, Wörterbücher und Listen.  
   
  Auflistungen basieren auf der <xref:System.Collections.ICollection>-Schnittstelle, der <xref:System.Collections.IList>-Schnittstelle, der <xref:System.Collections.IDictionary>-Schnittstelle oder auf ihren generischen Entsprechungen. Die <xref:System.Collections.IList>-Schnittstelle und die <xref:System.Collections.IDictionary>-Schnittstelle leiten sich beide aus der <xref:System.Collections.ICollection>-Schnittstelle ab. Daher basieren alle Auflistungen direkt oder indirekt auf der <xref:System.Collections.ICollection>-Schnittstelle. In Auflistungen, die auf der <xref:System.Collections.IList>-Schnittstelle basieren (zum Beispiel <xref:System.Array>, <xref:System.Collections.ArrayList> oder <xref:System.Collections.Generic.List%601>) oder direkt auf der <xref:System.Collections.ICollection>-Schnittstelle (zum Beispiel <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> oder <xref:System.Collections.Generic.LinkedList%601>), enthält jedes Element nur einen Wert. In Auflistungen, die auf der <xref:System.Collections.IDictionary>-Schnittstelle basieren (zum Beispiel die Klassen <xref:System.Collections.Hashtable> und <xref:System.Collections.SortedList>, die generischen Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Generic.SortedList%602>), oder die auf den <xref:System.Collections.Concurrent.ConcurrentDictionary%602>-Klassen basieren, enthält jedes Element einen Schlüssel und einen Wert.  Die <xref:System.Collections.ObjectModel.KeyedCollection%602>-Klasse ist eindeutig, da sie eine Liste von Werten mit Schlüsseln darstellt, die in den Werten eingebettet sind. Deshalb verhält sie sich wie eine Liste und wie ein Wörterbuch.  
@@ -42,9 +40,7 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
   
  Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ-zu-Objekte](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) und [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-<a id="related-topics" class="xliff"></a>
-
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
@@ -53,9 +49,7 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
 |[Sortierte Auflistungstypen](../../../docs/standard/collections/sorted-collection-types.md)|Beschreibt Klassen, die Sortierfunktionen für Listen und Sätze bereitstellen.|  
 |[Generika](../../../docs/standard/generics/index.md)|Beschreibt das Generikafeature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
   
-<a id="reference" class="xliff"></a>
-
-## Verweis  
+## <a name="reference"></a>Verweis  
  <xref:System.Collections?displayProperty=fullName>  
   
  <xref:System.Collections.Generic?displayProperty=fullName>  
@@ -71,3 +65,4 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
  <xref:System.Collections.IDictionary?displayProperty=fullName>  
   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+

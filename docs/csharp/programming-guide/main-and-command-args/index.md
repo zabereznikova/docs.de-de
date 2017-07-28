@@ -1,5 +1,5 @@
 ---
-title: Main() und Befehlszeilenargumente (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Main() und Befehlszeilenargumente (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,25 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: eb1d380ee4dfd64081d8fe36880a06e3a450f639
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="main-and-command-line-arguments-c-programming-guide" class="xliff"></a>
-
-# Main() und Befehlszeilenargumente (C#-Programmierhandbuch)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() und Befehlszeilenargumente (C#-Programmierhandbuch)
 Die `Main`-Methode ist der Einstiegspunkt einer C#-Konsolenanwendung oder einer Windows-Anwendung. (Bibliotheken und Dienste erfordern keine `Main`-Methode als Einstiegspunkt.) Wenn die Anwendung gestartet wird, ist die `Main`-Methode die erste Methode, die aufgerufen wird.  
   
  In einem C#-Programm kann nur ein Einstiegspunkt vorhanden sein. Wenn Sie mehr als eine Klasse mit einer `Main`-Methode aufweisen, müssen Sie das Programm mit der **/main**-Compileroption kompilieren, um anzugeben, welche `Main`-Methode als Einstiegspunkt verwendet wird. Weitere Informationen hierzu finden Sie unter [/main (C# Compiler Options)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
  [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
-<a id="overview" class="xliff"></a>
-
-## Übersicht  
+## <a name="overview"></a>Übersicht  
   
 -   Die `Main`-Methode ist der Einstiegspunkt eines EXE-Programms, in dem die Programmsteuerung beginnt und endet.  
   
@@ -63,9 +59,7 @@ Die `Main`-Methode ist der Einstiegspunkt einer C#-Konsolenanwendung oder einer 
   
 -   Die `Main`-Methode kann mit oder ohne `string[]`-Parameter deklariert werden, der die Befehlszeilenargumente enthält. Bei Verwendung von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zum Erstellen der Windows Forms-Anwendung können Sie den Parameter manuell hinzufügen oder die <xref:System.Environment>-Klasse anderweitig verwenden, um die Befehlszeilenargumente abzurufen. Parameter werden als mit Null indizierte Befehlszeilenargumente gelesen. Im Gegensatz zu C und C++ wird der Name des Programms nicht als erstes Befehlszeilenargument behandelt.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
   
@@ -75,16 +69,13 @@ Die `Main`-Methode ist der Einstiegspunkt einer C#-Konsolenanwendung oder einer 
   
 -   [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+

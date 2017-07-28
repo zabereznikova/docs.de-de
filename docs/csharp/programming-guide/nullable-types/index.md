@@ -1,5 +1,5 @@
 ---
-title: Nullable-Typen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Nullable-Typen (C#-Programmierhandbuch)
 ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
@@ -29,25 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="nullable-types-c-programming-guide" class="xliff"></a>
-
-# Nullable-Typen (C#-Programmierhandbuch)
+# <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
 Auf NULL festlegbare Typen sind Instanzen der <xref:System.Nullable%601?displayProperty=fullName>-Struktur. Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen. Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden. Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden. Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde. Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein. 
   
 [!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
   
-<a id="nullable-types-overview" class="xliff"></a>
-
-## Übersicht über Nullable-Typen  
+## <a name="nullable-types-overview"></a>Übersicht über Nullable-Typen  
  Nullable-Typen weisen die folgenden Eigenschaften auf:  
   
 -   Nullable-Typen stellen Werttypvariablen dar, denen der Wert `null` zugewiesen werden kann. Sie können keinen Nullable-Typ basierend auf einem Verweistyp erstellen. (Verweistypen unterstützen immer den `null`-Wert.)  
@@ -72,9 +68,7 @@ Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../cshar
   
 -   Geschachtelte Nullable-Typen sind nicht zulässig. Die folgende Zeile wird nicht kompiliert: `Nullable<Nullable<int>> n;`  
   
-<a id="related-sections" class="xliff"></a>
-
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   
   
 -   [Verwenden von Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,14 +77,10 @@ Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../cshar
   
 -   [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Nullable>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   

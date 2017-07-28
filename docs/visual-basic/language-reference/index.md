@@ -1,5 +1,5 @@
 ---
-title: Visual Basic-Programmiersprachenreferenz | Microsoft-Dokumentation
+title: "Sprachreferenz zu Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Sprachreferenz zu Visual Basic
+# <a name="visual-basic-language-reference"></a>Sprachreferenz zu Visual Basic
 Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Typografische und Codekonventionen](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Fasst die Methoden zusammen, mit denen Schlüsselwörter, Platzhalter und andere Elemente der Sprache in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Dokumentation formatiert werden.  
   
@@ -108,11 +104,10 @@ Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der [!
  [Fehlermeldungen](../../visual-basic/language-reference/error-messages/index.md)  
  Stellt eine Auflistung der Benachrichtigungen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler- und Laufzeitfehlern bereit sowie Hilfe zur Fehlerbehandlung.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Visual Basic](../../visual-basic/index.md)  
  Stellt umfassende Hilfe für alle Bereiche der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprache bereit.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Beschreibt, wie der Befehlszeilencompiler als eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE) verwendet wird.
+

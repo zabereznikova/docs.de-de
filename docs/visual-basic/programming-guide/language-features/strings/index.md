@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolgen in Visual Basic | Microsoft-Dokumentation
+title: Zeichenfolgen in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# Zeichenfolgen in Visual Basic
+# <a name="strings-in-visual-basic"></a>Zeichenfolgen in Visual Basic
 Dieser Abschnitt beschreibt die grundlegenden Konzepte hinter der Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  Führt Themen auf, die die grundlegenden Konzepte hinter der Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschreiben.  
   
@@ -64,7 +60,6 @@ Dieser Abschnitt beschreibt die grundlegenden Konzepte hinter der Verwendung von
  [Exemplarische Vorgehensweise: Verschlüsseln und Entschlüsseln von Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Zeigt, wie Zeichenfolge mithilfe der kryptografischen Dienstanbieterversion des Triple Data Encryption Standard-Algorithmus verschlüsselt und wieder entschlüsselt werden.  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Funktionen von Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+

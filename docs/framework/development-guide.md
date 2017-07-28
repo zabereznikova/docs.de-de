@@ -1,5 +1,5 @@
 ---
-title: "Entwicklungshandbuch für .NET Framework | Microsoft-Dokumentation"
+title: "Entwicklungshandbuch für .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,10 +16,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
@@ -78,7 +79,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Verweis  
- [.NET Framework-Klassenbibliothek](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7)  
  Stellt Syntax, Codebeispiele und Informationen zur Verwendung zu den einzelnen in den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces enthaltenen Klassen zur Verfügung.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
@@ -93,3 +94,4 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
   
  [.NET Framework-Beispiele](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Enthält Links zur MSDN Code Samples Gallery für Beispielapps zur Veranschaulichung von .NET Framework-Technologien.
+

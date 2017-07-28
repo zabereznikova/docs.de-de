@@ -1,5 +1,5 @@
 ---
-title: "Entschärfung: TLS-Protokolle | Microsoft-Dokumentation"
+title: "Entschärfung: TLS-Protokolle"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,20 +14,16 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1474aeb0e1be38018f9d27c49e8711800ecb9f01
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254cbd020881cadd33186f8318aca037456c88ff
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="mitigation-tls-protocols" class="xliff"></a>
-
 # Entschärfung: TLS-Protokolle
 Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?displayProperty=fullName> und <xref:System.Net.Security.SslStream?displayProperty=fullName> eines der drei folgenden Protokolle verwenden: Tls1.0, Tls1.1 oder Tls 1.2. Weder das SSL3.0-Protokoll noch das RC4-Verschlüsselungsverfahren werden unterstützt.  
   
-<a id="impact" class="xliff"></a>
-
 ## Auswirkungen  
  Von dieser Änderung sind folgende Punkte betroffen:  
   
@@ -35,8 +31,6 @@ Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?d
   
 -   Alle serverseitigen Apps, die nicht für die Unterstützung von Tls1.0, Tls1.1 oder Tls 1.2 aktualisiert werden können.  
   
-<a id="mitigation" class="xliff"></a>
-
 ## Problemumgehung  
  Die empfohlene Minderung besteht darin, die serverseitige App auf Tls1.0, Tls1.1 oder Tls 1.2 zu aktualisieren. Wenn dies nicht möglich ist oder die Client-Apps fehlerhaft sind, kann die Klasse <xref:System.AppContext> verwendet werden, um das Feature auf zwei verschiedene Art und Weisen abzuwählen:   
   
@@ -54,7 +48,6 @@ Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?d
   
  Beachten Sie jedoch, dass das Abwählen des Standardverhaltens nicht empfohlen wird, da die Anwendung dadurch unsichererer wird.  
   
-<a id="see-also" class="xliff"></a>
-
 ## Siehe auch  
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

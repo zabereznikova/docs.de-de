@@ -1,5 +1,5 @@
 ---
-title: Schnittstellen (Visual Basic) | Microsoft-Dokumentation
+title: Schnittstellen (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,16 +33,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: a95f3cfc8213c6a34953ae3ce87c6f5da9c0f8ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interfaces-visual-basic" class="xliff"></a>
-
-# Schnittstellen (Visual Basic)
+# <a name="interfaces-visual-basic"></a>Schnittstellen (Visual Basic)
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können. Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden. Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
   
  Es gibt viele weitere Gründe, warum Sie möglicherweise Schnittstellen anstelle der Klassenvererbung verwenden möchten:  
@@ -55,9 +53,7 @@ ms.lasthandoff: 05/26/2017
   
 -   Schnittstellen sind nützlich, wenn Sie keine Klassenvererbung verwenden können. Z. B. Strukturen können nicht von Klassen erben, sie können jedoch Schnittstellen implementieren.  
   
-<a id="declaring-interfaces" class="xliff"></a>
-
-## Deklarieren von Schnittstellen  
+## <a name="declaring-interfaces"></a>Deklarieren von Schnittstellen  
  Schnittstellendefinitionen werden innerhalb der `Interface` und `End Interface` Anweisungen eingeschlossen. Nach der `Interface` Anweisung können Sie eine optionale `Inherits` Anweisung hinzufügen, die eine oder mehrere geerbte Schnittstellen auflistet. Die `Inherits` Anweisungen müssen in der Deklaration vor allen anderen Anweisungen, außer Kommentaren, stehen. Die übrigen Anweisungen der Schnittstellendefinition sollten `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, und `Enum` Anweisungen sein. Schnittstellen können keinen Implementierungscode oder Anweisungen, die Implementierungscode zugeordnet sind, enthalten, wie z. B. `End Sub` oder `End Property`.  
   
  In einem Namespace sind Schnittstellenanweisungen standardmäßig `Friend`, aber sie können auch explizit als `Public` oder `Friend` deklariert sein. Schnittstellen, die innerhalb von Klassen, Modulen, Schnittstellen und Strukturen definiert sind, sind standardmäßig `Public`, können aber auch explizit als `Public`, `Friend`, `Protected`, oder `Private` deklariert sein.  
@@ -69,19 +65,13 @@ ms.lasthandoff: 05/26/2017
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
-<a id="implementing-interfaces" class="xliff"></a>
-
-## Implementieren von Schnittsellen  
+## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
  Das [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reservierte Wort `Implements` wird in zwei Arten verwendet. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
   
-<a id="implements-statement" class="xliff"></a>
-
-### Implements-Anweisung  
+### <a name="implements-statement"></a>Implements-Anweisung  
  Wenn eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, muss die `Implements` Anweisung unmittelbar nach der `Class` oder `Structure` Anweisung erfolgen. Die `Implements` Anweisung erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellen, die von einer Klasse implementiert werden. Die Klasse oder Struktur muss alle Schnittstellenmember mit dem `Implements` Schlüsselwort implementieren.  
   
-<a id="implements-keyword" class="xliff"></a>
-
-### Implements-Schlüsselwort  
+### <a name="implements-keyword"></a>Implements-Schlüsselwort  
  Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name des Members, der ein Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden; und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet wurde.  
   
  Der folgende Code zeigt z. B. das Deklarieren einer Unterroutine namens `Sub1`, die eine Methode einer Schnittstelle implementiert:  
@@ -98,9 +88,7 @@ ms.lasthandoff: 05/26/2017
   
  Sie können einen privaten Member verwenden, um ein Schnittstellenmember zu implementieren. Wenn ein privater Member einen Member einer Schnittstelle implementiert, wird dieses Member durch die Schnittstelle verfügbar, obwohl er nicht direkt in Objektvariablen für die Klasse verfügbar ist.  
   
-<a id="interface-implementation-examples" class="xliff"></a>
-
-### Beispiele für Schnittstellenimplementierung  
+### <a name="interface-implementation-examples"></a>Beispiele für Schnittstellenimplementierung  
  Klassen, die eine Schnittstelle implementieren, müssen alle Eigenschaften, Methoden und Ereignisse implementieren.  
   
  Im folgenden Beispiel werden zwei Schnittstellen definiert. Die zweite Schnittstelle `Interface2`, erbt `Interface1` und definiert eine zusätzliche Eigenschaft und Methode.  
@@ -117,11 +105,10 @@ ms.lasthandoff: 05/26/2017
   
  Sie können eine schreibgeschützte Eigenschaft mit einer Readwrite-Eigenschaft implementieren (das heißt, Sie müssen sie nicht als schreibgeschützt in der implementierenden Klasse deklarieren).  Implementieren einer Schnittstelle verspricht mindestens die Member zu implementieren, die die Schnittstelle deklariert, aber Sie können mehr Funktionalität bieten, z. B. Schreibbarkeit Ihrer Eigenschaft.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Bietet eine ausführliche Anleitung, die Sie durch den Prozess des Definierens und Implementierens Ihrer eigenen Schnittstellen führt.|  
 |[Varianz in generischen Schnittstellen](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|Erläutert Ko- und Kontravarianz in generischen Schnittstellen und enthält eine Liste der Varianten generischen Schnittstellen in .NET Framework.|
+

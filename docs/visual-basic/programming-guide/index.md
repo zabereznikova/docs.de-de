@@ -1,5 +1,5 @@
 ---
-title: Visual Basic-Programmierhandbuch | Microsoft-Dokumentation
+title: "Visual Basic-Programmierhandbuch"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,21 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 43f0e9958838bf9a4ca5111ccd93499e3d4d13c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01d6a1fc688f2cdf55ab4be5c6d0a8daccda2031
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-programming-guide" class="xliff"></a>
-
-# Visual Basic-Programmierhandbuch
+# <a name="visual-basic-programming-guide"></a>Visual Basic-Programmierhandbuch
 Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viele allgemeine Programmierungskonstrukte und Sprachelemente. In dieser Anleitung werden die wichtigsten Elemente bei der Programmierung mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beschrieben.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Programmstruktur und Codekonventionen](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Enthält eine Dokumentation über die grundlegende Struktur und über Codekonventionen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], z. B. Benennungskonventionen, Kommentare im Code und Beschränkungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -53,11 +49,10 @@ Wie jede moderne Programmiersprache unterstützt auch [!INCLUDE[vbprvb](~/includ
  [COM-Interop](../../visual-basic/programming-guide/com-interop/index.md)  
  Erläutert Interoperabilitätsprobleme beim Erstellen und Verwenden von COM-Objekten (Component Object Model) mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="related-sections" class="xliff"></a>
-
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
  Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Programmierung.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Bietet Informationen zur Verwendung des [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompilers, der Compileroptionen und des Schlüsselwertupgradetools.
+
