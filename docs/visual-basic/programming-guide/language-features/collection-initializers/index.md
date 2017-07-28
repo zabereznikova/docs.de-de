@@ -1,5 +1,5 @@
 ---
-title: Auflistungsinitialisierer (Visual Basic) | Microsoft-Dokumentation
+title: Auflistungsinitialisierer (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,16 +32,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: 4b0abe2c6356370584356dce1c6fc5731d735810
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="collection-initializers-visual-basic" class="xliff"></a>
-
-# Auflistungsinitialisierer (Visual Basic)
+# <a name="collection-initializers-visual-basic"></a>Auflistungsinitialisierer (Visual Basic)
 *Auflistungsinitialisierer* stellen eine gekürzte Syntax bereit, mit der Sie eine Auflistung erstellen und mit einem anfänglichen Satz von Werten auffüllen können. Auflistungsinitialisierer sind nützlich beim Erstellen einer Auflistung aus einem Satz unbekannter Werte, z.B. eine Liste von Menüoptionen oder Kategorien, ein ursprünglicher Satz numerischer Werte, eine statische Liste von Zeichenfolgen wie Tag- oder Monatsnamen oder geografische Orte, z.B. eine Liste von Staaten, die für eine Überprüfung verwendet werden.  
   
  Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
@@ -53,9 +51,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  C# stellt ebenso Auflistungsinitialisierer bereit. C#-Auflistungsinitialisierer bieten die gleichen Funktionen wie Visual Basic-Auflistungsinitialisierer. Informationen über C#-Auflistungsinitialisierer finden Sie unter [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-<a id="syntax" class="xliff"></a>
-
-## Syntax  
+## <a name="syntax"></a>Syntax  
  Ein Auflistungsinitialisierer besteht aus einer Liste von durch Komma getrennte Werte, die in Klammern (`{}`) eingeschlossen sind. Das Schlüsselwort `From` ist vorangestellt, wie im folgenden Code dargestellt.  
   
  [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]  
@@ -67,9 +63,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  Sie können nicht einen Auflistungsinitialisierer und einen Objektinitialisierer kombinieren, um das gleiche Auflistungsobjekt zu initialisieren. Sie können Objektinitialisierer zum Initialisieren von Objekten in einem Auflistungsinitialisierer verwenden.  
   
-<a id="creating-a-collection-by-using-a-collection-intializer" class="xliff"></a>
-
-## Erstellen einer Auflistung durch Verwendung eines Auflistungsinitialisierers  
+## <a name="creating-a-collection-by-using-a-collection-intializer"></a>Erstellen einer Auflistung durch Verwendung eines Auflistungsinitialisierers  
  Wenn Sie eine Sammlung durch Verwendung eines Auflistunsinitialisierers erstellen, wird jeder Wert, der im Auflistunsinitialisierer angegeben ist, an die entsprechende `Add`-Methode der Auflistung übergeben. Wenn Sie z.B. eine <xref:System.Collections.Generic.List%601> durch Verwendung eines Auflistungsinitialisierers erstellen, wird jeder Zeichenfolgenwert im Auflistungsinitialisierer an die <xref:System.Collections.Generic.List%601.Add%2A>-Methode übergeben. Wenn Sie eine Auflistung mithilfe eines Auflistungsinitialisierers erstellen möchten, muss der angegebene Typ ein gültiger Auflistungstyp sein. Beispiele gültiger Auflistungstypen enthalten Klassen, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren oder die <xref:System.Collections.CollectionBase>-Klasse erben. Der angegebene Typ muss auch eine `Add`-Methode verfügbar machen, die die folgenden Kriterien erfüllt.  
   
 -   Die `Add`-Methode muss aus dem Bereich verfügbar sein, aus dem der Auflistungsinitialisierer aufgerufen wird. Die `Add`-Methode muss öffentlich sein, wenn Sie den Auflistungsinitialisierer in einem Szenario verwenden, in dem auf nicht-öffentliche Methode der Auflistung zugegriffen werden kann.  
@@ -88,9 +82,7 @@ ms.lasthandoff: 07/03/2017
   
  Wenn die Auflistung über eine `Add`-Methode verfügt, die Parameter besitzt, die mit dem Konstruktor für das `Customer`-Objekt übereinstimmen, können Sie Parameterwerte für die `Add`-Methode innerhalb von Auflistungsinitialisierern schachteln, so wie im nächsten Abschnitt beschrieben. Wenn die Auflistung nicht über diese `Add`-Methode verfügt, können Sie eine als Erweiterungsmethode erstellen. Ein Beispiel, wie Sie eine `Add`-Methode als Sammlung für eine Auflistung erstellen, finden Sie unter [Vorgehensweise: Erstellen einer Add-Erweiterungsmethode für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Ein Beispiel, wie Sie eine benutzerdefinierte Auflistung erstellen, die mit einem Auflistungsinitialisierer verwendet werden kann, finden Sie unter [Vorgehensweise: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
-<a id="nesting-collection-initializers" class="xliff"></a>
-
-## Schachteln von Auflistungsinitialisierern  
+## <a name="nesting-collection-initializers"></a>Schachteln von Auflistungsinitialisierern  
  Sie können Werte innerhalb eines Auflistungsinitialisierers schachteln, um eine bestimmte Überladung einer `Add`-Methode für die Auflistung, die erstellt wird, zu identifizieren. Die Werte, die an die `Add`-Methode übergeben werden, müssen durch Kommas getrennt und in Klammern (`{}`) eingeschlossen werden, so wie Sie das auch in einem Arrayliteral oder Auflistungsinitialisierer tun würden.  
   
  Wenn Sie ein Auflistung mithilfe geschachtelter Werte erstellen, wird jedes Element der geschachtelten Werteliste an das Argument an die `Add`-Methode übergeben, die mit den Elementtypen übereinstimmt. Beispielsweise erstellt das folgende Codebeispiel eine <xref:System.Collections.Generic.Dictionary%602>, in der die Schlüssel vom Typ `Integer` und die Werte vom Typ `String` sind. Jede der geschachtelten Wertelisten wird mit der <xref:System.Collections.Generic.Dictionary%602.Add%2A>-Methode für `Dictionary` verglichen.  
@@ -103,18 +95,14 @@ ms.lasthandoff: 07/03/2017
   
  Es werden ausschließlich geschachtelte Wertelisten aus der ersten Schachtelungsebene an die `Add`-Methode für den Auflistungstyp gesendet. Tiefere Schachtelungsebenen werden als Arrayliterale behandelt und die geschachtelten Wertelisten werden der `Add`-Methode einer Auflistung nicht zugeordnet.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |---|---|  
 |[Gewusst wie: Erstellen einer Add-Erweiterungsmethode für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Zeigt, wie eine Erweiterungsmethode namens `Add` erstellt wird, die zum Auffüllen einer Auflistung mit Werten von einem Auflistungsinitialisierer verwendet werden kann.|  
 |[Gewusst wie: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Zeigt, wie die Verwendung eines Auflistungsinitialisierers ermöglicht wird, indem eine `Add`-Methode in eine Auflistungsklasse eingefügt wird, die `IEnumerable` implementiert.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  (Sammlungen)  
  [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
  [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

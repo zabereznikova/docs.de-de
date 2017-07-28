@@ -1,5 +1,5 @@
 ---
-title: Generika (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Generika (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c02f182d725e180c71af4137cd60e63a1f6f2db
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4899b3604343925e7e4e0535929d041b1a1f1081
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-c-programming-guide"></a>Generika (C#-Programmierhandbuch)
@@ -84,7 +84,7 @@ Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (
 -   [Generika in der .NET Framework-Klassenbibliothek](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- Weitere Informationen erhalten Sie unter [C#-Sprachspezifikation](../../../csharp/language-reference/language-specification.md).  
+ Weitere Informationen erhalten Sie unter [C#-Sprachspezifikation](../../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Generic>   
@@ -92,3 +92,4 @@ Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (
  [Typen](../../../csharp/programming-guide/types/index.md)   
  [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)   
  [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+

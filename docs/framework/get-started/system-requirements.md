@@ -1,5 +1,5 @@
 ---
-title: "Systemanforderungen für .NET Frameworks | Microsoft-Dokumentation"
+title: "Systemanforderungen für .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,25 +20,21 @@ caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b48b2d7b8b6256c2395cee069d7705001258a0a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="net-framework-system-requirements" class="xliff"></a>
-
-# Systemanforderungen für .NET Framework
+# <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für .NET Framework 4.5 und dessen Punktreleases (4.5.1 und 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und dessen Punktreleases (4.6.1 und 4.6.2) sowie .NET Framework 4.7. Für Entwicklungsumgebungen, in denen Anwendungen für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
 
  Downloadinformationen und Links finden Sie unter [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).
 
  Informationen zum Support Lifecycle der .NET Framework-Versionen finden Sie unter [Microsoft Support Lifecycle](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
-<a id="hardware-requirements" class="xliff"></a>
-
-## Hardwareanforderungen
+## <a name="hardware-requirements"></a>Hardwareanforderungen
 
 |||
 |-|-|
@@ -48,15 +44,11 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 |32-Bit|4,5 GB|
 |64-Bit|4,5 GB|
 
-<a id="installation-requirements" class="xliff"></a>
-
-## Installationsanforderungen
+## <a name="installation-requirements"></a>Installationsanforderungen
 
 - Für die Installation von .NET Framework sind Administratorrechte erforderlich. Wenn Sie über keine Administratorrechte für den Computer verfügen, auf dem Sie .NET Framework installieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
 
-<a id="supported-client-operating-systems" class="xliff"></a>
-
-## Unterstützte Clientbetriebssysteme
+## <a name="supported-client-operating-systems"></a>Unterstützte Clientbetriebssysteme
 
 |Betriebssystem|Unterstützte Editionen|Mit vorinstalliertem Betriebssystem|Separat installierbar|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -82,9 +74,7 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 - Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
 
-<a id="supported-server-operating-systems" class="xliff"></a>
-
-## Unterstützte Serverbetriebssysteme
+## <a name="supported-server-operating-systems"></a>Unterstützte Serverbetriebssysteme
 
 |Betriebssystem|Unterstützte Editionen|Mit vorinstalliertem Betriebssystem|Separat installierbar|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -106,9 +96,7 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 - Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
  [Installationshandbuch](../../../docs/framework/install/index.md)   
  [Getting Started (Erste Schritte)](../../../docs/framework/get-started/index.md)   
  [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

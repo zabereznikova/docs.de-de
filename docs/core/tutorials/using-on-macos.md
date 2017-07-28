@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit .NET Core unter macOS | Microsoft-Dokumentation
+title: Erste Schritte mit .NET Core unter Mac OS
 description: "Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code."
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,26 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: de-de
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
-
-# Erste Schritte mit .NET Core unter Mac OS
+# <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
 
 Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe für macOS. Erfahren Sie, wie Projekte und Unittests erstellt, die Debuggingtools verwendet und Bibliotheken von Drittanbietern über [NuGet](https://www.nuget.org/) eingebunden werden.
 
 > [!NOTE]
 > In diesem Artikel wird [Visual Studio Code](http://code.visualstudio.com) unter macOS verwendet.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Installieren Sie das [.NET Core SDK](https://www.microsoft.com/net/core). Das .NET Core SDK umfasst die neueste Version von .NET Core-Framework und -Runtime.
 
@@ -36,9 +32,7 @@ Installieren Sie [Visual Studio Code](http://code.visualstudio.com). Im Rahmen d
 
 Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual Studio Code öffnen und <kbd>F1</kbd> drücken, um die Visual Studio Code-Palette zu öffnen. Geben Sie **ext install** ein, um die Liste mit Erweiterungen anzuzeigen. Wählen Sie die C#-Erweiterung aus. Starten Sie Visual Studio Code neu, um die Erweiterung zu aktivieren. Weitere Informationen finden Sie unter [Dokumentation zur C#-Erweiterung von Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-<a id="getting-started" class="xliff"></a>
-
-## Erste Schritte
+## <a name="getting-started"></a>Erste Schritte
 
 In diesem Tutorial erstellen Sie drei Projekte: ein Bibliotheksprojekt, Tests für dieses Bibliotheksprojekt sowie eine Konsolenanwendung, die die Bibliothek nutzt. Sie können die Quelle für dieses Thema im Repository „dotnet/docs“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -117,9 +111,7 @@ Erstellen Sie die Bibliothek mithilfe des [`dotnet build`](../tools/dotnet-build
 dotnet build
 ```
 
-<a id="create-the-test-project" class="xliff"></a>
-
-## Erstellen des Testprojekts
+## <a name="create-the-test-project"></a>Erstellen des Testprojekts
 
 Erstellen Sie eine Testprojekt für die Bibliothek. Erstellen Sie aus dem *golden*-Ordner ein neues Testprojekt:
 
@@ -182,9 +174,7 @@ Bearbeiten Sie die Datei *UnitTest1.cs*, und ändern Sie die Assertion von `Asse
 dotnet test test-library/test-library.csproj
 ```
 
-<a id="create-the-console-app" class="xliff"></a>
-
-## Schreiben der Konsolen-App
+## <a name="create-the-console-app"></a>Schreiben der Konsolen-App
 
 Die Konsolen-App, die Sie mithilfe der folgenden Schritte erstellen, ist vom Bibliotheksprojekt abhängig, das Sie zuvor erstellt haben, und ruft seine Bibliotheksmethode auf, wenn es ausgeführt wird. Mithilfe dieses Entwicklungsmusters sehen Sie, wie Sie wiederverwendbare Bibliotheken für mehrere Projekte erstellen können.
 
@@ -225,9 +215,7 @@ Führen Sie den folgenden `dotnet run`-Befehl aus, um die ausführbare Datei aus
 dotnet run -p app/app.csproj
 ```
 
-<a id="debug-the-application" class="xliff"></a>
-
-## Debuggen der Anwendung
+## <a name="debug-the-application"></a>Debuggen der Anwendung
 
 Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt fest. Dies erreichen Sie, indem Sie entweder die <kbd>F9</kbd>-Taste drücken, wenn sich der Cursor auf der `WriteLine`-Zeile befindet, oder indem Sie auf den linken Rand der Zeile klicken, wo Sie den Haltepunkt festlegen möchten. Es erscheint ein Roter Kreis im Rand neben der Codezeile. Wenn der Haltepunkt erreicht ist, wird die Ausführung des Codes angehalten, *bevor* die Haltepunktzeile ausgeführt wird.
 

@@ -1,5 +1,5 @@
 ---
-title: Felder (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Zeichenfolgen (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4f1f23bd4d95e617fadc64f4d3a30c5fa1fda85b
-ms.openlocfilehash: 699e9291400797ed1bedcb3686fdfe7848305726
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e41a7b68d890aa7a96aeddd660e0dca90596d998
 ms.contentlocale: de-de
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)

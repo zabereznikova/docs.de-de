@@ -1,5 +1,5 @@
 ---
-title: "Anwendungskompatibilität in .NET Framework | Microsoft-Dokumentation"
+title: "Anwendungskompatibilität im .NET Framework"
 ms.custom: 
 ms.date: 05/19/2017
 ms.prod: .net-framework
@@ -19,41 +19,37 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
-ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Anwendungskompatibilität im .NET Framework
-<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
+# <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
-## Einführung
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>Einführung
+
 Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität wird sichergestellt, dass jede Version additiv ist; frühere Versionen funktionieren also weiterhin. Auf der anderen Seite können Änderungen an früheren Versionen (zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden. .NET Framework erkennt Änderungen der Neuzuweisung und Laufzeitänderungen. Die Neuzuweisung von Änderungen beeinflussen Anwendungen, die auf eine bestimmte .NET Framework-Version abzielen, aber auf einer höheren Version ausgeführt werden. Laufzeitänderungen betreffen alle Anwendungen, die auf einer bestimmten Version ausgeführt werden.
 
 Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
 
-* Definieren eines Zielframeworks in Visual Studio
-* Angeben des Zielframeworks in einer Projektdatei
-* Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
+- Definieren eines Zielframeworks in Visual Studio
+- Angeben des Zielframeworks in einer Projektdatei
+- Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
 Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert.
 
-## Laufzeitänderungen
-<a id="runtime-changes" class="xliff"></a>
+## <a name="runtime-changes"></a>Laufzeitänderungen
 
 Laufzeitprobleme tauchen auf, wenn eine neue Laufzeit auf einem Gerät bereitgestellt wird und wenn die gleichen Binärdateien ausgeführt werden, es jedoch zu anderem Verhalten kommt. Wenn eine Binärdatei für .NET Framework 4.0 kompiliert wurde, wird Sie im .NET Framework 4.0-Kompatibilitätsmodus auf 4.5 oder späteren Versionen ausgeführt. Viele Änderungen, die 4.5 betreffen, werden für 4.0 kompilierte Binärdateien nicht betreffen. Dies ist spezifisch für AppDomain und ist von den Einstellungen der Einstiegsassembly abhängig.
 
-## Neuausrichtungsänderungen
-<a id="retargeting-changes" class="xliff"></a>
+## <a name="retargeting-changes"></a>Neuausrichtungsänderungen
 
 Probleme bei der Neuzuweisung erscheinen, wenn eine Assembly, die ursprünglich 4.0 angepeilt hat, nun 4.5 als Ziel hat. Die Assembly wählt nun die neuen Funktionen sowie die potenziellen Kompatibilitätsprobleme für alte Funktionen. Dies wird erneut von der Einstiegsassembly bestimmt, also von der Konsolen-App, die die Assembly verwendet oder der Website, die auf die Assembly verweist.
 
-## Diagnose der .NET-Kompatibilität
-<a id="net-compatibility-diagnostics" class="xliff"></a>
+## <a name="net-compatibility-diagnostics"></a>Diagnose der .NET-Kompatibilität
 
 Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer, die bei der Erkennung von Anwendungskompatibilitätsproblemen zwischen .NET Framework-Versionen helfen. Diese Liste enthält alle verfügbaren Analyzer, obwohl nur eine Teilmenge auf eine bestimmte Migration angewendet werden kann. Die Analyzer ermitteln, welche Probleme auf die geplante Migration zutreffen und beschreibt diese nur kurz.
 
@@ -85,18 +81,17 @@ Jedes Problem umfasst die folgenden Informationen:
 
 -   Die IDs der verfügbaren Diagnosen.
 
-## Verwendung
-<a id="usage" class="xliff"></a>
+## <a name="usage"></a>Verwendung
+
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
-* [Neuausrichtungsänderungen](./retargeting/index.md)
-* [Änderungen zur Laufzeit](./runtime/index.md)
+- [Neuausrichtungsänderungen](./retargeting/index.md)
+- [Änderungen zur Laufzeit](./runtime/index.md)
 
 
-## Siehe auch
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Siehe auch
 
-* [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [Neuigkeiten](../../../docs/framework/whats-new/index.md)
-* [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
+[Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
+[Neuigkeiten](../../../docs/framework/whats-new/index.md)   
+[Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
 

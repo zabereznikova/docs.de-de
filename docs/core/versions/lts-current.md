@@ -1,5 +1,5 @@
 ---
-title: ".NET Core-Unterstützung | Microsoft-Dokumentation"
+title: ".NET Core-Unterstützung"
 description: "Informationen über die Unterstützung der unterschiedlichen Releasepläne (LTS und Current) für .NET Core"
 keywords: ".NET, .NET Core, LTS, Current, FTS, Unterstützung, Unterstützungspläne, Unterstützungsverfolgung, Lebenszyklus, Releasepläne"
 author: kendrahavens
@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-translationtype: Human Translation
-ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
-ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -41,8 +43,4 @@ Um zu verstehen, welche speziellen Änderungen, etwa Fehlerbehebungen oder das H
 ### <a name="further-reading"></a>Weiterführende Themen
 * [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)
 * [Derzeit unterstützte Betriebssysteme und Versionen](https://github.com/dotnet/core/blob/master/roadmap.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
 

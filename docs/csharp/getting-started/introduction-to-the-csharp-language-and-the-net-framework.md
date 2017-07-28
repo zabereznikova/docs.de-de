@@ -1,5 +1,5 @@
 ---
-title: "Einführung in die Programmiersprache C# und in .NET Framework | Microsoft-Dokumentation"
+title: "Einführung in die Programmiersprache C# und in .NET Framework"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Einführung in die Programmiersprache C# und in .NET Framework
@@ -64,7 +64,7 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
  Die folgenden zusätzlichen C#-Ressourcen stehen zur Verfügung:  
   
--   Eine gute allgemeine Einführung in die Sprache finden Sie in Kapitel 1 der [C#-Sprachspezifikation](../../csharp/language-reference/language-specification.md).  
+-   Eine gute allgemeine Einführung in die Sprache finden Sie in Kapitel 1 der [C#-Sprachspezifikation](../../csharp/language-reference/language-specification/index.md).  
   
 -   Ausführliche Informationen zu bestimmten Aspekte der Programmiersprache C# finden Sie in der [C#-Referenz](../../csharp/language-reference/index.md).  
   
@@ -89,4 +89,5 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
 ## <a name="see-also"></a>Siehe auch  
  [C#](../../csharp/csharp.md)   
- [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

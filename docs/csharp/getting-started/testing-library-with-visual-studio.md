@@ -1,5 +1,5 @@
 ---
-title: Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017 | Microsoft-Dokumentation
+title: Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 description: Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 testen.
 keywords: .NET Core, .NET Standard-Klassenbibliothek, Visual Studio 2017, Komponententest
 author: BillWagner
@@ -10,23 +10,19 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5254000ab95fb2cb877466a9c387d200b1a81cd6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
+# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
 In [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](library-with-visual-studio.md) haben Sie eine einfache Klassenbibliothek erstellt, die der @System.String-Klasse eine Erweiterungsmethode hinzufügt. Jetzt erstellen Sie einen Komponententest, um sicherzustellen, dass es wie erwartet funktioniert. Sie fügen Ihr Komponententestprojekt der Projektmappe hinzu, die Sie im vorherigen Thema erstellt haben.
 
-<a id="creating-a-unit-test-project" class="xliff"></a>
-
-## Erstellen eines Komponententestprojekts
+## <a name="creating-a-unit-test-project"></a>Erstellen eines Komponententestprojekts
 
 Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
@@ -58,9 +54,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    ![Verweis-Manager](./media/testing-library-with-visual-studio/referencemanager.png)
 
-<a id="adding-and-running-unit-test-methods" class="xliff"></a>
-
-## Hinzufügen und Ausführen von Komponententestmethoden
+## <a name="adding-and-running-unit-test-methods"></a>Hinzufügen und Ausführen von Komponententestmethoden
 
 Wenn Visual Studio einen Komponententest ausführt, wird jede Methode in einer Komponententestklasse – der Klasse, auf die das [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)-Attribut angewendet wird – ausgeführt, die mit dem [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx)-Attribut markiert ist. Eine Testmethode endet, wenn der erste Fehler aufgetreten ist, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
 
@@ -104,9 +98,7 @@ So erstellen Sie die Testmethoden:
 
    ![Fenster „Test-Explorer“](./media/testing-library-with-visual-studio/firsttest.png)
 
-<a id="handling-test-failures" class="xliff"></a>
-
-## Behandeln von Testfehlern
+## <a name="handling-test-failures"></a>Behandeln von Testfehlern
 
 In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht , sodass eine der Testmethoden nicht fortgesetzt wird:
 
@@ -127,9 +119,7 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
 
 1. Entfernen Sie den Code, der hinzugefügt wurde (`"Error", `), und führen den Test erneut aus. Die Tests werden erfolgreich ausgeführt.
 
-<a id="testing-the-release-version-of-the-library" class="xliff"></a>
-
-## Testen der endgültigen Produktversion der Bibliothek
+## <a name="testing-the-release-version-of-the-library"></a>Testen der endgültigen Produktversion der Bibliothek
 
 Sie haben Ihre Tests für die Debugversion der Bibliothek ausgeführt. Da nun alle Ihre Tests erfolgreich waren, und Sie Ihre Bibliothek ausreichend getestet haben, sollten Sie die Tests ein weiteres Mal für die endgültige Produktversion der Bibliothek ausführen. Eine Reihe von Faktoren einschließlich der Compileroptimierungen kann manchmal zu einem unterschiedlichen Verhalten von Debug- und endgültiger Produktversion führen.
 

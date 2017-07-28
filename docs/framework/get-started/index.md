@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit .NET Framework | Microsoft-Dokumentation
+title: Erste Schritte mit .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
@@ -86,10 +86,11 @@ ms.lasthandoff: 05/19/2017
 |[.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|Beschreibt die Out-of-Band-Releases von .NET Framework und ihre Verwendung in der App.|
 |[Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)|Führt die Hardware- und Softwareanforderungen für das Ausführen von .NET Framework auf.|
 |[.NET Core und Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md)|Beschreibt, was .NET Core in Bezug auf .NET Framework ist und wie Sie auf die Open-Source-Projekte von .NET Core zugreifen können.|
-|[.NET Core-Dokumentation](https://docs.microsoft.com/dotnet/)|Die konzeptionelle und API-Referenzdokumentation für .NET Core.|
+|[.NET Core-Dokumentation](/dotnet/)|Die konzeptionelle und API-Referenzdokumentation für .NET Core.|
 
 ## <a name="see-also"></a>Siehe auch
  [.NET Framework – Leitfaden](../../../docs/framework/index.md)   
  [Neuigkeiten](../../../docs/framework/whats-new/index.md)   
  [.NET API-Browser](/dotnet/api/)   
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Frühes und spätes Binden (Visual Basic) | Microsoft-Dokumentation"
+title: "Frühes und spätes Binden (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,11 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 54b7e96c8b7cab8fba3dc295dfe124fcf3847118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Frühes und spätes Binden (Visual Basic)
@@ -67,3 +67,4 @@ Der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler führt einen als `bindi
  <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
  [Objektlebensdauer: Erstellen und Zerstören von Objekten](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
  [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+

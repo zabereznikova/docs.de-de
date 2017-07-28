@@ -1,5 +1,5 @@
 ---
-title: Auflistungen und Datenstrukturen | Microsoft-Dokumentation
+title: Auflistungen und Datenstrukturen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 40848d7b958c643b0ef6f0d807436cd6b8755724
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2538f300ef2af6051c2750e749674c8ea7145530
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
@@ -109,3 +109,4 @@ ms.lasthandoff: 05/19/2017
  <xref:System.Linq?displayProperty=fullName>  
   
  System.Collections.Immutable
+

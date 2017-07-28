@@ -1,5 +1,5 @@
 ---
-title: Sortierte Sammlungstypen | Microsoft-Dokumentation
+title: Sortierte Auflistungstypen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,16 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: de-de
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="sorted-collection-types" class="xliff"></a>
-
-# Sortierte Sammlungstypen
+# <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 Die <xref:System.Collections.SortedList?displayProperty=fullName>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
   
 -   Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=fullName>-Schnittstelle. Die zwei generischen Klassen implementieren außerdem die generische <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>-Schnittstelle.  
@@ -58,9 +56,7 @@ Die <xref:System.Collections.SortedList?displayProperty=fullName>-Klasse, die ge
   
  Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   

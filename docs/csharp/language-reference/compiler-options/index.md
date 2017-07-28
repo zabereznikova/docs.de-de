@@ -1,5 +1,5 @@
 ---
-title: C#-Compileroptionen| Microsoft-Dokumentation
+title: C#-Compileroptionen
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c355f42106cfb7790591108b9b0f0938c34fdb32
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options"></a>C#-Compileroptionen
@@ -63,11 +64,12 @@ Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) 
  Eine alphabetisch sortierte Liste der Compileroptionen  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Seite „Erstellen“, Projekt-Designer](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [Seite „Erstellen“, Projekt-Designer](/visualstudio/ide/reference/build-page-project-designer-csharp)  
  Festlegen von Eigenschaften, die das Kompilieren, Erstellen und Debuggen des Projekts regeln Enthält Informationen über benutzerdefinierte Buildschritte in Visual C#-Projekten  
   
- [Default and Custom Builds](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio) (Standardmäßige und benutzerdefinierte Builds)  
+ [Default and Custom Builds](/visualstudio/ide/compiling-and-building-in-visual-studio) (Standardmäßige und benutzerdefinierte Builds)  
  Informationen über Buildtypen und Konfigurationen  
   
- [Preparing and Managing Builds](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Vorbereiten und Verwalten von Builds)  
+ [Preparing and Managing Builds](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Vorbereiten und Verwalten von Builds)  
  Prozeduren zum Erstellen von Anwendungen in der Visual Studio-Entwicklungsumgebung
+

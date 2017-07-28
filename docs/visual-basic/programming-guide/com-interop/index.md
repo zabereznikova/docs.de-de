@@ -1,5 +1,5 @@
 ---
-title: COM-Interop (Visual Basic) | Microsoft-Dokumentation
+title: COM-Interop (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="com-interop-visual-basic" class="xliff"></a>
-
-# COM-Interop (Visual Basic)
+# <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
 Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Stellt eine Übersicht der COM-Interoperabilität bereit.  
   
@@ -76,9 +72,7 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Beschreibt die Verwendung vorhandener COM-Objekte als Grundlage für neue Objekte.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
  Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.  
   
@@ -90,3 +84,4 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
   
  [Anwenden von Interop-Attributen](https://msdn.microsoft.com/library/d4w8x20h)  
  Behandelt Attribute, die Sie verwenden können, wenn Sie mit nicht verwaltetem Code arbeiten.
+

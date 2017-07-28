@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksbaumstrukturen (C#) | Microsoft-Dokumentation
+title: Ausdrucksbaumstrukturen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 87195c8936aba485919d6c717fcbfaa1b282bddc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be37183163a3747f861cbda7fd7867640ba382a2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
@@ -171,3 +171,4 @@ Console.WriteLine(expr.Compile()(4));
  [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [Übersicht über die Dynamic Language Runtime](https://msdn.microsoft.com/library/dd233052)   
  [Programming Concepts (C#) (Programmierkonzepte (C#))](../../../../csharp/programming-guide/concepts/index.md)
+

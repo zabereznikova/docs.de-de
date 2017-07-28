@@ -1,5 +1,5 @@
 ---
-title: Reparieren von .NET Framework | Microsoft-Dokumentation
+title: Reparieren von .NET Framework
 description: Erfahren Sie, wie Sie .NET Framework reparieren
 author: rlander
 keywords: .Net Framework, installieren
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cdb1d5-c5g8-8af9-93e8-5f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 66099cc0673acf083a554d113917732399c0dc10
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43c1880fd5d363fbd6e36e3b18890d494c6d819d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

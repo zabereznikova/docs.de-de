@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary | Microsoft-Dokumentation"
+title: "Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,16 +15,14 @@ caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9d20d75b2492c214305c07a5e19941cd91b66f67
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="how-to-add-and-remove-items-from-a-concurrentdictionary" class="xliff"></a>
-
-# Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
 Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> entfernt werden. Diese Auflistungsklasse ist eine threadsichere Implementierung. Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> bietet verschiedene praktische Methoden, mit denen der Code nicht mehr zuerst prüfen muss, ob ein Schlüssel vorhanden ist, bevor versucht wird, Daten hinzuzufügen oder zu entfernen. Die folgende Tabelle führt diese praktischen Methoden auf und beschreibt ihre Verwendung.  
@@ -35,9 +33,7 @@ Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und vo
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Sie möchten den vorhandenen Wert für einen angegebenen Schlüssel abrufen und, wenn der Schlüssel nicht vorhanden ist, ein Schlüssel-Wert-Paar angeben.|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Sie möchten ein Schlüssel-Wert-Paar hinzufügen, abrufen, aktualisieren oder entfernen und, wenn der Schlüssel bereits vorhanden ist oder der Versuch aus einem anderen Grund fehlschlägt, eine alternative Aktion durchführen.|  
   
-<a id="example" class="xliff"></a>
-
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden zwei Instanzen von <xref:System.Threading.Tasks.Task> verwendet, um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> parallel einige Elemente hinzuzufügen und dann den gesamten Inhalt auszugeben, um zu zeigen, dass die Elemente erfolgreich hinzugefügt wurden. Das Beispiel zeigt auch, wie die Methoden <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> zum Hinzufügen, Aktualisieren und Abrufen von Elementen aus der Auflistung verwendet werden.  
   
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)] [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
@@ -56,8 +52,7 @@ Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und vo
   
  Daher ist nicht garantiert, dass die von <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> zurückgegebenen Daten die gleichen Daten sind, die von der valueFactory des Threads erstellt wurden. Eine ähnliche Abfolge von Ereignissen kann eintreten, wenn <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> aufgerufen wird.  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [threadsichere Auflistungen](../../../../docs/standard/collections/thread-safe/index.md)
+

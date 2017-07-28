@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit .NET Core | Microsoft-Dokumentation
+title: Erste Schritte mit .NET Core
 description: "Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendungen auf Windows, Linux und Mac OS erstellen können."
 keywords: .NET, .NET Core
 author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: de-de
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-net-core" class="xliff"></a>
-
-# Erste Schritte mit .NET Core
+# <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
 .NET Core wird auf [Windows](#windows), [Linux](#linux) und [Mac OS / OS X](#os-x--macos) ausgeführt.
 
-<a id="windows" class="xliff"></a>
-
-## Windows
+## <a name="windows"></a>Windows
 
 Installieren Sie .NET Core auf [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -39,9 +35,7 @@ Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schri
 
 Finden Sie unter dem Thema [Prerequisites for Windows development (erforderliche Komponenten für Windows-Entwicklung)](windows-prerequisites.md) eine Liste der unterstützten Windows-Versionen. 
 
-<a id="linux" class="xliff"></a>
-
-## Linux
+## <a name="linux"></a>Linux
 
 Installieren Sie .NET Core auf Ihrer Verteilung/Version:
 
@@ -59,9 +53,7 @@ Sie können .NET Core-Anwendungen entwickeln, indem Sie diese Schritt-für-Schri
 
 .NET Core wird durch die oben in den Installationslinks aufgeführten Linux-Distributionen und -Versionen unterstützt.
 
-<a id="os-x--macos" class="xliff"></a>
-
-## OS X/Mac OS
+## <a name="os-x--macos"></a>OS X/Mac OS
 
 Installieren Sie .NET Core für [macOS](https://www.microsoft.com/net/core#macos). Auf OS X El Capitan (Version 10.11) und macOS Sierra (Version 10.12) wird .NET Core nicht unterstützt.
 

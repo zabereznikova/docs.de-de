@@ -1,5 +1,5 @@
 ---
-title: "Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI) | Microsoft-Dokumentation"
+title: "Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)"
 description: "Hier erhalten Sie Informationen zur Verwendung des .NET Core SDK und der zugehörigen Tools auf dem Buildserver."
 keywords: .NET, .NET Core, continuous integration, ci, build, automation, Travis CI, AppVeyor, Visual Studio Team Services, vsts
 author: guardrex
@@ -10,31 +10,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5af11b469f906b7c074f127704eb338a78a62b34
-ms.openlocfilehash: a13f6b80248a659bda23baece3638e33a166b5df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67c08dd9804f6b51961be250033161427159e66e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="using-net-core-sdk-and-tools-in-continuous-integration-ci" class="xliff"></a>
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 
-# Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
-
-<a id="overview" class="xliff"></a>
-
-## Übersicht
+## <a name="overview"></a>Übersicht
 
 In diesem Dokument wird die Verwendung des .NET Core SDK und der zugehörigen Tools auf einem Buildserver beschrieben. Das .NET Core-Toolset arbeitet sowohl interaktiv – der Entwickler gibt Befehle an der Eingabeaufforderung ein – als auch automatisch, wenn ein Continuous Integration-Server (CI) ein Buildskript ausführt. Die Befehle, Optionen, Eingaben und Ausgaben sind dieselben, Sie stellen lediglich eine Methode zum Download der Tools und ein System zur Erstellung Ihrer App bereit. Dieses Dokument konzentriert sich auf Szenarien für den Tooldownload für CI mit Empfehlungen zum Entwerfen und Strukturieren Ihrer Buildskripts.
 
-<a id="installation-options-for-ci-build-servers" class="xliff"></a>
+## <a name="installation-options-for-ci-build-servers"></a>Installationsoptionen für CI-Buildserver
 
-## Installationsoptionen für CI-Buildserver
-
-<a id="using-the-native-installers" class="xliff"></a>
-
-### Verwenden der nativen Installationsprogramme
+### <a name="using-the-native-installers"></a>Verwenden der nativen Installationsprogramme
 
 Native Installationsprogramme stehen für macOS, Linux und Windows zur Verfügung. Für die Installationsprogramme benötigen Sie Administratorzugriff (sudo) auf den Buildserver. Der Vorteil der Verwendung eines nativen Installationsprogramms liegt darin, dass alle nativen Abhängigkeiten installiert werden, die zum Ausführen der Tools benötigt werden. Native Installationsprogramme ermöglichen außerdem eine systemweite Installation des SDK.
 
@@ -42,9 +34,7 @@ macOS-Benutzer sollten die PKG-Installationsprogramme verwenden. Unter Linux kö
 
 Die neuesten stabilen Binärdateien finden Sie unter [Erste Schritte mit .NET Core](https://aka.ms/dotnetcoregs). Wenn Sie die neuesten (möglicherweise instabilen) Vorabtools verwenden möchten, nutzen Sie die Links im [dotnet/cli-GitHub-Repository](https://github.com/dotnet/cli#installers-and-binaries). Für Linux-Distributionen stehen `tar.gz`-Archive (auch bekannt als `tarballs`) zur Verfügung. Verwenden Sie die Installationsskripts in den Archiven, um .NET Core zu installieren.
 
-<a id="using-the-installer-script" class="xliff"></a>
-
-### Verwenden des Installationsprogrammskripts
+### <a name="using-the-installer-script"></a>Verwenden des Installationsprogrammskripts
 
 Das Installationsprogrammskript ermöglicht eine Installation ohne Administratorrechte auf dem Buildserver und bietet eine einfache Automatisierung zum Download der Tools. Das Skript kümmert sich um das Herunterladen der Tools und extrahiert diese zur Verwendung an einem Standardspeicherort bzw. dem von Ihnen angegebenen Speicherort. Sie können außerdem angeben, welche Version der Tools Sie verwenden möchten und ob das gesamte SDK oder nur die freigegebene Runtime installiert werden soll.
 
@@ -53,15 +43,11 @@ Das Installationsskript ist automatisiert, sodass es zu Beginn des Buildvorgangs
 > [!NOTE]
 > Bei Verwendung des Installationsskripts werden native Abhängigkeiten nicht automatisch installiert. Sie müssen die nativen Abhängigkeiten installieren, wenn das Betriebssystem diese nicht umfasst. Die Liste der Voraussetzungen finden Sie im Thema [.NET Core native prerequisites](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (Systemvoraussetzungen für .NET Core).
 
-<a id="ci-setup-examples" class="xliff"></a>
-
-## Beispiele für die CI-Einrichtung
+## <a name="ci-setup-examples"></a>Beispiele für die CI-Einrichtung
 
 In diesem Abschnitt wird die manuelle Einrichtung unter Verwendung eines PowerShell- oder Bash-Skripts erläutert, und es werden verschiedene SaaS-CI-Lösungen (Software-as-a-Service) beschrieben. Die behandelten SaaS-CI-Lösungen sind [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [Visual Studio Team Services Build](https://www.visualstudio.com/docs/build/overview).
 
-<a id="manual-setup" class="xliff"></a>
-
-### Manuelle Einrichtung
+### <a name="manual-setup"></a>Manuelle Einrichtung
 
 Jeder SaaS-Dienst umfasst eigene Methoden zum Erstellen und Konfigurieren eines Buildprozesses. Wenn Sie eine andere SaaS-Lösung als die hier aufgeführten verwenden oder eine über die integrierte Unterstützung hinausgehende Anpassung erforderlich ist, müssen Sie einige manuelle Konfigurationsschritte ausführen.
 
@@ -143,17 +129,13 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 # Run the build process now. Implement your build script here.
 ```
 
-<a id="travis-ci" class="xliff"></a>
-
-### Travis CI
+### <a name="travis-ci"></a>Travis CI
 
 [Travis CI](https://travis-ci.org/) kann so konfiguriert werden, dass das .NET Core SDK mit der Sprache `csharp` und dem Schlüssel `dotnet` installiert wird. Weitere Informationen zum [Erstellen eines C#-, F#- oder Visual Basic-Projekts](https://docs.travis-ci.com/user/languages/csharp/) finden Sie in der offiziellen Travis CI-Dokumentation. Beachten Sie beim Zugriff auf die Travis CI-Informationen, dass der von der Community verwaltet Sprachbezeichner `language: csharp` für alle .NET-Sprachen (einschließlich F# und Mono) funktioniert.
 
 Travis CI führt sowohl macOS- (OS X 10.11, OS X 10.12) als auch Linux-Aufträge (Ubuntu 14.04) in einer *Buildmatrix* aus, wobei Sie eine Kombination aus Runtime, Umgebung und Einschlüssen/Ausschlüssen zur Abdeckung der Buildkombinationen für Ihre App angeben. Weitere Informationen finden Sie in der Datei [.travis.yml-Beispiel](https://github.com/dotnet/docs/blob/master/.travis.yml) und unter [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Anpassen des Builds) in der Travis CI-Dokumentation. Die MSBuild-basierten Tools enthalten die Runtimes LTS (1.0.x) und Current (1.1.x) im Paket. Deshalb verfügen Sie nach der Installation des SDK über alle benötigten Buildkomponenten.
 
-<a id="appveyor" class="xliff"></a>
-
-### AppVeyor
+### <a name="appveyor"></a>AppVeyor
 
 [AppVeyor](https://www.appveyor.com/) installiert das .NET Core 1.0.1 SDK mit dem Buildworkerimage `Visual Studio 2017`. Es stehen darüber hinaus weitere Buildimages mit anderen Versionen des .NET Core SDK zur Verfügung. Weitere Informationen hierzu finden Sie im [appveyor.yml-Beispiel](https://github.com/dotnet/docs/blob/master/appveyor.yml) und im Thema [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Buildworkerimages) in der AppVeyer-Dokumentation.
 
@@ -169,9 +151,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-<a id="visual-studio-team-services-vsts" class="xliff"></a>
-
-### Visual Studio Team Services (VSTS)
+### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
 
 Verwenden Sie einen dieser Ansätze, um Visual Studio Team Services (VSTS) zum Erstellen von .NET Core-Projekten zu konfigurieren:
 
@@ -198,17 +178,13 @@ Um ein Skript für ein manuelles Setup in VSTS zu verwenden, erstellen Sie eine 
 
    ![Angeben des auszuführenden PowerShell-Skripts](./media/using-ci-with-cli/screen4.png)
 
-<a id="orchestrating-the-build" class="xliff"></a>
-
-## Orchestrieren des Builds
+## <a name="orchestrating-the-build"></a>Orchestrieren des Builds
 
 In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools herunterladen und verschiedene CI-Dienst konfigurieren, ohne darauf einzugehen, wie Sie Ihren Code mit .NET Core orchestrieren oder *tatsächlich einen Build erstellen*. Die Auswahl bei der Strukturierung des Buildprozesses hängt von vielen Faktoren ab, die hier nicht allgemein abgedeckt werden können. Erkunden Sie die Ressourcen und Beispiele in der Dokumentation von [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) und [VSTS](https://www.visualstudio.com/docs/build/overview), um weitere Informationen zur Orchestrierung Ihrer Builds mit jeder Technologie zu erhalten.
 
 Bei der Strukturierung des Buildprozesses für .NET Core-Code unter Verwendung der .NET Core-Tools können zwei allgemeine Ansätze verfolgt werden: die direkte Verwendung von MSBuild oder die Verwendung von .NET Core-Befehlszeilenbefehlen. Sie sollten den verwendeten Ansatz danach auswählen, wie vertraut Sie mit dem jeweiligen Ansatz sind und welche Kompromisse Sie in Bezug auf die Komplexität eingehen möchten. Mit MSBuild können Sie Ihren Buildprozess in Form von Tasks und Zielen beschrieben, Sie müssen jedoch die MSBuild-Projektdateisyntax beherrschen. Die Verwendung von .NET Core-Befehlszeilentools ist möglicherweise einfacher, erfordert aber, dass Sie Orchestrierungslogik in einer Skriptsprache wie `bash` oder PowerShell schreiben.
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Schritte zum Download von Ubuntu](https://www.microsoft.com/net/core#linuxubuntu)   
 

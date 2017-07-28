@@ -1,5 +1,5 @@
 ---
-title: Prozeduren in Visual Basic | Microsoft-Dokumentation
+title: Prozeduren in Visual Basic
 ms.custom: 
 ms.date: 2017-04-28
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
 ms.contentlocale: de-de
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
@@ -98,3 +98,4 @@ Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-An
  [Prozedurüberladung](./procedure-overloading.md)   
  [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
  [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+

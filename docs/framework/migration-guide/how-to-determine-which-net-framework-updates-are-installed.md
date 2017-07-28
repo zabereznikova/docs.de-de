@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bestimmen der installierten .NET Framework-Updates | Microsoft-Dokumentation'
+title: 'Gewusst wie: Bestimmen der installierten .NET Framework-Updates'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,23 +17,19 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
-
-# Gewusst wie: Bestimmen der installierten .NET Framework-Updates
+# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Gewusst wie: Bestimmen der installierten .NET Framework-Updates
 Die installierten Updates für jede auf einem Computer installierten Version von .NET Framework werden in der Windows-Registrierung aufgeführt. Sie können diese Informationen mit dem Registrierungs-Editor (regedit.exe) anzeigen.  
   
  Im Registrierungs-Editor werden die .NET Framework-Versionen und die installierten Updates für jede Version in verschiedenen Unterschlüsseln gespeichert. Informationen zum Ermitteln der installierten Versionsnummern finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Informationen zum Installieren von .NET Framework finden Sie unter [Install the .NET Framework for developers (Installieren von .NET Framework für Entwickler)](../../../docs/framework/install/guide-for-developers.md).  
   
-<a id="to-find-installed-updates" class="xliff"></a>
-
-### So suchen Sie installierte Updates  
+### <a name="to-find-installed-updates"></a>So suchen Sie installierte Updates  
   
 1.  Öffnen Sie das Programm **regedit.exe**. Öffnen Sie in Windows 8 und höher die Startseite, und geben Sie den Namen ein. In früheren Versionen von Windows wählen Sie im **Startmenü** **Ausführen** aus, und geben Sie dann in das Feld **Öffnen** den Wert **regedit.exe** ein.  
   
@@ -45,9 +41,7 @@ Die installierten Updates für jede auf einem Computer installierten Version von
   
      Die installierten Updates werden unter Unterschlüsseln aufgeführt, die die für sie geltende .NET Framework-Version identifizieren. Jedes Update wird durch eine Knowledge Base (KB)-Nummer identifiziert.  
   
-<a id="example" class="xliff"></a>
-
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Der folgende Code ermittelt programmgesteuert die auf einem Computer installierten .NET Framework-Updates. Sie müssen über Administratorrechte verfügen, um dieses Beispiel ausführen zu können.  
   
  [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
@@ -80,9 +74,7 @@ Microsoft .NET Framework 4 Extended
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Installieren von .NET Framework](../../../docs/framework/install/guide-for-developers.md)   

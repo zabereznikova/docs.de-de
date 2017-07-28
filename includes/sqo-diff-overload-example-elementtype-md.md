@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Dieses Codebeispiel verwendet eine Überladung dieser überladenen Methode, die von der speziellen Überladung, wie sie in diesem Thema beschrieben wird, abweicht. Um das Beispiel für dieses Thema zu erweitern, ersetzen Sie die Elemente der Quellsequenz durch Elemente des entsprechenden numerischen Typs.
