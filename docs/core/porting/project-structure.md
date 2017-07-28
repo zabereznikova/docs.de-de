@@ -1,5 +1,5 @@
 ---
-title: "Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core | Microsoft-Dokumentation"
+title: "Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core"
 description: "Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lösung parallel für .NET Framework und .NET Core zu kompilieren."
 keywords: .NET, .NET Core, .NET Framework, Projektlayout, mehrere Frameworks
 author: conniey
@@ -10,16 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6565ccd42180a37eba52c286becfecb5bef1890d
+ms.sourcegitcommit: 9fd4e033a5f33d4f560b12e23950abd62c7825c5
+ms.openlocfilehash: d83378b094fbae16c788c04269b833a4ecae3608
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 04/07/2017
 
 ---
 
-<a id="organizing-your-project-to-support-net-framework-and-net-core" class="xliff"></a>
-
-# Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core
 
 Dieser Artikel hilft Projektbesitzern, Ihre eigene Lösung parallel für .NET Framework und .NET Core zu kompilieren. Es werden mehrere Optionen zum Organisieren von Projekten behandelt, die Entwickler beim Erreichen dieses Ziels unterstützen sollen. Im Folgenden finden Sie eine Liste mit typischen Szenarios, die Sie bei der Entscheidung bedenken sollten, wie Sie Ihr Projektlayout mit .NET Core einrichten. Die Liste deckt möglicherweise nicht alle Punkte ab, die Sie benötigen. Sie können abhängig von den Anforderungen Ihrer Projekte priorisieren.
 
@@ -40,9 +38,7 @@ Dieser Artikel hilft Projektbesitzern, Ihre eigene Lösung parallel für .NET Fr
   * Entwicklung in bereits erstellten Projekten wird weiterhin unterstützt. Entwickler oder Mitwirkende, die eventuell nicht über Visual Studio 2017 verfügen, müssen kein Upgrade durchführen.
   * Minimieren der Möglichkeit, neue Probleme in vorhandenen Projekten zu erstellen, da in diesen Projekten keine Codeänderung erforderlich ist.
 
-<a id="example" class="xliff"></a>
-
-## Beispiel
+## <a name="example"></a>Beispiel
 
 Betrachten Sie das folgende Repository:
 
@@ -52,9 +48,7 @@ Betrachten Sie das folgende Repository:
 
 Im Folgenden sind verschiedene Möglichkeiten beschrieben, Unterstützung für .NET Core für dieses Repository hinzuzufügen. Dies ist abhängig von den Einschränkungen und der Komplexität bestehender Projekte.
 
-<a id="replace-existing-projects-with-a-multi-targeted-net-core-project" class="xliff"></a>
-
-## Ersetzen von vorhandenen Projekten mit mehrfachzielorientierten .NET Core Projekten
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Ersetzen von vorhandenen Projekten mit mehrfachzielorientierten .NET Core Projekten
 
 Organisieren Sie das Repository neu, sodass alle vorhandenen *\*.csproj*-Dateien entfernt werden, und eine einzelne *\*.csproj*-Datei erstellt wird, die mehrere Frameworks als Ziel hat. Dies ist eine hervorragende Option, da ein einzelnes Projekt für andere Frameworks kompilieren kann. Außerdem kann die Option verschiedene Kompilierungsoptionen und Abhängigkeiten pro Zielframework behandeln.
 
@@ -65,9 +59,7 @@ Organisieren Sie das Repository neu, sodass alle vorhandenen *\*.csproj*-Dateien
 Zu beachtende Änderungen:
 * Der Ersatz für *packages.config* und *\*.csproj* mit einer neuen [.NET Core *\*.csproj*][example-csproj-netcore]. NuGet-Pakete werden mit `<PackageReference> ItemGroup` angegeben.
 
-<a id="keep-existing-projects-and-create-a-net-core-project" class="xliff"></a>
-
-## Behalten vorhandener Projekte und Erstellen eines .NET Core-Projekts
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Behalten vorhandener Projekte und Erstellen eines .NET Core-Projekts
 
 Wenn es vorhandene Projekte gibt, die ältere Frameworks als Ziel haben, empfiehlt es sich, diese Projekte unverändert zu lassen und ein .NET Core-Projekt zu verwenden, um kommende Frameworks als Ziel festzulegen.
 
@@ -79,9 +71,7 @@ Zu beachtende Änderungen:
 * .NET Core-Projekte und vorhandene Projekte werden in separaten Ordnern gespeichert.
     * Projekte in separaten Ordnern zu speichern, vermeidet, dass Sie über Visual Studio 2017 verfügen müssen. Sie können eine separate Lösung erstellen, die nur die alten Projekte öffnet.
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 Weitere Anleitungen zum Migrieren zu .NET Core finden Sie in der [Dokumentation zum Portieren von .NET Core][porting-doc].
 

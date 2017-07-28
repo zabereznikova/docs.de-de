@@ -41,3 +41,4 @@ Es ist möglich, jede Methode im Kontext eines Abfrageausdrucks aufzurufen. Es e
 
 ## <a name="see-also"></a>Siehe auch  
  [LINQ-Abfrageausdrücke](index.md)
+
