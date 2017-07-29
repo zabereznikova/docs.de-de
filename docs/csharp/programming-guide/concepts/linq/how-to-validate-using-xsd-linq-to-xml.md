@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (C#) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3a510c91b74df1e5d0ad26655fa33e8447ea850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cec3090541f7bbc306eb41fff409dc890cc55d17
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (C#)
 Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die ein einfaches Validieren von XML-Strukturen anhand von XSD-Dateien ermöglichen. Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Xml.Schema.Extensions.Validate%2A>-Methode.  
   
 ## <a name="example"></a>Beispiel  
- In folgendem Beispiel wird ein <xref:System.Xml.Schema.XmlSchemaSet> erstellt; anschließend werden zwei <xref:System.Xml.Linq.XDocument>-Objekte anhand dieses Schemasets überprüft. Eines der Dokumente ist gültig, das andere nicht.  
+ Das folgende Beispiel erstellt ein <xref:System.Xml.Schema.XmlSchemaSet> und validiert dann anhand des Schemasatzes die beiden <xref:System.Xml.Linq.XDocument>-Objekte. Eines der Dokumente ist gültig, das andere nicht.  
   
 ```csharp  
 string xsdMarkup =  
@@ -138,4 +139,5 @@ custOrdDoc did not validate
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Xml.Schema.Extensions.Validate%2A>   
- [Erstellen von XML-Bäumen (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+ [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

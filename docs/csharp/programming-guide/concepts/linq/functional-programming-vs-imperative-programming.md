@@ -1,5 +1,5 @@
 ---
-title: Funktionale Programmierung und Imperative Programmierung (C#) | Microsoft-Dokumentation
+title: Funktionale Programmierung und Imperative Programmierung (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 9e16daec1c830f4541229beaa10b079e683914fe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e26cf7946a2ee8d83683a31666b13c6685fbc045
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funktionale Programmierung und Imperative Programmierung (C#)
@@ -67,3 +66,4 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
  [Einführung in reine funktionale Transformationen (c#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [XSLT-Transformationen](../../../../standard/data/xml/xslt-transformations.md)   
  [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

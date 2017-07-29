@@ -1,5 +1,5 @@
 ---
-title: Standardabfragen (LINQ to XML) (C#) | Microsoft-Dokumentation
+title: Standardabfragen (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
 ms.contentlocale: de-de
-ms.lasthandoff: 05/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Standardabfragen (LINQ to XML) (C#)
-Dieser Abschnitt enthält Beispiele für einfache [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Abfragen.  
+Dieser Abschnitt enthält Beispiele für einfache [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -39,9 +38,10 @@ Dieser Abschnitt enthält Beispiele für einfache [!INCLUDE[sqltecxlinq](../../.
 |[Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Zeigt, wie Sie alle Knoten ermitteln können, die sich in einem bestimmten Namespace befinden.|  
 |[Vorgehensweise: Sortieren von Elementen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Zeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.|  
 |[Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Zeigt, wie Sie beim Sortieren nach mehreren Schlüsseln vorgehen müssen.|  
-|[Vorgehensweise: Berechnen von Zwischenwerten (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Hier erfahren Sie, wie Sie mit der `Let`-Klausel Zwischenwerte in einer [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Abfrage berechnen können.|  
+|[Vorgehensweise: Berechnen von Zwischenwerten (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Hier erfahren Sie, wie Sie mit der `Let`-Klausel Zwischenwerte in einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage berechnen können.|  
 |[Vorgehensweise: Schreiben einer Abfrage, die Elemente basierend auf dem Kontext sucht (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Zeigt, wie Sie Elemente auf der Grundlage anderer Elemente in der Struktur auswählen können.|  
 |[Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Zeigt die erforderlichen Korrekturen, wenn Sie Abfragen für XML in einem Standardnamespace debuggen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Exemplarische Vorgehensweisen für Visual Basic | Microsoft-Dokumentation"
+title: "Exemplarische Vorgehensweisen für Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b4e9eba6d086d0094c8368d7c3d67c676fe0bd3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Exemplarische Vorgehensweisen für Visual Basic
@@ -44,19 +44,19 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../visual-basic/language-reference/modifiers/async.md) und [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Declaring and Raising Events (Deklarieren und Auslösen von Ereignissen)](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Veranschaulicht, wie Ereignisse in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deklariert und ausgelöst werden.  
+ Veranschaulicht, wie Ereignisse in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deklariert und ausgelöst werden.  
   
  [Handling Events (Behandeln von Ereignissen)](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Veranschaulicht, wie man Ereignisse mithilfe des Standardschlüsselworts `WithEvents` oder den neuen Schlüsselwörtern `AddHandler`/`RemoveHandler` behandelt.  
   
  [Creating and Implementing Interfaces (Erstellen und Implementieren von Schnittstellen)](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Veranschaulicht, wie Schnittstellen in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deklariert und implementiert werden  
+ Veranschaulicht, wie Schnittstellen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deklariert und implementiert werden  
   
  [Defining Classes (Definieren von Klassen)](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Beschreibt, wie eine Klasse und deren Felder, Eigenschaften, Methoden und Ereignisse deklariert werden  
   
  [Writing Queries in Visual Basic (Schreiben von Abfragen in Visual Basic)](../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Veranschaulicht, wie Sie Funktionen von Visual Basic zum Schreiben von [!INCLUDE[vbteclinqext](../csharp/getting-started/includes/vbteclinqext_md.md)]-Abfrageausdrücken verwenden können  
+ Veranschaulicht, wie Sie Funktionen von Visual Basic zum Schreiben von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]-Abfrageausdrücken verwenden können  
   
  [Implementing IEnumerable(Of T) in Visual Basic (Implementieren von IEnumerable(Of T) in Visual Basic)](../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  Veranschaulicht, wie man eine Klasse zum Erstellen der Schnittstelle `IEnumerable(Of String)` und eine Klasse zum Erstellen der Schnittstelle `IEnumerator(Of String)` erstellt, um eine Textdatei zeilenweise zu lesen  
@@ -65,10 +65,10 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Erläutert, wie `Declare`-Anweisungen verwendet und Windows-APIs aufgerufen werden Enthält Informationen zur Verwendung von Attributen zum Steuern von Marshalling für API-Aufrufe zum Verfügbar machen eines API-Aufrufs als Methode einer Klasse  
   
  [Erstellen von COM-Objekten in Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Veranschaulicht das Erstellen von COM-Objekten in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], mit und ohne COM-Klassenvorlage  
+ Veranschaulicht das Erstellen von COM-Objekten in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], mit und ohne COM-Klassenvorlage  
   
  [Implementing Inheritance with COM Objects (Implementieren der Vererbung mit COM-Objekten)](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Veranschaulicht, wie man [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 6.0 zum Erstellen eines COM-Objekts mit einer Klasse verwendet, und es anschließend als Basisklasse in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verwendet  
+ Veranschaulicht, wie man [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 zum Erstellen eines COM-Objekts mit einer Klasse verwendet, und es anschließend als Basisklasse in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Veranschaulicht, wie man eine Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht  
@@ -95,13 +95,14 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Zeigt, wie Sie die Klasse <xref:System.Security.Cryptography.DESCryptoServiceProvider> verwenden, um Zeichenfolgen zu verschlüsseln bzw. zu entschlüsseln  
   
  [Manipulating Files and Folders in Visual Basic (Bearbeiten von Dateien und Ordnern in Visual Basic)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Veranschaulicht die Verwendung von [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  
+ Veranschaulicht die Verwendung von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  
   
  [Manipulating Files Using .NET Framework Methods (Bearbeiten von Dateien mit .NET Framework-Methoden)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)]-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  
+ Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  
   
  [Persisting an Object in Visual Basic (Beibehalten eines Objekts in Visual Studio)](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  Veranschaulicht, wie man ein einfaches Objekt erstellt und dessen Daten in einer Datei beibehält.  
   
  [Test-First Support with the Generate from Usage Feature (Test-First-Unterstützung mit der Funktion „Generate From Usage“)](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  Veranschaulicht die Test-First-Entwicklung, in der Sie zuerst Komponententests und anschließend den Quellcode schreiben, um die Tests erfolgreich auszuführen
+

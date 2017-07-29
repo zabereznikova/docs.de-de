@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf die Maus (Visual Basic) | Microsoft-Dokumentation
+title: Zugreifen auf die Maus (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b6c5f98b1fdaf81102c9723d449201b6ac162a12
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a893462ec205a6456e4dce63900467a872aad74
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Zugreifen auf die Maus (Visual Basic)
@@ -52,3 +52,4 @@ Mit dem `My.Computer.Mouse`-Objekt können Sie Informationen zu der Maus des Com
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Mouse>
+

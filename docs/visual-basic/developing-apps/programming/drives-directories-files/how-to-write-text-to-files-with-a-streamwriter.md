@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 8478c97fe76582fba575aa6fbb7856cd37f4bbd3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ea85d57e9af4fdd640733db5dc2fa8b0ab25325c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter in Visual Basic
@@ -62,3 +62,4 @@ In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mit der `My.Com
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
  [Vorgehensweise: Lesen aus Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)   
  [Schreiben in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+

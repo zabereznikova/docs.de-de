@@ -1,5 +1,5 @@
 ---
-title: set (C#-Referenz) | Microsoft-Dokumentation
+title: set (C#-Referenz)
 ms.date: 2017-03-10
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7111483ac2c939830560e8aad61078da5190684a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de10e3978d768aab34efa675fe00cfd059ff55df
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="set-c-reference"></a>set (C#-Referenz)
@@ -60,3 +60,4 @@ In einfachen Fällen, in denen der `get`- und der `set`-Accessor einer Eigenscha
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+

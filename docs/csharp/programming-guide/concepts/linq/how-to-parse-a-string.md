@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Parsen einer Zeichenfolge (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Parsen einer Zeichenfolge (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9cb39ce280775b255089bd97f1fe25618331e37
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8aa6e0235a5a9e834167b74897121a1ab003078b
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-a-string-c"></a>Vorgehensweise: Parsen einer Zeichenfolge (C#)
@@ -62,4 +63,5 @@ Console.WriteLine(contacts);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Parsen von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+ [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

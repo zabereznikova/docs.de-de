@@ -1,5 +1,5 @@
 ---
-title: extern (C#-Referenz) | Microsoft-Dokumentation
+title: extern (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61cde8c8f6b3d255be5f6040141542e3e8d1e8c7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e499ade5ec8a9339b0d425c59809cf7c177466fb
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="extern-c-reference"></a>extern (C#-Referenz)
@@ -116,3 +116,4 @@ SampleMethod() returns 50.
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
+

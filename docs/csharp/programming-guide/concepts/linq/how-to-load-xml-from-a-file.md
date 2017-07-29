@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Laden von XML aus einer Datei (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Laden von XML aus einer Datei (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3d93bcde05cf69db3786385cb674bfc32a1e8708
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 683c87608ecc9dea71c55a4b3c426ad3fd9f36fe
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Vorgehensweise: Laden von XML aus einer Datei (C#)
-In diesem Thema wird veranschaulicht, wie XML mithilfe der Methode <xref:System.Xml.Linq.XElement.Load%2A> von einem URI geladen wird.  
+In diesem Thema wird gezeigt, wie mit der <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>-Methode XML aus einem URI geladen werden kann.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie ein XML-Dokument aus einer Datei geladen werden kann. Dabei wird <legacyBold>books.xml</legacyBold> geladen und die XML-Struktur auf der Konsole ausgegeben.  
@@ -65,4 +66,5 @@ Console.WriteLine(booksFromFile);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Parsing XML (C#) (Parsen von XML (C#))](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+ [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

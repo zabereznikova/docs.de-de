@@ -1,5 +1,5 @@
 ---
-title: '#pragma-Warnung (C#-Referenz) | Microsoft-Dokumentation'
+title: '#<a name="pragma-warning-c-reference"></a>pragma-Warnung (C#-Referenz)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,18 +30,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 820b6de93a2a739d97084250601e41a5eb4a89f8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma-Warnung (C#-Referenz)
+# <a name="pragma-warning-c-reference"></a>#pragma warning (C#-Referenz)
 `#pragma warning` kann bestimmte Warnungen aktivieren oder deaktivieren.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```csharp
 // pragma_warning.cs  
 using System;  
   
@@ -86,3 +87,4 @@ public class D
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)   
  [C#-Compilerfehler](../../../csharp/language-reference/compiler-messages/index.md)
+

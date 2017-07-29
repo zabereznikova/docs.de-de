@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio-IDE und Toolunterstützung für LINQ (C#) | Microsoft-Dokumentation"
+title: "Visual Studio-IDE und Toolunterstützung für LINQ (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ffc0506fda6cd2dc0faf1e68514a0a5715f20a94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 028f501b455da2a930d3e39ba25da38ef9fdfd8d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Visual Studio-IDE und Toolunterstützung für LINQ (C#)
 Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Der objektrelationale Designer ist ein visuelles Designtool, das Sie in [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)-Anwendungen zum Erstellen von Klassen in C# verwenden können, die die relationalen Daten in einer zugrunde liegenden Datenbank darstellen. Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Der objektrelationale Designer ist ein visuelles Designtool, das Sie in [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)-Anwendungen zum Erstellen von Klassen in C# verwenden können, die die relationalen Daten in einer zugrunde liegenden Datenbank darstellen. Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal-Befehlszeilentool  
  SQLMetal ist ein Befehlszeilentool, das in Buildprozessen zum Generieren von Klassen aus vorhandenen Datenbanken verwendet werden kann, die in LINQ to SQL-Anwendungen verwendet werden sollen. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  
@@ -38,7 +39,8 @@ Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) v
  Der C#-Code-Editor bietet umfassende Unterstützung für LINQ durch IntelliSense- und Formatierungsfunktionen.  
   
 ## <a name="visual-studio-debugger-support"></a>Unterstützung für Visual Studio-Debugger  
- Der Visual Studio-Debugger unterstützt das Debuggen von Abfrageausdrücken. Weitere Informationen finden Sie unter [Debuggen von LINQ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq).  
+ Der Visual Studio-Debugger unterstützt das Debuggen von Abfrageausdrücken. Weitere Informationen finden Sie unter [Debuggen von LINQ](/visualstudio/debugger/debugging-linq).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+ [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)
+

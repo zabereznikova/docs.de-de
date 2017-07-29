@@ -1,5 +1,5 @@
 ---
-title: "Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“ (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Versionsverwaltung mit den Schlüsselwörtern \"override\" und \"new\" (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
@@ -77,7 +78,7 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer).  
+ Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
  Alternativ können Sie die Warnung vermeiden, indem Sie in der Definition Ihrer abgeleiteten Klasse das Schlüsselwort `new` verwenden:  
   
@@ -105,3 +106,4 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
  [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+

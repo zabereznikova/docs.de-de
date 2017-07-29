@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic-Beispielanwendungen | Microsoft-Dokumentation"
+title: "Visual Basic-Beispielanwendungen"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5a7bb4ca354fb8b67b3d3987e8d0c9ea563ec1ae
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b73a87d962993577740019df4e4233a4ad0f31b7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-sample-applications"></a>Visual Basic-Beispielanwendungen
@@ -44,3 +44,4 @@ Sie können Visual Studio verwenden, um Beispiele für vollständige, gepackte V
  [Visual Studio-Beispiele](http://go.microsoft.com/fwlink/?LinkId=150928)   
  [Visual Basic Programming Guide](../visual-basic/programming-guide/index.md)  (Visual Basic-Programmierhandbuch)  
  [Visual Basic](../visual-basic/index.md)
+

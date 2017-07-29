@@ -1,5 +1,5 @@
 ---
-title: for (C#-Referenz) | Microsoft-Dokumentation
+title: for (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2f32dd4bde376dd241cf168a4f034ba8f6e9b50
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d65c198b0fd763bddae4832290af038b8992eb48
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="for-c-reference"></a>for (C#-Referenz)
@@ -134,5 +134,6 @@ for (initializer; condition; iterator)
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [for-Anweisung (C++)](https://docs.microsoft.com/cpp/cpp/for-statement-cpp)   
+ [for-Anweisung (C++)](/cpp/cpp/for-statement-cpp)   
  [Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)
+

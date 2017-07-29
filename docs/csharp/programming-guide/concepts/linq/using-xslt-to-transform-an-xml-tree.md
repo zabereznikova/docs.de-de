@@ -1,5 +1,5 @@
 ---
-title: Verwenden von XSLT zum Transformieren eines XML-Baums (C#) | Microsoft-Dokumentation
+title: Verwenden von XSLT zum Transformieren eines XML-Baums (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c4c466b30292d4bee0b209ef217b1378975045eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6ec4a04bebd39ecb6a90dfc48729fa8696a2ab5
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Verwenden von XSLT zum Transformieren eines XML-Baums (C#)
-Sie können nacheinander eine XML-Struktur, einen <xref:System.Xml.XmlReader> aus der XML-Struktur, ein neues Dokument erstellen und einen <xref:System.Xml.XmlWriter> zum Schreiben in das neue Dokument erstellen. Anschließend können Sie die XSLT-Transformation aufrufen, wobei der <xref:System.Xml.XmlReader> und der <xref:System.Xml.XmlWriter> an die Transformation übergeben werden. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
+Sie können eine XML-Struktur erstellen, einen <xref:System.Xml.XmlReader> aus der XML-Struktur erstellen, ein neues Dokument erstellen und dann einen <xref:System.Xml.XmlWriter> erstellen, der in das neue Dokument schreibt. Anschließend können Sie die XSLT-Transformation aufrufen und den <xref:System.Xml.XmlReader> sowie den <xref:System.Xml.XmlWriter> an die Transformation übergeben. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -78,3 +79,4 @@ Console.WriteLine(newTree);
  <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
  <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
  [Advanced LINQ to XML Programming (C#) (Erweiterte LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Refactoring mithilfe einer reinen Funktion (C#) | Microsoft-Dokumentation
+title: Refactoring mithilfe einer reinen Funktion (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1484794352f326cd1045c6ba7c39e064e69146b
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d918c5f37f92f5da7ca535b05b8ff3a97dc851bf
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
@@ -29,7 +29,7 @@ Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Ex
   
  Eine Anleitung zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Es verwendet Typen im Namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -166,7 +166,7 @@ class Program
 }  
 ```  
   
- Dieses Beispiel erzeugt dieselbe Ausgabe wie vor dem Refactoring:  
+ Dieses Beispiel erzeugt dieselbe Ausgabe wie vor der Umgestaltung:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -195,3 +195,4 @@ StyleName:Code >Hello World<
  [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [Refactoring Using an Extension Method (C#) (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
  [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

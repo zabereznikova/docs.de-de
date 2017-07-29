@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit XML-Namespaces (C#) | Microsoft-Dokumentation
+title: Arbeiten mit XML-Namespaces (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,24 +19,26 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3b0a211d7cd699238b86c00c78f9920d4053a2d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98627e6944f774bb74f705c8c8607e856e1c1195
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-xml-namespaces-c"></a>Arbeiten mit XML-Namespaces (C#)
-In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] Namespaces unterstützt.  
+In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Übersicht über Namespaces (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|In diesem Thema werden Namespaces und die Klassen <xref:System.Xml.Linq.XName> und <xref:System.Xml.Linq.XNamespace> eingeführt.|  
+|[Übersicht über Namespaces (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Dieses Thema enthält eine Einführung in die Namespaces, die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse.|  
 |[Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|Beschreibt das Erstellen von Dokumenten mit Namespaces.|  
 |[Vorgehensweise: Steuern von Namespacepräfixen (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Zeigt, wie Namespacepräfixe durch Einfügen von Namespaceattributen in die XML-Struktur gesteuert werden können.|  
 |[Bereich von Standardnamespaces in C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Zeigt geeignete Möglichkeiten für das Schreiben von Abfragen für XML im Standardnamespace.|  
 |[Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Veranschaulicht, wie XML-Namespaces in LINQ to XML-Abfragen in C# angegeben werden|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+ [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

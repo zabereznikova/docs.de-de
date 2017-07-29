@@ -1,5 +1,5 @@
 ---
-title: Neues in Visual Basic | Microsoft-Dokumentation
+title: Neues in Visual Basic
 ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
@@ -105,7 +105,7 @@ Ab C# 7 unterstützt C# Verweisrückgabewerte. Das heißt, wenn die aufrufende M
 
 Die folgende in C# geschriebene `Sentence`-Klasse enthält z.B eine `FindNext`-Methode, die nach dem nächsten Wort in einer Sequenz sucht, die mit einer angegebenen Teilzeichenfolge beginnt. Die Zeichenfolge wird als Verweisrückgabewert zurückgegeben, und eine vom Verweis an die Methode übergebene `Boolean`-Variable gibt an, ob die Suche Erfolg hatte. Das bedeutet, dass der Aufrufer nicht nur den Rückgabewert lesen sondern auch modifizieren kann. Diese Modifizierung wird in der `Sentence`-Klasse widergespiegelt.
 
-[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+[!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
 Sie können das in der Sequenz gefundene Wort in seiner einfachsten Form mit Code wie dem folgenden modifizieren. Beachten Sie, dass Sie nicht der Methode sondern dem Ausdruck, den die Methode zurückgibt, einen Wert zuweisen. Dabei handelt es sich um den Verweisrückgabewert.
 
@@ -191,5 +191,5 @@ End Interface
  Nun verwendet der Compiler normale Regeln zur Überladungsauflösung, um die am besten geeignete `GetDetails`-Methode zum Aufrufen auszuwählen, und Sie können Schnittstellenbeziehungen in Visual Basic deklarieren, wie sie im Beispiel gezeigt sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Neues in Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+ [Neues in Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
 

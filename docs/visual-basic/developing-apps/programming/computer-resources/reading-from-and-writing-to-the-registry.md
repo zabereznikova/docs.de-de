@@ -1,5 +1,5 @@
 ---
-title: Lesen aus der und Schreiben in die Registrierung (Visual Basic) | Microsoft-Dokumentation
+title: Lesen aus der und Schreiben in die Registrierung (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,17 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a093754423ba8b6942170792655e65e256df49bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 742aeb48f028918040479593a31b1223fba1b02f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Lesen aus der und Schreiben in die Registrierung (Visual Basic)
 In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die mit der Registrierung in Verbindung stehen.  
   
- Beim Programmieren in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] können Sie auf die Registrierung zugreifen. Dies geschieht entweder über die in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bereitgestellten Funktionen oder die Registry-Klassen von .NET Framework. Die Registrierung enthält Informationen des Betriebssystems und Informationen von auf dem Computer gehosteten Anwendungen. Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird.  
+ Beim Programmieren in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können Sie auf die Registrierung zugreifen. Dies geschieht entweder über die in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bereitgestellten Funktionen oder die Registry-Klassen von .NET Framework. Die Registrierung enthält Informationen des Betriebssystems und Informationen von auf dem Computer gehosteten Anwendungen. Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
@@ -55,7 +55,7 @@ In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die 
  Beschreibt die Verwendung der `DeleteSubKey`-Methode der `My.Computer.Registry.CurrentUser`-Eigenschaft zum Löschen eines Registrierungsschlüssels  
   
  [Lesen aus der und Schreiben in die Registrierung mithilfe des Namespaces „Microsoft.Win32“](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Beschreibt die Verwendung der Klassen `Registry` und `RegistryKey` von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] zum Zugriff auf die Registrierung  
+ Beschreibt die Verwendung der Klassen `Registry` und `RegistryKey` von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Zugriff auf die Registrierung  
   
  [Sicherheit und die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Beschreibt Sicherheitsprobleme im Zusammenhang mit der Registrierung  
@@ -66,3 +66,4 @@ In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die 
   
  <xref:Microsoft.Win32.Registry>  
  Bietet einen Überblick über die Klasse `Registry` und Links zu einzelnen Schlüsseln und Membern
+
