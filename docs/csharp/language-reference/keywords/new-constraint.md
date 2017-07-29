@@ -1,5 +1,5 @@
 ---
-title: "new-Einschränkung (C#-Referenz) | Microsoft-Dokumentation"
+title: "new-Einschränkung (C#-Referenz)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10f3693678f5a3eeaa335739bb383e204c80b375
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 762941794184605f90443ed8f36c88ecfa50aa84
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="new-constraint-c-reference"></a>new-Einschränkung (C#-Referenz)
@@ -59,3 +59,4 @@ Die `new`-Einschränkung gibt an, dass jedes Typargument in einer generischen Kl
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Generika](../../../csharp/programming-guide/generics/index.md)
+

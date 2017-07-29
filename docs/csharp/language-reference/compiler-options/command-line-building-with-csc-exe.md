@@ -1,5 +1,5 @@
 ---
-title: "Erstellen über die Befehlszeile mit csc.exe | Microsoft-Dokumentation"
+title: "Erstellen über die Befehlszeile mit csc.exe"
 ms.date: 2017-04-19
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d90dc35fd985cbe35cfe86f7c299bd12aed11365
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
@@ -42,7 +42,7 @@ Wenn Sie das Fenster **Developer-Eingabeaufforderung für Visual Studio** verwen
 
 Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie *csc.exe* aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie *vsvars32.bat* ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu *vsvars32.bat*, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
-Wenn Sie auf einem Computer arbeiten, auf dem nur das [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)] installiert ist, können Sie den C#-Compiler von der **SDK-Eingabeaufforderung** aus verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.
+Wenn Sie auf einem Computer arbeiten, auf dem nur das [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] installiert ist, können Sie den C#-Compiler von der **SDK-Eingabeaufforderung** aus verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.
 
 Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visualstudio/msbuild/msbuild).
 
@@ -81,37 +81,37 @@ Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems 
 
 - Kompiliert *file.cs*, sodass *file.exe* entsteht:
 
-```
+```console
 csc File.cs 
 ```
 
 - Kompiliert *file.cs*, sodass *file.exe* entsteht:
 
-```
+```console
 csc /target:library File.cs
 ```
 
 - Kompiliert *file.cs* und erstellt *my.exe*:
 
-```
+```console
 csc /out:My.exe File.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen und definiert das DEBUG-Symbol. Die Ausgabe lautet *File2.exe*:
 
-```
+```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis, wodurch eine Debugversion von *File2.dll* erstellt wird. Es werden weder Logo noch Warnungen angezeigt:
 
-```
+```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu *Name.xyz* (eine DLL-Datei):
 
-```
+```console
 csc /target:library /out:Something.xyz *.cs
 ```
 

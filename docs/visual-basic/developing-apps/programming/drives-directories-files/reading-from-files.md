@@ -1,5 +1,5 @@
 ---
-title: Lesen aus Dateien in Visual Basic | Microsoft-Dokumentation
+title: Lesen aus Dateien in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Lesen aus Dateien in Visual Basic
@@ -90,4 +90,5 @@ In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Les
  Veranschaulicht die Verwendung des Features `My` mit Dateien und Verzeichnissen  
   
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht die Verwendung der Methode [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] mit Dateien und Verzeichnissen
+ Veranschaulicht die Verwendung der Methode [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mit Dateien und Verzeichnissen
+

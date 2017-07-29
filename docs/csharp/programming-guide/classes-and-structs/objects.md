@@ -1,5 +1,5 @@
 ---
-title: Objekte (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Objekte (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
@@ -52,7 +52,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection im [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
+ Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  Die Belegung und Freigabe von Arbeitsspeicher auf dem verwalteten Heap ist in der Common Language Runtime stark optimiert. In den meisten Fällen besteht kein wesentlicher Unterschied zwischen den Leistungskosten beim Zuweisen einer Klasseninstanz auf dem Heap im Vergleich zum Zuweisen einer Strukturinstanz im Stapel.  
@@ -91,3 +91,4 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
  [Struktur](../../../csharp/language-reference/keywords/struct.md)   
  [new-Operator](../../../csharp/language-reference/keywords/new-operator.md)   
  [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md)
+

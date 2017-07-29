@@ -1,5 +1,5 @@
 ---
-title: while (C#-Referenz) | Microsoft-Dokumentation
+title: while (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 744980f2dd55806062901d874a3137f5936e0888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed531c83dba02b38576bf8354b1ff92f075048bc
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="while-c-reference"></a>while (C#-Referenz)
@@ -60,5 +60,6 @@ Die `while`-Anweisung führt eine Anweisung oder einen Anweisungsblock aus, bis 
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [while-Anweisung (C++)](https://docs.microsoft.com/cpp/cpp/while-statement-cpp)   
+ [while-Anweisung (C++)](/cpp/cpp/while-statement-cpp)   
  [Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)
+

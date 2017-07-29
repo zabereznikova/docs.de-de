@@ -1,5 +1,5 @@
 ---
-title: public (C#-Referenz) | Microsoft-Dokumentation
+title: public (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2d6350b6c7c2490d42d08ebd169a35b40d20900
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae19bf9a33a9860a8960cde5dd4402e10418a094
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="public-c-reference"></a>public (C#-Referenz)
@@ -66,9 +66,10 @@ class SampleClass
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/language-reference/keywords/access-modifiers.md)   
+ [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)
+

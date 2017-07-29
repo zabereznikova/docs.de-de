@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 87932173a74053aec1547ee9ebbe0e5f6187085c
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 945fc1e2cc3d7ae57239fdc5113e87c0a1512ff8
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Vorgehensweise: Abrufen von Absätzen aus einem Office Open-XML-Dokument (C#)
@@ -27,13 +27,13 @@ Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und
  Weitere Informationen zu Office Open XML finden Sie unter [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel öffnet ein Office Open XML-Paket und verwendet zum Suchen nach dem Dokumentteil und dem Formatvorlagenteil die Beziehungen innerhalb des Open XML-Pakets. Anschließend fragt es das Dokument ab und projiziert dabei eine Auflistung eines anonymen Typs, die den <xref:System.Xml.Linq.XElement>-Absatzknoten, den Namen der Formatvorlage der einzelnen Absätze und den Text der einzelnen Absätze enthält.  
+ Dieses Beispiel öffnet ein Office Open XML-Paket und verwendet zum Suchen nach dem Dokumentteil und dem Formatvorlagenteil die Beziehungen innerhalb des Open XML-Pakets. Anschließend fragt es das Dokument ab und projiziert dabei eine Auflistung eines anonymen Typs, die den Absatz-<xref:System.Xml.Linq.XElement>-Knoten, den Namen der Formatvorlage der einzelnen Absätze und den Text der einzelnen Absätze enthält.  
   
  Das Beispiel verwendet eine Erweiterungsmethode mit dem Namen `StringConcatenate`, die ebenfalls im Beispiel angegeben ist.  
   
  Ein ausführliches Tutorial, in dem das Arbeiten mit diesem Beispiel erläutert wird, finden Sie unter [Pure Functional Transformations of XML (C#) (Reine funktionale XML-Transformationen (C#))](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Es verwendet Typen im Namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -175,7 +175,7 @@ class Program
 }  
 ```  
   
- Dieses Beispiel produziert bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe:  
+ Dieses Beispiel erzeugt bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -197,3 +197,4 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Abfragetechniken (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Lambda Expressions (C# Programming Guide) | Microsoft-Dokumentation
+title: "Lambda-Ausdrücke (C#-Programmierhandbuch)"
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
 ms.contentlocale: de-de
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda-Ausdrücke (C#-Programmierhandbuch)
@@ -72,9 +72,9 @@ namespace ConsoleApplication1
   
  Der Operator `=>` hat die gleiche Rangfolge wie Zuordnung (`=`) und ist [rechtsassoziativ](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (siehe Abschnitt „Assoziativität“ im Artikel „Operatoren“).  
   
- Lambdas werden in methodenbasierten [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]-Abfragen als Argumente für Standardabfrageoperator-Methoden wie <xref:System.Linq.Enumerable.Where%2A> verwendet.  
+ Lambdas werden in methodenbasierten [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen als Argumente für Standardabfrageoperator-Methoden wie <xref:System.Linq.Enumerable.Where%2A> verwendet.  
   
- Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Where%2A>-Methode in der <xref:System.Linq.Enumerable>-Klasse methodenbasierte Syntax verwenden (wie in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects und [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]), ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=fullName>. Ein Lambda-Ausdruck ist die einfachste Möglichkeit zum Erstellen dieses Delegaten. Wenn Sie dieselbe Methode z.B. in der <xref:System.Linq.Queryable?displayProperty=fullName>-Klasse aufrufen (wie in [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]), handelt es sich bei dem Parametertyp um eine <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Funktion\>, wobei „Funktion“ für beliebige Funktionsdelegaten mit bis zu 16 Eingabeparametern steht. Wie gesagt, ein Lambda-Ausdruck ist eine sehr präzise Methode, diese Ausdrucksbaumstruktur zu erstellen. Durch die Lambdas können die `Where` -Aufrufe ähnlich aussehen, obwohl sich der mithilfe des Lambdas erstellte Objekttyp unterscheidet.  
+ Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Where%2A> -Methode in der <xref:System.Linq.Enumerable> -Klasse methodenbasierte Syntax verwenden (wie in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]), ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=fullName>. Ein Lambda-Ausdruck ist die einfachste Möglichkeit zum Erstellen dieses Delegaten. Wenn Sie dieselbe Methode z.B. in der <xref:System.Linq.Queryable?displayProperty=fullName>-Klasse aufrufen (wie in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), handelt es sich bei dem Parametertyp um eine <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Funktion\>, wobei „Funktion“ für beliebige Funktionsdelegaten mit bis zu 16 Eingabeparametern steht. Wie gesagt, ein Lambda-Ausdruck ist eine sehr präzise Methode, diese Ausdrucksbaumstruktur zu erstellen. Durch die Lambdas können die `Where` -Aufrufe ähnlich aussehen, obwohl sich der mithilfe des Lambdas erstellte Objekttyp unterscheidet.  
   
  Beachten Sie im vorigen Beispiel, dass die Signatur des Delegaten über einen implizit typisierten Eingabeparameter vom Typ `int`verfügt und `int`zurückgibt. Der Lambda-Ausdruck kann in einen Delegaten dieses Typs konvertiert werden, da er auch über einen Eingabeparameter (`x`) und einen Rückgabewert verfügt, der vom Compiler implizit in den Typ `int` konvertiert werden kann. (Der Typrückschluss wird in den folgenden Abschnitten ausführlicher erläutert.) Wenn der Delegat durch Verwendung des Eingabeparameters 5 aufgerufen wird, wird als Ergebnis 25 zurückgegeben.  
   
@@ -175,7 +175,7 @@ public partial class Form1 : Form
  Weitere Informationen zum Erstellen und Verwenden von asynchronen Methoden finden Sie unter [Asynchronous programming with async and await (Asynchrones Programmieren mit „async“ and „await“)](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas mit Standardabfrageoperatoren  
- Viele Standardabfrageoperatoren weisen einen Eingabeparameter auf, deren Typ einem der Typen aus der <xref:System.Func%602>-Familie generischer Delegaten entspricht. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func` -Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Betrachten Sie z. B. den folgenden Delegattyp:  
+ Viele Standardabfrageoperatoren weisen einen Eingabeparameter auf, deren Typ einem der Typen aus der <xref:System.Func%602> -Familie generischer Delegaten entspricht. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func` -Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Betrachten Sie z. B. den folgenden Delegattyp:  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
@@ -188,9 +188,9 @@ Func<int, bool> myFunc = x => x == 5;
 bool result = myFunc(4); // returns false of course  
 ```  
   
- Sie können einen Lambda-Ausdruck auch dann angeben, wenn der Argumenttyp `Expression<Func>`ist, beispielsweise in den Standardabfrageoperatoren, die in System.Linq.Queryable definiert sind. Wenn Sie ein `Expression<Func>`-Argument angeben, wird der Lambda-Ausdruck in eine Ausdrucksbaumstruktur kompiliert.  
+ Sie können einen Lambda-Ausdruck auch dann angeben, wenn der Argumenttyp `Expression<Func>`ist, beispielsweise in den Standardabfrageoperatoren, die in System.Linq.Queryable definiert sind. Wenn Sie ein `Expression<Func>` -Argument angeben, wird der Lambda-Ausdruck in eine Ausdrucksbaumstruktur kompiliert.  
   
- Hier wird ein Standardabfrageoperator, die <xref:System.Linq.Enumerable.Count%2A>-Methode, angezeigt:  
+ Hier wird ein Standardabfrageoperator, die <xref:System.Linq.Enumerable.Count%2A> -Methode, angezeigt:  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -226,7 +226,7 @@ customers.Where(c => c.City == "London");
   
 -   Der Rückgabewert des Lambdas (falls vorhanden) muss implizit in den Rückgabetyp des Delegaten konvertiert werden können.  
   
- Beachten Sie, dass Lambda-Ausdrücke keinen eigenen Typ haben, da das allgemeine Typsystem kein internes Konzept von "Lambda-Ausdrücken" aufweist. Es kann manchmal praktisch sein, informell vom "Typ" eines Lambda-Ausdrucks zu sprechen. In einem solchen Fall bezeichnet Typ den Delegattyp bzw. den <xref:System.Linq.Expressions.Expression>-Typ, in den der Lambda-Ausdruck konvertiert wird.  
+ Beachten Sie, dass Lambda-Ausdrücke keinen eigenen Typ haben, da das allgemeine Typsystem kein internes Konzept von "Lambda-Ausdrücken" aufweist. Es kann manchmal praktisch sein, informell vom "Typ" eines Lambda-Ausdrucks zu sprechen. In einem solchen Fall bezeichnet Typ den Delegattyp bzw. den <xref:System.Linq.Expressions.Expression> -Typ, in den der Lambda-Ausdruck konvertiert wird.  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>Variablenbereich in Lambda-Ausdrücken  
  Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), die im Bereich der Methode, mit der die Lambdafunktion definiert wird, oder im Bereich des Typs liegen, der den Lambdaausdruck enthält. Variablen, die auf diese Weise erfasst werden, werden zur Verwendung in Lambda-Ausdrücken gespeichert, auch wenn die Variablen andernfalls außerhalb des Gültigkeitsbereichs liegen und an die Garbage Collection übergeben würden. Eine äußere Variable muss definitiv zugewiesen sein, bevor sie in einem Lambda-Ausdruck verwendet werden kann. Das folgende Beispiel veranschaulicht diese Regeln:  
@@ -290,7 +290,7 @@ class Test
 -   Ein Lambda-Ausdruck kann eine `goto` -Anweisung, `break` -Anweisung oder `continue` -Anweisung enthalten, die innerhalb der Lambda-Funktion liegt, wenn das Ziel der jump-Anweisung außerhalb des Blocks liegt. Eine jump-Anweisung darf auch nicht außerhalb des Lambda-Funktionsblocks sein, wenn das Ziel im Block ist.  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
  [Delegaten, Ereignisse und Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=195395) im [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

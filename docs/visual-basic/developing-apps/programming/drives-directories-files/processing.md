@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic) | Microsoft-Dokumentation
+title: Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4cbb2ead7075e8cda58ac4ec33d9fb6535d3284a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic)
-Sie können [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] zum Verarbeiten von Laufwerken, Ordnern und Dateien mit dem `My.Computer.FileSystem`-Objekt verwenden, das eine bessere Leistung bietet und einfacher anzuwenden ist als herkömmliche Methoden wie z.B. die `FileOpen`- und `Write`-Funktionen (obwohl sie immer noch verfügbar sind). In den folgenden Abschnitten werden diese Methoden ausführlich erörtert.  
+Sie können [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zum Verarbeiten von Laufwerken, Ordnern und Dateien mit dem `My.Computer.FileSystem`-Objekt verwenden, das eine bessere Leistung bietet und einfacher anzuwenden ist als herkömmliche Methoden wie z.B. die `FileOpen`- und `Write`-Funktionen (obwohl sie immer noch verfügbar sind). In den folgenden Abschnitten werden diese Methoden ausführlich erörtert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Dateizugriff mit Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
@@ -53,7 +53,7 @@ Sie können [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq
  Bietet einen Überblick über die Datei-A/A-Konzepte in .NET Framework, einschließlich Streams, isolierter Speicher, Dateiereignissen, Dateiattributen und Dateizugriff.  
   
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht, wie [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] zum Bearbeiten von Dateien und Ordnern verwendet wird.  
+ Veranschaulicht, wie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Bearbeiten von Dateien und Ordnern verwendet wird.  
   
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Veranschaulicht, wie das `My.Computer.FileSystem`-Objekt zum Bearbeiten von Dateien und Ordnern verwendet wird.  
@@ -64,3 +64,4 @@ Sie können [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Referenzdokumentation für das `My.Computer.FileSystem`-Objekt und seiner Member.
+

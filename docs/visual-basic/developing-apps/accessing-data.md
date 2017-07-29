@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf Daten in Visual Basic-Anwendungen | Microsoft-Dokumentation
+title: Zugreifen auf Daten in Visual Basic-Anwendungen
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,51 +28,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 227aaf74dff0ae16fc5030ac8031ffa0f9ddf632
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Zugreifen auf Daten in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/)  
+ [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/)  
  Stellt Links zu Seiten bereit, in denen das Integrieren von Datenzugriffsfunktionen in Anwendungen erläutert wird.
 
- [Visual Studio-Datentools für .NET](https://docs.microsoft.com/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Enthält Links zu Seiten, in denen erläutert wird, wie Sie mit [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] Anwendungen erstellen können, die Daten verwenden.  
+ [Visual Studio-Datentools für .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+ Enthält Links zu Seiten, in denen erläutert wird, wie Sie mit [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Anwendungen erstellen können, die Daten verwenden.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Enthält Links zu Themen, in denen die Verwendung von LINQ mit Visual Basic beschrieben wird.  
   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
- Enthält Informationen über [!INCLUDE[vbtecdlinq](../../csharp/includes/vbtecdlinq_md.md)]. Enthält Programmierbeispiele.  
+ Enthält Informationen über [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Enthält Programmierbeispiele.  
   
- [LINQ to SQL-Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  Enthält Links zu Themen, in denen das Erstellen eines [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)-Objektmodells in Anwendungen erläutert wird.  
   
- [Arbeiten mit Datasets in N-Tier-Anwendungen](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ [Arbeiten mit Datasets in N-Tier-Anwendungen](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Enthält Links zu Themen über die Erstellung mehrschichtiger Datenanwendungen.  
      
- [Neue Verbindungen hinzufügen](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)  
- Enthält Links zu Seiten über das Herstellen von Verbindungen zwischen der Anwendung und Daten mit Entwurfszeittools und ADO.NET-Verbindungsobjekten mithilfe von [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [Neue Verbindungen hinzufügen](/visualstudio/data-tools/add-new-connections)  
+ Enthält Links zu Seiten über das Herstellen von Verbindungen zwischen der Anwendung und Daten mit Entwurfszeittools und ADO.NET-Verbindungsobjekten mithilfe von [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
 
- [Datasettools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+ [Datasettools in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Enthält Links zu Seiten, in denen das Laden von Daten in Datasets und die Ausführung von SQL-Anweisungen und gespeicherten Prozeduren beschrieben wird.  
   
- [Binden von Steuerelementen an Daten in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+ [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
  Enthält Links zu Seiten, in denen erläutert wird, wie Daten über datengebundene Steuerelemente in Windows Forms dargestellt werden.  
   
- [Bearbeiten von Daten in Datasets](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)  
+ [Bearbeiten von Daten in Datasets](/visualstudio/data-tools/edit-data-in-datasets)  
  Enthält Links zu Seiten, in denen erläutert wird, wie die Daten in den Datentabellen eines Datasets bearbeitet werden.  
   
- [Überprüfen von Daten in Datasets](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)  
+ [Überprüfen von Daten in Datasets](/visualstudio/data-tools/validate-data-in-datasets)  
  Enthält Links zu Seiten über das Hinzufügen von Validierungen zu einem Dataset bei der Durchführung von Spalten- und Zeilenänderungen.  
   
- [Rückspeichern von Daten in der Datenbank](https://docs.microsoft.com/visualstudio/data-tools/save-data-back-to-the-database)  
+ [Rückspeichern von Daten in der Datenbank](/visualstudio/data-tools/save-data-back-to-the-database)  
  Enthält Links zu Seiten, die erläutern, wie aktualisierte Daten von einer Anwendung an eine Datenbank gesendet werden.  
   
  [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  

@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)
@@ -44,7 +45,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-create-the-loan-class"></a>So erstellen Sie eine Loan-Klasse  
   
-1.  Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“. Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“. Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](/visualstudio/ide/creating-solutions-and-projects).  
   
 2.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für die Datei „Class1“ und wählen Sie **Umbenennen** aus. Benennen Sie die Datei in `Loan` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `Loan` umbenannt.  
   
@@ -102,7 +103,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 7.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
-8.  Fügen Sie im Designer dem Formular vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
+8.  Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
   
 9. Fügen Sie im Code-Editor folgenden Code hinzu:  
   
@@ -156,7 +157,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
     ```  
   
- Fügen Sie als nächstes den Serialisierungscode zur LoanApp-Anwendung hinzu. Verwenden Sie die Namespaces <xref:System.IO> und <xref:System.Xml.Serialization>, um die Klasse zu serialisieren und in eine Datei zu schreiben. Sie können Verweise zu den notwendigen Klassenbibliotheken hinzufügen, damit Sie die vollqualifizierten Namen nicht eingeben müssen.  
+ Fügen Sie als nächstes den Serialisierungscode zur LoanApp-Anwendung hinzu. Um die Klasse zu serialisieren und in eine Datei zu schreiben, verwenden Sie die Namespaces <xref:System.IO> und <xref:System.Xml.Serialization>. Sie können Verweise zu den notwendigen Klassenbibliotheken hinzufügen, damit Sie die vollqualifizierten Namen nicht eingeben müssen.  
   
 ### <a name="to-add-references-to-namespaces"></a>So fügen Sie Verweise zu Namespaces hinzu  
   
@@ -203,7 +204,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
-     Beachten Sie, dass Sie erst sicherstellen müssen, ob die Datei vorhanden ist. Erstellen Sie eine <xref:System.IO.Stream>-Klasse zum Lesen der Binärdatei und eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse zum Übersetzen der Datei. Sie müssen ebenfalls vom Streamtyp in den Loan-Objekttyp konvertieren.  
+     Beachten Sie, dass Sie erst sicherstellen müssen, ob die Datei vorhanden ist. Wenn sie vorhanden ist, erstellen Sie eine <xref:System.IO.Stream>-Klasse zum Lesen der Binärdatei und eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse zum Übersetzen der Datei. Sie müssen ebenfalls vom Streamtyp in den Loan-Objekttyp konvertieren.  
   
  Als nächstes müssen Sie Code hinzufügen, um die in die Textfelder eingegebenen Daten in der `Loan`-Klasse zu speichern. Anschließend müssen Sie die Klasse in eine Datei serialisieren.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
@@ -47,9 +47,9 @@ Diese exemplarische Vorgehensweise veranschaulicht diese Funktionen im Kontext d
 
 Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder neuere Versionen installiert sein, um diese exemplarische Vorgehensweise ausführen zu können.  
   
- Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] installiert ist.  
+ Wenn Sie ein Betriebssystem verwenden, das älter ist als [!INCLUDE[windowsver](~/includes/windowsver-md.md)], stellen Sie sicher, dass [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] installiert ist.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>So richten Sie eine Excel-Add-In-Anwendung ein  
   
@@ -73,7 +73,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Verweis hinzufügen**. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   
-2.  Wählen Sie auf der Registerkarte **Assemblys** die Option **Microsoft.Office.Interop.Excel**, Version `<version>.0.0.0` (einen Schlüssel für die Versionsnummer des Office-Produkts finden Sie unter [Microsoft Versions (in englischer Sprache)](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), in der Liste **Komponentenname** aus, und halten Sie dann die STRG-Taste gedrückt, während Sie **Microsoft.Office.Interop.Word**, `version <version>.0.0.0` auswählen. Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Interopassemblys für Office](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Wählen Sie auf der Registerkarte **Assemblys** die Option **Microsoft.Office.Interop.Excel**, Version `<version>.0.0.0` (einen Schlüssel für die Versionsnummer des Office-Produkts finden Sie unter [Microsoft Versions (in englischer Sprache)](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), in der Liste **Komponentenname** aus, und halten Sie dann die STRG-Taste gedrückt, während Sie **Microsoft.Office.Interop.Word**, `version <version>.0.0.0` auswählen. Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Interopassemblys für Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -105,7 +105,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
      Bei dieser Methode werden zwei neue C#-Funktionen verwendet. Beide Funktionen existieren bereits in Visual Basic.  
   
-    -   Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Die Methode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Weitere Informationen finden Sie unter [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -215,3 +215,4 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
  [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
  [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
  [Interoperabilität](../../../csharp/programming-guide/interop/index.md)
+

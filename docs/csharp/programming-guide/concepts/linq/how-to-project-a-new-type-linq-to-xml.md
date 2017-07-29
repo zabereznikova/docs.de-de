@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa8c4676890dcc25108d919a501bde44299db04
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b772326b3b8827351ffbfbb1888b105bd6e537df
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (C#)
-Andere Beispiele in diesem Abschnitt zeigen Abfragen, die Ergebnisse wie <xref:System.Collections.Generic.IEnumerable%601> für <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> für `string` und <xref:System.Collections.Generic.IEnumerable%601> für `int` zurückgeben. Dabei handelt es sich zwar um gängige Ergebnistypen, die sich aber nicht für jedes Szenario eignen. In vielen Fällen sollten Ihre Abfragen <xref:System.Collections.Generic.IEnumerable%601> eines anderen Typs zurückgeben.  
+In anderen Beispielen dieses Abschnitts wurden Abfragen gezeigt, die Ergebnisse als eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>, eine <xref:System.Collections.Generic.IEnumerable%601> von `string` und eine <xref:System.Collections.Generic.IEnumerable%601> von `int` zurückgeben. Dabei handelt es sich zwar um gängige Ergebnistypen, die sich aber nicht für jedes Szenario eignen. In vielen Fällen besteht Ihr Ziel darin, dass Ihre Abfragen als eine <xref:System.Collections.Generic.IEnumerable%601> eines anderen Typs zurückgegeben werden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie Sie Objekte in der `select`-Klausel instanziieren können. Der Code definiert zuerst mit einem Konstruktor eine neue Klasse und ändert anschließend die `select`-Anweisung so, dass der Ausdruck zu einer neuen Instanz der neuen Klasse wird.  
@@ -68,3 +68,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>Siehe auch  
  [Projektionen und Transformationen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: $ (C#-Referenz) | Microsoft-Dokumentation
+title: $ (C#-Referenz)
 ms.date: 2017-02-09
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b6afd7d9839f6d86f7fcfa3f097053ba4f418ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 65dfc7b28059c4d41dd9113fd60c6a64987bfc2b
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-c-reference"></a>$ (C#-Referenz)
@@ -49,5 +50,5 @@ Weitere Informationen zu interpolierten Zeichenfolgen finden Sie unter [Interpol
 ## <a name="see-also"></a>Siehe auch  
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Sonderzeichen](../../../csharp/language-reference/tokens/index.md)
+ [C# Special Characters (C#-Sonderzeichen)](../../../csharp/language-reference/tokens/index.md)
 

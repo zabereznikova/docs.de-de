@@ -1,5 +1,5 @@
 ---
-title: "Exemplarische Vorgehensweisen für C# | Microsoft-Dokumentation"
+title: "Exemplarische Vorgehensweisen für C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
 ms.contentlocale: de-de
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
@@ -47,7 +47,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../csharp/language-reference/keywords/async.md) und [Await](../csharp/language-reference/keywords/await.md).  
   
  [Erstellen einer Windows-Runtime-Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- Veranschaulicht das Erstellen eines [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]-Typs, das Verpacken in einer [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)]-App, die mithilfe von JavaScript für Windows erstellt wurde.  
+ Veranschaulicht das Erstellen eines [!INCLUDE[wrt](~/includes/wrt-md.md)]-Typs, das Verpacken in einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-App, die mithilfe von JavaScript für Windows erstellt wurde.  
   
  [Office-Programmierung (C# und Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Veranschaulicht das Erstellen einer Excel-Arbeitsmappe und eines Word-Dokuments mithilfe von C# und Visual Basic.  
@@ -71,10 +71,10 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht einige der häufig ausgeführten Aufgaben wie das Hinzufügen oder Entfernen einer Registerkarte auf einem `TabControl`, das Andocken eines Steuerelements an seinem übergeordneten Element und das Ändern der Ausrichtung eines `SplitContainer`-Steuerelements.  
   
  [Schreiben von Abfragen in C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](../csharp/includes/vbteclinq_md.md)]-Abfrageausdrücke verwendet werden.  
+ Veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke verwendet werden.  
   
  [Bearbeiten von Daten (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- Beschreibt ein [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)]-Szenario für das Hinzufügen, Ändern und Löschen von Daten in einer Datenbank.  
+ Beschreibt ein [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Szenario für das Hinzufügen, Ändern und Löschen von Daten in einer Datenbank.  
   
  [Einfaches Objektmodell und einfache Abfrage (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
  Veranschaulicht das Erstellen einer Entitätsklasse und einer einfachen Abfrage zum Filtern der Entitätsklasse.  
@@ -83,15 +83,16 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht, wie Sie mithilfe von LINQ to SQL auf Daten zugreifen können, indem Sie nur gespeicherte Prozeduren ausführen.  
   
  [Beziehungsübergreifendes Abfragen (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- Veranschaulicht die Verwendung der [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)]-Zuordnungen, um Fremdschlüsselbeziehungen in einer Datenbank darzustellen.  
+ Veranschaulicht die Verwendung der [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Zuordnungen, um Fremdschlüsselbeziehungen in einer Datenbank darzustellen.  
 
- [Schreiben einer Schnellansicht in C#](https://docs.microsoft.com/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ [Schreiben einer Schnellansicht in C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  Veranschaulicht das Schreiben einer einfache Schnellansicht in C#.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Beispiele und exemplarische Vorgehensweisen für die Bereitstellung](https://docs.microsoft.com/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ [Beispiele und exemplarische Vorgehensweisen für die Bereitstellung](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Bietet detaillierte Beispiele für häufige Bereitstellungsszenarien.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../csharp/programming-guide/index.md)   
- [Visual Studio-Beispiele](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)
+ [Visual Studio-Beispiele](/visualstudio/ide/visual-studio-samples)
+
