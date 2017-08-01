@@ -1,5 +1,5 @@
 ---
-title: "C#-Delegaten – Überblick über C# | Microsoft-Dokumentation"
+title: "C#-Delegaten – Überblick über C#"
 description: "Hier lernen Sie späte Bindungen mit C#-Delegaten kennen."
 keywords: ".NET, csharp, Delegat, Lambda, späte Bindung"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb304b2e5c762a44aab931b5e8f7fe9c99805eba
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="delegates" class="xliff"></a>
-
-# Delegaten
+# <a name="delegates"></a>Delegaten
 
 Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 

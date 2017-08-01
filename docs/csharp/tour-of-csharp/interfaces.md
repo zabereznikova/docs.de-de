@@ -1,5 +1,5 @@
 ---
-title: "C#-Schnittstellen – Überblick über C# | Microsoft-Dokumentation"
+title: "C#-Schnittstellen – Überblick über C#"
 description: "Schnittstellen definieren von Typen in C# implementierte Verträge."
 keywords: .NET, Csharp, Schnittstellen, Mehrfachvererbung, Polymorphie
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6c18de7a4aa86a321b65b4ce65e07c48ca1dbc24
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="interfaces" class="xliff"></a>
-
-# Schnittstellen
+# <a name="interfaces"></a>Schnittstellen
 
 Eine ***Schnittstelle*** definiert einen Vertrag, der von Klassen und Strukturen implementiert werden kann. Eine Schnittstelle kann Methoden, Eigenschaften, Ereignisse und Indexer enthalten. Eine Schnittstelle stellt keine Implementierungen der von ihr definierten Member bereit. Sie gibt lediglich die Member an, die von Klassen oder Strukturen bereitgestellt werden müssen, die die Schnittstelle implementieren.
 
