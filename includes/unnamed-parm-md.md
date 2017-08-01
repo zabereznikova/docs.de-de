@@ -1,0 +1,1 @@
+Einige Methoden, insbesondere Operatoren, deklarieren einen Typ für einen Parameter, geben jedoch keinen Parameternamen an. Ein solcher Parameter wird auch als *unbenannter Parameter* bezeichnet. In der Dokumentation für diese Methode stellt der Platzhalter *__unnamed0* den unbenannten Parameter dar.
