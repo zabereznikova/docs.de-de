@@ -1,5 +1,5 @@
 ---
-title: "Erste Schritte mit Visual Studio Code – Leitfaden für C# | Microsoft-Dokumentation"
+title: "Erste Schritte mit Visual Studio Code – Leitfaden für C#"
 description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe von Visual Studio Code erstellen und debuggen.
 keywords: "C#, erste Schritte, Erwerb, Installation, Visual Studio Code, plattformübergreifend"
 author: kendrahavens
@@ -10,31 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e1e9ce39b2de05478a2bf010584e2e7fd8eb02f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-visual-studio-code" class="xliff"></a>
-
-# Erste Schritte mit Visual Studio Code
+# <a name="get-started-with-visual-studio-code"></a>Erste Schritte mit Visual Studio Code
 
 .NET Core ist eine schnelle und modulare Plattform zum Erstellen von Serveranwendungen, die unter Windows, Linux und macOS ausgeführt werden. Verwenden Sie Visual Studio Code mit der C#-Erweiterung, um von leistungsfähigen Bearbeitungsfunktionen mit vollständiger Unterstützung für C# IntelliSense (intelligente Codevervollständigung) und Debugging zu erzielen.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 1. Installieren Sie [Visual Studio Code](https://code.visualstudio.com/).
 2. Installieren Sie das [.NET Core SDK](https://www.microsoft.com/net/download/core).
 3. Installieren Sie die [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) aus dem Visual Studio Code Marketplace.
 
-<a id="hello-world" class="xliff"></a>
-
-## Hello World
+## <a name="hello-world"></a>Hello World
 
 Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
@@ -69,9 +63,7 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
 Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurzes Videotutorial zu [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) oder [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) ansehen.
 
-<a id="debug" class="xliff"></a>
-
-## Debuggen
+## <a name="debug"></a>Debuggen
 1. Öffnen Sie *Program.cs*, indem Sie darauf klicken. Wenn Sie eine C#-Datei zum ersten Mal in Visual Studio Code öffnen, wird [OmniSharp](http://www.omnisharp.net/) in den Editor geladen.
 
   ![Öffnen der Datei „Program.cs“](media/with-visual-studio-code/opencs.png)
@@ -102,9 +94,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 > [!TIP] 
 > Weitere Informationen und Tipps zur Problembehandlung beim .NET Core-Debuggen mit OmniSharp in Visual Studio Code finden Sie unter [Instructions for setting up the .NET Core debugger (Anleitung zum Einrichten des .NET Core-Debuggers)](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 [Einrichten von Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [Debuggen in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
 

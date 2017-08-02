@@ -1,5 +1,5 @@
 ---
-title: "C#-Arrays – Überblick über C# | Microsoft-Dokumentation"
+title: "C#-Arrays – Überblick über C#"
 description: Arrays sind der grundlegendste Auflistungstyp in der Sprache C#.
 keywords: .NET, csharp, Array, Auflistung
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 8816ac61cda27a086746fe2734d62f395058acd5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 82362a3675c431423a99d3d728fb8dd1da58c9c7
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="arrays" class="xliff"></a>
-
-# Arrays
+# <a name="arrays"></a>Arrays
 
 Ein ***Array*** ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird. Die im Array enthaltenen Variablen, auch ***Elemente*** des Arrays genannt, weisen alle denselben Typ auf. Dieser Typ wird als ***Elementtyp*** des Arrays bezeichnet.
 

@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Es werden Funktionen und Objekte im N:Microsoft.VisualBasic.Compatibility.VB6?qualifyHint=False&autoUpgrade=True Namespace für die Verwendung mit den Tools zum Aktualisieren von Visual Basic 6.0 auf Visual Basic 2008 bereitgestellt. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die Sie in anderen Namespaces von .NET Framework finden. Diese sind nur notwendig, wenn das Visual Basic 6.0-Codemodell sich maßgeblich von der .NET Framework-Implementierung unterscheidet.
