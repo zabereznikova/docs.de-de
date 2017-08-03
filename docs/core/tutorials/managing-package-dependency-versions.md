@@ -1,6 +1,6 @@
 ---
-title: "Verwalten von Paketabhängigkeitsversionen für .NET Core 1.0 | Microsoft-Dokumentation"
-description: "So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0"
+title: "So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0"
+description: "Erfahren Sie mehr zur Versionsverwaltung der Paketabhängigkeit für Ihre .NET Core-Bibliotheken und Apps."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="how-to-manage-package-dependency-versions-for-net-core-10" class="xliff"></a>
-
-# So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0
+# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0
 
 Dieser Artikel beschreibt, was Sie über Paketversionen für Ihre .NET Core-Bibliotheken und Apps wissen müssen.
 
-<a id="glossary" class="xliff"></a>
-
-## Glossar
+## <a name="glossary"></a>Glossar
 
 **Korrigieren** – Das Korrigieren von Abhängigkeiten bedeutet, dass Sie dieselbe Paket-„Familie“ verwenden, die auf NuGet für .NET Core 1.0 erschienen ist.
 
@@ -33,9 +29,7 @@ Dieser Artikel beschreibt, was Sie über Paketversionen für Ihre .NET Core-Bibl
 
 **Trimmen** – Entfernen der Pakete, von denen Sie nicht von einem Metapaket abhängig sind.  Dies ist nur für Autoren von NuGet-Paketen relevant.  Weitere Informationen finden Sie unter [Reducing Package Dependencies with project.json (Reduzieren von Paketabhängigkeiten mit project.json)](../deploying/reducing-dependencies.md). 
 
-<a id="fix-your-dependencies-to-net-core-10" class="xliff"></a>
-
-## Korrigieren Ihrer Abhängigkeiten zu .NET Core 1.0
+## <a name="fix-your-dependencies-to-net-core-10"></a>Korrigieren Ihrer Abhängigkeiten zu .NET Core 1.0
 
 Um zuverlässig Pakete wiederherzustellen und zuverlässigen Code zu schreiben, ist es wichtig, dass Sie Ihre Abhängigkeiten zu der Paketversionen korrigieren, die zusammen mit .NET Core 1.0 versendet werden.  Dies bedeutet, dass jedes Paket über eine einzelne Version ohne zusätzlichen Qualifizierer verfügen muss.
 
@@ -55,15 +49,11 @@ Um zuverlässig Pakete wiederherzustellen und zuverlässigen Code zu schreiben, 
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-<a id="why-does-this-matter" class="xliff"></a>
-
-### Warum ist das wichtig?
+### <a name="why-does-this-matter"></a>Warum ist das wichtig?
 
 Wir garantieren, dass alle Pakete zusammen funktionieren, wenn Sie Ihre Abhängigkeiten auf das korrigiert haben, was zusammen mit .NET Core 1.0 versendet wird.  Diese Garantie verfällt, wenn Sie Pakete verwenden, die nicht auf diese Weise korrigiert wurden.
 
-<a id="scenarios" class="xliff"></a>
-
-### Szenarien
+### <a name="scenarios"></a>Szenarien
 
 Es gibt zwar eine umfangreiche Liste aller Pakete und deren Versionen, die mit .NET Core 1.0 veröffentlicht wurden, jedoch müssen Sie diese möglicherweise nicht durchgehen, wenn Ihr Code unter bestimmte Szenarios fällt.
 
@@ -83,19 +73,15 @@ Wenn dies der Fall ist, gehen Sie sicher, dass das Metapaket, mit dem Sie beginn
 
 Wenn dies der Fall ist, müssen Sie Ihre anderen Abhängigkeiten zu 1.0 korrigieren.  Sehen Sie sich die richtigen Paketversionen und Buildnummern am Ende dieses Artikels an.
 
-<a id="a-note-on-using-a-splat-string--when-versioning" class="xliff"></a>
-
-### Hinweis zur Verwendung einer Splat-Zeichenfolge (\*) bei der Versionskontrolle
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Hinweis zur Verwendung einer Splat-Zeichenfolge (\*) bei der Versionskontrolle
 
 Sie haben womöglich ein Muster bei der Versionskontrolle übernommen, bei dem eine Splat-Zeichenfolge (\*) wie etwa die folgende verwendet wird: `"System.Collections":"4.0.11-*"`.
 
 **Dies sollten Sie nicht tun**.  Die Verwendung einer Splat-Zeichenfolge könnte zum Wiederherstellen von Paketen aus verschiedenen Builds führen. Einige davon gehen dann möglicherweise über .NET Core 1.0 hinaus.  Dies kann dazu führen, dass einige Pakete inkompatibel werden.
 
-<a id="packages-and-version-numbers-organized-by-metapackage" class="xliff"></a>
+## <a name="packages-and-version-numbers-organized-by-metapackage"></a>Von Metapaketen organisierte Pakete und Versionsnummern
 
-## Von Metapaketen organisierte Pakete und Versionsnummern
-
-[Liste aller Pakete der .NET Standard-Bibliothek und deren Versionen für 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
+[List of all .NET Standard packages and their versions for 1.0 (Liste aller Pakete von .NET Standard und deren Versionen für 1.0)](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
 
 [Liste aller Laufzeitpakete und deren Versionen für 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 

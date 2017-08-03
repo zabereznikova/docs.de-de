@@ -1,5 +1,5 @@
 ---
-title: "Befehl „dotnet-clean“ – .NET Core-CLI | Microsoft-Dokumentation"
+title: "Befehl „dotnet-clean“ – .NET Core-CLI"
 description: "Mit dem Befehl „dotnet-clean“ wird das aktuelle Verzeichnis bereinigt."
 keywords: dotnet-clean, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 0bdd8b9ab133ca92e414618412d95d8136d6234a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
 ms.contentlocale: de-de
-ms.lasthandoff: 03/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet clean` löscht die Ausgabe des vorherigen Builds. Er ist als [MSBuild-Ziel](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets) implementiert, sodass das Projekt ausgewertet wird, wenn der Befehl ausgeführt wird. Es werden nur die Ausgaben gelöscht, die während des Builds erstellt wurden. Sowohl der Ordner für Zwischenausgabe (*obj*) als auch der Ordner für die endgültige Ausgabe (*bin*) werden bereinigt.
+Der Befehl `dotnet clean` löscht die Ausgabe des vorherigen Builds. Er ist als [MSBuild-Ziel](/visualstudio/msbuild/msbuild-targets) implementiert, sodass das Projekt ausgewertet wird, wenn der Befehl ausgeführt wird. Es werden nur die Ausgaben gelöscht, die während des Builds erstellt wurden. Sowohl der Ordner für Zwischenausgabe (*obj*) als auch der Ordner für die endgültige Ausgabe (*bin*) werden bereinigt.
 
 ## <a name="arguments"></a>Argumente
 

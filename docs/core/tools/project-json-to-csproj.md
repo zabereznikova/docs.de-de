@@ -1,5 +1,5 @@
 ---
-title: "Vergleich von Project.json und Csproj – .NET Core | Microsoft-Dokumentation"
+title: "Vergleich von project.json und csproj – .NET Core"
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -56,7 +56,7 @@ Standardmäßig gibt der Dateiname des Projekts auch den Wert der `<AssemblyName
 </PropertyGroup>
 ```
 
-`<AssemblyName>` wird einen anderen Wert als `<PackageId>` haben, wenn die `buildOptions\outputName`-Eigenschaft in project.json definiert wurde. Weitere Informationen finden Sie unter [Andere gängige Buildoptionen](#other-common-build-options).
+`<AssemblyName>` wird einen anderen Wert als `<PackageId>` haben, wenn die Eigenschaft `buildOptions\outputName` in project.json definiert wurde. Weitere Informationen finden Sie unter [Andere gängige Buildoptionen](#other-common-build-options).
 
 ### <a name="version"></a>Version
 
@@ -494,7 +494,7 @@ Es gibt keine Entsprechung für das `owners`-Element in MSBuild. Für `summary` 
 }
 ```
 
-Ihre Entsprechungen in MSBuild sind [Ziele](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets):
+Ihre Entsprechungen in MSBuild sind [Ziele](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ Allerdings können Sie alle diese Werte in der csproj sowie den MSBuild-Eigensch
 }
 ```
 
-Wird nicht in csproj unterstützt. Stattdessen müssen Sie Dateien zum Einschließen von Inhalten in Ihrer *.nuspec*-Datei erstellen. Weitere Informationen finden Sie unter [Inhaltsdateien einschließen](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files).
+Wird nicht in csproj unterstützt. Stattdessen müssen Sie Dateien zum Einschließen von Inhalten in Ihrer *.nuspec*-Datei erstellen. Weitere Informationen finden Sie unter [Inhaltsdateien einschließen](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>Dateien
 
 In *project.json* könnten Build und das Paket erweitert werden, um aus unterschiedlichen Ordnern zu kompilieren und einzubetten.
-In MSBuild wird dies unter Verwendung von [Elementen](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) erledigt. Im folgenden Beispiel sehen Sie eine allgemeine Konversion:
+In MSBuild wird dies unter Verwendung von [Elementen](/visualstudio/msbuild/common-msbuild-project-items) erledigt. Im folgenden Beispiel sehen Sie eine allgemeine Konversion:
 
 ```json
 {
@@ -620,7 +620,7 @@ Alle `ItemGroup`-Elemente von MSBuild unterstützen `Include`, `Exclude` und `Re
 
 Paketlayout in der .nupkg kann mit `PackagePath="path"` geändert werden.
 
-Mit Ausnahme von `Content` erfordern die meisten Artikelgruppen das explizite Hinzufügen von `Pack="true"` in das Paket. `Content` wird in den Ordner *Inhalt* in einem Paket versetzt werden, da die `<IncludeContentInPack>`-Eigenschaft von MSBuild standardmäßig auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Inhalt in ein Paket einschließen](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package).
+Mit Ausnahme von `Content` erfordern die meisten Artikelgruppen das explizite Hinzufügen von `Pack="true"` in das Paket. `Content` wird in den Ordner *Inhalt* in einem Paket versetzt werden, da die `<IncludeContentInPack>`-Eigenschaft von MSBuild standardmäßig auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Inhalt in ein Paket einschließen](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
 `PackagePath="%(Identity)"` ist eine mühelose Möglichkeit, mit der ein Paketpfad auf den projektspezifischen Dateipfad festgelegt werden kann.
 

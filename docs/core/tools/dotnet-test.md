@@ -1,5 +1,5 @@
 ---
-title: "Befehl dotnet-test – .NET Core CLI | Microsoft-Dokumentation"
+title: "dotnet-test-Befehl – .NET Core-CLI"
 description: "Der Befehl „dotnet-Test“ wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
 keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,33 +10,25 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3308488672df2621c04de40f642c732f81284019
 ms.contentlocale: de-de
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="dotnet-test" class="xliff"></a>
+#<a name="dotnet-test"></a>Dotnet-Test
 
-#Dotnet-Test
-
-<a id="name" class="xliff"></a>
-
-## Name
+## <a name="name"></a>Name
 
 `dotnet-test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
-<a id="synopsis" class="xliff"></a>
-
-## Übersicht
+## <a name="synopsis"></a>Übersicht
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-<a id="description" class="xliff"></a>
-
-## Beschreibung
+## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Komponententests sind Konsolenanwendungsprojekte, die Abhängigkeiten vom Komponententest-Framework (z.B. MSTest, NUnit oder xUnit) und dotnet-Test Runner für das Komponententest-Framework aufweisen. Sie werden als NuGet-Pakete verpackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
@@ -44,9 +36,7 @@ Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normale
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-<a id="options" class="xliff"></a>
-
-## Optionen
+## <a name="options"></a>Optionen
 
 `PROJECT`
     
@@ -100,9 +90,7 @@ Erstellt das Testprojekt nicht vor der Ausführung.
 
 Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-<a id="examples" class="xliff"></a>
-
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
@@ -112,9 +100,7 @@ Führen Sie die Tests im Projekt `test1` durch:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-<a id="filter-option-details" class="xliff"></a>
-
-## Details zu Filteroptionen
+## <a name="filter-option-details"></a>Details zu Filteroptionen
 
 `--filter <EXPRESSION>`
 
@@ -150,9 +136,7 @@ Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren v
 
 Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Frameworks und Ziele](../../standard/frameworks.md)   
 [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

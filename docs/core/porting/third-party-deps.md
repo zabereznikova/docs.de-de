@@ -1,5 +1,5 @@
 ---
-title: "Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern | Microsoft-Dokumentation"
+title: "Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern"
 description: "Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,29 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: de-de
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
-
-# Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern
 
 Der erste Schritt bei der Portierung besteht darin, die Abhängigkeiten von Drittanbietern zu verstehen.  Sie müssen herausfinden, welche gegebenenfalls noch nicht unter .NET Core ausgeführt werden und für diese einen Notfallplan entwickeln.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 In diesem Artikel wird davon ausgegangen, dass Sie Windows und Visual Studio sowie Code verwenden, der derzeit auf .NET Framework ausgeführt wird.
 
-<a id="analyzing-nuget-packages" class="xliff"></a>
-
-## Analysieren von NuGet-Paketen
+## <a name="analyzing-nuget-packages"></a>Analysieren von NuGet-Paketen
 
 Die Analyse von NuGet-Paketen für Portabilität ist sehr einfach.  Da ein NuGet-Paket selbst eine Reihe von Ordnern darstellt, die plattformspezifische Assemblys enthalten, müssen Sie lediglich überprüfen, ob ein Ordner mit einer .NET Core-Assembly vorhanden ist.
 
@@ -61,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Hierbei handelt es sich um Target Framework Moniker (TFM), die den Versionen der [.NET-Standardbibliothek](../../standard/net-standard.md) und den herkömmlichen PCL-Profilen (Portable Class Library) zugeordnet sind, die mit .NET Core kompatibel sind.  Beachten Sie, dass `netcoreapp1.0` zwar kompatibel ist, jedoch nicht für Bibliotheken, sondern für Anwendungen verwendet wird.  Sie können zwar eine `netcoreapp1.0`-basierte Bibliothek verwenden, diese wird jedoch von anderen `netcoreapp1.0`-Anwendungen möglicherweise für nichts *anderes* als für den Verbrauch verwendet.
+Hierbei handelt es sich um Target Framework Moniker (TFM), die den Versionen von [.NET-Standard](../../standard/net-standard.md) und den herkömmlichen PCL-Profilen (Portable Class Library) zugeordnet sind, die mit .NET Core kompatibel sind.  Beachten Sie, dass `netcoreapp1.0` zwar kompatibel ist, jedoch nicht für Bibliotheken, sondern für Anwendungen verwendet wird.  Sie können zwar eine `netcoreapp1.0`-basierte Bibliothek verwenden, diese wird jedoch von anderen `netcoreapp1.0`-Anwendungen möglicherweise für nichts *anderes* als für den Verbrauch verwendet.
 
 Es gibt auch einige ältere TFMs, die in Vorabversionen von .NET Core verwendet wurden, die möglicherweise ebenfalls kompatibel sind:
 
@@ -80,9 +74,7 @@ dotnet5.5
 > [!NOTE]
 > Wenn Sie ein Paket auf eine herkömmliche PCL oder Vorabversion von .NET Core ausrichten möchten, müssen Sie die `imports`-Anweisung in Ihrer `project.json`-Datei verwenden.
 
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
-
-### Vorgehensweise, wenn die NuGet-Paket-Abhängigkeit unter .NET Core nicht ausgeführt wird
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Vorgehensweise, wenn die NuGet-Paket-Abhängigkeit unter .NET Core nicht ausgeführt wird
 
 Es gibt einige Dinge, die Sie tun können, wenn ein NuGet-Paket, auf das Sie angewiesen sind, unter .NET Core nicht ausgeführt wird.
 
@@ -98,15 +90,11 @@ Wenn es Ihnen mit den genannten Vorschlägen nicht gelingt, Ihr Problem zu beheb
 
 Das .NET-Team würde gerne wissen, welche Bibliotheken als Nächstes von .NET Core unterstützt werden sollten. Sie können uns gerne per E-Mail an dotnet@microsoft.com mitteilen, welche Bibliotheken Sie gerne verwenden würden.
 
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
-
-## Analysieren von Abhängigkeiten, bei denen es sich nicht um NuGet-Pakete handelt
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Analysieren von Abhängigkeiten, bei denen es sich nicht um NuGet-Pakete handelt
 
 Möglicherweise verfügen Sie über eine Abhängigkeit, bei der es sich nicht um ein NuGet-Paket, sondern beispielsweise um eine DLL im Dateisystem handelt.  Wenn Sie feststellen möchten, ob diese Abhängigkeit portiert werden kann, haben Sie nur die Möglichkeit, das Tool [ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) auszuführen.
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Wenn Sie eine Bibliothek portieren, lesen Sie [Portieren von Bibliotheken](libraries.md).
 

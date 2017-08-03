@@ -1,5 +1,5 @@
 ---
-title: "Befehl „dotnet-restore“ – .NET Core-CLI | Microsoft-Dokumentation"
+title: "dotnet-restore-Befehl – .NET Core-CLI"
 description: "Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore."
 keywords: dotnet-restore, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
-ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9e471bd1d66d68703b025cd3eaa009cb296a9fb
 ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -38,7 +38,7 @@ Für Abhängigkeiten geben Sie mithilfe des Arguments `--packages` an, wo die wi
 
 Für projektspezifische Tools stellt `dotnet restore` zunächst das Paket wieder her, in dem sich das Tool befindet, und danach die Abhängigkeiten des Tools gemäß seiner Projektdatei.
 
-Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in der *NuGet.Config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *NuGet.Config* platziert z.B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie im [NuGet.Config-Referenzthema](https://docs.microsoft.com/nuget/schema/nuget-config-file).
+Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in der *NuGet.Config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *NuGet.Config* platziert z.B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie im [NuGet.Config-Referenzthema](/nuget/schema/nuget-config-file).
 
 ## <a name="arguments"></a>Argumente
 

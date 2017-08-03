@@ -1,5 +1,5 @@
 ---
-title: "Befehl „dotnet-nuget-locals“ – .NET Core-CLI | Microsoft-Dokumentation"
+title: "dotnet-nuget-locals-Befehl – .NET Core-CLI"
 description: "Der dotnet-nuget-locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf."
 keywords: dotnet-nuget-locals, CLI, CLI-Befehl, .NET Core
 author: karann-msft
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -95,5 +96,5 @@ Löscht alle Dateien im lokalen temporären Cacheverzeichnis:
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Weitere Informationen zu häufig auftretenden Problemen und Fehlern bei der Verwendung des `dotnet nuget locals`-Befehls finden Sie unter [Managing the NuGet cache (Verwalten des NuGet-Caches)](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache).
+Weitere Informationen zu häufig auftretenden Problemen und Fehlern bei der Verwendung des `dotnet nuget locals`-Befehls finden Sie unter [Managing the NuGet cache (Verwalten des NuGet-Caches)](/nuget/consume-packages/managing-the-nuget-cache).
 

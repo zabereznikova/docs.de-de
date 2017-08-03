@@ -1,5 +1,5 @@
 ---
-title: "Befehl „dotnet-msbuild“ – .NET Core-CLI | Microsoft-Dokumentation"
+title: "Befehl dotnet-msbuild – .NET Core-CLI"
 description: "Der Befehl dotnet-msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile."
 keywords: dotnet-msmsbuild, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,41 +10,31 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df4b2ddd322e4bd2ebaf444439107e88a983f988
-ms.openlocfilehash: 2267ef0b5785959456ea443405b6708a423d00ba
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f02dcd779b9ed249ebd2fedb973383b1dcd8963
 ms.contentlocale: de-de
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="dotnet-msbuild" class="xliff"></a>
+# <a name="dotnet-msbuild"></a>dotnet-msbuild
 
-# dotnet-msbuild
-
-<a id="name" class="xliff"></a>
-
-## Name
+## <a name="name"></a>Name
 
 `dotnet-msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten
 
-<a id="synopsis" class="xliff"></a>
-
-## Übersicht
+## <a name="synopsis"></a>Übersicht
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-<a id="description" class="xliff"></a>
-
-## Beschreibung
+## <a name="description"></a>Beschreibung
 
 Der `dotnet msbuild`-Befehl ermöglicht den Zugriff auf eine voll funktionsfähige MSBuild-Instanz.
 
-Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Informationen zu den verfügbaren Optionen finden Sie unter [MSBuild-Befehlszeilenreferenz](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
+Der Befehl weist genau die gleichen Funktionen wie der vorhandene MSBuild-Befehlszeilenclient auf. Alle Optionen sind gleich. Informationen zu den verfügbaren Optionen finden Sie unter [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). 
 
-<a id="examples" class="xliff"></a>
-
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Erstellt ein Projekt und seine Abhängigkeiten:
 
@@ -61,3 +51,4 @@ Führt das Veröffentlichungsziel aus und veröffentlicht für die RID `osx.10.1
 Zeigen Sie das gesamte Projekt mit allen Zielen an, die über das SDK eingeschlossen werden:
 
 `dotnet msbuild /pp`
+

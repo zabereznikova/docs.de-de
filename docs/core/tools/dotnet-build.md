@@ -1,5 +1,5 @@
 ---
-title: "Befehl dotnet-build – .NET Core CLI | Microsoft-Dokumentation"
+title: "dotnet-build-Befehl – .NET Core-CLI"
 description: "Der dotnet-build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten."
 keywords: dotnet-build, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2006b15978f384e53e43a0a2562e81d10582abd
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -35,9 +36,9 @@ Verfügt das Projekt über Abhängigkeiten von Drittanbietern, z.B. Bibliotheken
 
 Das Erstellen erfordert die *project.assets.json*-Datei, die die Abhängigkeiten Ihrer Anwendung aufführt. Die Datei wird erstellt, wenn Sie [`dotnet restore`](dotnet-restore.md) vor dem Erstellen des Projekts ausführen. Ohne die vorhandenen Ressourcendateien kann das Tools die Verweisassemblys nicht auflösen, was zu Fehlern führt.
 
-`dotnet build` verwendet MSBuild, um das Projekt zu erstellen und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Inkrementelle Builds](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds). 
+`dotnet build` verwendet MSBuild, um das Projekt zu erstellen und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Inkrementelle Builds](/visualstudio/msbuild/incremental-builds). 
 
-Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `/p` zum Festlegen von Eigenschaften oder `/l` zum Definieren eines Protokolls. Erfahren Sie mehr über diese Optionen in der [MSBuild-Befehlszeilenreferenz](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
+Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `/p` zum Festlegen von Eigenschaften oder `/l` zum Definieren eines Protokolls. Erfahren Sie mehr über diese Optionen in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). 
 
 Ob das Projekt ausführbar ist oder nicht, richtet sich nach der `<OutputType>`-Eigenschaft in der Projektdatei. Das folgende Beispiel zeigt ein Projekt, das ausführbaren Code erzeugt:
 

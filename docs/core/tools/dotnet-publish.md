@@ -1,5 +1,5 @@
 ---
-title: "Befehl dotnet-publish – .NET Core CLI | Microsoft-Dokumentation"
+title: "dotnet-publish-Befehl – .NET Core-CLI"
 description: "Der dotnet-publish-Befehl veröffentlicht ein .NET Core-Projekt in ein Verzeichnis."
 keywords: dotnet-publish, CLI, CLI-Befehl, .NET Core
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8a37b1eacab13682d4f4a2bea2f9ea248cdd9eb
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/22/2017
 * *\*.runtime.config.json*-Datei, die gemeinsam genutzte Laufzeit angibt, die die Anwendung erwartet, sowie andere Konfigurationsoptionen für die Laufzeit (z.B. Garbage Collection-Typ).
 * Die Abhängigkeiten der Anwendung. Diese werden aus dem NuGet-Cache in den Ausgabeordner kopiert.
 
-Die `dotnet publish`-Ausgabe des Befehls ist bereit für die Bereitstellung auf einem Hostsystem (z.B. ein Server, PC, Mac, Laptops) für die Ausführung und ist der einzige offiziell unterstützte Weg, um die Anwendung für die Bereitstellung vorzubereiten. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md). Die Verzeichnisstruktur der veröffentlichten Anwendung finden Sie unter [Directory structure (Verzeichnisstruktur)](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure).
+Die `dotnet publish`-Ausgabe des Befehls ist bereit für die Bereitstellung auf einem Hostsystem (z.B. ein Server, PC, Mac, Laptops) für die Ausführung und ist der einzige offiziell unterstützte Weg, um die Anwendung für die Bereitstellung vorzubereiten. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md). Die Verzeichnisstruktur der veröffentlichten Anwendung finden Sie unter [Directory structure (Verzeichnisstruktur)](/aspnet/core/hosting/directory-structure).
 
 ## <a name="arguments"></a>Argumente
 
@@ -96,3 +97,4 @@ Veröffentlichen der aktuellen Anwendung mithilfe des `netcoreapp1.1`-Frameworks
 
 * [Zielframeworks](../../standard/frameworks.md)
 * [Runtime-ID-Katalog (RID)](../rid-catalog.md)
+

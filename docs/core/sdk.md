@@ -1,6 +1,6 @@
 ---
-title: ".NET Core SDK – Übersicht | Microsoft-Dokumentation"
-description: ".NET Core SDK – Übersicht"
+title: ".NET Core SDK – Übersicht"
+description: "Erfahren Sie mehr über das .NET Core SDK, das ein Set von Bibliotheken und Tools zum Erstellen von .NET Core-Projekten ist."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,21 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-sdk-overview" class="xliff"></a>
+# <a name="net-core-sdk-overview"></a>.NET Core SDK – Übersicht 
 
-# .NET Core SDK – Übersicht 
-
-<a id="introduction" class="xliff"></a>
-
-## Einführung
+## <a name="introduction"></a>Einführung
 .NET Core Software Development Kit (SDK) ist eine Sammlung von Bibliotheken und Tools, mit der Entwickler .NET Core-Anwendungen und -Bibliotheken erstellen können. Dieses Paket wird von den meisten Entwicklern erworben. 
 
 Es enthält die folgenden Komponenten:
@@ -34,9 +30,7 @@ Es enthält die folgenden Komponenten:
 3. Der `dotnet`-Treiber für das Ausführen der [CLI-Befehle](tools/index.md) sowie von Anwendungen
 
 
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
-
-## .NET Core SDK erwerben
+## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK erwerben
 Wie bei allen Tools ist der erste Schritt, diese auf dem Computer zu installieren. Je nach Szenario können Sie entweder den nativen Installer oder das Shellskript verwenden, um das SDK zu installieren.
 
 Der native Installer ist in erster Linie für Entwicklercomputer vorgesehen. Das SDK wird mithilfe des nativen Installationsmechanismus der jeweils unterstützten Plattform verteilt, z.B. Debian-Pakete unter Ubuntu oder MSI-Bündel unter Windows. Diese Installer installieren und richten die Umgebung je nach Bedarf des Nutzers ein, sodass das SDK sofort nach der Installation genutzt werden kann. Jedoch benötigen sie auch Administratorrechte auf dem Computer. Die Installationsanweisungen finden Sie im [.NET Core-Installationshandbuch](https://aka.ms/dotnetcoregs).

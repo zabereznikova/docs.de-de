@@ -1,5 +1,5 @@
 ---
-title: "Verweisbefehl „dotnet-add“ – .NET Core-CLI | Microsoft-Dokumentation"
+title: "Verweisbefehl „dotnet-add“ – .NET Core-CLI"
 description: "Der dotnet-add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen."
 keywords: dotnet-add, CLI, CLI-Befehl, .NET Core
 author: spboyer
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e2a3efd-443c-4f23-a1b1-a662a5387879
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 1b342f0aea19c01d7bdae94552019f4c171fd1a2
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98491efc183ad62f47275d0832a32dde5899373d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>Beschreibung
 
-Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen von Projektverweisen auf ein Projekt. Nach dem Ausführen des Befehls werden die [`<ProjectReference>`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)-Elemente zur Projektdatei hinzugefügt.
+Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen von Projektverweisen auf ein Projekt. Nach dem Ausführen des Befehls werden die [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items)-Elemente zur Projektdatei hinzugefügt.
 
 ```xml
 <ItemGroup>

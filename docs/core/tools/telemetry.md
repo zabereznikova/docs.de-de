@@ -1,6 +1,6 @@
 ---
-title: .NET Core-Tools-Telemetrie | Microsoft-Dokumentation
-description: .NET Core
+title: .NET Core-Tools-Telemetrie
+description: "Entdecken Sie die Telemetriefunktionen der .NET Core-Tools, die Informationen zur Verwendung für die Analyse erfassen."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -10,25 +10,21 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b7de81f38c0d4fa259f1c9d8ada675197930e945
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1816b9fbad1f671820c9f970674c8af2147a230e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-tools-telemetry" class="xliff"></a>
-
-# .NET Core-Tools-Telemetrie
+# <a name="net-core-tools-telemetry"></a>.NET Core-Tools-Telemetrie
 
 Die .NET Core-Tools beinhalten eine [Telemetriefunktion](https://github.com/dotnet/cli/pull/2145), die Benutzerinformationen sammelt. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit sie verbessert werden können.
 
 Die gesammelten Daten sind anonym und werden unter der [Creative Commons Attribution-Lizenz](https://creativecommons.org/licenses/by/4.0/) in aggregierter Form für die Verwendung sowohl von Microsoft als auch von Community-Entwicklern veröffentlicht.
 
-<a id="scope" class="xliff"></a>
-
-## Bereich
+## <a name="scope"></a>Bereich
 
 Der `dotnet`-Befehl wird zum Starten von sowohl Apps als auch .NET Core-Tools verwendet. Der `dotnet`-Befehl selbst sammelt keine Telemetrie. Es sind die .NET Core-Tools, die über den `dotnet`-Befehl ausgeführt werden, der Telemetrie sammelt.
 
@@ -44,15 +40,11 @@ Der `dotnet`-Befehl wird zum Starten von sowohl Apps als auch .NET Core-Tools ve
 - `dotnet restore`
 - `dotnet run`
 
-<a id="behavior" class="xliff"></a>
-
-## Verhalten
+## <a name="behavior"></a>Verhalten
 
 Die Telemetriefunktion der .NET Core-Tools ist standardmäßig aktiviert. Sie können die Telemetriefunktion deaktivieren, indem Sie eine Umgebungsvariable DOTNET_CLI_TELEMETRY_OPTOUT (z.B. `export` unter Mac OS/Linux, `set` unter Windows) auf TRUE festlegen (z.B. „TRUE“, 1).
 
-<a id="data-points" class="xliff"></a>
-
-## Datenpunkte
+## <a name="data-points"></a>Datenpunkte
 
 Die Funktion sammelt die folgenden Daten:
 
@@ -66,9 +58,7 @@ Die Funktion sammelt die folgenden Daten:
 
 Die Funktion sammelt keine personenbezogenen Daten wie z.B. Benutzernamen oder E-Mails. Sie scannt Ihren Code nicht und extrahiert auch keine Daten auf Projektebene, die als sensibel gelten können, wie z.B. Name, Repository oder Autor (wenn Sie diese in Ihrer „project.json“-Datei festlegen). Wir würden gern wissen, wie die Tools verwendet werden, nicht was Sie mit den Tools erstellen. Wenn Sie bemerken, dass sensible Daten gesammelt werden, handelt es sich dabei um einen Fehler. Bitte [melden Sie ein Problem](https://github.com/dotnet/cli/issues), und der Fehler wird behoben.
 
-<a id="license" class="xliff"></a>
-
-## Lizenz
+## <a name="license"></a>Lizenz
 
 Die Microsoft-Verteilung von .NET Core ist lizenziert mit den [Lizenzbedingungen der Microsoft .NET-Bibliothek](https://aka.ms/dotnet-core-eula). Dies umfasst den Abschnitt „Data“ (Daten), der nachstehend abgebildet ist, um die Telemetrie zu aktivieren.
 
@@ -76,9 +66,7 @@ Die Microsoft-Verteilung von .NET Core ist lizenziert mit den [Lizenzbedingungen
 
 > 2. Daten Die Software sammelt möglicherweise Daten zum Benutzer und zur Nutzung der Software und übermittelt diese an Microsoft. Microsoft kann diese Informationen verwenden, um seine Produkte und -Dienste zu verbessern. Weitere Informationen zur Datenerfassung und -verwendung finden Sie in der Hilfedokumentation und in den Datenschutzbestimmungen unter http://go.microsoft.com/fwlink/?LinkId=528096. Ihre Verwendung der Software gilt als Zustimmung zu diesen Verfahren.
 
-<a id="disclosure" class="xliff"></a>
-
-## Offenlegung
+## <a name="disclosure"></a>Offenlegung
 
 In den .NET Core-Tools wird beim ersten Ausführen einer der Befehle (z.B. `dotnet restore`) der folgende Text angezeigt. Über diese erste Ausführung benachrichtigt Microsoft Sie über die Datensammlung. Bei dieser Aktion wird außerdem Ihr NuGet-Cache mit den Bibliotheken im .NET Core SDK gefüllt, und Anfragen an NuGet.org (oder ein anderes NuGet-Feed) für diese Bibliotheken werden vermieden.
 
