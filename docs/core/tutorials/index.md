@@ -1,6 +1,6 @@
 ---
-title: .NET Core-Tutorials | Microsoft-Dokumentation
-description: .NET Core-Tutorials
+title: .NET Core-Tutorials
+description: "Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Testen einer C#-Klassenbibliothek](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [Nutzen einer C#-Klassenbibliothek mit .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Erstellen einer vollständigen C#-.NET Core-Projektmappe unter Windows](using-on-windows-full-solution.md)
-- [NoSQL-Tutorial: Erstellen einer DocumentDB-C#-Konsolenanwendung unter .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [NoSQL-Tutorial: Erstellen einer DocumentDB-C#-Konsolenanwendung unter .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
 
@@ -55,5 +55,5 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hosten von .NET Core von nativem Code](netcore-hosting.md)
 
-Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](https://docs.microsoft.com/aspnet/core/).
+Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).
 

@@ -6,4 +6,4 @@
 ## [C#-Präprozessoranweisungen](preprocessor-directives/)
 ## [C#-Compileroptionen](compiler-options/)
 ## [C#-Compilerfehler](compiler-messages/)
-## [C#-Programmiersprachenspezifikation](language-specification.md)
+## [C# 6.0-Entwurfssprachenspezifikation](language-specification/)
