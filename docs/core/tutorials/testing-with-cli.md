@@ -1,7 +1,7 @@
 ---
-title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile | Microsoft-Dokumentation
+title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 description: "In diesem Tutorial wird das Organisieren und Testen von .NET Core-Projekten von der Befehlszeile aus erläutert."
-keywords: .NET, .NET Core, Komponententests, .NET-CLI, xUnit
+keywords: .NET, .NET Core, Komponententests, .NET Core-CLI, xUnit
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: de-de
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -260,3 +260,4 @@ Test execution time: 1.6634 Seconds
 Die Tests werden erfolgreich ausgeführt. Die Haustiertyp-Methoden geben die korrekten Werte zurück, wenn sie mit dem Besitzer kommunizieren.
 
 Sie haben Techniken zum Organisieren und Testen von Projekten mithilfe von xUnit gelernt. Machen Sie mit diesen Techniken weiter, und wenden Sie sie in Ihren eigenen Projekten an. *Viel Spaß beim Programmieren!*
+

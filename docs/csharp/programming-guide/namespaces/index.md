@@ -1,64 +1,84 @@
 ---
-title: "Namespaces (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Namespaces"
-  - "Namespaces [C#]"
+title: Namespaces (C#-Programmierhandbuch)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, namespaces
+- namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a45339a4c3320a92c0339b1cad6345a2555ed920
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Namespaces (C#-Programmierhandbuch)
-Bei der C\#\-Programmierung wird ausgiebig Gebrauch von Namespaces gemacht, wobei zwei Anwendungsfälle zu unterscheiden sind.  Zum einen werden Namespaces von .NET Framework zur Organisation seiner vielen Klassen verwendet. Beispiel:  
+# <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
+Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Arten verwendet. Erstens: Das .NET Framework verwendet Namespaces, um seine vielen Klassen folgendermaßen zu organisieren:  
   
  [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
- `System` ist ein Namespace und `Console` ist eine in diesem Namespace enthaltene Klasse.  Das `using`\-Schlüsselwort kann verwendet werden, um nicht den ganzen Namen angeben zu müssen. Beispiel:  
+ `System` ist ein Namespace, und `Console` ist eine Klasse in diesem Namespace. Das `using`-Schlüsselwort kann verwendet werden, sodass der vollständige Name nicht erforderlich ist, wie im folgenden Beispiel:  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
  [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
- Weitere Informationen finden Sie unter [using\-Direktive](../../../csharp/language-reference/keywords/using-directive.md).  
+ Weitere Information finden Sie unter [using-Direktive](../../../csharp/language-reference/keywords/using-directive.md).  
   
- Zum anderen können Sie durch die Definition eines eigenen Namespaces die Steuerung des Gültigkeitsbereiches von Klassen\- und Methodennamen in größeren Programmierprojekten unterstützen.  Verwenden Sie das [namespace](../../../csharp/language-reference/keywords/namespace.md)\-Schlüsselwort, um einen Namespace wie in folgendem Beispiel zu deklarieren:  
+ Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern. Verwenden Sie das [Namespace](../../../csharp/language-reference/keywords/namespace.md)-Schlüsselwort, um einen Namespace wie im folgenden Beispiel zu deklarieren:  
   
  [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
-## Übersicht über Namespaces  
- Namespaces verfügen über folgende Eigenschaften:  
+## <a name="namespaces-overview"></a>Übersicht über Namespaces  
+ Namespaces verfügen über die folgenden Eigenschaften:  
   
--   Sie organisieren große Codeprojekte.  
+-   Sie organisieren umfangreiche Codeprojekte.  
   
--   Sie werden mit dem Operator `.` begrenzt.  
+-   Sie werden durch den `.`-Operator getrennt.  
   
--   Die `using directive` macht es überflüssig, den Namen des Namespace für jede Klasse anzugeben.  
+-   Durch `using directive` besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.  
   
--   Der `global`\-Namespace ist der "Stamm"\-Namespace: `global::System` verweist immer auf den .NET Framework\-Namespace `System`.  
+-   Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den `System`-Namespace des .NET Framework.  
   
-## Verwandte Abschnitte  
- Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden Themen:  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ Weitere Informationen zu Namespaces finden Sie unter folgenden Themen:  
   
--   [Verwenden von Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+-   [Using-Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
   
 -   [Gewusst wie: Verwenden des globalen Namespacealias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
--   [Gewusst wie: Verwenden des My\-Namespaces](../../../csharp/programming-guide/namespaces/how-to-use-the-my-namespace.md)  
+-   [Gewusst wie: Verwenden des My-Namespaces](../../../csharp/programming-guide/namespaces/how-to-use-the-my-namespace.md)  
   
-## C\#\-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [using\-Direktive](../../../csharp/language-reference/keywords/using-directive.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Namespace Keywords (Schlüsselwörter des Namespace)](../../../csharp/language-reference/keywords/namespace-keywords.md)   
+ [using-Direktive](../../../csharp/language-reference/keywords/using-directive.md)   
  [Operator ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
  [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)
+

@@ -1,19 +1,20 @@
 ---
-title: dotnet-Installationsskripts | Microsoft-Dokumentation
+title: Dotnet-Installationsskripts
 description: Informationen zu Dotnet-Installationsskripts zur Installation von .NET Core CLI-Tools und freigegebener Laufzeit.
 keywords: Dotnet-Installation, Dotnet-Installationsskripts, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: fbc1ce8d864a5c2150c61f4b8bf7cb8544921634
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8af168e96f8f5b57626b126135d8b5e509fbb059
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -57,15 +58,28 @@ Hinweis: Optionen unterscheiden sich zwischen den Skriptimplementierungen.
 
 `-Channel <CHANNEL>`
 
-Gibt den Quellkanal für die Installation an. Die Werte sind `future`, `preview` und `production`. Der Standardwert ist `production`.
+Gibt den Quellkanal für die Installation an. Mögliche Werte sind:
+
+- `Current`: Aktuelle Version
+- `LTS`: Long Term Support-Kanal (aktuell unterstützte Versionen)
+- Zweiteilige Version im X.Y-Format, das eine bestimmte Version darstellt (z.B. `2.0` oder `1.0`)
+- Branchname [z.B. `release/2.0.0`, `release/2.0.0-preview2`, oder `master` für die neueste aus dem Branch `master` („topaktuelle“ nächtliche Versionen)]
+
+Der Standardwert ist `LTS`. Weitere Informationen zu .NET-Supportkanälen finden Sie unter dem Thema [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support).
 
 `-Version <VERSION>`
 
-Gibt an, welche CLI-Version installiert werden soll. Sie müssen die Version als dreiteilige Version (z.B. 1.0.0-13232) angeben. Falls nicht angegeben, wird standardmäßig die erste [global.json](global-json.md)-Datei verwendet, die die Eigenschaft `version` enthält. Wenn nicht vorhanden, wird die neueste Version verwendet.
+Stellt eine Buildversion auf dem Quellkanal dar (weitere Informationen finden Sie unter der Option `-Channel`). Mögliche Werte sind:
+
+- `latest`: Neuester Build auf dem Kanal
+- `coherent`: Neuester kohärenter Build auf dem Kanal; verwendet die neueste stabile Paketkombination
+- Dreiteilige Version im X.Y.Z-Format, das eine bestimmte Buildversion darstellt (z B. `1.0.x` mit `x`, das die Patchversion darstellt; oder ein bestimmter Build wie `2.0.0-preview2-006120`)
+
+Falls nicht angegeben, verwendet `-Version` standardmäßig die erste [global.json-Datei](global-json.md), die den `version`-Member enthält. Wenn dies nicht vorhanden ist, verwendet `-Version` standardmäßig `latest`.
 
 `-InstallDir <DIRECTORY>`
 
-Gibt den Installationspfad an. Das Verzeichnis wird erstellt, wenn es nicht vorhanden ist. Der Standardwert ist *%LocalAppData%\.dotnet*.
+Gibt den Installationspfad an. Das Verzeichnis wird erstellt, wenn es nicht vorhanden ist. Der Standardwert ist *%LocalAppData%\.dotnet*. Beachten Sie, dass Binärdateien direkt im Verzeichnis platziert werden.
 
 `-Architecture <ARCHITECTURE>`
 
@@ -84,7 +98,7 @@ Wenn festgelegt, umfasst das Installationsprogramm Debugsymbole in der Installat
 
 `-DryRun`
 
-Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
+Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET Core-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
 
 `-NoPath`
 
@@ -102,13 +116,26 @@ Wenn festgelegt, verwendet das Installationsprogramm den Proxy bei der Durchfüh
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]`
 
-`--channel <CHANNEL>`
+`-Channel <CHANNEL>`
 
-Gibt den Quellkanal für die Installation an. Die Werte sind `future`, `dev` und `production`. Der Standardwert ist `production`.
+Gibt den Quellkanal für die Installation an. Mögliche Werte sind:
 
-`--version <VERSION>`
+- `Current`: Aktuelle Version
+- `LTS`: Long Term Support-Kanal (aktuell unterstützte Versionen)
+- Zweiteilige Version im X.Y-Format, das eine bestimmte Version darstellt (z.B. `2.0` oder `1.0`)
+- Branchname [z.B. `release/2.0.0`, `release/2.0.0-preview2`, oder `master` für die neueste aus dem Branch `master` („topaktuelle“ nächtliche Versionen)]
 
-Gibt an, welche CLI-Version installiert werden soll. Sie müssen die Version als dreiteilige Version (z.B. 1.0.0-13232) angeben. Falls nicht angegeben, wird standardmäßig die erste [global.json](global-json.md)-Datei verwendet, die die Eigenschaft `version` enthält. Wenn nicht vorhanden, wird die neueste Version verwendet.
+Der Standardwert ist `LTS`. Weitere Informationen zu .NET-Supportkanälen finden Sie unter dem Thema [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support).
+
+`-Version <VERSION>`
+
+Stellt eine Buildversion auf dem Quellkanal dar (weitere Informationen finden Sie unter der Option `-Channel`). Mögliche Werte sind:
+
+- `latest`: Neuester Build auf dem Kanal
+- `coherent`: Neuester kohärenter Build auf dem Kanal; verwendet die neueste stabile Paketkombination
+- Dreiteilige Version im X.Y.Z-Format, das eine bestimmte Buildversion darstellt (z B. `1.0.x` mit `x`, das die Patchversion darstellt, oder ein bestimmter Build wie `2.0.0-preview2-006120`)
+
+Falls nicht angegeben, verwendet `-Version` standardmäßig die erste [global.json-Datei](global-json.md), die den `version`-Member enthält. Wenn dies nicht vorhanden ist, verwendet `-Version` standardmäßig `latest`.
 
 `--install-dir <DIRECTORY>`
 
@@ -131,7 +158,7 @@ Wenn festgelegt, umfasst das Installationsprogramm Debugsymbole in der Installat
 
 `--dry-run`
 
-Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
+Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET Core-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
 
 `--no-path`
 
@@ -170,3 +197,9 @@ Windows:
 Mac OS/Linux:
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
+
+## <a name="see-also"></a>Siehe auch
+
+[.NET Core-Versionen](https://github.com/dotnet/core/releases)   
+[Downloadarchiv von .NET Core Runtime und des SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+

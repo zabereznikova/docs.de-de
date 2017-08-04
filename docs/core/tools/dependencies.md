@@ -1,5 +1,5 @@
 ---
-title: "Verwalten von Abhängigkeiten in .NET Core-Tools | Microsoft-Dokumentation"
+title: "Verwalten von Abhängigkeiten in .NET Core-Tools"
 description: "Erläutert, wie Abhängigkeiten mit den .NET Core-Tools verwaltet werden können."
 keywords: CLI, Erweiterbarkeit, benutzerdefinierte Befehle, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
-ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
 ms.contentlocale: de-de
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ In diesem Dokument wird der neue Verweistyp beschrieben. Es wird außerdem gezei
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Wenn Sie mit MSBuild vertraut sind, kommt es Ihnen durch bereits vorhandene Verweistypen bekannt vor. Der Schlüssel ist die `Include`-Anweisung, mit der die Paket-ID angegeben wird, die Sie dem Projekt hinzufügen möchten. Das untergeordnete `<Version>`-Element gibt die abzurufende Version an. Die Versionen werden gemäß den [NuGet-Versionsregeln](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges) angegeben.
+Wenn Sie mit MSBuild vertraut sind, kommt es Ihnen durch bereits vorhandene Verweistypen bekannt vor. Der Schlüssel ist die `Include`-Anweisung, mit der die Paket-ID angegeben wird, die Sie dem Projekt hinzufügen möchten. Das untergeordnete `<Version>`-Element gibt die abzurufende Version an. Die Versionen werden gemäß den [NuGet-Versionsregeln](/nuget/create-packages/dependency-versions#version-ranges) angegeben.
 
 > [!NOTE]
-> Wenn Ihnen die allgemeine `csproj`-Syntax noch unbekannt ist, finden Sie weitere Informationen in der Dokumentation zu [MSBuild-Projektverweisen](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+> Wenn Ihnen die allgemeine `csproj`-Syntax noch unbekannt ist, finden Sie weitere Informationen in der Dokumentation zu [MSBuild-Projektverweisen](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
 
 Beim Hinzufügen einer Abhängigkeit, die nur für ein bestimmtes Ziel verfügbar ist, werden Bedingungen wie im folgenden Beispiel verwendet:
 

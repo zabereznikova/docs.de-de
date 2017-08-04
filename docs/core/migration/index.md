@@ -1,25 +1,23 @@
 ---
-title: .NET Core-Migration in das csproj-Format | Microsoft-Dokumentation
+title: .NET Core-Migration in das csproj-Format
 description: .NET Core-Migration von project.json zu csproj
 keywords: .NET, .NET Core, .NET Core-Migration
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/13/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: ac870aa302c3e56b59cbfdfd0fc88e06bbaad5fb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
 ms.contentlocale: de-de
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="migrating-net-core-projects-to-the-csproj-format" class="xliff"></a>
-
-# Migrieren von .NET Core-Projekten in das .csproj-Format
+# <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrieren von .NET Core-Projekten in das .csproj-Format
 
 Dieses Dokument behandelt Migrationsszenarios für .NET Core-Projekte und die folgenden drei Migrationsszenarios:
 
@@ -27,9 +25,7 @@ Dieses Dokument behandelt Migrationsszenarios für .NET Core-Projekte und die fo
 2. [Migration von DNX zu csproj](#migration-from-dnx-to-csproj)
 3. [Migration von RC3 und früheren .NET Core csproj-Projekten in das endgültige Format](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-<a id="migration-from-projectjson-to-csproj" class="xliff"></a>
-
-## Migration von project.json zu csproj
+## <a name="migration-from-projectjson-to-csproj"></a>Migration von project.json zu csproj
 Die Migration von *project.json* zu *csproj* kann mithilfe einer der folgenden Methoden erfolgen:
 
 - [Visual Studio 2017](#visual-studio-2017)
@@ -37,24 +33,20 @@ Die Migration von *project.json* zu *csproj* kann mithilfe einer der folgenden M
  
 Beide Methoden verwenden das gleiche zugrunde liegende Modul, um die Projekte zu migrieren, sodass die Ergebnisse bei beiden gleich sind. In den meisten Fällen genügt eine der folgenden beiden Methoden zum Migrieren von *project.json* zu *csproj* und es ist keine weitere manuelle Bearbeitung der Projektdatei erforderlich. Die resultierende *.csproj*-Datei erhält denselben Namen wie das Verzeichnis, in dem sie enthalten ist.
 
-<a id="visual-studio-2017" class="xliff"></a>
-
-### Visual Studio 2017
+### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 Beim Öffnen einer *.xproj*-Datei oder einer Projektmappendatei, die auf *.xproj*-Dateien verweist, wird das Dialogfeld **Unidirektionales Upgrade** angezeigt. Das Dialogfeld zeigt die Projekte, die migriert werden sollen. Wenn Sie eine Projektmappendatei öffnen, werden alle Projekte aufgeführt, die in der Projektmappendatei angegeben sind. Überprüfen Sie die Liste der Projekte, die migriert werden sollen, und wählen Sie **OK**.
 
 ![Unidirektionales Upgrade-Dialogfeld mit der Liste der zu migrierenden Projekte](media/one-way-upgrade.jpg)
 
-Visual Studio wird die ausgewählten Projekte automatisch migrieren. Wenn Sie bei der Migration einer Projektmappe nicht alle Projekte auswählen, erscheint das gleiche Dialogfeld und Sie werden aufgefordert, die übrigen Projekte der Projektmappe upzugraden.
+Visual Studio wird die ausgewählten Projekte automatisch migrieren. Wenn Sie bei der Migration einer Projektmappe nicht alle Projekte auswählen, erscheint das gleiche Dialogfeld und Sie werden aufgefordert, die übrigen Projekte der Projektmappe upzugraden. Nachdem das Projekt migriert wurde, können Sie sich seine Inhalt anzeigen lassen und diese ändern, indem Sie mit der rechten Maustaste auf das Projekt im Fenster **Projektmappen-Explorer** und anschließend auf **Bearbeiten \<Projektname>.csproj** klicken.
 
 Dateien, die migriert wurden (*project.json*, *global.json*, *.xproj* und Projektmappendatei), werden in einen *Sicherung*-Ordner verschoben. Die migrierte Projektmappendatei wird auf Visual Studio 2017 upgegradet und es wird nicht mehr möglich sein, diese Projektmappendatei in früheren Versionen von Visual Studio zu öffnen. Eine Datei namens *UpgradeLog.htm*, die einen Migrationsbericht enthält, wird ebenfalls gespeichert und automatisch geöffnet.
 
 > [!IMPORTANT]
 > Die neuen Tools sind nicht in Visual Studio 2015 verfügbar und Sie können Ihre Projekte mit dieser Version von Visual Studio nicht migrieren.
 
-<a id="dotnet-migrate" class="xliff"></a>
-
-### dotnet migrate
+### <a name="dotnet-migrate"></a>dotnet migrate
 
 Im Befehlszeilenszenario können Sie den Befehl [`dotnet migrate`](../tools/dotnet-migrate.md) verwenden. Dadurch werden ein Projekt, eine Projektmappe oder eine Reihe von Ordnern in dieser Reihenfolge migriert, je nachdem ob sie gefunden wurden. Wenn Sie ein Projekt migrieren, werden das Projekt und alle zugehörigen Abhängigkeiten migriert.
 
@@ -65,18 +57,14 @@ Dateien, die migriert wurden (*project.json*, *global.json* und *.xproj*), werde
 
 Einen Vergleich der Formate project.json und csproj finden Sie unter [Die Zuordnung zwischen project.json und csproj-Eigenschaften](../tools/project-json-to-csproj.md).
 
-<a id="common-issues" class="xliff"></a>
-
-### Häufig auftretende Probleme
+### <a name="common-issues"></a>Häufig auftretende Probleme
 
 - Wenn Sie die Fehlermeldung „No executable found matching command dotnet-migrate“ (Es konnte keine ausführbare Datei gefunden werden, die mit dem Befehl dotnet-migrate übereinstimmt) erhalten:
 
 Führen Sie `dotnet --version` aus, um zu sehen, welche Version Sie verwenden. [`dotnet migrate`](../tools/dotnet-migrate.md) erfordert .NET Core-CLI RC3 oder höher.
 Sie erhalten diese Fehlermeldung, wenn sich eine *global.json*-Datei im aktuellen oder übergeordneten Verzeichnis befindet und die `sdk`-Version auf eine ältere Version festgelegt ist.
 
-<a id="migration-from-dnx-to-csproj" class="xliff"></a>
-
-## Migration von DNX zu csproj
+## <a name="migration-from-dnx-to-csproj"></a>Migration von DNX zu csproj
 Wenn Sie für die .NET Core-Entwicklung noch immer DNX verwenden, sollte der Migrationsvorgang in zwei Phasen erfolgen:
 
 1. Verwenden Sie die [existing DNX migration guidance (Hinweise zur Migration von einer vorhandenen DNX)](from-dnx.md), um von DNX zu project-json-aktivierter CLI zu migrieren.
@@ -85,9 +73,7 @@ Wenn Sie für die .NET Core-Entwicklung noch immer DNX verwenden, sollte der Mig
 > [!NOTE]
 > DNX gilt seit der Preview 1-Version der .NET Core-CLI offiziell als veraltet. 
 
-<a id="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj" class="xliff"></a>
-
-## Migration von früheren .NET Core-csproj-Formaten zu RTM-csproj
+## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>Migration von früheren .NET Core-csproj-Formaten zu RTM-csproj
 Das .NET Core-csproj-Format ändert und entwickelt sich mit jeder neuen Vorabversion der Tools. Es gibt kein Tool, das die Projektdatei von früheren csproj-Versionen zur neuesten migriert, sodass Sie die Projektdatei manuell bearbeiten müssen. Die tatsächlichen Schritte hängen von der Version der Projektdatei ab, die Sie migrieren. Nachfolgend finden Sie einige zu berücksichtigenden Hinweise, die auf den Änderungen von Version zu Version basieren:
 
 * Entfernen Sie die Tools-Version-Eigenschaft aus dem `<Project>`-Element, sofern vorhanden. 
@@ -101,4 +87,7 @@ Das .NET Core-csproj-Format ändert und entwickelt sich mit jeder neuen Vorabver
 Nach diesen Schritten sollte das Projekt mit dem RTM .NET Core-csproj-Format vollständig kompatibel sein. 
 
 Beispiele für vor und nach der Migration vom alten csproj-Format zum neuen finden Sie im Artikel [Updating Visual Studio 2017 RC – .NET Core Tooling improvements (Aktualisieren von Visual Studio 2017 RC – Verbesserungen der .NET Core-Tools)](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) im .NET-Blog.
+
+## <a name="see-also"></a>Siehe auch
+[Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
 
