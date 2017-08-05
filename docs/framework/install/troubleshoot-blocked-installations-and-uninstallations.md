@@ -1,7 +1,7 @@
 ---
 title: Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ Das Installationsprogramm für .NET Framework kann im Programmkompatibilitätsmo
 [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)   
 [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
