@@ -1,5 +1,5 @@
 ---
-title: "Entschärfung: Überprüfung von Pfaden auf Doppelpunkte | Microsoft-Dokumentation"
+title: "Entschärfung: Überprüfung von Pfaden auf Doppelpunkte"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,18 +15,18 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5e2426fc81c8fd38994a4124cf71af8ec445bfb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eb6864213aa4420f7a4373b9abbf173880f035f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-path-colon-checks"></a>Entschärfung: Überprüfung von Pfaden auf Doppelpunkte
 Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format). Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.  
   
 ## <a name="impact"></a>Auswirkungen  
- Durch diese Änderungen werden einige URI-Pfade blockiert, die bisher von den Methoden <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> und <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> unterstützt wurden.  
+ Durch diese Änderungen werden einige URI-Pfade blockiert, die von den Methoden <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> und <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> zuvor unterstützt wurden.  
   
 ## <a name="mitigation"></a>Problemumgehung  
  Sie können folgendermaßen vorgehen, um das Problem von bisher gültigen Pfaden zu umgehen, die von den Methoden <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> und <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> nicht mehr unterstützt werden:  
@@ -35,7 +35,7 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
   
 -   Übergeben Sie den URI an einen <xref:System.Uri>-Konstruktor, und rufen Sie den Wert der <xref:System.Uri.LocalPath%2A?displayProperty=fullName>-Eigenschaft ab.  
   
--   Entscheiden Sie sich gegen die Normalisierung des neuen Pfades, indem Sie den Schalter `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> auf `true` festlegen.  
+-   Entscheiden Sie sich gegen die Normalisierung des neuen Pfades, indem Sie den Schalter `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext>auf `true` festlegen.  
   
     ```xml  
     <runtime>  

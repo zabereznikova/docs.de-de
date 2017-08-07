@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Sammlung | Microsoft-Dokumentation"
+title: "Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Auflistung"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,17 +15,18 @@ caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: df159b1ab3f7c16564ce493a585246c4c461a8f9
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3258534cb0bf67b180080eca4f7cefc65c609fa4
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Sammlung
-Dieses Beispiel zeigt, wie Sie einer benutzerdefinierten Sammlungsklasse begrenzende und blockierende Funktionen hinzufügen, indem Sie die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName>-Schnittstelle in der Klasse implementieren und dann eine Klasseninstanz als internen Speichermechanismus für eine <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> verwenden. Weitere Informationen zu Begrenzungen und Blockierungen finden Sie unter [Übersicht über BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Gewusst wie: Hinzufügen von Begrenzungs- und Blockadefunktionen zu einer Auflistung
+Dieses Beispiel zeigt, wie eine Begrenzungs- und Blockadefunktion zu einer benutzerdefinierten Auflistungsklasse hinzugefügt werden kann, indem die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName>-Schnittstelle in die Klasse implementiert und anschließend eine Klasseninstanz als interner Speichermechanismus für ein <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>-Objekt verwendet wird. Weitere Informationen zu Begrenzungen und Blockierungen finden Sie unter [Übersicht über BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
 ## <a name="example"></a>Beispiel  
- Die benutzerdefinierte Sammlungsklasse ist eine einfache Prioritätswarteschlange, in der die Prioritätsstufen als Array aus <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>-Objekten dargestellt werden. Innerhalb der Warteschlangen erfolgt keine weitere Sortierung.  
+ Die benutzerdefinierte Auflistungsklasse ist eine grundlegende Prioritätswarteschlange, in der die Prioritätsstufen als Array von <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>-Objekten dargestellt werden. Innerhalb der Warteschlangen erfolgt keine weitere Sortierung.  
   
  Im Clientcode werden drei Tasks gestartet. Der erste Task fragt nur Tastenanschläge ab, um zu jedem Zeitpunkt während der Ausführung einen Abbruch zu ermöglichen. Der zweite Task ist der Producerthread, der neue Elemente zur blockierenden Auflistung hinzufügt und jedem Element basierend auf einem zufälligen Wert eine Priorität zuweist. Der dritte Task entfernt Elemente aus der Auflistung, sobald sie verfügbar werden.  
   
@@ -33,7 +34,8 @@ Dieses Beispiel zeigt, wie Sie einer benutzerdefinierten Sammlungsklasse begrenz
   
  [!code-csharp[CDS_BlockingCollection#06](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/prodcon.cs#06)]  
   
- Standardmäßig ist der Speicher für eine <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>-Sammlung <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>.  
+ In der Standardeinstellung ist der Speicher für ein <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>-Objekt <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [threadsichere Auflistungen](../../../../docs/standard/collections/thread-safe/index.md)
+

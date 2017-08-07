@@ -1,5 +1,5 @@
 ---
-title: "Entschärfung: X509CertificateClaimSet.FindClaims-Methode | Microsoft-Dokumentation"
+title: "Entschärfung: X509CertificateClaimSet.FindClaims-Methode"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,22 +14,22 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c234d6ddeda50dfefff8c49a2e14d623cdd8d861
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d19bf73e36061729c0c57439f4e4144669787d1a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Entschärfung: X509CertificateClaimSet.FindClaims-Methode
-Beginnend mit den Apps, die auf [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ausgerichtet sind, versucht die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName>-Methode, das `claimType`-Argument mit allen DNS-Einträgen in seinem SAN-Feld zu vergleichen.  
+Beginnend mit Apps, die auf [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ausgerichtet sind, versucht die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName>-Methode das `claimType`-Argument mit allen DNS-Einträgen in seinem SAN-Feld zu vergleichen.  
   
 ## <a name="impact"></a>Auswirkungen  
  Diese Änderung betrifft nur Apps, die auf Versionen von .NET Framework ausgerichtet sind, die mit [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] beginnen.  
   
- Für Apps, die auf frühere Versionen von .NET Framework ausgerichtet sind, versucht die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName>-Methode, das `claimType`-Argument nur mit dem letzten DNS-Eintrag zu vergleichen.  
+ Bei Apps, die auf frühere Versionen von .NET Framework ausgerichtet sind, versucht die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName>-Methode, das `claimType`-Argument nur mit dem letzten DNS-Eintrag abzustimmen.  
   
-## <a name="mitigation"></a>Entschärfung  
+## <a name="mitigation"></a>Problemumgehung  
  Ist diese Änderung nicht erwünscht, kann sie für Apps, die auf Versionen von .NET Framework ausgerichtet sind, die mit [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] beginnen, abgelehnt werden. Dazu muss dem [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)-Abschnitt der Konfigurationsdatei der App die folgende Konfigurationseinstellung hinzugefügt werden:  
   
 ```xml  

@@ -1,5 +1,5 @@
 ---
-title: "Übersicht über .NET Framework | Microsoft-Dokumentation"
+title: "Übersicht über .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,16 +19,14 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e4cd4dc15fb8da942e947a031567b180327a7d6
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="overview-of-the-net-framework" class="xliff"></a>
-
-# Übersicht über .NET Framework
+# <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
 Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklung und Ausführung von Anwendungen und XML-Webdiensten der nächsten Generation unterstützt wird. .NET Framework wurde im Hinblick auf folgende Zielsetzungen entwickelt:  
   
 -   Bereitstellung einer konsistenten, objektorientierten Programmierumgebung, in der Objektcode gespeichert wird. Die Ausführung erfolgt dann entweder lokal oder über Remotezugriff bzw. lokal mit Verteilung über das Internet.  
@@ -56,14 +54,12 @@ Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklun
   
  In der folgenden Abbildung ist die Beziehung der Common Language Runtime und der Klassenbibliothek zu den Anwendungen und dem Gesamtsystem dargestellt. Außerdem geht aus der Abbildung hervor, wie verwalteter Code innerhalb einer größeren Architektur operiert.  
   
- ![Verwalteter Code innerhalb einer größeren Architektur](../../../docs/framework/get-started/media/circle.gif "circle")  
+ ![Verwalteter Code innerhalb einer größeren Architektur](../../../docs/framework/get-started/media/circle.gif "Kreis")  
 .NET Framework im Kontext  
   
  In den folgenden Abschnitten werden die Hauptfunktionen von .NET Framework genauer beschrieben.  
   
-<a id="features-of-the-common-language-runtime" class="xliff"></a>
-
-## Features der Common Language Runtime  
+## <a name="features-of-the-common-language-runtime"></a>Features der Common Language Runtime  
  Die Common Language Runtime verwaltet Speicher, Thread- und Codeausführung, Überprüfung der Codesicherheit, Kompilierung und andere Systemdienste. Diese Features sind in den verwalteten Code integriert, der durch die Common Language Runtime ausgeführt wird.  
   
  Aus Sicherheitsgründen werden verwalteten Komponenten unterschiedliche Vertrauensstufen zugewiesen, die von mehreren Faktoren abhängen, zu denen auch der Ursprung (z. B. das Internet, ein Intranet oder ein lokaler Computer) zählt. Das bedeutet, dass eine verwaltete Komponente je nachdem auf Dateien und die Registrierung zugreifen bzw. andere sensible Funktionen ausführen kann oder ihr der Zugriff untersagt ist, selbst wenn sie in derselben aktiven Anwendung verwendet wird.  
@@ -82,9 +78,7 @@ Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklun
   
  Schließlich kann die Common Language Runtime auch von hochleistungsfähigen, serverseitigen Anwendungen wie Microsoft SQL Server und Internetinformationsdiensten (IIS) gehostet werden. Diese Infrastruktur bietet die Möglichkeit, Geschäftslogik mit verwaltetem Code zu schreiben und gleichzeitig die überlegene Leistungsfähigkeit der branchenweit besten Organisationsserver zu nutzen, die Laufzeithosting unterstützen.  
   
-<a id="net-framework-class-library" class="xliff"></a>
-
-## .NET Framework-Klassenbibliothek  
+## <a name="net-framework-class-library"></a>.NET Framework-Klassenbibliothek  
  Die .NET Framework-Klassenbibliothek ist eine Auflistung wiederverwendbarer Typen, die eng in die Common Language Runtime integriert sind. Die Klassenbibliothek ist objektorientiert und stellt Typen bereit, von denen eigener verwalteter Code Funktionen ableiten kann. Dadurch können Sie die .NET Framework-Typen problemlos verwenden und sich schneller mit den neuen Features von .NET Framework vertraut machen. Außerdem können Sie Komponenten von Drittanbietern nahtlos in .NET Framework integrieren.  
   
  So wird beispielsweise durch die Auflistungsklassen in .NET Framework ein Schnittstellensatz implementiert, der zur Entwicklung eigener Auflistungsklassen verwendet werden kann, die sich nahtlos in die .NET Framework-Klassen einfügen.  
@@ -107,12 +101,11 @@ Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklun
   
  So bestehen beispielsweise die Klassen für Windows Forms aus einem umfangreichen Satz wiederverwendbarer Typen, die die Entwicklung für Windows-GUIs erheblich vereinfachen. Beim Schreiben einer ASP.NET Web Form-Anwendung können diese Web Forms-Klassen verwendet werden.  
   
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)   
  [Installationshandbuch](../../../docs/framework/install/index.md)   
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)   
  [Tools](../../../docs/framework/tools/index.md)   
  [.NET Framework-Beispiele](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
  [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)
+
