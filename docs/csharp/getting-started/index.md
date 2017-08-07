@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C# #
@@ -33,7 +33,7 @@ Folgende Themen sind verfügbar:
 
    Mit einer Klassenbibliothek können Sie Typen und Typmember definieren, die von einer anderen Anwendung aufgerufen werden können. In diesem Thema erstellen Sie eine Klassenbibliothek mit einer einzigen Methode, die festlegt, ob eine Zeichenfolge mit einem Großbuchstaben beginnt. Nachdem Sie die Bibliothek erstellt haben, können Sie einen [Komponententest](testing-library-with-visual-studio.md) entwickeln, um sicherzustellen, dass die Bibliothek wie erwartet funktioniert. Dann machen Sie die Bibliothek verfügbar für [Anwendungen, von denen sie genutzt werden soll](consuming-library-with-visual-studio.md).
 
-- [Erste Schritte mit Visual Studio Code](with-visual-studio-code.md)
+- [Erste Schritte mit C# und Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code ist ein kostenloser Code-Editor zum Entwickeln und Debuggen moderner Cloud- und Webanwendungen. Er unterstützt IntelliSense und ist für Linux, macOS und Windows verfügbar.
 
