@@ -1,26 +1,43 @@
 ---
-title: "Modifiers (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: Modifizierer (Visual Basic)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Modifiers (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 99618381c1267647e07d9acc64693dcc5def6f3a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
-In den Themen dieses Abschnitts sind die Visual Basic\-Laufzeitmodifizierer dokumentiert.  
+---
+# <a name="modifiers-visual-basic"></a>Modifizierer (Visual Basic)
+Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizierer.  
   
-## In diesem Abschnitt  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
@@ -42,7 +59,7 @@ In den Themen dieses Abschnitts sind die Visual Basic\-Laufzeitmodifizierer doku
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Module \<keyword\>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<<schlüsselwort>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -90,7 +107,8 @@ In den Themen dieses Abschnitts sind die Visual Basic\-Laufzeitmodifizierer doku
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## Verwandte Abschnitte  
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+

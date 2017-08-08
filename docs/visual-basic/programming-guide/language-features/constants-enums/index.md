@@ -1,52 +1,68 @@
 ---
-title: "Constants and Enumerations in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "enumerations [Visual Basic]"
-  - "Visual Basic code, constants"
-  - "constants"
-  - "object libraries, Object Browser"
-  - "Visual Basic code, enumerations"
-  - "declaring constants, enumerations"
-  - "naming conventions, constants"
-  - "Visual Basic code, improving readability with constants"
+title: Konstanten und Enumerationen in Visual Basic
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerations [Visual Basic]
+- Visual Basic code, constants
+- constants
+- object libraries, Object Browser
+- Visual Basic code, enumerations
+- declaring constants, enumerations
+- naming conventions, constants
+- Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Constants and Enumerations in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ef8ade1100bb660af4d968d4b600aba41073fc2
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
-Konstanten stellen eine Möglichkeit dar, anstelle eines unveränderlichen Werts einen aussagekräftigen Namen zu verwenden.  Konstanten speichern Werte, die \(wie der Name sagt\) während der Ausführung einer Anwendung konstant bleiben.  Die Verwendung von Konstanten ermöglicht das Bereitstellen aussagekräftiger Namen anstelle von Zahlen, wodurch der Code leichter lesbar wird.  
+---
+# <a name="constants-and-enumerations-in-visual-basic"></a>Konstanten und Enumerationen in Visual Basic
+Konstanten sind ein Weg, aussagekräftige Namen anstelle von Variablen mit unveränderlichem Wert zu verwenden. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung konstant bleiben. Sie können Konstanten verwenden, um aussagekräftige Namen anstelle von Zahlen anzugeben, wodurch Ihr Code besser lesbar wird.  
   
- Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstanten zu arbeiten und Konstantenwerte mit Namen zu verknüpfen.  Sie können beispielsweise eine Enumeration für eine Reihe von Ganzzahlkonstanten deklarieren, die mit den Wochentagen verknüpft sind. Anschließend können Sie anstelle der Ganzzahlwerte im Code die Namen der einzelnen Tage verwenden.  
+ Durch Enumerationen wird ein bequemer Weg bereitgestellt, um mit Sätzen verknüpfter Konstanten zu arbeiten, und um konstanten Werten Namen zuzuweisen. Sie können zum Beispiel eine Enumeration für einen Satz von Integerkonstanten deklarieren, denen die Tage der Woche zugewiesen sind, und dann in Ihrem Code die Namen der Wochentage statt deren Integerwerte verwenden.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|[Constants Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|In den Themen dieses Abschnitts werden Konstanten und ihre Verwendung beschrieben.|  
-|[Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|In den Themen dieses Abschnitts werden Enumerationen und ihre Verwendung beschrieben.|  
+|---|---|  
+|[Übersicht über Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Die Themen in diesem Abschnitt beschreiben Konstanten und ihre Verwendung.|  
+|[Übersicht über Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Die Themen in diesem Abschnitt beschreiben Konstanten und ihre Verwendung.|  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|[Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)|Beschreibt die `Const`\-Anweisung, die verwendet wird, um Konstanten zu deklarieren.|  
-|[Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)|Beschreibt die `Enum`\-Anweisung, die verwendet wird, um Enumerationen zu erstellen.|  
-|[Option Explicit Statement](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Beschreibt die `Option Explicit`\-Anweisung, die auf Modulebene verwendet wird, um die explizite Deklaration aller Variablen in diesem Modul zu erzwingen.|  
-|[Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Beschreibt die `Option Infer`\-Anweisung, die die Verwendung von lokalem Typrückschluss bei der Deklarierung von Variablen ermöglicht.|  
-|[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Beschreibt die `Option Strict`\-Anweisung, die implizite Datentypkonvertierungen ausschließlich auf Erweiterungskonvertierungen beschränkt, späte Bindungen nicht zulässt und implizite Typisierung nicht zulässt, aus der sich ein `Object`\-Typ ergibt.|
+|---|---|  
+|[Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)|Beschreibt die `Const`-Anweisung, die zum Deklarieren von Konstanten verwendet wird.|  
+|[Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)|Beschreibt die `Enum`-Anweisung, die zum Erstellen von Konstanten verwendet wird.|  
+|[Option Explicit-Anweisung](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Beschreibt die `Option Explicit`-Anweisung, die auf Modulebene verwendet wird, um die explizite Deklaration aller Variablen in diesem Modul zu erzwingen.|  
+|[Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Beschreibt die `Option Infer`-Anweisung, die die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen ermöglicht.|  
+|[Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Beschreibt die `Option Strict`-Anweisung, die die implizite Datentypkonvertierung auf Erweiterungskonvertierungen beschränkt, wodurch spätes Binden und eine implizite Typisierung in einen `Object`-Typ nicht zugelassen werden.|
+

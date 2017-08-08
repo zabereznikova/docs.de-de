@@ -1,0 +1,195 @@
+---
+title: Attribute (C#)
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
+---
+# <a name="attributes-c"></a>Attribute (C#)
+Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
+  
+ Attribute verfügen über die folgenden Eigenschaften:  
+  
+-   Attribute fügen Metadaten zu Ihrem Programm hinzu. *Metadaten* sind Informationen zu den Typen, die in einem Programm definiert sind. Alle .NET-Assemblys enthalten einen festgelegten Satz von Metadaten, der die Typen und Typmember beschreibt, die in der Assembly definiert sind. Sie können benutzerdefinierte Attribute hinzufügen, um zusätzliche erforderliche Informationen anzugeben. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+  
+-   Sie können eines oder mehrere Attribute auf ganze Assemblys, Module oder kleinere Programmelemente wie Klassen und Eigenschaften anwenden.  
+  
+-   Attribute können Argumente auf die gleiche Art wie Methoden und Eigenschaften akzeptieren.  
+  
+-   Das Programm kann seine eigenen Metadaten oder die Metadaten in anderen Programmen mithilfe der Reflektion untersuchen. Weitere Informationen finden Sie unter [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+  
+## <a name="using-attributes"></a>Verwenden von Attributen  
+ Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In C# geben Sie ein Attribut durch Angabe des Namens des Attributs an, eingeschlossen in eckigen Klammern ([]), oberhalb der Deklaration der Entität, auf die es angewendet wird.  
+  
+ In diesem Beispiel wird das Attribut <xref:System.SerializableAttribute> benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:  
+  
+```csharp  
+[System.Serializable]  
+public class SampleClass  
+{  
+    // Objects of this type can be serialized.  
+}  
+```  
+  
+ Eine Methode mit dem Attribut <xref:System.Runtime.InteropServices.DllImportAttribute> wird wie folgt deklariert:  
+  
+```csharp  
+using System.Runtime.InteropServices;  
+```  
+  
+```csharp  
+[System.Runtime.InteropServices.DllImport("user32.dll")]  
+extern static void SampleMethod();  
+```  
+  
+ Mehrere Attribute können in einer Deklaration platziert werden:  
+  
+```csharp  
+using System.Runtime.InteropServices;  
+```  
+  
+```csharp  
+void MethodA([In][Out] ref double x) { }  
+void MethodB([Out][In] ref double x) { }  
+void MethodC([In, Out] ref double x) { }  
+```  
+  
+ Einige Attribute können für eine bestimmte Entität mehrmals angegeben werden. Ein Beispiel für ein solches mehrfach verwendbares Attribut ist <xref:System.Diagnostics.ConditionalAttribute>:  
+  
+```csharp  
+[Conditional("DEBUG"), Conditional("TEST1")]  
+void TraceMethod()  
+{  
+    // ...  
+}  
+```  
+  
+> [!NOTE]
+>  Alle Attributnamen enden laut Konvention mit dem Wort „Attribute“, um sie von anderen Elementen in .NET Framework zu unterscheiden. Sie müssen das Attributsuffix allerdings nicht angeben, wenn Sie Attribute im Code verwenden. Beispiel: `[DllImport]` entspricht `[DllImportAttribute]`, aber `DllImportAttribute` ist der tatsächliche Name des Attributs in .NET Framework.  
+  
+### <a name="attribute-parameters"></a>Attributparameter  
+ Viele Attribute weisen Parameter auf, die positional, unbenannt der benannt sein können. Alle positionalen Parameter müssen in einer bestimmten Reihenfolge angegeben und können nicht ausgelassen werden. Benannte Parameter sind optional und können in beliebiger Reihenfolge angegeben werden. Positionale Parameter werden zuerst angegeben. Die folgenden drei Attribute sind beispielsweise äquivalent:  
+  
+```csharp  
+[DllImport("user32.dll")]  
+[DllImport("user32.dll", SetLastError=false, ExactSpelling=false)]  
+[DllImport("user32.dll", ExactSpelling=false, SetLastError=false)]  
+```  
+  
+ Der erste Parameter, der DLL-Name, ist positional und kommt immer an erster Stelle. Die anderen sind benannt. In diesem Fall werden beide benannten Parameter standardmäßig auf „false“ festgelegt und können daher ausgelassen werden. In der Dokumentation des individuellen Attributs finden Sie Informationen zu Standardparameterwerten.  
+  
+### <a name="attribute-targets"></a>Attributziele  
+ Das *Ziel* eines Attributs ist die Entität, auf die das Attribut angewendet wird. Ein Attribut kann beispielsweise auf eine Klasse, eine bestimmte Methode oder eine ganze Assembly angewendet werden. Standardmäßig wird ein Attribut auf das voranstehende Element angewendet. Sie können allerdings auch explizit festlegen, dass ein Attribut beispielsweise auf eine Methode, ihren Parameter oder ihren Rückgabewert angewendet wird.  
+  
+ Verwenden Sie die folgende Syntax, um ein Attributziel explizit zu kennzeichnen:  
+  
+```csharp  
+[target : attribute-list]  
+```  
+  
+ Die Liste der möglichen `target`-Werte wird in der folgenden Tabelle gezeigt:  
+  
+|Zielwert|Betrifft|  
+|------------------|----------------|  
+|`assembly`|Gesamte Assembly|  
+|`module`|Aktuelle Assemblymodul|  
+|`field`|Feld in einer Klasse oder Struktur|  
+|`event`|Ereignis|  
+|`method`|Methode oder `get`- und `set`-Eigenschaftenaccessors|  
+|`param`|Methodenparameter oder `set`-Parameter des Eigenschaftenaccessors|  
+|`property`|Eigenschaft|  
+|`return`|Rückgabewert einer Methode, Eigenschaftenindexer oder `get`-Eigenschaftenaccessor|  
+|`type`|Struktur, Klasse, Schnittstelle, Enumeration oder Delegat|  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie Attribute auf Assemblys und Module angewendet werden. Weitere Informationen finden Sie unter [Allgemeine Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md).  
+  
+```csharp  
+using System;  
+using System.Reflection;  
+[assembly: AssemblyTitleAttribute("Production assembly 4")]  
+[module: CLSCompliant(true)]  
+```  
+  
+ Im folgenden Beispiel wird gezeigt, wie Attribute auf Methoden, Methodenparameter und Methodenrückgabewerte in C# angewendet werden.  
+  
+```csharp  
+// default: applies to method  
+[SomeAttr]  
+int Method1() { return 0; }  
+  
+// applies to method  
+[method: SomeAttr]  
+int Method2() { return 0; }  
+  
+// applies to return value  
+[return: SomeAttr]  
+int Method3() { return 0; }  
+```  
+  
+> [!NOTE]
+>  Unabhängig von den Zielen, auf denen `SomeAttr` definiert wird, um gültig zu sein, muss das Ziel `return` angegeben werden, selbst wenn `SomeAttr` nur für die Rückgabewerte definiert wurde. Das heißt, der Compiler verwendet keine `AttributeUsage`-Informationen zum Auflösen von mehrdeutigen Attributzielen. Weitere Informationen finden Sie unter [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md).  
+  
+## <a name="common-uses-for-attributes"></a>Häufige Verwendungsmöglichkeiten für Attribute  
+ Die folgende Liste enthält einige häufige Verwendungsmöglichkeiten von Attributen im Code:  
+  
+-   Kennzeichnen von Methoden mit dem `WebMethod`-Attribut in Webdiensten, um anzugeben, dass die Methode über das SOAP-Protokoll aufrufbar sein sollte. Weitere Informationen finden Sie unter <xref:System.Web.Services.WebMethodAttribute>.  
+  
+-   Beschreiben, wie Methodenparameter bei der Interaktion mit systemeigenem Code gemarshallt werden sollen. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+  
+-   Beschreiben der COM-Eigenschaften für Klassen, Methoden und Schnittstellen.  
+  
+-   Aufrufen von nicht verwaltetem Code mithilfe der Klasse <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+  
+-   Beschreiben der Assembly im Hinblick auf Titel, Version, Beschreibung oder Marke.  
+  
+-   Beschreiben, welche Member einer Klasse zur Verbesserung der Dauerhaftigkeit serialisiert werden müssen.  
+  
+-   Beschreiben der Zuordnung zwischen Klassenmembern und XML-Knoten für die XML-Serialisierung.  
+  
+-   Beschreiben der Sicherheitsanforderungen für Methoden.  
+  
+-   Angeben von Eigenschaften zum Erzwingen der Sicherheit.  
+  
+-   Steuern der vom JIT-Compiler (Just-In-Time-Compiler) ausgeführten Optimierungen, damit der Code weiterhin problemlos debuggt werden kann.  
+  
+-   Abrufen von Informationen zum Aufrufer einer Methode.  
+  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ Weitere Informationen finden Sie unter:  
+  
+-   [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+  
+-   [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+  
+-   [Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)](../../../../csharp/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+  
+-   [Allgemeine Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+  
+-   [Aufruferinformationen (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
+ [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ [Attribute](https://msdn.microsoft.com/library/5x6cd29c)
+

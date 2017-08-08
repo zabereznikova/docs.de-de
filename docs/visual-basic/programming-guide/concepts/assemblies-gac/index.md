@@ -1,5 +1,5 @@
 ---
-title: Assemblys und der globale Assemblycache (Visual Basic) | Microsoft-Dokumentation
+title: Assemblys und der globale Assemblycache (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assemblys und der globale Assemblycache (Visual Basic)
@@ -41,7 +42,7 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
   
 -   Sie können mithilfe der Reflektion programmgesteuert Informationen zu einer Assembly abrufen. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
--   Wenn Sie eine Assembly lediglich zu Überprüfungszwecken laden möchten, verwenden Sie eine Methode wie „<xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>“.  
+-   Wenn Sie eine Assembly nur zu Überprüfungszwecken laden möchten, verwenden Sie eine Methode wie <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Assemblymanifest  
  Jede Assembly enthält ein *Assemblymanifest*. Ähnlich wie ein Inhaltsverzeichnis enthält das Assemblymanifest Folgendes:  
@@ -50,7 +51,7 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
   
 -   Eine Dateitabelle, die alle anderen Dateien beschreibt, aus denen die Assembly besteht, z.B. alle weiteren Assemblys, die Sie erstellt haben, auf denen Ihre EXE- oder DLL-Datei basiert, oder sogar Bitmap- oder Infodateien.  
   
--   Eine *Assemblyverweisliste*, eine Liste aller externen Abhängigkeiten, z.B. DLL-Dateien oder andere Dateien, die Ihre Anwendung benötigt, die möglicherweise von einer anderen Person erstellt wurden. Assemblyverweise enthalten Verweise auf globale und private Objekte. Globale Objekte befinden sich im globalen Assemblycache, einem Bereich, der auch anderen Anwendungen zur Verfügung steht, wie etwa das System32-Verzeichnis. Der <xref:Microsoft.VisualBasic?displayProperty=fullName>-Namespace ist ein Beispiel für eine Assembly im globalen Assemblycache. Private Objekte müssen sich in einem Verzeichnis auf derselben Ebene oder unterhalb des Verzeichnisses befinden, in dem die Anwendung installiert ist.  
+-   Eine *Assemblyverweisliste*, eine Liste aller externen Abhängigkeiten, z.B. DLL-Dateien oder andere Dateien, die Ihre Anwendung benötigt, die möglicherweise von einer anderen Person erstellt wurden. Assemblyverweise enthalten Verweise auf globale und private Objekte. Globale Objekte befinden sich im globalen Assemblycache, einem Bereich, der auch anderen Anwendungen zur Verfügung steht, wie etwa das System32-Verzeichnis. Der Namespace <xref:Microsoft.VisualBasic?displayProperty=fullName> ist ein Beispiel für eine Assembly im globalen Assemblycache. Private Objekte müssen sich in einem Verzeichnis auf derselben Ebene oder unterhalb des Verzeichnisses befinden, in dem die Anwendung installiert ist.  
   
  Da Assemblys Informationen zu Inhalt, Versionsverwaltung und Abhängigkeiten enthalten, sind die Anwendungen, die Sie mit Visual Basic erstellen, nicht von Windows-Registrierungswerten abhängig, damit sie ordnungsgemäß funktionieren. Assemblys reduzieren DLL-Konflikte, verbessern die Zuverlässigkeit und vereinfachen die Bereitstellung Ihrer Anwendungen. In vielen Fällen können Sie eine .NET-basierte Anwendung einfach durch Kopieren der Dateien auf den Zielcomputer installieren.  
   
@@ -74,3 +75,4 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
  [How to: Create and Use Assemblies Using the Command Line (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  (Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic))  
  [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Serialisierung (Visual Basic) | Microsoft-Dokumentation
+title: Serialisierung (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fb4404bf648f108a3b98952234d29e2bc1d4189
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88f78b86e79802238b78cfe097a0ccc73bfe778
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serialization-visual-basic"></a>Serialisierung (Visual Basic)
@@ -40,11 +41,11 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
  Mit der Serialisierung kann der Entwickler den Zustand eines Objekts speichern und das Objekt bei Bedarf neu erstellen. Die Serialisierung stellt sowohl Objektspeicher als auch Datenaustausch bereit. Über die Serialisierung kann ein Entwickler verschiedene Aktionen durchführen, wie z.B.: Senden des Objekts an eine Remoteanwendung mithilfe eines Webdiensts, Übergeben eines Objekts von einer Domäne an eine andere, Übergeben eines Objekts über eine Firewall als XML-Zeichenfolge oder anwendungsübergreifendes Verwalten der Sicherheit oder benutzerspezifischer Informationen.  
   
 ### <a name="making-an-object-serializable"></a>Aktivieren der Serialisierbarkeit eines Objekts  
- Um ein Objekt zu serialisieren, benötigen Sie das entsprechende Objekt, einen Stream, der das serialisierte Objekt enthalten soll, und einen <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> enthält die erforderlichen Klassen zum Serialisieren und Deserialisieren von Objekten.  
+ Zum Serialisieren eines Objekts benötigen Sie das entsprechende Objekt, einen Stream, der das serialisierte Objekt enthält und einen <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> enthält die Klassen, die zum Serialisieren und Deserialisieren von Objekten nötig sind.  
   
- Wenden Sie das <xref:System.SerializableAttribute>-Attribut auf einen Typ an, um anzugeben, dass Instanzen dieses Typs serialisiert werden können. Eine <xref:System.Runtime.Serialization.SerializationException>-Ausnahme wird ausgelöst, wenn Sie versuchen, eine Serialisierung durchzuführen, der Typ aber kein <xref:System.SerializableAttribute>-Attribut aufweist.  
+ Wenden Sie das Attribut <xref:System.SerializableAttribute> auf einen Typ an, um anzugeben, dass Instanzen dieses Typs serialisiert werden können. Eine Ausnahme <xref:System.Runtime.Serialization.SerializationException> wird ausgelöst, wenn Sie versuchen zu serialisieren, aber der Typ nicht über das Attribut <xref:System.SerializableAttribute> verfügt.  
   
- Wenn ein Feld innerhalb Ihrer Klasse nicht serialisierbar sein soll, wenden Sie das <xref:System.NonSerializedAttribute>-Attribut an. Wenn ein Feld eines serialisierbaren Typs einen Zeiger, ein Handle oder eine andere Datenstruktur enthält, der/die für eine bestimmte Umgebung spezifisch ist, und das Feld in keiner anderen Umgebung sinnvoll wiederhergestellt werden kann, sollten Sie den Typ als nicht serialisierbar markieren.  
+ Wenn Sie nicht möchten, dass ein Feld innerhalb Ihrer Klasse serialisierbar ist, wenden Sie das Attribut <xref:System.NonSerializedAttribute> an. Wenn ein Feld eines serialisierbaren Typs einen Zeiger, ein Handle oder eine andere Datenstruktur enthält, der/die für eine bestimmte Umgebung spezifisch ist, und das Feld in keiner anderen Umgebung sinnvoll wiederhergestellt werden kann, sollten Sie den Typ als nicht serialisierbar markieren.  
   
  Wenn eine serialisierte Klasse Verweise auf Objekte anderer Klassen enthält, die mit <xref:System.SerializableAttribute> markiert sind, werden diese Objekte ebenfalls serialisiert.  
   
@@ -52,10 +53,10 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
  Es kann entweder Binär- oder XML-Serialisierung verwendet werden. Bei der binären Serialisierung werden alle Member einschließlich der schreibgeschützten Member serialisiert, und die Leistung wird verbessert. Die XML-Serialisierung bietet besser lesbaren Code sowie größere Flexibilität bei der Objektfreigabe und -nutzung zu Interoperabilitätszwecken.  
   
 ### <a name="binary-serialization"></a>Binäre Serialisierung  
- Die binäre Serialisierung verwendet die binäre Codierung, um für Nutzungszwecke wie z.B. Speicherung oder socketbasierte Netzwerkstreams eine kompakte Serialisierung zu ermöglichen.  
+ Die binäre Serialisierung verwendet zum Generieren einer kompakten Serialisierung die binäre Codierung für den Speicher oder für socketbasierte Netzwerkstreams.  
   
 ### <a name="xml-serialization"></a>XML-Serialisierung  
- Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften eines Objekts bzw. die Parameter und Rückgabewerte von Methoden in einen XML-Stream serialisiert, der einem bestimmtem XSD-Dokument (XML Schema Definition) entspricht. Die XML-Serialisierung führt zu stark typisierten Klassen mit öffentlichen Eigenschaften und Feldern, die in XML konvertiert werden. <xref:System.Xml.Serialization> enthält die erforderlichen Klassen zum Serialisieren und Deserialisieren von XML-Code.  
+ Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften eines Objekts bzw. die Parameter und Rückgabewerte von Methoden in einen XML-Stream serialisiert, der einem bestimmtem XSD-Dokument (XML Schema Definition) entspricht. Die XML-Serialisierung führt zu stark typisierten Klassen mit öffentlichen Eigenschaften und Feldern, die in XML konvertiert werden. <xref:System.Xml.Serialization> enthält die Klassen, die zum Serialisieren und Deserialisieren in XML nötig sind.  
   
  Sie können Attribute auf Klassen und Klassenmember anwenden, um die Art der Serialisierung oder Deserialisierung einer Instanz der Klasse durch <xref:System.Xml.Serialization.XmlSerializer> zu steuern.  
   
@@ -63,12 +64,12 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
  Die Serialisierung kann auf zwei Arten ausgeführt werden: einfach und benutzerdefiniert. Die einfache Serialisierung verwendet .NET Framework, um ein Objekt automatisch zu serialisieren.  
   
 ### <a name="basic-serialization"></a>Einfache Serialisierung  
- Die einzige Anforderung bei der einfachen Serialisierung ist, dass das <xref:System.SerializableAttribute>-Attribut auf das Objekt angewendet wurde. Das <xref:System.NonSerializedAttribute>-Attribut kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.  
+ Die einzige Anforderung bei der einfachen Serialisierung ist, dass das Attribut <xref:System.SerializableAttribute> auf das Objekt angewendet wurde. Das Attribut <xref:System.NonSerializedAttribute> kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.  
   
  Wenn Sie die einfache Serialisierung verwenden, kann die Versionsverwaltung von Objekten zu Problemen führen. In diesem Fall empfiehlt sich die benutzerdefinierte Serialisierung. Die einfache Serialisierung ist die einfachste Möglichkeit zur Serialisierung, bietet allerdings nicht viel Steuerungsmöglichkeiten für den Prozess.  
   
 ### <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung  
- Bei der benutzerdefinierten Serialisierung können Sie genau angeben, welche Objekte serialisiert werden und wie die Serialisierung erfolgt. Die Klasse muss mit <xref:System.SerializableAttribute> markiert werden und die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementieren.  
+ Bei der benutzerdefinierten Serialisierung können Sie genau angeben, welche Objekte serialisiert werden und wie die Serialisierung erfolgt. Die Klasse muss als <xref:System.SerializableAttribute> markiert und in die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementiert sein.  
   
  Wenn das Objekt auch benutzerdefiniert deserialisiert werden soll, müssen Sie einen benutzerdefinierten Konstruktor verwenden.  
   
@@ -80,7 +81,8 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
  Veranschaulicht, wie die Serialisierung verwendet werden kann, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
   
  [Gewusst wie: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- Zeigt, wie Objektdaten gelesen werden, die zuvor mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
+ Zeigt, wie Objektdaten gelesen werden, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
   
  [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- Zeigt, wie das Objekt mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse von einer Klasse in eine XML-Datei geschrieben wird.
+ Zeigt, wie ein Objekt aus einer Klasse mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wird.
+
