@@ -1,5 +1,5 @@
 ---
-title: .NET Core
+title: "Leitfaden für .NET Core"
 description: ".NET Core ist eine modulare, hochleistungsfähige Implementierung von .NET zur Erstellung von Windows-, Linux- und Mac-Apps. Erfahren Sie mehr über .NET Core, um zu beginnen."
 keywords: .NET, .NET Core
 author: richlander
@@ -10,14 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 51f21e49623231f08d2c4a72e9b99c1141563e5e
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>Leitfaden für .NET Core
 
 > Sehen Sie sich die [Lernprogramme „Erste Schritte“](get-started.md) an, und lernen Sie, wie Sie eine einfache .NET Core-Anwendung erstellen können. Es dauert nur wenige Minuten bis Ihre erste App funktioniert und ausgeführt wird.
 
