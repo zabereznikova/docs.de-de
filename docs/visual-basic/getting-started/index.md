@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit Visual Basic
-ms.date: 2017-05-01
+ms.date: 2017-08-07
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
+ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
+ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
@@ -45,18 +45,17 @@ Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der V
 Listet neue Funktionen in jeder Version von Visual Basic .NET auf.
 
 [Wichtige Visual Basic-Änderungen in Visual Studio ](breaking-changes-in-visual-studio.md)  
- Führt Änderungen in dieser Version auf, die die Kompilierung der Anwendung verhindern oder ihr Laufzeitverhalten ändern könnten.  
+Führt Änderungen in dieser Version auf, die die Kompilierung der Anwendung verhindern oder ihr Laufzeitverhalten ändern könnten.  
   
- [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../visual-basic/getting-started/additional-resources.md)  
- Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftauchenden Problemen finden  
+[Zusätzliche Ressourcen für Visual Basic-Programmierer](additional-resources.md)  
+Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftauchenden Problemen finden  
   
- [Visual Basic kennen lernen](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
- Stellt Links zu den Ressourcen zum Erlernen der Programmierung mit Visual Basic bereit.  
-  
+## <a name="see-also"></a>Siehe auch
  [Visual Basic abrufen](https://www.visualstudio.com/downloads/)  
  Bietet Downloadlinks für Visual Studio-Versionen, einschließlich Visual Basic-Unterstützung und kostenlose Versionen.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
+
+ [Visual Basic-Grundlagen für Einsteiger](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Microsoft Virtual Academy-Kurs, der die Grundlagen der Programmierung mit Visual Basic vermittelt.
+
  [Objektorientierte Programmierung](../programming-guide/concepts/object-oriented-programming.md)  
  Bietet Links zu Seiten mit Einführungen in die objektorientierte Programmierung und beschreibt das Erstellen eigener Objekte sowie das Verwenden der Objekte zum Vereinfachen der Codierung  
   
