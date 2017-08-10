@@ -1,6 +1,6 @@
 ---
-title: Unittests in .NET Core | Microsoft-Dokumentation
-description: Unittests in .NET Core
+title: Unittests in .NET Core
+description: Komponententests waren nie einfacher. Erfahren Sie, wie man Komponententests in .NET Core-Projekten verwendet.
 keywords: .NET, .NET Core
 author: ardalis
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 4983af5386efc6b713f10f200687535b7dc36a11
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22647a9ad7723bbfcf0d54530b3c0538198e7c35
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -28,12 +28,12 @@ Eine Suite von automatisierten Tests ist eine der besten Möglichkeiten, um sich
 > [!NOTE]
 > Entwickler haben oft Probleme bei der Benennung für ihre Testklassen und Methoden. Als Ausgangspunkt befolgt das ASP.NET-Produktteam [diesen Konventionen](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
 
-Wenn Sie Unittests schreiben, achten Sie darauf, dass Sie nicht versehentlich Abhängigkeiten der Infrastruktur einführen. Dies führt in der Regel dazu, dass Tests langsamer und anfälliger sind und sollten deshalb für Integrationstests reserviert werden. Sie können diese versteckten Abhängigkeiten in Ihrem Anwendungscode vermeiden, indem Sie das [Explicit Dependencies Principle (Explizites Abhängigkeitsprinzip)](http://deviq.com/explicit-dependencies-principle/) befolgen und [Dependency Injection (Abhängigkeitseinfügung)](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) verwenden, um Ihre Abhängigkeiten vom Framework anzufordern. Sie können Ihre Unittests auch auf ein separates Projekt von Ihren Integrationstests beschränken, und sicherstellen, dass Ihr Unittestprojekt nicht über Referenzen für oder Abhängigkeiten auf den Infrastrukturpaketen verfügt.
+Wenn Sie Unittests schreiben, achten Sie darauf, dass Sie nicht versehentlich Abhängigkeiten der Infrastruktur einführen. Dies führt in der Regel dazu, dass Tests langsamer und anfälliger sind und sollten deshalb für Integrationstests reserviert werden. Sie können diese versteckten Abhängigkeiten in Ihrem Anwendungscode vermeiden, indem Sie das [Explicit Dependencies Principle (Explizites Abhängigkeitsprinzip)](http://deviq.com/explicit-dependencies-principle/) befolgen und [Dependency Injection (Abhängigkeitseinfügung)](/aspnet/core/fundamentals/dependency-injection) verwenden, um Ihre Abhängigkeiten vom Framework anzufordern. Sie können Ihre Unittests auch auf ein separates Projekt von Ihren Integrationstests beschränken, und sicherstellen, dass Ihr Unittestprojekt nicht über Referenzen für oder Abhängigkeiten auf den Infrastrukturpaketen verfügt.
 
 Möchten Sie mehr über Unittests in .NET Core-Projekten erfahren?
 
-* Probieren Sie [walkthrough creating unit tests with xUnit and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit xUnit und der .NET-CLI)](unit-testing-with-dotnet-test.md) aus. 
+* Probieren Sie [walkthrough creating unit tests with xUnit and the .NET Core-CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit xUnit und der .NET Core-CLI)](unit-testing-with-dotnet-test.md) aus. 
 * Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [how to use xUnit with .NET Core and Visual Studio (wie xUnit mit .NET Core und Visual Studio verwendet wird)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-* Wenn Sie lieber MSTest verwenden, versuchen Sie [walkthrough creating unit tests with MSTest and the .NET CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit MSTest und der .NET-CLI)](unit-testing-with-mstest.md).
+* Wenn Sie lieber MSTest verwenden, versuchen Sie [walkthrough creating unit tests with MSTest and the .NET Core-CLI (Exemplarische Vorgehensweise: Erstellen von Komponententests mit MSTest und der .NET Core-CLI)](unit-testing-with-mstest.md).
 * Weitere Informationen sowie Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 

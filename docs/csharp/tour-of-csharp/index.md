@@ -1,5 +1,5 @@
 ---
-title: "Einführung in C# (Leitfaden für C#) | Microsoft-Dokumentation"
+title: "Einführung in C# - Leitfaden für C#"
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 keywords: ".NET, .NET Core, C#, C# Primer, Leitfaden für C#"
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f122f59dd6f194facd98f4c6fa7f84c658c02a90
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
 ms.contentlocale: de-de
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -81,7 +81,7 @@ Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine �
 * [Delegaten](delegates.md)
     - Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 * [Attribute](attributes.md)
-     * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
+    * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
 
 >[!div class="step-by-step"]
 [Weiter](program-structure.md)

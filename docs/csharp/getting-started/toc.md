@@ -5,6 +5,6 @@
 ## [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](library-with-visual-studio.md)
 ### [Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md)
 ### [Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017](consuming-library-with-visual-studio.md)
-## [Erste Schritte mit Visual Studio Code](with-visual-studio-code.md)
+## [Erste Schritte mit C# und Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 <!--## [🔧 Getting started with cross-platform tools](with-cross-platform-tools.md)-->
 <!--## [🔧 Getting started with C# Interactive](with-csharp-interactive.md)-->

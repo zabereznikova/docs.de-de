@@ -1,72 +1,90 @@
 ---
-title: "Declared Elements in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: Deklarierte Elemente in Visual Basic
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# Declared Elements in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
-Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert wird.  Deklarierte Elemente können Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, Verweise auf externe Prozeduren, Operatoren, Eigenschaften, Ereignisse und Delegaten sein.  
+---
+# <a name="declared-elements-in-visual-basic"></a>Deklarierte Elemente in Visual Basic
+Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert ist. Deklarierte Elemente enthalten Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, externe Prozedurverweise, Operatoren, Eigenschaften, Ereignisse und Delegaten.  
   
- Deklarationsanweisungen enthalten folgende Elemente:  
+ Deklarationsanweisungen beinhalten Folgendes:  
   
--   [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+-   [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)  
+-   [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+-   [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module Statement](../../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface Statement](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [Interface-Anweisung](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Statement](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare-Anweisung](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event Statement](../../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [Event-Anweisung](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Delegate Statement](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+-   [Delegate-Anweisung](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## In diesem Abschnitt  
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- Beschreibt, wie Elemente benannt werden und welche Rolle die Groß\- und Kleinschreibung spielt.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ Beschreibt, wie Elemente benannt werden und wie man Groß- und Kleinschreibung verwendet.  
   
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- Behandelt Merkmale deklarierter Elemente, z. B. den Gültigkeitsbereich.  
+ [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ Behandelt Eigenschaften, z.B. den Bereich, über die deklarierte Elemente verfügen.  
   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- Erläutert, wie der Compiler einen Verweis einer Deklaration zuordnet und wie Namen qualifiziert werden.  
+ [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ Beschreibt, wie der Compiler einen Verweis auf eine Deklaration übereinstimmt und wie man einen Namen qualifiziert.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Programmstruktur und Codekonventionen](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Gibt Richtlinien dafür vor, wie Sie den Code verändern können, damit er einfacher zu lesen, zu verstehen und zu verwalten ist.  
+ Präsentiert Richtlinien, durch die der Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten ist.  
   
- [Statements](../../../../visual-basic/language-reference/statements/index.md)  
- Beschreibt Anweisungen, die Prozeduren, Variablen, Arrays und Konstanten benennen und definieren.  
+ [Anweisungen](../../../../visual-basic/language-reference/statements/index.md)  
+ Beschreibt die Anweisungen, die Namen und Prozeduren, Variablen, Arrays und Konstanten definieren.  
   
- [Declaration Contexts and Default Access Levels](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- Listet die Typen deklarierter Elemente auf und stellt für jeden Typ die Deklarationsanweisung, den Kontext, in dem Sie ihn deklarieren können, und seine Standardzugriffsebene dar.
+ [Deklarationskontexte und Standardzugriffsebenen](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ Listet die Typen der deklarierten Elemente auf und zeigt für jedes seine Deklarationsanweisung, in welchem Kontext Sie es deklarieren können und seine Standardzugriffsebene an.
+

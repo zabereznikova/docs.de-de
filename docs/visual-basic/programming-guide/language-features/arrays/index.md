@@ -1,5 +1,5 @@
 ---
-title: Arrays in Visual Basic | Microsoft-Dokumentation
+title: Arrays in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: de-de
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
@@ -112,7 +112,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 -   Der im Element enthaltene Wert steht für die Anzahl der Schüler in dieser Jahrgangsstufe.  
   
- ![Bild des Arrays mit der Anzahl von Schülern](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool")  
+ ![Bild des Arrays mit der Anzahl von Studenten](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool")  
 Elemente des "students"-Arrays  
   
  Das folgende Beispiel zeigt, wie auf das erste, zweite und letzte Element des `students`-Arrays verwiesen wird.  
@@ -185,7 +185,7 @@ Elemente des "students"-Arrays
   
  [!code-vb[VbVbalrArrays#41](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#41)]  
   
- Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For...Next` -Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A>-Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` gibt den hohen Indexwert für die erste Dimension und `GetUpperBound(1)` gibt den hohen Indexwert für die zweite Dimension zurück.  
+ Im folgenden Beispiel wird ein mehrdimensionales Array mit einer `For...Next` -Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A> -Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` gibt den hohen Indexwert für die erste Dimension und `GetUpperBound(1)` gibt den hohen Indexwert für die zweite Dimension zurück.  
   
  [!code-vb[VbVbalrArrays#42](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#42)]  
   
@@ -224,7 +224,7 @@ Elemente des "students"-Arrays
   
  Unter den folgenden Bedingungen müssen Sie eventuell ein Array der Länge 0 (null) erstellen:  
   
--   Der Code muss, ohne eine <xref:System.NullReferenceException>-Ausnahme auszulösen, auf Member der <xref:System.Array>-Klasse zugreifen, beispielsweise auf <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Funktion wie <xref:Microsoft.VisualBasic.Information.UBound%2A> aufrufen.  
+-   Der Code muss, ohne eine <xref:System.NullReferenceException> -Ausnahme auszulösen, auf Member der <xref:System.Array> -Klasse zugreifen, beispielsweise auf <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Funktion wie <xref:Microsoft.VisualBasic.Information.UBound%2A>aufrufen.  
   
 -   Sie möchten den verwendeten Code dadurch vereinfachen, dass eine Überprüfung auf das Vorhandensein von `Nothing` als Sonderfall entfällt.  
   
@@ -235,22 +235,22 @@ Elemente des "students"-Arrays
   
  Im folgenden Beispiel wird ein dreidimensionales Array deklariert.  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
  Die Gesamtgröße des Arrays in der Variablen `prices` ist (3 + 1) x (4 + 1) x (5 + 1) = 120.  
   
- Sie können die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A>-Eigenschaft bestimmen. Sie können die Länge der einzelnen Dimensionen eines mehrdimensionalen Arrays mithilfe der <xref:System.Array.GetLength%2A>-Methode bestimmen.  
+ Sie können die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A>-Eigenschaft bestimmen. Sie können die Länge der einzelnen Dimensionen eines mehrdimensionalen Arrays mithilfe der <xref:System.Array.GetLength%2A> -Methode bestimmen.  
   
- Sie können die Größe einer Arrayvariablen ändern, indem Sie ihr ein neues Arrayobjekt zuweisen oder indem Sie die `ReDim`-Anweisung verwenden.  
+ Sie können die Größe einer Arrayvariablen ändern, indem Sie ihr ein neues Arrayobjekt zuweisen oder indem Sie die `ReDim` -Anweisung verwenden.  
   
  Mehrere Faktoren wirken sich auf die Arraygröße aus.  
   
 |||  
 |---|---|  
 |Dimensionslänge|Der Index jeder Dimension ist nullbasiert, d. h. er reicht von 0 bis zur Obergrenze. Die Länge einer bestimmten Dimension ist deshalb um 1 größer als die deklarierte Obergrenze dieser Dimension.|  
-|Längenbeschränkungen|Die Länge jeder Dimension eines Arrays ist auf den maximalen Wert des `Integer`-Datentyps beschränkt, der (2 ^ 31) - 1 ist. Die Gesamtgröße eines Arrays richtet sich nach dem verfügbaren Arbeitsspeicher des Systems und ist damit ebenfalls beschränkt. Wenn Sie versuchen, ein Array zu initialisieren, das die Kapazität des verfügbaren RAM-Arbeitsspeichers übersteigt, löst die Common Language Runtime eine <xref:System.OutOfMemoryException>-Ausnahme aus.|  
+|Längenbeschränkungen|Die Länge jeder Dimension eines Arrays ist auf den maximalen Wert des `Integer`-Datentyps beschränkt, der (2 ^ 31) - 1 ist. Die Gesamtgröße eines Arrays richtet sich nach dem verfügbaren Arbeitsspeicher des Systems und ist damit ebenfalls beschränkt. Wenn Sie versuchen, ein Array zu initialisieren, das die Kapazität des verfügbaren RAM-Arbeitsspeichers übersteigt, löst die Common Language Runtime eine <xref:System.OutOfMemoryException> -Ausnahme aus.|  
 |Größe und Elementgröße|Die Größe eines Arrays ist vom Datentyp seiner Elemente unabhängig. Die Größe stellt immer die Gesamtzahl der Elemente dar, nicht die Anzahl an Bytes, die die Elemente im Speicher belegen.|  
 |Speicherverbrauch|Es gibt keine verbindlichen Angaben darüber, wie ein Array gespeichert wird. Der Speicherverbrauch variiert auf Plattformen mit unterschiedlichen Datenbreiten, d. h. ein und dasselbe Array kann auf einem 64-Bit-System mehr Speicherplatz benötigen als auf einem 32-Bit-System. Abhängig von der Systemkonfiguration beim Initialisieren eines Arrays kann die Common Language Runtime (CLR) Speicher so zuweisen, dass die Elemente auf sehr engem Raum gespeichert werden oder nur die natürlichen Hardwarebeschränkungen gelten. Ein Array benötigt außerdem zusätzlichen Speicher für seine Steuerungsinformationen. Der Bedarf an zusätzlichem Speicher nimmt mit jeder hinzugefügten Dimension zu.|  
   
@@ -261,13 +261,13 @@ Dim prices(3, 4, 5) As Long
   
  Sie können den Datentyp eines Arrays oder seiner Elemente auf verschiedene Arten ermitteln.  
   
--   Sie können die <xref:System.Object.GetType%2A?displayProperty=fullName>-Methode für die Variable aufrufen, um ein <xref:System.Type>-Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type>-Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
+-   Sie können die <xref:System.Object.GetType%2A?displayProperty=fullName> -Methode für die Variable aufrufen, um ein <xref:System.Type> -Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type> -Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
   
--   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A>-Funktion übergeben, um den Namen des Laufzeittyps als `String` zu erhalten.  
+-   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A> -Funktion übergeben, um den Namen des Laufzeittyps als `String` zu erhalten.  
   
--   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.VarType%2A>-Funktion übergeben, um einen `VariantType`-Wert zu erhalten, der die Typklassifikation der Variablen darstellt.  
+-   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.VarType%2A> -Funktion übergeben, um einen `VariantType` -Wert zu erhalten, der die Typklassifikation der Variablen darstellt.  
   
- Im folgenden Beispiel wird die `TypeName`-Funktion aufgerufen, um den Typ des Arrays und den Typ der Elemente im Array zu bestimmen. Der Arraytyp ist `Integer(,)` , und die Elemente im Array sind vom Typ `Integer`.  
+ Im folgenden Beispiel wird die `TypeName` -Funktion aufgerufen, um den Typ des Arrays und den Typ der Elemente im Array zu bestimmen. Der Arraytyp ist `Integer(,)` , und die Elemente im Array sind vom Typ `Integer`.  
   
  [!code-vb[VbVbalrArrays#15](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#15)]  
   
@@ -278,7 +278,7 @@ Dim prices(3, 4, 5) As Long
   
  Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.  
   
- Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
+ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName> -Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
   
  Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   

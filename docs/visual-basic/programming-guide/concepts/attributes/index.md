@@ -1,5 +1,5 @@
 ---
-title: "Übersicht über Attribute (Visual Basic) | Microsoft-Dokumentation"
+title: "Übersicht über Attribute (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
@@ -42,7 +43,7 @@ Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Inform
 ## <a name="using-attributes"></a>Verwenden von Attributen  
  Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In Visual Basic ist ein Attribut in spitzen Klammern eingeschlossen (\< >). Es muss in derselben Zeile direkt vor dem Element angezeigt werden, auf das es angewendet wird.  
   
- In diesem Beispiel wird das <xref:System.SerializableAttribute>-Attribut verwendet, um ein spezifisches Merkmal auf eine Klasse anzuwenden:  
+ In diesem Beispiel wird das <xref:System.SerializableAttribute>-Attribut benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:  
   
 ```vb  
 <System.Serializable()> Public Class SampleClass  
@@ -50,7 +51,7 @@ Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Inform
 End Class  
 ```  
   
- Eine Methode mit dem Attribut „<xref:System.Runtime.InteropServices.DllImportAttribute>“ wird wie folgt deklariert:  
+ Eine Methode mit dem Attribut <xref:System.Runtime.InteropServices.DllImportAttribute> wird wie folgt deklariert:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -75,7 +76,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- Einige Attribute können für eine bestimmte Entität mehrmals angegeben werden. Ein Beispiel für solche mehrfach verwendeten Attribute ist „<xref:System.Diagnostics.ConditionalAttribute>“:  
+ Einige Attribute können für eine bestimmte Entität mehrmals angegeben werden. Ein Beispiel für ein solches mehrfach verwendbares Attribut ist <xref:System.Diagnostics.ConditionalAttribute>:  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -124,9 +125,9 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Häufige Verwendungsmöglichkeiten für Attribute  
  Die folgende Liste enthält einige häufige Verwendungsmöglichkeiten von Attributen im Code:  
   
--   Kennzeichnen von Methoden mit dem `WebMethod`-Attribut in Webdiensten, um anzugeben, dass die Methode über das SOAP-Protokoll aufrufbar sein sollte. Weitere Informationen finden Sie unter „<xref:System.Web.Services.WebMethodAttribute>“.  
+-   Kennzeichnen von Methoden mit dem `WebMethod`-Attribut in Webdiensten, um anzugeben, dass die Methode über das SOAP-Protokoll aufrufbar sein sollte. Weitere Informationen finden Sie unter <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Beschreiben, wie Methodenparameter bei der Interaktion mit systemeigenem Code gemarshallt werden sollen. Weitere Informationen finden Sie unter „<xref:System.Runtime.InteropServices.MarshalAsAttribute>“.  
+-   Beschreiben, wie Methodenparameter bei der Interaktion mit systemeigenem Code gemarshallt werden sollen. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
 -   Beschreiben der COM-Eigenschaften für Klassen, Methoden und Schnittstellen.  
   
@@ -163,3 +164,4 @@ Module: CLSCompliant(True)>
  [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)  (Visual Basic-Programmierhandbuch)  
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  (Reflektion (Visual Basic))  
  [Attribute](https://msdn.microsoft.com/library/5x6cd29c)
+
