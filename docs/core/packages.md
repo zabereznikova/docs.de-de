@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 .NET Core ist eine Plattform, die aus NuGet-Paketen besteht. Einige Produkte profitieren von differenzierten Paketdefinitionen während andere von undifferenzierten profitieren. Um dieser Dualität entgegenzukommen, wird dieses Produkt als eine Gruppe von differenzierten Paketen verteilt und dann in undifferenzierteren Blöcken mit einem Pakettyp beschrieben, der informell als „Metapaket“ bekannt ist.
 
-Jedes .NET Core-Paket unterstützt die Ausführung auf mehreren als Framework dargestellten .NET-Laufzeiten. Einige dieser Frameworks sind traditionelle Frameworks, wie z.B. `net46`, das das .NET Framework darstellt. Eine andere Gruppe sind neue Frameworks, die man sich als „paketbasierte Frameworks“ vorstellen kann, die ein neues Modell zum Definieren von Frameworks einführen. Diese paketbasierten Frameworks sind vollständig als Pakete formuliert und definiert, und bilden dadurch eine starke Beziehung zwischen Paketen und Frameworks.
+Jedes .NET Core-Paket unterstützt die Ausführung in mehreren als Framework dargestellten .NET-Implementierungen. Einige dieser Frameworks sind traditionelle Frameworks, wie z.B. `net46`, das das .NET Framework darstellt. Eine andere Gruppe sind neue Frameworks, die man sich als „paketbasierte Frameworks“ vorstellen kann, die ein neues Modell zum Definieren von Frameworks einführen. Diese paketbasierten Frameworks sind vollständig als Pakete formuliert und definiert, und bilden dadurch eine starke Beziehung zwischen Paketen und Frameworks.
 
 ## <a name="packages"></a>Pakete
 

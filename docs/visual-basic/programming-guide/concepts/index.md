@@ -1,10 +1,7 @@
 ---
 title: Programmierkonzepte (Visual Basic)
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -20,10 +17,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11e93cbb48a0d47dccef8ceb2e501ca5cf4d18f4
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 96c9ec0a5bd9f6b0b2a460e8be15b4f936432016
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="programming-concepts-visual-basic"></a>Programmierkonzepte (Visual Basic)
@@ -38,12 +35,12 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.
 |[Übersicht über Attribute (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Beschreibt, wie zusätzliche Informationen über Programmierelemente, wie Typen, Felder, Methoden und Eigenschaften, mit Attributen bereitgestellt werden können.|  
 |[Aufruferinformationen (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Beschreibt, wie Informationen zum Aufrufer einer Methode abgerufen werden. Diese Informationen umfassen den Dateipfad und die Zeilennummer des Quellcodes sowie den Membernamen des Aufrufers.|  
 |[Auflistungen (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|Beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.|  
-|[Kovarianz und Kontravarianz (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)|Zeigt, wie die implizite Konvertierung von generischen Typparametern in Schnittstellen und Delegaten aktiviert wird.|  
+|[Kovarianz und Kontravarianz (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Zeigt, wie die implizite Konvertierung von generischen Typparametern in Schnittstellen und Delegaten aktiviert wird.|  
 |[Ausdrucksbaumstrukturen (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Erläutert, wie Sie Ausdrucksbaumstrukturen für die dynamische Änderung von ausführbarem Codes verwenden können.|  
 |[Iteratoren (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|Beschreibt Iteratoren, die verwendet werden, um Auflistungen zu durchlaufen und um Elemente einzeln zurückzugeben.|  
 |[Language-Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Behandelt die leistungsstarken Abfragefunktionen in der Sprachsyntax von Visual Basic sowie das Abfragemodell für relationale Datenbanken, XML-Dokumente, Datasets und speicherinterne Auflistungen.|  
 |[Objektorientierte Programmierung (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Beschreibt allgemeine objektorientierte Konzepte, einschließlich Kapselung, Vererbung und Polymorphie.|  
-|[Reflektion (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Erläutert, wie Sie mithilfe von Reflektion Instanzen von Typen dynamisch erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen können. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann.|  
+|[Reflektion (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Erläutert, wie Sie mithilfe von Reflektion Instanzen von Typen dynamisch erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen können. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann.|
 |[Serialisierung (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Beschreibt wichtige Konzepte der binären, XML- und SOAP-Serialisierung.|  
 |[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Bietet einen Überblick über das .NET-Threadingmodell und veranschaulicht das Schreiben von Code, mit dem mehrere Aufgaben gleichzeitig ausgeführt werden können, um die Leistung und die Reaktionsgeschwindigkeit der Anwendung zu verbessern.|  
   
@@ -51,5 +48,5 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.
   
 |||  
 |---|---|  
-|[Tipps zur Leistungssteigerung](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Erläutert verschiedene grundlegende Regeln, die Ihnen helfen können, die Leistung der Anwendung zu verbessern.|
+|[Tipps zur Leistungssteigerung](../../../framework/performance/performance-tips.md) | Erläutert verschiedene grundlegende Regeln, die Ihnen helfen können, die Leistung der Anwendung zu verbessern.|
 

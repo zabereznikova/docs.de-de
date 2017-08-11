@@ -11,10 +11,10 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 252b67a528b9cc666a5353b7c4a4c7e2c488e7af
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
  
@@ -53,7 +53,7 @@ Zusätzliche Images zu den optimierten Szenarios für Entwicklung, Erstellung un
 
 - `microsoft/dotnet:<version>-onbuild`: Das Image **microsoft/dotnet:1.0.0-preview2-onbuild** enthält [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild) Trigger. Der Buildvorgang [KOPIERT](https://docs.docker.com/engine/reference/builder/#/copy) die Anwendung, führt `dotnet restore` aus und erstellt eine [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` Anweisung, um die Anwendung auszuführen, wenn das Docker-Image ausgeführt wird. Auch wenn es kein optimiertes Image für die Produktion ist, können einige es hilfreich finden, einfach ihren Quellcode in ein Image zu kopieren und auszuführen. 
 
-- `microsoft/dotnet:<version>-core-deps`: Das Image **microsoft/dotnet:1.0.0-core-deps** zum Ausführen eigenständiger Anwendungen. Es enthält das Betriebssystem mit allen nativen Abhängigkeiten, die von .NET Core benötigt werden. Dieses Image kann auch als Basisimage verwendet werden, für Ihre eigenen benutzerdefinierten CoreFX oder CoreCLR Builds. Während die Variante **onbuild** optimiert ist, um einfach Code in einem Image zu platzieren und es auszuführen, ist dieses Image darauf optimiert, nur die benötigten Betriebssystemabhängigkeiten zum Ausführen von .NET Core-Apps bereitzustellen, die die .NET Runtime im Anwendungspaket haben. Dieses Image ist im Allgemeinen nicht für das Ausführen mehrerer .NET Core-Container auf dem gleichen Host optimiert, da jedes Image die .NET Core Runtime in der Anwendung hat und eine Image-Überlagerung keinen Vorteil bringt.   
+- `microsoft/dotnet:<version>-core-deps`: Das Image **microsoft/dotnet:1.0.0-core-deps** zum Ausführen eigenständiger Anwendungen. Es enthält das Betriebssystem mit allen nativen Abhängigkeiten, die von .NET Core benötigt werden. Dieses Image kann auch als Basisimage verwendet werden, für Ihre eigenen benutzerdefinierten CoreFX oder CoreCLR Builds. Während die Variante **onbuild** so optimiert ist, dass Sie einfach Code in einem Image platzieren und ausführen können, ist dieses Image dafür optimiert, dass nur die benötigten Betriebssystemabhängigkeiten zum Ausführen von .NET Core-Apps bereitgestellt werden, bei denen die .NET Runtime im Anwendungspaket enthalten ist. Dieses Image ist im Allgemeinen nicht für das Ausführen mehrerer .NET Core-Container auf dem gleichen Host optimiert, da jedes Image die .NET Core Runtime in der Anwendung hat und eine Image-Überlagerung keinen Vorteil bringt.   
 
 Aktuelle Versionen jeder Variante:
 
@@ -62,7 +62,7 @@ Aktuelle Versionen jeder Variante:
 - `microsoft/dotnet:core`
 - `microsoft/dotnet:core-deps`
 
-Es folgt eine Liste der Images nach einem `docker pull <imagename>` auf einem Entwicklungscomputer mit den verschiedenen Größen. Beachten Sie, dass die Entwicklungs/Build-Variante `microsoft/dotnet:1.0.0-preview2-sdk` größer ist, da sie das SDK zum Entwickeln und Erstellen der Anwendung enthält. Die Produktionsvariante `microsoft/dotnet:core` ist kleiner, da sie nur die .NET Core Runtime enthält. Das minimale Image `core-deps`, das unter Linux verwendet werden kann, ist sehr viel kleiner, jedoch muss die Anwendung eine private Kopie der .NET Runtime beinhalten. Da Container bereits private Isolationsbarrieren sind, verlieren Sie diese Optimierung, wenn mehrere Dotnet-basierte Container ausgeführt werden. 
+Es folgt eine Liste der Images nach einem `docker pull <imagename>` auf einem Entwicklungscomputer mit den verschiedenen Größen. Beachten Sie, dass die Entwicklungs/Build-Variante `microsoft/dotnet:1.0.0-preview2-sdk` größer ist, da sie das SDK zum Entwickeln und Erstellen der Anwendung enthält. Die Produktionsvariante `microsoft/dotnet:core` ist kleiner, da sie nur die .NET Core Runtime enthält. Das minimale Image `core-deps`, das unter Linux verwendet werden kann, ist sehr viel kleiner, jedoch muss die Anwendung eine private Kopie der .NET Runtime enthalten. Da Container bereits private Isolationsbarrieren sind, verlieren Sie diese Optimierung, wenn mehrere Dotnet-basierte Container ausgeführt werden. 
 
 ```
 REPOSITORY          TAG                     IMAGE ID            SIZE

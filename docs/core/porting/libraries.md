@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ In diesem Artikel wird vorausgesetzt, dass:
 Sie sollten sich auch mit dem Inhalt in den folgenden Themen vertraut machen:
 
 [.NET-Standard](~/docs/standard/net-standard.md)   
-Das Thema beschreibt die formale Spezifikation von .NET-APIs, die für alle .NET-Runtimes verfügbar sein sollen.
+Dieses Thema beschreibt die formale Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verfügbar sein sollen.
 
 [Pakete, Metapakete und Frameworks](~/docs/core/packages.md)   
-In diesem Artikel wird erläutert, wie .NET Core Pakete definiert und verwendet und wie Pakete den auf mehreren .NET-Runtimes ausgeführten Code unterstützen.
+In diesem Artikel wird erläutert, wie .NET Core Pakete definiert und verwendet und wie Pakete Code unterstützen, der in mehreren .NET-Implementierungen ausgeführt wird.
 
 [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](~/docs/core/tutorials/libraries.md)   
 Dieses Thema erläutert, wie Sie mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreiben.

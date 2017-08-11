@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -50,7 +50,7 @@ In diesem Artikel finden Sie eine Tabelle, in der die Versionen von .NET Standar
 
 Im Folgenden wird erklärt, was diese Tabelle für das Erstellen einer Bibliothek bedeutet:
 
-Die Version von .NET Plattform Standard, die Sie auswählen, bildet einen Kompromiss zwischen dem Zugang zu den neuesten APIs und der Möglichkeit, mehr .NET-Plattformen und Frameworkversionen als Ziel festzulegen. Sie kontrollieren den Bereich der Plattformen, die als Ziel gesetzt werden können, und der Versionen, indem Sie eine `netstandardX.X`-Version auswählen (`X.X` steht für eine Versionsnummer) und sie zu Ihrer Projektdatei (`.csproj` oder `.fsproj`) hinzufügen.
+Die Version von .NET Standard, die Sie auswählen, bildet einen Kompromiss zwischen dem Zugang zu den neuesten APIs und der Möglichkeit, mehr .NET-Implementierungen und .NET Standard-Versionen nutzen zu können. Sie kontrollieren den Bereich der Plattformen, die als Ziel gesetzt werden können, und der Versionen, indem Sie eine `netstandardX.X`-Version auswählen (`X.X` steht für eine Versionsnummer) und sie zu Ihrer Projektdatei (`.csproj` oder `.fsproj`) hinzufügen.
 
 Wenn Sie .NET Standard als Ziel festlegen, stehen Ihnen je nach Bedarf drei Optionen zur Verfügung.
 
