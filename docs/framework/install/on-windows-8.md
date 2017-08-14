@@ -2,38 +2,37 @@
 title: Installieren von .NET Framework unter Windows 8
 description: Informationen zum Installieren von .NET Framework unter Windows 8
 author: rlander
+ms.author: mairaw
 keywords: .Net Framework, installieren
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
 ms.devlang: dotnet
-ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3271254ce60a0ac882510eae7c91b9aa64865b22
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: dc4a5e943e5824977a574bb97e391d725274953e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-on-windows-8"></a>Installieren von .NET Framework unter Windows 8
 
-Möglicherweise wird .NET Framework zum Ausführen einer Anwendung auf Windows 8 benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
+Möglicherweise wird .NET Framework zum Ausführen einer App auf Windows 8 benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
 
-## <a name="net-framework-462"></a>.NET Framework 4.6.2
+## <a name="net-framework-47"></a>.NET Framework 4.7
 
-Sie können [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) oder höher auf Windows 8 installieren.
+Sie können [.NET Framework 4.7](https://www.microsoft.com/net/download/framework) auf Windows 8 installieren.
 
-.NET Framework 4.6.2 ist im Lieferumfang von [Windows 10 Anniversary Update](https://www.microsoft.com/software-download/windows10) enthalten.
+.NET Framework 4.7 ist im [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10) enthalten.
 
-.NET Framework 4.6.2 kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
+.NET Framework 4.7 unterstützt Apps, die für .NET Framework 4.0 oder höher entwickelt wurden. Andere Versionen von .NET Framework sind auf der Webseite [Download .NET Framework (Herunterladen von .NET Framework)](https://www.microsoft.com/net/download/framework) verfügbar.
 
-## <a name="net-framework-35"></a>.NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Folgen Sie den Anweisungen zum Installieren von [.NET Framework 3.5 unter Windows 10](dotnet-35-windows-10.md).
 
-.NET Framework 3.5 kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 1.0 bis 3.5 entwickelt wurden.
+.NET Framework 3.5 unterstützt Apps, die für .NET Framework 1.0 bis 3.5 entwickelt wurden.
 
 ## <a name="help"></a>Hilfe
 

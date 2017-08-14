@@ -1,19 +1,17 @@
 ---
 title: Installieren von .NET Framework unter Windows 7 SP1
-description: Informationen zum Installieren von .NET Framework unter Windows 7 SP1
+description: Informationen zum Installieren von .NET Framework unter Windows 7 SP1.
 author: rlander
+ms.author: mairaw
 keywords: .Net Framework, installieren
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
-ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f878de07fd7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b5f9dd3fc636bbb6dbec6be43288e34028aaa1f2
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: a9ee34089237adf6fe1d277add72a9f36a49e11e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -21,19 +19,19 @@ ms.lasthandoff: 07/28/2017
 
 Möglicherweise wird .NET Framework zum Ausführen einer Anwendung auf Windows 7 SP1 benötigt. Sie können die neuesten unterstützten Versionen mithilfe der folgenden Schritte installieren. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
 
-## <a name="net-framework-462"></a>.NET Framework 4.6.2
+## <a name="net-framework-47"></a>.NET Framework 4.7
 
-Sie können [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) oder höher auf Windows 7 installieren.
+Sie können [.NET Framework 4.7](https://www.microsoft.com/net/download/framework) auf Windows 7 installieren.
 
-.NET Framework 4.6.2 ist im Lieferumfang von [Windows 10 Anniversary Update](https://www.microsoft.com/software-download/windows10) enthalten.
+.NET Framework 4.7 ist im [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10) enthalten.
 
-.NET Framework 4.6.2 kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
+.NET Framework 4.7 unterstützt Apps, die für .NET Framework 4.0 oder höher entwickelt wurden. Andere Versionen von .NET Framework sind auf der Webseite [Download .NET Framework (Herunterladen von .NET Framework)](https://www.microsoft.com/net/download/framework) verfügbar.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
 .NET Framework 3.5 ist in Windows 7 enthalten.
 
-.NET Framework 3.5 kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 1.0 bis 3.5 entwickelt wurden.
+.NET Framework 3.5 unterstützt Apps, die für .NET Framework 1.0 bis 3.5 entwickelt wurden.
 
 ## <a name="help"></a>Hilfe
 

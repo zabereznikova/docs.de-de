@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="net-core-and-open-source"></a>.NET Core und Open-Source
@@ -26,7 +26,7 @@ Dieses Thema enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>Was ist .NET Core?  
- .NET Core ist eine allgemeine, modulare, plattformübergreifende und Open Source-Implementierung der .NET-Plattform. Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt. Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Runtime. Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.  
+ .NET Core ist eine allgemeine, modulare, plattformübergreifende Open Source-Implementierung der .NET-Standards. Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt. Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Implementierung. Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.  
   
  Besuchen Sie für die ersten Schritte mit .NET Core die [.NET Core-Homepage](https://www.microsoft.com/net/core).  
   
