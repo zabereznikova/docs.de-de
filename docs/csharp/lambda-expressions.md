@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -58,7 +58,7 @@ Für gewöhnlich verwendet der Compiler den Typrückschluss, um Parametertypen z
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-Beachten Sie im vorherigen Beispiel, dass der Text eines Ausdruckslambdas ein Methodenaufruf sein kann. Wenn Sie allerdings Ausdrucksbaumstrukturen erstellen, die außerhalb des .NET Frameworks ausgewertet werden, wie z.B. in SQL Server oder Entity Framework (EF), sollten Sie davon absehen, Methodenaufrufe in Lambdaausdrücken zu verwenden, da die Methoden möglicherweise außerhalb des Kontexts der .NET-Laufzeit bedeutungslos sind. Falls Sie dennoch Methodenaufrufe verwenden möchten, prüfen Sie diese gründlich, um sicherzustellen, dass die Methodenaufrufe erfolgreich aufgelöst werden können.
+Beachten Sie im vorherigen Beispiel, dass der Text eines Ausdruckslambdas ein Methodenaufruf sein kann. Wenn Sie allerdings Ausdrucksbaumstrukturen erstellen, die außerhalb des .NET Frameworks ausgewertet werden, wie z.B. in SQL Server oder Entity Framework (EF), sollten Sie davon absehen, Methodenaufrufe in Lambdaausdrücken zu verwenden, da die Methoden möglicherweise außerhalb des Kontexts der .NET-Implementierung bedeutungslos sind. Falls Sie dennoch Methodenaufrufe verwenden möchten, prüfen Sie diese gründlich, um sicherzustellen, dass die Methodenaufrufe erfolgreich aufgelöst werden können.
 
 ## <a name="statement-lambdas"></a>Anweisungslambdas ##
 
@@ -138,7 +138,7 @@ Die allgemeinen Regeln für Typrückschlüsse bei Lambdas lauten wie folgt:
 
 - Der Rückgabewert des Lambdas (falls vorhanden) muss implizit in den Rückgabetyp des Delegaten konvertiert werden können.
 
-Beachten Sie, dass Lambda-Ausdrücke keinen eigenen Typ haben, da das allgemeine Typsystem kein internes Konzept von "Lambda-Ausdrücken" aufweist. Es kann manchmal praktisch sein, informell vom "Typ" eines Lambda-Ausdrucks zu sprechen. In einem solchen Fall bezeichnet Typ den Delegattyp bzw. den @System.Linq.Expressions.Expression-Typ, in den der Lambda-Ausdruck konvertiert wird.
+Beachten Sie, dass Lambda-Ausdrücke keinen eigenen Typ haben, da das allgemeine Typsystem kein internes Konzept von "Lambda-Ausdrücken" aufweist. Es kann manchmal praktisch sein, informell vom "Typ" eines Lambda-Ausdrucks zu sprechen. In einem solchen Fall bezeichnet Typ den Delegattyp bzw. den @System.Linq.Expressions.Expression -Typ, in den der Lambda-Ausdruck konvertiert wird.
 
 ## <a name="variable-scope-in-lambda-expressions"></a>Variablenbereich in Lambda-Ausdrücken ##
 
