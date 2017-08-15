@@ -12,16 +12,13 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
+ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
-
-## <a name="introduction"></a>Einführung
 
 Dieses Tutorial macht Sie mit der Vererbung in C# vertraut. Vererbung ist eine Funktion der objektorientierten Programmiersprachen, die Ihnen ermöglicht, eine Basisklasse zu definieren, die eine bestimmte Funktionalität bietet (Daten und Verhalten), und abgeleitete Klassen zu definieren, die diese Funktionalität entweder übernehmen oder außer Kraft setzen.
 
@@ -122,13 +119,13 @@ Um zu sehen, was implizite Vererbung bedeutet, definieren wir eine neue Klasse `
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-Wir können dann die Reflektion (die uns ermöglicht, die Metadaten eines Typs zu überprüfen, um Informationen zu diesem Typ zu erhalten) verwenden, um eine Liste der Member abzurufen, die zum `SimpleClass`-Typ gehören. Obwohl wir keine Member in unserer `SimpleClass`-Klasse definiert haben, gibt die Ausgabe des Beispiels an, dass sie tatsächlich neun Member hat. Einer davon ist ein parameterloser (oder standardmäßiger) Konstruktor, der automatisch vom C#-Compiler für den `SimpleClass`-Typ angegeben wird. Die acht übrigen sind Member von <xref:System.Object>, der Typ, von dem alle Klassen und Schnittstellen im .NET-Typsystem letztlich implizit erben.
+Wir können dann die Reflektion (die uns ermöglicht, die Metadaten eines Typs zu überprüfen, um Informationen zu diesem Typ zu erhalten) verwenden, um eine Liste der Member abzurufen, die zum `SimpleClass`-Typ gehören. Obwohl wir keine Member in unserer `SimpleClass`-Klasse definiert haben, gibt die Ausgabe des Beispiels an, dass sie tatsächlich neun Member hat. Einer davon ist ein parameterloser (oder standardmäßiger) Konstruktor, der automatisch vom C#-Compiler für den `SimpleClass`-Typ angegeben wird. Die verbleibenden acht sind Member von <xref:System.Object>, dem Typ, von dem alle Klassen und Schnittstellen im .NET-Typsystem letztlich implizit erben.
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 Implizite Vererbung von der <xref:System.Object> -Klasse macht diese Methoden der `SimpleClass`-Klasse verfügbar:
 
-- Die öffentliche `ToString`-Methode, die ein `SimpleClass`-Objekt in seine Zeichenfolgendarstellung konvertiert, den vollqualifizierten Typnamen. In diesem Fall gibt die `ToString`-Methode die Zeichenfolge „SimpleClass“ zurück.
+- Die öffentliche `ToString`-Methode, die ein `SimpleClass`-Objekt in seine Zeichenfolgendarstellung konvertiert, gibt den vollqualifizierten Typnamen zurück. In diesem Fall gibt die `ToString`-Methode die Zeichenfolge „SimpleClass“ zurück.
 
 - Drei Methoden, die zwei Objekte auf Gleichheit testen: die öffentliche `Equals(Object)`-Instanzmethode, die öffentliche statische `Equals(Object, Object)`-Methode und die öffentliche statische `ReferenceEquals(Object, Object)`-Methode. Standardmäßig testen diese Methoden auf Verweisgleichheit; d.h., um gleich zu sein, müssen zwei Objektvariablen auf das gleiche Objekt verweisen.
 
@@ -160,7 +157,7 @@ Mit Vererbung wird normalerweise eine „ist ein“-Beziehung zwischen einer Bas
 > [!NOTE]
 > Eine Klasse oder Struktur kann eine oder mehrere Schnittstellen implementieren. Die Schnittstellenimplementierung wird zwar oft als Problemumgehung für einzelne Vererbung oder Möglichkeit der Verwendung von Vererbung mit Strukturen dargestellt, doch sie soll eine andere Beziehung (eine „tun können“-Beziehung) zwischen einer Schnittstelle und ihrem implementierenden Typ ausdrücken als Vererbung. Eine Schnittstelle definiert eine Teilmenge der Funktionalität (z.B. die Möglichkeit zum Testen auf Gleichheit, zum Vergleichen oder Sortieren von Objekten oder zum Unterstützen kulturspezifischer Analyse und Formatierung), die die Schnittstelle den implementierenden Typen zur Verfügung stellt.
 
-Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Moke`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile` -Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die <xref:System.Object.ToString%2A?displayProperty=fullName> -Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile` -Instanz anstelle der `Automobile` -Klasse identifiziert.
+Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Make`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile` -Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die <xref:System.Object.ToString%2A?displayProperty=fullName> -Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile` -Instanz anstelle der `Automobile` -Klasse identifiziert.
 
 [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 

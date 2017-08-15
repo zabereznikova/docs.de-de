@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f88dc299bdc503ae83740e4c1259aa1896481760
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="getting-started-with-c"></a>Erste Schritte mit C#
@@ -41,7 +41,7 @@ Die folgenden Themen erleichtern Ihnen den Einstieg in die Entwicklung von Anwen
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in die Programmiersprache C# und in .NET Framework](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
- Bietet eine Übersicht über die Programmiersprache C# und die .NET-Plattform  
+ Bietet eine Übersicht über die Programmiersprache C# und .NET.  
   
  [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  
  Bietet Links zu Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftretenden Problemen finden.  

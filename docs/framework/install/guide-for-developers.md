@@ -1,7 +1,7 @@
 ---
 title: "Installieren von.NET Framework für Entwickler"
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da0e9bd789068d94feda3c2a6ab0d35606d423a1
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
-.NET ist integraler Bestandteil vieler Anwendungen unter Windows und stellt allgemeine Funktionen für diese Anwendungen bereit. Für Entwickler stellt .NET Framework ein umfassendes und konsistentes Programmiermodell zum Erstellen von Anwendungen bereit, die eine visuell beeindruckende Benutzeroberfläche und eine nahtlose und sichere Kommunikation bieten.  
+.NET ist integraler Bestandteil vieler Apps unter Windows und stellt allgemeine Funktionen für diese Apps bereit. Für Entwickler stellt .NET Framework ein umfassendes und konsistentes Programmiermodell zum Erstellen von Apps bereit, die eine visuell beeindruckende Benutzeroberfläche und eine nahtlose und sichere Kommunikation bieten.  
 
 Dieser Artikel stellt Links für die Installation von .NET Framework 4.5 und dessen Punktreleases (4.5.1, 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und dessen Punktreleases (4.6.1, 4.6.2) sowie .NET Framework 4.7 auf Ihrem Computer bereit. Als Entwickler können Sie außerdem .NET Framework über diese Links herunterladen und mit den Apps verteilen.
 

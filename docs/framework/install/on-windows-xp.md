@@ -2,18 +2,17 @@
 title: Installieren von .NET Framework unter Windows XP
 description: Informationen zum Installieren von .NET Framework unter Windows XP
 author: rlander
+ms.author: mairaw
 keywords: .Net Framework, installieren
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
 ms.devlang: dotnet
-ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a4bf14ad57495c5d6cd2ba40e2bd63b91551e33
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -22,13 +21,13 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 > Für Windows XP wird von Microsoft kein Support mehr zur Verfügung gestellt. Es wird empfohlen, auf Windows 10 zu aktualisieren. Für Windows 10 wird Support bereitgestellt, und es unterstützt die neueste Version von .NET Framework. Dieses Dokument dient ausschließlich als nützlicher Ratgeber zur Problembehandlung.
 
-Möglicherweise wird .NET Framework zum Ausführen einer Anwendung auf Windows XP benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
+Möglicherweise wird .NET Framework zum Ausführen einer App auf Windows XP benötigt. Die folgenden Anweisungen helfen Ihnen. Die Anweisungen sind von der benötigten .NET Framework-Version abhängig.
 
 ## <a name="net-framework-45-and-later"></a>.NET Framework 4.5 und höher
 
 Sie können .NET Framework 4.5 oder höher nicht auf Windows XP installieren. Stattdessen müssen Sie auf eine neuere Windows-Version aktualisieren, um eine höhere Version von .NET Framework verwenden zu können.
 
-.NET Framework 4.6.2 ist im Lieferumfang von [Windows 10 Anniversary Update](https://www.microsoft.com/software-download/windows10) enthalten.
+.NET Framework 4.7 ist im [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10) enthalten.
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
