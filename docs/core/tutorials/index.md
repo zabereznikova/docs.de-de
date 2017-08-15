@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/13/2017
 
 ---
 
@@ -23,12 +23,13 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 
 ## <a name="building-applications-with-visual-studio-2017"></a>Erstellen von Anwendungen mit Visual Studio 2017
 
-- [Erstellen einer C#-Hello World-Anwendung](../../csharp/getting-started/with-visual-studio.md)
-- [Debuggen einer C#-Hello World-Anwendung](../../csharp/getting-started/debugging-with-visual-studio.md)
-- [Veröffentlichen einer C#-Hello World-Anwendung](../../csharp/getting-started/publishing-with-visual-studio.md)
-- [Erstellen einer C#-Klassenbibliothek](../../csharp/getting-started/library-with-visual-studio.md)
-- [Testen einer C#-Klassenbibliothek](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [Nutzen einer C#-Klassenbibliothek mit .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
+- [Erstellen einer C#-Hello World-Anwendung](with-visual-studio.md)
+- [Debuggen einer C#-Hello World-Anwendung](debugging-with-visual-studio.md)
+- [Veröffentlichen einer C#-Hello World-Anwendung](publishing-with-visual-studio.md)
+- [Erstellen einer C#-Klassenbibliothek](library-with-visual-studio.md)
+- [Erstellen einer Klassenbibliothek mit Visual Studio](vb-library-with-visual-studio.md)
+- [Testen einer Klassenbibliothek](testing-library-with-visual-studio.md)
+- [Nutzen einer Klassenbibliothek](consuming-library-with-visual-studio.md)
 - [Erstellen einer vollständigen C#-.NET Core-Projektmappe unter Windows](using-on-windows-full-solution.md)
 - [NoSQL-Tutorial: Erstellen einer DocumentDB-C#-Konsolenanwendung unter .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
@@ -46,7 +47,7 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 
 - [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der .NET Core CLI-Tools](using-with-xplat-cli.md)
 - [Organisieren und Testen von Projekten mit .NET Core CLI-Tools](testing-with-cli.md)
-- [Erste Schritte mit F#](../../fsharp/tutorials/getting-started/getting-started-command-line.md)
+- [Erste Schritte mit F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Andere
 - [Unittests in .NET Core mit dotnet-test](../testing/unit-testing-with-dotnet-test.md)
@@ -54,6 +55,7 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](libraries.md)
 - [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hosten von .NET Core von nativem Code](netcore-hosting.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten für „dotnet new“](create-custom-template.md)
 
 Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).
 
