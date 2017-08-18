@@ -1,6 +1,6 @@
 ---
 title: "Lokale Funktionen im Vergleich zu Lambdaausdrücken"
-description: "Warum lokale Funktionen besser geeignet als Lambdaausdrücke sein können"
+description: "Erfahren Sie, warum lokale Funktionen unter Umständen besser geeignet sind als Lambdaausdrücke."
 keywords: "C#, .NET, .NET Core, neueste Funktionen, Neuigkeiten, lokale Funktionen, Lambdaausdrücke"
 author: BillWagner
 ms.author: wiwagn
@@ -11,16 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 315d4c5ee1f16c4fe59599c3a37437b112b784f6
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 366d7465433f2786960e22418b8aa46ba10e1fd1
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 
 ### <a name="local-functions-compared-to-lambda-expressions"></a>Lokale Funktionen im Vergleich zu Lambdaausdrücken
 
-Auf den ersten Blick sind [lokale Funktionen](programming-guide/classes-and/structs/local-functions.md) und [Lambdaausdrücke](lambda-expressions.md) sehr ähnlich.
+Auf den ersten Blick sind [lokale Funktionen](programming-guide/classes-and-structs/local-functions.md) und [Lambdaausdrücke](lambda-expressions.md) sehr ähnlich.
 Je nach Ihren Anforderungen sind lokale Funktionen möglicherweise aber eine viel bessere und einfachere Lösung.
 
 Sehen wir uns die Unterschiede zwischen der Implementierungen des Fakultätsalgorithmus als lokale Funktion und als Lambdaausdruck an. Erste die Version mit einer lokalen Funktion:
