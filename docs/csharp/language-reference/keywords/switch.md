@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
-ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
+ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
+ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
@@ -100,7 +100,7 @@ Diese Anforderung wird normalerweise erfüllt, indem der switch-Abschnitt ausdr�
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen.  
+ Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `goto label`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen. Eine `goto`-Anweisung muss bei Nichtverwendung die Steuerung an eine konstante Bezeichnung übergeben. Diese Einschränkung ist notwendig, da der Versuch, die Steuerung an eine nicht konstante Bezeichnung zu übergeben, unerwünschte Nebeneffekte haben kann, z.B. kann die Steuerung an eine nicht beabsichtigte Position im Code übergeben werden, oder es kann eine Endlosschleife entstehen.
 
 ## <a name="case-labels"></a>case-Bezeichnungen
 
