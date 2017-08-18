@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Assemblyattributen | Microsoft-Dokumentation
+title: Festlegen von Assemblyattributen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9dd77aff85a810f462d2af77f1bfbe13b77e35dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="setting-assembly-attributes"></a>Festlegen von Assemblyattributen
@@ -91,3 +91,4 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

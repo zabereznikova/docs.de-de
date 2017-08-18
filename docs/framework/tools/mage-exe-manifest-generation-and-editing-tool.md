@@ -1,5 +1,5 @@
 ---
-title: Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten) | Microsoft-Dokumentation
+title: Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 68
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
@@ -114,7 +114,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
   
  Wenn Sie ein Bereitstellungsmanifest mithilfe der Option **-AppManifest** füllen, geht „Mage.exe“ davon aus, dass sich das Anwendungsmanifest im selben Verzeichnis wie das Bereitstellungsmanifest befindet, und zwar in einem Unterverzeichnis, das nach der aktuellen Bereitstellungsversion benannt ist. Das Bereitstellungsmanifest wird entsprechend konfiguriert. Wenn sich das Anwendungsmanifest in einem anderen Verzeichnis befinden soll, verwenden Sie die Option **-AppCodeBase** , um das alternative Verzeichnis festzulegen.  
   
- Das Bereitstellungs- und das Anwendungsmanifest müssen signiert werden, bevor Sie die Anwendung bereitstellen. Hinweise zum Signieren von Manifesten finden Sie unter [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).  
+ Das Bereitstellungs- und das Anwendungsmanifest müssen signiert werden, bevor Sie die Anwendung bereitstellen. Einen Leitfaden zum Signieren von Manifesten finden Sie unter [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).  
   
  Die Option **-TrustLevel** für Anwendungsmanifeste beschreibt den Berechtigungssatz, der für eine Anwendung erforderlich ist, damit sie auf dem Clientcomputer ausgeführt werden kann. Standardmäßig wird Anwendungen auf Grundlage der *Zone* , in der sich die zugehörige URL befindet, eine Vertrauensebene zugewiesen. Anwendungen, die über ein Unternehmensnetzwerk bereitgestellt werden, werden in der Regel in der Intranetzone platziert. Anwendungen, die über das Internet bereitgestellt werden, werden in der Internetzone platziert. In beiden Sicherheitszonen wird der Zugriff der Anwendung auf lokale Ressourcen eingeschränkt, wobei für die Intranetzone etwas geringere Einschränkungen der Berechtigungen gelten als für die Internetzone. Anwendungen in der FullTrust-Zone wird vollständiger Zugriff auf die lokalen Ressourcen eines Computers gewährt. Wenn Sie mithilfe der Option **-TrustLevel** eine Anwendung in dieser Zone platzieren, fordert die Trust-Manager-Komponente der CLR den Benutzer auf, anzugeben, ob diese höhere Vertrauensebene gewährt werden soll. Bei Bereitstellung der Anwendung über ein Unternehmensnetzwerk können Sie die Vertrauensebene der Anwendung mithilfe der Bereitstellung vertrauenswürdiger Anwendungen erhöhen, ohne dazu den Benutzer auffordern zu müssen.  
   
@@ -215,3 +215,4 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
  [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)   
  [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

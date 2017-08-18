@@ -1,13 +1,9 @@
 ---
-title: "Verzögertes Signieren einer Assembly | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 03/30/2017
+title: "Verzögertes Signieren einer Assembly"
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>Verzögertes Signieren einer Assembly
@@ -62,8 +58,8 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
   
      Mit den Optionen **–Vr** oder **–Vk** lässt sich optional eine SNK-Datei zum Testen der Schlüsselsignatur einbeziehen.  
   
-    > [!CAUTION]
-    >  Verwenden Sie die Optionen **-Vr** oder **–Vk** aber nur während der Entwicklung. Das Überspringen der Überprüfung einer Assembly kann ein erhebliches Sicherheitsrisiko darstellen. Wenn die Überprüfung einer Assembly übersprungen wird, besteht die Gefahr, dass deren vollständig angegebener Assemblyname (Assemblyname, Version, Kultur und öffentliches Schlüsseltoken) als falsche Identität einer böswilligen Assembly verwendet wird. Dadurch würde auch die Überprüfung der böswilligen Assembly übersprungen.  
+    > [!WARNING]
+    > Verlassen Sie sich für die Sicherheit nicht auf starke Namen. Diese Namen bieten lediglich eine eindeutige Identität.
   
     > [!NOTE]
     >  Wenn Sie während der Entwicklung mit Visual Studio auf einem 64-Bit-Computer das verzögerte Signieren verwenden und eine Assembly für **Any CPU** (Beliebige CPU) kompilieren, müssen Sie die Option **-Vr** möglicherweise zweimal anwenden. In Visual Studio ist **Beliebige CPU** der Wert der Buildeigenschaft **Zielplattform**. Wenn Sie über die Befehlszeile kompilieren, ist dies der Standardwert. Um Ihre Anwendung über die Befehlszeile oder über den Datei-Explorer auszuführen, nutzen Sie die 64-Bit-Version von [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md), um die Option **-Vr** auf die Assembly anzuwenden. Wenn Sie die Assembly zur Entwurfszeit in Visual Studio laden möchten (z.B., wenn die Assembly Komponenten enthält, die von anderen Assemblys in Ihrer Anwendung verwendet werden), verwenden Sie die 32-Bit-Version des Strong Name-Tools. Dies ist notwendig, weil der Just-in-Time-Compiler (JIT) die Assembly in nativem 64-Bit-Code kompiliert, wenn die Assembly über die Befehlszeile ausgeführt wird, und in nativem 32-Bit-Code, wenn die Assembly in die Entwurfszeitumgebung geladen wird.  
@@ -81,3 +77,4 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
  [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

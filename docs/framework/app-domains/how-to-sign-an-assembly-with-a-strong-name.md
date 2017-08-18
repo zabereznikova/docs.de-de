@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Signieren einer Assembly mit einem starken Namen | Microsoft -Dokumentation'
+title: 'Gewusst wie: Signieren einer Assembly mit einem starken Namen'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 548cc4ffd0f894c4f522552c5f032be4c94d3585
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Gewusst wie: Signieren einer Assembly mit einem starken Namen
@@ -33,7 +33,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 -   Mit dem [Assemblylinker-Tool (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) , um ein .NET Framework-Codemodul (eine NETMODULE-Datei) mit einer Schlüsseldatei zu verknüpfen.  
   
--   Mithilfe von Assemblyattributen, um die Informationen zum starken Namen in den Code einzufügen. Abhängig von dem Ort, an dem sich die zu verwendende Schlüsseldatei befindet, können Sie entweder das <xref:System.Reflection.AssemblyKeyFileAttribute>-Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute>-Attribut verwenden.  
+-   Mithilfe von Assemblyattributen, um die Informationen zum starken Namen in den Code einzufügen. Abhängig von dem Ort, an dem sich die zu verwendende Schlüsseldatei befindet, können Sie entweder das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut verwenden.  
   
 -   Mithilfe von Compileroptionen.  
   
@@ -76,12 +76,12 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>So signieren Sie eine Assembly mit einem starken Namen unter Verwendung von Attributen  
   
-1.  Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>-Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute>-Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
+1.  Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
   
 2.  Kompilieren Sie die Quellcodedatei normal.  
   
 > [!NOTE]
->  Die C#- und Visual Basic-Compiler geben Compilerwarnungen aus (CS1699 bzw. BC41008), wenn das <xref:System.Reflection.AssemblyKeyFileAttribute>-Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute>-Attribut im Quellcode auftreten. Sie können die Warnungen ignorieren.  
+>  Die C#- und Visual Basic-Compiler geben Compilerwarnungen aus (CS1699 bzw. BC41008), wenn das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut im Quellcode auftreten. Sie können die Warnungen ignorieren.  
   
  Im folgenden Beispiel wird das <xref:System.Reflection.AssemblyKeyFileAttribute>-Attribut mit der Schlüsseldatei `keyfile.snk` verwendet, die sich in dem Verzeichnis befindet, in dem die Assembly kompiliert wird.  
   
@@ -108,3 +108,4 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [Verwalten der Signierung von Assemblys und Manifesten](/visualstudio/ide/managing-assembly-and-manifest-signing)   
  [Seite „Signierung“, Projekt-Designer](https://msdn.microsoft.com/library/0k50fs3b)
+

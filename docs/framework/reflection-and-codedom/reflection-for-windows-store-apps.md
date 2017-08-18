@@ -1,5 +1,5 @@
 ---
-title: "Reflektion in .NET Framework für Windows Store-Apps | Microsoft-Dokumentation"
+title: "Reflektion in .NET Framework für Windows Store-Apps"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f5f1bd47fca6a2affc21890b1731ef438d160d30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflektion in .NET Framework für Windows Store-Apps
@@ -50,3 +50,4 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework e
 ## <a name="see-also"></a>Siehe auch  
  [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)   
  [.NET für Windows Store-Apps – unterstützte APIs](http://go.microsoft.com/fwlink/?LinkID=225700)
+
