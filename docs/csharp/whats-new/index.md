@@ -11,15 +11,19 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3ea221cfe71256ac44238f99f272c55c5810d0c3
+ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
+ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>Neues in C# #
 
+Diese Seite enthält eine Roadmap zu den neuen Funktionen in jeder Hauptversion der C#-Sprache. Die folgenden Links bieten ausführliche Informationen zu den wichtigsten Funktionen, die in jeder Version hinzugefügt wurden.
+
+> [!IMPORTANT]
+> Für einige der Funktionen ist die C#-Sprache von Typen und Methoden in einer *Standardbibliothek* abhängig. Ein Beispiel ist die Ausnahmeverarbeitung. Alle `throw`-Anweisungen oder -Ausdrücke werden überprüft, um sicherzustellen, dass das ausgelöste Objekt von @System.Exception abgeleitet ist. Auf ähnliche Weise wird jedes `catch` überprüft, um sicherzustellen, dass der abgefangen Typ von @System.Exception abgeleitet ist. Jede Version kann neue Anforderungen hinzufügen. Um die neuesten Sprachfunktionen in älteren Umgebungen verwenden zu können, müssen Sie vielleicht bestimmte Bibliotheken installieren. Diese sind auf der jeweiligen Seite für eine spezifische Version dokumentiert. Sie können mehr über die [Beziehungen zwischen Sprache und Bibliothek](relationships-between-language-and-library.md) erfahren, um Hintergrundinformationen zu dieser Abhängigkeit zu erhalten. 
 
 * [C# 7](csharp-7.md):
     - Auf dieser Seite werden die neuesten Funktionen der Programmiersprache C# vorgestellt. Dies deckt auch C# 7 ab, das aktuell in [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) zur Verfügung steht.
