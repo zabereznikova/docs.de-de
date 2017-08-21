@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/13/2017
 
 ---
 
@@ -29,7 +29,7 @@ Dieser Artikel bietet einen Überblick über die erforderlichen Schritte zum Sta
 
 Da Hosts native Anwendungen sind, wird in diesem Lernprogramm das Erstellen einer C++-Anwendung zum Hosten auf .NET Core behandelt. Sie benötigen eine C++-Entwicklungsumgebung (z.B. von [Visual Studio](https://www.visualstudio.com/downloads/)).
 
-Sie sollten außerdem über eine einfache .NET Core-Anwendung zum Testen des Hosts verfügen, daher sollten Sie die [.NET Core SDK](https://www.microsoft.com/net/core) installieren und [eine kleine .NET Core-Testanwendung erstellen](../../csharp/getting-started/with-visual-studio.md) (z.B. die Anwendung „Hello World“). Die „Hello World“-Anwendung, die von der neuen Projektvorlage der .NET Core-Konsole erstellt wird, ist ausreichend.
+Sie sollten außerdem über eine einfache .NET Core-Anwendung zum Testen des Hosts verfügen, daher sollten Sie die [.NET Core SDK](https://www.microsoft.com/net/core) installieren und [eine kleine .NET Core-Testanwendung erstellen](../../core/tutorials/with-visual-studio.md) (z.B. die Anwendung „Hello World“). Die „Hello World“-Anwendung, die von der neuen Projektvorlage der .NET Core-Konsole erstellt wird, ist ausreichend.
 
 In diesem Tutorial und dem zugehörigen Beispiel wird ein Windows-Host erstellt, jedoch finden Sie in den Hinweisen am Ende dieses Artikels Informationen zum Hosten unter Unix.
 

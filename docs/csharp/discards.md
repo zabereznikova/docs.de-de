@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: 7d7753a2c15cc20169005ea1c5f64eb74067cb24
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
 ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
@@ -47,7 +47,7 @@ Die Methode `Deconstruct` einer Klasse, Struktur oder Schnittstelle ermöglicht 
 
 [!code-csharp[Class-discard (Ausschuss bei Klassen)](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-Weitere Informationen zum Dekonstruieren von benutzerdefinierten Typen mit Ausschüssen finden Sie unter [Deconstructing tuples and other types (Dekonstruieren von Tupeln und anderen Typen)](deconstruct.md#deconstructing-a-user-defined type-with-discards).
+Weitere Informationen zum Dekonstruieren von benutzerdefinierten Typen mit Ausschüssen finden Sie unter [Deconstructing tuples and other types (Dekonstruieren von Tupeln und anderen Typen)](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
 ## <a name="pattern-matching-with-switch-and-is"></a>Musterabgleich mit `switch` und `is`
 

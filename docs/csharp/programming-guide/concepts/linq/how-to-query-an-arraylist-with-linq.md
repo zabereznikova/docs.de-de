@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abfragen von ArrayList mit LINQ (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.translationtype: HT
+ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
+ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)
@@ -36,10 +36,10 @@ var query = from Student s in arrList
   
  Indem Sie den Typ der Bereichsvariablen angeben, wandeln Sie jedes Element in der <xref:System.Collections.ArrayList> in ein `Student` um.  
   
- Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn die angegebene Umwandlung nicht durchgeführt werden kann. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind die zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. Weitere Informationen finden Sie unter [Typbeziehungen in LINQ-Abfragevorgängen](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
+ Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn bei der Umwandlung ein Fehler auftritt. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. Weitere Informationen finden Sie unter [Typbeziehungen in LINQ-Abfragevorgängen](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine einfache Abfrage über eine <xref:System.Collections.ArrayList>. Beachten Sie, dass in diesem Beispiel Objektinitialisierer verwendet werden, wenn der Code die <xref:System.Collections.ArrayList.Add%2A>-Methode aufruft, aber dies ist keine Voraussetzung.  
+ Im folgenden Beispiel wird eine einfache Abfrage von <xref:System.Collections.ArrayList> veranschaulicht. Beachten Sie, dass in diesem Beispiel Objektinitialisierer verwendet werden, wenn der Code die <xref:System.Collections.ArrayList.Add%2A>-Methode aufruft, aber dies ist keine Voraussetzung.  
   
 ```csharp  
 using System;  

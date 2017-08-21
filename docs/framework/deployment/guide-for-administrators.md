@@ -1,5 +1,5 @@
 ---
-title: "Handbuch für die Bereitstellung von .NET Framework für Administratoren | Microsoft-Dokumentation"
+title: "Handbuch für die Bereitstellung von .NET Framework für Administratoren"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 95f0a049db17d8aa2d55200c184be2b2f2ec45fc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
@@ -274,3 +274,4 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ## <a name="see-also"></a>Siehe auch  
  [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
+

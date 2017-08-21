@@ -1,6 +1,6 @@
 ---
 title: "Erste Schritte – Leitfaden für C#"
-description: Erste Schritte mit C#
+description: "Entdecken Sie kurze, einfache Tutorials, die Sie schnell in C#-Konzepte und das Schreiben von .NET Core-Anwendungen einführen."
 keywords: C#, erste Schritte, erwerben, installieren
 author: rpetrusha
 ms.author: ronpet
@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
 ms.contentlocale: de-de
-ms.lasthandoff: 08/13/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C# #
@@ -33,7 +32,7 @@ Folgende Themen sind verfügbar:
 
    Mit einer Klassenbibliothek können Sie Typen und Typmember definieren, die von einer anderen Anwendung aufgerufen werden können. In diesem Thema erstellen Sie eine Klassenbibliothek mit einer einzigen Methode, die festlegt, ob eine Zeichenfolge mit einem Großbuchstaben beginnt. Nachdem Sie die Bibliothek erstellt haben, können Sie einen [Komponententest](../../core/tutorials/testing-library-with-visual-studio.md) entwickeln, um sicherzustellen, dass die Bibliothek wie erwartet funktioniert. Dann machen Sie die Bibliothek verfügbar für [Anwendungen, von denen sie genutzt werden soll](../../core/tutorials/consuming-library-with-visual-studio.md).
 
-- [Erste Schritte mit C# und Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
+* [Erste Schritte mit C# und Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code ist ein kostenloser Code-Editor zum Entwickeln und Debuggen moderner Cloud- und Webanwendungen. Er unterstützt IntelliSense und ist für Linux, macOS und Windows verfügbar.
 

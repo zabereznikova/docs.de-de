@@ -1,5 +1,5 @@
 ---
-title: SqlMetal.exe (Tool zur Codegenerierung) | Microsoft-Dokumentation
+title: SqlMetal.exe (Tool zur Codegenerierung)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 43
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b4f700a285017e5e759b4e9b8e840a893592e7f4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
@@ -147,9 +147,10 @@ sqlmetal [options] [<input file>]
  **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
->  Wenn Sie die Option **/pluralize** mit der Northwind-Beispieldatenbank verwenden, stellen Sie folgendes Verhalten fest. Wenn SqlMetal Zeilentypnamen für Tabellen erstellt, wird für Tabellennamen die Singularform verwendet. Wenn <xref:System.Data.Linq.DataContext>-Eigenschaften für Tabellen erstellt werden, wird für Tabellennamen die Pluralform verwendet. Zufällig treten die Tabellen in der Northwind-Beispieldatenbank bereits in Pluralform auf. Deshalb ist nicht erkennbar, dass dieser Schritt funktioniert. Obwohl es üblich ist, Datenbanktabellen im Singular zu benennen, ist es in .NET auch verbreitet, Auflistungen in Pluralform zu benennen.  
+>  Wenn Sie die Option **/pluralize** mit der Northwind-Beispieldatenbank verwenden, stellen Sie folgendes Verhalten fest. Wenn SqlMetal Zeilentypnamen für Tabellen erstellt, wird für Tabellennamen die Singularform verwendet. Wenn <xref:System.Data.Linq.DataContext> -Eigenschaften für Tabellen erstellt werden, wird für Tabellennamen die Pluralform verwendet. Zufällig treten die Tabellen in der Northwind-Beispieldatenbank bereits in Pluralform auf. Deshalb ist nicht erkennbar, dass dieser Schritt funktioniert. Obwohl es üblich ist, Datenbanktabellen im Singular zu benennen, ist es in .NET auch verbreitet, Auflistungen in Pluralform zu benennen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [How to: Generate the Object Model in Visual Basic or C# (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
  [Codegenerierung in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
  [External Mapping (Externe Zuordnung)](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+

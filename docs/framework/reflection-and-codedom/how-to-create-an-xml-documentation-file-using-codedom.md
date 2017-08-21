@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: f9f90a91511b846a9ade9dc197c49caed082d57b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7d5569fd22cc8469052cc318fd50a5f8ef94c1a9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
@@ -86,3 +86,4 @@ CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation
  [Dokumentieren von Code mit XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
  [XML-Dokumentationskommentare](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [XML-Dokumentation](/cpp/ide/xml-documentation-visual-cpp)
+

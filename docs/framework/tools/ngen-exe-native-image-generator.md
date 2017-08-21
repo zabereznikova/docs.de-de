@@ -1,5 +1,5 @@
 ---
-title: Ngen.exe (Native Image Generator) | Microsoft-Dokumentation
+title: Ngen.exe (Native Image Generator)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -31,11 +31,11 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 65ecfdf69d739e76e386ed334c95f31ad266b904
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
@@ -202,7 +202,7 @@ ngen /? | /help
 ## <a name="generating-images-for-----different-scenarios"></a>Generieren von Images für verschiedene Szenarien  
  Nachdem Sie ein natives Image für eine Assembly generiert haben, wird dieses bei jedem Ausführen der Assembly automatisch von der Laufzeit gesucht und verwendet. Je nach Anwendungsszenario können mehrere Images generiert werden.  
   
- Wenn Sie beispielsweise eine Assembly in einem Debugging- oder Profilerstellungsszenario ausführen, sucht die Laufzeit nach einem systemeigenen Image, das mit der Option `/Debug` bzw. `/Profile` generiert wurde. Wenn kein entsprechendes systemeigenes Image gefunden wurde, wird die Laufzeit auf die standardmäßige JIT-Kompilierung zurückgesetzt. Die einzige Möglichkeit zum Debuggen nativer Images besteht darin, ein natives Image mit der Option `/Debug` zu erstellen.  
+ Wenn Sie beispielsweise eine Assembly in einem Debugging- oder Profilerstellungsszenario ausführen, sucht die Laufzeit nach einem systemeigenen Image, das mit der Option `/Debug` bzw. `/Profile` generiert wurde. Wenn kein entsprechendes systemeigenes Image gefunden wurde, wird die Laufzeit auf die standardmäßige JIT-Kompilierung zurückgesetzt. Die einzige Möglichkeit zum Debuggen systemeigener Images besteht darin, ein systemeigenes Image mit der Option `/Debug` zu erstellen.  
   
  Die Aktion `uninstall` erkennt auch Szenarien, sodass Sie alle oder nur ausgewählte Szenarien deinstallieren können.  
   

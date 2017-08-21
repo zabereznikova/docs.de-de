@@ -1,5 +1,5 @@
 ---
-title: SignTool.exe (Signaturtool) | Microsoft-Dokumentation
+title: SignTool.exe (Signaturtool)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 4cdbfda05fe9acafc6d717f3e0d3b1a57026df9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
@@ -164,7 +164,7 @@ signtool [command] [options] [file_name | ...]
 |2|Ausführung wurde mit Warnungen abgeschlossen.|  
   
 ## <a name="examples"></a>Beispiele  
- Durch den folgenden Befehl wird der Systemkomponenten- und Treiberdatenbank die Katalogdatei "MyCatalogFileName.cat" hinzugefügt. Mit der `/v`-Option wird ggf. ein eindeutiger Name generiert, um das Ersetzen einer möglicherweise vorhandenen Katalogdatei mit dem Namen `MyCatalogFileName.cat` zu verhindern.  
+ Durch den folgenden Befehl wird der Systemkomponenten- und Treiberdatenbank die Katalogdatei "MyCatalogFileName.cat" hinzugefügt. Mit der `/u`-Option wird ggf. ein eindeutiger Name generiert, um das Ersetzen einer möglicherweise vorhandenen Katalogdatei mit dem Namen `MyCatalogFileName.cat` zu verhindern.  
   
 ```  
 signtool catdb /v /u MyCatalogFileName.cat  

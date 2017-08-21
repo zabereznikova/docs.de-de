@@ -1,5 +1,5 @@
 ---
-title: out (generische Modifizierer) (C#-Referenz) | Microsoft-Dokumentation
+title: out (generischer Modifizierer) (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5b488eab5966a556b3e3c91ae8c748d11e61367
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (generischer Modifizierer) (C#-Referenz)
@@ -44,7 +44,7 @@ Das Schlüsselwort `out` gibt für generische Typparameter an, dass der Typparam
   
  Ein kovarianter Delegat kann einem anderen Delegaten desselben Typs zugewiesen werden, jedoch mit einem stärker abgeleiteten generischen Typparameter.  
   
- Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie eine kovariante generische Schnittstelle deklarieren, erweitern und implementieren. Es wird auch gezeigt, wie eine implizite Konvertierung für Klassen verwendet wird, die eine kovariante Schnittstelle implementieren.  
@@ -71,6 +71,7 @@ Das Schlüsselwort `out` gibt für generische Typparameter an, dass der Typparam
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Varianz in generischen Schnittstellen](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
+ [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [in](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Ressourcen in Desktop-Apps | Microsoft-Dokumentation
+title: Ressourcen in Desktop-Apps
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
 ms.contentlocale: de-de
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>Ressourcen in Desktop-Apps
@@ -51,19 +51,19 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
  Weitere Informationen finden Sie im Artikel [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Abrufen von Ressourcen  
- Ein App lädt zur Laufzeit die geeigneten lokalisierten Ressourcen auf einer Pro-Thread-Basis auf der Grundlage der durch die <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft angegebenen Kultur. Dieser Eigenschaftswert wird wie folgt abgeleitet:  
+ Zur Laufzeit werden von einer App die passenden lokalisierten Ressourcen auf Threadbasis entsprechend der Kultur geladen, die von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft angegeben wird. Dieser Eigenschaftswert wird wie folgt abgeleitet:  
   
--   Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur der <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft präsentiert.  
+-   Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur darstellt, zur <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft.  
   
--   Wenn eine Kultur nicht explizit zugewiesen wird, durch Abrufen der Benutzeroberflächenkultur des Standardthreads aus der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>-Eigenschaft.  
+-   Wenn keine Kultur explizit zugeordnet wurde, durch Abrufen der Benutzeroberflächenkultur des Standardthreads von der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>-Eigenschaft.  
   
 -   Wenn keine Benutzeroberflächenkultur des Standardthreads explizit zugeordnet wurde, durch Abrufen der Kultur für den aktuellen Benutzer auf dem lokalen Computer durch Aufrufen der `GetUserDefaultUILanguage`-Funktion von Windows.  
   
- Weitere Informationen dazu, wie die aktuelle Benutzeroberflächenkultur festgelegt wird, finden Sie auf den Referenzseiten <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Weitere Informationen darüber, wie die aktuelle Benutzeroberflächenkultur festgelegt wird, finden Sie auf den Referenzseiten <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
   
  Sie können Ressourcen dann für die aktuelle Benutzeroberflächenkultur oder für eine bestimmte Kultur abrufen, indem Sie die <xref:System.Resources.ResourceManager?displayProperty=fullName>-Klasse verwenden. Die <xref:System.Resources.ResourceManager>-Klasse wird zwar am häufigsten zum Abrufen von Ressourcen in Desktop-Apps verwendet, der <xref:System.Resources?displayProperty=fullName>-Namespace enthält jedoch weitere Typen, die Sie zum Abrufen von Ressourcen verwenden können. Dazu gehören:  
   
--   Die <xref:System.Resources.ResourceReader>-Klasse, mit der Sie Ressourcen auflisten können, die in eine Assembly eingebettet oder in einer eigenständigen binären .resources-Datei gespeichert sind. Dies ist nützlich, wenn Sie die genauen Namen der Ressourcen nicht kennen, die zur Laufzeit verfügbar sind.  
+-   Die <xref:System.Resources.ResourceReader>-Klasse, mit der Sie Ressourcen auflisten können, die in eine Assembly eingebettet oder in einer eigenständigen binären ".resources"-Datei gespeichert sind. Dies ist nützlich, wenn Sie die genauen Namen der Ressourcen nicht kennen, die zur Laufzeit verfügbar sind.  
   
 -   Die <xref:System.Resources.ResXResourceReader>-Klasse, mit der Sie Ressourcen aus einer XML-Datei (.resx) abrufen können.  
   
@@ -79,3 +79,4 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
  [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
  [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
  [Abrufen von Ressourcen](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+

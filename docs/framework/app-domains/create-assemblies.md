@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Assemblys | Microsoft-Dokumentation
+title: Erstellen von Assemblys
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-assemblies"></a>Erstellen von Assemblys
@@ -62,3 +62,4 @@ Sie können Einfach- oder Mehrfachdateiassemblys mit einer IDE entwickeln, wie z
  [How to: Build a Multifile Assembly (Vorgehensweise: Erstellen einer Mehrfachdateiassembly)](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)
+

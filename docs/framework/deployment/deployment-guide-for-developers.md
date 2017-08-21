@@ -1,5 +1,5 @@
 ---
-title: "Handbuch für die Bereitstellung von .NET Framework für Entwickler | Microsoft-Dokumentation"
+title: "Handbuch für die Bereitstellung von .NET Framework für Entwickler"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
@@ -76,9 +76,9 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 |Bereitstellungsstrategie für die App|Verfügbare Bereitstellungsmethoden|Zu verwendendes verteilbares .NET Framework-Paket|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installation aus dem Web|- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Webinstaller](#redistributable-packages)|
-|Installation von Datenträger|- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Offline-Installer](#redistributable-packages)|
-|Installation von einem lokalen Netzwerk (für Unternehmens-Apps)|- [ClickOnce](#clickonce-deployment)|Entweder der [Webinstaller](#redistributable-packages) (siehe [ClickOnce](#clickonce-deployment) für Einschränkungen) oder der [Offlineinstaller](#redistributable-packages)|
+|Installation aus dem Web|- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Web installer](#redistributable-packages)|
+|Installation von Datenträger|- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Offline installer](#redistributable-packages)|
+|Installation von einem lokalen Netzwerk (für Unternehmens-Apps)|- [ClickOnce](#clickonce-deployment)|Entweder [Webinstaller](#redistributable-packages) (siehe [ClickOnce](#clickonce-deployment) für Einschränkungen) oder [Offlineinstaller](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Verteilbare Pakete
  .NET Framework ist in zwei verteilbaren Paketen verfügbar: Webinstaller (Bootstrapper) und Offlineinstaller (eigenständiges verteilbares Paket). In der folgenden Tabelle werden die beiden Pakettypen verglichen.
@@ -161,7 +161,7 @@ Wenn Sie die App mit ClickOnce, InstallShield oder WiX bereitstellen, können Si
 7.  Öffnen Sie das Kontextmenü für das Setup-Projekt, und wählen Sie **Erstellen**aus.
 
 <a name="wix"></a> 
-### <a name="windows-installer-xml-wix-deployment"></a>WiX-Bereitstellung (Windows Installer XML)
+### <a name="windows-installer-xml-wix-deployment"></a>WiX (Windows Installer XML)-Bereitstellung
  Mit dem WiX (Windows Installer XML)-Toolset werden Windows-Installationspakete aus XML-Quellcode erstellt. WiX unterstützt eine Befehlszeilenumgebung, die in die Buildprozesse integriert werden kann, um MSI- und MSM-Setuppakete zu erstellen. Mit WiX können Sie [.NET Framework als erforderliche Komponente angeben](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html), oder Sie können [einen Chainer erstellen](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) , um die Bereitstellung von .NET Framework vollständig zu steuern. Weitere Informationen zu WiX finden Sie auf der Website für das [WiX (Windows Installer XML)-Toolset](http://wixtoolset.org/) .
 
 <a name="installing_manually"></a> 
@@ -217,9 +217,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!NOTE]
     > Unterschiedliche Language Packs können verschiedene Versionsdatumsangaben aufweisen. Wenn das angegebene Language Pack im Download Center nicht verfügbar ist, wird .NET Framework ohne das Language Pack installiert. Wenn .NET Framework auf dem Computer des Benutzers bereits installiert ist, wird nur das Language Pack installiert.
 
- Eine vollständige Liste der Optionen finden Sie im Abschnitt [Befehlszeilenoptionen](#command-line-options).
+ Eine vollständige Liste der Optionen finden Sie im Abschnitt [Befehlszeilenoptionen](#command-line-options) .
 
- Häufige Rückgabecodes finden Sie im Abschnitt [Rückgabecodes](#return-codes).
+ Häufige Rückgabecodes finden Sie im Abschnitt [Rückgabecodes](#return-codes) .
 
 <a name="chaining_custom"></a>
 ### <a name="chaining-by-using-a-custom-ui"></a>Verketten mithilfe einer benutzerdefinierten Benutzeroberfläche
@@ -232,13 +232,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!IMPORTANT]
     > Bei der Bestimmung, ob die richtige Version von .NET Framework bereits installiert ist, sollten Sie überprüfen, ob Ihre Zielversion *oder* eine höhere Version installiert ist und nicht nur, ob Ihre Zielversion installiert ist. Sie sollen also bewerten, ob der Release-Schlüssel, den Sie aus der Registrierung enthalten, größer oder gleich dem Release-Schlüssel Ihrer Zielversion ist und *nicht* , ob er gleich dem Release-Schlüssel Ihrer Zielversion ist.
 
-- [Erkennen](#detecting-the-language-packs), ob die Sprachpakete bereits auf dem Computer des Benutzers installiert sind.
+- [Erkennen](#detecting-the-language-packs) , ob die Language Packs bereits auf dem Computer des Benutzers installiert sind.
 
 - Wenn Sie die Bereitstellung steuern möchten, lassen Sie den .NET Framework-Setupvorgang automatisch starten und nachverfolgen (weitere Informationen finden Sie unter [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Wenn Sie den Offlineinstaller bereitstellen, [verketten Sie die Language Packs separat](#chain_langpack).
 
-- Passen Sie die Bereitstellung mit [Befehlszeilenoptionen](#command-line-options) an. Wenn Sie beispielsweise den .NET Framework-Webinstaller verketten, jedoch das standardmäßige Language Pack überschreiben möchten, verwenden Sie die `/LCID` -Option, wie im vorherigen Abschnitt beschrieben.
+- Passen Sie die Bereitstellung mit [Befehlszeilenoptionen](#command-line-options)an. Wenn Sie beispielsweise den .NET Framework-Webinstaller verketten, jedoch das standardmäßige Language Pack überschreiben möchten, verwenden Sie die `/LCID` -Option, wie im vorherigen Abschnitt beschrieben.
 
 - [Problembehandlung](#troubleshooting).
 
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > Die Sprachpakete enthalten nicht die zum Ausführen einer App erforderlichen .NET Framework-Komponenten, Sie müssen das .NET Framework mit dem Web- oder Offlineinstaller installieren, bevor Sie ein Sprachpaket installieren.
 
- Ab [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] haben die Paketnamen das Format „NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe“, wobei `version` die Versionsnummer von .NET Framework ist, `number` die Nummer eines Artikels in der Microsoft Knowledge Base und `culture` steht für [Land/Region](#supported-languages). Ein Beispiel für einen solchen Paketnamen ist `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Paketnamen sind im Abschnitt [Verteilbare Pakete](#redistributable-packages) dieses Artikels aufgelistet.
+ Ab [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] haben die Paketnamen das Format „NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe“, wobei `version` die Versionsnummer von .NET Framework ist, `number` die Nummer eines Artikels in der Microsoft Knowledge Base und `culture` steht für [Land/Region](#supported-languages). Ein Beispiel für einen solchen Paketnamen ist `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Paketnamen sind im Abschnitt [Redistributable Packages](#redistributable-packages) dieses Artikels aufgelistet.
 
  Um ein Sprachpaket mit dem .NET Framework-Offlineinstaller zu installieren, müssen Sie es mit dem Setup der App verketten. Verwenden Sie beispielsweise zum Bereitstellen des [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] -Offlineinstallers mit dem Language Pack "Japanisch" den folgenden Befehl:
 
@@ -308,7 +308,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  Sie müssen die Language Packs nicht verketten, wenn Sie den Webinstaller verwenden. In diesem Fall installiert Setup das Language Pack, das der MUI-Einstellung des Benutzers entspricht. Wenn Sie eine andere Sprache installieren möchten, können Sie mit der Option `/LCID` ein Language Pack angeben.
 
- Eine vollständige Liste der Befehlszeilenoptionen finden Sie im Abschnitt [Befehlszeilenoptionen](#command-line-options).
+ Eine vollständige Liste der Befehlszeilenoptionen finden Sie im Abschnitt [Befehlszeilenoptionen](#command-line-options) .
 
 ### <a name="troubleshooting"></a>Problembehandlung
 
@@ -333,7 +333,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
 - [Fehlercodes für WinHttp](http://go.microsoft.com/fwlink/?LinkId=180948)
 
-#### <a name="other-error-codes"></a>Weitere Fehlercodes
+#### <a name="other-error-codes"></a>Sonstige Fehlercodes
  Diese finden Sie auf den folgenden Seiten der MSDN Library:
 
 - [Fehlercodes für Windows Installer](http://go.microsoft.com/fwlink/?LinkId=180949)
@@ -355,11 +355,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Überschreibt das Standardverhalten und sendet anonymes Feedback an Microsoft, um die Bereitstellungsumgebung für die Zukunft zu verbessern. Diese Option kann nur verwendet werden, wenn vom Setupprogramm die Zustimmung angefordert wird und der Benutzer die Berechtigung erteilt, anonymes Feedback an Microsoft zu senden.|
 |**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"**. Ein Beispiel für ein Verkettungspaket finden Sie in der MSDN Library unter [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=181926) .|
-|**/LCID**  `LCID`<br /><br /> Wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**: Verwenden Sie diese Option nur mit dem Webinstaller.|
+|**/LCID**  `LCID`<br /><br /> wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**: Verwenden Sie diese Option nur mit dem Webinstaller.|
 |**/log** `file` &#124; `folder`|Gibt den Speicherort der Protokolldatei an. Der Standardwert ist der temporäre Ordner für den Vorgang, und der Standarddateiname basiert auf dem Paket. Wenn die Dateierweiterung TXT lautet, wird ein Textprotokoll präsentiert. Wenn Sie eine andere Erweiterung oder keine Erweiterung angeben, wird ein HTML-Protokoll erstellt.|
 |**/msioptions**|Gibt Optionen an, die für MSI- und MSP-Elemente übergeben werden sollen. Beispiel: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Wenn Sie diese Option verwenden, muss die verkettende App den Rückgabecode erfassen und den Neustart initiieren (siehe [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606) in der MSDN Library).|
-|**/passive**|Legt den passiven Modus fest. Zeigt die Statusleiste an, um anzugeben, dass die Installation ausgeführt wird, zeigt dem Benutzer jedoch keine Eingabeaufforderungen oder Fehlermeldungen an. In diesem Modus muss das Verkettungspaket [Rückgabecodes](#return-codes) behandeln, sofern der Modus durch ein Setupprogramm verkettet ist.|
+|**/passive**|Legt den passiven Modus fest. Zeigt die Statusleiste an, um anzugeben, dass die Installation ausgeführt wird, zeigt dem Benutzer jedoch keine Eingabeaufforderungen oder Fehlermeldungen an. In diesem Modus muss, sofern er durch ein Setupprogramm verkettet ist, das Verkettungspaket [Rückgabecodes](#return-codes)behandeln.|
 |**/pipe**|Erstellt einen Kommunikationskanal, damit ein Verkettungspaket bearbeitet werden kann.|
 |**/promptrestart**|Wenn im passiven Modus das Setupprogramm einen Neustart erfordert, wird der Benutzer zur Eingabe aufgefordert. Bei dieser Option muss der Benutzer eingreifen, wenn ein Neustart erforderlich ist.|
 |**/q**|Legt den stillen Modus fest.|
@@ -405,3 +405,4 @@ In der folgenden Tabelle sind die .NET Framework Sprachpakete aufgeführt, die f
  [Troubleshoot blocked .NET Framework installations and uninstallations (Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework)](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [Reducing System Restarts During .NET Framework 4.5 Installations (Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen)](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

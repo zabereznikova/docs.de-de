@@ -1,5 +1,5 @@
 ---
-title: "switch-Schlüsselwort (C#-Referenz) | Microsoft-Dokumentation"
+title: "Schlüsselwort „switch“ (C#-Referenz)"
 ms.date: 2017-03-07
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
+ms.translationtype: HT
+ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
+ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
@@ -100,7 +100,7 @@ Diese Anforderung wird normalerweise erfüllt, indem der switch-Abschnitt ausdr�
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen.  
+ Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `goto label`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen. Eine `goto`-Anweisung muss bei Nichtverwendung die Steuerung an eine konstante Bezeichnung übergeben. Diese Einschränkung ist notwendig, da der Versuch, die Steuerung an eine nicht konstante Bezeichnung zu übergeben, unerwünschte Nebeneffekte haben kann, z.B. kann die Steuerung an eine nicht beabsichtigte Position im Code übergeben werden, oder es kann eine Endlosschleife entstehen.
 
 ## <a name="case-labels"></a>case-Bezeichnungen
 
@@ -155,7 +155,7 @@ Der Konstantenausdruck wird wie folgt ausgewertet:
 
 - Andernfalls wird der Wert des Ausdrucks durch einen Aufruf der statischen Methode [Object.Equals (expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) bestimmt.  
 
-Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) des heutigen Tags mit den Membern der @System.DayOfWeek -Enumeration. 
+Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) des heutigen Tags mit den Membern der @System.DayOfWeek-Enumeration. 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -221,3 +221,4 @@ Beachten Sie, dass in diesem Beispiel die `when`-Klausel, die zu prüfen versuch
  
 
  
+
