@@ -1,5 +1,5 @@
 ---
-title: "Übersicht über die Dynamic Language Runtime | Microsoft-Dokumentation"
+title: "Übersicht über die Dynamic Language Runtime"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
@@ -60,7 +60,7 @@ Die *Dynamic Language Runtime* (DLR) ist eine Runtimeumgebung, die der Common La
   
  Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgendes:  
   
--   IronPython. Als Open-Source-Software auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040)-Website verfügbar.  
+-   IronPython. Als Open-Source-Software auf der [GitHub](https://github.com/IronLanguages/ironpython2)-Website verfügbar.  
   
 -   IronRuby Als Open-Source-Software auf der [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.  
   
@@ -107,3 +107,4 @@ DLR-Architektur
  [Common Language Runtime](../../../docs/standard/clr.md)   
  [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

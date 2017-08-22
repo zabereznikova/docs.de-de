@@ -1,5 +1,5 @@
 ---
-title: "Parallele Ausführung in .NET Framework | Microsoft-Dokumentation"
+title: "Parallele Ausführung in .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 460471cceda60697382d770e1b95be75ff3cfc8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1628d75ab7f842c6b7486a1d57f490b4d876ee28
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
@@ -33,14 +33,14 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
  Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen der Common Language Runtime verwenden. Anwendungen A, B und C verwenden Common Language Runtime, Version 1.0, während Anwendung D die Version 1.1 verwendet.  
   
- ![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
+ ![Parallele Ausführung](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
 Parallele Ausführung von zwei Versionen der Common Language Runtime  
   
  .NET Framework besteht aus der Common Language Runtime und einer Reihe von Assemblys, die die API-Typen enthalten. Die Versionsnummern der Common Language Runtime und der .NET Framework-Assemblys sind voneinander unabhängig. So ist z. B. die Common Language Runtime Version 4.0 eigentlich Version 4.0.319, während die Version 1.0 der .NET Framework-Assemblys eigentlich Version 1.0.3300.0 ist.  
   
  Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen einer Komponente verwenden. Anwendungen A und B verwenden Version 1.0 der Komponente, während Anwendung C Version 2.0 der gleichen Komponente verwendet.  
   
- ![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
+ ![Parallele Ausführung](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
 Parallele Ausführung von zwei Versionen einer Komponente  
   
  Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
@@ -138,3 +138,4 @@ publicKeyToken=...,
   
 ## <a name="reference"></a>Verweis  
  [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd906fa2d45331082b9dc86c972e5630361e2653
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
@@ -91,7 +91,7 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
 > [!NOTE]
 >  Der Name der Standardanwendungsdomäne ist identisch mit dem Namen der ausführbaren Datei.  
   
- Wenn Sie der Standardanwendungsdomäne einen Handler für das <xref:System.AppDomain.FirstChanceException>-Ereignis hinzufügen, wird das Ereignis ausgelöst und behandelt, bevor die Standardanwendungsdomäne die Ausnahme behandelt. Um dies zu veranschaulichen, fügen Sie den C#-Code `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (in Visual Basic `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n) am Anfang von `Main()` ein.  
+ Wenn Sie der Standardanwendungsdomäne einen Handler für das <xref:System.AppDomain.FirstChanceException>-Ereignis hinzufügen, wird das Ereignis ausgelöst und behandelt, bevor die Standardanwendungsdomäne die Ausnahme behandelt. Um dies zu veranschaulichen, fügen Sie den C#-Code `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (in Visual Basic: `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) am Anfang von `Main()` ein.  
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)] [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
@@ -101,3 +101,4 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.AppDomain.FirstChanceException>
+
