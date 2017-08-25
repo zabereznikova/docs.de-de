@@ -1,7 +1,7 @@
 ---
-title: Dekonstruieren von Tupeln und anderen Typen | Microsoft-Dokumentation
-description: Informationen zum Dekonstruieren von Tupeln und anderen Typen
-keywords: .NET, .NET Core, C#0
+title: Dekonstruieren von Tupeln und anderen Typen
+description: Informationen zum Dekonstruieren von Tupeln und anderen Typen.
+keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms-author: ronpet
 ms.date: 07/18/2016
@@ -11,13 +11,12 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: f0946db700301a63109f23be5536f3a0505f4d60
+ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
+ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen #
 
 Ein Tupel stellt einen einfachen Weg bereit, um mehrere Werte aus einem Methodenaufruf abzurufen. Sobald Sie den Tupel abrufen, müssen Sie jedoch seine individuellen Elemente bearbeiten. Jedes Element einzeln zu bearbeiten ist jedoch mühselig, wie das folgende Beispiel zeigt. Die Methode `QueryCityData` gibt ein 3-Tupel zurück, und jedes seiner Elemente wird in einem separaten Vorgang einer Variable zugewiesen.
@@ -44,21 +43,21 @@ Es gibt zwei Wege zum Dekonstruieren eines Tupel:
 
 - Sie können das Schlüsselwort `var` verwenden, damit C# den Typ jeder Variable herleitet. Platzieren Sie das Schlüsselwort `var` außerhalb der Klammern. Im folgenden Beispiel wird ein Typrückschluss beim Dekonstruieren des von der Methode `QueryCityData` zurückgegebenen 3-Tupel verwendet.
  
-      [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
+    [!code-csharp[Dekonstruktion: Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
     Sie können das Schlüsselwort `var` auch einzeln mit beliebigen oder allen Variablendeklarationen innerhalb der Klammern verwenden. 
 
-      [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
+    [!code-csharp[Dekonstruktion: Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     Dies ist jedoch sehr mühselig und wird nicht empfohlen.
 
-Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern nicht spezifizieren können, auch wenn jedes Feld im Tupel den selben Typ hat. Dadurch wird der Compilerfehler CS8136, generiert. Das Formular `var (...)` lässt einen bestimmten Typ für `var` nicht zu.
+Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern nicht spezifizieren können, auch wenn jedes Feld im Tupel den selben Typ hat. Dadurch wird der Compilerfehler CS8136 „Durch die Dekonstruktion der Form „var (...)“ wird ein bestimmter Typ für „var“ unzulässig.“ generiert.
 
 Beachten Sie, dass Sie ebenfalls jedes Element des Tupel einer Variable zuweisen müssen. Wenn Sie Elemente auslassen, generiert der Compiler den Fehler: CS8132, „Tupel mit x Elementen kann nicht in y Variablen dekonstruiert werden.“
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Dekonstruieren von Tupelelementen mit Ausschüssen
 
-Häufig sind Sie beim Dekonstruieren eines Tupel nur an den Werten mancher Elemente interessiert. Ab C# 7 können Sie die Unterstützung von C# für *discards* (Ausschüsse) nutzen, bei dem es sich um lesegeschützte Variablen handelt, die Sie ignorieren möchten. Ein Ausschuss wird in einer Zuweisung durch einen Unterstrich („_“) angegeben. Sie können beliebig viele Werte verwerfen, diese werden alle in einem einzigen Ausschuss dargestellt, `_`.
+Häufig sind Sie beim Dekonstruieren eines Tupel nur an den Werten mancher Elemente interessiert. Ab C# 7 können Sie die Unterstützung von C# für *discards* (Ausschüsse) nutzen, bei dem es sich um lesegeschützte Variablen handelt, die Sie ignorieren möchten. Ein Ausschuss wird in einer Zuweisung durch einen Unterstrich („\_“) angegeben. Sie können beliebig viele Werte verwerfen, diese werden alle in einem einzigen Ausschuss dargestellt, `_`.
 
 Das folgende Beispiel veranschaulicht die Verwendung von Tupels mit Ausschüssen. Die Methode `QueryCityDataForYears` gibt einen 6-Tupel mit dem Namen einer Stadt, ihrer Fläche, einer Jahreszahl, der Bevölkerung der Stadt in diesem Jahr, einer zweiten Jahreszahl und der Bevölkerung der Stadt im zweiten Jahr zurück. Das Beispiel zeigt die Veränderung der Bevölkerung zwischen diesen beiden Jahren. Von den Daten, die im Tupel verfügbar sind, ist die Fläche der Stadt nicht relevant für uns und außerdem kennen wir den Namen der Stadt und die zwei Datumswerte zur Entwurfszeit. Darum sind wir nur an den zwei Bevölkerungsgwerten interessiert, die im Tupel gespeichert sind und behandeln die restlichen Werte als Ausschuss.  
 
@@ -90,7 +89,7 @@ Die überladene Methode `Deconstruct` im folgenden Beispiel veranschaulicht eine
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Dekonstruieren eines benutzerdefinierten Typs mit Ausschüssen
 
-Genau wie bei [Tupels](#deconstructing-tuple-elements-with-discards) können Sie Ausschüsse verwenden, um ausgewählte Elemente zu ignorieren, die von einer `Deconstruct`-Methode zurückgegeben werden. Jeder Ausschuss wird von einer Variable mit dem Namen „_“ definiert, und ein einziger Dekonstruierungsvorgang kann mehrere Ausschüsse beinhalten.
+Genau wie bei [Tupels](#deconstructing-tuple-elements-with-discards) können Sie Ausschüsse verwenden, um ausgewählte Elemente zu ignorieren, die von einer `Deconstruct`-Methode zurückgegeben werden. Jeder Ausschuss wird von einer Variable mit dem Namen „\_“ definiert, und ein einziger Dekonstruierungsvorgang kann mehrere Ausschüsse beinhalten.
 
 Im folgenden Beispiel wird ein `Person`-Objekt in vier Zeichenfolgen (den Vor- und Nachnamen, die Stadt und den Staat) dekonstruiert, der Nachname und der Staat werden jedoch verworfen.
 
