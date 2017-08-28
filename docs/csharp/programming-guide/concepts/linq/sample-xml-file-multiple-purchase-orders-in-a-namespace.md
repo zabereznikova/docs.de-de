@@ -1,5 +1,5 @@
 ---
-title: 'XML-Beispieldatei: Mehrere Bestellungen in einem Namespace2 | Microsoft-Dokumentation'
+title: 'Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace2'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b7397a191d015bff2abcdd176bcc1b34e7539a00
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22e79b3b56bf9963518cfbd93dcf4e1f2d2842e0
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge. Der XML-Code befindet sich in einem Namespace.  
+Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge. Der XML-Code befindet sich in einem Namespace.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
   
@@ -127,3 +128,4 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

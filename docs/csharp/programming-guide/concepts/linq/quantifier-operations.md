@@ -1,5 +1,5 @@
 ---
-title: "Quantifizierer-Vorgänge (C#) | Microsoft-Dokumentation"
+title: "Quantifizierer-Vorgänge (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0e4265f08f1fbe540885e1c9de28c5054f2f33a7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f82df05693dffec64bcbc66cc2c0b9db2a7deb20
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="quantifier-operations-c"></a>Quantifizierer-Vorgänge (C#)
@@ -47,3 +48,4 @@ Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der ang
  [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [How to: Dynamically Specify Predicate Filters at Runtime (Vorgehensweise: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit)](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)   
  [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#) (Vorgehensweise: Abfragen von Sätzen, die bestimmte Wörter enthalten (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+

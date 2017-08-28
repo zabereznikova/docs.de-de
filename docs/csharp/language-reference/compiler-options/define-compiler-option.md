@@ -1,69 +1,88 @@
 ---
-title: "/define (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/define"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-define compiler option [C#]"
-  - "/define compiler option [C#]"
-  - "-d compiler option [C#]"
-  - "define compiler option [C#]"
-  - "/d compiler option [C#]"
-  - "d compiler option [C#]"
+title: -define (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /define
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -define compiler option [C#]
+- /define compiler option [C#]
+- -d compiler option [C#]
+- define compiler option [C#]
+- /d compiler option [C#]
+- d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dbe5532114864d9f76c6d9e19b669c46489709b2
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /define (C# Compiler Options)
-Die Option **\/define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  
+# <a name="define-c-compiler-options"></a>/define (C#-Compileroptionen)
+Die Option **/define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /define:name[;name2]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `name`, `name2`  
  Der Name eines oder mehrerer Symbole, die Sie definieren möchten.  
   
-## Hinweise  
- Die Option **\/define** hat dieselbe Auswirkung wie die Verwendung eines [\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)\-Präprozessordirektiven, außer dass die Compileroption für alle Dateien im Projekt gültig ist.  Ein Symbol bleibt in einer Quelldatei definiert, bis eine [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)\-Direktive in der Quelldatei die Definition entfernt.  Wenn Sie die Option \/define verwenden, hat eine `#undef`\-Direktive in einer Datei keinerlei Auswirkung auf andere Quellcodedateien im Projekt.  
+## <a name="remarks"></a>Hinweise  
+ Die Option **/define** hat dieselbe Auswirkung wie die Verwendung einer [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)-Präprozessoranweisung, außer dass die Compileroption für alle Dateien im Projekt gültig ist. Ein Symbol bleibt in einer Quelldatei definiert, bis eine [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)-Anweisung in der Quelldatei die Definition entfernt. Wenn Sie die Option „/define“ verwenden, hat eine `#undef`-Anweisung in einer Datei keinerlei Auswirkung auf andere Quellcodedateien im Projekt.  
   
- Sie können die durch diese Option erstellten Symbole in Verbindung mit [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [\#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [\#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) und [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) verwenden, um Quelldateien bedingt zu kompilieren.  
+ Sie können die durch diese Option erstellten Symbole in Verbindung mit [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), und [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) verwenden, um Quelldateien bedingt zu kompilieren.  
   
- **\/d** ist die Kurzform von **\/define**.  
+ **/d** ist die Kurzform von **/define**.  
   
- Sie können mehrere Symbole mit **\/define** definieren, indem Sie die Symbolnamen jeweils durch ein Semikolon oder Komma voneinander trennen.  Beispiel:  
+ Sie können mehrere Symbole mit **/define** definieren, indem Sie die Symbolnamen jeweils durch ein Semikolon oder Komma voneinander trennen. Zum Beispiel:  
   
-```  
+```console  
 /define:DEBUG;TUESDAY  
 ```  
   
- Der C\# \-Compiler selbst definiert keine Symbole oder Makros, die Sie im Quellcode verwenden können. Alle Symboldefinitionen müssen benutzerdefiniert sein.  
+ Der C#-Compiler selbst definiert keine Symbole oder Makros, die Sie in Ihrem Quellcode verwenden können. Alle Symboldefinitionen müssen benutzerdefiniert sein.  
   
 > [!NOTE]
->  Anders als in Programmiersprachen wie C\+\+ ist es in C\# bei Verwendung von `#define` nicht zulässig, einem Symbol einen Wert zuzuweisen.  Beispielsweise kann `#define` nicht zum Erstellen eines Makros oder zum Definieren einer Konstante verwendet werden.  Falls Sie eine Konstante definieren müssen, verwenden Sie eine `enum`\-Variable.  Wenn Sie ein C\+\+\-übliches Makro erstellen möchten, erwägen Sie Alternativen wie Generika.  Da Makros sehr fehleranfällig sind, ist ihre Verwendung in C\# nicht zugelassen. Es stehen jedoch sicherere Alternativen zur Verfügung.  
+>  Anders als in Programmiersprachen wie C++ ist es in C# bei Verwendung von `#define` nicht zulässig, einem Symbol einen Wert zuzuweisen. Beispielsweise kann `#define` nicht zum Erstellen eines Makros oder zum Definieren einer Konstante verwendet werden. Falls Sie eine Konstante definieren müssen, verwenden Sie eine `enum`-Variable. Wenn Sie ein C++-übliches Makro erstellen möchten, erwägen Sie Alternativen wie Generika. Da Makros sehr fehleranfällig sind, ist ihre Verwendung in C# nicht zugelassen. Es stehen jedoch sicherere Alternativen zur Verfügung.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
   
-2.  Geben Sie auf der Registerkarte **Erstellen** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein.  Wenn Sie z. B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
+2.  Geben Sie auf der Registerkarte **Erstellen** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein. Wenn Sie z.B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```csharp  
 // preprocessor_define.cs  
 // compile with: /define:xx  
 // or uncomment the next line  
@@ -82,6 +101,7 @@ public class Test
 }  
 ```  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

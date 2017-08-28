@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,17 +28,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c63e18bc7e23a9fda4a005745174bdd6c85b3f08
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
-Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder des Unterverzeichnisses als `string` abrufen, oder Sie können zusätzliche Informationen in der Form eines <xref:System.IO.FileInfo?displayProperty=fullName>- oder <xref:System.IO.DirectoryInfo?displayProperty=fullName>-Objekts abrufen.  
+Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder dem Unterverzeichnis als `string` abrufen, oder Sie können zusätzliche Informationen eines <xref:System.IO.FileInfo?displayProperty=fullName> oder <xref:System.IO.DirectoryInfo?displayProperty=fullName>-Objekts abrufen.  
   
 > [!NOTE]
->  In Windows sind die Begriffe „Verzeichnis“ und „Ordner“ austauschbar. Die meisten Dokumentationen und der Text der Benutzeroberfläche verwenden den Begriff „Ordner“, aber die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek verwendet den Begriff „Verzeichnis“.  
+>  In Windows sind die Begriffe „Verzeichnis“ und „Ordner“ austauschbar. Die meisten Dokumentationen und der Text der Benutzeroberfläche verwenden den Begriff „Ordner“, aber die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek verwendet den Begriff „Verzeichnis“.  
   
  Im einfachsten Fall, in dem Sie ganz sicher sind, dass Sie über die Zugriffsberechtigungen für alle Verzeichnisse in einem angegebenen Stamm verfügen, können Sie das `System.IO.SearchOption.AllDirectories`-Flag verwenden. Dieses Flag gibt alle geschachtelten Unterverzeichnisse zurück, die mit dem angegebenen Muster übereinstimmen. Im folgenden Beispiel wird die Verwendung dieses Flags veranschaulicht.  
   
@@ -46,7 +47,7 @@ Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede
 root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);  
 ```  
   
- Der Schwachpunkt bei diesem Ansatz ist, dass die Methode fehlschlägt und keine Verzeichnisse zurückgibt, wenn eines der Unterverzeichnisse im angegebenen Stamm eine <xref:System.IO.DirectoryNotFoundException> oder <xref:System.UnauthorizedAccessException> bewirkt. Das Gleiche gilt bei Verwendung der <xref:System.IO.DirectoryInfo.GetFiles%2A>-Methode. Wenn Sie diese Ausnahmen für bestimmte Unterverzeichnisse behandeln müssen, müssen Sie die Verzeichnisstruktur manuell durchlaufen, wie in den folgenden Beispielen gezeigt.  
+ Der Schwachpunkt bei diesem Ansatz ist, dass die Methode fehlschlägt und keine Verzeichnisse zurückgibt, wenn eines der Unterverzeichnisse im angegebenen Stamm eine <xref:System.IO.DirectoryNotFoundException> oder <xref:System.UnauthorizedAccessException> bewirkt. Dasselbe gilt bei Verwendung der <xref:System.IO.DirectoryInfo.GetFiles%2A>-Methode. Wenn Sie diese Ausnahmen für bestimmte Unterverzeichnisse behandeln müssen, müssen Sie die Verzeichnisstruktur manuell durchlaufen, wie in den folgenden Beispielen gezeigt.  
   
  Wenn Sie eine Verzeichnisstruktur manuell durchlaufen, können Sie zuerst die Unterverzeichnisse (*Durchlauf vor der Sortierung*) oder die Dateien (*Durchlauf nach der Sortierung*) behandeln. Wenn Sie einen Durchlauf vor der Sortierung ausführen, durchlaufen Sie die gesamte Struktur unter dem aktuellen Ordner, bevor Sie die Dateien durchlaufen, die sich direkt in diesem Ordner befinden. In den Beispielen weiter unten in diesem Dokument wird ein Durchlauf nach der Sortierung ausgeführt, aber Sie können die Beispiele problemlos abändern, um einen Durchlauf vor der Sortierung auszuführen.  
   
@@ -55,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Wenn Sie mehrere Vorgänge für Dateien und Ordner ausführen müssen, können Sie diese Beispiele modularisieren, indem Sie den Vorgang in separate Funktionen umgestalten, die Sie mit einem einzelnen Delegaten aufrufen können.  
   
 > [!NOTE]
->  NTFS-Dateisysteme können *Analysepunkte* in Form von *Verknüpfungspunkten*, *symbolischen Verknüpfungen* und *festen Links* enthalten. .NET Framework-Methoden wie z.B. <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unterhalb eines Analysepunkts zurück. Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Analysepunkte aufeinander verweisen. Im Allgemeinen sollten Sie bei Analysepunkten äußerst vorsichtig sein, um sicherzustellen, dass Sie nicht versehentlich Dateien ändern oder löschen. Wenn Sie genaue Kontrolle über Analysepunkte benötigen, verwenden Sie einen Plattformaufruf oder nativen Code, um die entsprechenden Win32-Dateisystemmethoden direkt aufzurufen.  
+>  NTFS-Dateisysteme können *Analysepunkte* in Form von *Verknüpfungspunkten*, *symbolischen Verknüpfungen* und *festen Links* enthalten. .NET Framework-Methoden wie z.B. <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unter einem Analysepunkt zurück. Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Analysepunkte aufeinander verweisen. Im Allgemeinen sollten Sie bei Analysepunkten äußerst vorsichtig sein, um sicherzustellen, dass Sie nicht versehentlich Dateien ändern oder löschen. Wenn Sie genaue Kontrolle über Analysepunkte benötigen, verwenden Sie einen Plattformaufruf oder nativen Code, um die entsprechenden Win32-Dateisystemmethoden direkt aufzurufen.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie eine Verzeichnisstruktur mit Rekursion direkt durchlaufen. Der rekursive Ansatz ist elegant, kann aber eine Stapelüberlaufausnahme verursachen, wenn die Verzeichnisstruktur groß und tief verschachtelt ist.  
@@ -82,3 +83,4 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  <xref:System.IO>   
  [LINQ und Dateiverzeichnisse](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+

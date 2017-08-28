@@ -1,5 +1,5 @@
 ---
-title: get (C#-Referenz) | Microsoft-Dokumentation
+title: get (C#-Referenz)
 ms.date: 2017-03-10
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cdd3107a9e23e2f41a412390c8a723d4366e3952
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 88603864ae0a31a193cab211b8ce8061ec63c169
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-c-reference"></a>get (C#-Referenz)
@@ -60,6 +60,5 @@ In einfachen Fällen, in denen der `get`- und der `set`-Accessor einer Eigenscha
 ## <a name="see-also"></a>Siehe auch  
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+ [C# Keywords (C#-Schlüsselwörter)](../../../csharp/language-reference/keywords/index.md) [Properties (Eigenschaften)](../../../csharp/programming-guide/classes-and-structs/properties.md)
 

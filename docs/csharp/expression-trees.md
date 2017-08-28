@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: "Weitere Informationen zu Ausdrucksbaumstrukturen in .NET Core und wie sie verwendet werden, um Code als Strukturen darzustellen, die Sie überprüfen, ändern und ausführen können."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ Sie haben wahrscheinlich bereits Code geschrieben, der Ausdrucksbaumstrukturen v
 So kann [Entity Framework](http://docs.efproject.net/en/latest/) die Abfrage übersetzen, die Sie in C# in SQL geschrieben haben, die im Datenbankmodul ausgeführt wird. Ein weiteres Beispiel ist [Moq](https://github.com/Moq/moq), was ein beliebtes Mockingframework für .NET ist.
 
 In den verbleibenden Abschnitten dieses Tutorials wird untersucht, was Ausdrucksbaumstrukturen sind, es werden die Framework-Klassen untersucht, die Ausdrucksbaumstrukturen unterstützen, und es wird gezeigt, wie Sie mit Ausdrucksbaumstrukturen arbeiten. Sie erfahren, wie Sie Ausdrucksbaumstrukturen lesen und diese erstellen, wie Sie geänderte Ausdrucksbaumstrukturen erstellen und wie Sie Code von dargestellten Ausdrucksbaumstrukturen ausführen. Nach dem Lesen können Sie mit diesen Strukturen umfangreiche adaptive Algorithmen erstellen.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
-1. [Expression Trees Explained (Ausdrucksbaumstrukturen erklärt)](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+1. [Ausdrucksbaumstrukturen mit Erläuterung](expression-trees-explained.md)
+
+    Verstehen der Struktur und der Konzepte hinter *Ausdrucksbaumstrukturen*.
     
 2. [Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
     

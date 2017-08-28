@@ -1,45 +1,65 @@
 ---
-title: "#pragma (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#pragma"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#pragma-Direktive [C#]"
+title: '#<a name="pragma-c-reference"></a>pragma (C#-Referenz)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#pragma'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e03fc387b105c1dee3b7fed93263ad8ef22d5934
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# #pragma (C#-Referenz)
-`#pragma` gibt dem Compiler spezielle Anweisungen für die Kompilierung der Datei, in der er sich befindet.  Die Anweisungen müssen vom Compiler unterstützt werden.  Mit anderen Worten: Sie können `#pragma` nicht verwenden, um benutzerdefinierte Präprozessoranweisungen zu erstellen.  Der Microsoft C\#\-Compiler unterstützt die folgenden zwei `#pragma`\-Anweisungen:  
+# <a name="pragma-c-reference"></a>#pragma (C#-Referenz)
+`#pragma` gibt dem Compiler spezielle Anweisungen für die Kompilierung der Datei, in der es auftritt. Die Anweisungen müssen vom Compiler unterstützt werden. Das heißt, Sie können `#pragma` nicht zum Erstellen von benutzerdefinierten Vorverarbeitungsanweisungen verwenden. Der Microsoft C#-Compiler unterstützt die folgenden beiden `#pragma`-Anweisungen:  
   
- [\#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
- [\#pragma\-Prüfsumme](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```csharp
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pragma-name`  
- Der Name eines erkannten Pragmas.  
+ Der Name einer erkannten pragma-Anweisung.  
   
  `pragma-arguments`  
- Pragmaspezifische Argumente.  
+ Pragma-spezifische Argumente.  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Präprozessordirektiven](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [\#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)   
- [\#pragma\-Prüfsumme](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)   
+ [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)   
+ [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+

@@ -1,37 +1,58 @@
 ---
-title: "Gewusst wie: Suchen von Zeichenfolgen mithilfe von regul&#228;ren Ausdr&#252;cken (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Suchen nach Zeichenfolgen [C#]"
-  - "Zeichenfolgen [C#], Suchen mit RegEx"
+title: "Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken (C#-Programmierhandbuch)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- searching strings [C#]
+- strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fb05d1702c75be8fd224ee0f34d7d8d3fe71f207
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Gewusst wie: Suchen von Zeichenfolgen mithilfe von regul&#228;ren Ausdr&#252;cken (C#-Programmierhandbuch)
-Die <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>\-Klasse kann zum Suchen von Zeichenfolgen verwendet werden.  Die Komplexität dieser Suchvorgänge kann unterschiedlich sein: Es gibt sehr einfache Suchvorgänge und solche, die umfassend Gebrauch von regulären Ausdrücken machen.  Nachfolgend sind für das Suchen von Zeichenfolgen mithilfe der <xref:System.Text.RegularExpressions.Regex>\-Klasse zwei Beispiele aufgelistet.  Weitere Informationen hierzu finden Sie unter [Reguläre Ausdrücke von .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md).  
+# <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>Gewusst wie: Suchen von Zeichenfolgen mithilfe von regulären Ausdrücken (C#-Programmierhandbuch)
+Die <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>-Klasse kann zum durchsuchen von Zeichenfolgen verwendet werden. Diese Suchvorgänge können sehr simpel sein oder voll von regulären Ausdrücken profitieren. Im Folgenden finden Sie zwei Beispiele für das Durchsuchen von Zeichenfolgen mit der <xref:System.Text.RegularExpressions.Regex>-Klasse. Weitere Informationen hierzu finden Sie unter [Reguläre Ausdrücke von .NET Framework](https://msdn.microsoft.com/library/hs600312).  
   
-## Beispiel  
- Der folgende Code ist eine Konsolenanwendung, die eine einfache Suche nach Zeichenfolgen in einem Array ausführt, wobei nicht zwischen Groß\- und Kleinschreibung unterschieden wird.  Die statische Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName> führt die Suche aus, wobei die zu suchende Zeichenfolge und eine Zeichenfolge mit dem Suchmuster angegeben werden müssen.  In diesem Beispiel wird ein drittes Argument verwendet, um anzugeben, dass die Groß\-\/Kleinschreibung ignoriert werden soll.  Weitere Informationen finden Sie unter <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code ist eine Konsolenanwendung, die eine einfache Suche von Zeichenfolgen in einem Array durchführt, die nicht auf die Groß- und Kleinschreibung achtet. Die statische Methode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName> führt die Suche mit der zu durchsuchenden Zeichenfolge und einer Zeichenfolge, die das Suchmuster enthält, durch. In diesem Fall wird ein drittes Argument verwendet, um anzugeben, dass die Groß- und Kleinschreibung nicht beachtet werden soll. Weitere Informationen finden Sie unter <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  
   
  [!code-cs[csProgGuideStrings#17](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_1.cs)]  
   
-## Beispiel  
- Der folgende Code ist eine Konsolenanwendung, bei der reguläre Ausdrücke verwendet werden, um das Format aller Zeichenfolgen in einem Array zu überprüfen.  Für die Validierung ist es erforderlich, dass jede Zeichenfolge wie eine Telefonnummer in drei Zahlengruppen unterteilt ist, die mit Strichen voneinander getrennt sind. Die ersten zwei Gruppen enthalten drei Ziffern, die dritte Gruppe besteht aus vier Ziffern.  Dies wird mithilfe des regulären Ausdrucks `^\\d{3}-\\d{3}-\\d{4}$` ermöglicht.  Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../Topic/Regular%20Expression%20Language%20-%20Quick%20Reference.md).  
+## <a name="example"></a>Beispiel  
+ Der folgende Code ist eine Konsolenanwendung, die reguläre Ausdrücke verwendet, um das Format jeder Zeichenfolge in einem Array zu überprüfen. Für die Überprüfung ist erforderlich, dass jede Zeichenfolge die Form einer Telefonnummer hat, in der drei Gruppen von Zahlen durch Gedankenstriche getrennt sind, wobei die erste Gruppe drei Zeichen enthält und die dritte vier. Dies erreichen Sie mit dem regulären Ausdruck `^\\d{3}-\\d{3}-\\d{4}$`. Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).  
   
  [!code-cs[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_2.cs)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)   
- [Reguläre Ausdrücke von .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../Topic/Regular%20Expression%20Language%20-%20Quick%20Reference.md)
+ [Reguläre Ausdrücke von .NET Framework](https://msdn.microsoft.com/library/hs600312)   
+ [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c)
+

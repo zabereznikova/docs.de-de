@@ -1,25 +1,44 @@
 ---
-title: "Generische Schnittstellen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Generische Schnittstellen"
-  - "Generika [C#], Schnittstellen"
+title: Generische Schnittstellen (C#-Programmierhandbuch)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, generic interfaces
+- generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
 caps.latest.revision: 28
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 28
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2a9a994c339553b923b930660c0e129dd930de96
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Generische Schnittstellen (C#-Programmierhandbuch)
-Es ist häufig sinnvoll, Schnittstellen entweder für generische Auflistungsklassen zu definieren oder für die generischen Klassen, die Elemente in der Auflistung darstellen.  Die Einstellung für generische Klassen ist, dass generische Schnittstellen verwendet werden sollen, z. B. <xref:System.IComparable%601> anstelle von <xref:System.IComparable>. Dadurch werden Boxing\- und Unboxingoperationen für Werttypen vermieden.  Durch die Klassenbibliothek von .NET Framework werden einige generische Schnittstellen definiert, die zusammen mit den Auflistungsklassen im <xref:System.Collections.Generic>\-Namespace verwendet werden können.  
+# <a name="generic-interfaces-c-programming-guide"></a>Generische Schnittstellen (C#-Programmierhandbuch)
+Es ist häufig sinnvoll, Schnittstellen entweder für generische Auflistungsklassen zu definieren oder für die generischen Klassen, die Elemente in der Auflistung darstellen. Die Einstellung für generische Klassen ist, dass generische Schnittstellen verwendet werden sollen, z.B. <xref:System.IComparable%601> anstelle von <xref:System.IComparable>. Dadurch werden Boxing- und Unboxingoperationen für Werttypen vermieden. Durch die Klassenbibliothek von .NET Framework werden einige generische Schnittstellen definiert, die zusammen mit den Auflistungsklassen im Namespace <xref:System.Collections.Generic> verwendet werden können.  
   
- Wenn als Einschränkung für einen Typparameter eine Schnittstelle angegeben ist, können nur Typen verwendet werden, die diese Schnittstelle implementieren.  Das folgende Codebeispiel zeigt eine `SortedList<T>`\-Klasse, die von der `GenericList<T>`\-Klasse abgeleitet ist.  Weitere Informationen finden Sie unter [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md).  `SortedList<T>` fügt die Einschränkung `where T : IComparable<T>` hinzu.  Dadurch kann die `BubbleSort`\-Methode in `SortedList<T>` die generische <xref:System.IComparable%601.CompareTo%2A>\-Methode für Listenelemente verwenden.  Im angegebenen Beispiel sind Listenelemente eine einfache Klasse \(`Person`\), die `IComparable<Person>` implementiert.  
+ Wenn als Einschränkung für einen Typparameter eine Schnittstelle angegeben ist, können nur Typen verwendet werden, die diese Schnittstelle implementieren. Der folgende Code zeigt eine Klasse `SortedList<T>`, die von der Klasse `GenericList<T>` abgeleitet wird. Weitere Informationen finden Sie unter [Introduction to Generics (Einführung in Generika)](../../../csharp/programming-guide/generics/introduction-to-generics.md). `SortedList<T>` fügt die Einschränkung `where T : IComparable<T>` hinzu. Dadurch kann die Methode `BubbleSort` in `SortedList<T>` die generische Methode <xref:System.IComparable%601.CompareTo%2A> für Listenelemente verwenden. In diesem Beispiel sind Listenelemente eine einfache Klasse, `Person`, die `IComparable<Person>` implementiert.  
   
  [!code-cs[csProgGuideGenerics#29](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_1.cs)]  
   
@@ -35,7 +54,7 @@ Es ist häufig sinnvoll, Schnittstellen entweder für generische Auflistungsklas
   
  [!code-cs[csProgGuideGenerics#32](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_4.cs)]  
   
- Generische Schnittstellen können von nicht generischen Schnittstellen erben, sofern die generische Schnittstelle kontravariant ist, d. h., die generische Schnittstelle verwendet ausschließlich den eigenen Typparameter als Rückgabewert.  In der Klassenbibliothek von .NET Framework erbt <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Collections.IEnumerable>, da <xref:System.Collections.Generic.IEnumerable%601> nur `T` im Rückgabewert von <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> und in der Funktion zum Abrufen der <xref:System.Collections.Generic.IEnumerator%601.Current%2A>\-Eigenschaft verwendet.  
+ Generische Schnittstellen können von nicht generischen Schnittstellen erben, sofern die generische Schnittstelle kontravariant ist, also die generische Schnittstelle ausschließlich den eigenen Typparameter als Rückgabewert verwendet. In der Klassenbibliothek von .NET Framework erbt <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Collections.IEnumerable>, da <xref:System.Collections.Generic.IEnumerable%601> nur `T` im Rückgabewert von <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> und in der Funktion zum Abrufen der Eigenschaft <xref:System.Collections.Generic.IEnumerator%601.Current%2A> verwendet.  
   
  Konkrete Klassen können geschlossene konstruierte Schnittstellen wie folgt implementieren:  
   
@@ -45,10 +64,11 @@ Es ist häufig sinnvoll, Schnittstellen entweder für generische Auflistungsklas
   
  [!code-cs[csProgGuideGenerics#34](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_6.cs)]  
   
- Die Regeln, die das Überladen von Methoden steuern, sind für die Methoden innerhalb von generischen Klassen, generischen Strukturen oder generischen Schnittstellen gleich.  Weitere Informationen finden Sie unter [Generische Methoden](../../../csharp/programming-guide/generics/generic-methods.md).  
+ Die Regeln, die das Überladen von Methoden steuern, sind für die Methoden innerhalb von generischen Klassen, generischen Strukturen oder generischen Schnittstellen gleich. Weitere Informationen finden Sie unter [Generic Methods (Generische Methoden)](../../../csharp/programming-guide/generics/generic-methods.md).  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [Schnittstelle](../../../csharp/language-reference/keywords/interface.md)   
- [Generika](../Topic/Generics%20in%20the%20.NET%20Framework.md)
+ [Generika](~/docs/standard/generics/index.md)
+

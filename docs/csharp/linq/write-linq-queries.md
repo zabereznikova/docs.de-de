@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -40,7 +41,7 @@ In diesem Thema werden alle drei Möglichkeiten vorgestellt, mit denen man eine 
   
  [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
- Beachten Sie, dass der Typ der Abfragen <xref:System.Collections.Generic.IEnumerable%601> ist. Alle diese Abfragen können mithilfe von `var` geschrieben werden, wie im folgenden Beispiel gezeigt wird:  
+ Beachten Sie, dass der Typ der Abfrage <xref:System.Collections.Generic.IEnumerable%601> ist. Alle diese Abfragen können mithilfe von `var` geschrieben werden, wie im folgenden Beispiel gezeigt wird:  
   
  `var query = from num in numbers...`  
   
@@ -49,7 +50,7 @@ In diesem Thema werden alle drei Möglichkeiten vorgestellt, mit denen man eine 
 ## <a name="example"></a>Beispiel  
   
 ## <a name="method-syntax"></a>Methodensyntax  
- Einige Abfragevorgänge müssen als Methodenaufruf ausgedrückt werden. Die am häufigsten vorkommenden Methoden dieser Art sind die, die einzelne numerische Singleton-Werte zurückgeben, z.B. <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> und so weiter. Diese Methoden müssen in einer Abfrage immer zuletzt aufgerufen werden, da sie nur einen einzelnen Wert darstellen und nicht als Quelle für einen zusätzlichen Abfragevorgang dienen können. Im folgenden Beispiel wird ein Methodenaufruf in einem Abfrageausdruck dargestellt:  
+ Einige Abfragevorgänge müssen als Methodenaufruf ausgedrückt werden. Die häufigsten derartigen Methoden sind die, die einzelne numerische Werte zurückgeben, wie z.B. <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> usw. Diese Methoden müssen in einer Abfrage immer zuletzt aufgerufen werden, da sie nur einen einzelnen Wert darstellen und nicht als Quelle für einen zusätzlichen Abfragevorgang dienen können. Im folgenden Beispiel wird ein Methodenaufruf in einem Abfrageausdruck dargestellt:  
   
  [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
@@ -58,7 +59,7 @@ In diesem Thema werden alle drei Möglichkeiten vorgestellt, mit denen man eine 
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- Von den vorherigen Abfragen wird nur die vierte Abfrage sofort ausgeführt. Das liegt daran, dass sie einen einzelnen Wert zurückgibt und keine generische <xref:System.Collections.Generic.IEnumerable%601>-Auflistung. Die Methode selbst muss `foreach` verwenden, um einen Wert zu berechnen.  
+ Von den vorherigen Abfragen wird nur die vierte Abfrage sofort ausgeführt. Dies liegt daran, dass es einen einzelnen Wert zurückgibt und keine generische <xref:System.Collections.Generic.IEnumerable%601>-Auflistung. Die Methode selbst muss `foreach` verwenden, um einen Wert zu berechnen.  
   
  Alle vorherigen Abfragen können mithilfe von implizierter Typisierung mit [var](../language-reference/keywords/var.md) geschrieben werden. Dies wird im folgenden Beispiel gezeigt:  
   
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [LINQ-Abfrageausdrücke](index.md)   
  [where-Klausel](../language-reference/keywords/where-clause.md)
+

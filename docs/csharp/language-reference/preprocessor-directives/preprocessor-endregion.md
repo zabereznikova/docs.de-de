@@ -1,28 +1,46 @@
 ---
-title: "#endregion (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#endregion"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#endregion-Direktive [C#]"
+title: '#<a name="endregion-c-reference"></a>endregion (C#-Referenz)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#endregion'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 59b37330f526333b8cfc18e06bdfaadd480b4b43
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# #endregion (C#-Referenz)
-Mit `#endregion` wird das Ende eines [\#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)\-Blocks gekennzeichnet.  Beispiele:  
+# <a name="endregion-c-reference"></a>#endregion (C#-Referenz)
+`#endregion` markiert das Ende eines [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)-Blocks. Zum Beispiel:  
   
-```  
-  
-      #region MyClass definition  
+```csharp
+#region MyClass definition  
 class MyClass   
 {  
     static void Main()   
@@ -32,7 +50,8 @@ class MyClass
 #endregion  
 ```  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Präprozessordirektiven](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
+

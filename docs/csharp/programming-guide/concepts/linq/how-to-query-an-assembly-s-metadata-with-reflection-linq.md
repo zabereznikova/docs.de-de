@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 50409af2add7f5ca3d591ac9d942e45ccce409af
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 181d72db228bbc43c00ce3d3266fde8e1d3324e9
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)
@@ -61,10 +61,11 @@ namespace LINQReflection
 }  
 ```  
   
- Im Beispiel wird die <xref:System.Reflection.Assembly.GetTypes%2A>-Methode verwendet, um ein Array von Typen in der angegebenen Assembly zurückzugeben. Der [where](../../../../csharp/language-reference/keywords/where-clause.md)-Filter wird angewendet, sodass nur öffentliche Typen zurückgegeben werden. Für jeden öffentlichen Typ wird eine Unterabfrage generiert, indem das <xref:System.Reflection.MethodInfo>-Array verwendet wird, der vom <xref:System.Type.GetMethods%2A>-Aufruf zurückgegeben wird. Diese Ergebnisse werden gefiltert, damit nur die Methoden zurückgegeben werden, deren Rückgabetyp ein Array oder ein Typ ist, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Abschließend werden die Ergebnisse mithilfe des Typnamens als Schlüssel gruppiert.  
+ Im Beispiel wird die <xref:System.Reflection.Assembly.GetTypes%2A>-Methode verwendet, um ein Array von Typen in der angegebenen Assembly zurückzugeben. Der [where](../../../../csharp/language-reference/keywords/where-clause.md)-Filter wird angewendet, sodass nur öffentliche Typen zurückgegeben werden. Für jeden öffentlichen Typ wird mit dem <xref:System.Reflection.MethodInfo>-Array eine Unterabfrage generiert, die vom <xref:System.Type.GetMethods%2A>-Aufruf zurückgegeben wird. Diese Ergebnisse werden gefiltert, damit nur die Methoden zurückgegeben werden, deren Rückgabetyp ein Array oder ein Typ ist, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Abschließend werden die Ergebnisse mithilfe des Typnamens als Schlüssel gruppiert.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein Projekt, das die .NET Framework-Version 3.5 oder höher verwendet, mit einem Verweis auf System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

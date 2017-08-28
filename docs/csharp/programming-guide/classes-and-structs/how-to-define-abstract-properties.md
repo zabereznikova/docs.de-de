@@ -1,64 +1,84 @@
 ---
-title: "Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Abstrakte Eigenschaften [C#]"
-  - "Eigenschaften [C#], abstract"
+title: 'Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- properties [C#], abstract
+- abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)
-Im folgenden Beispiel wird die Definition [abstrakter](../../../csharp/language-reference/keywords/abstract.md) Eigenschaften erläutert.  Die Deklaration einer abstrakten Eigenschaft stellt keine Implementierung der Eigenschaftenaccessoren bereit. Sie deklariert, dass die Klasse Eigenschaften unterstützt, überlässt die Implementierung der Accessoren jedoch abgeleiteten Klassen.  Im folgenden Beispiel wird veranschaulicht, wie die von einer Basisklasse geerbten abstrakten Eigenschaften implementiert werden.  
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)
+Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../../csharp/language-reference/keywords/abstract.md) Eigenschaften definieren: Eine abstrakte Eigenschaftendeklaration stellt keine Implementierung des Eigenschaftenaccessors bereit, sondern deklariert, dass die Klasse Eigenschaften unterstützt, die Accessorenimplementierung jedoch abgeleiteten Klassen überlässt. Das folgende Beispiel veranschaulicht das Implementieren von abstrakten Eigenschaften, die von einer Basisklasse geerbt wurden.  
   
- Dieses Beispiel besteht aus drei Dateien, die einzeln kompiliert werden. Auf die sich daraus ergebende Assembly wird in der jeweils nächsten Kompilierung verwiesen:  
+ Dieses Beispiel besteht aus drei Dateien, von denen jede einzeln kompiliert wird, und auf die daraus entstehende Assembly von der nächsten Kompilierung verwiesen wird.  
   
--   abstractshape.cs: Die `Shape`\-Klasse, die eine abstrakte `Area`\-Eigenschaft enthält.  
+-   abstractshape.cs: die `Shape`-Klasse, die eine abstrakte `Area`-Eigenschaft enthält.  
   
--   shapes.cs: Die Unterklassen der `Shape`\-Klasse.  
+-   shapes.cs: die Unterklassen der `Shape`-Klasse.  
   
--   shapetest.cs: Ein Testprogramm zum Anzeigen der Bereiche einiger von `Shape` abgeleiteter Objekte.  
+-   shapetest.cs: ein Testprogramm zum Anzeigen der Bereiche einiger abgeleiteten `Shape`-Objekte.  
   
- Verwenden Sie zum Kompilieren des Beispiels die folgende Befehlszeile:  
+ Verwenden Sie den folgenden Befehl, um das Beispiel zu kompilieren:  
   
  `csc abstractshape.cs shapes.cs shapetest.cs`  
   
- Dadurch wird die ausführbare Datei **shapetest.exe** erstellt.  
+ Dadurch wird die ausführbare Datei „shapetest.exe“ erstellt.  
   
-## Beispiel  
- Durch diese Datei wird die `Shape`\-Klasse deklariert, die die `Area`\-Eigenschaft vom Typ `double` enthält.  
+## <a name="example"></a>Beispiel  
+ Diese Datei deklariert die `Shape`-Klasse, die die `Area`-Eigenschaft des Typs `double` enthält.  
   
  [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
--   Modifizierer für die Eigenschaft werden in die Eigenschaftendeklaration selbst eingefügt.  Beispiele:  
+-   Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Zum Beispiel:  
   
     ```  
     public abstract double Area  
     ```  
   
--   Wenn Sie eine abstrakte Eigenschaft \(in diesem Beispiel `Area`\) deklarieren, geben Sie lediglich an, welche Eigenschaftenaccessoren verfügbar sind, ohne sie jedoch zu implementieren.  In diesem Beispiel ist nur ein [get](../../../csharp/language-reference/keywords/get.md)\-Accessor verfügbar, weswegen die Eigenschaft schreibgeschützt ist.  
+-   Wenn Sie eine abstrakte Eigenschaft deklarieren (z.B. `Area` in diesem Beispiel), geben Sie lediglich an, welche Eigenschaftenaccessoren verfügbar sind, implementieren diese jedoch nicht. In diesem Beispiel ist nur ein [get](../../../csharp/language-reference/keywords/get.md)-Accessor verfügbar, die Eigenschaft ist also schreibgeschützt.  
   
-## Beispiel  
- Im folgenden Code sind drei Unterklassen von `Shape` enthalten, die die `Area`\-Eigenschaft überschreiben, um ihre eigene Implementierung bereitzustellen.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt drei Unterklassen von `Shape` und wie sie die `Area`-Eigenschaft überschreiben, um ihre eigene Implementierung bereitzustellen.  
   
  [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
-## Beispiel  
- Der folgende Code stellt ein Testprogramm dar, das einige von `Shape` abgeleitete Objekte erstellt und ihre Bereiche ausgibt.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt ein Testprogramm, das eine Reihe abgeleiteter `Shape`-Objekte erstellt und deren Bereiche ausdruckt.  
   
  [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
  [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)
+ [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+

@@ -1,5 +1,5 @@
 ---
-title: 'XML-Beispieldatei: Testkonfiguration in einem Namespace1 | Microsoft-Dokumentation'
+title: 'Beispiel XML-Datei: Testkonfiguration in einem Namespace1'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3637599db5db27a2e5ea7b0ae4599a47e95da9ea
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 891616a9327add5671b512cf2d437f61cce947e7
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Beispiel XML-Datei: Testkonfiguration in einem Namespace
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei. Der XML-Code befindet sich in einem Namespace.  
+Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei. Der XML-Code befindet sich in einem Namespace.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
   
@@ -74,3 +75,4 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

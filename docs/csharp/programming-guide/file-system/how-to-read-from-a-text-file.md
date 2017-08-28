@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen aus einer Textdatei (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Lesen aus einer Textdatei (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,14 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d545aa7f25da49b3ca0fc50b0c5a55c9c0d2b967
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd0ad3e062c4d4b32fb6140cacba9a4a32674759
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Gewusst wie: Lesen aus einer Textdatei (C#-Programmierhandbuch)
-Dieses Beispiel liest die Inhalte einer Textdatei mithilfe der statischen Methoden <xref:System.IO.File.ReadAllText%2A> und <xref:System.IO.File.ReadAllLines%2A> der Klasse <xref:System.IO.File?displayProperty=fullName>.  
+In diesem Beispiel wird der Inhalt von Textdateien gelesen, indem die statische Methoden <xref:System.IO.File.ReadAllText%2A> und <xref:System.IO.File.ReadAllLines%2A> aus der <xref:System.IO.File?displayProperty=fullName>-Klasse verwendet werden.  
   
  Ein Beispiel, in dem <xref:System.IO.StreamReader> verwendet wird, finden Sie unter [Vorgehensweise: Zeilenweises Lesen einer Textdatei](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
@@ -66,3 +67,4 @@ Dieses Beispiel liest die Inhalte einer Textdatei mithilfe der statischen Method
  <xref:System.IO?displayProperty=fullName>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+

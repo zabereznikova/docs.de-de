@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,24 +27,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6d529e60643966fbabd5290543146977b4dc83c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Gewusst wie: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch)
-Das folgende Verfahren veranschaulicht, wie Sie Ereignisse hinzufügen können, die dem [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Standardmuster ihrer Klassen und Strukturen folgen. Alle Ereignisse in der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Klassenbibliothek basieren auf dem <xref:System.EventHandler>-Delegaten, der wie folgt definiert ist:  
+Das folgende Verfahren veranschaulicht, wie Sie Ereignisse hinzufügen können, die dem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Standardmuster ihrer Klassen und Strukturen folgen. Alle Ereignisse in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek basieren auf dem <xref:System.EventHandler>-Delegaten, der wie folgt definiert ist:  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  Das [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] führt eine generische Version dieses Delegaten ein: <xref:System.EventHandler%601>. Die folgenden Beispiele zeigen, wie Sie beide Versionen verwenden können.  
+>  Das [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] führt eine generische Version dieses Delegaten ein: <xref:System.EventHandler%601>. Die folgenden Beispiele zeigen, wie Sie beide Versionen verwenden können.  
   
- Auch wenn Ereignisse in von Ihnen definierten Klassen auf jedem beliebigen Delegattyp basiert sein können – sogar Delegate, die einen Wert zurückgeben –, wird allgemein empfohlen, dass Sie Ihre Ereignisse mit <xref:System.EventHandler> auf dem [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]-Muster basieren, wie in folgendem Beispiel gezeigt.  
+ Auch wenn Ereignisse in von Ihnen definierten Klassen auf jedem beliebigen Delegattyp basiert sein können – sogar Delegate, die einen Wert zurückgeben –, wird allgemein empfohlen, dass Sie Ihre Ereignisse mit dem <xref:System.EventHandler> auf dem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Muster basieren, wie in folgendem Beispiel gezeigt.  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>So veröffentlichen Sie Ereignisse, die auf dem EventHandler-Muster basieren  
   
@@ -101,3 +101,4 @@ public delegate void EventHandler(object sender, EventArgs e);
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Ereignisse](../../../csharp/programming-guide/events/index.md)   
  [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+

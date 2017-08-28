@@ -1,5 +1,5 @@
 ---
-title: "Methoden | Leitfaden für C#"
+title: "Methoden (Leitfaden für C#)"
 description: "Übersicht über Methoden, Methodenparameter und Methodenrückgabewerte"
 keywords: .NET, .NET Core, C#
 author: rpetrusha
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods"></a>Methoden #
@@ -280,14 +280,12 @@ Mit einer asynchronen Methode können keine [ref](https://msdn.microsoft.com/lib
 Es gibt häufig Methodendefinitionen, die einfach direkt das Ergebnis eines Ausdrucks zurückgeben oder eine einzige Anweisung als Text der Methode aufweisen.  Es ist eine Syntaxabkürzung zur Definition solcher Methoden mithilfe von `=>`verfügbar:
 
 ```csharp
-
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
 public void Print() => Console.WriteLine(First + " " + Last);
 // Works with operators, properties, and indexers too.
 public static Complex operator +(Complex a, Complex b) => a.Add(b);
 public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
-
 ```
 
 Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get`-Accessorschlüsselwort.
@@ -303,12 +301,12 @@ Weitere Informationen finden Sie unter [Iteratoren](https://msdn.microsoft.com/l
 
 ## <a name="see-also"></a>Siehe auch ##
 
-[Zugriffsmodifizierer](https://msdn.microsoft.com/library/wxh6fsc7.aspx)
-[Statische Klassen und statische Klassenmember](https://msdn.microsoft.com/library/79b3xss3.aspx)
-[Vererbung](https://msdn.microsoft.com/library/ms173149.aspx)
-[Abstrakte und versiegelte Klassen und Klassenmember](https://msdn.microsoft.com/library/ms173150.aspx)
-[Params](https://msdn.microsoft.com/library/w5zay9db.aspx)
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)
+[Access Modifiers (Zugriffsmodifizierer)](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
+[Statische Klassen und statische Klassenmember](https://msdn.microsoft.com/library/79b3xss3.aspx)   
+[Vererbung](https://msdn.microsoft.com/library/ms173149.aspx)   
+[Abstrakte und versiegelte Klassen und Klassenmember](https://msdn.microsoft.com/library/ms173150.aspx)   
+[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
+[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
+[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
 [Übergeben von Parametern](https://msdn.microsoft.com/library/0f66670z.aspx)
 

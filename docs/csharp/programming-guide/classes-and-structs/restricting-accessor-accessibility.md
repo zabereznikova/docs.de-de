@@ -1,74 +1,94 @@
 ---
-title: "Einschr&#228;nken des Accessorzugriffs (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Accessoren [C#]"
-  - "Asymmetrischer Accessorzugriff [C#]"
-  - "Indexer [C#], Schreibgeschützt"
-  - "Eigenschaften [C#], Schreibgeschützt"
-  - "Schreibgeschützte Indexer [C#]"
-  - "Schreibschutzeigenschaften [C#]"
+title: "Einschränken des Zugriffsmethodenzugriffs (C#-Programmierhandbuch)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- read-only properties [C#]
+- read-only indexers [C#]
+- accessors [C#]
+- properties [C#], read-only
+- asymmetric accessor accesibility [C#]
+- indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Einschr&#228;nken des Accessorzugriffs (C#-Programmierhandbuch)
-Die Abschnitte [get](../../../csharp/language-reference/keywords/get.md) und [set](../../../csharp/language-reference/keywords/set.md) einer Eigenschaft oder eines Indexers werden als *Accessoren* bezeichnet.  Diese Accessoren weisen standardmäßig dieselbe Sichtbarkeits\- bzw. Zugriffsebene auf, und zwar diejenige der Eigenschaft oder des Indexers, der bzw. dem sie angehören.  Weitere Informationen finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md).  In bestimmten Fällen ist es jedoch nützlich, den Zugriff auf einen der beiden Accessoren einzuschränken.  Normalerweise wird der Zugriff auf den `set`\-Accessor eingeschränkt, während auf den `get`\-Accessor weiterhin öffentlich zugegriffen werden kann.  Beispiele:  
+# <a name="restricting-accessor-accessibility-c-programming-guide"></a>Einschränken des Zugriffsmethodenzugriffs (C#-Programmierhandbuch)
+Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../../csharp/language-reference/keywords/set.md)-Teile einer Eigenschaft oder eines Indexers werden *Zugriffsmethoden* oder Accessoren genannt. Standardmäßig weisen diese Zugriffsmethoden dieselbe Sichtbarkeit oder Zugriffsebene auf: nämlich die der Eigenschaft oder des Indexers, zu dem sie gehören. Weitere Informationen finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). Allerdings ist es manchmal sinnvoll, den Zugriff auf eine der beiden Zugriffsmethoden einzuschränken. Dies bedeutet in der Regel, dass der Zugriff auf den `set`-Accessor eingeschränkt wird, während der `get`-Accessor öffentlich zugänglich bleibt. Zum Beispiel:  
   
  [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
- In diesem Beispiel definiert die Eigenschaft `Name` einen `set`\-Accessor und einen `get`\-Accessor.  Dem `get`\-Accessor wird die Zugriffsebene der Eigenschaft selbst zugewiesen, `public` in diesem Fall, während der `set`\-Accessor explizit eingeschränkt wird, indem der [protected](../../../csharp/language-reference/keywords/protected.md)\-Zugriffsmodifizierer auf den Accessor selbst angewendet wird.  
+ In diesem Beispiel definiert die Eigenschaft `Name` einen `get`- und einen `set`-Accessor. Der `get`-Accessor erhält die Zugriffsebene der Eigenschaft selbst, in diesem Fall `public`. Der `set`-Accessor wird jedoch explizit durch Anwenden des [Protected](../../../csharp/language-reference/keywords/protected.md)-Zugriffsmodifizierers auf den Accessor selbst eingeschränkt.  
   
-## Einschränkungen für Zugriffsmodifizierer bei Accessoren  
- Die Anwendung von Accessormodifizierern auf Eigenschaften oder Indexer unterliegt den folgenden Bedingungen:  
+## <a name="restrictions-on-access-modifiers-on-accessors"></a>Einschränkungen für Zugriffsmodifizierer für Accessoren  
+ Bei der Verwendung von Accessormodifizierern auf Eigenschaften oder Indexer muss Folgendes beachtet werden:  
   
--   Sie können Accessormodifizierer nicht für eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) oder eine explizite Implementierung eines Schnittstellenmembers verwenden.  
+-   Accessormodifizierer können nicht bei einer Schnittstelle oder einer expliziten [Schnittstellen](../../../csharp/language-reference/keywords/interface.md)-Member-Implementierung verwendet werden.  
   
--   Sie können nur Accessormodifizierer verwenden, wenn die Eigenschaft oder der Indexer sowohl über einen `set`\-Accessor als auch über einen `get`\-Accessor verfügt.  In diesem Fall ist der Modifizierer nur auf einem der beiden Accessoren erlaubt.  
+-   Accessormodifizierer können nur verwendet werden, wenn die Eigenschaft oder der Indexer sowohl einen `set`- als auch einen `get`-Accessor besitzt. In diesem Fall ist der Modifizierer nur für einen der beiden Accessoren zulässig.  
   
--   Wenn die Eigenschaft oder der Indexer einen [override](../../../csharp/language-reference/keywords/override.md)\-Modifizierer besitzt, muss der Accessormodifizierer dem Accessor des überschriebenen Accessors \(falls vorhanden\) entsprechen.  
+-   Besitzt die Eigenschaft oder der Indexer einen [Override](../../../csharp/language-reference/keywords/override.md)-Modifizierer, muss der Accessormodifizierer mit dem eventuell vorhandenen Accessor des überschriebenen Accessors übereinstimmen.  
   
--   Die Zugriffsebene für den Accessor muss restriktiver sein als die Zugriffsebene für die Eigenschaft oder den Indexer.  
+-   Die Zugriffsebene des Accessors muss restriktiver sein als die Zugriffsebene der Eigenschaft oder des Indexers selbst.  
   
-## Zugriffsmodifizierer auf überschreibenden Accessoren  
- Wenn Sie eine Eigenschaft oder einen Indexer überschreiben, müssen die überschriebenen Accessoren für den überschreibenden Code zugänglich sein.  Außerdem muss die Zugriffsebene sowohl von Eigenschaft\/Indexer als auch der Accessoren mit den überschriebenen Entsprechungen von Eigenschaft\/Indexer und der Accessoren übereinstimmen.  Beispiele:  
+## <a name="access-modifiers-on-overriding-accessors"></a>Zugriffsmodifizierer für Override-Accessoren  
+ Beim Überschreiben einer Eigenschaft oder eines Indexers müssen die überschriebenen Accessoren für den überschreibenden Code zugänglich sein. Außerdem müssen die Zugriffsebenen der Eigenschaft/des Indexers als auch der Accessoren mit der entsprechenden überschriebenen Eigenschaft/dem Indexer und den Accessoren übereinstimmen. Zum Beispiel:  
   
  [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
-## Implementieren von Schnittstellen  
- Wenn Sie einen Accessor verwenden, um eine Schnittstelle zu implementieren, ist es möglich, dass der Accessor keinen Zugriffsmodifizierer hat.  Wenn Sie die Schnittstelle mit einem Accessor implementieren, z. B. mit `get`, kann der andere Accessor einen Zugriffsmodifizierer haben. Beispiel:  
+## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
+ Bei der Verwendung eines Accessors zur Implementierung einer Schnittstelle darf der Accessor keinen Zugriffsmodifizierer besitzen. Wird jedoch zur Implementierung der Schnittstelle nur ein Accessor verwendet, z.B. `get`, kann der andere Accessor einen Zugriffsmodifizierer besitzen. Hier ein Beispiel:  
   
  [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
-## Accessorzugriffsdomäne  
- Wenn Sie auf dem Accessor einen Zugriffsmodifizierer verwenden, wird die [Zugriffsdomäne](../../../csharp/language-reference/keywords/accessibility-domain.md) des Accessors von diesem Modifizierer bestimmt.  
+## <a name="accessor-accessibility-domain"></a>Zugriffsdomäne des Accessors  
+ Bei Verwendung eines Zugriffsmodifizierers für den Accessor wird die [Zugriffsdomäne](../../../csharp/language-reference/keywords/accessibility-domain.md) des Accessors durch diesen Modifizierer bestimmt.  
   
- Wenn Sie auf dem Accessor keinen Zugriffsmodifizierer verwendet haben, wird die Zugriffsdomäne des Accessors von der Zugriffsebene der Eigenschaft bzw. des Indexers bestimmt.  
+ Andernfalls wird die Zugriffsdomäne des Accessors durch die Zugriffsebene der Eigenschaft oder des Indexers bestimmt.  
   
-## Beispiel  
- Das folgende Beispiel enthält drei Klassen: `BaseClass`, `DerivedClass` und `MainClass`.  Es gibt zwei Eigenschaften auf der `BaseClass`, `Name` und `Id` auf beiden Klassen.  Im Beispiel wird veranschaulicht, wie die `Id`\-Eigenschaft für `DerivedClass` durch die `Id`\-Eigenschaft für `BaseClass` ausgeblendet wird, wenn ein restriktiver Zugriffsmodifizierer wie [protected](../../../csharp/language-reference/keywords/protected.md) oder [private](../../../csharp/language-reference/keywords/private.md) verwendet wird.  Wenn Sie dieser Eigenschaft Werte zuweisen, wird daher stattdessen die Eigenschaft auf der `BaseClass`\-Klasse aufgerufen.  Indem Sie den Zugriffsmodifizierer durch [public](../../../csharp/language-reference/keywords/public.md) ersetzen, kann auf die Eigenschaft zugegriffen werden.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel enthält drei Klassen: `BaseClass`, `DerivedClass` und `MainClass`. Für `BaseClass` gibt es zwei Eigenschaften, `Name` und `Id` für beide Klassen. Das Beispiel veranschaulicht, wie die Eigenschaft `Id` in `DerivedClass` durch die Eigenschaft `Id` in `BaseClass` ausgeblendet werden kann, wenn ein restriktiver Zugriffsmodifizierer, wie z.B. [protected](../../../csharp/language-reference/keywords/protected.md) oder [private](../../../csharp/language-reference/keywords/private.md), verwendet wird. Daher wird beim Zuweisen von Werten zu dieser Eigenschaft stattdessen die Eigenschaft für die Klasse `BaseClass` aufgerufen. Wird der Zugriffsmodifizierer durch [public](../../../csharp/language-reference/keywords/public.md) ersetzt, kann auf die Eigenschaft zugegriffen werden.  
   
- Das Beispiel zeigt auch, dass ein restriktiver Zugriffsmodifizierer \(z. B. `private` oder `protected`\) auf dem `set`\-Accessor der `Name`\-Eigenschaft in `DerivedClass` den Zugriff auf den Accessor verhindert und einen Fehler generiert, sobald Sie darauf verweisen.  
+ Das Beispiel zeigt auch, dass die Verwendung eines restriktiven Zugriffsmodifizierers, wie z.B. `private` oder `protected`, auf den `set`-Accessor der Eigenschaft `Name` in `DerivedClass` den Zugriff auf den Accessor verhindert. Mit dem Zuweisen zu dem Accessor wird ein Fehler generiert.  
   
  [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
-## Kommentare  
- Beachten Sie, dass Sie beim Ersetzen der Deklaration `new private string Id` durch `new public string Id` die folgende Ausgabe erhalten:  
+## <a name="comments"></a>Kommentare  
+ Beachten Sie, dass beim Ersetzen der Deklaration `new private string Id` durch `new public string Id` Folgendes ausgegeben wird:  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  
   
  `Name and ID in the derived class: John, John123`  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Indexer](../../../csharp/programming-guide/indexers/index.md)   
  [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+

@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  Im Allgemeinen werden die Quelldaten logisch als Sequenz von Elementen der gleichen Art organisiert. Eine SQL-Datenbanktabelle enthält z.B. eine Sequenz von Zeilen. In einer XML-Datei gibt es eine „Sequenz“ von XML-Elementen (auch wenn diese hierarchisch in einer Baumstruktur organisiert sind). Eine Auflistung im Arbeitsspeicher enthält eine Sequenz von Objekten. 
   
- Aus Sicht einer Anwendung ist der spezifische Typ und die Struktur der ursprünglichen Datenquelle nicht wichtig. Die Anwendung interpretiert die Quelldaten immer als eine <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Linq.IQueryable%601>-Auflistung. In LINQ to XML werden die Quelldaten z.B. als ein `IEnumerable`\<<xref:System.Xml.Linq.XElement>> sichtbar gemacht.  
+ Aus Sicht einer Anwendung ist der spezifische Typ und die Struktur der ursprünglichen Datenquelle nicht wichtig. Die Anwendung sieht die Quelldaten immer als eine <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Linq.IQueryable%601>-Auflistung an. In LINQ to XML werden die Quelldaten z.B. als ein `IEnumerable`\<<xref:System.Xml.Linq.XElement> sichtbar gemacht.  
   
  Wenn diese Quellsequenz vorliegt, kann eine Abfrage eine der folgenden drei Aktionen durchführen:  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
   
- Die `select`-Klausel kann zum Transformieren von Quelldaten in Sequenzen neuer Typen verwendet werden. Diese Transformation wird auch als *Projektion* bezeichnet. Im folgenden Beispiel *projiziert`select` die*-Klausel eine Sequenz anonymer Typen, die nur eine Teilmenge der Felder im originalen Element enthalten. Beachten Sie, dass die neuen Objekte mit einem Objektinitialisierer initialisiert werden.  
+ Die `select`-Klausel kann zum Transformieren von Quelldaten in Sequenzen neuer Typen verwendet werden. Diese Transformation wird auch als *Projektion* bezeichnet. Im folgenden Beispiel *projiziert`select` die* -Klausel eine Sequenz anonymer Typen, die nur eine Teilmenge der Felder im originalen Element enthalten. Beachten Sie, dass die neuen Objekte mit einem Objektinitialisierer initialisiert werden.  
   
  [!code-cs[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
   

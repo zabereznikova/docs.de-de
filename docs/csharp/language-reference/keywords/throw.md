@@ -1,5 +1,5 @@
 ---
-title: throw (C#-Referenz) | Microsoft-Dokumentation
+title: throw (C#-Referenz)
 ms.date: 2015-03-02
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 095a86f5ab2ce50f5931643161a44b5759583e4e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
@@ -49,7 +49,7 @@ Die Syntax von `throw` lautet:
 ```csharp
 throw [e]
 ```
-wobei `e` eine Instanz einer Klasse ist, die von <xref:System.Exception?displayProperty=fullName> abgeleitet wurde. Im folgenden Beispiel wird die `throw`-Anweisung verwendet, um eine @System.IndexOutOfRangeException auszulösen, wenn das Argument, das an eine Methode mit dem Namen `GetNumber` übergeben wurde, nicht auf einen gültigen Index eines internen Arrays reagiert.
+Wo `e` eine Instanz einer Klasse ist, die von <xref:System.Exception?displayProperty=fullName> abgeleitet wird. Im folgenden Beispiel wird die `throw`-Anweisung verwendet, um eine @System.IndexOutOfRangeException auszulösen, wenn das Argument, das an eine Methode mit dem Namen `GetNumber` übergeben wurde, nicht auf einen gültigen Index eines internen Arrays reagiert.
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 
@@ -94,3 +94,4 @@ Ab C# 7 kann `throw` als Ausdruck sowie als Anweisung verwendet werden. Dadurch 
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [Vorgehensweise: Explizites Auslösen von Ausnahmen](https://msdn.microsoft.com/library/xhcbs8fz)
+

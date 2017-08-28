@@ -1,5 +1,5 @@
 ---
-title: float (C#-Referenz) | Microsoft-Dokumentation
+title: float (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float (C#-Referenz)
@@ -73,12 +74,12 @@ float x = 3.5F;
  Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269)-Website.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden ein [int](int.md)-, ein [short](short.md) und ein `float`-Datentyp in einem mathematischen Ausdruck verwendet, der ein `float`-Ergebnis aufweist. (Beachten Sie, dass `float` ein Alias für den Typen <xref:System.Single?displayProperty=fullName> ist) Beachten Sie auch, dass es in diesem Ausdruck keine [Double-Datentypen](double.md) gibt.  
+ Im folgenden Beispiel werden ein [int](int.md)-, ein [short](short.md) und ein `float`-Datentyp in einem mathematischen Ausdruck verwendet, der ein `float`-Ergebnis aufweist. (Beachten Sie, dass `float` ein Alias für den Typ <xref:System.Single?displayProperty=fullName> ist.) Beachten Sie auch, dass es in diesem Ausdruck keine [Double-Datentypen](double.md) gibt.  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Single>   
@@ -90,3 +91,4 @@ float x = 3.5F;
  [Tabelle integrierter Typen](built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)
+

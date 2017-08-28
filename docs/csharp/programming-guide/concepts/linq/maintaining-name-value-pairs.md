@@ -1,5 +1,5 @@
 ---
-title: Warten von Name/Wert-Paaren (C#) | Microsoft-Dokumentation
+title: Warten von Name-Wert-Paaren (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,28 +14,28 @@ ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fda5e083584a57245a83bdf8c09d31e7ffdb2d5a
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9515411123ad800df4e800d698921b76f6590286
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Warten von Name/Wert-Paaren (C#)
-Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  
+Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  
   
  Ein Unterschied zwischen diesen beiden Formen besteht darin, dass Attribute der Beschränkung unterliegen, dass pro Element immer nur ein Attribut mit einem bestimmten Namen vorhanden sein darf. Für untergeordnete Elemente gilt diese Einschränkung nicht.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>"SetAttributeValue" und "SetElementValue"  
- Die zwei Methoden, die das Behalten von Name/Wert-Paaren vereinfachen, sind <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> und <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Diese beiden Methoden besitzen eine ähnliche Semantik.  
+ Zum Unterhalten von Name/Wert-Paaren stehen die folgenden beiden Methoden zur Verfügung: <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> und <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Diese beiden Methoden besitzen eine ähnliche Semantik.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> kann Attribute eines Elements hinzufügen, ändern oder entfernen.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> kann Attribute eines Elements hinzufügen, Attribute ändern oder Attribute entfernen.  
   
 -   Wenn Sie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> mit einem Namen eines Attributs aufrufen, das nicht existiert, erstellt die Methode ein neues Attribut und fügt dieses dem angegebenen Element hinzu.  
   
 -   Wenn Sie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> mit einem Namen eines vorhandenen Attributs und einem angegebenen Inhalt aufrufen, wird der Inhalt des Attributs durch den angegebenen Inhalt ersetzt.  
   
--   Wenn Sie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> mit einem Namen eines vorhandenem Attributs aufrufen und für den Inhalt einen NULL-Wert angeben, wird das Attribut aus dem übergeordneten Element entfernt.  
+-   Wenn Sie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> mit einem Namen eines vorhandenen Attributs aufrufen und für den Inhalt einen NULL-Wert angeben, wird das Attribut aus dem übergeordneten Element entfernt.  
   
  <xref:System.Xml.Linq.XElement.SetElementValue%2A> kann untergeordnete Elemente eines Elements hinzufügen, ändern oder entfernen.  
   
@@ -43,10 +43,10 @@ Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-P
   
 -   Wenn Sie <xref:System.Xml.Linq.XElement.SetElementValue%2A> mit einem Namen eines vorhandenen Elements und einem angegebenen Inhalt aufrufen, wird der Inhalt des Elements durch den angegebenen Inhalt ersetzt.  
   
--   Wenn Sie <xref:System.Xml.Linq.XElement.SetElementValue%2A> mit einem Namen eines vorhandenen Elements aufrufen und einen NULL-Wert für den Inhalt des Elements angeben, wird der Inhalt des Elements aus dem übergeordneten Element entfernt.  
+-   Wenn Sie <xref:System.Xml.Linq.XElement.SetElementValue%2A> mit einem Namen eines vorhandenen Elements aufrufen und für den Inhalt einen NULL-Wert angeben, wird das Element aus dem übergeordneten Element entfernt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt ein Element, das keine Attribute besitzt. Es verwendet anschließend die Methode <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>, um eine Liste von Name/Wert-Paaren zu erstellen und zu verwalten.  
+ Das folgende Beispiel erstellt ein Element, das keine Attribute besitzt. Es verwendet dann die <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>-Methode, um eine Liste von Name/Wert-Paaren zu erstellen und zu unterhalten.  
   
 ```csharp  
 // Create an element with no content.  
@@ -71,14 +71,14 @@ Console.WriteLine(root);
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
 <Root Top="10" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
 <Root Top="10" Left="20" Bottom="122" Right="300" />  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt ein Element, das keine untergeordneten Elemente besitzt. Es verwendet die Methode <xref:System.Xml.Linq.XElement.SetElementValue%2A>, um eine Liste von Name/Wert-Paaren zu erstellen und zu verwalten.  
+ Das folgende Beispiel erstellt ein Element, das keine untergeordneten Elemente besitzt. Es verwendet dann die <xref:System.Xml.Linq.XElement.SetElementValue%2A>-Methode, um eine Liste von Name/Wert-Paaren zu erstellen und zu unterhalten.  
   
 ```csharp  
 // Create an element with no content.  
@@ -105,7 +105,7 @@ Console.WriteLine(root);
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```xml  
 <Root>  
   <Top>22</Top>  
   <Left>20</Left>  
@@ -134,3 +134,4 @@ Console.WriteLine(root);
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>   
  <xref:System.Xml.Linq.XElement.SetElementValue%2A>   
  [Modifying XML Trees (LINQ to XML) (C#) (Ändern von XML-Strukturen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#) | Microsoft-Dokumentation"
+title: "Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cb79fe22bd551599eef7f20bd34492a2930d5609
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4217cbce36bc055cf8c6dde446df4d7b7394430d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
@@ -34,7 +35,7 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
  Direkte Ausführung bedeutet, dass die Datenquelle gelesen wird und die Operation an dem Zeitpunkt im Code ausgeführt wird, an dem die Abfrage deklariert wird. Alle Standardabfrageoperatoren, die ein einzelnes, nicht aufzählbares Ergebnis zurückgeben, werden sofort ausgeführt.  
   
 ### <a name="deferred"></a>Zurückgestellt  
- Zurückgestellte Ausführung bedeutet, dass der Vorgang nicht zum Zeitpunkt im Code ausgeführt wird, an dem die Abfrage deklariert wird. Der Vorgang erfolgt nur, wenn die Abfragevariable aufgezählt wird, z.B. durch Verwendung einer `foreach`-Anweisung. Dies bedeutet, dass die Ergebnisse der Ausführung der Abfrage vom Inhalt der Datenquelle zum Zeitpunkt der Abfrageausführung, nicht der Abfragedefinition abhängen. Wenn die Abfragevariable mehrfach aufgezählt wird, können die Ergebnisse jedes Mal abweichen. Nahezu alle Standardabfrageoperatoren, deren Rückgabetyp <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IOrderedEnumerable%601> ist, werden zurückgestellt ausgeführt.  
+ Zurückgestellte Ausführung bedeutet, dass der Vorgang nicht zum Zeitpunkt im Code ausgeführt wird, an dem die Abfrage deklariert wird. Der Vorgang erfolgt nur, wenn die Abfragevariable aufgezählt wird, z.B. durch Verwendung einer `foreach`-Anweisung. Dies bedeutet, dass die Ergebnisse der Ausführung der Abfrage vom Inhalt der Datenquelle zum Zeitpunkt der Abfrageausführung, nicht der Abfragedefinition abhängen. Wenn die Abfragevariable mehrfach aufgezählt wird, können die Ergebnisse jedes Mal abweichen. Fast alle Standardabfrageoperatoren, deren Rückgabetyp <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IOrderedEnumerable%601> ist, werden verzögert ausgeführt.  
   
  Abfrageoperatoren, die die verzögerte Ausführung verwenden, können zusätzlich als Streaming und Nicht-Streaming klassifiziert werden.  
   
@@ -108,3 +109,4 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
  [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

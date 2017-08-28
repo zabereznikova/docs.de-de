@@ -1,5 +1,5 @@
 ---
-title: Interpolierte Zeichenfolgen (C#) | Microsoft-Dokumentation
+title: Interpolierte Zeichenfolgen (C#-Referenz)
 ms.date: 2017-02-03
 ms.prod: .net
 ms.technology:
@@ -26,23 +26,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29790cadd30e9aca56d7ba4c8d7a945b4f891f35
 ms.contentlocale: de-de
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>Interpolierte Zeichenfolgen (C#-Referenz)
 
 Zum Erstellen von Zeichenfolgen verwendet.  Eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die *interpolierte Ausdrücke* enthält.  Eine interpolierte Zeichenfolge gibt eine Zeichenfolge zurück, die die interpolierten Ausdrücke, die sie enthält, durch deren Zeichenfolgenrepräsentation ersetzt.  
 
-Die Argumente einer interpolierten Zeichenfolge sind leichter zu verstehen als eine [Zusammengesetzte Formatzeichenfolge](../../../standard/base-types/composite-formatting.md#composite-format-string).  Die interpolierte Zeichenfolgen  
+Die Argumente einer interpolierten Zeichenfolge sind leichter zu verstehen als eine [Zusammengesetzte Formatzeichenfolge](../../../standard/base-types/composite-formatting.md#composite-format-string).  Die interpolierte Zeichenfolge  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
 ```  
-enthält z.B. zwei interpolierte Ausdrücke, „{name}“ und „{hours:hh}“. Die entsprechende zusammengesetzte Zeichenfolge lautet:
+enthält z.B. zwei interpolierte Ausdrücke: „{name}“ und „{hours:hh}“. Die entsprechende zusammengesetzte Zeichenfolge lautet:
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);  
@@ -91,7 +91,7 @@ Es gibt drei implizite Typkonvertierungen aus einer interpolierten Zeichenfolge:
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 
 ## <a name="language-specification"></a>Sprachspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IFormattable?displayProperty=fullName>   

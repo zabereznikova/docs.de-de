@@ -1,5 +1,5 @@
 ---
-title: Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
 ms.contentlocale: de-de
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- Wenn das Objekt ungleich NULL ist – wenn <xref:System.Nullable%601.HasValue%2A> `true` ist –, kommt es zum Boxing. Allerdings wird nur der zugrundeliegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt. Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=fullName>-Objekt, das den Werttyp umschließt. Zum Beispiel:  
+ Wenn das Objekt ungleich NULL und <xref:System.Nullable%601.HasValue%2A> `true` ist, kommt es zum Boxing. Allerdings wird nur der zugrunde liegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt. Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=fullName>-Objekt, das den Werttyp umschließt. Zum Beispiel:  
   
 ```csharp  
 bool? b = false;  
@@ -94,3 +94,4 @@ int? i2 = (int?)iBoxed;
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Typen, die NULL-Werte zulassen](../../../csharp/programming-guide/nullable-types/index.md)   
  [Gewusst wie: Identifizieren eines Typs mit Nullwerten](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

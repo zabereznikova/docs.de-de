@@ -1,47 +1,67 @@
 ---
-title: "Operator &lt;&lt;= (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "<<=_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<<=-Operator (Linksschiebezuweisung) [C#]"
-  - "Linksschiebezuweisungsoperator (<<=) [C#]"
+title: '&lt;Operator &lt;= (C#-Referenz)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- <<=_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <<= operator (left-shift assignment) [C#]
+- left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd562a538891a5592cc724e74cffb3d086248898
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Operator &lt;&lt;= (C#-Referenz)
-Der Linksschiebezuweisungsoperator.  
+# <a name="ltlt-operator-c-reference"></a>&lt;Operator &lt;= (C#-Referenz)
+Der Linksschiebezuweisungs-Operator  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Ein Ausdruck der Form  
   
 ```  
 x <<= y  
 ```  
   
- wird ausgewertet als  
+ wird als ausgewertet,  
   
 ```  
 x = x << y  
 ```  
   
- mit der Ausnahme, dass `x` nur einmal ausgewertet wird.  Der [Operator \<\<](../../../csharp/language-reference/operators/left-shift-operator.md) verschiebt `x` um die durch `y` angegebenen Anzahl von Bits nach links.  
+ außer dass `x` nur einmal überprüft wird. Der [Operator <<](../../../csharp/language-reference/operators/left-shift-operator.md) verschiebt `x` um die von `y` angegebenen Schritte nach links.  
   
- Der Operator `<<=` kann nicht direkt überladen werden. Benutzerdefinierte Typen können jedoch den [Operator \<\<](../../../csharp/language-reference/operators/left-shift-operator.md) überladen \(siehe [operator](../../../csharp/language-reference/keywords/operator.md)\).  
+ Der Operator `<<=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[<< operator](../../../csharp/language-reference/operators/left-shift-operator.md) überladen (weitere Informationen unter [Operator](../../../csharp/language-reference/keywords/operator.md)).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-assignment-operator_1.cs)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+

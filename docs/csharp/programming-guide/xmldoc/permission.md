@@ -1,48 +1,68 @@
 ---
-title: "&lt;permission&gt; (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "permission"
-  - "<permission>"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<permission> (C#-XML-Tag)"
-  - "permission (C#-XML-Tag)"
+title: '&lt;permission&gt; (C#-Programmierhandbuch)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- permission
+- <permission>
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <permission> C# XML tag
+- permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b8f109d7e01f6e630f09939161b6a20c3a13f73
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;permission&gt; (C#-Programmierhandbuch)
-## Syntax  
+# <a name="ltpermissiongt-c-programming-guide"></a>&lt;permission&gt; (C#-Programmierhandbuch)
+## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### Parameter  
- cref \= "`member`"  
- Ein Verweis auf einen Member oder ein Feld, der bzw. das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Der Compiler überprüft, ob das angegebene Codeelement vorhanden ist, und übersetzt `member` in den kanonischen Elementnamen in der ausgegebenen XML.  *member* muss in doppelte Anführungszeichen \(" "\) eingeschlossen werden.  
+#### <a name="parameters"></a>Parameter  
+ cref = " `member`"  
+ Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. *member* muss in doppelte Anführungszeichen (" ") gesetzt werden.  
   
- Informationen für das Erstellen von cref\-Verweisen auf einen generischen Typ finden Sie unter [\<see\>](../../../csharp/programming-guide/xmldoc/see.md).  
+ Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   
  `description`  
- Eine Beschreibung des Zugriffs auf den Member.  
+ Eine Beschreibung des Zugriffs auf den Member  
   
-## Hinweise  
- Mit dem \<permission\>\-Tag kann der Zugriff auf einen Member dokumentiert werden.  Den Zugriff auf einen Member können Sie mithilfe der <xref:System.Security.PermissionSet>\-Klasse angeben.  
+## <a name="remarks"></a>Hinweise  
+ Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der <xref:System.Security.PermissionSet>-Klasse können Sie den Zugriff auf ein Member angeben.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

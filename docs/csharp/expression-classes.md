@@ -1,6 +1,6 @@
 ---
 title: "Framework-Typen, die Ausdrucksbaumstrukturen unterstützen"
-description: "Framework-Typen, die Ausdrucksbaumstrukturen unterstützen"
+description: "Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen unterstützen, wie Sie diese erstellen können und Methoden zum Arbeiten mit Ausdrucksbaumstruktur-APIs."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64b3b7999b6ff01bdf28cb7902ba50087d191cb4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/13/2017
 [Vorherige – Ausdrucksbaumstrukturen mit Erläuterung](expression-trees-explained.md)
 
 Es gibt eine umfangreiche Liste von Klassen im .NET Core Framework, die mit Ausdrucksbaumstrukturen arbeiten.
-[Hier](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions) finden Sie die vollständige Liste.
+[Hier](/dotnet/core/api/System.Linq.Expressions) finden Sie die vollständige Liste.
 Anstatt die vollständige Liste zu durchlaufen, sehen wir uns an, wie die Framework-Klassen entwickelt wurden.
 
 Im Sprachentwurf ist ein Ausdruck ein Teil eines Codes, der ausgewertet wird und einen Wert zurückgibt. Ausdrücke können sehr einfach sein: Der konstante Ausdruck `1` gibt den konstanten Wert 1 zurück. Sie sind möglicherweise komplizierter: Der Ausdruck `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` gibt ein Stammverzeichnis für eine quadratische Gleichung zurück (in dem Fall, in dem die Gleichung eine Lösung hat).  

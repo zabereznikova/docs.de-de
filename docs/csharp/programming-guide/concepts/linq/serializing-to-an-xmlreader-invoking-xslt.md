@@ -1,5 +1,5 @@
 ---
-title: Serialisieren in einen XmlReader (XSLT aufrufen) (C#) | Microsoft-Dokumentation
+title: Serialisieren in einen XmlReader (XSLT aufrufen) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96fed09349264710dc8f0591a0022939e9a4181a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 62127847c6eeefdc60bf8c4cb4cb8fac2fb2b8bb
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serialisieren in einen XmlReader (XSLT aufrufen) (C#)
-Wenn Sie die <xref:System.Xml?displayProperty=fullName>-Interoperabilitätsfunktionen von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] verwenden, können Sie <xref:System.Xml.Linq.XNode.CreateReader%2A> zum Erstellen eines <xref:System.Xml.XmlReader> verwenden. Das Modul, das aus <xref:System.Xml.XmlReader> liest, liest die Knoten aus der XML-Struktur und verarbeitet sie entsprechend.  
+Wenn Sie die <xref:System.Xml?displayProperty=fullName>-Interoperabilitätsfunktionen von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden, können Sie <xref:System.Xml.Linq.XNode.CreateReader%2A> verwenden, um einen <xref:System.Xml.XmlReader> zu erstellen. Das Modul, das aus diesem <xref:System.Xml.XmlReader> liest, liest die Knoten aus der XML-Struktur und verarbeitet sie entsprechend.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Aufrufen einer XSLT-Transformation  
- Diese Methode kann z. B. zum Aufrufen einer XSLT-Transformation verwendet werden. Sie können nacheinander eine XML-Struktur, einen <xref:System.Xml.XmlReader> aus der XML-Struktur, ein neues Dokument und dann <xref:System.Xml.XmlWriter> zum Schreiben in das neue Dokument erstellen. Anschließend können Sie die XSLT-Transformation aufrufen, wobei <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> übergeben werden. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
+ Diese Methode kann z. B. zum Aufrufen einer XSLT-Transformation verwendet werden. Sie können eine XML-Struktur erstellen, einen <xref:System.Xml.XmlReader> aus der XML-Struktur erstellen, ein neues Dokument erstellen und dann einen <xref:System.Xml.XmlWriter> zum Schreiben in das neue Dokument erstellen. Anschließend können Sie die XSLT-Transformation starten, indem Sie <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> übergeben. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -76,4 +77,5 @@ Console.WriteLine(newTree);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Serializing XML Trees (C#) (Serialisieren von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+ [Serialisieren von XML-Strukturen (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

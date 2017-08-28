@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf Anwendungswebdienste (Visual Basic) | Microsoft-Dokumentation
+title: Zugreifen auf Anwendungswebdienste (Visual Basic)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b9e7bb7884da98f419d6de4a7463216a32bb0a5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1933167db4e42ae1a2d1634573bc824750a792da
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Zugreifen auf Anwendungswebdienste (Visual Basic)
@@ -50,3 +50,4 @@ Das `My.WebServices`-Objekt bietet eine Instanz jedes Webdienstes, auf den vom a
   
 ## <a name="see-also"></a>Siehe auch  
  [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

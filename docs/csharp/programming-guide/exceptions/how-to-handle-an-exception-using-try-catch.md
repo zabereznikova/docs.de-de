@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Behandeln einer Ausnahme mit try-catch (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Behandeln einer Ausnahme mit try/catch (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10eac61f4b9bb186d28044862ebc7273c6eb07b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6f714cd1b652845e77405ff74fbfc860e71dc21
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Gewusst wie: Behandeln einer Ausnahme mit try/catch (C#-Programmierhandbuch)
@@ -44,9 +45,10 @@ Ein [try/catch](../../../csharp/language-reference/keywords/try-catch.md)-Block 
  [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## <a name="comments"></a>Kommentare  
- Der Code, der eine Ausnahme auslöst, ist im `try`-Block eingeschlossen. Eine `catch`-Anweisung wird direkt danach hinzugefügt, um `IndexOutOfRangeException` zu verarbeiten, falls dies auftritt. Der `catch`-Block verarbeitet `IndexOutOfRangeException` und löst stattdessen die passendere Ausnahme `ArgumentOutOfRangeException` aus. Um dem Aufrufer so viele Informationen wie möglich bereitzustellen, können Sie die ursprüngliche Ausnahme auf <xref:System.Exception.InnerException%2A> der neuen Ausnahme festlegen. Da die Eigenschaft <xref:System.Exception.InnerException%2A> [readonly](../../../csharp/language-reference/keywords/readonly.md) ist, müssen Sie sie im Konstruktor der neuen Ausnahme zuweisen.  
+ Der Code, der eine Ausnahme auslöst, ist im `try`-Block eingeschlossen. Eine `catch`-Anweisung wird direkt danach hinzugefügt, um `IndexOutOfRangeException` zu verarbeiten, falls dies auftritt. Der `catch`-Block verarbeitet `IndexOutOfRangeException` und löst stattdessen die passendere Ausnahme `ArgumentOutOfRangeException` aus. Um dem Aufrufer so viele Informationen wie möglich bereitzustellen, können Sie die ursprüngliche Ausnahme auf <xref:System.Exception.InnerException%2A> der neuen Ausnahme festlegen. Da die Eigenschaft <xref:System.Exception.InnerException%2A> [schreibgeschützt](../../../csharp/language-reference/keywords/readonly.md) ist, müssen Sie sie im Konstruktor der neuen Ausnahme zuweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)   
  [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

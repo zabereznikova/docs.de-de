@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Attribute (C#) | Microsoft-Dokumentation
+title: Allgemeine Attribute (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bafcb0a9a81d97e060acca38b7c0bfca23efdaad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
@@ -54,7 +55,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 -   Attribute für Assemblymanifeste.  
   
 ### <a name="assembly-identity-attributes"></a>Attribute für Assemblyidentitäten  
- Drei Attribute bestimmen mit einem starken Namen (falls zutreffend) die Identität einer Assembly: „name“, „version“ und „culture“. Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn im Code auf sie verwiesen wird. Mit Attributen können die Version und Kultur einer Assembly festgelegt werden. Allerdings wird der name-Wert vom Compiler, der Visual Studio-IDE im [Dialogfeld „Assemblyinformationen“](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box) oder dem Assemblylinker (Al.exe) festgelegt, wenn die Assembly erstellt wird. Die geschieht auf Grundlage der Datei, die das Assemblymanifest enthält. Das <xref:System.Reflection.AssemblyFlagsAttribute>-Attribut gibt an, ob mehrere Kopien der Assembly gleichzeitig existieren dürfen.  
+ Drei Attribute bestimmen mit einem starken Namen (falls zutreffend) die Identität einer Assembly: „name“, „version“ und „culture“. Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn im Code auf sie verwiesen wird. Mit Attributen können die Version und Kultur einer Assembly festgelegt werden. Allerdings wird der name-Wert vom Compiler, der Visual Studio-IDE im [Dialogfeld „Assemblyinformationen“](/visualstudio/ide/reference/assembly-information-dialog-box) oder dem Assemblylinker (Al.exe) festgelegt, wenn die Assembly erstellt wird. Die geschieht auf Grundlage der Datei, die das Assemblymanifest enthält. Das Attribut <xref:System.Reflection.AssemblyFlagsAttribute> gibt an, ob mehrere Kopien der Assembly parallel bestehen können.  
   
  In der folgenden Tabelle werden die Identitätsattribute aufgeführt.  
   
@@ -66,7 +67,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Gibt an, ob eine Assembly die parallele Ausführung auf demselben Computer, im selben Prozess oder in derselben Anwendungsdomäne unterstützt|  
   
 ### <a name="informational-attributes"></a>Informationsattribute  
- Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. In der folgenden Tabelle werden die Informationsattribute angezeigt, die im <xref:System.Reflection?displayProperty=fullName>-Namespace definiert sind.  
+ Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle zeigt die Informationsattribute, die im Namespace <xref:System.Reflection?displayProperty=fullName> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
@@ -79,7 +80,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 |<xref:System.CLSCompliantAttribute>|Gibt an, ob die Assembly mit der Common Language Specification (CLS) kompatibel ist|  
   
 ### <a name="assembly-manifest-attributes"></a>Attribute für Assemblymanifeste  
- Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Assemblymanifest bereitzustellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration ein. In der folgenden Tabelle werden die Attribute des Assemblymanifests angezeigt, die im <xref:System.Reflection?displayProperty=fullName>-Namespace definiert sind.  
+ Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Assemblymanifest bereitzustellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration ein. Die folgende Tabelle zeigt die Attribute für Assemblymanifeste, die im Namespace <xref:System.Reflection?displayProperty=fullName> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
@@ -233,7 +234,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> Aufufrerinfoattribute  
  Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen.  
   
- Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. Die folgende Tabelle enthält die Aufruferinformationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind.  
+ Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind:  
   
 |Attribut|Beschreibung|Typ|  
 |---|---|---|  
@@ -250,3 +251,4 @@ class SampleClass
  [Attribute](https://msdn.microsoft.com/library/5x6cd29c)   
  [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

@@ -1,5 +1,5 @@
 ---
-title: -appconfig (C#-Compileroptionen) | Microsoft-Dokumentation
+title: -appconfig (C#-Compileroptionen)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: ced4927526d86d29c502a898c60c528df497bb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2aede966f92af3c94f4591b68732dbdbf5a4c5c9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="appconfig-c-compiler-options"></a>/appconfig (C#-Compileroptionen)
@@ -79,3 +79,4 @@ Mit der Compileroption **/appconfig** kann eine C#-Anwendung den Speicherort der
  [Übersicht über die .NET Framework-Assemblyvereinheitlichung](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
  [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
  [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+
