@@ -1,5 +1,5 @@
 ---
-title: ?? Operator (C#-Referenz) | Microsoft-Dokumentation
+title: ?? Operator (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: de2abc6830419c368c6a62dfd74fc6f2013db9d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86e50b97d7ded8adc74f031faf026b69ccdd0c87
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>?? Operator (C#-Referenz)
@@ -46,7 +46,7 @@ Der Operator `??` wird NULL-Sammeloperator genannt.  Der linke Operand wird zurÃ
   
  Weitere Informationen finden Sie unter [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).  
   
- Das Ergebnis eines ?? -Operators wird nicht als Konstante angesehen, auch wenn beide Argumente Konstanten sind.  
+ Das Ergebnis eines ??- Operators wird nicht als Konstante angesehen, auch wenn beide Argumente Konstanten sind.  
   
 ## <a name="example"></a>Beispiel  
  [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
@@ -57,3 +57,4 @@ Der Operator `??` wird NULL-Sammeloperator genannt.  Der linke Operand wird zurÃ
  [C#-Operatoren](../../../csharp/language-reference/operators/index.md)   
  [Typen, die NULL-Werte zulassen](../../../csharp/programming-guide/nullable-types/index.md)   
  [What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkID=112382) (Was genau bedeutet â€žLiftedâ€œ?)
+
