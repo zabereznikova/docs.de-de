@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5a4b84756be7d33c478d8115b812795dba182cdf
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
@@ -54,7 +54,7 @@ Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funkt
 
 - Den Zugriffsmodifizierer für Member. Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.
  
-- Das Schlüsselwort [static](..\..\language-reference\keywords\static.md). Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 „Der Modifizierer ‚static‘ ist für dieses Element nicht gültig“.
+- Das Schlüsselwort [static](../../language-reference/keywords/static.md). Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 „Der Modifizierer ‚static‘ ist für dieses Element nicht gültig“.
 
 Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden. 
  
