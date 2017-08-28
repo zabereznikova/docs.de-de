@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windows Forms-Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht. Folgendes wird veranschaulicht:  
   
--   Definieren einer Klasse mit einer Methode, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente aufgerufen werden kann.  
+-   Definieren einer Klasse mit einer Methode, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente aufgerufen werden kann  
   
--   Behandeln von Ereignissen, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente ausgelöst werden.  
+-   Behandlung von Ereignissen, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente ausgelöst werden  
   
--   Starten einer <xref:System.ComponentModel.BackgroundWorker>-Komponente zum Ausführen einer Methode.  
+-   Starten einer <xref:System.ComponentModel.BackgroundWorker>-Komponente zum Ausführen einer Methode  
   
--   Implementieren einer `Cancel`-Schaltfläche, die die <xref:System.ComponentModel.BackgroundWorker>-Komponente beendet.  
+-   Implementieren einer `Cancel`-Schaltfläche, die die <xref:System.ComponentModel.BackgroundWorker>-Komponente beendet  
   
 ### <a name="to-create-the-user-interface"></a>So erstellen Sie die Benutzeroberfläche  
   
@@ -64,7 +65,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windo
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>So erstellen Sie eine BackgroundWorker-Komponente und abonnieren deren Ereignisse  
   
-1.  Fügen Sie eine <xref:System.ComponentModel.BackgroundWorker>-Komponente aus dem Bereich **Komponenten** der **Toolbox** zum Formular hinzu. Sie wird in der Komponentenleiste des Formulars angezeigt.  
+1.  Fügen Sie dem Formular über den Abschnitt **Komponenten** im **Werkzeugkasten** eine <xref:System.ComponentModel.BackgroundWorker>-Komponente hinzu. Sie wird in der Komponentenleiste des Formulars angezeigt.  
   
 2.  Legen Sie die folgenden Eigenschaften für das Objekt „backgroundWorker1“ fest.  
   
@@ -293,3 +294,4 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windo
 ## <a name="see-also"></a>Siehe auch  
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

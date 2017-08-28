@@ -1,5 +1,5 @@
 ---
-title: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic) | Microsoft-Dokumentation
+title: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,18 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc6fde8dcbb27157f3fd180ad393bb406222195e
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefinierten Protokolllistener erstellen und ihn so konfigurieren, dass er der Ausgabe des `My.Application.Log`-Objekts lauscht.  
   
 ## <a name="getting-started"></a>Erste Schritte  
- Protokolllistener müssen von der Klasse <xref:System.Diagnostics.TraceListener> erben.  
+ Protokolllistener müssen von der <xref:System.Diagnostics.TraceListener>-Klasse erben.  
   
 #### <a name="to-create-the-listener"></a>So erstellen Sie den Listener  
   
@@ -50,9 +50,9 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     Die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A>, die von der Basisklasse benötigt werden, rufen `MsgBox` auf, um ihre Eingabe anzuzeigen.  
+     Die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A> sind für die Basisklasse erforderlich und rufen `MsgBox` auf, um ihre Eingabe anzuzeigen.  
   
-     Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> wird auf die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A> angewendet, sodass ihre Attribute den Methoden der Basisklasse entsprechen. Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> ermöglicht es dem Host, der den Code ausführt, zu bestimmen, ob der Code die Synchronisierung der Hostsicherheit verfügbar macht.  
+     Das <xref:System.Security.Permissions.HostProtectionAttribute>-Attribut wird auf die Methoden <xref:System.Diagnostics.TraceListener.Write%2A> und <xref:System.Diagnostics.TraceListener.WriteLine%2A> angewendet, damit ihre Attribute den Methoden der Basisklasse entsprechen. Mithilfe des Attributs <xref:System.Security.Permissions.HostProtectionAttribute> kann der Host, der den Code ausführt, ermitteln, ob der Code die Synchronisierung der Hostsicherheit verfügbar macht.  
   
     > [!NOTE]
     >  Das Attribut <xref:System.Security.Permissions.HostProtectionAttribute> ist nur in nicht verwalteten Anwendungen effektiv, die die Common Language Runtime hosten und Hostschutz implementieren, z.B. SQL Server.  
@@ -136,3 +136,4 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
  [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

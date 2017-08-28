@@ -1,5 +1,5 @@
 ---
-title: ushort (C#-Referenz) | Microsoft-Dokumentation
+title: ushort (C#-Referenz)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b067a2ffd0fbffe06dc5c9f2a9910c9563eec4b
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (C#-Referenz)
@@ -47,7 +47,7 @@ Das Schlüsselwort `ushort` kennzeichnet einen ganzzahligen Datentyp, der Werte 
   
 ## <a name="literals"></a>Literale  
 
-Sie können eine `ushort`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn das Ganzzahlliteral außerhalb des Bereichs von `ushort` liegt, d.h., wenn es kleiner als <xref:System.UInt16.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt16.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf.
+Sie können eine `ushort`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ushort` befindet (das bedeutet wenn es kleiner als <xref:System.UInt16.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt16.MaxValue?displayProperty=fullName> ist), tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 65.034, die als dezimale, hexadezimale und binäre Literale dargestellt werden, implizit aus [int](../../../csharp/language-reference/keywords/int.md) in `ushort`-Werte konvertiert.    
   
@@ -120,7 +120,7 @@ ushort y = (ushort)3.0;
  Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.UInt16>   
@@ -131,3 +131,4 @@ ushort y = (ushort)3.0;
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

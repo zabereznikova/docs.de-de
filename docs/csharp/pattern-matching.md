@@ -1,6 +1,6 @@
 ---
-title: "Musterabgleich | Leitfaden für C#"
-description: "Erfahren Sie mehr über Musterabgleichausdrücke in C#"
+title: "Musterabgleich – Leitfaden für C#"
+description: "Erfahren Sie mehr über Musterabgleichausdrücke in C#."
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b1ef4b6de108e2ea3967630e9e37e52a97245c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +51,7 @@ Dieser Code wird einfacher, indem Sie Erweiterungen für den `is`-Ausdruck verwe
 
 In dieser aktualisierten Version testet der `is`-Ausdruck die Variable und weist sie einer neuen Variablen des richtigen Typs zu. Beachten Sie ebenfalls, dass die Version den `Rectangle`-Typ enthält, der ein `struct` ist. Der neue `is`-Ausdruck funktioniert mit Werttypen sowie mit Verweistypen.
 
-Sprachregeln für Musterabgleichausdrücke helfen Ihnen, das Ergebnis eines Musterausdrucks nicht falsch zu verwenden. Im obigen Beispiel sind die Variablen `s`,  `c` und `r` nur im Geltungsbereich und werden definitiv zugewiesen, wenn die entsprechenden Musterabgleichausdrücke `true`-Ergebnisse haben. Wenn Sie versuchen, eine der Variablen an einem anderen Ort zu verwenden, erzeugt Ihr Code Compilerfehler.
+Sprachregeln für Musterabgleichausdrücke helfen Ihnen, das Ergebnis eines Musterausdrucks nicht falsch zu verwenden. Im obigen Beispiel sind die Variablen `s`, `c` und `r` nur im Geltungsbereich und werden definitiv zugewiesen, wenn die entsprechenden Musterabgleichausdrücke `true`-Ergebnisse haben. Wenn Sie versuchen, eine der Variablen an einem anderen Ort zu verwenden, erzeugt Ihr Code Compilerfehler.
 
 Betrachten wir beide dieser Regeln im Detail, beginnend mit dem Geltungsbereich. Die Variable `c` ist im Geltungsbereich nur im `else`-Zweig der ersten `if`-Anweisung. Die Variable `s` liegt im Geltungsbereich in der Methode `ComputeArea`. Jeder Zweig einer `if`-Anweisung bildet nämlich einen separaten Geltungsbereich für Variablen. Die eigentliche `if`-Anweisung macht dies jedoch nicht. Das bedeutet, dass Variablen, die in der `if`-Anweisung deklariert wurden, im gleichen Geltungsbereich der `if`-Anweisung sind (in diesem Fall die Methode). Dieses Verhalten ist nicht spezifisch für den Musterabgleich, entspricht jedoch dem definierten Verhalten für variable Geltungsbereiche sowie für `if`- und `else`-Anweisungen.
 
@@ -111,7 +112,7 @@ Zuletzt können Sie einen `null`-case hinzufügen, um sicherzustellen, dass das 
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "NULL-Case hinzufügen")]
 
-Der Sonderfall für das `null`-Muster ist interessant, weil die Konstante `null` keinen Typ besitzt, aber in jeden Referenztyp oder Typ, der NULL-Werte zulässt, konvertiert werden kann. 
+Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstante `null` im Muster keinen Typ besitzt, aber in jeden Verweis- oder Nullable-Typ konvertiert werden kann. Statt `null` in einen beliebigen Typ zu konvertieren, definiert die Sprache, dass ein `null`-Wert keinem Typmuster entspricht, unabhängig Typ zur Kompilierzeit der Variablen. Dieses Verhalten macht das neue `switch`-basierte Typmuster konsistent mit der `is`-Anweisung: `is`-Anweisungen geben stets `false` zurück, wenn der überprüfte Wert `null` ist. Außerdem ist es einfacher: Nachdem Sie den Typ überprüft haben, ist keine zusätzliche NULL-Überprüfung erforderlich. Das erkennen Sie daran, dass in keinem der Case-Blocks oben genannten Beispiele NULL-Überprüfungen durchgeführt werden: Sie sind schlicht nicht erforderlich, da der Abgleich des Typmusters einen Wert ungleich NULL garantiert.
 
 ## <a name="conclusions"></a>Zusammenfassung
 

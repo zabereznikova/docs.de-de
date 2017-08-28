@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic) | Microsoft-Dokumentation
+title: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,20 +41,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a16d2168548dadf9210b653d90ce229d99469b64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilfe der Klasse <xref:System.IO.StreamReader> öffnet und liest, wie man überprüft, ob auf eine Datei zugegriffen wird, wie man innerhalb einer Datei, die mit einer Instanz der Klasse <xref:System.IO.StreamReader> gelesen wird, nach einer Zeichenfolge sucht und wie man mithilfe der Klasse <xref:System.IO.StreamWriter> in eine Datei schreibt.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Erstellen der Anwendung  
- Starten Sie [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] und beginnen Sie das Projekt durch Erstellen eines Formulars, mit dem ein Benutzer in die festgelegte Datei schreiben kann.  
+ Starten Sie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und beginnen Sie das Projekt durch Erstellen eines Formulars, mit dem ein Benutzer in die festgelegte Datei schreiben kann.  
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
@@ -64,7 +64,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilf
   
 3.  Geben Sie im Feld **Name** die Bezeichnung `MyDiary` ein, und klicken Sie auf **OK**.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] fügt das Projekt in den **Projektmappen-Explorer** ein. Der **Windows Forms-Designer** wird geöffnet.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt das Projekt in den **Projektmappen-Explorer** ein. Der **Windows Forms-Designer** wird geöffnet.  
   
 4.  Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und legen Sie die entsprechenden Werte für die Eigenschaften fest.  
   

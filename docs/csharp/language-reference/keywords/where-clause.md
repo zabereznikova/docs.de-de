@@ -1,5 +1,5 @@
 ---
-title: where-Klausel (C#-Referenz) | Microsoft-Dokumentation
+title: where-Klausel (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>where-Klausel (C#-Referenz)
@@ -57,7 +58,7 @@ Die `where`-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welch
 ## <a name="remarks"></a>Hinweise  
  Die `where`-Klausel ist ein Filtermechanismus. Sie kann praktisch überall in einem Abfrageausdruck positioniert werden; sie kann allerdings nicht die erste oder letzte Klausel sein. Eine `where`-Klausel kann entweder vor oder nach der [group](../../../csharp/language-reference/keywords/group-clause.md)-Klausel angezeigt werden, abhängig davon, ob Sie die Quellelemente vor oder nach deren Gruppierung filtern müssen.  
   
- Wenn ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig ist, tritt ein Kompilierzeitfehler auf. Dies ist ein Vorteil der von [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] bereitgestellten starken Typprüfung.  
+ Wenn ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gültig ist, tritt ein Kompilierzeitfehler auf. Dies ist ein Vorteil der von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bereitgestellten starken Typprüfung.  
   
  Zur Kompilierzeit wird das Schlüsselwort `where` in einen Aufruf der Standardabfrageoperator-Methode <xref:System.Linq.Enumerable.Where%2A> konvertiert.  
   
@@ -68,3 +69,4 @@ Die `where`-Klausel wird in einem Abfrageausdruck verwendet, um anzugeben, welch
  [Filtering Data (C#) (Filtern von Daten (C#))](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [LINQ query expressions (LINQ-Abfrageausdrücke)](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

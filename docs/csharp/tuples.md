@@ -1,5 +1,5 @@
 ---
-title: "Tupel | Leitfaden für C#"
+title: "Tupel - Leitfaden für C#"
 description: "Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#"
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den 
 In diesem Thema lernen Sie die Sprachregeln, die Tupel in C# 7 steuern, verschiedene Verwendungsarten und einen ersten Leitfaden über das Arbeiten mit Tupel.
 
 > [!NOTE]
-> Die neuen Tupeleigenschaften benötigen den Typ `System.ValueTuple`. Sie müssen bei Visual Studio 2017 das NuGet-Paket [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, das im NuGet-Katalog verfügbar ist.
-> Ohne dieses Paket erhalten Sie vielleicht einen Kompilierungsfehler, der `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` oder `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.` ähnelt
+> Die neuen Tupeleigenschaften benötigen die @System.ValueTuple-Typen.
+> Sie müssen das NuGet-Paket [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, um es auf Plattformen zu verwenden, die keine Typen enthalten.
+>
+> Dies ist ähnlich wie bei anderen Sprachfunktionen, die auf im Framework übermittelten Typen basieren. Beispiele hierfür sind `async` und `await`, die auf der `INotifyCompletion`-Schnittstelle basieren, und LINQ, das auf `IEnumerable<T>` basiert. Allerdings ändert sich der Übermittlungsmechanismus, da .NET plattformunabhängiger wird. .NET Framework wird möglicherweise nicht immer im gleichen Rhythmus wie der Sprachcompiler ausgeliefert. Wenn neue Sprachfunktionen auf neuen Typen basieren, sind diese Typen als NuGet-Pakete bei der Auslieferung der Sprachfunktionen verfügbar. Da diese neuen Typen dem standardmäßigen .NET API hinzugefügt und als Teil des Frameworks bereitgestellt werden, wird die Anforderung des NuGet-Pakets entfernt.
 
 Beginnen wir mit den Gründen für das Hinzufügen von neuer Unterstützung für Tupel. Methoden geben ein einzelnes Objekt zurück. Mit Tupel können Sie mehrere Werte einfacher in das einzelne Objekt packen. 
 
@@ -43,7 +45,7 @@ Tupel sind sowohl einfachere als auch flexiblere Datencontainer als `class`- und
 
 ## <a name="named-and-unnamed-tuples"></a>Benannte und unbenannte Tupel
 
-Die `ValueTuple`-Struktur hat Felder mit den Namen `Item1`, `Item2`, `Item3` usw, die den Eigenschaften ähnlich sind, die in den vorhandenen `Tuple`-Typen definiert wurden.
+Die `ValueTuple`-Struktur hat Felder mit den Namen `Item1`, `Item2`, `Item3` usw., die den Eigenschaften ähnlich sind, die in den vorhandenen `Tuple`-Typen definiert wurden.
 Diese Namen sind die einzigen Namen, die Sie für *unbenannte Tupel* verwenden können. Wenn Sie einem Tupel keine alternativen Feldnamen bereitstellen, haben Sie einen unbenannten Tupel erstellt:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "unbenannte Tupel")]
@@ -200,13 +202,13 @@ Die `Deconstruct`-Methode kann eine Erweiterungsmethode sein, die die zugänglic
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Typ mit einer Dekonstruktionserweiterungsmethode")]
 
 Ein `Student`-Objekt hat jetzt zwei zugängliche `Deconstruct`-Methoden: Die Erweiterungsmethode, die für `Student`-Typen deklariert wurde, und die Member des `Person`-Typs. Beide befinden sich im Geltungsbereich, womit ein `Student` entweder in zwei oder drei Variablen dekonstruiert werden kann.
-Wenn Sie einem Studenten drei Variablen zuweisen, werden Vorname, Nachname sowie das GPA zurückgegeben. Wenn Sie einem Studenten zwei Variablen zuweisen, werden nur Vor- und Nachname zurückgegeben.
+Wenn Sie einem Studenten drei Variablen zuweisen, werden der Vorname, der Nachname sowie das GPA zurückgegeben. Wenn Sie einem Studenten zwei Variablen zuweisen, werden nur Vor- und Nachname zurückgegeben.
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Dekonstruieren eines Klassentyps mithilfe einer Erweiterungsmethode")]
 
 Sie sollten sehr vorsichtig mit dem Definieren von mehreren `Deconstruct`-Methoden in einer Klasse oder einer Klassenhierarchie sein. Mehrere `Deconstruct`-Methoden, die die gleiche Anzahl von `out`-Parameter haben, können schnell zu Mehrdeutigkeiten führen. Aufrufer können dann vielleicht nicht die gewünschte `Deconstruct`-Methode aufrufen.
 
-In diesem Beispiel besteht minimale Wahrscheinlichkeit für einen mehrdeutigen Aufruf, weil die `Deconstruct`-Methode für `Person` zwei Ausgabeparameter besitzt, und die `Deconstruct`-Methode für `Student` drei besitzt.
+In diesem Beispiel besteht eine minimale Wahrscheinlichkeit für einen mehrdeutigen Aufruf, weil die `Deconstruct`-Methode für `Person` zwei Ausgabeparameter besitzt, und die `Deconstruct`-Methode für `Student` drei besitzt.
 
 ## <a name="conclusion"></a>Schlussfolgerung 
 

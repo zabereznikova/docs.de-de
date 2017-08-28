@@ -1,5 +1,5 @@
 ---
-title: Formatvorlagenteil eines WordprocessingML-Dokuments1 | Microsoft-Dokumentation
+title: Formatvorlagenteil eines WordprocessingML-Dokument1
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93ce8c799b6fb7e8c4f64203e0fbfa39bb421212
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad635d5e7df887ac079d2a7267a40b762829298
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Absatzformatteil eines WordprocessingML-Dokuments
@@ -154,3 +154,4 @@ In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XM
   
 ## <a name="see-also"></a>Siehe auch  
  [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+

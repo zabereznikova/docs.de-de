@@ -1,5 +1,5 @@
 ---
-title: "Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#) | Microsoft-Dokumentation"
+title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 2874eaadd23fdfdc1baf9337169ad5a52c05905f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
 ms.contentlocale: de-de
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)
@@ -105,7 +105,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 6.  Positionieren Sie das Textfeld und die Schaltfläche so, dass beide im Fenster **MainWindow** angezeigt werden.  
   
-     Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
+     Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
 ##  <a name="BKMK_AddReference"></a>   
 ###  <a name="AddRef"></a> So fügen Sie einen Verweis hinzu  
@@ -271,20 +271,20 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
 ###  <a name="GetURLContents"></a> So konvertieren Sie „GetURLContents“ in eine asynchrone Methode  
   
-1.  Der beste Ausgangspunkt zum konvertieren der synchronen Lösung in eine asynchrone Lösung ist `GetURLContents`, da die Aufrufe der <xref:System.Net.HttpWebRequest>-Methode <xref:System.Net.HttpWebRequest.GetResponse%2A> und der <xref:System.IO.Stream>-Methode <xref:System.IO.Stream.CopyTo%2A> sich dort befinden, wo die Anwendung auf das Web zugreift. .NET Framework erleichtert die Konvertierung, indem asynchrone Versionen beider Methoden bereitgestellt werden.  
+1.  Für das Konvertieren der synchronen Projektmappe in eine asynchrone Projektmappe empfiehlt es sich, in `GetURLContents` zu beginnen, da die Aufrufe der <xref:System.Net.HttpWebRequest>-Methode <xref:System.Net.HttpWebRequest.GetResponse%2A> und der <xref:System.IO.Stream>-Methode <xref:System.IO.Stream.CopyTo%2A> dort erfolgen, wo die Anwendung auf das Web zugreift. .NET Framework erleichtert die Konvertierung, indem asynchrone Versionen beider Methoden bereitgestellt werden.  
   
      Weitere Informationen über die in `GetURLContents` verwendeten Methoden finden Sie unter <xref:System.Net.WebRequest>.  
   
     > [!NOTE]
     >  Beim Befolgen der Schritte in dieser exemplarischen Vorgehensweise treten verschiedene Compilerfehler auf. Sie können diese ignorieren und mit der exemplarischen Vorgehensweise fortfahren.  
   
-     Ändern Sie die Methode, die aufgerufen wird, in der dritten Zeile von `GetURLContents` von `GetResponse` zur asynchronen, aufgabenbasierten Methode <xref:System.Net.WebRequest.GetResponseAsync%2A>.  
+     Ändern Sie die Methode, die aufgerufen wird, in der dritten Zeile von `GetURLContents` von `GetResponse` zur asynchronen, aufgabenbasierten <xref:System.Net.WebRequest.GetResponseAsync%2A>-Methode.  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` gibt <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable* `TResult` den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.  
+2.  `GetResponseAsync` gibt einen Wert vom Typ <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.  
   
      Wenden Sie analog zur Darstellung im folgenden Code zum Abrufen des `WebResponse`-Werts aus der Aufgabe einen [await](../../../../csharp/language-reference/keywords/await.md)-Operator für den Aufruf von `GetResponseAsync` an.  
   
@@ -309,7 +309,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
     -   Ändern Sie den Namen der Methode, die für <xref:System.IO.Stream.CopyToAsync%2A> aufgerufen wird.  
   
-    -   Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.  
+    -   Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt ein <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.  
   
         ```csharp  
         await responseStream.CopyToAsync(content);  
@@ -332,7 +332,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  Eine asynchrone Methode kann in C# nur einen Rückgabetyp <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `void` haben. Für gewöhnlich wird ein Rückgabetyp `void` nur in einem asynchronen Ereignishandler verwendet, bei dem `void` erforderlich ist. In anderen Fällen verwenden Sie `Task(T)`, wenn die abgeschlossene Methode eine [return](../../../../csharp/language-reference/keywords/return.md)-Anweisung aufweist, die einen Wert vom Typ T zurückgibt. Verwenden Sie `Task`, wenn die abgeschlossene Methode keinen sinnvollen Wert zurückgibt. Sie können sich den `Task`-Rückgabetyp wie „Task(void)“ vorstellen.  
+5.  Der Rückgabetype einer async-Methode kann nur <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `void` in C# sein. Für gewöhnlich wird ein Rückgabetyp `void` nur in einem asynchronen Ereignishandler verwendet, bei dem `void` erforderlich ist. In anderen Fällen verwenden Sie `Task(T)`, wenn die abgeschlossene Methode eine [return](../../../../csharp/language-reference/keywords/return.md)-Anweisung aufweist, die einen Wert vom Typ T zurückgibt. Verwenden Sie `Task`, wenn die abgeschlossene Methode keinen sinnvollen Wert zurückgibt. Sie können sich den `Task`-Rückgabetyp wie „Task(void)“ vorstellen.  
   
      Weitere Informationen finden Sie unter [Async Return Types (C#) (Asynchrone Rückgabetypen (C#))](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
@@ -450,7 +450,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ###  <a name="GetURLContentsAsync"></a> So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode  
   
-1.  .NET Framework 4.5 bietet viele asynchrone Methoden, die Sie verwenden können. Eine dieser Methoden, die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, erfüllt genau das, was in dieser exemplarischen Vorgehensweise nötig ist. Sie können sie anstelle der `GetURLContentsAsync`-Methode verwenden, die Sie in einer vorherigen Vorgehensweise erstellt haben.  
+1.  .NET Framework 4.5 bietet viele asynchrone Methoden, die Sie verwenden können. Eine davon, die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> erfüllt genau das, was in dieser exemplarischen Vorgehensweise nötig ist. Sie können sie anstelle der `GetURLContentsAsync`-Methode verwenden, die Sie in einer vorherigen Vorgehensweise erstellt haben.  
   
      Der erste Schritt besteht darin, ein `HttpClient`-Objekt in der Methode `SumPageSizesAsync` zu erstellen. Fügen Sie am Anfang der Methode die folgende Deklaration hinzu.  
   

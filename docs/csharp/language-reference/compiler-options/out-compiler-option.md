@@ -1,74 +1,94 @@
 ---
-title: "/out (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/out"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/out compiler option [C#]"
-  - "out compiler option [C#]"
-  - "-out compiler option [C#]"
+title: -out (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /out
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /out compiler option [C#]
+- out compiler option [C#]
+- -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a6db728bc98f5223fc35268a1cce41021ff530cc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /out (C# Compiler Options)
-Die Option **\/out** gibt den Namen der Ausgabedatei an.  
+# <a name="out-c-compiler-options"></a>/out (C#-Compileroptionen)
+Die Option **/out** gibt den Namen der Ausgabedatei an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /out:filename  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `filename`  
- Der Name der vom Compiler erstellten Ausgabedatei.  
+ Der Name der Ausgabedatei, die vom Compiler erstellt wurde  
   
-## Hinweise  
- Sie können in der Befehlszeile mehrere Ausgabedateien für die Kompilierung angeben.  Der Compiler erwartet nach der **\/out**\-Option eine oder mehrere Quellcodedateien.  Anschließend werden alle Quellcodedateien in die durch diese **\/out**\-Option festgelegte Ausgabedatei kompiliert.  
+## <a name="remarks"></a>Hinweise  
+ In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **/out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **/out** angegebenen Ausgabedatei kompiliert.  
   
- Geben Sie den vollständigen Namen und die Erweiterung der zu erstellenden Datei an.  
+ Geben Sie den vollständigen Namen und die Erweiterung der Datei an, die Sie erstellen möchten.  
   
- Wenn Sie den Namen der Ausgabedatei nicht angeben, geschieht Folgendes:  
+ Wenn Sie den Namen der Ausgabedatei nicht angeben:  
   
--   Eine EXE\-Datei übernimmt den Namen aus der Quellcodedatei, die die **Main**\-Methode enthält.  
+-   Übernimmt eine EXE-Datei den Namen aus der Quellcodedatei, die die **Main**-Methode enthält.  
   
--   Ein oder .dll .netmodule nehmen seinen Namen von der ersten Quellcodedatei.  
+-   Eine DLL- oder NETMODULE-Datei übernimmt den Namen aus der ersten Quellcodedatei.  
   
- Eine Quellcodedatei, die für die Kompilierung einer Ausgabedatei verwendet wird, kann nicht in der gleichen Kompilierung zum Kompilieren einer weiteren Ausgabedatei verwendet werden.  
+ Eine Quellcodedatei zum Kompilieren einer Ausgabedatei kann nicht in der gleichen Kompilierung für die Kompilierung einer anderen Ausgabedatei verwendet werden.  
   
- Wenn bei einer Befehlszeilenkompilierung mehrere Ausgabedateien erstellt werden, sollten Sie beachten, dass lediglich eine der Ausgabedateien eine Assembly sein kann und dass es sich dabei nur um die erste \(implizit oder explizit mit **\/out**\) angegebene Ausgabedatei handeln kann.  
+ Wenn bei einer Befehlszeilenkompilierung mehrere Ausgabedateien erstellt werden, sollten Sie bedenken, dass nur eine der Ausgabedateien eine Assembly sein kann und dass nur die erste angegebene Ausgabedatei (implizit oder explizit mit **/out**) die Assembly sein kann.  
   
- Alle als Teil einer Kompilierung erstellten Module werden mit jeder Assembly verknüpft, die auch in dieser Kompilierung erstellt wurde.  Mithilfe von [ildasm.exe](../Topic/Ildasm.exe%20\(IL%20Disassembler\).md) können Sie das Assemblymanifest und somit auch die verknüpften Dateien anzeigen lassen.  
+ Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](https://msdn.microsoft.com/library/f7dy01k1), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
   
- Die Compileroption \/out ist erforderlich, damit eine ausführbare Datei das Ziel einer friend\-Assembly sein kann.  Weitere Informationen finden Sie unter [Friend\-Assemblys](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+ Die Compileroption „/out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  
+1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite von **Anwendung**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
 3.  Ändern Sie die Eigenschaft **Assemblyname**.  
   
-     So legen Sie diese Compileroption programmgesteuert fest: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> ist eine schreibgeschützte Eigenschaft, die durch eine Kombination aus dem Projekttyp \(ausführbare Datei, Bibliothek usw.\) und dem Assemblynamen bestimmt wird.  Um den Namen der Ausgabedatei festzulegen, ist es erforderlich, eine oder beide Eigenschaften zu ändern.  
+     So legen Sie diese Compileroption programmgesteuert fest: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> ist eine schreibgeschützte Eigenschaft, die durch eine Kombination aus dem Projekttyp (ausführbare Datei, Bibliothek usw.) und dem Namen der Assembly bestimmt wird. Das Ändern von einer oder diesen beiden Eigenschaften ist erforderlich, um den Namen der Ausgabedatei festzulegen.  
   
-## Beispiel  
- In diesem Beispiel werden `t.cs` kompiliert sowie die Ausgabedatei `t.exe`, `t2.cs` und die Modulausgabedatei `mymodule.netmodule` erstellt:  
+## <a name="example"></a>Beispiel  
+ Kompilieren Sie `t.cs`, und erstellen Sie die Ausgabedatei `t.exe` und die Datei `t2.cs` sowie die Modulausgabedatei `mymodule.netmodule`:  
   
-```  
+```console  
 csc t.cs /out:mymodule.netmodule /target:module t2.cs  
 ```  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Friend\-Assemblys](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [Friend-Assemblys](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)   
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

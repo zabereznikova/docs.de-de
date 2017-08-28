@@ -1,5 +1,5 @@
 ---
-title: "Bestimmen, wohin „My.Application.Log“ Informationen schreibt (Visual Basic) | Microsoft-Dokumentation"
+title: "Bestimmen, wohin „My.Application.Log“ Informationen schreibt (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Bestimmen, wohin "My.Application.Log" Informationen schreibt (Visual Basic)
@@ -50,7 +50,7 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Bestimmen der Listener für "My.Application.Log"  
   
-1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] im **Projektmappen-Explorer**auf die "app.config" zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
+1.  Suchen Sie die Konfigurationsdatei der Assembly. Wenn Sie die Assembly entwickeln, können Sie in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] im **Projektmappen-Explorer**auf die "app.config" zugreifen. Andernfalls ist der Name der Konfigurationsdatei der Name der Assembly mit angefügtem ".config" und befindet sich im gleichen Verzeichnis wie die Assembly.  
   
     > [!NOTE]
     >  Nicht jede Assembly verfügt über eine Konfigurationsdatei.  
@@ -61,7 +61,7 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
   
      Wenn diese Abschnitte nicht vorhanden sind, werden die `My.Application.Log` -Protokolllistener möglicherweise durch die Konfigurationsdatei des Computers konfiguriert. In den folgenden Schritten ist beschrieben, wie Sie bestimmen, was in der Computerkonfigurationsdatei definiert ist:  
   
-    1.  Suchen Sie die Datei "machine.config" des Computers. In der Regel befindet sie sich im Verzeichnis *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , wobei `SystemRoot` das Betriebssystemverzeichnis ist und `frameworkVersion` die Version von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Suchen Sie die Datei "machine.config" des Computers. In der Regel befindet sie sich im Verzeichnis *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , wobei `SystemRoot` das Betriebssystemverzeichnis ist und `frameworkVersion` die Version von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          Die Einstellungen in "machine.config" können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden.  
   
@@ -79,13 +79,13 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
   
 5.  Bei vielen freigegebenen Listenern enthalten die Initialisierungdaten des Listeners eine Beschreibung, wohin der Listener die Daten leitet:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>-Listener schreibt in ein Dateiprotokoll, wie in der Einführung beschrieben.  
+    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> -Listener schreibt in ein Dateiprotokoll, wie in der Einführung beschrieben.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>-Listener schreibt Informationen in das Ereignisprotokoll des Computers, das im `initializeData`-Parameter angegeben ist. Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder die **Windows-Ereignisanzeige**verwenden. Weitere Informationen finden Sie unter [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> -Listener schreibt Informationen in das Ereignisprotokoll des Computers, das im `initializeData` -Parameter angegeben ist. Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder die **Windows-Ereignisanzeige**verwenden. Weitere Informationen finden Sie unter [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
-    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>- und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>-Listener schreiben in die Datei, die im `initializeData`-Parameter angegeben ist.  
+    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> - und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> -Listener schreiben in die Datei, die im `initializeData` -Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>-Listener schreibt in die Befehlszeilenkonsole.  
+    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> -Listener schreibt in die Befehlszeilenkonsole.  
   
     -   Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
@@ -103,3 +103,4 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
  [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [ETW-Ereignisse in .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
  [Problembehandlung: Protokolllistener](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

@@ -1,5 +1,5 @@
 ---
-title: try-catch (C#-Referenz) | Microsoft-Dokumentation
+title: try-catch (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
@@ -47,7 +47,7 @@ Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder meh
 ## <a name="remarks"></a>Hinweise  
  Wenn eine Ausnahme ausgelöst wird, sucht die Common Language Runtime (CLR) nach der `catch`-Anweisung, die diese Ausnahme behandelt. Wenn die derzeit ausgeführte Methode keinen solchen `catch`-Block enthält, betrachtet die CLR die Methode, die die aktuelle Methode aufgerufen hat, dann die vorhergehende in der Aufrufliste usw. Wenn kein `catch`-Block gefunden wird, zeigt die CLR dem Benutzer eine Meldung über eine nicht behandelte Ausnahme an und beendet die Ausführung des Programms.  
   
- Der `try` -Block enthält den überwachten Code, der möglicherweise die Ausnahme verursacht. Der Block wird ausgeführt, bis eine Ausnahme ausgelöst wird, oder bis er erfolgreich abgeschlossen wird. Beispielsweise löst der folgende Versuch, ein `null`-Objekt umzuwandeln, die Ausnahme <xref:System.NullReferenceException> aus:  
+ Der `try` -Block enthält den überwachten Code, der möglicherweise die Ausnahme verursacht. Der Block wird ausgeführt, bis eine Ausnahme ausgelöst wird, oder bis er erfolgreich abgeschlossen wird. Beispielsweise löst der folgende Versuch, ein `null`-Objekt umzuwandeln, die <xref:System.NullReferenceException>-Ausnahme aus:  
   
 ```csharp  
 object o2 = null;  
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Zwar kann die `catch`-Klausel ohne Argumente verwendet werden, um jeden beliebigen Ausnahmetyp abfangen, dies wird jedoch nicht empfohlen. Im Allgemeinen sollten Sie nur solche Ausnahmen abfangen, bei denen Sie wissen, wie die Wiederherstellung durchgeführt wird. Daher sollten Sie immer ein Objektargument angeben, das von <xref:System.Exception?displayProperty=fullName> abgeleitet wurde. Zum Beispiel:  
+ Zwar kann die `catch`-Klausel ohne Argumente verwendet werden, um jeden beliebigen Ausnahmetyp abfangen, dies wird jedoch nicht empfohlen. Im Allgemeinen sollten Sie nur solche Ausnahmen abfangen, bei denen Sie wissen, wie die Wiederherstellung durchgeführt wird. Daher sollten Sie immer ein von <xref:System.Exception?displayProperty=fullName> abgeleitetes Objektargument angeben, zum Beispiel:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -77,7 +77,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
   
  Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können eine Prädikatfunktion erstellen, die immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.  
   
- Eine [throw`catch`-Anweisung kann in einem ](../../../csharp/language-reference/keywords/throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer Ausnahme <xref:System.IO.IOException> extrahiert; anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.  
+ Eine [throw`catch`-Anweisung kann in einem ](../../../csharp/language-reference/keywords/throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.  
   
 ```csharp  
 catch (FileNotFoundException e)  
@@ -142,7 +142,7 @@ static void Main()
  Weitere Informationen zu „catch“ finden Sie unter [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
 ## <a name="exceptions-in-async-methods"></a>Ausnahmen in asynchronen Methoden  
- Eine asynchrone Methode wird mit einem [async](../../../csharp/language-reference/keywords/async.md)-Modifizierer gekennzeichnet und enthält in der Regel eine oder mehrere await-Ausdrücke oder -Anweisungen. Ein await-Ausdruck wendet den Operator [await](../../../csharp/language-reference/keywords/await.md) auf ein <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> an.  
+ Eine asynchrone Methode wird mit einem [async](../../../csharp/language-reference/keywords/async.md)-Modifizierer gekennzeichnet und enthält in der Regel eine oder mehrere await-Ausdrücke oder -Anweisungen. Ein „await“-Ausdruck wendet den [await](../../../csharp/language-reference/keywords/await.md)-Operator auf ein <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> an.  
   
  Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) und [Ablaufsteuerung in asynchronen Programmen](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
@@ -150,7 +150,7 @@ static void Main()
   
  Um die Ausnahme abzufangen, warten Sie in einem `try`-Block auf die Aufgabe, und fangen Sie die Ausnahme im zugehörigen `catch`-Block ab. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
   
- Eine Aufgabe kann sich in einem fehlerhaften Zustand befinden, da mehrere Ausnahmen in der erwarteten asynchronen Methode aufgetreten sind. Die Aufgabe kann z.B. das Ergebnis eines Aufrufs von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> sein. Wenn Sie auf eine solche Aufgabe warten, wird nur eine der Ausnahmen abgefangen, und Sie können nicht vorhersagen, welche Ausnahme abgefangen wird. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
+ Eine Aufgabe kann sich in einem fehlerhaften Zustand befinden, da mehrere Ausnahmen in der erwarteten asynchronen Methode aufgetreten sind. Beispielsweise kann die Aufgabe das Ergebnis eines Aufrufs an <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> sein. Wenn Sie auf eine solche Aufgabe warten, wird nur eine der Ausnahmen abgefangen, und Sie können nicht vorhersagen, welche Ausnahme abgefangen wird. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel enthält der `try`-Block einen Aufruf der `ProcessString`-Methode, die eine Ausnahme verursachen kann. Die `catch`-Klausel enthält den Ausnahmehandler, der lediglich eine Meldung auf dem Bildschirm anzeigt. Wenn die `throw`-Anweisung aus `MyMethod` heraus aufgerufen wird, sucht das System nach der `catch`-Anweisung und zeigt die Meldung `Exception caught` an.  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Behandlung von Ausnahmen in Fällen, in denen mehrere Aufgaben zu mehreren Ausnahmen führen können. Der Block `try` wartet auf die Aufgabe, die durch den Aufruf von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> zurückgeben wurde. Die Aufgabe ist abgeschlossen, wenn die drei Aufgaben abgeschlossen sind, auf die WhenAll angewendet wird.  
+ Das folgende Beispiel veranschaulicht die Behandlung von Ausnahmen in Fällen, in denen mehrere Aufgaben zu mehreren Ausnahmen führen können. Der `try`-Block wartet auf die Aufgabe, die von einem Aufruf von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> zurückgegeben wird. Die Aufgabe ist abgeschlossen, wenn die drei Aufgaben abgeschlossen sind, auf die WhenAll angewendet wird.  
   
- Jede der drei Aufgaben löst eine Ausnahme aus. Der Block `catch` iteriert durch die Ausnahmen, die in der Eigenschaft `Exception.InnerExceptions` der Aufgabe stehen, die von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> zurückgegeben wurde.  
+ Jede der drei Aufgaben löst eine Ausnahme aus. Der `catch`-Block iteriert durch die Ausnahmen, die in der `Exception.InnerExceptions`-Eigenschaft der Aufgabe stehen, die von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> zurückgegeben wurde.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
@@ -189,7 +189,7 @@ static void Main()
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [try-, throw- und catch-Anweisungen (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   

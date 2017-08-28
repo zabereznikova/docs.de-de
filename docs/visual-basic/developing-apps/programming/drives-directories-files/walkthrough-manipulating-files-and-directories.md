@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Dateien und Verzeichnissen in Visual Basic | Microsoft-Dokumentation
+title: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,19 +41,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
-Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
+Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
   
- In dieser exemplarischen Vorgehensweise werden Member von `My.Computer.FileSystem Object` verwendet, die unter [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verfügbar sind. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Am Ende dieser exemplarischen Vorgehensweise finden Sie ein entsprechendes Beispiel, in dem Klassen aus dem Namespace <xref:System.IO> verwendet werden.  
+ In dieser exemplarischen Vorgehensweise werden Member von `My.Computer.FileSystem Object` verwendet, die unter [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verfügbar sind. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Am Ende dieser exemplarischen Vorgehensweise finden Sie ein entsprechendes Beispiel, in dem Klassen aus dem Namespace <xref:System.IO> verwendet werden.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
@@ -65,7 +65,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 3.  Geben Sie im Feld **Name** `FileExplorer` ein, um den Projektnamen festzulegen, und klicken Sie anschließend auf **OK**.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] fügt das Projekt zum **Projektmappen-Explorer** hinzu. Der Windows Forms-Designer wird geöffnet.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt das Projekt zum **Projektmappen-Explorer** hinzu. Der Windows Forms-Designer wird geöffnet.  
   
 4.  Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und legen Sie die entsprechenden Werte für die Eigenschaften fest.  
   

@@ -1,5 +1,5 @@
 ---
-title: Threadzeitgeber (C#) | Microsoft-Dokumentation
+title: Threadzeitgeber (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>Threadzeitgeber (C#)
-Die Klasse <xref:System.Threading.Timer?displayProperty=fullName> ist nützlich, um in regelmäßigen Abständen eine Aufgabe in einem separaten Thread auszuführen. Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.  
+Die <xref:System.Threading.Timer?displayProperty=fullName>-Klasse eignet sich für eine Aufgabe, die in regelmäßigen Abständen in einem separaten Thread ausgeführt wird. Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.  
   
 ## <a name="thread-timer-example"></a>Beispiel für Threadzeitgeber  
- Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet und nutzt ein Flag, das die Methode <xref:System.IDisposable.Dispose%2A> initiiert, die den Zeitgeber anhält. In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.  
+ Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet, und ein Flag genutzt, das die <xref:System.IDisposable.Dispose%2A>-Methode initiiert, die den Timer anhält. In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.  
   
 ```csharp  
 private class StateObjClass  
@@ -88,3 +89,4 @@ private void TimerTask(object StateObj)
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading>   
  [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

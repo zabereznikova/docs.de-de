@@ -1,5 +1,5 @@
 ---
-title: "Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#) | Microsoft-Dokumentation"
+title: "Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 44adda352b5e7d0ef13e51ed114a0f45487f52ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d505b566fe604afdedea583dc8c001f80c15d3c
 ms.contentlocale: de-de
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#)
@@ -34,7 +34,7 @@ Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgele
  Eine Liste von varianten Schnittstellen in .NET Framework finden Sie unter [Varianz in generischen Schnittstellen (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Konvertieren von generischen Auflistungen  
- Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der Schnittstelle <xref:System.Collections.Generic.IEnumerable%601>. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable<Person>` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable<Employee>` wiederverwenden, da `Employee` `Person` erbt.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable<Person>` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable<Employee>` wiederverwenden, da `Employee` `Person` erbt.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -72,7 +72,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>Vergleichen von generischen Auflistungen  
- Im folgenden Beispiel werden die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle veranschaulicht. Die `PersonComparer`-Klasse implementiert die `IComparer<Person>`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer<Person>`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -132,3 +132,4 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch  
  [Varianz in generischen Schnittstellen](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+

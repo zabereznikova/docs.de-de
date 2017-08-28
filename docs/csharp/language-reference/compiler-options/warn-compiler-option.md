@@ -1,73 +1,93 @@
 ---
-title: "/warn (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/warn"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "warning level [C#]"
-  - "/w compiler option [C#]"
-  - "-w compiler option [C#]"
-  - "-warn compiler option [C#]"
-  - "/warn compiler option [C#]"
-  - "w compiler option [C#]"
-  - "warn compiler option [C#]"
+title: -warn (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /warn
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- warning level [C#]
+- /w compiler option [C#]
+- -w compiler option [C#]
+- -warn compiler option [C#]
+- /warn compiler option [C#]
+- w compiler option [C#]
+- warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e703060b7cc5f897ddf0b6764e9607460666e92c
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /warn (C# Compiler Options)
-Die Option **\/warn** gibt die vom Compiler anzuzeigende Warnstufe an.  
+# <a name="warn-c-compiler-options"></a>/warn (C#-Compileroptionen)
+Die Option **/warn** gibt die vom Compiler anzuzeigende Warnstufe an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /warn:option  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `option`  
- Die Warnstufe, die bei der Kompilierung angezeigt werden soll. Bei niedrigen Werten werden nur Warnungen mit hohem Schweregrad angezeigt; bei höheren Werten werden mehr Warnungen angezeigt.  Gültige Werte liegen zwischen 0 und 4:  
+ Die Warnstufe, die für die Kompilierung angezeigt werden soll: Niedrigere Zahlen zeigen nur schwerwiegendere Warnungen an, höhere Zahlen zeigen mehr Warnungen an. Gültige Werte sind 0–4:  
   
 |Warnstufe|Bedeutung|  
-|---------------|---------------|  
-|0|Schaltet die Ausgabe aller Warnungen aus.|  
-|1|Zeigt schwerwiegende Warnungen an.|  
-|2|Zeigt Warnungen der Stufe 1 sowie bestimmte, weniger schwerwiegende Warnungen an \(z. B. zu ausgeblendeten Klassenmembern\).|  
-|3|Zeigt Warnungen der Stufe 2 sowie bestimmte, weniger schwerwiegende Warnungen an, z. B. Warnungen zu Ausdrücken, die immer den Wert `true` oder `false` ergeben.|  
-|4 \(Standard\)|Zeigt alle Warnungen der Stufe 3 sowie Informationswarnungen an.|  
+|-------------------|-------------|  
+|0|Deaktiviert die Ausgabe aller Warnungmeldungen|  
+|1|Zeigt schwerwiegende Warnmeldungen an|  
+|2|Zeigt Warnungen der Stufe 1 sowie bestimmte, weniger schwerwiegende Warnungen an, z.B. Warnungen zum Ausblenden von Klassenmembern|  
+|3|Zeigt Warnungen der Stufe 2 sowie bestimmte, weniger schwerwiegende Warnungen an, z.B. Warnungen zu Ausdrücken, immer nach `true` oder `false` ausgewertet werden|  
+|4 (Standard)|Zeigt die Warnungen aller drei Stufen sowie informative Warnungen an|  
   
-## Hinweise  
- Informationen zu einem Fehler oder zu einer Warnung finden Sie unter dem entsprechenden Fehlercode im Hilfeindex.  Weitere Möglichkeiten zum Abrufen von Informationen zu einem Fehler oder einer Warnung zu erhalten finden Sie unter [C\# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md).  
+## <a name="remarks"></a>Hinweise  
+ Um Informationen zu einem Fehler oder einer Warnung zu erhalten, schlagen Sie den Fehlercode im Hilfeindex nach. Andere Möglichkeiten zum Abrufen von Informationen zu einem Fehler oder einer Warnung finden Sie unter [C#-Compilerfehler](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Mit [\/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) können Sie alle Warnungen als Fehler behandeln.  Mithilfe von [\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) können Sie bestimmte Warnungen deaktivieren.  
+ Verwenden Sie [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md), um alle Warnungen als Fehler zu behandeln. Verwenden Sie [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md), um bestimmte Warnungen zu deaktivieren.  
   
- **\/w** ist die Kurzform von **\/warn**.  
+ **/w** ist die Kurzform von **/warn**.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  
+1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Erstellen**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
   
 3.  Ändern Sie die Eigenschaft **Warnstufe**.  
   
- Informationen darüber, wie Sie diese Compileroption programmgesteuert festlegen können, finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   
-## Beispiel  
- In diesem Beispiel wird `in.cs` kompiliert, wobei der Compiler nur Warnungen der Stufe 1 anzeigen soll:  
+## <a name="example"></a>Beispiel  
+ Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass nur Warnungen der Stufe 1 angezeigt werden:  
   
-```  
+```console  
 csc /warn:1 in.cs  
 ```  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

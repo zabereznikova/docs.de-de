@@ -1,5 +1,5 @@
 ---
-title: Varianz bei Delegaten (C#) | Microsoft-Dokumentation
+title: Varianz bei Delegaten (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79de8218f3fcdf52dad84bb0bacffde01a222066
 ms.contentlocale: de-de
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
@@ -129,15 +129,15 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Generische Delegaten mit varianten Typparametern in .NET Framework  
  Mit .NET Framework 4 wurde die Unterstützung von Varianz für generische Typparameter in verschiedenen vorhandenen generischen Delegaten eingeführt:  
   
--   `Action`-Delegaten aus dem Namespace <xref:System>, z.B. <xref:System.Action%601> und <xref:System.Action%602>  
+-   `Action`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Action%601> und <xref:System.Action%602>  
   
--   `Func`-Delegaten aus dem Namespace <xref:System>, z.B. <xref:System.Func%601> und <xref:System.Func%602>  
+-   `Func`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Func%601> und <xref:System.Func%602>  
   
--   Der <xref:System.Predicate%601>-Delegat  
+-   Der <xref:System.Predicate%601>-Delegat.  
   
--   Der <xref:System.Comparison%601>-Delegat  
+-   Der <xref:System.Comparison%601>-Delegat.  
   
--   Der <xref:System.Converter%602>-Delegat  
+-   Der <xref:System.Converter%602>-Delegat.  
   
  Weitere Informationen und Beispiele finden Sie unter [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
@@ -157,7 +157,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
-> Die Parameter  `ref` und `out` in C# können nicht als variant markiert werden.  
+>  Die Parameter `ref` und `out` in C# können nicht als variant markiert werden.  
   
  Es ist auch möglich, Varianz und Kovarianz im gleichen Delegaten, aber für verschiedene Typparameter, zu unterstützen. Dies wird im folgenden Beispiel gezeigt.  
   
@@ -214,6 +214,7 @@ public static void Test()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Generics (Generika)](https://msdn.microsoft.com/library/ms172192)   
+ [Generics (Generika)](~/docs/standard/generics/index.md)   
  [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)   
  [How to: Combine Delegates (Multicast Delegates) (Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten))](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+
