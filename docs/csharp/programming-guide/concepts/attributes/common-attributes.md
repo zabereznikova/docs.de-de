@@ -193,16 +193,18 @@ static void DoIfAorB()
   
  Um den Effekt der logischen Verknüpfung von Symbolen durch den AND-Operator zu erzielen, können Sie serielle bedingte Methoden definieren. Zum Beispiel wird die zweite Methode unten nur ausgeführt, wenn jeweils `A` und `B` definiert sind:  
   
-```csharp  
-<Conditional("A")>   
-Shared Sub DoIfA()  
-    DoIfAandB()  
-End Sub  
+```csharp
+[Conditional("A")]  
+static void DoIfA()  
+{  
+    DoIfAandB();  
+}  
   
-<Conditional("B")>   
-Shared Sub DoIfAandB()  
-    ' Code to execute when both A and B are defined...  
-End Sub  
+[Conditional("B")]  
+static void DoIfAandB()  
+{  
+    // Code to execute when both A and B are defined...  
+}  
 ```  
   
 ### <a name="using-conditional-with-attribute-classes"></a>Verwenden von Conditional mit Attributklassen  
