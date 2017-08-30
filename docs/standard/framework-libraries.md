@@ -1,6 +1,6 @@
 ---
 title: Frameworkbibliotheken
-description: Frameworkbibliotheken
+description: "Erfahren Sie, wie diese Bibliotheken Implementierungen für viele allgemeine und App-spezifische Typen, Algorithmen und Hilfsprogrammfunktionen bereitstellen."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: ronpet
@@ -10,9 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-translationtype: Human Translation
-ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
-ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -30,42 +32,37 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 
 .NET umfasst eine Reihe primitiver Typen, die (in unterschiedlichem Maß) in allen Programmen verwendet werden. Diese Typen enthalten Daten, beispielsweise Zahlen, Zeichenfolgen, Bytes und beliebige Objekte. Die Sprache C# enthält Schlüsselwörter für diese Typen. Unten finden Sie einen Beispielsatz dieser Typen, zusammen mit den entsprechenden C#-Schlüsselwörtern.
 
-* [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
-* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx)-Typ ohne Vorzeichen.
-* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)): Ein ganzzahliger 32-Bit-Typ mit Vorzeichen. Es gibt auch einen [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx)-Typ ohne Vorzeichen.
-* [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)): Ein 32-Bit-Gleitkommatyp.
-* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)): Ein 128-Bit-Dezimaltyp.
-* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte Arbeitsspeicher darstellt.
-* [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)): Ein boolescher Typ, der „true“ oder „false“ darstellt.
-* [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)): Ein numerischer 16-Bit-Typ, der ein Unicode-Zeichen darstellt.
-* [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
+* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
+* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
+* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/keywords/uint.md)-Typ ohne Vorzeichen.
+* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)): Ein 32-Bit-Gleitkommatyp
+* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)): Ein 128-Bit-Dezimaltyp
+* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
+* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)): Ein boolescher Typ, der `true` oder `false` darstellt
+* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)): Ein numerischer 16-Bit-Typ, der ein Unicodezeichen darstellt
+* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
 
 ## <a name="data-structures"></a>Datenstrukturen
 
 .NET umfasst eine Reihe von Datenstrukturen, die die Arbeitsgrundlage für nahezu alle .NET-Apps darstellen. Die meisten sind Auflistungen, es gibt jedoch auch andere Typen.
 
-*   [Array](https://msdn.microsoft.com/library/system.array.aspx): Stellt ein Array aus stark typisierten Objekten dar, auf die über einen Index zugegriffen werden kann. Verfügt konstruktionsbedingt über eine festgelegte Größe.
-*   [List](https://msdn.microsoft.com/library/6sh2ey19.aspx): Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Die Größe wird nach Bedarf automatisch angepasst.
-*   [Dictionary](https://msdn.microsoft.com/library/xfhwa508.aspx): Stellt eine Auflistung aus Werten dar, die durch einen Schlüssel indiziert werden. Auf die Werte kann über einen Schlüssel zugegriffen werden. Die Größe wird nach Bedarf automatisch angepasst.
-*   [Uri](https://msdn.microsoft.com/library/system.uri.aspx): Stellt eine Objektdarstellung eines URIs (Uniform Resource Identifier) sowie einfachen Zugriff auf die Teile des URIs bereit.
-*   [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx): Stellt einen Zeitpunkt dar, der üblicherweise als Datum und Uhrzeit dargestellt wird.
+*   <xref:System.Array>: Stellt ein Array aus stark typisierten Objekten dar, auf die über einen Index zugegriffen werden kann. Verfügt konstruktionsbedingt über eine festgelegte Größe.
+*   <xref:System.Collections.Generic.List%601>: Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Die Größe wird nach Bedarf automatisch angepasst.
+*   <xref:System.Collections.Generic.Dictionary%602>: Stellt eine Auflistung aus Werten dar, die durch einen Schlüssel indiziert werden. Auf die Werte kann über einen Schlüssel zugegriffen werden. Die Größe wird nach Bedarf automatisch angepasst.
+*   <xref:System.Uri>: Stellt eine Objektdarstellung eines URIs (Uniform Resource Identifier) und einfachen Zugriff auf die Teile des URIs bereit.
+*   <xref:System.DateTime>: Stellt einen Zeitpunkt dar, normalerweise durch Datum und Uhrzeit angegeben.
 
 ## <a name="utility-apis"></a>Hilfsprogramm-APIs
 
 .NET umfasst eine Reihe von Hilfsprogramm-APIs, die Funktionen für viele wichtige Aufgaben bereitstellen.
 
-*   [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx): Eine API zum Senden von HTTP-Anforderungen und Empfangen von HTTP-Antworten aus einer Ressource, die durch einen URI identifiziert wird.
-*   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx): Eine API zum Laden und Abfragen von XML-Dokumenten mit LINQ.
-*   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx): Eine API zum Lesen von Dateien ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)). Kann zum Schreiben von Dateien verwendet werden.
+*   <xref:System.Net.Http.HttpClient>: Eine API zum Senden von HTTP-Anforderungen und Empfangen von HTTP-Antworten aus einer Ressource, die durch einen URI identifiziert wird.
+*   <xref:System.Xml.Linq.XDocument>: Eine API zum Laden und Abfragen von XML-Dokumenten mit LINQ.
+*   <xref:System.IO.StreamReader>: Eine API zum Lesen von Dateien (<xref:System.IO.StringWriter>). Kann zum Schreiben von Dateien verwendet werden.
 
 ## <a name="app-model-apis"></a>App-Modell-APIs
 
 Es gibt viele App-Modelle von unterschiedlichen Herstellern, die mit .NET verwendet werden können.
 
 *   [ASP.NET](http://asp.net): Stellt ein Webframework zum Erstellen von Websites und -diensten bereit. Unterstützt unter Windows, Linux und macOS (je nach ASP.NET-Version).
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

@@ -1,6 +1,6 @@
 ---
 title: "Native Interoperabilität"
-description: "Native Interoperabilität"
+description: "Erfahren Sie, wie Sie eine Verknüpfung mit nativen Komponenten in .NET herstellen."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>Native Interoperabilität
 
-In diesem Dokument werden alle drei Möglichkeiten für „native Interoperabilität“ im Detail untersucht, die auf der .NET-Plattform verfügbar sind.
+In diesem Dokument werden alle drei Möglichkeiten für „native Interoperabilität“ im Detail untersucht, die in .NET verfügbar sind.
 
 Es gibt einige Gründe für das Aufrufen von nativem Code:
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 Das obige Beispiel ist recht einfach, zeigt jedoch, was zum Aufrufen nicht verwalteter Funktionen von verwaltetem Code aus erforderlich ist. Gehen wir das Beispiel schrittweise durch:
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 Unter Linux verhält es sich natürlich ähnlich. Der Funktionsname ist identisch, da es sich bei `getpid(2)` um einen [POSIX](https://en.wikipedia.org/wiki/POSIX)-Systemaufruf handelt.
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>Aufrufen von verwaltetem Code von nicht verwaltetem Code aus
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 Bevor wir unser Beispiel durchgehen, sollten wir die Signaturen der nicht verwalteten Funktionen betrachten, mit denen wir arbeiten müssen. Die Funktion, die wir zum Auflisten aller Fenster aufrufen möchten, weist folgende Signatur auf: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 Im macOS-Beispiel wird die gleiche Funktion verwendet. Der einzige Unterschied ist das Argument für das `DllImport`-Attribut, da macOS `libc` an einer anderen Stelle speichert.
@@ -261,7 +257,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 Beide oben aufgeführten Beispiele hängen von Parametern ab, und in beiden Fällen werden die Parameter als verwaltete Typen angegeben. Die Runtime reagiert demgemäß und verarbeitet diese in ihren Entsprechungen auf der anderen Seite. Da dieser Vorgang für das Schreiben von hochwertigem nativem Interopcode entscheidend ist, sehen wir uns an, was beim _Marshallen_ der Typen durch die Runtime geschieht.
@@ -270,12 +265,11 @@ Beide oben aufgeführten Beispiele hängen von Parametern ab, und in beiden Fäl
 
 Das **Marshallen** bezeichnet den Vorgang zum Umwandeln von Typen, wenn diese die verwaltete Grenze zu nativem Code und umgekehrt überschreiten.
 
-Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit Null endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
+Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>Marshallen von Klassen und Strukturen
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-Das obige Beispiel zeigt ein einfaches Beispiel für einen Aufruf in der `GetSystemTime()`-Funktion. Der interessante Teil befindet sich in Zeile 4\. Das Attribut gibt an, dass die Felder der Klasse sequenziell der Struktur auf der anderen (nicht verwalteten) Seite zugeordnet werden sollen. Dies bedeutet, dass die Benennung der Felder nicht wichtig ist, sondern nur deren Reihenfolge, da diese der nicht verwalteten Struktur entsprechen muss, wie unten gezeigt:
+Das obige Beispiel zeigt ein einfaches Beispiel für einen Aufruf in der `GetSystemTime()`-Funktion. Der interessante Teil befindet sich in Zeile 4. Das Attribut gibt an, dass die Felder der Klasse sequenziell der Struktur auf der anderen (nicht verwalteten) Seite zugeordnet werden sollen. Dies bedeutet, dass die Benennung der Felder nicht wichtig ist, sondern nur deren Reihenfolge, da diese der nicht verwalteten Struktur entsprechen muss, wie unten gezeigt:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 Das Linux- und macOS-Beispiel hierfür haben wir bereits im vorherigen Beispiel gesehen. Es wird unten noch einmal aufgeführt.
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 Die `StatClass`-Klasse stellt eine Struktur dar, die vom `stat`-Systemaufruf auf UNIX-Systemen zurückgegeben wird. Sie stellt Informationen über eine bestimmte Datei dar. Die oben gezeigte Klasse ist die stat-Strukturdarstellung in verwaltetem Code. Wiederum müssen die Felder in der Klasse derselben Reihenfolge entsprechen wie die native Struktur. (Sie finden diese über Manpages in Ihrer bevorzugten UNIX-Implementierung.) Zudem müssen Sie denselben zugrunde liegenden Typ aufweisen.

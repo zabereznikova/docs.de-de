@@ -1,6 +1,6 @@
 ---
 title: "Async (Übersicht)"
-description: "Async (Übersicht)"
+description: "Erfahren Sie mehr über die asynchrone Programmierung als eine wichtige Technik, mit der E/A-Blockierung und gleichzeitige Vorgänge auf mehreren Kernen direkt behandelt werden können."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -28,17 +29,16 @@ Asynchrone Programmierung ist eine wichtige Technik, mit der E/A-Blockierung und
 
 ## <a name="why-write-async-code"></a>Warum sollten Sie Async-Code schreiben?
 
-Moderne Apps machen umfassenden Gebrauch von Datei- und Netzwerk-E/A. E/A-APIs sind üblicherweise Blockaden, was Benutzerfreundlichkeit und Hardwarenutzung beeinträchtigt, solange Sie keine herausfordernden Muster erlernen und verwenden möchten. Async-APIs und das asynchrone Programmiermodell auf Sprachebene kehren dieses Modell um, sodass die asynchrone Ausführung zum Standard wird, wobei einige neue Konzepte zu erlernen sind.
+Moderne Apps machen umfassenden Gebrauch von Datei- und Netzwerk-E/A. E/A-APIs sind üblicherweise Blockaden, was Benutzerfreundlichkeit und Hardwarenutzung beeinträchtigt, solange Sie keine herausfordernden Muster erlernen und verwenden möchten. Taskbasierte, asynchrone APIs und das asynchrone Programmiermodell auf Sprachebene kehren dieses Modell um, sodass die asynchrone Ausführung zum Standard wird, wobei einige neue Konzepte zu erlernen sind.
 
-Async-Code weist folgende Merkmale auf:
+Asynchroner Code weist folgende Merkmale auf:
 
 * Behandeln einer höheren Zahl von Serveranforderungen durch Erzeugen von Threads zum Behandeln einer höheren Zahl von Anforderungen während des Wartens auf die Rückmeldung von E/A-Anforderungen.
 * Reaktionsfähigere Benutzeroberflächen durch Erzeugen von Threads für die Benutzeroberflächeninteraktion während des Wartens auf E/A-Anforderungen und durch Übertragen zeitintensiver Abläufe auf andere CPU-Kerne.
 * Viele der neueren .NET-APIs sind asynchron.
-* In .NET schreiben Sie im Handumdrehen Async-Code!
+* In .NET schreiben Sie im Handumdrehen asynchronen Code!
 
-## <a name="whats-next"></a>Weitere Informationen?
+## <a name="whats-next"></a>Ausblick
 
-Tiefe Einblicke in asynchrone Konzepte und Programmierung finden Sie unter [Async ausführlich](async-in-depth.md) .
-
+Tiefe Einblicke in asynchrone Konzepte und Programmierung finden Sie unter [Async ausführlich](async-in-depth.md) und [Task-based asynchronous programming (Taskbasiertes, asynchrones Programmieren)](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md).
 

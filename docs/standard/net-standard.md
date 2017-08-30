@@ -1,43 +1,42 @@
 ---
 title: .NET Standard | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über .NET Standard, die Version und die unterstützten Plattformen für .NET."
+description: "Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird."
 keywords: .NET Standard, PCL, .NET
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 03/17/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a580e33f756bfb5eb96daeb9decb4acfe3ef2f52
-ms.openlocfilehash: 970c70af2d8e5524e022f38d1ad93697a62985f8
+ms.translationtype: HT
+ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
+ms.openlocfilehash: eaae98ce0f7a1b49669098812193ae1b629584a4
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
-
 # <a name="net-standard"></a>.NET-Standard
 
-[.NET-Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Laufzeiten verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Laufzeitverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek. 
+[.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Implementierungsverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek. 
 
 .NET Standard ermöglicht im Wesentlichen die folgenden Szenarios: 
 
-- Sie definiert einen einheitlichen Satz von BCL-APIs, die unabhängig von der Arbeitsauslastung für alle .NET-Plattformen implementiert werden.
-- Sie ermöglicht Entwicklern die Erstellung portabler Bibliotheken, die anhand desselben Satzes von APIs übergreifend über .NET-Runtimes hinweg eingesetzt werden können.
-- Sie reduziert und beseitigt idealerweise die bedingte Kompilierung freigegebener Quellen aufgrund von .NET-APIs (nur für Betriebssystem-APIs).
+- Sie definiert einen einheitlichen Satz von BCL-APIs, die unabhängig von der Arbeitsauslastung für alle .NET-Implementierungen implementiert werden.
+- Sie ermöglicht Entwicklern die Erstellung portabler Bibliotheken, die anhand desselben Satzes von APIs in .NET-Implementierungen eingesetzt werden können.
+- Sie reduziert oder beseitigt sogar die bedingte Kompilierung freigegebener Quellen aufgrund von .NET-APIs (nur für Betriebssystem-APIs).
 
-Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. Jede .NET-Runtimeversion kündigt die höchste .NET-Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z.B. .NET Standard 1.3 und macht damit alle APIs verfügbar, die in den Versionen 1.0 bis 1.3 von .NET Standard definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.1 .NET Standard 1.5, während .NET Core 1.0 .NET Standard 1.6 implementiert.
+Die verschiedenen .NET-Implementierungen verwenden spezifische Versionen von .NET Standard als Ziel. Jede .NET-Implementierung kündigt die höchste .NET Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z.B. .NET Standard 1.3 und macht damit alle APIs verfügbar, die in den Versionen 1.0 bis 1.3 von .NET Standard definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.1 .NET Standard 1.4, während .NET Core 1.0 .NET Standard 1.6 implementiert.
 
-## <a name="net-platforms-support"></a>Unterstützung für .NET-Plattformen
+## <a name="net-implementation-support"></a>Unterstützung der .NET-Implementierung
 
 In der folgenden Tabelle sind alle Versionen von .NET Standard und die unterstützten Plattformen aufgeführt:
 
 [!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Gehen Sie folgendermaßen vor, um die höchste Version von .NET Standard zu suchen, die Sie als Ziel verwenden können:
-1. Suchen Sie die Zeile, die die .NET Plattform enthält, die Sie ausführen möchten.
+1. Suchen Sie die Zeile, die die .NET-Implementierung enthält, die Sie ausführen möchten.
 2. Suchen Sie in dieser Zeile die Spalte, in der Ihre Version angegeben ist (von rechts nach links).
 3. Die Spaltenüberschrift gibt die .NET Standard-Version an, die Ihr Ziel unterstützt (alle niedrigeren .NET Standard-Versionen werden ebenfalls unterstützt).
 4. Wiederholen Sie diesen Vorgang für jede Plattform, die als Ziel verwendet werden soll. Wenn Sie mehrere Zielplattformen verwenden, sollten Sie die kleinste unterstützten Versionen auswählen. Wenn Sie .NET Standard z.B. auf .NET Framework 4.5 und .NET Core 1.0 ausführen möchten, ist die höchste .NET Standard-Version, die Sie verwenden können, .NET Standard 1.1.
@@ -58,11 +57,11 @@ Im Allgemeinen sollten Sie als Zielversion die *niedrigste* mögliche Version vo
 Es gibt zwei primäre Versionskontrollregeln:
 
 - Additiv: .NET Standard-Versionen sind logisch konzentrische Kreise: höhere Versionen umfassen alle APIs früherer Versionen. Zwischen den Versionen gibt es keine die Lauffähigkeit der Anwendung beeinträchtigenden Änderungen.
-- Unveränderlich. Nach der Auslieferung von .NET Standard-Versionen erfolgen keine Änderungen. Neue APIs werden mit bestimmten .NET-Plattformen wie .NET Core zum ersten Mal verfügbar. Wenn das .NET Standard-Prüfungsgremium der Ansicht ist, dass die neuen APIs allgemein bereitgestellt werden sollten, werden sie in einer neuen Version von .NET Standard hinzugefügt.
+- Unveränderlich. Nach der Auslieferung von .NET Standard-Versionen erfolgen keine Änderungen. Neue APIs werden mit bestimmten .NET-Implementierungen wie .NET Core zum ersten Mal verfügbar. Wenn das .NET Standard-Prüfungsgremium der Ansicht ist, dass die neuen APIs allgemein bereitgestellt werden sollten, werden sie in einer neuen Version von .NET Standard hinzugefügt.
 
 ## <a name="comparison-to-portable-class-libraries"></a>Vergleich mit portablen Klassenbibliotheken
 
-.NET Standard kann man sich als die nächste Generation [portabler Klassenbibliotheken (PCL)](https://msdn.microsoft.com/library/gg597391.aspx) vorstellen. .NET Standard profitiert von der Erfahrung mit der Erstellung portabler Bibliotheken, indem eine Standard-BCL zusammengestellt und damit eine umfassendere Einheitlichkeit über .NET-Runtimes hinweg hergestellt wird. Eine Bibliothek, die .NET Standard als Ziel verwendet, ist eine PCL oder eine „auf .NET Standard basierende PCL“. Vorhandene PCLs werden als „profilbasierte PCLs“ bezeichnet.
+.NET Standard ersetzt [portable Klassenbibliotheken (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md). .NET Standard profitiert von der Erfahrung mit der Erstellung portabler Bibliotheken, indem eine Standard-BCL zusammengestellt und damit eine umfassendere Einheitlichkeit für .NET-Implementierungen hergestellt wird. Eine Bibliothek, die .NET Standard als Ziel verwendet, ist eine PCL oder eine „auf .NET Standard basierende PCL“. Vorhandene PCLs werden als „profilbasierte PCLs“ bezeichnet.
 
 .NET Standard und PCL-Profile wurden zu ähnlichen Zwecke erstellt, unterscheiden sich jedoch in wesentlichen Bereichen.
 
@@ -78,13 +77,13 @@ Unterschiede:
 
 ## <a name="specification"></a>Spezifikation
 
-Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungen der .NET-Runtime verwaltet, insbesondere Microsoft (einschließlich .NET Framework, .NET Core und Mono) und Unity. Im Rahmen der Einrichtung neuer Versionen von .NET Standard über [GitHub](https://github.com/dotnet/standard) wird ein öffentlicher Feedbackprozess verwendet.
+Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungen von .NET verwaltet, insbesondere Microsoft (einschließlich .NET Framework, .NET Core und Mono) und Unity. Im Rahmen der Einrichtung neuer Versionen von .NET Standard über [GitHub](https://github.com/dotnet/standard) wird ein öffentlicher Feedbackprozess verwendet.
 
 ### <a name="official-artifacts"></a>Offizielle Artefakte
 
-Die offizielle Spezifikation ist ein Satz von CS-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) für jede [Komponente](https://github.com/dotnet/corefx/tree/master/src) definiert die APIs von .NET Standard. Auch wenn sich die ref-Artefakte im [CoreFX-Repository](https://github.com/dotnet/corefx) befinden, sind sie nicht .NET Core-spezifisch.
+Die offizielle Spezifikation ist ein Satz von CS-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/standard/tree/master/netstandard/ref) im [dotnet/standard-Repository](https://github.com/dotnet/corefx/tree/master/src) definiert die .NET Standard-APIs.
 
-Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen der .NET-Standardbibliothek definieren.
+Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen von .NET Standard definieren.
 
 Eine bestimmte Komponente, wie System.Runtime, beschreibt Folgendes:
 
@@ -98,7 +97,7 @@ Abgeleitete Elemente werden bereitgestellt, um ein einfacheres Lesen und bestimm
 
 ### <a name="package-representation"></a>Paketdarstellung
 
-Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Runtimes geeignet sind.
+Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Implementierungen geeignet sind.
 
 NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den [komprimierten TFM](frameworks.md) `netstandard` (z.B. `netstandard1.4`) das .NET Standard Framework als Ziel angeben. Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel verwenden. 
 
@@ -108,9 +107,9 @@ Das Metapaket `NETStandard.Library` verweist auf den vollständigen Satz von NuG
 
 Die Spezifikation ist nicht singulär, sondern ein ständig wachsender und linear versionierter Satz von APIs. In der ersten Version des Standards wird ein Basissatz von APIs eingerichtet. Nachfolgende Versionen fügen APIs hinzu und erben APIs, die in früheren Versionen definiert wurden. Es gibt keine festgelegte Möglichkeit zum Entfernen von APIs aus dem Standard.
 
-.NET Standard ist weder spezifisch auf eine bestimmte .NET-Runtime ausgelegt, noch entspricht sie dem Versionierungsschema einer dieser Runtimes.
+.NET Standard ist weder spezifisch auf eine bestimmte .NET-Implementierung ausgelegt, noch entspricht sie dem Versionierungsschema einer dieser Runtimes.
 
-APIs, die einer der Laufzeiten (z.B. .NET Framework, .NET Core und Mono) hinzugefügt werden, können als Kandidaten für die Spezifikation betrachtet werden, insbesondere, wenn sie von grundlegender Natur sind. Neue [Versionen von .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) werden basierend auf .NET-Runtimeversionen erstellt, sodass Sie neue APIs über eine .NET-Standard-PCL adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
+APIs, die einer der Implementierungen (z.B. .NET Framework, .NET Core und Mono) hinzugefügt werden, können als Kandidaten für die Spezifikation betrachtet werden, insbesondere, wenn sie von grundlegender Natur sind. Neue [Versionen von .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) werden basierend auf .NET-Implementierungsversionen erstellt, sodass Sie neue APIs über eine .NET Standard-PCL adressieren können. Die Mechanismen der Versionskontrolle werden ausführlich unter [.NET Core-Versionskontrolle](../core/versions/index.md) beschrieben.
 
 Die Versionskontrolle von .NET Standard ist wichtig für die Nutzung. Mit einer bestimmten Version von .NET Standard können Sie Bibliotheken verwenden, die auf dieselbe oder eine niedrigere Version ausgerichtet sind. Die folgende Vorgehensweise beschreibt den Workflow für die Verwendung von PCLs von .NET Standard, die auf .NET Standard ausgerichtet sind.
 

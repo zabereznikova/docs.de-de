@@ -1,24 +1,28 @@
 ---
-title: "Grundlagen der .NET Framework-Anwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework-Entwicklung"
+title: Grundlagen der .NET Framework-Anwendung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Grundlagen der .NET Framework-Anwendung
+# <a name="net-framework-application-essentials"></a>Grundlagen der .NET Framework-Anwendung
 Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über grundlegende Anwendungsentwicklungsaufgaben in .NET Framework.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -40,8 +44,8 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
  [Ausnahmen](../../docs/standard/exceptions/index.md)  
  Beschreibt die Fehlerbehandlung in .NET Framework und die Grundlagen der Ausnahmenbehandlung.  
   
- [Datei- und e-A-Stream](../../docs/standard/io/index.md)  
- Erläutert die Durchführung synchronen und asynchronen Datei- und Datenstreamzugriffs und die Verwendung der isolierten Speicherung.  
+ [Datei- und Stream-E/A](../../docs/standard/io/index.md)  
+ Erläutert die Durchführung eines synchronen und asynchronen Datei- und Datenstreamzugriffs und die Verwendung des isolierten Speichers.  
   
  [Datumsangaben, Uhrzeiten und Zeitzonen](../../docs/standard/datetime/index.md)  
  Beschreibt, wie in zeitzonenfähigen Anwendungen mit Zeitzonen und Zeitzonenkonvertierungen gearbeitet wird.  
@@ -49,7 +53,7 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
  [Anwendungsdomänen und Assemblys](../../docs/framework/app-domains/index.md)  
  Beschreibt die Erstellung und die Arbeit mit Assemblys und Anwendungsdomänen.  
   
- [Serialisierung](../../docs/framework/serialization/index.md)  
+ [Serialisierung](../../docs/standard/serialization/index.md)  
  Erläutert das Konvertieren des Zustands eines Objekts in eine Form, die erhalten oder transportiert werden kann.  
   
  [Ressourcen in Desktop-Apps](../../docs/framework/resources/index.md)  
@@ -64,7 +68,7 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
  [Attribute](../../docs/standard/attributes/index.md)  
  Beschreibt, wie Attribute zur Anpassung von Metadaten verwendet werden können.  
   
- [64-Bit-Anwendung](../../docs/framework/64-bit-apps.md)  
+ [64-Bit-Anwendungen](../../docs/framework/64-bit-apps.md)  
  Erläutert Probleme im Zusammenhang mit der Entwicklung von Anwendungen, die unter einem 64-Bit-Windows-Betriebssystem ausgeführt werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
@@ -73,3 +77,4 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
   
  [Sicherheit](../../docs/standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste für sichere Anwendungsentwicklung in der Common Language Runtime und in .NET Framework.
+

@@ -1,26 +1,26 @@
 ---
 title: "Sprachunabhängigkeit und sprachunabhängige Komponenten"
-description: "Sprachunabhängigkeit und sprachunabhängige Komponenten"
+description: "Erfahren Sie, wie Sie in einer der vielen in .NET unterstützten Sprachen entwickeln können: u.a. C#, C++/CLI, F#, IronPython, VB, Visual COBOL und PowerShell."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: de-de
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
-Die .NET-Plattform ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Plattform entwickeln können, beispielweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Plattform entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
+.NET ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Implementierung entwickeln können, beispielsweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Implementierung entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
 
 > [!NOTE]
 > In diesem Artikel wird das Erstellen sprachunabhängiger Komponenten erläutert. Diese Komponenten können von Apps verwendet werden, die in einer beliebigen Sprache geschrieben wurden. Sie können auch eine einzelne Komponente oder App aus Quellcode erstellen, der in mehreren Sprachen geschrieben wurde. Weitere Informationen finden Sie im zweiten Teil dieses Artikels unter [Sprachübergreifende Interoperabilität](#cross-language-interoperability). 
@@ -172,7 +172,7 @@ Enumerationen | [Enumerationen](#enumerations) | Literale statische Felder einer
 Ereignisse | [Ereignisse](#events) | Die Methoden, die ein Ereignis implementieren, müssen in den Metadaten als `SpecialName` gekennzeichnet sein. |29
 Ereignisse | [Ereignisse](#events) | Der Zugriff eines Ereignisses und seiner Zugriffsmethoden muss identisch sein. |30
 Ereignisse | [Ereignisse](#events) | Die `add` und `remove`-Methoden eines Ereignisses müssen entweder beide vorhanden oder beide nicht vorhanden sein. |31
-Ereignisse | [Ereignisse](#events) | Die `add`- und `remove`-Methoden eines Ereignisses müssen jeweils einen Parameter erhalten, dessen Typ den Ereignistyp definiert. Dieser Typ muss von [System.Delegate](xref:System.Delegate) abgeleitet sein. |32
+Ereignisse | [Ereignisse](#events) | Die `add`- und `remove`-Methoden eines Ereignisses müssen jeweils einen Parameter akzeptieren, dessen Typ den Ereignistyp definiert. Dieser Typ muss von [System.Delegate](xref:System.Delegate) abgeleitet sein. |32
 Ereignisse | [Ereignisse](#events) | Ereignisse müssen einem bestimmten Benennungsschema folgen. Das SpecialName-Attribut, auf das in CLS-Regel 29 verwiesen wird, muss in den entsprechenden Namensvergleichen ignoriert werden und Bezeichnerregeln einhalten.  |33
 Ausnahmen | [Ausnahmen](#exceptions) | Ausgelöste Objekte müssen vom Typ [System.Exception](xref:System.Exception) oder einem davon geerbten Typ sein. Dennoch müssen CLS-kompatible Methoden die Weitergabe anderer Ausnahmetypen nicht blockieren. | 40
 Allgemein | [CLS-Kompatibilitätsregeln](#cls-compliance-rules) | CLS-Regeln betreffen nur die Teile eines Typs, deren Zugriff oder Sichtbarkeit außerhalb der definierenden Assembly liegen. | 1
@@ -347,7 +347,7 @@ Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
  
  Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel: 
  
- * Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int` *namens `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
+ * Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int`* mit dem Namen `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>Schnittstellen
 
@@ -1628,7 +1628,7 @@ End Module
 
 Der Name eines generischen Typs wird in der Form *name*'*n* codiert, wobei *name* der Typname, *`* ein Zeichenliteral und *n* die Anzahl von Parametern ist, die für den Typ deklariert sind, oder, bei geschachtelten generischen Typen, die Anzahl neu eingeführter Typparameter. Diese Codierung von Namen des generischen Typs ist hauptsächlich für Entwickler relevant, die Reflexion verwenden, um auf CLS-kompatible generische Typen in einer Bibliothek zuzugreifen. 
 
-Wenn Einschränkungen auf einen generischen Typ angewendet werden, müssen alle als Einschränkungen verwendeten Typen auch CLS-kompatibel sein. Im folgenden Beispiel wird eine Klasse namens `BaseClass` definiert, die nicht CLS-kompatibel ist sowie eine generische Klasse namens `BaseCollection` deren Typparameter von `BaseClass` abgeleitet werden muss. Da `BaseClass` jedoch nicht CLS-kompatibel ist, gibt der Compiler eine Warnung aus. 
+Wenn Einschränkungen auf einen generischen Typ angewendet werden, müssen alle als Einschränkungen verwendeten Typen auch CLS-kompatibel sein. Im folgenden Beispiel wird eine Klasse namens `BaseClass` definiert, die nicht CLS-kompatibel ist sowie eine generische Klasse namens `BaseCollection` deren Typparameter von `BaseClass` abgeleitet werden muss. Aber, da `BaseClass` nicht CLS-kompatibel ist, gibt der Compiler eine Warnung aus. 
 
 ```csharp
 using System;
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 Wenn ein generischer Typ von einem generischen Basistyp abgeleitet ist, muss er alle Einschränkungen erneut deklarieren, damit sichergestellt ist, dass auch die Einschränkungen des Basistyps erfüllt werden. Im folgenden Beispiel wird `Number<T>` definiert, das einen numerischen Typ darstellen kann. Es definiert auch eine `FloatingPoint<T>`-Klasse, die einen Gleitkommawert darstellt. Allerdings kann der Quellcode nicht kompiliert werden, da die Einschränkung auf `Number<T>` (dieses T muss ein Werttyp sein) nicht auf `FloatingPoint<T>` angewendet werden.
@@ -1938,7 +1937,7 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
 
 * Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen. 
 
-  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor jedoch nicht zum Initialisieren geerbter Instanzfelder aufrufen. 
+  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen. 
 
     ```csharp
     using System;
