@@ -8,7 +8,6 @@
 ## [Generische Methoden](generic-methods.md)
 ## [Generika und Arrays](generics-and-arrays.md)
 ## [Generische Delegate](generic-delegates.md)
-## [default-Schlüsselwort in generischem Code (C#)](default-keyword-in-generic-code.md)
 ## [Unterschiede zwischen C++-Vorlagen und C#-Generika](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Generika zur Laufzeit](generics-in-the-run-time.md)
 ## [Generika in der .NET Framework-Klassenbibliothek](generics-in-the-net-framework-class-library.md)

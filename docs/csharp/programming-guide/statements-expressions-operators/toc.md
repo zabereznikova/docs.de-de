@@ -10,6 +10,7 @@
 ### [Anonyme Methoden](anonymous-methods.md)
 ## [Überladbare Operatoren](overloadable-operators.md)
 ## [Konvertierungsoperatoren](conversion-operators.md)
+## [Ausdrücke mit Standardwert](default-value-expressions.md)
 ### [Verwenden von Konvertierungsoperatoren](using-conversion-operators.md)
 ### [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Gewusst wie: Verwenden der Operatorüberladung zum Erstellen einer Klasse für komplexe Zahlen](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
