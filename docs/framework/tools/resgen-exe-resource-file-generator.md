@@ -1,5 +1,5 @@
 ---
-title: Resgen.exe (Resource File Generator) | Microsoft-Dokumentation
+title: Resgen.exe (Resource File Generator)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 46
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 6729ba927ee4beba2dc500f9ef1b1a293f262f2a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
@@ -261,7 +261,7 @@ resgen MyApp.exe Win8Resources
 ### <a name="conditionally-compiling-resources"></a>Bedingte Kompilierung von Ressourcen  
  Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird von Resgen.exe die bedingte Kompilierung von Zeichenfolgenressourcen in Textdateien (".txt" und ".restext") unterstütz. Hierdurch kann eine einzige textbasierte Ressourcendatei in mehreren Buildkonfigurationen verwendet werden.  
   
- In einer TXT- oder RESTEXT-Datei verwenden Sie das Konstrukt `#ifdef` `#endif` , um eine Ressource in die binäre RESOURCES-Datei einzubeziehen. Verwenden Sie das Konstrukt `#if !` `#endif`, um eine Ressource einzubeziehen, wenn ein Symbol nicht definiert ist. Zur Kompilierzeit definieren Sie anschließend Symbole mithilfe der `/define:`-Option, gefolgt von einer durch Kommas getrennten Liste von Symbolen. Beim Vergleich wird die Klein-/Großschreibung berücksichtigt. Die Groß-/Kleinschreibung der durch `/define` definierten Symbole muss derjenigen in den zu kompilierenden Textdateien entsprechen.  
+ In einer TXT- oder RESTEXT-Datei verwenden Sie das Konstrukt `#ifdef`...`#endif`, um eine Ressource in die binäre RESOURCES-Datei einzubeziehen. Verwenden Sie das Konstrukt `#if !`...`#endif`, um eine Ressource einzubeziehen, wenn ein Symbol nicht definiert ist. Zur Kompilierzeit definieren Sie anschließend Symbole mithilfe der `/define:`-Option, gefolgt von einer durch Kommas getrennten Liste von Symbolen. Beim Vergleich wird die Klein-/Großschreibung berücksichtigt. Die Groß-/Kleinschreibung der durch `/define` definierten Symbole muss derjenigen in den zu kompilierenden Textdateien entsprechen.  
   
  Beispielsweise enthält die folgende Datei "UIResources.restext" eine Zeichenfolgenressource mit dem Namen `AppTitle`, die abhängig von der Definition der Attribute `PRODUCTION`, `CONSULT` oder `RETAIL` einen von drei Werten annehmen kann.  
   

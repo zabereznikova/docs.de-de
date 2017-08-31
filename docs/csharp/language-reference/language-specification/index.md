@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 Entwurfssprachenspezifikation
@@ -47,7 +47,8 @@ Die Version 6.0 der Spezifikation wurde nicht als Standard genehmigt. Diese Webs
 Themen der Entwurfsspezifikation sollten im Repository [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) erstellt werden. Falls Sie daran interessiert sind, die Fehler zu beheben, die Sie finden, können Sie einen [Pull Request](https://github.com/dotnet/csharplang/pulls) im selben Repository übermitteln.
 
 ## <a name="see-also"></a>Siehe auch  
- [C# Reference (C#-Referenz)](../../language-reference/index.md) [C# Programming Guide (C#-Programmierhandbuch)](../../programming-guide/index.md)
+ [C#-Referenz](../../language-reference/index.md)  
+ [C#-Programmierhandbuch](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [Nächste](../../../../_csharplang/spec/lexical-structure.md)

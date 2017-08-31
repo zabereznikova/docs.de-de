@@ -1,5 +1,5 @@
 ---
-title: '.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit | Microsoft-Dokumentation'
+title: '.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 70f0515b2b4219dcb7e143b0c81f91d3855fd433
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit
@@ -53,7 +53,7 @@ Das Aktivierungssystem der CLR (Common Language Runtime) bestimmt die Version de
 ## <a name="ui-for-initialization-errors"></a>Benutzeroberfläche für Initialisierungsfehler  
  Wenn das CLR-Aktivierungssystem die richtige Version der Laufzeit, die von einer Anwendung benötigt wird, nicht laden kann, wird eine Fehlermeldung angezeigt. Diese informiert den Benutzer darüber, dass der Computer für das Ausführen der Anwendung nicht ordnungsgemäß konfiguriert ist, und bietet eine Möglichkeit, die Situation zu beheben. In dieser Situation wird in der Regel die folgende Fehlermeldung erstellt. Der Benutzer kann **Ja** wählen, um zu einer Microsoft-Website zu wechseln, auf der die richtige .NET Framework-Version für die Anwendung heruntergeladen werden kann.  
   
- Dialogfeld ![Fehler beim Initialisieren von .NET Framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")  
+ ![Dialogfeld: Fehler beim Initialisieren von .NET Framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")  
 Typische Fehlermeldung bei Initialisierungsfehlern  
   
 ## <a name="resolving-the-initialization-error"></a>Beheben des Initialisierungsfehlers  
@@ -106,3 +106,4 @@ Aufforderung zum Installieren von .NET Framework 3.5 bei Bedarf
  [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
  [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
  [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+

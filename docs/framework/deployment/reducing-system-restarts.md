@@ -1,5 +1,5 @@
 ---
-title: Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen | Microsoft-Dokumentation
+title: Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0b39f793d2bc3b3fb73594320d533ebb411fa128
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
@@ -41,7 +41,7 @@ Das Installationsprogramm [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] v
   
  Wenn der Neustart-Manager eine Situation erkennt, die einen Systemneustart erfordert, selbst wenn derzeit ausgeführte Apps geschlossen werden, wird die Meldung nicht angezeigt.  
   
- ![Dialogfeld „Anwendung schießen“](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
+ ![Dialogfeld „Anwendung schließen“](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
 Aufforderung zum Schließen von .NET Framework-Apps, die in Verwendung sind  
   
 ## <a name="using-a-chained-installer"></a>Verwenden eines verketteten Installationsprogramms  
@@ -53,3 +53,4 @@ Aufforderung zum Schließen von .NET Framework-Apps, die in Verwendung sind
  [Bereitstellung](../../../docs/framework/deployment/index.md)   
  [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

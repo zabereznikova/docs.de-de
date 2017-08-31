@@ -1,13 +1,9 @@
 ---
-title: Erstellen und Verwenden von Assemblys mit starkem Namen | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/30/2017
+title: Erstellen und Verwenden von Assemblys mit starkem Namen
+ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -24,17 +20,17 @@ caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7c694fc26d65fee277c7a6873494c8d1900408b2
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 <a name="top"></a> Ein starker Name setzt sich aus der Identität der Assembly – dem einfachen Textnamen, der Versionsnummer und Kulturinformationen (falls vorhanden) – sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Er wird mithilfe des entsprechenden privaten Schlüssels aus einer Assemblydatei generiert. (Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.)  
   
- Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden. Andernfalls ist die Sicherheit der Assembly mit starkem Namen beeinträchtigt.  
+ Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden. Andernfalls ist die Integrität der Assembly mit starkem Namen beeinträchtigt.  
   
  Diese Übersicht enthält folgende Abschnitte:  
   
@@ -61,9 +57,9 @@ ms.lasthandoff: 06/02/2017
 4.  Die Common Language Runtime überprüft die starke Namenssignatur, wenn die Assembly im globalen Assemblycache platziert wird. Beim Binden mit starken Namen zur Runtime vergleicht die Common Language Runtime den im Manifest von Assembly B gespeicherten Schlüssel mit dem Schlüssel, der verwendet wurde, um den starken Namen von Assembly A zu generieren. Wenn die Sicherheitstests von .NET Framework durchlaufen und die Bindung abgeschlossen wurde, garantiert Assembly B, dass Bits von Assembly A nicht verändert wurden, und dass sie tatsächlich von den Entwicklern von Assembly A stammen.  
   
 > [!NOTE]
->  Dieses Szenario deckt keine Aspekte der Vertrauenswürdigkeit ab. Assemblys können neben starken Namen auch vollständige Microsoft Authenticode-Signaturen tragen. Authenticode-Signaturen enthalten ein Zertifikat, das Vertrauenswürdigkeit bescheinigt. Beachten Sie unbedingt, dass bei starken Namen nicht erforderlich ist, Code auf diese Weise zu signieren. Die Schlüssel zum Generieren einer starken Namenssignatur müssen in der Tat nicht mit denen übereinstimmen, die zum Erstellen der Authenticode-Signatur verwendet werden.  
+>  Dieses Szenario löst keine Vertrauenswürdigkeitsprobleme. Assemblys können neben starken Namen auch vollständige Microsoft Authenticode-Signaturen tragen. Authenticode-Signaturen enthalten ein Zertifikat, das Vertrauenswürdigkeit bescheinigt. Beachten Sie unbedingt, dass bei starken Namen nicht erforderlich ist, Code auf diese Weise zu signieren. Starke Namen bieten lediglich eine eindeutige Identität.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="bypassing_signature_verification"></a>   
 ## <a name="bypassing-signature-verification-of-trusted-assemblies"></a>Umgehen der Signaturüberprüfung für vertrauenswürdige Assemblys  
@@ -94,6 +90,7 @@ ms.lasthandoff: 06/02/2017
 |[Gewusst wie: Verweisen auf eine Assembly mit starkem Namen](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Beschreibt, wie auf Typen oder Ressourcen in einer Assembly mit starkem Namen zur Kompilier- oder Laufzeit verwiesen wird.|  
 |[Gewusst wie: Deaktivieren der Strong-Name-Bypass-Funktion](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Beschreibt, wie die Funktion, die die Validierung von Signaturen mit starkem Namen umgeht, deaktiviert wird. Diese Funktion kann für alle oder bestimmte Anwendungen deaktiviert werden.|  
 |[Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)|Bietet eine Übersicht über Einfach- und Mehrfachdateiassemblys.|  
-|[Gewusst wie: Verzögern der Signierung einer Assembly (Visual Studio)](http://msdn.microsoft.com/en-us/cab63b7a-591e-4674-b236-d77cd29a79ea)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|  
+|[So erstellen Sie eine Assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|  
 |[Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem Assemblys mit starken Namen erstellt werden können. Dieses Tool stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.|  
 |[Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem eine Datei generiert wird, die ein Assemblymanifest von Modulen oder Ressourcendateien besitzt.|
+

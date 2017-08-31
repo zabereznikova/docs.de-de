@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/08/2017
   
 - [Herunterladen des Installationsprogramms von .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Hinweis: Hiermit wird .NET Framework nicht direkt heruntergeladen, sondern es wird ein Installationsprogramm heruntergeladen, das Windows Update aufruft.)  
   
-Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907 oder 0x800f081f auf. In diesem Fall finden Sie weitere Informationen unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/en-us/kb/2734782). Beachten Sie, dass diese Fehler möglicherweise durch die Installation des [Sicherheitsupdates 3005628](https://support.microsoft.com/kb/3005628)behoben werden können.  
+Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907 oder 0x800f081f auf. In diesem Fall finden Sie weitere Informationen unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09). Beachten Sie, dass diese Fehler möglicherweise durch die Installation des [Sicherheitsupdates 3005628](https://support.microsoft.com/kb/3005628)behoben werden können.  
   
 Wenn bei den oben genannten Methoden ein Fehler auftritt, oder Sie nicht über eine Internetverbindung verfügen, müssen Sie das Windows-Installationsmedium verwenden. Weitere Informationen finden Sie unter Methode 3 für Fehler 0x800f0906 im Artikel [.NET Framework 3.5-Installationsfehler](https://support.microsoft.com/en-us/kb/2734782). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Create Installation media for Windows 8.1 (Erstellen eines Installationsmediums für Windows 8.1)](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).  
   

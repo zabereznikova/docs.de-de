@@ -1,5 +1,5 @@
 ---
-title: So sucht Common Language Runtime nach Assemblys | Microsoft-Dokumentation
+title: So sucht Common Language Runtime nach Assemblys
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: de-de
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
@@ -42,13 +42,13 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
 >  Bindungsinformationen in der Protokolldatei können mit dem [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)angezeigt werden, der in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]enthalten ist.  
   
 ## <a name="initiating-the-bind"></a>Initiieren der Bindung  
- Das Auffinden einer und Binden an eine Assembly beginnt mit dem Versuch der Common Language Runtime, einen Verweis auf eine andere Assembly aufzulösen. Dieser Verweis kann statisch oder dynamisch sein. Der Compiler zeichnet statische Verweise in den Metadaten des Assemblymanifests während der Erstellungszeit auf. Dynamische Verweise werden dynamisch erstellt und resultieren aus dem Aufruf verschiedener Methoden, z.B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ Das Auffinden einer und Binden an eine Assembly beginnt mit dem Versuch der Common Language Runtime, einen Verweis auf eine andere Assembly aufzulösen. Dieser Verweis kann statisch oder dynamisch sein. Der Compiler zeichnet statische Verweise in den Metadaten des Assemblymanifests während der Erstellungszeit auf. Dynamische Verweise werden dynamisch erstellt und resultieren aus dem Aufruf verschiedener Methoden, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
   
- Die bevorzugte Methode zum Verweisen auf eine Assembly ist die Verwendung eines vollständigen Verweises mit Assemblynamen, -version, -kultur und Token des öffentlichen Schlüssels (falls vorhanden).   Diese Informationen werden von der Common Language Runtime bei der Suche nach der Assembly verwendet. Die dabei ausgeführten Schritte werden in diesem Abschnitt weiter unten beschrieben. Der von der Common Language Runtime verwendete Auflösungsprozess ist immer gleich, unabhängig davon, ob sich der Verweis auf eine statische oder dynamische Assembly bezieht.  
+ Die bevorzugte Methode zum Verweisen auf eine Assembly ist die Verwendung eines vollständigen Verweises mit Assemblynamen, -version, -kultur und Token des öffentlichen Schlüssels (falls vorhanden). Diese Informationen werden von der Common Language Runtime bei der Suche nach der Assembly verwendet. Die dabei ausgeführten Schritte werden in diesem Abschnitt weiter unten beschrieben. Der von der Common Language Runtime verwendete Auflösungsprozess ist immer gleich, unabhängig davon, ob sich der Verweis auf eine statische oder dynamische Assembly bezieht.  
   
- Sie können auch dynamisch auf eine Assembly verweisen, indem Sie die aufrufende Methode nur unter Angabe partieller Informationen zur Assembly, z. B. des Assemblynamens, bereitstellen. In diesem Fall wird lediglich das Anwendungsverzeichnis nach der Assembly durchsucht; es erfolgen keine weiteren Überprüfungen. Einen partiellen Verweis können Sie mit jeder der verschiedenen Methoden zum Laden von Assemblys erstellen, z.B. mit <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> oder <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
+ Sie können auch dynamisch auf eine Assembly verweisen, indem Sie die aufrufende Methode nur unter Angabe partieller Informationen zur Assembly, z. B. des Assemblynamens, bereitstellen. In diesem Fall wird lediglich das Anwendungsverzeichnis nach der Assembly durchsucht; es erfolgen keine weiteren Überprüfungen. Einen partiellen Verweis können Sie mit jeder der verschiedenen Methoden zum Laden von Assemblys erstellen, z. B. mit <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> oder <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
   
- Mit einer Methode wie [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) können Sie auch einen dynamischen Verweis erstellen und nur partielle Informationen angeben. Dann qualifizieren Sie den Verweis mithilfe des [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)-Elements in der Anwendungskonfigurationsdatei. Mit diesem Element können Sie die vollständigen Verweisinformationen (Name, Version, Kultur und ggf. das Token des öffentlichen Schlüssels) in der Anwendungskonfigurationsdatei statt im Code bereitstellen. Dieses Verfahren sollten Sie anwenden, wenn Sie einen Verweis auf eine Assembly außerhalb des Anwendungsverzeichnisses vollständig qualifizieren oder auf eine Assembly im globalen Assemblycache verweisen möchten, aber gleichzeitig aus praktischen Gründen den vollständigen Verweis in der Konfigurationsdatei statt im Code angeben möchten.  
+ Mit einer Methode wie <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> können Sie auch einen dynamischen Verweis erstellen und nur partielle Informationen angeben. Dann qualifizieren Sie den Verweis mithilfe des [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)-Elements in der Anwendungskonfigurationsdatei. Mit diesem Element können Sie die vollständigen Verweisinformationen (Name, Version, Kultur und ggf. das Token des öffentlichen Schlüssels) in der Anwendungskonfigurationsdatei statt im Code bereitstellen. Dieses Verfahren sollten Sie anwenden, wenn Sie einen Verweis auf eine Assembly außerhalb des Anwendungsverzeichnisses vollständig qualifizieren oder auf eine Assembly im globalen Assemblycache verweisen möchten, aber gleichzeitig aus praktischen Gründen den vollständigen Verweis in der Konfigurationsdatei statt im Code angeben möchten.  
   
 > [!NOTE]
 >  Diesen Typ des partiellen Verweises sollten Sie nicht bei Assemblys verwenden, die für mehrere Anwendungen freigegeben sind. Da Konfigurationseinstellungen nach Anwendung und nicht nach Assembly erfolgen, müssten bei einer freigegebenen Assembly mit diesem Typ des partiellen Verweises für jede Anwendung, die diese freigegebene Assembly verwendet, die qualifizierenden Informationen in der jeweiligen Konfigurationsdatei enthalten sein.  
@@ -66,7 +66,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
   
 4.  [Suchen der Assembly](#step4) , wobei folgendermaßen vorgegangen wird:  
   
-    1.  Wenn die Konfiguration und die Herausgeberrichtlinie keine Auswirkung auf den ursprünglichen Verweis haben und die Anforderung zur Bindung mithilfe der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>-Methode erstellt wurde, sucht die Common Language Runtime nach Hinweisen auf den Speicherort.  
+    1.  Wenn die Konfiguration und die Herausgeberrichtlinie keine Auswirkung auf den ursprünglichen Verweis haben und die Anforderung zur Bindung mithilfe der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> -Methode erstellt wurde, sucht die Common Language Runtime nach Hinweisen auf den Speicherort.  
   
     2.  Wenn eine CodeBase in den Konfigurationsdateien gefunden wurde, wird nur dieser Speicherort überprüft. Wenn die Überprüfung fehlschlägt, wird durch die Common Language Runtime festgelegt, dass die Anforderung zur Bindung fehlgeschlagen ist und keine weitere Überprüfung erfolgt.  
   
@@ -95,7 +95,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
   
  Im Fall von ausführbaren Clientdateien befindet sich die Anwendungskonfigurationsdatei im selben Verzeichnis wie die ausführbare Datei der Anwendung und verfügt über denselben Basisnamen wie diese sowie über die Dateierweiterung ".config". Die Konfigurationsdatei für "C:\Programme\Myapp\Myapp.exe" ist beispielsweise "C:\Programme\Myapp\Myapp.exe.config". In einem browserbasierten Szenario muss die HTML-Datei das **\<link>**-Element verwenden, um explizit auf die Konfigurationsdatei zu verweisen.  
   
- Der folgende Code bietet ein einfaches Beispiel für eine Anwendungskonfigurationsdatei. In diesem Beispiel wird der <xref:System.Diagnostics.Debug.Listeners%2A>-Auflistung ein <xref:System.Diagnostics.TextWriterTraceListener> hinzugefügt, um das Aufzeichnen von Debuginformationen in einer Datei zu aktivieren.   
+ Der folgende Code bietet ein einfaches Beispiel für eine Anwendungskonfigurationsdatei. In diesem Beispiel wird der <xref:System.Diagnostics.TextWriterTraceListener> -Auflistung ein <xref:System.Diagnostics.Debug.Listeners%2A> hinzugefügt, um das Aufzeichnen von Debuginformationen in einer Datei zu aktivieren.  
   
 ```xml  
 <configuration>  
@@ -193,7 +193,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Name der Assembly, auf die verwiesen wird.  
   
--   Das `privatePath`-Attribut des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements, bei dem es sich um die benutzerdefinierte Liste von Unterverzeichnissen unter dem Stammspeicherort handelt. Dieser Speicherort kann in der Anwendungskonfigurationsdatei und in verwaltetem Code mithilfe der <xref:System.AppDomain.AppendPrivatePath%2A>-Eigenschaft für eine Anwendungsdomäne festgelegt werden. Im Fall der Festlegung in verwaltetem Code wird zuerst der `privatePath` des verwalteten Codes und daraufhin der in der Anwendungskonfigurationsdatei angegebene Pfad überprüft.   
+-   Das `privatePath`-Attribut des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements, bei dem es sich um die benutzerdefinierte Liste von Unterverzeichnissen unter dem Stammspeicherort handelt. Dieser Speicherort kann in der Anwendungskonfigurationsdatei und in verwaltetem Code mithilfe der <xref:System.AppDomain.AppendPrivatePath%2A>-Eigenschaft für eine Anwendungsdomäne festgelegt werden. Im Fall der Festlegung in verwaltetem Code wird zuerst der `privatePath` des verwalteten Codes und daraufhin der in der Anwendungskonfigurationsdatei angegebene Pfad überprüft.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Überprüfen der Anwendungsbasis- und Kulturverzeichnisse  
  Die Common Language Runtime beginnt mit der Überprüfung immer in der Anwendungsbasis, die entweder eine URL oder das Stammverzeichnis der Anwendung auf einem Computer ist. Wird die Assembly, auf die verwiesen wird, in der Anwendungsbasis nicht gefunden und stehen keine Informationen zur Kultur bereit, durchsucht die Common Language Runtime alle Unterverzeichnisse mit diesem Assemblynamen. Zu den überprüften Verzeichnissen gehören:  
@@ -258,10 +258,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>Weitere überprüfte Speicherorte  
- Der Speicherort einer Assembly kann auch mithilfe des aktuellen Bindungskontexts ermittelt werden. Dieses Verfahren kommt besonders häufig bei Verwendung der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>-Methode und in Szenarien mit COM-Interop zum Einsatz. Wenn eine Assembly die <xref:System.Reflection.Assembly.LoadFrom%2A>-Methode verwendet, um auf eine andere Assembly zu verweisen, wird der Speicherort der aufrufenden Assembly als Hinweis auf den Speicherort der Assembly angesehen, auf die verwiesen wird. Bei gefundener Übereinstimmung wird diese Assembly geladen. Besteht keine Übereinstimmung, setzt die Common Language Runtime die Suche mit der entsprechenden Semantik fort und fordert Windows Installer auf, die Assembly zur Verfügung zu stellen. Wenn keine Assembly zur Verfügung gestellt wird, die mit der Bindungsanforderung übereinstimmt, wird eine Ausnahme ausgelöst. Bei der Ausnahme handelt es sich um eine <xref:System.TypeLoadException> in verwaltetem Code, sofern auf einen Typ verwiesen wurde, oder um eine <xref:System.IO.FileNotFoundException>, sofern die geladene Assembly nicht gefunden wurde.   
+ Der Speicherort einer Assembly kann auch mithilfe des aktuellen Bindungskontexts ermittelt werden. Dieses Verfahren kommt besonders häufig bei Verwendung der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> -Methode und in Szenarien mit COM-Interop zum Einsatz. Wenn eine Assembly die <xref:System.Reflection.Assembly.LoadFrom%2A> -Methode verwendet, um auf eine andere Assembly zu verweisen, wird der Speicherort der aufrufenden Assembly als Hinweis auf den Speicherort der Assembly angesehen, auf die verwiesen wird. Bei gefundener Übereinstimmung wird diese Assembly geladen. Besteht keine Übereinstimmung, setzt die Common Language Runtime die Suche mit der entsprechenden Semantik fort und fordert Windows Installer auf, die Assembly zur Verfügung zu stellen. Wenn keine Assembly zur Verfügung gestellt wird, die mit der Bindungsanforderung übereinstimmt, wird eine Ausnahme ausgelöst. Bei der Ausnahme handelt es sich um eine <xref:System.TypeLoadException> in verwaltetem Code, sofern auf einen Typ verwiesen wurde, oder um eine <xref:System.IO.FileNotFoundException> , sofern die geladene Assembly nicht gefunden wurde.  
   
  Wenn beispielsweise "Assembly1" auf "Assembly2" verweist und "Assembly1" von "http://www.code.microsoft.com/utils" heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von "Assembly2.dll" angesehen. Die Common Language Runtime überprüft dann "http://www.code.microsoft.com/utils/Assembly2.dll" und "http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll", um die Assembly zu finden. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [Bereitstellung](../../../docs/framework/deployment/index.md)
+
