@@ -45,7 +45,7 @@ Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
     ```  
   
-    ```cpp#  
+    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
