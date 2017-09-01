@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Erste Schritte mit Visual Basic und .NET Core
+
+[Erstellen einer „Hello World“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+
+[Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>Zusätzliche Informationen
 
 [Neues bei Visual Basic](whats-new.md)   
 Listet neue Funktionen in jeder Version von Visual Basic .NET auf.
@@ -49,7 +55,13 @@ Führt Änderungen in dieser Version auf, die die Kompilierung der Anwendung ver
   
 [Zusätzliche Ressourcen für Visual Basic-Programmierer](additional-resources.md)  
 Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftauchenden Problemen finden  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>Entwickeln von .NET Core-Anwendungen mit Visual Basic
+
+[Erstellen einer „Hallo Welt“-App in Visual Basic mit .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) 
+
+[Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>Siehe auch
  [Visual Basic abrufen](https://www.visualstudio.com/downloads/)  
  Bietet Downloadlinks für Visual Studio-Versionen, einschließlich Visual Basic-Unterstützung und kostenlose Versionen.  
