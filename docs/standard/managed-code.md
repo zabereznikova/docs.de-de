@@ -1,6 +1,6 @@
 ---
-title: "Was ist „verwalteter Code“?"
-description: "Was ist „verwalteter Code“?"
+title: Was ist verwalteter Code?
+description: "Bei verwaltetem Code handelt es sich um Code, dessen Ausführung von einer Runtime verwaltet wird, der Common Language Runtime (CLR)."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
-ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -23,13 +24,13 @@ Bei der Arbeit mit .NET Framework begegnen Sie häufig dem Begriff „verwaltete
 
 Sehr einfach ausgedrückt, ist verwalteter Code genau das, was der Name besagt: Code, dessen Ausführung von einer Runtime verwaltet wird. In diesem Fall wird die betreffende Runtime als **Common Language Runtime** oder CLR bezeichnet, unabhängig von der Implementierung ([Mono](http://www.mono-project.com/) oder .NET Framework oder .NET Core). Die CLR übernimmt die Aufgabe, den verwalteten Code in Computercode zu kompilieren und dann auszuführen. Darüber hinaus bietet die Common Language Runtime mehrere wichtige Dienste wie die automatische Arbeitsspeicherverwaltung, Sicherheitsgrenzen, Typsicherheit usw.
 
-Vergleichen Sie dies mit der Art und Weise, in der Sie ein C-/C++-Programm ausführen, auch als „nicht verwalteter Code“ bezeichnet. Im nicht verwalteten Bereich ist der Programmierer für nahezu alles zuständig. Das tatsächliche Programm ist im Wesentlichen eine Binärdatei, die vom Betriebssystem in den Arbeitsspeicher geladen und gestartet wird. Alles Übrige, von der Arbeitsspeicherverwaltung bis hin zu den Sicherheitsaspekten, liegt in der Verantwortung des Programmierers.
+Vergleichen Sie dies mit der Art und Weise, auf die Sie ein C-/C++-Programm ausführen, dem sogenannten „nicht verwalteten Code“. Im nicht verwalteten Bereich ist der Programmierer für nahezu alles zuständig. Das tatsächliche Programm ist im Wesentlichen eine Binärdatei, die vom Betriebssystem in den Arbeitsspeicher geladen und gestartet wird. Alles Übrige, von der Arbeitsspeicherverwaltung bis hin zu den Sicherheitsaspekten, liegt in der Verantwortung des Programmierers.
 
-Verwalteter Code wird in einer der allgemeinen Sprachen geschrieben, die auf der .NET-Plattform ausgeführt werden können, z.B. C#, Visual Basic, F# und andere. Wenn Sie in diesen Sprachen geschriebenen Code mit ihrem jeweiligen Compiler kompilieren, erhalten Sie keinen Computercode. Sie erhalten Code in einer Zwischensprache, **Intermediate Language**, der von der Runtime kompiliert und ausgeführt wird. C++ ist die einzige Ausnahme von dieser Regel, da diese Sprache auch native, nicht verwaltete Binärdateien erstellen kann, die unter Windows ausgeführt werden.
+Verwalteter Code wird in einer der allgemeinen Sprachen geschrieben, die auf .NET ausgeführt werden können, z.B. C#, Visual Basic, F# und andere. Wenn Sie in diesen Sprachen geschriebenen Code mit ihrem jeweiligen Compiler kompilieren, erhalten Sie keinen Computercode. Sie erhalten Code in einer Zwischensprache, **Intermediate Language**, der von der Runtime kompiliert und ausgeführt wird. C++ ist die einzige Ausnahme von dieser Regel, da diese Sprache auch native, nicht verwaltete Binärdateien erstellen kann, die unter Windows ausgeführt werden.
 
 ## <a name="intermediate-language--execution"></a>Zwischensprache (Intermediate Language) und Ausführung
 
-Was ist „Intermediate Language“ (kurz IL)? Dies ist ein Produkt der Kompilierung von Code, der in allgemeinen .NET-Sprachen geschrieben wurde. Nachdem Sie den Code kompiliert haben, der in einer dieser Sprachen geschrieben wurde, erhalten Sie eine Binärdatei, die aus IL besteht. Beachten Sie unbedingt, dass der IL-Code unabhängig von einer bestimmten Sprache ist, die auf der Runtime ausgeführt wird. Es gibt sogar eine separate Spezifikation dafür, die Sie bei Interesse nachlesen können.
+Was ist eine Zwischensprache (Intermediate Language, kurz IL)? Dies ist ein Produkt der Kompilierung von Code, der in allgemeinen .NET-Sprachen geschrieben wurde. Nachdem Sie den Code kompiliert haben, der in einer dieser Sprachen geschrieben wurde, erhalten Sie eine Binärdatei, die aus IL besteht. Beachten Sie unbedingt, dass der IL-Code unabhängig von einer bestimmten Sprache ist, die auf der Runtime ausgeführt wird. Es gibt sogar eine separate Spezifikation dafür, die Sie bei Interesse nachlesen können.
 
 Nachdem Sie IL-Code aus dem allgemeinen Code erstellt haben, möchten Sie diesen höchstwahrscheinlich ausführen. An dieser Stelle übernimmt die CLR und startet den Prozess der **Just-In-Time**-Kompilierung Ihres Codes aus der Zwischensprache in Computercode, der dann auf einer CPU ausgeführt werden kann. Auf diese Weise ist die CLR genau über den Status Ihres Codes informiert und kann ihn effektiv _verwalten_.
 
