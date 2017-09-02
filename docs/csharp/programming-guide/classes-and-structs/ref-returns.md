@@ -10,10 +10,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
@@ -44,7 +44,7 @@ Es gibt einige Einschränkungen für den Wert, den eine Methode als Rückgabewer
  
 - Der zurückgegebene Wert darf keine Konstante, kein Enumerationsmember und keine Eigenschaft einer `class` oder `struct` sein. Beim Versuch, diese zurückzugeben, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
-Darüber hinaus, sind Verweisrückgabewerte bei `async`-Methoden nicht erlaubt, da eine asynchrone Methode zurückgeben könnte, bevor die Ausführung abgeschlossen und ihr Rückgabewert bekannt ist.
+Darüber hinaus sind Verweisrückgabewerte bei asynchronen Methoden nicht erlaubt, da eine asynchrone Methode etwas zurückgeben könnte, bevor die Ausführung abgeschlossen und ihr Rückgabewert bekannt ist.
  
 ## <a name="defining-a-ref-return-value"></a>Definieren eines ref-Rückgabewerts
 
