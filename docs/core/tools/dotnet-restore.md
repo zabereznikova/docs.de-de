@@ -1,38 +1,51 @@
 ---
-title: "dotnet-restore-Befehl – .NET Core-CLI"
+title: "dotnet restore-Befehl – .NET Core-CLI"
 description: "Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore."
 keywords: dotnet-restore, CLI, CLI-Befehl, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/24/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a9e471bd1d66d68703b025cd3eaa009cb296a9fb
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
+# <a name="dotnet-restore"></a>dotnet restore
 
-# <a name="dotnet-restore"></a>dotnet-restore
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Name
 
-`dotnet-restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
+`dotnet restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet restore [<ROOT>] [-s|--source] [-r|--runtime] [--packages] [--disable-parallel] [--configfile] [--no-cache] [--ignore-failed-sources] [--no-dependencies] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet restore` verwendet NuGet zum Wiederherstellen von Abhängigkeiten sowie projektspezifischen Tools, die in der Projektdatei angegeben sind. Standardmäßig wird die Wiederherstellung von Abhängigkeiten und Tools parallel ausgeführt.
 
-Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden in der Regel über die Konfigurationsdatei *NuGet.config* bereitgestellt. Eine standardmäßige Konfigurationsdatei wird bereitgestellt, wenn die CLI-Tools installiert sind. Sie geben zusätzliche Feeds an, indem Sie eine eigene *NuGet.config*-Datei im Projektverzeichnis erstellen. Sie können auch zusätzliche Feeds pro Aufruf an der Eingabeaufforderung angeben. 
+Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden in der Regel über die Konfigurationsdatei *NuGet.config* bereitgestellt. Eine standardmäßige Konfigurationsdatei wird bereitgestellt, wenn die CLI-Tools installiert sind. Sie geben zusätzliche Feeds an, indem Sie eine eigene *NuGet.config*-Datei im Projektverzeichnis erstellen. Sie können auch zusätzliche Feeds pro Aufruf an der Eingabeaufforderung angeben.
 
 Für Abhängigkeiten geben Sie mithilfe des Arguments `--packages` an, wo die wiederhergestellten Pakete während der Wiederherstellung platziert werden. Wenn nichts angegeben wurde, wird der Standardcache des NuGet-Pakets verwendet. Er befindet sich im Verzeichnis `.nuget/packages` im Basisverzeichnis des Benutzers auf allen Betriebssystemen (z.B. */home/user1* unter Linux oder *C:\Users\user1* unter Windows).
 
@@ -42,47 +55,95 @@ Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in de
 
 ## <a name="arguments"></a>Argumente
 
-`ROOT` 
-    
+`ROOT`
+
 Optionaler Pfad zur wiederherzustellenden Projektdatei.
 
 ## <a name="options"></a>Optionen
 
-`-h|--help`
-
-Druckt eine kurze Hilfe für den Befehl.
-
-`-s|--source <SOURCE>`
-
-Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in der/den *NuGet.config*-Datei(en) angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiederherstellen von Paketen für Laufzeiten verwendet, die nicht explizit im `<RuntimeIdentifiers>`-Tag in der *.csproj*-Datei aufgeführt sind. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Es können mehrere RIDs bereitgestellt werden, indem diese Option mehrmals angegeben wird.
-
-`--packages <PACKAGES_DIRECTORY>`
-
-Gibt das Verzeichnis für wiederhergestellte Pakete an. 
-
-`--disable-parallel`
-
-Deaktiviert paralleles Erstellen von mehreren Projekten. 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `--configfile <FILE>`
 
 Die NuGet-Konfigurationsdatei (*NuGet.config*) für den Wiederherstellungsvorgang.
 
-`--no-cache`
+`--disable-parallel`
 
-Gibt an, dass Pakete und HTTP-Anfragen nicht zwischengespeichert werden.
+Deaktiviert paralleles Erstellen von mehreren Projekten.
+
+`--force`
+
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen der Datei *project.assets.json*.
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
 
 `--ignore-failed-sources`
 
 Bei fehlerhaften Quellen nur warnen, wenn Pakete die Versionsanforderung erfüllen.
 
+`--no-cache`
+
+Gibt an, dass Pakete und HTTP-Anfragen nicht zwischengespeichert werden.
+
 `--no-dependencies`
 
-Wenn Sie ein Projekt mit Projekt-zu-Projekt (P2P)-Verweisen wiederherstellen, stellen Sie das Stammprojekt wieder her und nicht die Verweise.
+Wenn Sie ein Projekt mit Projekt-zu-Projekt-Verweisen (P2P) wiederherstellen, stellen Sie das Stammprojekt wieder her und nicht die Verweise.
+
+`--packages <PACKAGES_DIRECTORY>`
+
+Gibt das Verzeichnis für wiederhergestellte Pakete an.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiederherstellen von Paketen für Laufzeiten verwendet, die nicht explizit im `<RuntimeIdentifiers>`-Tag in der *.csproj*-Datei aufgeführt sind. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Es können mehrere RIDs bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+
+`-s|--source <SOURCE>`
+
+Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in der/den *NuGet.config*-Datei(en) angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+
+`--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--configfile <FILE>`
+
+Die NuGet-Konfigurationsdatei (*NuGet.config*) für den Wiederherstellungsvorgang.
+
+`--disable-parallel`
+
+Deaktiviert paralleles Erstellen von mehreren Projekten.
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`--ignore-failed-sources`
+
+Bei fehlerhaften Quellen nur warnen, wenn Pakete die Versionsanforderung erfüllen.
+
+`--no-cache`
+
+Gibt an, dass Pakete und HTTP-Anfragen nicht zwischengespeichert werden.
+
+`--no-dependencies`
+
+Wenn Sie ein Projekt mit Projekt-zu-Projekt-Verweisen (P2P) wiederherstellen, stellen Sie das Stammprojekt wieder her und nicht die Verweise.
+
+`--packages <PACKAGES_DIRECTORY>`
+
+Gibt das Verzeichnis für wiederhergestellte Pakete an.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiederherstellen von Paketen für Laufzeiten verwendet, die nicht explizit im `<RuntimeIdentifiers>`-Tag in der *.csproj*-Datei aufgeführt sind. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Es können mehrere RIDs bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+
+`-s|--source <SOURCE>`
+
+Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in der/den *NuGet.config*-Datei(en) angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
 
 `--verbosity <LEVEL>`
 
@@ -92,19 +153,19 @@ Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[ui
 
 Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis:
 
-`dotnet restore` 
+`dotnet restore`
 
 Wiederherstellen von Abhängigkeiten und Tools für das Projekt `app1` im vorgegebenen Pfad:
 
 `dotnet restore ~/projects/app1/app1.csproj`
-    
+
 Wiederherstellen der Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis mit dem bereitgestellten Dateipfad als Quelle:
 
-`dotnet restore -s c:\packages\mypackages` 
+`dotnet restore -s c:\packages\mypackages`
 
 Wiederherstellen der Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis mit den beiden bereitgestellten Dateipfaden als Quellen:
 
-`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
+`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
 Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis und nur Anzeige von nur minimaler Ausgabe:
 
