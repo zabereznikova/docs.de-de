@@ -38,7 +38,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp;-Operator (C#-Referenz)
-Der bedingte AND-Operator (`&&`) führt eine logische AND-Verknüpfung seiner `bool`-Operanden durch, wertet aber falls erforderlich nur den zweiten Operanden aus.  
+Der bedingte AND-Operator (`&&`) führt eine logische AND-Verknüpfung seiner `bool`-Operanden durch, wertet den zweiten Operanden aber nur dann aus, wenn es erforderlich ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Vorgang  
