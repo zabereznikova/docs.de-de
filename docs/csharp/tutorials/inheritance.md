@@ -5,17 +5,17 @@ keywords: Vererbung (C#), Basisklassen abgeleitete Klassen, abstrakte Basisklass
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
@@ -216,13 +216,13 @@ Das folgende Beispiel zeigt sowohl den Quellcode für die `Publication`-Klasse a
 
 - Zwei publikationsbezogene Eigenschaften
 
-  `Title` ist eine schreibgeschützte Eigenschaft <xref:System.String>, deren Wert durch Aufrufen des `Publication`-Konstruktors abgerufen wird, der den Wert in einem privaten Feld namens `pubTitle` speichert.
+  `Title` ist eine schreibgeschützte <xref:System.String>-Eigenschaft, deren Wert durch Aufrufen des `Publication`-Konstruktors bereitgestellt wird.
 
   `Pages` ist eine schreibgeschützte Eigenschaft <xref:System.Int32>, die angibt, wie viele Seiten die Publikation insgesamt hat. Der Wert wird in einem privaten Feld namens `totalPages` gespeichert. Er muss eine positive Zahl sein; andernfalls wird eine <xref:System.ArgumentOutOfRangeException> ausgelöst.
 
 - Herausgeberbezogene Elemente
 
-  Zwei schreibgeschützte Eigenschaften, `Publisher` und `Type`, geben den Wert der privaten Felder `pubName` und `pubType` zurück. Die Werte werden ursprünglich durch den Aufruf des `Publication`-Klassenkonstruktors abgerufen.
+  Zwei schreibgeschützte Eigenschaften, `Publisher` und `Type`. Die Werte werden ursprünglich durch den Aufruf des `Publication`-Klassenkonstruktors abgerufen.
 
 - Veröffentlichungsbezogene Elemente
 
@@ -230,7 +230,7 @@ Das folgende Beispiel zeigt sowohl den Quellcode für die `Publication`-Klasse a
 
 - Copyrightbezogene Elemente
 
-  Die `Copyright`-Methode übernimmt den Namen des Urheberrechtsinhabers und das Jahr des Copyrights als Argumente und weist sie den privaten Feldern `copyrName` und `copyrDate` zu. Die Werte können aus den Eigenschaften `CopyrightName` und `CopyrightDate` abgerufen werden.
+  Die Methode `Copyright` übernimmt den Namen des Urheberrechtsinhabers und das Jahr des Copyrights als Argumente und weist sie den Eigenschaften `CopyrightName` und `CopyrightDate` zu.
 
 - Eine Überschreibung der `ToString`-Methode
 
@@ -250,13 +250,13 @@ Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`
 
 - Zwei Konstruktoren
 
-  Die beiden `Book`-Konstruktoren nutzen gemeinsam drei allgemeine Parameter. Zwei, *title* und *publisher*, entsprechen den Parametern des `Publication`-Konstruktors. Der dritte ist *author*, der in einem privaten Feld `authorName` gespeichert ist. Ein Konstruktor enthält einen *isbn*-Parameter, der in dem privaten Feld `id` gespeichert ist.
+  Die beiden `Book`-Konstruktoren nutzen gemeinsam drei allgemeine Parameter. Zwei, *title* und *publisher*, entsprechen den Parametern des `Publication`-Konstruktors. Der dritte ist *author*, der in einem privaten Feld `authorName` gespeichert ist. Ein Konstruktor enthält einen *ISBN*-Parameter, der in der Auto-Eigenschaft `ISBN` gespeichert ist.
 
-  Der erste Konstruktor verwendet das [this](../language-reference/keywords/this.md)-Schlüsselwort, um den anderen Konstruktor aufzurufen. Dies ist ein allgemeines Muster der Konstruktordefinition. Konstruktoren mit weniger Parametern stellen beim Aufrufen des Konstruktors mit der größten Anzahl von Parametern Standardwerte zur Verfügung.
+  Der erste Konstruktor verwendet das [this](../language-reference/keywords/this.md)-Schlüsselwort, um den anderen Konstruktor aufzurufen. Dies ist ein häufiges Muster beim Definieren von Konstruktoren. Konstruktoren mit weniger Parametern stellen beim Aufrufen des Konstruktors mit der größten Anzahl von Parametern Standardwerte zur Verfügung.
 
   Der zweite Konstruktor verwendet das [base](../language-reference/keywords/base.md)-Schlüsselwort, um Titel und Herausgebername an den Basisklassenkonstruktor zu übergeben. Wenn Ihr Quellcode keinen expliziten Aufruf eines Basisklassenkonstruktors enthält, stellt der C#-Compiler automatisch einen Aufruf des standardmäßigen oder parameterlosen Konstruktors der Basisklasse bereit.
 
-- Eine schreibgeschützte Eigenschaft `ISBN`, die die ISBN des `Book`-Objekts zurückgibt, eine eindeutige 10- oder 13-stellige Nummer. Die ISBN wird als Argument einem der `Book`-Konstruktoren übergeben und im privaten Feld `id` gespeichert.
+- Eine schreibgeschützte Eigenschaft `ISBN`, die die ISBN des `Book`-Objekts zurückgibt, eine eindeutige 10- oder 13-stellige Nummer. Die ISBN wird einem der `Book`-Konstruktoren als Argument übergeben. Die ISBN wird in einem privaten Unterstützungsfeld gespeichert, das automatisch vom Compiler generiert wird.
 
 - Eine schreibgeschützte Eigenschaft `Author`. Der Autorenname wird als Argument beiden `Book`-Konstruktoren übergeben und im privaten Feld `authorName` gespeichert.
 
