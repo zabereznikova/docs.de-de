@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>NULL-bedingte Operatoren (C# und Visual Basic)
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Im letzten Beispiel wird veranschaulicht, dass die Null-Bedingungsoperatoren Kurzschlussoperatoren sind.  Wenn ein Vorgang in einer Kette von bedingten Memberzugriffs- und Indexvorgängen null zurückgibt, wird die restliche Ausführung der Kette angehalten.  Andere Vorgänge mit niedrigerer Rangfolge im Ausdruck werden fortgesetzt.  Beispielsweise wird `E` im Folgenden immer ausgeführt, und die `??`- und `==`-Vorgänge werden ausgeführt.  
+ Im letzten Beispiel wird veranschaulicht, dass die Null-Bedingungsoperatoren Kurzschlussoperatoren sind.  Wenn ein Vorgang in einer Kette von bedingten Memberzugriffs- und Indexvorgängen null zurückgibt, wird die restliche Ausführung der Kette angehalten.  Andere Vorgänge mit niedrigerer Rangfolge im Ausdruck werden fortgesetzt.  Beispielsweise wird im folgenden Codebeispiel `E` in der zweiten Zeile ausgeführt, und die Operatoren `??` und `==` werden ausgeführt.  In der ersten Zeile ruft `??` einen Kurzschluss hervor, und `E` wird nicht ausgeführt, wenn die linke Seite ungleich NULL ist.
   
 ```csharp
 A?.B?.C?[0] ?? E  
