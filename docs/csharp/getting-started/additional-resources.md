@@ -1,5 +1,6 @@
 ---
 title: "Zusätzliche Ressourcen für Visual C#-Programmierer"
+description: "Weitere Ressourcen, die Sie beim Erlernen von C# und .NET unterstützen"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,14 +34,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f843abd4ec891a7da17151140fc524acee72a346
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: dce2b9cbcc0e594f345e2a33ce7579f8546257d7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>Zusätzliche Ressourcen für Visual C#-Programmierer
-Die folgenden Websites helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.  
+Die folgenden Websites helfen Ihnen möglicherweise, Lösungen für gängige Probleme zu finden.
   
 ## <a name="microsoft-resources"></a>Microsoft-Ressourcen  
   
@@ -86,8 +87,7 @@ Die folgenden Websites helfen Ihnen möglicherweise, Lösungen für gängige Pro
  Die MSDN-Website enthält Informationen über aktuelle Sites und Newsgroups von Drittanbietern. Eine aktuelle Liste der verfügbaren Ressourcen finden Sie auf der [MSDN C# Community-Website](http://go.microsoft.com/fwlink/?LinkId=165945).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#](../../csharp/csharp.md)   
- [Erste Schritte mit C#](../../csharp/getting-started/getting-started-with-csharp.md)   
+ [C#](../../csharp/index.md): [Erste Schritte mit C#](index.md)   
  [Anpassen des Editors](/visualstudio/ide/customizing-the-editor)   
  [Gewusst wie: Teilnehmen an der Entwicklercommunity](http://msdn.microsoft.com/library/f1503d98-7a64-41b6-a6c7-0e42a533e9c5)   
  [Gewusst wie: Senden von Feedback](http://msdn.microsoft.com/library/c9f1dd8f-bcb6-40ac-b896-1e9eca0bb209)   

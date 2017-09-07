@@ -1,5 +1,6 @@
 ---
 title: "Einführung in die Programmiersprache C# und in .NET Framework"
+description: "Lernen Sie die Grundlagen von C# und .NET kennen. Verschaffen Sie sich einen Überblick über die Programmiersprache C# und das .NET-Ökosystem."
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Einführung in die Programmiersprache C# und in .NET Framework
@@ -88,6 +89,5 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
  Weitere Informationen zu .NET Framework finden Sie unter [Overview of the Microsoft .NET Framework 3.0](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355) (Überblick über Microsoft .NET Framework 3.0).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#](../../csharp/csharp.md)   
- [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [C#](../../csharp/index.md): [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
 
