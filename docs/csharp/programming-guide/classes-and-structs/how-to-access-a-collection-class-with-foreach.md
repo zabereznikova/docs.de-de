@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf Auflistungsklassen mit foreach (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Zugreifen auf Auflistungsklassen mit foreach (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,25 +27,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 841132b5181c5e17d1eabae11d3550811aa959ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad81ab699b079f4aabb04a886211e94a937335d
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Gewusst wie: Zugreifen auf Auflistungsklassen mit foreach (C#-Programmierhandbuch)
 Das folgende Codebeispiel zeigt, wie Sie eine nicht generische Auflistungsklasse schreiben, die mit [foreach](../../../csharp/language-reference/keywords/foreach-in.md) verwendet werden kann. Das Beispiel definiert eine Zeichenfolgen-Tokenisierungsklasse.  
   
 > [!NOTE]
->  Das Beispiel stellt nur die empfohlene Vorgehensweise dar, wenn Sie keine generische Auflistungsklasse verwenden können. Ein Beispiel wie eine typsichere generische Auflistungsklasse implementiert wird, die <xref:System.Collections.Generic.IEnumerable%601> unterstützt, finden Sie unter [Iteratoren (C# und Visual Basic)](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+>  Das Beispiel stellt nur die empfohlene Vorgehensweise dar, wenn Sie keine generische Auflistungsklasse verwenden können. Ein Beispiel wie eine typsichere generische Auflistungsklasse implementiert wird, die <xref:System.Collections.Generic.IEnumerable%601> unterstützt, finden Sie unter [Iterators (Iteratoren)](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
- Im Beispiel verwendet das folgende Codesegment die `Tokens`-Klasse, um den Satz „Dies ist ein Beispielsatz“ in Token aufzuteilen, indem „ “ und „-“ als Trennzeichen verwendet werden. Der Code zeigt anschließend diese Tokens mithilfe einer `foreach`-Anweisung an.  
+ Im Beispiel verwendet das folgende Codesegment die `Tokens`-Klasse, um den Satz „Dies ist ein Beispielsatz“. in Token aufzuteilen, indem „ “ und „-“ als Trennzeichen verwendet werden. Der Code zeigt anschließend diese Tokens mithilfe einer `foreach`-Anweisung an.  
   
  [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
- Die `Tokens`-Klasse verwendet intern ein Array, um die Token zu speichern. Da Arrays <xref:System.Collections.IEnumerator> und <xref:System.Collections.IEnumerable> implementieren, hätte das Codebeispiel die Enumerationsmethoden des Arrays verwenden können (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.Current%2A>), anstatt sie in der `Tokens`-Klasse zu definieren. Die Methodendefinitionen sind im Beispiel enthalten, um zu verdeutlichen, wie sie definiert sind und was jede Definition tut.  
+ Die `Tokens`-Klasse verwendet intern ein Array, um die Token zu speichern. Da Arrays <xref:System.Collections.IEnumerator> und <xref:System.Collections.IEnumerable> implementieren, hätte das Codebeispiel die Enumerationsmethoden des Arrays (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.Current%2A>) verwenden können, anstatt sie in der Klasse `Tokens` zu definieren. Die Methodendefinitionen sind im Beispiel enthalten, um zu verdeutlichen, wie sie definiert sind und was jede Definition tut.  
   
  [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
@@ -54,7 +54,6 @@ Das folgende Codebeispiel zeigt, wie Sie eine nicht generische Auflistungsklasse
  Ändern Sie z.B. die folgenden Zeilen im vorherigen Beispiel.  
   
 ```csharp  
-  
 // Change the Tokens class so that it no longer implements IEnumerable.  
 public class Tokens  
 {  
@@ -74,18 +73,16 @@ public class Tokens
         {   }  
     }  
  }  
-  
 ```  
   
  Da `Current` eine Zeichenfolge zurückgibt, kann der Compiler erkennen, wenn ein nicht kompatibler Typ in einer `foreach`-Anweisung verwendet wird, so wie in folgendem Code dargestellt.  
   
 ```csharp  
-  
 // Error: Cannot convert type string to int.  
 foreach (int item in f)    
 ```  
   
- Wenn <xref:System.Collections.IEnumerable> und <xref:System.Collections.IEnumerator> ausgelassen werden, besteht der Nachteil darin, dass die Auflistungsklasse nicht länger mit den `foreach`-Anweisungen oder entsprechenden Anweisungen anderer Common Language Runtime-Sprachen interoperabel ist.  
+ Wenn <xref:System.Collections.IEnumerator> und `foreach` ausgelassen werden, besteht der Nachteil darin, dass die Auflistungsklasse nicht länger mit den <xref:System.Collections.IEnumerable>-Anweisungen oder entsprechenden Anweisungen anderer Common Language Runtime-Sprachen interoperabel ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Generic>   
@@ -93,3 +90,4 @@ foreach (int item in f)
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Arrays](../../../csharp/programming-guide/arrays/index.md)   
  [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+

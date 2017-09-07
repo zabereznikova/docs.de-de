@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
@@ -31,7 +32,7 @@ In diesem Thema wird das Erstellen von Dokumenten mit Namespaces beschrieben.
 ## <a name="example"></a>Beispiel  
  Wenn Sie ein Element oder Attribut erstellen möchten, das sich in einem Namespace befindet, deklarieren und initialisieren Sie zuerst ein <xref:System.Xml.Linq.XNamespace>-Objekt. Anschließend verwenden Sie die Additionsoperatorüberladung, um den Namespace mit dem lokalen Namen in Form einer Zeichenfolge zu kombinieren.  
   
- Das folgende Beispiel erstellt ein Dokument mit nur einem Namespace. Standardmäßig serialisiert [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] dieses Dokument mit einem Standardnamespace.  
+ Das folgende Beispiel erstellt ein Dokument mit nur einem Namespace. Standardmäßig serialisiert [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dieses Dokument mit einem Standardnamespace.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -137,7 +138,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Beispiel  
  Dasselbe Ergebnis lässt sich erzielen, indem statt des Deklarierens und Erstellens eines <xref:System.Xml.Linq.XNamespace>-Objekts erweiterte Namen verwendet werden.  
   
- Dieser Ansatz wirkt sich aber negativ auf die Leistung aus. Jedes Mal, wenn Sie eine Zeichenfolge, die einen erweiterten Namen enthält, an [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] übergeben, muss [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] den Namen analysieren und nach dem atomisierten Namespace und dem atomisierten Namen suchen. Dieser Prozess nimmt CPU-Zeit in Anspruch. Wenn es auf eine hohe Leistung ankommt, sollten Sie daher eher explizit ein <xref:System.Xml.Linq.XNamespace>-Objekt deklarieren und verwenden.  
+ Dieser Ansatz wirkt sich aber negativ auf die Leistung aus. Jedes Mal, wenn Sie eine Zeichenfolge, die einen erweiterten Namen enthält, an [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] übergeben, muss [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] den Namen analysieren und nach dem atomisierten Namespace und dem atomisierten Namen suchen. Dieser Prozess nimmt CPU-Zeit in Anspruch. Wenn es auf eine hohe Leistung ankommt, sollten Sie daher explizit ein <xref:System.Xml.Linq.XNamespace>-Objekt deklarieren und verwenden.  
   
  Wenn die Leistung ein wichtiger Aspekt ist, finden Sie weitere Informationen unter [Pre-Atomization of XName Objects (LINQ to XML) (C#) (Voratomisierung von XName-Objekten (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md).  
   
@@ -160,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Siehe auch  
  [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

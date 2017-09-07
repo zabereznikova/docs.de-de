@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: LINQ (Language Integrated Query)
+description: "LINQ bietet Abfragefunktionen auf Sprachebene und eine API für C# und VB, sodass die Möglichkeit besteht, aussagekräftigen, deklarativen Code zu schreiben."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6d9c163255939c3732177ecccb373479ab610447
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,7 +30,6 @@ Abfragesyntax auf Sprachebene:
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
-
 ```
 
 Gleiches Beispiel mit der `IEnumerable<T>`-API:
@@ -37,7 +37,6 @@ Gleiches Beispiel mit der `IEnumerable<T>`-API:
 ```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
-
 ```
 
 ## <a name="linq-is-expressive"></a>LINQ ist ausdrucksstark
@@ -53,7 +52,6 @@ foreach (var pet in pets)
 {
     petLookup.Add(pet.RFID, pet);
 }
-
 ```
 
 Der Zweck des Codes ist nicht, ein neues `Dictionary<int, Pet>` zu erstellen und es über eine Schleife zu erweitern, sondern eine vorhandene Liste in ein Wörterbuch zu konvertieren. Mit LINQ bleibt dieser Zweck erhalten, mit imperativem Code hingegen nicht.
@@ -62,7 +60,6 @@ Entsprechender LINQ-Ausdruck:
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
-
 ```
 
 Der Code mit LINQ ist hilfreich, da er aus der Perspektive eines Programmierers einen Ausgleich zwischen Zweck und Code schafft. Ein weiter Bonus ist die Kürze des Codes. Stellen Sie sich vor, Sie könnten große Teile einer Codebasis um 1/3 reduzieren, wie oben dargestellt. Klingt das nicht überzeugend?
@@ -81,7 +78,6 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
            where (string)el.Element(attributeName) == value
            select el;
 }
-
 ```
 
 Code zu schreiben, um das XML-Dokument zu diesem Zweck manuell zu durchlaufen, wäre eine wesentlich größere Herausforderung.
@@ -94,7 +90,6 @@ Dies ist eine Frage, die häufig gestellt wird. Im Grunde ist dies:
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
-
 ```
 
 sehr viel präziser als dies:
@@ -103,7 +98,6 @@ sehr viel präziser als dies:
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
-
 ```
 
 Ist die API-Syntax nicht nur eine präzisere Methode für die Abfragesyntax?
@@ -151,7 +145,6 @@ var queryCats = from dog in dogs
 // Summing then lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
-
 ```
 
 *   Reduzieren einer Liste mit Listen:
@@ -159,7 +152,6 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
-
 ```
 
 *   Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
@@ -195,7 +187,6 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 
 // Gets all the short-haired dogs between two different kennels
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
-
 ```
 
 *   Schnittmenge zwischen zwei Gruppen:
@@ -204,7 +195,6 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
-
 ```
 
 *   Sortierung:
@@ -214,7 +204,6 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
               .ThenBy(direction => direction.EstimatedTime);
-
 ```
 
 *   Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](http://stackoverflow.com/a/844855) übernommen und geändert):
@@ -239,7 +228,6 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
     return self == to;
 }
-
 ```
 
 ## <a name="plinq"></a>PLINQ
@@ -260,7 +248,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
     return facebookUsers.AsParallel()
                         .Aggregate(seed, threadAccumulator, threadResultAccumulator, resultSelector);
 }
-
 ```
 
 Dieser Code partitioniert bei Bedarf `facebookUsers` über Systemthreads, summiert die Gesamtanzahl der „Likes“ parallel für jeden Thread, summiert die von allen Threads berechneten Ergebnisse und bringt das Ergebnis in eine nützliche Zeichenfolge.

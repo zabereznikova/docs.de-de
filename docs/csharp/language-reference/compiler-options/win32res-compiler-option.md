@@ -1,60 +1,80 @@
 ---
-title: "/win32res (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/win32res"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "win32res compiler option"
-  - "/win32res compiler option [C#]"
-  - "-win32res compiler option [C#]"
-  - "win32res compiler option [C#]"
+title: -win32res (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /win32res
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- win32res compiler option
+- /win32res compiler option [C#]
+- -win32res compiler option [C#]
+- win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4552b526767584e62106b2b10f8a1e6394a23b46
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /win32res (C# Compiler Options)
-Die Option **\/win32res** fügt eine Win32\-Ressource in die Ausgabedatei ein.  
+# <a name="win32res-c-compiler-options"></a>/win32res (C#-Compileroptionen)
+Die Option **/win32res** fügt eine win32res-Ressource in die Ausgabedatei ein.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /win32res:filename  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `filename`  
- Die Ressourcendatei, die Sie der Ausgabedatei hinzufügen möchten.  
+ Die Ressourcendatei, die Sie Ihrer Ausgabedatei hinzufügen möchten  
   
-## Hinweise  
- Eine Win32\-Ressourcendatei kann mit erstellt werden [Ressourcencompiler](http://go.microsoft.com/fwlink/?LinkId=148370).  Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C\+\+\-Programm kompilieren. Aus der RC\-Datei wird eine RES\-Datei erstellt.  
+## <a name="remarks"></a>Hinweise  
+ Eine Win32-Ressourcendatei kann mit dem [Ressourcencompiler](http://go.microsoft.com/fwlink/?LinkId=148370) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine RES-Datei erstellt.  
   
- Eine Win32\-Ressource kann Versions\- oder Bitmap\(Symbol\) Informationen enthalten, die die Erfolgsquote würden, die Anwendung im Datei\-Explorer zu identifizieren.  Wenn Sie **\/win32res** nicht angeben, generiert der Compiler Versionsinformationen auf der Grundlage der Assemblyversion.  
+ Eine Win32-Ressource kann Versions- oder Bitmapinformationen (Symbolinformationen) enthalten, anhand derer die Anwendung im Datei-Explorer identifiziert werden kann. Wenn sie **/win32res** nicht angeben, generiert der Compiler Versioninformationen auf Grundlage der Assemblyversion  
   
- Weitere Informationen über das Verweisen auf eine .NET Framework\-Ressourcendatei finden Sie unter [\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) bzw. über das Anhängen einer .NET Framework\-Ressourcendatei unter [\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md).  
+ Schauen Sie sich [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) zum Verweisen oder [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) zum Anfügen einer .NET Framework-Ressourcendatei an  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**\-Seite des Projekts.  
+1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite von **Anwendung**.  
+2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
-3.  Klicken Sie auf die Schaltfläche **Ressourcendatei**, und wählen Sie mit dem Kombinationsfeld eine Datei aus.  
+3.  Klicken Sie auf die Schaltfläche **Ressourcendatei**, und wählen Sie die Datei über das Kombinationsfeld aus.  
   
-## Beispiel  
- In diesem Beispiel wird `in.cs` kompiliert, die Win32\-Ressourcendatei `rf.res` angefügt und `in.exe` erstellt:  
+## <a name="example"></a>Beispiel  
+ Kompilieren Sie `in.cs`, und fügen Sie die Win32-Ressourcendatei `rf.res` an, um `in.exe` zu erzeugen:  
   
-```  
+```console  
 csc /win32res:rf.res in.cs  
 ```  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

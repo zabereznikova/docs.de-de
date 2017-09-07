@@ -1,5 +1,5 @@
 ---
-title: long (C#-Referenz) | Microsoft-Dokumentation
+title: long (C#-Referenz)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,20 +30,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0ea7f109ab934660418aab1a88bff7206ef23a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f7d2d6a3d5781b4e120b8399c7206d4429dd98e
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="long-c-reference"></a>long (C#-Referenz)
 
 `long` kennzeichnet einen Ganzzahltyp, der Werte anhand der Größe und des Bereichs speichert, die in der folgenden Tabelle gezeigt werden.  
   
-|Typ|Bereich|Größe|.NET Framework-Typ|  
+|Typ|Bereich|Größe|.NET Framework-Typ|  
 |----------|-----------|----------|-------------------------|  
-|`long`|–9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807|64-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int64?displayProperty=fullName>|  
+|`long`|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literale 
 
@@ -119,10 +119,10 @@ long y = (long)3.0;   // OK: explicit conversion
 ```  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Int64></xref:System.Int64>   
+ <xref:System.Int64>   
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
@@ -130,3 +130,4 @@ long y = (long)3.0;   // OK: explicit conversion
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

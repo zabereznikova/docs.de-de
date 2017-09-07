@@ -1,5 +1,5 @@
 ---
-title: Statische Klassen und statische Klassenmember (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f93706bb5df41e46c860ca70d131d94015a6348f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
@@ -44,7 +45,7 @@ Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse i
 UtilityClass.MethodA();  
 ```  
   
- Eine statische Klasse kann als geeigneter Container für Reihen von Methoden verwendet werden, die nur Eingabeparameter verarbeiten und keine internen Instanzfelder haben oder festlegen müssen. In der .NET Framework-Klassenbibliothek enthält z.B. die Klasse <xref:System.Math?displayProperty=fullName> Methoden, die mathematische Vorgänge ausführen, ohne dass es notwendig ist, Daten zu speichern oder abzurufen, die in einer bestimmten Instanz der Klasse <xref:System.Math> einzigartig ist. Sie wenden also die Member der Klasse an, indem der Klassen- und Methodennamen angegeben wird, wie im folgenden Beispiel gezeigt wird.  
+ Eine statische Klasse kann als geeigneter Container für Reihen von Methoden verwendet werden, die nur Eingabeparameter verarbeiten und keine internen Instanzfelder haben oder festlegen müssen. In der .NET Framework-Klassenbibliothek enthält z.B. die statische Klasse <xref:System.Math?displayProperty=fullName> Methoden, die mathematische Vorgänge ausführen, ohne dass es notwendig ist, Daten zu speichern oder abzurufen, die in einer bestimmten Instanz der Klasse <xref:System.Math> einzigartig sind. Sie wenden also die Member der Klasse an, indem der Klassen- und Methodennamen angegeben wird, wie im folgenden Beispiel gezeigt wird.  
   
 ```csharp  
 double dub = -3.14;  
@@ -58,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Wie auch bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Common Language Runtime (CLR) geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau angeben, wann die Klasse geladen wird. Jedoch wird sichergestellt, dass es geladen wird, und dass seine Felder initialisiert sowie seine statischen Konstruktoren aufgerufen sind, bevor zum ersten Mal auf die Klasse in Ihrem Programm verwiesen wird. Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
+ Wie auch bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Common Language Runtime (CLR) geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau angeben, wann die Klasse geladen wird. Jedoch wird sichergestellt, dass es geladen wird, und dass seine Felder initialisiert sowie seine statischen Konstruktoren aufgerufen sind, bevor zum ersten Mal auf die Klasse in Ihrem Programm verwiesen wird. Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
   
 > [!NOTE]
 >  Wie Sie eine nicht statische Klasse erstellen, die es erlaubt, dass nur eine Instanz von ihr selbst erstellt wird, finden Sie unter [Implementierung von Singleton in C#](http://go.microsoft.com/fwlink/?LinkID=100567).  
@@ -106,7 +107,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Ein Aufruf einer statischen Methode erzeugt eine Aufrufanweisung in Microsoft Intermediate Language (MSIL), während ein Aufruf einer Instanzmethode eine Anweisung `callvirt` erzeugt, die auch auf Verweise auf ein NULL-Objekt überprüft. Jedoch ist in den meisten Fällen der Leistungsunterschied zwischen den beiden nicht bedeutend genug.  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
@@ -115,3 +116,4 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [Klasse](../../../csharp/language-reference/keywords/class.md)   
  [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
  [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+

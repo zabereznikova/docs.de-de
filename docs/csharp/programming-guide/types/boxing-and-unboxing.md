@@ -1,5 +1,5 @@
 ---
-title: Boxing und Unboxing (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Boxing und Unboxing (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6e0a70abd0f3311324f30eb5155000c09fc29cd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c783ac60735ba25db2736bd9469063c0897be22f
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing und Unboxing (C#-Programmierhandbuch)
@@ -71,7 +71,7 @@ Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../../cshar
   
  Diese Anweisung bewirkt, dass der Objektverweis `o` auf dem Stapel erstellt wird, der auf einen Wert vom Typ `int` auf dem Heap verweist. Dieser Wert ist eine Kopie des Werttyps, der der Variablen `i` zugewiesen ist. In der folgenden Abbildung ist der Unterschied zwischen den Variablen `i` und `o` dargestellt.  
   
- ![BoxingConversion-Grafik](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
+ ![Grafik zu BoxingConversion](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
 Boxing-Konvertierung  
   
  Es auch möglich, das Boxing wie im folgenden Beispiel explizit auszuführen. Explizites Boxing ist jedoch nie erforderlich:  
@@ -97,10 +97,10 @@ Boxing-Konvertierung
   
  In der folgenden Abbildung ist das Ergebnis der vorherigen Anweisungen dargestellt.  
   
- ![Grafik zur UnBoxing-Konvertierung](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
+ ![Grafik zu UnBoxingConversion](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
 Unboxing-Konvertierung  
   
- Damit das Unboxing eines Werttypen zur Laufzeit erfolgreich verläuft, muss das zu konvertierende Element ein Verweis auf ein Objekt sein, das zuvor durch Boxing einer Instanz dieses Werttyps erstellt wurde. Der Versuch, `null` durch Unboxing zu konvertieren, verursacht eine <xref:System.NullReferenceException>. Der Versuch, einen Verweis auf einen nicht kompatiblen Werttyp mittels Unboxing zu konvertieren, verursacht eine <xref:System.InvalidCastException>.  
+ Damit das Unboxing eines Werttypen zur Laufzeit erfolgreich verläuft, muss das zu konvertierende Element ein Verweis auf ein Objekt sein, das zuvor durch Boxing einer Instanz dieses Werttyps erstellt wurde. Der Versuch, ein Unboxing durchzuführen, `null` löst ein <xref:System.NullReferenceException> aus. Der Versuch, einen Verweis auf einen nicht kompatiblen Werttyp mittels Unboxing zu konvertieren, führt zu einer <xref:System.InvalidCastException>.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Fall von ungültigem Unboxing und der sich daraus ergebenden `InvalidCastException` veranschaulicht. Bei Verwendung von `try` und `catch` wird eine Fehlermeldung angezeigt, wenn der Fehler auftritt.  
@@ -142,3 +142,4 @@ int j = (int) o;
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+

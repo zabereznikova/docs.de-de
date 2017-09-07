@@ -1,39 +1,59 @@
 ---
-title: "Konvertierungsoperatoren (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C#-Sprache, Konvertierungsoperatoren"
-  - "Konvertierungsoperatoren [C#]"
-  - "Operatoren [C#], Konvertierung"
-  - "Benutzerdefinierte Konvertierungen [C#]"
+title: Konvertierungsoperatoren (C#-Programmierhandbuch)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, conversion operators
+- conversion operators [C#]
+- operators [C#], conversion
+- user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c12fd13d6526d79363f973ce2a944c4823bf4104
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Konvertierungsoperatoren (C#-Programmierhandbuch)
-C\# bietet Programmierern die Möglichkeit, Konvertierungen für Klassen oder Strukturen zu deklarieren, sodass diese in andere bzw. aus anderen Klassen, Strukturen oder Basistypen konvertiert werden können.  Konvertierungen werden wie Operatoren definiert und nach dem Typ benannt, in den sie konvertiert werden.  Entweder das zu konvertierende Typargument oder der Typ des Ergebnisses der Konvertierung – nicht beides – muss der enthaltende Typ sein.  
+# <a name="conversion-operators-c-programming-guide"></a>Konvertierungsoperatoren (C#-Programmierhandbuch)
+Mit C# können Programmierer Konvertierungen für Klassen oder Strukturen deklarieren, damit Klassen oder Strukturen in andere Klassen und Strukturen und Basistypen oder aus diesen konvertiert werden können. Konvertierungen werden wie Operatoren definiert und nach dem Typ benannt, in den Sie konvertiert werden. Entweder muss der Typ des zu konvertierenden Arguments oder der Typ des Konvertierungsergebnisses, aber nicht beide, der enthaltende Typ sein.  
   
  [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## Übersicht über Konvertierungsoperatoren  
- Konvertierungsoperatoren verfügen über die folgenden Eigenschaften:  
+## <a name="conversion-operators-overview"></a>Überblick über Konvertierungsoperatoren  
+ Konvertierungsoperatoren verfügen über folgende Eigenschaften:  
   
--   Als `implicit` deklarierte Konvertierungen werden bei Bedarf automatisch vorgenommen.  
+-   Konvertierungen, die als `implicit` deklariert wurden, werden bei Bedarf automatisch durchgeführt.  
   
--   Als `explicit` deklarierte Konvertierungen werden nur bei einer Typumwandlung aufgerufen.  
+-   Konvertierungen, die als `explicit` deklariert wurden, erfordern zum Aufruf eine Umwandlung.  
   
 -   Alle Konvertierungen müssen als `static` deklariert werden.  
   
-## Verwandte Abschnitte  
- Weitere Informationen:  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ Weitere Informationen finden Sie unter:   
   
 -   [Verwenden von Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
@@ -41,13 +61,14 @@ C\# bietet Programmierern die Möglichkeit, Konvertierungen für Klassen oder St
   
 -   [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [Explizit](../../../csharp/language-reference/keywords/explicit.md)  
+-   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [Implizite](../../../csharp/language-reference/keywords/implicit.md)  
+-   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [Statische](../../../csharp/language-reference/keywords/static.md)  
+-   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Convert>   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Verkettete benutzerdefinierte explizite Konvertierungen in C\#](http://go.microsoft.com/fwlink/?LinkId=112384)
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [Chained user-defined explicit conversions in C# (Verkettete benutzerdefinierte, explizite Konvertierungen in C#)](http://go.microsoft.com/fwlink/?LinkId=112384)
+

@@ -1,32 +1,51 @@
 ---
-title: "&lt;list&gt; (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "list"
-  - "<list>"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<item> (C#-XML-Tag)"
-  - "<list> (C#-XML-Tag)"
-  - "<listheader> (C#-XML-Tag)"
-  - "item (C#-XML-Tag)"
-  - "list (C#-XML-Tag)"
-  - "listheader (C#-XML-Tag)"
+title: '&lt;list&gt; (C# -Programmierhandbuch)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- list
+- <list>
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- list C# XML tag
+- listheader C# XML tag
+- <listheader> C# XML tag
+- item C# XML tag
+- <item> C# XML tag
+- <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b9d3dfa60530734a142295c8a8f2c32c4ecd9a47
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;list&gt; (C#-Programmierhandbuch)
-## Syntax  
+# <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt; (C# -Programmierhandbuch)
+## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <list type="bullet" | "number" | "table">  
     <listheader>  
         <term>term</term>  
@@ -39,25 +58,26 @@ caps.handback.revision: 11
 </list>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `term`  
- Ein zu definierender Term, der in `description` definiert wird.  
+ Ein zu definierender Begriff, der in `description` definiert wird.  
   
  `description`  
- ein Element in einer Aufzählung oder nummerierten Liste oder die Definition eines `term`s.  
+ Entweder ein Element einer Aufzählung oder nummerierten Liste oder die Definition eines `term`.  
   
-## Hinweise  
- Der \<listheader\>\-Block wird zur Definition der Überschriftenzeile einer Tabelle oder einer Definitionsliste verwendet.  Wenn eine Tabelle definiert wird, muss nur ein Eintrag für "term" in der Überschrift angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Der \<listheader>-Block wird verwendet, um die Überschriftenzeile einer Tabelle oder einer Definitionsliste zu definieren. Bei der Definition einer Tabelle müssen Sie nur einen Eintrag für „term“ in der Überschrift angeben.  
   
- Jedes Element der Liste wird mit einem \<item\>\-Block angegeben.  Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben.  Für eine Tabelle, eine Aufzählung oder eine nummerierte Liste muss jedoch nur ein Eintrag für `description` angegeben werden.  
+ Jedes Element der Liste wird mit einem \<item>-Block angegeben. Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben. Für eine Tabelle, eine Auflistung oder eine nummerierte Liste muss jedoch nur ein Eintrag für `description` angegeben werden.  
   
- Eine Liste oder Tabelle kann so viele \<item\>\-Blöcke enthalten, wie benötigt werden.  
+ Eine Liste oder Tabelle kann so viele \<item>-Blöcke besitzen wie nötig.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cs[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

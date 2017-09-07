@@ -1,51 +1,71 @@
 ---
-title: "/target:module (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/target:module"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-target compiler options [C#], /target:module"
-  - "target compiler options [C#], /target:module"
-  - "/target compiler options [C#], /target:module"
+title: -target:module (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /target:module
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -target compiler options [C#], /target:module
+- target compiler options [C#], /target:module
+- /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23c91fe0e4002ebf4c002eb4e0c7e25020fed356
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /target:module (C# Compiler Options)
+# <a name="targetmodule-c-compiler-options"></a>/target:module (C#-Compileroptionen)
 Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /target:module  
 ```  
   
-## Hinweise  
- Standardmäßig weist die Ausgabedatei, die erstellt wird, indem sie mit dieser Option kompiliert, eine Erweiterung von .netmodule.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig weist die Ausgabedatei, die durch Kompilieren mit dieser Option erstellt wird, eine Dateierweiterung .NETMODULE auf.  
   
- Eine Datei, die kein Assemblymanifest aufweist, kann nicht von der .NET Framework\-Common Language Runtime geladen werden.  Allerdings können Sie eine solche Datei mithilfe von [\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) in das Assemblymanifest einer Assembly aufnehmen.  
+ Eine Datei, die nicht über ein Assemblymanifest verfügt, kann nicht von der Common Language Runtime von .NET Framework geladen werden. Allerdings kann eine solche Datei in das Assemblymanifest mithilfe von [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) integriert werden.  
   
- Wenn in einer einzigen Kompilierung mehrere Module erstellt werden, stehen die [internen](../../../csharp/language-reference/keywords/internal.md) Typen eines Moduls den anderen Modulen in der Kompilierung zur Verfügung.  Wenn Code in einem Modul auf `internal`\-Typen in einem anderen Modul verweist, müssen beide Module mithilfe von **\/addmodule** in ein Assemblymanifest aufgenommen werden.  
+ Wird mehr als ein Modul in einer einzigen Kompilierung erstellt, werden [interne](../../../csharp/language-reference/keywords/internal.md) Typen in einem Modul für andere Module in der Kompilierung verfügbar. Wenn der Code in einem Modul auf `internal`-Typen in einem anderen Modul verweist, dann müssen beide Module in ein Assemblymanifest aufgenommen werden, mithilfe von **/addmodule**.  
   
- Das Erstellen von Modulen wird in der Visual Studio\-Entwicklungsumgebung nicht unterstützt.  
+ Das Erstellen eines Moduls wird in der Visual Studio-Entwicklungsumgebung nicht unterstützt.  
   
- Informationen über das programmgesteuerte Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
-## Beispiel  
- In diesem Beispiel wird `in.cs` kompiliert und `in.netmodule` erstellt:  
+## <a name="example"></a>Beispiel  
+ Kompilieren Sie `in.cs`, und `in.netmodule` wird erstellt:  
   
-```  
+```console  
 csc /target:module in.cs  
 ```  
   
-## Siehe auch  
- [\/target \(Specify Output File Format\)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [/target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+

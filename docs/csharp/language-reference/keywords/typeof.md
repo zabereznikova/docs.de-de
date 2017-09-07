@@ -1,5 +1,5 @@
 ---
-title: typeof (C#-Referenz) | Microsoft-Dokumentation
+title: typeof (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0590aa8a339dc58b7215722a530a71f8973864d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb335e44a5a3634520d3a86495a4508597b4f70
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="typeof-c-reference"></a>typeof (C#-Referenz)
@@ -45,7 +45,7 @@ System.Type type = typeof(int);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die .NET Framework-Methode <xref:System.Object.GetType%2A> verwenden, um den Laufzeittyp eines Ausdrucks zu erhalten, so wie in folgendem Beispiel:  
+ Um den Runtime-Typ eines Ausdrucks zu erhalten, können Sie die .NET Framework-Methode <xref:System.Object.GetType%2A> wie in folgendem Beispiel verwenden:  
   
 ```  
 int i = 0;  
@@ -65,7 +65,7 @@ string s = method.ReturnType.GetInterface
  [!code-cs[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die Methode <xref:System.Object.GetType%2A>, um den Typ zu bestimmen, der verwendet wird, um das Ergebnis einer numerischen Berechnung zu speichern. Dies hängt vom Speicherbedarf der resultierenden Zahl ab.  
+ Dieses Beispiel verwendet die <xref:System.Object.GetType%2A>-Methode um den Typ zu bestimmen, der verwendet wird, um das Ergebnis einer numerischen Berechnung zu speichern. Dies hängt vom Speicherbedarf der resultierenden Zahl ab.  
   
  [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
@@ -79,3 +79,4 @@ string s = method.ReturnType.GetInterface
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
  [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)
+

@@ -1,5 +1,5 @@
 ---
-title: ulong (C#-Referenz) | Microsoft-Dokumentation
+title: ulong (C#-Referenz)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C#-Referenz)
@@ -47,7 +47,7 @@ Das Schlüsselwort `ulong` kennzeichnet einen ganzzahligen Typ, der Werte anhand
   
 ## <a name="literals"></a>Literale  
 
-Sie können eine `ulong`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen.  Wenn das Ganzzahlliteral außerhalb des Bereichs von `ulong` liegt, d.h., wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt64.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf. 
+Sie können eine `ulong`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen.  Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ulong` befindet (d.h., wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt64.MaxValue?displayProperty=fullName> ist), tritt ein Kompilierfehler auf. 
 
 Im folgenden Beispiel werden Ganzzahlen wie 7.934.076.125, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `ulong`-Werten zugewiesen.  
   
@@ -60,7 +60,7 @@ Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbe
 
 [!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `UL` oder `ul` identifiziert unzweideutig ein numerisches Literal als ein `ulong`-Wert. Das `L`-Suffix kennzeichnet ein `ulong`, wenn der literale Wert <xref:System.Int64.MaxValue?displayProperty=fullName> überschreitet. Und das Suffix `U` oder `u` kennzeichnet ein `ulong`, wenn der literale Wert <xref:System.UInt32.MaxValue?displayProperty=fullName> überschreitet. Im folgenden Beispiel wird das `ul`-Suffix verwendet, um eine lange ganze Zahl anzugeben:
+ Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `UL` oder `ul` identifiziert unzweideutig ein numerisches Literal als ein `ulong`-Wert. Das `L`-Suffix kennzeichnet ein `ulong`, wenn der Literalwert <xref:System.Int64.MaxValue?displayProperty=fullName> überschreitet. Das `U`- oder `u`-Suffix kennzeichnet ein `ulong`, wenn der Literalwert <xref:System.UInt32.MaxValue?displayProperty=fullName> überschreitet. Im folgenden Beispiel wird das `ul`-Suffix verwendet, um eine lange ganze Zahl anzugeben:
  
 [!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
@@ -112,7 +112,7 @@ ulong y = (ulong)3.0;
  Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.UInt64>   
@@ -123,3 +123,4 @@ ulong y = (ulong)3.0;
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

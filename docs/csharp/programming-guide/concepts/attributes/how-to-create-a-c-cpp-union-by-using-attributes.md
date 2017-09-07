@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd6bc60dfd1c6146d8fa72abdcfc6a00006817aa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4532829080d994cf4cec92d64a12e3bf1890dc6a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)
@@ -90,4 +91,5 @@ Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher 
  [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [Zugriff auf Attribute mit Reflektion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

@@ -1,6 +1,6 @@
 ---
 title: "Async ausführlich"
-description: "Ausführliche Erläuterung der Funktionsweise von asynchronem Code in .NET"
+description: "Erfahren Sie, wie Sie E/A- und CPU-gebundenen asynchronen Code leicht mit dem taskbasierten asynchronen .NET-Modell schreiben können."
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
+ms.contentlocale: de-de
+ms.lasthandoff: 08/28/2017
 
 ---
 
 # <a name="async-in-depth"></a>Async ausführlich
 
-Schreiben von E/A- und CPU-gebundenem asynchronen Code ist mit dem .NET Task-basierten asynchronen Modell einfach. Das Modell wird durch die Typen `Task` und `Task<T>` und die Sprachschlüsselwörter `async` und `await` verfügbar gemacht. Dieser Artikel erläutert den Einsatz von .NET-Async und bietet einen Einblick in das im Hintergrund verwendete Async-Framework.
+Schreiben von E/A- und CPU-gebundenem asynchronen Code ist mit dem .NET Task-basierten asynchronen Modell einfach. Das Modell wird durch die Typen `Task` und `Task<T>` und die C#- und Visual Basic-Schlüsselwörter `async` und `await` verfügbar gemacht. (Sprachspezifische Ressourcen finden Sie im Abschnitt [Siehe auch](#see-also).) Dieser Artikel erläutert den Einsatz von .NET-Async und bietet einen Einblick in das im Hintergrund verwendete Async-Framework.
 
 ## <a name="task-and-tasklttgt"></a>Task und Task&lt;T&gt;
 
@@ -34,7 +35,7 @@ Tasks machen ein API-Protokoll zum Überwachen des Ergebniswerts (im Fall von `T
 
 Mithilfe von `await` kann Ihre Anwendung bzw. Ihr Dienst sinnvolle Aufgaben erledigen, während ein Task ausgeführt wird, indem die Steuerung an seinen Aufrufer übergeben wird, bis der Task abgeschlossen ist. Ihr Code muss sich nicht auf Rückrufe oder Ereignisse verlassen, um die Ausführung nach Abschluss des Tasks fortzusetzen. Die Sprach- und Task-API-Integration erledigt dies für Sie. Bei Verwendung von `Task<T>` „enthüllt“ das Schlüsselwort `await` darüber hinaus den Wert, der bei Abschluss des Tasks zurückgegeben wird.  Wie dies funktioniert, wird weiter unten erläutert.
 
-Weitere Informationen zu Tasks und den verschiedenen Arten, mit ihnen zu interagieren, finden Sie in dem Artikel [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
+Weitere Informationen zu Tasks und den verschiedenen Arten, mit ihnen zu interagieren, finden Sie in dem Artikel [Task-based Asynchronous Pattern (Taskbasiertes asynchrones Muster (TAP))](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tieferer Einblick in Tasks für einen E/A-gebundenen Vorgang
 
@@ -45,7 +46,7 @@ Im ersten Beispiel wird eine asynchrone Methode aufgerufen und ein aktiver Task 
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -147,3 +148,10 @@ Sobald `await` festgestellt wird, wird die Ausführung von `CalculateResult()` a
 ### <a name="why-does-async-help-here"></a>Warum ist Async hier hilfreich?
 
 `async` und `await` stellen die Best Practice zum Verwalten von CPU-gebundener Arbeit dar, wenn Sie Wert auf Reaktionsfähigkeit legen. Es gibt mehrere Muster zur Async-Verwendung mit CPU-gebundener Arbeit. Sie sollten unbedingt beachten, dass die Async-Verwendung mit geringem Kostenaufwand verbunden ist und nicht für enge Schleifen empfohlen wird.  Sie entscheiden, wie Sie diese neue Funktion in Ihren Code einbringen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Asynchrone Programmierung in C#](~/docs/csharp/async.md)   
+[Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+[Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

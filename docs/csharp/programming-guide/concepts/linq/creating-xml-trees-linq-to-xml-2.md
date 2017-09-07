@@ -1,5 +1,5 @@
 ---
-title: "Erstellen von XML-Bäumen in C# (LINQ to XML) | Microsoft-Dokumentation"
+title: Erstellen von XML-Strukturen in C# (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Erstellen von XML-Strukturen in C# (LINQ to XML)
@@ -33,9 +34,9 @@ Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in C#.
 ## <a name="constructing-elements"></a>Konstruieren von Elementen  
  Die Signaturen der <xref:System.Xml.Linq.XElement>-Konstruktoren und der <xref:System.Xml.Linq.XAttribute>-Konstruktoren ermöglichen es Ihnen, den Inhalt des Elements oder Attributs als Argumente an den Konstruktor zu übergeben. Da einer der Konstruktoren eine variable Anzahl von Argumenten akzeptiert, können Sie jede beliebige Anzahl von untergeordneten Elementen übergeben. Natürlich kann jedes dieser untergeordneten Elemente wiederum untergeordnete Elemente enthalten. Für jedes Element können Sie eine beliebige Anzahl von Attributen hinzufügen.  
   
- Beim Hinzufügen von <xref:System.Xml.Linq.XNode>- (einschließlich <xref:System.Xml.Linq.XElement>) oder <xref:System.Xml.Linq.XAttribute>-Objekten werden Objekte einfach an die XML-Struktur angefügt, wenn der neue Inhalt kein übergeordnetes Element besitzt. Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird er geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt. Dies wird im letzten Beispiel in diesem Thema gezeigt.  
+ Wenn beim Hinzufügen von <xref:System.Xml.Linq.XNode>-Objekten (einschließlich <xref:System.Xml.Linq.XElement>) oder von <xref:System.Xml.Linq.XAttribute>-Objekten der neue Inhalt kein übergeordnetes Element besitzt, werden die Objekte einfach an die XML-Struktur angefügt. Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird er geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt. Dies wird im letzten Beispiel in diesem Thema gezeigt.  
   
- Um eine `contacts`<xref:System.Xml.Linq.XElement> zu erstellen, können Sie folgenden Code verwenden:  
+ Zum Erstellen eines `contacts`-<xref:System.Xml.Linq.XElement>-Objekts können Sie den folgenden Code verwenden:  
   
 ```csharp  
 XElement contacts =  
@@ -61,25 +62,25 @@ XElement contacts =
 |Konstruktor|Beschreibung|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Erstellt ein <xref:System.Xml.Linq.XElement>. Der `name`-Parameter gibt den Namen des Elements an, und `content` gibt den Inhalt des Elements an.|  
-|`XElement(XName name)`|Erstellt ein <xref:System.Xml.Linq.XElement> mit deren <xref:System.Xml.Linq.XName>-Klasse, die mit dem angegebenen Namen initialisiert wird.|  
-|`XElement(XName name, params object[] content)`|Erstellt ein <xref:System.Xml.Linq.XElement> mit deren <xref:System.Xml.Linq.XName>-Klasse, die mit dem angegebenen Namen initialisiert wird. Die Attribute und/oder untergeordneten Elemente werden aus dem Inhalt der Parameterliste erstellt.|  
+|`XElement(XName name)`|Erstellt ein <xref:System.Xml.Linq.XElement> mit seinem <xref:System.Xml.Linq.XName>, initialisiert für den angegebenen Namen.|  
+|`XElement(XName name, params object[] content)`|Erstellt ein <xref:System.Xml.Linq.XElement> mit seinem <xref:System.Xml.Linq.XName>, initialisiert für den angegebenen Namen. Die Attribute und/oder untergeordneten Elemente werden aus dem Inhalt der Parameterliste erstellt.|  
   
  Der `content`-Parameter ist äußerst flexibel. Er unterstützt jede Art von Objekt, das ein gültiges untergeordnetes Element eines <xref:System.Xml.Linq.XElement> ist. Die folgenden Regeln gelten für andere Arten von Objekten, die in diesem Parameter übergeben werden:  
   
 -   Eine Zeichenfolge wird als Textinhalt hinzugefügt.  
   
--   Eine <xref:System.Xml.Linq.XElement>-Klasse wird als untergeordnetes Element hinzugefügt.  
+-   Ein <xref:System.Xml.Linq.XElement> wird als untergeordnetes Element hinzugefügt.  
   
--   Eine <xref:System.Xml.Linq.XAttribute>-Klasse wird als Attribut hinzugefügt.  
+-   Ein <xref:System.Xml.Linq.XAttribute> wird als Attribut hinzugefügt.  
   
--   Eine <xref:System.Xml.Linq.XProcessingInstruction>-, <xref:System.Xml.Linq.XComment>- oder <xref:System.Xml.Linq.XText>-Klasse wird als untergeordneter Inhalt hinzugefügt.  
+-   Eine <xref:System.Xml.Linq.XProcessingInstruction>, ein <xref:System.Xml.Linq.XComment> oder ein <xref:System.Xml.Linq.XText> wird als untergeordneter Inhalt hinzugefügt.  
   
--   Eine <xref:System.Collections.IEnumerable>-Schnittstelle wird aufgezählt, und diese Regeln werden rekursiv den Ergebnissen hinzugefügt.  
+-   Eine <xref:System.Collections.IEnumerable> wird aufgelistet, und diese Regeln werden rekursiv auf die Ergebnisse angewendet.  
   
 -   Für alle anderen Arten wird deren `ToString`-Methode aufgerufen, und das Ergebnis wird als Textinhalt hinzugefügt.  
   
 ### <a name="creating-an-xelement-with-content"></a>Erstellen eines "XElement" mit Inhalt  
- Sie können mit einem einzigen Methodenaufruf eine <xref:System.Xml.Linq.XElement>-Klasse erstellen, die einfachen Inhalt enthält. Geben Sie dazu den Inhalt wie folgt als zweiten Parameter an:  
+ Sie können mit einem einzigen Methodenaufruf ein <xref:System.Xml.Linq.XElement> erstellen, das einfachen Inhalt enthält. Geben Sie dazu den Inhalt wie folgt als zweiten Parameter an:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -126,7 +127,7 @@ Console.WriteLine(shippingUnit);
 ```  
   
 ### <a name="creating-an-xelement-with-multiple-child-elements"></a>Erstellen eines "XElement" mit mehreren untergeordneten Elementen  
- Sie können eine Anzahl von <xref:System.Xml.Linq.XElement>-Objekten für den Inhalt übergeben. Jedes der <xref:System.Xml.Linq.XElement>-Objekte ist als untergeordnetes Element eingeschlossen.  
+ Sie können für den Inhalt mehrere <xref:System.Xml.Linq.XElement>-Objekte übergeben. Jedes dieser <xref:System.Xml.Linq.XElement>-Objekte wird zu einem untergeordneten Element.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -186,7 +187,7 @@ Console.WriteLine(contacts);
 ```  
   
 ### <a name="creating-an-empty-element"></a>Erstellen eines leeren Elements  
- Wenn Sie eine leere <xref:System.Xml.Linq.XElement>-Klasse erstellen möchten, übergeben Sie einfach keinen Inhalt an den Konstruktor. Das folgende Beispiel erstellt ein leeres Element:  
+ Wenn Sie ein leeres <xref:System.Xml.Linq.XElement> erstellen möchten, übergeben Sie einfach keinen Inhalt an den Konstruktor. Das folgende Beispiel erstellt ein leeres Element:  
   
 ```csharp  
 XElement n = new XElement("Customer");  
@@ -200,7 +201,7 @@ Console.WriteLine(n);
 ```  
   
 ### <a name="attaching-vs-cloning"></a>Anfügen oder Klonen?  
- Beim Hinzufügen von <xref:System.Xml.Linq.XNode>- (einschließlich <xref:System.Xml.Linq.XElement>) oder <xref:System.Xml.Linq.XAttribute>-Objekten zu einer neuen Struktur werden – wie zuvor erwähnt – die Objekte einfach an die XML-Struktur angefügt, wenn der neue Inhalt kein übergeordnetes Element besitzt. Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird er geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt.  
+ Wie bereits erwähnt, werden beim Hinzufügen von <xref:System.Xml.Linq.XNode>-Objekten (einschließlich <xref:System.Xml.Linq.XElement>) oder von <xref:System.Xml.Linq.XAttribute>-Objekten für den Fall, dass der neue Inhalt kein übergeordnetes Element besitzt, die Objekte einfach an die XML-Struktur angefügt. Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird er geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt.  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -237,3 +238,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Siehe auch  
  [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

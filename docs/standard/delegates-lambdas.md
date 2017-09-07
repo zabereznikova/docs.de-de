@@ -1,6 +1,6 @@
 ---
 title: Delegaten und Lambdas
-description: Delegaten und Lambdas
+description: "Erfahren Sie, wie Delegate einen Typ definieren, der eine bestimmte Methodensignatur angibt, die direkt aufgerufen oder erst an eine andere Methode übergeben und dann aufgerufen werden kann."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   In Zeile 4 erstellen wir einen Delegattyp mit einer bestimmten Signatur – in diesem Fall eine Methode, die einen Zeichenfolgenparameter akzeptiert und dann einen Zeichenfolgenparameter zurückgibt.
@@ -71,7 +71,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb der Main()-Methode zu definieren. Aus diesem Grund wurde in .NET Framework 2.0 das Konzept der **anonymen Delegaten** eingeführt. Damit können Sie „Inlinedelegaten“ erstellen, ohne einen weiteren Typ oder eine zusätzliche Methode angeben zu müssen. Sie fügen einfach die Definition des Delegaten inline dort ein, wo Sie sie benötigen.
@@ -104,14 +103,13 @@ public class Program
     }
   }
 }
-
 ```
 
 Beachten Sie die markierten Zeilen. Wie Sie sehen, besteht der Haupttext des Delegaten einfach nur aus einer Reihe von Ausdrücken, wie bei jedem anderen Delegaten auch. Anstatt aber eine separate Definition zu erstellen, haben wir ihn _ad hoc_ in den Aufruf der `FindAll()`-Methode des `List<T>`-Typs eingeführt.
 
 Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen **Lambdaausdrücke** ins Spiel.
 
-Lambdaausdrücke (kurz „Lambdas“) wurden zum ersten Mal in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ (Language Integrated Query). Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als linke Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
+Lambdaausdrücke (sogenannte Lambdas) wurden zum ersten Mal in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ dar (Language Integrated Query). Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als linke Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
 
 Da ein Lambdaausdruck einfach nur eine weitere Möglichkeit ist, einen Delegaten anzugeben, können wir das obige Beispiel neu schreiben und einen Lambdaausdruck anstelle eines anonymen Delegaten verwenden.
 
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 In den markierten Zeilen sehen Sie, wie ein Lambdaausdruck aussieht. Das ist einfach eine **sehr** praktische Syntax für die Verwendung von Delegaten. Hinter den Kulissen passiert das Gleiche wie bei anonymen Delegaten.
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>Weitere Informationen und Ressourcen

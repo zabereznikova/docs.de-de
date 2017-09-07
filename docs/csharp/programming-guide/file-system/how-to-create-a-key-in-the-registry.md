@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Erstellen eines Schlüssels in der Registrierung (Visual C#) | Microsoft-Dokumentation"
+title: "Gewusst wie: Erstellen eines Schlüssels in der Registrierung (Visual C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3a377a85acdc31b426171ab6583bff92b24889b3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Gewusst wie: Erstellen eines Schlüssels in der Registrierung (Visual C#)
@@ -53,7 +54,7 @@ key.Close();
   
 -   Ersetzen Sie den `Names`-Parameter durch den Namen eines Schlüssels, der sich in der Registrierung direkt unter dem HKEY_CURRENT_USER-Knoten befindet.  
   
--   Ersetzen Sie den `Nam`e-Parameter durch den Namen eines Werts, der sich direkt unterhalb des Names-Knotens befindet.  
+-   Ersetzen Sie den `Name`-Parameter durch den Namen eines Werts, der sich direkt unterhalb des Names-Knotens befindet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Untersuchen Sie die Registrierungsstruktur, um eine adäquate Position für den Schlüssel zu ermitteln. Sie können beispielsweise den Schlüssel Software des aktuellen Benutzers öffnen und einen Schlüssel mit dem Namen Ihres Unternehmens erstellen. Anschließend fügen Sie die Registrierungswerte dem Schlüssel für das Unternehmen hinzu.  
@@ -81,4 +82,5 @@ key.Close();
  <xref:System.IO?displayProperty=fullName>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)   
- [Read, write and delete from the registry with C#](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+ [Read, write and delete from the registry with C# (Ausführen von Aktionen in der Registrierung mit C#: Lesen, Schreiben und Löschen)](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 67b3672ff7fa6c4d188c18f246f5e564ec3b0b29
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f60dc589ab6db8e7229ca1f276ac624e78d77327
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)
-In dieses Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ erweiterte Gruppierungs- und Sortiervorgänge mit Datei- oder Ordnerlisten ausführen können. Es auch wird gezeigt, wie die Ausgabe im Konsolenfenster mit den Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> seitenweise angezeigt werden kann.  
+In dieses Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ erweiterte Gruppierungs- und Sortiervorgänge mit Datei- oder Ordnerlisten ausführen können. Es zeigt auch, wie der Bildlauf für die Ausgabe im Konsolenfenster mithilfe der Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> durchgeführt wird.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Abfrage zeigt, wie Sie den Inhalt einer angegebenen Verzeichnisstruktur nach der Dateierweiterung gruppieren.  
@@ -126,3 +127,4 @@ class GroupByExtension
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
  [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

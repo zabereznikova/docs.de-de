@@ -1,5 +1,5 @@
 ---
-title: "Hello World – Ihr erstes Programm (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Hello World – Ihr erstes Programm (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,17 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.translationtype: HT
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
-Mit der folgenden Prozedur wird eine C#-Version des herkömmlichen Programms „Hello World!“ erstellt. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
+Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!“ -Programms. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
   
- Weitere Beispiele zu einführenden Konzepten finden Sie unter [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
+ Weitere Beispiele zu einführenden Konzepten finden Sie unter [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -115,7 +115,7 @@ Mit der folgenden Prozedur wird eine C#-Version des herkömmlichen Programms „
  Weitere Informationen zu Eingabe-/Ausgabemethoden finden Sie unter <xref:System.IO>.  
   
 ## <a name="command-line-compilation-and-execution"></a>Befehlszeilenkompilierung und -ausführung  
- Sie können das Programm „Hello, World!“ über die Befehlszeile statt mit der integrierten Entwicklungsumgebung (IDE) von Visual Studio kompilieren.  
+ Sie können das „Hallo Welt“ -Programm über die Befehlszeile statt mit der integrierten Entwicklungsumgebung (IDE) von Visual Studio kompilieren.  
   
 #### <a name="to-compile-and-run-from-a-command-prompt"></a>So funktionieren Kompilierungsvorgänge und Ausführungen von einer Eingabeaufforderung aus  
   
@@ -123,11 +123,11 @@ Mit der folgenden Prozedur wird eine C#-Version des herkömmlichen Programms „
   
 2.  Führen Sie einen der folgenden Schritte aus, um ein Eingabeaufforderungsfenster zu öffnen:  
   
-    -   Suchen Sie in Windows 8 auf dem **Startbildschirm** nach `Developer Command Prompt`, und wählen Sie dann **Developer-Eingabeaufforderung für VS2012** aus.  
+    -   Suchen Sie in Windows 10 auf dem **Startbildmenü** nach `Developer Command Prompt`, und wählen Sie dann **Developer-Eingabeaufforderung für VS2017** aus.  
   
          Ein Entwickler-Eingabeaufforderungsfenster wird angezeigt.  
   
-    -   Öffnen Sie in Windows 7 das **Startmenü**, erweitern Sie den Ordner der aktuellen Version von Visual Studio, öffnen Sie das Kontextmenü für **Visual Studio-Tools**, und wählen Sie dann **Developer-Eingabeaufforderung für VS2012** aus.  
+    -   Öffnen Sie in Windows 7 das **Startmenü**, erweitern Sie den Ordner der aktuellen Version von Visual Studio, öffnen Sie das Kontextmenü für **Visual Studio-Tools**, und wählen Sie dann **Developer-Eingabeaufforderung für VS2017** aus.  
   
          Ein Entwickler-Eingabeaufforderungsfenster wird angezeigt.  
   
@@ -156,4 +156,5 @@ Mit der folgenden Prozedur wird eine C#-Version des herkömmlichen Programms „
  [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Erste Schritte mit Visual C# und Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

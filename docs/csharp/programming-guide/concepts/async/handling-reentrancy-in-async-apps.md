@@ -1,5 +1,5 @@
 ---
-title: Ablaufinvarianz in asynchronen Anwendungen (C#) | Microsoft-Dokumentation
+title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
@@ -101,7 +101,7 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Lösung auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen oder den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden.Weitere Informationen und Anleitungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Projektmappe auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen, oder, indem Sie den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anweisungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz  
  Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:  
@@ -157,7 +157,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](http://go.microsoft.com/fwlink/?LinkId=266571) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
   
-1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die sich im Geltungsbereich aller Methoden befindet.  
+1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -236,7 +236,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
 -   Fügen Sie einen Parameter hinzu, um das Abbruchtoken von `StartButton_Click` zu akzeptieren.  
   
--   Verwenden Sie die <xref:System.Net.Http.HttpClient.GetAsync%2A>-Methode zum Herunterladen der Websites, da `GetAsync` ein <xref:System.Threading.CancellationToken>-Argument akzeptiert.  
+-   Verwenden Sie die <xref:System.Net.Http.HttpClient.GetAsync%2A>-Methode zum Herunterladen der Websites, da `GetAsync` ein <xref:System.Threading.CancellationToken> Argument akzeptiert.  
   
 -   Bevor Sie `DisplayResults` aufrufen, um die Ergebnisse für jede heruntergeladene Website anzuzeigen, aktivieren Sie `ct`, um sicherzustellen, dass der aktuelle Vorgang nicht abgebrochen wurde.  
   
@@ -393,7 +393,7 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- Die Gruppen B und C starten, bevor Gruppe A beendet ist, doch die Ausgabe für jede Gruppe wird getrennt angezeigt. Die gesamte Ausgabe für Gruppe A wird zuerst angezeigt, gefolgt von der gesamten Ausgabe für Gruppe B und dann die gesamte Ausgabe für Gruppe C.Die App zeigt die Gruppen immer in Reihenfolge an, und die Informationen zu den einzelnen Websites werden immer in der Reihenfolge angezeigt, in der die URLs in der URL-Liste aufgeführt werden.  
+ Die Gruppen B und C starten, bevor Gruppe A beendet ist, doch die Ausgabe für jede Gruppe wird getrennt angezeigt. Die gesamte Ausgabe für Gruppe A wird zuerst angezeigt, gefolgt von der gesamten Ausgabe für Gruppe B und dann die gesamte Ausgabe für Gruppe C. Die App zeigt die Gruppen immer in Reihenfolge an, und die Informationen zu den einzelnen Websites werden immer in der Reihenfolge angezeigt, in der die URLs in der URL-Liste aufgeführt werden.  
   
  Sie können die Reihenfolge, in der die Downloads tatsächlich vorkommen, allerdings nicht vorhersagen. Nachdem mehrere Gruppen gestartet wurden, sind alle von ihnen generierten Downloadtasks aktiv. Sie können nicht davon ausgehen, dass A-1 vor B-1 heruntergeladen wird, und Sie können auch nicht davon ausgehen, dass A-1 vor A-2 heruntergeladen wird.  
   
@@ -438,7 +438,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 ```  
   
 #### <a name="the-accessthewebasync-method"></a>Die AccessTheWebAsync-Methode  
- In diesem Beispiel wird `AccessTheWebAsync` in zwei Methoden aufgeteilt. Mit der erste Methode, `AccessTheWebAsync`, werden alle Downloadtasks für eine Gruppe gestartet und `pendingWork` wird zum Steuern des Anzeigenprozesses festgelegt. Die Methode verwendet zum gleichzeitigen Starten aller Downloadaufgaben eine LINQ-Abfrage (Language-Integrated Query) sowie <xref:System.Linq.Enumerable.ToArray%2A>.  
+ In diesem Beispiel wird `AccessTheWebAsync` in zwei Methoden aufgeteilt. Mit der erste Methode, `AccessTheWebAsync`, werden alle Downloadtasks für eine Gruppe gestartet und `pendingWork` wird zum Steuern des Anzeigenprozesses festgelegt. Die Methode verwendet zum gleichzeitigen Starten aller Downloadtasks eine LINQ-Abfrage (Language-Integrated Query) sowie <xref:System.Linq.Enumerable.ToArray%2A>.  
   
  `AccessTheWebAsync` ruft dann `FinishOneGroupAsync` auf, um den Abschluss jedes einzelnen Downloads zu erwarten und die Länge anzuzeigen.  
   

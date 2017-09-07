@@ -1,5 +1,5 @@
 ---
-title: /target (C#-Compileroptionen) | Microsoft-Dokumentation
+title: -target (C#-Compileroptionen)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 615a0e2993dc78919008e8f9245504a486e2fb77
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="target-c-compiler-options"></a>/target (C#-Compileroptionen)
 Die Compileroption **/target** kann in einem von vier Formaten angegeben werden:  
   
  [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- So erstellen Sie eine EXE-Datei für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]-Anwendungen.  
+ So erstellen Sie eine EXE-Datei für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Anwendungen.  
   
  [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
  So erstellen Sie eine EXE-Datei.  
@@ -63,15 +64,15 @@ Die Compileroption **/target** kann in einem von vier Formaten angegeben werden:
   
  Das Assemblymanifest wird in der ersten EXE-Ausgabedatei in der Kompilierung oder in der ersten DLL platziert, falls es keine EXE-Ausgabedatei gibt. In der folgenden Befehlszeile wird das Manifest z.B. in `1.exe` platziert:  
   
-```  
+```console  
 csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
 ```  
   
  Der Compiler erstellt nur ein Assemblymanifest pro Kompilierung. Informationen über alle Dateien in einer Kompilierung werden im Assemblymanifest platziert. Alle Ausgabedateien, außer diejenigen die mit **/target:module** erstellt wurden, können ein Assemblymanifest enthalten. Wenn mehrere Ausgabedateien in der Befehlszeile erstellt werden, kann nur ein Assemblymanifest erstellt werden, und es muss in die erste Ausgabedatei gehen, die in der Befehlszeile angegeben wurde. Unabhängig davon, was die erste Ausgabedatei ist (**/target:exe**, **/target:winexe**, **/target:library** oder **/target:module**), müssen alle anderen Ausgabedateien, die in der selben Kompilierung erzeugt wurden, Module sein (**/target:module**).  
   
- Wenn Sie eine Assembly erstellen, können Sie angeben, dass der ganze oder ein Teil des Codes mit dem Attribut <xref:System.CLSCompliantAttribute> CLS-kompatibel ist.  
+ Wenn Sie eine Assembly erstellen, können Sie angeben, dass der ganze oder ein Teil des Codes mit dem <xref:System.CLSCompliantAttribute>-Attribut CLS-kompatibel ist.  
   
-```  
+```csharp  
 // target_clscompliant.cs  
 [assembly:System.CLSCompliant(true)]   // specify assembly compliance  
   
@@ -82,9 +83,10 @@ public class TestClass
 }  
 ```  
   
- Weitere Informationen zum programmatischen Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB: Vorgehensweise: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [Verwalten von Projekt- und Lösungseigenschaften](/visualstudio/ide/managing-project-and-solution-properties)   
  [/subsystemversion (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+

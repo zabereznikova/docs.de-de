@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: afa7e63f4224a91c072c99d04a4851d2548166e5
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78c6d612e11f50bedf8f1c2e9826775494faa465
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)
@@ -62,7 +62,7 @@ End of result set
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.  
   
- Die Lösung besteht darin, ein <xref:System.Xml.Linq.XNamespace>-Objekt zu deklarieren und zu initialisieren und es beim Angeben von <xref:System.Xml.Linq.XName>-Objekten zu verwenden. In diesem Fall ist das Argument für die Methode <xref:System.Xml.Linq.XElement.Elements%2A> ein <xref:System.Xml.Linq.XName>-Objekt.  
+ Die Lösung besteht darin, ein <xref:System.Xml.Linq.XNamespace>-Objekt zu deklarieren und zu initialisieren und beim Angeben von <xref:System.Xml.Linq.XName>-Objekten dieses Objekt zu verwenden. In diesem Fall ist das Argument der <xref:System.Xml.Linq.XElement.Elements%2A>-Methode ein <xref:System.Xml.Linq.XName>-Objekt.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -95,4 +95,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Standardabfragen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+ [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

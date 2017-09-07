@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b9ad2603a9c57855f9a8ebd7ff3f5261aa44157
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamisches Festlegen von Prädikatfiltern zur Laufzeit
 
-In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie für die Quellelemente in die `where`-Klausel übernehmen müssen. Eine Möglichkeit, mehrere Prädikatfilter dynamisch festzulegen ist die Verwendung der Methode <xref:System.Linq.Enumerable.Contains%2A>, wie im folgenden Beispiel gezeigt. Das Beispiel wird auf zwei Arten erstellt. Zuerst wird das Projekt durch Filtern nach Werten, die im Programm bereitgestellt werden, ausgeführt. Und dann wird das Projekt mithilfe der Eingabe, die zur Laufzeit bereitgestellt wird, erneut ausgeführt.  
+In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie für die Quellelemente in die `where`-Klausel übernehmen müssen. Eine Möglichkeit, mehrere Prädikatfilter dynamisch festzulegen, ist die Verwendung der Methode <xref:System.Linq.Enumerable.Contains%2A>, wie im folgenden Beispiel gezeigt wird. Das Beispiel wird auf zwei Arten erstellt. Zuerst wird das Projekt durch Filtern nach Werten, die im Programm bereitgestellt werden, ausgeführt. Und dann wird das Projekt mithilfe der Eingabe, die zur Laufzeit bereitgestellt wird, erneut ausgeführt.  
   
 ## <a name="to-filter-by-using-the-contains-method"></a>Filtern mithilfe der Contains-Methode  
   
@@ -79,3 +80,4 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
 ## <a name="see-also"></a>Siehe auch  
  [LINQ-Abfrageausdrücke](index.md)   
  [where-Klausel](../language-reference/keywords/where-clause.md)
+

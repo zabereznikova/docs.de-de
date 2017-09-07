@@ -1,45 +1,65 @@
 ---
-title: "/noconfig (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/noconfig"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/noconfig compiler option [C#]"
-  - "csc.rsp"
-  - "-noconfig compiler option [C#]"
-  - "noconfig compiler option [C#]"
+title: -noconfig (C#-Compileroptionen)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /noconfig
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /noconfig compiler option [C#]
+- csc.rsp
+- -noconfig compiler option [C#]
+- noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 594e972dc834ab74412e30a48428f850ae02b5ac
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# /noconfig (C# Compiler Options)
-Durch die Option **\/noconfig** wird der Compiler angewiesen, die Kompilierung nicht unter Verwendung der Datei csc.rsp auszuführen, die sich im selben Verzeichnis befindet wie die Datei csc.exe und von dort aus geladen wird.  
+# <a name="noconfig-c-compiler-options"></a>/noconfig (C#-Compileroptionen)
+Die Option **/noconfig** weist den Compiler an, nicht mit der Datei „csc.rsp“ zu kompilieren, die sich im gleichen Verzeichnis wie die Datei „csc.exe“ befindet und daraus geladen wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /noconfig  
 ```  
   
-## Hinweise  
- In der Datei **csc.rsp** wird auf alle Assemblys verwiesen, die mit .NET Framework geliefert wurden.  Welche Verweise von der Visual Studio .NET\-Entwicklungsumgebung berücksichtigt werden, hängt vom Projekttyp ab.  
+## <a name="remarks"></a>Hinweise  
+ Die Datei „csc.rsp“ verweist auf alle Assemblys, die im Lieferumfang von .NET Framework enthalten sind. Die tatsächlichen Verweise, die die .NET-Entwicklungsumgebung von Visual Studio enthält, hängen vom Projekttyp ab.  
   
- Sie können die Datei **csc.rsp** bearbeiten und \(mit Ausnahme der Option **\/noconfig**\) beliebige zusätzliche Compileroptionen angeben, die in allen Befehlszeilenkompilierungen von **csc.exe** ausgeführt werden sollen.  
+ Sie können die Datei „csc.rsp“ ändern und zusätzliche Compileroptionen angeben, die in jeder Kompilierung über die Befehlszeile mit „csc.exe“ enthalten sein sollen (mit Ausnahme der Option **/noconfig**).  
   
- Der Compiler verarbeitet die an den **csc**\-Befehl übergebenen Optionen zuletzt.  Daher wird jede in der Datei **csc.rsp** festgelegte Optionseinstellung durch die entsprechende, in der Befehlszeile angegebene Option überschrieben.  
+ Der Compiler verarbeitet die an den Befehl **csc** übergebenen Optionen zuletzt. Aus diesem Grund überschreibt jede Option in der Befehlszeile die Einstellung für die gleiche Option in der Datei „csc.rsp“.  
   
- Wenn der Compiler nicht nach den Einstellungen in der Datei **csc.rsp** suchen und diese verwenden soll, geben Sie **\/noconfig** an.  
+ Wenn der Compiler nach den Einstellungen in der Datei „csc.rsp“ suchen und diese verwenden soll, geben Sie **/noconfig** an.  
   
- Diese Compileroption steht in Visual Studio nicht zur Verfügung. Sie kann nicht programmgesteuert geändert werden.  
+ Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
   
-## Siehe auch  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

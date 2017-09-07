@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-operators"></a>C#-Operatoren
@@ -80,7 +80,7 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) – Deaktiviert die Überlaufprüfung für Ganzzahloperationen.  Dies ist das Standardverhalten für den Compiler.  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) – Gibt den standardmäßigen initialisierten Wert des Typs T zurück, `null` für Referenztypen, 0 für numerische Werte sowie mit 0/`null` aufgefüllte Member für Strukturtypen.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): Gibt den Standardwert des Typs T zurück, `null` für Verweistypen, 0 (null) für numerische Werte sowie mit 0/`null` aufgefüllte Member für Strukturtypen.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – Deklariert eine Delegatinstanz und gibt sie zurück.  
   
@@ -235,7 +235,6 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
 ## <a name="see-also"></a>Siehe auch  
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
- [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C#](../../../csharp/index.md): [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
 

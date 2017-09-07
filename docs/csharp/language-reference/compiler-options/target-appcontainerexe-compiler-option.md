@@ -1,5 +1,5 @@
 ---
-title: /target:appcontainerexe (C#-Compileroptionen) | Microsoft-Dokumentation
+title: -target:appcontainerexe (C#-Compileroptionen)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (C#-Compileroptionen)
-Wenn Sie die Compileroption **/target:appcontainerexe** verwenden, erstellt der Compiler eine ausführbare Windows-Datei (.exe), die in einem App-Container ausgeführt werden muss. Diese Option entspricht [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ist aber für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]-Apps vorgesehen.  
+Wenn Sie die Compileroption **/target:appcontainerexe** verwenden, erstellt der Compiler eine ausführbare Windows-Datei (.exe), die in einem App-Container ausgeführt werden muss. Diese Option entspricht [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ist aber für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Apps vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
@@ -54,14 +55,14 @@ Wenn Sie die Compileroption **/target:appcontainerexe** verwenden, erstellt der 
   
 2.  Wählen Sie auf der Registerkarte **Anwendung** in der Liste **Ausgabetyp** die Option **Windows Store-App** aus.  
   
-     Diese Option ist nur für [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]-App-Vorlagen verfügbar.  
+     Diese Option ist nur für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-App-Vorlagen verfügbar.  
   
- Informationen zum programmatischen Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Befehl kompiliert `filename.cs` in eine ausführbare Windows-Datei, die nur in einem App-Container ausgeführt werden kann.  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
@@ -69,3 +70,4 @@ csc /target:appcontainerexe filename.cs
  [/target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [/target:winexe (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+

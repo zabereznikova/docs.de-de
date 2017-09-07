@@ -1,6 +1,6 @@
 ---
-title: await (C#-Referenz) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: await (C#-Referenz)
+ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,107 +30,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 3656141c32a04e3a32a2992185f4c418c6915482
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 28be25d2f467ea5df4de50516bfa03347c77081e
 ms.contentlocale: de-de
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="await-c-reference"></a>await (C#-Referenz)
-Der Operator `await` wird auf eine Aufgabe in einer asynchronen Methode angewendet, um die Ausführung der Methode anzuhalten, bis die Aufgabe abgeschlossen ist. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
+Der Operator `await` wird auf eine Aufgabe in einer asynchronen Methode angewendet, um einen Unterbrechungspunkt in die Ausführung der Methode einzufügen, bis die Aufgabe abgeschlossen ist. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
   
- Die asynchrone Methode, in der `await` verwendet wird, muss mit dem Schlüsselwort [async](../../../csharp/language-reference/keywords/async.md) modifiziert werden. Eine solche mit dem `async`-Modifizierer definierte Methode, die in der Regel mindestens einen `await`-Ausdruck enthält, wird als *async-Methode* bezeichnet.  
+`await` kann nur in einer asynchronen Methode verwendet werden, die vom Schlüsselwort [async](../../../csharp/language-reference/keywords/async.md) verändert wird. Eine solche mit dem `async`-Modifizierer definierte Methode, die in der Regel mindestens einen `await`-Ausdruck enthält, wird als *asynchrone Methode* bezeichnet.  
   
 > [!NOTE]
->  Die Schlüsselwörter `async` und `await` wurden in Visual Studio 2012 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit „async“ und „await“)](../../../csharp/programming-guide/concepts/async/index.md).  
+>  Die Schlüsselwörter `async` und `await` wurden in C# 5 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit „async“ und „await“)](../../../csharp/programming-guide/concepts/async/index.md).  
   
- In der Regel ist die Aufgabe, auf die Sie den Operator `await` anwenden, der Rückgabewert eines Aufrufs einer Methode, die das [aufgabenbasierte asynchrone Muster](http://go.microsoft.com/fwlink/?LinkId=204847) implementiert. Beispiele dafür sind u.a. Werte der Typen <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601>.  
+In der Regel wird die Aufgabe, auf die Sie den Operator `await` anwenden, von einem Aufruf einer Methode zurückgegeben, die das [aufgabenbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) implementiert. Dazu zählen Methoden, die die Objekte <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> und `System.Threading.Tasks.ValueType<TResult>` zurückgeben.  
+
   
- In folgendem Code gibt die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> `Task\<byte[]>` und `getContentsTask` zurück. Diese Aufgabe enthält das Versprechen, das tatsächliche Bytearray zu erzeugen, wenn die Aufgabe abgeschlossen ist. Der Operator `await` wird auf `getContentsTask` angewendet, um die Ausführung in `SumPageSizesAsync` anzuhalten, bis `getContentsTask` abgeschlossen wurde. In der Zwischenzeit wird die Steuerung wieder an den Aufrufer von `SumPageSizesAsync` übergeben. Wenn `getContentsTask` beendet ist, wird der `await`-Ausdruck in ein Bytearray ausgewertet.  
-  
-```csharp  
-private async Task SumPageSizesAsync()  
-{  
-    // To use the HttpClient type in desktop apps, you must include a using directive and add a   
-    // reference for the System.Net.Http namespace.  
-    HttpClient client = new HttpClient();  
-    // . . .  
-    Task<byte[]> getContentsTask = client.GetByteArrayAsync(url);  
-    byte[] urlContents = await getContentsTask;  
-  
-    // Equivalently, now that you see how it works, you can write the same thing in a single line.  
-    //byte[] urlContents = await client.GetByteArrayAsync(url);  
-    // . . .  
-}  
-```  
-  
+ Im folgenden Beispiel gibt die <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=fullName>-Methode ein `Task<byte[]>`-Objekt zurück. Diese Aufgabe enthält das Versprechen, das tatsächliche Bytearray zu erzeugen, wenn die Aufgabe abgeschlossen ist. Der `await`-Operator hält die Ausführung an, bis die Arbeit der Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> abgeschlossen ist. In der Zwischenzeit wird die Steuerung wieder an den Aufrufer von `GetPageSizeAsync` übergeben. Wenn der Task die Ausführung beendet, wird der `await`-Ausdruck zu einem Bytearray ausgewertet.  
+
+[!code-cs[await-Beispiel](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
+
 > [!IMPORTANT]
 >  Das vollständige Beispiel finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Sie können das Beispiel aus den [Codebeispielen für Entwickler](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) der Microsoft-Website herunterladen. Das Beispiel befindet sich im AsyncWalkthrough_HttpClient-Projekt.  
   
- Wird `await` auf das Ergebnis eines Methodenaufrufs angewendet, der `Task<TResult>` zurückgibt, ist der Typ des `await`-Ausdrucks "TResult", wie im vorherigen Beispiel gezeigt. Wird `await` auf das Ergebnis eines Methodenaufrufs angewendet, der `Task` zurückgibt, ist der Typ des `await`-Ausdrucks "void". Der Unterschied wird im folgenden Beispiel veranschaulicht.  
+Wenn `await` auf das Ergebnis eines Methodenaufrufs angewendet wird, der `Task<TResult>` zurückgibt, ist der Typ des `await`-Ausdrucks `TResult`, wie im vorherigen Beispiel gezeigt. Wenn `await` auf das Ergebnis eines Methodenaufrufs angewendet wird, der `Task` zurückgibt, ist der Typ des `await`-Ausdrucks `void`. Der Unterschied wird im folgenden Beispiel veranschaulicht.  
   
 ```csharp  
-// Keyword await used with a method that returns a Task<TResult>.  
+// await keyword used with a method that returns a Task<TResult>.  
 TResult result = await AsyncMethodThatReturnsTaskTResult();  
   
-// Keyword await used with a method that returns a Task.  
+// await keyword used with a method that returns a Task.  
 await AsyncMethodThatReturnsTask();  
+
+// await keyword used with a method that returns a ValueTask<TResult>.
+TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 ```  
   
- Ein `await`-Ausdruck blockiert nicht den Thread, auf dem er ausgeführt wird. Stattdessen bewirkt er, dass der Compiler den Rest der asynchronen Methode als Fortsetzung der erwarteten Aufgabe registriert. Die Steuerung wird dann wieder an den Aufrufer der Async-Methode übergeben. Wenn die Aufgabe abgeschlossen ist, löst sie ihre Fortsetzung aus, und die Ausführung der asynchronen Methode wird da fortgesetzt, wo sie angehalten wurde.  
+Ein `await`-Ausdruck blockiert nicht den Thread, auf dem er ausgeführt wird. Stattdessen bewirkt er, dass der Compiler den Rest der asynchronen Methode als Fortsetzung der erwarteten Aufgabe registriert. Die Steuerung wird dann wieder an den Aufrufer der Async-Methode übergeben. Wenn die Aufgabe abgeschlossen ist, löst sie ihre Fortsetzung aus, und die Ausführung der asynchronen Methode wird da fortgesetzt, wo sie angehalten wurde.  
   
- Ein `await`-Ausdruck kann nur in einer unmittelbar einschließenden Methode, einem Lambda-Ausdruck oder einer anonymen Methode auftreten, die durch einen `async`-Modifizierer gekennzeichnet ist. Der Begriff *await* dient nur in diesem Kontext als Schlüsselwort. In anderen Kontexten wird er als Bezeichner interpretiert. Innerhalb der Methode, des Lambdaausdrucks oder der anonymen Methode kann ein `await`-Ausdruck nicht im Textteil einer synchronen Funktion, einem Abfrageausdruck, im Block einer [lock-Anweisung](../../../csharp/language-reference/keywords/lock-statement.md) oder in einem [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Kontext auftreten.  
+Ein `await`-Ausdruck kann nur in seiner einschließenden Methode, einem Lambdaausdruck oder einer anonymen Methode auftreten, die durch einen `async`-Modifizierer gekennzeichnet sein muss. Der Begriff *await* dient nur in diesem Kontext als Schlüsselwort. In anderen Kontexten wird er als Bezeichner interpretiert. Innerhalb der Methode, des Lambdaausdrucks oder der anonymen Methode kann ein `await`-Ausdruck nicht im Textteil einer synchronen Funktion, einem Abfrageausdruck, im Block einer [lock-Anweisung](../../../csharp/language-reference/keywords/lock-statement.md) oder in einem [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Kontext auftreten.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Die meisten asynchronen Methoden geben einen <xref:System.Threading.Tasks.Task> oder einen <xref:System.Threading.Tasks.Task%601> zurück. Die Eigenschaften der zurückgegebenen Aufgabe enthalten Informationen über den Status und Verlauf, z. B. ob die Aufgabe abgeschlossen ist, ob die asynchrone Methode eine Ausnahme verursacht hat oder abgebrochen wurde, und was das Endergebnis ist. Der Operator `await` greift auf diese Eigenschaften zu.  
+Die meisten asynchronen Methoden geben einen <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurück. Die Eigenschaften der zurückgegebenen Aufgabe enthalten Informationen über den Status und Verlauf, z. B. ob die Aufgabe abgeschlossen ist, ob die asynchrone Methode eine Ausnahme verursacht hat oder abgebrochen wurde, und was das Endergebnis ist. Der Operator `await` greift auf diese Eigenschaften zu, indem er Methoden auf dem von der `GetAwaiter`-Methode zurückgegebenen Objekt aufruft.  
   
- Wenn Sie auf eine asynchrone Methode warten, die eine Aufgabe zurückgibt und eine Ausnahme verursacht, löst der Operator `await` die Ausnahme erneut aus.  
+Wenn Sie auf eine asynchrone Methode warten, die eine Aufgabe zurückgibt und eine Ausnahme verursacht, löst der Operator `await` die Ausnahme erneut aus.  
   
- Wenn Sie auf eine asynchrone Methode warten, die eine Aufgabe zurückgibt und abgebrochen wird, löst der Operator `await` erneut eine <xref:System.OperationCanceledException> aus.  
+Wenn Sie auf eine asynchrone Methode warten, die eine Aufgabe zurückgibt und abgebrochen wird, löst der Operator `await` erneut eine <xref:System.OperationCanceledException> aus.  
   
- Eine einzelne Aufgabe, die einen Fehlerzustand aufweist, kann verschiedene Ausnahmen auslösen. Die Aufgabe kann z. B. das Ergebnis eines Aufrufs von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> sein. Wenn Sie auf eine solche Aufgabe warten, löst die await-Operation nur eine der Ausnahmen erneut aus. Sie können jedoch nicht vorhersagen, welche der Ausnahmen erneut ausgelöst wird.  
+Eine einzelne Aufgabe, die einen Fehlerzustand aufweist, kann verschiedene Ausnahmen auslösen. Beispielsweise kann die Aufgabe das Ergebnis eines Aufrufs an <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> sein. Wenn Sie auf eine solche Aufgabe warten, löst die await-Operation nur eine der Ausnahmen erneut aus. Sie können jedoch nicht vorhersagen, welche der Ausnahmen erneut ausgelöst wird.  
   
- Beispiele für die Fehlerbehandlung in asynchronen Methoden finden Sie unter [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
+Beispiele für die Fehlerbehandlung in asynchronen Methoden finden Sie unter [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Windows Forms-Beispielen wird die Verwendung von `await` in einer asynchronen Methode, `WaitAsynchronouslyAsync`, veranschaulicht. Vergleichen Sie das Verhalten der Methode mit dem Verhalten von `WaitSynchronously`. Ohne den `await`-Operator in der Aufgabe wird `WaitSynchronously` trotz der Verwendung des `async`-Modifizierers in ihrer Definition und einem Aufruf an <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName> in ihrem Text synchron ausgeführt.  
-  
-```csharp  
-private async void button1_Click(object sender, EventArgs e)  
-{  
-    // Call the method that runs asynchronously.  
-    string result = await WaitAsynchronouslyAsync();  
-  
-    // Call the method that runs synchronously.  
-    //string result = await WaitSynchronously ();  
-  
-    // Display the result.  
-    textBox1.Text += result;  
-}  
-  
-// The following method runs asynchronously. The UI thread is not  
-// blocked during the delay. You can move or resize the Form1 window   
-// while Task.Delay is running.  
-public async Task<string> WaitAsynchronouslyAsync()  
-{  
-    await Task.Delay(10000);  
-    return "Finished";  
-}  
-  
-// The following method runs synchronously, despite the use of async.  
-// You cannot move or resize the Form1 window while Thread.Sleep  
-// is running because the UI thread is blocked.  
-public async Task<string> WaitSynchronously()  
-{  
-    // Add a using directive for System.Threading.  
-    Thread.Sleep(10000);  
-    return "Finished";  
-}  
-```  
-  
+Im folgenden Beispiel wird die Gesamtzahl der Zeichen auf den Seiten zurückgegeben, deren URLs als Befehlszeilenargumente übergeben werden. Im Beispiel wird die Methode `GetPageLengthsAsync` aufgerufen, die mit dem Schlüsselwort `async` gekennzeichnet ist. Die Methode `GetPageLengthsAsync` verwendet wiederum das Schlüsselwort `await`, um auf Aufrufe der Methode <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=fullName> zu warten.  
+
+[!code-cs[await-Beispiel](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
+
+Da die Verwendung von `async` und `await` an einem Anwendungseinstiegspunkt nicht unterstützt wird, kann das `async`-Attribut nicht auf die `Main`-Methode angewendet werden und es kann auch nicht auf den Methodenaufruf `GetPageLengthsAsync` gewartet werden. Es kann sichergestellt werden, dass die `Main`-Methode auf den Abschluss des asynchronen Vorgangs wartet, indem der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result?displayProperty=fullName> abgerufen wird. Bei Aufgaben, die keinen Wert zurückgeben, wird die Methode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> aufgerufen. 
+
 ## <a name="see-also"></a>Siehe auch  
- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)   
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [async](../../../csharp/language-reference/keywords/async.md)
+[Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)   
+[Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+[async](../../../csharp/language-reference/keywords/async.md)
 

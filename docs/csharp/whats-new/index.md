@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
-ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0a328f62a02aea223340fcc00e839e841041a7d6
 ms.contentlocale: de-de
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -25,9 +25,12 @@ Diese Seite enthält eine Roadmap zu den neuen Funktionen in jeder Hauptversion 
 > [!IMPORTANT]
 > Für einige der Funktionen ist die C#-Sprache von Typen und Methoden in einer *Standardbibliothek* abhängig. Ein Beispiel ist die Ausnahmeverarbeitung. Alle `throw`-Anweisungen oder -Ausdrücke werden überprüft, um sicherzustellen, dass das ausgelöste Objekt von @System.Exception abgeleitet ist. Auf ähnliche Weise wird jedes `catch` überprüft, um sicherzustellen, dass der abgefangen Typ von @System.Exception abgeleitet ist. Jede Version kann neue Anforderungen hinzufügen. Um die neuesten Sprachfunktionen in älteren Umgebungen verwenden zu können, müssen Sie vielleicht bestimmte Bibliotheken installieren. Diese sind auf der jeweiligen Seite für eine spezifische Version dokumentiert. Sie können mehr über die [Beziehungen zwischen Sprache und Bibliothek](relationships-between-language-and-library.md) erfahren, um Hintergrundinformationen zu dieser Abhängigkeit zu erhalten. 
 
-* [C# 7](csharp-7.md):
-    - Auf dieser Seite werden die neuesten Funktionen der Programmiersprache C# vorgestellt. Dies deckt auch C# 7 ab, das aktuell in [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) zur Verfügung steht.
+* [C# 7.1](csharp-7-1.md):
+    - Auf dieser Seite werden die neuesten Funktionen der Programmiersprache C# vorgestellt. Dies deckt auch C# 7.1 ab, das aktuell in [Visual Studio 2017 Version 15.3](https://www.visualstudio.com/vs/whatsnew/) und im [.NET Core 2.0 SDK](../../core/whats-new/index.md) zur Verfügung steht.
 
+* [C# 7](csharp-7.md):
+    - Auf dieser Seite werden die Funktionen vorgestellt, die in C# 7 hinzugefügt wurden. Diese wurden in [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) und in [.NET Core 1.0](../../core/whats-new/index.md) und höher hinzugefügt.
+     
 * [C# 6](csharp-6.md):
     - Auf dieser Seite werden die Funktionen vorgestellt, die in C# 6 eingefügt wurden. Diese Funktionen stehen für Windows-Entwickler in Visual Studio 2015 zur Verfügung; Entwickler, die C# unter macOS und Linux verwenden, können dazu .NET Core 1.0 nutzen.
 

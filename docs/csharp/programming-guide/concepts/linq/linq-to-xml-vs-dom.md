@@ -1,5 +1,5 @@
 ---
-title: LINQ to XML im Vergleich zu DOM (C#) | Microsoft-Dokumentation
+title: LINQ to XML im Vergleich zu DOM (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4734d82ef2f912e76a2e7a3dbc4ab3a2f45382b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e27bf46390bca80ca573ab557953f70f591c9ae2
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML im Vergleich zu DOM (C#)
-In diesem Abschnitt werden einige der wichtigsten Unterschiede zwischen [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] und der derzeit verbreitetsten XML-Programmier-API, dem W3C-Dokumentobjektmodell (DOM), beschrieben.  
+In diesem Abschnitt werden einige der wichtigsten Unterschiede zwischen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] und der derzeit verbreitetsten XML-Programmier-API, dem W3C-Dokumentobjektmodell (DOM), beschrieben.  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Neue Möglichkeiten zum Konstruieren von XML-Strukturen  
  Im W3C-DOM erstellen Sie eine XML-Struktur von unten nach oben. Das bedeutet, Sie erstellen ein Dokument, Sie erstellen Elemente, und anschließend fügen Sie die Elemente dem Dokument hinzu.  
@@ -66,9 +67,9 @@ contacts.AppendChild(contact);
 doc.AppendChild(contacts);  
 ```  
   
- Dieses Format der Codierung liefert keine ausführlichen visuellen Informationen zum Aufbau der XML-Struktur. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] unterstützt diesen Ansatz der Erstellung einer XML-Struktur, aber auch einen alternativen Ansatz, die so genannte *funktionale Konstruktion*. Die funktionale Konstruktion verwendet zum Erstellen einer XML-Struktur die Konstruktoren <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XAttribute>.  
+ Dieses Format der Codierung liefert keine ausführlichen visuellen Informationen zum Aufbau der XML-Struktur. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] unterstützt diesen Ansatz der Erstellung einer XML-Struktur, aber auch einen alternativen Ansatz, die so genannte *funktionale Konstruktion*. Bei der funktionalen Konstruktion werden zum Erstellen einer XML-Struktur die Konstruktoren <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XAttribute> verwendet.  
   
- Das folgende Beispiel zeigt, wie Sie dieselbe XML-Struktur wie oben mit der funktionalen Konstruktion in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] konstruieren können:  
+ Das folgende Beispiel zeigt, wie Sie dieselbe XML-Struktur wie oben mit der funktionalen Konstruktion in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] konstruieren können:  
   
 ```csharp  
 XElement contacts =  
@@ -94,7 +95,7 @@ XElement contacts =
  Weitere Informationen finden Sie unter [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Direktes Arbeiten mit XML-Elementen  
- Beim Programmieren mit XML liegt Ihr Hauptaugenmerk in der Regel auf XML-Elementen und vielleicht auch auf Attributen. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] können Sie direkt mit XML-Elementen und Attributen arbeiten. So können Sie z. B. Folgendes tun:  
+ Beim Programmieren mit XML liegt Ihr Hauptaugenmerk in der Regel auf XML-Elementen und vielleicht auch auf Attributen. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie direkt mit XML-Elementen und Attributen arbeiten. So können Sie z. B. Folgendes tun:  
   
 -   Sie können XML-Elemente ohne jegliche Verwendung eines Dokumentobjekts erstellen. Dies vereinfacht beim Arbeiten mit Fragmenten von XML-Strukturen die Programmierung.  
   
@@ -111,41 +112,42 @@ name.InnerText = "Patrick Hines";
 doc.AppendChild(name);  
 ```  
   
- Wenn Sie ein Element in mehreren Dokumenten verwenden möchten, müssen Sie die Knoten dokumentübergreifend importieren. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] vermeidet diese Ebene der Komplexität.  
+ Wenn Sie ein Element in mehreren Dokumenten verwenden möchten, müssen Sie die Knoten dokumentübergreifend importieren. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vermeidet diese Ebene der Komplexität.  
   
- Bei der Verwendung von LINQ to XML müssen Sie die Klasse <xref:System.Xml.Linq.XDocument> nur dann verwenden, wenn Sie der Stammebene des Dokuments einen Kommentar oder eine Verarbeitungsanweisung hinzufügen möchten.  
+ Bei der Verwendung von LINQ to XML müssen Sie die <xref:System.Xml.Linq.XDocument>-Klasse nur dann verwenden, wenn Sie der Stammebene des Dokuments einen Kommentar oder eine Verarbeitungsanweisung hinzufügen möchten.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Vereinfachte Handhabung von Namen und Namespaces  
- Die Handhabung von Namen, Namespaces und Namespacepräfixen ist im Allgemeinen ein komplexer Teil der XML-Programmierung. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] vereinfacht Namen und Namespaces, weil der Umgang mit Namespacepräfixen nicht zwingend erforderlich ist. Das heißt aber nicht, dass Sie die Namespacepräfixe nicht mehr selbst steuern können. Wenn Sie sich aber dafür entscheiden, sich nicht mehr explizit um die Steuerung der Namespacepräfixe kümmern zu wollen, weist [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] bei der Serialisierung, wo erforderlich, entsprechende Namespacepräfixe zu oder greift für die Serialisierung auf die Standardnamespaces zurück. Wenn Standardnamespaces verwendet werden, gibt es im resultierenden Dokument keine Namespacepräfixe. Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Die Handhabung von Namen, Namespaces und Namespacepräfixen ist im Allgemeinen ein komplexer Teil der XML-Programmierung. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vereinfacht Namen und Namespaces, weil der Umgang mit Namespacepräfixen nicht zwingend erforderlich ist. Das heißt aber nicht, dass Sie die Namespacepräfixe nicht mehr selbst steuern können. Wenn Sie sich aber dafür entscheiden, sich nicht mehr explizit um die Steuerung der Namespacepräfixe kümmern zu wollen, weist [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bei der Serialisierung, wo erforderlich, entsprechende Namespacepräfixe zu oder greift für die Serialisierung auf die Standardnamespaces zurück. Wenn Standardnamespaces verwendet werden, gibt es im resultierenden Dokument keine Namespacepräfixe. Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Ein anderes Problem mit dem DOM besteht darin, dass es keine Änderung des Namens eines Knotens zulässt. Stattdessen müssen Sie einen neuen Knoten erstellen und alle untergeordneten Knoten kopieren, sodass die ursprüngliche Knotenidentität verloren geht. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] vermeidet dieses Problem, indem es Ihnen die Möglichkeit gibt, für einen Knoten die Eigenschaft <xref:System.Xml.Linq.XName> festzulegen.  
+ Ein anderes Problem mit dem DOM besteht darin, dass es keine Änderung des Namens eines Knotens zulässt. Stattdessen müssen Sie einen neuen Knoten erstellen und alle untergeordneten Knoten kopieren, sodass die ursprüngliche Knotenidentität verloren geht. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vermeidet dieses Problem, indem es Ihnen ermöglicht wird, für einen Knoten die <xref:System.Xml.Linq.XName>-Eigenschaft festzulegen.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Unterstützung statischer Methoden für das Laden von XML  
- In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] können Sie zum Laden von XML anstelle von Instanzmethoden statische Methoden verwenden. Dadurch vereinfacht sich das Laden und das Analysieren. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von XML aus einer Datei](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie zum Laden von XML anstelle von Instanzmethoden statische Methoden verwenden. Dadurch vereinfacht sich das Laden und das Analysieren. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von XML aus einer Datei](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Entfernung der Unterstützung für DTD-Konstrukte  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] vereinfacht die XML-Programmierung zusätzlich, indem die Unterstützung für Entitäten und Entitätsverweise entfernt wird. Die Verwaltung von Entitäten ist komplex und wird selten verwendet. Durch das Entfernen dieser Unterstützung wird die Leistung verbessert und die Programmierung vereinfacht. Beim Auffüllen einer [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Struktur werden alle DTD-Entitäten erweitert.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vereinfacht die XML-Programmierung zusätzlich, indem die Unterstützung für Entitäten und Entitätsverweise entfernt wird. Die Verwaltung von Entitäten ist komplex und wird selten verwendet. Durch das Entfernen dieser Unterstützung wird die Leistung verbessert und die Programmierung vereinfacht. Beim Auffüllen einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Struktur werden alle DTD-Entitäten erweitert.  
   
 ## <a name="support-for-fragments"></a>Unterstützung für Fragmente  
- In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] gibt es keine Entsprechung für die Klasse `XmlDocumentFragment`. In vielen Fällen kann jedoch das Konzept `XmlDocumentFragment` durch eine Abfrage behandelt werden, die als <xref:System.Collections.Generic.IEnumerable%601> des <xref:System.Xml.Linq.XNode> oder <xref:System.Collections.Generic.IEnumerable%601> des <xref:System.Xml.Linq.XElement> typisiert ist.  
+ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gibt es keine Entsprechung für die Klasse `XmlDocumentFragment`. In vielen Fällen lassen sich aber mit dem Ergebnis einer Abfrage, die als `XmlDocumentFragment`-Schnittstelle von <xref:System.Collections.Generic.IEnumerable%601> oder als <xref:System.Xml.Linq.XNode>-Schnittstelle von <xref:System.Collections.Generic.IEnumerable%601> typisiert ist, die gleichen Ergebnisse wie mit der <xref:System.Xml.Linq.XElement>-Klasse erzielen.  
   
 ## <a name="support-for-xpathnavigator"></a>Unterstützung für XPathNavigator  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] bietet durch Erweiterungsmethoden im Namespace <xref:System.Xml.XPath?displayProperty=fullName> Unterstützung für <xref:System.Xml.XPath.XPathNavigator>. Weitere Informationen finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.XPath?displayProperty=fullName>-Namespace Unterstützung für <xref:System.Xml.XPath.XPathNavigator>. Weitere Informationen finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Unterstützung für Leerraum und Einzüge  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] handhabt Leerzeichen einfacher als das DOM.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handhabt Leerzeichen einfacher als das DOM.  
   
- Es kommt häufig vor, dass XML mit Einzügen gelesen und dann im Arbeitsspeicher eine XML-Struktur ohne Leerraumtextknoten erstellt wird (Leerräume bleiben also nicht erhalten). Anschließend wird der XML-Code geändert und dann mit Einzügen gespeichert. Wenn Sie den XML-Code mit Formatierung serialisieren, bleibt nur signifikanter Leerraum in der XML-Struktur erhalten. Dies ist das Standardverhalten bei [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+ Es kommt häufig vor, dass XML mit Einzügen gelesen und dann im Arbeitsspeicher eine XML-Struktur ohne Leerraumtextknoten erstellt wird (Leerräume bleiben also nicht erhalten). Anschließend wird der XML-Code geändert und dann mit Einzügen gespeichert. Wenn Sie den XML-Code mit Formatierung serialisieren, bleibt nur signifikanter Leerraum in der XML-Struktur erhalten. Dies ist das Standardverhalten bei [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Aber auch dieses Szenario ist häufig anzutreffen: XML-Code, der bereits absichtlich mit Einzügen versehen wurde, wird gelesen und geändert. Sie möchten nicht, dass diese Einzüge irgendwie geändert werden. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] können Sie dies erreichen, indem Sie den Leerraum beim Laden oder Analysieren des XML-Codes beibehalten und dann beim Serialisieren des XML-Codes die Formatierung deaktivieren.  
+ Aber auch dieses Szenario ist häufig anzutreffen: XML-Code, der bereits absichtlich mit Einzügen versehen wurde, wird gelesen und geändert. Sie möchten nicht, dass diese Einzüge irgendwie geändert werden. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie dies erreichen, indem Sie den Leerraum beim Laden oder Analysieren des XML-Codes beibehalten und dann beim Serialisieren des XML-Codes die Formatierung deaktivieren.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] speichert Leerzeichen als <xref:System.Xml.Linq.XText>-Knoten, anstatt wie das DOM einen spezialisierten <xref:System.Xml.XmlNodeType>-Knoten zu haben.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] speichert Leerraum als <xref:System.Xml.Linq.XText>-Knoten und nicht als speziellen <xref:System.Xml.XmlNodeType.Whitespace>-Knotentyp, wie dies im DOM der Fall ist.  
   
 ## <a name="support-for-annotations"></a>Unterstützung für Anmerkungen  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Elemente unterstützen einen erweiterbaren Satz von Anmerkungen. Dies ist hilfreich, wenn verschiedene Informationen zu einem Element nachverfolgt werden sollen, z.B. Schemainformationen, die Information, ob das Element an eine Benutzeroberfläche gebunden ist, oder andere anwendungsspezifische Informationen. Weitere Informationen finden Sie unter [Anmerkungen zu LINQ to XML](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Elemente unterstützen einen erweiterbaren Satz von Anmerkungen. Dies ist hilfreich, wenn verschiedene Informationen zu einem Element nachverfolgt werden sollen, z.B. Schemainformationen, die Information, ob das Element an eine Benutzeroberfläche gebunden ist, oder andere anwendungsspezifische Informationen. Weitere Informationen finden Sie unter [Anmerkungen zu LINQ to XML](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
   
 ## <a name="support-for-schema-information"></a>Unterstützung für Schemainformationen  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] bietet durch Erweiterungsmethoden im Namespace <xref:System.Xml.Schema?displayProperty=fullName> Unterstützung für XSD-Überprüfung an. Sie können prüfen, ob sich eine XML-Struktur nach einer XSD richtet. Sie können die XML-Struktur mit dem Post-Schema-Validierungs-Infoset (PSVI) auffüllen. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen mithilfe von XSD](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) und <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.Schema?displayProperty=fullName>-Namespace Unterstützung für die XSD-Validierung. Sie können prüfen, ob sich eine XML-Struktur nach einer XSD richtet. Sie können die XML-Struktur mit dem Post-Schema-Validierungs-Infoset (PSVI) auffüllen. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen mithilfe von XSD](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) und <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+

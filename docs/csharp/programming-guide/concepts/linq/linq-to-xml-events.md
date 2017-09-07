@@ -1,5 +1,5 @@
 ---
-title: LINQ to XML-Ereignisse (C#) | Microsoft-Dokumentation
+title: LINQ to XML-Ereignisse (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f19439004a9551f5e13588201ca3aaf201620681
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ccc3928795f188b7cf7b23d88a1f35ff043b889
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML-Ereignisse (C#)
-Mit [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.  
+Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.  
   
- Sie können Ereignisse zu einer Instanz von jedem <xref:System.Xml.Linq.XObject> hinzufügen. Der Ereignishandler empfängt dann Ereignisse für Änderungen an diesem <xref:System.Xml.Linq.XObject> und dessen Nachfolgern. So können Sie z. B. dem Stamm der Struktur einen Ereignishandler hinzufügen und alle Änderungen an der Struktur von diesem Ereignishandler behandeln lassen.  
+ Ereignisse können allen Instanzen eines <xref:System.Xml.Linq.XObject> hinzugefügt werden. Der Ereignishandler empfängt dann Ereignisse für Änderungen an diesem <xref:System.Xml.Linq.XObject> und dessen Nachfolgern. So können Sie z. B. dem Stamm der Struktur einen Ereignishandler hinzufügen und alle Änderungen an der Struktur von diesem Ereignishandler behandeln lassen.  
   
- Beispiele für [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Ereignisse finden Sie unter <xref:System.Xml.Linq.XObject.Changing> und <xref:System.Xml.Linq.XObject.Changed>.  
+ Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignisse finden Sie unter <xref:System.Xml.Linq.XObject.Changing> und <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Typen und Ereignisse  
  Beim Arbeiten mit Ereignissen stehen Ihnen die folgenden Typen zur Verfügung:  
@@ -38,13 +39,13 @@ Mit [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/in
 |Typ|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Gibt den Ereignistyp an, wenn ein Ereignis für ein <xref:System.Xml.Linq.XObject> ausgelöst wird.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Stellt Daten für die Ereignisse <xref:System.Xml.Linq.XObject.Changing> und <xref:System.Xml.Linq.XObject.Changed> bereit.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Stellt Daten für das <xref:System.Xml.Linq.XObject.Changing>-Ereignis und das <xref:System.Xml.Linq.XObject.Changed>-Ereignis bereit.|  
   
  Die folgenden Ereignisse werden ausgelöst, wenn Sie eine XML-Struktur ändern:  
   
 |Ereignis|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Tritt ein, kurz bevor sich <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger ändert.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Tritt ein, unmittelbar bevor sich dieses <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger ändert.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Tritt ein, wenn sich ein <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger geändert hat.|  
   
 ## <a name="example"></a>Beispiel  
@@ -115,3 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Siehe auch  
  [Advanced LINQ to XML Programming (C#) (Erweiterte LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

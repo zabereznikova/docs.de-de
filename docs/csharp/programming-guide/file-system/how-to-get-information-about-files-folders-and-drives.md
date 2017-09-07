@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Abrufen von Informationen über Dateien, Ordner und Laufwerke (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Gewusst wie: Abrufen von Informationen über Dateien, Ordner und Laufwerke (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Gewusst wie: Abrufen von Informationen über Dateien, Ordner und Laufwerke (C#-Programmierhandbuch)
@@ -52,9 +53,9 @@ Sie können im .NET Framework auf die Dateisysteminformationen mithilfe folgende
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- Sie können die Namen von Dateien, Ordnern oder Laufwerken erhalten, indem Sie <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> oder <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName> aufrufen.  
+ Sie können auch die Namen von Dateien, Ordnern oder Laufwerken abrufen, indem Sie Aufrufe auf <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> und <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName> verwenden.  
   
- Die Klassen <xref:System.IO.Directory?displayProperty=fullName> und <xref:System.IO.File?displayProperty=fullName> bieten statische Methoden zum Abrufen von Informationen zu Verzeichnissen und Dateien.  
+ Die Klassen <xref:System.IO.Directory?displayProperty=fullName> und <xref:System.IO.File?displayProperty=fullName> bieten statische Methoden zum Abrufen von Informationen über Verzeichnisse und Dateien.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht verschiedene Arten des Zugriffs auf Datei- und Ordnerinformationen.  
@@ -78,3 +79,4 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO?displayProperty=fullName>   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+

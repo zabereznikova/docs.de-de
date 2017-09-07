@@ -164,3 +164,4 @@ Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](pro
 [Anonyme Methoden](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [Ausdrucksbaumstrukturen](expression-trees.md)
 
+<!--aaa-->

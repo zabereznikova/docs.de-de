@@ -1,5 +1,5 @@
 ---
-title: internal (C#-Referenz) | Microsoft-Dokumentation
+title: internal (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6b50c4c2a6e545e0313beb0450d9ca5ff170ad05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5674a78e2c317357c31d9e2661a25ce86cbf4f6a
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="internal-c-reference"></a>internal (C#-Referenz)
@@ -59,7 +59,7 @@ public class BaseClass
  Es ist unzulässig, auf einen Typen oder einen Member mit internem Zugriff außerhalb der Assembly zu verweisen, in der sie definiert wurden.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly1`_`a.cs`. Die erste Datei enthält eine interne Basisklasse, `BaseClass`. In der zweiten Datei führt der Versuch, `BaseClass` zu instanziieren zu einem Fehler.  
+ Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly1_a.cs`. Die erste Datei enthält eine interne Basisklasse, `BaseClass`. In der zweiten Datei führt der Versuch, `BaseClass` zu instanziieren zu einem Fehler.  
   
 ```  
 // Assembly1.cs  
@@ -120,3 +120,4 @@ public class TestAccess
  [Public](../../../csharp/language-reference/keywords/public.md)   
  [Private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)
+

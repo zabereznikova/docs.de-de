@@ -1,5 +1,5 @@
 ---
-title: Benannte und optionale Argumente (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Benannte und optionale Argumente (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,14 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9827553c1362d92bdf68a50e840b33474a22dcaa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
   
  Wenn Sie benannte und optionale Argumente verwenden, werden die Argumente in der Reihenfolge ausgewertet, in der sie in der Argumentliste, nicht in der Parameterliste, erscheinen.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Ein Ausdruck der Form `new ValType()`, wobei `ValType` ein Werttyp wie [enum](../../../csharp/language-reference/keywords/enum.md) oder [struct](../../../csharp/programming-guide/classes-and-structs/structs.md) ist  
   
--   Ein Ausdruck in Form von [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md), wobei `ValType` ein Werttyp ist  
+-   Ein Ausdruck in Form von [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), wobei `ValType` ein Werttyp ist  
   
  Optionale Parameter werden am Ende der Parameterliste nach den erforderlichen Parametern definiert. Wenn der Aufrufer ein Argument für einen beliebigen Parameter aus einer Folge von optionalen Parametern bereitstellt, muss er Argumente für alle vorherigen optionalen Parameter bereitstellen. Durch Trennzeichen getrennte Lücken in der Argumentliste werden nicht unterstützt. Im folgenden Code wird z.B. die Instanzmethode `ExampleMethod` mit einem erforderlichen und zwei optionalen Parametern definiert.  
   
@@ -100,11 +101,11 @@ ms.lasthandoff: 03/13/2017
   
  IntelliSense verwendet zum Anzeigen von optionalen Parametern Klammern, wie in folgender Abbildung veranschaulicht wird.  
   
- ![IntelliSense-QuickInfo für ExampleMethod-Methode.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
+ ![IntelliSense-QuickInfo für die Methode „ExampleMethod.“](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
 Optionale Parameter in ExampleMethod  
   
 > [!NOTE]
->  Sie können auch optionale Parameter mit der .NET-<xref:System.Runtime.InteropServices.OptionalAttribute>-Klasse definieren. `OptionalAttribute`-Parameter erfordern keinen Standardwert.  
+>  Sie können auch optionale Parameter mit der .NET-Klasse <xref:System.Runtime.InteropServices.OptionalAttribute> deklarieren. `OptionalAttribute`-Parameter erfordern keinen Standardwert.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel hat der Konstruktor für `ExampleClass` einen Parameter, der optional ist. Instanzmethode `ExampleMethod` hat einen erforderlichen Parameter (`required`) und zwei optionale Parameter (`optionalstr` und `optionalint`). Der Code in `Main` veranschaulicht die unterschiedlichen Methoden, in denen der Konstruktor und die Methode aufgerufen werden können.  
@@ -139,10 +140,11 @@ AutoFormat-Parameter
 -   Wenn zwei Kandidaten gleich gut geeignet sind, wird ein Kandidat bevorzugt, der keine optionalen Parameter besitzt, für die Argumente im Aufruf ausgelassen wurden. Dies ist die Folge einer allgemeinen Präferenz bei der Überladungsauflösung für Kandidaten, die weniger Parameter besitzen.  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
  [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
  [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)
+

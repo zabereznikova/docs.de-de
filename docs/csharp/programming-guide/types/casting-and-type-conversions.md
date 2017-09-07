@@ -1,5 +1,5 @@
 ---
-title: Umwandlung und Typkonvertierungen (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: d421f0115642efa73dbeb893dba912b96d5f4dc6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 20743c07c8e9c6b7ec24cf52a28bb9f451ba9df5
 ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
@@ -55,7 +55,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
   
 -   **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einem Verhältnis „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Konvertierungen mit Hilfsprogrammen**: Für eine Konvertierung von nicht kompatiblen Typen (wie z.B. von Ganzzahlen und <xref:System.DateTime?displayProperty=fullName>-Objekten, oder hexadezimal Zeichenfolgen und Bytearrays) können Sie die <xref:System.BitConverter?displayProperty=fullName>-Klasse, die <xref:System.Convert?displayProperty=fullName>-Klasse und die `Parse`-Methode der integrierten numerischen Typen (wie z.B. <xref:System.Int32.Parse%2A?displayProperty=fullName>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+-   **Konvertierungen mit Hilfsklassen**:Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=fullName>-Objekten oder von Hexadezimalzeichenfolgen und Bytearrays, können Sie die <xref:System.BitConverter?displayProperty=fullName>-Klasse, die <xref:System.Convert?displayProperty=fullName>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=fullName>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen  
  Eine implizite Konvertierung kann für integrierte numerische Typen durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder abgerundet zu werden. Eine Variable den Typs [long](../../../csharp/language-reference/keywords/long.md) (8-Byte-Ganzzahl) kann z.B. jeden Wert speichern, den eine Variable des Typs [int](../../../csharp/language-reference/keywords/int.md) (4-Bytes auf einem 32-Bit-Computer) speichern kann. In folgendem Beispiel konvertiert der Compiler den Wert auf der rechten Seite implizit in einen Typ `long`, bevor er ihn `bigNum` zuweist.  
@@ -97,7 +97,7 @@ Giraffe g2 = (Giraffe) a;
  Ein Umwandlungsvorgang zwischen Verweistypen ändert nicht den Laufzeittypen des zugrunde liegenden Objekts; er ändert lediglich den Typ des Wertes, der als Verweis auf das Objekt verwendet wird. Weitere Informationen finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="type-conversion-exceptions-at-run-time"></a>Typkonvertierungsausnahmen zur Laufzeit  
- In manchen Verweistypkonvertierungen kann der Compiler nicht bestimmen, ob eine Umwandlung zulässig wäre. Es ist möglich, dass ein Umwandlungsvorgang, der ordnungsgemäß kompiliert, zur Laufzeit fehlschlägt. Eine fehlgeschlagene Typumwandlung zur Laufzeit löst eine <xref:System.InvalidCastException> aus, wie in folgendem Beispiel dargestellt.  
+ In manchen Verweistypkonvertierungen kann der Compiler nicht bestimmen, ob eine Umwandlung zulässig wäre. Es ist möglich, dass ein Umwandlungsvorgang, der ordnungsgemäß kompiliert, zur Laufzeit fehlschlägt. Eine fehlgeschlagene Typumwandlung zur Laufzeit löst wie in folgendem Beispiel dargestellt eine <xref:System.InvalidCastException> aus.  
   
  [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
@@ -116,3 +116,4 @@ Giraffe g2 = (Giraffe) a;
  [Verallgemeinerte Typkonvertierung](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)   
  [Konvertieren exportierter Typen](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
  [Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+

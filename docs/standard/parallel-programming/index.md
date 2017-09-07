@@ -1,5 +1,5 @@
 ---
-title: Parallele Programmierung in .NET Framework | Microsoft-Dokumentation
+title: Parallele Programmierung in .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,10 +15,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 6a163776f358691c0f61c90dce98c15bebe4052a
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
+ms.contentlocale: de-de
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="parallel-programming-in-the-net-framework"></a>Parallele Programmierung in .NET Framework
@@ -33,7 +34,7 @@ Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne
 |[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Stellt eine Dokumentation für die <xref:System.Threading.Tasks.Parallel?displayProperty=fullName>-Klasse, die parallele Versionen einer `For`-Schleife und einer `ForEach`-Schleife einschließt, sowie für die <xref:System.Threading.Tasks.Task?displayProperty=fullName>-Klasse bereit. Dies ist die bevorzugte Methode, um asynchrone Vorgänge auszudrücken.|  
 |[Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Eine parallele Implementierung von LINQ to Objects, die die Leistung in vielen Szenarien deutlich verbessert.|  
 |[Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Stellt Links zu Dokumentationen über threadsichere Auflistungsklassen, einfache Synchronisierungstypen und Typen für verzögerte Initialisierung bereit.|  
-|[Diagnosetools für die parallele Ausführung](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Stellt Links zu Dokumentationen über Visual Studio-Debuggerfenster für Aufgaben und parallele Stapel und die [Nebenläufigkeitsschnellansicht](http://msdn.microsoft.com/library/ae5879a0-1e1a-455a-ba72-148e57f59289) bereit, die aus einer Gruppe von Ansichten im [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)]-Profiler besteht, mit dem paralleler Code debuggt und dessen Leistung optimiert werden kann.|  
+|[Diagnosetools für die parallele Ausführung](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Stellt Links zu Dokumentationen über Visual Studio-Debuggerfenster für Aufgaben und parallele Stapel und die [Nebenläufigkeitsschnellansicht](/visualstudio/profiling/concurrency-visualizer) bereit, die aus einer Gruppe von Ansichten im [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)]-Profiler besteht, mit dem paralleler Code debuggt und dessen Leistung optimiert werden kann.|  
 |[Benutzerdefinierte Partitionierer für PLINQ und TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Beschreibt, wie Partitionierer funktionieren und wie die Standardpartitionierer konfiguriert bzw. wie ein neuer Partitionierer erstellt wird.|  
 |[Taskplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Beschreibt, wie Planer funktionieren und wie die Standardplaner konfiguriert werden.|  
 |[Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Bietet einen kurzen Überblick über Lambaausdrücke in C# und Visual Basic und zeigt, wie sie in PLINQ und der Task Parallel Library verwendet werden.|  
@@ -42,3 +43,4 @@ Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne
 ## <a name="see-also"></a>Siehe auch  
  [Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)   
  [Beispiele für die parallele Programmierung mit .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+

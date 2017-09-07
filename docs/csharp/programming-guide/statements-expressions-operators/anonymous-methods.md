@@ -1,70 +1,90 @@
 ---
-title: "Anonyme Methoden (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Anonyme Methoden [C#]"
-  - "Delegaten [C#], Anonyme Methoden"
-  - "Methoden [C#], Anonyme"
+title: Anonyme Methoden (C#-Programmierhandbuch)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- anonymous methods [C#]
+- methods [C#], anonymous
+- delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92842becf26a15ab1a6f5e9621002abf71dc67bc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Anonyme Methoden (C#-Programmierhandbuch)
-In C\#\-Versionen vor 2.0 bestand die einzige Möglichkeit zum Deklarieren eines [Delegaten](../../../csharp/language-reference/keywords/delegate.md) darin, [benannte Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) zu verwenden.  In C\# 2.0 wurden anonyme Methoden eingeführt, und in C\# 3.0 und höher werden diese von Lambda\-Ausdrücken als bevorzugtes Verfahren zum Schreiben von Inlinecode ersetzt.  Die Informationen zu anonymen Methoden in diesem Thema gelten auch für Lambda\-Ausdrücke.  Nur in einem Fall werden durch eine anonyme Methode Funktionen bereitgestellt, die in Lambda\-Ausdrücken nicht zur Verfügung stehen.  Bei anonymen Methoden können Sie auf eine Verwendung der Parameterliste verzichten.  Dies bedeutet, dass eine anonyme Methode mit einer Vielzahl von Signaturen in Delegaten konvertiert werden kann.  Dies ist bei Lambda\-Ausdrücken nicht möglich.  Weitere Informationen speziell zu Lambda\-Ausdrücken finden Sie unter [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+# <a name="anonymous-methods-c-programming-guide"></a>Anonyme Methoden (C#-Programmierhandbuch)
+In Versionen von C# vor 2.0 bestand die einzige Möglichkeit zum Deklarieren eines [Delegaten](../../../csharp/language-reference/keywords/delegate.md) in der Verwendung von [benannten Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). Mit C# 2.0 wurden anonyme Methoden eingeführt, und in C# 3.0 und höher lösen Lambdaausdrücke anonyme Methoden als bevorzugten Weg zum Schreiben von Inlinecode ab. Die Informationen zu anonymen Methoden in diesem Thema gelten jedoch auch für Lambdaausdrücke. In einem Fall bietet eine anonyme Methode eine Funktion, über die Lambdaausdrücke nicht verfügen. Anonyme Methoden ermöglichen das Auslassen der Parameterliste. Das bedeutet, dass eine anonyme Methode in Delegaten mit verschiedenen Signaturen konvertiert werden kann. Dies ist bei Lambdaausdrücken nicht möglich. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- Anonyme Methoden bieten im Wesentlichen eine Möglichkeit, einen Codeblock als Delegatparameter zu übergeben.  Hier zwei Beispiele:  
+ Das Erstellen anonymer Methoden ist im Grunde genommen ein Weg, um einen Codeblock als Delegatparameter zu übergeben. Hier sind zwei Beispiele:  
   
  [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
  [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
- Durch anonyme Methoden wird der Codierungsaufwand des Instanziierens von Delegaten reduziert, weil keine separate Methode erstellt werden muss.  
+ Mit anonymen Methoden verringern Sie den Mehraufwand an Codierung beim Instanziieren von Delegaten, da Sie keine separate Methode erstellen müssen.  
   
- Beispielsweise kann die Angabe eines Codeblocks anstelle eines Delegaten in einer Situation nützlich sein, in der das Erstellen einer Methode als unnötiger Aufwand erscheinen würde.  Ein gutes Beispiel dafür wäre das Starten eines neuen Threads.  Diese Klasse erstellt einen Thread und enthält außerdem den Code, den der Thread ausführt, ohne dass eine zusätzliche Methode für den Delegaten erstellt werden muss.  
+ So kann es nützlich sein, einen Codeblock anstatt eines Delegaten anzugeben, wenn das Erstellen einer Methode mit unnötigem Aufwand verbunden scheint. Ein gutes Beispiel ist das Starten eines neuen Threads. Diese Klasse erstellt einen Thread und enthält zudem den Code, den der Thread ausführt, ohne dass eine zusätzliche Methode für den Delegaten erstellt wird.  
   
  [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
-## Hinweise  
- Der Gültigkeitsbereich der Parameter einer anonymen Methode ist der *anonyme Methodenblock*.  
+## <a name="remarks"></a>Hinweise  
+ Der Bereich der Parameter einer anonymen Methode ist der *anonyme Methodenblock*.  
   
- Das Vorhandensein einer Sprunganweisung \(z. B. [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md) oder [continue](../../../csharp/language-reference/keywords/continue.md)\) innerhalb des anonymen Methodenblocks ist ein Fehler, wenn das Ziel außerhalb des Blocks liegt.  Umgekehrt ist das Vorhandensein einer Sprunganweisung \(z. B. `goto`, `break` oder `continue`\) außerhalb des anonymen Methodenblocks ebenfalls ein Fehler, wenn das Ziel innerhalb des Blocks liegt.  
+ Es ist ein Fehler, wenn sich eine Sprunganweisung wie [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md) oder [continue](../../../csharp/language-reference/keywords/continue.md) innerhalb des anonymen Methodenblocks befindet, wenn das Ziel außerhalb des Blocks liegt. Es ist auch ein Fehler, wenn sich eine Sprunganweisung wie `goto`, `break` oder `continue` außerhalb des anonymen Methodenblocks befindet, wenn das Ziel innerhalb des Blocks liegt.  
   
- Die lokalen Variablen und Parameter, in deren Gültigkeitsbereich eine anonyme Methodendeklaration enthalten ist, werden als *äußere* Variablen der anonymen Methode bezeichnet.  Zum Beispiel ist `n` im folgenden Codesegment eine äußere Variable:  
+ Die lokalen Variablen und Parameter, deren Bereich eine anonyme Methodendeklaration enthält, werden als *äußere* Variablen der anonymen Methode bezeichnet. Beispielsweise ist im folgenden Codesegment `n` eine äußere Variable:  
   
  [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
- Ein Verweis auf die äußere Variable `n` gilt als  *erfasst* Wenn der Delegat erstellt wird.  Im Gegensatz zu lokalen Variablen erstreckt sich die Lebensdauer einer erfassten Variablen, bis die Delegaten, die anonymen Methoden verweisen, für Garbagecollection freigegeben werden.  
+ Ein Verweis auf die äußere Variable `n` gilt als *erfasst*, wenn der Delegat erstellt wird. Anders als bei lokalen Variablen erstreckt sich die Lebensdauer einer erfassten Variablen so lange, bis die Delegaten, die auf die anonymen Methoden verweisen, für die automatische Speicherbereinigung verfügbar sind.  
   
- Eine anonyme Methode kann nicht auf den [ref](../../../csharp/language-reference/keywords/ref.md)\-Parameter oder den [out](../../../csharp/language-reference/keywords/out.md)\-Parameter eines äußeren Gültigkeitsbereichs zugreifen.  
+ Eine anonyme Methode kann nicht auf die Parameter [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md) eines äußeren Bereichs zugreifen.  
   
- Auf unsicheren Code kann innerhalb des *anonymen Methodenblocks* nicht zugegriffen werden.  
+ Auf unsicheren Code kann nicht innerhalb des *anonymen Methodenblocks* zugegriffen werden.  
   
- Anonyme Methoden sind auf der linken Seite des Operators [is](../../../csharp/language-reference/keywords/is.md) nicht zugelassen.  
+ Anonyme Methoden sind auf der linken Seite des [is](../../../csharp/language-reference/keywords/is.md)-Operators nicht zulässig.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei Arten veranschaulicht, einen Delegaten zu instanziieren:  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden zwei Möglichkeiten veranschaulicht, um einen Delegaten zu instanziieren:  
   
--   Das Zuordnen des Delegaten zu einer anonymen Methode.  
+-   Zuordnen des Delegaten zu einer anonymen Methode.  
   
--   Das Zuordnen des Delegaten zu einer benannten Methode \(`DoWork`\).  
+-   Zuordnen des Delegaten zu einer benannten Methode (`DoWork`).  
   
  In beiden Fällen wird eine Meldung angezeigt, wenn der Delegat aufgerufen wird.  
   
  [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Delegaten](../../../csharp/programming-guide/delegates/index.md)   
- [Lambda\-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+ [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Delegaten mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+ [Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+

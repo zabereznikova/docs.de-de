@@ -1,5 +1,5 @@
 ---
-title: try-finally (C#-Referenz) | Microsoft-Dokumentation
+title: try-finally (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3f7618aa6d4ae3535b2b6cb562349650b3eba1ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 88b9960b8c026d1fcd8eed1815ade57422cd2a15
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C#-Referenz)
@@ -56,7 +56,7 @@ Mit einem `finally`-Block können Sie alle Ressourcen bereinigen, die in einem [
   
  Weitere Informationen zu `finally` finden Sie unter [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
- C# enthält auch die [using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md), die ähnliche Funktionalität für <xref:System.IDisposable>-Objekte in einer zweckmäßigen Syntax bereitstellt.  
+ C# enthält auch die [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md), die eine ähnliche Funktionalität für <xref:System.IDisposable>-Objekte in einer zweckmäßigen Syntax bereitstellt.  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -65,8 +65,9 @@ Mit einem `finally`-Block können Sie alle Ressourcen bereinigen, die in einem [
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [try-, throw- und catch-Anweisungen (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [Vorgehensweise: Explizites Auslösen von Ausnahmen](https://msdn.microsoft.com/library/xhcbs8fz)
+

@@ -1,5 +1,5 @@
 ---
-title: Multithreadanwendungen (C#) | Microsoft-Dokumentation
+title: Multithreadanwendungen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>Multithreadanwendungen (C#)
@@ -53,7 +54,7 @@ newThread.Start();
 newThread.Abort();  
 ```  
   
- Neben dem Starten und Beenden von Threads können Sie Threads auch mithilfe der Methoden <xref:System.Threading.Thread.Sleep%2A> oder <xref:System.Threading.Thread.Suspend%2A> anhalten. Sie setzen einen angehaltenen Thread mithilfe der Methode <xref:System.Threading.Thread.Resume%2A> fort, und löschen einen Thread mithilfe der Methode <xref:System.Threading.Thread.Abort%2A>.  
+ Neben dem Starten und Beenden von Threads können Sie Threads auch mit den Methoden <xref:System.Threading.Thread.Sleep%2A> oder <xref:System.Threading.Thread.Suspend%2A> anhalten, einen angehaltenen Thread mit der <xref:System.Threading.Thread.Resume%2A>-Methode fortsetzen und einen Thread mithilfe der <xref:System.Threading.Thread.Abort%2A>-Methode zerstören.  
   
 ### <a name="thread-methods"></a>Thread-Methoden  
  Die folgende Tabelle zeigt einige der Methoden, mit denen Sie einzelne Threads steuern.  
@@ -82,9 +83,9 @@ newThread.Abort();
 |<xref:System.Threading.Thread.ThreadState%2A>|Enthält einen Wert, der Zustand oder Zustände eines Threads beschreibt.|  
   
 ## <a name="thread-priorities"></a>Threadprioritäten  
- Jeder Thread hat eine Prioritätseigenschaft, die bestimmt, wie groß oder klein ein Segment der Prozessorzeit ist, das er ausführen muss. Das Betriebssystem ordnet Threads mit hoher Priorität größere Zeiträume und Threads mit niedriger Priorität kürzere Zeiträume zu. Neue Threads werden mit dem Wert `Normal` erstellt, aber Sie können die Eigenschaft <xref:System.Threading.Thread.Priority%2A> auf einen beliebigen Wert in der <xref:System.Threading.ThreadPriority>-Enumeration ändern.  
+ Jeder Thread hat eine Prioritätseigenschaft, die bestimmt, wie groß oder klein ein Segment der Prozessorzeit ist, das er ausführen muss. Das Betriebssystem ordnet Threads mit hoher Priorität größere Zeiträume und Threads mit niedriger Priorität kürzere Zeiträume zu. Neue Threads werden mit dem Wert `Normal` erstellt, aber Sie können die Eigenschaft <xref:System.Threading.Thread.Priority%2A> auf jeden beliebigen Wert in der <xref:System.Threading.ThreadPriority>-Enumeration ändern.  
   
- Eine genauere Beschreibung der verschiedenen Threadprioritäten finden Sie unter <xref:System.Threading.ThreadPriority>.  
+ Unter <xref:System.Threading.ThreadPriority> finden Sie eine ausführliche Beschreibung der verschiedenen Threadprioritäten.  
   
 ## <a name="foreground-and-background-threads"></a>Vordergrund- und Hintergrundthreads  
  Ein *Vordergrundthread* wird dauerhaft ausgeführt, während ein *Hintergrundthread* beendet wird, sobald der letzte Vordergrundthread beendet wurde. Sie können die Eigenschaft <xref:System.Threading.Thread.IsBackground%2A> verwenden, um den Hintergrundzustand eines Threads zu bestimmen oder zu ändern.  
@@ -94,3 +95,4 @@ newThread.Abort();
  [Thread Synchronization (C#) (Threadsynchronisierung (C#))](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [Parameter und Rückgabewerte für Multithreadprozeduren (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [Treading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+

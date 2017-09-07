@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,20 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6a591108b1ae225ecd311dcc04cd744acb48712
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c773e7a6d902b9e61e724a69c9fdf5d61606de50
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
-Benannte und optionale Argumente, die in [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] eingeführt wurden, optimieren die Zweckmäßigkeit, die Flexibilität und die Lesbarkeit in der C#-Programmierung. Diese Funktionen erleichtern zusätzlich den Zugriff auf COM-Schnittstellen wie etwa die Automatisierungs-APIs in Microsoft Office.  
+Benannte und optionale Argumente, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] eingeführt wurden, optimieren die Zweckmäßigkeit, die Flexibilität und die Lesbarkeit in der C#-Programmierung. Diese Funktionen erleichtern zusätzlich den Zugriff auf COM-Schnittstellen wie etwa die Automatisierungs-APIs in Microsoft Office.  
   
  In folgendem Beispiel hat die Methode [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) sechzehn Parameter, die Eigenschaften einer Tabelle repräsentieren, wie z.B. die Zeilen- und Spaltenanzahl, das Format, die Rahmen, Schriftarten und Farben. Alle sechzehn Parameter sind optional, weil Sie oftmals keine bestimmten Werte für sie festlegen möchten. Ohne benannte und optionale Argumente muss aber trotzdem ein Wert oder Platzhalterwert für jeden Parameter angegeben werden. Mit benannten und optionalen Argumenten geben Sie nur für die Parameter Werte an, die für Ihr Projekt erforderlich sind.  
   
  Microsoft Office Word muss auf Ihrem Computer installiert sein, damit Sie diesen Vorgang abschließen können.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-new-console-application"></a>So erstellen Sie eine Konsolenanwendung  
   
@@ -100,7 +101,7 @@ Benannte und optionale Argumente, die in [!INCLUDE[csharp_dev10_long](../../../c
   
 1.  Verwenden Sie die `ConvertToTable`-Methode, um den Text in eine Tabelle einzuschließen. Die Methode verfügt über sechzehn optionale Parameter. IntelliSense schließt optionale Parameter in Klammern ein, wie in folgender Abbildung veranschaulicht.  
   
-     ![Liste der Parameter für die ConvertToTable-Methode.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
+     ![Liste der Parameter für die ConvertToTable-Methode](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
 ConvertToTable-Parameter  
   
      Benannte und optionale Argumente ermöglichen es Ihnen, nur Werte für die Parameter anzugeben, die Sie auch ändern möchten. Fügen Sie den folgenden Code am Ende der `DisplayInWord`-Methode hinzu, um eine einfache Tabelle zu erstellen. Das Argument gibt an, dass die Kommas in der Textzeichenfolge in `range` die Zelle der Tabelle trennen.  
@@ -130,3 +131,4 @@ ConvertToTable-Parameter
   
 ## <a name="see-also"></a>Siehe auch  
  [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+

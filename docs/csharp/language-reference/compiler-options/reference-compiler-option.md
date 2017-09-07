@@ -1,5 +1,5 @@
 ---
-title: /reference (C#-Compileroptionen) | Microsoft-Dokumentation
+title: -reference (C#-Compileroptionen)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
 ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference (C#-Compileroptionen)
@@ -84,7 +84,7 @@ Die Option **/reference** veranlasst den Compiler, [öffentliche](../../../cshar
  Die csc-Antwortdatei (.rsp), welche auf häufig verwendete .NET Framework-Assemblys verweist, wird standardmäßig verwendet. Verwenden Sie [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md), wenn der Compiler csc.rsp nicht verwenden soll.  
   
 > [!NOTE]
-> Verwenden Sie in Visual Studio das Dialogfeld **Verweis hinzufügen**. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Um ein gleichwertiges Verhalten zwischen Hinzufügen von Verweisen mit `/reference` und Hinzufügen von Verweisen mithilfe des Dialogfelds **Verweis hinzufügen** sicherzustellen, legen Sie die Eigenschaft **Einbetten von Interop-Typen** für die Assembly, die Sie hinzufügen möchten, auf **FALSE** fest. Der Standardwert für diese Eigenschaft ist **TRUE**.  
+> Verwenden Sie in Visual Studio das Dialogfeld **Verweis hinzufügen**. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Um ein gleichwertiges Verhalten zwischen Hinzufügen von Verweisen mit `/reference` und Hinzufügen von Verweisen mithilfe des Dialogfelds **Verweis hinzufügen** sicherzustellen, legen Sie die Eigenschaft **Einbetten von Interop-Typen** für die Assembly, die Sie hinzufügen möchten, auf **FALSE** fest. Der Standardwert für diese Eigenschaft ist **TRUE**.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Verwendung der Funktion [extern-Alias](../../../csharp/language-reference/keywords/extern-alias.md).  
@@ -115,4 +115,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB: Vorgehensweise: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+

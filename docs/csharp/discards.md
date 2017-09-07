@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
@@ -33,7 +33,7 @@ In C# 7 werden Ausschüsse in Zuweisungen in den folgenden Kontexten unterstütz
 - Aufrufe von Methoden mit `out`-Parametern.
 - Ein eigenständiger `_`, wenn sich kein `_` im Bereich befindet.
 
-Wenn es sich bei `_` um einen gültigen Ausschuss handelt, wird beim Versuch, seinen Wert abzurufen oder ihn in einer Zuweisungsoperation zu verwenden, ein Compilerfehler (CS0301, „Der Name ‚_‘ existiert im aktuellen Kontext nicht“) generiert. Das liegt daran, dass `_` kein Wert und möglicherweise nicht einmal ein Speicherort zugewiesen ist. Wenn es sich dabei um eine tatsächliche Variable handeln würde, könnten Sie nicht wie im vorherigen Beispiel mehr als einen Wert verwerfen.
+Wenn es sich bei `_` um einen gültigen Ausschuss handelt, wird beim Versuch, seinen Wert abzurufen oder ihn in einer Zuweisungsoperation zu verwenden, ein Compilerfehler (CS0301, „Der Name ‚\_‘ existiert im aktuellen Kontext nicht“) generiert. Das liegt daran, dass `_` kein Wert und möglicherweise nicht einmal ein Speicherort zugewiesen ist. Wenn es sich dabei um eine tatsächliche Variable handeln würde, könnten Sie nicht wie im vorherigen Beispiel mehr als einen Wert verwerfen.
 
 ## <a name="tuple-and-object-deconstruction"></a>Dekonstruieren von Tupeln und Objekten
 

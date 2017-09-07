@@ -1,5 +1,5 @@
 ---
-title: sizeof (C#-Referenz) | Microsoft-Dokumentation
+title: sizeof (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7a1944caceaba3ffb8d83a8f67e5ef2975bf9644
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15d11071c369fad398d40cfef301e462c006d5e4
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C#-Referenz)
@@ -91,3 +91,4 @@ int intSize = sizeof(int);
  [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)   
  [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)
+

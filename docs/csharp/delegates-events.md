@@ -1,6 +1,6 @@
 ---
-title: Delegaten und EreignisseDelegates & events
-description: Delegaten und Ereignisse
+title: Delegaten und Ereignisse
+description: Erfahren Sie, wo Sie Informationen zu Delegaten und Ereignissen in der Dokumentation zu .NET Core finden.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c9a2d44ae73208543380c52547473a572ba45d04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -21,10 +22,9 @@ ms.lasthandoff: 03/13/2017
 
 Dieses Thema wird unter den folgenden Artikeln behandelt:
 
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
-1. [Overview of Delegates (Übersicht der Delegaten)](delegates-overview.md)
+1. [Overview of Delegates (Übersicht über Delegaten)](delegates-overview.md)
 
-    This article covers an overview of delegates.
+    Dieser Artikel enthält eine Übersicht über Delegaten.
 
 2. [System.Delegate and the keyword (System.Delegate und das `delegate`-Schlüsselwort)](delegate-class.md)
 
@@ -42,7 +42,7 @@ Dieses Thema wird unter den folgenden Artikeln behandelt:
 
     Dieser Artikel enthält eine Übersicht der Ereignisse in .NET.
 
-6. [Das .NET-Ereignismuster](event-pattern.md)
+6. [Standard .NET event patterns (Standardereignismuster in .NET)](event-pattern.md)
 
     Dieser Artikel behandelt das Standardereignismuster in .NET.
 

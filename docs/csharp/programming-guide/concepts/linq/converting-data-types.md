@@ -1,5 +1,5 @@
 ---
-title: Konvertieren von Datentypen (C#) | Microsoft-Dokumentation
+title: Konvertieren von Datentypen (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 922e2f26c5f8ded260644e8effa043b03b721020
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 454fb0ce937d7d20dfce26d92dbf49de24f062f0
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="converting-data-types-c"></a>Konvertieren von Datentypen (C#)
@@ -30,11 +31,11 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
   
  Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Nachstehend sind einige Beispiele aufgeführt:  
   
--   Die Methode <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName> kann verwendet werden, um die benutzerdefinierte Implementierung eines Standardabfrageoperators eines Typs auszublenden.  
+-   Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>-Methode kann zum Ausblenden einer benutzerdefinierten Implementierung eines Standardabfrageoperators eines Typs verwendet werden.  
   
--   Die Methode <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName> kann verwendet werden, um nicht-parametrisierte Sammlungen für LINQ-Abfragen zu aktivieren.  
+-   Die <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>-Methode kann verwendet werden, um nicht parametrisierte Auflistungen für LINQ-Abfragen zu ermöglichen.  
   
--   Die Methoden <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> sowie <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> können verwendet werden, um die sofortige Ausführung einer Abfrage zu erzwingen, statt sie so lange zu verzögern, bis die Abfrage aufgelistet wird.  
+-   Die Methoden <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> und <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> können verwendet werden, um die sofortige Ausführung einer Abfrage zu erzwingen, statt sie zu verzögern, bis die Abfrage enumeriert wurde.  
   
 ## <a name="methods"></a>Methoden  
  Die folgende Tabelle enthält die Standardabfrageoperator-Methoden, die Datentypumwandlungen ausführen.  
@@ -43,16 +44,16 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
   
 |Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|AsEnumerable|Gibt die Eingabe zurück, die als <xref:System.Collections.Generic.IEnumerable%601> festgelegt ist.|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
-|AsQueryable|Konvertiert eine (generische) <xref:System.Collections.IEnumerable>-Methode in eine (generische) <xref:System.Linq.IQueryable>-Methode.|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
+|AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
+|AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
 |Typumwandlung|Kopiert die Elemente einer Auflistung in einen bestimmten Typ.|Verwenden Sie eine explizit typisierte Bereichsvariable. Zum Beispiel:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
 |OfType|Filtert Werte, je nach ihrer Fähigkeit, die in einen angegebenen Typ umgewandelt werden sollen.|Nicht zutreffend.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
 |ToArray|Konvertiert eine Auflistung in ein Array. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>|  
-|ToDictionary|Fügt Elemente in eine <xref:System.Collections.Generic.Dictionary%602>-Methode ein, basierend auf einer Schlüsselauswahlfunktion. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
-|ToList|Konvertiert eine Auflistung in eine <xref:System.Collections.Generic.List%601>-Methode. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>|  
-|ToLookup|Fügt Elemente, basierend auf einer Schlüsselauswahlfunktion, in ein <xref:System.Linq.Lookup%602> (one-to-many Wörterbuch) ein. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|ToDictionary|Platziert Elemente in ein <xref:System.Collections.Generic.Dictionary%602> auf Grundlage einer Schlüsselauswahlfunktion. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
+|ToList|Konvertiert eine Auflistung in eine <xref:System.Collections.Generic.List%601>. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>|  
+|ToLookup|Platziert Elemente, basierend auf einer Schlüsselauswahlfunktion, in ein <xref:System.Linq.Lookup%602> (one-to-many-Wörterbuch) ein. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
   
-## <a name="query-expression-syntax-example"></a>Beispiele für die Abfrageausdruckssyntax  
+## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
  Das folgende Codebeispiel verwendet eine explizit typisierte Bereichsvariable, um einen Typ vor dem Zugriff auf ein Element, das nur im Untertyp verfügbar ist, in einen Untertyp umzuwandeln.  
   
 ```csharp  
@@ -96,3 +97,4 @@ static void Cast()
  [From-Klausel](../../../../csharp/language-reference/keywords/from-clause.md)   
  [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+

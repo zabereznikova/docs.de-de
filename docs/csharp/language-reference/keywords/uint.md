@@ -1,5 +1,5 @@
 ---
-title: uint (C#-Referenz) | Microsoft-Dokumentation
+title: uint (C#-Referenz)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: de-de
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (C#-Referenz)
@@ -49,7 +49,7 @@ Das Schlüsselwort `uint` kennzeichnet einen ganzzahligen Typ, der Werte anhand 
   
 ## <a name="literals"></a>Literale  
 
-Sie können eine `uint`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn das Ganzzahlliteral außerhalb des Bereichs von `uint` liegt, d.h., wenn es kleiner als <xref:System.UInt32.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist, tritt ein Kompilierungsfehler auf.
+Sie können eine `uint`-Variable deklarieren und initialisieren, indem Sie ihr ein dezimales Literal, ein hexadezimales Literal oder (beginnend mit C# 7) ein binäres Literal zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `uint` befindet (d.h., wenn es kleiner als <xref:System.UInt32.MinValue?displayProperty=fullName> oder größer als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist), tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 3.000.000.000, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `uint`-Werten zugewiesen.  
   
@@ -62,7 +62,7 @@ Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbe
 
 [!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `U` oder „u“ gibt entweder ein `uint` oder `ulong` an, abhängig vom numerischen Wert des Literals. Im folgenden Beispiel wird das `u`-Suffix verwendet, um eine ganze Zahl ohne Vorzeichen von beiden Typen zu kennzeichnen. Beachten Sie, dass das erste Literal ein `uint` ist, da sein Wert kleiner als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist, während das zweite ein `ulong` ist, da sein Wert größer als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist.
+ Ganzzahlliterale können auch ein Suffix enthalten, das den Typ bezeichnet. Das Suffix `U` oder „u“ gibt entweder ein `uint` oder `ulong` an, abhängig vom numerischen Wert des Literals. Im folgenden Beispiel wird das `u`-Suffix verwendet, um eine ganze Zahl ohne Vorzeichen von beiden Typen zu kennzeichnen. Beachten Sie, dass das erste Literal ein `uint` ist, weil sein Wert kleiner als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist, während das zweite ein `ulong` ist, weil sein Wert größer als <xref:System.UInt32.MaxValue?displayProperty=fullName> ist.
 
 [!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
@@ -104,7 +104,7 @@ uint y = (uint)3.0;
  Weitere Informationen zu impliziten numerischen Konvertierungsregeln finden Sie in der [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.UInt32>   
@@ -115,3 +115,4 @@ uint y = (uint)3.0;
  [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

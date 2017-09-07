@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierhandbuch) | Microsoft-Dokumentation"
+title: "Gewusst wie: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierhandbuch)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,14 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7e9a170882c4e8dbb04dc014642a28ad4365e39
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4cfec46e0af0056a0de20a1ed83a370cd010055
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Gewusst wie: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierhandbuch)
-In den folgenden Beispiele wird veranschaulicht, wie Dateien und Ordner mithilfe der Klassen <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> und <xref:System.IO.DirectoryInfo?displayProperty=fullName> aus dem <xref:System.IO?displayProperty=fullName>-Namespace synchron kopiert, verschoben und gelöscht werden. Diese Beispiele stellen keine Statusanzeige oder irgendeine andere Benutzeroberfläche bereit. Informationen zur Bereitstellung eines standardmäßigen Fortschrittsdialogfelds finden Sie unter [Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
+Die folgenden Beispiele veranschaulichen, wie Dateien und Ordner mithilfe der Klassen <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> und <xref:System.IO.DirectoryInfo?displayProperty=fullName> aus dem Namespace <xref:System.IO?displayProperty=fullName> synchron kopiert, verschoben und gelöscht werden können. Diese Beispiele stellen keine Statusanzeige oder irgendeine andere Benutzeroberfläche bereit. Informationen zur Bereitstellung eines standardmäßigen Fortschrittsdialogfelds finden Sie unter [Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
   
  Verwenden Sie <xref:System.IO.FileSystemWatcher?displayProperty=fullName> zum Bereitstellen von Ereignissen, mit denen Sie bei Vorgängen auf mehreren Dateien den Status berechnen können. Eine weitere Möglichkeit ist die Verwendung eines Plattformaufrufs, um die relevanten dateibezogenen Methoden in der Windows-Shell aufzurufen. Weitere Informationen dazu, wie Sie diese Dateivorgänge asynchron ausführen, finden Sie unter [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys).  
   
@@ -60,3 +61,4 @@ In den folgenden Beispiele wird veranschaulicht, wie Dateien und Ordner mithilfe
  [Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen](how-to-provide-a-progress-dialog-box-for-file-operations.md)   
  [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)   
  [Allgemeine E/A-Aufgaben](https://msdn.microsoft.com/library/ms404278)
+

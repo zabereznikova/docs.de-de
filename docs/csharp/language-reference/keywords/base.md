@@ -1,8 +1,6 @@
 ---
 title: base (C#-Referenz)
-description: base (C#-Referenz)
-keywords: "base (C#), base-Schlüsselwort (C#), base-Schlüsselwort (C#-Referenz), base-Schlüsselwort (C#-Sprachreferenz)"
-ms.custom: 
+description: "Erfahren Sie mehr über das base-Schlüsselwort, mit dem aus einer abgeleiteten Klasse auf die Member der Basisklasse zugegriffen werden kann."
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,43 +33,43 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c875ca834fc66e0bf6cd596f376773badca757e3
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: b3a389d92373b6ba5995a7644b0440f9d8fad9ac
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="base-c-reference"></a>base (C#-Referenz)
-Das `base`-Schlüsselwort wird verwendet, um aus einer abgeleiteten Klasse auf die Member der Basisklasse zuzugreifen:  
-  
--   Rufen Sie eine Methode der Basisklasse auf, die durch eine andere Methode überschrieben wurde.  
-  
--   Geben Sie an, welcher Konstruktor der Basisklasse beim Erstellen von Instanzen der abgeleiteten Klasse aufgerufen werden soll.  
-  
- Zugriff auf eine Basisklasse ist nur in einem Konstruktor, einer Instanzenmethode oder einem Instanzeneigenschaften-Accessor zulässig.  
-  
- Die Nutzung eines `base`-Schlüsselworts innerhalb einer statischen Methode ist ein Fehler.  
-  
- Die Basisklasse, auf die zugegriffen wird, ist die Basisklasse, die in der Klassendeklaration angegeben ist. Wenn Sie z.B. `class ClassB : ClassA` angeben, wird von ClassB auf die Member von ClassA unabhängig von der Basisklasse von ClassA zugegriffen.  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel verfügen sowohl die Basisklasse `Person` als auch die abgeleitete Klasse `Employee` über eine Methode mit dem Namen `Getinfo`. Mithilfe des `base`-Schlüsselworts ist es möglich, die `Getinfo`-Methode der Basisklasse aus der abgeleiteten Klasse abzurufen.  
-  
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
-  
- Weitere Beispiele finden Sie unter [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) und [override](../../../csharp/language-reference/keywords/override.md).  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird veranschaulicht, wie der aufgerufene Konstruktor der Basisklasse beim Erstellen von Instanzen einer abgeleiteten Klasse angegeben wird.  
-  
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch  
+
+Das `base`-Schlüsselwort wird verwendet, um aus einer abgeleiteten Klasse auf die Member der Basisklasse zuzugreifen:
+
+- Rufen Sie eine Methode der Basisklasse auf, die durch eine andere Methode überschrieben wurde.
+
+- Geben Sie an, welcher Konstruktor der Basisklasse beim Erstellen von Instanzen der abgeleiteten Klasse aufgerufen werden soll.
+
+Zugriff auf eine Basisklasse ist nur in einem Konstruktor, einer Instanzenmethode oder einem Instanzeneigenschaften-Accessor zulässig.
+
+Die Nutzung eines `base`-Schlüsselworts innerhalb einer statischen Methode ist ein Fehler.
+
+Die Basisklasse, auf die zugegriffen wird, ist die Basisklasse, die in der Klassendeklaration angegeben ist. Wenn Sie z.B. `class ClassB : ClassA` angeben, wird von ClassB auf die Member von ClassA unabhängig von der Basisklasse von ClassA zugegriffen.
+
+## <a name="example"></a>Beispiel
+In diesem Beispiel verfügen sowohl die Basisklasse `Person` als auch die abgeleitete Klasse `Employee` über eine Methode mit dem Namen `Getinfo`. Mithilfe des `base`-Schlüsselworts ist es möglich, die `Getinfo`-Methode der Basisklasse aus der abgeleiteten Klasse abzurufen.
+
+[!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
+
+Weitere Beispiele finden Sie unter [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) und [override](../../../csharp/language-reference/keywords/override.md).
+
+## <a name="example"></a>Beispiel
+In diesem Beispiel wird veranschaulicht, wie der aufgerufene Konstruktor der Basisklasse beim Erstellen von Instanzen einer abgeleiteten Klasse angegeben wird.
+
+[!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Siehe auch
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
  [this](../../../csharp/language-reference/keywords/this.md)
-

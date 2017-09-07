@@ -1,5 +1,5 @@
 ---
-title: Zugriffsebenen (C#-Referenz) | Microsoft-Dokumentation
+title: Zugriffsebenen (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30220e92e55ac6101cf8fedd8920755cd25978bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 796802a407c486c1df5332d5b4920467f3a1171b
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessibility-levels-c-reference"></a>Zugriffsebenen (C#-Referenz)
@@ -43,10 +43,10 @@ Verwenden Sie die Zugriffsmodifizierer [öffentlich](../../../csharp/language-re
 |`public`|Der Zugriff ist nicht beschränkt.|  
 |`protected`|Der Zugriff ist auf die enthaltende Klasse oder auf Typen beschränkt, die von der enthaltenden Klasse abgeleitet sind.|  
 |`internal`|Der Zugriff ist auf die aktuelle Assembly beschränkt.|  
-|`protected` `internal`|Der Zugriff ist auf die aktuelle Assembly oder auf Typen beschränkt, die von der enthaltenden Klasse abgeleitet sind.|  
+|`protected internal`|Der Zugriff ist auf die aktuelle Assembly oder auf Typen beschränkt, die von der enthaltenden Klasse abgeleitet sind.|  
 |`private`|Der Zugriff ist auf die enthaltende Klasse beschränkt.|  
   
- Es ist nur ein Zugriffsmodifizierer für einen Member oder Typ zulässig, außer wenn `protected` und `internal` kombiniert werden.  
+ Es ist nur ein Zugriffsmodifizierer für einen Member oder Typ zulässig, außer wenn Sie die `protected internal`-Kombination verwenden.  
   
  Zugriffsmodifizierer sind bei Namespaces nicht zulässig. Namespaces haben uneingeschränkten Zugriff.  
   
@@ -59,7 +59,7 @@ Verwenden Sie die Zugriffsmodifizierer [öffentlich](../../../csharp/language-re
 |Member von|Standard-Memberzugriff|Zulässiger deklarierter Zugriffstyp des Members|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Keine|  
-|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected` `internal`|  
+|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal`|  
 |`interface`|`public`|Keine|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
@@ -72,7 +72,7 @@ Verwenden Sie die Zugriffsmodifizierer [öffentlich](../../../csharp/language-re
  [C#-Referenz](../../../csharp/language-reference/index.md)   
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md)   
+ [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Zugriffsdomäne](../../../csharp/language-reference/keywords/accessibility-domain.md)   
  [Einschränkungen bei der Verwendung von Zugriffsebenen](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)   
  [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
@@ -80,3 +80,4 @@ Verwenden Sie die Zugriffsmodifizierer [öffentlich](../../../csharp/language-re
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)
+

@@ -1,5 +1,5 @@
 ---
-title: in (generische Modifizierer) (C#-Referenz) | Microsoft-Dokumentation
+title: in (generischer Modifizierer) (C#-Referenz)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (generischer Modifizierer) (C#-Referenz)
@@ -42,11 +42,11 @@ Das Schlüsselwort `in` gibt für generische Typparameter an, dass der Typparame
   
  Ein Typ kann als kontravariant in einer generischen Schnittstelle oder einem generischen Delegaten deklariert werden, wenn er nur als Typ eines Methodenarguments und nicht als Methodenrückgabetyp verwendet wird. Die Parameter `Ref` und `out` dürfen nicht variant sein.  
   
- Mit einer Schnittstelle, die einen kontravarianten Typparameter hat, kann ihre Methode mehr abgeleitete Typen, als durch den Typparameter der Schnittstelle angegeben, akzeptieren. Da z.B. in .NET Framework 4 Typ T in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle kontravariant ist, können Sie ein Objekt des `IComparer(Of Person)`-Typs an ein Objekt des `IComparer(Of Employee)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden, wenn `Employee` `Person` erbt.  
+ Mit einer Schnittstelle, die einen kontravarianten Typparameter hat, kann ihre Methode mehr abgeleitete Typen, als durch den Typparameter der Schnittstelle angegeben, akzeptieren. Da z.B. in .NET Framework 4 Typ T in der Schnittstelle <xref:System.Collections.Generic.IComparer%601> kontravariant ist, können Sie ein Objekt des `IComparer(Of Person)`-Typs an ein Objekt des `IComparer(Of Employee)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden, wenn `Employee` von `Person` erbt.  
   
  Ein kontravarianter Delegat kann einem anderen Delegaten desselben Typs zugewiesen werden, jedoch mit einem weniger stark abgeleiteten generischen Typparameter.  
   
- Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie eine kontravariante generische Schnittstelle deklarieren, erweitern und implementieren können. Es wird auch gezeigt, wie Sie die implizite Konvertierung für Klassen verwenden können, die eine diese Schnittstelle implementieren können.  
@@ -63,5 +63,6 @@ Das Schlüsselwort `in` gibt für generische Typparameter an, dass der Typparame
   
 ## <a name="see-also"></a>Siehe auch  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
+ [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md)   
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
+

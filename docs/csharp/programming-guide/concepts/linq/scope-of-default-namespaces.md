@@ -1,5 +1,5 @@
 ---
-title: Bereich von Standardnamespaces in C#1 | Microsoft-Dokumentation
+title: Bereich von Standardnamespaces in C#1
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 760716dc81f5cd946ae014ed22b6c5a7df64a5dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Bereich von Standardnamespaces in C#
@@ -69,7 +70,7 @@ End of result set
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.  
   
- Im Gegensatz zum falsch codierten Beispiel oben besteht der richtige Ansatz bei Verwendung von C# darin, ein <xref:System.Xml.Linq.XNamespace>-Objekt zu deklarieren und zu initialisieren und dieses beim Angeben von <xref:System.Xml.Linq.XName>-Objekten zu verwenden. In diesem Fall ist das Argument für die Methode <xref:System.Xml.Linq.XElement.Elements%2A> ein <xref:System.Xml.Linq.XName>-Objekt.  
+ Im Gegensatz zum falsch codierten Beispiel oben besteht der richtige Ansatz bei Verwendung von C# darin, ein <xref:System.Xml.Linq.XNamespace>-Objekt zu deklarieren und zu initialisieren und dieses beim Angeben von <xref:System.Xml.Linq.XName>-Objekten zu verwenden. In diesem Fall ist das Argument der <xref:System.Xml.Linq.XElement.Elements%2A>-Methode ein <xref:System.Xml.Linq.XName>-Objekt.  
   
 ### <a name="code"></a>Code  
   
@@ -106,3 +107,4 @@ End of result set
   
 ## <a name="see-also"></a>Siehe auch  
  [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

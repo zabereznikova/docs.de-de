@@ -3,16 +3,16 @@ title: .NET Core-Versionskontrolle
 description: Informationen zur Versionierung in .NET Core
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
@@ -103,7 +103,7 @@ Möglicherweise müssen auch nur die .NET Core-Tools aktualisiert werden, ohne d
 
 ##### <a name="preview-versions"></a>Vorschauversionen
 
-Paketverwalter können möglicherweise Vorschauversionen der Runtime und SDKs einschließen. Beziehen Sie diese Vorschauversionen niemals in das nicht versionierte `dotnet-sdk`-Paket ein. Sie können sie aber als Pakete mit Versionsnummer mit einem zusätzlichen Vorschaumarker freigegeben, der an die Abschnitte der Haupt- und Nebenversion des Namens angefügt ist. Beispielsweise gibt es möglicherweise ein Paket `dotnet-sdk-2.0-preview-1-final`.
+Paketverwalter können möglicherweise Vorschauversionen der Runtime und SDKs einschließen. Beziehen Sie diese Vorschauversionen niemals in das nicht versionierte `dotnet-sdk`-Paket ein. Sie können sie aber als Pakete mit Versionsnummer mit einem zusätzlichen Vorschaumarker freigegeben, der an die Abschnitte der Haupt- und Nebenversion des Namens angefügt ist. Beispielsweise gibt es möglicherweise ein Paket `dotnet-sdk-2.0-preview1-final`.
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ Wenn mehrere Änderungen vorgenommen wurden, wird das höchste Element, was von 
 
 ### <a name="preview-versions"></a>Vorschauversionen
 
-Der Version von Vorschauversionen ist ein `-preview-[number]-([build]|"final")` angehängt. Beispielsweise `2.0.0-preview-1-final`.
+Der Version von Vorschauversionen ist ein `-preview[number]-([build]|"final")` angehängt. Beispielsweise `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Wartung von Versionen
 

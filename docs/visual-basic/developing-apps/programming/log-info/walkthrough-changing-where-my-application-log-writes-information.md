@@ -1,5 +1,5 @@
 ---
-title: "Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt (Visual Basic) | Microsoft-Dokumentation"
+title: "Ändern des Orts, in den „My.Application.Log“ Informationen schreibt (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Ändern des Orts, in den "My.Application.Log" Informationen schreibt (Visual Basic)
@@ -176,17 +176,17 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 1.  Suchen Sie im Abschnitt `<add>` das `<sharedListeners>` -Element des Listeners.  
   
-2.  Das `type` -Attribut enthält den Namen des Listenertyps. Dieser Typ muss von der Klasse <xref:System.Diagnostics.TraceListener> erben. Verwenden Sie den starken Typnamen, um sicherzustellen, dass der richtige Typ verwendet wird. Weitere Informationen finden Sie unten im Abschnitt "Verweise auf Typen mit starken Namen".  
+2.  Das `type` -Attribut enthält den Namen des Listenertyps. Dieser Typ muss von der <xref:System.Diagnostics.TraceListener> -Klasse erben. Verwenden Sie den starken Typnamen, um sicherzustellen, dass der richtige Typ verwendet wird. Weitere Informationen finden Sie unten im Abschnitt "Verweise auf Typen mit starken Namen".  
   
      Dies sind einige der Typen, die Sie verwenden können:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>-Listener, der in eine Protokolldatei schreibt.  
+    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> -Listener, der in eine Protokolldatei schreibt.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
+    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> -Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData` -Parameter angegeben ist.  
   
-    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>- und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>-Listener, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
+    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> - und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> -Listener, die in die Datei schreiben, die im `initializeData` -Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>-Listener, der in die Befehlszeilenkonsole schreibt.  
+    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> -Listener, der in die Befehlszeilenkonsole schreibt.  
   
      Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
@@ -215,3 +215,4 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
  [Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+

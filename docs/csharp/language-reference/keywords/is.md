@@ -1,5 +1,5 @@
 ---
-title: is (C#-Referenz) | Microsoft-Dokumentation
+title: is (C#-Referenz)
 keywords: "is-Schlüsselwort (C#), is (C#)"
 ms.date: 2017-02-17
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0d300dbb47e64d2425f8af3bc6a819b145786fa
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58b18284b12ca0c636ed3fa923c43d94f202597f
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz) #
@@ -44,13 +44,13 @@ ms.lasthandoff: 03/13/2017
 
 ## <a name="testing-for-type-compatibility"></a>Prüfen auf Typkompatibilität ##
 
-Das `is`-Schlüsselwort wertet die Typkompatibilität zur Laufzeit aus. Es bestimmt, ob eine Instanz eines Objekts oder das Ergebnis eines Ausdrucks in einen angegebenen Typen konvertiert werden kann. Besitzt die Syntax
+Das `is`-Schlüsselwort wertet die Typkompatibilität zur Laufzeit aus. Es bestimmt, ob eine Instanz eines Objekts oder das Ergebnis eines Ausdrucks in einen angegebenen Typen konvertiert werden kann. Es besitzt die Syntax
 
 ```csharp
    expr is type
 ```
 
-, in der *expr* ein Ausdruck ist, der die Instanz eines Typen auswertet. *Typ* ist der Name des Typs, in den das Ergebnis von *expr* konvertiert werden soll. Die Anweisung `is` ist `true`, wenn *expr* nicht NULL ist, und das Objekt, das beim Auswerten des Ausdrucks entsteht, kann in *Typ* konvertiert werden; andernfalls gibt es `false` zurück.
+in der *expr* ein Ausdruck ist, der die Instanz eines Typs auswertet und *type* der Name des Typs, in den das Ergebnis von *expr* konvertiert werden soll. Die Anweisung `is` ist `true`, wenn *expr* nicht NULL ist, und das Objekt, das beim Auswerten des Ausdrucks entsteht, kann in *Typ* konvertiert werden; andernfalls gibt es `false` zurück.
 
 Der folgende Code bestimmt beispielsweise, ob `obj` in eine Instanz des Typs `Person` umgewandelt werden kann:
 
@@ -60,9 +60,9 @@ Die Anweisung `is` ist TRUE, wenn:
 
 - *expr* eine Instanz des gleichen Typs wie *Typ* ist.
 
-- *expr* eine Instanz eines Typs ist, der von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
+- *expr* ist eine Instanz eines Typs, der von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
 
-- *expr* einen Kompilierzeittyp hat, der eine Basisklasse von *Typ* ist, und *expr* hat einen Runtime-Typ,der *Typ* ist oder von *Typ* abgeleitet wird. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variablen zugewiesen wird.
+- *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *Typ* ist, und *expr* hat einen Runtime-Typ,der *Typ* ist oder von *Typ* abgeleitet wird. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variablen zugewiesen wird.
 
 - *expr* ist eine Instanz eines Typs, der die Schnittstelle *Typ* implementiert.
 
@@ -111,7 +111,7 @@ Der Ausdruck `is` ist `true`, wenn eine der folgenden Aussagen zutrifft:
 
 Wenn *expr* `true` ist, und `is` mit der `if`-Anweisung verwendet wird, wird *varname* zugewiesen und ist nur lokal innerhalb der Anweisung `if` gültig.
 
-In folgendem Beispiel wird das Typmuster `is` verwendet, um die Implementierung der Methode <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> eines Typs bereitzustellen.
+Im folgenden Beispiel wird das `is`-Typmuster verwendet, um die Implementierung der Methode <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> des Typs bereitzustellen.
 
 [!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 

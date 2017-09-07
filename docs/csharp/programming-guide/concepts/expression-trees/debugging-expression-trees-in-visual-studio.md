@@ -1,5 +1,5 @@
 ---
-title: "Debuggen von Ausdrucksbäumen in Visual Studio (C#) | Microsoft-Dokumentation"
+title: "Debuggen von Ausdrucksbäumen in Visual Studio (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14ab67e78a3b4c4819ddca36a406526e78f5485e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debuggen von Ausdrucksbäumen in Visual Studio (C#)
-Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar. Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar. Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>So öffnen Sie eine Schnellansicht für eine Ausdrucksbaumstruktur  
   
@@ -41,7 +42,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
  Jeder Ausdruckstyp wird in der Schnellansicht angezeigt, wie in den folgenden Abschnitten beschrieben.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>-Variablennamen werden mit dem „$“-Symbol zu Beginn dargestellt.  
+ Namen von <xref:System.Linq.Expressions.ParameterExpression>-Variablen werden mit einem „$“-Symbol am Anfang angezeigt.  
   
  Wenn ein Parameter nicht über einen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `$var1` oder `$var2`.  
   
@@ -53,7 +54,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- Für <xref:System.Linq.Expressions.ConstantExpression>-Objekte, die Integerwerte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante dargestellt.  
+ Für <xref:System.Linq.Expressions.ConstantExpression>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.  
   
  Für numerische Typen, die über Standardsuffixe als C#-Literale verfügen, wird das Suffix zum Wert hinzugefügt. Die folgende Tabelle zeigt die verschiedenen numerischen Typen und ihre zugeordneten Suffixe.  
   
@@ -74,7 +75,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in der `DebugInfo`-Eigenschaft in spitzen Klammern (\< und >) dargestellt. Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.  
+ Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in der `DebugInfo`-Eigenschaft in spitzen Klammern (\< und >) angezeigt. Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -96,7 +97,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
   
 ## <a name="labelexpression"></a>LabelExpression  
- Bei Angabe eines Standardwerts für das <xref:System.Linq.Expressions.LabelExpression>-Objekt wird dieser Wert vor dem <xref:System.Linq.Expressions.LabelTarget>-Objekt angezeigt.  
+ Wenn Sie einen Standardwert für das <xref:System.Linq.Expressions.LabelExpression>-Objekt angeben, wird dieser Wert vor dem <xref:System.Linq.Expressions.LabelTarget>-Objekt angezeigt.  
   
  Das `.Label`-Token gibt den Anfang der Bezeichnung an. Das `.LabelTarget`-Token gibt den Zielort an, zu dem gewechselt werden soll.  
   
@@ -121,5 +122,6 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Debuggen in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Erstellen benutzerdefinierter Schnellansichten](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
+ [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)
+

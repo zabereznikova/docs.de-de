@@ -1,5 +1,5 @@
 ---
-title: "Strukturen | Leitfaden für C#"
+title: "Strukturen - Leitfaden für C#"
 description: "Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen erstellen"
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: ff7e67add731324e01b8f2cc323a66e3a8683ec9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2a4bfdb46a69113d5eb8949df4ccf902acf9dee
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -77,3 +77,4 @@ Gewöhnliche Werttypen können den Wert [NULL](./language-reference/keywords/nul
 [Klassen](classes.md)
 
 [Grundlegende Typen](basic-types.md)
+

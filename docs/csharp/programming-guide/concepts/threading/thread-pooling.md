@@ -1,5 +1,5 @@
 ---
-title: Pooling von Threads (C#) | Microsoft-Dokumentation
+title: Pooling von Threads (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>Pooling von Threads (C#)
@@ -34,9 +35,9 @@ Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um 
   
  Threadpools haben in der Regel eine maximale Anzahl von Threads. Wenn alle Threads aktiv sind, werden zusätzliche Aufgaben in die Warteschlange eingereiht, bis sie von wieder verfügbaren Threads verarbeitet werden können.  
   
- Sie können einen eigenen Threadpool implementieren. Es ist allerdings einfacher, den Threadpool zu verwenden, der von .NET Framework durch die Klasse <xref:System.Threading.ThreadPool> bereitgestellt wird.  
+ Sie können einen eigenen Threadpool implementieren. Es ist allerdings einfacher, den Threadpool zu verwenden, der von .NET Framework durch die <xref:System.Threading.ThreadPool>-Klasse bereitgestellt wird.  
   
- Beim Pooling von Threads rufen Sie die Methode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> mit einem Delegat für die Prozedur auf, die Sie ausführen wollen. C# erstellt dann den Thread und führt Ihre Prozedur aus.  
+ Beim Pooling von Threads rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>-Methode mit einem Delegat für die Prozedur auf, die Sie ausführen wollen. C# erstellt dann den Thread und führt Ihre Prozedur aus.  
   
 ## <a name="thread-pooling-example"></a>Beispiele zum Pooling von Threads  
  Das folgende Beispiel zeigt, wie Sie das Pooling von Threads zum Starten von mehreren Aufgaben verwenden können.  
@@ -68,7 +69,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Parameter und Rückgabewerte des Threadpools  
  Die Rückgabe von Werten aus einem Thread des Threadpools ist nicht einfach. Das Standardverfahren für die Rückgabe von Werten von einem Funktionsaufruf ist nicht zulässig, da `Sub`-Prozeduren die einzigen Typen der Prozedur sind, die in einem Threadpool in die Warteschlagen gestellt werden können. Eine Möglichkeit, wie Sie Parameter und Rückgabewerte bereitstellen können, besteht darin, die Parameter, Rückgabewerte und Methoden in einer Wrapperklasse zu umschließen, wie in [Parameters and Return Values for Multithreaded Procedures (C#) (Parameter und Rückgabewerte für Multithreadprozeduren (C#))](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md) beschrieben wird.  
   
- Ein einfacherer Weg zum Bereitstellen von Parametern und Rückgabewerten besteht darin, die optionale Zustandsobjektvariable `ByVal` der Methode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> zu verwenden. Wenn Sie diese Variable verwenden, um einen Verweis an eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Thread des Threadpools geändert und als Rückgabewerte verwendet werden.  
+ Ein einfacherer Weg zum Bereitstellen von Parametern und Rückgabewerten besteht darin, die optionale Zustandsobjektvariable `ByVal` der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode zu verwenden. Wenn Sie diese Variable verwenden, um einen Verweis an eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Thread des Threadpools geändert und als Rückgabewerte verwendet werden.  
   
  Es liegt nicht unbedingt auf der Hand, dass Sie ein Objekt ändern können, auf das von einer als Wert übergebenen Variable verwiesen wurde. Dies ist allein möglich, da nur der Objektverweis als Wert übergeben wird. Wenn Sie Member des Objekts ändern, auf das vom Objektverweis verwiesen wurde, werden die Änderungen auf die eigentliche Klasseninstanz angewendet.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Threadsynchronisierung (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

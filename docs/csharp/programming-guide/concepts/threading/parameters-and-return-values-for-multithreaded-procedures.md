@@ -1,5 +1,5 @@
 ---
-title: "Parameter und Rückgabewerte für Multithreadprozeduren (C#) | Microsoft-Dokumentation"
+title: "Parameter und Rückgabewerte für Multithreadprozeduren (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95fdc0f74c1f2c35a4f3b5c0a8f40f5d4fe9457c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parameter und Rückgabewerte für Multithreadprozeduren (C#)
@@ -131,7 +132,7 @@ private void BackgroundWorker1_RunWorkerCompleted(
 }  
 ```  
   
- Sie können Parameter und Rückgabewerte für Threads im Threadpool bereitstellen, indem Sie die optionale Zustandsobjektvariable `ByVal` der Methode <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> verwenden. Threads des Threadzeitgebers unterstützen für diesen Zweck auch ein Zustandsobjekt. Informationen über Threadpooling und Threadzeitgeber finden Sie unter [Thread Pooling (C#) (Pooling von Threads (C#))](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) und [Thread Timers (C#) (Threadzeitgeber (C#))](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).  
+ Sie können Parameter und Rückgabewerte bereitstellen, indem Sie die optionale Zustandsobjektvariable `ByVal` der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode zu verwenden. Threads des Threadzeitgebers unterstützen für diesen Zweck auch ein Zustandsobjekt. Informationen über Threadpooling und Threadzeitgeber finden Sie unter [Thread Pooling (C#) (Pooling von Threads (C#))](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) und [Thread Timers (C#) (Threadzeitgeber (C#))](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
@@ -141,3 +142,4 @@ private void BackgroundWorker1_RunWorkerCompleted(
  [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Delegaten](../../../../csharp/programming-guide/delegates/index.md)   
  [Multithreading in Komponenten](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+

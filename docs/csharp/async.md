@@ -1,6 +1,6 @@
 ---
 title: Asynchrone Programmierung
-description: Asynchrone Programmierung
+description: Informationen zum asynchronen Programmiermodell auf C#-Sprachebene, das von .NET Core bereitgestellt wird.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: de-de
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -32,7 +32,7 @@ Für E/A-gebundenen Code wenden Sie `await` auf einen Vorgang an, der `Task` ode
 
 Für CPU-gebundenen Code wenden Sie `await` auf einen Vorgang an, der in einem Hintergrundthread mit der `Task.Run`-Methode gestartet wird.
 
-Das `await`-Schlüsselwort ist sozusagen der Zauberstab, da es die Steuerung an den Aufrufer der Methode übergibt, die `await` durchgeführt hat.  Somit können Benutzeroberflächen letztendlich reaktionsfähig und Dienste elastisch werden.
+Das Schlüsselwort `await` ist sozusagen der Zauberstab. Es übergibt die Steuerung an den Aufrufer der Methode, die `await` durchgeführt hat. Somit können Benutzeroberflächen letztendlich reaktionsfähig und Dienste elastisch werden.
 
 Es gibt weitere Methoden als Ansatz für asynchronen Code als `async` und `await`, die im oben verknüpften TAP-Artikel beschriebenen sind, aber dieses Dokument konzentriert sich ab nun auf die Konstrukte auf Sprachebene.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -128,7 +128,7 @@ Die folgenden Beispiele veranschaulichen verschiedene Möglichkeiten, wie Sie as
 Dieser Ausschnitt lädt den HTML-Code von www.dotnetfoundation.org herunter und zählt die Häufigkeit, mit der die Zeichenfolge „.NET“ im HTML-Code auftritt.  Er verwendet ASP.NET MVC zur Definition einer Webcontrollermethode, die diese Aufgabe ausführt, indem sie die Zahl zurückgibt.
 
 > [!NOTE]
-> Wenn Sie tatsächliche HTML-Analysen planen, sollten Sie nie reguläre Ausdrücke verwenden.  Wenn dies Ihr Ziel im Produktionscode ist, verwenden Sie bitte eine Analysebibliothek.
+> Wenn Sie eine HTML-Analyse im Produktionscode durchführen möchten, nutzen Sie dafür nicht die regulären Ausdrücke. Verwenden Sie stattdessen eine Analysebibliothek.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
@@ -180,7 +180,6 @@ Sie könnten sich in einer Situation befinden, in der Sie mehrere Daten gleichze
 Dieses Beispiel zeigt, wie Sie einen `User`-Datensatz für einen Satz von `userId` nehmen könnten.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Hier sehen Sie eine weitere Möglichkeit, dies mithilfe von LINQ etwas präziser zu schreiben:
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

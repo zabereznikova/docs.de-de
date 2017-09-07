@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abfragen der Gesamtzahl von Bytes in einem Ordnersatz (LINQ) (C#) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Abfragen der Gesamtzahl von Bytes in einem Ordnersatz (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd78f36792ab65f31075a7a83660261f096953ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7eabb1b04a708e0b6f443552cdb07540b4d970dc
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Vorgehensweise: Abfragen der Gesamtzahl von Bytes in einem Ordnersatz (LINQ) (C#)
 Dieses Beispiel zeigt, wie die Gesamtanzahl der Bytes, die von allen Dateien in einem angegebenen Ordner und allen Unterordnern verwendet werden, abgerufen wird.  
   
 ## <a name="example"></a>Beispiel  
- Die <xref:System.Linq.Enumerable.Sum%2A>-Methode fügt die Werte aller Elemente hinzu, die in der `select`-Klausel ausgewählt wurden. Sie können diese Abfrage einfach verändern, um die größte oder kleinste Datei in der angegebenen Verzeichnisstruktur durch Aufrufen der <xref:System.Linq.Enumerable.Min%2A>- oder der <xref:System.Linq.Enumerable.Max%2A>-Methode anstatt <xref:System.Linq.Enumerable.Sum%2A> abzurufen.  
+ Die <xref:System.Linq.Enumerable.Sum%2A>-Methode fügt die Werte aller Elemente hinzu, die in der `select`-Klausel ausgewählt wurden. Sie können diese Abfrage leicht modifizieren, um die größte oder kleinste Datei in der angegebenen Verzeichnisstruktur abzurufen, indem Sie die <xref:System.Linq.Enumerable.Min%2A>- oder <xref:System.Linq.Enumerable.Max%2A>-Methode statt der <xref:System.Linq.Enumerable.Sum%2A>-Methode verwenden.  
   
 ```csharp  
 class QuerySize  
@@ -95,3 +96,4 @@ class QuerySize
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
  [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

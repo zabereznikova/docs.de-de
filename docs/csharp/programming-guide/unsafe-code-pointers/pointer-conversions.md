@@ -1,52 +1,72 @@
 ---
-title: "Zeigerkonvertierungen (C#-Programmierhandbuch) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Zeiger [C#], Konvertierungen"
+title: Zeigerkonvertierungen (C#-Programmierhandbuch)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e415d892d979e2bdcd648256150e2a96b1772ce4
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# Zeigerkonvertierungen (C#-Programmierhandbuch)
-Die folgende Tabelle zeigt die vordefinierten impliziten Zeigerkonvertierungen.  Implizite Konvertierungen können in zahlreichen Situationen auftreten, z. B. in Methodenaufrufen und Zuweisungsanweisungen.  
+# <a name="pointer-conversions-c-programming-guide"></a>Zeigerkonvertierungen (C#-Programmierhandbuch)
+Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.  
   
-## Implizite Zeigerkonvertierungen  
+## <a name="implicit-pointer-conversions"></a>Implizite Zeigerkonvertierungen  
   
-|Von|To|  
-|---------|--------|  
-|Beliebiger Zeigertyp|void\*|  
-|null|Beliebiger Zeigertyp|  
+|Von|Beschreibung|  
+|----------|--------|  
+|Beliebiger Zeigertyp|void*|  
+|NULL|Beliebiger Zeigertyp|  
   
- Die explizite Zeigerkonvertierung mithilfe von Typumwandlungsausdrücken wird für Konvertierungen verwendet, für die keine implizite Konvertierung vorhanden ist.  Diese Konvertierungen sind in der folgenden Tabelle zusammengefasst.  
+ Die explizite Zeigerkonvertierung wird verwendet, um Konvertierungen, für die keine implizite Konvertierung vorliegt, mithilfe eines CAST-Ausdrucks durchzuführen. Die folgende Tabelle zeigt diese Konvertierungen.  
   
-## Explizite Zeigerkonvertierungen  
+## <a name="explicit-pointer-conversions"></a>Explizite Zeigerkonvertierungen  
   
-|Von|To|  
-|---------|--------|  
-|Beliebiger Zeigertyp|Alle anderen Zeigertypen|  
+|Von|Beschreibung|  
+|----------|--------|  
+|Beliebiger Zeigertyp|Ein beliebiger anderer Zeigertyp|  
 |sbyte, byte, short, ushort, int, uint, long oder ulong|Beliebiger Zeigertyp|  
 |Beliebiger Zeigertyp|sbyte, byte, short, ushort, int, uint, long oder ulong|  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Zeiger auf `int` in einen Zeiger auf `byte` konvertiert.  Beachten Sie, dass der Zeiger auf das niedrigste adressierte Byte der Variablen zeigt.  Wenn Sie das Ergebnis schrittweise auf die Größe von `int` \(4 Bytes\) erhöhen, können Sie die verbleibenden Bytes der Variablen anzeigen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein Zeiger auf `int` in einen Zeiger auf `byte` konvertiert. Beachten Sie, dass der Zeiger auf das Byte der Variable mit der niedrigsten Adresse zeigt. Wenn Sie das Ergebnis nach und nach bis auf die Größe von `int` (4 Bytes) erhöhen, können Sie die verbleibenden Bytes der Variable anzeigen.  
   
  [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
  [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
-## Siehe auch  
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
  [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
  [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
  [Typen](../../../csharp/language-reference/keywords/types.md)   
- [Unsicher](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed\-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
+ [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

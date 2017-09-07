@@ -1,6 +1,6 @@
 ---
 title: "Interpretieren von Ausdrücken"
-description: "Interpretieren von Ausdrücken"
+description: Weitere Informationen zum Schreiben von Code, um die Struktur einer Ausdrucksbaumstruktur zu untersuchen.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07352a2807c08ad19b8d5a47c5a42a0e1c455ab6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -522,7 +522,7 @@ Erstens behandelt der Besucher nur Konstanten, die ganze Zahlen sind. Konstante 
 
 Sogar das letzte Beispiel erkennt eine Teilmenge der möglichen Knotentypen.
 Sie können weiterhin viele Ausdrücke eingeben, die Fehler verursachen werden.
-Eine vollständige Implementierung befindet sich in der .NET Standardbibliothek unter dem Namen [ExpressionVisitor](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) und kann die möglichen Knotentypen behandeln.
+Eine vollständige Implementierung befindet sich in .NET Standard unter dem Namen [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) und kann die möglichen Knotentypen behandeln.
 
 Schließlich wurde die Bibliothek, die ich in diesem Artikel verwendet habe, für Demo- und Lernzwecke erstellt. Sie ist nicht optimiert. Ich habe sie geschrieben, um die verwendeten Strukturen klar zu machen und um die verwendeten Techniken für den Zugriff auf die Knoten hervorzuheben und zu analysieren, was sich dort befindet. Eine Produktionsimplementierung würde mehr Aufmerksamkeit auf die Leistung legen, als ich es habe.
 

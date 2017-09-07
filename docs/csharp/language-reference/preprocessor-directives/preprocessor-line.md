@@ -1,26 +1,45 @@
 ---
-title: "#line (C#-Referenz) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#line"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#line-Direktive [C#]"
+title: '#<a name="line-c-reference"></a>line (C#-Referenz)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#line'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
+ms.contentlocale: de-de
+ms.lasthandoff: 07/28/2017
+
 ---
-# #line (C#-Referenz)
-Mit `#line` können die Zeilennummer des Compilers und optional der Dateiname, die für Fehler und Warnungen ausgegeben werden, geändert werden.  Dieses Beispiel zeigt, wie zwei Warnungen mit zugeordneten Zeilennummern in einem Fehlerbericht angezeigt werden.  Die `#line 200`\-Direktive erzwingt \(trotz der Standardeinstellung von \#7\) eine Festlegung der Zeilennummer auf 200, und der Dateiname wird bis zur folgenden \#line\-Direktive als "Special" gemeldet.  Die \#line default\-Direktive setzt die Zeilennummerierung auf das Standardverfahren zurück, das die Zeilen zählt, die von der vorherigen Direktive neu nummeriert wurden.  
+# <a name="line-c-reference"></a>#line (C#-Referenz)
+Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamenausgabe für Fehler und Warnungen bearbeiten. Dieses Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Zeilennummer 200 (obwohl der Standardwert #7 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
   
-```  
+```csharp
 class MainClass  
 {  
     static void Main()  
@@ -38,21 +57,21 @@ class MainClass
 }  
 ```  
   
-## Hinweise  
- Die `#line`\-Direktive kann während des Buildprozesses in einem automatisierten Zwischenschritt verwendet werden.  Wenn z. B. Zeilen aus der ursprünglichen Quellcodedatei entfernt wurden, der Compiler die Ausgabe aber weiterhin basierend auf der ursprünglichen Zeilennummerierung der Datei generieren soll, können Zeilen entfernt und die ursprüngliche Zeilennummerierung dann mit `#line` simuliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `#line`-Anweisung könnte in einem automatischen Zwischenschritt im Buildprozess verwendet werden. Wenn beispielsweise Zeilen aus der ursprünglichen Quellcodedatei entfernt würden, Sie jedoch trotzdem möchten, dass der Compiler eine Ausgabe basierend auf der ursprünglichen Zeilennummerierung in der Datei generiert, könnten Sie Zeilen entfernen und anschließend die ursprüngliche Zeilennummerierung mit `#line` simulieren.  
   
- Durch die `#line hidden`\-Direktive werden die aufeinander folgenden Zeilen vor dem Debugger verborgen, sodass alle Zeilen zwischen einer `#line hidden`\-Direktive und der nächsten `#line`\-Direktive \(sofern es sich nicht um eine weitere `#line hidden`\-Direktive handelt\) übergangen werden, wenn der Entwickler den Code schrittweise durchgeht.  Anhand dieser Option kann ASP.NET auch die Möglichkeit eingeräumt werden, zwischen benutzerdefiniertem und computergeneriertem Code zu unterscheiden.  Obwohl es sich bei ASP.NET um den Hauptnutzer dieses Features handelt, ist davon auszugehen, dass es von mehreren Programmen zur Quellcodegenerierung verwendet wird.  
+ Die `#line hidden`-Anweisung blendet die aufeinander folgenden Zeilen im Debugger aus, sodass alle Zeilen zwischen einer `#line hidden`-Anweisung und der nächsten `#line`-Anweisung (vorausgesetzt es handelt sich nicht um eine weitere `#line hidden`-Anweisung) übersprungen werden, wenn der Entwickler den Code durchläuft. Diese Option kann auch dazu verwendet werden, ASP.NET die Möglichkeit zu geben, zwischen benutzerdefiniertem und computergeneriertem Code zu unterscheiden. Obwohl ASP.NET der primäre Anwender dieser Funktion ist, ist es wahrscheinlich, dass mehr Quellgeneratoren sich diese zunutze machen werden.  
   
- Eine `#line hidden`\-Direktive hat keinen Einfluss auf Dateinamen oder Zeilennummern in Fehlerberichten.  Wenn ein Fehler also in einem verborgenen Block auftritt, gibt der Compiler den aktuellen Dateinamen und die Zeilennummer des Fehlers an.  
+ Ein `#line hidden`-Anweisung hat keine Auswirkung auf Dateinamen oder Zeilennummern bei der Fehlerberichterstattung. Das bedeutet, wenn ein Fehler in einem ausgeblendeten Block gefunden wird, meldet der Compiler den aktuellen Dateinamen und die Zeilennummer des Fehlers.  
   
- Die `#line filename`\-Direktive gibt den Dateiname an, der in der Ausgabe des Compilers angezeigt werden soll.  Standardmäßig wird der tatsächliche Name der Quellcodedatei verwendet.  Der Dateiname muss in doppelten Anführungszeichen \(""\) angegeben werden und mit einer Zeilennummer beginnen.  
+ Die `#line filename`-Anweisung gibt den Dateinamen an, von dem Sie möchten, dass er in der Compilerausgabe erscheint. Standardmäßig wird der tatsächliche Name der Quellcodedatei verwendet. Der Dateiname muss in doppelten Anführungszeichen ("") und hinter einer Zeilennummer stehen.  
   
- Eine Quellcodedatei kann eine beliebige Anzahl von `#line`\-Direktiven enthalten.  
+ Eine Quellcodedatei kann über eine beliebige Anzahl von `#line`-Anweisungen verfügen.  
   
-## Beispiel 1  
- Im folgenden Beispiel wird veranschaulicht, wie der Debugger die verborgenen Codezeilen ignoriert.  Beim Ausführen dieses Beispiels werden drei Textzeilen angezeigt.  Wenn Sie jedoch, wie im Beispiel, einen Haltepunkt festlegen und den Code mit F10 schrittweise durchlaufen, werden Sie feststellen, dass die verborgene Zeile vom Debugger ignoriert wird.  Die Zeile wird vom Debugger auch ignoriert, wenn Sie an der verborgenen Zeile einen Haltepunkt setzen.  
+## <a name="example-1"></a>Beispiel 1  
+ Das folgende Beispiel zeigt, wie der Debugger die ausgeblendeten Zeilen im Code ignoriert. Wenn Sie das Beispiel ausführen, werden drei Textzeilen angezeigt. Wenn Sie jedoch wie im Beispiel gezeigt einen Haltepunkt setzen und F10 drücken, um den Code zu durchlaufen, werden Sie feststellen, dass der Debugger die ausgeblendete Zeile ignoriert. Beachten Sie zudem, dass die ausgeblendete Zeile selbst dann vom Debugger ignoriert wird, wenn Sie einen Haltepunkt an dieser Zeile setzen.  
   
-```  
+```csharp
 // preprocessor_linehidden.cs  
 using System;  
 class MainClass   
@@ -68,7 +87,8 @@ class MainClass
 }  
 ```  
   
-## Siehe auch  
- [C\#\-Referenz](../../../csharp/language-reference/index.md)   
- [C\#\-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C\#\-Präprozessordirektiven](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [C#-Referenz](../../../csharp/language-reference/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
+

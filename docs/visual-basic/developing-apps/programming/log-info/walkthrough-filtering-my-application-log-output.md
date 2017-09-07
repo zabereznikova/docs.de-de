@@ -1,5 +1,5 @@
 ---
-title: "Filtern der Ausgaben von „My.Application.Log“ (Visual Basic) | Microsoft-Dokumentation"
+title: "Filterung der Ausgaben von „My.Application.Log“ (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von "My.Application.Log" (Visual Basic)
@@ -48,7 +48,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 #### <a name="to-build-the-sample-application"></a>So installieren Sie die Beispielanwendung  
   
-1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Windows-Anwendungsprojekt.  
+1.  Öffnen Sie ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Windows-Anwendungsprojekt.  
   
 2.  Fügen Sie eine Schaltfläche mit dem Namen „Button1“ zu „Form1“ hinzu.  
   
@@ -68,7 +68,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 6.  Schließen Sie die Anwendung.  
   
-     Informationen zum Anzeigen des Ausgabefensters der Anwendung finden Sie unter [Ausgabefenster](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Informationen zum Speicherort der Protokolldatei der Anwendung finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Informationen zum Anzeigen des Ausgabefensters der Anwendung finden Sie unter [Ausgabefenster](/visualstudio/ide/reference/output-window). Informationen zum Speicherort der Protokolldatei der Anwendung finden Sie unter [Walkthrough: Determining Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
     >  Standardmäßig leert die Anwendung die Ausgabe der Protokolldatei, wenn die Anwendung geschlossen wird.  
@@ -162,7 +162,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
 9. Ändern Sie den Wert des `value`-Attributs zurück zu „Information“.  
   
     > [!NOTE]
-    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> wird dadurch nicht verändert.  
+    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> wird dadurch nicht verändert.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für alle „My.Application.Log“-Listener  
  Im vorherige Beispiel wurde gezeigt, wie Sie die Filterung für alle `My.Application.Log`-Ausgaben ändern können. In diesem Beispiel wird veranschaulicht, wie Sie einen einzelnen Protokolllistener filtern. Standardmäßig verwendet eine Anwendung zwei Listener, die in die Debugausgabe und die Protokolldatei der Anwendung schreiben.  
@@ -281,3 +281,4 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
  [How to: Write Log Messages (Vorgehensweise: Schreiben von Protokollmeldungen)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Trace Switches (Ablaufverfolgungsschalter)](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

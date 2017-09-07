@@ -1,5 +1,5 @@
 ---
-title: Methoden (C#-Programmierhandbuch) | Microsoft-Dokumentation
+title: Methoden (C#-Programmierhandbuch)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: de-de
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
@@ -80,7 +80,18 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
  Weitere Informationen zum Übergeben von Verweistypen als Verweis oder als Wert finden Sie unter [Übergeben von Verweistypparametern ](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) und [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp – der vor dem Methodennamen aufgeführte Typ – nicht `void`ist, kann die Methode den Wert mithilfe des `return` -Schlüsselworts zurückgeben. Eine Anweisung mit der `return` -Schlüsselwort, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. Das `return` -Schlüsselwort beendet außerdem die Ausführung der Methode. Wenn der Rückgabetyp `void`ist, ist eine `return` -Anweisung ohne Wert immer noch nützlich, um die Ausführung der Methode zu beenden. Ohne das `return` -Schlüsselwort wird die Ausführung der Methode beendet, wenn das Ende des Codeblocks erreicht ist. Methoden mit einem anderen Rückgabetyp als „void“ müssen das `return` -Schlüsselwort verwenden, um einen Wert zurückzugeben. Die folgenden beiden Methoden verwenden z. B. das `return` -Schlüsselwort, um ganze Zahlen zurückzugeben:  
+Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp – der vor dem Methodennamen aufgeführte Typ – nicht `void`ist, kann die Methode den Wert mithilfe des `return` -Schlüsselworts zurückgeben. Eine Anweisung mit der `return` -Schlüsselwort, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. 
+
+Der Wert kann an den Aufrufer nach Wert oder, ab C# 7, [nach Verweis](ref-returns.md) zurückgegeben werden. Werte werden an den Aufrufer nach Verweis zurückgegeben, wenn das Schlüsselwort `ref` in der Methodensignatur verwendet wird und auf jedes `return`-Schlüsselwort folgt. Die folgende Methodensignatur und Rückgabeanweisung geben an, dass die Methode eine Variable mit dem Namen `estDistance` nach Verweis an den Aufrufer zurückgibt.
+
+```csharp
+public ref double GetEstimatedDistance()
+{
+   return ref estDistance;
+}
+```
+
+Das `return` -Schlüsselwort beendet außerdem die Ausführung der Methode. Wenn der Rückgabetyp `void`ist, ist eine `return` -Anweisung ohne Wert immer noch nützlich, um die Ausführung der Methode zu beenden. Ohne das `return` -Schlüsselwort wird die Ausführung der Methode beendet, wenn das Ende des Codeblocks erreicht ist. Methoden mit einem anderen Rückgabetyp als „void“ müssen das `return` -Schlüsselwort verwenden, um einen Wert zurückzugeben. Die folgenden beiden Methoden verwenden z. B. das `return` -Schlüsselwort, um ganze Zahlen zurückzugeben:  
   
  [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
@@ -91,8 +102,14 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
  [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Die Verwendung einer lokalen Variablen, in diesem Fall `result`, zum Speichern eines Werts ist optional. Es kann die Lesbarkeit des Codes verbessern, oder es kann notwendig sein, wenn Sie den ursprünglichen Wert des Arguments für den gesamten Gültigkeitsbereich der Methode speichern müssen.  
-  
- Die Rückgabe eines mehrdimensionalen Arrays von einer Methode M, die den Inhalt des Arrays ändert, ist nicht erforderlich, wenn die aufrufende Funktion das Array an M übergeben hat. Sie können das resultierende Array von M für den funktionalen Fluss von Werten oder zu stilistischen Zwecken zurückgeben, erforderlich ist dies aber nicht.  Sie müssen das geänderte Array nicht zurückgeben, weil C# alle Verweistypen als Wert übergibt und der Wert eines Arrayverweises der Zeiger auf das Array ist. In der Methode M sind Änderungen am Inhalt des Arrays durch beliebigen Code beobachtbar, der einen Verweis auf das Array enthält, wie im folgenden Beispiel gezeigt.  
+
+Um einen Wert zu verwenden, der nach Verweis von einer Methode zurückgegeben wurde, müssen Sie die Variable [ref local](ref-returns.md#ref-locals) deklarieren, wenn Sie diesen Wert modifizieren möchten. Wenn die `Planet.GetEstimatedDistance`-Methode z.B. einen <xref:System.Double>-Wert nach Verweis zurückgibt, können Sie ihn mit Code wie dem folgenden als ref local-Variable definieren:
+
+```csharp
+ref int distance = plant 
+```
+
+Die Zurückgabe eines mehrdimensionalen Arrays aus einer Methode, `M`, die den Inhalt eines Arrays modifiziert, ist nicht vonnöten, wenn die aufrufende Funktion das Array an `M` übergeben hat.  Sie können das resultierende Array aus `M` für den funktionalen Fluss der Werte oder aus stilistischen Gründen zurückgeben. Dies ist jedoch nicht nötig, da C# alle Referenztypen nach Wert übergibt und der Wert eines Arrayverweises ein Zeiger auf das Array ist. In der Methode `M` sind Änderungen am Inhalt des Arrays durch beliebigen Code beobachtbar, der einen Verweis auf das Array enthält, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -124,9 +141,9 @@ static void Main(string[] args)
 > [!NOTE]
 >  Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.  
   
- Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> oder „void“ haben. Der void-Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein void-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die „void“ zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen auffangen, die die Methode auslöst.  
+ Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oder „void“ haben. Der void-Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein void-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die „void“ zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen auffangen, die die Methode auslöst.  
   
- Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration von `DelayAsync` den Rückgabetyp `Task<int>`haben. Da der Rückgabetyp `Task<int>`ist, ergibt die Auswertung des `await` -Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung veranschaulicht: `int result = await delayTask`.  
+ Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `return` -Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration von `DelayAsync` den Rückgabetyp `Task<int>`haben. Da der Rückgabetyp `Task<int>`ist, ergibt die Auswertung des `await` -Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung veranschaulicht: `int result = await delayTask`.  
   
  Die `startButton_Click` -Methode ist ein Beispiel für eine asynchrone Methode mit void-Rückgabetyp. Da `DoSomethingAsync` eine asynchrone Methode ist, muss die Aufgabe für den Aufruf von `DoSomethingAsync` abgewartet werden, wie in der folgenden Anweisung dargestellt: `await DoSomethingAsync();`. Die `startButton_Click` -Methode muss mit dem `async` -Modifizierer definiert werden, da die Methode über einen `await` -Ausdruck verfügt.  
   
@@ -155,7 +172,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md) Anweisung auf.  
   
- Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.  
+ Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.  
   
  Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
