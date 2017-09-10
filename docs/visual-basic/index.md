@@ -30,13 +30,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Leitfaden für Visual Basic
+
 Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwendungen produktiv erstellen können. Visual Basic kann von Entwicklern für Windows-basierte, webbasierte und mobile Geräte verwendet werden. Wie bei allen Sprachen für Microsoft .NET Framework profitieren in Visual Basic geschriebene Programme von Sicherheit und sprachübergreifender Interoperabilität.  
   
  Auch diese Visual Basic-Generation bietet Ihnen schnelle und einfache Möglichkeiten zur Erstellung von Anwendungen auf der Basis von .NET Framework.  
