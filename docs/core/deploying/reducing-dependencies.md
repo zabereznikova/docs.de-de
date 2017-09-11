@@ -17,37 +17,37 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>Reduzieren von Paketabhängigkeiten mit „project.json“
+# <a name="reducing-package-dependencies-with-projectjson"></a><span data-ttu-id="971fb-104">Reduzieren von Paketabhängigkeiten mit „project.json“</span><span class="sxs-lookup"><span data-stu-id="971fb-104">Reducing Package Dependencies with project.json</span></span>
 
-Dieser Artikel beschreibt, was Sie über das Reduzieren Ihrer Paketabhängigkeiten beim Erstellen von `project.json`-Bibliotheken wissen müssen. Am Ende dieses Artikels erfahren Sie, wie Ihre Bibliothek so zusammengesetzt wird, dass sie nur die Abhängigkeiten verwendet, die sie benötigt. 
+<span data-ttu-id="971fb-105">Dieser Artikel beschreibt, was Sie über das Reduzieren Ihrer Paketabhängigkeiten beim Erstellen von `project.json`-Bibliotheken wissen müssen.</span><span class="sxs-lookup"><span data-stu-id="971fb-105">This article covers what you need to know about reducing your package dependencies when authoring `project.json` libraries.</span></span> <span data-ttu-id="971fb-106">Am Ende dieses Artikels erfahren Sie, wie Ihre Bibliothek so zusammengesetzt wird, dass sie nur die Abhängigkeiten verwendet, die sie benötigt.</span><span class="sxs-lookup"><span data-stu-id="971fb-106">By the end of this article, you will learn how to compose your library such that it only uses the dependencies it needs.</span></span> 
 
-## <a name="why-its-important"></a>Warum dies wichtig ist
+## <a name="why-its-important"></a><span data-ttu-id="971fb-107">Warum dies wichtig ist</span><span class="sxs-lookup"><span data-stu-id="971fb-107">Why it's Important</span></span>
 
-.NET Core ist ein Produkt, das aus NuGet-Paketen besteht.  Ein wichtiges Paket ist das [.NETStandard.Library metapackage (.NETStandard.Library-Metapaket)](https://www.nuget.org/packages/NETStandard.Library), wobei es sich um ein NuGet-Paket handelt, das aus anderen Paketen besteht.  Es stellt die Reihe von Paketen bereit, bei denen gewährleistet wird, dass sie auf mehreren .NET-Implementierungen wie z.B. .NET Framework, .NET Core und Xamarin/Mono funktionieren.
+<span data-ttu-id="971fb-108">.NET Core ist ein Produkt, das aus NuGet-Paketen besteht.</span><span class="sxs-lookup"><span data-stu-id="971fb-108">.NET Core is a product made up of NuGet packages.</span></span>  <span data-ttu-id="971fb-109">Ein wichtiges Paket ist das [.NETStandard.Library metapackage (.NETStandard.Library-Metapaket)](https://www.nuget.org/packages/NETStandard.Library), wobei es sich um ein NuGet-Paket handelt, das aus anderen Paketen besteht.</span><span class="sxs-lookup"><span data-stu-id="971fb-109">An essential package is the [.NETStandard.Library metapackage](https://www.nuget.org/packages/NETStandard.Library), which is a NuGet package composed of other packages.</span></span>  <span data-ttu-id="971fb-110">Es stellt die Reihe von Paketen bereit, bei denen gewährleistet wird, dass sie auf mehreren .NET-Implementierungen wie z.B. .NET Framework, .NET Core und Xamarin/Mono funktionieren.</span><span class="sxs-lookup"><span data-stu-id="971fb-110">It provides you with the set of packages that are guaranteed to work on multiple .NET implementations, such as .NET Framework, .NET Core and Xamarin/Mono.</span></span>
 
-Jedoch ist die Wahrscheinlichkeit hoch, dass Ihre Bibliothek nicht jedes einzelne Paket verwenden wird, das enthalten ist.  Beim Erstellen einer Bibliothek und Verteilen dieser Bibliothek über NuGet ist eine empfohlene Vorgehensweise das „Beschränken“ Ihrer Abhängigkeiten auf nur die Pakete, die Sie tatsächlich verwenden.  Dies führt zu einem kleineren allgemeinen Speicherbedarf für NuGet-Pakete.
+<span data-ttu-id="971fb-111">Jedoch ist die Wahrscheinlichkeit hoch, dass Ihre Bibliothek nicht jedes einzelne Paket verwenden wird, das enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="971fb-111">However, there's a good chance that your library won't use every single package it contains.</span></span>  <span data-ttu-id="971fb-112">Beim Erstellen einer Bibliothek und Verteilen dieser Bibliothek über NuGet ist eine empfohlene Vorgehensweise das „Beschränken“ Ihrer Abhängigkeiten auf nur die Pakete, die Sie tatsächlich verwenden.</span><span class="sxs-lookup"><span data-stu-id="971fb-112">When authoring a library and distributing it over NuGet, it's a best practice to "trim" your dependencies down to only the packages you actually use.</span></span>  <span data-ttu-id="971fb-113">Dies führt zu einem kleineren allgemeinen Speicherbedarf für NuGet-Pakete.</span><span class="sxs-lookup"><span data-stu-id="971fb-113">This results in a smaller overall footprint for NuGet packages.</span></span>
 
-## <a name="how-to-do-it"></a>So gehen Sie vor
+## <a name="how-to-do-it"></a><span data-ttu-id="971fb-114">So gehen Sie vor</span><span class="sxs-lookup"><span data-stu-id="971fb-114">How to do it</span></span>
 
-Derzeit gibt es keinen offiziellen `dotnet`-Befehl, der Paketverweise beschränkt.  Stattdessen müssen Sie dies manuell tun.  Der allgemeine Prozess sieht folgendermaßen aus:
+<span data-ttu-id="971fb-115">Derzeit gibt es keinen offiziellen `dotnet`-Befehl, der Paketverweise beschränkt.</span><span class="sxs-lookup"><span data-stu-id="971fb-115">Currently, there is no official `dotnet` command which trims package references.</span></span>  <span data-ttu-id="971fb-116">Stattdessen müssen Sie dies manuell tun.</span><span class="sxs-lookup"><span data-stu-id="971fb-116">Instead, you'll have to do it manually.</span></span>  <span data-ttu-id="971fb-117">Der allgemeine Prozess sieht folgendermaßen aus:</span><span class="sxs-lookup"><span data-stu-id="971fb-117">The general process looks like the following:</span></span>
 
-1. Verweisen Sie auf `NETStandard.Library` Version `1.6.0` in einem `dependencies`-Abschnitt Ihrer `project.json`.
-2. Stellen Sie Pakete mit `dotnet restore` aus der Befehlszeile wieder her.
-3. Prüfen Sie die Datei `project.lock.json`, und suchen Sie den Abschnitt `NETSTandard.Library`.  Er befindet sich nahe dem Anfang der Datei.
-4. Kopieren Sie alle unter `dependencies` aufgeführten Pakete.
-5. Entfernen Sie den `.NETStandard.Library`-Verweis, und ersetzen Sie ihn durch die kopierten Pakete.
-6. Entfernen Sie Verweise auf Pakete, die Sie nicht benötigen.
+1. <span data-ttu-id="971fb-118">Verweisen Sie auf `NETStandard.Library` Version `1.6.0` in einem `dependencies`-Abschnitt Ihrer `project.json`.</span><span class="sxs-lookup"><span data-stu-id="971fb-118">Reference `NETStandard.Library` version `1.6.0` in a `dependencies` section of your `project.json`.</span></span>
+2. <span data-ttu-id="971fb-119">Stellen Sie Pakete mit `dotnet restore` aus der Befehlszeile wieder her.</span><span class="sxs-lookup"><span data-stu-id="971fb-119">Restore packages with `dotnet restore` from the command line.</span></span>
+3. <span data-ttu-id="971fb-120">Prüfen Sie die Datei `project.lock.json`, und suchen Sie den Abschnitt `NETSTandard.Library`.</span><span class="sxs-lookup"><span data-stu-id="971fb-120">Inspect the `project.lock.json` file and find the `NETSTandard.Library` section.</span></span>  <span data-ttu-id="971fb-121">Er befindet sich nahe dem Anfang der Datei.</span><span class="sxs-lookup"><span data-stu-id="971fb-121">It's near the beginning of the file.</span></span>
+4. <span data-ttu-id="971fb-122">Kopieren Sie alle unter `dependencies` aufgeführten Pakete.</span><span class="sxs-lookup"><span data-stu-id="971fb-122">Copy all of the listed packages under `dependencies`.</span></span>
+5. <span data-ttu-id="971fb-123">Entfernen Sie den `.NETStandard.Library`-Verweis, und ersetzen Sie ihn durch die kopierten Pakete.</span><span class="sxs-lookup"><span data-stu-id="971fb-123">Remove the `.NETStandard.Library` reference and replace it with the copied packages.</span></span>
+6. <span data-ttu-id="971fb-124">Entfernen Sie Verweise auf Pakete, die Sie nicht benötigen.</span><span class="sxs-lookup"><span data-stu-id="971fb-124">Remove references to packages you don't need.</span></span>
 
-Auf eine der folgenden Weisen können Sie herausfinden, welche Pakete Sie nicht benötigen:
+<span data-ttu-id="971fb-125">Auf eine der folgenden Weisen können Sie herausfinden, welche Pakete Sie nicht benötigen:</span><span class="sxs-lookup"><span data-stu-id="971fb-125">You can find out which packages you don't need by one of the following ways:</span></span>
 
-1. Ausprobieren:  Bei dieser Methode entfernen Sie ein Paket, stellen es wieder her, nehmen zur Kenntnis, ob Ihre Bibliothek immer noch kompiliert, und wiederholen diesen Prozess.
-2. Verwenden eines Tools zum Ansehen von Verweisen wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector), um zu sehen, was Ihr Code tatsächlich verwendet.  Anschließend können Sie Pakete entfernen, die nicht den Typen entsprechen, die Sie verwenden.
+1. <span data-ttu-id="971fb-126">Ausprobieren:</span><span class="sxs-lookup"><span data-stu-id="971fb-126">Trial and error.</span></span>  <span data-ttu-id="971fb-127">Bei dieser Methode entfernen Sie ein Paket, stellen es wieder her, nehmen zur Kenntnis, ob Ihre Bibliothek immer noch kompiliert, und wiederholen diesen Prozess.</span><span class="sxs-lookup"><span data-stu-id="971fb-127">This involves removing a package, restoring, seeing if your library still compiles, and repeating this process.</span></span>
+2. <span data-ttu-id="971fb-128">Verwenden eines Tools zum Ansehen von Verweisen wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector), um zu sehen, was Ihr Code tatsächlich verwendet.</span><span class="sxs-lookup"><span data-stu-id="971fb-128">Using a tool such as [ILSpy](http://ilspy.net) or [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) to peek at references to see what your code is actually using.</span></span>  <span data-ttu-id="971fb-129">Anschließend können Sie Pakete entfernen, die nicht den Typen entsprechen, die Sie verwenden.</span><span class="sxs-lookup"><span data-stu-id="971fb-129">You can then remove packages which don't correspond to types you're using.</span></span>
 
-## <a name="example"></a>Beispiel 
+## <a name="example"></a><span data-ttu-id="971fb-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="971fb-130">Example</span></span> 
 
-Stellen Sie sich vor, dass Sie eine Bibliothek geschrieben haben, die zusätzliche Funktionen für generische Sammlungstypen bereitstellt.  Eine solche Bibliothek müsste von Paketen wie z.B. `System.Collections` abhängen, hängt möglicherweise aber überhaupt nicht von Paketen wie z.B. `System.Net.Http` ab.  Daher wäre es gut, Paketabhängigkeiten auf nur das zu beschränken, was die Bibliothek tatsächlich benötigt.
+<span data-ttu-id="971fb-131">Stellen Sie sich vor, dass Sie eine Bibliothek geschrieben haben, die zusätzliche Funktionen für generische Sammlungstypen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="971fb-131">Imagine that you wrote a library which provided additional functionality to generic collection types.</span></span>  <span data-ttu-id="971fb-132">Eine solche Bibliothek müsste von Paketen wie z.B. `System.Collections` abhängen, hängt möglicherweise aber überhaupt nicht von Paketen wie z.B. `System.Net.Http` ab.</span><span class="sxs-lookup"><span data-stu-id="971fb-132">Such a library would need to depend on packages such as `System.Collections`, but may not at all depend on packages such as `System.Net.Http`.</span></span>  <span data-ttu-id="971fb-133">Daher wäre es gut, Paketabhängigkeiten auf nur das zu beschränken, was die Bibliothek tatsächlich benötigt.</span><span class="sxs-lookup"><span data-stu-id="971fb-133">As such, it would be good to trim package dependencies down to only what this library required!</span></span>
 
-Um diese Bibliothek zu beschränken, beginnen Sie mit der `project.json`-Datei, und fügen Sie einen Verweis zu `NETStandard.Library` Version `1.6.0` hinzu.
+<span data-ttu-id="971fb-134">Um diese Bibliothek zu beschränken, beginnen Sie mit der `project.json`-Datei, und fügen Sie einen Verweis zu `NETStandard.Library` Version `1.6.0` hinzu.</span><span class="sxs-lookup"><span data-stu-id="971fb-134">To trim this library, you start with the `project.json` file and add a reference to `NETStandard.Library` version `1.6.0`.</span></span>
 
 ```json
 {
@@ -61,9 +61,9 @@ Um diese Bibliothek zu beschränken, beginnen Sie mit der `project.json`-Datei, 
 }
 ```
 
-Als Nächstes stellen Sie Pakete mit `dotnet restore` wieder her, prüfen die Datei `project.lock.json` und suchen alle für `NETSTandard.Library` wiederhergestellten Pakete.
+<span data-ttu-id="971fb-135">Als Nächstes stellen Sie Pakete mit `dotnet restore` wieder her, prüfen die Datei `project.lock.json` und suchen alle für `NETSTandard.Library` wiederhergestellten Pakete.</span><span class="sxs-lookup"><span data-stu-id="971fb-135">Next, you restore packages with `dotnet restore`, inspect the `project.lock.json` file, and find all the packages restored for `NETSTandard.Library`.</span></span>
 
-So sieht der entsprechende Abschnitt in der Datei `project.lock.json` aus, wenn auf `netstandard1.0` abgezielt wird:
+<span data-ttu-id="971fb-136">So sieht der entsprechende Abschnitt in der Datei `project.lock.json` aus, wenn auf `netstandard1.0` abgezielt wird:</span><span class="sxs-lookup"><span data-stu-id="971fb-136">Here's what the relevant section in the `project.lock.json` file looks like when targeting `netstandard1.0`:</span></span>
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -96,7 +96,7 @@ So sieht der entsprechende Abschnitt in der Datei `project.lock.json` aus, wenn 
 }
 ```
 
-Kopieren Sie als Nächstes die Paketverweise in den `dependencies`-Abschnitt der `project.json`-Datei der Bibliothek, und ersetzen Sie den `NETStandard.Library`-Verweis:
+<span data-ttu-id="971fb-137">Kopieren Sie als Nächstes die Paketverweise in den `dependencies`-Abschnitt der `project.json`-Datei der Bibliothek, und ersetzen Sie den `NETStandard.Library`-Verweis:</span><span class="sxs-lookup"><span data-stu-id="971fb-137">Next, copy over the package references into the `dependencies` section of the library's `project.json` file, replacing the `NETStandard.Library` reference:</span></span>
 
 ```json
 {
@@ -132,9 +132,9 @@ Kopieren Sie als Nächstes die Paketverweise in den `dependencies`-Abschnitt der
 }
 ```
 
-Das sind ziemlich viele Pakete, die sicherlich nicht zum Erweitern von Sammlungstypen benötigt werden.  Sie können Pakete entweder manuell entfernen oder ein Tool wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) verwenden, um zu bestimmen, welche Pakete Ihr Code tatsächlich verwendet.
+<span data-ttu-id="971fb-138">Das sind ziemlich viele Pakete, die sicherlich nicht zum Erweitern von Sammlungstypen benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="971fb-138">That's quite a lot of packages, many of which which certainly aren't necessary for extending collection types.</span></span>  <span data-ttu-id="971fb-139">Sie können Pakete entweder manuell entfernen oder ein Tool wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) verwenden, um zu bestimmen, welche Pakete Ihr Code tatsächlich verwendet.</span><span class="sxs-lookup"><span data-stu-id="971fb-139">You can either remove packages manually or use a tool such as [ILSpy](http://ilspy.net) or [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) to identify which packages your code actually uses.</span></span>
 
-So könnte ein eingeschränktes Paket aussehen:
+<span data-ttu-id="971fb-140">So könnte ein eingeschränktes Paket aussehen:</span><span class="sxs-lookup"><span data-stu-id="971fb-140">Here's what a trimmed package could look like:</span></span>
 
 ```json
 {
@@ -156,5 +156,5 @@ So könnte ein eingeschränktes Paket aussehen:
 }
 ```
 
-Nun hat es einen geringeren Speicherbedarf als wenn es vom `NETStandard.Library`-Metapaket abhängen würde.
+<span data-ttu-id="971fb-141">Nun hat es einen geringeren Speicherbedarf als wenn es vom `NETStandard.Library`-Metapaket abhängen würde.</span><span class="sxs-lookup"><span data-stu-id="971fb-141">Now, it has a smaller footprint than if it had depended on the `NETStandard.Library` metapackage.</span></span>
 

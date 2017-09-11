@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (C#)
-In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird. Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="39ffc-102">Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (C#)</span><span class="sxs-lookup"><span data-stu-id="39ffc-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
+<span data-ttu-id="39ffc-103">In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird.</span><span class="sxs-lookup"><span data-stu-id="39ffc-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="39ffc-104">Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="39ffc-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="39ffc-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="39ffc-105">Example</span></span>  
   
 ```csharp  
 class FindFileByExtension  
@@ -80,10 +80,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein Projekt, das die .NET Framework-Version 3.5 oder höher verwendet, mit einem Verweis auf System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
+## <a name="compiling-the-code"></a><span data-ttu-id="39ffc-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="39ffc-106">Compiling the Code</span></span>  
+ <span data-ttu-id="39ffc-107">Erstellen Sie ein Projekt, das die .NET Framework-Version 3.5 oder höher verwendet, mit einem Verweis auf System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="39ffc-107">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="39ffc-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="39ffc-108">See Also</span></span>  
+ <span data-ttu-id="39ffc-109">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="39ffc-109">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+ [<span data-ttu-id="39ffc-110">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="39ffc-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

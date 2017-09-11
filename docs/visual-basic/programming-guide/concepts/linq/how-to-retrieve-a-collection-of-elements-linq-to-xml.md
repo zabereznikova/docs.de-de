@@ -15,20 +15,21 @@ ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfe4450d268125f021795dfb61885f4c2cb81151
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bb9cd9b3a7e30ba87c748899510794f4a66248ba
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Gewusst wie: Abrufen einer Auflistung von Elementen (LINQ to XML) (Visual Basic)
-In diesem Thema wird die <xref:System.Xml.Linq.XContainer.Elements%2A>-Methode.</xref:System.Xml.Linq.XContainer.Elements%2A> Diese Methode ruft eine Auflistung der untergeordneten Elemente eines Elements ab.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="0c87a-102">Gewusst wie: Abrufen einer Auflistung von Elementen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c87a-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0c87a-103">In diesem Thema wird die <xref:System.Xml.Linq.XContainer.Elements%2A>-Methode.</xref:System.Xml.Linq.XContainer.Elements%2A></span><span class="sxs-lookup"><span data-stu-id="0c87a-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="0c87a-104">Diese Methode ruft eine Auflistung der untergeordneten Elemente eines Elements ab.</span><span class="sxs-lookup"><span data-stu-id="0c87a-104">This method retrieves a collection of the child elements of an element.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel durchläuft die untergeordneten Elemente des `purchaseOrder`-Elements.  
+## <a name="example"></a><span data-ttu-id="0c87a-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0c87a-105">Example</span></span>  
+ <span data-ttu-id="0c87a-106">Dieses Beispiel durchläuft die untergeordneten Elemente des `purchaseOrder`-Elements.</span><span class="sxs-lookup"><span data-stu-id="0c87a-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ <span data-ttu-id="0c87a-107">Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0c87a-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,7 +42,7 @@ For Each el As XElement In childElements
 Next  
 ```  
   
- Folgende Ergebnisse werden zurückgegeben:  
+ <span data-ttu-id="0c87a-108">Folgende Ergebnisse werden zurückgegeben:</span><span class="sxs-lookup"><span data-stu-id="0c87a-108">This example produces the following output.</span></span>  
   
 ```  
 Name: Address  
@@ -50,5 +51,5 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML-Achsen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="0c87a-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c87a-109">See Also</span></span>  
+ [<span data-ttu-id="0c87a-110">LINQ to XML-Achsen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c87a-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

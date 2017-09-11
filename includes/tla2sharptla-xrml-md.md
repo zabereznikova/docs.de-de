@@ -1,1 +1,1 @@
-XrML
+<span data-ttu-id="a49b0-101">XrML</span><span class="sxs-lookup"><span data-stu-id="a49b0-101">XrML</span></span>

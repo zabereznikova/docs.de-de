@@ -21,23 +21,23 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-default-authorizationcontext"></a>Entschärfung: Standardmäßiger AuthorizationContext
-In der Implementierung von <xref:System.IdentityModel.Policy.AuthorizationContext>, der durch den Aufruf von <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%28System.Collections.Generic.IList%7BSystem.IdentityModel.Policy.IAuthorizationPolicy%7D%29> mit einem `null``authorizationPolicies`-Argument zurückgegeben wird, wurde die entsprechende Implementierung in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] geändert.  
+# <a name="mitigation-default-authorizationcontext"></a><span data-ttu-id="e778b-102">Entschärfung: Standardmäßiger AuthorizationContext</span><span class="sxs-lookup"><span data-stu-id="e778b-102">Mitigation: Default AuthorizationContext</span></span>
+<span data-ttu-id="e778b-103">In der Implementierung von <xref:System.IdentityModel.Policy.AuthorizationContext>, der durch den Aufruf von <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%28System.Collections.Generic.IList%7BSystem.IdentityModel.Policy.IAuthorizationPolicy%7D%29> mit einem `null``authorizationPolicies`-Argument zurückgegeben wird, wurde die entsprechende Implementierung in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] geändert.</span><span class="sxs-lookup"><span data-stu-id="e778b-103">The implementation of the <xref:System.IdentityModel.Policy.AuthorizationContext> returned by a call to the <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%28System.Collections.Generic.IList%7BSystem.IdentityModel.Policy.IAuthorizationPolicy%7D%29> with a `null``authorizationPolicies` argument has changed its implementation in the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)].</span></span>  
   
-## <a name="impact"></a>Auswirkungen  
- In seltenen Fällen liegen bei WCF-Apps, die die benutzerdefinierte Authentifizierung verwenden, möglicherweise Verhaltensunterschiede vor.  
+## <a name="impact"></a><span data-ttu-id="e778b-104">Auswirkungen</span><span class="sxs-lookup"><span data-stu-id="e778b-104">Impact</span></span>  
+ <span data-ttu-id="e778b-105">In seltenen Fällen liegen bei WCF-Apps, die die benutzerdefinierte Authentifizierung verwenden, möglicherweise Verhaltensunterschiede vor.</span><span class="sxs-lookup"><span data-stu-id="e778b-105">In rare cases, WCF apps that use custom authentication may see behavioral differences.</span></span>  
   
-## <a name="mitigation"></a>Problemumgehung  
- Sie können das vorherige Verhalten auf zwei verschiedene Art und Weisen wiederherstellen:  
+## <a name="mitigation"></a><span data-ttu-id="e778b-106">Problemumgehung</span><span class="sxs-lookup"><span data-stu-id="e778b-106">Mitigation</span></span>  
+ <span data-ttu-id="e778b-107">Sie können das vorherige Verhalten auf zwei verschiedene Art und Weisen wiederherstellen:</span><span class="sxs-lookup"><span data-stu-id="e778b-107">You can restore the previous behavior in either of two ways:</span></span>  
   
--   Kompilieren Sie Ihre App erneut, damit sie auf eine frühere Version als .NET Framework 4.6 abzielt. Verwenden Sie für mithilfe von IIS gehosteten Diensten das `<httpRuntime targetFramework="x.x" />`-Element, um auf eine frühere Version von .NET Framework abzuzielen.  
+-   <span data-ttu-id="e778b-108">Kompilieren Sie Ihre App erneut, damit sie auf eine frühere Version als .NET Framework 4.6 abzielt.</span><span class="sxs-lookup"><span data-stu-id="e778b-108">Recompile your app to target an earlier version of the .NET Framework than 4.6.</span></span> <span data-ttu-id="e778b-109">Verwenden Sie für mithilfe von IIS gehosteten Diensten das `<httpRuntime targetFramework="x.x" />`-Element, um auf eine frühere Version von .NET Framework abzuzielen.</span><span class="sxs-lookup"><span data-stu-id="e778b-109">For IIS-hosted services, use the `<httpRuntime targetFramework="x.x" />` element to target an earlier version of the .NET Framework.</span></span>  
   
--   Fügen Sie dem Abschnitt `<appSettings>` Ihrer Datei „app.config“ die folgende Zeile hinzu:  
+-   <span data-ttu-id="e778b-110">Fügen Sie dem Abschnitt `<appSettings>` Ihrer Datei „app.config“ die folgende Zeile hinzu:</span><span class="sxs-lookup"><span data-stu-id="e778b-110">Add the following line to the `<appSettings>` section of your app.config file:</span></span>  
   
     ```xml  
     <add key="appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext" value="true" />  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a><span data-ttu-id="e778b-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e778b-111">See Also</span></span>  
+ [<span data-ttu-id="e778b-112">Neuausrichtungsänderungen</span><span class="sxs-lookup"><span data-stu-id="e778b-112">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
 

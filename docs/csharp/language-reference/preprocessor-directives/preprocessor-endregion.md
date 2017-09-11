@@ -36,8 +36,8 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="endregion-c-reference"></a>#endregion (C#-Referenz)
-`#endregion` markiert das Ende eines [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)-Blocks. Zum Beispiel:  
+# <a name="endregion-c-reference"></a><span data-ttu-id="0c0e5-102">#endregion (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="0c0e5-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="0c0e5-103">`#endregion` markiert das Ende eines [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)-Blocks.</span><span class="sxs-lookup"><span data-stu-id="0c0e5-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="0c0e5-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="0c0e5-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -50,8 +50,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="0c0e5-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c0e5-105">See Also</span></span>  
+ <span data-ttu-id="0c0e5-106">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="0c0e5-106">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="0c0e5-107">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0c0e5-107">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="0c0e5-108">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="0c0e5-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

@@ -21,10 +21,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="wif-extensions"></a>WIF-Erweiterungen
-In diesem Abschnitt werden die Erweiterungen für Windows Identity Foundation beschrieben.  
+# <a name="wif-extensions"></a><span data-ttu-id="7ccc0-102">WIF-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="7ccc0-102">WIF Extensions</span></span>
+<span data-ttu-id="7ccc0-103">In diesem Abschnitt werden die Erweiterungen für Windows Identity Foundation beschrieben.</span><span class="sxs-lookup"><span data-stu-id="7ccc0-103">This section describes the extensions for Windows Identity Foundation.</span></span>  
   
--   [JSON-Webtokenhandler](../../../docs/framework/security/json-web-token-handler.md)  
+-   [<span data-ttu-id="7ccc0-104">JSON-Webtokenhandler</span><span class="sxs-lookup"><span data-stu-id="7ccc0-104">JSON Web Token Handler</span></span>](../../../docs/framework/security/json-web-token-handler.md)  
   
--   [Validierung der Ausstellernamenregistration](../../../docs/framework/security/validating-issuer-name-registry.md)
+-   [<span data-ttu-id="7ccc0-105">Validierung der Ausstellernamenregistration</span><span class="sxs-lookup"><span data-stu-id="7ccc0-105">Validating Issuer Name Registry</span></span>](../../../docs/framework/security/validating-issuer-name-registry.md)
 

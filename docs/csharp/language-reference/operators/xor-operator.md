@@ -37,25 +37,25 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operator ^ (C#-Referenz)
-Binäre `^`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet `^` die bitweise XOR-Operation der Operanden. Für `bool`-Operanden berechnet `^` den XOR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn einer und nur einer der Operanden `true` ist.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="04d63-102">Operator ^ (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="04d63-102">^ Operator (C# Reference)</span></span>
+<span data-ttu-id="04d63-103">Binäre `^`-Operatoren sind für integrale Typen und `bool` vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="04d63-103">Binary `^` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="04d63-104">Für integrale Typen berechnet `^` die bitweise XOR-Operation der Operanden.</span><span class="sxs-lookup"><span data-stu-id="04d63-104">For integral types, `^` computes the bitwise exclusive-OR of its operands.</span></span> <span data-ttu-id="04d63-105">Für `bool`-Operanden berechnet `^` den XOR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn einer und nur einer der Operanden `true` ist.</span><span class="sxs-lookup"><span data-stu-id="04d63-105">For `bool` operands, `^` computes the logical exclusive-or of its operands; that is, the result is `true` if and only if exactly one of its operands is `true`.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Typen können den Operator `^` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)). Operationen mit Ganzzahltypen sind grundsätzlich auch für Aufzählungen (enum) zulässig.  
+## <a name="remarks"></a><span data-ttu-id="04d63-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="04d63-106">Remarks</span></span>  
+ <span data-ttu-id="04d63-107">Benutzerdefinierte Typen können den Operator `^` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="04d63-107">User-defined types can overload the `^` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="04d63-108">Operationen mit Ganzzahltypen sind grundsätzlich auch für Aufzählungen (enum) zulässig.</span><span class="sxs-lookup"><span data-stu-id="04d63-108">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="04d63-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="04d63-109">Example</span></span>  
+ <span data-ttu-id="04d63-110">[!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="04d63-110">[!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]</span></span>  
   
- Die Berechnung von `0xf8 ^ 0x3f` im vorherigen Beispiel führt einen bitweisen XOR-Operator der folgenden beiden binären Werte aus, die den Hexadezimalwerten F8 und 3F entsprechen:  
+ <span data-ttu-id="04d63-111">Die Berechnung von `0xf8 ^ 0x3f` im vorherigen Beispiel führt einen bitweisen XOR-Operator der folgenden beiden binären Werte aus, die den Hexadezimalwerten F8 und 3F entsprechen:</span><span class="sxs-lookup"><span data-stu-id="04d63-111">The computation of `0xf8 ^ 0x3f` in the previous example performs a bitwise exclusive-OR of the following two binary values, which correspond to the hexadecimal values F8 and 3F:</span></span>  
   
  `1111 1000`  
   
  `0011 1111`  
   
- Das Ergebnis von XOR ist `1100 0111`, was hexadezimal C7 ist.  
+ <span data-ttu-id="04d63-112">Das Ergebnis von XOR ist `1100 0111`, was hexadezimal C7 ist.</span><span class="sxs-lookup"><span data-stu-id="04d63-112">The result of the exclusive-OR is `1100 0111`, which is C7 in hexadecimal.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="04d63-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04d63-113">See Also</span></span>  
+ <span data-ttu-id="04d63-114">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="04d63-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="04d63-115">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="04d63-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="04d63-116">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="04d63-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dabei handelt es sich um einen typischen Auftrag.  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="64c01-102">Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="64c01-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="64c01-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="64c01-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="64c01-104">Dabei handelt es sich um einen typischen Auftrag.</span><span class="sxs-lookup"><span data-stu-id="64c01-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
+## <a name="purchaseorderxml"></a><span data-ttu-id="64c01-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="64c01-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,6 +68,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="64c01-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="64c01-106">See Also</span></span>  
+ [<span data-ttu-id="64c01-107">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="64c01-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

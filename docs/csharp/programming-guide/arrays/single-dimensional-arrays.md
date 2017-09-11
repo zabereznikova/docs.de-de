@@ -35,49 +35,49 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
-Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie im folgenden Beispiel gezeigt:  
+# <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="3e9a4-102">Eindimensionale Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="3e9a4-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="3e9a4-103">Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
+ <span data-ttu-id="3e9a4-104">[!code-cs[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-104">[!code-cs[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]</span></span>  
   
- Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Der [neue](../../../csharp/language-reference/keywords/new.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren. In diesem Beispiel werden alle Arrayelemente mit null initialisiert.  
+ <span data-ttu-id="3e9a4-105">Dieses Array enthält die Elemente `array[0]` bis `array[4]`.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-105">This array contains the elements from `array[0]` to `array[4]`.</span></span> <span data-ttu-id="3e9a4-106">Der [neue](../../../csharp/language-reference/keywords/new.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-106">The [new](../../../csharp/language-reference/keywords/new.md) operator is used to create the array and initialize the array elements to their default values.</span></span> <span data-ttu-id="3e9a4-107">In diesem Beispiel werden alle Arrayelemente mit null initialisiert.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-107">In this example, all the array elements are initialized to zero.</span></span>  
   
- Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden. Zum Beispiel:  
+ <span data-ttu-id="3e9a4-108">Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-108">An array that stores string elements can be declared in the same way.</span></span> <span data-ttu-id="3e9a4-109">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-109">For example:</span></span>  
   
- [!code-cs[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
+ <span data-ttu-id="3e9a4-110">[!code-cs[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-110">[!code-cs[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]</span></span>  
   
-## <a name="array-initialization"></a>Arrayinitialisierung  
- Arrays können nach der Deklaration initialisiert werden. In diesem Fall ist kein Rangbezeichner erforderlich, da er bereits durch die Anzahl der Elemente in der Initialisierungsliste bereitgestellt wird. Zum Beispiel:  
+## <a name="array-initialization"></a><span data-ttu-id="3e9a4-111">Arrayinitialisierung</span><span class="sxs-lookup"><span data-stu-id="3e9a4-111">Array Initialization</span></span>  
+ <span data-ttu-id="3e9a4-112">Arrays können nach der Deklaration initialisiert werden. In diesem Fall ist kein Rangbezeichner erforderlich, da er bereits durch die Anzahl der Elemente in der Initialisierungsliste bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-112">It is possible to initialize an array upon declaration, in which case, the rank specifier is not needed because it is already supplied by the number of elements in the initialization list.</span></span> <span data-ttu-id="3e9a4-113">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-113">For example:</span></span>  
   
- [!code-cs[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
+ <span data-ttu-id="3e9a4-114">[!code-cs[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-114">[!code-cs[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]</span></span>  
   
- Ein Zeichenfolgenarray kann auf die gleiche Weise initialisiert werden. Die nachfolgende Deklaration zeigt ein Zeichenfolgenarray, in dem jedes Arrayelement durch den Namen eines Wochentags initialisiert wird:  
+ <span data-ttu-id="3e9a4-115">Ein Zeichenfolgenarray kann auf die gleiche Weise initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-115">A string array can be initialized in the same way.</span></span> <span data-ttu-id="3e9a4-116">Die nachfolgende Deklaration zeigt ein Zeichenfolgenarray, in dem jedes Arrayelement durch den Namen eines Wochentags initialisiert wird:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-116">The following is a declaration of a string array where each array element is initialized by a name of a day:</span></span>  
   
- [!code-cs[csProgGuideArrays#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_4.cs)]  
+ <span data-ttu-id="3e9a4-117">[!code-cs[csProgGuideArrays#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-117">[!code-cs[csProgGuideArrays#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_4.cs)]</span></span>  
   
- Beim Initialisieren eines Arrays nach der Deklaration können Sie die folgenden Kurzbefehle verwenden:  
+ <span data-ttu-id="3e9a4-118">Beim Initialisieren eines Arrays nach der Deklaration können Sie die folgenden Kurzbefehle verwenden:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-118">When you initialize an array upon declaration, you can use the following shortcuts:</span></span>  
   
- [!code-cs[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
+ <span data-ttu-id="3e9a4-119">[!code-cs[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-119">[!code-cs[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]</span></span>  
   
- Eine Arrayvariable kann auch ohne Initialisierung deklariert werden. Verwenden Sie hierzu jedoch den Operator `new`, um dieser Variable ein Array zuzuweisen. Zum Beispiel:  
+ <span data-ttu-id="3e9a4-120">Eine Arrayvariable kann auch ohne Initialisierung deklariert werden. Verwenden Sie hierzu jedoch den Operator `new`, um dieser Variable ein Array zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-120">It is possible to declare an array variable without initialization, but you must use the `new` operator when you assign an array to this variable.</span></span> <span data-ttu-id="3e9a4-121">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-121">For example:</span></span>  
   
- [!code-cs[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
+ <span data-ttu-id="3e9a4-122">[!code-cs[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-122">[!code-cs[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]</span></span>  
   
- In C# 3.0 werden implizit typisierte Arrays eingeführt. Weitere Informationen finden Sie unter [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ <span data-ttu-id="3e9a4-123">In C# 3.0 werden implizit typisierte Arrays eingeführt.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-123">C# 3.0 introduces implicitly typed arrays.</span></span> <span data-ttu-id="3e9a4-124">Weitere Informationen finden Sie unter [Implizit typisierte Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="3e9a4-124">For more information, see [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  
   
-## <a name="value-type-and-reference-type-arrays"></a>Werttyp- und Verweistyparrays  
- Betrachten Sie die folgende Arraydeklaration:  
+## <a name="value-type-and-reference-type-arrays"></a><span data-ttu-id="3e9a4-125">Werttyp- und Verweistyparrays</span><span class="sxs-lookup"><span data-stu-id="3e9a4-125">Value Type and Reference Type Arrays</span></span>  
+ <span data-ttu-id="3e9a4-126">Betrachten Sie die folgende Arraydeklaration:</span><span class="sxs-lookup"><span data-stu-id="3e9a4-126">Consider the following array declaration:</span></span>  
   
- [!code-cs[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
+ <span data-ttu-id="3e9a4-127">[!code-cs[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="3e9a4-127">[!code-cs[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]</span></span>  
   
- Das Ergebnis dieser Anweisung hängt davon ab, ob `SomeType` ein Werttyp oder ein Verweistyp ist. Bei einem Werttyp wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes den Typ `SomeType` besitzt. Stellt `SomeType` einen Verweistyp dar, wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes mit einem NULL-Verweis initialisiert wird.  
+ <span data-ttu-id="3e9a4-128">Das Ergebnis dieser Anweisung hängt davon ab, ob `SomeType` ein Werttyp oder ein Verweistyp ist.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-128">The result of this statement depends on whether `SomeType` is a value type or a reference type.</span></span> <span data-ttu-id="3e9a4-129">Bei einem Werttyp wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes den Typ `SomeType` besitzt.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-129">If it is a value type, the statement creates an array of 10 elements, each of which has the type `SomeType`.</span></span> <span data-ttu-id="3e9a4-130">Stellt `SomeType` einen Verweistyp dar, wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes mit einem NULL-Verweis initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="3e9a4-130">If `SomeType` is a reference type, the statement creates an array of 10 elements, each of which is initialized to a null reference.</span></span>  
   
- Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).  
+ <span data-ttu-id="3e9a4-131">Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).</span><span class="sxs-lookup"><span data-stu-id="3e9a4-131">For more information about value types and reference types, see [Types](../../../csharp/language-reference/keywords/types.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Array>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Arrays](../../../csharp/programming-guide/arrays/index.md)   
- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
- [Verzweigte Arrays](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a><span data-ttu-id="3e9a4-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3e9a4-132">See Also</span></span>  
+ <span data-ttu-id="3e9a4-133"><xref:System.Array></span><span class="sxs-lookup"><span data-stu-id="3e9a4-133"><xref:System.Array></span></span>   
+ <span data-ttu-id="3e9a4-134">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="3e9a4-134">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="3e9a4-135">[Arrays](../../../csharp/programming-guide/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="3e9a4-135">[Arrays](../../../csharp/programming-guide/arrays/index.md) </span></span>  
+ <span data-ttu-id="3e9a4-136">[Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="3e9a4-136">[Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span></span>  
+ [<span data-ttu-id="3e9a4-137">Verzweigte Arrays</span><span class="sxs-lookup"><span data-stu-id="3e9a4-137">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
 

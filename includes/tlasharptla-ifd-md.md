@@ -1,1 +1,1 @@
-Bilddateiverzeichnis (image file directory, IFD)
+<span data-ttu-id="ea9ce-101">Bilddateiverzeichnis (image file directory, IFD)</span><span class="sxs-lookup"><span data-stu-id="ea9ce-101">image file directory (IFD)</span></span>

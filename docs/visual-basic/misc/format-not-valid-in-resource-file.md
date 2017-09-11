@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6d9332c5a346ea17736d17812930bbae376d8f88
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8becf5b3c4d91ed376cce0a2bbd1bbe1b69cf214
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="format-not-valid-in-resource-file"></a>Die Ressourcendatei enthält ein ungültiges Format.
-Eine Ressourcendatei im Projekt werden nicht befolgt das Standardformat für eine Windows-Ressourcendatei, oder es besteht ein Konflikt zwischen der Ressourcendatei und [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Projekt.  
+# <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="38c86-102">Die Ressourcendatei enthält ein ungültiges Format.</span><span class="sxs-lookup"><span data-stu-id="38c86-102">Format not valid in resource file</span></span>
+<span data-ttu-id="38c86-103">Eine Ressourcendatei im Projekt werden nicht befolgt das Standardformat für eine Windows-Ressourcendatei, oder es besteht ein Konflikt zwischen der Ressourcendatei und [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Projekt.</span><span class="sxs-lookup"><span data-stu-id="38c86-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] project.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="38c86-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="38c86-104">To correct this error</span></span>  
   
-1.  Erstellen Sie die Ressourcenquelle und Ressourcendateien neu, und befolgen Sie die Syntax, die im Windows Software Development Kit dokumentiert ist.  
+1.  <span data-ttu-id="38c86-105">Erstellen Sie die Ressourcenquelle und Ressourcendateien neu, und befolgen Sie die Syntax, die im Windows Software Development Kit dokumentiert ist.</span><span class="sxs-lookup"><span data-stu-id="38c86-105">Recreate the resource source and resource files and adhere to the syntax documented in the Windows Software Development Kit.</span></span>  
   
-2.  Entfernen Sie die ungültige Ressourcendatei aus dem Projekt.  
+2.  <span data-ttu-id="38c86-106">Entfernen Sie die ungültige Ressourcendatei aus dem Projekt.</span><span class="sxs-lookup"><span data-stu-id="38c86-106">Remove the invalid resource file from the project.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="38c86-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38c86-107">See Also</span></span>  
+ [<span data-ttu-id="38c86-108">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="38c86-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

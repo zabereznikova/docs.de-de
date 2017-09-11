@@ -34,39 +34,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d35de576bd9e267800acc2a9bfd5761dd977622f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6e614a1dce4894dcd18509854f3cae149665cbf0
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="removehandler-statement"></a>RemoveHandler-Anweisung
-Entfernt die Zuordnung zwischen einem Ereignis und einen Ereignishandler.  
+# <a name="removehandler-statement"></a><span data-ttu-id="ede4e-102">RemoveHandler-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ede4e-102">RemoveHandler Statement</span></span>
+<span data-ttu-id="ede4e-103">Entfernt die Zuordnung zwischen einem Ereignis und einen Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="ede4e-103">Removes the association between an event and an event handler.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="ede4e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ede4e-104">Syntax</span></span>  
   
 ```  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a><span data-ttu-id="ede4e-105">Teile</span><span class="sxs-lookup"><span data-stu-id="ede4e-105">Parts</span></span>  
   
-|Begriff|Definition|  
+|<span data-ttu-id="ede4e-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="ede4e-106">Term</span></span>|<span data-ttu-id="ede4e-107">Definition</span><span class="sxs-lookup"><span data-stu-id="ede4e-107">Definition</span></span>|  
 |---|---|  
-|`event`|Der Name des behandelten Ereignisses.|  
-|`eventhandler`|Der Name der Prozedur, die das Ereignis derzeit behandelt.|  
+|`event`|<span data-ttu-id="ede4e-108">Der Name des behandelten Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="ede4e-108">The name of the event being handled.</span></span>|  
+|`eventhandler`|<span data-ttu-id="ede4e-109">Der Name der Prozedur, die das Ereignis derzeit behandelt.</span><span class="sxs-lookup"><span data-stu-id="ede4e-109">The name of the procedure currently handling the event.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Die `AddHandler` und `RemoveHandler` -Anweisungen ermöglichen Ihnen das Starten und Beenden der Ereignisbehandlung für ein bestimmtes Ereignis zu einem beliebigen Zeitpunkt während der Ausführung des Programms.  
+## <a name="remarks"></a><span data-ttu-id="ede4e-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ede4e-110">Remarks</span></span>  
+ <span data-ttu-id="ede4e-111">Die `AddHandler` und `RemoveHandler` -Anweisungen ermöglichen Ihnen das Starten und Beenden der Ereignisbehandlung für ein bestimmtes Ereignis zu einem beliebigen Zeitpunkt während der Ausführung des Programms.</span><span class="sxs-lookup"><span data-stu-id="ede4e-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
   
 > [!NOTE]
->  Für benutzerdefinierte Ereignisse die `RemoveHandler` -Anweisung ruft des Ereignis `RemoveHandler` Accessor. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
+>  <span data-ttu-id="ede4e-112">Für benutzerdefinierte Ereignisse die `RemoveHandler` -Anweisung ruft des Ereignis `RemoveHandler` Accessor.</span><span class="sxs-lookup"><span data-stu-id="ede4e-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="ede4e-113">Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="ede4e-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-vb[VbVbalrEvents&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
+## <a name="example"></a><span data-ttu-id="ede4e-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ede4e-114">Example</span></span>  
+ <span data-ttu-id="ede4e-115">[!code-vb[VbVbalrEvents&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="ede4e-115">[!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="ede4e-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ede4e-116">See Also</span></span>  
+ <span data-ttu-id="ede4e-117">[AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ede4e-117">[AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span></span>  
+<span data-ttu-id="ede4e-118"> [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) </span><span class="sxs-lookup"><span data-stu-id="ede4e-118"> [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) </span></span>  
+<span data-ttu-id="ede4e-119"> [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ede4e-119"> [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="ede4e-120"> [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="ede4e-120"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>

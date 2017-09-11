@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="a5ec4-102">Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a5ec4-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="a5ec4-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="a5ec4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a5ec4-104">Dies ist eine Testkonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="a5ec4-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="a5ec4-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="a5ec4-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a5ec4-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a5ec4-106">See Also</span></span>  
+ [<span data-ttu-id="a5ec4-107">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a5ec4-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

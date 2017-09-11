@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Beispiel-XML-Datei: Numerische Daten (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren.  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="bf7be-102">Beispiel-XML-Datei: Numerische Daten (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bf7be-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="bf7be-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="bf7be-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bf7be-104">Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren.</span><span class="sxs-lookup"><span data-stu-id="bf7be-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a>Data.xml  
+## <a name="dataxml"></a><span data-ttu-id="bf7be-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="bf7be-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -72,6 +72,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bf7be-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf7be-106">See Also</span></span>  
+ [<span data-ttu-id="bf7be-107">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bf7be-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

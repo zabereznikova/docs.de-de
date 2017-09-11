@@ -32,51 +32,51 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Isolated Storage-Tool)
-Das Isolated Storage-Tool listet alle vorhandenen Speicher des aktuellen Benutzers auf oder löscht diese.  
+# <a name="storeadmexe-isolated-storage-tool"></a><span data-ttu-id="40f0b-102">Storeadm.exe (Isolated Storage-Tool)</span><span class="sxs-lookup"><span data-stu-id="40f0b-102">Storeadm.exe (Isolated Storage Tool)</span></span>
+<span data-ttu-id="40f0b-103">Das Isolated Storage-Tool listet alle vorhandenen Speicher des aktuellen Benutzers auf oder löscht diese.</span><span class="sxs-lookup"><span data-stu-id="40f0b-103">The Isolated Storage tool lists or removes all existing stores for the current user.</span></span>  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="40f0b-104">Dieses Tool wird automatisch mit Visual Studio installiert.</span><span class="sxs-lookup"><span data-stu-id="40f0b-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="40f0b-105">Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7).</span><span class="sxs-lookup"><span data-stu-id="40f0b-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="40f0b-106">Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="40f0b-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Geben Sie an der Eingabeaufforderung Folgendes ein:  
+ <span data-ttu-id="40f0b-107">Geben Sie an der Eingabeaufforderung Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="40f0b-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="40f0b-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="40f0b-108">Syntax</span></span>  
   
 ```  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="40f0b-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="40f0b-109">Parameters</span></span>  
   
-|Option|Beschreibung|  
+|<span data-ttu-id="40f0b-110">Option</span><span class="sxs-lookup"><span data-stu-id="40f0b-110">Option</span></span>|<span data-ttu-id="40f0b-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="40f0b-111">Description</span></span>|  
 |------------|-----------------|  
-|**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/list**|Zeigt sämtliche vorhandenen Speicher des aktuellen Benutzers an. Dies schließt die Speicher für alle von diesem Benutzer ausgeführten Anwendungen oder Assemblys ein.|  
-|**/machine**|Wählt den Computerspeicher aus. Verwenden Sie diese Option zusammen mit der **/list**-Option oder der **/remove**-Option, um anzugeben, dass die Aktion auf den Computerspeicher angewendet werden soll.<br /><br /> Neu in .NET Framework 2.0|  
-|**/quiet**|Gibt den stillen Modus an. Dies unterdrückt die Ausgabe von Informationen und zeigt nur Fehlermeldungen an.|  
-|**/remove**|Entfernt alle vorhandenen Speicher des aktuellen Benutzers dauerhaft.|  
-|**/roaming**|Wählt den Roamingspeicher aus. Verwenden Sie diese Option zusammen mit der **/list**-Option oder der **/remove**-Option, um anzugeben, dass die Aktion auf den Roamingspeicher angewendet werden soll.|  
-|**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
+|<span data-ttu-id="40f0b-112">**-h**[**elp**]</span><span class="sxs-lookup"><span data-stu-id="40f0b-112">**/h**[**elp**]</span></span>|<span data-ttu-id="40f0b-113">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="40f0b-113">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="40f0b-114">**/list**</span><span class="sxs-lookup"><span data-stu-id="40f0b-114">**/list**</span></span>|<span data-ttu-id="40f0b-115">Zeigt sämtliche vorhandenen Speicher des aktuellen Benutzers an.</span><span class="sxs-lookup"><span data-stu-id="40f0b-115">Displays all existing stores for the current user.</span></span> <span data-ttu-id="40f0b-116">Dies schließt die Speicher für alle von diesem Benutzer ausgeführten Anwendungen oder Assemblys ein.</span><span class="sxs-lookup"><span data-stu-id="40f0b-116">This includes the stores for all applications or assemblies executed by this user.</span></span>|  
+|<span data-ttu-id="40f0b-117">**/machine**</span><span class="sxs-lookup"><span data-stu-id="40f0b-117">**/machine**</span></span>|<span data-ttu-id="40f0b-118">Wählt den Computerspeicher aus.</span><span class="sxs-lookup"><span data-stu-id="40f0b-118">Selects the machine store.</span></span> <span data-ttu-id="40f0b-119">Verwenden Sie diese Option zusammen mit der **/list**-Option oder der **/remove**-Option, um anzugeben, dass die Aktion auf den Computerspeicher angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="40f0b-119">Use this option with the **/list** or **/remove** option to specify that the action should apply to the machine store.</span></span><br /><br /> <span data-ttu-id="40f0b-120">Neu in .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="40f0b-120">New in the .NET Framework 2.0</span></span>|  
+|<span data-ttu-id="40f0b-121">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="40f0b-121">**/quiet**</span></span>|<span data-ttu-id="40f0b-122">Gibt den stillen Modus an. Dies unterdrückt die Ausgabe von Informationen und zeigt nur Fehlermeldungen an.</span><span class="sxs-lookup"><span data-stu-id="40f0b-122">Specifies quiet mode; suppresses informational output so that only error messages appear.</span></span>|  
+|<span data-ttu-id="40f0b-123">**/remove**</span><span class="sxs-lookup"><span data-stu-id="40f0b-123">**/remove**</span></span>|<span data-ttu-id="40f0b-124">Entfernt alle vorhandenen Speicher des aktuellen Benutzers dauerhaft.</span><span class="sxs-lookup"><span data-stu-id="40f0b-124">Permanently removes all existing stores for the current user.</span></span>|  
+|<span data-ttu-id="40f0b-125">**/roaming**</span><span class="sxs-lookup"><span data-stu-id="40f0b-125">**/roaming**</span></span>|<span data-ttu-id="40f0b-126">Wählt den Roamingspeicher aus.</span><span class="sxs-lookup"><span data-stu-id="40f0b-126">Selects the roaming store.</span></span> <span data-ttu-id="40f0b-127">Verwenden Sie diese Option zusammen mit der **/list**-Option oder der **/remove**-Option, um anzugeben, dass die Aktion auf den Roamingspeicher angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="40f0b-127">Use this option with the **/list** or **/remove** options to specify that the action should apply to the roaming store.</span></span>|  
+|<span data-ttu-id="40f0b-128">**/?**</span><span class="sxs-lookup"><span data-stu-id="40f0b-128">**/?**</span></span>|<span data-ttu-id="40f0b-129">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="40f0b-129">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Wird "Storeadm.exe" ohne Angabe von Optionen von der Befehlszeile aus ausgeführt, werden Syntax und Optionen für das Tool angezeigt.  
+## <a name="remarks"></a><span data-ttu-id="40f0b-130">Hinweise</span><span class="sxs-lookup"><span data-stu-id="40f0b-130">Remarks</span></span>  
+ <span data-ttu-id="40f0b-131">Wird "Storeadm.exe" ohne Angabe von Optionen von der Befehlszeile aus ausgeführt, werden Syntax und Optionen für das Tool angezeigt.</span><span class="sxs-lookup"><span data-stu-id="40f0b-131">Running Storeadm.exe from the command line without specifying any options displays the syntax and options for the tool.</span></span>  
   
- Die **/list**-Option und die **/remove**-Option werden in der Regel nicht gleichzeitig verwendet. Wenn jedoch zwei oder mehr Optionen angegeben sind, erfolgt deren Verarbeitung in der Reihenfolge ihrer Eingabe in die Befehlszeile.  
+ <span data-ttu-id="40f0b-132">Die **/list**-Option und die **/remove**-Option werden in der Regel nicht gleichzeitig verwendet. Wenn jedoch zwei oder mehr Optionen angegeben sind, erfolgt deren Verarbeitung in der Reihenfolge ihrer Eingabe in die Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="40f0b-132">The **/list** and **/remove** options are typically used one at a time; however, if two or more options are specified they will be performed in the order in which they appear on the command line.</span></span>  
   
- Anwendungen bieten die Wahl, in einen von zwei Speichern für einen Benutzer oder in den Computerspeicher zu speichern:  
+ <span data-ttu-id="40f0b-133">Anwendungen bieten die Wahl, in einen von zwei Speichern für einen Benutzer oder in den Computerspeicher zu speichern:</span><span class="sxs-lookup"><span data-stu-id="40f0b-133">Applications have a choice of saving to one of two stores for a user or to the machine store:</span></span>  
   
--   Der lokale Speicher befindet sich an einem Speicherort, der (unter Windows 2000 und höher) kein Roaming zulässt, selbst wenn Benutzerdatenroaming für den Benutzer aktiviert ist.  
+-   <span data-ttu-id="40f0b-134">Der lokale Speicher befindet sich an einem Speicherort, der (unter Windows 2000 und höher) kein Roaming zulässt, selbst wenn Benutzerdatenroaming für den Benutzer aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="40f0b-134">The local store exists in a location that is guaranteed not to roam (on Windows 2000 and later) even if user data roaming is enabled for the user.</span></span>  
   
--   Der Roamingspeicher befindet sich an einem Speicherort, der Roaming ermöglicht, sofern über die Windows NT-Verwaltung das Roaming von Benutzerdaten aktiviert ist.  
+-   <span data-ttu-id="40f0b-135">Der Roamingspeicher befindet sich an einem Speicherort, der Roaming ermöglicht, sofern über die Windows NT-Verwaltung das Roaming von Benutzerdaten aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="40f0b-135">The roaming store exists in a location that is able to roam, but can only do so if roaming is enabled for the user via Windows NT administration.</span></span>  
   
--   Der Computerspeicher wird von allen Benutzern eines Computers gemeinsam genutzt und unter einem allgemeinen Verzeichnis auf dem jeweiligen Computer angelegt.  
+-   <span data-ttu-id="40f0b-136">Der Computerspeicher wird von allen Benutzern eines Computers gemeinsam genutzt und unter einem allgemeinen Verzeichnis auf dem jeweiligen Computer angelegt.</span><span class="sxs-lookup"><span data-stu-id="40f0b-136">The machine store is common to all users on a machine and is stored under a common directory on that machine.</span></span>  
   
     > [!NOTE]
-    >  Der Computerspeicher ist ein neues Feature in .NET Framework, Version 2.0.  
+    >  <span data-ttu-id="40f0b-137">Der Computerspeicher ist ein neues Feature in .NET Framework, Version 2.0.</span><span class="sxs-lookup"><span data-stu-id="40f0b-137">The machine store is new in the .NET Framework version 2.0.</span></span>  
   
- Ob Roaming für den Benutzer tatsächlich aktiviert ist, wirkt sich nicht auf die Verwaltung von "Storeadm.exe" aus. Wenn das Tool ohne Optionen ausgeführt wird, werden sämtliche Aktionen auf den lokalen Speicher angewendet. Wird das Tool mit der **/roaming**-Option ausgeführt, werden alle Aktionen auf den Speicher angewendet, der Roaming zulässt. Wenn das Tool mit der **/machine**-Option ausgeführt wird, werden sämtliche Aktionen auf den Computerspeicher angewendet.  
+ <span data-ttu-id="40f0b-138">Ob Roaming für den Benutzer tatsächlich aktiviert ist, wirkt sich nicht auf die Verwaltung von "Storeadm.exe" aus.</span><span class="sxs-lookup"><span data-stu-id="40f0b-138">Whether roaming is actually enabled for the user does not affect the administration of Storeadm.exe.</span></span> <span data-ttu-id="40f0b-139">Wenn das Tool ohne Optionen ausgeführt wird, werden sämtliche Aktionen auf den lokalen Speicher angewendet.</span><span class="sxs-lookup"><span data-stu-id="40f0b-139">Running the tool without any options applies all actions to the local store.</span></span> <span data-ttu-id="40f0b-140">Wird das Tool mit der **/roaming**-Option ausgeführt, werden alle Aktionen auf den Speicher angewendet, der Roaming zulässt.</span><span class="sxs-lookup"><span data-stu-id="40f0b-140">Running the tool with the **/roaming** option applies all actions to the store that is able to roam.</span></span> <span data-ttu-id="40f0b-141">Wenn das Tool mit der **/machine**-Option ausgeführt wird, werden sämtliche Aktionen auf den Computerspeicher angewendet.</span><span class="sxs-lookup"><span data-stu-id="40f0b-141">Running the tool with the **/machine** option applies all actions to the machine store.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)   
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="40f0b-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="40f0b-142">See Also</span></span>  
+ <span data-ttu-id="40f0b-143">[Tools](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="40f0b-143">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="40f0b-144">[Isolierter Speicher](../../../docs/standard/io/isolated-storage.md) </span><span class="sxs-lookup"><span data-stu-id="40f0b-144">[Isolated Storage](../../../docs/standard/io/isolated-storage.md) </span></span>  
+ [<span data-ttu-id="40f0b-145">Eingabeaufforderungen</span><span class="sxs-lookup"><span data-stu-id="40f0b-145">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

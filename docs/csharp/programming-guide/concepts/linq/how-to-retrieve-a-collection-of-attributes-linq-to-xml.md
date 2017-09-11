@@ -21,11 +21,11 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Vorgehensweise: Abrufen einer Attributauflistung (LINQ to XML) (C#)
-Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XElement.Attributes%2A>-Klasse. Diese Methode ruft die Attribute eines Elements ab.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a><span data-ttu-id="7bfb9-102">Vorgehensweise: Abrufen einer Attributauflistung (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="7bfb9-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="7bfb9-103">Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XElement.Attributes%2A>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="7bfb9-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="7bfb9-104">Diese Methode ruft die Attribute eines Elements ab.</span><span class="sxs-lookup"><span data-stu-id="7bfb9-104">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die Auflistung von Attributen eines Elements durchlaufen werden kann.  
+## <a name="example"></a><span data-ttu-id="7bfb9-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7bfb9-105">Example</span></span>  
+ <span data-ttu-id="7bfb9-106">Im folgenden Beispiel wird gezeigt, wie die Auflistung von Attributen eines Elements durchlaufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="7bfb9-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -40,7 +40,7 @@ foreach (XAttribute a in listOfAttributes)
     Console.WriteLine(a);  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="7bfb9-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="7bfb9-107">This code produces the following output:</span></span>  
   
 ```  
 ID="1243"  
@@ -48,6 +48,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="7bfb9-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7bfb9-108">See Also</span></span>  
+ [<span data-ttu-id="7bfb9-109">LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))</span><span class="sxs-lookup"><span data-stu-id="7bfb9-109">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
 

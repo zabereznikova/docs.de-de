@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1fd4a2098ce99e43e3ffcadee4aae42ac55f043c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bb8b1bcaedc6e465ca78acc1cf66e3cf5ca3a5b7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="picture-is-not-valid"></a>Ungültiges Bild.
-Sie haben versucht, der `Picture` -Eigenschaft eines Formulars oder Steuerelements ein anderes Grafikformat als ein Bitmap-, Symbol- oder Windows Metafile-Format zuzuweisen.  
+# <a name="picture-is-not-valid"></a><span data-ttu-id="cda7d-102">Ungültiges Bild.</span><span class="sxs-lookup"><span data-stu-id="cda7d-102">Picture is not valid</span></span>
+<span data-ttu-id="cda7d-103">Sie haben versucht, der `Picture` -Eigenschaft eines Formulars oder Steuerelements ein anderes Grafikformat als ein Bitmap-, Symbol- oder Windows Metafile-Format zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="cda7d-103">You tried to assign a graphics format other than a bitmap, icon, or Windows metafile to the `Picture` property of a form or control.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cda7d-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="cda7d-104">To correct this error</span></span>  
   
-1.  Stellen Sie sicher, dass die Datei, die Sie zum Laden in das `Picture` -Eigenschaft ist eine von unterstützte gültige Grafikdatei [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+1.  <span data-ttu-id="cda7d-105">Stellen Sie sicher, dass die Datei, die Sie zum Laden in das `Picture` -Eigenschaft ist eine von unterstützte gültige Grafikdatei [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="cda7d-105">Ensure that the file you are trying to load into the `Picture` property is a valid graphics file supported by [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Grafiken Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/24cd2d55-ebf1-42d6-b755-00e9001f1cb8)
+## <a name="see-also"></a><span data-ttu-id="cda7d-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cda7d-106">See Also</span></span>  
+ [<span data-ttu-id="cda7d-107">Grafiken Changes in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="cda7d-107">Graphics Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/24cd2d55-ebf1-42d6-b755-00e9001f1cb8)

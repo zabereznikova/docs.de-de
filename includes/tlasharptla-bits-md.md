@@ -1,1 +1,1 @@
-Intelligenter Hintergrundübertragungsdienst von Microsoft (Background Intelligent Transfer Service; BITS)
+<span data-ttu-id="14bf7-101">Intelligenter Hintergrundübertragungsdienst von Microsoft (Background Intelligent Transfer Service; BITS)</span><span class="sxs-lookup"><span data-stu-id="14bf7-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

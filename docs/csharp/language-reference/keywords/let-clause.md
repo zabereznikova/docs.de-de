@@ -38,22 +38,22 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="let-clause-c-reference"></a>let-Klausel (C#-Referenz)
-Bei einem Abfrageausdruck kann es manchmal nützlich sein, das Ergebnis eines Unterausdrucks zur Verwendung in nachfolgenden Klauseln zu speichern. Sie können hierzu das Schlüsselwort `let` verwenden, das eine neue Bereichsvariable erstellt und sie mit dem von Ihnen bereitgestellten Ergebnis des Ausdrucks initialisiert. Sobald die Bereichsvariable mit einem Wert initialisiert wurde, kann sie nicht mehr zum Speichern eines anderen Werts verwendet werden. Enthält die Bereichsvariable jedoch einen abfragbaren Typ, kann sie abgefragt werden.  
+# <a name="let-clause-c-reference"></a><span data-ttu-id="e3b5c-102">let-Klausel (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e3b5c-102">let clause (C# Reference)</span></span>
+<span data-ttu-id="e3b5c-103">Bei einem Abfrageausdruck kann es manchmal nützlich sein, das Ergebnis eines Unterausdrucks zur Verwendung in nachfolgenden Klauseln zu speichern.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-103">In a query expression, it is sometimes useful to store the result of a sub-expression in order to use it in subsequent clauses.</span></span> <span data-ttu-id="e3b5c-104">Sie können hierzu das Schlüsselwort `let` verwenden, das eine neue Bereichsvariable erstellt und sie mit dem von Ihnen bereitgestellten Ergebnis des Ausdrucks initialisiert.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-104">You can do this with the `let` keyword, which creates a new range variable and initializes it with the result of the expression you supply.</span></span> <span data-ttu-id="e3b5c-105">Sobald die Bereichsvariable mit einem Wert initialisiert wurde, kann sie nicht mehr zum Speichern eines anderen Werts verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-105">Once initialized with a value, the range variable cannot be used to store another value.</span></span> <span data-ttu-id="e3b5c-106">Enthält die Bereichsvariable jedoch einen abfragbaren Typ, kann sie abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-106">However, if the range variable holds a queryable type, it can be queried.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `let` auf zweierlei Weise verwendet:  
+## <a name="example"></a><span data-ttu-id="e3b5c-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e3b5c-107">Example</span></span>  
+ <span data-ttu-id="e3b5c-108">Im folgenden Beispiel wird `let` auf zweierlei Weise verwendet:</span><span class="sxs-lookup"><span data-stu-id="e3b5c-108">In the following example `let` is used in two ways:</span></span>  
   
-1.  Um einen aufzählbaren Typ zu erstellen, der selbst abgefragt werden kann.  
+1.  <span data-ttu-id="e3b5c-109">Um einen aufzählbaren Typ zu erstellen, der selbst abgefragt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-109">To create an enumerable type that can itself be queried.</span></span>  
   
-2.  Um es der Abfrage zu ermöglichen, `ToLower` nur ein Mal für die Bereichsvariable `word` aufzurufen. Ohne `let` müssten Sie `ToLower` in jedem Prädikat der `where`-Klausel aufrufen.  
+2.  <span data-ttu-id="e3b5c-110">Um es der Abfrage zu ermöglichen, `ToLower` nur ein Mal für die Bereichsvariable `word` aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-110">To enable the query to call `ToLower` only one time on the range variable `word`.</span></span> <span data-ttu-id="e3b5c-111">Ohne `let` müssten Sie `ToLower` in jedem Prädikat der `where`-Klausel aufrufen.</span><span class="sxs-lookup"><span data-stu-id="e3b5c-111">Without using `let`, you would have to call `ToLower` in each predicate in the `where` clause.</span></span>  
   
- [!code-cs[cscsrefAbfrageSchlüsselwörter#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
+ <span data-ttu-id="e3b5c-112">[!code-cs[cscsrefAbfrageSchlüsselwörter#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e3b5c-112">[!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Gewusst wie: Behandeln von Ausnahmen in Abfrageausdrücken](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="e3b5c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3b5c-113">See Also</span></span>  
+ <span data-ttu-id="e3b5c-114">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e3b5c-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e3b5c-115">[Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="e3b5c-115">[Query Keywords (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md) </span></span>  
+ <span data-ttu-id="e3b5c-116">[LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="e3b5c-116">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ <span data-ttu-id="e3b5c-117">[Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span><span class="sxs-lookup"><span data-stu-id="e3b5c-117">[Getting Started with LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span></span>  
+ [<span data-ttu-id="e3b5c-118">Gewusst wie: Behandeln von Ausnahmen in Abfrageausdrücken</span><span class="sxs-lookup"><span data-stu-id="e3b5c-118">How to: Handle Exceptions in Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)
 

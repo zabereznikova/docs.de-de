@@ -35,16 +35,16 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-breaking-changes-in-visual-studio"></a>Wichtige Visual Basic-Änderungen in Visual Studio
-Die neueste Dokumentation zu Visual Studio 2017 finden Sie unter [Dokumentation zu Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+# <a name="visual-basic-breaking-changes-in-visual-studio"></a><span data-ttu-id="c413b-102">Wichtige Visual Basic-Änderungen in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c413b-102">Visual Basic Breaking Changes in Visual Studio</span></span>
+<span data-ttu-id="c413b-103">Die neueste Dokumentation zu Visual Studio 2017 finden Sie unter [Dokumentation zu Visual Studio 2017](http://docs.microsoft.com/visualstudio/).</span><span class="sxs-lookup"><span data-stu-id="c413b-103">For the latest documentation on Visual Studio 2017, see [Visual Studio 2017 Documentation](http://docs.microsoft.com/visualstudio/).</span></span>
 
-Durch Visual Basic-Änderungen in Visual Studio 2015 wird keine Anwendung, die in Visual Studio 2013 in Visual Basic erstellt wurde, nicht kompiliert bzw. ihr Laufzeitverhalten nicht geändert.  
+<span data-ttu-id="c413b-104">Durch Visual Basic-Änderungen in Visual Studio 2015 wird keine Anwendung, die in Visual Studio 2013 in Visual Basic erstellt wurde, nicht kompiliert bzw. ihr Laufzeitverhalten nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="c413b-104">No changes in Visual Basic in Visual Studio 2015 will prevent an application that was created in Visual Basic in Visual Studio 2013 from compiling or change the run-time behavior of such an application.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Lambda-Ausdrücke](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [For Each...Next-Anweisung](../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Getting Started (Erste Schritte)](../../visual-basic/getting-started/index.md)   
- [Wann wird der Schutz einer Fehlerbehebung in der Programmiersprache aufgehoben?](http://go.microsoft.com/fwlink/?LinkId=259542)
+## <a name="see-also"></a><span data-ttu-id="c413b-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c413b-105">See Also</span></span>  
+ <span data-ttu-id="c413b-106">[Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="c413b-106">[Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+ <span data-ttu-id="c413b-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="c413b-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span></span>  
+ <span data-ttu-id="c413b-108">[Lambda-Ausdrücke](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="c413b-108">[Lambda Expressions](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="c413b-109">[For Each...Next-Anweisung](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="c413b-109">[For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span></span>  
+ <span data-ttu-id="c413b-110">[Getting Started (Erste Schritte)](../../visual-basic/getting-started/index.md) </span><span class="sxs-lookup"><span data-stu-id="c413b-110">[Getting Started](../../visual-basic/getting-started/index.md) </span></span>  
+ [<span data-ttu-id="c413b-111">Wann wird der Schutz einer Fehlerbehebung in der Programmiersprache aufgehoben?</span><span class="sxs-lookup"><span data-stu-id="c413b-111">When is a non-breaking language fix breaking?</span></span>](http://go.microsoft.com/fwlink/?LinkId=259542)
 

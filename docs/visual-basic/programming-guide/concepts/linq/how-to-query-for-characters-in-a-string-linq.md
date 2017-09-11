@@ -20,22 +20,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: dabd63e52707f3078c6cdc41db8c4f0e7dfbf70e
+ms.contentlocale: de-de
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)
-Da die <xref:System.String>-Klasse implementiert die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle kann eine beliebige Zeichenfolge als eine Sequenz von Zeichen abgefragt werden.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.String> Dies ist jedoch nicht die normale Verwendung von LINQ. Verwenden Sie für komplexe Muster Abgleichen von Vorgängen die <xref:System.Text.RegularExpressions.Regex>Klasse.</xref:System.Text.RegularExpressions.Regex>  
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="c1246-102">Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1246-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="c1246-103">Da die <xref:System.String>-Klasse implementiert die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle kann eine beliebige Zeichenfolge als eine Sequenz von Zeichen abgefragt werden.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.String></span><span class="sxs-lookup"><span data-stu-id="c1246-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="c1246-104">Dies ist jedoch nicht die normale Verwendung von LINQ.</span><span class="sxs-lookup"><span data-stu-id="c1246-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="c1246-105">Verwenden Sie für komplexe Muster Abgleichen von Vorgängen die <xref:System.Text.RegularExpressions.Regex>Klasse.</xref:System.Text.RegularExpressions.Regex></span><span class="sxs-lookup"><span data-stu-id="c1246-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel fragt eine Zeichenfolge zum Ermitteln der Anzahl von Ziffern, die sie enthält. Beachten Sie, dass die Abfrage "wiederverwendet wird, nachdem er zum ersten Mal ausgeführt wird. Dies ist möglich, da die Abfrage selbst keine eigentlichen Ergebnisse gespeichert werden.  
+## <a name="example"></a><span data-ttu-id="c1246-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c1246-106">Example</span></span>  
+ <span data-ttu-id="c1246-107">Das folgende Beispiel fragt eine Zeichenfolge zum Ermitteln der Anzahl von Ziffern, die sie enthält.</span><span class="sxs-lookup"><span data-stu-id="c1246-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="c1246-108">Beachten Sie, dass die Abfrage "wiederverwendet wird, nachdem er zum ersten Mal ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c1246-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="c1246-109">Dies ist möglich, da die Abfrage selbst keine eigentlichen Ergebnisse gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="c1246-109">This is possible because the query itself does not store any actual results.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+<span data-ttu-id="c1246-110"><CodeContentPlaceHolder>0</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="c1246-110"><CodeContentPlaceHolder>0</CodeContentPlaceHolder></span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c1246-111">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="c1246-111">Compiling the Code</span></span>  
+ <span data-ttu-id="c1246-112">Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".</span><span class="sxs-lookup"><span data-stu-id="c1246-112">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="c1246-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c1246-113">See Also</span></span>  
+ <span data-ttu-id="c1246-114">[LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="c1246-114">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="c1246-115"> [Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="c1246-115"> [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)</span></span>

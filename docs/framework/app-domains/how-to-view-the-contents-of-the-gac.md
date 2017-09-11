@@ -30,20 +30,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches
-Verwenden Sie das [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um den Inhalt des globalen Assemblycaches anzuzeigen.  
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a><span data-ttu-id="cdf8a-102">Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches</span><span class="sxs-lookup"><span data-stu-id="cdf8a-102">How to: View the Contents of the Global Assembly Cache</span></span>
+<span data-ttu-id="cdf8a-103">Verwenden Sie das [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um den Inhalt des globalen Assemblycaches anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="cdf8a-103">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to view the contents of the global assembly cache.</span></span>  
   
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>So zeigen Sie eine Liste der Assemblys im globalen Assemblycache an  
+### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a><span data-ttu-id="cdf8a-104">So zeigen Sie eine Liste der Assemblys im globalen Assemblycache an</span><span class="sxs-lookup"><span data-stu-id="cdf8a-104">To view a list of the assemblies in the global assembly cache</span></span>  
   
-1.  Geben Sie an der [Visual Studio-Eingabeaufforderung](../../../docs/framework/tools/developer-command-prompt-for-vs.md) den folgenden Befehl ein:  
+1.  <span data-ttu-id="cdf8a-105">Geben Sie an der [Visual Studio-Eingabeaufforderung](../../../docs/framework/tools/developer-command-prompt-for-vs.md) den folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="cdf8a-105">At the [Visual Studio command prompt](../../../docs/framework/tools/developer-command-prompt-for-vs.md), type the following command:</span></span>  
   
-     **gacutil -l**   
-     - oder -   
-    **gacutil /l**  
+     <span data-ttu-id="cdf8a-106">**gacutil -l** </span><span class="sxs-lookup"><span data-stu-id="cdf8a-106">**gacutil -l** </span></span>  
+     <span data-ttu-id="cdf8a-107">- oder - </span><span class="sxs-lookup"><span data-stu-id="cdf8a-107">-or-</span></span>  
+    <span data-ttu-id="cdf8a-108">**gacutil /l**</span><span class="sxs-lookup"><span data-stu-id="cdf8a-108">**gacutil /l**</span></span>  
   
- In früheren Versionen von .NET Framework ermöglichte die Windows Shell-Erweiterung [Shfusion.dll](http://msdn.microsoft.com/en-us/0d9464cf-ddba-4ca9-bbec-f678fb58f380) das Anzeigen des globalen Assemblycaches im Datei-Explorer. Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ist Shfusion.dll veraltet.  
+ <span data-ttu-id="cdf8a-109">In früheren Versionen von .NET Framework ermöglichte die Windows Shell-Erweiterung [Shfusion.dll](http://msdn.microsoft.com/en-us/0d9464cf-ddba-4ca9-bbec-f678fb58f380) das Anzeigen des globalen Assemblycaches im Datei-Explorer.</span><span class="sxs-lookup"><span data-stu-id="cdf8a-109">In earlier versions of the .NET Framework, the [Shfusion.dll](http://msdn.microsoft.com/en-us/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows shell extension enabled you to view the global assembly cache in File Explorer.</span></span> <span data-ttu-id="cdf8a-110">Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ist Shfusion.dll veraltet.</span><span class="sxs-lookup"><span data-stu-id="cdf8a-110">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a><span data-ttu-id="cdf8a-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cdf8a-111">See Also</span></span>  
+ <span data-ttu-id="cdf8a-112">[Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md) </span><span class="sxs-lookup"><span data-stu-id="cdf8a-112">[Working with Assemblies and the Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md) </span></span>  
+ [<span data-ttu-id="cdf8a-113">Gacutil.exe (Global Assembly Cache-Tool)</span><span class="sxs-lookup"><span data-stu-id="cdf8a-113">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
 

@@ -26,12 +26,12 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)
-In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="d95e3-102">Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d95e3-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="d95e3-103">In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren.</span><span class="sxs-lookup"><span data-stu-id="d95e3-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d95e3-104">Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d95e3-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>So richten Sie das Projekt und die Textdateien ein  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="d95e3-105">So richten Sie das Projekt und die Textdateien ein</span><span class="sxs-lookup"><span data-stu-id="d95e3-105">To set up the project and the text files</span></span>  
   
-1.  Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:  
+1.  <span data-ttu-id="d95e3-106">Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:</span><span class="sxs-lookup"><span data-stu-id="d95e3-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +46,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammen
     Garcia, Debra  
     ```  
   
-2.  Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner. Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
+2.  <span data-ttu-id="d95e3-107">Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="d95e3-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="d95e3-108">Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.</span><span class="sxs-lookup"><span data-stu-id="d95e3-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +61,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammen
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="d95e3-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d95e3-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -185,10 +185,10 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
+## <a name="compiling-the-code"></a><span data-ttu-id="d95e3-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d95e3-110">Compiling the Code</span></span>  
+ <span data-ttu-id="d95e3-111">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="d95e3-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="d95e3-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d95e3-112">See Also</span></span>  
+ <span data-ttu-id="d95e3-113">[LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="d95e3-113">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="d95e3-114">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="d95e3-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

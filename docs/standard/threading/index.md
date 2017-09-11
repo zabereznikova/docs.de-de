@@ -1,5 +1,5 @@
 ---
-title: Verwaltetes Threading | Microsoft-Dokumentation
+title: Verwaltetes Threading
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,57 +16,58 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f2a8792818e837f019403aa84c2c2e98db0b2b89
 ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="managed-threading"></a>Verwaltetes Threading
-Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren Prozessoren entwickelt wurde, sollte sie optimal auf die Interaktion mit einem Benutzer reagieren, auch wenn sie gerade mit anderen Aufgaben befasst ist. Die Verwendung verschiedener Ausführungsthreads stellt eine der effektivsten Möglichkeiten dar, eine Anwendung entsprechend reaktionsschnell zu gestalten und gleichzeitig den Prozessor zwischen Benutzerereignissen oder sogar währenddessen zu nutzen. In diesem Abschnitt werden die grundlegenden Threadingkonzepte eingeführt und insbesondere verwaltete Threadingkonzepte und die Verwendung von verwaltetem Threading ausführlich behandelt.  
+# <a name="managed-threading"></a><span data-ttu-id="0da76-102">Verwaltetes Threading</span><span class="sxs-lookup"><span data-stu-id="0da76-102">Managed Threading</span></span>
+<span data-ttu-id="0da76-103">Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren Prozessoren entwickelt wurde, sollte sie optimal auf die Interaktion mit einem Benutzer reagieren, auch wenn sie gerade mit anderen Aufgaben befasst ist.</span><span class="sxs-lookup"><span data-stu-id="0da76-103">Whether you are developing for computers with one processor or several, you want your application to provide the most responsive interaction with the user, even if the application is currently doing other work.</span></span> <span data-ttu-id="0da76-104">Die Verwendung verschiedener Ausführungsthreads stellt eine der effektivsten Möglichkeiten dar, eine Anwendung entsprechend reaktionsschnell zu gestalten und gleichzeitig den Prozessor zwischen Benutzerereignissen oder sogar währenddessen zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="0da76-104">Using multiple threads of execution is one of the most powerful ways to keep your application responsive to the user and at the same time make use of the processor in between or even during user events.</span></span> <span data-ttu-id="0da76-105">In diesem Abschnitt werden die grundlegenden Threadingkonzepte eingeführt und insbesondere verwaltete Threadingkonzepte und die Verwendung von verwaltetem Threading ausführlich behandelt.</span><span class="sxs-lookup"><span data-stu-id="0da76-105">While this section introduces the basic concepts of threading, it focuses on managed threading concepts and using managed threading.</span></span>  
   
 > [!NOTE]
->  Beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> und <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=fullName>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).  
+>  <span data-ttu-id="0da76-106">Beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> und <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=fullName>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert, erheblich vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="0da76-106">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], multithreaded programming is greatly simplified with the <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> and <xref:System.Threading.Tasks.Task?displayProperty=fullName> classes, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), new concurrent collection classes in the <xref:System.Collections.Concurrent?displayProperty=fullName> namespace, and a new programming model that is based on the concept of tasks rather than threads.</span></span> <span data-ttu-id="0da76-107">Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).</span><span class="sxs-lookup"><span data-stu-id="0da76-107">For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)  
- Enthält eine Übersicht über das verwaltete Threading und erläutert, in welchen Fällen mehrere Threads verwendet werden.  
+## <a name="in-this-section"></a><span data-ttu-id="0da76-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="0da76-108">In This Section</span></span>  
+ [<span data-ttu-id="0da76-109">Grundlagen des verwalteten Threadings</span><span class="sxs-lookup"><span data-stu-id="0da76-109">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)  
+ <span data-ttu-id="0da76-110">Enthält eine Übersicht über das verwaltete Threading und erläutert, in welchen Fällen mehrere Threads verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0da76-110">Provides an overview of managed threading and discusses when to use multiple threads.</span></span>  
   
- [Verwenden von Threads und Threading](../../../docs/standard/threading/using-threads-and-threading.md)  
- Erklärt das Erstellen, Starten, Anhalten, Fortsetzen und Abbrechen von Threads.  
+ [<span data-ttu-id="0da76-111">Verwenden von Threads und Threading</span><span class="sxs-lookup"><span data-stu-id="0da76-111">Using Threads and Threading</span></span>](../../../docs/standard/threading/using-threads-and-threading.md)  
+ <span data-ttu-id="0da76-112">Erklärt das Erstellen, Starten, Anhalten, Fortsetzen und Abbrechen von Threads.</span><span class="sxs-lookup"><span data-stu-id="0da76-112">Explains how to create, start, pause, resume, and abort threads.</span></span>  
   
- [Empfohlene Vorgehensweise für das verwaltete Threading](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Behandelt Synchronisierungsstufen, die Vermeidung von Deadlock- und Racebedingungen, Einzel- und Multiprozessorcomputer und weitere Threadingprobleme.  
+ [<span data-ttu-id="0da76-113">Empfohlene Vorgehensweise für das verwaltete Threading</span><span class="sxs-lookup"><span data-stu-id="0da76-113">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ <span data-ttu-id="0da76-114">Behandelt Synchronisierungsstufen, die Vermeidung von Deadlock- und Racebedingungen, Einzel- und Multiprozessorcomputer und weitere Threadingprobleme.</span><span class="sxs-lookup"><span data-stu-id="0da76-114">Discusses levels of synchronization, how to avoid deadlocks and race conditions, single-processor and multiprocessor computers, and other threading issues.</span></span>  
   
- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)  
- Beschreibt die verwalteten Klassen, mit denen Sie Threadingaktivitäten sowie die Daten von Objekten, auf die in verschiedenen Threads zugegriffen wird, synchronisieren können, und bietet eine Übersicht über Threadpoolthreads.  
+ [<span data-ttu-id="0da76-115">Threading Objects and Features (Threadingobjekte und -funktionen)</span><span class="sxs-lookup"><span data-stu-id="0da76-115">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
+ <span data-ttu-id="0da76-116">Beschreibt die verwalteten Klassen, mit denen Sie Threadingaktivitäten sowie die Daten von Objekten, auf die in verschiedenen Threads zugegriffen wird, synchronisieren können, und bietet eine Übersicht über Threadpoolthreads.</span><span class="sxs-lookup"><span data-stu-id="0da76-116">Describes the managed classes you can use to synchronize the activities of threads and the data of objects accessed on different threads, and provides an overview of thread pool threads.</span></span>  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a><span data-ttu-id="0da76-117">Verweis</span><span class="sxs-lookup"><span data-stu-id="0da76-117">Reference</span></span>  
  <xref:System.Threading>  
- Enthält Klassen zum Verwenden und Synchronisieren von verwalteten Threads.  
+ <span data-ttu-id="0da76-118">Enthält Klassen zum Verwenden und Synchronisieren von verwalteten Threads.</span><span class="sxs-lookup"><span data-stu-id="0da76-118">Contains classes for using and synchronizing managed threads.</span></span>  
   
  <xref:System.Collections.Concurrent>  
- Enthält Auflistungsklassen, die sicher mit mehreren Threads verwendet werden können.  
+ <span data-ttu-id="0da76-119">Enthält Auflistungsklassen, die sicher mit mehreren Threads verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="0da76-119">Contains collection classes that are safe for use with multiple threads.</span></span>  
   
  <xref:System.Threading.Tasks>  
- Enthält Klassen zum Erstellen und Planen von parallelen Verarbeitungsaufgaben.  
+ <span data-ttu-id="0da76-120">Enthält Klassen zum Erstellen und Planen von parallelen Verarbeitungsaufgaben.</span><span class="sxs-lookup"><span data-stu-id="0da76-120">Contains classes for creating and scheduling concurrent processing tasks.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)  
- Übersicht über Anwendungsdomänen und deren Verwendung durch die Common Language-Infrastruktur.  
+## <a name="related-sections"></a><span data-ttu-id="0da76-121">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="0da76-121">Related Sections</span></span>  
+ [<span data-ttu-id="0da76-122">Anwendungsdomänen</span><span class="sxs-lookup"><span data-stu-id="0da76-122">Application Domains</span></span>](../../../docs/framework/app-domains/application-domains.md)  
+ <span data-ttu-id="0da76-123">Übersicht über Anwendungsdomänen und deren Verwendung durch die Common Language-Infrastruktur.</span><span class="sxs-lookup"><span data-stu-id="0da76-123">Provides an overview of application domains and their use by the Common Language Infrastructure.</span></span>  
   
- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)  
- Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/A.  
+ [<span data-ttu-id="0da76-124">Asynchrone Datei-E/A</span><span class="sxs-lookup"><span data-stu-id="0da76-124">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ <span data-ttu-id="0da76-125">Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/A.</span><span class="sxs-lookup"><span data-stu-id="0da76-125">Describes the performance advantages and basic operation of asynchronous I/O.</span></span>  
   
- [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- Übersicht über asynchrones Programmieren.  
+ [<span data-ttu-id="0da76-126">Ereignisbasiertes asynchrones Muster (EAP)</span><span class="sxs-lookup"><span data-stu-id="0da76-126">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ <span data-ttu-id="0da76-127">Übersicht über asynchrones Programmieren.</span><span class="sxs-lookup"><span data-stu-id="0da76-127">Provides an overview of asynchronous programming.</span></span>  
   
- [Asynchrones Aufrufen von synchronen Methoden](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- Erläutert das Aufrufen von Methoden für Threadpoolthreads mithilfe der integrierten Features von Delegaten.  
+ [<span data-ttu-id="0da76-128">Asynchrones Aufrufen von synchronen Methoden</span><span class="sxs-lookup"><span data-stu-id="0da76-128">Calling Synchronous Methods Asynchronously</span></span>](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ <span data-ttu-id="0da76-129">Erläutert das Aufrufen von Methoden für Threadpoolthreads mithilfe der integrierten Features von Delegaten.</span><span class="sxs-lookup"><span data-stu-id="0da76-129">Explains how to call methods on thread pool threads using built-in features of delegates.</span></span>  
   
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- Beschreibt die parallelen Programmierbibliotheken, die die Verwendung mehrerer Threads in Anwendungen vereinfachen.  
+ [<span data-ttu-id="0da76-130">Parallele Programmierung</span><span class="sxs-lookup"><span data-stu-id="0da76-130">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
+ <span data-ttu-id="0da76-131">Beschreibt die parallelen Programmierbibliotheken, die die Verwendung mehrerer Threads in Anwendungen vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="0da76-131">Describes the parallel programming libraries, which simplify the use of multiple threads in applications.</span></span>  
   
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- Beschreibt ein System zum parallelen Ausführen von Abfragen, um die Vorteile mehrerer Prozessoren zu nutzen.
+ [<span data-ttu-id="0da76-132">Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))</span><span class="sxs-lookup"><span data-stu-id="0da76-132">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ <span data-ttu-id="0da76-133">Beschreibt ein System zum parallelen Ausführen von Abfragen, um die Vorteile mehrerer Prozessoren zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="0da76-133">Describes a system for running queries in parallel, to take advantage of multiple processors.</span></span>
+

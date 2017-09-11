@@ -32,36 +32,36 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f8d321505b528d07fd04780cec06fb65b0e05e
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: c1b2c48dc3247935f703ff4107f29829c494a305
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/01/2017
 
 ---
-# <a name="ltremarksgt-visual-basic"></a>&lt;Hinweise&gt; (Visual Basic)
-Gibt einen Hinweisabschnitt für den Member.  
+# <a name="ltremarksgt-visual-basic"></a><span data-ttu-id="be848-102">&lt;Hinweise&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be848-102">&lt;remarks&gt; (Visual Basic)</span></span>
+<span data-ttu-id="be848-103">Gibt einen Hinweisabschnitt für den Member.</span><span class="sxs-lookup"><span data-stu-id="be848-103">Specifies a remarks section for the member.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="be848-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="be848-104">Syntax</span></span>  
   
 ```xml  
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="be848-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="be848-105">Parameters</span></span>  
  `description`  
- Eine Beschreibung des Elements.  
+ <span data-ttu-id="be848-106">Eine Beschreibung des Elements.</span><span class="sxs-lookup"><span data-stu-id="be848-106">A description of the member.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der `<remarks>` Tag Hinzufügen von Informationen zu einem Typ, der mit angegebenen mittels [ \<Zusammenfassung >](../../../visual-basic/language-reference/xmldoc/summary.md).  
+## <a name="remarks"></a><span data-ttu-id="be848-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="be848-107">Remarks</span></span>  
+ <span data-ttu-id="be848-108">Verwenden der `<remarks>` Tag Hinzufügen von Informationen zu einem Typ, der mit angegebenen mittels [ \<Zusammenfassung >](../../../visual-basic/language-reference/xmldoc/summary.md).</span><span class="sxs-lookup"><span data-stu-id="be848-108">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span></span>  
   
- Diese Informationen werden im Objektkatalog angezeigt. Informationen über den Objektkatalog finden Sie unter [Anzeigen der Struktur des Codes](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).  
+ <span data-ttu-id="be848-109">Diese Informationen werden im Objektkatalog angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be848-109">This information appears in the Object Browser.</span></span> <span data-ttu-id="be848-110">Informationen über den Objektkatalog finden Sie unter [Anzeigen der Struktur des Codes](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="be848-110">For information about the Object Browser, see [Viewing the Structure of Code](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- Kompilieren Sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) Dokumentationskommentare zu einer Datei.  
+ <span data-ttu-id="be848-111">Kompilieren Sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) Dokumentationskommentare zu einer Datei.</span><span class="sxs-lookup"><span data-stu-id="be848-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<remarks>` -Tag erläutert, was die `UpdateRecord` Methode.  
+## <a name="example"></a><span data-ttu-id="be848-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="be848-112">Example</span></span>  
+ <span data-ttu-id="be848-113">Dieses Beispiel verwendet die `<remarks>` -Tag erläutert, was die `UpdateRecord` Methode.</span><span class="sxs-lookup"><span data-stu-id="be848-113">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span></span>  
   
- [!code-vb[VbVbcnXmlDocComments&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
+ <span data-ttu-id="be848-114">[!code-vb[VbVbcnXmlDocComments&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="be848-114">[!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="be848-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="be848-115">See Also</span></span>  
+ [<span data-ttu-id="be848-116">XML-Kommentartags</span><span class="sxs-lookup"><span data-stu-id="be848-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

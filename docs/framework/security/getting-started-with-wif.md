@@ -21,11 +21,11 @@ ms.contentlocale: de-de
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="getting-started-with-wif"></a>Erste Schritte mit WIF
--   [Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+# <a name="getting-started-with-wif"></a><span data-ttu-id="9a829-102">Erste Schritte mit WIF</span><span class="sxs-lookup"><span data-stu-id="9a829-102">Getting Started With WIF</span></span>
+-   [<span data-ttu-id="9a829-103">Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung</span><span class="sxs-lookup"><span data-stu-id="9a829-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+-   [<span data-ttu-id="9a829-104">Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts</span><span class="sxs-lookup"><span data-stu-id="9a829-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="9a829-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9a829-105">See Also</span></span>  
+ [<span data-ttu-id="9a829-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="9a829-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

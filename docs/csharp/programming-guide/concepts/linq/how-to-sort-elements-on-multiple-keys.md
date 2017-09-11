@@ -21,13 +21,13 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (C#)
-In diesem Thema wird das Sortieren nach mehreren Schlüsseln gezeigt.  
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="fe37f-102">Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (C#)</span><span class="sxs-lookup"><span data-stu-id="fe37f-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+<span data-ttu-id="fe37f-103">In diesem Thema wird das Sortieren nach mehreren Schlüsseln gezeigt.</span><span class="sxs-lookup"><span data-stu-id="fe37f-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Die Ergebnisse in diesem Beispiel werden zunächst nach der Postleitzahl des Versandziels und dann nach dem Auftragsdatum geordnet.  
+## <a name="example"></a><span data-ttu-id="fe37f-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fe37f-104">Example</span></span>  
+ <span data-ttu-id="fe37f-105">Die Ergebnisse in diesem Beispiel werden zunächst nach der Postleitzahl des Versandziels und dann nach dem Auftragsdatum geordnet.</span><span class="sxs-lookup"><span data-stu-id="fe37f-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ <span data-ttu-id="fe37f-106">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="fe37f-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -46,7 +46,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="fe37f-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="fe37f-107">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -73,10 +73,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="example"></a><span data-ttu-id="fe37f-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fe37f-108">Example</span></span>  
+ <span data-ttu-id="fe37f-109">Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt.</span><span class="sxs-lookup"><span data-stu-id="fe37f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="fe37f-110">Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="fe37f-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ <span data-ttu-id="fe37f-111">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="fe37f-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");  
@@ -97,7 +97,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="fe37f-112">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="fe37f-112">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -124,6 +124,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="fe37f-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe37f-113">See Also</span></span>  
+ [<span data-ttu-id="fe37f-114">Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))</span><span class="sxs-lookup"><span data-stu-id="fe37f-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

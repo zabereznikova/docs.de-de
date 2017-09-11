@@ -37,31 +37,31 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operator %= (C#-Referenz)
-Der Restzuweisungsoperator  
+# <a name="-operator-c-reference"></a><span data-ttu-id="7e09d-102">Operator %= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="7e09d-102">%= Operator (C# Reference)</span></span>
+<span data-ttu-id="7e09d-103">Der Restzuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="7e09d-103">The remainder assignment operator.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Ein Ausdruck mit dem Zuweisungsoperator `%=`, z.B.  
+## <a name="remarks"></a><span data-ttu-id="7e09d-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7e09d-104">Remarks</span></span>  
+ <span data-ttu-id="7e09d-105">Ein Ausdruck mit dem Zuweisungsoperator `%=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="7e09d-105">An expression using the `%=` assignment operator, such as</span></span>  
   
 ```  
 x %= y  
 ```  
   
- für die folgende Syntax:  
+ <span data-ttu-id="7e09d-106">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="7e09d-106">is equivalent to</span></span>  
   
 ```  
 x = x % y  
 ```  
   
- außer dass `x` nur einmal überprüft wird. Der [Operator %](../../../csharp/language-reference/operators/modulus-operator.md) ist für numerische Typen vordefiniert, um den Rest nach einer Division zu berechnen.  
+ <span data-ttu-id="7e09d-107">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="7e09d-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="7e09d-108">Der [Operator %](../../../csharp/language-reference/operators/modulus-operator.md) ist für numerische Typen vordefiniert, um den Rest nach einer Division zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="7e09d-108">The [% operator](../../../csharp/language-reference/operators/modulus-operator.md) is predefined for numeric types to compute the remainder after division.</span></span>  
   
- Der Operator `%=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[Operator /](../../../csharp/language-reference/operators/modulus-operator.md) überladen (weitere Informationen unter [operator (C#-Referenz)](../../../csharp/language-reference/keywords/operator.md)).  
+ <span data-ttu-id="7e09d-109">Der Operator `%=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[Operator /](../../../csharp/language-reference/operators/modulus-operator.md) überladen (weitere Informationen unter [operator (C#-Referenz)](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="7e09d-109">The `%=` operator cannot be overloaded directly, but user-defined types can overload the [% operator](../../../csharp/language-reference/operators/modulus-operator.md) (see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="7e09d-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7e09d-110">Example</span></span>  
+ <span data-ttu-id="7e09d-111">[!code-cs[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7e09d-111">[!code-cs[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e09d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7e09d-112">See Also</span></span>  
+ <span data-ttu-id="7e09d-113">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="7e09d-113">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="7e09d-114">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7e09d-114">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="7e09d-115">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="7e09d-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

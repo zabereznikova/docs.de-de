@@ -38,23 +38,23 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="return-c-reference"></a>return (C#-Referenz)
-Die Anweisung `return` beendet die Ausführung der Methode, in der sie angezeigt wird, und gibt das Steuerelement an die aufrufende Methode zurück. Zudem kann ein optionaler Wert zurückgegeben werden. Wenn es sich bei der Methode um einen `void`-Typ handelt, kann die Anweisung `return` ausgelassen werden.  
+# <a name="return-c-reference"></a><span data-ttu-id="e877b-102">return (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e877b-102">return (C# Reference)</span></span>
+<span data-ttu-id="e877b-103">Die Anweisung `return` beendet die Ausführung der Methode, in der sie angezeigt wird, und gibt das Steuerelement an die aufrufende Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="e877b-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="e877b-104">Zudem kann ein optionaler Wert zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e877b-104">It can also return an optional value.</span></span> <span data-ttu-id="e877b-105">Wenn es sich bei der Methode um einen `void`-Typ handelt, kann die Anweisung `return` ausgelassen werden.</span><span class="sxs-lookup"><span data-stu-id="e877b-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  
   
- Wenn sich die „return“-Anweisung in einem `try`-Block befindet, wird der `finally`-Block, falls vorhanden, ausgeführt bevor das Steuerelement an die aufrufende Methode zurückgegeben wird.  
+ <span data-ttu-id="e877b-106">Wenn sich die „return“-Anweisung in einem `try`-Block befindet, wird der `finally`-Block, falls vorhanden, ausgeführt bevor das Steuerelement an die aufrufende Methode zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="e877b-106">If the return statement is inside a `try` block, the `finally` block, if one exists, will be executed before control returns to the calling method.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel gibt die Methode `A()` die Variable `Area` als [double](../../../csharp/language-reference/keywords/double.md)-Wert zurück.  
+## <a name="example"></a><span data-ttu-id="e877b-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e877b-107">Example</span></span>  
+ <span data-ttu-id="e877b-108">Im folgenden Beispiel gibt die Methode `A()` die Variable `Area` als [double](../../../csharp/language-reference/keywords/double.md)-Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="e877b-108">In the following example, the method `A()` returns the variable `Area` as a [double](../../../csharp/language-reference/keywords/double.md) value.</span></span>  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
+ <span data-ttu-id="e877b-109">[!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e877b-109">[!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="e877b-110">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="e877b-110">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [return Statement („return“-Anweisung)](/cpp/cpp/return-statement-cpp)   
- [Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a><span data-ttu-id="e877b-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e877b-111">See Also</span></span>  
+ <span data-ttu-id="e877b-112">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e877b-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e877b-113">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e877b-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e877b-114">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="e877b-114">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="e877b-115">[return Statement („return“-Anweisung)](/cpp/cpp/return-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="e877b-115">[return Statement](/cpp/cpp/return-statement-cpp) </span></span>  
+ [<span data-ttu-id="e877b-116">Sprunganweisungen</span><span class="sxs-lookup"><span data-stu-id="e877b-116">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)
 

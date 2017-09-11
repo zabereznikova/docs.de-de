@@ -37,36 +37,36 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ampamp-operator-c-reference"></a>&amp;&amp;-Operator (C#-Referenz)
-Der bedingte AND-Operator (`&&`) führt eine logische AND-Verknüpfung seiner `bool`-Operanden durch, wertet den zweiten Operanden aber nur dann aus, wenn es erforderlich ist.  
+# <a name="ampamp-operator-c-reference"></a><span data-ttu-id="32bb7-102">&amp;&amp;-Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="32bb7-102">&amp;&amp; Operator (C# Reference)</span></span>
+<span data-ttu-id="32bb7-103">Der bedingte AND-Operator (`&&`) führt eine logische AND-Verknüpfung seiner `bool`-Operanden durch, wertet den zweiten Operanden aber nur dann aus, wenn es erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="32bb7-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Der Vorgang  
+## <a name="remarks"></a><span data-ttu-id="32bb7-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="32bb7-104">Remarks</span></span>  
+ <span data-ttu-id="32bb7-105">Der Vorgang</span><span class="sxs-lookup"><span data-stu-id="32bb7-105">The operation</span></span>  
   
 ```  
 x && y  
 ```  
   
- entspricht dem Vorgang  
+ <span data-ttu-id="32bb7-106">entspricht dem Vorgang</span><span class="sxs-lookup"><span data-stu-id="32bb7-106">corresponds to the operation</span></span>  
   
 ```  
 x & y  
 ```  
   
- mit der Ausnahme, dass `y` nicht ausgewertet wird, wenn `x` `false` ist, weil das Ergebnis der AND-Operation `false` ist, unabhängig vom Wert von `y`. Dies wird als „Kurzschlussauswertung“ bezeichnet.  
+ <span data-ttu-id="32bb7-107">mit der Ausnahme, dass `y` nicht ausgewertet wird, wenn `x` `false` ist, weil das Ergebnis der AND-Operation `false` ist, unabhängig vom Wert von `y`.</span><span class="sxs-lookup"><span data-stu-id="32bb7-107">except that if `x` is `false`, `y` is not evaluated, because the result of the AND operation is `false` no matter what the value of `y`  is.</span></span> <span data-ttu-id="32bb7-108">Dies wird als „Kurzschlussauswertung“ bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="32bb7-108">This is known as "short-circuit" evaluation.</span></span>  
   
- Der bedingte AND-Operator kann nicht überladen werden, aber Überladungen der regulären logischen Operatoren und der Operatoren [true](../../../csharp/language-reference/keywords/true.md) und [false](../../../csharp/language-reference/keywords/false.md) gelten mit gewissen Einschränkungen auch als Überladungen der bedingten logischen Operatoren.  
+ <span data-ttu-id="32bb7-109">Der bedingte AND-Operator kann nicht überladen werden, aber Überladungen der regulären logischen Operatoren und der Operatoren [true](../../../csharp/language-reference/keywords/true.md) und [false](../../../csharp/language-reference/keywords/false.md) gelten mit gewissen Einschränkungen auch als Überladungen der bedingten logischen Operatoren.</span><span class="sxs-lookup"><span data-stu-id="32bb7-109">The conditional-AND operator cannot be overloaded, but overloads of the regular logical operators and operators [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) are, with certain restrictions, also considered overloads of the conditional logical operators.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wertet der bedingte Ausdruck in der zweiten `if`-Anweisung nur den ersten Operanden aus, da der Operand `false` zurückgibt.  
+## <a name="example"></a><span data-ttu-id="32bb7-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32bb7-110">Example</span></span>  
+ <span data-ttu-id="32bb7-111">Im folgenden Beispiel wertet der bedingte Ausdruck in der zweiten `if`-Anweisung nur den ersten Operanden aus, da der Operand `false` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="32bb7-111">In the following example, the conditional expression in the second `if` statement evaluates only the first operand because the operand returns `false`.</span></span>  
   
- [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
+ <span data-ttu-id="32bb7-112">[!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="32bb7-112">[!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="32bb7-113">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="32bb7-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="32bb7-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32bb7-114">See Also</span></span>  
+ <span data-ttu-id="32bb7-115">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="32bb7-115">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="32bb7-116">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="32bb7-116">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="32bb7-117">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="32bb7-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

@@ -20,20 +20,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: be682b421173c7c226f17145db383aae1ebad154
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fca67d4eeb78667fae5a667c293b5f66af6a6771
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet. Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>).  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="63f30-102">Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="63f30-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="63f30-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="63f30-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="63f30-104">Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>).</span><span class="sxs-lookup"><span data-stu-id="63f30-104">This file contains customers and orders.</span></span>  
   
- Das Thema [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) enthält eine XSD, die zum Validieren dieses Dokuments verwendet werden kann. Mit den Funktionen `xs:key` und `xs:keyref` des XSD-Schemas wird geprüft, ob das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist. Außerdem wird damit eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element hergestellt.  
+ <span data-ttu-id="63f30-105">Das Thema [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) enthält eine XSD, die zum Validieren dieses Dokuments verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="63f30-105">The topic [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="63f30-106">Mit den Funktionen `xs:key` und `xs:keyref` des XSD-Schemas wird geprüft, ob das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist. Außerdem wird damit eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element hergestellt.</span><span class="sxs-lookup"><span data-stu-id="63f30-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- Ein Beispiel für das Schreiben von LINQ-Abfragen, die diese Beziehung mit nutzen die `Join` -Klausel finden Sie unter [Gewusst wie: Verknüpfen zwei Auflistungen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ <span data-ttu-id="63f30-107">Ein Beispiel für das Schreiben von LINQ-Abfragen, die diese Beziehung mit nutzen die `Join` -Klausel finden Sie unter [Gewusst wie: Verknüpfen zwei Auflistungen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="63f30-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a>CustomersOrders.xml  
+## <a name="customersordersxml"></a><span data-ttu-id="63f30-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="63f30-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -451,5 +452,5 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="63f30-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="63f30-109">See Also</span></span>  
+ [<span data-ttu-id="63f30-110">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="63f30-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

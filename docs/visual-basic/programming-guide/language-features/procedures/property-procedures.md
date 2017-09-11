@@ -40,33 +40,34 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f21d4c7d9bd8f14bbe7284bc08399e7ba6b466c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6ba662a8cf9748b719bfbd7205ce65989e79d05a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="property-procedures-visual-basic"></a>Eigenschaftenprozeduren (Visual Basic)
-Eine Eigenschaftenprozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Anweisungen, die eine benutzerdefinierte Eigenschaft für ein Modul, Klasse oder Struktur zu bearbeiten. Eigenschaftenprozeduren sind auch bekannt als *Eigenschaftenaccessoren*.  
+# <a name="property-procedures-visual-basic"></a><span data-ttu-id="cb63c-102">Eigenschaftenprozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb63c-102">Property Procedures (Visual Basic)</span></span>
+<span data-ttu-id="cb63c-103">Eine Eigenschaftenprozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Anweisungen, die eine benutzerdefinierte Eigenschaft für ein Modul, Klasse oder Struktur zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="cb63c-103">A property procedure is a series of [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="cb63c-104">Eigenschaftenprozeduren sind auch bekannt als *Eigenschaftenaccessoren*.</span><span class="sxs-lookup"><span data-stu-id="cb63c-104">Property procedures are also known as *property accessors*.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]enthält die folgenden Eigenschaftenprozeduren:  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="cb63c-105">enthält die folgenden Eigenschaftenprozeduren:</span><span class="sxs-lookup"><span data-stu-id="cb63c-105"> provides for the following property procedures:</span></span>  
   
--   Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück. Es wird aufgerufen, wenn Sie die Eigenschaft in einem Ausdruck zugreifen.  
+-   <span data-ttu-id="cb63c-106">Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="cb63c-106">A `Get` procedure returns the value of a property.</span></span> <span data-ttu-id="cb63c-107">Es wird aufgerufen, wenn Sie die Eigenschaft in einem Ausdruck zugreifen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-107">It is called when you access the property in an expression.</span></span>  
   
--   Ein `Set` -Prozedur legt eine Eigenschaft auf einen Wert fest. Sie wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.  
+-   <span data-ttu-id="cb63c-108">Ein `Set` -Prozedur legt eine Eigenschaft auf einen Wert fest.</span><span class="sxs-lookup"><span data-stu-id="cb63c-108">A `Set` procedure sets a property to a value, including an object reference.</span></span> <span data-ttu-id="cb63c-109">Sie wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-109">It is called when you assign a value to the property.</span></span>  
   
- Sie definieren Property-Prozeduren in der Regel paarweise mit den `Get` und `Set` -Anweisungen, sondern Sie können auch einzeln definiert, wenn die Eigenschaft schreibgeschützt ist ([Get-Anweisung](../../../../visual-basic/language-reference/statements/get-statement.md)) oder lesegeschützt ([Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ <span data-ttu-id="cb63c-110">Sie definieren Property-Prozeduren in der Regel paarweise mit den `Get` und `Set` -Anweisungen, sondern Sie können auch einzeln definiert, wenn die Eigenschaft schreibgeschützt ist ([Get-Anweisung](../../../../visual-basic/language-reference/statements/get-statement.md)) oder lesegeschützt ([Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)).</span><span class="sxs-lookup"><span data-stu-id="cb63c-110">You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).</span></span>  
   
- Sie lassen die `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft verwenden. Weitere Informationen finden Sie unter [automatisch implementierte Eigenschaften](./auto-implemented-properties.md).  
+ <span data-ttu-id="cb63c-111">Sie lassen die `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft verwenden.</span><span class="sxs-lookup"><span data-stu-id="cb63c-111">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="cb63c-112">Weitere Informationen finden Sie unter [automatisch implementierte Eigenschaften](./auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="cb63c-112">For more information, see [Auto-Implemented Properties](./auto-implemented-properties.md).</span></span>  
   
- Sie können Eigenschaften in Klassen, Strukturen und Module definieren. Eigenschaften sind `Public` standardmäßig, d. h. Sie können sie von überall aus aufrufen in der Anwendung, die Container der Eigenschaft zugreifen können.  
+ <span data-ttu-id="cb63c-113">Sie können Eigenschaften in Klassen, Strukturen und Module definieren.</span><span class="sxs-lookup"><span data-stu-id="cb63c-113">You can define properties in classes, structures, and modules.</span></span> <span data-ttu-id="cb63c-114">Eigenschaften sind `Public` standardmäßig, d. h. Sie können sie von überall aus aufrufen in der Anwendung, die Container der Eigenschaft zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="cb63c-114">Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.</span></span>  
   
- Einen Vergleich von Eigenschaften und Variablen finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md).  
+ <span data-ttu-id="cb63c-115">Einen Vergleich von Eigenschaften und Variablen finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md).</span><span class="sxs-lookup"><span data-stu-id="cb63c-115">For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md).</span></span>  
   
-## <a name="declaration-syntax"></a>Deklarationssyntax  
- Eine Eigenschaft selbst wird durch einen Codeblock in definiert die [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md) und der `End Property` Anweisung. In diesem Block jede Eigenschaftenprozedur angezeigt wird, als interne eingeschlossen, die innerhalb einer deklarationsanweisung (`Get` oder `Set`) und der entsprechenden `End` Deklaration.  
+## <a name="declaration-syntax"></a><span data-ttu-id="cb63c-116">Deklarationssyntax</span><span class="sxs-lookup"><span data-stu-id="cb63c-116">Declaration Syntax</span></span>  
+ <span data-ttu-id="cb63c-117">Eine Eigenschaft selbst wird durch einen Codeblock in definiert die [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md) und der `End Property` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="cb63c-117">A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement.</span></span> <span data-ttu-id="cb63c-118">In diesem Block jede Eigenschaftenprozedur angezeigt wird, als interne eingeschlossen, die innerhalb einer deklarationsanweisung (`Get` oder `Set`) und der entsprechenden `End` Deklaration.</span><span class="sxs-lookup"><span data-stu-id="cb63c-118">Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.</span></span>  
   
- Die Syntax zum Deklarieren einer Eigenschaft und ihrer Prozeduren lautet wie folgt:  
+ <span data-ttu-id="cb63c-119">Die Syntax zum Deklarieren einer Eigenschaft und ihrer Prozeduren lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="cb63c-119">The syntax for declaring a property and its procedures is as follows:</span></span>  
   
 ```  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
@@ -85,60 +86,60 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- Die `Modifiers` können geben Zugriffsebene und Informationen zum Überladen, überschreiben, freigeben und shadowing, sowie, ob die Eigenschaft schreibgeschützt oder lesegeschützt ist. Die `AccessLevel` auf der `Get` oder `Set` Prozedur kann auf jeder Ebene, die restriktiver als die Zugriffsebene für die Eigenschaft selbst angegeben ist. Weitere Informationen finden Sie unter [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ <span data-ttu-id="cb63c-120">Die `Modifiers` können geben Zugriffsebene und Informationen zum Überladen, überschreiben, freigeben und shadowing, sowie, ob die Eigenschaft schreibgeschützt oder lesegeschützt ist.</span><span class="sxs-lookup"><span data-stu-id="cb63c-120">The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only.</span></span> <span data-ttu-id="cb63c-121">Die `AccessLevel` auf der `Get` oder `Set` Prozedur kann auf jeder Ebene, die restriktiver als die Zugriffsebene für die Eigenschaft selbst angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="cb63c-121">The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself.</span></span> <span data-ttu-id="cb63c-122">Weitere Informationen finden Sie unter [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md).</span><span class="sxs-lookup"><span data-stu-id="cb63c-122">For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).</span></span>  
   
-### <a name="data-type"></a>Datentyp  
- Der Datentyp einer Eigenschaft und principal Zugriffsebene werden definiert, der `Property` -Anweisung nicht in den Eigenschaftenprozeduren. Eine Eigenschaft kann nur einen Datentyp aufweisen. Angenommen, Sie eine Eigenschaft zum Speichern von definieren können eine `Decimal` Wert aber Abrufen einer `Double` Wert.  
+### <a name="data-type"></a><span data-ttu-id="cb63c-123">Datentyp</span><span class="sxs-lookup"><span data-stu-id="cb63c-123">Data Type</span></span>  
+ <span data-ttu-id="cb63c-124">Der Datentyp einer Eigenschaft und principal Zugriffsebene werden definiert, der `Property` -Anweisung nicht in den Eigenschaftenprozeduren.</span><span class="sxs-lookup"><span data-stu-id="cb63c-124">A property's data type and principal access level are defined in the `Property` statement, not in the property procedures.</span></span> <span data-ttu-id="cb63c-125">Eine Eigenschaft kann nur einen Datentyp aufweisen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-125">A property can have only one data type.</span></span> <span data-ttu-id="cb63c-126">Angenommen, Sie eine Eigenschaft zum Speichern von definieren können eine `Decimal` Wert aber Abrufen einer `Double` Wert.</span><span class="sxs-lookup"><span data-stu-id="cb63c-126">For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.</span></span>  
   
-### <a name="access-level"></a>Zugriffsebene  
- Sie können eine principal Zugriffsebene für eine Eigenschaft definieren und die Zugriffsebene in einer der Eigenschaftenprozeduren weiter einschränken. Sie können z. B. definieren eine `Public` Eigenschaft und definieren Sie dann ein `Private Set` Verfahren. Die `Get` Prozedur bleibt `Public`. Sie können die Zugriffsebene in nur einer der Prozeduren einer Eigenschaft ändern können, und Sie nur es restriktiver ist als der Prinzipal Zugriff auf. Weitere Informationen finden Sie unter [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md).  
+### <a name="access-level"></a><span data-ttu-id="cb63c-127">Zugriffsebene</span><span class="sxs-lookup"><span data-stu-id="cb63c-127">Access Level</span></span>  
+ <span data-ttu-id="cb63c-128">Sie können eine principal Zugriffsebene für eine Eigenschaft definieren und die Zugriffsebene in einer der Eigenschaftenprozeduren weiter einschränken.</span><span class="sxs-lookup"><span data-stu-id="cb63c-128">However, you can define a principal access level for a property and further restrict the access level in one of its property procedures.</span></span> <span data-ttu-id="cb63c-129">Sie können z. B. definieren eine `Public` Eigenschaft und definieren Sie dann ein `Private Set` Verfahren.</span><span class="sxs-lookup"><span data-stu-id="cb63c-129">For example, you can define a `Public` property and then define a `Private Set` procedure.</span></span> <span data-ttu-id="cb63c-130">Die `Get` Prozedur bleibt `Public`.</span><span class="sxs-lookup"><span data-stu-id="cb63c-130">The `Get` procedure remains `Public`.</span></span> <span data-ttu-id="cb63c-131">Sie können die Zugriffsebene in nur einer der Prozeduren einer Eigenschaft ändern können, und Sie nur es restriktiver ist als der Prinzipal Zugriff auf.</span><span class="sxs-lookup"><span data-stu-id="cb63c-131">You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level.</span></span> <span data-ttu-id="cb63c-132">Weitere Informationen finden Sie unter [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="cb63c-132">For more information, see [How to: Declare a Property with Mixed Access Levels](./how-to-declare-a-property-with-mixed-access-levels.md).</span></span>  
   
-## <a name="parameter-declaration"></a>Parameterdeklaration  
- Sie deklarieren jeden Parameter auf die gleiche Weise bei [Sub-Prozeduren](./sub-procedures.md), außer dass die Methode übergeben werden muss `ByVal`.  
+## <a name="parameter-declaration"></a><span data-ttu-id="cb63c-133">Parameterdeklaration</span><span class="sxs-lookup"><span data-stu-id="cb63c-133">Parameter Declaration</span></span>  
+ <span data-ttu-id="cb63c-134">Sie deklarieren jeden Parameter auf die gleiche Weise bei [Sub-Prozeduren](./sub-procedures.md), außer dass die Methode übergeben werden muss `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="cb63c-134">You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md), except that the passing mechanism must be `ByVal`.</span></span>  
   
- Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:  
+ <span data-ttu-id="cb63c-135">Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="cb63c-135">The syntax for each parameter in the parameter list is as follows:</span></span>  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert lautet wie folgt:  
+ <span data-ttu-id="cb63c-136">Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben.</span><span class="sxs-lookup"><span data-stu-id="cb63c-136">If the parameter is optional, you must also supply a default value as part of its declaration.</span></span> <span data-ttu-id="cb63c-137">Die Syntax zum Angeben der Standardwert lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="cb63c-137">The syntax for specifying a default value is as follows:</span></span>  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
-## <a name="property-value"></a>Eigenschaftswert  
- In einer `Get` Prozedur, der Rückgabewert für den aufrufenden Ausdruck als Wert der Eigenschaft bereitgestellt wird.  
+## <a name="property-value"></a><span data-ttu-id="cb63c-138">Eigenschaftswert</span><span class="sxs-lookup"><span data-stu-id="cb63c-138">Property Value</span></span>  
+ <span data-ttu-id="cb63c-139">In einer `Get` Prozedur, der Rückgabewert für den aufrufenden Ausdruck als Wert der Eigenschaft bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="cb63c-139">In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.</span></span>  
   
- In einem `Set` Verfahren wird der neue Wert der Eigenschaft an den Parameter des übergeben der `Set` Anweisung. Wenn Sie einen Parameter explizit deklarieren, müssen Sie es mit dem gleichen Datentyp wie die Eigenschaft deklarieren. Wenn Sie keine Parameter deklariert, verwendet der Compiler die impliziten Parameter `Value` zur Darstellung des neuen Wert der Eigenschaft zugewiesen werden.  
+ <span data-ttu-id="cb63c-140">In einem `Set` Verfahren wird der neue Wert der Eigenschaft an den Parameter des übergeben der `Set` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="cb63c-140">In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement.</span></span> <span data-ttu-id="cb63c-141">Wenn Sie einen Parameter explizit deklarieren, müssen Sie es mit dem gleichen Datentyp wie die Eigenschaft deklarieren.</span><span class="sxs-lookup"><span data-stu-id="cb63c-141">If you explicitly declare a parameter, you must declare it with the same data type as the property.</span></span> <span data-ttu-id="cb63c-142">Wenn Sie keine Parameter deklariert, verwendet der Compiler die impliziten Parameter `Value` zur Darstellung des neuen Wert der Eigenschaft zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="cb63c-142">If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.</span></span>  
   
-## <a name="calling-syntax"></a>Aufrufen der Syntax  
- Sie aufrufen eine Eigenschaftenprozedur implizit durch einen Verweis auf die Eigenschaft. Sie verwenden den Namen der Eigenschaft, die gleiche Weise wie der Name einer Variablen mit dem Unterschied, dass Sie Werte für alle Argumente angeben müssen, die nicht optional sind, und Sie müssen die Argumentliste in Klammern einschließen. Wenn keine Argumente angegeben sind, können Sie die Klammern auch weglassen.  
+## <a name="calling-syntax"></a><span data-ttu-id="cb63c-143">Aufrufen der Syntax</span><span class="sxs-lookup"><span data-stu-id="cb63c-143">Calling Syntax</span></span>  
+ <span data-ttu-id="cb63c-144">Sie aufrufen eine Eigenschaftenprozedur implizit durch einen Verweis auf die Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="cb63c-144">You invoke a property procedure implicitly by making reference to the property.</span></span> <span data-ttu-id="cb63c-145">Sie verwenden den Namen der Eigenschaft, die gleiche Weise wie der Name einer Variablen mit dem Unterschied, dass Sie Werte für alle Argumente angeben müssen, die nicht optional sind, und Sie müssen die Argumentliste in Klammern einschließen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-145">You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses.</span></span> <span data-ttu-id="cb63c-146">Wenn keine Argumente angegeben sind, können Sie die Klammern auch weglassen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-146">If no arguments are supplied, you can optionally omit the parentheses.</span></span>  
   
- Die Syntax für einen impliziten Aufruf einer `Set` Prozedur lautet wie folgt:  
+ <span data-ttu-id="cb63c-147">Die Syntax für einen impliziten Aufruf einer `Set` Prozedur lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="cb63c-147">The syntax for an implicit call to a `Set` procedure is as follows:</span></span>  
   
  `propertyname[(argumentlist)] = expression`  
   
- Die Syntax für einen impliziten Aufruf einer `Get` Prozedur lautet wie folgt:  
+ <span data-ttu-id="cb63c-148">Die Syntax für einen impliziten Aufruf einer `Get` Prozedur lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="cb63c-148">The syntax for an implicit call to a `Get` procedure is as follows:</span></span>  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
-### <a name="illustration-of-declaration-and-call"></a>Darstellung von Deklaration und Aufruf  
- Die folgende Eigenschaft speichert einen vollständigen Namen als zwei konstituierende Namen, den Vornamen und den Nachnamen ein. Wenn der aufrufende Code liest `fullName`der `Get` kombiniert die beiden konstituierenden Namen und gibt den vollständigen Namen. Wenn der aufrufende Code einen neuen vollständigen Namen zuweist der `Set` Prozedur versucht, den Namen in zwei konstituierende Namen aufzulösen. Wenn ein Leerzeichen nicht findet, gespeichert als der erste Name.  
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="cb63c-149">Darstellung von Deklaration und Aufruf</span><span class="sxs-lookup"><span data-stu-id="cb63c-149">Illustration of Declaration and Call</span></span>  
+ <span data-ttu-id="cb63c-150">Die folgende Eigenschaft speichert einen vollständigen Namen als zwei konstituierende Namen, den Vornamen und den Nachnamen ein.</span><span class="sxs-lookup"><span data-stu-id="cb63c-150">The following property stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="cb63c-151">Wenn der aufrufende Code liest `fullName`der `Get` kombiniert die beiden konstituierenden Namen und gibt den vollständigen Namen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-151">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="cb63c-152">Wenn der aufrufende Code einen neuen vollständigen Namen zuweist der `Set` Prozedur versucht, den Namen in zwei konstituierende Namen aufzulösen.</span><span class="sxs-lookup"><span data-stu-id="cb63c-152">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="cb63c-153">Wenn ein Leerzeichen nicht findet, gespeichert als der erste Name.</span><span class="sxs-lookup"><span data-stu-id="cb63c-153">If it does not find a space, it stores it all as the first name.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#8;](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ <span data-ttu-id="cb63c-154">[!code-vb[VbVbcnProcedures&#8;](./codesnippet/VisualBasic/property-procedures_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="cb63c-154">[!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]</span></span>  
   
- Das folgende Beispiel zeigt die normale Aufrufe an die Property-Prozeduren des `fullName`.  
+ <span data-ttu-id="cb63c-155">Das folgende Beispiel zeigt die normale Aufrufe an die Property-Prozeduren des `fullName`.</span><span class="sxs-lookup"><span data-stu-id="cb63c-155">The following example shows typical calls to the property procedures of `fullName`.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#9;](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ <span data-ttu-id="cb63c-156">[!code-vb[VbVbcnProcedures&#9;](./codesnippet/VisualBasic/property-procedures_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="cb63c-156">[!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)   
- [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)   
- [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)   
- [Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)   
- [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)   
- [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="cb63c-157">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb63c-157">See Also</span></span>  
+ <span data-ttu-id="cb63c-158">[Verfahren](./index.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-158">[Procedures](./index.md) </span></span>  
+<span data-ttu-id="cb63c-159"> [Function-Prozeduren](./function-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-159"> [Function Procedures](./function-procedures.md) </span></span>  
+<span data-ttu-id="cb63c-160"> [Operatorprozeduren](./operator-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-160"> [Operator Procedures](./operator-procedures.md) </span></span>  
+<span data-ttu-id="cb63c-161"> [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-161"> [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md) </span></span>  
+<span data-ttu-id="cb63c-162"> [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-162"> [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md) </span></span>  
+<span data-ttu-id="cb63c-163"> [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-163"> [How to: Create a Property](./how-to-create-a-property.md) </span></span>  
+<span data-ttu-id="cb63c-164"> [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-164"> [How to: Call a Property Procedure](./how-to-call-a-property-procedure.md) </span></span>  
+<span data-ttu-id="cb63c-165"> [Gewusst wie: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-165"> [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md) </span></span>  
+<span data-ttu-id="cb63c-166"> [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md) </span><span class="sxs-lookup"><span data-stu-id="cb63c-166"> [How to: Put a Value in a Property](./how-to-put-a-value-in-a-property.md) </span></span>  
+<span data-ttu-id="cb63c-167"> [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)</span><span class="sxs-lookup"><span data-stu-id="cb63c-167"> [How to: Get a Value from a Property](./how-to-get-a-value-from-a-property.md)</span></span>

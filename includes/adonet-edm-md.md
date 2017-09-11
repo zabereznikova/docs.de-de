@@ -1,1 +1,1 @@
-Entity Data Model
+<span data-ttu-id="ff6c1-101">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="ff6c1-101">Entity Data Model</span></span>

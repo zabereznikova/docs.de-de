@@ -18,46 +18,46 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a><span data-ttu-id="f6331-104">Expression Trees</span><span class="sxs-lookup"><span data-stu-id="f6331-104">Expression Trees</span></span>
 
-Wenn Sie LINQ verwendet haben, verfügen Sie über Erfahrung mit einer umfangreichen Bibliothek, in der die `Func`-Typen Teil des API-Satzes sind. (Wenn Sie nicht mit LINQ vertraut sind, möchten Sie möglicherweise vorher [das LINQ-Tutorial](linq/index.md) und das Tutorial zu [lambda expressions (Lambdaausdrücke)](lambda-expressions.md) lesen.) *Ausdrucksbaumstrukturen* bieten eine umfangreichere Interaktion mit den Argumenten, die Funktionen sind.
+<span data-ttu-id="f6331-105">Wenn Sie LINQ verwendet haben, verfügen Sie über Erfahrung mit einer umfangreichen Bibliothek, in der die `Func`-Typen Teil des API-Satzes sind.</span><span class="sxs-lookup"><span data-stu-id="f6331-105">If you have used LINQ, you have experience with a rich library where the `Func` types are part of the API set.</span></span> <span data-ttu-id="f6331-106">(Wenn Sie nicht mit LINQ vertraut sind, möchten Sie möglicherweise vorher [das LINQ-Tutorial](linq/index.md) und das Tutorial zu [lambda expressions (Lambdaausdrücke)](lambda-expressions.md) lesen.) *Ausdrucksbaumstrukturen* bieten eine umfangreichere Interaktion mit den Argumenten, die Funktionen sind.</span><span class="sxs-lookup"><span data-stu-id="f6331-106">(If you are not familiar with LINQ, you probably want to read [the LINQ tutorial](linq/index.md) and the tutorial on [lambda expressions](lambda-expressions.md) before this one.) *Expression Trees* provide richer interaction with the arguments that are functions.</span></span>
 
-Sie schreiben die Argumente der Funktion in der Regel mithilfe von Lambdaausdrücken, wenn Sie LINQ-Abfragen erstellen. In einer normalen LINQ-Abfrage werden die Funktionsargumente in einen Delegaten transformiert, den der Compiler erstellt. 
+<span data-ttu-id="f6331-107">Sie schreiben die Argumente der Funktion in der Regel mithilfe von Lambdaausdrücken, wenn Sie LINQ-Abfragen erstellen.</span><span class="sxs-lookup"><span data-stu-id="f6331-107">You write function arguments, typically using Lambda Expressions, when you create LINQ queries.</span></span> <span data-ttu-id="f6331-108">In einer normalen LINQ-Abfrage werden die Funktionsargumente in einen Delegaten transformiert, den der Compiler erstellt.</span><span class="sxs-lookup"><span data-stu-id="f6331-108">In a typical LINQ query, those function arguments are transformed into a delegate the compiler creates.</span></span> 
 
-Wenn Sie eine umfangreichere Interaktion haben möchten, müssen Sie *Ausdrucksbaumstrukturen* verwenden.
-Ausdrucksbaumstrukturen stellen Code wie eine Struktur dar, die Sie untersuchen, ändern oder ausführen können. Diese Tools bieten Ihnen die Möglichkeit, Code während der Laufzeit zu ändern. Sie können Code schreiben, der ausgeführte Algorithmen untersucht oder neue Funktionen einfügt. In erweiterten Szenarios können Sie ausgeführte Algorithmen ändern und sogar C#-Ausdrücke für die Ausführung in einer anderen Umgebung in eine andere Form übersetzen.
+<span data-ttu-id="f6331-109">Wenn Sie eine umfangreichere Interaktion haben möchten, müssen Sie *Ausdrucksbaumstrukturen* verwenden.</span><span class="sxs-lookup"><span data-stu-id="f6331-109">When you want to have a richer interaction, you need to use *Expression Trees*.</span></span>
+<span data-ttu-id="f6331-110">Ausdrucksbaumstrukturen stellen Code wie eine Struktur dar, die Sie untersuchen, ändern oder ausführen können.</span><span class="sxs-lookup"><span data-stu-id="f6331-110">Expression Trees represent code as a structure that you can examine, modify, or execute.</span></span> <span data-ttu-id="f6331-111">Diese Tools bieten Ihnen die Möglichkeit, Code während der Laufzeit zu ändern.</span><span class="sxs-lookup"><span data-stu-id="f6331-111">These tools give you the power to manipulate code during run time.</span></span> <span data-ttu-id="f6331-112">Sie können Code schreiben, der ausgeführte Algorithmen untersucht oder neue Funktionen einfügt.</span><span class="sxs-lookup"><span data-stu-id="f6331-112">You can write code that examines running algorithms, or injects new capabilities.</span></span> <span data-ttu-id="f6331-113">In erweiterten Szenarios können Sie ausgeführte Algorithmen ändern und sogar C#-Ausdrücke für die Ausführung in einer anderen Umgebung in eine andere Form übersetzen.</span><span class="sxs-lookup"><span data-stu-id="f6331-113">In more advanced scenarios, you can modify running algorithms, and even translate C# expressions into another form for execution in another environment.</span></span>
 
-Sie haben wahrscheinlich bereits Code geschrieben, der Ausdrucksbaumstrukturen verwendet. LINQ-APIs von Entity Framework akzeptieren Ausdrucksbaumstrukturen als Argumente für das LINQ-Abfrageausdrucksmuster.
-So kann [Entity Framework](http://docs.efproject.net/en/latest/) die Abfrage übersetzen, die Sie in C# in SQL geschrieben haben, die im Datenbankmodul ausgeführt wird. Ein weiteres Beispiel ist [Moq](https://github.com/Moq/moq), was ein beliebtes Mockingframework für .NET ist.
+<span data-ttu-id="f6331-114">Sie haben wahrscheinlich bereits Code geschrieben, der Ausdrucksbaumstrukturen verwendet.</span><span class="sxs-lookup"><span data-stu-id="f6331-114">You've likely already written code that uses Expression Trees.</span></span> <span data-ttu-id="f6331-115">LINQ-APIs von Entity Framework akzeptieren Ausdrucksbaumstrukturen als Argumente für das LINQ-Abfrageausdrucksmuster.</span><span class="sxs-lookup"><span data-stu-id="f6331-115">Entity Framework's LINQ APIs accept Expression Trees as the arguments for the LINQ Query Expression Pattern.</span></span>
+<span data-ttu-id="f6331-116">So kann [Entity Framework](http://docs.efproject.net/en/latest/) die Abfrage übersetzen, die Sie in C# in SQL geschrieben haben, die im Datenbankmodul ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f6331-116">That enables [Entity Framework](http://docs.efproject.net/en/latest/) to translate the query you wrote in C# into SQL that executes in the database engine.</span></span> <span data-ttu-id="f6331-117">Ein weiteres Beispiel ist [Moq](https://github.com/Moq/moq), was ein beliebtes Mockingframework für .NET ist.</span><span class="sxs-lookup"><span data-stu-id="f6331-117">Another example is [Moq](https://github.com/Moq/moq), which is a popular mocking framework for .NET.</span></span>
 
-In den verbleibenden Abschnitten dieses Tutorials wird untersucht, was Ausdrucksbaumstrukturen sind, es werden die Framework-Klassen untersucht, die Ausdrucksbaumstrukturen unterstützen, und es wird gezeigt, wie Sie mit Ausdrucksbaumstrukturen arbeiten. Sie erfahren, wie Sie Ausdrucksbaumstrukturen lesen und diese erstellen, wie Sie geänderte Ausdrucksbaumstrukturen erstellen und wie Sie Code von dargestellten Ausdrucksbaumstrukturen ausführen. Nach dem Lesen können Sie mit diesen Strukturen umfangreiche adaptive Algorithmen erstellen.
+<span data-ttu-id="f6331-118">In den verbleibenden Abschnitten dieses Tutorials wird untersucht, was Ausdrucksbaumstrukturen sind, es werden die Framework-Klassen untersucht, die Ausdrucksbaumstrukturen unterstützen, und es wird gezeigt, wie Sie mit Ausdrucksbaumstrukturen arbeiten.</span><span class="sxs-lookup"><span data-stu-id="f6331-118">The remaining sections of this tutorial will explore what Expression Trees are, examine the framework classes that support expression trees, and show you how to work with expression trees.</span></span> <span data-ttu-id="f6331-119">Sie erfahren, wie Sie Ausdrucksbaumstrukturen lesen und diese erstellen, wie Sie geänderte Ausdrucksbaumstrukturen erstellen und wie Sie Code von dargestellten Ausdrucksbaumstrukturen ausführen.</span><span class="sxs-lookup"><span data-stu-id="f6331-119">You'll learn how to read expression trees, how to create expression trees, how to create modified expression trees, and how to execute the code represented by expression trees.</span></span> <span data-ttu-id="f6331-120">Nach dem Lesen können Sie mit diesen Strukturen umfangreiche adaptive Algorithmen erstellen.</span><span class="sxs-lookup"><span data-stu-id="f6331-120">After reading, you will be ready to use these structures to create rich adaptive algorithms.</span></span>
 
-1. [Ausdrucksbaumstrukturen mit Erläuterung](expression-trees-explained.md)
+1. [<span data-ttu-id="f6331-121">Ausdrucksbaumstrukturen mit Erläuterung</span><span class="sxs-lookup"><span data-stu-id="f6331-121">Expression Trees Explained</span></span>](expression-trees-explained.md)
 
-    Verstehen der Struktur und der Konzepte hinter *Ausdrucksbaumstrukturen*.
+    <span data-ttu-id="f6331-122">Verstehen der Struktur und der Konzepte hinter *Ausdrucksbaumstrukturen*.</span><span class="sxs-lookup"><span data-stu-id="f6331-122">Understand the structure and concepts behind *Expression Trees*.</span></span>
     
-2. [Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
+2. [<span data-ttu-id="f6331-123">Framework-Typen, die Ausdrucksbaumstrukturen unterstützen</span><span class="sxs-lookup"><span data-stu-id="f6331-123">Framework Types Supporting Expression Trees</span></span>](expression-classes.md)
     
-    Erfahren Sie mehr über die Strukturen und Klassen, die Ausdrucksbaumstrukturen definieren und bearbeiten.
+    <span data-ttu-id="f6331-124">Erfahren Sie mehr über die Strukturen und Klassen, die Ausdrucksbaumstrukturen definieren und bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="f6331-124">Learn about the structures and classes that define and manipulate expression trees.</span></span>
     
-3. [Ausführen von Ausdrücken](expression-trees-execution.md)
+3. [<span data-ttu-id="f6331-125">Ausführen von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="f6331-125">Executing Expressions</span></span>](expression-trees-execution.md)
 
-    Erfahren Sie, wie Sie eine Ausdrucksbaumstruktur, die als Lambdaausdruck dargestellt wird, in einen Delegaten konvertieren, und wie Sie den resultierenden Delegaten ausführen.
+    <span data-ttu-id="f6331-126">Erfahren Sie, wie Sie eine Ausdrucksbaumstruktur, die als Lambdaausdruck dargestellt wird, in einen Delegaten konvertieren, und wie Sie den resultierenden Delegaten ausführen.</span><span class="sxs-lookup"><span data-stu-id="f6331-126">Learn how to convert an expression tree represented as a Lambda Expression into a delegate and execute the resulting delegate.</span></span>
 
-4. [Interpretieren von Ausdrücken](expression-trees-interpreting.md)
+4. [<span data-ttu-id="f6331-127">Interpretieren von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="f6331-127">Interpreting Expressions</span></span>](expression-trees-interpreting.md)
 
-    Erfahren Sie, wie Sie *Ausdrucksbaumstrukturen* durchlaufen und untersuchen, um zu verstehen, welchen Code die Ausdrucksbaumstruktur darstellt.
+    <span data-ttu-id="f6331-128">Erfahren Sie, wie Sie *Ausdrucksbaumstrukturen* durchlaufen und untersuchen, um zu verstehen, welchen Code die Ausdrucksbaumstruktur darstellt.</span><span class="sxs-lookup"><span data-stu-id="f6331-128">Learn how to traverse and examine *expression trees* to understand what code the expression tree represents.</span></span>
 
-5. [Erstellen von Ausdrücken](expression-trees-building.md)
+5. [<span data-ttu-id="f6331-129">Erstellen von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="f6331-129">Building Expressions</span></span>](expression-trees-building.md)
 
-    Erfahren Sie, wie Sie die Knoten für eine Ausdrucksbaumstruktur erstellen, und wie Sie Ausdrucksbaumstrukturen erstellen.
+    <span data-ttu-id="f6331-130">Erfahren Sie, wie Sie die Knoten für eine Ausdrucksbaumstruktur erstellen, und wie Sie Ausdrucksbaumstrukturen erstellen.</span><span class="sxs-lookup"><span data-stu-id="f6331-130">Learn how to construct the nodes for an expression tree and build expression trees.</span></span>
 
-6. [Übersetzen von Ausdrücken](expression-trees-translating.md)
+6. [<span data-ttu-id="f6331-131">Übersetzen von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="f6331-131">Translating Expressions</span></span>](expression-trees-translating.md)
 
-    Erfahren Sie, wie Sie eine geänderte Kopie einer Ausdrucksbaumstruktur erstellen oder wie Sie eine Ausdrucksbaumstruktur in ein anderes Format übersetzen.
+    <span data-ttu-id="f6331-132">Erfahren Sie, wie Sie eine geänderte Kopie einer Ausdrucksbaumstruktur erstellen oder wie Sie eine Ausdrucksbaumstruktur in ein anderes Format übersetzen.</span><span class="sxs-lookup"><span data-stu-id="f6331-132">Learn how to build a modified copy of an expression tree, or translate an expression tree into a different format.</span></span>
 
-7. [Schlussbemerkung](expression-trees-summary.md)
+7. [<span data-ttu-id="f6331-133">Schlussbemerkung</span><span class="sxs-lookup"><span data-stu-id="f6331-133">Summing up</span></span>](expression-trees-summary.md)
 
-    Überprüfen Sie die Informationen zu Ausdrucksbaumstrukturen.
+    <span data-ttu-id="f6331-134">Überprüfen Sie die Informationen zu Ausdrucksbaumstrukturen.</span><span class="sxs-lookup"><span data-stu-id="f6331-134">Review the information on expression trees.</span></span>
     
 

@@ -1,1 +1,1 @@
-Microsoft Editor
+<span data-ttu-id="cec28-101">Microsoft Editor</span><span class="sxs-lookup"><span data-stu-id="cec28-101">Microsoft Notepad</span></span>

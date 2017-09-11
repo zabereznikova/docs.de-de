@@ -26,18 +26,18 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-started-linq-to-xml"></a>Erste Schritte (LINQ to XML)
-Die folgenden Themen enthalten eine Einführung in LINQ to XML.  
+# <a name="getting-started-linq-to-xml"></a><span data-ttu-id="609e3-102">Erste Schritte (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="609e3-102">Getting Started (LINQ to XML)</span></span>
+<span data-ttu-id="609e3-103">Die folgenden Themen enthalten eine Einführung in LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="609e3-103">The following topics introduce LINQ to XML.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a><span data-ttu-id="609e3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="609e3-104">In This Section</span></span>  
   
-|Thema|Beschreibung|  
+|<span data-ttu-id="609e3-105">Thema</span><span class="sxs-lookup"><span data-stu-id="609e3-105">Topic</span></span>|<span data-ttu-id="609e3-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="609e3-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML Overview (C#) (Übersicht zu LINQ to XML (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|Stellt eine Übersicht über die LINQ to XML-Technologie bereit|  
-|[LINQ to XML im Vergleich zu DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|Vergleicht LINQ to XML mit dem Dokumentobjektmodell (DOM)|  
-|[LINQ to XML im Vergleich zu anderen XML-Technologien](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|Vergleicht LINQ to XML mit anderen XML-Analyse- und -Bearbeitungstechnologien wie XmlReader, XSLT, MSXML und XmlLite|  
+|[<span data-ttu-id="609e3-107">LINQ to XML Overview (C#) (Übersicht zu LINQ to XML (C#))</span><span class="sxs-lookup"><span data-stu-id="609e3-107">LINQ to XML Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|<span data-ttu-id="609e3-108">Stellt eine Übersicht über die LINQ to XML-Technologie bereit</span><span class="sxs-lookup"><span data-stu-id="609e3-108">Provides an overview of the LINQ to XML technology.</span></span>|  
+|[<span data-ttu-id="609e3-109">LINQ to XML im Vergleich zu DOM (C#)</span><span class="sxs-lookup"><span data-stu-id="609e3-109">LINQ to XML vs. DOM (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|<span data-ttu-id="609e3-110">Vergleicht LINQ to XML mit dem Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="609e3-110">Compares LINQ to XML to the Document Object Model (DOM).</span></span>|  
+|[<span data-ttu-id="609e3-111">LINQ to XML im Vergleich zu anderen XML-Technologien</span><span class="sxs-lookup"><span data-stu-id="609e3-111">LINQ to XML vs. Other XML Technologies</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|<span data-ttu-id="609e3-112">Vergleicht LINQ to XML mit anderen XML-Analyse- und -Bearbeitungstechnologien wie XmlReader, XSLT, MSXML und XmlLite</span><span class="sxs-lookup"><span data-stu-id="609e3-112">Compares LINQ to XML to other XML parsing and manipulation technologies: XmlReader, XSLT, MSXML, and XmlLite.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Verweis (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="609e3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="609e3-113">See Also</span></span>  
+ <span data-ttu-id="609e3-114">[Verweis (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="609e3-114">[Reference (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md) </span></span>  
+ [<span data-ttu-id="609e3-115">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="609e3-115">LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
 

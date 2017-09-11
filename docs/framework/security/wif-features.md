@@ -21,17 +21,17 @@ ms.contentlocale: de-de
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="wif-features"></a>WIF-Features
--   [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+# <a name="wif-features"></a><span data-ttu-id="d5348-102">WIF-Features</span><span class="sxs-lookup"><span data-stu-id="d5348-102">WIF Features</span></span>
+-   [<span data-ttu-id="d5348-103">Identitäts- und Zugriffs-Tool für Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="d5348-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
--   [WIF-Sitzungsverwaltung](../../../docs/framework/security/wif-session-management.md)  
+-   [<span data-ttu-id="d5348-104">WIF-Sitzungsverwaltung</span><span class="sxs-lookup"><span data-stu-id="d5348-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
   
--   [WIF und Webfarmen](../../../docs/framework/security/wif-and-web-farms.md)  
+-   [<span data-ttu-id="d5348-105">WIF und Webfarmen</span><span class="sxs-lookup"><span data-stu-id="d5348-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
   
--   [Übersicht über das WSFederation-Authentifizierungsmodul](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+-   [<span data-ttu-id="d5348-106">Übersicht über das WSFederation-Authentifizierungsmodul</span><span class="sxs-lookup"><span data-stu-id="d5348-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
   
--   [„WSTrustChannelFactory“ und „WSTrustChannel“](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+-   [<span data-ttu-id="d5348-107">„WSTrustChannelFactory“ und „WSTrustChannel“</span><span class="sxs-lookup"><span data-stu-id="d5348-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="d5348-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d5348-108">See Also</span></span>  
+ [<span data-ttu-id="d5348-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="d5348-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

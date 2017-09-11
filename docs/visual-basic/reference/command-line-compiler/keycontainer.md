@@ -31,50 +31,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 68fa09edce5c0c9af143197f9379d5a46afab52e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a783ef85e6ff2b7c6f889f809291ca8c275e709a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="keycontainer"></a>/keycontainer
-Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
+# <a name="keycontainer"></a><span data-ttu-id="ffedc-102">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="ffedc-102">/keycontainer</span></span>
+<span data-ttu-id="ffedc-103">Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="ffedc-103">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="ffedc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ffedc-104">Syntax</span></span>  
   
 ```  
 /keycontainer:container  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="ffedc-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="ffedc-105">Arguments</span></span>  
   
-|Begriff|Definition|  
+|<span data-ttu-id="ffedc-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="ffedc-106">Term</span></span>|<span data-ttu-id="ffedc-107">Definition</span><span class="sxs-lookup"><span data-stu-id="ffedc-107">Definition</span></span>|  
 |---|---|  
-|`container`|Erforderlich. Containerdatei, die den Schlüssel enthält. Schließen Sie den Dateinamen in Anführungszeichen (""), wenn der Name ein Leerzeichen enthält.|  
+|`container`|<span data-ttu-id="ffedc-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="ffedc-108">Required.</span></span> <span data-ttu-id="ffedc-109">Containerdatei, die den Schlüssel enthält.</span><span class="sxs-lookup"><span data-stu-id="ffedc-109">Container file that contains the key.</span></span> <span data-ttu-id="ffedc-110">Schließen Sie den Dateinamen in Anführungszeichen (""), wenn der Name ein Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="ffedc-110">Enclose the file name in quotation marks ("") if the name contains a space.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Der Compiler erstellt die teilbar Komponente, indem ein öffentlicher Schlüssel in das Assemblymanifest eingefügt und die endgültige Assembly mit dem privaten Schlüssel signiert. Um eine Schlüsseldatei zu generieren, geben Sie `sn -k``file` in der Befehlszeile. Die `-i` Option installiert das Schlüsselpaar in einem Container. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+## <a name="remarks"></a><span data-ttu-id="ffedc-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ffedc-111">Remarks</span></span>  
+ <span data-ttu-id="ffedc-112">Der Compiler erstellt die teilbar Komponente, indem ein öffentlicher Schlüssel in das Assemblymanifest eingefügt und die endgültige Assembly mit dem privaten Schlüssel signiert.</span><span class="sxs-lookup"><span data-stu-id="ffedc-112">The compiler creates the sharable component by inserting a public key into the assembly manifest and by signing the final assembly with the private key.</span></span> <span data-ttu-id="ffedc-113">Um eine Schlüsseldatei zu generieren, geben Sie `sn -k``file` in der Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="ffedc-113">To generate a key file, type `sn -k``file` at the command line.</span></span> <span data-ttu-id="ffedc-114">Die `-i` Option installiert das Schlüsselpaar in einem Container.</span><span class="sxs-lookup"><span data-stu-id="ffedc-114">The `-i` option installs the key pair into a container.</span></span> <span data-ttu-id="ffedc-115">Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span><span class="sxs-lookup"><span data-stu-id="ffedc-115">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
- Bei der Kompilierung mit `/target:module`, der Name der Schlüsseldatei im Modul gespeichert und in die Assembly, die erstellt wird, wenn eine Assembly mit aufgenommen [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ <span data-ttu-id="ffedc-116">Bei der Kompilierung mit `/target:module`, der Name der Schlüsseldatei im Modul gespeichert und in die Assembly, die erstellt wird, wenn eine Assembly mit aufgenommen [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span><span class="sxs-lookup"><span data-stu-id="ffedc-116">If you compile with `/target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
   
- Sie können diese Option auch als benutzerdefiniertes Attribut angeben (<xref:System.Reflection.AssemblyKeyNameAttribute>) im Quellcode für ein beliebiges Microsoft intermediate Language (MSIL)-Modul.</xref:System.Reflection.AssemblyKeyNameAttribute>  
+ <span data-ttu-id="ffedc-117">Sie können diese Option auch als benutzerdefiniertes Attribut angeben (<xref:System.Reflection.AssemblyKeyNameAttribute>) im Quellcode für ein beliebiges Microsoft intermediate Language (MSIL)-Modul.</xref:System.Reflection.AssemblyKeyNameAttribute></span><span class="sxs-lookup"><span data-stu-id="ffedc-117">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyNameAttribute>) in the source code for any Microsoft intermediate language (MSIL) module.</span></span>  
   
- Sie können auch die Verschlüsselungsinformationen mit an den Compiler übergeben [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Verwendung [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) , wenn Sie eine Assembly teilweise signiert werden soll.  
+ <span data-ttu-id="ffedc-118">Sie können auch die Verschlüsselungsinformationen mit an den Compiler übergeben [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span><span class="sxs-lookup"><span data-stu-id="ffedc-118">You can also pass your encryption information to the compiler with [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span></span> <span data-ttu-id="ffedc-119">Verwendung [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) , wenn Sie eine Assembly teilweise signiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ffedc-119">Use [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
   
- Finden Sie unter [erstellen und Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.  
+ <span data-ttu-id="ffedc-120">Finden Sie unter [erstellen und Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.</span><span class="sxs-lookup"><span data-stu-id="ffedc-120">See [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) for more information on signing an assembly.</span></span>  
   
 > [!NOTE]
->  Die `/keycontainer` Option ist nicht verfügbar in der Visual Studio Development Environment; es ist nur beim Kompilieren von der Befehlszeile aus.  
+>  <span data-ttu-id="ffedc-121">Die `/keycontainer` Option ist nicht verfügbar in der Visual Studio Development Environment; es ist nur beim Kompilieren von der Befehlszeile aus.</span><span class="sxs-lookup"><span data-stu-id="ffedc-121">The `/keycontainer` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Code wird die Quelldatei `Input.vb` und gibt einen Schlüsselcontainer.  
+## <a name="example"></a><span data-ttu-id="ffedc-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ffedc-122">Example</span></span>  
+ <span data-ttu-id="ffedc-123">Im folgenden Code wird die Quelldatei `Input.vb` und gibt einen Schlüsselcontainer.</span><span class="sxs-lookup"><span data-stu-id="ffedc-123">The following code compiles source file `Input.vb` and specifies a key container.</span></span>  
   
 ```  
 vbc /keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="ffedc-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ffedc-124">See Also</span></span>  
+ <span data-ttu-id="ffedc-125">[Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span><span class="sxs-lookup"><span data-stu-id="ffedc-125">[Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span></span>  
+<span data-ttu-id="ffedc-126"> [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="ffedc-126"> [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="ffedc-127"> [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) </span><span class="sxs-lookup"><span data-stu-id="ffedc-127"> [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) </span></span>  
+<span data-ttu-id="ffedc-128"> [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="ffedc-128"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

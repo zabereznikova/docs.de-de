@@ -26,23 +26,23 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xattribute-class-overview-c"></a>Übersicht der XAttribute-Klasse (C#)
-Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.  
+# <a name="xattribute-class-overview-c"></a><span data-ttu-id="a3672-102">Übersicht der XAttribute-Klasse (C#)</span><span class="sxs-lookup"><span data-stu-id="a3672-102">XAttribute Class Overview (C#)</span></span>
+<span data-ttu-id="a3672-103">Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="a3672-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="a3672-104">Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.</span><span class="sxs-lookup"><span data-stu-id="a3672-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  
   
-## <a name="overview"></a>Übersicht  
- Das Arbeiten mit Attributen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist vergleichbar mit dem Arbeiten mit Elementen. Ihre Konstruktoren ähneln sich, und auch die Methoden zum Aufrufen von Auflistungen sind ähnlich. Ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Attributen sieht einem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Elementen sehr ähnlich.  
+## <a name="overview"></a><span data-ttu-id="a3672-105">Übersicht</span><span class="sxs-lookup"><span data-stu-id="a3672-105">Overview</span></span>  
+ <span data-ttu-id="a3672-106">Das Arbeiten mit Attributen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist vergleichbar mit dem Arbeiten mit Elementen.</span><span class="sxs-lookup"><span data-stu-id="a3672-106">Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements.</span></span> <span data-ttu-id="a3672-107">Ihre Konstruktoren ähneln sich,</span><span class="sxs-lookup"><span data-stu-id="a3672-107">Their constructors are similar.</span></span> <span data-ttu-id="a3672-108">und auch die Methoden zum Aufrufen von Auflistungen sind ähnlich.</span><span class="sxs-lookup"><span data-stu-id="a3672-108">The methods that you use to retrieve collections of them are similar.</span></span> <span data-ttu-id="a3672-109">Ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Attributen sieht einem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Elementen sehr ähnlich.</span><span class="sxs-lookup"><span data-stu-id="a3672-109">A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.</span></span>  
   
- Die Reihenfolge, in der einem Element Attribute hinzugefügt wurden, wird beibehalten. Das heißt, wenn Sie die Attribute durchlaufen, sehen Sie die Attribute genau in der Reihenfolge, in der sie hinzugefügt wurden.  
+ <span data-ttu-id="a3672-110">Die Reihenfolge, in der einem Element Attribute hinzugefügt wurden, wird beibehalten.</span><span class="sxs-lookup"><span data-stu-id="a3672-110">The order in which attributes were added to an element is preserved.</span></span> <span data-ttu-id="a3672-111">Das heißt, wenn Sie die Attribute durchlaufen, sehen Sie die Attribute genau in der Reihenfolge, in der sie hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="a3672-111">That is, when you iterate through the attributes, you see them in the same order that they were added.</span></span>  
   
-## <a name="the-xattribute-constructor"></a>Der "XAttribute"-Konstruktor  
- Der folgende Konstruktor der <xref:System.Xml.Linq.XAttribute>-Klasse ist der Konstruktor, den Sie am häufigsten verwenden werden:  
+## <a name="the-xattribute-constructor"></a><span data-ttu-id="a3672-112">Der "XAttribute"-Konstruktor</span><span class="sxs-lookup"><span data-stu-id="a3672-112">The XAttribute Constructor</span></span>  
+ <span data-ttu-id="a3672-113">Der folgende Konstruktor der <xref:System.Xml.Linq.XAttribute>-Klasse ist der Konstruktor, den Sie am häufigsten verwenden werden:</span><span class="sxs-lookup"><span data-stu-id="a3672-113">The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:</span></span>  
   
-|Konstruktor|Beschreibung|  
+|<span data-ttu-id="a3672-114">Konstruktor</span><span class="sxs-lookup"><span data-stu-id="a3672-114">Constructor</span></span>|<span data-ttu-id="a3672-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a3672-115">Description</span></span>|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Sie erstellt ein <xref:System.Xml.Linq.XAttribute>-Objekt. Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.|  
+|`XAttribute(XName name, object content)`|<span data-ttu-id="a3672-116">Sie erstellt ein <xref:System.Xml.Linq.XAttribute>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="a3672-116">Creates an <xref:System.Xml.Linq.XAttribute> object.</span></span> <span data-ttu-id="a3672-117">Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.</span><span class="sxs-lookup"><span data-stu-id="a3672-117">The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.</span></span>|  
   
-### <a name="creating-an-element-with-an-attribute"></a>Erstellen eines Elements mit einem Attribut  
- Der folgende Code zeigt die häufige Aufgabe des Erstellens eines Elements mit einem Attribut:  
+### <a name="creating-an-element-with-an-attribute"></a><span data-ttu-id="a3672-118">Erstellen eines Elements mit einem Attribut</span><span class="sxs-lookup"><span data-stu-id="a3672-118">Creating an Element with an Attribute</span></span>  
+ <span data-ttu-id="a3672-119">Der folgende Code zeigt die häufige Aufgabe des Erstellens eines Elements mit einem Attribut:</span><span class="sxs-lookup"><span data-stu-id="a3672-119">The following code shows the common task of creating an element that contains an attribute:</span></span>  
   
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -51,14 +51,14 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="a3672-120">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a3672-120">This example produces the following output:</span></span>  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a>Funktionale Konstruktion von Attributen  
- Mit der Konstruktion von <xref:System.Xml.Linq.XAttribute>-Objekten können Sie <xref:System.Xml.Linq.XElement>-Objekte "inline" erstellen, wie das folgende Beispiel zeigt:  
+### <a name="functional-construction-of-attributes"></a><span data-ttu-id="a3672-121">Funktionale Konstruktion von Attributen</span><span class="sxs-lookup"><span data-stu-id="a3672-121">Functional Construction of Attributes</span></span>  
+ <span data-ttu-id="a3672-122">Mit der Konstruktion von <xref:System.Xml.Linq.XAttribute>-Objekten können Sie <xref:System.Xml.Linq.XElement>-Objekte "inline" erstellen, wie das folgende Beispiel zeigt:</span><span class="sxs-lookup"><span data-stu-id="a3672-122">You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:</span></span>  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -77,7 +77,7 @@ XElement c = new XElement("Customers",
 Console.WriteLine(c);  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="a3672-123">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a3672-123">This example produces the following output:</span></span>  
   
 ```xml  
 <Customers>  
@@ -91,11 +91,11 @@ Console.WriteLine(c);
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a>Attribute sind keine Knoten  
- Es gibt einige Unterschiede zwischen Attributen und Elementen. <xref:System.Xml.Linq.XAttribute>-Objekte sind keine Knoten in der XML-Struktur. Sie sind Name/Wert-Paare, die einem XML-Element zugeordnet sind. Im Unterschied zum Dokumentobjektmodell (DOM) reflektiert dies die Struktur des XML genauer. Auch wenn <xref:System.Xml.Linq.XAttribute>-Objekte keine Knoten in der XML-Struktur im eigentlichen Sinne sind, ist das Arbeiten mit <xref:System.Xml.Linq.XAttribute>-Objekten vergleichbar mit dem Arbeiten mit <xref:System.Xml.Linq.XElement>-Objekten.  
+### <a name="attributes-are-not-nodes"></a><span data-ttu-id="a3672-124">Attribute sind keine Knoten</span><span class="sxs-lookup"><span data-stu-id="a3672-124">Attributes Are Not Nodes</span></span>  
+ <span data-ttu-id="a3672-125">Es gibt einige Unterschiede zwischen Attributen und Elementen.</span><span class="sxs-lookup"><span data-stu-id="a3672-125">There are some differences between attributes and elements.</span></span> <span data-ttu-id="a3672-126"><xref:System.Xml.Linq.XAttribute>-Objekte sind keine Knoten in der XML-Struktur.</span><span class="sxs-lookup"><span data-stu-id="a3672-126"><xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree.</span></span> <span data-ttu-id="a3672-127">Sie sind Name/Wert-Paare, die einem XML-Element zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="a3672-127">They are name/value pairs associated with an XML element.</span></span> <span data-ttu-id="a3672-128">Im Unterschied zum Dokumentobjektmodell (DOM) reflektiert dies die Struktur des XML genauer.</span><span class="sxs-lookup"><span data-stu-id="a3672-128">In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML.</span></span> <span data-ttu-id="a3672-129">Auch wenn <xref:System.Xml.Linq.XAttribute>-Objekte keine Knoten in der XML-Struktur im eigentlichen Sinne sind, ist das Arbeiten mit <xref:System.Xml.Linq.XAttribute>-Objekten vergleichbar mit dem Arbeiten mit <xref:System.Xml.Linq.XElement>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="a3672-129">Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- Diese Unterscheidung ist im Wesentlichen nur für Entwickler von Bedeutung, die Code schreiben, der mit XML-Strukturen auf Knotenebene arbeitet. Für die meisten Entwickler dürfte dieser Unterschied ohne praktische Bedeutung sein.  
+ <span data-ttu-id="a3672-130">Diese Unterscheidung ist im Wesentlichen nur für Entwickler von Bedeutung, die Code schreiben, der mit XML-Strukturen auf Knotenebene arbeitet.</span><span class="sxs-lookup"><span data-stu-id="a3672-130">This distinction is primarily important only to developers who are writing code that works with XML trees at the node level.</span></span> <span data-ttu-id="a3672-131">Für die meisten Entwickler dürfte dieser Unterschied ohne praktische Bedeutung sein.</span><span class="sxs-lookup"><span data-stu-id="a3672-131">Many developers will not be concerned with this distinction.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a3672-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a3672-132">See Also</span></span>  
+ [<span data-ttu-id="a3672-133">LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))</span><span class="sxs-lookup"><span data-stu-id="a3672-133">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
 

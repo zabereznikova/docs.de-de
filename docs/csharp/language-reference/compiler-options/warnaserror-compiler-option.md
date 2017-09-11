@@ -38,43 +38,43 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="warnaserror-c-compiler-options"></a>/warnaserror (C#-Compileroptionen)
-Die Option **/warnaserror+** behandelt alle Warnungen als Fehler.  
+# <a name="warnaserror-c-compiler-options"></a><span data-ttu-id="284d2-102">/warnaserror (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="284d2-102">/warnaserror (C# Compiler Options)</span></span>
+<span data-ttu-id="284d2-103">Die Option **/warnaserror+** behandelt alle Warnungen als Fehler.</span><span class="sxs-lookup"><span data-stu-id="284d2-103">The **/warnaserror+** option treats all warnings as errors</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="284d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="284d2-104">Syntax</span></span>  
   
 ```console  
 /warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet, und der Buildprozesses wird angehalten (keine Ausgabedateien werden erstellt).  
+## <a name="remarks"></a><span data-ttu-id="284d2-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="284d2-105">Remarks</span></span>  
+ <span data-ttu-id="284d2-106">Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet, und der Buildprozesses wird angehalten (keine Ausgabedateien werden erstellt).</span><span class="sxs-lookup"><span data-stu-id="284d2-106">Any messages that would ordinarily be reported as warnings are instead reported as errors, and the build process is halted (no output files are built).</span></span>  
   
- **/warnaserror-aktiviert** ist standardmäßig gültig, wodurch Warnungen nicht die Generierung einer Ausgabedatei verhindern. **/warnaserror**, das mit **/warnaserror+** identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.  
+ <span data-ttu-id="284d2-107">**/warnaserror-aktiviert** ist standardmäßig gültig, wodurch Warnungen nicht die Generierung einer Ausgabedatei verhindern.</span><span class="sxs-lookup"><span data-stu-id="284d2-107">By default, **/warnaserror-** is in effect, which causes warnings to not prevent the generation of an output file.</span></span> <span data-ttu-id="284d2-108">**/warnaserror**, das mit **/warnaserror+** identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="284d2-108">**/warnaserror**, which is the same as **/warnaserror+**, causes warnings to be treated as errors.</span></span>  
   
- Wenn nur bestimmte Warnungen als Fehler behandelt werden sollen, können Sie optional eine durch Trennzeichen getrennte Liste mit Warnungsnummern angeben, die als Fehler behandelt werden sollen.  
+ <span data-ttu-id="284d2-109">Wenn nur bestimmte Warnungen als Fehler behandelt werden sollen, können Sie optional eine durch Trennzeichen getrennte Liste mit Warnungsnummern angeben, die als Fehler behandelt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="284d2-109">Optionally, if you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.</span></span>  
   
- Verwenden Sie [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md), um die Warnstufe anzugeben, die vom Compiler angezeigt werden soll. Verwenden Sie [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md), um bestimmte Warnungen zu deaktivieren.  
+ <span data-ttu-id="284d2-110">Verwenden Sie [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md), um die Warnstufe anzugeben, die vom Compiler angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="284d2-110">Use [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) to specify the level of warnings that you want the compiler to display.</span></span> <span data-ttu-id="284d2-111">Verwenden Sie [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md), um bestimmte Warnungen zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="284d2-111">Use [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="284d2-112">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="284d2-112">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  <span data-ttu-id="284d2-113">Öffnen Sie die **Eigenschaften**-Seite des Projekts.</span><span class="sxs-lookup"><span data-stu-id="284d2-113">Open the project's **Properties** page.</span></span>  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2.  <span data-ttu-id="284d2-114">Klicken Sie auf die Eigenschaftenseite **Build** .</span><span class="sxs-lookup"><span data-stu-id="284d2-114">Click the **Build** property page.</span></span>  
   
-3.  Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.  
+3.  <span data-ttu-id="284d2-115">Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.</span><span class="sxs-lookup"><span data-stu-id="284d2-115">Modify the **Treat Warnings As Errors** property.</span></span>  
   
-     Um diese Compileroption programmgesteuert festzulegen, sehen Sie sich <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A> an.  
+     <span data-ttu-id="284d2-116">Um diese Compileroption programmgesteuert festzulegen, sehen Sie sich <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A> an.</span><span class="sxs-lookup"><span data-stu-id="284d2-116">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass keine Warnungen angezeigt werden:  
+## <a name="example"></a><span data-ttu-id="284d2-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="284d2-117">Example</span></span>  
+ <span data-ttu-id="284d2-118">Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass keine Warnungen angezeigt werden:</span><span class="sxs-lookup"><span data-stu-id="284d2-118">Compile `in.cs` and have the compiler display no warnings:</span></span>  
   
 ```console  
 csc /warnaserror in.cs  
 csc /warnaserror:642,649,652 in.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="284d2-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="284d2-119">See Also</span></span>  
+ <span data-ttu-id="284d2-120">[C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="284d2-120">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="284d2-121">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="284d2-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

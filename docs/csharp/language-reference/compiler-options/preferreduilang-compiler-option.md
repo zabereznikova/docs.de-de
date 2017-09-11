@@ -38,28 +38,28 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (C#-Compileroptionen)
-Mithilfe der Compileroption `/preferreduilang` können Sie die Sprache festlegen, in der der C#-Compiler Ausgaben anzeigt, wie z.B. Fehlermeldungen.  
+# <a name="preferreduilang-c-compiler-options"></a><span data-ttu-id="27bca-102">/preferreduilang (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="27bca-102">/preferreduilang (C# Compiler Options)</span></span>
+<span data-ttu-id="27bca-103">Mithilfe der Compileroption `/preferreduilang` können Sie die Sprache festlegen, in der der C#-Compiler Ausgaben anzeigt, wie z.B. Fehlermeldungen.</span><span class="sxs-lookup"><span data-stu-id="27bca-103">By using the `/preferreduilang` compiler option, you can specify the language in which the C# compiler displays output, such as error messages.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="27bca-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="27bca-104">Syntax</span></span>  
   
 ```console  
 /preferreduilang: language  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="27bca-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="27bca-105">Arguments</span></span>  
  `language`  
- Der [language name](http://go.microsoft.com/fwlink/p/?LinkId=236992) (Sprachenname) der Sprache, die für die Compilerausgabe verwendet wird.  
+ <span data-ttu-id="27bca-106">Der [language name](http://go.microsoft.com/fwlink/p/?LinkId=236992) (Sprachenname) der Sprache, die für die Compilerausgabe verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="27bca-106">The [language name](http://go.microsoft.com/fwlink/p/?LinkId=236992) of the language to use for compiler output.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Sie können die Compileroption `/preferreduilang` verwenden, um die Sprache anzugeben, die der C#-Compiler für Fehlermeldungen und andere Befehlszeilenausgaben verwenden soll. Wenn das Sprachpaket für die Sprache nicht installiert ist, wird stattdessen die Spracheinstellung des Betriebssystems verwendet und kein Fehler gemeldet.  
+## <a name="remarks"></a><span data-ttu-id="27bca-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="27bca-107">Remarks</span></span>  
+ <span data-ttu-id="27bca-108">Sie können die Compileroption `/preferreduilang` verwenden, um die Sprache anzugeben, die der C#-Compiler für Fehlermeldungen und andere Befehlszeilenausgaben verwenden soll.</span><span class="sxs-lookup"><span data-stu-id="27bca-108">You can use the `/preferreduilang` compiler option to specify the language that you want the C# compiler to use for error messages and other command-line output.</span></span> <span data-ttu-id="27bca-109">Wenn das Sprachpaket für die Sprache nicht installiert ist, wird stattdessen die Spracheinstellung des Betriebssystems verwendet und kein Fehler gemeldet.</span><span class="sxs-lookup"><span data-stu-id="27bca-109">If the language pack for the language is not installed, the language setting of the operating system is used instead, and no error is reported.</span></span>  
   
 ```csharp  
 csc.exe /preferreduilang:ja-JP  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a><span data-ttu-id="27bca-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="27bca-110">Requirements</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="27bca-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="27bca-111">See Also</span></span>  
+ [<span data-ttu-id="27bca-112">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="27bca-112">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

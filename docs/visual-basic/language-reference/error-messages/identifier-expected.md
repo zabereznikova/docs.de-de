@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 01152cdbce5db3379f25b58cb39e6c9c8446562b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-expected"></a>Bezeichner erwartet.
-Ein Programmierelement, das kein erkennbares deklariertes Elementname ist erfolgt, in dem Kontext ein Elementname benötigt. Eine mögliche Ursache ist, dass irgendwo ein Attribut nicht angegeben wurde am Anfang der Anweisung.  
+# <a name="identifier-expected"></a><span data-ttu-id="7cd3c-102">Bezeichner erwartet.</span><span class="sxs-lookup"><span data-stu-id="7cd3c-102">Identifier expected</span></span>
+<span data-ttu-id="7cd3c-103">Ein Programmierelement, das kein erkennbares deklariertes Elementname ist erfolgt, in dem Kontext ein Elementname benötigt.</span><span class="sxs-lookup"><span data-stu-id="7cd3c-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="7cd3c-104">Eine mögliche Ursache ist, dass irgendwo ein Attribut nicht angegeben wurde am Anfang der Anweisung.</span><span class="sxs-lookup"><span data-stu-id="7cd3c-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- **Fehler-ID:** BC30203  
+ <span data-ttu-id="7cd3c-105">**Fehler-ID:** BC30203</span><span class="sxs-lookup"><span data-stu-id="7cd3c-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7cd3c-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="7cd3c-106">To correct this error</span></span>  
   
--   Stellen Sie sicher, dass alle Attribute in der Anweisung am Anfang platziert werden.  
+-   <span data-ttu-id="7cd3c-107">Stellen Sie sicher, dass alle Attribute in der Anweisung am Anfang platziert werden.</span><span class="sxs-lookup"><span data-stu-id="7cd3c-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   Stellen Sie sicher, dass alle Elementnamen in der Anweisung richtig geschrieben sind.  
+-   <span data-ttu-id="7cd3c-108">Stellen Sie sicher, dass alle Elementnamen in der Anweisung richtig geschrieben sind.</span><span class="sxs-lookup"><span data-stu-id="7cd3c-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="7cd3c-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7cd3c-109">See Also</span></span>  
+ <span data-ttu-id="7cd3c-110">[Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span><span class="sxs-lookup"><span data-stu-id="7cd3c-110">[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span></span>  
+<span data-ttu-id="7cd3c-111"> [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span><span class="sxs-lookup"><span data-stu-id="7cd3c-111"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span></span>
  

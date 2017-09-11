@@ -15,20 +15,21 @@ ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5b66ff5de8828675ef01efd11b8fb13e4811e368
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Gewusst wie: Steuern des Typs einer Projektion (Visual Basic)
-Bei einer Projektion wird ein Satz von Daten gefiltert und in der Form und sogar im Typ geändert. Die meisten Abfrageausdrücke führen Projektionen aus. Die meisten Abfrageausdrücken in diesem Abschnitt ergeben <xref:System.Collections.Generic.IEnumerable%601>von <xref:System.Xml.Linq.XElement>, aber Sie können den Typ der Projektion zum Erstellen von Sammlungen von anderen Typen steuern.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a><span data-ttu-id="3b6a8-102">Gewusst wie: Steuern des Typs einer Projektion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b6a8-102">How to: Control the Type of a Projection (Visual Basic)</span></span>
+<span data-ttu-id="3b6a8-103">Bei einer Projektion wird ein Satz von Daten gefiltert und in der Form und sogar im Typ geändert.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="3b6a8-104">Die meisten Abfrageausdrücke führen Projektionen aus.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-104">Most query expressions perform projections.</span></span> <span data-ttu-id="3b6a8-105">Die meisten Abfrageausdrücken in diesem Abschnitt ergeben <xref:System.Collections.Generic.IEnumerable%601>von <xref:System.Xml.Linq.XElement>, aber Sie können den Typ der Projektion zum Erstellen von Sammlungen von anderen Typen steuern.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="3b6a8-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="3b6a8-106">In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-106">This topic shows how to do this.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel definiert einen neuen Typ: `Customer`. Der Abfrageausdruck instanziiert dann in der `Customer`-Klausel neue `Select`-Objekte. Dadurch wird der Typ des Abfrageausdrucks sein <xref:System.Collections.Generic.IEnumerable%601>von `Customer`.</xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="example"></a><span data-ttu-id="3b6a8-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3b6a8-107">Example</span></span>  
+ <span data-ttu-id="3b6a8-108">Das folgende Beispiel definiert einen neuen Typ: `Customer`.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="3b6a8-109">Der Abfrageausdruck instanziiert dann in der `Customer`-Klausel neue `Select`-Objekte.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="3b6a8-110">Dadurch wird der Typ des Abfrageausdrucks sein <xref:System.Collections.Generic.IEnumerable%601>von `Customer`.</xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="3b6a8-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ <span data-ttu-id="3b6a8-111">Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="3b6a8-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Public Class Customer  
@@ -91,7 +92,7 @@ End Sub
   
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="3b6a8-112">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="3b6a8-112">This code produces the following output:</span></span>  
   
 ```  
 GREAL:Great Lakes Food Market:Howard Snyder  
@@ -100,6 +101,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="3b6a8-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b6a8-113">See Also</span></span>  
+ <span data-ttu-id="3b6a8-114"><xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A></span><span class="sxs-lookup"><span data-stu-id="3b6a8-114"><xref:System.Linq.Enumerable.Select%2A></span></span>   
+<span data-ttu-id="3b6a8-115"> [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="3b6a8-115"> [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)</span></span>

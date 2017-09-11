@@ -35,25 +35,25 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-expressions-c-programming-guide"></a>Zeigerausdrücke (C#-Programmierhandbuch)
-In diesem Abschnitt werden die folgenden Zeigerausdrücke behandelt:  
+# <a name="pointer-expressions-c-programming-guide"></a><span data-ttu-id="36df7-102">Zeigerausdrücke (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="36df7-102">Pointer Expressions (C# Programming Guide)</span></span>
+<span data-ttu-id="36df7-103">In diesem Abschnitt werden die folgenden Zeigerausdrücke behandelt:</span><span class="sxs-lookup"><span data-stu-id="36df7-103">In this section, the following pointer expressions are discussed:</span></span>  
   
- [Abrufen des Werts einer Zeigervariablen](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
+ [<span data-ttu-id="36df7-104">Abrufen des Werts einer Zeigervariablen</span><span class="sxs-lookup"><span data-stu-id="36df7-104">Obtaining the Value of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
   
- [Abrufen der Adresse einer Variablen](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
+ [<span data-ttu-id="36df7-105">Abrufen der Adresse einer Variablen</span><span class="sxs-lookup"><span data-stu-id="36df7-105">Obtaining the Address of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
   
- [Gewusst wie: Zugreifen auf ein Element mit einem Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
+ [<span data-ttu-id="36df7-106">Gewusst wie: Zugreifen auf ein Element mit einem Zeiger</span><span class="sxs-lookup"><span data-stu-id="36df7-106">How to: Access a Member with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
   
- [Gewusst wie: Zugreifen auf ein Arrayelement mit einem Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
+ [<span data-ttu-id="36df7-107">Gewusst wie: Zugreifen auf ein Arrayelement mit einem Zeiger</span><span class="sxs-lookup"><span data-stu-id="36df7-107">How to: Access an Array Element with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
   
- [Bearbeiten von Zeigern](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [<span data-ttu-id="36df7-108">Bearbeiten von Zeigern</span><span class="sxs-lookup"><span data-stu-id="36df7-108">Manipulating Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Zeigerkonvertierungen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Typen](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="36df7-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36df7-109">See Also</span></span>  
+ <span data-ttu-id="36df7-110">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="36df7-111">[Zeigerkonvertierungen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-111">[Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span></span>  
+ <span data-ttu-id="36df7-112">[Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-112">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ <span data-ttu-id="36df7-113">[Typen](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-113">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="36df7-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="36df7-115">[fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="36df7-115">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ [<span data-ttu-id="36df7-116">stackalloc</span><span class="sxs-lookup"><span data-stu-id="36df7-116">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
 

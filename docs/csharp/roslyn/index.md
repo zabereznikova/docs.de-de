@@ -17,24 +17,24 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-using-the-net-compiler-sdk"></a>🔧 Verwenden des .NET Compiler SDK
+# <a name="-using-the-net-compiler-sdk"></a><span data-ttu-id="66c4a-104">🔧 Verwenden des .NET Compiler SDK</span><span class="sxs-lookup"><span data-stu-id="66c4a-104">🔧 Using the .NET Compiler SDK</span></span>
 
-> **Hinweis**
+> <span data-ttu-id="66c4a-105">**Hinweis**</span><span class="sxs-lookup"><span data-stu-id="66c4a-105">**Note**</span></span>
 > 
-> Zu diesem Thema wurde noch nichts geschrieben. 
+> <span data-ttu-id="66c4a-106">Zu diesem Thema wurde noch nichts geschrieben.</span><span class="sxs-lookup"><span data-stu-id="66c4a-106">This topic hasn’t been written yet!</span></span> 
 >
-> Wir freuen uns auf Ihre Ideen zur Gestaltung des Umfangs und der Herangehensweise. Sie können den Status nachverfolgen und Informationen zu diesem [Problem](https://github.com/dotnet/docs/issues/972) auf GitHub bereitstellen.
+> <span data-ttu-id="66c4a-107">Wir freuen uns auf Ihre Ideen zur Gestaltung des Umfangs und der Herangehensweise.</span><span class="sxs-lookup"><span data-stu-id="66c4a-107">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="66c4a-108">Sie können den Status nachverfolgen und Informationen zu diesem [Problem](https://github.com/dotnet/docs/issues/972) auf GitHub bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="66c4a-108">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/972) at GitHub.</span></span>
 > 
-> Wenn Sie früher Entwürfe und Überblicke zu diesem Thema erhalten möchten, geben Sie Ihre Kontaktinformationen bei dem Thema an.
+> <span data-ttu-id="66c4a-109">Wenn Sie früher Entwürfe und Überblicke zu diesem Thema erhalten möchten, geben Sie Ihre Kontaktinformationen bei dem Thema an.</span><span class="sxs-lookup"><span data-stu-id="66c4a-109">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Erfahren Sie auf [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) mehr darüber, wie Sie hierzu beitragen können.
+> <span data-ttu-id="66c4a-110">Erfahren Sie auf [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) mehr darüber, wie Sie hierzu beitragen können.</span><span class="sxs-lookup"><span data-stu-id="66c4a-110">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 
-Dies ist ein Metathema für einen ganzen Abschnitt. Folgende Bereiche sollten hier behandelt werden: 
-* Erste Schritte
-* Beispiele und Tutorials
-* Konzeptionelle Inhalte
-* API-Gesamtmodell
-* Link zu Beispielen zum [roslyn-analyzers](http://github.com/dotnet/roslyn-analyzers)-Repository
-* Links zu anderen Referenzinhalten
+<span data-ttu-id="66c4a-111">Dies ist ein Metathema für einen ganzen Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="66c4a-111">This is a meta-topic for an entire section.</span></span> <span data-ttu-id="66c4a-112">Folgende Bereiche sollten hier behandelt werden:</span><span class="sxs-lookup"><span data-stu-id="66c4a-112">Areas that need to be covered here include:</span></span> 
+* <span data-ttu-id="66c4a-113">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="66c4a-113">Getting Started</span></span>
+* <span data-ttu-id="66c4a-114">Beispiele und Tutorials</span><span class="sxs-lookup"><span data-stu-id="66c4a-114">Samples and tutorials</span></span>
+* <span data-ttu-id="66c4a-115">Konzeptionelle Inhalte</span><span class="sxs-lookup"><span data-stu-id="66c4a-115">conceptual content</span></span>
+* <span data-ttu-id="66c4a-116">API-Gesamtmodell</span><span class="sxs-lookup"><span data-stu-id="66c4a-116">overall model of the APIs</span></span>
+* <span data-ttu-id="66c4a-117">Link zu Beispielen zum [roslyn-analyzers](http://github.com/dotnet/roslyn-analyzers)-Repository</span><span class="sxs-lookup"><span data-stu-id="66c4a-117">links to samples on the [roslyn-analyzers](http://github.com/dotnet/roslyn-analyzers) repository</span></span>
+* <span data-ttu-id="66c4a-118">Links zu anderen Referenzinhalten</span><span class="sxs-lookup"><span data-stu-id="66c4a-118">links to other reference content</span></span>
 

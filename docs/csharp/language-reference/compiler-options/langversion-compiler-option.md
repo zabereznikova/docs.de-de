@@ -38,30 +38,30 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (C#-Compileroptionen)
-Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C#-Sprachspezifikation enthalten ist.  
+# <a name="langversion-c-compiler-options"></a><span data-ttu-id="044a6-102">/langversion (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="044a6-102">/langversion (C# Compiler Options)</span></span>
+<span data-ttu-id="044a6-103">Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C#-Sprachspezifikation enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="044a6-103">Causes the compiler to accept only syntax that is included in the chosen C# language specification.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="044a6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="044a6-104">Syntax</span></span>  
   
 ```console  
 /langversion:option  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="044a6-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="044a6-105">Arguments</span></span>  
  `option`  
- Folgende Werte sind gültig:  
+ <span data-ttu-id="044a6-106">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="044a6-106">The following values are valid:</span></span>  
   
-|Option|Bedeutung|  
+|<span data-ttu-id="044a6-107">Option</span><span class="sxs-lookup"><span data-stu-id="044a6-107">Option</span></span>|<span data-ttu-id="044a6-108">Bedeutung</span><span class="sxs-lookup"><span data-stu-id="044a6-108">Meaning</span></span>|  
 |------------|-------------|  
-|default|Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann. <sup id="TDefault">[Default](#FDefault)</sup>| 
-|ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003-C# (1.0/1.1) enthalten ist <sup id="TISO1">[ISO1](#FISO1)</sup>|  
-|ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist <sup id="TISO2">[ISO2](#FISO2)</sup>|
-|3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist <sup id="TCS3">[CS3](#FCS3)</sup>|
-|4|Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist <sup id="TCS4">[CS4](#FCS4)</sup>|
-|5|Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist <sup id="TCS5">[CS5](#FCS5)</sup>|
-|6|Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist <sup id="TCS6">[CS6](#FCS6)</sup>|
-|7|Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist <sup id="TCS7">[CS7](#FCS7)</sup>|
-|latest|Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann. <sup id="TLatest">[latest](#FLatest)</sup>|
+|<span data-ttu-id="044a6-109">default</span><span class="sxs-lookup"><span data-stu-id="044a6-109">default</span></span>|<span data-ttu-id="044a6-110">Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="044a6-110">The compiler accepts all valid language syntax that it can support.</span></span> <span data-ttu-id="044a6-111"><sup id="TDefault">[Default](#FDefault)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-111"><sup id="TDefault">[Default](#FDefault)</sup></span></span>| 
+|<span data-ttu-id="044a6-112">ISO-1</span><span class="sxs-lookup"><span data-stu-id="044a6-112">ISO-1</span></span>|<span data-ttu-id="044a6-113">Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003-C# (1.0/1.1) enthalten ist <sup id="TISO1">[ISO1](#FISO1)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-113">The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.1) <sup id="TISO1">[ISO1](#FISO1)</sup></span></span>|  
+|<span data-ttu-id="044a6-114">ISO-2</span><span class="sxs-lookup"><span data-stu-id="044a6-114">ISO-2</span></span>|<span data-ttu-id="044a6-115">Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist <sup id="TISO2">[ISO2](#FISO2)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-115">The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup></span></span>|
+|<span data-ttu-id="044a6-116">3</span><span class="sxs-lookup"><span data-stu-id="044a6-116">3</span></span>|<span data-ttu-id="044a6-117">Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist <sup id="TCS3">[CS3](#FCS3)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-117">The compiler accepts only syntax that is included in C# 3.0 or lower <sup id="TCS3">[CS3](#FCS3)</sup></span></span>|
+|<span data-ttu-id="044a6-118">4</span><span class="sxs-lookup"><span data-stu-id="044a6-118">4</span></span>|<span data-ttu-id="044a6-119">Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist <sup id="TCS4">[CS4](#FCS4)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-119">The compiler accepts only syntax that is included in C# 4.0 or lower <sup id="TCS4">[CS4](#FCS4)</sup></span></span>|
+|<span data-ttu-id="044a6-120">5</span><span class="sxs-lookup"><span data-stu-id="044a6-120">5</span></span>|<span data-ttu-id="044a6-121">Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist <sup id="TCS5">[CS5](#FCS5)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-121">The compiler accepts only syntax that is included in C# 5.0 or lower <sup id="TCS5">[CS5](#FCS5)</sup></span></span>|
+|<span data-ttu-id="044a6-122">6</span><span class="sxs-lookup"><span data-stu-id="044a6-122">6</span></span>|<span data-ttu-id="044a6-123">Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist <sup id="TCS6">[CS6](#FCS6)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-123">The compiler accepts only syntax that is included in C# 6.0 or lower <sup id="TCS6">[CS6](#FCS6)</sup></span></span>|
+|<span data-ttu-id="044a6-124">7</span><span class="sxs-lookup"><span data-stu-id="044a6-124">7</span></span>|<span data-ttu-id="044a6-125">Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist <sup id="TCS7">[CS7](#FCS7)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-125">The compiler accepts only syntax that is included in C# 7.0 or lower <sup id="TCS7">[CS7](#FCS7)</sup></span></span>|
+|<span data-ttu-id="044a6-126">latest</span><span class="sxs-lookup"><span data-stu-id="044a6-126">latest</span></span>|<span data-ttu-id="044a6-127">Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="044a6-127">The compiler accepts all valid language syntax that it can support.</span></span> <span data-ttu-id="044a6-128"><sup id="TLatest">[latest](#FLatest)</sup></span><span class="sxs-lookup"><span data-stu-id="044a6-128"><sup id="TLatest">[Latest](#FLatest)</sup></span></span>|
 <!--- Uncomment and move these above
 |latest| once they're officially released
 |7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|
@@ -70,41 +70,41 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 -->
 
   
-## <a name="remarks"></a>Hinweise  
- Metadaten, auf die von Ihrer C#-Anwendung verwiesen wird, unterliefen nicht der Compileroption **/langversion**.  
+## <a name="remarks"></a><span data-ttu-id="044a6-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="044a6-129">Remarks</span></span>  
+ <span data-ttu-id="044a6-130">Metadaten, auf die von Ihrer C#-Anwendung verwiesen wird, unterliefen nicht der Compileroption **/langversion**.</span><span class="sxs-lookup"><span data-stu-id="044a6-130">Metadata referenced by your C# application is not subject to **/langversion** compiler option.</span></span>  
   
- Da jede Version des C#-Compilers Erweiterungen der Sprachspezifikation enthält, bietet **/langversion** Ihnen nicht die gleichen Funktionen wie die einer früheren Compilerversion.  
+ <span data-ttu-id="044a6-131">Da jede Version des C#-Compilers Erweiterungen der Sprachspezifikation enthält, bietet **/langversion** Ihnen nicht die gleichen Funktionen wie die einer früheren Compilerversion.</span><span class="sxs-lookup"><span data-stu-id="044a6-131">Because each version of the C# compiler contains extensions to the language specification, **/langversion** does not give you the equivalent functionality of an earlier version of the compiler.</span></span>  
  
- Darüber hinaus sind die neue Syntax und die neuen Features nicht unbedingt an die spezifische Frameworkversion gebunden, während C#-Versionupdates für gewöhnlich mit den Hauptversionen von .NET Framework einhergehen. Während die neuen Features ein Compilerupdate erfordern, das mit der C#-Revision veröffentlicht wird, hat jedes Feature seine eigene mindestens erforderliche .NET-API- oder CLR-Anforderungen, durch die es auf abwärtskomptatiblen Frameworks ausgeführt werden kann, indem NuGet-Pakete oder andere Bibliotheken einbezogen werden.
+ <span data-ttu-id="044a6-132">Darüber hinaus sind die neue Syntax und die neuen Features nicht unbedingt an die spezifische Frameworkversion gebunden, während C#-Versionupdates für gewöhnlich mit den Hauptversionen von .NET Framework einhergehen.</span><span class="sxs-lookup"><span data-stu-id="044a6-132">Additionally, while C# version updates generally coincide with major .Net Framework releases, the new syntax and features are not necessarily tied to that specific framework version.</span></span> <span data-ttu-id="044a6-133">Während die neuen Features ein Compilerupdate erfordern, das mit der C#-Revision veröffentlicht wird, hat jedes Feature seine eigene mindestens erforderliche .NET-API- oder CLR-Anforderungen, durch die es auf abwärtskomptatiblen Frameworks ausgeführt werden kann, indem NuGet-Pakete oder andere Bibliotheken einbezogen werden.</span><span class="sxs-lookup"><span data-stu-id="044a6-133">While the new features will definitely require a new compiler update that is also released alongside the C# revision, each specific feature has its own minimum .Net API or common language runtime requirements that may allow it to run on downlevel frameworks by including NuGet packages or other libraries.</span></span>
   
- Unabhängig von der verwendeten **/langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen. Davon ausgenommen sind Friend-Assemblys und [/moduleassemblyname (C#-Compileroption)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), die unter **/langversion:ISO-1** laufen.  
+ <span data-ttu-id="044a6-134">Unabhängig von der verwendeten **/langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="044a6-134">Regardless of which **/langversion** setting you use, you will use the current version of the common language runtime to create your .exe or .dll.</span></span> <span data-ttu-id="044a6-135">Davon ausgenommen sind Friend-Assemblys und [/moduleassemblyname (C#-Compileroption)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), die unter **/langversion:ISO-1** laufen.</span><span class="sxs-lookup"><span data-stu-id="044a6-135">One exception is friend assemblies and [/moduleassemblyname (C# Compiler Option)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), which work under **/langversion:ISO-1**.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="044a6-136">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="044a6-136">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1.  <span data-ttu-id="044a6-137">Öffnen Sie die **Eigenschaften**-Seite des Projekts.</span><span class="sxs-lookup"><span data-stu-id="044a6-137">Open the project's **Properties** page.</span></span>  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2.  <span data-ttu-id="044a6-138">Klicken Sie auf die Eigenschaftenseite **Build** .</span><span class="sxs-lookup"><span data-stu-id="044a6-138">Click the **Build** property page.</span></span>  
   
-3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
+3.  <span data-ttu-id="044a6-139">Klicken Sie auf die Schaltfläche **Erweitert** .</span><span class="sxs-lookup"><span data-stu-id="044a6-139">Click the **Advanced** button.</span></span>  
   
-4.  Modifizieren Sie die Eigenschaft **Sprachversion**.  
+4.  <span data-ttu-id="044a6-140">Modifizieren Sie die Eigenschaft **Sprachversion**.</span><span class="sxs-lookup"><span data-stu-id="044a6-140">Modify the **Language Version** property.</span></span>  
   
- Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
+ <span data-ttu-id="044a6-141">Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.</span><span class="sxs-lookup"><span data-stu-id="044a6-141">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.</span></span>  
     
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)   
+## <a name="see-also"></a><span data-ttu-id="044a6-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="044a6-142">See Also</span></span>  
+ <span data-ttu-id="044a6-143">[C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="044a6-143">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="044a6-144">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="044a6-144">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)   
  
-### <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
- [C#-Sprachspezifikationsreferenz](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation   
- C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog   
- C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog   
- C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006 im PDF-Format: Frei verfügbare ISO-Standards   
- C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C#-Sprachspezifikation Version 3.0 : Microsoft Corporation   
- C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) Standard ECMA-334 4. Edition    
- C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/en-us/download/details.aspx?id=7029) C#-Sprachspezifikation Version 5.0 : Microsoft Corporation   
- C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C#-Sprachspezifikation Version 6 – Inoffizieller Entwurf : .NET Foundation   
- C# 7.0 (aktuell nicht verfügbar)   
+### <a name="c-language-specification"></a><span data-ttu-id="044a6-145">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="044a6-145">C# Language Specification</span></span>
+ <span data-ttu-id="044a6-146">[C#-Sprachspezifikationsreferenz](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation</span><span class="sxs-lookup"><span data-stu-id="044a6-146">[C# Language Specification Reference](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation</span></span>   
+ <span data-ttu-id="044a6-147">C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog</span><span class="sxs-lookup"><span data-stu-id="044a6-147">C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Information technology -- C# Language Specification : ISO Catalogue</span></span>   
+ <span data-ttu-id="044a6-148">C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) Informationstechnologie – C#-Sprachspezifikation: ISO-Katalog</span><span class="sxs-lookup"><span data-stu-id="044a6-148">C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) Information technology -- C# Language Specification : ISO Catalogue</span></span>   
+ <span data-ttu-id="044a6-149">C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006 im PDF-Format: Frei verfügbare ISO-Standards</span><span class="sxs-lookup"><span data-stu-id="044a6-149">C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006 in PDF format : ISO Freely Available Standards</span></span>   
+ <span data-ttu-id="044a6-150">C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C#-Sprachspezifikation Version 3.0 : Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="044a6-150">C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# Language Specification Version 3.0 : Microsoft Corporation</span></span>   
+ <span data-ttu-id="044a6-151">C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) Standard ECMA-334 4. Edition</span><span class="sxs-lookup"><span data-stu-id="044a6-151">C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) Standard ECMA-334 4th Edition</span></span>    
+ <span data-ttu-id="044a6-152">C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/en-us/download/details.aspx?id=7029) C#-Sprachspezifikation Version 5.0 : Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="044a6-152">C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/en-us/download/details.aspx?id=7029) C# Language Specification Version 5.0 : Microsoft Corporation</span></span>   
+ <span data-ttu-id="044a6-153">C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C#-Sprachspezifikation Version 6 – Inoffizieller Entwurf : .NET Foundation</span><span class="sxs-lookup"><span data-stu-id="044a6-153">C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# Language Specification Version 6 - Unofficial Draft : .NET Foundation</span></span>   
+ <span data-ttu-id="044a6-154">C# 7.0 (aktuell nicht verfügbar)</span><span class="sxs-lookup"><span data-stu-id="044a6-154">C# 7.0 (not currently available)</span></span>   
 
 <!--- Uncomment and add to the above when they become officially released
  C# 7.1 (spec is not yet finished)   
@@ -112,14 +112,14 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
  C# 8.0 (spec is not yet finished)   
 -->
 
-### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Mindestens erforderliche Compilerversion, die Sie benötigen, um alle Sprachfeatures zu unterstützen   
-[↩](#TDefault)<a name="FDefault">Standard</a>, <a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 oder gebündelter .NET Framework 1.0-Compiler     
-[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 oder gebündelter .NET Framework 2.0-Compiler    
-[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 oder gebündelter .NET Framework 3.5-Compiler    
-[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 oder gebündelter .NET Framework 4.0-Compiler    
-[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 oder gebündelter .NET Framework 4.5-Compiler    
-[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio Build Tools 2015    
-[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a>: Microsoft Visual Studio Build Tools 2017   
+### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a><span data-ttu-id="044a6-155">Mindestens erforderliche Compilerversion, die Sie benötigen, um alle Sprachfeatures zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="044a6-155">Minimum compiler version needed to support all language features</span></span>   
+<span data-ttu-id="044a6-156">[↩](#TDefault)<a name="FDefault">Standard</a>, <a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 oder gebündelter .NET Framework 1.0-Compiler</span><span class="sxs-lookup"><span data-stu-id="044a6-156">[↩](#TDefault)<a name="FDefault">Default</a>, <a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .Net 2002 or bundled .Net Framework 1.0 compiler</span></span>     
+<span data-ttu-id="044a6-157">[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 oder gebündelter .NET Framework 2.0-Compiler</span><span class="sxs-lookup"><span data-stu-id="044a6-157">[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 or bundled .Net Framework 2.0 compiler</span></span>    
+<span data-ttu-id="044a6-158">[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 oder gebündelter .NET Framework 3.5-Compiler</span><span class="sxs-lookup"><span data-stu-id="044a6-158">[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 or bundled .Net Framework 3.5 compiler</span></span>    
+<span data-ttu-id="044a6-159">[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 oder gebündelter .NET Framework 4.0-Compiler</span><span class="sxs-lookup"><span data-stu-id="044a6-159">[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 or bundled .Net Framework 4.0 compiler</span></span>    
+<span data-ttu-id="044a6-160">[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 oder gebündelter .NET Framework 4.5-Compiler</span><span class="sxs-lookup"><span data-stu-id="044a6-160">[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 or bundled .Net Framework 4.5 compiler</span></span>    
+<span data-ttu-id="044a6-161">[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio Build Tools 2015</span><span class="sxs-lookup"><span data-stu-id="044a6-161">[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015</span></span>    
+<span data-ttu-id="044a6-162">[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a>: Microsoft Visual Studio Build Tools 2017</span><span class="sxs-lookup"><span data-stu-id="044a6-162">[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a>: Microsoft Visual Studio/Build Tools 2017</span></span>   
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 20??    

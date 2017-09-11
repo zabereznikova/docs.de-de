@@ -37,20 +37,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operator % (C#-Referenz)
-Der Operator `%` berechnet den Rest nach der Division seines ersten Operanden durch den zweiten. Alle numerischen Typen besitzen vordefinierte Restoperatoren.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="e33e3-102">Operator % (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e33e3-102">% Operator (C# Reference)</span></span>
+<span data-ttu-id="e33e3-103">Der Operator `%` berechnet den Rest nach der Division seines ersten Operanden durch den zweiten.</span><span class="sxs-lookup"><span data-stu-id="e33e3-103">The `%` operator computes the remainder after dividing its first operand by its second.</span></span> <span data-ttu-id="e33e3-104">Alle numerischen Typen besitzen vordefinierte Restoperatoren.</span><span class="sxs-lookup"><span data-stu-id="e33e3-104">All numeric types have predefined remainder operators.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Typen können den Operator `%` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)). Wenn ein binärer Operator überladen ist, wird der zugehörige Zuweisungsoperator, sofern er vorhanden ist, auch implizit überladen.  
+## <a name="remarks"></a><span data-ttu-id="e33e3-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e33e3-105">Remarks</span></span>  
+ <span data-ttu-id="e33e3-106">Benutzerdefinierte Typen können den Operator `%` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="e33e3-106">User-defined types can overload the `%` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="e33e3-107">Wenn ein binärer Operator überladen ist, wird der zugehörige Zuweisungsoperator, sofern er vorhanden ist, auch implizit überladen.</span><span class="sxs-lookup"><span data-stu-id="e33e3-107">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="e33e3-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e33e3-108">Example</span></span>  
+ <span data-ttu-id="e33e3-109">[!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e33e3-109">[!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]</span></span>  
   
-## <a name="comments"></a>Kommentare  
- Beachten Sie die Rundungsfehler im Zusammenhang mit dem double-Typ.  
+## <a name="comments"></a><span data-ttu-id="e33e3-110">Kommentare</span><span class="sxs-lookup"><span data-stu-id="e33e3-110">Comments</span></span>  
+ <span data-ttu-id="e33e3-111">Beachten Sie die Rundungsfehler im Zusammenhang mit dem double-Typ.</span><span class="sxs-lookup"><span data-stu-id="e33e3-111">Note the round-off errors associated with the double type.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="e33e3-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e33e3-112">See Also</span></span>  
+ <span data-ttu-id="e33e3-113">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e33e3-113">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e33e3-114">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e33e3-114">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="e33e3-115">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="e33e3-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

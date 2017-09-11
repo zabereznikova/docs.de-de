@@ -30,24 +30,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 604aa2f91bb2a25ba59dc75d5d73314bc7bf2343
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 49f8be86d7ec86152b0d4cfc74dd9e13e6814d32
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a>Einführung in Zeichenfolgen in Visual Basic
-Dieser Abschnitt beschreibt die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="9b9ba-102">Einführung in Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9b9ba-102">Introduction to Strings in Visual Basic</span></span>
+<span data-ttu-id="9b9ba-103">Dieser Abschnitt beschreibt die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="9b9ba-103">This section describes the basic concepts behind using strings in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlagen zu Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Stellt die grundlegenden Konzepte für Zeichenfolgen und Zeichenfolgenvariablen.  
+## <a name="in-this-section"></a><span data-ttu-id="9b9ba-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9b9ba-104">In This Section</span></span>  
+ [<span data-ttu-id="9b9ba-105">Grundlagen zu Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="9b9ba-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="9b9ba-106">Stellt die grundlegenden Konzepte für Zeichenfolgen und Zeichenfolgenvariablen.</span><span class="sxs-lookup"><span data-stu-id="9b9ba-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
   
- [Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Stellt verschiedene Arten zu analysieren und Bearbeiten von Zeichenfolgen.  
+ [<span data-ttu-id="9b9ba-107">Typen von Zeichenfolgenbearbeitungsmethoden in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9b9ba-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ <span data-ttu-id="9b9ba-108">Stellt verschiedene Arten zu analysieren und Bearbeiten von Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="9b9ba-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
   
- [Auswirkungen der Kultur Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Erläutert, wie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verwendet Kultur Informationen zum zeichenfolgenkonvertierungen und Vergleiche durchführen.  
+ [<span data-ttu-id="9b9ba-109">Auswirkungen der Kultur Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9b9ba-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ <span data-ttu-id="9b9ba-110">Erläutert, wie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] verwendet Kultur Informationen zum zeichenfolgenkonvertierungen und Vergleiche durchführen.</span><span class="sxs-lookup"><span data-stu-id="9b9ba-110">Discusses how [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] uses culture information to perform string conversions and comparisons.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="9b9ba-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9b9ba-111">See Also</span></span>  
+ [<span data-ttu-id="9b9ba-112">Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="9b9ba-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)

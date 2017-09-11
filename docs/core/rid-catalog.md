@@ -17,29 +17,29 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="net-core-runtime-identifier-rid-catalog"></a>.NET Core Runtime-ID-Katalog (RID)
+# <a name="net-core-runtime-identifier-rid-catalog"></a><span data-ttu-id="5f868-104">.NET Core Runtime-ID-Katalog (RID)</span><span class="sxs-lookup"><span data-stu-id="5f868-104">.NET Core Runtime IDentifier (RID) catalog</span></span>
 
-## <a name="what-are-rids"></a>Was sind RIDs?
-RID ist die Kurzform für *Runtime-ID* (Laufzeitbezeichner). RIDs dienen zur Identifizierung von Zielbetriebssystemen, in denen eine Anwendung oder ein Objekt (d.h. eine Assembly) ausgeführt wird. Sie sehen folgendermaßen aus: „ubuntu.14.04 x64“, „win7-x64“, „osx.10.11-x64“. Für die Pakete mit nativen Abhängigkeiten legt er fest, auf welchen Plattformen das Paket wiederhergestellt werden kann. 
+## <a name="what-are-rids"></a><span data-ttu-id="5f868-105">Was sind RIDs?</span><span class="sxs-lookup"><span data-stu-id="5f868-105">What are RIDs?</span></span>
+<span data-ttu-id="5f868-106">RID ist die Kurzform für *Runtime-ID* (Laufzeitbezeichner).</span><span class="sxs-lookup"><span data-stu-id="5f868-106">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="5f868-107">RIDs dienen zur Identifizierung von Zielbetriebssystemen, in denen eine Anwendung oder ein Objekt (d.h. eine Assembly) ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5f868-107">RIDs are used to identify target operating systems where an application or asset (that is, assembly) will run.</span></span> <span data-ttu-id="5f868-108">Sie sehen folgendermaßen aus: „ubuntu.14.04 x64“, „win7-x64“, „osx.10.11-x64“.</span><span class="sxs-lookup"><span data-stu-id="5f868-108">They look like this: "ubuntu.14.04-x64", "win7-x64", "osx.10.11-x64".</span></span> <span data-ttu-id="5f868-109">Für die Pakete mit nativen Abhängigkeiten legt er fest, auf welchen Plattformen das Paket wiederhergestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="5f868-109">For the packages with native dependencies, it will designate on which platforms the package can be restored.</span></span> 
 
-Es ist wichtig zu beachten, dass die RIDs tatsächlich opake Zeichenfolgen sind. Dies bedeutet, dass sie für Vorgänge, die mit ihnen arbeiten, genau übereinstimmen müssen. Als Beispiel betrachten wir [Elementary OS](https://elementary.io/), welches ein einfacher Klon von Ubuntu 14.04 ist. Obwohl .NET Core und CLI zusätzlich zu dieser Version von Ubuntu funktionieren, schlägt der Wiederherstellungsvorgang für jedes Paket fehl, wenn Sie versuchen, Elementary OS ohne Änderungen zu verwenden. Dies liegt daran, dass wir momentan keine RID haben, die Elementary OS als Plattform festlegt. 
+<span data-ttu-id="5f868-110">Es ist wichtig zu beachten, dass die RIDs tatsächlich opake Zeichenfolgen sind.</span><span class="sxs-lookup"><span data-stu-id="5f868-110">It is important to note that RIDs are really opaque strings.</span></span> <span data-ttu-id="5f868-111">Dies bedeutet, dass sie für Vorgänge, die mit ihnen arbeiten, genau übereinstimmen müssen.</span><span class="sxs-lookup"><span data-stu-id="5f868-111">This means that they have to match exactly for operations using them to work.</span></span> <span data-ttu-id="5f868-112">Als Beispiel betrachten wir [Elementary OS](https://elementary.io/), welches ein einfacher Klon von Ubuntu 14.04 ist.</span><span class="sxs-lookup"><span data-stu-id="5f868-112">As an example, let us consider the case of [Elementary OS](https://elementary.io/), which is a straightforward clone of Ubuntu 14.04.</span></span> <span data-ttu-id="5f868-113">Obwohl .NET Core und CLI zusätzlich zu dieser Version von Ubuntu funktionieren, schlägt der Wiederherstellungsvorgang für jedes Paket fehl, wenn Sie versuchen, Elementary OS ohne Änderungen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5f868-113">Although .NET Core and CLI work on top of that version of Ubuntu, if you try to use them on Elementary OS without any modifications, the restore operation for any package will fail.</span></span> <span data-ttu-id="5f868-114">Dies liegt daran, dass wir momentan keine RID haben, die Elementary OS als Plattform festlegt.</span><span class="sxs-lookup"><span data-stu-id="5f868-114">This is because we currently don't have a RID that designates Elementary OS as a platform.</span></span> 
 
-RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[arch]`, wobei:
-- `[os]` ist der Moniker des Betriebssystems, z.B. `ubuntu`.
-- `[version]` die Version des Betriebssystems in Form einer mit Punkt (`.`) getrennten Versionsnummer ist, z.B. `15.10`, die genau genug ist, um Ressourcen den Zugriff auf Betriebssystems- APIs, die diese Versionskennung verwenden, zu ermöglichen.
-  - Dies sollten **keine** Marketingversionen sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellen.
-- `[arch]` ist die Prozessorarchitektur, z.B. `x86`, `x64`, `arm`, `arm64` usw.
+<span data-ttu-id="5f868-115">RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[arch]`, wobei:</span><span class="sxs-lookup"><span data-stu-id="5f868-115">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[arch]` where:</span></span>
+- <span data-ttu-id="5f868-116">`[os]` ist der Moniker des Betriebssystems, z.B. `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="5f868-116">`[os]` is the operating system moniker, for example, `ubuntu`.</span></span>
+- <span data-ttu-id="5f868-117">`[version]` die Version des Betriebssystems in Form einer mit Punkt (`.`) getrennten Versionsnummer ist, z.B. `15.10`, die genau genug ist, um Ressourcen den Zugriff auf Betriebssystems- APIs, die diese Versionskennung verwenden, zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="5f868-117">`[version]` is the operating system version in the form of a dot (`.`) separated version number, for example, `15.10`, accurate enough to reasonably enable assets to target operating system platform APIs represented by that version.</span></span>
+  - <span data-ttu-id="5f868-118">Dies sollten **keine** Marketingversionen sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellen.</span><span class="sxs-lookup"><span data-stu-id="5f868-118">This **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
+- <span data-ttu-id="5f868-119">`[arch]` ist die Prozessorarchitektur, z.B. `x86`, `x64`, `arm`, `arm64` usw.</span><span class="sxs-lookup"><span data-stu-id="5f868-119">`[arch]` is the processor architecture, for example, `x86`, `x64`, `arm`, `arm64`, etc.</span></span>
 
-Das RID-Diagramm wird in einem Paket namens `Microsoft.NETCore.Platforms` in einer Datei namens `runtime.json` definiert, die Sie dem [CoreFX-Repository](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) entnehmen können. Wenn Sie diese Datei verwenden, werden Sie feststellen, dass einige der RIDs eine `"#import"`-Anweisung beinhalten. Diese Anweisungen sind Kompatibilitätsanweisungen. Das bedeutet, dass eine RID, die eine importierte RID enthält, als Ziel für das Wiederherstellen von Paketen für diese RID verwendet werden kann. Das erscheint etwas verwirrend, aber sehen wir uns ein Beispiel an. Betrachten wir macOS:
+<span data-ttu-id="5f868-120">Das RID-Diagramm wird in einem Paket namens `Microsoft.NETCore.Platforms` in einer Datei namens `runtime.json` definiert, die Sie dem [CoreFX-Repository](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) entnehmen können.</span><span class="sxs-lookup"><span data-stu-id="5f868-120">The RID graph is defined in a package called `Microsoft.NETCore.Platforms` in a file called `runtime.json`, which you can see on the [CoreFX repo](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json).</span></span> <span data-ttu-id="5f868-121">Wenn Sie diese Datei verwenden, werden Sie feststellen, dass einige der RIDs eine `"#import"`-Anweisung beinhalten.</span><span class="sxs-lookup"><span data-stu-id="5f868-121">If you use this file, you will notice that some of the RIDs have an `"#import"` statement in them.</span></span> <span data-ttu-id="5f868-122">Diese Anweisungen sind Kompatibilitätsanweisungen.</span><span class="sxs-lookup"><span data-stu-id="5f868-122">These statements are compatibility statements.</span></span> <span data-ttu-id="5f868-123">Das bedeutet, dass eine RID, die eine importierte RID enthält, als Ziel für das Wiederherstellen von Paketen für diese RID verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="5f868-123">That means that a RID that has an imported RID in it can be a target for restoring packages for that RID.</span></span> <span data-ttu-id="5f868-124">Das erscheint etwas verwirrend, aber sehen wir uns ein Beispiel an.</span><span class="sxs-lookup"><span data-stu-id="5f868-124">Slightly confusing, but let's look at an example.</span></span> <span data-ttu-id="5f868-125">Betrachten wir macOS:</span><span class="sxs-lookup"><span data-stu-id="5f868-125">Let's take a look at macOS:</span></span>
 
 ```json
 "osx.10.11-x64": {
     "#import": [ "osx.10.11", "osx.10.10-x64" ]
 }
 ```
-Die oben genannte RID gibt an, dass `osx.10.11-x64` `osx.10.10-x64` importiert. Dies bedeutet, dass NuGet beim Wiederherstellen von Paketen in der Lage ist, Pakete wiederherzustellen, die angeben, dass sie `osx.10.11-x64` unter `osx.10.10-x64` benötigen.
+<span data-ttu-id="5f868-126">Die oben genannte RID gibt an, dass `osx.10.11-x64` `osx.10.10-x64` importiert.</span><span class="sxs-lookup"><span data-stu-id="5f868-126">The above RID specifies that `osx.10.11-x64` imports `osx.10.10-x64`.</span></span> <span data-ttu-id="5f868-127">Dies bedeutet, dass NuGet beim Wiederherstellen von Paketen in der Lage ist, Pakete wiederherzustellen, die angeben, dass sie `osx.10.11-x64` unter `osx.10.10-x64` benötigen.</span><span class="sxs-lookup"><span data-stu-id="5f868-127">This means that when restoring packages, NuGet will be able to restore packages that specify that they need `osx.10.10-x64` on `osx.10.11-x64`.</span></span>
 
-Ein etwas größeres Beispiel-RID-Diagramm:  
+<span data-ttu-id="5f868-128">Ein etwas größeres Beispiel-RID-Diagramm:</span><span class="sxs-lookup"><span data-stu-id="5f868-128">A slightly bigger example RID graph:</span></span>  
 
 - `win10-arm`
   - `win10`
@@ -51,74 +51,74 @@ Ein etwas größeres Beispiel-RID-Diagramm:
           - `win`
             - `any`
 
-Alle RIDs bilden schließlich wieder den Stamm `any`-RID ab.
+<span data-ttu-id="5f868-129">Alle RIDs bilden schließlich wieder den Stamm `any`-RID ab.</span><span class="sxs-lookup"><span data-stu-id="5f868-129">All RIDs eventually map back to the root `any` RID.</span></span>
 
-Obwohl ihre Anwendung einfach scheint, gibt es bei RIDs einige Besonderheiten, die Sie bedenken sollten, wenn Sie mit ihnen arbeiten:
+<span data-ttu-id="5f868-130">Obwohl ihre Anwendung einfach scheint, gibt es bei RIDs einige Besonderheiten, die Sie bedenken sollten, wenn Sie mit ihnen arbeiten:</span><span class="sxs-lookup"><span data-stu-id="5f868-130">Although they look easy enough to use, there are some special things about RIDs that you have to keep in mind when working with them:</span></span>
 
-* Sie sind **opake Zeichenfolgen** und sollten als Blackbox behandelt werden
-    * Sie sollten keine RIDs programmgesteuert erstellen
-* Sie müssen die RIDs verwenden, die bereits für die Plattform definiert sind, was diesem Dokument zu entnehmen ist
-* Die RIDs müssen nicht spezifisch sein, gehen Sie daher nicht von dem tatsächlichen RID-Wert aus. Anhand der Informationen in diesem Dokument können Sie bestimmen, welche RID(s) Sie für eine bestimmte Plattform benötigen
+* <span data-ttu-id="5f868-131">Sie sind **opake Zeichenfolgen** und sollten als Blackbox behandelt werden</span><span class="sxs-lookup"><span data-stu-id="5f868-131">They are **opaque strings** and should be treated as black boxes</span></span>
+    * <span data-ttu-id="5f868-132">Sie sollten keine RIDs programmgesteuert erstellen</span><span class="sxs-lookup"><span data-stu-id="5f868-132">You should not construct RIDs programmatically</span></span>
+* <span data-ttu-id="5f868-133">Sie müssen die RIDs verwenden, die bereits für die Plattform definiert sind, was diesem Dokument zu entnehmen ist</span><span class="sxs-lookup"><span data-stu-id="5f868-133">You need to use the RIDs that are already defined for the platform and this document shows that</span></span>
+* <span data-ttu-id="5f868-134">Die RIDs müssen nicht spezifisch sein, gehen Sie daher nicht von dem tatsächlichen RID-Wert aus. Anhand der Informationen in diesem Dokument können Sie bestimmen, welche RID(s) Sie für eine bestimmte Plattform benötigen</span><span class="sxs-lookup"><span data-stu-id="5f868-134">The RIDs do need to be specific so don't assume anything from the actual RID value; please consult this document to determine which RID(s) you need for a given platform</span></span>
 
-## <a name="using-rids"></a>Die Verwendung von RIDs
-Um RIDs zu verwenden, müssen Sie wissen, welche RIDs es gibt. Zur Plattform werden regelmäßig neue RIDs hinzugefügt. Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository auf die neueste Version.
+## <a name="using-rids"></a><span data-ttu-id="5f868-135">Die Verwendung von RIDs</span><span class="sxs-lookup"><span data-stu-id="5f868-135">Using RIDs</span></span>
+<span data-ttu-id="5f868-136">Um RIDs zu verwenden, müssen Sie wissen, welche RIDs es gibt.</span><span class="sxs-lookup"><span data-stu-id="5f868-136">In order to use RIDs, you have to know which RIDs there are.</span></span> <span data-ttu-id="5f868-137">Zur Plattform werden regelmäßig neue RIDs hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5f868-137">New RIDs are added regularly to the platform.</span></span> <span data-ttu-id="5f868-138">Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository auf die neueste Version.</span><span class="sxs-lookup"><span data-stu-id="5f868-138">For the latest version, please check the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
 
 > [!NOTE]
-> Wir arbeiten daran, diese Informationen in eine interaktivere Form zu bringen. Sobald dies der Fall ist, wird diese Seite aktualisiert werden und Sie auf dieses Tool bzw. die Dokumentation zur Verwendung hinweisen. 
+> <span data-ttu-id="5f868-139">Wir arbeiten daran, diese Informationen in eine interaktivere Form zu bringen.</span><span class="sxs-lookup"><span data-stu-id="5f868-139">We are working towards getting this information into a more interactive form.</span></span> <span data-ttu-id="5f868-140">Sobald dies der Fall ist, wird diese Seite aktualisiert werden und Sie auf dieses Tool bzw. die Dokumentation zur Verwendung hinweisen.</span><span class="sxs-lookup"><span data-stu-id="5f868-140">When that happens, this page will be updated to point to that tool and/or its usage documentation.</span></span> 
 
-## <a name="windows-rids"></a>RIDs für Windows
+## <a name="windows-rids"></a><span data-ttu-id="5f868-141">RIDs für Windows</span><span class="sxs-lookup"><span data-stu-id="5f868-141">Windows RIDs</span></span>
 
-* Windows 7 / Windows Server 2008 R2
+* <span data-ttu-id="5f868-142">Windows 7 / Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="5f868-142">Windows 7 / Windows Server 2008 R2</span></span>
     * `win7-x64`
     * `win7-x86`
-* Windows 8 / Windows Server 2012
+* <span data-ttu-id="5f868-143">Windows 8 / Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="5f868-143">Windows 8 / Windows Server 2012</span></span>
     * `win8-x64`
     * `win8-x86`
     * `win8-arm`
-* Windows 8.1 / Windows Server 2012 R2
+* <span data-ttu-id="5f868-144">Windows 8.1 / Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="5f868-144">Windows 8.1 / Windows Server 2012 R2</span></span>
     * `win81-x64`
     * `win81-x86`
     * `win81-arm`
-* Windows 10 / Windows Server 2016
+* <span data-ttu-id="5f868-145">Windows 10 / Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="5f868-145">Windows 10 / Windows Server 2016</span></span>
     * `win10-x64`
     * `win10-x86`
     * `win10-arm`
     * `win10-arm64`
 
-## <a name="linux-rids"></a>RIDs für Linux
+## <a name="linux-rids"></a><span data-ttu-id="5f868-146">RIDs für Linux</span><span class="sxs-lookup"><span data-stu-id="5f868-146">Linux RIDs</span></span>
 
-* Red Hat Enterprise Linux
+* <span data-ttu-id="5f868-147">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="5f868-147">Red Hat Enterprise Linux</span></span>
     * `rhel.7-x64`
-* Ubuntu
+* <span data-ttu-id="5f868-148">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="5f868-148">Ubuntu</span></span>
     * `ubuntu.14.04-x64`
     * `ubuntu.14.10-x64`
     * `ubuntu.15.04-x64`
     * `ubuntu.15.10-x64`
     * `ubuntu.16.04-x64`
     * `ubuntu.16.10-x64`
-* CentOS
+* <span data-ttu-id="5f868-149">CentOS</span><span class="sxs-lookup"><span data-stu-id="5f868-149">CentOS</span></span>
     * `centos.7-x64`
-* Debian
+* <span data-ttu-id="5f868-150">Debian</span><span class="sxs-lookup"><span data-stu-id="5f868-150">Debian</span></span>
     * `debian.8-x64`
-* Fedora
+* <span data-ttu-id="5f868-151">Fedora</span><span class="sxs-lookup"><span data-stu-id="5f868-151">Fedora</span></span>
     * `fedora.23-x64`
     * `fedora.24-x64`
-* OpenSUSE
+* <span data-ttu-id="5f868-152">OpenSUSE</span><span class="sxs-lookup"><span data-stu-id="5f868-152">OpenSUSE</span></span>
     * `opensuse.13.2-x64`
     * `opensuse.42.1-x64`
-* Oracle Linux
+* <span data-ttu-id="5f868-153">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="5f868-153">Oracle Linux</span></span>
     * `ol.7-x64`
     * `ol.7.0-x64`
     * `ol.7.1-x64`
     * `ol.7.2-x64`
-* Derzeit unterstützte Derivate von Ubuntu 
+* <span data-ttu-id="5f868-154">Derzeit unterstützte Derivate von Ubuntu</span><span class="sxs-lookup"><span data-stu-id="5f868-154">Currently supported Ubuntu derivatives</span></span> 
     * `linuxmint.17-x64`
     * `linuxmint.17.1-x64`
     * `linuxmint.17.2-x64`
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-## <a name="os-x-rids"></a>RIDs für OS X
+## <a name="os-x-rids"></a><span data-ttu-id="5f868-155">RIDs für OS X</span><span class="sxs-lookup"><span data-stu-id="5f868-155">OS X RIDs</span></span>
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`

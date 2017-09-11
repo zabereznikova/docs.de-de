@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a0995925847368a875f185ce761d626674a5d8a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3e48522da908990b9b7230aedc3ab91c205509f9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>'&lt;Namen&gt;'ist mehrdeutig im Namespace'&lt;Namespacename&gt;'
-Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht. Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler muss keine Regeln; Sie müssen Namen sich unterscheiden.  
+# <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a><span data-ttu-id="6ce5d-102">'&lt;Namen&gt;'ist mehrdeutig im Namespace'&lt;Namespacename&gt;'</span><span class="sxs-lookup"><span data-stu-id="6ce5d-102">&#39;&lt;name&gt;&#39; is ambiguous in the namespace &#39;&lt;namespacename&gt;&#39;</span></span>
+<span data-ttu-id="6ce5d-103">Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht.</span><span class="sxs-lookup"><span data-stu-id="6ce5d-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="6ce5d-104">Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler muss keine Regeln; Sie müssen Namen sich unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="6ce5d-104">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- **Fehler-ID:** BC30560  
+ <span data-ttu-id="6ce5d-105">**Fehler-ID:** BC30560</span><span class="sxs-lookup"><span data-stu-id="6ce5d-105">**Error ID:** BC30560</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6ce5d-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="6ce5d-106">To correct this error</span></span>  
   
--   Geben Sie einen vollqualifizierten Namen an.  
+-   <span data-ttu-id="6ce5d-107">Geben Sie einen vollqualifizierten Namen an.</span><span class="sxs-lookup"><span data-stu-id="6ce5d-107">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)
+## <a name="see-also"></a><span data-ttu-id="6ce5d-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ce5d-108">See Also</span></span>  
+ <span data-ttu-id="6ce5d-109">[Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="6ce5d-109">[Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span></span>  
+<span data-ttu-id="6ce5d-110"> [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)</span><span class="sxs-lookup"><span data-stu-id="6ce5d-110"> [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)</span></span>

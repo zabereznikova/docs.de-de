@@ -1,1 +1,1 @@
-Hilfstechnologie
+<span data-ttu-id="84ebd-101">Hilfstechnologie</span><span class="sxs-lookup"><span data-stu-id="84ebd-101">assistive technology</span></span>

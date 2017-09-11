@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>). Der XML-Code befindet sich in einem Namespace.  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="29e80-102">Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="29e80-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="29e80-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="29e80-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="29e80-104">Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>).</span><span class="sxs-lookup"><span data-stu-id="29e80-104">This file contains customers and orders.</span></span> <span data-ttu-id="29e80-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="29e80-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="29e80-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="29e80-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -447,6 +447,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="29e80-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="29e80-107">See Also</span></span>  
+ [<span data-ttu-id="29e80-108">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="29e80-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

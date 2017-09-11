@@ -40,20 +40,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="fullpaths-c-compiler-options"></a>/fullpaths (C#-Compileroptionen)
-Die Option **/fullpaths** bewirkt, dass der Compiler beim Auflisten von Kompilierungsfehlern und Warnungen den vollständigen Pfad zur Datei angibt.  
+# <a name="fullpaths-c-compiler-options"></a><span data-ttu-id="0d8a4-102">/fullpaths (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="0d8a4-102">/fullpaths (C# Compiler Options)</span></span>
+<span data-ttu-id="0d8a4-103">Die Option **/fullpaths** bewirkt, dass der Compiler beim Auflisten von Kompilierungsfehlern und Warnungen den vollständigen Pfad zur Datei angibt.</span><span class="sxs-lookup"><span data-stu-id="0d8a4-103">The **/fullpaths** option causes the compiler to specify the full path to the file when listing compilation errors and warnings.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="0d8a4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0d8a4-104">Syntax</span></span>  
   
 ```console  
 /fullpaths  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig ist in den aus der Kompilierung resultierenden Fehler- und Warnmeldungen der Name der Datei enthalten, in der der entsprechende Fehler auftrat. Die Option **/fullpaths** bewirkt, dass der Compiler den vollständigen Pfad zur Datei angibt.  
+## <a name="remarks"></a><span data-ttu-id="0d8a4-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0d8a4-105">Remarks</span></span>  
+ <span data-ttu-id="0d8a4-106">Standardmäßig ist in den aus der Kompilierung resultierenden Fehler- und Warnmeldungen der Name der Datei enthalten, in der der entsprechende Fehler auftrat.</span><span class="sxs-lookup"><span data-stu-id="0d8a4-106">By default, errors and warnings that result from compilation specify the name of the file in which an error was found.</span></span> <span data-ttu-id="0d8a4-107">Die Option **/fullpaths** bewirkt, dass der Compiler den vollständigen Pfad zur Datei angibt.</span><span class="sxs-lookup"><span data-stu-id="0d8a4-107">The **/fullpaths** option causes the compiler to specify the full path to the file.</span></span>  
   
- Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
+ <span data-ttu-id="0d8a4-108">Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="0d8a4-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="0d8a4-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d8a4-109">See Also</span></span>  
+ [<span data-ttu-id="0d8a4-110">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="0d8a4-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

@@ -45,22 +45,22 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
-Die Umgebungsvariablen, die für Befehlszeilenbuilds erforderlich sind, werden durch die Datei VSVARS32.BAT festgelegt. Weitere Informationen zu „vsvars32.bat“ finden Sie im [Knowledge Base-Artikel Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).  
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="9efab-102">Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="9efab-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
+<span data-ttu-id="9efab-103">Die Umgebungsvariablen, die für Befehlszeilenbuilds erforderlich sind, werden durch die Datei VSVARS32.BAT festgelegt.</span><span class="sxs-lookup"><span data-stu-id="9efab-103">The vsvars32.bat file sets the appropriate environment variables to enable command-line builds.</span></span> <span data-ttu-id="9efab-104">Weitere Informationen zu „vsvars32.bat“ finden Sie im [Knowledge Base-Artikel Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).</span><span class="sxs-lookup"><span data-stu-id="9efab-104">For more information about vsvars32.bat, see [Knowledge Base article Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).</span></span>  
   
- Falls die aktuelle Version von Visual Studio auf einem Computer installiert ist, der zusätzlich über eine frühere Version von Visual Studio verfügt, sollten Sie die Dateien VSVARS32.BAT und VCVARS32.BAT nicht aus unterschiedlichen Versionen im selben Eingabeaufforderungsfenster ausführen.  
+ <span data-ttu-id="9efab-105">Falls die aktuelle Version von Visual Studio auf einem Computer installiert ist, der zusätzlich über eine frühere Version von Visual Studio verfügt, sollten Sie die Dateien VSVARS32.BAT und VCVARS32.BAT nicht aus unterschiedlichen Versionen im selben Eingabeaufforderungsfenster ausführen.</span><span class="sxs-lookup"><span data-stu-id="9efab-105">If the current version of Visual Studio is installed on a computer that also has an earlier version of Visual Studio, you should not run vsvars32.bat or vcvars32.bat from different versions in the same Command Prompt window.</span></span>  
   
-### <a name="to-run-vsvars32bat"></a>So führen Sie VSVARS32.BAT aus  
+### <a name="to-run-vsvars32bat"></a><span data-ttu-id="9efab-106">So führen Sie VSVARS32.BAT aus</span><span class="sxs-lookup"><span data-stu-id="9efab-106">To run VSVARS32.BAT</span></span>  
   
-1.  Öffnen Sie über das Menü **Start** die **Developer-Eingabeaufforderung für VS2012**.  
+1.  <span data-ttu-id="9efab-107">Öffnen Sie über das Menü **Start** die **Developer-Eingabeaufforderung für VS2012**.</span><span class="sxs-lookup"><span data-stu-id="9efab-107">From the **Start** menu, open the **Developer Command Prompt for VS2012**.</span></span>  
   
-2.  Wechseln Sie zum Unterverzeichnis „Programme\Microsoft Visual Studio *Version*\Common7\Tools“ oder „Programme (x86)\Microsoft Visual Studio *Version*\Common7\Tools“ Ihrer Installation.  
+2.  <span data-ttu-id="9efab-108">Wechseln Sie zum Unterverzeichnis „Programme\Microsoft Visual Studio *Version*\Common7\Tools“ oder „Programme (x86)\Microsoft Visual Studio *Version*\Common7\Tools“ Ihrer Installation.</span><span class="sxs-lookup"><span data-stu-id="9efab-108">Change to the Program Files\Microsoft Visual Studio *Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio *Version*\Common7\Tools subdirectory of your installation.</span></span>  
   
-3.  Führen Sie „VSVARS32.BAT“ aus, indem Sie **VSVARS32** eingeben.  
+3.  <span data-ttu-id="9efab-109">Führen Sie „VSVARS32.BAT“ aus, indem Sie **VSVARS32** eingeben.</span><span class="sxs-lookup"><span data-stu-id="9efab-109">Run VSVARS32.bat by typing **VSVARS32**.</span></span>  
   
     > [!CAUTION]
-    >  VSVARS32.BAT kann auf verschiedenen Computern unterschiedlich sein. Falls die Datei VSVARS32.BAT nicht vorhanden oder beschädigt ist, sollten Sie sie nicht durch die VSVARS32.BAT-Datei eines anderen Computers ersetzen. Führen Sie stattdessen Setup erneut aus, um die fehlende Datei zu ersetzen.  
+    >  <span data-ttu-id="9efab-110">VSVARS32.BAT kann auf verschiedenen Computern unterschiedlich sein.</span><span class="sxs-lookup"><span data-stu-id="9efab-110">VSVARS32.bat can vary from computer to computer.</span></span> <span data-ttu-id="9efab-111">Falls die Datei VSVARS32.BAT nicht vorhanden oder beschädigt ist, sollten Sie sie nicht durch die VSVARS32.BAT-Datei eines anderen Computers ersetzen.</span><span class="sxs-lookup"><span data-stu-id="9efab-111">Do not replace a missing or damaged VSVARS32.bat file with a VSVARS32.bat from another computer.</span></span> <span data-ttu-id="9efab-112">Führen Sie stattdessen Setup erneut aus, um die fehlende Datei zu ersetzen.</span><span class="sxs-lookup"><span data-stu-id="9efab-112">Instead, rerun setup to replace the missing file.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="9efab-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9efab-113">See Also</span></span>  
+ [<span data-ttu-id="9efab-114">Erstellen über die Befehlszeile mit csc.exe</span><span class="sxs-lookup"><span data-stu-id="9efab-114">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 

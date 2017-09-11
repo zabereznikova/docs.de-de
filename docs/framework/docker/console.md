@@ -17,53 +17,53 @@ ms.lasthandoff: 08/11/2017
 
 ---
 
-# <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
+# <a name="running-console-applications-in-windows-containers"></a><span data-ttu-id="0320b-104">Ausführen von Konsolenanwendungen in Windows-Containern</span><span class="sxs-lookup"><span data-stu-id="0320b-104">Running console applications in Windows containers</span></span>
 
-Konsolenanwendungen werden für verschiedene Zwecke verwendet – vom einfachen Abfragen eines Status bis hin zu Aufgaben zur Verarbeitung von Dokumentbildern mit langer Laufzeit. In allen Fällen wird die Möglichkeit, diese Anwendungen zu starten und zu skalieren, durch Hardwarekäufe, Startzeiten oder die Ausführung mehrerer Instanzen eingeschränkt.
+<span data-ttu-id="0320b-105">Konsolenanwendungen werden für verschiedene Zwecke verwendet – vom einfachen Abfragen eines Status bis hin zu Aufgaben zur Verarbeitung von Dokumentbildern mit langer Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="0320b-105">Console applications are used for many purposes; from simple querying of a status to long running document image processing tasks.</span></span> <span data-ttu-id="0320b-106">In allen Fällen wird die Möglichkeit, diese Anwendungen zu starten und zu skalieren, durch Hardwarekäufe, Startzeiten oder die Ausführung mehrerer Instanzen eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="0320b-106">In any case, the ability to start up and scale these applications are met with limitations of hardware acquisitions, startup times or running multiple instances.</span></span>
 
-Indem Sie Ihre Konsolenanwendungen in Docker- und Windows Server-Container verlagern, können diese Anwendungen mit einem fehlerfreien Status gestartet werden, den Vorgang ausführen und dann ordnungsgemäß beendet werden. Dieses Thema erläutert die Schritte, die erforderlich sind, um eine Konsolenanwendung in einen Windows-basierten Container zu verlagern und mithilfe eines PowerShell-Skripts zu starten.
+<span data-ttu-id="0320b-107">Indem Sie Ihre Konsolenanwendungen in Docker- und Windows Server-Container verlagern, können diese Anwendungen mit einem fehlerfreien Status gestartet werden, den Vorgang ausführen und dann ordnungsgemäß beendet werden.</span><span class="sxs-lookup"><span data-stu-id="0320b-107">Moving your console applications to use Docker and Windows Server containers allows for starting these applications from a clean state, enabling them to perform the operation and then shutdown cleanly.</span></span> <span data-ttu-id="0320b-108">Dieses Thema erläutert die Schritte, die erforderlich sind, um eine Konsolenanwendung in einen Windows-basierten Container zu verlagern und mithilfe eines PowerShell-Skripts zu starten.</span><span class="sxs-lookup"><span data-stu-id="0320b-108">This topic will show the steps needed to move a console application to a Windows based container and start it using a PowerShell script.</span></span>
 
-Als Beispiel dient eine einfache Konsolenanwendung, die ein Argument akzeptiert – in diesem Fall eine Frage – und eine zufällige Antwort zurückgibt. Die Anwendung könnte auch eine `customer_id` akzeptieren und die entsprechenden Steuern berechnen oder eine Miniaturansicht für ein `image_url`-Argument erstellen.
+<span data-ttu-id="0320b-109">Als Beispiel dient eine einfache Konsolenanwendung, die ein Argument akzeptiert – in diesem Fall eine Frage – und eine zufällige Antwort zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="0320b-109">The sample console application is a simple example which takes an argument, a question in this case, and returns a random answer.</span></span> <span data-ttu-id="0320b-110">Die Anwendung könnte auch eine `customer_id` akzeptieren und die entsprechenden Steuern berechnen oder eine Miniaturansicht für ein `image_url`-Argument erstellen.</span><span class="sxs-lookup"><span data-stu-id="0320b-110">This could take a `customer_id` and process their taxes, or create a thumbnail for an `image_url` argument.</span></span>
 
-Zusätzlich zur Antwort wurde der Antwort auch der `Environment.MachineName` hinzugefügt, um den Unterschied zwischen der Ausführung der Anwendung im lokalen System oder in einem Windows-Container zu zeigen. Wenn die Anwendung lokal ausgeführt wird, wird der Name des lokalen Computers zurückgegeben. Bei Ausführung in einem Windows-Container wird die ID der Containersitzung zurückgegeben.
+<span data-ttu-id="0320b-111">Zusätzlich zur Antwort wurde der Antwort auch der `Environment.MachineName` hinzugefügt, um den Unterschied zwischen der Ausführung der Anwendung im lokalen System oder in einem Windows-Container zu zeigen.</span><span class="sxs-lookup"><span data-stu-id="0320b-111">In addition to the answer, the `Environment.MachineName` has been added to the response to show the difference between running the application locally and in a Windows container.</span></span> <span data-ttu-id="0320b-112">Wenn die Anwendung lokal ausgeführt wird, wird der Name des lokalen Computers zurückgegeben. Bei Ausführung in einem Windows-Container wird die ID der Containersitzung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0320b-112">When running the application locally, your local machine name should be returned and when running in a Windows Container; the container session id is returned.</span></span>
 
-Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="0320b-113">Das [vollständige Beispiel](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/docs-Repository auf GitHub.</span><span class="sxs-lookup"><span data-stu-id="0320b-113">The [complete example](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) is available in the dotnet/docs repository on GitHub.</span></span> <span data-ttu-id="0320b-114">Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="0320b-114">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-Sie müssen sich mit einigen Docker-Begriffen vertraut machen, bevor Sie damit beginnen, Ihre Anwendung in einen Container zu verlagern.
+<span data-ttu-id="0320b-115">Sie müssen sich mit einigen Docker-Begriffen vertraut machen, bevor Sie damit beginnen, Ihre Anwendung in einen Container zu verlagern.</span><span class="sxs-lookup"><span data-stu-id="0320b-115">You need to be familiar with some Docker terms before you begin working on moving your application to a container.</span></span>
 
-> Ein *Docker-Image* ist eine schreibgeschützte Vorlage, die die Umgebung für einen ausgeführten Container definiert, einschließlich Betriebssystem, Systemkomponenten und Anwendung(en).
+> <span data-ttu-id="0320b-116">Ein *Docker-Image* ist eine schreibgeschützte Vorlage, die die Umgebung für einen ausgeführten Container definiert, einschließlich Betriebssystem, Systemkomponenten und Anwendung(en).</span><span class="sxs-lookup"><span data-stu-id="0320b-116">A *Docker image* is a read-only template that defines the environment for a running container, including the operating system (OS), system components, and application(s).</span></span>
 
-Ein wichtiges Merkmal der Docker-Images ist es, dass Images aus einem Basisimage zusammengestellt werden. Jedes neue Image fügt einen kleinen Satz an Funktionen zu einem vorhandenen Image hinzu. 
+<span data-ttu-id="0320b-117">Ein wichtiges Merkmal der Docker-Images ist es, dass Images aus einem Basisimage zusammengestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0320b-117">One important feature of Docker images is that images are composed from a base image.</span></span> <span data-ttu-id="0320b-118">Jedes neue Image fügt einen kleinen Satz an Funktionen zu einem vorhandenen Image hinzu.</span><span class="sxs-lookup"><span data-stu-id="0320b-118">Each new image adds a small set of features to an existing image.</span></span> 
 
-> Ein *Docker-Container* ist eine ausgeführte Instanz eines Images. 
+> <span data-ttu-id="0320b-119">Ein *Docker-Container* ist eine ausgeführte Instanz eines Images.</span><span class="sxs-lookup"><span data-stu-id="0320b-119">A *Docker container* is a running instance of an image.</span></span> 
 
-Sie skalieren eine Anwendung, indem Sie das gleiche Image in mehreren Containern ausführen.
-Vom Konzept her ähnelt dieses Vorgehen der Ausführung der gleichen Anwendung auf mehreren Hosts.
+<span data-ttu-id="0320b-120">Sie skalieren eine Anwendung, indem Sie das gleiche Image in mehreren Containern ausführen.</span><span class="sxs-lookup"><span data-stu-id="0320b-120">You scale an application by running the same image in many containers.</span></span>
+<span data-ttu-id="0320b-121">Vom Konzept her ähnelt dieses Vorgehen der Ausführung der gleichen Anwendung auf mehreren Hosts.</span><span class="sxs-lookup"><span data-stu-id="0320b-121">Conceptually, this is similar to running the same application in multiple hosts.</span></span>
 
-Weitere Informationen zur Docker-Architektur finden Sie auf der Docker-Website unter [Docker Overview](https://docs.docker.com/engine/understanding-docker/) (Übersicht über Docker). 
+<span data-ttu-id="0320b-122">Weitere Informationen zur Docker-Architektur finden Sie auf der Docker-Website unter [Docker Overview](https://docs.docker.com/engine/understanding-docker/) (Übersicht über Docker).</span><span class="sxs-lookup"><span data-stu-id="0320b-122">You can learn more about the Docker architecture by reading the [Docker Overview](https://docs.docker.com/engine/understanding-docker/) on the Docker site.</span></span> 
 
-Die Verlagerung Ihrer Konsolenanwendung erfordert nur einige wenige Schritte.
+<span data-ttu-id="0320b-123">Die Verlagerung Ihrer Konsolenanwendung erfordert nur einige wenige Schritte.</span><span class="sxs-lookup"><span data-stu-id="0320b-123">Moving your console application is a matter of a few steps.</span></span>
 
-1. [Erstellen der Anwendung](#building-the-application)
-1. [Erstellen einer Dockerfile-Datei für das Image](#creating-the-dockerfile)
-1. [Erstellen und Ausführen des Docker-Containers](#creating-the-image)
+1. [<span data-ttu-id="0320b-124">Erstellen der Anwendung</span><span class="sxs-lookup"><span data-stu-id="0320b-124">Build the application</span></span>](#building-the-application)
+1. [<span data-ttu-id="0320b-125">Erstellen einer Dockerfile-Datei für das Image</span><span class="sxs-lookup"><span data-stu-id="0320b-125">Creating a Dockerfile for the image</span></span>](#creating-the-dockerfile)
+1. [<span data-ttu-id="0320b-126">Erstellen und Ausführen des Docker-Containers</span><span class="sxs-lookup"><span data-stu-id="0320b-126">Process to build and run the Docker container</span></span>](#creating-the-image)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
-Windows-Container werden unter [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) oder [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) unterstützt.
+## <a name="prerequisites"></a><span data-ttu-id="0320b-127">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="0320b-127">Prerequisites</span></span>
+<span data-ttu-id="0320b-128">Windows-Container werden unter [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) oder [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0320b-128">Windows containers are supported on [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) or [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).</span></span>
 
 > [!NOTE]
->Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert. Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), um die Container und Docker-Funktionen zu installieren.
+><span data-ttu-id="0320b-129">Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="0320b-129">If you are using Windows Server 2016, you must enable containers manually since the Docker for Windows installer will not enable the feature.</span></span> <span data-ttu-id="0320b-130">Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), um die Container und Docker-Funktionen zu installieren.</span><span class="sxs-lookup"><span data-stu-id="0320b-130">Make sure all updates have run for the OS and then follow the instructions from the [Container Host Deployment](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) article to install the containers and Docker features.</span></span>
 
-Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfügen, um Windows-Container zu unterstützen. Standardmäßig arbeitet Docker mit Linux-basierten Containern. Wechseln Sie zu Windows-Containern, indem Sie in der Taskleiste mit der rechten Maustaste auf das Docker-Symbol klicken und **Zu Windows-Containern wechseln** auswählen. Docker führt den Änderungsprozess aus. Möglicherweise ist ein Neustart erforderlich.
+<span data-ttu-id="0320b-131">Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfügen, um Windows-Container zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="0320b-131">You need to have Docker for Windows, version 1.12 Beta 26 or higher to support Windows containers.</span></span> <span data-ttu-id="0320b-132">Standardmäßig arbeitet Docker mit Linux-basierten Containern. Wechseln Sie zu Windows-Containern, indem Sie in der Taskleiste mit der rechten Maustaste auf das Docker-Symbol klicken und **Zu Windows-Containern wechseln** auswählen.</span><span class="sxs-lookup"><span data-stu-id="0320b-132">By default, Docker enables Linux based containers; switch to Windows containers by right clicking the Docker icon in the system tray and select **Switch to Windows containers**.</span></span> <span data-ttu-id="0320b-133">Docker führt den Änderungsprozess aus. Möglicherweise ist ein Neustart erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0320b-133">Docker will run the process to change and a restart may be required.</span></span>
 
 ![Windows-Container](./media/console/SwitchContainer.png)
 
-## <a name="building-the-application"></a>Erstellen der Anwendung
-Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt. Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.
+## <a name="building-the-application"></a><span data-ttu-id="0320b-135">Erstellen der Anwendung</span><span class="sxs-lookup"><span data-stu-id="0320b-135">Building the application</span></span>
+<span data-ttu-id="0320b-136">Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt.</span><span class="sxs-lookup"><span data-stu-id="0320b-136">Typically console applications are distributed through an installer, FTP, or File Share deployment.</span></span> <span data-ttu-id="0320b-137">Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="0320b-137">When deploying to a container, the assets need to be compiled and staged to a location that can be used when the Docker image is created.</span></span>
 
-In *build.ps1* verwendet das Skript [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
+<span data-ttu-id="0320b-138">In *build.ps1* verwendet das Skript [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="0320b-138">In *build.ps1*, the script uses [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) to compile the application to complete the task of building the assets.</span></span> <span data-ttu-id="0320b-139">Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren.</span><span class="sxs-lookup"><span data-stu-id="0320b-139">There are a few parameters passed to MSBuild to finalize the needed assets.</span></span> <span data-ttu-id="0320b-140">Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).</span><span class="sxs-lookup"><span data-stu-id="0320b-140">The name of the project file or solution to be compiled, the location for the output and finally the configuration (Release or Debug).</span></span>
 
-Im Aufruf von `Invoke-MSBuild` ist der `OutputPath` auf **publish** festgelegt und die `Configuration` auf **Release**. 
+<span data-ttu-id="0320b-141">Im Aufruf von `Invoke-MSBuild` ist der `OutputPath` auf **publish** festgelegt und die `Configuration` auf **Release**.</span><span class="sxs-lookup"><span data-stu-id="0320b-141">In the call to `Invoke-MSBuild` the `OutputPath` is set to **publish** and  `Configuration` set to **Release**.</span></span> 
 
 ```
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
@@ -73,18 +73,18 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-## <a name="creating-the-dockerfile"></a>Erstellen der Dockerfile-Datei
-Das für eine .NET Framework-Konsolenanwendung verwendete Basisimage ist `microsoft/windowsservercore`, öffentlich verfügbar im [Docker-Hub](https://hub.docker.com/r/microsoft/windowsservercore/). Das Basisimage umfasst eine Minimalinstallation mit Windows Server 2016 und .NET Framework 4.6.2 und dient als grundlegendes Betriebssystemimage für Windows-Container.
+## <a name="creating-the-dockerfile"></a><span data-ttu-id="0320b-142">Erstellen der Dockerfile-Datei</span><span class="sxs-lookup"><span data-stu-id="0320b-142">Creating the Dockerfile</span></span>
+<span data-ttu-id="0320b-143">Das für eine .NET Framework-Konsolenanwendung verwendete Basisimage ist `microsoft/windowsservercore`, öffentlich verfügbar im [Docker-Hub](https://hub.docker.com/r/microsoft/windowsservercore/).</span><span class="sxs-lookup"><span data-stu-id="0320b-143">The base image used for a console .NET Framework application is `microsoft/windowsservercore`, publicly available on [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/).</span></span> <span data-ttu-id="0320b-144">Das Basisimage umfasst eine Minimalinstallation mit Windows Server 2016 und .NET Framework 4.6.2 und dient als grundlegendes Betriebssystemimage für Windows-Container.</span><span class="sxs-lookup"><span data-stu-id="0320b-144">The base image contains a minimal installation of Windows Server 2016, .NET Framework 4.6.2 and serves as the base OS image for Windows Containers.</span></span>
 
 ```
 FROM microsoft/windowsservercore
 ADD publish/ /
 ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
-Die erste Zeile der Dockerfile-Datei gibt mithilfe der [`FROM`](https://docs.docker.com/engine/reference/builder/#/from)-Anweisung das Basisimage an. Danach kopiert [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) in der Datei die Anwendungsassets aus dem Ordner **publish** in den Stammordner des Containers, und zum Schluss wird mit [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) der Befehl oder die Anwendung festgelegt, der bzw. die beim Starten des Containers ausgeführt wird. 
+<span data-ttu-id="0320b-145">Die erste Zeile der Dockerfile-Datei gibt mithilfe der [`FROM`](https://docs.docker.com/engine/reference/builder/#/from)-Anweisung das Basisimage an.</span><span class="sxs-lookup"><span data-stu-id="0320b-145">The first line in the Dockerfile designates the base image using the [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) instruction.</span></span> <span data-ttu-id="0320b-146">Danach kopiert [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) in der Datei die Anwendungsassets aus dem Ordner **publish** in den Stammordner des Containers, und zum Schluss wird mit [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) der Befehl oder die Anwendung festgelegt, der bzw. die beim Starten des Containers ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0320b-146">Next, [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) in the file copies the application assets from the **publish** folder to root folder of the container and last; setting the [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) of the image states that this is the command or application that will run when the container starts.</span></span> 
 
-## <a name="creating-the-image"></a>Erstellen des Images
-Um das Docker-Image zu erstellen, wird dem Skript *build.ps1* folgender Code hinzugefügt. Wenn das Skript ausgeführt wird, wird das `console-random-answer-generator`-Image mithilfe der Assets erstellt, die aus dem im Abschnitt [Erstellen der Anwendung](#building-the-application) definierten MSBuild kompiliert wurden.
+## <a name="creating-the-image"></a><span data-ttu-id="0320b-147">Erstellen des Images</span><span class="sxs-lookup"><span data-stu-id="0320b-147">Creating the image</span></span>
+<span data-ttu-id="0320b-148">Um das Docker-Image zu erstellen, wird dem Skript *build.ps1* folgender Code hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0320b-148">In order to create the Docker image, the following code is added to the *build.ps1* script.</span></span> <span data-ttu-id="0320b-149">Wenn das Skript ausgeführt wird, wird das `console-random-answer-generator`-Image mithilfe der Assets erstellt, die aus dem im Abschnitt [Erstellen der Anwendung](#building-the-application) definierten MSBuild kompiliert wurden.</span><span class="sxs-lookup"><span data-stu-id="0320b-149">When the script is run, the `console-random-answer-generator` image is created using the assets compiled from MSBuild defined in the [Building the application](#building-the-application) section.</span></span>
 
 ```powershell
 $ImageName="console-random-answer-generator"
@@ -97,52 +97,52 @@ function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$D
 Invoke-Docker-Build -ImageName $ImageName -ImagePath "."
 ```
 
-Führen Sie das Skript unter Verwendung von `.\build.ps1` in der PowerShell-Befehlszeile aus.
+<span data-ttu-id="0320b-150">Führen Sie das Skript unter Verwendung von `.\build.ps1` in der PowerShell-Befehlszeile aus.</span><span class="sxs-lookup"><span data-stu-id="0320b-150">Run the script using `.\build.ps1` from the PowerShell command prompt.</span></span>
 
-Wenn der Build abgeschlossen ist, verwenden Sie den Befehl `docker images` in einer Befehlszeile oder PowerShell-Eingabeaufforderung. Damit wird das Image erstellt und ist bereit zur Ausführung.
+<span data-ttu-id="0320b-151">Wenn der Build abgeschlossen ist, verwenden Sie den Befehl `docker images` in einer Befehlszeile oder PowerShell-Eingabeaufforderung. Damit wird das Image erstellt und ist bereit zur Ausführung.</span><span class="sxs-lookup"><span data-stu-id="0320b-151">When the build is complete, using the `docker images` command from a command line or PowerShell prompt; you'll see that the image is created and ready to be run.</span></span>
 
 ```
 REPOSITORY                        TAG                 IMAGE ID            CREATED             SIZE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-## <a name="running-the-container"></a>Ausführen des Containers
-Sie können den Container mithilfe der Docker-Befehle in der Befehlszeile starten.
+## <a name="running-the-container"></a><span data-ttu-id="0320b-152">Ausführen des Containers</span><span class="sxs-lookup"><span data-stu-id="0320b-152">Running the container</span></span>
+<span data-ttu-id="0320b-153">Sie können den Container mithilfe der Docker-Befehle in der Befehlszeile starten.</span><span class="sxs-lookup"><span data-stu-id="0320b-153">You can start the container from the command line using the Docker commands.</span></span>
 
 ```
 docker run console-random-answer-generator "Are you a square container?"
 ```
 
-Ausgabe:
+<span data-ttu-id="0320b-154">Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="0320b-154">The output is</span></span>
 
 ```
 The answer to your question: 'Are you a square container?' is Concentrate and ask again on (70C3D48F4343)
 ```
 
-Wenn Sie den `docker ps -a`-Befehl in PowerShell ausführen, können Sie sehen, dass der Container immer noch vorhanden ist.
+<span data-ttu-id="0320b-155">Wenn Sie den `docker ps -a`-Befehl in PowerShell ausführen, können Sie sehen, dass der Container immer noch vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="0320b-155">If you run the `docker ps -a` command from PowerShell, you can see that the container still exists.</span></span>
 
 ```
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          
 70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago      
 ```
 
-Die Statusspalte zeigt bei „About a minute ago“, dass die Anwendung vor ungefähr einer Minute abgeschlossen wurde und beendet werden kann. Wenn der Befehl hundert Mal ausgeführt wurde, würden hundert Container in statischem Zustand ohne Aufgabe zurückbleiben. Im Anfangsszenario bestand der ideale Vorgang darin, die erforderlichen Funktionen auszuführen und dann zu beenden oder zu bereinigen. Um diesen Workflow vollständig durchzuführen, fügen Sie die Option `--rm` zum `docker run`-Befehl hinzu, um den Container zu entfernen, sobald das Signal `Exited` empfangen wurde.
+<span data-ttu-id="0320b-156">Die Statusspalte zeigt bei „About a minute ago“, dass die Anwendung vor ungefähr einer Minute abgeschlossen wurde und beendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="0320b-156">The STATUS column shows at "About a minute ago", the application was complete and could be shut down.</span></span> <span data-ttu-id="0320b-157">Wenn der Befehl hundert Mal ausgeführt wurde, würden hundert Container in statischem Zustand ohne Aufgabe zurückbleiben.</span><span class="sxs-lookup"><span data-stu-id="0320b-157">If the command was run a hundred times, there would be a hundred containers left static with no work to do.</span></span> <span data-ttu-id="0320b-158">Im Anfangsszenario bestand der ideale Vorgang darin, die erforderlichen Funktionen auszuführen und dann zu beenden oder zu bereinigen.</span><span class="sxs-lookup"><span data-stu-id="0320b-158">In the beginning scenario the ideal operation was to do the work and shutdown or cleanup.</span></span> <span data-ttu-id="0320b-159">Um diesen Workflow vollständig durchzuführen, fügen Sie die Option `--rm` zum `docker run`-Befehl hinzu, um den Container zu entfernen, sobald das Signal `Exited` empfangen wurde.</span><span class="sxs-lookup"><span data-stu-id="0320b-159">To accomplish that workflow, adding the `--rm` option to the `docker run` command will remove the container as soon as the `Exited` signal is received.</span></span>
 
 ```
 docker run --rm console-random-answer-generator "Are you a square container?"
 ```
 
-Führen Sie den Befehl mit dieser Option aus, und betrachten Sie dann die Ausgabe des `docker ps -a`-Befehls. Sie werden feststellen, dass sich die Container-ID (`Environment.MachineName`) nicht mehr in der Liste befindet.
+<span data-ttu-id="0320b-160">Führen Sie den Befehl mit dieser Option aus, und betrachten Sie dann die Ausgabe des `docker ps -a`-Befehls. Sie werden feststellen, dass sich die Container-ID (`Environment.MachineName`) nicht mehr in der Liste befindet.</span><span class="sxs-lookup"><span data-stu-id="0320b-160">Running the command with this option and then looking at the output of `docker ps -a` command; notice that the container id (the `Environment.MachineName`) is not in the list.</span></span>
 
-### <a name="running-the-container-using-powershell"></a>Ausführen des Container mithilfe von PowerShell
-In den Beispielprojektdateien befindet sich auch die Datei *run.ps1*. Diese ist ein Beispiel dafür, wie Sie PowerShell verwenden, um die Anwendung auszuführen, wobei die Argumente akzeptiert werden.
+### <a name="running-the-container-using-powershell"></a><span data-ttu-id="0320b-161">Ausführen des Container mithilfe von PowerShell</span><span class="sxs-lookup"><span data-stu-id="0320b-161">Running the container using PowerShell</span></span>
+<span data-ttu-id="0320b-162">In den Beispielprojektdateien befindet sich auch die Datei *run.ps1*. Diese ist ein Beispiel dafür, wie Sie PowerShell verwenden, um die Anwendung auszuführen, wobei die Argumente akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="0320b-162">In the sample project files there is also a *run.ps1* which is an example of how to use PowerShell to run the application accepting the arguments.</span></span>
 
-Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden Befehl:
+<span data-ttu-id="0320b-163">Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden Befehl:</span><span class="sxs-lookup"><span data-stu-id="0320b-163">To run, open PowerShell and use the following command:</span></span>
 
 ```
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>Zusammenfassung
-Sie können Ihre .NET Framework-Konsolenanwendungen in Containern ausführen, indem Sie einfach eine Dockerfile-Datei hinzufügen und die Anwendung veröffentlichen. So können Sie mehrere Instanzen ausführen, sauber starten und beenden und von mehr Windows Server 2016-Funktionen profitieren, ohne den Anwendungscode selbst in irgendeiner Weise zu ändern.
+## <a name="summary"></a><span data-ttu-id="0320b-164">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="0320b-164">Summary</span></span>
+<span data-ttu-id="0320b-165">Sie können Ihre .NET Framework-Konsolenanwendungen in Containern ausführen, indem Sie einfach eine Dockerfile-Datei hinzufügen und die Anwendung veröffentlichen. So können Sie mehrere Instanzen ausführen, sauber starten und beenden und von mehr Windows Server 2016-Funktionen profitieren, ohne den Anwendungscode selbst in irgendeiner Weise zu ändern.</span><span class="sxs-lookup"><span data-stu-id="0320b-165">Just by adding a Dockerfile and publishing the application, you can containerize your .NET Framework console applications and now take the advantage of running multiple instances, clean start and stop and more Windows Server 2016 capabilities without making any changes to the application code at all.</span></span>
 

@@ -21,13 +21,13 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)
-In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="81139-102">Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)</span><span class="sxs-lookup"><span data-stu-id="81139-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="81139-103">In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.</span><span class="sxs-lookup"><span data-stu-id="81139-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende Code führt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage für ein Zeichenfolgenarray aus.  
+## <a name="example"></a><span data-ttu-id="81139-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="81139-104">Example</span></span>  
+ <span data-ttu-id="81139-105">Der folgende Code führt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage für ein Zeichenfolgenarray aus.</span><span class="sxs-lookup"><span data-stu-id="81139-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.  
+ <span data-ttu-id="81139-106">Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.</span><span class="sxs-lookup"><span data-stu-id="81139-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -60,7 +60,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="81139-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="81139-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -119,6 +119,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Projektionen und Transformationen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="81139-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81139-108">See Also</span></span>  
+ [<span data-ttu-id="81139-109">Projektionen und Transformationen (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="81139-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

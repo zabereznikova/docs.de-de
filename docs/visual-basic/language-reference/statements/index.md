@@ -36,28 +36,28 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="statements-visual-basic"></a>Anweisungen (Visual Basic)
-Die Themen in diesem Abschnitt enthalten Tabellen von der Visual Basic-Deklaration und den ausführbaren Anweisungen und Tabellen von wichtigen Listen, die für viele Anweisungen gelten.  
+# <a name="statements-visual-basic"></a><span data-ttu-id="75708-102">Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75708-102">Statements (Visual Basic)</span></span>
+<span data-ttu-id="75708-103">Die Themen in diesem Abschnitt enthalten Tabellen von der Visual Basic-Deklaration und den ausführbaren Anweisungen und Tabellen von wichtigen Listen, die für viele Anweisungen gelten.</span><span class="sxs-lookup"><span data-stu-id="75708-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Anweisungen A – E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="75708-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="75708-104">In This Section</span></span>  
+ [<span data-ttu-id="75708-105">Anweisungen A – E</span><span class="sxs-lookup"><span data-stu-id="75708-105">A-E Statements</span></span>](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [Anweisungen F – P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [<span data-ttu-id="75708-106">Anweisungen F – P</span><span class="sxs-lookup"><span data-stu-id="75708-106">F-P Statements</span></span>](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [Anweisungen Q – Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [<span data-ttu-id="75708-107">Anweisungen Q – Z</span><span class="sxs-lookup"><span data-stu-id="75708-107">Q-Z Statements</span></span>](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
- [Klauseln](../../../visual-basic/language-reference/statements/clauses.md)  
+ [<span data-ttu-id="75708-108">Klauseln</span><span class="sxs-lookup"><span data-stu-id="75708-108">Clauses</span></span>](../../../visual-basic/language-reference/statements/clauses.md)  
   
- [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [<span data-ttu-id="75708-109">Deklarationskontexte und Standardzugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="75708-109">Declaration Contexts and Default Access Levels</span></span>](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
   
- [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [<span data-ttu-id="75708-110">Attributliste</span><span class="sxs-lookup"><span data-stu-id="75708-110">Attribute List</span></span>](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="75708-111">Parameterliste</span><span class="sxs-lookup"><span data-stu-id="75708-111">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="75708-112">Typliste</span><span class="sxs-lookup"><span data-stu-id="75708-112">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="75708-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="75708-113">Related Sections</span></span>  
+ [<span data-ttu-id="75708-114">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="75708-114">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
+ [<span data-ttu-id="75708-115">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="75708-115">Visual Basic</span></span>](../../../visual-basic/index.md)
 

@@ -34,19 +34,19 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="literal-keywords-c-reference"></a>Literalschlüsselwörter (C#-Referenz)
-C# hat die folgenden Literalschlüsselwörter:  
+# <a name="literal-keywords-c-reference"></a><span data-ttu-id="ecbe3-102">Literalschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ecbe3-102">Literal Keywords (C# Reference)</span></span>
+<span data-ttu-id="ecbe3-103">C# hat die folgenden Literalschlüsselwörter:</span><span class="sxs-lookup"><span data-stu-id="ecbe3-103">C# has the following literal keywords:</span></span>  
   
--   [null](../../../csharp/language-reference/keywords/null.md)  
+-   [<span data-ttu-id="ecbe3-104">null</span><span class="sxs-lookup"><span data-stu-id="ecbe3-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
   
--   [true](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="ecbe3-105">true</span><span class="sxs-lookup"><span data-stu-id="ecbe3-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
--   [false](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="ecbe3-106">false</span><span class="sxs-lookup"><span data-stu-id="ecbe3-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
--   [default](../../../csharp/language-reference/keywords/default.md)  
+-   [<span data-ttu-id="ecbe3-107">default</span><span class="sxs-lookup"><span data-stu-id="ecbe3-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="ecbe3-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ecbe3-108">See Also</span></span>  
+ <span data-ttu-id="ecbe3-109">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ecbe3-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ecbe3-110">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ecbe3-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="ecbe3-111">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ecbe3-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

@@ -1,1 +1,1 @@
-Advanced Encryption Standard (AES)
+<span data-ttu-id="d663b-101">Advanced Encryption Standard (AES)</span><span class="sxs-lookup"><span data-stu-id="d663b-101">Advanced Encryption Standard (AES)</span></span>

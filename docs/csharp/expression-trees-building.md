@@ -18,46 +18,46 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="building-expression-trees"></a>Erstellen von Ausdrucksbaumstrukturen
+# <a name="building-expression-trees"></a><span data-ttu-id="a60be-104">Erstellen von Ausdrucksbaumstrukturen</span><span class="sxs-lookup"><span data-stu-id="a60be-104">Building Expression Trees</span></span>
 
-[Vorheriges - Interpretieren von Ausdrücken](expression-trees-interpreting.md)
+[<span data-ttu-id="a60be-105">Vorheriges - Interpretieren von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="a60be-105">Previous -- Interpreting Expressions</span></span>](expression-trees-interpreting.md)
 
-Alle Ausdrucksbaumstrukturen, die Sie bisher gesehen haben, wurden vom C#-Compiler erstellt. Sie müssen einfach einen Lambdaausdruck erstellen, der einer typisierten Variable als `Expression<Func<T>>` oder als einen ähnlichen Typ zugewiesen wurde. Das ist nicht die einzige Möglichkeit, eine Ausdrucksbaumstruktur zu erstellen. Für viele Szenarios stellen Sie möglicherweise fest, dass Sie einen Ausdruck im Arbeitsspeicher zur Laufzeit erstellen müssen. 
+<span data-ttu-id="a60be-106">Alle Ausdrucksbaumstrukturen, die Sie bisher gesehen haben, wurden vom C#-Compiler erstellt.</span><span class="sxs-lookup"><span data-stu-id="a60be-106">All the expression trees you've seen so far have been created by the C# compiler.</span></span> <span data-ttu-id="a60be-107">Sie müssen einfach einen Lambdaausdruck erstellen, der einer typisierten Variable als `Expression<Func<T>>` oder als einen ähnlichen Typ zugewiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="a60be-107">All you had to do was create a lambda expression that was assigned to a variable typed as an `Expression<Func<T>>` or some similar type.</span></span> <span data-ttu-id="a60be-108">Das ist nicht die einzige Möglichkeit, eine Ausdrucksbaumstruktur zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-108">That's not the only way to create an expression tree.</span></span> <span data-ttu-id="a60be-109">Für viele Szenarios stellen Sie möglicherweise fest, dass Sie einen Ausdruck im Arbeitsspeicher zur Laufzeit erstellen müssen.</span><span class="sxs-lookup"><span data-stu-id="a60be-109">For many scenarios you may find that you need to build an expression in memory at runtime.</span></span> 
 
-Das Erstellen von Ausdrucksbaumstrukturen ist kompliziert, da diese Ausdrucksbaumstrukturen unveränderlich sind. Unveränderlich bedeutet, dass Sie die Struktur von den Blättern bis zum Stamm erstellen müssen. Die APIs, die Sie zum Erstellen von Ausdrucksbaumstrukturen verwenden spiegeln diese Tatsache wider: Die Methoden, die Sie verwenden, um einen Knoten zu erstellen, werden alle ihre untergeordneten Elemente als Argumente verwenden. Betrachten wir einige Beispiele, die Ihnen die Techniken zeigen.
+<span data-ttu-id="a60be-110">Das Erstellen von Ausdrucksbaumstrukturen ist kompliziert, da diese Ausdrucksbaumstrukturen unveränderlich sind.</span><span class="sxs-lookup"><span data-stu-id="a60be-110">Building Expression Trees is complicated by the fact that those expression trees are immutable.</span></span> <span data-ttu-id="a60be-111">Unveränderlich bedeutet, dass Sie die Struktur von den Blättern bis zum Stamm erstellen müssen.</span><span class="sxs-lookup"><span data-stu-id="a60be-111">Being immutable means that you must build the tree from the leaves up to the root.</span></span> <span data-ttu-id="a60be-112">Die APIs, die Sie zum Erstellen von Ausdrucksbaumstrukturen verwenden spiegeln diese Tatsache wider: Die Methoden, die Sie verwenden, um einen Knoten zu erstellen, werden alle ihre untergeordneten Elemente als Argumente verwenden.</span><span class="sxs-lookup"><span data-stu-id="a60be-112">The APIs you'll use to build expression trees reflect this fact: The methods you'll use to build a node take all its children as arguments.</span></span> <span data-ttu-id="a60be-113">Betrachten wir einige Beispiele, die Ihnen die Techniken zeigen.</span><span class="sxs-lookup"><span data-stu-id="a60be-113">Let's walk through a few examples to show you the techniques.</span></span>
 
-## <a name="creating-nodes"></a>Erstellen von Knoten
+## <a name="creating-nodes"></a><span data-ttu-id="a60be-114">Erstellen von Knoten</span><span class="sxs-lookup"><span data-stu-id="a60be-114">Creating Nodes</span></span>
 
-Beginnen wir erneut relativ einfach. Wir verwenden den Additionsausdruck, mit dem ich in diesen Abschnitten arbeiten werde:
+<span data-ttu-id="a60be-115">Beginnen wir erneut relativ einfach.</span><span class="sxs-lookup"><span data-stu-id="a60be-115">Let's start relatively simply again.</span></span> <span data-ttu-id="a60be-116">Wir verwenden den Additionsausdruck, mit dem ich in diesen Abschnitten arbeiten werde:</span><span class="sxs-lookup"><span data-stu-id="a60be-116">We'll use the addition expression I've been working with throughout these sections:</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-Um diese Ausdrucksbaumstruktur zu erstellen, müssen Sie die Endknoten erstellen.
-Die Endknoten sind Konstanten, damit Sie die `Expression.Constant`-Methode verwenden können, um die Knoten zu erstellen:
+<span data-ttu-id="a60be-117">Um diese Ausdrucksbaumstruktur zu erstellen, müssen Sie die Endknoten erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-117">To construct that expression tree, you must construct the leaf nodes.</span></span>
+<span data-ttu-id="a60be-118">Die Endknoten sind Konstanten, damit Sie die `Expression.Constant`-Methode verwenden können, um die Knoten zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="a60be-118">The leaf nodes are constants, so you can use the `Expression.Constant` method to create the nodes:</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
 var two = Expression.Constant(2, typeof(int));
 ```
 
-Als Nächstes erstellen Sie den Additionsausdruck:
+<span data-ttu-id="a60be-119">Als Nächstes erstellen Sie den Additionsausdruck:</span><span class="sxs-lookup"><span data-stu-id="a60be-119">Next, you'll build the addition expression:</span></span>
 
 ```csharp
 var addition = Expression.Add(one, two);
 ```
 
-Sobald Sie den Additionsausdruck haben, können Sie den Lambdaausdruck erstellen:
+<span data-ttu-id="a60be-120">Sobald Sie den Additionsausdruck haben, können Sie den Lambdaausdruck erstellen:</span><span class="sxs-lookup"><span data-stu-id="a60be-120">Once you've got the addition expression, you can create the lambda expression:</span></span>
 
 ```csharp
 var lamdba = Expression.Lambda(addition);
 ```
 
-Dies ist eine sehr einfache LambdaExpression, da sie keine Argumente enthält.
-In diesem Abschnitt erfahren Sie später, wie Sie Parametern Argumente zuordnen und kompliziertere Ausdrücke erstellen.
+<span data-ttu-id="a60be-121">Dies ist eine sehr einfache LambdaExpression, da sie keine Argumente enthält.</span><span class="sxs-lookup"><span data-stu-id="a60be-121">This is a very simple LambdaExpression, because it contains no arguments.</span></span>
+<span data-ttu-id="a60be-122">In diesem Abschnitt erfahren Sie später, wie Sie Parametern Argumente zuordnen und kompliziertere Ausdrücke erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-122">Later in this section, you'll see how to map arguments to parameters and build more complicated expressions.</span></span>
 
-Für Ausdrücke, die so einfach wie dieser sind, können Sie alle Aufrufe in einer einzelnen Anweisung kombinieren:
+<span data-ttu-id="a60be-123">Für Ausdrücke, die so einfach wie dieser sind, können Sie alle Aufrufe in einer einzelnen Anweisung kombinieren:</span><span class="sxs-lookup"><span data-stu-id="a60be-123">For expressions that are as simple as this one, you may combine all the calls into a single statement:</span></span>
 
 ```csharp
 var lambda = Expression.Lambda(
@@ -68,25 +68,25 @@ var lambda = Expression.Lambda(
 );
 ```
 
-## <a name="building-a-tree"></a>Erstellen einer Struktur
+## <a name="building-a-tree"></a><span data-ttu-id="a60be-124">Erstellen einer Struktur</span><span class="sxs-lookup"><span data-stu-id="a60be-124">Building a Tree</span></span>
 
-Das sind die Grundlagen der Erstellung einer Ausdrucksbaumstruktur im Arbeitsspeicher. Komplexere Strukturen bedeuten im Allgemeinen mehr Knotentypen und weitere Knoten in der Struktur. Lassen Sie uns ein weiteres Beispiel ausführen, und zwei weitere Knotentypen, die Sie in der Regel beim Erstellen von Ausdrucksbaumstrukturen erstellen, anzeigen: Die Argumentknoten und Methodenaufrufknoten.
+<span data-ttu-id="a60be-125">Das sind die Grundlagen der Erstellung einer Ausdrucksbaumstruktur im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="a60be-125">That's the basics of building an expression tree in memory.</span></span> <span data-ttu-id="a60be-126">Komplexere Strukturen bedeuten im Allgemeinen mehr Knotentypen und weitere Knoten in der Struktur.</span><span class="sxs-lookup"><span data-stu-id="a60be-126">More complex trees generally mean more node types, and more nodes in the tree.</span></span> <span data-ttu-id="a60be-127">Lassen Sie uns ein weiteres Beispiel ausführen, und zwei weitere Knotentypen, die Sie in der Regel beim Erstellen von Ausdrucksbaumstrukturen erstellen, anzeigen: Die Argumentknoten und Methodenaufrufknoten.</span><span class="sxs-lookup"><span data-stu-id="a60be-127">Let's run through one more example and show two more node types that you will typically build when you create expression trees: the argument nodes, and method call nodes.</span></span>
 
-Wir erstellen eine Ausdrucksbaumstruktur, um diesen Ausdruck zu erstellen:
+<span data-ttu-id="a60be-128">Wir erstellen eine Ausdrucksbaumstruktur, um diesen Ausdruck zu erstellen:</span><span class="sxs-lookup"><span data-stu-id="a60be-128">Let's build an expression tree to create this expression:</span></span>
 
 ```csharp
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
  
-Sie beginnen mit dem Erstellen der Parameterausdrücke für `x` und `y`:
+<span data-ttu-id="a60be-129">Sie beginnen mit dem Erstellen der Parameterausdrücke für `x` und `y`:</span><span class="sxs-lookup"><span data-stu-id="a60be-129">You'll start by creating parameter expressions for `x` and `y`:</span></span>
 
 ```csharp
 var xParameter = Expression.Parameter(typeof(double), "x");
 var yParameter = Expression.Parameter(typeof(double), "y");
 ```
 
-Das Erstellen der Multiplikations- und Additionsausdrücke folgt dem Muster, das Sie bereits gesehen haben:
+<span data-ttu-id="a60be-130">Das Erstellen der Multiplikations- und Additionsausdrücke folgt dem Muster, das Sie bereits gesehen haben:</span><span class="sxs-lookup"><span data-stu-id="a60be-130">Creating the multiplication and addition expressions follows the pattern you've already seen:</span></span>
 
 ```csharp
 var xSquared = Expression.Multiply(xParameter, xParameter);
@@ -94,14 +94,14 @@ var ySquared = Expression.Multiply(yParameter, yParameter);
 var sum = Expression.Add(xSquared, ySquared);
 ```
 
-Anschließend müssen Sie einen Ausdruck des Methodenaufrufs für den Aufruf von `Math.Sqrt` erstellen.
+<span data-ttu-id="a60be-131">Anschließend müssen Sie einen Ausdruck des Methodenaufrufs für den Aufruf von `Math.Sqrt` erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-131">Next, you need to create a method call expression for the call to `Math.Sqrt`.</span></span>
 
 ```csharp
 var sqrtMethod = typeof(Math).GetMethod("Sqrt", new[] { typeof(double) });
 var distance = Expression.Call(sqrtMethod, sum);
 ```
 
-Und anschließend legen Sie den Methodenaufruf in einen Lambdaausdruck, und stellen sicher, dass Sie die Argumente für den Lambdaausdruck definieren:
+<span data-ttu-id="a60be-132">Und anschließend legen Sie den Methodenaufruf in einen Lambdaausdruck, und stellen sicher, dass Sie die Argumente für den Lambdaausdruck definieren:</span><span class="sxs-lookup"><span data-stu-id="a60be-132">And  then finally, you put the method call into a lambda expression, and make sure to define the arguments to the lambda expression:</span></span>
 
 ```csharp
 var distanceLambda = Expression.Lambda(
@@ -110,17 +110,17 @@ var distanceLambda = Expression.Lambda(
     yParameter);
 ```
 
-In diesem komplizierteren Beispiel sehen Sie ein paar weitere Verfahren, die Sie häufig benötigen, um Ausdrucksbaumstrukturen zu erstellen.
+<span data-ttu-id="a60be-133">In diesem komplizierteren Beispiel sehen Sie ein paar weitere Verfahren, die Sie häufig benötigen, um Ausdrucksbaumstrukturen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-133">In this more complicated example, you see a couple more techniques that you will often need to create expression trees.</span></span>
 
-Zunächst müssen Sie die Objekte erstellen, die Parameter oder lokale Variablen darstellen, bevor Sie sie verwenden. Wenn Sie diese Objekte erstellt haben, können Sie diese in Ihrer Ausdrucksbaumstruktur verwenden, wo immer Sie sie benötigen.
+<span data-ttu-id="a60be-134">Zunächst müssen Sie die Objekte erstellen, die Parameter oder lokale Variablen darstellen, bevor Sie sie verwenden.</span><span class="sxs-lookup"><span data-stu-id="a60be-134">First, you need to create the objects that represent parameters or local variables before you use them.</span></span> <span data-ttu-id="a60be-135">Wenn Sie diese Objekte erstellt haben, können Sie diese in Ihrer Ausdrucksbaumstruktur verwenden, wo immer Sie sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="a60be-135">Once you've created those objects, you can use them in your expression tree wherever you need.</span></span>
 
-Zweitens müssen Sie einen Teil der Reflektions-APIs verwenden, um ein `MethodInfo`-Objekt zu erstellen, sodass Sie eine Ausdrucksbaumstruktur für den Zugriff auf diese Methode erstellen können. Sie müssen sich auf die Teilmenge der Reflektions-APIs begrenzen, die auf der .NET Core-Plattform verfügbar sind. In diesem Fall werden diese Techniken auf andere Ausdrucksbaumstrukturen erweitert.
+<span data-ttu-id="a60be-136">Zweitens müssen Sie einen Teil der Reflektions-APIs verwenden, um ein `MethodInfo`-Objekt zu erstellen, sodass Sie eine Ausdrucksbaumstruktur für den Zugriff auf diese Methode erstellen können.</span><span class="sxs-lookup"><span data-stu-id="a60be-136">Second, you need to use a subset of the Reflection APIs to create a `MethodInfo` object so that you can create an expression tree to access that method.</span></span> <span data-ttu-id="a60be-137">Sie müssen sich auf die Teilmenge der Reflektions-APIs begrenzen, die auf der .NET Core-Plattform verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="a60be-137">You must limit yourself to the subset of the Reflection APIs that are available on the .NET Core platform.</span></span> <span data-ttu-id="a60be-138">In diesem Fall werden diese Techniken auf andere Ausdrucksbaumstrukturen erweitert.</span><span class="sxs-lookup"><span data-stu-id="a60be-138">Again, these techniques will extend to other expression trees.</span></span>
 
-## <a name="building-code-in-depth"></a>Erstellen von Code im Detail
+## <a name="building-code-in-depth"></a><span data-ttu-id="a60be-139">Erstellen von Code im Detail</span><span class="sxs-lookup"><span data-stu-id="a60be-139">Building Code In Depth</span></span>
 
-Sie sind nicht darin beschränkt, was Sie mithilfe dieser APIs erstellen können. Je komplizierter jedoch die Ausdrucksbaumstruktur ist, die Sie erstellen möchten, desto schwieriger ist der Code zu verwalten und zu lesen. 
+<span data-ttu-id="a60be-140">Sie sind nicht darin beschränkt, was Sie mithilfe dieser APIs erstellen können.</span><span class="sxs-lookup"><span data-stu-id="a60be-140">You aren't limited in what you can build using these APIs.</span></span> <span data-ttu-id="a60be-141">Je komplizierter jedoch die Ausdrucksbaumstruktur ist, die Sie erstellen möchten, desto schwieriger ist der Code zu verwalten und zu lesen.</span><span class="sxs-lookup"><span data-stu-id="a60be-141">However, the more complicated expression tree that you want to build, the more difficult the code is to manage and to read.</span></span> 
 
-Wir erstellen eine Ausdrucksbaumstruktur, die diesem Code entspricht:
+<span data-ttu-id="a60be-142">Wir erstellen eine Ausdrucksbaumstruktur, die diesem Code entspricht:</span><span class="sxs-lookup"><span data-stu-id="a60be-142">Let's build an expression tree that is the equivalent of this code:</span></span>
 
 ```csharp
 Func<int, int> factorialFunc = (n) =>
@@ -135,7 +135,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Beachten Sie oben, dass ich nicht die Ausdrucksbaumstruktur, aber einfach den Delegaten erstellt habe. Mithilfe der `Expression`-Klasse können Sie keine Anweisungslambdas erstellen. Hier ist der Code, der erforderlich ist, um die gleiche Funktionalität zu erstellen. Es ist etwas kompliziert, dass es keine API zum Erstellen einer `while`-Schleife gibt. Stattdessen müssen Sie eine Schleife, die einen bedingten Test enthält, und ein Bezeichnungsziel erstellen, um die Schleife zu unterbrechen. 
+<span data-ttu-id="a60be-143">Beachten Sie oben, dass ich nicht die Ausdrucksbaumstruktur, aber einfach den Delegaten erstellt habe.</span><span class="sxs-lookup"><span data-stu-id="a60be-143">Notice above that I did not build the expression tree, but simply the delegate.</span></span> <span data-ttu-id="a60be-144">Mithilfe der `Expression`-Klasse können Sie keine Anweisungslambdas erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-144">Using the `Expression` class, you can't build statement lambdas.</span></span> <span data-ttu-id="a60be-145">Hier ist der Code, der erforderlich ist, um die gleiche Funktionalität zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a60be-145">Here's the code that is required to build the same functionality.</span></span> <span data-ttu-id="a60be-146">Es ist etwas kompliziert, dass es keine API zum Erstellen einer `while`-Schleife gibt. Stattdessen müssen Sie eine Schleife, die einen bedingten Test enthält, und ein Bezeichnungsziel erstellen, um die Schleife zu unterbrechen.</span><span class="sxs-lookup"><span data-stu-id="a60be-146">It's complicated by the fact that there isn't an API to build a `while` loop, instead you need to build a loop that contains a conditional test, and a label target to break out of the loop.</span></span> 
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -169,15 +169,15 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-Der Code zum Erstellen der Baumstruktur für die Fakultätsfunktion ist etwas länger, komplizierter, und er ist voll von Bezeichnungen und Break-Anweisungen und anderen Elemente, die wir in unseren täglichen Codieraufgaben vermeiden möchten. 
+<span data-ttu-id="a60be-147">Der Code zum Erstellen der Baumstruktur für die Fakultätsfunktion ist etwas länger, komplizierter, und er ist voll von Bezeichnungen und Break-Anweisungen und anderen Elemente, die wir in unseren täglichen Codieraufgaben vermeiden möchten.</span><span class="sxs-lookup"><span data-stu-id="a60be-147">The code to build the expression tree for the factorial function is quite a bit longer, more complicated, and it's riddled with labels and break statements and other elements we'd like to avoid in our everyday coding tasks.</span></span> 
 
-Für diesen Abschnitt habe ich auch den Besuchercode aktualisiert, um jeden Knoten in dieser Ausdrucksbaumstruktur zu finden, und Informationen zu den Knoten, die in diesem Beispiel erstellt wurden, zu schreiben. Sie können den Beispielcode vom Repository „dotnet/docs“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees). Experimentieren Sie selbst, indem Sie die Beispiele erstellen und ausführen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="a60be-148">Für diesen Abschnitt habe ich auch den Besuchercode aktualisiert, um jeden Knoten in dieser Ausdrucksbaumstruktur zu finden, und Informationen zu den Knoten, die in diesem Beispiel erstellt wurden, zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="a60be-148">For this section, I've also updated the visitor code to visit every node in this expression tree and write out information about the nodes that are created in this sample.</span></span> <span data-ttu-id="a60be-149">Sie können den Beispielcode vom Repository „dotnet/docs“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).</span><span class="sxs-lookup"><span data-stu-id="a60be-149">You can [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) at the dotnet/docs GitHub repository.</span></span> <span data-ttu-id="a60be-150">Experimentieren Sie selbst, indem Sie die Beispiele erstellen und ausführen.</span><span class="sxs-lookup"><span data-stu-id="a60be-150">Experiment for yourself by building and running the samples.</span></span> <span data-ttu-id="a60be-151">Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="a60be-151">For download instructions, see [Samples and Tutorials](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="examining-the-apis"></a>Untersuchen der APIs
+## <a name="examining-the-apis"></a><span data-ttu-id="a60be-152">Untersuchen der APIs</span><span class="sxs-lookup"><span data-stu-id="a60be-152">Examining the APIs</span></span>
 
-Die Ausdrucksbaumstruktur-APIs sind einige der Schwierigeren zum Navigieren in .NET Core, aber das ist in Ordnung. Ihr Zweck ist ein recht komplexes Unterfangen: Schreiben von Code, der Code zur Laufzeit generiert. Sie sind notwendigerweise kompliziert, um ein Gleichgewicht zwischen der Unterstützung aller verfügbaren Steuerungsstrukturen in der C#-Sprache bereitzustellen und um die Oberfläche der APIs so klein wie angemessenen zu halten. Diese Balance bedeutet, dass viele Steuerungsstrukturen nicht über die C#-Konstrukte dargestellt werden, jedoch über Konstrukte, die die zugrunde liegende Logik darstellen, die der Compiler von diesen Konstrukten mit höherer Ebene generiert. 
+<span data-ttu-id="a60be-153">Die Ausdrucksbaumstruktur-APIs sind einige der Schwierigeren zum Navigieren in .NET Core, aber das ist in Ordnung.</span><span class="sxs-lookup"><span data-stu-id="a60be-153">The expression tree APIs are some of the more difficult to navigate in .NET Core, but that's fine.</span></span> <span data-ttu-id="a60be-154">Ihr Zweck ist ein recht komplexes Unterfangen: Schreiben von Code, der Code zur Laufzeit generiert.</span><span class="sxs-lookup"><span data-stu-id="a60be-154">Their purpose is a rather complex undertaking: writing code that generates code at runtime.</span></span> <span data-ttu-id="a60be-155">Sie sind notwendigerweise kompliziert, um ein Gleichgewicht zwischen der Unterstützung aller verfügbaren Steuerungsstrukturen in der C#-Sprache bereitzustellen und um die Oberfläche der APIs so klein wie angemessenen zu halten.</span><span class="sxs-lookup"><span data-stu-id="a60be-155">They are necessarily complicated to provide a balance between supporting all the control structures available in the C# language and keeping the surface area of the APIs as small as reasonable.</span></span> <span data-ttu-id="a60be-156">Diese Balance bedeutet, dass viele Steuerungsstrukturen nicht über die C#-Konstrukte dargestellt werden, jedoch über Konstrukte, die die zugrunde liegende Logik darstellen, die der Compiler von diesen Konstrukten mit höherer Ebene generiert.</span><span class="sxs-lookup"><span data-stu-id="a60be-156">This balance means that many control structures are represented not by their C# constructs, but by constructs that represent the underlying logic that the compiler generates from these higher level constructs.</span></span> 
 
-Außerdem sind zu diesem Zeitpunkt C#-Ausdrücke vorhanden, die nicht direkt mit `Expression`-Klassenmethoden erstellt werden können. Im Allgemeinen werden dies die neuesten Operatoren und Ausdrücke sein, die in C# 5 und C# 6 hinzugefügt werden. (Z.B. `async`-Ausdrücke können nicht erstellt werden, und der neue `?.`-Operator kann nicht direkt erstellt werden.)
+<span data-ttu-id="a60be-157">Außerdem sind zu diesem Zeitpunkt C#-Ausdrücke vorhanden, die nicht direkt mit `Expression`-Klassenmethoden erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="a60be-157">Also, at this time, there are C# expressions that cannot be built directly using `Expression` class methods.</span></span> <span data-ttu-id="a60be-158">Im Allgemeinen werden dies die neuesten Operatoren und Ausdrücke sein, die in C# 5 und C# 6 hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="a60be-158">In general, these will be the newest operators and expressions added in C# 5 and C# 6.</span></span> <span data-ttu-id="a60be-159">(Z.B. `async`-Ausdrücke können nicht erstellt werden, und der neue `?.`-Operator kann nicht direkt erstellt werden.)</span><span class="sxs-lookup"><span data-stu-id="a60be-159">(For example, `async` expressions cannot be built, and the new `?.` operator cannot be directly created.)</span></span>
 
-[Weiter– Übersetzen von Ausdrücken](expression-trees-translating.md)
+[<span data-ttu-id="a60be-160">Weiter– Übersetzen von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="a60be-160">Next -- Translating Expressions</span></span>](expression-trees-translating.md)
 

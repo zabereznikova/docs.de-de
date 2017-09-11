@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9849428343d130bd363b8b53c8d143c4b8bf996a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 45edd22788c6e93efe335dec45c818cbcf233847
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="stop-statement-encountered"></a>Eine Stop-Anweisung wurde gefunden.
-Eine `Stop` -Anweisung, die die Ausführung unterbricht, wurde gefunden.  
+# <a name="stop-statement-encountered"></a><span data-ttu-id="7446f-102">Eine Stop-Anweisung wurde gefunden.</span><span class="sxs-lookup"><span data-stu-id="7446f-102">Stop statement encountered</span></span>
+<span data-ttu-id="7446f-103">Eine `Stop` -Anweisung, die die Ausführung unterbricht, wurde gefunden.</span><span class="sxs-lookup"><span data-stu-id="7446f-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7446f-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="7446f-104">To correct this error</span></span>  
   
-1.  Entfernen Sie die `Stop` -Anweisung.  
+1.  <span data-ttu-id="7446f-105">Entfernen Sie die `Stop` -Anweisung.</span><span class="sxs-lookup"><span data-stu-id="7446f-105">Remove the `Stop` statement.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Stop-Anweisung](../../visual-basic/language-reference/statements/stop-statement.md)   
- [Ablaufsteuerung: Zusammenfassung](../../visual-basic/language-reference/keywords/control-flow-summary.md)   
- [Stop-Anweisungen in Visual Basic](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)
+## <a name="see-also"></a><span data-ttu-id="7446f-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7446f-106">See Also</span></span>  
+ <span data-ttu-id="7446f-107">[Stop-Anweisung](../../visual-basic/language-reference/statements/stop-statement.md) </span><span class="sxs-lookup"><span data-stu-id="7446f-107">[Stop Statement](../../visual-basic/language-reference/statements/stop-statement.md) </span></span>  
+<span data-ttu-id="7446f-108"> [Ablaufsteuerung: Zusammenfassung](../../visual-basic/language-reference/keywords/control-flow-summary.md) </span><span class="sxs-lookup"><span data-stu-id="7446f-108"> [Control Flow Summary](../../visual-basic/language-reference/keywords/control-flow-summary.md) </span></span>  
+<span data-ttu-id="7446f-109"> [Stop-Anweisungen in Visual Basic](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="7446f-109"> [Stop Statements in Visual Basic](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)</span></span>

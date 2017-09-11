@@ -37,33 +37,33 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="--operator-c-reference"></a>Operator -= (C#-Referenz)
-Der Subtraktionszuweisungsoperator.  
+# <a name="--operator-c-reference"></a><span data-ttu-id="846f0-102">Operator -= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="846f0-102">-= Operator (C# Reference)</span></span>
+<span data-ttu-id="846f0-103">Der Subtraktionszuweisungsoperator.</span><span class="sxs-lookup"><span data-stu-id="846f0-103">The subtraction assignment operator.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Ein Ausdruck mit dem Zuweisungsoperator `-=`, z.B.  
+## <a name="remarks"></a><span data-ttu-id="846f0-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="846f0-104">Remarks</span></span>  
+ <span data-ttu-id="846f0-105">Ein Ausdruck mit dem Zuweisungsoperator `-=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="846f0-105">An expression using the `-=` assignment operator, such as</span></span>  
   
 ```  
 x -= y  
 ```  
   
- für die folgende Syntax:  
+ <span data-ttu-id="846f0-106">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="846f0-106">is equivalent to</span></span>  
   
 ```  
 x = x - y  
 ```  
   
- außer dass `x` nur einmal überprüft wird. Die Bedeutung des [Operators -](../../../csharp/language-reference/operators/subtraction-operator.md) hängt von den Typen `x` und `y` (Subtraktion für nummerische Operanden, Delegatentfernung für Delegatoperatoren usw.) ab.  
+ <span data-ttu-id="846f0-107">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="846f0-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="846f0-108">Die Bedeutung des [Operators -](../../../csharp/language-reference/operators/subtraction-operator.md) hängt von den Typen `x` und `y` (Subtraktion für nummerische Operanden, Delegatentfernung für Delegatoperatoren usw.) ab.</span><span class="sxs-lookup"><span data-stu-id="846f0-108">The meaning of the [- operator](../../../csharp/language-reference/operators/subtraction-operator.md) is dependent on the types of `x` and `y` (subtraction for numeric operands, delegate removal for delegate operands, and so forth).</span></span>  
   
- Der Operator `-=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[- Operator](../../../csharp/language-reference/operators/subtraction-operator.md) überladen (siehe [Operator](../../../csharp/language-reference/keywords/operator.md)).  
+ <span data-ttu-id="846f0-109">Der Operator `-=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[- Operator](../../../csharp/language-reference/operators/subtraction-operator.md) überladen (siehe [Operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="846f0-109">The `-=` operator cannot be overloaded directly, but user-defined types can overload the [- operator](../../../csharp/language-reference/operators/subtraction-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
- Der Operator -= wird auch in C# verwendet, um ein Ereignisabonnement zu kündigen. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ <span data-ttu-id="846f0-110">Der Operator -= wird auch in C# verwendet, um ein Ereignisabonnement zu kündigen.</span><span class="sxs-lookup"><span data-stu-id="846f0-110">The -= operator is also used in C# to unsubscribe from an event.</span></span> <span data-ttu-id="846f0-111">Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span><span class="sxs-lookup"><span data-stu-id="846f0-111">For more information, see [How to: Subscribe to and Unsubscribe from Events](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="846f0-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="846f0-112">Example</span></span>  
+ <span data-ttu-id="846f0-113">[!code-cs[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="846f0-113">[!code-cs[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="846f0-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="846f0-114">See Also</span></span>  
+ <span data-ttu-id="846f0-115">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="846f0-115">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="846f0-116">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="846f0-116">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="846f0-117">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="846f0-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

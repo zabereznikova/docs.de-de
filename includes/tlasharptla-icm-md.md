@@ -1,1 +1,1 @@
-Farbverwaltung (Image Color Management; ICM)
+<span data-ttu-id="81324-101">Farbverwaltung (Image Color Management; ICM)</span><span class="sxs-lookup"><span data-stu-id="81324-101">Image Color Management (ICM)</span></span>

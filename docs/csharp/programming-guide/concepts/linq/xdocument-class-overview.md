@@ -26,40 +26,40 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xdocument-class-overview-c"></a>Übersicht über die XDocument-Klasse (C#)
-Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse.  
+# <a name="xdocument-class-overview-c"></a><span data-ttu-id="13888-102">Übersicht über die XDocument-Klasse (C#)</span><span class="sxs-lookup"><span data-stu-id="13888-102">XDocument Class Overview (C#)</span></span>
+<span data-ttu-id="13888-103">Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="13888-103">This topic introduces the <xref:System.Xml.Linq.XDocument> class.</span></span>  
   
-## <a name="overview-of-the-xdocument-class"></a>Allgemeines  
- Die <xref:System.Xml.Linq.XDocument>-Klasse enthält die für ein gültiges XML-Dokument erforderlichen Informationen. Dazu gehören eine XML-Deklaration, Verarbeitungsanweisungen und Kommentare.  
+## <a name="overview-of-the-xdocument-class"></a><span data-ttu-id="13888-104">Allgemeines</span><span class="sxs-lookup"><span data-stu-id="13888-104">Overview of the XDocument class</span></span>  
+ <span data-ttu-id="13888-105">Die <xref:System.Xml.Linq.XDocument>-Klasse enthält die für ein gültiges XML-Dokument erforderlichen Informationen.</span><span class="sxs-lookup"><span data-stu-id="13888-105">The <xref:System.Xml.Linq.XDocument> class contains the information necessary for a valid XML document.</span></span> <span data-ttu-id="13888-106">Dazu gehören eine XML-Deklaration, Verarbeitungsanweisungen und Kommentare.</span><span class="sxs-lookup"><span data-stu-id="13888-106">This includes an XML declaration, processing instructions, and comments.</span></span>  
   
- Beachten Sie, dass Sie <xref:System.Xml.Linq.XDocument>-Objekte nur erstellen müssen, wenn Sie die spezifische Funktionalität benötigen, die von der <xref:System.Xml.Linq.XDocument>-Klasse bereitgestellt wird. In vielen Fällen können Sie direkt mit <xref:System.Xml.Linq.XElement> arbeiten. Das direkte Arbeiten mit <xref:System.Xml.Linq.XElement> ist ein einfacheres Programmiermodell.  
+ <span data-ttu-id="13888-107">Beachten Sie, dass Sie <xref:System.Xml.Linq.XDocument>-Objekte nur erstellen müssen, wenn Sie die spezifische Funktionalität benötigen, die von der <xref:System.Xml.Linq.XDocument>-Klasse bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="13888-107">Note that you only have to create <xref:System.Xml.Linq.XDocument> objects if you require the specific functionality provided by the <xref:System.Xml.Linq.XDocument> class.</span></span> <span data-ttu-id="13888-108">In vielen Fällen können Sie direkt mit <xref:System.Xml.Linq.XElement> arbeiten.</span><span class="sxs-lookup"><span data-stu-id="13888-108">In many circumstances, you can work directly with <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="13888-109">Das direkte Arbeiten mit <xref:System.Xml.Linq.XElement> ist ein einfacheres Programmiermodell.</span><span class="sxs-lookup"><span data-stu-id="13888-109">Working directly with <xref:System.Xml.Linq.XElement> is a simpler programming model.</span></span>  
   
- <xref:System.Xml.Linq.XDocument> wird von <xref:System.Xml.Linq.XContainer> abgeleitet. Deshalb kann es untergeordnete Knoten enthalten. <xref:System.Xml.Linq.XDocument>-Objekte können aber nur einen untergeordneten <xref:System.Xml.Linq.XElement>-Knoten besitzen. Dies spiegelt den XML-Standard wider, demzufolge in einem XML-Dokument nur ein Stammelement vorhanden sein darf.  
+ <span data-ttu-id="13888-110"><xref:System.Xml.Linq.XDocument> wird von <xref:System.Xml.Linq.XContainer> abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="13888-110"><xref:System.Xml.Linq.XDocument> derives from <xref:System.Xml.Linq.XContainer>.</span></span> <span data-ttu-id="13888-111">Deshalb kann es untergeordnete Knoten enthalten.</span><span class="sxs-lookup"><span data-stu-id="13888-111">Therefore, it can contain child nodes.</span></span> <span data-ttu-id="13888-112"><xref:System.Xml.Linq.XDocument>-Objekte können aber nur einen untergeordneten <xref:System.Xml.Linq.XElement>-Knoten besitzen.</span><span class="sxs-lookup"><span data-stu-id="13888-112">However, <xref:System.Xml.Linq.XDocument> objects can have only one child <xref:System.Xml.Linq.XElement> node.</span></span> <span data-ttu-id="13888-113">Dies spiegelt den XML-Standard wider, demzufolge in einem XML-Dokument nur ein Stammelement vorhanden sein darf.</span><span class="sxs-lookup"><span data-stu-id="13888-113">This reflects the XML standard that there can be only one root element in an XML document.</span></span>  
   
-## <a name="components-of-xdocument"></a>Komponenten von "XDocument"  
- Ein <xref:System.Xml.Linq.XDocument> kann die folgenden Elemente enthalten:  
+## <a name="components-of-xdocument"></a><span data-ttu-id="13888-114">Komponenten von "XDocument"</span><span class="sxs-lookup"><span data-stu-id="13888-114">Components of XDocument</span></span>  
+ <span data-ttu-id="13888-115">Ein <xref:System.Xml.Linq.XDocument> kann die folgenden Elemente enthalten:</span><span class="sxs-lookup"><span data-stu-id="13888-115">An <xref:System.Xml.Linq.XDocument> can contain the following elements:</span></span>  
   
--   genau ein <xref:System.Xml.Linq.XDeclaration>-Objekt: Mit <xref:System.Xml.Linq.XDeclaration> können Sie die wichtigen Teile einer XML-Deklaration angeben: die XML-Version, die Codierung des Dokuments und die Angabe, ob das XML-Dokument eigenständig ist.  
+-   <span data-ttu-id="13888-116">genau ein <xref:System.Xml.Linq.XDeclaration>-Objekt:</span><span class="sxs-lookup"><span data-stu-id="13888-116">One <xref:System.Xml.Linq.XDeclaration> object.</span></span> <span data-ttu-id="13888-117">Mit <xref:System.Xml.Linq.XDeclaration> können Sie die wichtigen Teile einer XML-Deklaration angeben: die XML-Version, die Codierung des Dokuments und die Angabe, ob das XML-Dokument eigenständig ist.</span><span class="sxs-lookup"><span data-stu-id="13888-117"><xref:System.Xml.Linq.XDeclaration> enables you to specify the pertinent parts of an XML declaration: the XML version, the encoding of the document, and whether the XML document is stand-alone.</span></span>  
   
--   genau ein <xref:System.Xml.Linq.XElement>-Objekt: Dies ist der Stammknoten des XML-Dokuments.  
+-   <span data-ttu-id="13888-118">genau ein <xref:System.Xml.Linq.XElement>-Objekt:</span><span class="sxs-lookup"><span data-stu-id="13888-118">One <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="13888-119">Dies ist der Stammknoten des XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="13888-119">This is the root node of the XML document.</span></span>  
   
--   eine beliebige Anzahl von <xref:System.Xml.Linq.XProcessingInstruction>-Objekten: Eine Verarbeitungsanweisung stellt der Anwendung, die das XML-Dokument verarbeitet, entsprechende Informationen zur Verarbeitung bereit.  
+-   <span data-ttu-id="13888-120">eine beliebige Anzahl von <xref:System.Xml.Linq.XProcessingInstruction>-Objekten:</span><span class="sxs-lookup"><span data-stu-id="13888-120">Any number of <xref:System.Xml.Linq.XProcessingInstruction> objects.</span></span> <span data-ttu-id="13888-121">Eine Verarbeitungsanweisung stellt der Anwendung, die das XML-Dokument verarbeitet, entsprechende Informationen zur Verarbeitung bereit.</span><span class="sxs-lookup"><span data-stu-id="13888-121">A processing instruction communicates information to an application that processes the XML.</span></span>  
   
--   eine beliebige Anzahl von <xref:System.Xml.Linq.XComment>-Objekten: Die Kommentare sind dem Stammelement nebengeordnet. Das <xref:System.Xml.Linq.XComment>-Objekt kann nicht das erste Argument in der Liste sein, da ein XML-Dokument nicht mit einem Kommentar beginnen darf.  
+-   <span data-ttu-id="13888-122">eine beliebige Anzahl von <xref:System.Xml.Linq.XComment>-Objekten:</span><span class="sxs-lookup"><span data-stu-id="13888-122">Any number of <xref:System.Xml.Linq.XComment> objects.</span></span> <span data-ttu-id="13888-123">Die Kommentare sind dem Stammelement nebengeordnet.</span><span class="sxs-lookup"><span data-stu-id="13888-123">The comments will be siblings to the root element.</span></span> <span data-ttu-id="13888-124">Das <xref:System.Xml.Linq.XComment>-Objekt kann nicht das erste Argument in der Liste sein, da ein XML-Dokument nicht mit einem Kommentar beginnen darf.</span><span class="sxs-lookup"><span data-stu-id="13888-124">The <xref:System.Xml.Linq.XComment> object cannot be the first argument in the list, because it is not valid for an XML document to start with a comment.</span></span>  
   
--   genau ein <xref:System.Xml.Linq.XDocumentType> für die DTD  
+-   <span data-ttu-id="13888-125">genau ein <xref:System.Xml.Linq.XDocumentType> für die DTD</span><span class="sxs-lookup"><span data-stu-id="13888-125">One <xref:System.Xml.Linq.XDocumentType> for the DTD.</span></span>  
   
- Beim Serialisieren eines <xref:System.Xml.Linq.XDocument>-Objekts enthält die Ausgabe eine XML-Deklaration. Dies gilt auch dann, wenn `XDocument.Declaration` auf `null` gesetzt ist, solange der Writer für `Writer.Settings.OmitXmlDeclaration` den Standardwert `false` festgelegt hat.  
+ <span data-ttu-id="13888-126">Beim Serialisieren eines <xref:System.Xml.Linq.XDocument>-Objekts enthält die Ausgabe eine XML-Deklaration. Dies gilt auch dann, wenn `XDocument.Declaration` auf `null` gesetzt ist, solange der Writer für `Writer.Settings.OmitXmlDeclaration` den Standardwert `false` festgelegt hat.</span><span class="sxs-lookup"><span data-stu-id="13888-126">When you serialize an <xref:System.Xml.Linq.XDocument>, even if `XDocument.Declaration` is `null`, the output will have an XML declaration if the writer has `Writer.Settings.OmitXmlDeclaration` set to `false` (the default).</span></span>  
   
- Standardmäßig legt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] die Version auf "1.0" und die Codierung auf "utf-8" fest.  
+ <span data-ttu-id="13888-127">Standardmäßig legt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] die Version auf "1.0" und die Codierung auf "utf-8" fest.</span><span class="sxs-lookup"><span data-stu-id="13888-127">By default, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sets the version to "1.0", and sets the encoding to "utf-8".</span></span>  
   
-## <a name="using-xelement-without-xdocument"></a>Verwenden von "XElement" ohne "XDocument"  
- Wie bereits erwähnt, ist die <xref:System.Xml.Linq.XElement>-Klasse die Hauptklasse in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Programmierschnittstelle. In vielen Fällen wird es für Ihre Anwendung nicht notwendig sein, ein Dokument zu erstellen. Dank der <xref:System.Xml.Linq.XElement>-Klasse können Sie eine XML-Struktur erstellen, dieser Struktur andere XML-Strukturen hinzufügen, die XML-Struktur ändern und die XML-Struktur speichern.  
+## <a name="using-xelement-without-xdocument"></a><span data-ttu-id="13888-128">Verwenden von "XElement" ohne "XDocument"</span><span class="sxs-lookup"><span data-stu-id="13888-128">Using XElement without XDocument</span></span>  
+ <span data-ttu-id="13888-129">Wie bereits erwähnt, ist die <xref:System.Xml.Linq.XElement>-Klasse die Hauptklasse in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Programmierschnittstelle.</span><span class="sxs-lookup"><span data-stu-id="13888-129">As previously mentioned, the <xref:System.Xml.Linq.XElement> class is the main class in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programming interface.</span></span> <span data-ttu-id="13888-130">In vielen Fällen wird es für Ihre Anwendung nicht notwendig sein, ein Dokument zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="13888-130">In many cases, your application will not require that you create a document.</span></span> <span data-ttu-id="13888-131">Dank der <xref:System.Xml.Linq.XElement>-Klasse können Sie eine XML-Struktur erstellen, dieser Struktur andere XML-Strukturen hinzufügen, die XML-Struktur ändern und die XML-Struktur speichern.</span><span class="sxs-lookup"><span data-stu-id="13888-131">By using the <xref:System.Xml.Linq.XElement> class, you can create an XML tree, add other XML trees to it, modify the XML tree, and save it.</span></span>  
   
-## <a name="using-xdocument"></a>Verwenden von "XDocument"  
- Zum Konstruieren eines <xref:System.Xml.Linq.XDocument> können Sie genauso die funktionale Konstruktion verwenden wie zum Konstruieren von <xref:System.Xml.Linq.XElement>-Objekten.  
+## <a name="using-xdocument"></a><span data-ttu-id="13888-132">Verwenden von "XDocument"</span><span class="sxs-lookup"><span data-stu-id="13888-132">Using XDocument</span></span>  
+ <span data-ttu-id="13888-133">Zum Konstruieren eines <xref:System.Xml.Linq.XDocument> können Sie genauso die funktionale Konstruktion verwenden wie zum Konstruieren von <xref:System.Xml.Linq.XElement>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="13888-133">To construct an <xref:System.Xml.Linq.XDocument>, use functional construction, just like you do to construct <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- Der folgende Code erstellt ein <xref:System.Xml.Linq.XDocument>-Objekt und die zugehörigen in ihm enthaltenen Objekte.  
+ <span data-ttu-id="13888-134">Der folgende Code erstellt ein <xref:System.Xml.Linq.XDocument>-Objekt und die zugehörigen in ihm enthaltenen Objekte.</span><span class="sxs-lookup"><span data-stu-id="13888-134">The following code creates an <xref:System.Xml.Linq.XDocument> object and its associated contained objects.</span></span>  
   
 ```csharp  
 XDocument d = new XDocument(  
@@ -84,7 +84,7 @@ Console.WriteLine(d);
 d.Save("test.xml");  
 ```  
   
- Wenn Sie sich die Datei <legacyBold>test.xml</legacyBold> ansehen, erhalten Sie die folgende Ausgabe:  
+ <span data-ttu-id="13888-135">Wenn Sie sich die Datei <legacyBold>test.xml</legacyBold> ansehen, erhalten Sie die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="13888-135">When you examine the file test.xml, you get the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -103,6 +103,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="13888-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="13888-136">See Also</span></span>  
+ [<span data-ttu-id="13888-137">LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))</span><span class="sxs-lookup"><span data-stu-id="13888-137">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
 

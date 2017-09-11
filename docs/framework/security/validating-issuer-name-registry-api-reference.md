@@ -21,6 +21,6 @@ ms.contentlocale: de-de
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="validating-issuer-name-registry-api-reference"></a>Validierung der Ausstellernamenregistration-API-Referenz
-Dieser Abschnitt enthält die API-Referenz für die WIF-Erweiterung zur Überprüfung der Ausstellernamenregistrierung.
+# <a name="validating-issuer-name-registry-api-reference"></a><span data-ttu-id="49468-102">Validierung der Ausstellernamenregistration-API-Referenz</span><span class="sxs-lookup"><span data-stu-id="49468-102">Validating Issuer Name Registry API Reference</span></span>
+<span data-ttu-id="49468-103">Dieser Abschnitt enthält die API-Referenz für die WIF-Erweiterung zur Überprüfung der Ausstellernamenregistrierung.</span><span class="sxs-lookup"><span data-stu-id="49468-103">This section contains the API Reference for the Validating Issuer Name Registry WIF Extension.</span></span>
 

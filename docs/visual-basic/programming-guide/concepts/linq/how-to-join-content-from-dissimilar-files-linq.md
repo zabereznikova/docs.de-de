@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 728c2b268b9ce6185f1c4ef8bd28915f1bafc8c5
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Gewusst wie: Verknüpfen des Inhalts von unähnlichen Dateien (LINQ) (Visual Basic)
-In diesem Beispiel wird veranschaulicht, wie Daten von zwei durch Kommas getrennten Dateien verknüpft, die einen gemeinsamen Wert aufweisen, der ein übereinstimmender Schlüssel verwendet wird. Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern kombinieren, oder aus einer Tabelle und aus einer Datei, ein anderes Format in eine neue Datei. Sie können das Beispiel funktioniert mit jeder Art von strukturiertem Text ändern.  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="106eb-102">Gewusst wie: Verknüpfen des Inhalts von unähnlichen Dateien (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="106eb-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="106eb-103">In diesem Beispiel wird veranschaulicht, wie Daten von zwei durch Kommas getrennten Dateien verknüpft, die einen gemeinsamen Wert aufweisen, der ein übereinstimmender Schlüssel verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="106eb-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="106eb-104">Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern kombinieren, oder aus einer Tabelle und aus einer Datei, ein anderes Format in eine neue Datei.</span><span class="sxs-lookup"><span data-stu-id="106eb-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="106eb-105">Sie können das Beispiel funktioniert mit jeder Art von strukturiertem Text ändern.</span><span class="sxs-lookup"><span data-stu-id="106eb-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Um die Datendateien zu erstellen.  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="106eb-106">Um die Datendateien zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="106eb-106">To create the data files</span></span>  
   
-1.  Kopieren Sie die folgenden Zeilen in eine Datei mit dem Namen scores.csv, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt Tabellenkalkulationsdaten dar. Spalte 1 ist die ID der Studierenden und Spalten 2 bis 5 werden die Testergebnisse.  
+1.  <span data-ttu-id="106eb-107">Kopieren Sie die folgenden Zeilen in eine Datei mit dem Namen scores.csv, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="106eb-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="106eb-108">Die Datei stellt Tabellenkalkulationsdaten dar.</span><span class="sxs-lookup"><span data-stu-id="106eb-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="106eb-109">Spalte 1 ist die ID der Studierenden und Spalten 2 bis 5 werden die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="106eb-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +49,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten von zwei durch Kommas getrenn
     122, 94, 92, 91, 91  
     ```  
   
-2.  Kopieren Sie die folgenden Zeilen in eine Datei mit dem Namen names.csv, und speichern Sie sie in Ihrem Projektordner. Die Datei darstellt, die eine Tabelle mit der Student Nachnamen, Vornamen und ID  
+2.  <span data-ttu-id="106eb-110">Kopieren Sie die folgenden Zeilen in eine Datei mit dem Namen names.csv, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="106eb-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="106eb-111">Die Datei darstellt, die eine Tabelle mit der Student Nachnamen, Vornamen und ID</span><span class="sxs-lookup"><span data-stu-id="106eb-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +66,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten von zwei durch Kommas getrenn
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="106eb-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="106eb-112">Example</span></span>  
   
 ```vb  
 Class JoinStrings  
@@ -134,9 +135,9 @@ End Class
 '12 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+## <a name="compiling-the-code"></a><span data-ttu-id="106eb-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="106eb-113">Compiling the Code</span></span>  
+ <span data-ttu-id="106eb-114">Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".</span><span class="sxs-lookup"><span data-stu-id="106eb-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="106eb-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="106eb-115">See Also</span></span>  
+ <span data-ttu-id="106eb-116">[LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="106eb-116">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="106eb-117"> [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="106eb-117"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

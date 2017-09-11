@@ -26,11 +26,11 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-parse-a-string-c"></a>Vorgehensweise: Parsen einer Zeichenfolge (C#)
-In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="b0e39-102">Vorgehensweise: Parsen einer Zeichenfolge (C#)</span><span class="sxs-lookup"><span data-stu-id="b0e39-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="b0e39-103">In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.</span><span class="sxs-lookup"><span data-stu-id="b0e39-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende C#-Code zeigt das Analysieren einer Zeichenfolge.  
+## <a name="example"></a><span data-ttu-id="b0e39-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b0e39-104">Example</span></span>  
+ <span data-ttu-id="b0e39-105">Der folgende C#-Code zeigt das Analysieren einer Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="b0e39-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,6 +62,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b0e39-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0e39-106">See Also</span></span>  
+ [<span data-ttu-id="b0e39-107">Analysieren von XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b0e39-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
 

@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Beispiel-XML-Datei: Typische Bestellung in einem Namespace
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dabei handelt es sich um einen typischen Auftrag. Der XML-Code befindet sich in einem Namespace.  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="e3f04-102">Beispiel-XML-Datei: Typische Bestellung in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="e3f04-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="e3f04-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="e3f04-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e3f04-104">Dabei handelt es sich um einen typischen Auftrag.</span><span class="sxs-lookup"><span data-stu-id="e3f04-104">This file is a typical purchase order.</span></span> <span data-ttu-id="e3f04-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="e3f04-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="e3f04-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="e3f04-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -71,6 +71,6 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="e3f04-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3f04-107">See Also</span></span>  
+ [<span data-ttu-id="e3f04-108">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e3f04-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -32,56 +32,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dac4b133882c043f9c84e936bad2e36f35fc4c33
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d15981a1a2fb31ba377066fa421f5a9979d47a12
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-emit-assembly-lterror-messagegt"></a>Assembly wurde nicht generiert: &lt;Fehlermeldung&gt;
-Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Compiler ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf, um eine Assembly mit einem Manifest zu erstellen. Dabei meldet der Linker einen Fehler in der Ausgabephase der Assemblyerstellung.  
+# <a name="unable-to-emit-assembly-lterror-messagegt"></a><span data-ttu-id="a8a08-102">Assembly wurde nicht generiert: &lt;Fehlermeldung&gt;</span><span class="sxs-lookup"><span data-stu-id="a8a08-102">Unable to emit assembly: &lt;error message&gt;</span></span>
+<span data-ttu-id="a8a08-103">Der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Compiler ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf, um eine Assembly mit einem Manifest zu erstellen. Dabei meldet der Linker einen Fehler in der Ausgabephase der Assemblyerstellung.</span><span class="sxs-lookup"><span data-stu-id="a8a08-103">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest, with the linker reporting an error in the emission stage of creating the assembly.</span></span>  
   
- **Fehler-ID:** BC30145  
+ <span data-ttu-id="a8a08-104">**Fehler-ID:** BC30145</span><span class="sxs-lookup"><span data-stu-id="a8a08-104">**Error ID:** BC30145</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a8a08-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a8a08-105">To correct this error</span></span>  
   
-1.  Überprüfen Sie die angezeigte Fehlermeldung an, und wenden Sie sich an das Thema [Al.exe Tool Fehler und Warnungen](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) Weitere Hinweise und Tipps.  
+1.  <span data-ttu-id="a8a08-106">Überprüfen Sie die angezeigte Fehlermeldung an, und wenden Sie sich an das Thema [Al.exe Tool Fehler und Warnungen](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) Weitere Hinweise und Tipps.</span><span class="sxs-lookup"><span data-stu-id="a8a08-106">Examine the quoted error message and consult the topic [Al.exe Tool Errors and Warnings](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) for further explanation and advice.</span></span>  
   
-2.  Wiederholen Sie die Assembly manuell zu signieren, entweder mithilfe der [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) oder [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  <span data-ttu-id="a8a08-107">Wiederholen Sie die Assembly manuell zu signieren, entweder mithilfe der [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) oder [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span><span class="sxs-lookup"><span data-stu-id="a8a08-107">Try signing the assembly manually, using either the [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) or the [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
-3.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
+3.  <span data-ttu-id="a8a08-108">Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a8a08-108">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-### <a name="to-sign-the-assembly-manually"></a>So signieren Sie die Assembly manuell  
+### <a name="to-sign-the-assembly-manually"></a><span data-ttu-id="a8a08-109">So signieren Sie die Assembly manuell</span><span class="sxs-lookup"><span data-stu-id="a8a08-109">To sign the assembly manually</span></span>  
   
-1.  Verwenden der [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23) zum Erstellen einer Datei Schlüsselpaar aus öffentlichem und privatem Schlüssel.  
+1.  <span data-ttu-id="a8a08-110">Verwenden der [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23) zum Erstellen einer Datei Schlüsselpaar aus öffentlichem und privatem Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="a8a08-110">Use the [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) to create a public/private key pair file.</span></span>  
   
-     Die Dateierweiterung dieser Datei lautet .snk.  
+     <span data-ttu-id="a8a08-111">Die Dateierweiterung dieser Datei lautet .snk.</span><span class="sxs-lookup"><span data-stu-id="a8a08-111">This file has a .snk extension.</span></span>  
   
-2.  Löschen Sie den COM-Verweis, der für den Fehler verantwortlich ist, aus Ihrem Projekt.  
+2.  <span data-ttu-id="a8a08-112">Löschen Sie den COM-Verweis, der für den Fehler verantwortlich ist, aus Ihrem Projekt.</span><span class="sxs-lookup"><span data-stu-id="a8a08-112">Delete the COM reference that is generating the error from your project.</span></span>  
   
-3.  Von der Windows **Start** auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2008**, zeigen Sie auf **Visual Studio-Tools**, und klicken Sie dann auf **Visual Studio 2008 Command Prompt**.  
+3.  <span data-ttu-id="a8a08-113">Von der Windows **Start** auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2008**, zeigen Sie auf **Visual Studio-Tools**, und klicken Sie dann auf **Visual Studio 2008 Command Prompt**.</span><span class="sxs-lookup"><span data-stu-id="a8a08-113">From the Windows **Start** menu, point to **Programs**, point to **Microsoft Visual Studio 2008**, point to **Visual Studio Tools**, and then click **Visual Studio 2008 Command Prompt**.</span></span>  
   
-4.  Wechseln Sie in das Verzeichnis, in das Sie den Assemblywrapper platzieren möchten.  
+4.  <span data-ttu-id="a8a08-114">Wechseln Sie in das Verzeichnis, in das Sie den Assemblywrapper platzieren möchten.</span><span class="sxs-lookup"><span data-stu-id="a8a08-114">Move to the directory where you want to place your assembly wrapper.</span></span>  
   
-5.  Geben Sie den folgenden Code ein.  
+5.  <span data-ttu-id="a8a08-115">Geben Sie den folgenden Code ein.</span><span class="sxs-lookup"><span data-stu-id="a8a08-115">Type the following code.</span></span>  
   
     ```  
     tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>  
     ```  
   
-     Im Folgenden finden Sie ein Beispiel für den von Ihnen eingegebenen Code.  
+     <span data-ttu-id="a8a08-116">Im Folgenden finden Sie ein Beispiel für den von Ihnen eingegebenen Code.</span><span class="sxs-lookup"><span data-stu-id="a8a08-116">An example of the code you might enter would be the following.</span></span>  
   
     ```  
     tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"  
     ```  
   
-     Verwenden Sie doppelte Anführungszeichen ("), wenn ein Pfad oder eine Datei Leerzeichen enthält.  
+     <span data-ttu-id="a8a08-117">Verwenden Sie doppelte Anführungszeichen ("), wenn ein Pfad oder eine Datei Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="a8a08-117">Use double quotation marks (") if a path or file contains spaces.</span></span>  
   
-6.  Fügen Sie in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] einen .NET Assembly-Verweis auf die gerade von Ihnen erstellte Datei hinzu.  
+6.  <span data-ttu-id="a8a08-118">Fügen Sie in [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] einen .NET Assembly-Verweis auf die gerade von Ihnen erstellte Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="a8a08-118">In [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], add a .NET Assembly reference to the file you just created.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Al.exe (Assemblylinker)](https://msdn.microsoft.com/library/c405shex)   
- [Al.exe-Tools-Fehler und Warnungen](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)   
- [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)   
- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="a8a08-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a8a08-119">See Also</span></span>  
+ <span data-ttu-id="a8a08-120">[Al.exe (Assemblylinker)](https://msdn.microsoft.com/library/c405shex) </span><span class="sxs-lookup"><span data-stu-id="a8a08-120">[Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) </span></span>  
+<span data-ttu-id="a8a08-121"> [Al.exe-Tools-Fehler und Warnungen](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) </span><span class="sxs-lookup"><span data-stu-id="a8a08-121"> [Al.exe Tool Errors and Warnings](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) </span></span>  
+<span data-ttu-id="a8a08-122"> [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23) </span><span class="sxs-lookup"><span data-stu-id="a8a08-122"> [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) </span></span>  
+<span data-ttu-id="a8a08-123"> [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114) </span><span class="sxs-lookup"><span data-stu-id="a8a08-123"> [How to: Create a Public-Private Key Pair](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114) </span></span>  
+<span data-ttu-id="a8a08-124"> [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="a8a08-124"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

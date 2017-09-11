@@ -38,26 +38,26 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltcodegt-c-programming-guide"></a>&lt;code&gt; (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+# <a name="ltcodegt-c-programming-guide"></a><span data-ttu-id="233b1-102">&lt;code&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="233b1-102">&lt;code&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="233b1-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="233b1-103">Syntax</span></span>  
   
 ```xml  
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="233b1-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="233b1-104">Parameters</span></span>  
  `content`  
- Der Text, der als Code gekennzeichnet werden soll.  
+ <span data-ttu-id="233b1-105">Der Text, der als Code gekennzeichnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="233b1-105">The text you want marked as code.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Die \<code>-Tag ermöglicht es, mehrere Zeilen als Code anzugeben. Mit [\<c>](../../../csharp/programming-guide/xmldoc/code-inline.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.  
+## <a name="remarks"></a><span data-ttu-id="233b1-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="233b1-106">Remarks</span></span>  
+ <span data-ttu-id="233b1-107">Die \<code>-Tag ermöglicht es, mehrere Zeilen als Code anzugeben.</span><span class="sxs-lookup"><span data-stu-id="233b1-107">The \<code> tag gives you a way to indicate multiple lines as code.</span></span> <span data-ttu-id="233b1-108">Mit [\<c>](../../../csharp/programming-guide/xmldoc/code-inline.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="233b1-108">Use [\<c>](../../../csharp/programming-guide/xmldoc/code-inline.md) to indicate that text within a description should be marked as code.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ <span data-ttu-id="233b1-109">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="233b1-109">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](../../../csharp/programming-guide/xmldoc/example.md).  
+## <a name="example"></a><span data-ttu-id="233b1-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="233b1-110">Example</span></span>  
+ <span data-ttu-id="233b1-111">Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](../../../csharp/programming-guide/xmldoc/example.md).</span><span class="sxs-lookup"><span data-stu-id="233b1-111">See the [\<example>](../../../csharp/programming-guide/xmldoc/example.md) topic for an example of how to use the \<code> tag.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="233b1-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="233b1-112">See Also</span></span>  
+ <span data-ttu-id="233b1-113">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="233b1-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="233b1-114">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="233b1-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

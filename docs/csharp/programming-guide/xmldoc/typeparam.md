@@ -37,34 +37,34 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="7af61-102">&lt;typeparam&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="7af61-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="7af61-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="7af61-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="7af61-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="7af61-104">Parameters</span></span>  
  `name`  
- Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
+ <span data-ttu-id="7af61-105">Der Name des Typparameters.</span><span class="sxs-lookup"><span data-stu-id="7af61-105">The name of the type parameter.</span></span> <span data-ttu-id="7af61-106">Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").</span><span class="sxs-lookup"><span data-stu-id="7af61-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- Eine Beschreibung für den Typparameter.  
+ <span data-ttu-id="7af61-107">Eine Beschreibung für den Typparameter.</span><span class="sxs-lookup"><span data-stu-id="7af61-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Die `<typeparam>` -Tag sollte im Kommentar für einen generischen Typ oder eine Methodendeklaration verwendet werden, um einen Typparameter zu beschreiben. Fügen Sie ein Tag für jeden Typparameter des generischen Typs oder der Methode hinzu.  
+## <a name="remarks"></a><span data-ttu-id="7af61-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7af61-108">Remarks</span></span>  
+ <span data-ttu-id="7af61-109">Die `<typeparam>` -Tag sollte im Kommentar für einen generischen Typ oder eine Methodendeklaration verwendet werden, um einen Typparameter zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="7af61-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="7af61-110">Fügen Sie ein Tag für jeden Typparameter des generischen Typs oder der Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="7af61-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- Weitere Informationen finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
+ <span data-ttu-id="7af61-111">Weitere Informationen finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="7af61-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- Der Text für die `<typeparam>` Tag wird in IntelliSense angezeigt werden, dem [Objekt Browserfenster](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) Webbericht für Codekommentare.  
+ <span data-ttu-id="7af61-112">Der Text für die `<typeparam>` Tag wird in IntelliSense angezeigt werden, dem [Objekt Browserfenster](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) Webbericht für Codekommentare.</span><span class="sxs-lookup"><span data-stu-id="7af61-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) code comment web report.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ <span data-ttu-id="7af61-113">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="7af61-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[CsProgGuideDocComments #13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
+## <a name="example"></a><span data-ttu-id="7af61-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7af61-114">Example</span></span>  
+ <span data-ttu-id="7af61-115">[!code-cs[CsProgGuideDocComments #13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7af61-115">[!code-cs[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="7af61-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7af61-116">See Also</span></span>  
+ <span data-ttu-id="7af61-117">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="7af61-117">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="7af61-118">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7af61-118">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="7af61-119">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="7af61-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

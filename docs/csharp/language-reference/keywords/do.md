@@ -37,27 +37,27 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="do-c-reference"></a>do (C#-Referenz)
-Die `do`-Anweisung führt eine Anweisung oder einen Block wiederholt aus, bis ein bestimmter Ausdruck `false` ergibt. Der Text der Schleife muss in geschweifte Klammern eingeschlossen werden, `{}`, wenn es nicht aus einer einzelnen Anweisung besteht. In diesem Fall sind die Klammern optional.  
+# <a name="do-c-reference"></a><span data-ttu-id="ea2e2-102">do (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ea2e2-102">do (C# Reference)</span></span>
+<span data-ttu-id="ea2e2-103">Die `do`-Anweisung führt eine Anweisung oder einen Block wiederholt aus, bis ein bestimmter Ausdruck `false` ergibt.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-103">The `do` statement executes a statement or a block of statements repeatedly until a specified expression evaluates to `false`.</span></span> <span data-ttu-id="ea2e2-104">Der Text der Schleife muss in geschweifte Klammern eingeschlossen werden, `{}`, wenn es nicht aus einer einzelnen Anweisung besteht.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-104">The body of the loop must be enclosed in braces, `{}`, unless it consists of a single statement.</span></span> <span data-ttu-id="ea2e2-105">In diesem Fall sind die Klammern optional.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-105">In that case, the braces are optional.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel führen die `do-while`-Schleifenanweisungen solange aus, bis die Variable `x` kleiner als 5 ist.  
+## <a name="example"></a><span data-ttu-id="ea2e2-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ea2e2-106">Example</span></span>  
+ <span data-ttu-id="ea2e2-107">Im folgenden Beispiel führen die `do-while`-Schleifenanweisungen solange aus, bis die Variable `x` kleiner als 5 ist.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-107">In the following example, the `do-while` loop statements execute as long as the variable `x` is less than 5.</span></span>  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
+ <span data-ttu-id="ea2e2-108">[!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea2e2-108">[!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]</span></span>  
   
- Im Gegensatz zur [while](../../../csharp/language-reference/keywords/while.md)-Anweisung wird eine `do-while`-Schleife einmal ausgeführt, bevor der bedingte Ausdruck ausgewertet wird.  
+ <span data-ttu-id="ea2e2-109">Im Gegensatz zur [while](../../../csharp/language-reference/keywords/while.md)-Anweisung wird eine `do-while`-Schleife einmal ausgeführt, bevor der bedingte Ausdruck ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-109">Unlike the [while](../../../csharp/language-reference/keywords/while.md) statement, a `do-while` loop is executed one time before the conditional expression is evaluated.</span></span>  
   
- An jedem Punkt im `do-while`-Block können Sie mithilfe der [break](../../../csharp/language-reference/keywords/break.md)-Anweisung aus der Schleife ausbrechen. Sie können mithilfe der [continue](../../../csharp/language-reference/keywords/continue.md)-Anweisung direkt die `while`-Ausdrucksauswertung der Anweisung ausführen. Wenn der `while`-Ausdruck TRUE ergibt, wird die Ausführung bei der ersten Anweisung in der Schleife fortgesetzt. Wenn der Ausdruck FALSE ergibt, wird die Ausführung bei der ersten Anweisung nach der `do-while`-Schleife fortgesetzt.  
+ <span data-ttu-id="ea2e2-110">An jedem Punkt im `do-while`-Block können Sie mithilfe der [break](../../../csharp/language-reference/keywords/break.md)-Anweisung aus der Schleife ausbrechen.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-110">At any point in the `do-while` block, you can break out of the loop using the [break](../../../csharp/language-reference/keywords/break.md) statement.</span></span> <span data-ttu-id="ea2e2-111">Sie können mithilfe der [continue](../../../csharp/language-reference/keywords/continue.md)-Anweisung direkt die `while`-Ausdrucksauswertung der Anweisung ausführen.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-111">You can step directly to the `while` expression evaluation statement by using the [continue](../../../csharp/language-reference/keywords/continue.md) statement.</span></span> <span data-ttu-id="ea2e2-112">Wenn der `while`-Ausdruck TRUE ergibt, wird die Ausführung bei der ersten Anweisung in der Schleife fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-112">If the `while` expression evaluates to true, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="ea2e2-113">Wenn der Ausdruck FALSE ergibt, wird die Ausführung bei der ersten Anweisung nach der `do-while`-Schleife fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-113">If the expression evaluates to false, execution continues at the first statement after the `do-while` loop.</span></span>  
   
- Eine `do-while`-Schleife kann durch die Anweisungen [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md) beendet werden.  
+ <span data-ttu-id="ea2e2-114">Eine `do-while`-Schleife kann durch die Anweisungen [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) oder [throw](../../../csharp/language-reference/keywords/throw.md) beendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea2e2-114">A `do-while` loop can also be exited by the [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statements.</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="ea2e2-115">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="ea2e2-115">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [do-while-Anweisung (C++)](/cpp/cpp/do-while-statement-cpp)   
- [Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)
+## <a name="see-also"></a><span data-ttu-id="ea2e2-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea2e2-116">See Also</span></span>  
+ <span data-ttu-id="ea2e2-117">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ea2e2-117">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ea2e2-118">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ea2e2-118">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ea2e2-119">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="ea2e2-119">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="ea2e2-120">[do-while-Anweisung (C++)](/cpp/cpp/do-while-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="ea2e2-120">[do-while Statement (C++)](/cpp/cpp/do-while-statement-cpp) </span></span>  
+ [<span data-ttu-id="ea2e2-121">Iterationsanweisungen</span><span class="sxs-lookup"><span data-stu-id="ea2e2-121">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
 

@@ -18,22 +18,22 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="c-tutorials"></a>C#-Tutorials
+# <a name="c-tutorials"></a><span data-ttu-id="d5168-104">C#-Tutorials</span><span class="sxs-lookup"><span data-stu-id="d5168-104">C# Tutorials</span></span>
 
-Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:
+<span data-ttu-id="d5168-105">Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:</span><span class="sxs-lookup"><span data-stu-id="d5168-105">The following tutorials enable you to build C# programs using [.NET Core](../../core/index.md):</span></span>
 
-* [Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.
-* [REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.
+* <span data-ttu-id="d5168-106">[Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.</span><span class="sxs-lookup"><span data-stu-id="d5168-106">[Console Application](console-teleprompter.md): demonstrates Console I/O, the structure of a Console application, and the basics of the Task based asynchronous programming model.</span></span>
+* <span data-ttu-id="d5168-107">[REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.</span><span class="sxs-lookup"><span data-stu-id="d5168-107">[REST Client](console-webapiclient.md): demonstrates web communications, JSON serialization, and Object Oriented features in the C# language.</span></span>
 
-* [Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.
+* <span data-ttu-id="d5168-108">[Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="d5168-108">[Inheritance in C# and .NET](inheritance.md): demonstrates inheritance in C#, including the use of inheritance to define base classes, abstract base classes, and derived classes.</span></span>
 
-* [Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.
+* <span data-ttu-id="d5168-109">[Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.</span><span class="sxs-lookup"><span data-stu-id="d5168-109">[Working with LINQ](working-with-linq.md): demonstrates many of the features of LINQ and the language elements that support it.</span></span>
 
-* [In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.
+* <span data-ttu-id="d5168-110">[In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.</span><span class="sxs-lookup"><span data-stu-id="d5168-110">[Microservices hosted in Docker](microservices.md): demonstrates building an ASP.NET Core microservice and hosting it in Docker.</span></span>
 
-* [Vererbung](inheritance.md): veranschaulicht die Wiederverwendung von Code in C# durch Klassen und Schnittstellenvererbung.
+* <span data-ttu-id="d5168-111">[Vererbung](inheritance.md): veranschaulicht die Wiederverwendung von Code in C# durch Klassen und Schnittstellenvererbung.</span><span class="sxs-lookup"><span data-stu-id="d5168-111">[Inheritance](inheritance.md): demonstrates how class and interface inheritance provide code reuse in C#.</span></span>
 
-* [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht zahlreiche Verwendungsmöglichkeiten für die `$`-Zeichenfolgeninterpolation in C#.
+* <span data-ttu-id="d5168-112">[Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht zahlreiche Verwendungsmöglichkeiten für die `$`-Zeichenfolgeninterpolation in C#.</span><span class="sxs-lookup"><span data-stu-id="d5168-112">[String Interpolation](string-interpolation.md): demonstrates many of the uses for the `$` string interpolation in C#.</span></span>
 
-* [Verwenden von Attributen](attributes.md): Erstellen und Verwenden von Attributen in C#.
+* <span data-ttu-id="d5168-113">[Verwenden von Attributen](attributes.md): Erstellen und Verwenden von Attributen in C#.</span><span class="sxs-lookup"><span data-stu-id="d5168-113">[Using Attributes](attributes.md): how to create and use attributes in C#.</span></span>
 

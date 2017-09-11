@@ -1,1 +1,1 @@
-dpi
+<span data-ttu-id="7871b-101">dpi</span><span class="sxs-lookup"><span data-stu-id="7871b-101">dpi</span></span>

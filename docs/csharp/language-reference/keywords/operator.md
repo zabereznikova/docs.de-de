@@ -37,22 +37,22 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operator-c-reference"></a>operator (C#-Referenz)
-Verwenden Sie das Schlüsselwort `operator`, um einen integrierten Operator zu überladen oder um eine benutzerdefinierte Konvertierung in einer Klassen- oder Strukturdeklaration bereitzustellen.  
+# <a name="operator-c-reference"></a><span data-ttu-id="bb7a6-102">operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bb7a6-102">operator (C# Reference)</span></span>
+<span data-ttu-id="bb7a6-103">Verwenden Sie das Schlüsselwort `operator`, um einen integrierten Operator zu überladen oder um eine benutzerdefinierte Konvertierung in einer Klassen- oder Strukturdeklaration bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="bb7a6-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Die Folgende ist eine stark vereinfachte Klasse für Bruchzahlen. Sie überlädt die Operatoren „+“ und „*“, um Addition und Multiplikation bei Brüchen auszuführen, und stellt auch einen Konvertierungsoperator bereit, der einen Bruchtyp in einen doppelten Typ konvertiert.  
+## <a name="example"></a><span data-ttu-id="bb7a6-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bb7a6-104">Example</span></span>  
+ <span data-ttu-id="bb7a6-105">Die Folgende ist eine stark vereinfachte Klasse für Bruchzahlen.</span><span class="sxs-lookup"><span data-stu-id="bb7a6-105">The following is a very simplified class for fractional numbers.</span></span> <span data-ttu-id="bb7a6-106">Sie überlädt die Operatoren „+“ und „*“, um Addition und Multiplikation bei Brüchen auszuführen, und stellt auch einen Konvertierungsoperator bereit, der einen Bruchtyp in einen doppelten Typ konvertiert.</span><span class="sxs-lookup"><span data-stu-id="bb7a6-106">It overloads the + and * operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a Fraction type to a double type.</span></span>  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
+ <span data-ttu-id="bb7a6-107">[!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="bb7a6-107">[!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="bb7a6-108">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="bb7a6-108">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [implicit](../../../csharp/language-reference/keywords/implicit.md)   
- [explicit](../../../csharp/language-reference/keywords/explicit.md)   
- [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+## <a name="see-also"></a><span data-ttu-id="bb7a6-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bb7a6-109">See Also</span></span>  
+ <span data-ttu-id="bb7a6-110">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bb7a6-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bb7a6-111">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bb7a6-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="bb7a6-112">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="bb7a6-112">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="bb7a6-113">[implicit](../../../csharp/language-reference/keywords/implicit.md) </span><span class="sxs-lookup"><span data-stu-id="bb7a6-113">[implicit](../../../csharp/language-reference/keywords/implicit.md) </span></span>  
+ <span data-ttu-id="bb7a6-114">[explicit](../../../csharp/language-reference/keywords/explicit.md) </span><span class="sxs-lookup"><span data-stu-id="bb7a6-114">[explicit](../../../csharp/language-reference/keywords/explicit.md) </span></span>  
+ [<span data-ttu-id="bb7a6-115">Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen</span><span class="sxs-lookup"><span data-stu-id="bb7a6-115">How to: Implement User-Defined Conversions Between Structs</span></span>](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 

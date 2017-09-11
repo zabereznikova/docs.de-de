@@ -37,31 +37,31 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-gt-operator-c-reference"></a>-&gt;-Operator (C#-Referenz)
-Der Operator `->` kombiniert Zeigerdereferenzierung und Memberzugriff.  
+# <a name="-gt-operator-c-reference"></a><span data-ttu-id="3318d-102">-&gt;-Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="3318d-102">-&gt; Operator (C# Reference)</span></span>
+<span data-ttu-id="3318d-103">Der Operator `->` kombiniert Zeigerdereferenzierung und Memberzugriff.</span><span class="sxs-lookup"><span data-stu-id="3318d-103">The `->` operator combines pointer dereferencing and member access.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Ein Ausdruck der Form  
+## <a name="remarks"></a><span data-ttu-id="3318d-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3318d-104">Remarks</span></span>  
+ <span data-ttu-id="3318d-105">Ein Ausdruck der Form</span><span class="sxs-lookup"><span data-stu-id="3318d-105">An expression of the form,</span></span>  
   
 ```  
 x->y  
 ```  
   
- (wobei `x` ein Zeiger vom Typ `T*` und `y` ein Member von `T` ist) ist äquivalent zu  
+ <span data-ttu-id="3318d-106">(wobei `x` ein Zeiger vom Typ `T*` und `y` ein Member von `T` ist) ist äquivalent zu</span><span class="sxs-lookup"><span data-stu-id="3318d-106">(where `x` is a pointer of type `T*` and `y` is a member of `T`) is equivalent to,</span></span>  
   
 ```  
 (*x).y  
 ```  
   
- Der Operator `->` kann nur in Code verwendet werden, der als [unsicher](../../../csharp/language-reference/keywords/unsafe.md) markiert ist.  
+ <span data-ttu-id="3318d-107">Der Operator `->` kann nur in Code verwendet werden, der als [unsicher](../../../csharp/language-reference/keywords/unsafe.md) markiert ist.</span><span class="sxs-lookup"><span data-stu-id="3318d-107">The `->` operator can be used only in code that is marked as [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
   
- Operator `->` kann nicht überladen werden.  
+ <span data-ttu-id="3318d-108">Operator `->` kann nicht überladen werden.</span><span class="sxs-lookup"><span data-stu-id="3318d-108">The `->` operator cannot be overloaded.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="3318d-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3318d-109">Example</span></span>  
+ <span data-ttu-id="3318d-110">[!code-cs[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="3318d-110">[!code-cs[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="3318d-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3318d-111">See Also</span></span>  
+ <span data-ttu-id="3318d-112">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="3318d-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="3318d-113">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="3318d-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="3318d-114">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="3318d-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

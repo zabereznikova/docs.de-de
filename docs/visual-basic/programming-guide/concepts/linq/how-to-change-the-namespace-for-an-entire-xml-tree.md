@@ -15,20 +15,21 @@ ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af216e734c85806056e37d92733a3e4d49f8b73c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2a77a16f1f0fc75636cea3ea5872948e9a81cc10
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Gewusst wie: Ändern Sie den Namespace für eine ganze XML-Struktur (Visual Basic)
-Es kann passieren, dass Sie den Namespace für ein Element oder Attribut programmgesteuert ändern müssen. Mit LINQ to XML ist dies ganz einfach. Die <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>-Eigenschaft festgelegt werden kann.</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> Die <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>Eigenschaft kann nicht festgelegt werden, aber Sie können einfach kopieren, die Attribute in einer <xref:System.Collections.Generic.List%601?displayProperty=fullName>, die vorhandenen Attribute entfernen und dann neue Attribute hinzufügen, die im neuen gewünschten Namespace befinden.</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a><span data-ttu-id="60154-102">Gewusst wie: Ändern Sie den Namespace für eine ganze XML-Struktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60154-102">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="60154-103">Es kann passieren, dass Sie den Namespace für ein Element oder Attribut programmgesteuert ändern müssen.</span><span class="sxs-lookup"><span data-stu-id="60154-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="60154-104">Mit LINQ to XML ist dies ganz einfach.</span><span class="sxs-lookup"><span data-stu-id="60154-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="60154-105">Die <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>-Eigenschaft festgelegt werden kann.</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="60154-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> property can be set.</span></span> <span data-ttu-id="60154-106">Die <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>Eigenschaft kann nicht festgelegt werden, aber Sie können einfach kopieren, die Attribute in einer <xref:System.Collections.Generic.List%601?displayProperty=fullName>, die vorhandenen Attribute entfernen und dann neue Attribute hinzufügen, die im neuen gewünschten Namespace befinden.</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="60154-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=fullName>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ <span data-ttu-id="60154-107">Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="60154-107">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende Code erstellt zwei XML-Strukturen, die sich in keinem Namespace befinden. Er ändert dann den Namespace beider Strukturen und fasst die Strukturen in einer gemeinsamen Struktur zusammen.  
+## <a name="example"></a><span data-ttu-id="60154-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="60154-108">Example</span></span>  
+ <span data-ttu-id="60154-109">Der folgende Code erstellt zwei XML-Strukturen, die sich in keinem Namespace befinden.</span><span class="sxs-lookup"><span data-stu-id="60154-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="60154-110">Er ändert dann den Namespace beider Strukturen und fasst die Strukturen in einer gemeinsamen Struktur zusammen.</span><span class="sxs-lookup"><span data-stu-id="60154-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```vb  
 Dim tree1 As XElement = _  
@@ -76,7 +77,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="60154-111">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="60154-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -89,5 +90,5 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="60154-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60154-112">See Also</span></span>  
+ [<span data-ttu-id="60154-113">Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60154-113">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

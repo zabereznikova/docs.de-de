@@ -18,19 +18,19 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="strongly-typed-delegates"></a>Stark typisierte Delegate
+# <a name="strongly-typed-delegates"></a><span data-ttu-id="6be8c-104">Stark typisierte Delegate</span><span class="sxs-lookup"><span data-stu-id="6be8c-104">Strongly Typed Delegates</span></span>
 
-[Vorheriges](delegate-class.md)
+[<span data-ttu-id="6be8c-105">Vorheriges</span><span class="sxs-lookup"><span data-stu-id="6be8c-105">Previous</span></span>](delegate-class.md)
 
-Im vorherigen Artikel haben Sie gesehen, dass bestimmte Delegaten mithilfe des `delegate`-Schlüsselworts erstellen. 
+<span data-ttu-id="6be8c-106">Im vorherigen Artikel haben Sie gesehen, dass bestimmte Delegaten mithilfe des `delegate`-Schlüsselworts erstellen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-106">In the previous article, you saw that you create specific delegate types using the `delegate` keyword.</span></span> 
 
-Die abstrakte Klasse für den Delegaten stellt die Infrastruktur für die lose Kopplung und den losen Aufruf bereit. Konkrete Delegattypen werden durch die Einführung und das Erzwingen von Typsicherheit für die Methoden, die zur Aufrufliste für ein Delegatobjekt hinzugefügt werden, viel nützlicher. Wenn Sie das `delegate`-Schlüsselwort verwenden und einen konkreten Delegattyp definieren, generiert der Compiler diese Methoden.
+<span data-ttu-id="6be8c-107">Die abstrakte Klasse für den Delegaten stellt die Infrastruktur für die lose Kopplung und den losen Aufruf bereit.</span><span class="sxs-lookup"><span data-stu-id="6be8c-107">The abstract Delegate class provide the infrastructure for loose coupling and invocation.</span></span> <span data-ttu-id="6be8c-108">Konkrete Delegattypen werden durch die Einführung und das Erzwingen von Typsicherheit für die Methoden, die zur Aufrufliste für ein Delegatobjekt hinzugefügt werden, viel nützlicher.</span><span class="sxs-lookup"><span data-stu-id="6be8c-108">Concrete Delegate types become much more useful by embracing and enforcing type safety for the methods that are added to the invocation list for a delegate object.</span></span> <span data-ttu-id="6be8c-109">Wenn Sie das `delegate`-Schlüsselwort verwenden und einen konkreten Delegattyp definieren, generiert der Compiler diese Methoden.</span><span class="sxs-lookup"><span data-stu-id="6be8c-109">When you use the `delegate` keyword and define a concrete delegate type, the compiler generates those methods.</span></span>
 
-In der Praxis würde dies zur Erstellung neuer Delegattypen führen, wann immer Sie eine andere Methodensignatur benötigen. Diese Arbeit könnte mit der Zeit ermüdend werden. Jede neue Funktion erfordert neue Delegattypen.
+<span data-ttu-id="6be8c-110">In der Praxis würde dies zur Erstellung neuer Delegattypen führen, wann immer Sie eine andere Methodensignatur benötigen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-110">In practice, this would lead to creating new delegate types whenever you need a different method signature.</span></span> <span data-ttu-id="6be8c-111">Diese Arbeit könnte mit der Zeit ermüdend werden.</span><span class="sxs-lookup"><span data-stu-id="6be8c-111">This work could get tedious after a time.</span></span> <span data-ttu-id="6be8c-112">Jede neue Funktion erfordert neue Delegattypen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-112">Every new feature requires new delegate types.</span></span>
 
-Glücklicherweise ist dies nicht erforderlich. Der .NET Core Framework enthält verschiedene Typen, die Sie wiederverwenden können, wenn Sie Delegattypen benötigen. Dies sind [generische](programming-guide/generics/index.md) Definitionen, damit Sie Anpassungen deklarieren können, wenn Sie neue Methodendeklarationen benötigen. 
+<span data-ttu-id="6be8c-113">Glücklicherweise ist dies nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6be8c-113">Thankfully, this isn't necessary.</span></span> <span data-ttu-id="6be8c-114">Der .NET Core Framework enthält verschiedene Typen, die Sie wiederverwenden können, wenn Sie Delegattypen benötigen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-114">The .NET Core framework contains several types that you can reuse whenever you need delegate types.</span></span> <span data-ttu-id="6be8c-115">Dies sind [generische](programming-guide/generics/index.md) Definitionen, damit Sie Anpassungen deklarieren können, wenn Sie neue Methodendeklarationen benötigen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-115">These are [generic](programming-guide/generics/index.md) definitions so you can declare customizations when you need new method declarations.</span></span> 
 
-Der erste dieser Typen ist der @System.Action-Typ, und verschiedene Varianten:
+<span data-ttu-id="6be8c-116">Der erste dieser Typen ist der @System.Action-Typ, und verschiedene Varianten:</span><span class="sxs-lookup"><span data-stu-id="6be8c-116">The first of these types is the @System.Action type, and several variations:</span></span>
 
 ```csharp
 public delegate void Action();
@@ -39,14 +39,14 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 // Other variations removed for brevity.
 ```
 
-Die `in`-Modifizierer im generischen Typargument wird in diesem Artikel in Kovarianz behandelt.
+<span data-ttu-id="6be8c-117">Die `in`-Modifizierer im generischen Typargument wird in diesem Artikel in Kovarianz behandelt.</span><span class="sxs-lookup"><span data-stu-id="6be8c-117">The `in` modifier on the generic type argument is covered in the article on covariance.</span></span>
 
-Es gibt Variationen des `Action`-Delegaten, der bis zu 16 Argumente enthält, wie z.B. @System.Action%6016.
-Es ist wichtig, dass diese Definitionen andere generische Argumente für jeden der Delegatargumente verwenden: Das bietet Ihnen maximale Flexibilität. Die Methodenargumente müssen nicht, aber können der gleiche Typ sein.
+<span data-ttu-id="6be8c-118">Es gibt Variationen des `Action`-Delegaten, der bis zu 16 Argumente enthält, wie z.B. @System.Action%6016.</span><span class="sxs-lookup"><span data-stu-id="6be8c-118">There are variations of the `Action` delegate that contain up to 16 arguments such as @System.Action%6016 .</span></span>
+<span data-ttu-id="6be8c-119">Es ist wichtig, dass diese Definitionen andere generische Argumente für jeden der Delegatargumente verwenden: Das bietet Ihnen maximale Flexibilität.</span><span class="sxs-lookup"><span data-stu-id="6be8c-119">It's important that these definitions use different generic arguments for each of the delegate arguments: That gives you maximum flexibility.</span></span> <span data-ttu-id="6be8c-120">Die Methodenargumente müssen nicht, aber können der gleiche Typ sein.</span><span class="sxs-lookup"><span data-stu-id="6be8c-120">The method arguments need not be, but may be, the same type.</span></span>
 
-Verwenden Sie einen der `Action`-Typen für jeden Delegattyp, der über einen void-Rückgabetyp verfügt.
+<span data-ttu-id="6be8c-121">Verwenden Sie einen der `Action`-Typen für jeden Delegattyp, der über einen void-Rückgabetyp verfügt.</span><span class="sxs-lookup"><span data-stu-id="6be8c-121">Use one of the `Action` types for any delegate type that has a void return type.</span></span>
 
-Das Framework enthält auch mehrere generische Delegattypen, die Sie für Delegattypen verwenden können, die Werte zurückgeben:
+<span data-ttu-id="6be8c-122">Das Framework enthält auch mehrere generische Delegattypen, die Sie für Delegattypen verwenden können, die Werte zurückgeben:</span><span class="sxs-lookup"><span data-stu-id="6be8c-122">The framework also includes several generic delegate types that you can use for delegate types that return values:</span></span>
 
 ```csharp
 public delegate TResult Func<out TResult>();
@@ -55,34 +55,34 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 // Other variations removed for brevity
 ```
 
-Der `out`-Modifizierer im Ergebnisargument des generischen Typs wird in diesem Artikel in Kovarianz behandelt.
+<span data-ttu-id="6be8c-123">Der `out`-Modifizierer im Ergebnisargument des generischen Typs wird in diesem Artikel in Kovarianz behandelt.</span><span class="sxs-lookup"><span data-stu-id="6be8c-123">The `out` modifier on the result generic type argument is covered in the article on covariance.</span></span>
 
-Es gibt Variationen des `Func`-Delegaten mit bis zu 16 Eingabeargumenten, wie z.B. @System.Func%6017.
-Der Typ des Ergebnisses ist immer der letzte Typparameter in allen `Func`-Deklarationen, gemäß der Konvention.
+<span data-ttu-id="6be8c-124">Es gibt Variationen des `Func`-Delegaten mit bis zu 16 Eingabeargumenten, wie z.B. @System.Func%6017.</span><span class="sxs-lookup"><span data-stu-id="6be8c-124">There are variations of the `Func` delegate with up to 16 input arguments such as @System.Func%6017 .</span></span>
+<span data-ttu-id="6be8c-125">Der Typ des Ergebnisses ist immer der letzte Typparameter in allen `Func`-Deklarationen, gemäß der Konvention.</span><span class="sxs-lookup"><span data-stu-id="6be8c-125">The type of the result is always the last type parameter in all the `Func` declarations, by convention.</span></span>
 
-Verwenden Sie einen der `Func`-Typen für jeden Delegattyp, der einen Wert zurückgibt.
+<span data-ttu-id="6be8c-126">Verwenden Sie einen der `Func`-Typen für jeden Delegattyp, der einen Wert zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="6be8c-126">Use one of the `Func` types for any delegate type that returns a value.</span></span>
 
-Es gibt auch einen spezialisierten @System.Predicate% 601-Typ für einen Delegaten, der einen Test für einen einzelnen Wert zurückgibt:
+<span data-ttu-id="6be8c-127">Es gibt auch einen spezialisierten @System.Predicate% 601-Typ für einen Delegaten, der einen Test für einen einzelnen Wert zurückgibt:</span><span class="sxs-lookup"><span data-stu-id="6be8c-127">There's also a specialized @System.Predicate%601 type for a delegate that returns a test on a single value:</span></span>
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
 ```
 
-Möglicherweise haben Sie bemerkt, dass für jeden `Predicate`-Typ ein strukturell äquivalenter `Func`-Typ vorhanden ist, beispielsweise:
+<span data-ttu-id="6be8c-128">Möglicherweise haben Sie bemerkt, dass für jeden `Predicate`-Typ ein strukturell äquivalenter `Func`-Typ vorhanden ist, beispielsweise:</span><span class="sxs-lookup"><span data-stu-id="6be8c-128">You may notice that for any `Predicate` type, a structurally equivalent `Func` type exists For example:</span></span>
 
 ```csharp
 Func<string, bool> TestForString;
 Predicate<string> AnotherTestForString;
 ```
 
-Sie denken möglicherweise, dass diese beiden Typen äquivalent sind. Das sind sie nicht.
-Diese beiden Variablen sind nicht austauschbar. Eine Variable eines Typs kann dem anderen Typ nicht zugewiesen werden. Das C#-Typsystem verwendet die Namen der definierten Typen, nicht die Struktur.
+<span data-ttu-id="6be8c-129">Sie denken möglicherweise, dass diese beiden Typen äquivalent sind.</span><span class="sxs-lookup"><span data-stu-id="6be8c-129">You might think these two types are equivalent.</span></span> <span data-ttu-id="6be8c-130">Das sind sie nicht.</span><span class="sxs-lookup"><span data-stu-id="6be8c-130">They are not.</span></span>
+<span data-ttu-id="6be8c-131">Diese beiden Variablen sind nicht austauschbar.</span><span class="sxs-lookup"><span data-stu-id="6be8c-131">These two variables cannot be used interchangeably.</span></span> <span data-ttu-id="6be8c-132">Eine Variable eines Typs kann dem anderen Typ nicht zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="6be8c-132">A variable of one type cannot be assigned the other type.</span></span> <span data-ttu-id="6be8c-133">Das C#-Typsystem verwendet die Namen der definierten Typen, nicht die Struktur.</span><span class="sxs-lookup"><span data-stu-id="6be8c-133">The C# type system uses the names of the defined types, not the structure.</span></span>
 
-Alle diese Definitionen von Delegattypen in der .NET Core-Bibliothek sollten bedeuten, dass Sie keinen neuen Delegattypen für jede neue Funktion, die Sie erstellen und die Delegaten erfordert, definieren müssen. Diese generischen Definitionen sollten alle Delegattypen bereitstellen, die Sie in den meisten Fällen benötigen. Sie können einen dieser Typen mit den erforderlichen Parametern einfach instanziieren. Im Falle von Algorithmen, die generisch vorgenommen werden können, können diese Delegaten als generische Typen verwendet werden. 
+<span data-ttu-id="6be8c-134">Alle diese Definitionen von Delegattypen in der .NET Core-Bibliothek sollten bedeuten, dass Sie keinen neuen Delegattypen für jede neue Funktion, die Sie erstellen und die Delegaten erfordert, definieren müssen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-134">All these delegate type definitions in the .NET Core Library should mean that you do not need to define a new delegate type for any new feature you create that requires delegates.</span></span> <span data-ttu-id="6be8c-135">Diese generischen Definitionen sollten alle Delegattypen bereitstellen, die Sie in den meisten Fällen benötigen.</span><span class="sxs-lookup"><span data-stu-id="6be8c-135">These generic definitions should provide all the delegate types you need under most situations.</span></span> <span data-ttu-id="6be8c-136">Sie können einen dieser Typen mit den erforderlichen Parametern einfach instanziieren.</span><span class="sxs-lookup"><span data-stu-id="6be8c-136">You can simply instantiate one of these types with the required type parameters.</span></span> <span data-ttu-id="6be8c-137">Im Falle von Algorithmen, die generisch vorgenommen werden können, können diese Delegaten als generische Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="6be8c-137">In the case of algorithms that can be made generic, these delegates can be used as generic types.</span></span> 
 
-Dies sollte Zeit sparen und die Anzahl neuer Typen minimieren, die Sie erstellen müssen, um mit Delegaten zu arbeiten.
+<span data-ttu-id="6be8c-138">Dies sollte Zeit sparen und die Anzahl neuer Typen minimieren, die Sie erstellen müssen, um mit Delegaten zu arbeiten.</span><span class="sxs-lookup"><span data-stu-id="6be8c-138">This should save time, and minimize the number of new types that you need to create in order to work with delegates.</span></span>
 
-Im nächsten Artikel sehen Sie einige allgemeine Muster für die praktische Arbeit mit Delegaten.
+<span data-ttu-id="6be8c-139">Im nächsten Artikel sehen Sie einige allgemeine Muster für die praktische Arbeit mit Delegaten.</span><span class="sxs-lookup"><span data-stu-id="6be8c-139">In the next article, you'll see several common patterns for working with delegates in practice.</span></span>
 
-[Weiter](delegates-patterns.md)
+[<span data-ttu-id="6be8c-140">Weiter</span><span class="sxs-lookup"><span data-stu-id="6be8c-140">Next</span></span>](delegates-patterns.md)
 

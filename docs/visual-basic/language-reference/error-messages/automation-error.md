@@ -29,21 +29,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0e48d5bde8b0fd3d31265d3d287623e32c0ea4cf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b48ada07663889db633a43fabb577d5129c5cbb3
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="automation-error"></a>Automatisierungsfehler
-Beim Ausführen einer Methode oder Abrufen oder Festlegen einer Eigenschaft einer Objektvariable ist ein Fehler aufgetreten. Der Fehler wurde von der Anwendung gemeldet, mit der das Objekt erstellt wurde.  
+# <a name="automation-error"></a><span data-ttu-id="cf643-102">Automatisierungsfehler</span><span class="sxs-lookup"><span data-stu-id="cf643-102">Automation error</span></span>
+<span data-ttu-id="cf643-103">Beim Ausführen einer Methode oder Abrufen oder Festlegen einer Eigenschaft einer Objektvariable ist ein Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="cf643-103">An error occurred while executing a method or getting or setting a property of an object variable.</span></span> <span data-ttu-id="cf643-104">Der Fehler wurde von der Anwendung gemeldet, mit der das Objekt erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="cf643-104">The error was reported by the application that created the object.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cf643-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="cf643-105">To correct this error</span></span>  
   
-1.  Überprüfen Sie die Eigenschaften des `Err`-Objekts, um die Ursache und die Art des Fehlers zu ermitteln.  
+1.  <span data-ttu-id="cf643-106">Überprüfen Sie die Eigenschaften des `Err`-Objekts, um die Ursache und die Art des Fehlers zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="cf643-106">Check the properties of the `Err` object to determine the source and nature of the error.</span></span>  
   
-2.  Verwenden Sie die Anweisung `On Error Resume Next` unmittelbar vor der Zugriffsanweisung, und prüfen Sie dann unmittelbar nach der Zugriffsanweisung auf Fehler hin.  
+2.  <span data-ttu-id="cf643-107">Verwenden Sie die Anweisung `On Error Resume Next` unmittelbar vor der Zugriffsanweisung, und prüfen Sie dann unmittelbar nach der Zugriffsanweisung auf Fehler hin.</span><span class="sxs-lookup"><span data-stu-id="cf643-107">Use the `On Error Resume Next` statement immediately before the accessing statement, and then check for errors immediately after the accessing statement.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Error Types (Fehlertypen)](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="cf643-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cf643-108">See Also</span></span>  
+ <span data-ttu-id="cf643-109">[Error Types (Fehlertypen)](../../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="cf643-109">[Error Types](../../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="cf643-110"> [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="cf643-110"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

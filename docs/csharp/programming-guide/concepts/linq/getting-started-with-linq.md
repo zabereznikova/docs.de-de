@@ -41,47 +41,47 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-started-with-linq-in-c"></a>Erste Schritte mit LINQ in C#
-Dieser Abschnitt enthält grundlegende Informationen, die Ihnen helfen werden den Rest der LINQ-Dokumentation und die Beispiele zu verstehen.  
+# <a name="getting-started-with-linq-in-c"></a><span data-ttu-id="31538-102">Erste Schritte mit LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="31538-102">Getting Started with LINQ in C#</span></span>
+<span data-ttu-id="31538-103">Dieser Abschnitt enthält grundlegende Informationen, die Ihnen helfen werden den Rest der LINQ-Dokumentation und die Beispiele zu verstehen.</span><span class="sxs-lookup"><span data-stu-id="31538-103">This section contains basic background information that will help you understand the rest of the LINQ documentation and samples.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Beschreibt die drei Bestandteile des grundlegenden LINQ-Abfragevorgangs, die bei allen Sprachen und Datenquellen verwendet werden  
+## <a name="in-this-section"></a><span data-ttu-id="31538-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="31538-104">In This Section</span></span>  
+ [<span data-ttu-id="31538-105">Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))</span><span class="sxs-lookup"><span data-stu-id="31538-105">Introduction to LINQ Queries (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ <span data-ttu-id="31538-106">Beschreibt die drei Bestandteile des grundlegenden LINQ-Abfragevorgangs, die bei allen Sprachen und Datenquellen verwendet werden</span><span class="sxs-lookup"><span data-stu-id="31538-106">Describes the three parts of the basic LINQ query operation that are common across all languages and data sources.</span></span>  
   
- [LINQ and Generic Types (C#) (LINQ und generische Typen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
- Bietet eine kurze Einführung in generische Typen, wie sie in LINQ verwendet werden  
+ [<span data-ttu-id="31538-107">LINQ and Generic Types (C#) (LINQ und generische Typen (C#))</span><span class="sxs-lookup"><span data-stu-id="31538-107">LINQ and Generic Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
+ <span data-ttu-id="31538-108">Bietet eine kurze Einführung in generische Typen, wie sie in LINQ verwendet werden</span><span class="sxs-lookup"><span data-stu-id="31538-108">Provides a brief introduction to generic types as they are used in LINQ.</span></span>  
   
- [Grundlegende LINQ-Abfragevorgänge](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
- Beschreibt die am häufigsten verwendeten Typen von Abfrageoperationen und wie diese in C# ausgedrückt werden  
+ [<span data-ttu-id="31538-109">Grundlegende LINQ-Abfragevorgänge</span><span class="sxs-lookup"><span data-stu-id="31538-109">Basic LINQ Query Operations</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
+ <span data-ttu-id="31538-110">Beschreibt die am häufigsten verwendeten Typen von Abfrageoperationen und wie diese in C# ausgedrückt werden</span><span class="sxs-lookup"><span data-stu-id="31538-110">Describes the most common types of query operations and how they are expressed in C#.</span></span>  
   
- [Datentransformationen mit LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
- Beschreibt die verschiedenen Methoden, mit denen Sie aus Abfragen abgerufene Daten transformieren können  
+ [<span data-ttu-id="31538-111">Datentransformationen mit LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="31538-111">Data Transformations with LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
+ <span data-ttu-id="31538-112">Beschreibt die verschiedenen Methoden, mit denen Sie aus Abfragen abgerufene Daten transformieren können</span><span class="sxs-lookup"><span data-stu-id="31538-112">Describes the various ways that you can transform data retrieved in queries.</span></span>  
   
- [Typbeziehungen in LINQ-Abfragevorgängen](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- Beschreibt, wie Datentypen beibehalten und/oder in den drei Bestandteilen eines LINQ-Abfragevorgangs transformiert werden  
+ [<span data-ttu-id="31538-113">Typbeziehungen in LINQ-Abfragevorgängen</span><span class="sxs-lookup"><span data-stu-id="31538-113">Type Relationships in LINQ Query Operations</span></span>](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ <span data-ttu-id="31538-114">Beschreibt, wie Datentypen beibehalten und/oder in den drei Bestandteilen eines LINQ-Abfragevorgangs transformiert werden</span><span class="sxs-lookup"><span data-stu-id="31538-114">Describes how types are preserved and/or transformed in the three parts of a LINQ query operation</span></span>  
   
- [Abfragesyntax und Methodensyntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- Vergleicht zwei Möglichkeiten, eine LINQ-Abfrage auszudrücken – Methodensyntax und Abfragesyntax  
+ [<span data-ttu-id="31538-115">Abfragesyntax und Methodensyntax in LINQ</span><span class="sxs-lookup"><span data-stu-id="31538-115">Query Syntax and Method Syntax in LINQ</span></span>](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
+ <span data-ttu-id="31538-116">Vergleicht zwei Möglichkeiten, eine LINQ-Abfrage auszudrücken – Methodensyntax und Abfragesyntax</span><span class="sxs-lookup"><span data-stu-id="31538-116">Compares method syntax and query syntax as two ways to express a LINQ query.</span></span>  
   
- [C#-Funktionen mit LINQ-Unterstützung](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
- Beschreibt die Konstrukte in C# 3.0, die LINQ unterstützen.  
+ [<span data-ttu-id="31538-117">C#-Funktionen mit LINQ-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="31538-117">C# Features That Support LINQ</span></span>](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
+ <span data-ttu-id="31538-118">Beschreibt die Konstrukte in C# 3.0, die LINQ unterstützen.</span><span class="sxs-lookup"><span data-stu-id="31538-118">Describes the language constructs added in C# 3.0 that support LINQ.</span></span>  
   
- [Walkthrough (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Eine ausführliche Anleitung zum Erstellen eines C#-LINQ-Projekts, Hinzufügen einer einfachen Datenquelle und Durchführen einiger grundlegender Abfrageoperationen  
+ [<span data-ttu-id="31538-119">Walkthrough (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)</span><span class="sxs-lookup"><span data-stu-id="31538-119">Walkthrough: Writing Queries in C#</span></span>](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ <span data-ttu-id="31538-120">Eine ausführliche Anleitung zum Erstellen eines C#-LINQ-Projekts, Hinzufügen einer einfachen Datenquelle und Durchführen einiger grundlegender Abfrageoperationen</span><span class="sxs-lookup"><span data-stu-id="31538-120">Step-by-step instructions for creating a C# LINQ project, adding a simple data source, and performing some basic query operations.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Language-Integrated Query (LINQ) (C#) (Language-Integrated Query (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/index.md)  
- Enthält Links zu Themen, die die LINQ-Technologie erläutern  
+## <a name="related-sections"></a><span data-ttu-id="31538-121">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="31538-121">Related Sections</span></span>  
+ [<span data-ttu-id="31538-122">Language-Integrated Query (LINQ) (C#) (Language-Integrated Query (LINQ) (C#))</span><span class="sxs-lookup"><span data-stu-id="31538-122">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="31538-123">Enthält Links zu Themen, die die LINQ-Technologie erläutern</span><span class="sxs-lookup"><span data-stu-id="31538-123">Provides links to topics that explain the LINQ technologies.</span></span>  
   
- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen bereit  
+ [<span data-ttu-id="31538-124">LINQ-Abfrageausdrücke</span><span class="sxs-lookup"><span data-stu-id="31538-124">LINQ Query Expressions</span></span>](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ <span data-ttu-id="31538-125">Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen bereit</span><span class="sxs-lookup"><span data-stu-id="31538-125">Includes an overview of queries in LINQ and provides links to additional resources.</span></span>  
   
- [Visual Studio IDE and Tools Support for LINQ (C#) (Visual Studio-IDE und Toolunterstützung für LINQ (C#))](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Beschreibt die in der Visual Studio-Umgebung verfügbaren Tools für das Entwerfen, Programmieren und Debuggen von LINQ-fähigen Anwendungen  
+ [<span data-ttu-id="31538-126">Visual Studio IDE and Tools Support for LINQ (C#) (Visual Studio-IDE und Toolunterstützung für LINQ (C#))</span><span class="sxs-lookup"><span data-stu-id="31538-126">Visual Studio IDE and Tools Support for LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ <span data-ttu-id="31538-127">Beschreibt die in der Visual Studio-Umgebung verfügbaren Tools für das Entwerfen, Programmieren und Debuggen von LINQ-fähigen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="31538-127">Describes tools available in the Visual Studio environment for designing, coding, and debugging LINQ-enabled application.</span></span>  
   
- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Einführung in die Standardmethoden, die in LINQ verwendet werden  
+ [<span data-ttu-id="31538-128">Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))</span><span class="sxs-lookup"><span data-stu-id="31538-128">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ <span data-ttu-id="31538-129">Einführung in die Standardmethoden, die in LINQ verwendet werden</span><span class="sxs-lookup"><span data-stu-id="31538-129">Introduces the standard methods used in LINQ.</span></span>  
   
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Enthält Links zu Themen über die Verwendung von LINQ mit Visual Basic
+ [<span data-ttu-id="31538-130">Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31538-130">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ <span data-ttu-id="31538-131">Enthält Links zu Themen über die Verwendung von LINQ mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="31538-131">Provides links to topics about using LINQ with Visual Basic.</span></span>
 

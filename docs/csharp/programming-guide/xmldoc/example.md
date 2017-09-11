@@ -38,26 +38,26 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+# <a name="ltexamplegt-c-programming-guide"></a><span data-ttu-id="32aa4-102">&lt;example&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="32aa4-102">&lt;example&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="32aa4-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="32aa4-103">Syntax</span></span>  
   
 ```xml  
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="32aa4-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="32aa4-104">Parameters</span></span>  
  `description`  
- Eine Beschreibung des Codebeispiels.  
+ <span data-ttu-id="32aa4-105">Eine Beschreibung des Codebeispiels.</span><span class="sxs-lookup"><span data-stu-id="32aa4-105">A description of the code sample.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliothekmembers angegeben werden. Dies schließt im Allgemeinen die Verwendung des [\<code](../../../csharp/programming-guide/xmldoc/code.md)-Tags ein.  
+## <a name="remarks"></a><span data-ttu-id="32aa4-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="32aa4-106">Remarks</span></span>  
+ <span data-ttu-id="32aa4-107">Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliothekmembers angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="32aa4-107">The \<example> tag lets you specify an example of how to use a method or other library member.</span></span> <span data-ttu-id="32aa4-108">Dies schließt im Allgemeinen die Verwendung des [\<code](../../../csharp/programming-guide/xmldoc/code.md)-Tags ein.</span><span class="sxs-lookup"><span data-stu-id="32aa4-108">This commonly involves using the [\<code>](../../../csharp/programming-guide/xmldoc/code.md) tag.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ <span data-ttu-id="32aa4-109">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="32aa4-109">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]  
+## <a name="example"></a><span data-ttu-id="32aa4-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32aa4-110">Example</span></span>  
+ <span data-ttu-id="32aa4-111">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="32aa4-111">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="32aa4-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32aa4-112">See Also</span></span>  
+ <span data-ttu-id="32aa4-113">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="32aa4-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="32aa4-114">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="32aa4-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

@@ -1,1 +1,1 @@
-Windows-Runtime
+<span data-ttu-id="c6f77-101">Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="c6f77-101">Windows Runtime</span></span>

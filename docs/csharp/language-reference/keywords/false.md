@@ -37,15 +37,15 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="false-c-reference"></a>false (C#-Referenz)
-Wird als ein überladenen Operator oder als Literal verwendet:  
+# <a name="false-c-reference"></a><span data-ttu-id="36861-102">false (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="36861-102">false (C# Reference)</span></span>
+<span data-ttu-id="36861-103">Wird als ein überladenen Operator oder als Literal verwendet:</span><span class="sxs-lookup"><span data-stu-id="36861-103">Used as an overloaded operator or as a literal:</span></span>  
   
--   [false-Operator](../../../csharp/language-reference/keywords/false-operator.md)  
+-   [<span data-ttu-id="36861-104">false-Operator</span><span class="sxs-lookup"><span data-stu-id="36861-104">false Operator</span></span>](../../../csharp/language-reference/keywords/false-operator.md)  
   
--   [false-Literal](../../../csharp/language-reference/keywords/false-literal.md)  
+-   [<span data-ttu-id="36861-105">false-Literal</span><span class="sxs-lookup"><span data-stu-id="36861-105">false Literal</span></span>](../../../csharp/language-reference/keywords/false-literal.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="36861-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36861-106">See Also</span></span>  
+ <span data-ttu-id="36861-107">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="36861-107">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="36861-108">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="36861-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="36861-109">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="36861-109">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

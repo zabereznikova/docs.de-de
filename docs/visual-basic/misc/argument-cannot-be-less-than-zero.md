@@ -24,18 +24,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 133a7ff1526be43e671e719c57ce606a347a2c9a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b3699472f87805da8031d0c10e055170dbf1fca3
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="argument-cannot-be-less-than-zero"></a>Ein Argument darf nicht kleiner als&0; (null) sein.
-Es wurde ein Wert angegeben, der kleiner als&0; (null) ist, doch das Argument darf nicht kleiner als&0; (null) sein.  
+# <a name="argument-cannot-be-less-than-zero"></a><span data-ttu-id="f76bc-102">Ein Argument darf nicht kleiner als&0; (null) sein.</span><span class="sxs-lookup"><span data-stu-id="f76bc-102">Argument cannot be less than zero</span></span>
+<span data-ttu-id="f76bc-103">Es wurde ein Wert angegeben, der kleiner als&0; (null) ist, doch das Argument darf nicht kleiner als&0; (null) sein.</span><span class="sxs-lookup"><span data-stu-id="f76bc-103">A value that is less than zero has been supplied, but the argument cannot be less than zero.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f76bc-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="f76bc-104">To correct this error</span></span>  
   
--   Überprüfen Sie, wie der betreffende Wert berechnet wird, um sicherzustellen, dass er korrekt ist.  
+-   <span data-ttu-id="f76bc-105">Überprüfen Sie, wie der betreffende Wert berechnet wird, um sicherzustellen, dass er korrekt ist.</span><span class="sxs-lookup"><span data-stu-id="f76bc-105">Check how the value in question is calculated, to make sure it is correct.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Debugger – Grundlagen](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)
+## <a name="see-also"></a><span data-ttu-id="f76bc-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f76bc-106">See Also</span></span>  
+ [<span data-ttu-id="f76bc-107">Debugger – Grundlagen</span><span class="sxs-lookup"><span data-stu-id="f76bc-107">Debugger Basics</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)

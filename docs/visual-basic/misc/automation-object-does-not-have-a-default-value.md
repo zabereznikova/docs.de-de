@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e734c32052099e5d3ad8fe3466f103fc3dded5f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7818f2bd83b2a45edb207213ac1087ce86261a39
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="automation-object-does-not-have-a-default-value"></a>Das Automatisierungsobjekt hat keinen Standardwert.
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Das Standardelement für das angegebene Objekt kann nicht bestimmt werden.  
+# <a name="automation-object-does-not-have-a-default-value"></a><span data-ttu-id="12c54-102">Das Automatisierungsobjekt hat keinen Standardwert.</span><span class="sxs-lookup"><span data-stu-id="12c54-102">Automation object does not have a default value</span></span>
+[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="12c54-103">Das Standardelement für das angegebene Objekt kann nicht bestimmt werden.</span><span class="sxs-lookup"><span data-stu-id="12c54-103"> cannot determine the default member for the specified object.</span></span>  
   
-### <a name="to-correct-the-error"></a>So beheben Sie den Fehler  
+### <a name="to-correct-the-error"></a><span data-ttu-id="12c54-104">So beheben Sie den Fehler</span><span class="sxs-lookup"><span data-stu-id="12c54-104">To correct the error</span></span>  
   
--   Lesen Sie die Dokumentation des Objekts, und geben Sie eine explizite Spezifikation für die Eigenschaft oder Methode an.  
+-   <span data-ttu-id="12c54-105">Lesen Sie die Dokumentation des Objekts, und geben Sie eine explizite Spezifikation für die Eigenschaft oder Methode an.</span><span class="sxs-lookup"><span data-stu-id="12c54-105">Check the object's documentation and give an explicit specification for the property or method.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Error Types (Fehlertypen)](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER Produktsupport und Eingabehilfen](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="12c54-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12c54-106">See Also</span></span>  
+ <span data-ttu-id="12c54-107">[Error Types (Fehlertypen)](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="12c54-107">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="12c54-108"> [PAVEOVER Produktsupport und Eingabehilfen](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span><span class="sxs-lookup"><span data-stu-id="12c54-108"> [PAVEOVER Product Support and Accessibility](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span></span>

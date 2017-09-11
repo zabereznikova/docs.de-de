@@ -1,1 +1,1 @@
-IDE
+<span data-ttu-id="0bf7c-101">IDE</span><span class="sxs-lookup"><span data-stu-id="0bf7c-101">IDE</span></span>

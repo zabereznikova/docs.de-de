@@ -1,1 +1,1 @@
-WPF Imaging
+<span data-ttu-id="942ba-101">WPF Imaging</span><span class="sxs-lookup"><span data-stu-id="942ba-101">WPF Imaging</span></span>

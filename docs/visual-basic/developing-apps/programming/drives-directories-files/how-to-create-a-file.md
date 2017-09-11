@@ -38,42 +38,42 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Gewusst wie: Erstellen einer Datei in Visual Basic
-Dieses Beispiel erstellt mithilfe der <xref:System.IO.File.Create%2A>-Methode in der <xref:System.IO.File>-Klasse eine leere Textdatei auf dem bestimmten Pfad.  
+# <a name="how-to-create-a-file-in-visual-basic"></a><span data-ttu-id="c5a70-102">Gewusst wie: Erstellen einer Datei in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c5a70-102">How to: Create a File in Visual Basic</span></span>
+<span data-ttu-id="c5a70-103">Dieses Beispiel erstellt mithilfe der <xref:System.IO.File.Create%2A>-Methode in der <xref:System.IO.File>-Klasse eine leere Textdatei auf dem bestimmten Pfad.</span><span class="sxs-lookup"><span data-stu-id="c5a70-103">This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
+## <a name="example"></a><span data-ttu-id="c5a70-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c5a70-104">Example</span></span>  
+ <span data-ttu-id="c5a70-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="c5a70-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span></span>  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Verwenden Sie die Varible `file`, um in die Datei zu schreiben.  
+## <a name="compiling-the-code"></a><span data-ttu-id="c5a70-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="c5a70-106">Compiling the Code</span></span>  
+ <span data-ttu-id="c5a70-107">Verwenden Sie die Varible `file`, um in die Datei zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="c5a70-107">Use the `file` variable to write to the file.</span></span>  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Wenn die Datei bereits vorhanden ist, wird sie ignoriert.  
+## <a name="robust-programming"></a><span data-ttu-id="c5a70-108">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="c5a70-108">Robust Programming</span></span>  
+ <span data-ttu-id="c5a70-109">Wenn die Datei bereits vorhanden ist, wird sie ignoriert.</span><span class="sxs-lookup"><span data-stu-id="c5a70-109">If the file already exists, it is replaced.</span></span>  
   
- Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
+ <span data-ttu-id="c5a70-110">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="c5a70-110">The following conditions may cause an exception:</span></span>  
   
--   Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="c5a70-111">Der Pfadname ist falsch formatiert.</span><span class="sxs-lookup"><span data-stu-id="c5a70-111">The path name is malformed.</span></span> <span data-ttu-id="c5a70-112">Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-112">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).</span></span>  
   
--   Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="c5a70-113">Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-113">The path is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="c5a70-114">Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-114">The path name is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="c5a70-115">Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-115">The path name is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>).  
+-   <span data-ttu-id="c5a70-116">Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-116">The path is invalid (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   Der Pfad besteht nur aus einem Doppelpunkt „:“ (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="c5a70-117">Der Pfad besteht nur aus einem Doppelpunkt „:“ (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="c5a70-117">The path is only a colon ":" (<xref:System.NotSupportedException>).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Eine <xref:System.Security.SecurityException> wir möglicherweise in teilweise vertrauenswürdigen Umgebungen ausgelöst.  
+## <a name="net-framework-security"></a><span data-ttu-id="c5a70-118">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="c5a70-118">.NET Framework Security</span></span>  
+ <span data-ttu-id="c5a70-119">Eine <xref:System.Security.SecurityException> wir möglicherweise in teilweise vertrauenswürdigen Umgebungen ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="c5a70-119">A <xref:System.Security.SecurityException> may be thrown in partial-trust environments.</span></span>  
   
- Der Aufruf auf die <xref:System.IO.File.Create%2A>-Methode erfordert <xref:System.Security.Permissions.FileIOPermission>.  
+ <span data-ttu-id="c5a70-120">Der Aufruf auf die <xref:System.IO.File.Create%2A>-Methode erfordert <xref:System.Security.Permissions.FileIOPermission>.</span><span class="sxs-lookup"><span data-stu-id="c5a70-120">The call to the <xref:System.IO.File.Create%2A> method requires <xref:System.Security.Permissions.FileIOPermission>.</span></span>  
   
- Eine <xref:System.UnauthorizedAccessException> wird ausgelöst, wenn der Benutzer keine Berechtigungen zum Erstellen der Datei besitzt.  
+ <span data-ttu-id="c5a70-121">Eine <xref:System.UnauthorizedAccessException> wird ausgelöst, wenn der Benutzer keine Berechtigungen zum Erstellen der Datei besitzt.</span><span class="sxs-lookup"><span data-stu-id="c5a70-121">An <xref:System.UnauthorizedAccessException> is thrown if the user does not have permission to create the file.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO>   
- <xref:System.IO.File.Create%2A>   
- [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
- [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8)
+## <a name="see-also"></a><span data-ttu-id="c5a70-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5a70-122">See Also</span></span>  
+ <span data-ttu-id="c5a70-123"><xref:System.IO></span><span class="sxs-lookup"><span data-stu-id="c5a70-123"><xref:System.IO></span></span>   
+ <span data-ttu-id="c5a70-124"><xref:System.IO.File.Create%2A></span><span class="sxs-lookup"><span data-stu-id="c5a70-124"><xref:System.IO.File.Create%2A></span></span>   
+ <span data-ttu-id="c5a70-125">[Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span><span class="sxs-lookup"><span data-stu-id="c5a70-125">[Using Libraries from Partially Trusted Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span></span>  
+ [<span data-ttu-id="c5a70-126">Grundlagen der Codezugriffssicherheit</span><span class="sxs-lookup"><span data-stu-id="c5a70-126">Code Access Security Basics</span></span>](https://msdn.microsoft.com/library/33tceax8)
 

@@ -26,11 +26,11 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="thread-timers-c"></a>Threadzeitgeber (C#)
-Die <xref:System.Threading.Timer?displayProperty=fullName>-Klasse eignet sich für eine Aufgabe, die in regelmäßigen Abständen in einem separaten Thread ausgeführt wird. Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.  
+# <a name="thread-timers-c"></a><span data-ttu-id="81624-102">Threadzeitgeber (C#)</span><span class="sxs-lookup"><span data-stu-id="81624-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="81624-103">Die <xref:System.Threading.Timer?displayProperty=fullName>-Klasse eignet sich für eine Aufgabe, die in regelmäßigen Abständen in einem separaten Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="81624-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="81624-104">Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.</span><span class="sxs-lookup"><span data-stu-id="81624-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Beispiel für Threadzeitgeber  
- Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet, und ein Flag genutzt, das die <xref:System.IDisposable.Dispose%2A>-Methode initiiert, die den Timer anhält. In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.  
+## <a name="thread-timer-example"></a><span data-ttu-id="81624-105">Beispiel für Threadzeitgeber</span><span class="sxs-lookup"><span data-stu-id="81624-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="81624-106">Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet, und ein Flag genutzt, das die <xref:System.IDisposable.Dispose%2A>-Methode initiiert, die den Timer anhält.</span><span class="sxs-lookup"><span data-stu-id="81624-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="81624-107">In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.</span><span class="sxs-lookup"><span data-stu-id="81624-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,9 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- Threadzeitgeber sind besonders nützlich, wenn das Objekt <xref:System.Windows.Forms.Timer?displayProperty=fullName> nicht verfügbar ist, z.B. wenn Sie Konsolenanwendungen entwickeln.  
+ <span data-ttu-id="81624-108">Threadzeitgeber sind besonders nützlich, wenn das Objekt <xref:System.Windows.Forms.Timer?displayProperty=fullName> nicht verfügbar ist, z.B. wenn Sie Konsolenanwendungen entwickeln.</span><span class="sxs-lookup"><span data-stu-id="81624-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading>   
- [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="81624-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81624-109">See Also</span></span>  
+ <span data-ttu-id="81624-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="81624-110"><xref:System.Threading></span></span>   
+ [<span data-ttu-id="81624-111">Multithreaded Applications (C#) (Multithreadanwendungen (C#))</span><span class="sxs-lookup"><span data-stu-id="81624-111">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
 

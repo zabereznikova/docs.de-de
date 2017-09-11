@@ -21,27 +21,27 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a>Dynamische Programmierung in .NET Framework
-In diesem Abschnitt der Dokumentation sind Informationen zur dynamischen Programmierung im .NET Framework enthalten.  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="3e54e-102">Dynamische Programmierung in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3e54e-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="3e54e-103">In diesem Abschnitt der Dokumentation sind Informationen zur dynamischen Programmierung im .NET Framework enthalten.</span><span class="sxs-lookup"><span data-stu-id="3e54e-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Beschreibt die Verwendung der Reflektion für die Arbeit mit Objekten zur Laufzeit.  
+## <a name="in-this-section"></a><span data-ttu-id="3e54e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3e54e-104">In This Section</span></span>  
+ [<span data-ttu-id="3e54e-105">Reflektion</span><span class="sxs-lookup"><span data-stu-id="3e54e-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="3e54e-106">Beschreibt die Verwendung der Reflektion für die Arbeit mit Objekten zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="3e54e-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- Beschreibt das Erstellen von Methoden und Assemblys zur Laufzeit mithilfe von "Reflection.Emit".  
+ [<span data-ttu-id="3e54e-107">Ausgeben von dynamischen Methoden und Assemblys</span><span class="sxs-lookup"><span data-stu-id="3e54e-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="3e54e-108">Beschreibt das Erstellen von Methoden und Assemblys zur Laufzeit mithilfe von "Reflection.Emit".</span><span class="sxs-lookup"><span data-stu-id="3e54e-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [Übersicht über die Dynamic Language Runtime](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- Beschreibt die Funktionen der Dynamic Language Runtime (DLR).  
+ [<span data-ttu-id="3e54e-109">Übersicht über die Dynamic Language Runtime</span><span class="sxs-lookup"><span data-stu-id="3e54e-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="3e54e-110">Beschreibt die Funktionen der Dynamic Language Runtime (DLR).</span><span class="sxs-lookup"><span data-stu-id="3e54e-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [Generieren und Kompilieren von dynamischem Quellcode](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- Beschreibt das Generieren und Kompilieren von dynamischem Quellcode.  
+ [<span data-ttu-id="3e54e-111">Generieren und Kompilieren von dynamischem Quellcode</span><span class="sxs-lookup"><span data-stu-id="3e54e-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="3e54e-112">Beschreibt das Generieren und Kompilieren von dynamischem Quellcode.</span><span class="sxs-lookup"><span data-stu-id="3e54e-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="3e54e-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3e54e-113">Related Sections</span></span>  
+ [<span data-ttu-id="3e54e-114">Entwicklungshandbuch</span><span class="sxs-lookup"><span data-stu-id="3e54e-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
   
- [Weiterführende Informationen zu .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [<span data-ttu-id="3e54e-115">Weiterführende Informationen zu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3e54e-115">Advanced Reading for the .NET Framework</span></span>](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
 

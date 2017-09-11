@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 19ef0cfd1115f8f2cf6137c7eeb8eb82292b223c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cff3fecc9a563eff7b2a4ae51ba9f04444edc4df
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="namespaces-in-visual-basic-linq-to-xml"></a>Namespaces in Visual Basic (LINQ to XML)
-Fügen Sie hier eine Einleitung ein.  
+# <a name="namespaces-in-visual-basic-linq-to-xml"></a><span data-ttu-id="1c018-102">Namespaces in Visual Basic (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1c018-102">Namespaces in Visual Basic (LINQ to XML)</span></span>
+<span data-ttu-id="1c018-103">Fügen Sie hier eine Einleitung ein.</span><span class="sxs-lookup"><span data-stu-id="1c018-103">Insert introduction here.</span></span>  
   
-## <a name="section-heading"></a>Abschnittsüberschrift  
- Fügen Sie hier den Abschnittstext ein.  
+## <a name="section-heading"></a><span data-ttu-id="1c018-104">Abschnittsüberschrift</span><span class="sxs-lookup"><span data-stu-id="1c018-104">Section Heading</span></span>  
+ <span data-ttu-id="1c018-105">Fügen Sie hier den Abschnittstext ein.</span><span class="sxs-lookup"><span data-stu-id="1c018-105">Insert section body here.</span></span>  
   
-### <a name="subsection-heading"></a>Überschrift für Unterabschnitt  
- Unterabschnittstext hier einfügen.
+### <a name="subsection-heading"></a><span data-ttu-id="1c018-106">Überschrift für Unterabschnitt</span><span class="sxs-lookup"><span data-stu-id="1c018-106">Subsection Heading</span></span>  
+ <span data-ttu-id="1c018-107">Unterabschnittstext hier einfügen.</span><span class="sxs-lookup"><span data-stu-id="1c018-107">Insert subsection body here.</span></span>

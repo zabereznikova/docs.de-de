@@ -25,17 +25,17 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="developing-web-applications-with-aspnet"></a>Entwickeln von Webanwendungen mit ASP.NET
-ASP.NET ist eine .NET Framework-Technologie zum Erstellen von Web-Apps. Die Dokumentation für ASP.NET befindet sich im Abschnitt [Web-Entwicklung](http://go.microsoft.com/fwlink/p/?LinkID=235794) der MSDN Library sowie auf der Website [www.asp.net](http://go.microsoft.com/fwlink/p/?LinkId=251042). Die folgenden Links sollen als Hilfestellung dienen.  
+# <a name="developing-web-applications-with-aspnet"></a><span data-ttu-id="1a826-102">Entwickeln von Webanwendungen mit ASP.NET</span><span class="sxs-lookup"><span data-stu-id="1a826-102">Developing Web Applications with ASP.NET</span></span>
+<span data-ttu-id="1a826-103">ASP.NET ist eine .NET Framework-Technologie zum Erstellen von Web-Apps.</span><span class="sxs-lookup"><span data-stu-id="1a826-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="1a826-104">Die Dokumentation für ASP.NET befindet sich im Abschnitt [Web-Entwicklung](http://go.microsoft.com/fwlink/p/?LinkID=235794) der MSDN Library sowie auf der Website [www.asp.net](http://go.microsoft.com/fwlink/p/?LinkId=251042).</span><span class="sxs-lookup"><span data-stu-id="1a826-104">Documentation for ASP.NET is in the [Web Development](http://go.microsoft.com/fwlink/p/?LinkID=235794) section of the MSDN Library and on the [www.asp.net website](http://go.microsoft.com/fwlink/p/?LinkId=251042).</span></span> <span data-ttu-id="1a826-105">Die folgenden Links sollen als Hilfestellung dienen.</span><span class="sxs-lookup"><span data-stu-id="1a826-105">The following links are provided for your convenience:</span></span>  
   
--   [ASP.NET und Visual Studio für Web](http://msdn.microsoft.com/library/c3e0fd2f-7a94-47c4-afc0-ecfb7233e15a)  
+-   [<span data-ttu-id="1a826-106">ASP.NET und Visual Studio für Web</span><span class="sxs-lookup"><span data-stu-id="1a826-106">ASP.NET and Visual Studio for Web</span></span>](http://msdn.microsoft.com/library/c3e0fd2f-7a94-47c4-afc0-ecfb7233e15a)  
   
--   [ASP.NET MVC](http://go.microsoft.com/fwlink/p/?LinkID=227227)  
+-   [<span data-ttu-id="1a826-107">ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="1a826-107">ASP.NET MVC</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=227227)  
   
--   [ASP.NET-Webseiten 2](http://go.microsoft.com/fwlink/p/?LinkId=251040)  
+-   [<span data-ttu-id="1a826-108">ASP.NET-Webseiten 2</span><span class="sxs-lookup"><span data-stu-id="1a826-108">ASP.NET Web Pages</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251040)  
   
--   [ASP.NET-Web-API](http://go.microsoft.com/fwlink/p/?LinkId=251041)  
+-   [<span data-ttu-id="1a826-109">ASP.NET-Web-API</span><span class="sxs-lookup"><span data-stu-id="1a826-109">ASP.NET Web API</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251041)  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwicklungshandbuch](../../docs/framework/development-guide.md)
+## <a name="see-also"></a><span data-ttu-id="1a826-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1a826-110">See Also</span></span>  
+ [<span data-ttu-id="1a826-111">Entwicklungshandbuch</span><span class="sxs-lookup"><span data-stu-id="1a826-111">Development Guide</span></span>](../../docs/framework/development-guide.md)
 

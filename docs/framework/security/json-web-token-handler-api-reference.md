@@ -21,6 +21,6 @@ ms.contentlocale: de-de
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="json-web-token-handler-api-reference"></a>JSON-Webtokenhandler-API-Referenz
-Dieser Abschnitt enthält die API-Referenz für die WIF-Erweiterung des JSON-Web Token Handler.
+# <a name="json-web-token-handler-api-reference"></a><span data-ttu-id="90097-102">JSON-Webtokenhandler-API-Referenz</span><span class="sxs-lookup"><span data-stu-id="90097-102">JSON Web Token Handler API Reference</span></span>
+<span data-ttu-id="90097-103">Dieser Abschnitt enthält die API-Referenz für die WIF-Erweiterung des JSON-Web Token Handler.</span><span class="sxs-lookup"><span data-stu-id="90097-103">This section contains the API Reference for the JSON Web Token Handler WIF Extension.</span></span>
 

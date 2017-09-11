@@ -21,18 +21,18 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="shape-of-wordprocessingml-documents-c"></a>Form von WordprocessingML-Dokumenten (C#)
-Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.  
+# <a name="shape-of-wordprocessingml-documents-c"></a><span data-ttu-id="341c8-102">Form von WordprocessingML-Dokumenten (C#)</span><span class="sxs-lookup"><span data-stu-id="341c8-102">Shape of WordprocessingML Documents (C#)</span></span>
+<span data-ttu-id="341c8-103">Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.</span><span class="sxs-lookup"><span data-stu-id="341c8-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  
   
-## <a name="microsoft-office-formats"></a>Microsoft Office-Formate  
- Das systemeigene Dateiformat für das 2007 Microsoft Office-System ist Office Open XML (häufig als Open XML bezeichnet). Open XML ist ein XML-basiertes Format, das von der Ecma als Standard übernommen wurde und für das die ISO-IEC-Standardisierung beantragt wurde. Die Markupsprache für Textverarbeitungsdateien innerhalb von Open XML heißt WordprocessingML. Dieses Lernprogramm verwendet als Eingabe für die Beispiele WordprocessingML-Quelldateien.  
+## <a name="microsoft-office-formats"></a><span data-ttu-id="341c8-104">Microsoft Office-Formate</span><span class="sxs-lookup"><span data-stu-id="341c8-104">Microsoft Office Formats</span></span>  
+ <span data-ttu-id="341c8-105">Das systemeigene Dateiformat für das 2007 Microsoft Office-System ist Office Open XML (häufig als Open XML bezeichnet).</span><span class="sxs-lookup"><span data-stu-id="341c8-105">The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML).</span></span> <span data-ttu-id="341c8-106">Open XML ist ein XML-basiertes Format, das von der Ecma als Standard übernommen wurde und für das die ISO-IEC-Standardisierung beantragt wurde.</span><span class="sxs-lookup"><span data-stu-id="341c8-106">Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process.</span></span> <span data-ttu-id="341c8-107">Die Markupsprache für Textverarbeitungsdateien innerhalb von Open XML heißt WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="341c8-107">The markup language for word processing files within Open XML is called WordprocessingML.</span></span> <span data-ttu-id="341c8-108">Dieses Lernprogramm verwendet als Eingabe für die Beispiele WordprocessingML-Quelldateien.</span><span class="sxs-lookup"><span data-stu-id="341c8-108">This tutorial uses WordprocessingML source files as input for the examples.</span></span>  
   
- Benutzer von Microsoft Office 2003 müssen das Compatibility Pack für Microsoft Office 2007-Dateiformate installiert haben, um Dokumente im Office Open XML-Format speichern zu können.  
+ <span data-ttu-id="341c8-109">Benutzer von Microsoft Office 2003 müssen das Compatibility Pack für Microsoft Office 2007-Dateiformate installiert haben, um Dokumente im Office Open XML-Format speichern zu können.</span><span class="sxs-lookup"><span data-stu-id="341c8-109">If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>Form der WordprocessingML-Dokumente  
- Als Erstes sollten Sie die Form von WordprocessingML-Dokumenten verstehen. WordprocessingML-Dokumente enthalten ein Textkörperelement (mit der Bezeichnung `w:body`) mit den Absätzen des Dokuments. Jeder Absatz enthält mindestens einen Textrun (mit der Bezeichnung `w:r`). Jeder Textrun enthält mindestens ein Textstück (mit der Bezeichnung `w:t`).  
+## <a name="the-shape-of-wordprocessingml-documents"></a><span data-ttu-id="341c8-110">Form der WordprocessingML-Dokumente</span><span class="sxs-lookup"><span data-stu-id="341c8-110">The Shape of WordprocessingML Documents</span></span>  
+ <span data-ttu-id="341c8-111">Als Erstes sollten Sie die Form von WordprocessingML-Dokumenten verstehen.</span><span class="sxs-lookup"><span data-stu-id="341c8-111">The first thing to understand is the shape of WordprocessingML documents.</span></span> <span data-ttu-id="341c8-112">WordprocessingML-Dokumente enthalten ein Textkörperelement (mit der Bezeichnung `w:body`) mit den Absätzen des Dokuments.</span><span class="sxs-lookup"><span data-stu-id="341c8-112">A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document.</span></span> <span data-ttu-id="341c8-113">Jeder Absatz enthält mindestens einen Textrun (mit der Bezeichnung `w:r`).</span><span class="sxs-lookup"><span data-stu-id="341c8-113">Each paragraph contains one or more text runs (named `w:r`).</span></span> <span data-ttu-id="341c8-114">Jeder Textrun enthält mindestens ein Textstück (mit der Bezeichnung `w:t`).</span><span class="sxs-lookup"><span data-stu-id="341c8-114">Each text run contains one or more text pieces (named `w:t`).</span></span>  
   
- Das folgende Beispiel ist ein sehr einfaches WordprocessingML-Dokument:  
+ <span data-ttu-id="341c8-115">Das folgende Beispiel ist ein sehr einfaches WordprocessingML-Dokument:</span><span class="sxs-lookup"><span data-stu-id="341c8-115">The following is a very simple WordprocessingML document:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -63,11 +63,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- Dieses Dokument besteht aus zwei Absätzen. Beide Absätze enthalten genau einen Textrun, und jeder Textrun enthält genau ein Textstück.  
+ <span data-ttu-id="341c8-116">Dieses Dokument besteht aus zwei Absätzen.</span><span class="sxs-lookup"><span data-stu-id="341c8-116">This document contains two paragraphs.</span></span> <span data-ttu-id="341c8-117">Beide Absätze enthalten genau einen Textrun, und jeder Textrun enthält genau ein Textstück.</span><span class="sxs-lookup"><span data-stu-id="341c8-117">They both contain a single text run, and each text run contains a single text piece.</span></span>  
   
- Die einfachste Möglichkeit, sich den Inhalt eines WordprocessingML-Dokuments in XML-Form anzusehen, besteht darin, ein WordprocessingML-Dokument in Microsoft Word zu erstellen, das Dokument zu speichern und dann das folgende Programm zum Ausgeben des XML-Codes auf der Konsole auszuführen:  
+ <span data-ttu-id="341c8-118">Die einfachste Möglichkeit, sich den Inhalt eines WordprocessingML-Dokuments in XML-Form anzusehen, besteht darin, ein WordprocessingML-Dokument in Microsoft Word zu erstellen, das Dokument zu speichern und dann das folgende Programm zum Ausgeben des XML-Codes auf der Konsole auszuführen:</span><span class="sxs-lookup"><span data-stu-id="341c8-118">The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.</span></span>  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
+ <span data-ttu-id="341c8-119">Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly.</span><span class="sxs-lookup"><span data-stu-id="341c8-119">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="341c8-120">Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.</span><span class="sxs-lookup"><span data-stu-id="341c8-120">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -99,13 +99,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>Externe Ressourcen  
- [Einführung in die Microsoft Office (2007) Open XML-Dateiformate](http://go.microsoft.com/fwlink/?LinkId=98093)  
+## <a name="external-resources"></a><span data-ttu-id="341c8-121">Externe Ressourcen</span><span class="sxs-lookup"><span data-stu-id="341c8-121">External Resources</span></span>  
+ [<span data-ttu-id="341c8-122">Einführung in die Microsoft Office (2007) Open XML-Dateiformate</span><span class="sxs-lookup"><span data-stu-id="341c8-122">Introducing the Office (2007) Open XML File Formats</span></span>](http://go.microsoft.com/fwlink/?LinkId=98093)  
   
- [Übersicht über WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)  
+ [<span data-ttu-id="341c8-123">Übersicht über WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="341c8-123">Overview of WordprocessingML</span></span>](http://go.microsoft.com/fwlink/?LinkId=98094)  
   
- [Office 2003: Downloadseite für die XML-Referenzschemas](http://go.microsoft.com/fwlink/?LinkId=98095)  
+ [<span data-ttu-id="341c8-124">Office 2003: Downloadseite für die XML-Referenzschemas</span><span class="sxs-lookup"><span data-stu-id="341c8-124">Office 2003: XML Reference Schemas Download page</span></span>](http://go.microsoft.com/fwlink/?LinkId=98095)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="341c8-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="341c8-125">See Also</span></span>  
+ [<span data-ttu-id="341c8-126">Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))</span><span class="sxs-lookup"><span data-stu-id="341c8-126">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 

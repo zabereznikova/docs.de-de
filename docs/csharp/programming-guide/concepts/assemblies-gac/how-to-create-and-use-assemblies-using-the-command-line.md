@@ -26,18 +26,18 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)
-Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="a5c25-102">Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)</span><span class="sxs-lookup"><span data-stu-id="a5c25-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
+<span data-ttu-id="a5c25-103">Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft.</span><span class="sxs-lookup"><span data-stu-id="a5c25-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="a5c25-104">Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:</span><span class="sxs-lookup"><span data-stu-id="a5c25-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
--   `MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen. In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.  
+-   <span data-ttu-id="a5c25-105">`MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a5c25-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="a5c25-106">In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="a5c25-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
--   `Add`: Die Quelldatei, die die Methode `Add` enthält. Sie gibt die Summe ihrer Parameter zurück. Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.  
+-   <span data-ttu-id="a5c25-107">`Add`: Die Quelldatei, die die Methode `Add` enthält.</span><span class="sxs-lookup"><span data-stu-id="a5c25-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="a5c25-108">Sie gibt die Summe ihrer Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="a5c25-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="a5c25-109">Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="a5c25-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
--   `Mult`: Der Quellcode, der die Methode `Multiply` enthält. Er gibt die Summe seiner Parameter zurück. Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.  
+-   <span data-ttu-id="a5c25-110">`Mult`: Der Quellcode, der die Methode `Multiply` enthält.</span><span class="sxs-lookup"><span data-stu-id="a5c25-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="a5c25-111">Er gibt die Summe seiner Parameter zurück.</span><span class="sxs-lookup"><span data-stu-id="a5c25-111">It returns the product of its parameters.</span></span> <span data-ttu-id="a5c25-112">Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="a5c25-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
--   `TestCode`: Die Datei, die die Methode `Main` enthält. Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.  
+-   <span data-ttu-id="a5c25-113">`TestCode`: Die Datei, die die Methode `Main` enthält.</span><span class="sxs-lookup"><span data-stu-id="a5c25-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="a5c25-114">Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="a5c25-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="a5c25-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a5c25-115">Example</span></span>  
   
 ```csharp  
 // File: Add.cs   
@@ -101,46 +101,46 @@ class TestCode
 */  
 ```  
   
- Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet. Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert. Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.  
+ <span data-ttu-id="a5c25-116">Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet.</span><span class="sxs-lookup"><span data-stu-id="a5c25-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="a5c25-117">Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert.</span><span class="sxs-lookup"><span data-stu-id="a5c25-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="a5c25-118">Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.</span><span class="sxs-lookup"><span data-stu-id="a5c25-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- Beachten Sie, dass Sie mit der `using`-Direktive am Anfang der Datei nicht qualifizierte Klassennamen verwenden können, um zum Zeitpunkt der Kompilierung wie folgt auf die DLL-Methoden zu verweisen:  
+ <span data-ttu-id="a5c25-119">Beachten Sie, dass Sie mit der `using`-Direktive am Anfang der Datei nicht qualifizierte Klassennamen verwenden können, um zum Zeitpunkt der Kompilierung wie folgt auf die DLL-Methoden zu verweisen:</span><span class="sxs-lookup"><span data-stu-id="a5c25-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- Andernfalls müssen Sie die vollqualifizierten Namen wie folgt verwenden:  
+ <span data-ttu-id="a5c25-120">Andernfalls müssen Sie die vollqualifizierten Namen wie folgt verwenden:</span><span class="sxs-lookup"><span data-stu-id="a5c25-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
-## <a name="execution"></a>Ausführung  
- Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:  
+## <a name="execution"></a><span data-ttu-id="a5c25-121">Ausführung</span><span class="sxs-lookup"><span data-stu-id="a5c25-121">Execution</span></span>  
+ <span data-ttu-id="a5c25-122">Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:</span><span class="sxs-lookup"><span data-stu-id="a5c25-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.  
+## <a name="compiling-the-code"></a><span data-ttu-id="a5c25-123">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="a5c25-123">Compiling the Code</span></span>  
+ <span data-ttu-id="a5c25-124">Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="a5c25-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
   
 ```csharp  
 csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
 ```  
   
- Die Compileroption [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) weist den Compiler an, eine DLL- statt einer EXE-Datei auszugeben. Die Compileroption [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) wird gefolgt von einem Dateinamen verwendet, um den Namen der DLL-Datei anzugeben. Andernfalls verwendet der Compiler die erste Datei (`Add.cs`) als Name der DLL.  
+ <span data-ttu-id="a5c25-125">Die Compileroption [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) weist den Compiler an, eine DLL- statt einer EXE-Datei auszugeben.</span><span class="sxs-lookup"><span data-stu-id="a5c25-125">The [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="a5c25-126">Die Compileroption [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) wird gefolgt von einem Dateinamen verwendet, um den Namen der DLL-Datei anzugeben.</span><span class="sxs-lookup"><span data-stu-id="a5c25-126">The [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="a5c25-127">Andernfalls verwendet der Compiler die erste Datei (`Add.cs`) als Name der DLL.</span><span class="sxs-lookup"><span data-stu-id="a5c25-127">Otherwise, the compiler uses the first file (`Add.cs`) as the name of the DLL.</span></span>  
   
- Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:  
+ <span data-ttu-id="a5c25-128">Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:</span><span class="sxs-lookup"><span data-stu-id="a5c25-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
   
 ```csharp  
 csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
 ```  
   
- Die Compileroption **/out** weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`) an. Diese Compileroption ist optional. Die Compileroption [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) gibt die von diesem Programm verwendeten DLL-Dateien an. Weitere Informationen finden Sie unter [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ <span data-ttu-id="a5c25-129">Die Compileroption **/out** weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`) an.</span><span class="sxs-lookup"><span data-stu-id="a5c25-129">The **/out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="a5c25-130">Diese Compileroption ist optional.</span><span class="sxs-lookup"><span data-stu-id="a5c25-130">This compiler option is optional.</span></span> <span data-ttu-id="a5c25-131">Die Compileroption [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) gibt die von diesem Programm verwendeten DLL-Dateien an.</span><span class="sxs-lookup"><span data-stu-id="a5c25-131">The [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiler option specifies the DLL file or files that this program uses.</span></span> <span data-ttu-id="a5c25-132">Weitere Informationen finden Sie unter [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="a5c25-132">For more information, see [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>  
   
- Weitere Informationen zum Erstellen über die Befehlszeile finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ <span data-ttu-id="a5c25-133">Weitere Informationen zum Erstellen über die Befehlszeile finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="a5c25-133">For more information about building from the command line, see [Command-line Building With csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a5c25-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a5c25-134">See Also</span></span>  
+ <span data-ttu-id="a5c25-135">[C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="a5c25-135">[C# Programming Guide](../../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="a5c25-136">[Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) </span><span class="sxs-lookup"><span data-stu-id="a5c25-136">[Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) </span></span>  
+ [<span data-ttu-id="a5c25-137">Erstellen einer Klasse zum Halten von DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="a5c25-137">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
 

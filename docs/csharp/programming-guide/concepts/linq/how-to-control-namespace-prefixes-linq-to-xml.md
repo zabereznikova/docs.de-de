@@ -26,23 +26,23 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)
-In diesem Thema wird beschrieben, wie Sie beim Serialisieren einer XML-Struktur Namespacepräfixe steuern können.  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a><span data-ttu-id="78f93-102">Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="78f93-102">How to: Control Namespace Prefixes (C#) (LINQ to XML)</span></span>
+<span data-ttu-id="78f93-103">In diesem Thema wird beschrieben, wie Sie beim Serialisieren einer XML-Struktur Namespacepräfixe steuern können.</span><span class="sxs-lookup"><span data-stu-id="78f93-103">This topic describes how you can control namespace prefixes when serializing an XML tree.</span></span>  
   
- In vielen Situationen ist es nicht notwendig, die Namespacepräfixe zu steuern.  
+ <span data-ttu-id="78f93-104">In vielen Situationen ist es nicht notwendig, die Namespacepräfixe zu steuern.</span><span class="sxs-lookup"><span data-stu-id="78f93-104">In many situations, it is not necessary to control namespace prefixes.</span></span>  
   
- Bestimmte XML-Programmiertools erfordern jedoch eine spezifische Steuerung der Namespacepräfixe. Angenommen, Sie möchten z. B. ein XSLT-Stylesheet oder ein XAML-Dokument bearbeiten, das eingebettete XPath-Ausdrücke enthält, die auf bestimmte Namespacepräfixe verweisen. In diesem Fall ist es wichtig, dass das Dokument mit diesen konkreten Präfixen serialisiert wird.  
+ <span data-ttu-id="78f93-105">Bestimmte XML-Programmiertools erfordern jedoch eine spezifische Steuerung der Namespacepräfixe.</span><span class="sxs-lookup"><span data-stu-id="78f93-105">However, certain XML programming tools require specific control of namespace prefixes.</span></span> <span data-ttu-id="78f93-106">Angenommen, Sie möchten z. B. ein XSLT-Stylesheet oder ein XAML-Dokument bearbeiten, das eingebettete XPath-Ausdrücke enthält, die auf bestimmte Namespacepräfixe verweisen. In diesem Fall ist es wichtig, dass das Dokument mit diesen konkreten Präfixen serialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="78f93-106">For example, you might be manipulating an XSLT style sheet or a XAML document that contains embedded XPath expressions that refer to specific namespace prefixes; in this case, it is important that the document be serialized with those specific prefixes.</span></span>  
   
- Dies ist der häufigste Grund für die Steuerung von Namespacepräfixen.  
+ <span data-ttu-id="78f93-107">Dies ist der häufigste Grund für die Steuerung von Namespacepräfixen.</span><span class="sxs-lookup"><span data-stu-id="78f93-107">This is the most common reason for controlling namespace prefixes.</span></span>  
   
- Ein weiterer Grund für die Notwendigkeit, Namespacepräfixe zu steuern, liegt darin, dass die Benutzer das XML-Dokument manuell bearbeiten können sollen und dass Sie Namespacepräfixe erstellen möchten, die für den Benutzer einfach einzugeben sind. Nehmen wir z. B. an, Sie möchten ein XSD-Dokument generieren. Den Konventionen für Schemas zufolge verwenden Sie  als Präfix für den Schemanamespace entweder `xs` oder `xsd`.  
+ <span data-ttu-id="78f93-108">Ein weiterer Grund für die Notwendigkeit, Namespacepräfixe zu steuern, liegt darin, dass die Benutzer das XML-Dokument manuell bearbeiten können sollen und dass Sie Namespacepräfixe erstellen möchten, die für den Benutzer einfach einzugeben sind.</span><span class="sxs-lookup"><span data-stu-id="78f93-108">Another common reason for controlling namespace prefixes is that you want users to edit the XML document manually, and you want to create namespace prefixes that are convenient for the user to type.</span></span> <span data-ttu-id="78f93-109">Nehmen wir z. B. an, Sie möchten ein XSD-Dokument generieren.</span><span class="sxs-lookup"><span data-stu-id="78f93-109">For example, you might be generating an XSD document.</span></span> <span data-ttu-id="78f93-110">Den Konventionen für Schemas zufolge verwenden Sie  als Präfix für den Schemanamespace entweder `xs` oder `xsd`.</span><span class="sxs-lookup"><span data-stu-id="78f93-110">Conventions for schemas suggest that you use either `xs` or `xsd` as the prefix for the schema namespace.</span></span>  
   
- Zum Steuern von Namespacepräfixen fügen Sie Attribute ein, die Namespaces deklarieren. Wenn Sie die Namespaces mit bestimmten Präfixen deklarieren, versucht [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], die Namespacepräfixe beim Serialisieren zu beachten.  
+ <span data-ttu-id="78f93-111">Zum Steuern von Namespacepräfixen fügen Sie Attribute ein, die Namespaces deklarieren.</span><span class="sxs-lookup"><span data-stu-id="78f93-111">To control namespace prefixes, you insert attributes that declare namespaces.</span></span> <span data-ttu-id="78f93-112">Wenn Sie die Namespaces mit bestimmten Präfixen deklarieren, versucht [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], die Namespacepräfixe beim Serialisieren zu beachten.</span><span class="sxs-lookup"><span data-stu-id="78f93-112">If you declare the namespaces with specific prefixes, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will attempt to honor the namespace prefixes when serializing.</span></span>  
   
- Beim Erstellen eines Attributs, das einen Namespace mit einem Präfix deklariert, erstellen Sie ein Attribut, bei dem der Namespace des Namens des Attributs <xref:System.Xml.Linq.XNamespace.Xmlns%2A> lautet und der Name des Attributs das Namespacepräfix ist. Der Wert des Attributs ist der URI des Namespace.  
+ <span data-ttu-id="78f93-113">Beim Erstellen eines Attributs, das einen Namespace mit einem Präfix deklariert, erstellen Sie ein Attribut, bei dem der Namespace des Namens des Attributs <xref:System.Xml.Linq.XNamespace.Xmlns%2A> lautet und der Name des Attributs das Namespacepräfix ist.</span><span class="sxs-lookup"><span data-stu-id="78f93-113">To create an attribute that declares a namespace with a prefix, you create an attribute where the namespace of the name of the attribute is <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, and the name of the attribute is the namespace prefix.</span></span> <span data-ttu-id="78f93-114">Der Wert des Attributs ist der URI des Namespace.</span><span class="sxs-lookup"><span data-stu-id="78f93-114">The value of the attribute is the URI of the namespace.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel deklariert zwei Namespaces. Es gibt für den `http://www.adventure-works.com`-Namespace das Präfix `aw` und für den `www.fourthcoffee.com`-Namespace das Präfix `fc` an.  
+## <a name="example"></a><span data-ttu-id="78f93-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="78f93-115">Example</span></span>  
+ <span data-ttu-id="78f93-116">Dieses Beispiel deklariert zwei Namespaces.</span><span class="sxs-lookup"><span data-stu-id="78f93-116">This example declares two namespaces.</span></span> <span data-ttu-id="78f93-117">Es gibt für den `http://www.adventure-works.com`-Namespace das Präfix `aw` und für den `www.fourthcoffee.com`-Namespace das Präfix `fc` an.</span><span class="sxs-lookup"><span data-stu-id="78f93-117">It specifies that the `http://www.adventure-works.com` namespace has the prefix of `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -59,7 +59,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="78f93-118">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="78f93-118">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -71,6 +71,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="78f93-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="78f93-119">See Also</span></span>  
+ [<span data-ttu-id="78f93-120">Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))</span><span class="sxs-lookup"><span data-stu-id="78f93-120">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
 

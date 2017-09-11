@@ -21,17 +21,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6701834f1a99536abda37f3fbc2450bd795dcb5
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 7494a0296fd2bbba055fb1f49f87e8c73d85e8e4
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Gewusst wie: Serialisieren mit DataContractSerializer (Visual Basic)
-Dieses Thema enthält ein Beispiel, das serialisiert und deserialisiert mithilfe von <xref:System.Runtime.Serialization.DataContractSerializer>.</xref:System.Runtime.Serialization.DataContractSerializer>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="3b10b-102">Gewusst wie: Serialisieren mit DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b10b-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
+<span data-ttu-id="3b10b-103">Dieses Thema enthält ein Beispiel, das serialisiert und deserialisiert mithilfe von <xref:System.Runtime.Serialization.DataContractSerializer>.</xref:System.Runtime.Serialization.DataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="3b10b-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Reihe von Objekten, die enthalten <xref:System.Xml.Linq.XElement>Objekte.</xref:System.Xml.Linq.XElement> Anschließend werden diese Objekte in Textdateien serialisiert und dann aus den Textdateien wieder deserialisiert.  
+## <a name="example"></a><span data-ttu-id="3b10b-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3b10b-104">Example</span></span>  
+ <span data-ttu-id="3b10b-105">Das folgende Beispiel erstellt eine Reihe von Objekten, die enthalten <xref:System.Xml.Linq.XElement>Objekte.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="3b10b-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="3b10b-106">Anschließend werden diese Objekte in Textdateien serialisiert und dann aus den Textdateien wieder deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="3b10b-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```vb  
 Imports System  
@@ -90,7 +90,7 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="3b10b-107">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="3b10b-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -101,6 +101,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Serialisieren von Objektdiagrammen, die XElement-Objekten (Visual Basic) enthalten.](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="3b10b-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b10b-108">See Also</span></span>  
+ [<span data-ttu-id="3b10b-109">Serialisieren von Objektdiagrammen, die XElement-Objekten (Visual Basic) enthalten.</span><span class="sxs-lookup"><span data-stu-id="3b10b-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
 

@@ -32,26 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ab2041826f74fdc5aceab7b1ceb26563d9b3f0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d792485f13e2b675858d82aa7219670a17fd974e
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>'&lt;%InterfaceName&gt;.&lt; Membername&gt;"ist bereits implementiert die Basisklasse"&lt;Baseclassname&gt;". Die erneute Implementierung von &lt;Typ&gt; davon ausgegangen, dass
-Eine Eigenschaft, eine Prozedur oder ein Ereignis in einer abgeleiteten Klasse verwendet eine `Implements` -Klausel für einen Schnittstellenmember, der bereits in der Basisklasse implementiert wird.  
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a><span data-ttu-id="5b613-103">'&lt;%InterfaceName&gt;.&lt; Membername&gt;"ist bereits implementiert die Basisklasse"&lt;Baseclassname&gt;".</span><span class="sxs-lookup"><span data-stu-id="5b613-103">&#39;&lt;interfacename&gt;.&lt;membername&gt;&#39; is already implemented by the base class &#39;&lt;baseclassname&gt;&#39;.</span></span> <span data-ttu-id="5b613-104">Die erneute Implementierung von &lt;Typ&gt; davon ausgegangen, dass</span><span class="sxs-lookup"><span data-stu-id="5b613-104">Re-implementation of &lt;type&gt; assumed</span></span>
+<span data-ttu-id="5b613-105">Eine Eigenschaft, eine Prozedur oder ein Ereignis in einer abgeleiteten Klasse verwendet eine `Implements` -Klausel für einen Schnittstellenmember, der bereits in der Basisklasse implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="5b613-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
   
- Ein Schnittstellenmember, der von seiner Basisklasse implementiert wird, kann von einer abgeleiteten Klasse erneut implementiert werden. Dieser Vorgang ist nicht identisch mit dem Überschreiben der Basisklassenimplementierung. Weitere Informationen finden Sie unter [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md).  
+ <span data-ttu-id="5b613-106">Ein Schnittstellenmember, der von seiner Basisklasse implementiert wird, kann von einer abgeleiteten Klasse erneut implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="5b613-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="5b613-107">Dieser Vorgang ist nicht identisch mit dem Überschreiben der Basisklassenimplementierung.</span><span class="sxs-lookup"><span data-stu-id="5b613-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="5b613-108">Weitere Informationen finden Sie unter [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md).</span><span class="sxs-lookup"><span data-stu-id="5b613-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
- Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="5b613-109">Standardmäßig ist diese Meldung eine Warnung.</span><span class="sxs-lookup"><span data-stu-id="5b613-109">By default, this message is a warning.</span></span> <span data-ttu-id="5b613-110">Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="5b613-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Fehler-ID:** BC42015  
+ <span data-ttu-id="5b613-111">**Fehler-ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="5b613-111">**Error ID:** BC42015</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5b613-112">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="5b613-112">To correct this error</span></span>  
   
--   Wenn Sie beabsichtigen, den Schnittstellenmember erneut zu implementieren, müssen Sie keine Maßnahme ergreifen. Code in der abgeleiteten Klasse greift auf die reimplemented Member, es sei denn, Sie verwenden die `MyBase` -Schlüsselwort verwenden, um die Implementierung der Basisklasse zugreifen.  
+-   <span data-ttu-id="5b613-113">Wenn Sie beabsichtigen, den Schnittstellenmember erneut zu implementieren, müssen Sie keine Maßnahme ergreifen.</span><span class="sxs-lookup"><span data-stu-id="5b613-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="5b613-114">Code in der abgeleiteten Klasse greift auf die reimplemented Member, es sei denn, Sie verwenden die `MyBase` -Schlüsselwort verwenden, um die Implementierung der Basisklasse zugreifen.</span><span class="sxs-lookup"><span data-stu-id="5b613-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
   
--   Wenn Sie keine erneute Implementierung des Schnittstellenmembers beabsichtigen, entfernen Sie die `Implements` -Klausel aus der Deklaration der Eigenschaft, Prozedur oder des Ereignisses.  
+-   <span data-ttu-id="5b613-115">Wenn Sie keine erneute Implementierung des Schnittstellenmembers beabsichtigen, entfernen Sie die `Implements` -Klausel aus der Deklaration der Eigenschaft, Prozedur oder des Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="5b613-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="5b613-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5b613-116">See Also</span></span>  
+ [<span data-ttu-id="5b613-117">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="5b613-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

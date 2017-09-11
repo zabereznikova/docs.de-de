@@ -35,19 +35,19 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="manipulating-pointers-c-programming-guide"></a>Bearbeiten von Zeigern (C#-Programmierhandbuch)
-Dieser Abschnitt enthält die folgenden Zeigeroperationen:  
+# <a name="manipulating-pointers-c-programming-guide"></a><span data-ttu-id="37e0a-102">Bearbeiten von Zeigern (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="37e0a-102">Manipulating Pointers (C# Programming Guide)</span></span>
+<span data-ttu-id="37e0a-103">Dieser Abschnitt enthält die folgenden Zeigeroperationen:</span><span class="sxs-lookup"><span data-stu-id="37e0a-103">This section includes the following pointer operations:</span></span>  
   
- [Inkrementieren und Dekrementieren](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)  
+ [<span data-ttu-id="37e0a-104">Inkrementieren und Dekrementieren</span><span class="sxs-lookup"><span data-stu-id="37e0a-104">Increment and Decrement</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)  
   
- [Arithmetische Operationen](../../../csharp/programming-guide/unsafe-code-pointers/arithmetic-operations-on-pointers.md)  
+ [<span data-ttu-id="37e0a-105">Arithmetische Operationen</span><span class="sxs-lookup"><span data-stu-id="37e0a-105">Arithmetic Operations</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/arithmetic-operations-on-pointers.md)  
   
- [Vergleich](../../../csharp/programming-guide/unsafe-code-pointers/pointer-comparison.md)  
+ [<span data-ttu-id="37e0a-106">Vergleich</span><span class="sxs-lookup"><span data-stu-id="37e0a-106">Comparison</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-comparison.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)   
- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [-unsafe (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)
+## <a name="see-also"></a><span data-ttu-id="37e0a-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37e0a-107">See Also</span></span>  
+ <span data-ttu-id="37e0a-108">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="37e0a-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="37e0a-109">[Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="37e0a-109">[Pointer Expressions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span></span>  
+ <span data-ttu-id="37e0a-110">[C#-Operatoren](../../../csharp/language-reference/operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="37e0a-110">[C# Operators](../../../csharp/language-reference/operators/index.md) </span></span>  
+ <span data-ttu-id="37e0a-111">[Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="37e0a-111">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ [<span data-ttu-id="37e0a-112">-unsafe (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="37e0a-112">/unsafe (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)
 

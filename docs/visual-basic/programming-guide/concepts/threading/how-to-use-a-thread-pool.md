@@ -20,20 +20,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60bceea0ed956075233f5f045131ffb2eb37eef
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a86eabe40c91d96fc236c0a0de3ff668b855b9ab
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a>Gewusst wie: Verwenden eines Threadpools (Visual Basic)
-*Pooling von Threads* ist eine Form von multithreading in der Aufgaben in eine Warteschlange eingefügt und bei der Erstellung von Threads automatisch gestartet. Weitere Informationen finden Sie unter [Pooling von Threads (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a><span data-ttu-id="5c670-102">Gewusst wie: Verwenden eines Threadpools (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5c670-102">How to: Use a Thread Pool (Visual Basic)</span></span>
+<span data-ttu-id="5c670-103">*Pooling von Threads* ist eine Form von multithreading in der Aufgaben in eine Warteschlange eingefügt und bei der Erstellung von Threads automatisch gestartet.</span><span class="sxs-lookup"><span data-stu-id="5c670-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="5c670-104">Weitere Informationen finden Sie unter [Pooling von Threads (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span><span class="sxs-lookup"><span data-stu-id="5c670-104">For more information, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span></span>  
   
- Im folgenden Beispiel wird den .NET Framework-Threadpool zur Berechnung der `Fibonacci` -Ergebnis für zehn Zahlen zwischen 20 und 40. Jede `Fibonacci` Ergebnis wird dargestellt, durch die `Fibonacci` -Klasse, die eine Methode namens bereitstellt `ThreadPoolCallback` zur Ausführung der Berechnung. Ein Objekt, das jeweils `Fibonacci` Wert erstellt wird, und die `ThreadPoolCallback` an die Methode übergeben wird <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, einen verfügbaren Thread im Pool zum Ausführen der Methode zuweisen.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <span data-ttu-id="5c670-105">Im folgenden Beispiel wird den .NET Framework-Threadpool zur Berechnung der `Fibonacci` -Ergebnis für zehn Zahlen zwischen 20 und 40.</span><span class="sxs-lookup"><span data-stu-id="5c670-105">The following example uses the .NET Framework thread pool to calculate the `Fibonacci` result for ten numbers between 20 and 40.</span></span> <span data-ttu-id="5c670-106">Jede `Fibonacci` Ergebnis wird dargestellt, durch die `Fibonacci` -Klasse, die eine Methode namens bereitstellt `ThreadPoolCallback` zur Ausführung der Berechnung.</span><span class="sxs-lookup"><span data-stu-id="5c670-106">Each `Fibonacci` result is represented by the `Fibonacci` class, which provides a method named `ThreadPoolCallback` that performs the calculation.</span></span> <span data-ttu-id="5c670-107">Ein Objekt, das jeweils `Fibonacci` Wert erstellt wird, und die `ThreadPoolCallback` an die Methode übergeben wird <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, einen verfügbaren Thread im Pool zum Ausführen der Methode zuweisen.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></span><span class="sxs-lookup"><span data-stu-id="5c670-107">An object that represents each `Fibonacci` value is created, and the `ThreadPoolCallback` method is passed to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, which assigns an available thread in the pool to execute the method.</span></span>  
   
- Da jedes `Fibonacci` Objekt erhält einen halb zufälligen Wert berechnet, und jeder Thread für die Prozessorzeit konkurrieren, kann nicht vorhersagen, wie lange aller zehn Ergebnisse dauert wissen. Deshalb jedes `Fibonacci` Objekt ist eine Instanz des übergeben der <xref:System.Threading.ManualResetEvent>Klasse während der Erstellung.</xref:System.Threading.ManualResetEvent> Jedes Objekt signalisiert das bereitgestellten Ereignisobjekt Wenn Berechnung abgeschlossen ist, wodurch den primären Thread blockieren Ausführung mit <xref:System.Threading.WaitHandle.WaitAll%2A>bis alle zehn `Fibonacci` Objekte haben ein Ergebnis berechnet.</xref:System.Threading.WaitHandle.WaitAll%2A> Die `Main` -Methode zeigt dann alle `Fibonacci` Ergebnis.  
+ <span data-ttu-id="5c670-108">Da jedes `Fibonacci` Objekt erhält einen halb zufälligen Wert berechnet, und jeder Thread für die Prozessorzeit konkurrieren, kann nicht vorhersagen, wie lange aller zehn Ergebnisse dauert wissen.</span><span class="sxs-lookup"><span data-stu-id="5c670-108">Because each `Fibonacci` object is given a semi-random value to compute, and because each thread will be competing for processor time, you cannot know in advance how long it will take for all ten results to be calculated.</span></span> <span data-ttu-id="5c670-109">Deshalb jedes `Fibonacci` Objekt ist eine Instanz des übergeben der <xref:System.Threading.ManualResetEvent>Klasse während der Erstellung.</xref:System.Threading.ManualResetEvent></span><span class="sxs-lookup"><span data-stu-id="5c670-109">That is why each `Fibonacci` object is passed an instance of the <xref:System.Threading.ManualResetEvent> class during construction.</span></span> <span data-ttu-id="5c670-110">Jedes Objekt signalisiert das bereitgestellten Ereignisobjekt Wenn Berechnung abgeschlossen ist, wodurch den primären Thread blockieren Ausführung mit <xref:System.Threading.WaitHandle.WaitAll%2A>bis alle zehn `Fibonacci` Objekte haben ein Ergebnis berechnet.</xref:System.Threading.WaitHandle.WaitAll%2A></span><span class="sxs-lookup"><span data-stu-id="5c670-110">Each object signals the provided event object when its calculation is complete, which allows the primary thread to block execution with <xref:System.Threading.WaitHandle.WaitAll%2A> until all ten `Fibonacci` objects have calculated a result.</span></span> <span data-ttu-id="5c670-111">Die `Main` -Methode zeigt dann alle `Fibonacci` Ergebnis.</span><span class="sxs-lookup"><span data-stu-id="5c670-111">The `Main` method then displays each `Fibonacci` result.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="5c670-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5c670-112">Example</span></span>  
   
 ```vb  
 Imports System.Threading  
@@ -113,7 +114,7 @@ Module Module1
 End Module  
 ```  
   
- Es folgt ein Beispiel für die Ausgabe.  
+ <span data-ttu-id="5c670-113">Es folgt ein Beispiel für die Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="5c670-113">Following is an example of the output.</span></span>  
   
 ```  
 launching 10 tasks...  
@@ -150,15 +151,15 @@ Fibonacci(21) = 10946
 Fibonacci(27) = 196418  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- [Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
+## <a name="see-also"></a><span data-ttu-id="5c670-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5c670-114">See Also</span></span>  
+ <span data-ttu-id="5c670-115"><xref:System.Threading.Mutex></xref:System.Threading.Mutex></span><span class="sxs-lookup"><span data-stu-id="5c670-115"><xref:System.Threading.Mutex></span></span>   
+ <span data-ttu-id="5c670-116"><xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A></span><span class="sxs-lookup"><span data-stu-id="5c670-116"><xref:System.Threading.WaitHandle.WaitAll%2A></span></span>   
+ <span data-ttu-id="5c670-117"><xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent></span><span class="sxs-lookup"><span data-stu-id="5c670-117"><xref:System.Threading.ManualResetEvent></span></span>   
+ <span data-ttu-id="5c670-118"><xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A></span><span class="sxs-lookup"><span data-stu-id="5c670-118"><xref:System.Threading.EventWaitHandle.Set%2A></span></span>   
+ <span data-ttu-id="5c670-119"><xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool></span><span class="sxs-lookup"><span data-stu-id="5c670-119"><xref:System.Threading.ThreadPool></span></span>   
+ <span data-ttu-id="5c670-120"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></span><span class="sxs-lookup"><span data-stu-id="5c670-120"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></span></span>   
+ <span data-ttu-id="5c670-121"><xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent></span><span class="sxs-lookup"><span data-stu-id="5c670-121"><xref:System.Threading.ManualResetEvent></span></span>   
+<span data-ttu-id="5c670-122"> [Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md) </span><span class="sxs-lookup"><span data-stu-id="5c670-122"> [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md) </span></span>  
+<span data-ttu-id="5c670-123"> [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) </span><span class="sxs-lookup"><span data-stu-id="5c670-123"> [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) </span></span>  
  @System.Threading.Monitor   
- [Sicherheit](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+<span data-ttu-id="5c670-124"> [Sicherheit](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)</span><span class="sxs-lookup"><span data-stu-id="5c670-124"> [Security](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)</span></span>

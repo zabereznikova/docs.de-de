@@ -38,38 +38,38 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>. Operator (C#-Referenz)
-Der Punktoperator (`.`) wird für den Memberzugriff verwendet. Der Punktoperator gibt einen Member eines Typs oder Namespaces an. Der Punktoperator wird z.B. verwendet, um auf bestimmte Methoden innerhalb der .NET Framework-Klassenbibliotheken zuzugreifen:  
+# <a name="-operator-c-reference"></a><span data-ttu-id="bbadf-103">.</span><span class="sxs-lookup"><span data-stu-id="bbadf-103">.</span></span> <span data-ttu-id="bbadf-104">Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bbadf-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="bbadf-105">Der Punktoperator (`.`) wird für den Memberzugriff verwendet.</span><span class="sxs-lookup"><span data-stu-id="bbadf-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="bbadf-106">Der Punktoperator gibt einen Member eines Typs oder Namespaces an.</span><span class="sxs-lookup"><span data-stu-id="bbadf-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="bbadf-107">Der Punktoperator wird z.B. verwendet, um auf bestimmte Methoden innerhalb der .NET Framework-Klassenbibliotheken zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="bbadf-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
- [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
+ <span data-ttu-id="bbadf-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span></span>  
   
- Betrachten Sie beispielsweise die folgende Klasse:  
+ <span data-ttu-id="bbadf-109">Betrachten Sie beispielsweise die folgende Klasse:</span><span class="sxs-lookup"><span data-stu-id="bbadf-109">For example, consider the following class:</span></span>  
   
- [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
+ <span data-ttu-id="bbadf-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span></span>  
   
- [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
+ <span data-ttu-id="bbadf-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span></span>  
   
- Die Variable `s` verfügt über zwei Member (`a` und `b`); verwenden Sie den Punktoperator, um auf beide zuzugreifen:  
+ <span data-ttu-id="bbadf-112">Die Variable `s` verfügt über zwei Member (`a` und `b`); verwenden Sie den Punktoperator, um auf beide zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="bbadf-112">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
- [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
+ <span data-ttu-id="bbadf-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span></span>  
   
- Der Punkt wird auch verwendet, um qualifizierte Namen zu erzeugen, die z.B. den Namespace oder die Schnittstelle angeben, zu der Sie gehören.  
+ <span data-ttu-id="bbadf-114">Der Punkt wird auch verwendet, um qualifizierte Namen zu erzeugen, die z.B. den Namespace oder die Schnittstelle angeben, zu der Sie gehören.</span><span class="sxs-lookup"><span data-stu-id="bbadf-114">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
- [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
+ <span data-ttu-id="bbadf-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span></span>  
   
- Die using-Direktive macht manche Namensqualifikationen optional:  
+ <span data-ttu-id="bbadf-116">Die using-Direktive macht manche Namensqualifikationen optional:</span><span class="sxs-lookup"><span data-stu-id="bbadf-116">The using directive makes some name qualification optional:</span></span>  
   
- [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
+ <span data-ttu-id="bbadf-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span></span>  
   
- Wenn ein Bezeichner jedoch nicht eindeutig ist, muss er qualifiziert werden:  
+ <span data-ttu-id="bbadf-118">Wenn ein Bezeichner jedoch nicht eindeutig ist, muss er qualifiziert werden:</span><span class="sxs-lookup"><span data-stu-id="bbadf-118">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
- [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
+ <span data-ttu-id="bbadf-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="bbadf-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="bbadf-120">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="bbadf-120">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="bbadf-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bbadf-121">See Also</span></span>  
+ <span data-ttu-id="bbadf-122">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bbadf-122">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bbadf-123">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bbadf-123">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="bbadf-124">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="bbadf-124">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

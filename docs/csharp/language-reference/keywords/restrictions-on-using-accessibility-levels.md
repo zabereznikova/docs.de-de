@@ -34,32 +34,32 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)
-Wenn Sie in einer Deklaration einen Typ angeben, überprüfen Sie, ob die Zugriffsebene dieses Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängt. Auf die direkte Basisklasse muss z.B. mindestens genauso zugegriffen werden können wie auf die abgeleitete Klasse. Die folgende Deklaration verursacht einen Compilerfehler, da die Basisklasse `BaseClass` eine stärkere Zugriffsbeschränkung hat als `MyClass`:  
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="fd3ca-102">Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="fd3ca-102">Restrictions on Using Accessibility Levels (C# Reference)</span></span>
+<span data-ttu-id="fd3ca-103">Wenn Sie in einer Deklaration einen Typ angeben, überprüfen Sie, ob die Zugriffsebene dieses Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängt.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="fd3ca-104">Auf die direkte Basisklasse muss z.B. mindestens genauso zugegriffen werden können wie auf die abgeleitete Klasse.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="fd3ca-105">Die folgende Deklaration verursacht einen Compilerfehler, da die Basisklasse `BaseClass` eine stärkere Zugriffsbeschränkung hat als `MyClass`:</span><span class="sxs-lookup"><span data-stu-id="fd3ca-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>  
   
 ```  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
   
- In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.  
+ <span data-ttu-id="fd3ca-106">In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>  
   
-|Kontext|Hinweise|  
+|<span data-ttu-id="fd3ca-107">Kontext</span><span class="sxs-lookup"><span data-stu-id="fd3ca-107">Context</span></span>|<span data-ttu-id="fd3ca-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fd3ca-108">Remarks</span></span>|  
 |-------------|-------------|  
-|[Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)|Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.|  
-|[Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)|Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.|  
-|[Delegaten](../../../csharp/programming-guide/delegates/index.md)|Die Rückgabe- und Parametertypen eines Delegattyps müssen mindestens dieselben Zugriffsmöglichkeiten wie der Delegattyp selbst bieten.|  
-|[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Der Typ einer Konstante muss mindestens dieselben Zugriffsmöglichkeiten wie die Konstante selbst bieten.|  
-|[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)|Der Typ eines Felds muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Feld selbst.|  
-|[Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)|Die Rückgabe- und Parametertypen einer Methode müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie die Methode selbst.|  
-|[Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)|Der Typ einer Eigenschaft muss mindestens dieselben Zugriffsmöglichkeiten bieten wie die Eigenschaft selbst.|  
-|[Ereignisse](../../../csharp/programming-guide/events/index.md)|Der Typ eines Ereignisses muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Ereignis selbst.|  
-|[Indexer](../../../csharp/programming-guide/indexers/index.md)|Der Typ und die Parametertypen eines Indexers müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst.|  
-|[Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Die Rückgabe- und Parametertypen eines Operators müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Operator selbst.|  
-|[Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Die Parametertypen eines Konstruktors müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Konstruktor selbst.|  
+|[<span data-ttu-id="fd3ca-109">Klassen</span><span class="sxs-lookup"><span data-stu-id="fd3ca-109">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="fd3ca-110">Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-111">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fd3ca-111">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)|<span data-ttu-id="fd3ca-112">Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-113">Delegaten</span><span class="sxs-lookup"><span data-stu-id="fd3ca-113">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)|<span data-ttu-id="fd3ca-114">Die Rückgabe- und Parametertypen eines Delegattyps müssen mindestens dieselben Zugriffsmöglichkeiten wie der Delegattyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-115">Konstanten</span><span class="sxs-lookup"><span data-stu-id="fd3ca-115">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="fd3ca-116">Der Typ einer Konstante muss mindestens dieselben Zugriffsmöglichkeiten wie die Konstante selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-117">Felder</span><span class="sxs-lookup"><span data-stu-id="fd3ca-117">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="fd3ca-118">Der Typ eines Felds muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Feld selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-118">The type of a field must be at least as accessible as the field itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-119">Methoden</span><span class="sxs-lookup"><span data-stu-id="fd3ca-119">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="fd3ca-120">Die Rückgabe- und Parametertypen einer Methode müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie die Methode selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-121">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="fd3ca-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="fd3ca-122">Der Typ einer Eigenschaft muss mindestens dieselben Zugriffsmöglichkeiten bieten wie die Eigenschaft selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-122">The type of a property must be at least as accessible as the property itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-123">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="fd3ca-123">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="fd3ca-124">Der Typ eines Ereignisses muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Ereignis selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-124">The type of an event must be at least as accessible as the event itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-125">Indexer</span><span class="sxs-lookup"><span data-stu-id="fd3ca-125">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="fd3ca-126">Der Typ und die Parametertypen eines Indexers müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-127">Operatoren</span><span class="sxs-lookup"><span data-stu-id="fd3ca-127">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="fd3ca-128">Die Rückgabe- und Parametertypen eines Operators müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Operator selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|  
+|[<span data-ttu-id="fd3ca-129">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="fd3ca-129">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="fd3ca-130">Die Parametertypen eines Konstruktors müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Konstruktor selbst.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält fehlerhafte Deklarationen verschiedener Typen. Der Kommentar nach jeder Deklaration gibt den erwarteten Compilerfehler an.  
+## <a name="example"></a><span data-ttu-id="fd3ca-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fd3ca-131">Example</span></span>  
+ <span data-ttu-id="fd3ca-132">Das folgende Beispiel enthält fehlerhafte Deklarationen verschiedener Typen.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="fd3ca-133">Der Kommentar nach jeder Deklaration gibt den erwarteten Compilerfehler an.</span><span class="sxs-lookup"><span data-stu-id="fd3ca-133">The comment following each declaration indicates the expected compiler error.</span></span>  
   
 ```  
 // Restrictions on Using Accessibility Levels  
@@ -124,19 +124,19 @@ public class A
 }  
 ```  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="fd3ca-134">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="fd3ca-134">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Accessibility Domain (Zugriffsdomäne)](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Access Modifiers (Zugriffsmodifizierer)](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a><span data-ttu-id="fd3ca-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd3ca-135">See Also</span></span>  
+ <span data-ttu-id="fd3ca-136">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-136">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="fd3ca-137">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-137">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="fd3ca-138">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-138">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="fd3ca-139">[Access Modifiers (Zugriffsmodifizierer)](../../../csharp/language-reference/keywords/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-139">[Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md) </span></span>  
+ <span data-ttu-id="fd3ca-140">[Accessibility Domain (Zugriffsdomäne)](../../../csharp/language-reference/keywords/accessibility-domain.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-140">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md) </span></span>  
+ <span data-ttu-id="fd3ca-141">[Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-141">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) </span></span>  
+ <span data-ttu-id="fd3ca-142">[Access Modifiers (Zugriffsmodifizierer)](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-142">[Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) </span></span>  
+ <span data-ttu-id="fd3ca-143">[public](../../../csharp/language-reference/keywords/public.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-143">[public](../../../csharp/language-reference/keywords/public.md) </span></span>  
+ <span data-ttu-id="fd3ca-144">[private](../../../csharp/language-reference/keywords/private.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-144">[private](../../../csharp/language-reference/keywords/private.md) </span></span>  
+ <span data-ttu-id="fd3ca-145">[protected](../../../csharp/language-reference/keywords/protected.md) </span><span class="sxs-lookup"><span data-stu-id="fd3ca-145">[protected](../../../csharp/language-reference/keywords/protected.md) </span></span>  
+ [<span data-ttu-id="fd3ca-146">internal</span><span class="sxs-lookup"><span data-stu-id="fd3ca-146">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
 

@@ -1,1 +1,1 @@
-Microsoft Windows Media
+<span data-ttu-id="a1679-101">Microsoft Windows Media</span><span class="sxs-lookup"><span data-stu-id="a1679-101">Microsoft Windows Media</span></span>

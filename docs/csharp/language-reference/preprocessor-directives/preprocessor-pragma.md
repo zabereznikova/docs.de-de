@@ -36,30 +36,30 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pragma-c-reference"></a>#pragma (C#-Referenz)
-`#pragma` gibt dem Compiler spezielle Anweisungen für die Kompilierung der Datei, in der es auftritt. Die Anweisungen müssen vom Compiler unterstützt werden. Das heißt, Sie können `#pragma` nicht zum Erstellen von benutzerdefinierten Vorverarbeitungsanweisungen verwenden. Der Microsoft C#-Compiler unterstützt die folgenden beiden `#pragma`-Anweisungen:  
+# <a name="pragma-c-reference"></a><span data-ttu-id="13a62-102">#pragma (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="13a62-102">#pragma (C# Reference)</span></span>
+<span data-ttu-id="13a62-103">`#pragma` gibt dem Compiler spezielle Anweisungen für die Kompilierung der Datei, in der es auftritt.</span><span class="sxs-lookup"><span data-stu-id="13a62-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="13a62-104">Die Anweisungen müssen vom Compiler unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="13a62-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="13a62-105">Das heißt, Sie können `#pragma` nicht zum Erstellen von benutzerdefinierten Vorverarbeitungsanweisungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="13a62-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="13a62-106">Der Microsoft C#-Compiler unterstützt die folgenden beiden `#pragma`-Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="13a62-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
   
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [<span data-ttu-id="13a62-107">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="13a62-107">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [<span data-ttu-id="13a62-108">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="13a62-108">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="13a62-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="13a62-109">Syntax</span></span>  
   
 ```csharp
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="13a62-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="13a62-110">Parameters</span></span>  
  `pragma-name`  
- Der Name einer erkannten pragma-Anweisung.  
+ <span data-ttu-id="13a62-111">Der Name einer erkannten pragma-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="13a62-111">The name of a recognized pragma.</span></span>  
   
  `pragma-arguments`  
- Pragma-spezifische Argumente.  
+ <span data-ttu-id="13a62-112">Pragma-spezifische Argumente.</span><span class="sxs-lookup"><span data-stu-id="13a62-112">Pragma-specific arguments.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)   
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+## <a name="see-also"></a><span data-ttu-id="13a62-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="13a62-113">See Also</span></span>  
+ <span data-ttu-id="13a62-114">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="13a62-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="13a62-115">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="13a62-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="13a62-116">[C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md) </span><span class="sxs-lookup"><span data-stu-id="13a62-116">[C# Preprocessor Directives](../../../csharp/language-reference/preprocessor-directives/index.md) </span></span>  
+ <span data-ttu-id="13a62-117">[#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) </span><span class="sxs-lookup"><span data-stu-id="13a62-117">[#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) </span></span>  
+ [<span data-ttu-id="13a62-118">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="13a62-118">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
 

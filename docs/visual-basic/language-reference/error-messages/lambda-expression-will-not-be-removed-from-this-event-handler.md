@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7afe8160a25130cd92722df527d9567192912292
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt
-Der Lambda-Ausdruck wird aus diesem Ereignishandler nicht entfernt. Weisen Sie den Lambda-Ausdruck einer Variablen zu und verwenden Sie die Variable hinzufügen und entfernen das Ereignis.  
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="5c788-102">Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt</span><span class="sxs-lookup"><span data-stu-id="5c788-102">Lambda expression will not be removed from this event handler</span></span>
+<span data-ttu-id="5c788-103">Der Lambda-Ausdruck wird aus diesem Ereignishandler nicht entfernt.</span><span class="sxs-lookup"><span data-stu-id="5c788-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="5c788-104">Weisen Sie den Lambda-Ausdruck einer Variablen zu und verwenden Sie die Variable hinzufügen und entfernen das Ereignis.</span><span class="sxs-lookup"><span data-stu-id="5c788-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
   
- Wenn Lambda-Ausdrücke und Ereignishandler verwendet werden, möglicherweise nicht das Verhalten angezeigt, das Sie erwarten. Der Compiler generiert eine neue Methode für jede Definition des Lambda-Ausdrucks, auch wenn sie identisch sind. Daher zeigt der folgende code `False`.  
+ <span data-ttu-id="5c788-105">Wenn Lambda-Ausdrücke und Ereignishandler verwendet werden, möglicherweise nicht das Verhalten angezeigt, das Sie erwarten.</span><span class="sxs-lookup"><span data-stu-id="5c788-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="5c788-106">Der Compiler generiert eine neue Methode für jede Definition des Lambda-Ausdrucks, auch wenn sie identisch sind.</span><span class="sxs-lookup"><span data-stu-id="5c788-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="5c788-107">Daher zeigt der folgende code `False`.</span><span class="sxs-lookup"><span data-stu-id="5c788-107">Therefore, the following code displays `False`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -57,7 +58,7 @@ Module Module1
 End Module  
 ```  
   
- Wenn Lambda-Ausdrücke und Ereignishandler verwendet werden, verursacht dies möglicherweise unerwartete Ergebnisse. Im folgenden Beispiel wird der Lambda-Ausdruck durch hinzugefügt `AddHandler` wird nicht entfernt werden, indem die `RemoveHandler` Anweisung.  
+ <span data-ttu-id="5c788-108">Wenn Lambda-Ausdrücke und Ereignishandler verwendet werden, verursacht dies möglicherweise unerwartete Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="5c788-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="5c788-109">Im folgenden Beispiel wird der Lambda-Ausdruck durch hinzugefügt `AddHandler` wird nicht entfernt werden, indem die `RemoveHandler` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="5c788-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
   
 ```vb  
 Module Module1  
@@ -78,13 +79,13 @@ Module Module1
 End Module  
 ```  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="5c788-110">Standardmäßig ist diese Meldung eine Warnung.</span><span class="sxs-lookup"><span data-stu-id="5c788-110">By default, this message is a warning.</span></span> <span data-ttu-id="5c788-111">Weitere Informationen zum Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="5c788-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Fehler-ID:** BC42326  
+ <span data-ttu-id="5c788-112">**Fehler-ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="5c788-112">**Error ID:** BC42326</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5c788-113">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="5c788-113">To correct this error</span></span>  
   
--   Um die Warnung zu vermeiden, und entfernen Sie den Lambda-Ausdruck, den Lambda-Ausdruck einer Variablen zuweisen und die Variable sowohl in der `AddHandler` und `RemoveHandler` -Anweisungen, wie im folgenden Beispiel gezeigt.  
+-   <span data-ttu-id="5c788-114">Um die Warnung zu vermeiden, und entfernen Sie den Lambda-Ausdruck, den Lambda-Ausdruck einer Variablen zuweisen und die Variable sowohl in der `AddHandler` und `RemoveHandler` -Anweisungen, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="5c788-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
   
 ```vb  
 Module Module1  
@@ -108,7 +109,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="5c788-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5c788-115">See Also</span></span>  
+ <span data-ttu-id="5c788-116">[Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="5c788-116">[Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+<span data-ttu-id="5c788-117"> [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span><span class="sxs-lookup"><span data-stu-id="5c788-117"> [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span></span>  
+<span data-ttu-id="5c788-118"> [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="5c788-118"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>

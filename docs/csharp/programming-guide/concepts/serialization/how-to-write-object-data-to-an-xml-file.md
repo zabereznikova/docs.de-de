@@ -26,10 +26,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)
-Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a><span data-ttu-id="03e0b-102">Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)</span><span class="sxs-lookup"><span data-stu-id="03e0b-102">How to: Write Object Data to an XML File (C#)</span></span>
+<span data-ttu-id="03e0b-103">Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="03e0b-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="03e0b-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="03e0b-104">Example</span></span>  
   
 ```csharp  
 public class XMLWrite  
@@ -61,25 +61,25 @@ public class XMLWrite
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
+## <a name="compiling-the-code"></a><span data-ttu-id="03e0b-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="03e0b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="03e0b-106">Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.</span><span class="sxs-lookup"><span data-stu-id="03e0b-106">The class must have a public constructor without parameters.</span></span>  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
+## <a name="robust-programming"></a><span data-ttu-id="03e0b-107">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="03e0b-107">Robust Programming</span></span>  
+ <span data-ttu-id="03e0b-108">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="03e0b-108">The following conditions may cause an exception:</span></span>  
   
--   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
+-   <span data-ttu-id="03e0b-109">Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="03e0b-109">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="03e0b-110">Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="03e0b-110">The file exists and is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="03e0b-111">Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="03e0b-111">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Der Datenträger ist voll (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="03e0b-112">Der Datenträger ist voll (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="03e0b-112">The disk is full (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).  
+## <a name="net-framework-security"></a><span data-ttu-id="03e0b-113">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="03e0b-113">.NET Framework Security</span></span>  
+ <span data-ttu-id="03e0b-114">Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="03e0b-114">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="03e0b-115">Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner.</span><span class="sxs-lookup"><span data-stu-id="03e0b-115">If an application needs to create a file, that application needs `Create` access for the folder.</span></span> <span data-ttu-id="03e0b-116">Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung.</span><span class="sxs-lookup"><span data-stu-id="03e0b-116">If the file already exists, the application needs only `Write` access, a lesser privilege.</span></span> <span data-ttu-id="03e0b-117">Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).</span><span class="sxs-lookup"><span data-stu-id="03e0b-117">Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.StreamWriter>   
- [Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
- [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a><span data-ttu-id="03e0b-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03e0b-118">See Also</span></span>  
+ <span data-ttu-id="03e0b-119"><xref:System.IO.StreamWriter></span><span class="sxs-lookup"><span data-stu-id="03e0b-119"><xref:System.IO.StreamWriter></span></span>   
+ <span data-ttu-id="03e0b-120">[Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) </span><span class="sxs-lookup"><span data-stu-id="03e0b-120">[How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) </span></span>  
+ [<span data-ttu-id="03e0b-121">Serialisierung (C#)</span><span class="sxs-lookup"><span data-stu-id="03e0b-121">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)
 

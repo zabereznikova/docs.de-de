@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aef57e597233e6179bc1a00b28182b46bb53cc59
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 57de9f91b695dfd63bb3e69204272e657e887345
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>Öffentliche Member '&lt;Membername&gt;'für Typ"&lt;Typename&gt;' wurde nicht gefunden.
-Der Member, auf den Sie versuchen zuzugreifen, konnte nicht gefunden werden. Dieser Fehler kann beim Zugriff auf nicht öffentliche Member von spät gebundenen Objekten auftreten.  
+# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a><span data-ttu-id="bd635-102">Öffentliche Member '&lt;Membername&gt;'für Typ"&lt;Typename&gt;' wurde nicht gefunden.</span><span class="sxs-lookup"><span data-stu-id="bd635-102">Public member &#39;&lt;membername&gt;&#39; on type &#39;&lt;typename&gt;&#39; not found</span></span>
+<span data-ttu-id="bd635-103">Der Member, auf den Sie versuchen zuzugreifen, konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="bd635-103">The member you are trying to access cannot be found.</span></span> <span data-ttu-id="bd635-104">Dieser Fehler kann beim Zugriff auf nicht öffentliche Member von spät gebundenen Objekten auftreten.</span><span class="sxs-lookup"><span data-stu-id="bd635-104">This error can occur when accessing non-public members of late-bound objects.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bd635-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="bd635-105">To correct this error</span></span>  
   
-1.  Wenn der Member vorhanden ist, stellen Sie sicher, dass er als `Public`deklariert wird.  
+1.  <span data-ttu-id="bd635-106">Wenn der Member vorhanden ist, stellen Sie sicher, dass er als `Public`deklariert wird.</span><span class="sxs-lookup"><span data-stu-id="bd635-106">If the member exists, ensure that it is declared as `Public`.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Öffentliche](../../visual-basic/language-reference/modifiers/public.md)   
- [Frühes und spätes Binden](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a><span data-ttu-id="bd635-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bd635-107">See Also</span></span>  
+ <span data-ttu-id="bd635-108">[Öffentliche](../../visual-basic/language-reference/modifiers/public.md) </span><span class="sxs-lookup"><span data-stu-id="bd635-108">[Public](../../visual-basic/language-reference/modifiers/public.md) </span></span>  
+<span data-ttu-id="bd635-109"> [Frühes und spätes Binden](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)</span><span class="sxs-lookup"><span data-stu-id="bd635-109"> [Early and Late Binding](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)</span></span>

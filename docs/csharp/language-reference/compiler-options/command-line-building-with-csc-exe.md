@@ -35,96 +35,96 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
-Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.
+# <a name="command-line-build-with-cscexe"></a><span data-ttu-id="d0680-102">Erstellen über die Befehlszeile mit csc.exe</span><span class="sxs-lookup"><span data-stu-id="d0680-102">Command-line build with csc.exe</span></span>
+<span data-ttu-id="d0680-103">Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.</span><span class="sxs-lookup"><span data-stu-id="d0680-103">You can invoke the C# compiler by typing the name of its executable file (*csc.exe*) at a command prompt.</span></span>
 
-Wenn Sie das Fenster **Developer-Eingabeaufforderung für Visual Studio** verwenden, werden alle erforderlichen Umgebungsvariablen für Sie festgelegt. Weitere Informationen zum Zugreifen auf dieses Tool finden Sie unter [Developer-Eingabeaufforderung für Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md). 
+<span data-ttu-id="d0680-104">Wenn Sie das Fenster **Developer-Eingabeaufforderung für Visual Studio** verwenden, werden alle erforderlichen Umgebungsvariablen für Sie festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d0680-104">If you use the **Developer Command Prompt for Visual Studio** window, all the necessary environment variables are set for you.</span></span> <span data-ttu-id="d0680-105">Weitere Informationen zum Zugreifen auf dieses Tool finden Sie unter [Developer-Eingabeaufforderung für Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="d0680-105">For information on how to access this tool, see the [Developer Command Prompt for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md) topic.</span></span> 
 
-Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie *csc.exe* aus einem Unterverzeichnis auf dem Computer aufrufen können. Außerdem müssen Sie *vsvars32.bat* ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen. Weitere Informationen zu *vsvars32.bat*, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+<span data-ttu-id="d0680-106">Wenn Sie ein standardmäßiges Eingabeaufforderungsfenster verwenden, müssen Sie die Pfadangabe anpassen, bevor Sie *csc.exe* aus einem Unterverzeichnis auf dem Computer aufrufen können.</span><span class="sxs-lookup"><span data-stu-id="d0680-106">If you use a standard Command Prompt window, you must adjust your path before you can invoke *csc.exe* from any subdirectory on your computer.</span></span> <span data-ttu-id="d0680-107">Außerdem müssen Sie *vsvars32.bat* ausführen, um die entsprechenden Umgebungsvariablen zur Unterstützung von Befehlszeilenbuilds festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d0680-107">You also must run *vsvars32.bat* to set the appropriate environment variables to support command-line builds.</span></span> <span data-ttu-id="d0680-108">Weitere Informationen zu *vsvars32.bat*, einschließlich Anweisungen zum Suchen und Ausführen, finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="d0680-108">For more information about *vsvars32.bat*, including instructions for how to find and run it, see [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span></span>
 
-Wenn Sie auf einem Computer arbeiten, auf dem nur das [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] installiert ist, können Sie den C#-Compiler von der **SDK-Eingabeaufforderung** aus verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.
+<span data-ttu-id="d0680-109">Wenn Sie auf einem Computer arbeiten, auf dem nur das [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] installiert ist, können Sie den C#-Compiler von der **SDK-Eingabeaufforderung** aus verwenden. Diese öffnen Sie über die Menüoption **Microsoft .NET Framework SDK**.</span><span class="sxs-lookup"><span data-stu-id="d0680-109">If you're working on a computer that has only the [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], you can use the C# compiler at the **SDK Command Prompt**, which you open from the **Microsoft .NET Framework SDK** menu option.</span></span>
 
-Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visualstudio/msbuild/msbuild).
+<span data-ttu-id="d0680-110">Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d0680-110">You can also use MSBuild to build C# programs programmatically.</span></span> <span data-ttu-id="d0680-111">Weitere Informationen finden Sie unter [MSBuild](/visualstudio/msbuild/msbuild).</span><span class="sxs-lookup"><span data-stu-id="d0680-111">For more information, see [MSBuild](/visualstudio/msbuild/msbuild).</span></span>
 
-Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\*\<Version>*. Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+<span data-ttu-id="d0680-112">Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\*\<Version>*.</span><span class="sxs-lookup"><span data-stu-id="d0680-112">The *csc.exe* executable file usually is located in the Microsoft.NET\Framework\\*\<Version>* folder under the *Windows* directory.</span></span> <span data-ttu-id="d0680-113">Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern.</span><span class="sxs-lookup"><span data-stu-id="d0680-113">Its location might vary depending on the exact configuration of a particular computer.</span></span> <span data-ttu-id="d0680-114">Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden.</span><span class="sxs-lookup"><span data-stu-id="d0680-114">If more than one version of the .NET Framework is installed on your computer, you'll find multiple versions of this file.</span></span> <span data-ttu-id="d0680-115">Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span><span class="sxs-lookup"><span data-stu-id="d0680-115">For more information about such installations, see [How to: determine which versions of the .NET Framework are installed](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span></span>
 
 > [!TIP]
->  Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie den Befehl **csc** und seine zugeordneten Compileroptionen im Fenster **Ausgabe** anzeigen. Um diese Informationen anzuzeigen, befolgen Sie die Anweisungen in [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log), in denen erläutert wird, wie der Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **Detailliert** geändert wird. Nachdem Sie das Projekt neu erstellt haben, durchsuchen Sie das Fenster **Ausgabe** nach **csc** nach, um den Aufruf des C#-Compilers zu finden.
+>  <span data-ttu-id="d0680-116">Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie den Befehl **csc** und seine zugeordneten Compileroptionen im Fenster **Ausgabe** anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d0680-116">When you build a project by using the Visual Studio IDE, you can display the **csc** command and its associated compiler options in the **Output** window.</span></span> <span data-ttu-id="d0680-117">Um diese Informationen anzuzeigen, befolgen Sie die Anweisungen in [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log), in denen erläutert wird, wie der Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **Detailliert** geändert wird.</span><span class="sxs-lookup"><span data-stu-id="d0680-117">To display this information, follow the instructions in [How to: View, Save, and Configure Build Log Files](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) to change the verbosity level of the log data to **Normal** or **Detailed**.</span></span> <span data-ttu-id="d0680-118">Nachdem Sie das Projekt neu erstellt haben, durchsuchen Sie das Fenster **Ausgabe** nach **csc** nach, um den Aufruf des C#-Compilers zu finden.</span><span class="sxs-lookup"><span data-stu-id="d0680-118">After you rebuild your project, search the **Output** window for **csc** to find the invocation of the C# compiler.</span></span>
 
- **Inhalt**
+ <span data-ttu-id="d0680-119">**Inhalt**</span><span class="sxs-lookup"><span data-stu-id="d0680-119">**In this topic**</span></span>
 
-- [Regeln für die Syntax der Befehlszeile](#-rules-for-command-line-syntax-for-the-c-compiler)
+- [<span data-ttu-id="d0680-120">Regeln für die Syntax der Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="d0680-120">Rules for command-line syntax</span></span>](#-rules-for-command-line-syntax-for-the-c-compiler)
 
-- [Beispielbefehlszeilen](#sample-command-lines-for-the-c-compiler)
+- [<span data-ttu-id="d0680-121">Beispielbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="d0680-121">Sample command lines</span></span>](#sample-command-lines-for-the-c-compiler)
 
-- [Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe](#differences-between-c-compiler-and-c-compiler-output)
+- [<span data-ttu-id="d0680-122">Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe</span><span class="sxs-lookup"><span data-stu-id="d0680-122">Differences between C# compiler and C++ compiler output</span></span>](#differences-between-c-compiler-and-c-compiler-output)
 
-## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>Regeln für Befehlszeilensyntax für den C#-Compiler
+## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a><span data-ttu-id="d0680-123">Regeln für Befehlszeilensyntax für den C#-Compiler</span><span class="sxs-lookup"><span data-stu-id="d0680-123">Rules for command-line syntax for the C# compiler</span></span>
 
-Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der C#-Compiler die folgenden Regeln:
+<span data-ttu-id="d0680-124">Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der C#-Compiler die folgenden Regeln:</span><span class="sxs-lookup"><span data-stu-id="d0680-124">The C# compiler uses the following rules when it interprets arguments given on the operating system command line:</span></span>
 
-- Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.
+- <span data-ttu-id="d0680-125">Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.</span><span class="sxs-lookup"><span data-stu-id="d0680-125">Arguments are delimited by white space, which is either a space or a tab.</span></span>
 
-- Die Einfügemarke (^) wird nicht als Escape- oder Trennzeichen erkannt. Das Zeichen wird vom Befehlszeilenparser im Betriebssystem verarbeitet, bevor es an das `argv`-Array im Programm übergeben wird.
+- <span data-ttu-id="d0680-126">Die Einfügemarke (^) wird nicht als Escape- oder Trennzeichen erkannt.</span><span class="sxs-lookup"><span data-stu-id="d0680-126">The caret character (^) is not recognized as an escape character or delimiter.</span></span> <span data-ttu-id="d0680-127">Das Zeichen wird vom Befehlszeilenparser im Betriebssystem verarbeitet, bevor es an das `argv`-Array im Programm übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="d0680-127">The character is handled by the command-line parser in the operating system before it's passed to the `argv` array in the program.</span></span>
 
-- Eine in Anführungszeichen eingeschlossene Zeichenfolge ("Zeichenfolge") wird als einzelnes Argument interpretiert, auch wenn darin Leerräume enthalten sind. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.
+- <span data-ttu-id="d0680-128">Eine in Anführungszeichen eingeschlossene Zeichenfolge ("Zeichenfolge") wird als einzelnes Argument interpretiert, auch wenn darin Leerräume enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="d0680-128">A string enclosed in double quotation marks ("string") is interpreted as a single argument, regardless of white space that is contained within.</span></span> <span data-ttu-id="d0680-129">Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.</span><span class="sxs-lookup"><span data-stu-id="d0680-129">A quoted string can be embedded in an argument.</span></span>
 
-- Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.
+- <span data-ttu-id="d0680-130">Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.</span><span class="sxs-lookup"><span data-stu-id="d0680-130">A double quotation mark preceded by a backslash (\\") is interpreted as a literal double quotation mark character (").</span></span>
 
-- Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.
+- <span data-ttu-id="d0680-131">Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.</span><span class="sxs-lookup"><span data-stu-id="d0680-131">Backslashes are interpreted literally, unless they immediately precede a double quotation mark.</span></span>
 
-- Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das Anführungszeichen wird als Zeichenfolgentrennzeichen interpretiert.
+- <span data-ttu-id="d0680-132">Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das Anführungszeichen wird als Zeichenfolgentrennzeichen interpretiert.</span><span class="sxs-lookup"><span data-stu-id="d0680-132">If an even number of backslashes is followed by a double quotation mark, one backslash is put in the `argv` array for every pair of backslashes, and the double quotation mark is interpreted as a string delimiter.</span></span>
 
-- Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das Anführungszeichen wird durch den übrig gebliebenen umgekehrten Schrägstrich maskiert. Hierdurch wird dem `argv`-Array ein echtes Anführungszeichen hinzugefügt.
+- <span data-ttu-id="d0680-133">Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche ein umgekehrter Schrägstrich im `argv`-Array platziert. Das Anführungszeichen wird durch den übrig gebliebenen umgekehrten Schrägstrich maskiert.</span><span class="sxs-lookup"><span data-stu-id="d0680-133">If an odd number of backslashes is followed by a double quotation mark, one backslash is put in the `argv` array for every pair of backslashes, and the double quotation mark is "escaped" by the remaining backslash.</span></span> <span data-ttu-id="d0680-134">Hierdurch wird dem `argv`-Array ein echtes Anführungszeichen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="d0680-134">This causes a literal double quotation mark (") to be added in `argv`.</span></span>
 
-## <a name="sample-command-lines-for-the-c-compiler"></a>Beispielbefehlszeilen für den C#-Compiler
+## <a name="sample-command-lines-for-the-c-compiler"></a><span data-ttu-id="d0680-135">Beispielbefehlszeilen für den C#-Compiler</span><span class="sxs-lookup"><span data-stu-id="d0680-135">Sample command lines for the C# compiler</span></span>
 
-- Kompiliert *file.cs*, sodass *file.exe* entsteht:
+- <span data-ttu-id="d0680-136">Kompiliert *file.cs*, sodass *file.exe* entsteht:</span><span class="sxs-lookup"><span data-stu-id="d0680-136">Compiles *File.cs* producing *File.exe*:</span></span>
 
 ```console
 csc File.cs 
 ```
 
-- Kompiliert *file.cs*, sodass *file.exe* entsteht:
+- <span data-ttu-id="d0680-137">Kompiliert *file.cs*, sodass *file.exe* entsteht:</span><span class="sxs-lookup"><span data-stu-id="d0680-137">Compiles *File.cs* producing *File.dll*:</span></span>
 
 ```console
 csc /target:library File.cs
 ```
 
-- Kompiliert *file.cs* und erstellt *my.exe*:
+- <span data-ttu-id="d0680-138">Kompiliert *file.cs* und erstellt *my.exe*:</span><span class="sxs-lookup"><span data-stu-id="d0680-138">Compiles *File.cs* and creates *My.exe*:</span></span>
 
 ```console
 csc /out:My.exe File.cs
 ```
 
-- Kompiliert alle C#-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen und definiert das DEBUG-Symbol. Die Ausgabe lautet *File2.exe*:
+- <span data-ttu-id="d0680-139">Kompiliert alle C#-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen und definiert das DEBUG-Symbol.</span><span class="sxs-lookup"><span data-stu-id="d0680-139">Compiles all the C# files in the current directory with optimizations enabled and defines the DEBUG symbol.</span></span> <span data-ttu-id="d0680-140">Die Ausgabe lautet *File2.exe*:</span><span class="sxs-lookup"><span data-stu-id="d0680-140">The output is *File2.exe*:</span></span>
 
 ```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
-- Kompiliert alle C#-Dateien im aktuellen Verzeichnis, wodurch eine Debugversion von *File2.dll* erstellt wird. Es werden weder Logo noch Warnungen angezeigt:
+- <span data-ttu-id="d0680-141">Kompiliert alle C#-Dateien im aktuellen Verzeichnis, wodurch eine Debugversion von *File2.dll* erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="d0680-141">Compiles all the C# files in the current directory producing a debug version of *File2.dll*.</span></span> <span data-ttu-id="d0680-142">Es werden weder Logo noch Warnungen angezeigt:</span><span class="sxs-lookup"><span data-stu-id="d0680-142">No logo and no warnings are displayed:</span></span>
 
 ```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
-- Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu *Name.xyz* (eine DLL-Datei):
+- <span data-ttu-id="d0680-143">Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu *Name.xyz* (eine DLL-Datei):</span><span class="sxs-lookup"><span data-stu-id="d0680-143">Compiles all the C# files in the current directory to *Something.xyz* (a DLL):</span></span>
 
 ```console
 csc /target:library /out:Something.xyz *.cs
 ```
 
-## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe
-Durch den Aufruf des C#-Compilers werden keine Objektdateien (*.obj*) erstellt, stattdessen werden die Ausgabedateien direkt erstellt. Daher benötigt der C#-Compiler keinen Linker.
+## <a name="differences-between-c-compiler-and-c-compiler-output"></a><span data-ttu-id="d0680-144">Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe</span><span class="sxs-lookup"><span data-stu-id="d0680-144">Differences between C# compiler and C++ compiler output</span></span>
+<span data-ttu-id="d0680-145">Durch den Aufruf des C#-Compilers werden keine Objektdateien (*.obj*) erstellt, stattdessen werden die Ausgabedateien direkt erstellt.</span><span class="sxs-lookup"><span data-stu-id="d0680-145">There are no object (*.obj*) files created as a result of invoking the C# compiler; output files are created directly.</span></span> <span data-ttu-id="d0680-146">Daher benötigt der C#-Compiler keinen Linker.</span><span class="sxs-lookup"><span data-stu-id="d0680-146">As a result of this, the C# compiler does not need a linker.</span></span>
 
-## <a name="see-also"></a>Siehe auch
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)   
- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
- [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+## <a name="see-also"></a><span data-ttu-id="d0680-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0680-147">See also</span></span>
+ <span data-ttu-id="d0680-148">[C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-148">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="d0680-149">[C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-149">[C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span></span>  
+ <span data-ttu-id="d0680-150">[C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-150">[C# Compiler Options Listed by Category](../../../csharp/language-reference/compiler-options/listed-by-category.md) </span></span>  
+ <span data-ttu-id="d0680-151">[Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-151">[Main() and Command-Line Arguments](../../../csharp/programming-guide/main-and-command-args/index.md) </span></span>  
+ <span data-ttu-id="d0680-152">[Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-152">[Command-Line Arguments](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md) </span></span>  
+ <span data-ttu-id="d0680-153">[Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-153">[How to: Display Command-Line Arguments](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md) </span></span>  
+ <span data-ttu-id="d0680-154">[Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md) </span><span class="sxs-lookup"><span data-stu-id="d0680-154">[How to: Access Command-Line Arguments Using foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md) </span></span>  
+ [<span data-ttu-id="d0680-155">Main()-Rückgabewerte</span><span class="sxs-lookup"><span data-stu-id="d0680-155">Main() Return Values</span></span>](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 

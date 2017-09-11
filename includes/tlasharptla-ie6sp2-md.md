@@ -1,1 +1,1 @@
-Microsoft Internet Explorer 6 (SP2)
+<span data-ttu-id="9268d-101">Microsoft Internet Explorer 6 (SP2)</span><span class="sxs-lookup"><span data-stu-id="9268d-101">Microsoft Internet Explorer 6 (SP2)</span></span>

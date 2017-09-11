@@ -1,1 +1,1 @@
-Bezeichner (ID)
+<span data-ttu-id="689d0-101">Bezeichner (ID)</span><span class="sxs-lookup"><span data-stu-id="689d0-101">identifiers (IDs)</span></span>

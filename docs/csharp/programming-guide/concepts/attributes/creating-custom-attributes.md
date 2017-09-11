@@ -26,8 +26,8 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="creating-custom-attributes-c"></a>Erstellen benutzerdefinierter Attribute (C#)
-Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
+# <a name="creating-custom-attributes-c"></a><span data-ttu-id="02603-102">Erstellen benutzerdefinierter Attribute (C#)</span><span class="sxs-lookup"><span data-stu-id="02603-102">Creating Custom Attributes (C#)</span></span>
+<span data-ttu-id="02603-103">Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="02603-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="02603-104">Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat.</span><span class="sxs-lookup"><span data-stu-id="02603-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="02603-105">Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:</span><span class="sxs-lookup"><span data-stu-id="02603-105">You might define a custom `Author` attribute class:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -46,9 +46,9 @@ public class Author : System.Attribute
 }  
 ```  
   
- Der Klassenname ist der Attributname, `Author`. Er ist von `System.Attribute` abgeleitet, ist also eine benutzerdefinierte Attributklasse. Die Parameter des Konstruktors sind die Positionsparameter des benutzerdefinierten Attributs. In diesem Beispiel ist `name` ein Positionsparameter. Alle öffentlichen Lese-/Schreibfelder oder -Eigenschaften werden Parameter genannt. In diesem Fall ist `version` der einzige Parameter mit Namen. Beachten Sie die Verwendung des `AttributeUsage`-Attributs, um das `Author`-Attribut ausschließlich für Klassen- und `struct`-Deklarationen gültig zu machen.  
+ <span data-ttu-id="02603-106">Der Klassenname ist der Attributname, `Author`.</span><span class="sxs-lookup"><span data-stu-id="02603-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="02603-107">Er ist von `System.Attribute` abgeleitet, ist also eine benutzerdefinierte Attributklasse.</span><span class="sxs-lookup"><span data-stu-id="02603-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="02603-108">Die Parameter des Konstruktors sind die Positionsparameter des benutzerdefinierten Attributs.</span><span class="sxs-lookup"><span data-stu-id="02603-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="02603-109">In diesem Beispiel ist `name` ein Positionsparameter.</span><span class="sxs-lookup"><span data-stu-id="02603-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="02603-110">Alle öffentlichen Lese-/Schreibfelder oder -Eigenschaften werden Parameter genannt.</span><span class="sxs-lookup"><span data-stu-id="02603-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="02603-111">In diesem Fall ist `version` der einzige Parameter mit Namen.</span><span class="sxs-lookup"><span data-stu-id="02603-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="02603-112">Beachten Sie die Verwendung des `AttributeUsage`-Attributs, um das `Author`-Attribut ausschließlich für Klassen- und `struct`-Deklarationen gültig zu machen.</span><span class="sxs-lookup"><span data-stu-id="02603-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `struct` declarations.</span></span>  
   
- Sie könnten dieses neue Attribut wie folgt verwenden:  
+ <span data-ttu-id="02603-113">Sie könnten dieses neue Attribut wie folgt verwenden:</span><span class="sxs-lookup"><span data-stu-id="02603-113">You could use this new attribute as follows:</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -58,7 +58,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage` verfügt über einen Parameter, `AllowMultiple`, mit dem Sie ein benutzerdefiniertes Attribut zur einmaligen oder mehrfachen Nutzung erstellen können. Im folgenden Codebeispiel wird ein mehrfach verwendbares Attribut erstellt.  
+ <span data-ttu-id="02603-114">`AttributeUsage` verfügt über einen Parameter, `AllowMultiple`, mit dem Sie ein benutzerdefiniertes Attribut zur einmaligen oder mehrfachen Nutzung erstellen können.</span><span class="sxs-lookup"><span data-stu-id="02603-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="02603-115">Im folgenden Codebeispiel wird ein mehrfach verwendbares Attribut erstellt.</span><span class="sxs-lookup"><span data-stu-id="02603-115">In the following code example, a multiuse attribute is created.</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -68,7 +68,7 @@ class SampleClass
 public class Author : System.Attribute  
 ```  
   
- Im folgenden Codebeispiel werden mehrere Attribute desselben Typs auf eine Klasse angewendet.  
+ <span data-ttu-id="02603-116">Im folgenden Codebeispiel werden mehrere Attribute desselben Typs auf eine Klasse angewendet.</span><span class="sxs-lookup"><span data-stu-id="02603-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -81,14 +81,14 @@ class SampleClass
 ```  
   
 > [!NOTE]
->  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.  
+>  <span data-ttu-id="02603-117">Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.</span><span class="sxs-lookup"><span data-stu-id="02603-117">If your attribute class contains a property, that property must be read-write.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)   
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a><span data-ttu-id="02603-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02603-118">See Also</span></span>  
+ <span data-ttu-id="02603-119"><xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="02603-119"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="02603-120">[C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="02603-120">[C# Programming Guide](../../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="02603-121">[Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="02603-121">[Writing Custom Attributes](../../../../standard/attributes/writing-custom-attributes.md) </span></span>  
+ <span data-ttu-id="02603-122">[Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="02603-122">[Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span></span>  
+ <span data-ttu-id="02603-123">[Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md) </span><span class="sxs-lookup"><span data-stu-id="02603-123">[Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md) </span></span>  
+ <span data-ttu-id="02603-124">[Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) </span><span class="sxs-lookup"><span data-stu-id="02603-124">[Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) </span></span>  
+ [<span data-ttu-id="02603-125">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="02603-125">AttributeUsage (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
 

@@ -21,22 +21,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52fb60b95b869a79900f84c2a1a7a6151bb5b58f
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 967e207aa4d1a4afb21f82b7b1767a5c6dc088c6
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programmieren mit Knoten (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Entwickler, die Programme, wie einen XML-Editor, ein Transformationssystem oder einen Berichts-Generator schreiben müssen, müssen häufig Programme schreiben, die auf einer detaillierteren Ebene als Elemente und Attribute arbeiten. Sie müssen oft auf der Ebene der Knoten arbeiten und dabei Textknoten, Verarbeitungsanweisungen und Kommentare bearbeiten. Dieses Thema beschäftigt sich mit einigen Aspekten des Programmierens auf Knotenebene.  
+# <a name="programming-with-nodes-visual-basic"></a><span data-ttu-id="dd555-102">Programmieren mit Knoten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd555-102">Programming with Nodes (Visual Basic)</span></span>
+[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<span data-ttu-id="dd555-103">-Entwickler, die Programme, wie einen XML-Editor, ein Transformationssystem oder einen Berichts-Generator schreiben müssen, müssen häufig Programme schreiben, die auf einer detaillierteren Ebene als Elemente und Attribute arbeiten.</span><span class="sxs-lookup"><span data-stu-id="dd555-103"> developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="dd555-104">Sie müssen oft auf der Ebene der Knoten arbeiten und dabei Textknoten, Verarbeitungsanweisungen und Kommentare bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="dd555-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="dd555-105">Dieses Thema beschäftigt sich mit einigen Aspekten des Programmierens auf Knotenebene.</span><span class="sxs-lookup"><span data-stu-id="dd555-105">This topic provides some details about programming at the node level.</span></span>  
   
-## <a name="node-details"></a>Knotendetails  
- Es gibt eine Reihe von Programmierdetails, die ein auf der Knotenebene arbeitender Programmierer kennen sollte.  
+## <a name="node-details"></a><span data-ttu-id="dd555-106">Knotendetails</span><span class="sxs-lookup"><span data-stu-id="dd555-106">Node Details</span></span>  
+ <span data-ttu-id="dd555-107">Es gibt eine Reihe von Programmierdetails, die ein auf der Knotenebene arbeitender Programmierer kennen sollte.</span><span class="sxs-lookup"><span data-stu-id="dd555-107">There are a number of details of programming that a programmer working at the node level should know.</span></span>  
   
-### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Übergeordnete Eigenschaft der untergeordneten XDocument-Knoten ist gleich NULL  
- Die <xref:System.Xml.Linq.XObject.Parent%2A>-Eigenschaft enthält das übergeordnete <xref:System.Xml.Linq.XElement>, nicht den übergeordneten Knoten.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XObject.Parent%2A> Untergeordnete Knoten <xref:System.Xml.Linq.XDocument>gibt es kein übergeordnetes <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> Das übergeordnete Element ist das Dokument, damit der <xref:System.Xml.Linq.XObject.Parent%2A>für diesen Knoten festgelegt ist auf Null.</xref:System.Xml.Linq.XObject.Parent%2A>  
+### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a><span data-ttu-id="dd555-108">Übergeordnete Eigenschaft der untergeordneten XDocument-Knoten ist gleich NULL</span><span class="sxs-lookup"><span data-stu-id="dd555-108">Parent Property of Children Nodes of XDocument is Set to Null</span></span>  
+ <span data-ttu-id="dd555-109">Die <xref:System.Xml.Linq.XObject.Parent%2A>-Eigenschaft enthält das übergeordnete <xref:System.Xml.Linq.XElement>, nicht den übergeordneten Knoten.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XObject.Parent%2A></span><span class="sxs-lookup"><span data-stu-id="dd555-109">The <xref:System.Xml.Linq.XObject.Parent%2A> property contains the parent <xref:System.Xml.Linq.XElement>, not the parent node.</span></span> <span data-ttu-id="dd555-110">Untergeordnete Knoten <xref:System.Xml.Linq.XDocument>gibt es kein übergeordnetes <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument></span><span class="sxs-lookup"><span data-stu-id="dd555-110">Child nodes of <xref:System.Xml.Linq.XDocument> have no parent <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="dd555-111">Das übergeordnete Element ist das Dokument, damit der <xref:System.Xml.Linq.XObject.Parent%2A>für diesen Knoten festgelegt ist auf Null.</xref:System.Xml.Linq.XObject.Parent%2A></span><span class="sxs-lookup"><span data-stu-id="dd555-111">Their parent is the document, so the <xref:System.Xml.Linq.XObject.Parent%2A> property for those nodes is set to null.</span></span>  
   
- Dies wird im folgenden Beispiel veranschaulicht:  
+ <span data-ttu-id="dd555-112">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="dd555-112">The following example demonstrates this:</span></span>  
   
 ```vb  
 Dim doc As XDocument = XDocument.Parse("<!-- a comment --><Root/>")  
@@ -44,17 +44,17 @@ Console.WriteLine(doc.Nodes().OfType(Of XComment).First().Parent Is Nothing)
 Console.WriteLine(doc.Root.Parent Is Nothing)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-113">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-113">This example produces the following output:</span></span>  
   
 ```  
 True  
 True  
 ```  
   
-### <a name="adjacent-text-nodes-are-possible"></a>Textknoten können nebeneinander liegen  
- In einer Reihe von XML-Programmiermodellen werden nebeneinander liegende Textknoten immer zusammengeführt. Dies wird mitunter als Normalisierung von Textknoten bezeichnet. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] findet keine Normalisierung von Textknoten statt. Wenn Sie einem Element zwei Textknoten hinzufügen, erhalten Sie zwei nebeneinander liegende Textknoten. Aber wenn Sie den Inhalt als Zeichenfolge statt als hinzufügen ein <xref:System.Xml.Linq.XText>Knoten [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] kann die Zeichenfolge mit einem benachbarten Textknoten zusammenführen.</xref:System.Xml.Linq.XText>  
+### <a name="adjacent-text-nodes-are-possible"></a><span data-ttu-id="dd555-114">Textknoten können nebeneinander liegen</span><span class="sxs-lookup"><span data-stu-id="dd555-114">Adjacent Text Nodes are Possible</span></span>  
+ <span data-ttu-id="dd555-115">In einer Reihe von XML-Programmiermodellen werden nebeneinander liegende Textknoten immer zusammengeführt.</span><span class="sxs-lookup"><span data-stu-id="dd555-115">In a number of XML programming models, adjacent text nodes are always merged.</span></span> <span data-ttu-id="dd555-116">Dies wird mitunter als Normalisierung von Textknoten bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="dd555-116">This is sometimes called normalization of text nodes.</span></span> <span data-ttu-id="dd555-117">In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] findet keine Normalisierung von Textknoten statt.</span><span class="sxs-lookup"><span data-stu-id="dd555-117">[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] does not normalize text nodes.</span></span> <span data-ttu-id="dd555-118">Wenn Sie einem Element zwei Textknoten hinzufügen, erhalten Sie zwei nebeneinander liegende Textknoten.</span><span class="sxs-lookup"><span data-stu-id="dd555-118">If you add two text nodes to the same element, it will result in adjacent text nodes.</span></span> <span data-ttu-id="dd555-119">Aber wenn Sie den Inhalt als Zeichenfolge statt als hinzufügen ein <xref:System.Xml.Linq.XText>Knoten [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] kann die Zeichenfolge mit einem benachbarten Textknoten zusammenführen.</xref:System.Xml.Linq.XText></span><span class="sxs-lookup"><span data-stu-id="dd555-119">However, if you add content specified as a string rather than as an <xref:System.Xml.Linq.XText> node, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] might merge the string with an adjacent text node.</span></span>  
   
- Dies wird im folgenden Beispiel veranschaulicht:  
+ <span data-ttu-id="dd555-120">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="dd555-120">The following example demonstrates this:</span></span>  
   
 ```vb  
 Dim xmlTree As XElement = <Root>Content</Root>  
@@ -69,7 +69,7 @@ xmlTree.Add(New XText("more text"))
 Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-121">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-121">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -77,8 +77,8 @@ Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())
 2  
 ```  
   
-### <a name="empty-text-nodes-are-possible"></a>Textknoten können leer sein  
- In einigen XML-Programmiermodellen ist garantiert, dass Textknoten keine leere Zeichenfolge enthalten. Der Grund dafür ist, dass ein Textknoten keine Auswirkungen auf die Serialisierung des XML-Codes haben. Aber aus demselben Grund, aus dem Textknoten nebeneinander liegen können, wird der Textknoten auch nicht gelöscht, wenn Sie den Text aus ihm entfernen, indem Sie eine leere Zeichenfolge als Wert für den Textknoten festlegen.  
+### <a name="empty-text-nodes-are-possible"></a><span data-ttu-id="dd555-122">Textknoten können leer sein</span><span class="sxs-lookup"><span data-stu-id="dd555-122">Empty Text Nodes are Possible</span></span>  
+ <span data-ttu-id="dd555-123">In einigen XML-Programmiermodellen ist garantiert, dass Textknoten keine leere Zeichenfolge enthalten.</span><span class="sxs-lookup"><span data-stu-id="dd555-123">In some XML programming models, text nodes are guaranteed to not contain the empty string.</span></span> <span data-ttu-id="dd555-124">Der Grund dafür ist, dass ein Textknoten keine Auswirkungen auf die Serialisierung des XML-Codes haben.</span><span class="sxs-lookup"><span data-stu-id="dd555-124">The reasoning is that such a text node has no impact on serialization of the XML.</span></span> <span data-ttu-id="dd555-125">Aber aus demselben Grund, aus dem Textknoten nebeneinander liegen können, wird der Textknoten auch nicht gelöscht, wenn Sie den Text aus ihm entfernen, indem Sie eine leere Zeichenfolge als Wert für den Textknoten festlegen.</span><span class="sxs-lookup"><span data-stu-id="dd555-125">However, for the same reason that adjacent text nodes are possible, if you remove the text from a text node by setting its value to the empty string, the text node itself will not be deleted.</span></span>  
   
 ```vb  
 Dim xmlTree As XElement = <Root>Content</Root>  
@@ -91,14 +91,14 @@ Dim textNode2 As XText = xmlTree.Nodes().OfType(Of XText)().First()
 Console.WriteLine(">>{0}<<", textNode2)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-126">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-126">This example produces the following output:</span></span>  
   
 ```  
 >><<  
 ```  
   
-### <a name="an-empty-text-node-impacts-serialization"></a>Ein leerer Textknoten wirkt sich auf die Serialisierung aus  
- Wenn ein Element nur einen untergeordneten Textknoten enthält, der leer ist, wird es mit der langen Tagsyntax serialisiert: `<Child></Child>`. Wenn ein Element überhaupt keine untergeordneten Knoten enthält, wird es mit der kurzen Tagsyntax serialisiert: `<Child />`.  
+### <a name="an-empty-text-node-impacts-serialization"></a><span data-ttu-id="dd555-127">Ein leerer Textknoten wirkt sich auf die Serialisierung aus</span><span class="sxs-lookup"><span data-stu-id="dd555-127">An Empty Text Node Impacts Serialization</span></span>  
+ <span data-ttu-id="dd555-128">Wenn ein Element nur einen untergeordneten Textknoten enthält, der leer ist, wird es mit der langen Tagsyntax serialisiert: `<Child></Child>`.</span><span class="sxs-lookup"><span data-stu-id="dd555-128">If an element contains only a child text node that is empty, it is serialized with the long tag syntax: `<Child></Child>`.</span></span> <span data-ttu-id="dd555-129">Wenn ein Element überhaupt keine untergeordneten Knoten enthält, wird es mit der kurzen Tagsyntax serialisiert: `<Child />`.</span><span class="sxs-lookup"><span data-stu-id="dd555-129">If an element contains no child nodes whatsoever, it is serialized with the short tag syntax: `<Child />`.</span></span>  
   
 ```vb  
 Dim child1 As XElement = New XElement("Child1", _  
@@ -109,17 +109,17 @@ Console.WriteLine(child1)
 Console.WriteLine(child2)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-130">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-130">This example produces the following output:</span></span>  
   
 ```  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
-### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Namespaces sind Attribute in der LINQ to XML-Struktur  
- Auch wenn Namespacedeklarationen dieselbe Syntax wie Attribute haben, werden Namespacedeklarationen in einigen Programmierschnittstellen, wie XSLT und XPath, nicht als Attribute betrachtet. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], Namespaces befinden sich als <xref:System.Xml.Linq.XAttribute>Objekte in der XML-Struktur.</xref:System.Xml.Linq.XAttribute> Wenn Sie die Attribute für ein Element durchlaufen, das eine Namespacedeklaration enthält, wird die Namespacedeklaration als eines der Elemente in der zurückgegebenen Auflistung angezeigt.  
+### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a><span data-ttu-id="dd555-131">Namespaces sind Attribute in der LINQ to XML-Struktur</span><span class="sxs-lookup"><span data-stu-id="dd555-131">Namespaces are Attributes in the LINQ to XML Tree</span></span>  
+ <span data-ttu-id="dd555-132">Auch wenn Namespacedeklarationen dieselbe Syntax wie Attribute haben, werden Namespacedeklarationen in einigen Programmierschnittstellen, wie XSLT und XPath, nicht als Attribute betrachtet.</span><span class="sxs-lookup"><span data-stu-id="dd555-132">Even though namespace declarations have identical syntax to attributes, in some programming interfaces, such as XSLT and XPath, namespace declarations are not considered to be attributes.</span></span> <span data-ttu-id="dd555-133">In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], Namespaces befinden sich als <xref:System.Xml.Linq.XAttribute>Objekte in der XML-Struktur.</xref:System.Xml.Linq.XAttribute></span><span class="sxs-lookup"><span data-stu-id="dd555-133">However, in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], namespaces are stored as <xref:System.Xml.Linq.XAttribute> objects in the XML tree.</span></span> <span data-ttu-id="dd555-134">Wenn Sie die Attribute für ein Element durchlaufen, das eine Namespacedeklaration enthält, wird die Namespacedeklaration als eines der Elemente in der zurückgegebenen Auflistung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="dd555-134">If you iterate through the attributes for an element that contains a namespace declaration, you will see the namespace declaration as one of the items in the returned collection.</span></span>  
   
- Die <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>-Eigenschaft gibt an, ob ein Attribut eine Namespacedeklaration ist.</xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>  
+ <span data-ttu-id="dd555-135">Die <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>-Eigenschaft gibt an, ob ein Attribut eine Namespacedeklaration ist.</xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A></span><span class="sxs-lookup"><span data-stu-id="dd555-135">The <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> property indicates whether an attribute is a namespace declaration.</span></span>  
   
 ```vb  
 Dim root As XElement = _   
@@ -133,7 +133,7 @@ For Each att As XAttribute In root.Attributes()
 Next  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-136">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-136">This example produces the following output:</span></span>  
   
 ```  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
@@ -141,8 +141,8 @@ xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True
 AnAttribute="abc"  IsNamespaceDeclaration:False  
 ```  
   
-### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath-Achsenmethoden geben keinen untergeordneten XDocument-Leerraum zurück  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]ermöglicht untergeordnete Textknoten ein <xref:System.Xml.Linq.XDocument>, solange die Textknoten nur Leerraum enthalten.</xref:System.Xml.Linq.XDocument> Allerdings das XPath-Objektmodell enthält keinen Leerraum als untergeordnete Knoten eines Dokuments, also beim Durchlaufen der untergeordneten Elemente ein <xref:System.Xml.Linq.XDocument>mithilfe der <xref:System.Xml.Linq.XContainer.Nodes%2A>-Achse Leerraumtextknoten zurückgegeben.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XDocument> Allerdings beim Durchlaufen der untergeordneten Elemente ein <xref:System.Xml.Linq.XDocument>mit den XPath-Achsenmethoden, Leerraum-Textknoten werden nicht zurückgegeben werden.</xref:System.Xml.Linq.XDocument>  
+### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a><span data-ttu-id="dd555-137">XPath-Achsenmethoden geben keinen untergeordneten XDocument-Leerraum zurück</span><span class="sxs-lookup"><span data-stu-id="dd555-137">XPath Axis Methods Do Not Return Child White Space of XDocument</span></span>  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<span data-ttu-id="dd555-138">ermöglicht untergeordnete Textknoten ein <xref:System.Xml.Linq.XDocument>, solange die Textknoten nur Leerraum enthalten.</xref:System.Xml.Linq.XDocument></span><span class="sxs-lookup"><span data-stu-id="dd555-138"> allows for child text nodes of an <xref:System.Xml.Linq.XDocument>, as long as the text nodes contain only white space.</span></span> <span data-ttu-id="dd555-139">Allerdings das XPath-Objektmodell enthält keinen Leerraum als untergeordnete Knoten eines Dokuments, also beim Durchlaufen der untergeordneten Elemente ein <xref:System.Xml.Linq.XDocument>mithilfe der <xref:System.Xml.Linq.XContainer.Nodes%2A>-Achse Leerraumtextknoten zurückgegeben.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XDocument></span><span class="sxs-lookup"><span data-stu-id="dd555-139">However, the XPath object model does not include white space as child nodes of a document, so when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the <xref:System.Xml.Linq.XContainer.Nodes%2A> axis, white space text nodes will be returned.</span></span> <span data-ttu-id="dd555-140">Allerdings beim Durchlaufen der untergeordneten Elemente ein <xref:System.Xml.Linq.XDocument>mit den XPath-Achsenmethoden, Leerraum-Textknoten werden nicht zurückgegeben werden.</xref:System.Xml.Linq.XDocument></span><span class="sxs-lookup"><span data-stu-id="dd555-140">However, when you iterate through the children of an <xref:System.Xml.Linq.XDocument> using the XPath axis methods, white space text nodes will not be returned.</span></span>  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -159,15 +159,15 @@ Dim nodes As IEnumerable = CType(root.XPathEvaluate("text()"), IEnumerable)
 Console.WriteLine(nodes.OfType(Of XText)().Count())  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-141">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-141">This example produces the following output:</span></span>  
   
 ```  
 3  
 0  
 ```  
   
-### <a name="xdeclaration-objects-are-not-nodes"></a>XDeclaration-Objekte sind keine Knoten  
- Beim Durchlaufen der untergeordneten Knoten von einem <xref:System.Xml.Linq.XDocument>, wird das XML-Deklarationsobjekt nicht angezeigt.</xref:System.Xml.Linq.XDocument> Es ist kein untergeordneter Knoten des Dokuments, sondern eine seiner Eigenschaften.  
+### <a name="xdeclaration-objects-are-not-nodes"></a><span data-ttu-id="dd555-142">XDeclaration-Objekte sind keine Knoten</span><span class="sxs-lookup"><span data-stu-id="dd555-142">XDeclaration Objects are not Nodes</span></span>  
+ <span data-ttu-id="dd555-143">Beim Durchlaufen der untergeordneten Knoten von einem <xref:System.Xml.Linq.XDocument>, wird das XML-Deklarationsobjekt nicht angezeigt.</xref:System.Xml.Linq.XDocument></span><span class="sxs-lookup"><span data-stu-id="dd555-143">When you iterate through the children nodes of an <xref:System.Xml.Linq.XDocument>, you will not see the XML declaration object.</span></span> <span data-ttu-id="dd555-144">Es ist kein untergeordneter Knoten des Dokuments, sondern eine seiner Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="dd555-144">It is a property of the document, not a child node of it.</span></span>  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -181,7 +181,7 @@ Console.WriteLine(File.ReadAllText("Temp.xml"))
 Console.WriteLine(doc.Nodes().Count())  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="dd555-145">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dd555-145">This example produces the following output:</span></span>  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -189,6 +189,6 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="dd555-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dd555-146">See Also</span></span>  
+ [<span data-ttu-id="dd555-147">Erweiterte LINQ to XML-Programmierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd555-147">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
 

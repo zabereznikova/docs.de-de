@@ -21,17 +21,17 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)
-Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen. Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="88807-102">Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="88807-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="88807-103">Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen.</span><span class="sxs-lookup"><span data-stu-id="88807-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="88807-104">Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.</span><span class="sxs-lookup"><span data-stu-id="88807-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- Der XPath-Ausdruck lautet:  
+ <span data-ttu-id="88807-105">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="88807-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel sucht zuerst nach einem `Book`-Element und dann nach allen nebengeordneten Elementen mit dem Namen `Book`. Die resultierende Auflistung enthält den Kontextknoten.  
+## <a name="example"></a><span data-ttu-id="88807-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="88807-106">Example</span></span>  
+ <span data-ttu-id="88807-107">Dieses Beispiel sucht zuerst nach einem `Book`-Element und dann nach allen nebengeordneten Elementen mit dem Namen `Book`.</span><span class="sxs-lookup"><span data-stu-id="88807-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="88807-108">Die resultierende Auflistung enthält den Kontextknoten.</span><span class="sxs-lookup"><span data-stu-id="88807-108">The resulting collection includes the context node.</span></span>  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ <span data-ttu-id="88807-109">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="88807-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -61,7 +61,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="88807-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="88807-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -86,6 +86,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML für XPath-Benutzer (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="88807-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88807-111">See Also</span></span>  
+ [<span data-ttu-id="88807-112">LINQ to XML für XPath-Benutzer (C#)</span><span class="sxs-lookup"><span data-stu-id="88807-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

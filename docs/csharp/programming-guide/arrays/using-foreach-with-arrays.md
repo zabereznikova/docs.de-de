@@ -35,22 +35,22 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-foreach-with-arrays-c-programming-guide"></a>Verwenden von foreach mit Arrays (C#-Programmierhandbuch)
-C# enthält außerdem die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung. Diese Anweisung stellt eine einfache, klare Methode bereit, um die Elemente eines Arrays oder einer aufzählbaren Auflistung zu durchlaufen. Die `foreach`-Anweisung verarbeitet Elemente in der Reihenfolge, die vom Array oder Enumerator des Auflistungstyps zurückgegeben wird, also normalerweise vom nullten bis zum letzten Element. Durch folgenden Code wird beispielsweise ein Array mit dem Namen `numbers` erstellt, das mithilfe der `foreach`-Anweisung durchlaufen wird:  
+# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="880c6-102">Verwenden von foreach mit Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="880c6-102">Using foreach with Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="880c6-103">C# enthält außerdem die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="880c6-103">C# also provides the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="880c6-104">Diese Anweisung stellt eine einfache, klare Methode bereit, um die Elemente eines Arrays oder einer aufzählbaren Auflistung zu durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="880c6-104">This statement provides a simple, clean way to iterate through the elements of an array or any enumerable collection.</span></span> <span data-ttu-id="880c6-105">Die `foreach`-Anweisung verarbeitet Elemente in der Reihenfolge, die vom Array oder Enumerator des Auflistungstyps zurückgegeben wird, also normalerweise vom nullten bis zum letzten Element.</span><span class="sxs-lookup"><span data-stu-id="880c6-105">The `foreach` statement processes elements in the order returned by the array or collection type’s enumerator, which is usually from the 0th element to the last.</span></span> <span data-ttu-id="880c6-106">Durch folgenden Code wird beispielsweise ein Array mit dem Namen `numbers` erstellt, das mithilfe der `foreach`-Anweisung durchlaufen wird:</span><span class="sxs-lookup"><span data-stu-id="880c6-106">For example, the following code creates an array called `numbers` and iterates through it with the `foreach` statement:</span></span>  
   
- [!code-cs[CsProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
+ <span data-ttu-id="880c6-107">[!code-cs[CsProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="880c6-107">[!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]</span></span>  
   
- Bei mehrdimensionalen Arrays können Sie dieselbe Methode zum Durchlaufen der Elemente verwenden. Beispiel:  
+ <span data-ttu-id="880c6-108">Bei mehrdimensionalen Arrays können Sie dieselbe Methode zum Durchlaufen der Elemente verwenden. Beispiel:</span><span class="sxs-lookup"><span data-stu-id="880c6-108">With multidimensional arrays, you can use the same method to iterate through the elements, for example:</span></span>  
   
- [!code-cs[CsProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
+ <span data-ttu-id="880c6-109">[!code-cs[CsProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="880c6-109">[!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]</span></span>  
   
- Bei mehrdimensionalen Arrays haben Sie jedoch eine größere Kontrolle über die Arrayelemente, indem Sie eine geschachtelte [for](../../../csharp/language-reference/keywords/for.md)-Schleife verwenden.  
+ <span data-ttu-id="880c6-110">Bei mehrdimensionalen Arrays haben Sie jedoch eine größere Kontrolle über die Arrayelemente, indem Sie eine geschachtelte [for](../../../csharp/language-reference/keywords/for.md)-Schleife verwenden.</span><span class="sxs-lookup"><span data-stu-id="880c6-110">However, with multidimensional arrays, using a nested [for](../../../csharp/language-reference/keywords/for.md) loop gives you more control over the array elements.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Array>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Arrays](../../../csharp/programming-guide/arrays/index.md)   
- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
- [Verzweigte Arrays](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a><span data-ttu-id="880c6-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="880c6-111">See Also</span></span>  
+ <span data-ttu-id="880c6-112"><xref:System.Array></span><span class="sxs-lookup"><span data-stu-id="880c6-112"><xref:System.Array></span></span>   
+ <span data-ttu-id="880c6-113">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="880c6-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="880c6-114">[Arrays](../../../csharp/programming-guide/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="880c6-114">[Arrays](../../../csharp/programming-guide/arrays/index.md) </span></span>  
+ <span data-ttu-id="880c6-115">[Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="880c6-115">[Single-Dimensional Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md) </span></span>  
+ <span data-ttu-id="880c6-116">[Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="880c6-116">[Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span></span>  
+ [<span data-ttu-id="880c6-117">Verzweigte Arrays</span><span class="sxs-lookup"><span data-stu-id="880c6-117">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
 

@@ -38,21 +38,21 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="continue-c-reference"></a>continue (C#-Referenz)
-Die `continue`-Anweisung übergibt die Steuerung an die nächste Iteration der einschließenden [while](../../../csharp/language-reference/keywords/while.md), [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md) oder [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung, in der sie angegeben ist.  
+# <a name="continue-c-reference"></a><span data-ttu-id="e62eb-102">continue (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e62eb-102">continue (C# Reference)</span></span>
+<span data-ttu-id="e62eb-103">Die `continue`-Anweisung übergibt die Steuerung an die nächste Iteration der einschließenden [while](../../../csharp/language-reference/keywords/while.md), [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md) oder [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung, in der sie angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="e62eb-103">The `continue` statement passes control to the next iteration of the enclosing [while](../../../csharp/language-reference/keywords/while.md), [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), or [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement in which it appears.</span></span>  
   
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird ein Zähler initialisiert, um von 1 bis 10 zu zählen. Indem die `continue`-Anweisung in Verbindung mit dem `(i < 9)`-Ausdruck verwendet wird, werden die Anweisungen zwischen `continue` und dem Ende des `for`-Rumpfs übersprungen.  
+## <a name="example"></a><span data-ttu-id="e62eb-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e62eb-104">Example</span></span>  
+ <span data-ttu-id="e62eb-105">In diesem Beispiel wird ein Zähler initialisiert, um von 1 bis 10 zu zählen.</span><span class="sxs-lookup"><span data-stu-id="e62eb-105">In this example, a counter is initialized to count from 1 to 10.</span></span> <span data-ttu-id="e62eb-106">Indem die `continue`-Anweisung in Verbindung mit dem `(i < 9)`-Ausdruck verwendet wird, werden die Anweisungen zwischen `continue` und dem Ende des `for`-Rumpfs übersprungen.</span><span class="sxs-lookup"><span data-stu-id="e62eb-106">By using the `continue` statement in conjunction with the expression `(i < 9)`, the statements between `continue` and the end of the `for` body are skipped.</span></span>  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
+ <span data-ttu-id="e62eb-107">[!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e62eb-107">[!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="e62eb-108">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="e62eb-108">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [break-Anweisung](/cpp/cpp/break-statement-cpp)   
- [Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a><span data-ttu-id="e62eb-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e62eb-109">See Also</span></span>  
+ <span data-ttu-id="e62eb-110">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e62eb-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e62eb-111">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e62eb-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e62eb-112">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="e62eb-112">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="e62eb-113">[break-Anweisung](/cpp/cpp/break-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="e62eb-113">[break Statement](/cpp/cpp/break-statement-cpp) </span></span>  
+ [<span data-ttu-id="e62eb-114">Sprunganweisungen</span><span class="sxs-lookup"><span data-stu-id="e62eb-114">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)
 

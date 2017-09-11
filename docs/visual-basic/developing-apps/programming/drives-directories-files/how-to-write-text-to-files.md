@@ -40,48 +40,48 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>Gewusst wie: Schreiben von Text in Dateien in Visual Basic
-Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann zum Schreiben von Text in Dateien verwendet werden. Ist die angegebene Datei noch nicht vorhanden, wird diese erstellt.  
+# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="52f5f-102">Gewusst wie: Schreiben von Text in Dateien in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="52f5f-102">How to: Write Text to Files in Visual Basic</span></span>
+<span data-ttu-id="52f5f-103">Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann zum Schreiben von Text in Dateien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="52f5f-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="52f5f-104">Ist die angegebene Datei noch nicht vorhanden, wird diese erstellt.</span><span class="sxs-lookup"><span data-stu-id="52f5f-104">If the specified file does not exist, it is created.</span></span>  
   
-## <a name="procedure"></a>Prozedur  
+## <a name="procedure"></a><span data-ttu-id="52f5f-105">Prozedur</span><span class="sxs-lookup"><span data-stu-id="52f5f-105">Procedure</span></span>  
   
-#### <a name="to-write-text-to-a-file"></a>Schreiben von Text in eine Datei  
+#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="52f5f-106">Schreiben von Text in eine Datei</span><span class="sxs-lookup"><span data-stu-id="52f5f-106">To write text to a file</span></span>  
   
--   Verwenden Sie die `WriteAllText`-Methode, um Text in eine Datei zu schreiben, und geben Sie die Datei und den zu schreibenden Text an. In diesem Beispiel wird der Satz `"This is new text."` in die Datei `test.txt` geschrieben und an jeden vorhandenen Text in der Datei angefügt.  
+-   <span data-ttu-id="52f5f-107">Verwenden Sie die `WriteAllText`-Methode, um Text in eine Datei zu schreiben, und geben Sie die Datei und den zu schreibenden Text an.</span><span class="sxs-lookup"><span data-stu-id="52f5f-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="52f5f-108">In diesem Beispiel wird der Satz `"This is new text."` in die Datei `test.txt` geschrieben und an jeden vorhandenen Text in der Datei angefügt.</span><span class="sxs-lookup"><span data-stu-id="52f5f-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
+     <span data-ttu-id="52f5f-109">[!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="52f5f-109">[!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]</span></span>  
   
-#### <a name="to-write-a-series-of-strings-to-a-file"></a>Schreiben von mehreren Zeichenfolgen in eine Datei  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="52f5f-110">Schreiben von mehreren Zeichenfolgen in eine Datei</span><span class="sxs-lookup"><span data-stu-id="52f5f-110">To write a series of strings to a file</span></span>  
   
--   Durchlaufen Sie die Zeichenfolgenauflistung. Verwenden Sie die `WriteAllText`-Methode, um Text in eine Datei zu schreiben, und geben Sie die Zieldatei und die Zeichenfolge an, die angefügt werden soll, und legen Sie den `append`-Parameter auf `True` fest.  
+-   <span data-ttu-id="52f5f-111">Durchlaufen Sie die Zeichenfolgenauflistung.</span><span class="sxs-lookup"><span data-stu-id="52f5f-111">Loop through the string collection.</span></span> <span data-ttu-id="52f5f-112">Verwenden Sie die `WriteAllText`-Methode, um Text in eine Datei zu schreiben, und geben Sie die Zieldatei und die Zeichenfolge an, die angefügt werden soll, und legen Sie den `append`-Parameter auf `True` fest.</span><span class="sxs-lookup"><span data-stu-id="52f5f-112">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
   
-     In diesem Beispiel werden die Namen der Dateien im `Documents and Settings`-Verzeichnis in `FileList.txt` geschrieben, und es wird ein Wagenrücklauf zur besseren Lesbarkeit eingefügt.  
+     <span data-ttu-id="52f5f-113">In diesem Beispiel werden die Namen der Dateien im `Documents and Settings`-Verzeichnis in `FileList.txt` geschrieben, und es wird ein Wagenrücklauf zur besseren Lesbarkeit eingefügt.</span><span class="sxs-lookup"><span data-stu-id="52f5f-113">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
+     <span data-ttu-id="52f5f-114">[!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="52f5f-114">[!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]</span></span>  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
+## <a name="robust-programming"></a><span data-ttu-id="52f5f-115">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="52f5f-115">Robust Programming</span></span>  
+ <span data-ttu-id="52f5f-116">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="52f5f-116">The following conditions may cause an exception:</span></span>  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="52f5f-117">Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-117">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="52f5f-118">Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-118">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   `File` verweist auf einen Pfad, der nicht vorhanden ist (<xref:System.IO.FileNotFoundException> oder<xref:System.IO.DirectoryNotFoundException>).  
+-   <span data-ttu-id="52f5f-119">`File` verweist auf einen Pfad, der nicht vorhanden ist (<xref:System.IO.FileNotFoundException> oder<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-119">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   Die Datei wird von einem anderen Prozess verwendet, oder ein E/A-Fehler tritt auf (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="52f5f-120">Die Datei wird von einem anderen Prozess verwendet, oder ein E/A-Fehler tritt auf (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-120">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
   
--   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="52f5f-121">Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-121">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="52f5f-122">Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-122">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="52f5f-123">Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-123">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   Auf dem Datenträger steht kein Platz mehr zur Verfügung, und der Aufruf von `WriteAllText` schlägt fehl (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="52f5f-124">Auf dem Datenträger steht kein Platz mehr zur Verfügung, und der Aufruf von `WriteAllText` schlägt fehl (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="52f5f-124">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
   
- Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Code möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8).  
+ <span data-ttu-id="52f5f-125">Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Code möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen.</span><span class="sxs-lookup"><span data-stu-id="52f5f-125">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="52f5f-126">Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](https://msdn.microsoft.com/library/33tceax8).</span><span class="sxs-lookup"><span data-stu-id="52f5f-126">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- [Vorgehensweise: Lesen aus Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+## <a name="see-also"></a><span data-ttu-id="52f5f-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="52f5f-127">See Also</span></span>  
+ <span data-ttu-id="52f5f-128"><xref:Microsoft.VisualBasic.FileIO.FileSystem></span><span class="sxs-lookup"><span data-stu-id="52f5f-128"><xref:Microsoft.VisualBasic.FileIO.FileSystem></span></span>   
+ <span data-ttu-id="52f5f-129"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A></span><span class="sxs-lookup"><span data-stu-id="52f5f-129"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A></span></span>   
+ [<span data-ttu-id="52f5f-130">Vorgehensweise: Lesen aus Textdateien</span><span class="sxs-lookup"><span data-stu-id="52f5f-130">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
 

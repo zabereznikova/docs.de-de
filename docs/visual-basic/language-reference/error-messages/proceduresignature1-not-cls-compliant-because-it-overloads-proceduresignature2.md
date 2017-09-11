@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 984c04a107444036b980439b231d27a8a81656c1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d106f59e3faa317f67ee92ddcec8416eeff745d4
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da es überlädt &lt;proceduresignature2&gt; , unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen
-Eine Prozedur oder Eigenschaft ist als markiert `<CLSCompliant(True)>` Wenn sie eine andere Prozedur bzw. Eigenschaft überschreibt und der einzige Unterschied zwischen ihre Parameterlisten der Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.  
+# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a><span data-ttu-id="b6635-102">&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da es überlädt &lt;proceduresignature2&gt; , unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen</span><span class="sxs-lookup"><span data-stu-id="b6635-102">&lt;proceduresignature1&gt; is not CLS-compliant because it overloads &lt;proceduresignature2&gt; which differs from it only by array of array parameter types or by the rank of the array parameter types</span></span>
+<span data-ttu-id="b6635-103">Eine Prozedur oder Eigenschaft ist als markiert `<CLSCompliant(True)>` Wenn sie eine andere Prozedur bzw. Eigenschaft überschreibt und der einzige Unterschied zwischen ihre Parameterlisten der Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.</span><span class="sxs-lookup"><span data-stu-id="b6635-103">A procedure or property is marked as `<CLSCompliant(True)>` when it overrides another procedure or property and the only difference between their parameter lists is the nesting level of a jagged array or the rank of an array.</span></span>  
   
- In den folgenden Deklarationen wird dieser Fehler durch die zweiten und dritten Deklaration generiert.  
+ <span data-ttu-id="b6635-104">In den folgenden Deklarationen wird dieser Fehler durch die zweiten und dritten Deklaration generiert.</span><span class="sxs-lookup"><span data-stu-id="b6635-104">In the following declarations, the second and third declarations generate this error.</span></span>  
   
  `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
   
@@ -49,23 +50,23 @@ Eine Prozedur oder Eigenschaft ist als markiert `<CLSCompliant(True)>` Wenn sie 
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- Die zweite Deklaration ändert den ursprünglichen eindimensionalen Parameter `arrayParam` in ein Array von Arrays. Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2). Während Visual Basic Überladungen, um nur eine dieser Änderungen unterscheiden können, solche überladen ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS).  
+ <span data-ttu-id="b6635-105">Die zweite Deklaration ändert den ursprünglichen eindimensionalen Parameter `arrayParam` in ein Array von Arrays.</span><span class="sxs-lookup"><span data-stu-id="b6635-105">The second declaration changes the original one-dimensional parameter `arrayParam` to an array of arrays.</span></span> <span data-ttu-id="b6635-106">Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2).</span><span class="sxs-lookup"><span data-stu-id="b6635-106">The third declaration changes `arrayParam` to a two-dimensional array (rank 2).</span></span> <span data-ttu-id="b6635-107">Während Visual Basic Überladungen, um nur eine dieser Änderungen unterscheiden können, solche überladen ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS).</span><span class="sxs-lookup"><span data-stu-id="b6635-107">While Visual Basic allows overloads to differ only by one of these changes, such overloading is not compliant with the [Language Independence and Language-Independent Components](https://msdn.microsoft.com/library/12a7a7h3) (CLS).</span></span>  
   
- Beim Anwenden der <xref:System.CLSCompliantAttribute>auf ein Programmierelement, legen Sie des Attributs `isCompliant` Parameter entweder `True` oder `False` an Kompatibilität oder Nichtkompatibilität.</xref:System.CLSCompliantAttribute> Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
+ <span data-ttu-id="b6635-108">Beim Anwenden der <xref:System.CLSCompliantAttribute>auf ein Programmierelement, legen Sie des Attributs `isCompliant` Parameter entweder `True` oder `False` an Kompatibilität oder Nichtkompatibilität.</xref:System.CLSCompliantAttribute></span><span class="sxs-lookup"><span data-stu-id="b6635-108">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="b6635-109">Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.</span><span class="sxs-lookup"><span data-stu-id="b6635-109">There is no default for this parameter, and you must supply a value.</span></span>  
   
- Wenn Sie nicht anwenden der <xref:System.CLSCompliantAttribute>auf ein Element gilt nicht kompatibel ist.</xref:System.CLSCompliantAttribute>  
+ <span data-ttu-id="b6635-110">Wenn Sie nicht anwenden der <xref:System.CLSCompliantAttribute>auf ein Element gilt nicht kompatibel ist.</xref:System.CLSCompliantAttribute></span><span class="sxs-lookup"><span data-stu-id="b6635-110">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
   
- Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="b6635-111">Standardmäßig ist diese Meldung eine Warnung.</span><span class="sxs-lookup"><span data-stu-id="b6635-111">By default, this message is a warning.</span></span> <span data-ttu-id="b6635-112">Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="b6635-112">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Fehler-ID:** BC40035  
+ <span data-ttu-id="b6635-113">**Fehler-ID:** BC40035</span><span class="sxs-lookup"><span data-stu-id="b6635-113">**Error ID:** BC40035</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b6635-114">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="b6635-114">To correct this error</span></span>  
   
--   Wenn Sie CLS-Kompatibilität erforderlich ist, definieren Sie Ihre Überladungen, um auf vielfältigere Weise als nur die Änderungen, die auf dieser Hilfeseite genannten voneinander abweichen.  
+-   <span data-ttu-id="b6635-115">Wenn Sie CLS-Kompatibilität erforderlich ist, definieren Sie Ihre Überladungen, um auf vielfältigere Weise als nur die Änderungen, die auf dieser Hilfeseite genannten voneinander abweichen.</span><span class="sxs-lookup"><span data-stu-id="b6635-115">If you require CLS compliance, define your overloads to differ from each other in more ways than only the changes cited on this Help page.</span></span>  
   
--   Wenn Sie festlegen, dass die Überladungen unterscheiden sich nur durch die Änderungen, die auf diese Hilfe erwähnten Seite, entfernen Sie die <xref:System.CLSCompliantAttribute>von ihren Definitionen, oder markieren Sie sie als `<CLSCompliant(False)>`.</xref:System.CLSCompliantAttribute>  
+-   <span data-ttu-id="b6635-116">Wenn Sie festlegen, dass die Überladungen unterscheiden sich nur durch die Änderungen, die auf diese Hilfe erwähnten Seite, entfernen Sie die <xref:System.CLSCompliantAttribute>von ihren Definitionen, oder markieren Sie sie als `<CLSCompliant(False)>`.</xref:System.CLSCompliantAttribute></span><span class="sxs-lookup"><span data-stu-id="b6635-116">If you require that the overloads differ only by the changes cited on this Help page, remove the <xref:System.CLSCompliantAttribute> from their definitions or mark them as `<CLSCompliant(False)>`.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [\<PAVE über > CLS-kompatiblen Code schreiben](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)   
- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a><span data-ttu-id="b6635-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6635-117">See Also</span></span>  
+ <span data-ttu-id="b6635-118">[\<PAVE über > CLS-kompatiblen Code schreiben](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3) </span><span class="sxs-lookup"><span data-stu-id="b6635-118">[\<PAVE OVER> Writing CLS-Compliant Code](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3) </span></span>  
+<span data-ttu-id="b6635-119"> [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md) </span><span class="sxs-lookup"><span data-stu-id="b6635-119"> [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md) </span></span>  
+<span data-ttu-id="b6635-120"> [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)</span><span class="sxs-lookup"><span data-stu-id="b6635-120"> [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)</span></span>

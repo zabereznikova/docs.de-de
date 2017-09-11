@@ -26,55 +26,55 @@ ms.contentlocale: de-de
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="enhancing-windows-forms-applications"></a>Erweitern von Windows Forms-Anwendungen
-Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-basierten Anwendungen steigern und die spezifischen Anforderungen der Benutzer erfüllen können. Unter den folgenden Themen werden diese Funktionen und ihre Verwendung beschrieben.  
+# <a name="enhancing-windows-forms-applications"></a><span data-ttu-id="763b5-102">Erweitern von Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="763b5-102">Enhancing Windows Forms Applications</span></span>
+<span data-ttu-id="763b5-103">Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-basierten Anwendungen steigern und die spezifischen Anforderungen der Benutzer erfüllen können.</span><span class="sxs-lookup"><span data-stu-id="763b5-103">Windows Forms contains many features that you can use to enhance your Windows-based applications to meet the specific needs of your users.</span></span> <span data-ttu-id="763b5-104">Unter den folgenden Themen werden diese Funktionen und ihre Verwendung beschrieben.</span><span class="sxs-lookup"><span data-stu-id="763b5-104">The following topics describe these features and how to use them.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie die Grafikoberfläche in Windows Forms verwenden.  
+## <a name="in-this-section"></a><span data-ttu-id="763b5-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="763b5-105">In This Section</span></span>  
+ [<span data-ttu-id="763b5-106">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-106">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ <span data-ttu-id="763b5-107">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie die Grafikoberfläche in Windows Forms verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-107">Contains links to topics that describe and show how to use the graphics interface in Windows Forms.</span></span>  
   
- [Anwendungseinstellungen für Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md).  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie das Feature **Anwendungseinstellungen** verwenden.  
+ <span data-ttu-id="763b5-108">[Anwendungseinstellungen für Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="763b5-108">[Application Settings for Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md).</span></span>  
+ <span data-ttu-id="763b5-109">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie das Feature **Anwendungseinstellungen** verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-109">Contains links to topics that describe and show how to use the **Application Settings** feature.</span></span>  
   
- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Dateien aus Windows Forms-Anwendungen drucken.  
+ [<span data-ttu-id="763b5-110">Druckunterstützung in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-110">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ <span data-ttu-id="763b5-111">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Dateien aus Windows Forms-Anwendungen drucken.</span><span class="sxs-lookup"><span data-stu-id="763b5-111">Contains links to topics that describe and show how to print files from Windows Forms applications.</span></span>  
   
- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Drag & Drop und die Zwischenablage in Windows Forms verwenden.  
+ [<span data-ttu-id="763b5-112">Drag & Drop-Vorgänge und Unterstützung der Zwischenablage</span><span class="sxs-lookup"><span data-stu-id="763b5-112">Drag-and-Drop Operations and Clipboard Support</span></span>](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ <span data-ttu-id="763b5-113">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Drag & Drop und die Zwischenablage in Windows Forms verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-113">Contains links to topics that describe and show how to use the drag-and-drop feature and the Clipboard in Windows Forms.</span></span>  
   
- [Netzwerkfunktionen in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Netzwerkfunktionen in Windows Forms verwenden.  
+ [<span data-ttu-id="763b5-114">Netzwerkfunktionen in Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="763b5-114">Networking in Windows Forms Applications</span></span>](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
+ <span data-ttu-id="763b5-115">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie Netzwerkfunktionen in Windows Forms verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-115">Contains links to topics that describe and show how to use networking in Windows Forms.</span></span>  
   
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
- Enthält Links zu Themen, in denen veranschaulicht wird, wie Sie Windows Forms-Anwendungen globalisieren.  
+ [<span data-ttu-id="763b5-116">Globalisieren von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-116">Globalizing Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ <span data-ttu-id="763b5-117">Enthält Links zu Themen, in denen veranschaulicht wird, wie Sie Windows Forms-Anwendungen globalisieren.</span><span class="sxs-lookup"><span data-stu-id="763b5-117">Contains links to topics that show how to globalize Windows Forms applications.</span></span>  
   
- [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie von Windows Forms-Anwendungen aus auf COM-Komponenten zugreifen.  
+ [<span data-ttu-id="763b5-118">Windows Forms und nicht verwaltete Anwendungen</span><span class="sxs-lookup"><span data-stu-id="763b5-118">Windows Forms and Unmanaged Applications</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ <span data-ttu-id="763b5-119">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie von Windows Forms-Anwendungen aus auf COM-Komponenten zugreifen.</span><span class="sxs-lookup"><span data-stu-id="763b5-119">Contains links to topics that describe and show how to access COM components from Windows Form applications.</span></span>  
   
- [Systeminformationen und Windows Forms](../../../../docs/framework/winforms/advanced/system-information-and-windows-forms.md)  
- Beschreibt, wie Sie Systeminformationen in Windows Forms verwenden.  
+ [<span data-ttu-id="763b5-120">Systeminformationen und Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-120">System Information and Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/system-information-and-windows-forms.md)  
+ <span data-ttu-id="763b5-121">Beschreibt, wie Sie Systeminformationen in Windows Forms verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-121">Describes how to use system information in Windows Forms.</span></span>  
   
- [Energieverwaltung in Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)  
- Beschreibt, wie Sie die Energieverwendung in Windows Forms-Anwendungen verwalten.  
+ [<span data-ttu-id="763b5-122">Energieverwaltung in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-122">Power Management in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)  
+ <span data-ttu-id="763b5-123">Beschreibt, wie Sie die Energieverwendung in Windows Forms-Anwendungen verwalten.</span><span class="sxs-lookup"><span data-stu-id="763b5-123">Describes how to manage power use in Windows Forms applications.</span></span>  
   
- [Visuelle Vererbung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- Beschreibt, wie von einem Basisformular geerbt wird.  
+ [<span data-ttu-id="763b5-124">Visuelle Vererbung in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-124">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ <span data-ttu-id="763b5-125">Beschreibt, wie von einem Basisformular geerbt wird.</span><span class="sxs-lookup"><span data-stu-id="763b5-125">Describes how to inherit from a base form.</span></span>  
   
- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- Beschreibt, wie Multiple Document Interface (MDI)-Anwendungen erstellt werden.  
+ [<span data-ttu-id="763b5-126">MDI-Anwendungen (Multiple Document Interface)</span><span class="sxs-lookup"><span data-stu-id="763b5-126">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ <span data-ttu-id="763b5-127">Beschreibt, wie Multiple Document Interface (MDI)-Anwendungen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="763b5-127">Describes how to create multiple-document interface (MDI) applications.</span></span>  
   
- [Integrieren von Benutzerhilfe in Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- Beschreibt, wie Benutzerhilfe in die Anwendungen integriert wird.  
+ [<span data-ttu-id="763b5-128">Integrieren von Benutzerhilfe in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-128">Integrating User Help in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ <span data-ttu-id="763b5-129">Beschreibt, wie Benutzerhilfe in die Anwendungen integriert wird.</span><span class="sxs-lookup"><span data-stu-id="763b5-129">Describes how to integrate user help in your applications.</span></span>  
   
- [Windows Forms-Barrierefreiheit](../../../../docs/framework/winforms/advanced/windows-forms-accessibility.md)  
- Beschreibt, wie die Anwendungen für eine Vielzahl von Benutzern verfügbar gemacht werden.  
+ [<span data-ttu-id="763b5-130">Windows Forms-Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="763b5-130">Windows Forms Accessibility</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-accessibility.md)  
+ <span data-ttu-id="763b5-131">Beschreibt, wie die Anwendungen für eine Vielzahl von Benutzern verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="763b5-131">Describes how to make your applications available to a wide variety of users.</span></span>  
   
- [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- Beschreibt, wie WPF-Steuerelemente in Windows Forms-basierten Anwendungen verwendet werden.  
+ [<span data-ttu-id="763b5-132">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="763b5-132">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ <span data-ttu-id="763b5-133">Beschreibt, wie WPF-Steuerelemente in Windows Forms-basierten Anwendungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="763b5-133">Describes how to use WPF controls in your Windows Forms-based applications.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hilfesysteme in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Benutzerhilfe in Windows Forms-Anwendungen bereitgestellt wird.  
+## <a name="related-sections"></a><span data-ttu-id="763b5-134">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="763b5-134">Related Sections</span></span>  
+ [<span data-ttu-id="763b5-135">Hilfesysteme in Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="763b5-135">Help Systems in Windows Forms Applications</span></span>](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)  
+ <span data-ttu-id="763b5-136">Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Benutzerhilfe in Windows Forms-Anwendungen bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="763b5-136">Contains links to topics that describe and show how to provide user help in Windows Forms applications.</span></span>  
   
- [Erste Schritte mit Windows Forms](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- Enthält Links zu Themen, in denen beschrieben wird, wie Sie die grundlegenden Funktionen von Windows Forms verwenden.
+ [<span data-ttu-id="763b5-137">Erste Schritte mit Windows Forms</span><span class="sxs-lookup"><span data-stu-id="763b5-137">Getting Started with Windows Forms</span></span>](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ <span data-ttu-id="763b5-138">Enthält Links zu Themen, in denen beschrieben wird, wie Sie die grundlegenden Funktionen von Windows Forms verwenden.</span><span class="sxs-lookup"><span data-stu-id="763b5-138">Contains links to topics that describe how to use the basic features of Windows Forms.</span></span>

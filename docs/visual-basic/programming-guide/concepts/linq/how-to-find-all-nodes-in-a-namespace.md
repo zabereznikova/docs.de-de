@@ -16,18 +16,18 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4216ba0ab8c8026705a82f505807fb4b1f31e424
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 8ec8acfc576434dd8d48ae4dd9133ba7fbb43959
 ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Gewusst wie: Suchen aller Knoten in einem Namespace (Visual Basic)
-Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="8844e-102">Gewusst wie: Suchen aller Knoten in einem Namespace (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8844e-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
+<span data-ttu-id="8844e-103">Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.</span><span class="sxs-lookup"><span data-stu-id="8844e-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine XML-Struktur mit zwei Namespaces. Anschließend durchläuft das Beispiel die Struktur und gibt die Namen aller Elemente und Attribute in einem dieser Namespaces aus.  
+## <a name="example"></a><span data-ttu-id="8844e-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8844e-104">Example</span></span>  
+ <span data-ttu-id="8844e-105">Das folgende Beispiel erstellt eine XML-Struktur mit zwei Namespaces.</span><span class="sxs-lookup"><span data-stu-id="8844e-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="8844e-106">Anschließend durchläuft das Beispiel die Struktur und gibt die Namen aller Elemente und Attribute in einem dieser Namespaces aus.</span><span class="sxs-lookup"><span data-stu-id="8844e-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -57,7 +57,7 @@ Module Module1
 End Module  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="8844e-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="8844e-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -65,10 +65,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>Beispiel  
- Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces. Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.  
+## <a name="example"></a><span data-ttu-id="8844e-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8844e-108">Example</span></span>  
+ <span data-ttu-id="8844e-109">Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces.</span><span class="sxs-lookup"><span data-stu-id="8844e-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="8844e-110">Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.</span><span class="sxs-lookup"><span data-stu-id="8844e-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ <span data-ttu-id="8844e-111">Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="8844e-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -87,7 +87,7 @@ Module Module1
 End Module  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="8844e-112">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="8844e-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -123,6 +123,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8844e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8844e-113">See Also</span></span>  
+ [<span data-ttu-id="8844e-114">Standardabfragen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8844e-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

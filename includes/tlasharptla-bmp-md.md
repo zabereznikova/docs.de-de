@@ -1,1 +1,1 @@
-Bitmap (BMP)
+<span data-ttu-id="d7e3e-101">Bitmap (BMP)</span><span class="sxs-lookup"><span data-stu-id="d7e3e-101">bitmap (BMP)</span></span>

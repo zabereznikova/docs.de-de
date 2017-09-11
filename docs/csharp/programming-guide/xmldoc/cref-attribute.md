@@ -34,15 +34,15 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cref-attribute-c-programming-guide"></a>cref-Attribut (C#-Programmierhandbuch)
-Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft. Dokumentationstools wie [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die Attribute `cref` zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="97fb3-102">cref-Attribut (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="97fb3-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="97fb3-103">Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“.</span><span class="sxs-lookup"><span data-stu-id="97fb3-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="97fb3-104">Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="97fb3-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="97fb3-105">Dokumentationstools wie [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die Attribute `cref` zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.</span><span class="sxs-lookup"><span data-stu-id="97fb3-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](../../../csharp/programming-guide/xmldoc/see.md)-Tags verwendet werden.  
+## <a name="example"></a><span data-ttu-id="97fb3-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="97fb3-106">Example</span></span>  
+ <span data-ttu-id="97fb3-107">Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](../../../csharp/programming-guide/xmldoc/see.md)-Tags verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="97fb3-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ <span data-ttu-id="97fb3-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="97fb3-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span></span>  
   
- Beim Kompilieren erzeugt das Programm die folgende XML-Datei. Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde. Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie Sandcastle erkannt wird. Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ <span data-ttu-id="97fb3-109">Beim Kompilieren erzeugt das Programm die folgende XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="97fb3-109">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="97fb3-110">Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde.</span><span class="sxs-lookup"><span data-stu-id="97fb3-110">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="97fb3-111">Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie Sandcastle erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="97fb3-111">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="97fb3-112">Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="97fb3-112">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -141,7 +141,7 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
 </doc>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="97fb3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97fb3-113">See Also</span></span>  
+ <span data-ttu-id="97fb3-114">[XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span><span class="sxs-lookup"><span data-stu-id="97fb3-114">[XML Documentation Comments](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span></span>  
+ [<span data-ttu-id="97fb3-115">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="97fb3-115">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

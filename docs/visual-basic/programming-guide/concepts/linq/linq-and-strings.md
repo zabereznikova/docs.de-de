@@ -20,63 +20,64 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a79d1427331070da9c545fdd3175115fe187e879
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94e9627efb183c08bbb67a7e6e82df9132ebdef2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="linq-and-strings-visual-basic"></a>LINQ und Zeichenfolgen (Visual Basic)
-LINQ kann Abfragen und Umwandeln von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden. Es kann besonders bei halbstrukturierten Daten in Textdateien sein. LINQ-Abfragen können mit herkömmlichen Zeichenfolgenfunktionen und regulären Ausdrücken kombiniert werden. Beispielsweise können Sie die <xref:System.String.Split%2A>oder <xref:System.Text.RegularExpressions.Regex.Split%2A>Methode, um ein Array von Zeichenfolgen zu erstellen, die Sie dann Abfragen oder ändern, indem Sie mithilfe von LINQ.</xref:System.Text.RegularExpressions.Regex.Split%2A> </xref:System.String.Split%2A> Sie können die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode in der `where` -Klausel einer LINQ-Abfrage.</xref:System.Text.RegularExpressions.Regex.IsMatch%2A> Und Sie können LINQ zum Abfragen und Ändern der <xref:System.Text.RegularExpressions.MatchCollection>von einem regulären Ausdruck zurückgegebenen Ergebnisse.</xref:System.Text.RegularExpressions.MatchCollection>  
+# <a name="linq-and-strings-visual-basic"></a><span data-ttu-id="66e09-102">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-102">LINQ and Strings (Visual Basic)</span></span>
+<span data-ttu-id="66e09-103">LINQ kann Abfragen und Umwandeln von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="66e09-103">LINQ can be used to query and transform strings and collections of strings.</span></span> <span data-ttu-id="66e09-104">Es kann besonders bei halbstrukturierten Daten in Textdateien sein.</span><span class="sxs-lookup"><span data-stu-id="66e09-104">It can be especially useful with semi-structured data in text files.</span></span> <span data-ttu-id="66e09-105">LINQ-Abfragen können mit herkömmlichen Zeichenfolgenfunktionen und regulären Ausdrücken kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="66e09-105">LINQ queries can be combined with traditional string functions and regular expressions.</span></span> <span data-ttu-id="66e09-106">Beispielsweise können Sie die <xref:System.String.Split%2A>oder <xref:System.Text.RegularExpressions.Regex.Split%2A>Methode, um ein Array von Zeichenfolgen zu erstellen, die Sie dann Abfragen oder ändern, indem Sie mithilfe von LINQ.</xref:System.Text.RegularExpressions.Regex.Split%2A> </xref:System.String.Split%2A></span><span class="sxs-lookup"><span data-stu-id="66e09-106">For example, you can use the <xref:System.String.Split%2A> or <xref:System.Text.RegularExpressions.Regex.Split%2A> method to create an array of strings that you can then query or modify by using LINQ.</span></span> <span data-ttu-id="66e09-107">Sie können die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode in der `where` -Klausel einer LINQ-Abfrage.</xref:System.Text.RegularExpressions.Regex.IsMatch%2A></span><span class="sxs-lookup"><span data-stu-id="66e09-107">You can use the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method in the `where` clause of a LINQ query.</span></span> <span data-ttu-id="66e09-108">Und Sie können LINQ zum Abfragen und Ändern der <xref:System.Text.RegularExpressions.MatchCollection>von einem regulären Ausdruck zurückgegebenen Ergebnisse.</xref:System.Text.RegularExpressions.MatchCollection></span><span class="sxs-lookup"><span data-stu-id="66e09-108">And you can use LINQ to query or modify the <xref:System.Text.RegularExpressions.MatchCollection> results returned by a regular expression.</span></span>  
   
- In diesem Abschnitt beschriebenen Techniken können auch teilweise strukturierten Textdaten in XML transformieren. Weitere Informationen finden Sie unter [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md).  
+ <span data-ttu-id="66e09-109">In diesem Abschnitt beschriebenen Techniken können auch teilweise strukturierten Textdaten in XML transformieren.</span><span class="sxs-lookup"><span data-stu-id="66e09-109">You can also use the techniques described in this section to transform semi-structured text data to XML.</span></span> <span data-ttu-id="66e09-110">Weitere Informationen finden Sie unter [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md).</span><span class="sxs-lookup"><span data-stu-id="66e09-110">For more information, see [How to: Generate XML from CSV Files](how-to-generate-xml-from-csv-files.md).</span></span>  
   
- In den Beispielen in diesem Abschnitt werden in zwei Kategorien unterteilt:  
+ <span data-ttu-id="66e09-111">In den Beispielen in diesem Abschnitt werden in zwei Kategorien unterteilt:</span><span class="sxs-lookup"><span data-stu-id="66e09-111">The examples in this section fall into two categories:</span></span>  
   
-## <a name="querying-a-block-of-text"></a>Abfragen eines Textblocks  
- Können Sie Abfragen, analysieren und Ändern von Textblöcken durch Aufteilen des Vorgangs in ein abfragbares Array kleinerer Zeichenfolgen mithilfe der <xref:System.String.Split%2A>-Methode oder die <xref:System.Text.RegularExpressions.Regex.Split%2A>-Methode.</xref:System.Text.RegularExpressions.Regex.Split%2A> </xref:System.String.Split%2A> Sie können den Quelltext Wörtern, Sätzen, Absätzen, Seiten oder andere Kriterien aufteilen und dann zusätzliche Teilungen ausführen, wenn sie in der Abfrage erforderlich sind.  
+## <a name="querying-a-block-of-text"></a><span data-ttu-id="66e09-112">Abfragen eines Textblocks</span><span class="sxs-lookup"><span data-stu-id="66e09-112">Querying a Block of Text</span></span>  
+ <span data-ttu-id="66e09-113">Können Sie Abfragen, analysieren und Ändern von Textblöcken durch Aufteilen des Vorgangs in ein abfragbares Array kleinerer Zeichenfolgen mithilfe der <xref:System.String.Split%2A>-Methode oder die <xref:System.Text.RegularExpressions.Regex.Split%2A>-Methode.</xref:System.Text.RegularExpressions.Regex.Split%2A> </xref:System.String.Split%2A></span><span class="sxs-lookup"><span data-stu-id="66e09-113">You can query, analyze, and modify text blocks by splitting them into a queryable array of smaller strings by using the <xref:System.String.Split%2A> method or the <xref:System.Text.RegularExpressions.Regex.Split%2A> method.</span></span> <span data-ttu-id="66e09-114">Sie können den Quelltext Wörtern, Sätzen, Absätzen, Seiten oder andere Kriterien aufteilen und dann zusätzliche Teilungen ausführen, wenn sie in der Abfrage erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="66e09-114">You can split the source text into words, sentences, paragraphs, pages, or any other criteria, and then perform additional splits if they are required in your query.</span></span>  
   
- [Gewusst wie: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
- Zeigt die Verwendung von LINQ für einfache Abfragen von Text.  
+ [<span data-ttu-id="66e09-115">Gewusst wie: zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-115">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+ <span data-ttu-id="66e09-116">Zeigt die Verwendung von LINQ für einfache Abfragen von Text.</span><span class="sxs-lookup"><span data-stu-id="66e09-116">Shows how to use LINQ for simple querying over text.</span></span>  
   
- [Gewusst wie: Abfragen von Sätzen, die eine angegebene Gruppe von Wörtern (LINQ) (Visual Basic) enthalten.](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+ [<span data-ttu-id="66e09-117">Gewusst wie: Abfragen von Sätzen, die eine angegebene Gruppe von Wörtern (LINQ) (Visual Basic) enthalten.</span><span class="sxs-lookup"><span data-stu-id="66e09-117">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
 
- Erfahren, wie Textdateien an willkürlichen Grenzen geteilt und zum Ausführen von Abfragen für jeden Teil.  
+ <span data-ttu-id="66e09-118">Erfahren, wie Textdateien an willkürlichen Grenzen geteilt und zum Ausführen von Abfragen für jeden Teil.</span><span class="sxs-lookup"><span data-stu-id="66e09-118">Shows how to split text files on arbitrary boundaries and how to perform queries against each part.</span></span>  
   
- [Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)](how-to-query-for-characters-in-a-string-linq.md)  
- Veranschaulicht, dass eine Zeichenfolge ein abfragbarer Typ ist.  
+ [<span data-ttu-id="66e09-119">Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-119">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>](how-to-query-for-characters-in-a-string-linq.md)  
+ <span data-ttu-id="66e09-120">Veranschaulicht, dass eine Zeichenfolge ein abfragbarer Typ ist.</span><span class="sxs-lookup"><span data-stu-id="66e09-120">Demonstrates that a string is a queryable type.</span></span>  
   
- [Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)  
- Zeigt, wie reguläre Ausdrücke in LINQ-Abfragen für komplexe Mustervergleiche auf gefilterte Abfrageergebnisse verwenden.  
+ [<span data-ttu-id="66e09-121">Gewusst wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-121">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](how-to-combine-linq-queries-with-regular-expressions.md)  
+ <span data-ttu-id="66e09-122">Zeigt, wie reguläre Ausdrücke in LINQ-Abfragen für komplexe Mustervergleiche auf gefilterte Abfrageergebnisse verwenden.</span><span class="sxs-lookup"><span data-stu-id="66e09-122">Shows how to use regular expressions in LINQ queries for complex pattern matching on filtered query results.</span></span>  
   
-## <a name="querying-semi-structured-data-in-text-format"></a>Abfragen halbstrukturierter Daten im Text-Format  
- Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, die häufig mit ähnlicher Formatierung, z. B. durch Tabstopps oder Kommas getrennten Dateien oder Zeilen von fester Länge. Nachdem Sie solch eine Textdatei in den Arbeitsspeicher gelesen haben, können Sie LINQ Abfragen und/oder ändern die Zeilen. LINQ-Abfragen vereinfachen zudem die Aufgabe, Daten aus mehreren Quellen zu kombinieren.  
+## <a name="querying-semi-structured-data-in-text-format"></a><span data-ttu-id="66e09-123">Abfragen halbstrukturierter Daten im Text-Format</span><span class="sxs-lookup"><span data-stu-id="66e09-123">Querying Semi-Structured Data in Text Format</span></span>  
+ <span data-ttu-id="66e09-124">Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, die häufig mit ähnlicher Formatierung, z. B. durch Tabstopps oder Kommas getrennten Dateien oder Zeilen von fester Länge.</span><span class="sxs-lookup"><span data-stu-id="66e09-124">Many different types of text files consist of a series of lines, often with similar formatting, such as tab- or comma-delimited files or fixed-length lines.</span></span> <span data-ttu-id="66e09-125">Nachdem Sie solch eine Textdatei in den Arbeitsspeicher gelesen haben, können Sie LINQ Abfragen und/oder ändern die Zeilen.</span><span class="sxs-lookup"><span data-stu-id="66e09-125">After you read such a text file into memory, you can use LINQ to query and/or modify the lines.</span></span> <span data-ttu-id="66e09-126">LINQ-Abfragen vereinfachen zudem die Aufgabe, Daten aus mehreren Quellen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="66e09-126">LINQ queries also simplify the task of combining data from multiple sources.</span></span>  
   
- [Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  
- Zeigt, wie alle Zeichenfolgen suchen, die in einer Liste, aber nicht in der anderen vorhanden sind.  
+ [<span data-ttu-id="66e09-127">Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-127">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>](how-to-find-the-set-difference-between-two-lists-linq.md)  
+ <span data-ttu-id="66e09-128">Zeigt, wie alle Zeichenfolgen suchen, die in einer Liste, aber nicht in der anderen vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="66e09-128">Shows how to find all the strings that are present in one list but not the other.</span></span>  
   
- [Gewusst wie: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
- Zeigt, wie Textzeilen basierend auf einem beliebigen Wort oder Feld sortieren.  
+ [<span data-ttu-id="66e09-129">Gewusst wie: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-129">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
+ <span data-ttu-id="66e09-130">Zeigt, wie Textzeilen basierend auf einem beliebigen Wort oder Feld sortieren.</span><span class="sxs-lookup"><span data-stu-id="66e09-130">Shows how to sort text lines based on any word or field.</span></span>  
   
- [Gewusst wie: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (Visual Basic)](how-to-reorder-the-fields-of-a-delimited-file.md)  
- Zeigt, wie Felder in einer Zeile in eine CSV-Datei neu angeordnet.  
+ [<span data-ttu-id="66e09-131">Gewusst wie: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-131">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>](how-to-reorder-the-fields-of-a-delimited-file.md)  
+ <span data-ttu-id="66e09-132">Zeigt, wie Felder in einer Zeile in eine CSV-Datei neu angeordnet.</span><span class="sxs-lookup"><span data-stu-id="66e09-132">Shows how to reorder fields in a line in a .csv file.</span></span>  
   
- [Gewusst wie: kombinieren und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)  
- Zeigt, wie Zeichenfolgenlisten auf verschiedene Weise zu kombinieren.  
+ [<span data-ttu-id="66e09-133">Gewusst wie: kombinieren und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-133">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>](how-to-combine-and-compare-string-collections-linq.md)  
+ <span data-ttu-id="66e09-134">Zeigt, wie Zeichenfolgenlisten auf verschiedene Weise zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="66e09-134">Shows how to combine string lists in various ways.</span></span>  
   
- [Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)  
- Zeigt, wie Auflistungen zu erstellen, indem Sie mehrere Textdateien als Datenquellen verwenden.  
+ [<span data-ttu-id="66e09-135">Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-135">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>](how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ <span data-ttu-id="66e09-136">Zeigt, wie Auflistungen zu erstellen, indem Sie mehrere Textdateien als Datenquellen verwenden.</span><span class="sxs-lookup"><span data-stu-id="66e09-136">Shows how to create object collections by using multiple text files as data sources.</span></span>  
   
- [Gewusst wie: Verknüpfen des Inhalts von unähnlichen Dateien (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)  
- Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge zu kombinieren.  
+ [<span data-ttu-id="66e09-137">Gewusst wie: Verknüpfen des Inhalts von unähnlichen Dateien (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-137">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>](how-to-join-content-from-dissimilar-files-linq.md)  
+ <span data-ttu-id="66e09-138">Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="66e09-138">Shows how to combine strings in two lists into a single string by using a matching key.</span></span>  
   
- [Gewusst wie: Teilen eine Datei in mehrere Dateien mithilfe von Gruppen (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
- Veranschaulicht das Erstellen neuer Dateien mithilfe einer einzigen Datei als Datenquelle.  
+ [<span data-ttu-id="66e09-139">Gewusst wie: Teilen eine Datei in mehrere Dateien mithilfe von Gruppen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-139">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
+ <span data-ttu-id="66e09-140">Veranschaulicht das Erstellen neuer Dateien mithilfe einer einzigen Datei als Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="66e09-140">Shows how to create new files by using a single file as a data source.</span></span>  
   
- [Gewusst wie: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)](how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- Zeigt, wie mathematische Berechnungen auf Text-Daten in CSV-Dateien ausführen.  
+ [<span data-ttu-id="66e09-141">Gewusst wie: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66e09-141">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>](how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ <span data-ttu-id="66e09-142">Zeigt, wie mathematische Berechnungen auf Text-Daten in CSV-Dateien ausführen.</span><span class="sxs-lookup"><span data-stu-id="66e09-142">Shows how to perform mathematical computations on text data in .csv files.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (Visual Basic)](index.md)   
- [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)
+## <a name="see-also"></a><span data-ttu-id="66e09-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="66e09-143">See Also</span></span>  
+ <span data-ttu-id="66e09-144">[Language-Integrated Query (LINQ) (Visual Basic)](index.md) </span><span class="sxs-lookup"><span data-stu-id="66e09-144">[Language-Integrated Query (LINQ) (Visual Basic)](index.md) </span></span>  
+<span data-ttu-id="66e09-145"> [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)</span><span class="sxs-lookup"><span data-stu-id="66e09-145"> [How to: Generate XML from CSV Files](how-to-generate-xml-from-csv-files.md)</span></span>
 

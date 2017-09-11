@@ -36,17 +36,17 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="conversion-keywords-c-reference"></a>Konvertierungsschlüsselwörter (C#-Referenz)
-In diesem Abschnitt werden Schlüsselwörter beschrieben, die in Typkonvertierungen verwendet werden:  
+# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="d25f7-102">Konvertierungsschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d25f7-102">Conversion Keywords (C# Reference)</span></span>
+<span data-ttu-id="d25f7-103">In diesem Abschnitt werden Schlüsselwörter beschrieben, die in Typkonvertierungen verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="d25f7-103">This section describes keywords used in type conversions:</span></span>  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+-   [<span data-ttu-id="d25f7-104">explicit</span><span class="sxs-lookup"><span data-stu-id="d25f7-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+-   [<span data-ttu-id="d25f7-105">implicit</span><span class="sxs-lookup"><span data-stu-id="d25f7-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [operator](../../../csharp/language-reference/keywords/operator.md)  
+-   [<span data-ttu-id="d25f7-106">operator</span><span class="sxs-lookup"><span data-stu-id="d25f7-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="d25f7-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d25f7-107">See Also</span></span>  
+ <span data-ttu-id="d25f7-108">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="d25f7-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="d25f7-109">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="d25f7-109">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="d25f7-110">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="d25f7-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

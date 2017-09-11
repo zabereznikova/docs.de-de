@@ -21,20 +21,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-minfreememorypercentagetoactiveservice-configuration-setting"></a>Entschärfung: minFreeMemoryPercentageToActiveService-Konfigurationseinstellung
-In [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] wird eine Ausnahme ausgelöst, wenn der verfügbare Arbeitsspeicher auf dem Webserver geringer ist als in der Konfigurationseinstellung [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) angegeben. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wurde diese Einstellung ignoriert.  
+# <a name="mitigation-minfreememorypercentagetoactiveservice-configuration-setting"></a><span data-ttu-id="854df-102">Entschärfung: minFreeMemoryPercentageToActiveService-Konfigurationseinstellung</span><span class="sxs-lookup"><span data-stu-id="854df-102">Mitigation: minFreeMemoryPercentageToActiveService Configuration Setting</span></span>
+<span data-ttu-id="854df-103">In [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] wird eine Ausnahme ausgelöst, wenn der verfügbare Arbeitsspeicher auf dem Webserver geringer ist als in der Konfigurationseinstellung [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) angegeben.</span><span class="sxs-lookup"><span data-stu-id="854df-103">In the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], an exception is thrown if the available memory on the web server is less than the percentage specified by the [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) configuration setting.</span></span> <span data-ttu-id="854df-104">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wurde diese Einstellung ignoriert.</span><span class="sxs-lookup"><span data-stu-id="854df-104">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], this setting was ignored.</span></span>  
   
-## <a name="impact"></a>Auswirkungen  
- In den meisten Fällen ist die Beachtung der Einstellung [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) wünschenswert: Sie verbessert die Systemstabilität, indem die <xref:System.OutOfMemoryException>-Ausnahmen verhindert werden, die auftreten können, wenn ein Windows Communication Foundation (WCF)-Dienst auf einem System gestartet wird, das über eingeschränkten Arbeitsspeicher verfügt.  
+## <a name="impact"></a><span data-ttu-id="854df-105">Auswirkungen</span><span class="sxs-lookup"><span data-stu-id="854df-105">Impact</span></span>  
+ <span data-ttu-id="854df-106">In den meisten Fällen ist die Beachtung der Einstellung [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) wünschenswert: Sie verbessert die Systemstabilität, indem die <xref:System.OutOfMemoryException>-Ausnahmen verhindert werden, die auftreten können, wenn ein Windows Communication Foundation (WCF)-Dienst auf einem System gestartet wird, das über eingeschränkten Arbeitsspeicher verfügt.</span><span class="sxs-lookup"><span data-stu-id="854df-106">In most cases, the impact of observing the [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) setting is desirable: It improves system stability by preventing the <xref:System.OutOfMemoryException> exceptions that can occur when a Windows Communication Foundation (WCF) service is started on a system that has constrained memory.</span></span>  
   
- In einigen Fällen jedoch kann ein bisher erfolgreich gestarteter Dienst aufgrund der Einstellung möglicherweise nicht gestartet werden. In diesem Fall wird eine ausführliche Fehlermeldung angezeigt:  
+ <span data-ttu-id="854df-107">In einigen Fällen jedoch kann ein bisher erfolgreich gestarteter Dienst aufgrund der Einstellung möglicherweise nicht gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="854df-107">However, in some cases, a service that previously started successfully may be unable to start.</span></span> <span data-ttu-id="854df-108">In diesem Fall wird eine ausführliche Fehlermeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="854df-108">In that case, a detailed error message appears:</span></span>  
   
 ```console
 Memory gates checking failed because the free memory (nnnn bytes) is less than nn% of total memory. As a result, the service will not be available for incoming requests. To resolve this, either reduce the load on the machine or adjust the value of minFreeMemoryPercentageToActivateService on the serviceHostingEnvironment config element.
 ```
   
-## <a name="mitigation"></a>Problemumgehung  
- Um das vorherige Verhalten wiederherzustellen, bei dem die [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)-Einstellung ignoriert wurde, ändern Sie die web.config-Datei wie folgt:  
+## <a name="mitigation"></a><span data-ttu-id="854df-109">Problemumgehung</span><span class="sxs-lookup"><span data-stu-id="854df-109">Mitigation</span></span>  
+ <span data-ttu-id="854df-110">Um das vorherige Verhalten wiederherzustellen, bei dem die [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)-Einstellung ignoriert wurde, ändern Sie die web.config-Datei wie folgt:</span><span class="sxs-lookup"><span data-stu-id="854df-110">To revert to the previous behavior where the [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) setting was ignored, modify the web.config file as follows:</span></span>  
   
 ```xml
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"   
@@ -45,6 +45,6 @@ Memory gates checking failed because the free memory (nnnn bytes) is less than n
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+## <a name="see-also"></a><span data-ttu-id="854df-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="854df-111">See Also</span></span>  
+ [<span data-ttu-id="854df-112">Änderungen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="854df-112">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
 

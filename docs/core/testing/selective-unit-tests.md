@@ -17,11 +17,11 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
+# <a name="running-selective-unit-tests"></a><span data-ttu-id="22f78-104">Ausführen von selektiven Komponententests</span><span class="sxs-lookup"><span data-stu-id="22f78-104">Running selective unit tests</span></span>
 
-Die folgenden Beispiele verwenden `dotnet test`. Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter ` mit `--testcasefilter:`.
+<span data-ttu-id="22f78-105">Die folgenden Beispiele verwenden `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="22f78-105">The following examples use `dotnet test`.</span></span> <span data-ttu-id="22f78-106">Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter ` mit `--testcasefilter:`.</span><span class="sxs-lookup"><span data-stu-id="22f78-106">If you're using `vstest.console.exe`, replace `--filter ` with `--testcasefilter:`.</span></span>
 
-## <a name="mstest"></a>MSTest
+## <a name="mstest"></a><span data-ttu-id="22f78-107">MSTest</span><span class="sxs-lookup"><span data-stu-id="22f78-107">MSTest</span></span>
 
 ```csharp
 namespace MSTestNamespace
@@ -47,24 +47,24 @@ namespace MSTestNamespace
 }
 ```
 
-| Ausdruck | Ergebnis |
+| <span data-ttu-id="22f78-108">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="22f78-108">Expression</span></span> | <span data-ttu-id="22f78-109">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="22f78-109">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter Method` | Führt Tests aus, dessen `FullyQualifiedName` `Method` enthält. Verfügbar in `vstest 15.1+`. |
-| `dotnet test --filter Name~TestMethod1` | Führt Tests aus, dessen Name `TestMethod1` enthält. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTestClass1` befinden.<br>**Hinweis:** Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTestClass1` nicht funktioniert. |
-| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | Führt alle Tests außer `MSTestNamespace.UnitTestClass1.TestMethod1` aus. |
-| `dotnet test --filter TestCategory=CategoryA` | Führt Tests aus, die mit `[TestCategory("CategoryA")]` kommentiert sind. |
-| `dotnet test --filter Priority=3` | Führt Tests aus, die mit `[Priority(3)]` kommentiert sind.<br>**Hinweis:** `Priority~3` ist ein ungültiger Wert, da er keine Zeichenfolge ist. |
+| `dotnet test --filter Method` | <span data-ttu-id="22f78-110">Führt Tests aus, dessen `FullyQualifiedName` `Method` enthält.</span><span class="sxs-lookup"><span data-stu-id="22f78-110">Runs tests whose `FullyQualifiedName` contains `Method`.</span></span> <span data-ttu-id="22f78-111">Verfügbar in `vstest 15.1+`.</span><span class="sxs-lookup"><span data-stu-id="22f78-111">Available in `vstest 15.1+`.</span></span> |
+| `dotnet test --filter Name~TestMethod1` | <span data-ttu-id="22f78-112">Führt Tests aus, dessen Name `TestMethod1` enthält.</span><span class="sxs-lookup"><span data-stu-id="22f78-112">Runs tests whose name contains `TestMethod1`.</span></span> |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | <span data-ttu-id="22f78-113">Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTestClass1` befinden.</span><span class="sxs-lookup"><span data-stu-id="22f78-113">Runs tests which are in class `MSTestNamespace.UnitTestClass1`.</span></span><br><span data-ttu-id="22f78-114">**Hinweis:** Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTestClass1` nicht funktioniert.</span><span class="sxs-lookup"><span data-stu-id="22f78-114">**Note:** The `ClassName` value should have a namespace, so `ClassName=UnitTestClass1` won't work.</span></span> |
+| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | <span data-ttu-id="22f78-115">Führt alle Tests außer `MSTestNamespace.UnitTestClass1.TestMethod1` aus.</span><span class="sxs-lookup"><span data-stu-id="22f78-115">Runs all tests except `MSTestNamespace.UnitTestClass1.TestMethod1`.</span></span> |
+| `dotnet test --filter TestCategory=CategoryA` | <span data-ttu-id="22f78-116">Führt Tests aus, die mit `[TestCategory("CategoryA")]` kommentiert sind.</span><span class="sxs-lookup"><span data-stu-id="22f78-116">Runs tests which are annotated with `[TestCategory("CategoryA")]`.</span></span> |
+| `dotnet test --filter Priority=3` | <span data-ttu-id="22f78-117">Führt Tests aus, die mit `[Priority(3)]` kommentiert sind.</span><span class="sxs-lookup"><span data-stu-id="22f78-117">Runs tests which are annotated with `[Priority(3)]`.</span></span><br><span data-ttu-id="22f78-118">**Hinweis:** `Priority~3` ist ein ungültiger Wert, da er keine Zeichenfolge ist.</span><span class="sxs-lookup"><span data-stu-id="22f78-118">**Note:** `Priority~3` is an invalid value, as it isn't a string.</span></span> |
 
-**Verwenden bedingter Operatoren | und&amp;**
+<span data-ttu-id="22f78-119">**Verwenden bedingter Operatoren | und&amp;**</span><span class="sxs-lookup"><span data-stu-id="22f78-119">**Using conditional operators | and &amp;**</span></span>
 
-| Ausdruck | Ergebnis |
+| <span data-ttu-id="22f78-120">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="22f78-120">Expression</span></span> | <span data-ttu-id="22f78-121">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="22f78-121">Result</span></span> |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | Führt Tests aus, die `UnitTestClass1` in `FullyQualifiedName` besitzen, **oder** `TestCategory` ist `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | Führt Tests aus, die `UnitTestClass1` in `FullyQualifiedName` besitzen, **und** `TestCategory` ist `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | Führt Tests aus, in denen `FullyQualifiedName` entweder `UnitTestClass1` enthalten ist, **und** `TestCategory` ist `CategoryA`, **oder** `Priority` ist 1. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | <span data-ttu-id="22f78-122">Führt Tests aus, die `UnitTestClass1` in `FullyQualifiedName` besitzen, **oder** `TestCategory` ist `CategoryA`.</span><span class="sxs-lookup"><span data-stu-id="22f78-122">Runs tests which have `UnitTestClass1` in `FullyQualifiedName` **or** `TestCategory` is `CategoryA`.</span></span> |
+| `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | <span data-ttu-id="22f78-123">Führt Tests aus, die `UnitTestClass1` in `FullyQualifiedName` besitzen, **und** `TestCategory` ist `CategoryA`.</span><span class="sxs-lookup"><span data-stu-id="22f78-123">Runs tests which have `UnitTestClass1` in `FullyQualifiedName` **and** `TestCategory` is `CategoryA`.</span></span> |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | <span data-ttu-id="22f78-124">Führt Tests aus, in denen `FullyQualifiedName` entweder `UnitTestClass1` enthalten ist, **und** `TestCategory` ist `CategoryA`, **oder** `Priority` ist 1.</span><span class="sxs-lookup"><span data-stu-id="22f78-124">Runs tests which have either `FullyQualifiedName` containing `UnitTestClass1` **and** `TestCategory` is `CategoryA` **or** `Priority` is 1.</span></span> |
 
-## <a name="xunit"></a>xUnit
+## <a name="xunit"></a><span data-ttu-id="22f78-125">xUnit</span><span class="sxs-lookup"><span data-stu-id="22f78-125">xUnit</span></span>
 
 ```csharp
 namespace XUnitNamespace
@@ -88,24 +88,24 @@ namespace XUnitNamespace
 }
 ```
 
-| Ausdruck | Ergebnis |
+| <span data-ttu-id="22f78-126">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="22f78-126">Expression</span></span> | <span data-ttu-id="22f78-127">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="22f78-127">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Führt einen Test, `XUnitNamespace.TestClass1.Test1`, aus. |
-| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Führt alle Tests außer `XUnitNamespace.TestClass1.Test1` aus. |
-| `dotnet test --filter DisplayName~TestClass1` | Führt Tests aus, dessen Anzeigename `TestClass1` enthält. |
+| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | <span data-ttu-id="22f78-128">Führt einen Test, `XUnitNamespace.TestClass1.Test1`, aus.</span><span class="sxs-lookup"><span data-stu-id="22f78-128">Runs only one test, `XUnitNamespace.TestClass1.Test1`.</span></span> |
+| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | <span data-ttu-id="22f78-129">Führt alle Tests außer `XUnitNamespace.TestClass1.Test1` aus.</span><span class="sxs-lookup"><span data-stu-id="22f78-129">Runs all tests except `XUnitNamespace.TestClass1.Test1`.</span></span> |
+| `dotnet test --filter DisplayName~TestClass1` | <span data-ttu-id="22f78-130">Führt Tests aus, dessen Anzeigename `TestClass1` enthält.</span><span class="sxs-lookup"><span data-stu-id="22f78-130">Runs tests whose display name contains `TestClass1`.</span></span> |
 
-Im Codebeispiel können die definierten Merkmale mit den Schlüsseln `Category` und `Priority` zum Filtern verwendet werden.
+<span data-ttu-id="22f78-131">Im Codebeispiel können die definierten Merkmale mit den Schlüsseln `Category` und `Priority` zum Filtern verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="22f78-131">In the code example, the defined traits with keys `Category` and `Priority` can be used for filtering.</span></span>
 
-| Ausdruck | Ergebnis |
+| <span data-ttu-id="22f78-132">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="22f78-132">Expression</span></span> | <span data-ttu-id="22f78-133">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="22f78-133">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter XUnit` | Führt Tests aus, dessen `FullyQualifiedName` `XUnit` enthält.  Verfügbar in `vstest 15.1+`. |
-| `dotnet test --filter Category=bvt` | Führt Tests aus, die `[Trait("Category", "bvt")]` besitzen. |
+| `dotnet test --filter XUnit` | <span data-ttu-id="22f78-134">Führt Tests aus, dessen `FullyQualifiedName` `XUnit` enthält.</span><span class="sxs-lookup"><span data-stu-id="22f78-134">Runs tests whose `FullyQualifiedName` contains `XUnit`.</span></span>  <span data-ttu-id="22f78-135">Verfügbar in `vstest 15.1+`.</span><span class="sxs-lookup"><span data-stu-id="22f78-135">Available in `vstest 15.1+`.</span></span> |
+| `dotnet test --filter Category=bvt` | <span data-ttu-id="22f78-136">Führt Tests aus, die `[Trait("Category", "bvt")]` besitzen.</span><span class="sxs-lookup"><span data-stu-id="22f78-136">Runs tests which have `[Trait("Category", "bvt")]`.</span></span> |
 
-**Verwenden bedingter Operatoren | und&amp;**
+<span data-ttu-id="22f78-137">**Verwenden bedingter Operatoren | und&amp;**</span><span class="sxs-lookup"><span data-stu-id="22f78-137">**Using conditional operators | and &amp;**</span></span>
 
-| Ausdruck | Ergebnis |
+| <span data-ttu-id="22f78-138">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="22f78-138">Expression</span></span> | <span data-ttu-id="22f78-139">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="22f78-139">Result</span></span> |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **oder** `Category` ist `Nightly`. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **und** `Category` ist `Nightly`. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | Führt Tests aus, in denen `FullyQualifiedName` entweder `TestClass1` enthalten ist, **und** `Category` ist `CategoryA`, **oder** `Priority` ist 1. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | <span data-ttu-id="22f78-140">Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **oder** `Category` ist `Nightly`.</span><span class="sxs-lookup"><span data-stu-id="22f78-140">Runs tests which has `TestClass1` in `FullyQualifiedName` **or** `Category` is `Nightly`.</span></span> |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | <span data-ttu-id="22f78-141">Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **und** `Category` ist `Nightly`.</span><span class="sxs-lookup"><span data-stu-id="22f78-141">Runs tests which has `TestClass1` in `FullyQualifiedName` **and** `Category` is `Nightly`.</span></span> |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | <span data-ttu-id="22f78-142">Führt Tests aus, in denen `FullyQualifiedName` entweder `TestClass1` enthalten ist, **und** `Category` ist `CategoryA`, **oder** `Priority` ist 1.</span><span class="sxs-lookup"><span data-stu-id="22f78-142">Runs tests which have either `FullyQualifiedName` containing `TestClass1` **and** `Category` is `CategoryA` **or** `Priority` is 1.</span></span> |
 

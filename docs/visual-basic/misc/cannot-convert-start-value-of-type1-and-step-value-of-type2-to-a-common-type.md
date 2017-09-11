@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b1a1eca9f75725cc75e6138941b7991416a69b2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Start-Wert vom Typ kann nicht konvertiert werden "&lt;type1&gt;"und step-Wert des Typs"&lt;type2&gt;" in einen gemeinsamen Typ
-Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen allgemeinen Typ konvertiert werden können.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="9dd11-102">Start-Wert vom Typ kann nicht konvertiert werden "&lt;type1&gt;"und step-Wert des Typs"&lt;type2&gt;" in einen gemeinsamen Typ</span><span class="sxs-lookup"><span data-stu-id="9dd11-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="9dd11-103">Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen allgemeinen Typ konvertiert werden können.</span><span class="sxs-lookup"><span data-stu-id="9dd11-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9dd11-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="9dd11-104">To correct this error</span></span>  
   
-1.  Ändern Sie den Typ von mindestens einem Wert, damit alle Werte in einen allgemeinen Typ konvertiert werden können.  
+1.  <span data-ttu-id="9dd11-105">Ändern Sie den Typ von mindestens einem Wert, damit alle Werte in einen allgemeinen Typ konvertiert werden können.</span><span class="sxs-lookup"><span data-stu-id="9dd11-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Navigieren im Code mit dem Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [Debuggen von Änderungen in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next-Anweisung](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="9dd11-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9dd11-106">See Also</span></span>  
+ <span data-ttu-id="9dd11-107">[Navigieren im Code mit dem Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span><span class="sxs-lookup"><span data-stu-id="9dd11-107">[Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span></span>  
+<span data-ttu-id="9dd11-108"> [Debuggen von Änderungen in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span><span class="sxs-lookup"><span data-stu-id="9dd11-108"> [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span></span>  
+<span data-ttu-id="9dd11-109"> [For...Next-Anweisung](../../visual-basic/language-reference/statements/for-next-statement.md)</span><span class="sxs-lookup"><span data-stu-id="9dd11-109"> [For...Next Statement](../../visual-basic/language-reference/statements/for-next-statement.md)</span></span>

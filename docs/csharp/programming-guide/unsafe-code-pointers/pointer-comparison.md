@@ -34,31 +34,31 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-comparison-c-programming-guide"></a>Zeigervergleich (C#-Programmierhandbuch)
-Sie können die folgenden Operatoren zum Vergleichen von Zeigern jeglichen Typs anwenden:  
+# <a name="pointer-comparison-c-programming-guide"></a><span data-ttu-id="e5eff-102">Zeigervergleich (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e5eff-102">Pointer Comparison (C# Programming Guide)</span></span>
+<span data-ttu-id="e5eff-103">Sie können die folgenden Operatoren zum Vergleichen von Zeigern jeglichen Typs anwenden:</span><span class="sxs-lookup"><span data-stu-id="e5eff-103">You can apply the following operators to compare pointers of any type:</span></span>  
   
- **==   !=   \<   >   \<=   >=**  
+ <span data-ttu-id="e5eff-104">**==   !=   \<   >   \<=   >=**</span><span class="sxs-lookup"><span data-stu-id="e5eff-104">**==   !=   \<   >   \<=   >=**</span></span>  
   
- Die Vergleichsoperatoren vergleichen die Adressen der zwei Operanden, als handle es sich bei diesen um ganze Zahlen ohne Vorzeichen.  
+ <span data-ttu-id="e5eff-105">Die Vergleichsoperatoren vergleichen die Adressen der zwei Operanden, als handle es sich bei diesen um ganze Zahlen ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="e5eff-105">The comparison operators compare the addresses of the two operands as if they are unsigned integers.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]  
+## <a name="example"></a><span data-ttu-id="e5eff-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e5eff-106">Example</span></span>  
+ <span data-ttu-id="e5eff-107">[!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e5eff-107">[!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]</span></span>  
   
- [!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]  
+ <span data-ttu-id="e5eff-108">[!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="e5eff-108">[!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]</span></span>  
   
-## <a name="sample-output"></a>Beispielausgabe  
+## <a name="sample-output"></a><span data-ttu-id="e5eff-109">Beispielausgabe</span><span class="sxs-lookup"><span data-stu-id="e5eff-109">Sample Output</span></span>  
  `True`  
   
  `False`  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)   
- [Bearbeiten von Zeigern](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)   
- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Typen](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="e5eff-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5eff-110">See Also</span></span>  
+ <span data-ttu-id="e5eff-111">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e5eff-112">[Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-112">[Pointer Expressions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span></span>  
+ <span data-ttu-id="e5eff-113">[C#-Operatoren](../../../csharp/language-reference/operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-113">[C# Operators](../../../csharp/language-reference/operators/index.md) </span></span>  
+ <span data-ttu-id="e5eff-114">[Bearbeiten von Zeigern](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-114">[Manipulating Pointers](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md) </span></span>  
+ <span data-ttu-id="e5eff-115">[Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-115">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ <span data-ttu-id="e5eff-116">[Typen](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-116">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="e5eff-117">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-117">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="e5eff-118">[fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="e5eff-118">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ [<span data-ttu-id="e5eff-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="e5eff-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
 

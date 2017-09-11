@@ -36,16 +36,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e94500c8bd7f2c6351c91ba028c1ad6d8d3dd4c3
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="mid-statement"></a>Mid-Anweisung
-Ersetzt eine angegebene Anzahl von Zeichen in einem `String` -Variablen durch Zeichen aus einer anderen Zeichenfolge.  
+# <a name="mid-statement"></a><span data-ttu-id="3668b-102">Mid-Anweisung</span><span class="sxs-lookup"><span data-stu-id="3668b-102">Mid Statement</span></span>
+<span data-ttu-id="3668b-103">Ersetzt eine angegebene Anzahl von Zeichen in einem `String` -Variablen durch Zeichen aus einer anderen Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="3668b-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="3668b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3668b-104">Syntax</span></span>  
   
 ```  
 Mid( _  
@@ -55,46 +56,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a><span data-ttu-id="3668b-105">Teile</span><span class="sxs-lookup"><span data-stu-id="3668b-105">Parts</span></span>  
  `Target`  
- Erforderlich. Der Name der `String` zu ändernden Variablen.  
+ <span data-ttu-id="3668b-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="3668b-106">Required.</span></span> <span data-ttu-id="3668b-107">Der Name der `String` zu ändernden Variablen.</span><span class="sxs-lookup"><span data-stu-id="3668b-107">Name of the `String` variable to modify.</span></span>  
   
  `Start`  
- Erforderlich. `Integer`Ausdruck. Die Zeichenposition in `Target` , an dem die Ersetzung von Text beginnt. `Start`verwendet einen einsbasierten Index.  
+ <span data-ttu-id="3668b-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="3668b-108">Required.</span></span> <span data-ttu-id="3668b-109">`Integer`Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="3668b-109">`Integer` expression.</span></span> <span data-ttu-id="3668b-110">Die Zeichenposition in `Target` , an dem die Ersetzung von Text beginnt.</span><span class="sxs-lookup"><span data-stu-id="3668b-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="3668b-111">`Start`verwendet einen einsbasierten Index.</span><span class="sxs-lookup"><span data-stu-id="3668b-111">`Start` uses a one-based index.</span></span>  
   
  `Length`  
- Optional. `Integer`Ausdruck. Die Anzahl der zu ersetzenden Zeichen. Wenn nicht angegeben, alle `String` verwendet wird.  
+ <span data-ttu-id="3668b-112">Optional.</span><span class="sxs-lookup"><span data-stu-id="3668b-112">Optional.</span></span> <span data-ttu-id="3668b-113">`Integer`Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="3668b-113">`Integer` expression.</span></span> <span data-ttu-id="3668b-114">Die Anzahl der zu ersetzenden Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3668b-114">Number of characters to replace.</span></span> <span data-ttu-id="3668b-115">Wenn nicht angegeben, alle `String` verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="3668b-115">If omitted, all of `String` is used.</span></span>  
   
  `StringExpression`  
- Erforderlich. `String`Ausdruck, der Teil des ersetzt `Target`.  
+ <span data-ttu-id="3668b-116">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="3668b-116">Required.</span></span> <span data-ttu-id="3668b-117">`String`Ausdruck, der Teil des ersetzt `Target`.</span><span class="sxs-lookup"><span data-stu-id="3668b-117">`String` expression that replaces part of `Target`.</span></span>  
   
-## <a name="exceptions"></a>Ausnahmen  
+## <a name="exceptions"></a><span data-ttu-id="3668b-118">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="3668b-118">Exceptions</span></span>  
   
-|Ausnahmetyp|Bedingung|  
+|<span data-ttu-id="3668b-119">Ausnahmetyp</span><span class="sxs-lookup"><span data-stu-id="3668b-119">Exception type</span></span>|<span data-ttu-id="3668b-120">Bedingung</span><span class="sxs-lookup"><span data-stu-id="3668b-120">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start`<= 0="" or=""></=>`Length`< 0.></ 0.>|  
+|<span data-ttu-id="3668b-121"><xref:System.ArgumentException></xref:System.ArgumentException></span><span class="sxs-lookup"><span data-stu-id="3668b-121"><xref:System.ArgumentException></span></span>|<span data-ttu-id="3668b-122">`Start`<= 0="" or=""></=>`Length`< 0.></ 0.></span><span class="sxs-lookup"><span data-stu-id="3668b-122">`Start` <= 0 or `Length` < 0.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Die Anzahl der ersetzten Zeichen ist immer kleiner oder gleich der Anzahl der Zeichen in `Target`.  
+## <a name="remarks"></a><span data-ttu-id="3668b-123">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3668b-123">Remarks</span></span>  
+ <span data-ttu-id="3668b-124">Die Anzahl der ersetzten Zeichen ist immer kleiner oder gleich der Anzahl der Zeichen in `Target`.</span><span class="sxs-lookup"><span data-stu-id="3668b-124">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
   
- Visual Basic verfügt über eine <xref:Microsoft.VisualBasic.Strings.Mid%2A>Funktion und eine `Mid` Anweisung.</xref:Microsoft.VisualBasic.Strings.Mid%2A> Beiden Elementen auf einer bestimmten Anzahl von Zeichen in einer Zeichenfolge, aber die `Mid` wird während der `Mid` Anweisung ersetzt die Zeichen. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
+ <span data-ttu-id="3668b-125">Visual Basic verfügt über eine <xref:Microsoft.VisualBasic.Strings.Mid%2A>Funktion und eine `Mid` Anweisung.</xref:Microsoft.VisualBasic.Strings.Mid%2A></span><span class="sxs-lookup"><span data-stu-id="3668b-125">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="3668b-126">Beiden Elementen auf einer bestimmten Anzahl von Zeichen in einer Zeichenfolge, aber die `Mid` wird während der `Mid` Anweisung ersetzt die Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3668b-126">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="3668b-127">Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A></span><span class="sxs-lookup"><span data-stu-id="3668b-127">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
   
 > [!NOTE]
->  Die `MidB` -Anweisung aus früheren Versionen von Visual Basic ersetzt eine Teilzeichenfolge in Bytes und nicht in Zeichen. Es dient in erster Linie für die Konvertierung von Zeichenfolgen in Doppelbyte-Zeichensatz (DBCS)-Satz Anwendungen. Alle Visual Basic-Zeichenfolgen sind in Unicode und `MidB` wird nicht mehr unterstützt.  
+>  <span data-ttu-id="3668b-128">Die `MidB` -Anweisung aus früheren Versionen von Visual Basic ersetzt eine Teilzeichenfolge in Bytes und nicht in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3668b-128">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="3668b-129">Es dient in erster Linie für die Konvertierung von Zeichenfolgen in Doppelbyte-Zeichensatz (DBCS)-Satz Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="3668b-129">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="3668b-130">Alle Visual Basic-Zeichenfolgen sind in Unicode und `MidB` wird nicht mehr unterstützt.</span><span class="sxs-lookup"><span data-stu-id="3668b-130">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `Mid` Anweisung, um eine angegebene Anzahl von Zeichen in einer Zeichenfolgenvariablen durch Zeichen aus einer anderen Zeichenfolge zu ersetzen.  
+## <a name="example"></a><span data-ttu-id="3668b-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3668b-131">Example</span></span>  
+ <span data-ttu-id="3668b-132">Dieses Beispiel verwendet die `Mid` Anweisung, um eine angegebene Anzahl von Zeichen in einer Zeichenfolgenvariablen durch Zeichen aus einer anderen Zeichenfolge zu ersetzen.</span><span class="sxs-lookup"><span data-stu-id="3668b-132">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
   
- [!code-vb[VbVbalrStrings&5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ <span data-ttu-id="3668b-133">[!code-vb[VbVbalrStrings&5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="3668b-133">[!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]</span></span>  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="3668b-134">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3668b-134">Requirements</span></span>  
+ <span data-ttu-id="3668b-135">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="3668b-135">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **Modul:**`Strings`  
+ <span data-ttu-id="3668b-136">**Modul:**`Strings`</span><span class="sxs-lookup"><span data-stu-id="3668b-136">**Module:** `Strings`</span></span>  
   
- **Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="3668b-137">**Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="3668b-137">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
- [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Einführung in Zeichenfolgen in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="3668b-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3668b-138">See Also</span></span>  
+ <span data-ttu-id="3668b-139"><xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A></span><span class="sxs-lookup"><span data-stu-id="3668b-139"><xref:Microsoft.VisualBasic.Strings.Mid%2A></span></span>   
+<span data-ttu-id="3668b-140"> [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md) </span><span class="sxs-lookup"><span data-stu-id="3668b-140"> [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md) </span></span>  
+<span data-ttu-id="3668b-141"> [Einführung in Zeichenfolgen in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)</span><span class="sxs-lookup"><span data-stu-id="3668b-141"> [Introduction to Strings in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)</span></span>

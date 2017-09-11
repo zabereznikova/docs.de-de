@@ -26,21 +26,21 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="generation-operations-c"></a>Generierungsvorgänge (C#)
-Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.  
+# <a name="generation-operations-c"></a><span data-ttu-id="06336-102">Generierungsvorgänge (C#)</span><span class="sxs-lookup"><span data-stu-id="06336-102">Generation Operations (C#)</span></span>
+<span data-ttu-id="06336-103">Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.</span><span class="sxs-lookup"><span data-stu-id="06336-103">Generation refers to creating a new sequence of values.</span></span>  
   
- Die Methoden des Standardabfrageoperators, die Generierung ausführen, sind im folgenden Abschnitt aufgeführt.  
+ <span data-ttu-id="06336-104">Die Methoden des Standardabfrageoperators, die Generierung ausführen, sind im folgenden Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="06336-104">The standard query operator methods that perform generation are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Methoden  
+## <a name="methods"></a><span data-ttu-id="06336-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="06336-105">Methods</span></span>  
   
-|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|<span data-ttu-id="06336-106">Methodenname</span><span class="sxs-lookup"><span data-stu-id="06336-106">Method Name</span></span>|<span data-ttu-id="06336-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="06336-107">Description</span></span>|<span data-ttu-id="06336-108">C#-Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="06336-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="06336-109">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="06336-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|DefaultIfEmpty|Ersetzt eine leere Auflistung durch eine Standardwert-Singeltonauflistung.|Nicht zutreffend.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
-|Empty|Gibt eine leere Auflistung zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Bereich|Generiert eine Auflistung, die eine Sequenz von Zahlen enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Wiederholen|Generiert eine Auflistung, die einen wiederholten Wert enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|<span data-ttu-id="06336-110">DefaultIfEmpty</span><span class="sxs-lookup"><span data-stu-id="06336-110">DefaultIfEmpty</span></span>|<span data-ttu-id="06336-111">Ersetzt eine leere Auflistung durch eine Standardwert-Singeltonauflistung.</span><span class="sxs-lookup"><span data-stu-id="06336-111">Replaces an empty collection with a default valued singleton collection.</span></span>|<span data-ttu-id="06336-112">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="06336-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
+|<span data-ttu-id="06336-113">Empty</span><span class="sxs-lookup"><span data-stu-id="06336-113">Empty</span></span>|<span data-ttu-id="06336-114">Gibt eine leere Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="06336-114">Returns an empty collection.</span></span>|<span data-ttu-id="06336-115">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="06336-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
+|<span data-ttu-id="06336-116">Bereich</span><span class="sxs-lookup"><span data-stu-id="06336-116">Range</span></span>|<span data-ttu-id="06336-117">Generiert eine Auflistung, die eine Sequenz von Zahlen enthält.</span><span class="sxs-lookup"><span data-stu-id="06336-117">Generates a collection that contains a sequence of numbers.</span></span>|<span data-ttu-id="06336-118">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="06336-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
+|<span data-ttu-id="06336-119">Wiederholen</span><span class="sxs-lookup"><span data-stu-id="06336-119">Repeat</span></span>|<span data-ttu-id="06336-120">Generiert eine Auflistung, die einen wiederholten Wert enthält.</span><span class="sxs-lookup"><span data-stu-id="06336-120">Generates a collection that contains one repeated value.</span></span>|<span data-ttu-id="06336-121">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="06336-121">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>   
- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a><span data-ttu-id="06336-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="06336-122">See Also</span></span>  
+ <span data-ttu-id="06336-123"><xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="06336-123"><xref:System.Linq></span></span>   
+ [<span data-ttu-id="06336-124">Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))</span><span class="sxs-lookup"><span data-stu-id="06336-124">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 

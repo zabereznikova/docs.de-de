@@ -38,26 +38,26 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt; (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="bb46d-102">&lt;returns&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="bb46d-102">&lt;returns&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="bb46d-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="bb46d-103">Syntax</span></span>  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="bb46d-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="bb46d-104">Parameters</span></span>  
  `description`  
- Eine Beschreibung des Rückgabewerts.  
+ <span data-ttu-id="bb46d-105">Eine Beschreibung des Rückgabewerts.</span><span class="sxs-lookup"><span data-stu-id="bb46d-105">A description of the return value.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Das \<returns>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um den Rückgabewert zu beschreiben.  
+## <a name="remarks"></a><span data-ttu-id="bb46d-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="bb46d-106">Remarks</span></span>  
+ <span data-ttu-id="bb46d-107">Das \<returns>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um den Rückgabewert zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="bb46d-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ <span data-ttu-id="bb46d-108">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="bb46d-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+## <a name="example"></a><span data-ttu-id="bb46d-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bb46d-109">Example</span></span>  
+ <span data-ttu-id="bb46d-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="bb46d-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="bb46d-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bb46d-111">See Also</span></span>  
+ <span data-ttu-id="bb46d-112">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bb46d-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="bb46d-113">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="bb46d-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

@@ -1,1 +1,1 @@
-O/R-Designer
+<span data-ttu-id="e3f9c-101">O/R-Designer</span><span class="sxs-lookup"><span data-stu-id="e3f9c-101">O/R Designer</span></span>

@@ -31,38 +31,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f41527703df781f32015f386bf87c1383d9769
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 45361fb1dca34f2cdc849184d0e316b27d9545b6
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="utf8output-visual-basic"></a>/utf8output (Visual Basic)
-Zeigt die Compilerausgabe mit UTF-8-Codierung an.  
+# <a name="utf8output-visual-basic"></a><span data-ttu-id="9398d-102">/utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9398d-102">/utf8output (Visual Basic)</span></span>
+<span data-ttu-id="9398d-103">Zeigt die Compilerausgabe mit UTF-8-Codierung an.</span><span class="sxs-lookup"><span data-stu-id="9398d-103">Displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="9398d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9398d-104">Syntax</span></span>  
   
 ```  
 /utf8output[+ | -]  
 ```  
   
-## <a name="arguments"></a>Argumente  
- `+` &#124; `-`  
- Optional. Der Standardwert für diese Option ist `/utf8output-`, d. h. Compilerausgabe nicht UTF-8-Codierung verwendet. Angeben von `/utf8output` entspricht der Angabe `/utf8output+`.  
+## <a name="arguments"></a><span data-ttu-id="9398d-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="9398d-105">Arguments</span></span>  
+ <span data-ttu-id="9398d-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="9398d-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="9398d-107">Optional.</span><span class="sxs-lookup"><span data-stu-id="9398d-107">Optional.</span></span> <span data-ttu-id="9398d-108">Der Standardwert für diese Option ist `/utf8output-`, d. h. Compilerausgabe nicht UTF-8-Codierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="9398d-108">The default for this option is `/utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="9398d-109">Angeben von `/utf8output` entspricht der Angabe `/utf8output+`.</span><span class="sxs-lookup"><span data-stu-id="9398d-109">Specifying `/utf8output` is the same as specifying `/utf8output+`.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Bei einigen internationalen Konfigurationen kann nicht-Compiler-Ausgabe korrekt in der Konsole angezeigt werden. Verwenden Sie in solchen Situationen `/utf8output` und -Compiler-Ausgabe in eine Datei umleiten.  
+## <a name="remarks"></a><span data-ttu-id="9398d-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9398d-110">Remarks</span></span>  
+ <span data-ttu-id="9398d-111">Bei einigen internationalen Konfigurationen kann nicht-Compiler-Ausgabe korrekt in der Konsole angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="9398d-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="9398d-112">Verwenden Sie in solchen Situationen `/utf8output` und -Compiler-Ausgabe in eine Datei umleiten.</span><span class="sxs-lookup"><span data-stu-id="9398d-112">In such situations, use `/utf8output` and redirect compiler output to a file.</span></span>  
   
 > [!NOTE]
->  Die `/utf8output` Option ist nicht verfügbar in der Visual Studio Development Environment; es ist nur beim Kompilieren von der Befehlszeile aus.  
+>  <span data-ttu-id="9398d-113">Die `/utf8output` Option ist nicht verfügbar in der Visual Studio Development Environment; es ist nur beim Kompilieren von der Befehlszeile aus.</span><span class="sxs-lookup"><span data-stu-id="9398d-113">The `/utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `In.vb` und die Compilerausgabe mit UTF-8-Codierung ausgegeben.  
+## <a name="example"></a><span data-ttu-id="9398d-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9398d-114">Example</span></span>  
+ <span data-ttu-id="9398d-115">Der folgende code kompiliert `In.vb` und die Compilerausgabe mit UTF-8-Codierung ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="9398d-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
   
 ```  
 vbc /utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="9398d-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9398d-116">See Also</span></span>  
+ <span data-ttu-id="9398d-117">[Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="9398d-117">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="9398d-118"> [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="9398d-118"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

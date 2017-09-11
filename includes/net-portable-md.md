@@ -1,1 +1,1 @@
-Portable Klassenbibliothek
+<span data-ttu-id="f32e8-101">Portable Klassenbibliothek</span><span class="sxs-lookup"><span data-stu-id="f32e8-101">Portable Class Library</span></span>

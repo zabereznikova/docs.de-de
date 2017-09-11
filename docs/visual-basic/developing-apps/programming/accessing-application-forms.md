@@ -39,20 +39,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-application-forms-visual-basic"></a>Zugreifen auf Anwendungsformulare (Visual Basic)
-Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Windows-Formular zugreifen, die im Projekt der Anwendung deklariert wurde. Außerdem können Sie mit den Eigenschaften des `My.Application`-Objekts auf den Begrüßungsbildschirm und das Hauptformular der Anwendung zugreifen und eine Liste der offenen Formulare der Anwendung abrufen.  
+# <a name="accessing-application-forms-visual-basic"></a><span data-ttu-id="bccf3-102">Zugreifen auf Anwendungsformulare (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bccf3-102">Accessing Application Forms (Visual Basic)</span></span>
+<span data-ttu-id="bccf3-103">Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Windows-Formular zugreifen, die im Projekt der Anwendung deklariert wurde.</span><span class="sxs-lookup"><span data-stu-id="bccf3-103">The `My.Forms` object provides an easy way to access an instance of each Windows Form declared in the application's project.</span></span> <span data-ttu-id="bccf3-104">Außerdem können Sie mit den Eigenschaften des `My.Application`-Objekts auf den Begrüßungsbildschirm und das Hauptformular der Anwendung zugreifen und eine Liste der offenen Formulare der Anwendung abrufen.</span><span class="sxs-lookup"><span data-stu-id="bccf3-104">You can also use properties of the `My.Application` object to access the application's splash screen and main form, and get a list of the application's open forms.</span></span>  
   
-## <a name="tasks"></a>Aufgaben  
- Die folgende Tabelle enthält Beispiele zum Zugriff auf Anwendungsformate.  
+## <a name="tasks"></a><span data-ttu-id="bccf3-105">Aufgaben</span><span class="sxs-lookup"><span data-stu-id="bccf3-105">Tasks</span></span>  
+ <span data-ttu-id="bccf3-106">Die folgende Tabelle enthält Beispiele zum Zugriff auf Anwendungsformate.</span><span class="sxs-lookup"><span data-stu-id="bccf3-106">The following table lists examples showing how to access an application's forms.</span></span>  
   
-|Beschreibung|Siehe|  
+|<span data-ttu-id="bccf3-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bccf3-107">To</span></span>|<span data-ttu-id="bccf3-108">Siehe</span><span class="sxs-lookup"><span data-stu-id="bccf3-108">See</span></span>|  
 |---|---|  
-|Zugreifen auf ein Formular von einem anderen Formular in der Anwendung|[My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Zeigen Sie die Titel der offenen Formulare aller Anwendungen an.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
-|Aktualisieren Sie den Begrüßungsbildschirm mit Statusinformationen, während die Anwendung startet.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
+|<span data-ttu-id="bccf3-109">Zugreifen auf ein Formular von einem anderen Formular in der Anwendung</span><span class="sxs-lookup"><span data-stu-id="bccf3-109">Access one form from another form in an application.</span></span>|[<span data-ttu-id="bccf3-110">My.Forms-Objekt</span><span class="sxs-lookup"><span data-stu-id="bccf3-110">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|<span data-ttu-id="bccf3-111">Zeigen Sie die Titel der offenen Formulare aller Anwendungen an.</span><span class="sxs-lookup"><span data-stu-id="bccf3-111">Display the titles of all the application's open forms.</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
+|<span data-ttu-id="bccf3-112">Aktualisieren Sie den Begrüßungsbildschirm mit Statusinformationen, während die Anwendung startet.</span><span class="sxs-lookup"><span data-stu-id="bccf3-112">Update the splash screen with status information as the application starts.</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>   
- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a><span data-ttu-id="bccf3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bccf3-113">See Also</span></span>  
+ <span data-ttu-id="bccf3-114"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A></span><span class="sxs-lookup"><span data-stu-id="bccf3-114"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A></span></span>   
+ <span data-ttu-id="bccf3-115"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A></span><span class="sxs-lookup"><span data-stu-id="bccf3-115"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A></span></span>   
+ [<span data-ttu-id="bccf3-116">My.Forms-Objekt</span><span class="sxs-lookup"><span data-stu-id="bccf3-116">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
 

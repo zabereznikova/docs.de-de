@@ -37,18 +37,18 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-c-reference"></a>$ (C#-Referenz)
+# <a name="-c-reference"></a><span data-ttu-id="ccb2a-102">$ (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ccb2a-102">$ (C# Reference)</span></span>
 
-Identifiziert einen Zeichenfolgenliteral als [interpolierte Zeichenfolge](../keywords/interpolated-strings.md). Eine interpolierte Zeichenfolge ist eine Zeichenfolge ähnlich einer Vorlage, die Literaltext zusammen mit *interpolierten Ausdrücken* enthält. Wenn die interpolierte Zeichenfolge aufgelöst wird, beispielsweise in einer Zuweisungsanweisung oder einem Methodenaufruf, werden seine interpolierten Ausdrücke durch deren Zeichenfolgenrepräsentationen in der Ergebniszeichenfolge ersetzt. Interpolierte Zeichenfolgen ersetzen vom .NET Framework unterstützte [zusammengesetzte Formatzeichenfolgen](../../../standard/base-types/composite-format.md).
+<span data-ttu-id="ccb2a-103">Identifiziert einen Zeichenfolgenliteral als [interpolierte Zeichenfolge](../keywords/interpolated-strings.md).</span><span class="sxs-lookup"><span data-stu-id="ccb2a-103">Identifies a string literal as an [interpolated string](../keywords/interpolated-strings.md).</span></span> <span data-ttu-id="ccb2a-104">Eine interpolierte Zeichenfolge ist eine Zeichenfolge ähnlich einer Vorlage, die Literaltext zusammen mit *interpolierten Ausdrücken* enthält.</span><span class="sxs-lookup"><span data-stu-id="ccb2a-104">An interpolated string is a template-like string that contains literal text along with *interpolated expressions*.</span></span> <span data-ttu-id="ccb2a-105">Wenn die interpolierte Zeichenfolge aufgelöst wird, beispielsweise in einer Zuweisungsanweisung oder einem Methodenaufruf, werden seine interpolierten Ausdrücke durch deren Zeichenfolgenrepräsentationen in der Ergebniszeichenfolge ersetzt.</span><span class="sxs-lookup"><span data-stu-id="ccb2a-105">When the interpolated string is resolved, for example in an assignment statement or a method call, its interpolated expressions are replaced by their string representations in the result string.</span></span> <span data-ttu-id="ccb2a-106">Interpolierte Zeichenfolgen ersetzen vom .NET Framework unterstützte [zusammengesetzte Formatzeichenfolgen](../../../standard/base-types/composite-format.md).</span><span class="sxs-lookup"><span data-stu-id="ccb2a-106">Interpolated strings are replacements for the [composite format strings](../../../standard/base-types/composite-format.md) supported by the .NET Framework.</span></span>
 
-Im folgenden Beispiel wird das `$`-Zeichen verwendet, um eine interpolierte Zeichenfolge zu definieren.
+<span data-ttu-id="ccb2a-107">Im folgenden Beispiel wird das `$`-Zeichen verwendet, um eine interpolierte Zeichenfolge zu definieren.</span><span class="sxs-lookup"><span data-stu-id="ccb2a-107">The following example uses the `$` character to define an interpolated string.</span></span>
 
-[!CODE-cs[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]
+<span data-ttu-id="ccb2a-108">[!CODE-cs[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ccb2a-108">[!CODE-cs[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]</span></span>
 
-Weitere Informationen zu interpolierten Zeichenfolgen finden Sie unter [Interpolierte Zeichenfolgen](../keywords/interpolated-strings.md).
+<span data-ttu-id="ccb2a-109">Weitere Informationen zu interpolierten Zeichenfolgen finden Sie unter [Interpolierte Zeichenfolgen](../keywords/interpolated-strings.md).</span><span class="sxs-lookup"><span data-stu-id="ccb2a-109">For more information on interpolated strings, see the [Interpolated Strings](../keywords/interpolated-strings.md) topic.</span></span>
 
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C# Special Characters (C#-Sonderzeichen)](../../../csharp/language-reference/tokens/index.md)
+## <a name="see-also"></a><span data-ttu-id="ccb2a-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ccb2a-110">See Also</span></span>  
+ <span data-ttu-id="ccb2a-111">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ccb2a-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ccb2a-112">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ccb2a-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="ccb2a-113">C# Special Characters (C#-Sonderzeichen)</span><span class="sxs-lookup"><span data-stu-id="ccb2a-113">C# Special Characters</span></span>](../../../csharp/language-reference/tokens/index.md)
 

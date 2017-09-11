@@ -41,16 +41,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="c-special-characters"></a>C#-Sonderzeichen
+# <a name="c-special-characters"></a><span data-ttu-id="83ca3-102">C#-Sonderzeichen</span><span class="sxs-lookup"><span data-stu-id="83ca3-102">C# Special Characters</span></span>
 
-Sonderzeichen sind vordefinierte, kontextbezogene Zeichen, die das Programmelement ändern, dem sie vorangestellt sind. Bei dem Programmelement kann es sich um eine Literalzeichenfolge, einen Bezeichner oder einen Attributnamen handeln. C# unterstützt die folgenden Sonderzeichen: 
+<span data-ttu-id="83ca3-103">Sonderzeichen sind vordefinierte, kontextbezogene Zeichen, die das Programmelement ändern, dem sie vorangestellt sind. Bei dem Programmelement kann es sich um eine Literalzeichenfolge, einen Bezeichner oder einen Attributnamen handeln.</span><span class="sxs-lookup"><span data-stu-id="83ca3-103">Special characters are predefined, contextual characters that modifies the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="83ca3-104">C# unterstützt die folgenden Sonderzeichen:</span><span class="sxs-lookup"><span data-stu-id="83ca3-104">C# supports the following special characters:</span></span> 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md), das Zeichen für ausführliche Bezeichner. 
+- <span data-ttu-id="83ca3-105">[@](../../../csharp/language-reference/tokens/verbatim.md), das Zeichen für ausführliche Bezeichner.</span><span class="sxs-lookup"><span data-stu-id="83ca3-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md), das Zeichen für interpolierte Zeichenfolgen.
+- <span data-ttu-id="83ca3-106">[$](../../../csharp/language-reference/tokens/interpolated.md), das Zeichen für interpolierte Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="83ca3-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="83ca3-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="83ca3-107">See Also</span></span>  
+ <span data-ttu-id="83ca3-108">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="83ca3-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="83ca3-109">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="83ca3-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
 
 

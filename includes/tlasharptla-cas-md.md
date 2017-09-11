@@ -1,1 +1,1 @@
-Codezugriffssicherheit (Code Access Security, CAS)
+<span data-ttu-id="beba0-101">Codezugriffssicherheit (Code Access Security, CAS)</span><span class="sxs-lookup"><span data-stu-id="beba0-101">Code Access Security (CAS)</span></span>

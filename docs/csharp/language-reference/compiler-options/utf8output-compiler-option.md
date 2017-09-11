@@ -38,20 +38,20 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="utf8output-c-compiler-options"></a>/utf8output (C#-Compileroptionen)
-Die Option **/utf8output** zeigt die Compilerausgabe mit UTF-8-Codierung an.  
+# <a name="utf8output-c-compiler-options"></a><span data-ttu-id="8bd2b-102">/utf8output (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="8bd2b-102">/utf8output (C# Compiler Options)</span></span>
+<span data-ttu-id="8bd2b-103">Die Option **/utf8output** zeigt die Compilerausgabe mit UTF-8-Codierung an.</span><span class="sxs-lookup"><span data-stu-id="8bd2b-103">The **/utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="8bd2b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8bd2b-104">Syntax</span></span>  
   
 ```console  
 /utf8output  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Bei einigen internationalen Konfigurationen kann die Compilerausgabe nicht ordnungsgemäß in der Konsole angezeigt werden. Verwenden Sie in diesen Konfigurationen **/utf8output**, und leiten Sie die Compilerausgabe in eine Datei um.  
+## <a name="remarks"></a><span data-ttu-id="8bd2b-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8bd2b-105">Remarks</span></span>  
+ <span data-ttu-id="8bd2b-106">Bei einigen internationalen Konfigurationen kann die Compilerausgabe nicht ordnungsgemäß in der Konsole angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="8bd2b-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="8bd2b-107">Verwenden Sie in diesen Konfigurationen **/utf8output**, und leiten Sie die Compilerausgabe in eine Datei um.</span><span class="sxs-lookup"><span data-stu-id="8bd2b-107">In these configurations, use **/utf8output** and redirect compiler output to a file.</span></span>  
   
- Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
+ <span data-ttu-id="8bd2b-108">Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="8bd2b-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bd2b-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bd2b-109">See Also</span></span>  
+ [<span data-ttu-id="8bd2b-110">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="8bd2b-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

@@ -1,1 +1,1 @@
-Geräteunabhängige Einheiten (1/96 Zoll pro Einheit)
+<span data-ttu-id="439d6-101">Geräteunabhängige Einheiten (1/96 Zoll pro Einheit)</span><span class="sxs-lookup"><span data-stu-id="439d6-101">device-independent units (1/96th inch per unit)</span></span>

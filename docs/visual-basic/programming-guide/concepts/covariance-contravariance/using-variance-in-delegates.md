@@ -20,21 +20,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bd3e60031eac713cee3dee1399af8c6b83e6656
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 620fd61000e42d68f566e441d023d73a036000ae
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Verwenden von Varianz in Delegaten (Visual Basic)
-Wenn Sie einen Delegaten eine Methode zuweisen *Kovarianz* und *Kontravarianz* bieten Flexibilität für den Abgleich eines Delegattyps mit einer Methodensignatur. Kovarianz unterstützt eine Methode Rückgabetyp aufweisen, stärker abgeleiteten, als im Delegaten definiert ist. Kontravarianz unterstützt eine Methode mit Parametertypen, die weniger stark abgeleitet sind als die in der Delegattyp.  
+# <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="e5139-102">Verwenden von Varianz in Delegaten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5139-102">Using Variance in Delegates (Visual Basic)</span></span>
+<span data-ttu-id="e5139-103">Wenn Sie einen Delegaten eine Methode zuweisen *Kovarianz* und *Kontravarianz* bieten Flexibilität für den Abgleich eines Delegattyps mit einer Methodensignatur.</span><span class="sxs-lookup"><span data-stu-id="e5139-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="e5139-104">Kovarianz unterstützt eine Methode Rückgabetyp aufweisen, stärker abgeleiteten, als im Delegaten definiert ist.</span><span class="sxs-lookup"><span data-stu-id="e5139-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="e5139-105">Kontravarianz unterstützt eine Methode mit Parametertypen, die weniger stark abgeleitet sind als die in der Delegattyp.</span><span class="sxs-lookup"><span data-stu-id="e5139-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
   
-## <a name="example-1-covariance"></a>Beispiel 1: Kovarianz  
+## <a name="example-1-covariance"></a><span data-ttu-id="e5139-106">Beispiel 1: Kovarianz</span><span class="sxs-lookup"><span data-stu-id="e5139-106">Example 1: Covariance</span></span>  
   
-### <a name="description"></a>Beschreibung  
- In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Rückgabetypen von dem Rückgabetyp in der Signatur des Delegaten abgeleitet werden. Der zurückgegebene Datentyp `DogsHandler` ist vom Typ `Dogs`, die abgeleitet wird von der `Mammals` Typ, der in der Delegat definiert ist.  
+### <a name="description"></a><span data-ttu-id="e5139-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e5139-107">Description</span></span>  
+ <span data-ttu-id="e5139-108">In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Rückgabetypen von dem Rückgabetyp in der Signatur des Delegaten abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="e5139-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="e5139-109">Der zurückgegebene Datentyp `DogsHandler` ist vom Typ `Dogs`, die abgeleitet wird von der `Mammals` Typ, der in der Delegat definiert ist.</span><span class="sxs-lookup"><span data-stu-id="e5139-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
   
-### <a name="code"></a>Code  
+### <a name="code"></a><span data-ttu-id="e5139-110">Code</span><span class="sxs-lookup"><span data-stu-id="e5139-110">Code</span></span>  
   
 ```vb  
 Class Mammals  
@@ -59,12 +60,12 @@ Class Test
 End Class  
 ```  
   
-## <a name="example-2-contravariance"></a>Beispiel 2: Kontravarianz  
+## <a name="example-2-contravariance"></a><span data-ttu-id="e5139-111">Beispiel 2: Kontravarianz</span><span class="sxs-lookup"><span data-stu-id="e5139-111">Example 2: Contravariance</span></span>  
   
-### <a name="description"></a>Beschreibung  
- In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Parameter Basistypen des Delegattyps Signatur-Parameter. Mithilfe von Kontravarianz können Sie einen Ereignishandler statt separate Handler. Sie können z. B. einen Ereignishandler, der akzeptiert erstellen ein `EventArgs` Eingabeparameter, und verwenden Sie es mit eine `Button.MouseClick` -Ereignis, das gesendet ein `MouseEventArgs` Typ als Parameter und mit ein `TextBox.KeyDown` -Ereignis, das gesendet ein `KeyEventArgs` Parameter.  
+### <a name="description"></a><span data-ttu-id="e5139-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e5139-112">Description</span></span>  
+ <span data-ttu-id="e5139-113">In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Parameter Basistypen des Delegattyps Signatur-Parameter.</span><span class="sxs-lookup"><span data-stu-id="e5139-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="e5139-114">Mithilfe von Kontravarianz können Sie einen Ereignishandler statt separate Handler.</span><span class="sxs-lookup"><span data-stu-id="e5139-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="e5139-115">Sie können z. B. einen Ereignishandler, der akzeptiert erstellen ein `EventArgs` Eingabeparameter, und verwenden Sie es mit eine `Button.MouseClick` -Ereignis, das gesendet ein `MouseEventArgs` Typ als Parameter und mit ein `TextBox.KeyDown` -Ereignis, das gesendet ein `KeyEventArgs` Parameter.</span><span class="sxs-lookup"><span data-stu-id="e5139-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
   
-### <a name="code"></a>Code  
+### <a name="code"></a><span data-ttu-id="e5139-116">Code</span><span class="sxs-lookup"><span data-stu-id="e5139-116">Code</span></span>  
   
 ```vb  
 ' Event hander that accepts a parameter of the EventArgs type.  
@@ -86,6 +87,6 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
- [Verwenden von Varianz für die Aktion generischen Delegaten Func und (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="e5139-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5139-117">See Also</span></span>  
+ <span data-ttu-id="e5139-118">[Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) </span><span class="sxs-lookup"><span data-stu-id="e5139-118">[Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) </span></span>  
+<span data-ttu-id="e5139-119"> [Verwenden von Varianz für die Aktion generischen Delegaten Func und (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span><span class="sxs-lookup"><span data-stu-id="e5139-119"> [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span></span>

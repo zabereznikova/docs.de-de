@@ -34,24 +34,24 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="namespace-keywords-c-reference"></a>Namespaceschlüsselwörter (C#-Programmierreferenz)
-Dieser Abschnitt beschreibt die Schlüsselwörter und Operatoren, die mit der Verwendung von Namespaces verbunden werden:  
+# <a name="namespace-keywords-c-reference"></a><span data-ttu-id="62e55-102">Namespaceschlüsselwörter (C#-Programmierreferenz)</span><span class="sxs-lookup"><span data-stu-id="62e55-102">Namespace Keywords (C# Reference)</span></span>
+<span data-ttu-id="62e55-103">Dieser Abschnitt beschreibt die Schlüsselwörter und Operatoren, die mit der Verwendung von Namespaces verbunden werden:</span><span class="sxs-lookup"><span data-stu-id="62e55-103">This section describes the keywords and operators that are associated with using namespaces:</span></span>  
   
--   [namespace](../../../csharp/language-reference/keywords/namespace.md)  
+-   [<span data-ttu-id="62e55-104">namespace</span><span class="sxs-lookup"><span data-stu-id="62e55-104">namespace</span></span>](../../../csharp/language-reference/keywords/namespace.md)  
   
--   [using](../../../csharp/language-reference/keywords/using.md)  
+-   [<span data-ttu-id="62e55-105">using</span><span class="sxs-lookup"><span data-stu-id="62e55-105">using</span></span>](../../../csharp/language-reference/keywords/using.md)  
  
--   [using static](using-static.md)
+-   [<span data-ttu-id="62e55-106">using static</span><span class="sxs-lookup"><span data-stu-id="62e55-106">using static</span></span>](using-static.md)
   
--   [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
+-   [<span data-ttu-id="62e55-107">. Operator</span><span class="sxs-lookup"><span data-stu-id="62e55-107">. Operator</span></span>](../../../csharp/language-reference/operators/member-access-operator.md)  
   
--   [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+-   [<span data-ttu-id="62e55-108">::-Operator</span><span class="sxs-lookup"><span data-stu-id="62e55-108">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
   
--   [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
+-   [<span data-ttu-id="62e55-109">extern alias</span><span class="sxs-lookup"><span data-stu-id="62e55-109">extern alias</span></span>](../../../csharp/language-reference/keywords/extern-alias.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="62e55-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62e55-110">See Also</span></span>  
+ <span data-ttu-id="62e55-111">[C#-Referenz](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="62e55-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="62e55-112">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="62e55-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="62e55-113">[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="62e55-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="62e55-114">Namespaces</span><span class="sxs-lookup"><span data-stu-id="62e55-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
 

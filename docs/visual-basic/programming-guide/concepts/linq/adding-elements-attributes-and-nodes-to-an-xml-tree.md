@@ -15,37 +15,38 @@ ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b8a1644757fb4ce9f1498e79b16d1077e412346b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f8ee26aef896a2f404e815823ade83e204270613
+ms.contentlocale: de-de
+ms.lasthandoff: 05/19/2017
 
 
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)
-Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="a7031-102">Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7031-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="a7031-103">Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a7031-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
   
-## <a name="methods-for-adding-content"></a>Methoden zum Hinzufügen von Inhalt  
- Die folgenden Methoden hinzufügen des untergeordneten Inhalts zu einem <xref:System.Xml.Linq.XElement>oder ein <xref:System.Xml.Linq.XDocument>:</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+## <a name="methods-for-adding-content"></a><span data-ttu-id="a7031-104">Methoden zum Hinzufügen von Inhalt</span><span class="sxs-lookup"><span data-stu-id="a7031-104">Methods for Adding Content</span></span>  
+ <span data-ttu-id="a7031-105">Die folgenden Methoden hinzufügen des untergeordneten Inhalts zu einem <xref:System.Xml.Linq.XElement>oder ein <xref:System.Xml.Linq.XDocument>:</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="a7031-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|Methode|Beschreibung|  
+|<span data-ttu-id="a7031-106">Methode</span><span class="sxs-lookup"><span data-stu-id="a7031-106">Method</span></span>|<span data-ttu-id="a7031-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a7031-107">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A></xref:System.Xml.Linq.XContainer.Add%2A>|Fügt Inhalt am Ende des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A></xref:System.Xml.Linq.XContainer.AddFirst%2A>|Fügt Inhalt am Anfang des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>|  
+|<span data-ttu-id="a7031-108"><xref:System.Xml.Linq.XContainer.Add%2A></xref:System.Xml.Linq.XContainer.Add%2A></span><span class="sxs-lookup"><span data-stu-id="a7031-108"><xref:System.Xml.Linq.XContainer.Add%2A></span></span>|<span data-ttu-id="a7031-109">Fügt Inhalt am Ende des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer></span><span class="sxs-lookup"><span data-stu-id="a7031-109">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<span data-ttu-id="a7031-110"><xref:System.Xml.Linq.XContainer.AddFirst%2A></xref:System.Xml.Linq.XContainer.AddFirst%2A></span><span class="sxs-lookup"><span data-stu-id="a7031-110"><xref:System.Xml.Linq.XContainer.AddFirst%2A></span></span>|<span data-ttu-id="a7031-111">Fügt Inhalt am Anfang des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer></span><span class="sxs-lookup"><span data-stu-id="a7031-111">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
   
- Die folgenden Methoden fügen Inhalt als nebengeordnete Knoten ein <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode> Die am häufigsten verwendete Knoten, den Sie nebengeordneten Inhalt hinzufügen, ist <xref:System.Xml.Linq.XElement>, obwohl Sie gültigen nebengeordneten Inhalt auch anderen Knotentypen wie <xref:System.Xml.Linq.XText>oder <xref:System.Xml.Linq.XComment>.</xref:System.Xml.Linq.XComment> </xref:System.Xml.Linq.XText> hinzufügen können</xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="a7031-112">Die folgenden Methoden fügen Inhalt als nebengeordnete Knoten ein <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode></span><span class="sxs-lookup"><span data-stu-id="a7031-112">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="a7031-113">Die am häufigsten verwendete Knoten, den Sie nebengeordneten Inhalt hinzufügen, ist <xref:System.Xml.Linq.XElement>, obwohl Sie gültigen nebengeordneten Inhalt auch anderen Knotentypen wie <xref:System.Xml.Linq.XText>oder <xref:System.Xml.Linq.XComment>.</xref:System.Xml.Linq.XComment> </xref:System.Xml.Linq.XText> hinzufügen können</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="a7031-113">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
   
-|Methode|Beschreibung|  
+|<span data-ttu-id="a7031-114">Methode</span><span class="sxs-lookup"><span data-stu-id="a7031-114">Method</span></span>|<span data-ttu-id="a7031-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a7031-115">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A></xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Fügt Inhalt nach dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Fügt Inhalt vor dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
+|<span data-ttu-id="a7031-116"><xref:System.Xml.Linq.XNode.AddAfterSelf%2A></xref:System.Xml.Linq.XNode.AddAfterSelf%2A></span><span class="sxs-lookup"><span data-stu-id="a7031-116"><xref:System.Xml.Linq.XNode.AddAfterSelf%2A></span></span>|<span data-ttu-id="a7031-117">Fügt Inhalt nach dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode></span><span class="sxs-lookup"><span data-stu-id="a7031-117">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<span data-ttu-id="a7031-118"><xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></span><span class="sxs-lookup"><span data-stu-id="a7031-118"><xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></span></span>|<span data-ttu-id="a7031-119">Fügt Inhalt vor dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode></span><span class="sxs-lookup"><span data-stu-id="a7031-119">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="a7031-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a7031-120">Example</span></span>  
   
-### <a name="description"></a>Beschreibung  
- Das folgende Beispiel erstellt zwei XML-Strukturen und ändert dann eine der beiden Strukturen:  
+### <a name="description"></a><span data-ttu-id="a7031-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a7031-121">Description</span></span>  
+ <span data-ttu-id="a7031-122">Das folgende Beispiel erstellt zwei XML-Strukturen und ändert dann eine der beiden Strukturen:</span><span class="sxs-lookup"><span data-stu-id="a7031-122">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
   
-### <a name="code"></a>Code  
+### <a name="code"></a><span data-ttu-id="a7031-123">Code</span><span class="sxs-lookup"><span data-stu-id="a7031-123">Code</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -78,8 +79,8 @@ Console.WriteLine(xmlTree)
   
 ```  
   
-### <a name="comments"></a>Kommentare  
- Dieser Code erzeugt die folgende Ausgabe:  
+### <a name="comments"></a><span data-ttu-id="a7031-124">Kommentare</span><span class="sxs-lookup"><span data-stu-id="a7031-124">Comments</span></span>  
+ <span data-ttu-id="a7031-125">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a7031-125">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -94,5 +95,5 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a7031-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a7031-126">See Also</span></span>  
+ [<span data-ttu-id="a7031-127">Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7031-127">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

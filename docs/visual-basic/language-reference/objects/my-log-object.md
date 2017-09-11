@@ -28,23 +28,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5150568b9f57640adf3ad959362df6a4059f6bf9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ae8941c6c52ad707481d13085b1d514163ad238
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mylog-object"></a>My.Log-Objekt
-Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis und Ausnahmeinformationen in die Anwendung Protokolllistener bereit.  
+# <a name="mylog-object"></a><span data-ttu-id="57c26-102">My.Log-Objekt</span><span class="sxs-lookup"><span data-stu-id="57c26-102">My.Log Object</span></span>
+<span data-ttu-id="57c26-103">Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis und Ausnahmeinformationen in die Anwendung Protokolllistener bereit.</span><span class="sxs-lookup"><span data-stu-id="57c26-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Methoden und Eigenschaften der `My.Log` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.</xref:Microsoft.VisualBasic.Logging.AspLog>  
+## <a name="remarks"></a><span data-ttu-id="57c26-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="57c26-104">Remarks</span></span>  
+ <span data-ttu-id="57c26-105">Weitere Informationen zu den Methoden und Eigenschaften der `My.Log` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.</xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="57c26-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
   
- Das `My.Log` Objekt ist für nur für ASP.NET-Anwendungen verfügbar. Verwenden Sie für Clientanwendungen [My.Application.Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ <span data-ttu-id="57c26-106">Das `My.Log` Objekt ist für nur für ASP.NET-Anwendungen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="57c26-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="57c26-107">Verwenden Sie für Clientanwendungen [My.Application.Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span><span class="sxs-lookup"><span data-stu-id="57c26-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging>  
+## <a name="requirements"></a><span data-ttu-id="57c26-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="57c26-108">Requirements</span></span>  
+ <span data-ttu-id="57c26-109">**Namespace:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="57c26-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- **Klasse:**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog>  
+ <span data-ttu-id="57c26-110">**Klasse:**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="57c26-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
   
- **Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]
+ <span data-ttu-id="57c26-111">**Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="57c26-111">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>

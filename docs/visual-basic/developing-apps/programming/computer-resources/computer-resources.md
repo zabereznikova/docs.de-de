@@ -40,12 +40,12 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="accessing-computer-resources-visual-basic"></a>Zugreifen auf Computerressourcen (Visual Basic)
+# <a name="accessing-computer-resources-visual-basic"></a><span data-ttu-id="48a73-102">Zugreifen auf Computerressourcen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48a73-102">Accessing computer resources (Visual Basic)</span></span>
 
-Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet Zugriff auf Informationen und häufig verwendete Funktionen. `My.Computer` bietet Methoden, Eigenschaften und Ereignisse für den Zugriff auf den Computer, auf dem die Anwendung ausgeführt wird. Es enthält folgende Objekte:  
+<span data-ttu-id="48a73-103">Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet Zugriff auf Informationen und häufig verwendete Funktionen.</span><span class="sxs-lookup"><span data-stu-id="48a73-103">The `My.Computer` object is one of the three central objects in `My`, providing access to information and commonly used functionality.</span></span> <span data-ttu-id="48a73-104">`My.Computer` bietet Methoden, Eigenschaften und Ereignisse für den Zugriff auf den Computer, auf dem die Anwendung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="48a73-104">`My.Computer` provides methods, properties, and events for accessing the computer on which the application is running.</span></span> <span data-ttu-id="48a73-105">Es enthält folgende Objekte:</span><span class="sxs-lookup"><span data-stu-id="48a73-105">Its objects include:</span></span>  
   
 -   <xref:Microsoft.VisualBasic.Devices.Audio>
--   Zwischenablage (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
+-   <span data-ttu-id="48a73-106">Zwischenablage (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)</span><span class="sxs-lookup"><span data-stu-id="48a73-106">Clipboard (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)</span></span>
 -   <xref:Microsoft.VisualBasic.Devices.Clock>
 -   <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 -   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
@@ -53,31 +53,31 @@ Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet
 -   <xref:Microsoft.VisualBasic.Devices.Mouse>
 -   <xref:Microsoft.VisualBasic.Devices.Network>
 -   <xref:Microsoft.VisualBasic.Devices.Ports>
--   Registrierung (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+-   <span data-ttu-id="48a73-107">Registrierung (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)</span><span class="sxs-lookup"><span data-stu-id="48a73-107">Registry (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)</span></span>
   
-## <a name="in-this-section"></a>In diesem Abschnitt
+## <a name="in-this-section"></a><span data-ttu-id="48a73-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="48a73-108">In this section</span></span>
 
-[Wiedergabe von Sound](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Audio` auf wie die Wiedergabe eines Sounds im Hintergrund.
+<span data-ttu-id="48a73-109">[Wiedergabe von Sound](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-109">[Playing Sounds](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md) </span></span>  
+<span data-ttu-id="48a73-110">Führt Aufgaben im Zusammenhang mit `My.Computer.Audio` auf wie die Wiedergabe eines Sounds im Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="48a73-110">Lists tasks associated with `My.Computer.Audio`, such as playing a sound in the background.</span></span>
 
-[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Clipboard` auf wie das Lesen von Daten aus oder das Schreiben von Daten in die Zwischenablage.
+<span data-ttu-id="48a73-111">[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-111">[Storing Data to and Reading from the Clipboard](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md) </span></span>  
+<span data-ttu-id="48a73-112">Führt Aufgaben im Zusammenhang mit `My.Computer.Clipboard` auf wie das Lesen von Daten aus oder das Schreiben von Daten in die Zwischenablage.</span><span class="sxs-lookup"><span data-stu-id="48a73-112">Lists tasks associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>
 
-[Abrufen von Informationen über den Computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Info` auf wie das Bestimmen des vollständigen Namens oder der IP-Adressen eines Computers.
+<span data-ttu-id="48a73-113">[Abrufen von Informationen über den Computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-113">[Getting Information about the Computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md) </span></span>  
+<span data-ttu-id="48a73-114">Führt Aufgaben im Zusammenhang mit `My.Computer.Info` auf wie das Bestimmen des vollständigen Namens oder der IP-Adressen eines Computers.</span><span class="sxs-lookup"><span data-stu-id="48a73-114">Lists tasks associated with `My.Computer.Info`, such as determining a computer's full name or IP addresses.</span></span>
 
-[Zugreifen auf die Tastatur](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Keyboard` auf wie das Bestimmen, ob die FESTSTELLTASTE aktiviert ist.
+<span data-ttu-id="48a73-115">[Zugreifen auf die Tastatur](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-115">[Accessing the Keyboard](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md) </span></span>  
+<span data-ttu-id="48a73-116">Führt Aufgaben im Zusammenhang mit `My.Computer.Keyboard` auf wie das Bestimmen, ob die FESTSTELLTASTE aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="48a73-116">Lists tasks associated with `My.Computer.Keyboard`, such as determining whether CAPS LOCK is on.</span></span>
 
-[Zugreifen auf die Maus](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Mouse` auf wie das Bestimmen, ob eine Maus vorhanden ist.
+<span data-ttu-id="48a73-117">[Zugreifen auf die Maus](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-117">[Accessing the Mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md) </span></span>  
+<span data-ttu-id="48a73-118">Führt Aufgaben im Zusammenhang mit `My.Computer.Mouse` auf wie das Bestimmen, ob eine Maus vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="48a73-118">Lists tasks associated with `My.Computer.Mouse`, such as determining whether a mouse is present.</span></span>
 
-[Durchführen von Netzwerkvorgängen](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Network` auf wie das Hochladen oder Herunterladen von Dateien.
+<span data-ttu-id="48a73-119">[Durchführen von Netzwerkvorgängen](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-119">[Performing Network Operations](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md) </span></span>  
+<span data-ttu-id="48a73-120">Führt Aufgaben im Zusammenhang mit `My.Computer.Network` auf wie das Hochladen oder Herunterladen von Dateien.</span><span class="sxs-lookup"><span data-stu-id="48a73-120">Lists tasks associated with `My.Computer.Network`, such as uploading or downloading files.</span></span>
 
-[Zugreifen auf die Anschlüsse des Computers](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Ports` auf wie das Anzeigen der verfügbaren seriellen Anschlüsse oder das Senden von Zeichenfolgen an serielle Anschlüsse.
+<span data-ttu-id="48a73-121">[Zugreifen auf die Anschlüsse des Computers](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-121">[Accessing the Computer's Ports](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md) </span></span>  
+<span data-ttu-id="48a73-122">Führt Aufgaben im Zusammenhang mit `My.Computer.Ports` auf wie das Anzeigen der verfügbaren seriellen Anschlüsse oder das Senden von Zeichenfolgen an serielle Anschlüsse.</span><span class="sxs-lookup"><span data-stu-id="48a73-122">Lists tasks associated with `My.Computer.Ports`, such as showing available serial ports or sending strings to serial ports.</span></span>
 
-[Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
-Führt Aufgaben im Zusammenhang mit `My.Computer.Registry` auf wie das Lesen von Daten aus oder das Schreiben von Daten an Registrierungsschlüssel.
+<span data-ttu-id="48a73-123">[Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md) </span><span class="sxs-lookup"><span data-stu-id="48a73-123">[Reading from and Writing to the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md) </span></span>  
+<span data-ttu-id="48a73-124">Führt Aufgaben im Zusammenhang mit `My.Computer.Registry` auf wie das Lesen von Daten aus oder das Schreiben von Daten an Registrierungsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="48a73-124">Lists tasks associated with `My.Computer.Registry`, such as reading data from or writing data to registry keys.</span></span>
 

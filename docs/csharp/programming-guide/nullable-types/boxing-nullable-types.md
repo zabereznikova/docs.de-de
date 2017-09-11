@@ -36,8 +36,8 @@ ms.contentlocale: de-de
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="boxing-nullable-types-c-programming-guide"></a>Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
-Objekte, die auf Typen basieren, die NULL-Werte zulassen, werden nur dann umschlossen, wenn das Objekt ungleich NULL ist. Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, wird der Objektverweis `null` zugewiesen, anstatt dass er geboxt wird. Zum Beispiel:  
+# <a name="boxing-nullable-types-c-programming-guide"></a><span data-ttu-id="50c23-102">Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="50c23-102">Boxing Nullable Types (C# Programming Guide)</span></span>
+<span data-ttu-id="50c23-103">Objekte, die auf Typen basieren, die NULL-Werte zulassen, werden nur dann umschlossen, wenn das Objekt ungleich NULL ist.</span><span class="sxs-lookup"><span data-stu-id="50c23-103">Objects based on nullable types are only boxed if the object is non-null.</span></span> <span data-ttu-id="50c23-104">Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, wird der Objektverweis `null` zugewiesen, anstatt dass er geboxt wird.</span><span class="sxs-lookup"><span data-stu-id="50c23-104">If <xref:System.Nullable%601.HasValue%2A> is `false`, the object reference is assigned to `null` instead of boxing.</span></span> <span data-ttu-id="50c23-105">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="50c23-105">For example:</span></span>  
   
 ```csharp  
 bool? b = null;  
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- Wenn das Objekt ungleich NULL und <xref:System.Nullable%601.HasValue%2A> `true` ist, kommt es zum Boxing. Allerdings wird nur der zugrunde liegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt. Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=fullName>-Objekt, das den Werttyp umschließt. Zum Beispiel:  
+ <span data-ttu-id="50c23-106">Wenn das Objekt ungleich NULL und <xref:System.Nullable%601.HasValue%2A> `true` ist, kommt es zum Boxing. Allerdings wird nur der zugrunde liegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt.</span><span class="sxs-lookup"><span data-stu-id="50c23-106">If the object is non-null -- if <xref:System.Nullable%601.HasValue%2A> is `true` -- then boxing occurs, but only the underlying type that the nullable object is based on is boxed.</span></span> <span data-ttu-id="50c23-107">Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=fullName>-Objekt, das den Werttyp umschließt.</span><span class="sxs-lookup"><span data-stu-id="50c23-107">Boxing a non-null nullable value type boxes the value type itself, not the <xref:System.Nullable%601?displayProperty=fullName> that wraps the value type.</span></span> <span data-ttu-id="50c23-108">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="50c23-108">For example:</span></span>  
   
 ```csharp  
 bool? b = false;  
@@ -54,17 +54,17 @@ object bBoxed = b; // bBoxed contains a boxed bool.
 object iBoxed = i; // iBoxed contains a boxed int.  
 ```  
   
- Die beiden geboxten Objekte stimmen mit Objekten überein, die beim Boxing von nicht auf NULL festlegbaren Typen entstehen. Sie können, genauso wie nicht auf NULL festlegbare Typen, in auf NULL festlegbare Typen „ausgewickelt“ werden, so wie in folgendem Beispiel:  
+ <span data-ttu-id="50c23-109">Die beiden geboxten Objekte stimmen mit Objekten überein, die beim Boxing von nicht auf NULL festlegbaren Typen entstehen.</span><span class="sxs-lookup"><span data-stu-id="50c23-109">The two boxed objects are identical to those created by boxing non-nullable types.</span></span> <span data-ttu-id="50c23-110">Sie können, genauso wie nicht auf NULL festlegbare Typen, in auf NULL festlegbare Typen „ausgewickelt“ werden, so wie in folgendem Beispiel:</span><span class="sxs-lookup"><span data-stu-id="50c23-110">And, just like non-nullable boxed types, they can be unboxed into nullable types, as in the following example:</span></span>  
   
 ```csharp  
 bool? b2 = (bool?)bBoxed;  
 int? i2 = (int?)iBoxed;  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Das Verhalten von umschlossenen, auf NULL festlegbaren Typen hat zwei Vorteile:  
+## <a name="remarks"></a><span data-ttu-id="50c23-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="50c23-111">Remarks</span></span>  
+ <span data-ttu-id="50c23-112">Das Verhalten von umschlossenen, auf NULL festlegbaren Typen hat zwei Vorteile:</span><span class="sxs-lookup"><span data-stu-id="50c23-112">The behavior of nullable types when boxed provides two advantages:</span></span>  
   
-1.  Auf NULL festlegbare Objekte und ihre umschlossenen Gegenstücke könne auf NULL getestet werden:  
+1.  <span data-ttu-id="50c23-113">Auf NULL festlegbare Objekte und ihre umschlossenen Gegenstücke könne auf NULL getestet werden:</span><span class="sxs-lookup"><span data-stu-id="50c23-113">Nullable objects and their boxed counterpart can be tested for null:</span></span>  
   
     ```csharp  
     bool? b = null;  
@@ -79,7 +79,7 @@ int? i2 = (int?)iBoxed;
     }  
     ```  
   
-2.  Umschlossene, auf NULL festlegbare Typen unterstützen die Funktionen des zugrundeliegenden Typs vollständig:  
+2.  <span data-ttu-id="50c23-114">Umschlossene, auf NULL festlegbare Typen unterstützen die Funktionen des zugrundeliegenden Typs vollständig:</span><span class="sxs-lookup"><span data-stu-id="50c23-114">Boxed nullable types fully support the functionality of the underlying type:</span></span>  
   
     ```csharp  
     double? d = 44.4;  
@@ -90,8 +90,8 @@ int? i2 = (int?)iBoxed;
     string str = ic.ToString();  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Typen, die NULL-Werte zulassen](../../../csharp/programming-guide/nullable-types/index.md)   
- [Gewusst wie: Identifizieren eines Typs mit Nullwerten](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+## <a name="see-also"></a><span data-ttu-id="50c23-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="50c23-115">See Also</span></span>  
+ <span data-ttu-id="50c23-116">[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="50c23-116">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="50c23-117">[Typen, die NULL-Werte zulassen](../../../csharp/programming-guide/nullable-types/index.md) </span><span class="sxs-lookup"><span data-stu-id="50c23-117">[Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) </span></span>  
+ [<span data-ttu-id="50c23-118">Gewusst wie: Identifizieren eines Typs mit Nullwerten</span><span class="sxs-lookup"><span data-stu-id="50c23-118">How to: Identify a Nullable Type</span></span>](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
 

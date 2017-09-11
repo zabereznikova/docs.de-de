@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d28cb398f316fd0df4f20bb038956b184cec7a8b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Gewusst wie: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)
-In diesem Beispiel wird veranschaulicht, wie alle Dateien zu finden, die einer angegebenen Erweiterung (z. B. ".txt") in einer angegebenen Verzeichnisstruktur. Es wird gezeigt, wie in der Struktur basierend auf den Zeitpunkt der Erstellung entweder die neueste oder älteste Datei zurück.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="7986a-102">Gewusst wie: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7986a-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="7986a-103">In diesem Beispiel wird veranschaulicht, wie alle Dateien zu finden, die einer angegebenen Erweiterung (z. B. ".txt") in einer angegebenen Verzeichnisstruktur.</span><span class="sxs-lookup"><span data-stu-id="7986a-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="7986a-104">Es wird gezeigt, wie in der Struktur basierend auf den Zeitpunkt der Erstellung entweder die neueste oder älteste Datei zurück.</span><span class="sxs-lookup"><span data-stu-id="7986a-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="7986a-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7986a-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -77,9 +78,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+## <a name="compiling-the-code"></a><span data-ttu-id="7986a-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="7986a-106">Compiling the Code</span></span>  
+ <span data-ttu-id="7986a-107">Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".</span><span class="sxs-lookup"><span data-stu-id="7986a-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="7986a-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7986a-108">See Also</span></span>  
+ <span data-ttu-id="7986a-109">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="7986a-109">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="7986a-110"> [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="7986a-110"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
