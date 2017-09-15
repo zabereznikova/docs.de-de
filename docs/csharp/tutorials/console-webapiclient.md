@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.translationtype: HT
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 8c747f65dca44fcca25fe67dccaa897561eefcc7
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -78,7 +78,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Sie müssen am Anfang Ihrer `Main`-Methode eine `using`-Anweisung hinzufügen, damit der C#-Compiler den @System.Threading.Tasks.Task-Typ erkennt:
+Sie müssen am Anfang Ihrer `Main`-Methode eine `using`-Anweisung hinzufügen, damit der C#-Compiler den @System.Threading.Tasks.Task -Typ erkennt:
 
 ```csharp
 using System.Threading.Tasks;
@@ -88,7 +88,7 @@ Wenn Sie zu diesem Zeitpunkt Ihr Projekt erstellen, erhalten Sie eine Warnung f�
 
 Als Nächstes benennen Sie den in der `namespace`-Anweisung definierten Namespace vom Standardwert `ConsoleApp` in `WebAPIClient` um. Später definieren wir eine `repo`-Klasse in diesem Namespace.
 
-Aktualisieren Sie jetzt die `Main`-Methode, um diese Methode aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück, und Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Deshalb müssen Sie die `Wait`-Methode verwenden, um eine Blockierung einzurichten und auf den Abschluss des Tasks zu warten:
+Aktualisieren Sie jetzt die `Main`-Methode, um diese Methode aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück, und Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Deshalb müssen Sie die `Wait` -Methode verwenden, um eine Blockierung einzurichten und auf den Abschluss des Tasks zu warten:
 
 ```csharp
 public static void Main(string[] args)
@@ -152,7 +152,7 @@ Platzieren Sie den obigen Code in einer neuen Datei namens „repo.cs“. Diese 
 Das JSON-Serialisierungsprogramm ignoriert Informationen, die nicht im verwendeten Klassentyp enthalten sind.
 Dieses Feature vereinfacht es, Typen zu erstellen, die nur mit einem Teilsatz der Felder im JSON-Paket funktionieren.
 
-Nun, da Sie den Typ erstellt haben, deserialisieren wir ihn. Sie müssen ein @System.Runtime.Serialization.Json.DataContractJsonSerializer-Objekt erstellen. Dieses Objekt muss den CLR-Typ kennen, der für das abgerufene JSON-Paket erwartet wird. Das Paket aus GitHub enthält eine Sequenz aus Repositorys, deshalb ist `List<repo>` der richtige Typ. Fügen Sie Ihrer `ProcessRepositories`-Methode die folgende Zeile hinzu:
+Nun, da Sie den Typ erstellt haben, deserialisieren wir ihn. Sie müssen ein @System.Runtime.Serialization.Json.DataContractJsonSerializer -Objekt erstellen. Dieses Objekt muss den CLR-Typ kennen, der für das abgerufene JSON-Paket erwartet wird. Das Paket aus GitHub enthält eine Sequenz aus Repositorys, deshalb ist `List<repo>` der richtige Typ. Fügen Sie Ihrer `ProcessRepositories`-Methode die folgende Zeile hinzu:
 
 ```csharp
 var serializer = new DataContractJsonSerializer(typeof(List<repo>));
@@ -211,7 +211,7 @@ Führen Sie nach dem Speichern der Datei `dotnet restore` aus, um dieses Paket a
 public class Repository
 ```
 
-@System.Runtime.Serialization.DataContractAttribute ist ein Member des @System.Runtime.Serialization-Namespace, deshalb müssen Sie oben in der Datei die geeignete `using`-Anweisung hinzufügen:
+@System.Runtime.Serialization.DataContractAttribute ist ein Member des @System.Runtime.Serialization -Namespace, deshalb müssen Sie oben in der Datei die geeignete `using` -Anweisung hinzufügen:
 
 ```csharp
 using System.Runtime.Serialization;
@@ -227,7 +227,7 @@ var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
 var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 ```
 
-Führen wir jetzt die gleiche Änderung mit dem `name`-Feld unter Verwendung der @System.Runtime.Serialization.DataMemberAttribute-Klasse durch. Ändern Sie die Deklaration des `name`-Felds in „repo.cs“ folgendermaßen ab:
+Führen wir jetzt die gleiche Änderung mit dem `name`-Feld unter Verwendung der @System.Runtime.Serialization.DataMemberAttribute -Klasse durch. Ändern Sie die Deklaration des `name`-Felds in „repo.cs“ folgendermaßen ab:
 
 ```csharp
 [DataMember(Name="name")]
@@ -309,7 +309,7 @@ public Uri Homepage { get; set; }
 public int Watchers { get; set; }
 ```
 
-Diese Eigenschaften verfügen über integrierte Konvertierungen vom Zeichenfolgentyp (dieser ist in den JSON-Paketen enthalten) in den Zieltyp. Der @System.Uri-Typ ist Ihnen möglicherweise neu. Er repräsentiert einen URI, oder in diesem Fall eine URL. Im Fall der `Uri`- und `int`-Typen wird über die Serialisierungsaktion eine Ausnahme ausgelöst, wenn das JSON-Paket Daten enthält, die nicht in den Zieltyp konvertiert werden können.
+Diese Eigenschaften verfügen über integrierte Konvertierungen vom Zeichenfolgentyp (dieser ist in den JSON-Paketen enthalten) in den Zieltyp. Der @System.Uri -Typ ist Ihnen möglicherweise neu. Er repräsentiert einen URI, oder in diesem Fall eine URL. Im Fall der `Uri`- und `int`-Typen wird über die Serialisierungsaktion eine Ausnahme ausgelöst, wenn das JSON-Paket Daten enthält, die nicht in den Zieltyp konvertiert werden können.
 
 Aktualisieren Sie nach dem Hinzufügen die `Main`-Methode, um diese Elemente anzuzeigen:
 
@@ -330,14 +330,14 @@ Im letzten Schritt fügen wir jetzt die Informationen für den letzten Pushvorga
 2016-02-08T21:27:00Z
 ```
 
-Dieses Format entspricht nicht den standardmäßigen .NET-@System.DateTime-Formaten. Deshalb müssen Sie eine benutzerdefinierte Konvertierungsmethode schreiben. Darüber hinaus möchten Sie wahrscheinlich nicht, dass die unformatierte Zeichenfolge für Benutzer der `Repository`-Klasse verfügbar gemacht wird. Dies kann ebenfalls mithilfe von Attributen gesteuert werden. Definieren Sie zunächst eine `private`-Eigenschaft, die die Zeichenfolgendarstellung des DateTime-Werts in Ihrer `Repository`-Klasse enthält:
+Dieses Format entspricht nicht den standardmäßigen .NET-@System.DateTime -Formaten. Deshalb müssen Sie eine benutzerdefinierte Konvertierungsmethode schreiben. Darüber hinaus möchten Sie wahrscheinlich nicht, dass die unformatierte Zeichenfolge für Benutzer der `Repository`-Klasse verfügbar gemacht wird. Dies kann ebenfalls mithilfe von Attributen gesteuert werden. Definieren Sie zunächst eine `private`-Eigenschaft, die die Zeichenfolgendarstellung des DateTime-Werts in Ihrer `Repository`-Klasse enthält:
 
 ```csharp
 [DataMember(Name="pushed_at")]
 private string JsonDate { get; set; }
 ```
 
-Das `DataMember`-Attribut informiert das Serialisierungsprogramm, dass eine Verarbeitung durchgeführt werden soll, obwohl es sich nicht um einen öffentlichen Member handelt. Als Nächstes erstellen Sie eine schreibgeschützte öffentliche Eigenschaft, mit der die Zeichenfolge in ein gültiges @System.DateTime-Objekt konvertiert wird und diesen @System.DateTime:-Wert zurückgibt.
+Das `DataMember`-Attribut informiert das Serialisierungsprogramm, dass eine Verarbeitung durchgeführt werden soll, obwohl es sich nicht um einen öffentlichen Member handelt. Als Nächstes erstellen Sie eine schreibgeschützte öffentliche Eigenschaft, mit der die Zeichenfolge in ein gültiges @System.DateTime -Objekt konvertiert wird und diesen @System.DateTime: -Wert zurückgibt.
 
 ```csharp
 [IgnoreDataMember]
@@ -350,9 +350,9 @@ public DateTime LastPush
 }
 ```
 
-Gehen wir die neuen Konstrukte von oben durch. Das `IgnoreDataMember`-Attribut weist das Serialisierungsprogramm an, dass dieser Typ nicht aus einem JSON-Objekt gelesen oder geschrieben werden darf. Diese Eigenschaft enthält nur einen `get`-Accessor. Es ist kein `set`-Accessor vorhanden. So wird eine *schreibgeschützte* Eigenschaft in C# definiert. (Ja, Sie können *lesegeschützte* Eigenschaften in C# erstellen, aber ihr Wert ist begrenzt.) Die @System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)-Methode analysiert eine Zeichenfolge und erstellt ein @System.DateTime-Objekt mit dem angegebenen Datumsformat. Außerdem werden mit einem `CultureInfo`-Objekt zusätzliche Metadaten zu `DateTime` hinzugefügt. Wenn die Analyse nicht erfolgreich ist, löst der Eigenschaftsaccessor eine Ausnahme aus.
+Gehen wir die neuen Konstrukte von oben durch. Das `IgnoreDataMember`-Attribut weist das Serialisierungsprogramm an, dass dieser Typ nicht aus einem JSON-Objekt gelesen oder geschrieben werden darf. Diese Eigenschaft enthält nur einen `get`-Accessor. Es ist kein `set`-Accessor vorhanden. So wird eine *schreibgeschützte* Eigenschaft in C# definiert. (Ja, Sie können *lesegeschützte* Eigenschaften in C# erstellen, aber ihr Wert ist begrenzt.) Die @System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider) -Methode analysiert eine Zeichenfolge und erstellt ein @System.DateTime -Objekt mit dem angegebenen Datumsformat. Außerdem werden mit einem `CultureInfo`-Objekt zusätzliche Metadaten zu `DateTime` hinzugefügt. Wenn die Analyse nicht erfolgreich ist, löst der Eigenschaftsaccessor eine Ausnahme aus.
 
-Zur Verwendung von @System.Globalization.CultureInfo.InvariantCulture müssen Sie den @System.Globalization-Namespace zu den `using`-Anweisungen in `repo.cs` hinzufügen:
+Zur Verwendung von @System.Globalization.CultureInfo.InvariantCulture müssen Sie den @System.Globalization -Namespace zu den `using`-Anweisungen in `repo.cs` hinzufügen:
 
 ```csharp
 using System.Globalization;
