@@ -26,14 +26,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 969e02ea7a560a18f8c0f79ada089fd791362808
+ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
+ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Entwickeln von Clientanwendungen mit .NET Framework
-Es gibt mehrere Möglichkeiten zum Entwickeln Windows-basierter Anwendungen mit .NET Framework, die lokal auf den Computern oder Geräten der Benutzer ausgeführt werden. Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie Windows-basierte Anwendungen mit Windows Presentation Foundation (WPF) oder mit Windows Forms erstellt werden. Sie können jedoch außerdem Clientanwendungen mit .NET Framework erstellen und für Ihre Benutzer über den Windows Store und Windows Phone Store für Computer oder Geräte, Webanwendungen, die in einem Browser angezeigt werden können, verfügbar machen.  
+Es gibt mehrere Möglichkeiten zum Entwickeln Windows-basierter Anwendungen mit .NET Framework, die lokal auf den Computern oder Geräten der Benutzer ausgeführt werden. Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie Windows-basierte Anwendungen mit Windows Presentation Foundation (WPF) oder mit Windows Forms erstellt werden. Sie können jedoch außerdem Webanwendungen mit .NET Framework sowie Clientanwendungen für Computer oder Geräte erstellen, die Sie über den Windows Store oder den Windows Phone Store verfügbar machen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  

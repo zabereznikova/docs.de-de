@@ -1,5 +1,5 @@
 ---
-title: "Behandeln und Auslösen von Ereignissen | Microsoft-Dokumentation"
+title: "Behandeln und Auslösen von Ereignissen"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,10 +17,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 59e11b0da28f28008f4440ca5c88ca8210fc2191
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
@@ -37,22 +38,20 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
   
  Im folgenden Beispiel wird die Deklaration eines Ereignisses namens `ThresholdReached`erläutert. Das Ereignis wird dem <xref:System.EventHandler>-Delegaten zugeordnet, und es wird in einer Methode namens `OnThresholdReached` ausgelöst.  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
- [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)] [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>Delegaten  
  Ein Delegat ist ein Typ, der einen Verweis auf eine Methode enthält. Ein Delegat wird mit einer Signatur deklariert, die den Rückgabetyp und die Parameter für die Methoden angibt, auf die er verweist. Er kann nur Verweise auf Methoden enthalten, die mit der Signatur übereinstimmen. Ein Delegat entspricht insofern einem typsicheren Funktionszeiger oder einem Rückruf. Mit einer Delegatdeklaration ist eine Delegatklasse ausreichend definiert.  
   
  Delegaten können in .NET Framework vielfältig verwendet werden. Im Kontext der Ereignisse ist ein Delegat ein Mittler (oder ein zeigerähnlicher Mechanismus) zwischen der Ereignisquelle und dem Code, mit dem das Ereignis behandelt wird. Sie weisen einen Delegaten einem Ereignis zu, indem Sie den Delegattyp in der Ereignisdeklaration, wie im Beispiel des vorherigen Abschnitts veranschaulicht, einschließen. Weitere Informationen zu Delegaten finden Sie unter der <xref:System.Delegate>-Klasse.  
   
- .NET Framework stellt die <xref:System.EventHandler>- und <xref:System.EventHandler%601> -Delegaten zur Unterstützung der meisten Ereignisszenarios bereit. Verwenden Sie den <xref:System.EventHandler>-Delegaten für alle Ereignisse, in denen keine Ereignisdaten enthalten sind. Verwenden Sie den <xref:System.EventHandler%601>-Delegaten für Ereignisse, die Daten über das Ereignis enthalten. Diese Delegaten verfügen über keinen Rückgabetypwert und akzeptieren zwei Parameter (ein Objekt für die Ereignisquelle sowie ein Objekt für Ereignisdaten).  
+ .NET Framework stellt die <xref:System.EventHandler> und <xref:System.EventHandler%601>-Delegaten zur Unterstützung der meisten Ereignisszenarien bereit. Verwenden Sie den <xref:System.EventHandler>-Delegaten für alle Ereignisse, in denen keine Ereignisdaten enthalten sind. Verwenden Sie den <xref:System.EventHandler%601>-Delegaten für Ereignisse, die Daten über das Ereignis enthalten. Diese Delegaten verfügen über keinen Rückgabetypwert und akzeptieren zwei Parameter (ein Objekt für die Ereignisquelle sowie ein Objekt für Ereignisdaten).  
   
  Delegaten sind Multicastdelegaten, d. h., sie können Verweise auf mehrere Methoden für die Ereignisbehandlung enthalten. Weitere Informationen finden Sie auf der <xref:System.Delegate>-Referenzseite. Delegaten bieten Flexibilität und eine genaue Steuerung bei der Ereignisbehandlung. Ein Delegat fungiert als ein Ereignisverteiler für die Klasse, die das Ereignis auslöst, indem er eine Liste der registrierten Ereignishandler für das Ereignis verwaltet.  
   
- Für Szenarios, in denen die Delegaten <xref:System.EventHandler> und <xref:System.EventHandler%601> nicht funktionieren, können Sie einen Delegaten definieren. Szenarien, für die Sie einen Delegaten definieren müssen, sind sehr selten, z. B. bei der Arbeit mit Code, von dem keine Generika erkannt werden. Markieren Sie einen Delegaten in der Deklaration mit dem Schlüsselwort `delegate` (in C#) bzw. dem Schlüsselwort `Delegate` (in Visual Basic). Im folgenden Beispiel wird die Deklaration eines Delegaten namens `ThresholdReachedEventHandler` erläutert.  
+ Für Szenarien, in denen die Delegaten <xref:System.EventHandler> und <xref:System.EventHandler%601> nicht funktionieren, können Sie einen Delegaten definieren. Szenarien, für die Sie einen Delegaten definieren müssen, sind sehr selten, z. B. bei der Arbeit mit Code, von dem keine Generika erkannt werden. Markieren Sie einen Delegaten in der Deklaration mit dem Schlüsselwort `delegate` (in C#) bzw. dem Schlüsselwort `Delegate` (in Visual Basic). Im folgenden Beispiel wird die Deklaration eines Delegaten namens `ThresholdReachedEventHandler` erläutert.  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
- [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)] [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>Ereignisdaten  
  Daten, die einem Ereignis zugewiesen sind, können durch eine Ereignisdatenklasse bereitgestellt werden. Im .NET Framework werden viele Ereignisdatenklassen für die Verwendung in Ihren Anwendungen bereitgestellt. Zum Beispiel ist die <xref:System.IO.Ports.SerialDataReceivedEventArgs>-Klasse die Ereignisdatenklasse für das <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>-Ereignis. Das .NET Framework folgt einem Benennungsmuster, bei dem alle Ereignisdatenklassen auf `EventArgs` enden. Sie bestimmen, welche Ereignisdatenklasse einem Ereignis zugeordnet wird, indem Sie den Delegaten nach dem Ereignis durchsuchen. Zum Beispiel enthält der <xref:System.IO.Ports.SerialDataReceivedEventHandler>-Delegat die <xref:System.IO.Ports.SerialDataReceivedEventArgs>-Klasse als einen seiner Parameter.  
@@ -63,19 +62,17 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
   
  Im folgenden Beispiel wird eine Ereignisdatenklasse `ThresholdReachedEventArgs` veranschaulicht. Darin sind Eigenschaften enthalten, die für das ausgelöste Ereignis spezifisch sind.  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
- [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)] [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>Ereignishandler  
  Um auf ein Ereignis zu reagieren, definieren Sie eine Ereignishandlermethode im Ereignisempfänger. Diese Methode muss der Signatur des Delegaten für das von Ihnen behandelte Ereignis entsprechen. Im Ereignishandler führen Sie die Aktionen aus, die beim Auslösen des Ereignisses erforderlich sind, zum Beispiel das Sammeln von Benutzereingaben, nachdem der Benutzer auf eine Schaltfläche geklickt hat. Um bei Auftreten des Ereignisses Benachrichtigungen zu empfangen, muss die Ereignishandlermethode das Ereignis abonnieren.  
   
  Im folgenden Beispiel wird die Ereignishandlermethode `c_ThresholdReached` dargestellt, die der Signatur für den <xref:System.EventHandler>-Delegaten entspricht. Die Methode abonniert das `ThresholdReached`-Ereignis.  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
- [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)] [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Statische und dynamische Ereignishandler  
- Mit dem .NET Framework können sich Abonnenten entweder statisch oder dynamisch für Ereignisbenachrichtigungen registrieren. Statische Ereignishandler sind für die gesamte Lebensdauer der Klasse gültig, deren Ereignisse sie behandeln. Dynamische Ereignishandler werden bei der Programmausführung explizit aktiviert und deaktiviert. Dies erfolgt in der Regel als Reaktion auf eine bedingte Programmlogik. So können sie beispielsweise verwendet werden, wenn Ereignisbenachrichtigungen nur unter bestimmten Bedingungen erforderlich sind, oder wenn eine Anwendung mehrere Ereignishandler bereitstellt und über die Laufzeitbedingungen definiert wird, welcher davon verwendet wird. Im Beispiel des vorherigen Abschnitts wird das dynamische Hinzufügen eines Ereignishandlers veranschaulicht. Weitere Informationen finden Sie unter [Ereignisse (Visual Basic)](http://msdn.microsoft.com/library/8fb0353a-e41b-4e23-b78f-da65db832f70) und [Ereignisse (C#-Programmierhandbuch)](http://msdn.microsoft.com/library/a8e51b22-d294-44fb-9539-0072f06c4cb3).  
+ Mit dem .NET Framework können sich Abonnenten entweder statisch oder dynamisch für Ereignisbenachrichtigungen registrieren. Statische Ereignishandler sind für die gesamte Lebensdauer der Klasse gültig, deren Ereignisse sie behandeln. Dynamische Ereignishandler werden bei der Programmausführung explizit aktiviert und deaktiviert. Dies erfolgt in der Regel als Reaktion auf eine bedingte Programmlogik. So können sie beispielsweise verwendet werden, wenn Ereignisbenachrichtigungen nur unter bestimmten Bedingungen erforderlich sind, oder wenn eine Anwendung mehrere Ereignishandler bereitstellt und über die Laufzeitbedingungen definiert wird, welcher davon verwendet wird. Im Beispiel des vorherigen Abschnitts wird das dynamische Hinzufügen eines Ereignishandlers veranschaulicht. Weitere Informationen finden Sie unter [Ereignisse (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md) und [Ereignisse (C#-Programmierhandbuch)](../../csharp/programming-guide/events/index.md).  
   
 ## <a name="raising-multiple-events"></a>Auslösen mehrerer Ereignisse  
  Wenn von der Klasse mehrere Ereignisse ausgelöst werden, generiert der Compiler ein Feld pro Ereignisdelegatinstanz. Ist die Anzahl der Ereignisse sehr hoch, wird u. U. zu viel Speicher beansprucht, wenn für jeden Delegaten ein Feld generiert wird. Für solche Situationen werden im .NET Framework Ereigniseigenschaften bereitgestellt, die Sie mit einer weiteren beliebig wählbaren Datenstruktur zum Speichern von Ereignisdelegaten verwenden können.  
@@ -97,5 +94,6 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
  <xref:System.EventArgs>   
  <xref:System.Delegate>   
  [Übersicht über Ereignisse und Routingereignisse (Windows Store-Apps)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [Ereignisse](http://msdn.microsoft.com/library/8fb0353a-e41b-4e23-b78f-da65db832f70)   
- [Ereignisse](http://msdn.microsoft.com/library/a8e51b22-d294-44fb-9539-0072f06c4cb3)
+ [Ereignisse (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ [Ereignisse (C#-Programmierhandbuch)](../../csharp/programming-guide/events/index.md)
+

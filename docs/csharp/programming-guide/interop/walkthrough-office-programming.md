@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
@@ -83,7 +83,9 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 2.  Fügen Sie die folgenden `Imports`-Anweisungen (Visual Basic) oder `using`-Direktiven (C#) am Anfang der Codedatei ein, wenn sie noch nicht vorhanden sind.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)] [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+
+     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>So erstellen Sie eine Liste mit Bankkonten  
   
@@ -91,17 +93,23 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 2.  Ersetzen Sie die Definition der `Account`-Klasse durch den folgenden Code. Die Klassendefinitionen verwenden *automatisch implementierte Eigenschaften*. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)] [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+
+     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  Fügen Sie den folgenden Code in die `ThisAddIn_Startup`-Methode in *ThisAddIn.vb* oder *ThisAddIn.cs* ein, um eine `bankAccounts`-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)] [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+
+     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### <a name="to-export-data-to-excel"></a>So exportieren Sie Daten nach Excel  
   
 1.  Fügen Sie in der gleichen Datei die folgende Methode der `ThisAddIn`-Klasse hinzu. Die Methode richtet eine Excel-Arbeitsmappe ein, in die die Daten exportiert werden.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)] [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+
+     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      Bei dieser Methode werden zwei neue C#-Funktionen verwendet. Beide Funktionen existieren bereits in Visual Basic.  
   
@@ -123,7 +131,9 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 2.  Fügen Sie den folgenden Code am Ende von `DisplayInExcel` hinzu, um die Spaltenbreite an den Inhalt anzupassen.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)] [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+
+     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
      Diese Ergänzungen veranschaulichen eine weitere Funktion in C#: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist oder gleichermaßen wenn die [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in Visual C# 2008 und in früheren Sprachversionen erforderliche explizite Umwandlung.  
   
@@ -135,9 +145,11 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 ### <a name="to-invoke-displayinexcel"></a>So rufen Sie DisplayInExcel auf  
   
-1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)] [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+
+     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  Drücken Sie F5, um das Programm auszuführen. Ein Excel-Arbeitsblatt wird mit den Kontendaten angezeigt.  
   
@@ -145,7 +157,9 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 1.  Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu, um ein Word-Dokument zu erstellen, das einen Link zur Excel-Arbeitsmappe enthält.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)] [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+
+     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      Dieser Code veranschaulicht mehrere der neuen Funktionen in C#: die Möglichkeit, das `ref`-Schlüsselwort in der COM-Programmierung auszulassen, benannte Argumente sowie optionale Argumente. Diese Funktionen sind bereits in Visual Basic vorhanden. Die Methode [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) verfügt über sieben Parameter, die als optionale Verweisparameter definiert sind. Benannte und optionale Argumente ermöglichen es Ihnen, die Parameter festzulegen, auf die Sie namentlich zugreifen möchten, und Argumente nur an diese Parameter zu senden. In diesem Beispiel werden Argumente gesendet, um anzugeben, dass ein Link zur Arbeitsmappe in der Zwischenablage erstellt werden soll (Parameter `Link`) und dass der Link im Word-Dokument als Symbol angezeigt werden soll (Parameter `DisplayAsIcon`). Visual C# ermöglicht auch das Weglassen des `ref`-Schlüsselworts für diese Argumente.
   

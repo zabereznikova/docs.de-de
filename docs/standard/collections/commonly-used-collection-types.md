@@ -23,10 +23,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a3ac4cbdee87e71f9a0de8aae701d84bfc96137
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: dfdfea20aeb8d0002ef22b9649afc09f80caeae2
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="commonly-used-collection-types"></a>Häufig verwendete Auflistungstypen

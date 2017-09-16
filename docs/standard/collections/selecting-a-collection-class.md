@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26467141e5f7537efddd79e0b04af6203e4a6994
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
@@ -68,7 +68,7 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
   
     -   Die Klasse <xref:System.Collections.Hashtable> sortiert ihre Elemente anhand ihrer Hashcodes.  
   
-    -   Die Klasse <xref:System.Collections.SortedList> und die generischen Klassen <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> sortieren ihre Elemente nach dem Schlüssel basierend auf Implementierungen der <xref:System.Collections.IComparer>-Schnittstelle und der generischen <xref:System.Collections.Generic.IComparer%601>-Schnittstelle.  
+    -   Die Klasse <xref:System.Collections.SortedList> und die generischen Klassen <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> sortieren ihre Elemente nach dem Schlüssel basierend auf Implementierungen der <xref:System.Collections.IComparer>-Schnittstelle und der generische <xref:System.Collections.Generic.IComparer%601>-Schnittstelle.  
   
     -   <xref:System.Collections.ArrayList> stellt eine Methode <xref:System.Collections.ArrayList.Sort%2A> bereit, die eine <xref:System.Collections.IComparer>-Implementierung als Parameter annimmt. Ihre generische Entsprechung, diegenerische Klasse  <xref:System.Collections.Generic.List%601> stellt eine Methode <xref:System.Collections.Generic.List%601.Sort%2A> bereit, die eine Implementierung der generischen <xref:System.Collections.Generic.IComparer%601>-Schnittstelle als Parameter annimmt.  
   

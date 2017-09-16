@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="methods"></a>Methoden #
@@ -22,7 +22,7 @@ ms.lasthandoff: 07/28/2017
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Methode `Main` ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.
 
 > [!NOTE]
-> In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](https://msdn.microsoft.com/library/bb882516.aspx).
+> In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](programming-guide/statements-expressions-operators/anonymous-functions.md).
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -252,14 +252,14 @@ Es gibt normalerweise zwei Möglichkeiten, einem vorhandenen Typ eine Methode hi
 
 Erweiterungsmethoden lassen Sie eine Methode einem vorhanden Typ „hinzufügen“, ohne den eigentlichen Typ zu verändern oder die neue Methode in einem geerbten Typ zu implementieren. Die Erweiterungsmethode muss sich auch nicht im gleichen Assembly wie der Typ befinden, den es erweitert. Sie rufen eine Erweiterungsmethode auf, als ob es sich um einen definierten Member eines Typs handele.
 
-Weitere Informationen finden Sie unter [Erweiterungsmethoden](https://msdn.microsoft.com/library/bb383977.aspx).
+Weitere Informationen finden Sie unter [Erweiterungsmethoden](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
 ## <a name="async-methods"></a>Asynchrone Methoden ##
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem Modifizierer [async](https://msdn.microsoft.com/library/hh156513.aspx) kennzeichnen, können Sie den Operator [await](https://msdn.microsoft.com/library/hh156528.aspx) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](language-reference/keywords/await.md) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
@@ -270,9 +270,9 @@ Im folgenden Beispiel ist `DelayAsync` eine asynchrone Methode, die eine Rückga
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Mit einer asynchronen Methode können keine [ref](https://msdn.microsoft.com/library/14akc2c7.aspx)- oder [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
+Mit einer asynchronen Methode können keine [ref](language-reference/keywords/ref.md)- oder [out](language-reference/keywords/out.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
- Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](https://msdn.microsoft.com/library/mt674882.aspx), [Ablaufsteuerung in asynchronen Programmen](https://msdn.microsoft.com/library/mt674892.aspx) und [Asynchrone Rückgabetypen](https://msdn.microsoft.com/library/mt674893.aspx).
+ Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](async.md), [Ablaufsteuerung in asynchronen Programmen](programming-guide/concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 ## <a name="expression-bodied-members"></a>Ausdruckskörpermember ##
@@ -293,20 +293,20 @@ Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode hand
 <a name="iterators"></a>
 ## <a name="iterators"></a>Iteratoren ##
 
-Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
+Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
 
 Der Rückgabetyp eines Iterators kann @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator oder @System.Collections.Generic.IEnumerator%601 sein.
 
-Weitere Informationen finden Sie unter [Iteratoren](https://msdn.microsoft.com/library/mt639331.aspx).
+Weitere Informationen finden Sie unter [Iteratoren](programming-guide/concepts/iterators.md).
 
 ## <a name="see-also"></a>Siehe auch ##
 
-[Access Modifiers (Zugriffsmodifizierer)](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
-[Statische Klassen und statische Klassenmember](https://msdn.microsoft.com/library/79b3xss3.aspx)   
-[Vererbung](https://msdn.microsoft.com/library/ms173149.aspx)   
-[Abstrakte und versiegelte Klassen und Klassenmember](https://msdn.microsoft.com/library/ms173150.aspx)   
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
-[Übergeben von Parametern](https://msdn.microsoft.com/library/0f66670z.aspx)
+[Zugriffsmodifizierer](language-reference/keywords/access-modifiers.md)   
+[Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+[Vererbung](programming-guide/classes-and-structs/inheritance.md)   
+[Abstrakte und versiegelte Klassen und Klassenmember](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+[params](language-reference/keywords/params.md)   
+[out](language-reference/keywords/out.md)   
+[ref](language-reference/keywords/ref.md)   
+[Übergeben von Parametern](programming-guide/classes-and-structs/passing-parameters.md)
 

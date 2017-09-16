@@ -1,25 +1,30 @@
 ---
-title: "ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17872cf1052acd963933b2d444a638e790e2c946
+ms.contentlocale: de-de
+ms.lasthandoff: 09/05/2017
+
 ---
-# ADO.NET
-Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework\-Programmierer verfügbar machen.  ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe.  Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML\- und Anwendungsdaten.  ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front\-End\-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
+# <a name="adonet"></a>ADO.NET
+Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Neues in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Enthält eine Einführung in neue Funktionen von ADO.NET.  
   
@@ -29,11 +34,11 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [Entity Framework](http://go.microsoft.com/fwlink/?LinkID=213876)  
  Beschreibt das Erstellen von Anwendungen mit dem Entity Framework.  
   
- [Sichern von ADO.NET\-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Beschreibt sichere Programmiermethoden für ADO.NET.  
   
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- Beschreibt Datentypzuordnungen zwischen .NET Framework\-Datentypen und den .NET Framework\-Datenanbietern.  
+ Beschreibt Datentypzuordnungen zwischen .NET Framework-Datentypen und den .NET Framework-Datenanbietern.  
   
  [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Beschreibt das Erstellen und Verwenden von `DataSets`, typisierten `DataSets`, `DataTables` und `DataViews`.  
@@ -48,27 +53,28 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Beschreibt das Arbeiten mit Funktionen und Funktionalität, die spezifisch für SQL Server sind.  
   
  [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- Beschreibt Funktionen und Verhaltensweisen, die spezifisch für den .NET Framework\-Datenanbieter für Oracle sind.  
+ Beschreibt Funktionen und Verhaltensweisen, die spezifisch für den .NET Framework-Datenanbieter für Oracle sind.  
   
-## Verwandte Abschnitte  
- [Sicherheit in systemeigenem Code und .NET Framework\-Code](http://msdn.microsoft.com/de-de/bd61be84-c143-409a-a75a-44253724f784)  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
  Enthält Links zu Sicherheitsthemen für Visual Studio, .NET Framework und Kryptografie.  
   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- Enthält Links zu LINQ\-Themen und \-Beispielen.  
+ [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ Enthält Links zu LINQ-Themen und -Beispielen.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- Beschreibt die Verwendung von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum Bereitstellen von Datendiensten, die das Open Data Protocol \(OData\) implementieren, im Internet oder in einem Intranet.  
+ Beschreibt die Verwendung von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum Bereitstellen von Datendiensten, die das Open Data Protocol (OData) implementieren, im Internet oder in einem Intranet.  
   
- [Core Development Technologies](http://msdn.microsoft.com/de-de/f7f0ab29-7866-4ef1-84dc-40e9677b5441)  
- Stellt Links zu Informationen über Standardentwicklungsaufgaben in .NET Framework bereit.  
+ [Core Development Technologies (Core-Entwicklungstechnologien)](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ Stellt Links zu Informationen über Standardentwicklungsaufgaben in .NET Framework bereit.  
   
- [Advanced Development Technologies](http://msdn.microsoft.com/de-de/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
- Stellt Links zu Informationen über anspruchsvolle Entwicklungsaufgaben und Techniken in .NET Framework bereit.  
+ [Advanced Development Technologies (Erweiterte Entwicklungstechnologien)](https://msdn.microsoft.com/library/a493kdy6.aspx)  
+ Stellt Links zu Informationen über anspruchsvolle Entwicklungsaufgaben und Techniken in .NET Framework bereit.  
   
- [Samples and QuickStarts](http://msdn.microsoft.com/de-de/e0d76b4d-faa3-4281-a8d3-1136143a2be7)  
- Stellt komplette Auflistungen aller mit .NET Framework verbundenen Beispiele \(einschließlich denen für den Schnellstart\) bereit.  
+ [Samples and Quickstarts (Beispiele und Schnellstarts)](https://msdn.microsoft.com/library/ms184422.aspx)  
+ Stellt komplette Auflistungen aller mit .NET Framework verbundenen Beispiele (einschließlich denen für den Schnellstart) bereit.  
   
-## Siehe auch  
- [Zugreifen auf Daten in Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)   
+ [ADO.NET Managed Providers und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+

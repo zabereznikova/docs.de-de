@@ -30,14 +30,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bfc0c0af620f7ec8b6b8a8352bf4253b85cc682c
+ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
+ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
-Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
+Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
   
  Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=fullName>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
   
