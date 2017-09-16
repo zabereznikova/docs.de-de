@@ -1,77 +1,80 @@
 ---
-title: "WIF-Claims-Programmiermodell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WIF-Claims-Programmiermodell
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF-Claims-Programmiermodell
-ASP.NET und Windows Communication Foundation \(WCF\)\-Entwickler verwenden normalerweise die IIdentity und IPrincipal\-Schnittstelle mit Identitätsinformationen des Benutzers.  In.NET 4.5, Windows Identity Foundation \(WIF\) wurde integriert Ansprüche jetzt immer für einen Prinzipal, wie im folgenden Diagramm dargestellt werden:  
+# <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
+Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:  
   
- ![WIF&#45;Claims&#45;Programmiermodell](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")  
+ ![WIF-Claims-Programmiermodell](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")  
   
- In.NET 4.5 enthält System.Security.Claims die neuen ClaimsPrincipal und ClaimsIdentity\-Klassen \(siehe Abbildung oben\).  Alle Prinzipale in.NET jetzt aus ClaimsPrincipal ableiten.  Alle integrierten Identitätsklassen wie FormsIdentity für ASP.NET und WindowsIdentity sind nun vom ClaimsIdentity abgeleitet.  Ebenso werden alle integrierte principal Klassen wie GenericPrincipal und WindowsPrincipal von ClaimsPrincipal abgeleitet.  
+ In .NET 4.5 enthält System.Security.Claims die neuen Klassen ClaimsPrincipal und ClaimsIdentity (siehe Abbildung oben). Alle Prinzipale in .NET werden nun von ClaimsPrincipal abgeleitet. Alle integrierten Identitätsklassen, z.B. FormsIdentity für ASP.NET und WindowsIdentity werden jetzt aus ClaimsIdentity abgeleitet. Auf ähnliche Weise werden alle integrierten Prinzipalklassen wie GenericPrincipal und WindowsPrincipal aus ClaimsPrincipal abgeleitet.  
   
- Ein Anspruch ist vertreten durch <xref:System.Security.Claims.Claim> Klasse.  Diese Klasse verfügt über die folgenden wichtigen Eigenschaften:  
+ Ein Anspruch wird von der <xref:System.Security.Claims.Claim>-Klasse dargestellt. Diese Klasse hat die folgenden Eigenschaften:  
   
--   <xref:System.Security.Claims.Claim.Type%2A>Stellt die Art der Forderung und in der Regel ein URI.  Beispielsweise wird der E\-mail\-Adresse\-Anspruch dargestellt, als `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> stellt den Typ des Anspruchs dar und ist in der Regel ein URI. Der Anspruch der E-Mailadresse wird z.B. als `http://schemas.microsoft.com/ws/2008/06/identity/claims/email` dargestellt.  
   
--   <xref:System.Security.Claims.Claim.Value%2A>enthält den Wert des Anspruchs und als Zeichenfolge dargestellt wird.  Beispielsweise kann die e\-Mail\-Adresse als "jemand@contoso.com" dargestellt werden.  
+-   <xref:System.Security.Claims.Claim.Value%2A> enthält den Wert des Anspruchs und wird als Zeichenfolge dargestellt. Der Anspruch der E-Mailadresse kann z.B. als „someone@contoso.com“ dargestellt werden.  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A>Stellt den Typ der Wert des Anspruchs und in der Regel ein URI.  Beispielsweise wird der String\-Typ dargestellt, als `http://www.w3.org/2001/XMLSchema#string`.  Der Werttyp muss ein QName gemäß dem XML\-Schema sein.  Der Wert sollte im Format `namespace#format` WIF einen gültigen QName Wert Ausgabe aktivieren.  Wenn der Namespace keine klar definierte Namespace ist, darf nicht das generierte XML Schema validiert, wahrscheinlich sein, denn es eine veröffentlichte XSD\-Datei für diesen Namespace nicht wird.  Der Standard\-Werttyp ist `http://www.w3.org/2001/XMLSchema#string`.  Bitte finden Sie unter [http:\/\/www.w3.org\/2001\/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) bekannten Werttypen, die Verwendung von Sie sicher.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> stellt den Typ des Anspruchswerts dar und ist in der Regel ein URI. Der Zeichenfolgentyp wird z.B. durch `http://www.w3.org/2001/XMLSchema#string` dargestellt. Gemäß dem XML-Schema muss der Werttyp ein QName sein. Der Wert muss im Format `namespace#format` vorhanden sein, um WIF zur Ausgabe eines gültigen QName-Werts zu aktivieren. Ist der Namespace kein klar definierter Namespace, kann die generierte XML-Datei möglicherweise nicht vom Schema überprüft werden, da keine veröffentlichte XSD-Datei für diesen Namespace vorhanden sein wird. Der Standardwert ist `http://www.w3.org/2001/XMLSchema#string`. Weitere Informationen zu bekannten Werttypen, die Sie sicher verwenden können, finden Sie unter [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155).  
   
--   <xref:System.Security.Claims.Claim.Issuer%2A>ist der Bezeichner der Sicherheitstokendienst \(STS\), der den Anspruch ausgestellt hat.  Dies kann als URL der STS oder eines Namens, z. B. der STS darstellt, dargestellt werden `https://sts1.contoso.com/sts`.  
+-   <xref:System.Security.Claims.Claim.Issuer%2A> ist der Bezeichner für den Sicherheitstokendienst (STS), der den Anspruch ausgestellt hat. Dies kann als URL des STS dargestellt werden, oder als Name, der den STS darstellt, beispielsweise `https://sts1.contoso.com/sts`.  
   
--   <xref:System.Security.Claims.Claim.OriginalIssuer%2A>ist der Bezeichner des STS, die ursprünglich den Anspruch, unabhängig davon, wie viele STSs ausgestellt werden, in der Kette.  Dies wird dargestellt, wie <xref:System.Security.Claims.Claim.Issuer%2A>.  
+-   <xref:System.Security.Claims.Claim.OriginalIssuer%2A> ist der Bezeichner des STS, der den Anspruch ursprünglich erhoben hat, unabhängig davon, wie viele STS in der Kette sind. Dies wird einfach als <xref:System.Security.Claims.Claim.Issuer%2A> dargestellt.  
   
--   <xref:System.Security.Claims.Claim.Subject%2A>ist das Thema, dessen Identität geprüft wird.  Sie enthält eine <xref:System.Security.Claims.ClaimsIdentity>.  
+-   <xref:System.Security.Claims.Claim.Subject%2A> ist der Antragsteller, dessen Identität überprüft wird. Sie enthält eine <xref:System.Security.Claims.ClaimsIdentity>.  
   
--   <xref:System.Security.Claims.Claim.Properties%2A>ist ein Wörterbuch, das den Entwickler kann anwendungsspezifische Daten liefern, um bei der Übertragung zusammen mit anderen Eigenschaften übertragen werden und kann für die benutzerdefinierte Validierung verwendet werden.  
+-   <xref:System.Security.Claims.Claim.Properties%2A> ist ein Wörterbuch, mit dem der Entwickler anwendungsspezifische Daten bereitstellen kann, die zusammen mit den anderen Eigenschaften übertragen werden, und für die benutzerdefinierte Überprüfung verwendet werden kann.  
   
-## Identitätsdelegierung der  
- Eine wichtige Eigenschaft des <xref:System.Security.Claims.ClaimsIdentity> ist <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>.  Diese Eigenschaft ermöglicht die Delegierung von Anmeldeinformationen in einem Multi\-Tier\-System in die mittlere Ebene als der Client Anforderungen an einen Back\-End\-Dienst fungiert.  
+## <a name="identity-delegation"></a>Identitätsdelegierung  
+ Eine wichtige Eigenschaft von <xref:System.Security.Claims.ClaimsIdentity> ist <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>. Diese Eigenschaft aktiviert die Delegierung von Anmeldeinformationen in einem System mit mehreren Ebenen, in dem eine mittlere Ebene als Client agiert, der Anforderungen an einen Back-End-Dienst stellt.  
   
-### Zugriff auf Ansprüche über Thread.CurrentPrincipal  
- Verwenden des aktuellen Benutzers Ansprüche in RP\-Anwendung zugreifen, `Thread.CurrentPrincipal`.  
+### <a name="accessing-claims-through-threadcurrentprincipal"></a>Zugriff auf Ansprüche über Thread.CurrentPrincipal  
+ Verwenden Sie `Thread.CurrentPrincipal`, um auf den Satz von Ansprüchen des aktuellen Benutzers in einer Anwendung der vertrauenden Seite zugreifen zu können.  
   
- Das folgende Codebeispiel zeigt die Verwendung dieser Methode um eine System.Security.Claims.ClaimsIdentity zu erhalten:  
+ Das folgende Codebeispiel zeigt die Verwendung dieser Methode zum Abrufen einer System.Security.Claims.ClaimsIdentity:  
   
 ```  
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;  
-  
 ```  
   
  Weitere Informationen finden Sie unter <xref:System.Security.Claims>.  
   
-### Rollenanspruchstyp  
- Konfigurieren der Anwendung für die RP gehört zu bestimmen, welche Ihre Rolle sollte sein behaupten.  Dieser Anspruchstyp wird von System.Security.Claims.ClaimsPrincipal.IsInRole\(System.String\) verwendet.  Der Standard\-Anspruchstyp ist `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`.  
+### <a name="role-claim-type"></a>Rollenanspruchstyp  
+ Bei der Konfiguration Ihrer Anwendung der vertrauenden Seite müssen Sie Ihren Rollenanspruchstyp bestimmen. Dieser Anspruchstyp wird von System.Security.Claims.ClaimsPrincipal.IsInRole(System.String) verwendet. Der Standardanspruchstyp ist `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`.  
   
-### Ansprüche, die von Windows\-Identität Foundation aus unterschiedlichen Token extrahiert  
- WIF unterstützt mehrere Authentifizierungsmechanismen out of the Box.  Die folgende Tabelle listet die Ansprüche, die von anderen Tokentypen WIF extrahiert.  
+### <a name="claims-extracted-by-windows-identity-foundation-from-different-token-types"></a>Ansprüche, die von Windows Identity Foundation aus anderen Tokentypen extrahiert wurden  
+ WIF unterstützt verschiedene Kombinationen von standardmäßigen Authentifizierungsmechanismen. Die folgende Tabelle enthält die Ansprüche, die WIF aus anderen Tokentypen extrahiert.  
   
-||||  
+|Tokentyp|Erstellter Anspruch|Zuordnung zu Windows-Zugriffstoken|  
 |-|-|-|  
-|Tokentyp|Forderung generiert|Karte, um Windows\-Zugriffstoken|  
-|SAML 1.1|1.  Alle Ansprüche aus System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity\(System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope\).<br />2.  Die `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` Anspruch, die die XML\-Serialisierung des Schlüssels Bestätigung enthält, wenn das Token ein Prüftoken enthält.<br />3.  Die `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` aus dem Emittenten Element behaupten.<br />4.  AuthenticationMethod und AuthenticationInstant Angaben, wenn das Token eine Authentifizierungsanweisung enthält.|Zusätzlich zu den Ansprüchen gemäß "SAML 1.1", mit Ausnahme der Ansprüche vom Typ `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`, Windows\-Authentifizierung mit Bezug Ansprüche werden hinzugefügt und die Identität wird durch WindowsClaimsIdentity dargestellt werden.|  
-|SAML 2.0|Identisch mit "SAML 1.1".|Identisch mit "SAML 1.1 Windowskonto zugeordnet".|  
-|X509|1.  Forderungen mit der X 500 distinguished Name, e\-Mail\-Name, DNS\-Name, SimpleName, UpnName, UrlName, Fingerabdruck, RsaKey \(Dies kann extrahiert werden mithilfe der RSACryptoServiceProvider.ExportParameters\-Methode aus der X509Certificate2.PublicKey.Key\-Eigenschaft\), DsaKey \(Dies kann extrahiert werden mithilfe der DSACryptoServiceProvider.ExportParameters\-Methode aus der X509Certificate2.PublicKey.Key\-Eigenschaft\), SerialNumber Eigenschaften von X 509\-Zertifikat.<br />2.  AuthenticationMethod Anspruch mit Wert `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`.  AuthenticationInstant behaupten, mit dem Wert der Zeit, wann das Zertifikat im XmlSchema\-DateTime\-Format überprüft wurde.|1.  Es verwendet den Windows\-Konto vollständig qualifizierten Domänennamen als den `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` Wert behaupten.  .<br />2.  Ansprüche von X 509\-Zertifikat nicht Windows zugeordnet, und Ansprüche aus dem Windowskonto erhalten von Windows das Zertifikat zuordnen.|  
-|UPN|1.  Ansprüche sind ähnlich wie die Ansprüche im Bereich Windows\-Authentifizierung.<br />2.  AuthenticationMethod Anspruch mit Wert `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`.  Die Forderung AuthenticationInstant mit dem Wert der Zeit, wann das Kennwort im XmlSchema\-DateTime\-Format überprüft wurde.||  
-|Windows \(Kerberos oder NTLM\)|1.  Ansprüche aus dem Zugriffstoken generiert, z. B.: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, Gruppen\-SID, DenyOnlySID, und Name<br />2.  AuthenticationMethod mit dem Wert `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`.  AuthenticationInstant mit dem Wert der Zeit, wenn die Windows Token zuzugreifen, wurde in das XMLSchema\-DateTime\-Format erstellt.||  
-|RSA\-Schlüsselpaar|1.  Die `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` mit dem Wert der RSAKeyValue behaupten.<br />2.  AuthenticationMethod Anspruch mit dem Wert `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`.  AuthenticationInstant Anspruch mit dem Wert der Zeit, wenn der RSA\-Schlüssel authentifiziert wurde \(d. h. die Signatur wurde verifiziert\) in das XMLSchema\-DateTime\-Format.||  
+|SAML 1.1|1.  Alle Ansprüche aus System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity(System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope).<br />2.  Der `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey`-Anspruch, der die XML-Serialisierung des Bestätigungsschlüssels enthält, wenn das Token ein Prüftoken enthält.<br />3.  Der `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername`-Anspruch des Ausstellerelements.<br />4.  AuthenticationMethod- und AuthenticationInstant-Ansprüche, wenn das Token eine Authentifizierungsanweisung enthält.|Zusätzlich zu den in „SAML 1.1“ aufgeführten Ansprüchen, mit Ausnahme der Ansprüche des Typs `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`, werden Ansprüche mit Beziehung zur Windows-Authentifizierung hinzugefügt, und die Identität wird von WindowsClaimsIdentity dargestellt.|  
+|SAML 2.0|Identisch mit „SAML 1.1“.|Identisch mit „SAML 1.1 Windowskonto zugeordnet“.|  
+|X509|1.  Ansprüche mit den Eigenschaften X500 distinguished Name, EmailName, DnsName, SimpleName, UpnName, UrlName, Fingerabdruck, RsaKey (dies kann mithilfe der RSACryptoServiceProvider.ExportParameters-Methode aus der X509Certificate2.PublicKey.Key-Eigenschaft extrahiert werden), DsaKey (dies kann mithilfe der DSACryptoServiceProvider.ExportParameters-Methode aus der X509Certificate2.PublicKey.Key-Eigenschaft extrahiert werden), SerialNumber aus dem X509-Zertifikat.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`-Wert. AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Zertifikat im XmlSchema-DateTime-Format überprüft wurde.|1.  Er verwendet den vollqualifizierten Domänennamen des Windows-Kontos als `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`-Anspruchswert. .<br />2.  Ansprüche aus dem X509-Zertifikat, die Windows nicht zugeordnet sind, und Ansprüche aus dem Windows-Konto, die durch die Zuordnung des Zertifikats zu Windows abgerufen werden.|  
+|UPN|1.  Ansprüche sind den Ansprüchen im Abschnitt Windows-Authentifizierung ähnlich.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Kennwort im XmlSchema-DateTime-Format überprüft wurde.||  
+|Windows (Kerberos oder NTLM)|1.  Aus dem Zugriffstoken generierte Ansprüche, beispielsweise: PrimarySID, DenyOnlyPrimarySID PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID und Name<br />2.  AuthenticationMethod mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Windows-Zugangstoken im XmlSchema-DateTime-Format erstellt wurde.||  
+|RSA-Schlüsselpaar|1.  Der `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa`-Anspruch mit dem Wert des RSAKeyValue.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem der RSA-Schlüssel (d.h. die Signatur wurde überprüft) im XMLSchema-DateTime-Format authentifiziert wurde.||  
   
-|||  
+|Authentifizierungstyp|URI, der im AuthenticationMethod-Anspruch ausgegeben wurde|  
 |-|-|  
-|Authentifizierungstyp|URI "AuthenticationMethod" Forderung ausgegeben|  
 |Kennwort|`urn:oasis:names:tc:SAML:1.0:am:password`|  
 |Kerberos|`urn:ietf:rfc:1510`|  
 |SecureRemotePassword|`urn:ietf:rfc:2945`|  
@@ -80,4 +83,5 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |PGP|`urn:oasis:names:tc:SAML:1.0:am:PGP`|  
 |Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
 |XmlDSig|`urn:ietf:rfc:3075`|  
-|Nicht angegeben|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
+|Nicht angegeben.|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
+

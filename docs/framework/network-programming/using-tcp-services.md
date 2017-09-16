@@ -1,43 +1,48 @@
 ---
-title: "Verwenden von TCP-Diensten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anfordern von Daten aus dem Internet, TCP"
-  - "Empfangen von Daten, TCP"
-  - "TcpClient-Klasse, Informationen zur TcpClient-Klasse"
-  - "Datenanforderungen, TCP"
-  - "Anwendungsprotokolle, TCP"
-  - "Netzwerkressourcen, TCP"
-  - "Senden von Daten, TCP"
-  - "TCP"
-  - "Protokolle, TCP"
-  - "Internet, TCP"
+title: Verwenden von TCP-Diensten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Verwenden von TCP-Diensten
-Die <xref:System.Net.Sockets.TcpClient>\-Klasse fordert Daten von einer Internetressource mit TCP.  Die Methoden und Eigenschaften von **TcpClient** extrahieren die Details zum Erstellen von <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mit TCP.  Da die Verbindung zum Remotegerät als Stream dargestellt wird, können Daten mit .NET Framework\-StreamBehandlung Techniken gelesen und geschrieben werden.  
+# <a name="using-tcp-services"></a>Verwenden von TCP-Diensten
+Die <xref:System.Net.Sockets.TcpClient>-Klasse fordert über TCP Daten von einer Internetressource an. Die Eigenschaften und Methoden von **TcpClient** abstrahieren die Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von TCP. Da die Verbindung mit dem Remotegerät als Datenstrom dargestellt wird, können Daten mit Techniken zur Datenstromverarbeitung von .NET Framework gelesen und geschrieben werden.  
   
- Das TCP\-Protokoll wird eine Verbindung mit einem Remoteberichtsserver Endpunkt und dann anhand fest, die die Verbindung, von Datenpaketen zu senden und zu empfangen.  TCP ist dafür verantwortlich, dass Datenpakete an den Endpunkt gesendet werden und in der richtigen Reihenfolge assembliert, wenn sie erhält.  
+ Das TCP-Protokoll stellt eine Verbindung mit einem Remoteendpunkt her, und verwendet dann diese Verbindung zum Senden und Empfangen von Datenpaketen. TCP ist dafür verantwortlich, dass die Datenpakete an den Endpunkt gesendet und in der richtigen Reihenfolge zusammengestellt werden, wenn sie ankommen.  
   
- Um eine TCP\-Verbindung festzulegen, müssen Sie die Adresse des Netzwerkgeräts kennen den Dienst hostet, den Sie benötigen und die TCP\-Port kennen die der Dienst zu übermitteln.  Die Internet Assigned Numbers Authority \(Iana\) definiert Portnummern für gemeinsame Dienste \(finden Sie unter www.iana.org\/assignments\/port\-numbers\).  Dienste nicht auf der IANA\-Liste Portnummern können im Bereich 1.024 bis 65.535 aufweisen.  
+ Zur Erstellung einer TCP-Verbindung müssen Sie die Adresse des Netzwerkgeräts kennen, das den benötigten Dienst hostet und den TCP-Port, den der Dienst zum Kommunizieren verwendet. Internet Assigned Numbers Authority (Iana) definiert die Portnummern für gemeinsame Dienste (weitere Informationen finden Sie unter www.iana.org/assignments/port-numbers). Dienste, die sich nicht auf der Iana-Liste befinden, können Portnummern im Bereich von 1.024 bis 65.535 aufweisen.  
   
- Im folgenden Beispiel wird das Installieren von **TcpClient**, um an einen Zeitserver auf TCP\-Port 13 herzustellen.  
+ Das folgende Beispiel veranschaulicht das Festlegen eines **TcpClient** zur Verbindung mit einem Zeitserver an TCP-Port 13.  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> wird verwendet, um eine TCP\-Port für eingehende Anforderungen zu überwachen und entweder **Socket** oder **TcpClient** dann zu erstellen, die die Verbindung mit dem Client verwaltet.  Die <xref:System.Net.Sockets.TcpListener.Start%2A>\-Methode ermöglicht das Lauschen, und die <xref:System.Net.Sockets.TcpListener.Stop%2A>\-Methode deaktiviert das Lauschen auf dem Port.  Die <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>\-Methode akzeptiert eingehende Aufforderungen zum Aufbau einer Verbindung und erstellt **TcpClient**, um die Anforderung zu bearbeiten, und die <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>\-Methode akzeptiert eingehende Aufforderungen zum Aufbau einer Verbindung und erstellt **Socket**, um die Anforderung zu bearbeiten.  
+ <xref:System.Net.Sockets.TcpListener> wird verwendet, um einen TCP-Port auf eingehende Anforderungen zu überwachen, und entweder einen **Socket** oder ein **TcpClient** zu erstellen, der die Verbindung mit dem Client verwaltet. Die <xref:System.Net.Sockets.TcpListener.Start%2A>-Methode ermöglicht die Überwachung, und die <xref:System.Net.Sockets.TcpListener.Stop%2A>-Methode deaktiviert die Überwachung des Ports. Die <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **TcpClient** zur Verarbeitung der Anforderung. Die <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **Socket** zur Verarbeitung der Anforderung.  
   
- Im folgenden Beispiel wird das Erstellen eines Netzwerkzeitservers mithilfe **TcpListener**, um TCP\-Port 13 zu überwachen.  Wenn eine eingehende Aufforderung zum Aufbau einer Verbindung akzeptiert wird, reagiert der Zeitserver mit dem aktuellen Datum und der Uhrzeit vom Hostserver.  
+ Das folgende Beispiel veranschaulicht das Erstellen eines Netzwerkzeitservers mithilfe eines **TcpListener** zur Überwachung des TCP-Ports 13. Wenn eine eingehende Verbindungsanforderung akzeptiert wird, antwortet der Zeitserver mit dem aktuellen Datum und der Uhrzeit vom Hostserver.  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## Siehe auch  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a>Siehe auch  
+ 
+

@@ -1,40 +1,45 @@
 ---
-title: "NTLM- und Kerberos-Authentifizierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Authentifizierung [.NET Framework], NTLM"
-  - "Authentifizierung [.NET Framework], Kerberos"
-  - "Benutzerauthentifizierung, Kerberos"
-  - "Benutzerauthentifizierung, NTLM"
-  - "Kerberos-Authentifizierung"
-  - "Empfangen von Daten, Authentifizierung"
-  - "NTLM-Authentifizierung"
-  - "Internet, Authentifizierung"
-  - "Client-Authentifizierung, Kerberos"
-  - "Senden von Daten, Authentifizierung"
-  - "Netzwerkressourcen, Authentifizierung"
-  - "Klassen [.NET Framework], Authentifizierung"
-  - "Clientauthentifizierung, NTLM"
+title: NTLM- und Kerberos-Authentifizierung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- authentication [.NET Framework], NTLM
+- authentication [.NET Framework], Kerberos
+- user authentication, Kerberos
+- user authentication, NTLM
+- Kerberos authentication
+- receiving data, authentication
+- NTLM authentication
+- Internet, authentication
+- client authentication, Kerberos
+- sending data, authentication
+- network resources, authentication
+- classes [.NET Framework], authentication
+- client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# NTLM- und Kerberos-Authentifizierung
-Standard NTLM\-Authentifizierung und Kerberos\-Authentifizierung verwenden die Microsoft Windows NT\-Benutzeranmeldeinformationen, die mit dem aufrufenden Anwendung zugeordnet werden, um Authentifizierung mit dem Server zu versuchen.  Wenn sie nicht standardmäßige NTLM\-Authentifizierung verwendet, legt die Anwendung den Authentifizierungstyp zu NTLM fest und verwendet ein <xref:System.Net.NetworkCredential>\-Objekt, um den Benutzernamen, das Kennwort und die Domäne an den Host, wie im folgenden Beispiel gezeigt zu übergeben.  
+# <a name="ntlm-and-kerberos-authentication"></a>NTLM- und Kerberos-Authentifizierung
+Die NTLM- und Kerberos-Authentifizierung verwendet standardmäßig die mit der aufrufenden Anwendung verbundenen Benutzeranmeldeinformationen von Microsoft Windows NT, um sich bei einem Server zu authentifizieren. Bei der nicht standardmäßigen NTLM-Authentifizierung wird der Authentifizierungstyp durch die Anwendung auf NTLM festgelegt. Mithilfe des <xref:System.Net.NetworkCredential>-Objekts wird, wie im folgenden Beispiel gezeigt, der Benutzername, das Kennwort und die Domäne an den Host übergeben.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -50,7 +55,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- Anwendungen, die auf Internetdienste unter Verwendung der Anmeldeinformationen des Anwendungsbenutzers herstellen müssen, können mit den standardmäßigen Anmeldeinformationen des Benutzers, wie im folgenden Beispiel gezeigt durchführen.  
+ Anwendungen, die sich mit den Anmeldeinformationen des Anwendungsbenutzers mit Internetdiensten verbinden müssen, können wie im folgenden Beispiel gezeigt über die Standardanmeldeinformationen des Benutzers verbunden werden.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -64,11 +69,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- Das Negotiate\-Authentifizierungs\-Modul, bestimmt, ob der Remoteserver NTLM\- oder Kerberos\-Authentifizierung verwendet, und sendet die entsprechende Antwort.  
+ Mithilfe des Negotiate-Authentifizierungsmoduls wird bestimmt, ob der Remoteserver die NTLM- oder Kerberos-Authentifizierung verwendet, und es wird die entsprechende Antwort gesendet.  
   
 > [!NOTE]
->  NTLM\-Authentifizierung funktioniert nicht über einen Proxyserver.  
+>  Die NTLM-Authentifizierung funktioniert nicht über einen Proxyserver.  
   
-## Siehe auch  
- [Standard\- und Digestauthentifizierung](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Standard- und Digestauthentifizierung](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
  [Internetauthentifizierung](../../../docs/framework/network-programming/internet-authentication.md)
+

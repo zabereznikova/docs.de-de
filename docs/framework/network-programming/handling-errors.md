@@ -1,81 +1,86 @@
 ---
-title: "Behandeln von Fehlern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet, Ausnahmen der WebRequest- und WebResponse-Klassen"
-  - "Status-Eigenschaft"
-  - "WebExceptions-Klasse, Informationen zur WebExceptions-Klasse"
-  - "Timeout-Enumerationsmember"
-  - "ConnectFailure-Enumerationsmember"
-  - "TrustFailure-Enumerationsmember"
-  - "WebRequest-Klasse, Ausnahmen"
-  - "Anfordern von Daten aus dem Internet, Fehlerbehandlung"
-  - "Success-Enumerationsmember"
-  - "Empfangen von Daten, Fehler"
-  - "ProtocolError-Enumerationsmember"
-  - "Herunterladen von Internetressourcen, Fehlerbehandlung"
-  - "WebResponse-Klasse, Ausnahmen"
-  - "SendFailure-Enumerationsmember"
-  - "Fehler [.NET Framework], Ausnahmen der WebRequest- und WebResponse-Klassen"
-  - "Senden von Daten, Fehler"
-  - "Antwort auf Internetanforderung, Fehlerbehandlung"
-  - "NameResolutionFailure-Enumerationsmember"
-  - "KeepAliveFailure-Enumerationsmember"
-  - "Netzwerkressourcen, Ausnahmen der WebRequest- und WebResponse-Klassen"
-  - "RequestCanceled-Enumerationsmember"
-  - "ReceiveFailure-Enumerationsmember"
-  - "ServerProtocolViolation-Enumerationsmember"
-  - "ConnectionClosed-Enumerationsmember"
-  - "SecureChannelFailure-Enumerationsmember"
+title: Behandeln von Fehlern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, WebRequest and WebResponse classes exceptions
+- Status property
+- WebExceptions class, about WebExceptions class
+- Timeout enumeration member
+- ConnectFailure enumeration member
+- TrustFailure enumeration member
+- WebRequest class, exceptions
+- requesting data from Internet, error handling
+- Success enumeration member
+- receiving data, errors
+- ProtocolError enumeration member
+- downloading Internet resources, error handling
+- WebResponse class, exceptions
+- SendFailure enumeration member
+- errors [.NET Framework], WebRequest and WebResponse classes exceptions
+- sending data, errors
+- response to Internet request, error handling
+- NameResolutionFailure enumeration member
+- KeepAliveFailure enumeration member
+- network resources, WebRequest and WebResponse classes exceptions
+- RequestCanceled enumeration member
+- ReceiveFailure enumeration member
+- ServerProtocolViolation enumeration member
+- ConnectionClosed enumeration member
+- SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Behandeln von Fehlern
-Die <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse>\-Klassen lösen Systemausnahmen \(z <xref:System.ArgumentException>\) und Internet\-Besondere Ausnahmen aus \(die [WebExceptions](frlrfsystemnetwebexceptionclasstopic) sind, das von der <xref:System.Net.WebRequest.GetResponse%2A>\-Methode ausgelöst wird\).  
+# <a name="handling-errors"></a>Behandeln von Fehlern
+Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> lösen beide Systemausnahmen (z.B. <xref:System.ArgumentException>) und webspezifische Ausnahmen (bei denen es sich um <xref:System.Net.WebException> handelt, ausgelöst von der <xref:System.Net.WebRequest.GetResponse%2A>-Methode) aus.  
   
- Jedes **WebException** enthält eine <xref:System.Net.WebException.Status%2A>\-Eigenschaft ein, die einen Wert aus der <xref:System.Net.WebExceptionStatus>\-Enumeration enthält.  Sie können die **Status**\-Eigenschaft überprüfen, um den Fehler zu bestimmen, der aufgetreten ist und die richtigen Schritte ausführen, um den Fehler zu beheben.  
+ Jede **WebException** enthält eine <xref:System.Net.WebException.Status%2A>-Eigenschaft, die einen Wert aus der <xref:System.Net.WebExceptionStatus>-Enumeration enthält. Sie können die **Status**-Eigenschaft untersuchen, um den aufgetretenen Fehler zu bestimmen und dann die richtigen Schritte vornehmen, um den Fehler zu beheben.  
   
- Die folgende Tabelle beschreibt die möglichen Werte für die **Status**\-Eigenschaft.  
+ In der folgenden Tabelle werden die möglichen Rückgabewerte für die **Status**-Eigenschaft beschrieben.  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |------------|-----------------|  
-|ConnectFailure|Mit den Remotedienst konnte auf der Transportebene Kontakt hergestellt werden.|  
-|ConnectionClosed|Die Verbindung wurde vorzeitig geschlossen.|  
-|KeepAliveFailure|Der Server wurde eine Beziehung, die mit dem Keep\-Alive\-Headersatz hergestellt wurde.|  
-|NameResolutionFailure|Der Namedienst konnte den Hostnamen nicht auflösen.|  
-|ProtocolError|Die Antwort, die vom Server empfangen wurde, war, vollständig jedoch ist ein Fehler auf der Protokollebene an.|  
-|ReceiveFailure|Es wurde keine vollständige Antwort vom Remoteserver empfangen.|  
+|ConnectFailure|Der Remotedienst konnte auf Transportebene nicht erreicht werden.|  
+|ConnectionClosed|Die Verbindung wurde vorzeitig getrennt.|  
+|KeepAliveFailure|Der Server hat die Verbindung mit dem festgelegten Keep-Alive-Header.|  
+|NameResolutionFailure|Die Namensdienst konnte den Hostnamen nicht auflösen.|  
+|ProtocolError|Die Antwort, die vom Server empfangen wurde, war vollständig, aber hat einen Fehler auf Protokollebene angezeigt.|  
+|ReceiveFailure|Es wurde keine vollständige Nachricht vom Remoteserver empfangen.|  
 |RequestCanceled|Die Anforderung wurde abgebrochen.|  
-|SecureChannelFailure|Fehler beim in einem Link eines sicheren Channels auf.|  
+|SecureChannelFailure|In einem sicheren Channel-Link ist ein Fehler aufgetreten.|  
 |SendFailure|Es konnte keine vollständige Anforderung an den Remoteserver gesendet werden.|  
-|ServerProtocolViolation|Die Antwort vom Server war keine gültige HTTP\-Antwort.|  
+|ServerProtocolViolation|Die Serverantwort ist eine ungültige HTTP-Antwort.|  
 |Erfolgreich|Es ist kein Fehler aufgetreten.|  
-|Timeout|Keine Antwort wurde innerhalb des Timeouts empfangen, das für die Anforderung festgelegt wurde.|  
+|Timeout|Innerhalb des festgelegten Timeouts wurde keine Antwort für die Anforderung erhalten.|  
 |TrustFailure|Ein Serverzertifikat konnte nicht überprüft werden.|  
-|MessageLengthLimitExceeded|Es wurde eine Meldung empfangen, bei der die festgelegte Größe für das Senden einer Anforderung bzw. das Empfangen einer Antwort vom Server überschritten wurde.|  
-|Schwebend|Eine interne asynchrone Anforderung steht aus.|  
-|PipelineFailure|Dieser Wert unterstützt die .NET Framework\-Infrastruktur und ist nicht vorgesehen, direkt im Code verwendet werden.|  
-|ProxyNameResolutionFailure|Der Namensauflösungsdienst konnte den Proxyhostnamen nicht auflösen.|  
-|UnknownError|Eine Ausnahme unbekannten Typs ist aufgetreten.|  
+|MessageLengthLimitExceeded|Es wurde eine Nachricht erhalten, die den angegebenen Grenzwert für das Senden einer Anforderung oder das Erhalten einer Antwort vom Server überschritten hat.|  
+|Ausstehend|Eine interne asynchrone Anforderung steht aus.|  
+|PipelineFailure|Dieser Wert unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Ihrem Code vorgesehen.|  
+|ProxyNameResolutionFailure|Der Namensresolverdienst konnte den Hostnamen des Proxys nicht auflösen.|  
+|UnknownError|Eine Ausnahme unbekannten Typs wurde ausgelöst.|  
   
- Wenn die **Status**\-Eigenschaft **WebExceptionStatus.ProtocolError** ist, ist **WebResponse**, die die Antwort vom Server enthält, verfügbar.  Sie können diese Antwort überprüfen, um die tatsächliche Quelle des Protokollfehlers zu bestimmen.  
+ Wenn es sich bei der **Status**-Eigenschaft um **WebExceptionStatus.ProtocolError** handelt, ist eine **WebResponse** verfügbar, die die Antwort des Servers enthält. Sie können diese Antwort untersuchen, um die tatsächliche Quelle des Protokollfehlers zu bestimmen.  
   
- Im folgenden Beispiel wird gezeigt, wie **WebException** abfängt.  
+ Das folgende Beispiel demonstriert das Abfangen einer **WebException**.  
   
 ```csharp  
 try   
@@ -170,10 +175,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Anwendungen, die den <xref:System.Net.Sockets.Socket>\-Klassenwurf [SocketExceptions](frlrfsystemnetsocketssocketexceptionclasstopic) verwenden, wenn Fehler auf dem Windows Socket auftreten.  Die [TCPClient](frlrfsystemnetsocketstcpclientclasstopic), [TCPListener](frlrfsystemnetsocketstcplistenerclasstopic) und [UDPClient](frlrfsystemnetsocketsudpclientclasstopic)\-Klassen werden auf die **Socket**\-Klasse erstellt und **SocketExceptions** auslösen.  
+ Anwendungen, die die Klasse <xref:System.Net.Sockets.Socket> verwenden, lösen <xref:System.Net.Sockets.SocketException> aus, wenn ein Fehler auf dem Windows Socket auftritt. Die Klassen <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> und <xref:System.Net.Sockets.UdpClient> werden basierend auf der **Socket**-Klasse erstellt und lösen ebenfalls **SocketExceptions** aus.  
   
- Wenn **SocketException** ausgelöst wird, legt die **SocketException**\-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>\-Eigenschaft zum letzten Betriebssystemsocketfehler fest, der aufgetreten ist.  Weitere Informationen zu Socketfehlercodes, finden Sie die Fehlercodedokumentation Winsocks 2,0 APIs in MSDN.  
+ Wenn eine **SocketException** ausgelöst wird, legt die **SocketException**-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>-Eigenschaft auf den zuletzt aufgetretenen Betriebssystemsocketfehler fest. Weitere Informationen zu Socketfehlercodes finden Sie in der Fehlercodedokumentation von Winsock 2.0 API in MSDN.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+

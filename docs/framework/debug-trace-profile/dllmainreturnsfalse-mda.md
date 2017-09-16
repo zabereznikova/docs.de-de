@@ -1,52 +1,57 @@
 ---
-title: "dllMainReturnsFalse MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), DllMain returns false"
-  - "DllMainReturnsFalse MDA"
-  - "DllMain function"
-  - "MDAs (managed debugging assistants), DllMain returns false"
+title: dllMainReturnsFalse-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), DllMain returns false
+- DllMainReturnsFalse MDA
+- DllMain function
+- MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be2fcbd608e15ecc9b0b17529558999d0dfa85c9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# dllMainReturnsFalse MDA
-Der `dllMainReturnsFalse`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn die mit Grund DLL\_PROCESS\_ATTACH aufgerufene verwaltete `DllMain`\-Funktion einer Benutzerassembly den Wert FALSE zurückgibt.  
+# <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse-MDA
+Der Assistent für verwaltetes Debuggen `dllMainReturnsFalse` (Managed Debugging Assistant, MDA) wird aktiviert, wenn die verwaltete Funktion `DllMain` einer Benutzerassembly, die mit der Ursache DLL_PROCESS_ATTACH aufgerufen wurde, FALSE zurückgibt.  
   
-## Symptome  
- Die `DllMain`\-Funktion gibt FALSE zurück und zeigt damit an, dass die Ausführung nicht ordnungsgemäß abgeschlossen wurde.  Dies kann nicht vorhersagbare Probleme verursachen, da `DllMain`\-Funktionen i. d. R. wichtigen Initialisierungscode enthalten.  
+## <a name="symptoms"></a>Symptome  
+ Die Funktion `DllMain` gab FALSE zurück, um anzuzeigen, dass sie nicht ordnungsgemäß ausgeführt wurde. Dies kann zu unbestimmten Problemen führen, da `DllMain`-Funktionen in der Regel wichtige Initialisierungscodes enthalten.  
   
-## Ursache  
- Die `DllMain`\-Funktion wird mit Grund DLL\_PROCESS\_ATTACH für die DLL\-Initialisierung nach dem Laden aufgerufen.  Wenn FALSE zurückgegeben wird, bedeutet dies, dass die DLL\-Initialisierung fehlgeschlagen ist.  
+## <a name="cause"></a>Ursache  
+ Die Funktion `DllMain` wird zur DLL-Initialisierung mit der Ursache DLL_PROCESS_ATTACH beim Laden aufgerufen. Wird FALSE zurückgegeben, trat bei der DLL-Initialisierung ein Fehler auf.  
   
-## Lösung  
- Analysieren Sie den Programmcode der `DllMain`\-Funktion dieser DLL, und ermitteln Sie die Ursache der fehlgeschlagenen Initialisierung.  
+## <a name="resolution"></a>Auflösung  
+ Analysieren Sie den Code der `DllMain`-Funktion für die fehlgeschlagene DLL, und identifizieren Sie die Ursache des Initialisierungsfehlers.  
   
-## Auswirkungen auf die Laufzeit  
- Dieser MDA hat keine Auswirkungen auf die CLR.  Es werden nur Angaben über den Rückgabewert von `DllMain` gemeldet.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Daten zum Rückgabewert für `DllMain` gemeldet.  
   
-## Ausgabe  
- Eine Meldung mit dem Hinweis, dass eine mit dem Grund DLL\_PROCESS\_ATTACH aufgerufene `DllMain`\-Funktion den Wert FALSE zurückgegeben hat.  Beachten Sie, dass dieser MDA nur aktiviert wird, wenn `DllMain` in verwaltetem Code implementiert ist.  
+## <a name="output"></a>Ausgabe  
+ Eine Meldung, die anzeigt, dass eine mit der Ursache DLL_PROCESS_ATTACH aufgerufene `DllMain`-Funktion FALSE zurückgegeben hat. Beachten Sie, dass dieser MDA nur aktiviert wird, wenn `DllMain` in verwalteten Code implementiert wird.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dllMainReturnsFalse />  
@@ -54,5 +59,6 @@ Der `dllMainReturnsFalse`\-MDA \(Managed Debugging Assistant, Assistent für ver
 </mdaConfig>  
 ```  
   
-## Siehe auch  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch  
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

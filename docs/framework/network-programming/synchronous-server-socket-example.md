@@ -1,30 +1,35 @@
 ---
-title: "Synchroner Serversocket, Beispiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Synchrone Serversockets"
-  - "Sockets, Codebeispiele"
-  - "Sockets, synchrone Serversockets"
+title: Synchroner Serversocket, Beispiel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- synchronous server sockets
+- sockets, code examples
+- sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Synchroner Serversocket, Beispiel
-Das folgende Beispielprogramm stellt einen Server erstellt, der Aufforderungen zum Aufbau einer Verbindung von Clients empfängt.  Der Server wird mit einem synchronen Socket erstellt, daher wird die Ausführung der Serveranwendung ignoriert, während sie auf eine Verbindung von einem Client wartet.  Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge auf der Konsole an und gibt dann die Zeichenfolge zurück an den Client zurückgegeben aus.  Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF\>" enthalten, um dem Ende der Meldung zu signalisieren.  
+# <a name="synchronous-server-socket-example"></a>Synchroner Serversocket, Beispiel
+Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem synchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  
   
 ```vb  
 Imports System  
@@ -86,7 +91,6 @@ Public Class SynchronousSocketListener
     End Sub  
   
 End Class 'SynchronousSocketListener  
-  
 ```  
   
 ```csharp  
@@ -165,7 +169,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## Siehe auch  
- [Synchrone Clientsockets \- Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Synchrone Clientsockets – Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
  [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Socketcodebeispiele](../../../docs/framework/network-programming/socket-code-examples.md)
+

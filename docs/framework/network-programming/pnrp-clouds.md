@@ -1,46 +1,52 @@
 ---
-title: "PNRP-Clouds | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: PNRP-Clouds
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP-Clouds
-PNRP "Cloud" stellt einen Satz von Knoten dar, die miteinander über das Netzwerk sein können.  Der Begriff "Cloud" ist mit "Peergitter" und "gleichberechtigt Diagramm" synonym.  
+# <a name="pnrp-clouds"></a>PNRP-Clouds
+Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk miteinander kommunizieren können. Der Begriff „Cloud“ wird synonym mit „Peermesh“ und „Peer-to-Peer-Diagramm“ verwendet.  
   
- Die Kommunikation zwischen Knoten sollte niemals wolkenübergreifend erfolgen.  Eine <xref:System.Net.PeerToPeer.Cloud>\-Instanz wird durch ihren Namen eindeutig identifiziert, wobei die Groß\- und Kleinschreibung berücksichtigt wird.  Ein einzelner Peer oder Knoten kann mit mehreren Wolken verbunden sein.  
+ Die Kommunikation zwischen den Knoten sollte die Grenze einer Cloud nie überschreiten. Eine <xref:System.Net.PeerToPeer.Cloud>-Instanz wird durch ihren Namen eindeutig bestimmt. Dabei muss Groß- und Kleinschreibung beachtet werden. Ein einzelner Peer oder Knoten kann mit mehr als einer Cloud verbunden sein.  
   
- Wolken sind sehr eng an Netzwerkschnittstellen gebunden.  Wenn ein Computer über mehrere IP\-Adressen verfügt und zwei Netzwerkkarten mit unterschiedlichen Teilnetzen verbunden sind, werden drei Wolken zurückgegeben: je eine Wolke pro Link\-Local\-Adresse der jeweiligen Schnittstelle und eine einzelne Wolke mit globalem Bereich.  
+ Clouds sind sehr eng an Netzwerkschnittstellen gebunden.  Auf einem mehrfach vernetzten Computer mit zwei Netzwerkkarten, die mit unterschiedlichen Subnetzen verbunden sind, werden drei Clouds zurückgegeben: eine für jede lokale Linkadresse pro Schnittstelle und eine einzelne Cloud mit globalem Gültigkeitsbereich.  
   
- Cloud "Bereiche" PNRP\-Verwendung drei, in der ein Bereich eine Gruppierung von Computer ist, die sind, sich zu suchen:  
+ PNRP verwendet drei Cloudbereiche, wobei diese Bereiche eine Gruppe von Computern darstellen, die sich gegenseitig finden können:  
   
--   Die globale Cloud entspricht dem globalen IPv6\-Adressbereich und zu den globalen Adressen und stellt alle Computer im gesamten Internet IPv6 dar.  Es gibt nur eine einzelne globale Cloud.  
+-   Die globale Cloud entspricht dem globalen IPv6-Adressbereich sowie globalen Adressen. Sie stellt alle Computer des gesamten IPv6-Internets dar. Es gibt nur eine einzige globale Cloud.  
   
--   Die Link\-Local\-Cloud entspricht dem Link\-Local\-IPv6\-Adressbereich und \-Link\-Local\-Adressen.  Eine Link\-Local\-Cloud ist für einen bestimmten Link, der normalerweise dem des lokal angefügte Subnetz ist.  Es kann Link\-Local\-Clouds der mehrere geben.  
+-   Die verbindungslokale Cloud entspricht dem verbindungslokalen IPv6-Adressbereich sowie verbindungslokalen Adressen. Eine verbindungslokale Cloud gilt für einen bestimmten Link, der in der Regel mit dem lokal verbundenen Subnetz identisch ist. Es können mehrere verbindungslokale Clouds vorhanden sein.  
   
- Eine dritte Cloud, die sitespezifische Cloud, entspricht dem Site IPv6\-Adressbereich und \-Site\-Local\-Adressen.  Diese Cloud ist veraltet, obwohl sie in PNRP unterstützt wird.  
+ Eine dritte Möglichkeit ist die standortspezifische Cloud, die dem standortspezifischen IPv6-Adressbereich sowie standortlokalen Adressen entspricht. Diese Cloud ist veraltet, wird jedoch weiterhin in PNRP unterstützt.  
   
-## Clouds  
- PNRP\-Clouds werden durch Instanzen der <xref:System.Net.PeerToPeer.Cloud>\-Klasse dargestellt.  Gruppen von Clouds haben einen Peer sind mit Instanzen der <xref:System.Net.PeerToPeer.CloudCollection> aufzählbaren Klasse.  Auflistungen PNRP\-Clouds, die den aktuellen Peer bekannt sind, können abgerufen werden, indem Sie die statische <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>\-Methode aufruft.  
+## <a name="clouds"></a>Clouds  
+ PNRP-Clouds werden durch Instanzen der <xref:System.Net.PeerToPeer.Cloud>-Klasse dargestellt. Gruppen von Clouds, die einen Peer verwenden, werden durch Instanzen der Enumerable-Klasse <xref:System.Net.PeerToPeer.CloudCollection> dargestellt. Sammlungen von PNRP-Clouds, die dem aktuellen Peer bekannt sind, können durch Aufrufen der statischen <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>-Methode abgerufen werden.  
   
- Einzelne Clouds haben die eindeutigen Namen, dargestellt als 256 Zeichen Unicode\-Zeichenfolge.  Diese Namen, zusammen mit dem oben genannten Bereich, werden verwendet, um eindeutige Instanzen der Cloudklasse zu erstellen.  Diese Instanzen können für dauerhafte Verwendung serialisiert und neu erstellt werden.  
+ Die einzelnen Clouds verfügen über eindeutige Namen, die als Unicode-Zeichenfolge mit 256 Zeichen dargestellt werden. Diese Namen werden zusammen mit dem oben genannten Gültigkeitsbereich zum Erstellen von eindeutigen Instanzen der Cloudklasse verwendet. Diese Instanzen können serialisiert und zur dauerhaften Verwendung rekonstruiert werden.  
   
- Sobald eine Cloudinstanz erstellt, oder abgerufen, können Peernamen mit ihr registriert werden, um ein Netz bekannter Peers zu erstellen.  
+ Nachdem eine Cloudinstanz erstellt oder abgerufen wurde, können Peernamen darin registriert werden, um ein Netz aus bekannten Peers zu erstellen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.PeerToPeer.Cloud>   
- [Peer Name Resolution\-Protokoll \(PNRP\)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+ [Peer Name Resolution-Protokoll (PNRP)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+

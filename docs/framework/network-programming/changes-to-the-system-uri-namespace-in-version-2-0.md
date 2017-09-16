@@ -1,31 +1,36 @@
 ---
-title: "&#196;nderungen am System.Uri-Namespace in Version 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Änderungen am System.Uri-Namespace in Version 2.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &#196;nderungen am System.Uri-Namespace in Version 2.0
-Mehrere Änderungen wurden an der <xref:System.Uri?displayProperty=fullName>\-Klasse vorgenommen.  Diese Änderungen korrigiert falsches Verhalten, verbesserten Benutzerfreundlichkeit und erweiterten Sicherheit.  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Änderungen am System.Uri-Namespace in Version 2.0
+Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=fullName>-Klasse vorgenommen. Diese Änderungen korrigierten falsches Verhalten, verbesserten die Verwendbarkeit und Sicherheit.  
   
-## Veraltete und veraltete Member  
+## <a name="obsolete-and-deprecated-members"></a>Veraltete Member  
  Konstruktoren:  
   
--   Alle Konstruktoren, die einen `dontEscape`\-Parameter haben.  
+-   Alle Konstruktoren, die über einen `dontEscape`-Parameter verfügen.  
   
  Methoden:  
   
@@ -45,39 +50,40 @@ Mehrere Änderungen wurden an der <xref:System.Uri?displayProperty=fullName>\-Kl
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## Änderungen  
+## <a name="changes"></a>Änderungen  
   
--   Für URI\-Schemen, die bekannt, um einen Abfragenteil \(Datei, FTP und andere\) nicht verfügen, "?" Zeichen wird immer mit Escapezeichen versehen und wird nicht als den Beginn eines <xref:System.Uri.Query%2A> Teils.  
+-   Für URI-Schemas, die bekanntermaßen nicht zwingend über einen Abfrageteil (Datei, ftp usw.) verfügen, ist das „?“-Zeichen immer mit Leerzeichen versehen und wird nicht als Anfang des <xref:System.Uri.Query%2A>-Teils angesehen.  
   
--   Bei impliziten Datei URI \(des Formulars "c:\\directory\\file @name.txt"\), das Fragmentzeichen \("\# "\) wird immer mit Escapezeichen versehen, es sei denn, voll unescaping angefordert wird, oder <xref:System.Uri.LocalPath%2A>`true` ist.  
+-   Für implizite URI-Dateien (im Format „c:\directory\file@name.txt“) wird das Fragmentzeichen („#“) immer mit einem Leerzeichen versehen, außer die Funktion für die Entfernung der Escapezeichen wird angefordert, oder <xref:System.Uri.LocalPath%2A> entspricht `true`.  
   
--   UNC\-Hostnamenunterstützung wurde entfernt; die IDN\-Spezifikation für die Darstellung von internationalen Hostnamen wurde angenommen.  
+-   Die Unterstützung des UNC-Hostnames wurde entfernt. Die IDN-Spezifikation für die Darstellung internationaler Hostnamen wurde übernommen.  
   
--   <xref:System.Uri.LocalPath%2A> gibt immer eine vollständig Zeichenfolge ohne Escapezeichen zurück.  
+-   <xref:System.Uri.LocalPath%2A> gibt immer eine Zeichenfolge ohne Escapezeichen zurück.  
   
--   <xref:System.Uri.ToString%2A> jedoch nicht unescape ein "% mit Escapezeichen", "? " oder "&#124;" Zeichen.  
+-   <xref:System.Uri.ToString%2A> verwendet die Funktion für die Entfernung der Escapezeichen nicht, um ein Escapezeichen vom Typ „%“, „?“ oder „#“ zu entfernen.  
   
--   <xref:System.Uri.Equals%2A> enthält nun den <xref:System.Uri.Query%2A> Anteil an der Gleichheitsüberprüfung ein.  
+-   <xref:System.Uri.Equals%2A> enthält jetzt den <xref:System.Uri.Query%2A>-Teil in der Gleichheitsüberprüfung.  
   
--   Operatoren "\=\=" und "\! \=" werden überschrieben und zu <xref:System.Uri.Equals%2A> die Methode verknüpft.  
+-   Die Operatoren „==“ und „! =“ werden überschrieben und mit der <xref:System.Uri.Equals%2A>-Methode verknüpft.  
   
--   <xref:System.Uri.IsLoopback%2A> bietet jetzt konsistente Ergebnisse.  
+-   <xref:System.Uri.IsLoopback%2A> erzeugt jetzt konsistente Ergebnisse.  
   
--   Der URI "`file:///path`" wird nicht mehr in "file:\/\/path" übersetzt.  
+-   Der URI „`file:///path`“ wird nicht mehr in „file://path“ übersetzt.  
   
--   "\#" wird jetzt als Hostnamenabschlusszeichen erkannt.  Das heißt, "http:\/\/consoto.com\#fragment" wird jetzt auf "http:\/\/contoso.com\/\#fragment" konvertiert.  
+-   „#“ wird nun als Abschlusszeichen eines Hostnamen erkannt werden. D.h., „http://consoto.com#fragment“ wird jetzt in „http://contoso.com/#fragment“ konvertiert.  
   
--   Ein Fehler, um einen Basis\-URI mit einem kombinierten Fragment wurde korrigiert.  
+-   Ein Fehler bei der Kombination eines Basis-URI mit einem Fragment wurde behoben.  
   
--   Ein Fehler in <xref:System.Uri.HostNameType%2A> behoben ist.  
+-   Ein Fehler in <xref:System.Uri.HostNameType%2A> wurde behoben.  
   
--   Ein Fehler in NNTP\-Analyse behoben ist.  
+-   Ein Fehler beim Analysieren von NNTP wurde behoben.  
   
--   Ein URI im Format HTTP:contoso.com löst jetzt eine Analyseausnahme aus.  
+-   Der URI des Formulars HTTP:contoso.com löst nun eine Ausnahme bei der Analyse aus.  
   
--   Das Framework ordnungsgemäß behandelt userinfo in einem URI.  
+-   Das Framework verarbeitet die Benutzerinformationen in einem URI ordnungsgemäß.  
   
--   URI\-Pfadkomprimierung ist festgelegt, damit ein unterbrochenes URI das Dateisystem über dem Stamm nicht durchlaufen kann.  
+-   Die URI-Pfadkomprimierung wird repariert, sodass ein fehlerhafter URI das Dateisystem oberhalb des Stammverzeichnisses nicht durchlaufen kann.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Uri?displayProperty=fullName>
+

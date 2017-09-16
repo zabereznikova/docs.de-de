@@ -1,60 +1,66 @@
 ---
-title: "Registering Assemblies with COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM interop, registering assemblies"
-  - "unregistering assemblies"
-  - "interoperation with unmanaged code, registering assemblies"
-  - "registering assemblies"
+title: Registrieren von Assemblys mit COM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- COM interop, registering assemblies
+- unregistering assemblies
+- interoperation with unmanaged code, registering assemblies
+- registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a467bff903701cf252da983e1265c679171e90b0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Registering Assemblies with COM
-Um eine Assembly in COM zu registrieren oder eine Registrierung aufzuheben, können Sie ein Befehlszeilentool namens [Assembly Registration\-Tool \(Regasm.exe\)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) ausführen.  Mit Regasm.exe werden Informationen über die Klasse der Systemregistrierung hinzugefügt, sodass COM\-Clients das .NET Framework\-Klasse transparent verwenden können.  Die <xref:System.Runtime.InteropServices.RegistrationServices>\-Klasse stellt die entsprechenden Funktionen zur Verfügung.  
+# <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
+Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
   
- Eine verwaltete Komponente muss in der Windows\-Registrierung registriert werden, damit sie von COM\-Clients aktiviert werden kann.  In der folgenden Tabelle werden die Schlüssel dargestellt, die durch **Regasm.exe** gewöhnlich in der Windows\-Registrierung eingetragen werden.  \(000000 gibt den eigentlichen GUID\-Wert an.\)  
+ Eine verwaltete Komponente muss in der Windows-Registrierung registriert sein, damit sie von einem COM-Client aktiviert werden kann. Die folgende Tabelle zeigt die Schlüssel, die Regasm.exe der Windows-Registrierung in der Regel hinzufügt. (000000 steht hier für den tatsächlichen GUID-WERT.)  
   
 |GUID|Beschreibung|Registrierungsschlüssel|  
-|----------|------------------|-----------------------------|  
-|CLSID|Klassenbezeichner|HKEY\_CLASSES\_ROOT\\CLSID\\{000…000}|  
-|IID|Schnittstellenbezeichner|HKEY\_CLASSES\_ROOT\\Interface\\{000…000}|  
-|LIBID|Bibliotheksbezeichner|HKEY\_CLASSES\_ROOT\\TypeLib\\{000…000}|  
-|ProgID|Programmbezeichner|HKEY\_CLASSES\_ROOT\\000…000|  
+|----------|-----------------|------------------|  
+|CLSID|Klassen-ID|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
+|IID|Schnittstellen-ID|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
+|LIBID|Bibliothek-ID|HKEY_CLASSES_ROOT\TypeLib\\{000... 000}|  
+|ProgID|Programmatischer Bezeichner|HKEY_CLASSES_ROOT\000... 000|  
   
- Unter dem HKCR\\CLSID\\{0000…0000}\-Schlüssel ist der Standardwert auf die ProgID der Klasse festgelegt, und zwei neue benannte Werte, Class und Assembly, werden hinzugefügt.  Der Assemblywert wird von Common Language Runtime in der Registrierung gelesen und an den Assemblyresolver von Common Language Runtime weitergeleitet.  Mithilfe von Assemblyinformationen wie Name und Versionsnummer sucht der Assemblyresolver nach der Assembly.  Zum Suchen einer Assembly durch den Assemblyresolver muss sich die Assembly an einem der folgenden Speicherorte befinden:  
+ Unter dem Schlüssel HKCR\CLSID\\{0000…0000} wird der Standardwert auf die ProgID der Klasse festgelegt, und zwei neue benannte Werte werden hinzugefügt, „Class“ und „Assembly“. Die Common Language Runtime liest den Wert „Assembly“ aus der Registrierung aus und übergibt ihn an den Assemblyresolver der Runtime. Der Assemblyresolver versucht, die Assembly anhand von Assemblyinformationen zu lokalisieren, z.B. Name und Versionsnummer. Damit der Assemblyresolver eine Assembly lokalisieren kann, muss sie sich an einem der folgenden Speicherorte befinden:  
   
--   Globaler Assemblycache \(es muss sich um eine Assembly mit starkem Namen handeln\).  
+-   Im globalen Assemblycache (die Assembly muss einen starken Namen haben)  
   
--   Anwendungsverzeichnis.  Auf Assemblys, die aus dem Anwendungspfad geladen werden, kann nur aus der Anwendung zugegriffen werden.  
+-   Im Anwendungsverzeichnis. Auf aus einem Anwendungspfad geladene Assemblies kann nur über diese Anwendung zugegriffen werden.  
   
--   Dateipfad zu **Regasm.exe**, der mit der **\/codebase**\-Option festgelegt wurde.  
+-   Entlang eines Dateipfads, der in Regasm.exe mit der Option **/codebase** angegeben wurde.  
   
- Regasm.exe erstellt auch den InProcServer32\-Schlüssel unter dem HKCR\\CLSID\\{0000…0000}\-Schlüssel.  Als Standardwert für den Schlüssel wird der Name der DLL\-Datei festgelegt, die die Common Language Runtime initialisiert \(**Mscoree.dll** \).  
+ Regasm.exe erstellt auch unter dem Schlüssel HKCR\CLSID\\{0000…0000} den Schlüssel InProcServer32. Als Standardwert für den Schlüssel ist der Name der DLL festgelegt, die die Common Language Runtime initialisiert (Mscoree.dll).  
   
-## Untersuchen von Registrierungseinträgen  
- In COM\-Interop steht eine standardmäßige Klassenfactoryimplementierung zum Erstellen einer Instanz einer beliebigen .NET Framework\-Klasse zur Verfügung.  Clients können **DllGetClassObject** für die verwaltete DLL\-Datei aufrufen, um wie für eine beliebige andere COM\-Komponente eine Klassenfactory zu erhalten und Objekte zu erstellen.  
+## <a name="examining-registry-entries"></a>Untersuchen von Registrierungseinträgen  
+ Das COM-Interop stellt eine standardmäßige Klassenfactoryimplementierung zum Erstellen einer Instanz einer beliebigen .NET Framework-Klasse bereit. Clients können für die verwaltete DLL **DllGetClassObject** aufrufen, um eine Klassenfactory zu erhalten und Objekte zu erstellen. Dies funktioniert genau wie bei jeder anderen COM-Komponente auch.  
   
- Für den `InprocServer32` Unterschlüssel wird ein Verweis auf Mscoree.dll anstelle einer traditionellen COM\-Typbibliothek, anzugeben, dass die Common Language Runtime das verwaltete Objekt erstellt.  
+ Für den Unterschlüssel `InprocServer32` wird statt einer traditionellen Bibliothek der COM-Typen ein Verweis auf die Datei „Mscoree.dll“ angezeigt. So wird angegeben, dass die Common Language Runtime das verwaltete Objekt erstellt.  
   
-## Siehe auch  
- [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [How to: Reference .NET Types from COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)   
- [Calling a .NET Object](http://msdn.microsoft.com/de-de/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
- [Deploying an Application for COM Access](http://msdn.microsoft.com/de-de/fb63564c-c1b9-4655-a094-a235625882ce)
+## <a name="see-also"></a>Siehe auch  
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
+ [How to: Reference .NET Types from COM (Vorgehensweise: Verweisen auf .NET-Typen in COM)](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)   
+ [Calling a .NET Object (Aufrufen eines .NET-Objekts)](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
+ [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+

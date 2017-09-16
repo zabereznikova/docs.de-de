@@ -1,89 +1,47 @@
 ---
-title: "Platform Invoke Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "examples [.NET Framework], platform invoke"
-  - "unmanaged functions"
-  - "COM interop, platform invoke"
-  - "platform invoke, examples"
-  - "interoperation with unmanaged code, platform invoke"
-  - "DLL functions"
+title: "Beispiele für Plattformaufrufe"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- examples [.NET Framework], platform invoke
+- unmanaged functions
+- COM interop, platform invoke
+- platform invoke, examples
+- interoperation with unmanaged code, platform invoke
+- DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ec8f261ab6f6f8b0c57f302859e1212d237b12aa
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Platform Invoke Examples
-Die folgenden Beispiele veranschaulichen, wie Sie die **MessageBox**\-Funktion in User32.dll definieren und aufrufen können, indem Sie eine einfache Zeichenfolge als Argument übergeben.  In den Beispielen ist das [DllImportAttribute.CharSet Field](frlrfSystemRuntimeInteropServicesDllImportAttributeClassCharSetTopic)\-Feld auf **Auto** festgelegt, d. h., die Zielplattform bestimmt über die Zeichenbreite und das Marshallen von Zeichenfolgen.  
+# <a name="platform-invoke-examples"></a>Beispiele für Plattformaufrufe
+In den folgenden Beispielen erfahren Sie, wie Sie durch die Übergabe einer einfachen Zeichenfolge als Argument die Funktion **MessageBox** in der Datei „User32.dll“ definieren und aufrufen. In den Beispielen ist das Feld <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> auf **Auto** (Automatisch) festgelegt, damit die Zielplattform die Zeichenbreite und das Marshalling von Zeichenfolgen festlegen kann.  
   
- Dasselbe Beispiel wird in Visual Basic, C\# und C\+\+ angezeigt.  Um alle Beispiele anzuzeigen, klicken Sie in der oberen linken Ecke der Seite auf die Schaltfläche Sprachfilter ![](../../../docs/framework/interop/media/filter2.gif "Filter2").  Weitere Beispiele finden Sie unter [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]   
   
-```vb  
-Imports System.Runtime.InteropServices  
+ Weitere Beispiele finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mithilfe des Plattformaufrufs)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String, _  
-       ByVal caption As String, ByVal Typ As Integer) As IntPtr  
-End Class  
-  
-Public Class HelloWorld      
-    Public Shared Sub Main()  
-        Win32.MessageBox(0, "Hello World", "Platform Invoke Sample", 0)  
-    End Sub  
-End Class  
-  
-```  
-  
-```csharp  
-using System.Runtime.InteropServices;  
-  
-public class Win32 {  
-     [DllImport("user32.dll", CharSet=CharSet.Auto)]  
-     public static extern IntPtr MessageBox(int hWnd, String text,   
-                     String caption, uint type);  
-}  
-  
-public class HelloWorld {  
-    public static void Main() {  
-       Win32.MessageBox(0, "Hello World", "Platform Invoke Sample", 0);  
-    }  
-}  
-  
-```  
-  
-```cpp  
-using namespace System::Runtime::InteropServices;  
-  
-typedef void* HWND;  
-[DllImport("user32", CharSet=CharSet::Auto)]  
-extern "C" IntPtr MessageBox(HWND hWnd,  
-                          String* pText,  
-                          String* pCaption,  
-                          unsigned int uType);  
-void main(void) {  
-     String* pText = L"Hello World!";  
-     String* pCaption = L"Platform Invoke Sample";  
-     MessageBox(0, pText, pCaption, 0);  
-}  
-```  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Specifying a Character Set](../../../docs/framework/interop/specifying-a-character-set.md)
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Specifying a Character Set (Angeben eines Zeichensatzes)](../../../docs/framework/interop/specifying-a-character-set.md)
+

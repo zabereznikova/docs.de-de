@@ -1,87 +1,93 @@
 ---
-title: "IPv6-Adressierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internetprotokoll, Version 6, Adressen in"
-  - "Nachbarsuche"
-  - "IPv6, aktivieren"
-  - "IPv6, Mobilität und"
-  - "Internetprotokoll, Version 6, Anycastadressen"
-  - "IPv6, Nachbarsuche"
-  - "Internetprotokoll, Version 6, automatisches Konfigurieren"
-  - "Internetprotokoll, Version 6, aktivieren"
-  - "IPv6, Unicastadressen"
-  - "IPv6, automatisches Konfigurieren"
-  - "Internetprotokoll, Version 6, Routing"
-  - "IPv6, RFC-Dokumente"
-  - "IPv6, Routing"
-  - "Internetprotokoll, Version 6, deaktivieren"
-  - "Internetprotokoll, Version 6, Unicastadressen"
-  - "IPv6, Multicastadressen"
-  - "Internetprotokoll, Version 6, Mobilität und"
-  - "Internetprotokoll, Version 6, RFC-Dokumente"
-  - "Internetprotokoll, Version 6, Nachbarsuche"
-  - "IPv6, Anycastadressen"
-  - "Internetprotokoll, Version 6, Multicastadressen"
-  - "IPv6, Adressen in"
-  - "IPv6, deaktivieren"
+title: IPv6-Adressierung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet Protocol version 6, addresses in
+- Neighbor Discovery
+- IPv6, enabling
+- IPv6, mobility and
+- Internet Protocol version 6, anycast addresses
+- IPv6, Neighbor Discovery
+- Internet Protocol version 6, auto-configuring
+- Internet Protocol version 6, enabling
+- IPv6, unicast addresses
+- IPv6, auto-configuring
+- Internet Protocol version 6, routing
+- IPv6, RFC documents
+- IPv6, routing
+- Internet Protocol version 6, disabling
+- Internet Protocol version 6, unicast addresses
+- IPv6, multicast addresses
+- Internet Protocol version 6, mobility and
+- Internet Protocol version 6, RFC documents
+- Internet Protocol version 6, Neighbor Discovery
+- IPv6, anycast addresses
+- Internet Protocol version 6, multicast addresses
+- IPv6, addresses in
+- IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6-Adressierung
-Im Internetprotokoll, Version 6 \(IPv6\), Adressen sind 128 Bits lang.  Ein Grund für einen solchen großen Adressbereich ist, die verfügbaren Adressen in eine Hierarchie von Routingdomänen zu unterteilen, die die Topologie Web entsprechen.  Ein anderer Grund besteht darin, die Adressen der Netzwerkadapter \(oder Schnittstellen\) zuzuordnen die Geräte mit dem Netzwerk herstellen.  IPv6 kennzeichnet eine integrierte Funktion, Adressen an der niedrigsten Ebene zu beheben, die auf der Netzwerkschnittstellenebene ist, und die auch Funktionen der automatischen Konfiguration.  
+# <a name="ipv6-addressing"></a>IPv6-Adressierung
+Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  
   
-## Textdarstellung  
- Im Folgenden sind die drei konventionellen Formulare, die verwendet werden, um die Adressen IPv6 als Textzeichenfolgen darzustellen:  
+## <a name="text-representation"></a>Textdarstellung  
+ Die folgenden drei konventionellen Formate werden verwendet, um die IPv6-Adressen als Textzeichenfolgen darzustellen:  
   
--   **Durch Doppelpunkt getrenntes Format**.  Dies ist das bevorzugte Format n:n:n:n:n:n:n:n.  Jedes n stellt den Hexadezimalwert von einem der acht 16\-Bit\-Elemente der Adresse dar.  Beispiel: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.  
+-   **Hexadezimalformat mit Doppelpunkt**. Das bevorzugte Format ist „n:n:n:n:n:n:n:n“. Jedes „n“ stellt den hexadezimalen Wert von einem der acht 16-Bit-Elemente der Adresse dar. Beispiel: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.  
   
--   **Komprimiertes Format**.  Aufgrund der Adresslänge ist es häufig, die Adressen zu haben, die eine lange Zeichenfolge aus null enthalten.  Um das Schreiben dieser Adressen zu vereinfachen, verwenden Sie das komprimierte Formular, das eine einzelne aufeinander folgende Sequenz von 0 Blöcken durch ein Symbol zwei Doppelpunkten \(::\) dargestellt werden.  Dieses Symbol kann in einer Adresse nur einmal angezeigt werden.  Beispielsweise ist die Multicastadresse `FFED:0:0:0:0:BA98:3210:4562` in komprimiertem Format `FFED::BA98:3210:4562`.  Die Unicastadresse `3FFE:FFFF:0:0:8:800:20C4:0` in komprimiertem Format ist `3FFE:FFFF::8:800:20C4:0`.  Die Loopbackadresse `0:0:0:0:0:0:0:1` in komprimiertem Format ist 1. `::`.  Die nicht angegebene Adresse `0:0:0:0:0:0:0:0` in komprimiertem Format ist `::`.  
+-   **Komprimiertes Format**. Aufgrund der Adresslänge ist es üblich, dass die Adressen lange Zeichenfolgen enthalten, die aus Nullen (0) bestehen. Verwenden Sie das komprimierte Format, um das Schreiben dieser Adressen zu vereinfachen. In diesem wird eine einzelne zusammenhängende Folge von 0-Blöcken durch zwei Doppelpunkte (::) dargestellt. Dieses Symbol kann in einer Adresse nur einmal vorkommen. Die Multicastadresse `FFED:0:0:0:0:BA98:3210:4562` ist in komprimierter Form zum Beispiel `FFED::BA98:3210:4562`. Die Unicastadresse `3FFE:FFFF:0:0:8:800:20C4:0` ist in komprimierter Form `3FFE:FFFF::8:800:20C4:0`. Die Loopbackadresse `0:0:0:0:0:0:0:1` ist in komprimierter Form `::`1. Die nicht definierte Adresse `0:0:0:0:0:0:0:0` ist in komprimierter Form `::`.  
   
--   **Gemischtes Format**.  Dieses Format kombiniert Adressen IPv4 und IPv6.  In diesem Fall ist das Adressenformat n:n:n:n:n:n:d.d.d.d, in dem jedes n die Hexadezimalwerte der sechs höherwertigen 16\-Bit\-Elemente der Adresse IPv6 darstellt, und jedes d stellt den Dezimalwert einer IPv4\-Adresse dar.  
+-   **Mixed form (Gemischtes Format)**. Dieses Format kombiniert IPv4- und IPv6-Adressen. In diesem Fall ist das Adressformat „n:n:n:n:n:n:d.d.d.d“, bei dem jedes „n“ den Hexadezimalwert der 6 oberen Elemente der IPv6-16-Bit-Adresse darstellt und jedes „d“ den Dezimalwert der IPv4-Adresse.  
   
-## Adresstypen  
- Die führenden Bits in der Adresse definieren den bestimmten IPv6\-Adresstyp.  Das Datenfeld variabler Länge, das diese führenden Bits enthält, wird ein Format\-Präfix \(FP\) aufgerufen.  
+## <a name="address-types"></a>Adresstypen  
+ Die führenden Werte in der Adresse definieren den spezifischen IPv6-Adresstyp. Das Feld mit variabler Länge, das diese führenden Bits enthält, wird als Formatpräfix (FP) bezeichnet.  
   
- Eine IPv6\-Unicastadresse ist in zwei Bereiche unterteilt.  Der erste Teil enthält das Adressenpräfix, der zweite Teil enthält den Schnittstellenbezeichner.  Eine kurze Methode, eine IPv6\-Adresse\/eine Präfixkombination auszudrücken ist, wie folgt: ipv6\-address\/PräfixLänge.  
+ Eine IPv6-Unicastadresse ist in zwei Teile unterteilt. Der erste Teil enthält das Adresspräfix, und der zweite Teil enthält den Schnittstellenbezeichner. Bei Folgendem handelt es sich um eine präzise Methode, um die Kombination aus einer IPv6-Adresse und einem Präfix auszudrücken: IPv6-Adresse/Präfixlänge.  
   
- Im folgenden Beispiel einer Adresse mit einem 64\-Bit\-Präfix.  
+ Das folgende Beispiel enthält eine Adresse mit einem 64-Bit-Präfix.  
   
  `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
   
- Das Präfix in diesem Beispiel ist `3FFE:FFFF:0:CD30`.  Die Adresse kann in eine komprimierte Form, als auch `3FFE:FFFF:0:CD30::/64` geschrieben werden.  
+ Das Präfix in diesem Beispiel ist `3FFE:FFFF:0:CD30`. Die Adresse kann auch in einem komprimierten Format (`3FFE:FFFF:0:CD30::/64`) geschrieben werden.  
   
  IPv6 definiert die folgenden Adresstypen:  
   
--   **Unicastadresse**.  Ein Bezeichner für eine einzelne Schnittstelle.  Ein Paket, das an diese Adresse gesendet wird, wird der identifizierten Schnittstelle übermittelt.  Die Unicastadressen werden von den Multicastadressen durch den Wert des höherwertigen Oktetts unterschieden.  Das höherwertige Oktett der Multicastadressen hat den Hexadezimalwert FF.  Jeder andere Wert für dieses Oktett identifiziert eine Unicastadresse.  Im Folgenden werden verschiedene Typen von Unicastadressen:  
+-   **Unicast address (Unicastadressen)**. Ein Bezeichner für eine einzelne Schnittstelle. Ein Paket, das an diese Adresse gesendet wird, wird an die angegebene Schnittstelle übermittelt. Die Unicastadressen werden von den Multicastadressen durch den Wert des oberen Oktetts unterschieden. Das obere Oktett der Multicastadressen hat den Hexadezimalwert von FF. Jeder andere Wert für dieses Oktett bezeichnet eine Unicastadresse. Es gibt folgende verschiedene Typen von Unicastadressen:  
   
-    -   **Link\-Local\-Adressen**.  Diese Adressen werden auf einem einzelnen Link verwendet und das folgende Format haben: FE80::*InterfaceID*.  Link\-Local\-Adressen werden zwischen Knoten in einem Link für AUTOAdresse Konfiguration, Nachbarsuche verwendet oder, wenn keine Router vorhanden sind.  Eine Link\-Local\-Adresse wird hauptsächlich beim Starten verwendet und das System noch nicht Adressen des größeren Bereichs abgerufen hat.  
+    -   **Link-local addresses (Verbindungslokale Adressen)**. Diese Adressen werden dann in einem einzigen Link verwendet und weisen folgendes Format auf: FE80::*InterfaceID*. Verbindungslokale Adressen werden zwischen Knoten auf einem Link zur automatischen Adresskonfiguration und Nachbarsuche verwendet oder wenn keine Router vorhanden sind. Eine verbindungslokale Adresse wird in erster Linie beim Start verwendet und wenn das System noch keine größeren Adressen abgerufen hat.  
   
-    -   **Site\-Local\-Adressen**.  Diese Adressen werden auf einer einzelnen Website verwendet und das folgende Format haben: FEC0::*SubnetID*:*InterfaceID*.  Die Site\-Local\-Adressen werden für das Behandeln innerhalb einer Website ohne die Anforderung ein globales Präfix verwendet.  
+    -   **Site-local addresses (Standortlokale Adressen)**. Diese Adressen werden dann in einem einzigen Standort verwendet und weisen folgendes Format auf: FEC0::*SubnetID*:*InterfaceID*. Die standortlokalen Adressen werden für die Adressierung innerhalb eines Standorts verwendet, wenn kein globales Präfix benötigt wird.  
   
-    -   **Globale IPv6\-Unicastadressen**.  Diese Adressen können über das Internet verwendet werden und das folgende Format haben: FP, \(3 Bits\) ID TLA\-010 \(13 Bits\) reservierte \(8 Bits\) ID NLA\-ID\-\(24 Bits\) SLA \(16 Bits\) *InterfaceID* \(64 Bits\).  
+    -   **Global IPv6 unicast addresses (Globale IPv6-Unicastadressen)**. Diese Adressen können über das Internet verwendet werden und weisen folgendes Format auf: 010(FP, 3 Bits) TLA ID (13 Bits) Reserved (8 Bits) NLA ID (24 Bits) SLA ID (16 Bits) *InterfaceID* (64 Bits).  
   
--   **Multicastadresse**.  Ein Bezeichner für einen Satz von Schnittstellen \(in der Regel zu verschiedenen Knoten\).  Ein Paket, das an diese Adresse gesendet wird, wird auf alle Schnittstellen zugestellt, die durch die Adresse identifiziert werden.  Die Multicastadressentypen lösen die Broadcastadressen IPv4 ab.  
+-   **Multicast address (Multicastadressen)**. Ein Bezeichner für eine Reihe von Schnittstellen, die normalerweise zu den unterschiedlichen Knoten gehören. Ein Paket, das an diese Adresse gesendet wird, wird an alle von der Adresse angegebenen Schnittstellen gesendet. Die Multicastadresstypen ersetzen die IPv4-Broadcastadressen.  
   
--   **Anycastadresse**.  Ein Bezeichner für einen Satz von Schnittstellen \(in der Regel zu verschiedenen Knoten\).  Ein Paket, das an diese Adresse gesendet wird, wird nur eine Schnittstelle zugestellt, die durch die Adresse identifiziert wird.  Dies ist die nächste Schnittstelle, wie identifiziert, indem Metriken weiterleitet.  Anycastadressen werden vom Unicastadressbereich übernommen und sind nicht unterscheidbar syntaktisch.  Die adressierte Schnittstelle führt die Unterscheidung zwischen den Unicasten und Anycastadressen als Funktion der Konfiguration aus.  
+-   **Anycast address (Anycastadressen)**. Ein Bezeichner für eine Reihe von Schnittstellen, die normalerweise zu den unterschiedlichen Knoten gehören. Ein Paket, das an diese Adresse gesendet wird, wird nur an eine von der Adresse angegebenen Schnittstellen gesendet. Dabei handelt es sich um die Schnittstelle, die von den Routingmetriken als die nächstgelegene angegeben wird. Anycastadressen werden aus dem Unicastadressraum erstellt und sind syntaktisch nicht unterscheidbar. Die adressierte Schnittstelle nimmt die Unterscheidung zwischen Unicast- und Anycastadressen als Funktion ihrer Konfiguration vor.  
   
- Im Allgemeinen hat ein Knoten immer eine Link\-Local\-Adresse.  Es liegt eine Site\-Local\-Adresse und eine oder mehrere globale Adressen.  
+ Im Allgemeinen verfügt der Knoten immer über eine verbindungslokale Adresse. Er kann auch über eine standortlokale Adresse und eine oder mehrere globale Adressen verfügen.  
   
-## Siehe auch  
- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Internet Protocol Version 6 (Internetprotokoll Version 6)](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [Sockets](../../../docs/framework/network-programming/sockets.md)
+

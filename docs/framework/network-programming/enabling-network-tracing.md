@@ -1,51 +1,56 @@
 ---
-title: "Aktivieren der Netzwerkablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Ablaufverfolgungsziele"
-  - "Senden von Ablaufverfolgungen an eine Protokolldatei"
-  - "Ablaufverfolgungslistener, Netzwerkablaufverfolgung"
-  - "Netzwerkablaufverfolgung, aktivieren"
-  - "CLR Debugger"
-  - "Standardlistener"
-  - "Protokolle, Ablaufverfolgung"
-  - "Ziel für Ablaufverfolgungsausgabe"
+title: Aktivieren der Netzwerkablaufverfolgung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- trace destinations
+- sending traces to log file
+- trace listeners, network tracing
+- network tracing, enabling
+- CLR Debugger
+- default listeners
+- logs, trace
+- destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15cee0244dc06f6eea03b333e01380953a616947
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Aktivieren der Netzwerkablaufverfolgung
-Netzwerkablaufverfolgung bietet Zugriff auf Informationen über Methodenaufrufe und den Netzwerkverkehr, der von einer Anwendung generiert wird.  Sie müssen die folgenden Aufgaben ausführen, können in der Anwendung zu aktivieren:  
+# <a name="enabling-network-tracing"></a>Aktivieren der Netzwerkablaufverfolgung
+Die Netzwerkablaufverfolgung bietet Zugriff auf Informationen über den Aufruf von Methoden sowie Informationen zu dem von einer Anwendung generierten Netzwerkdatenverkehr. Sie müssen folgende Aufgaben abschließen, um die Netzwerkablaufverfolgung in Ihrer Anwendung zu aktivieren:  
   
--   Kompilieren Sie den Code mit aktivierter Ablaufverfolgung.  Siehe [How to: Compile Conditionally with Trace and Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) weitere Informationen über die Compilerschalter, die erforderlich sind, um die Ablaufverfolgung zu aktivieren.  
+-   Kompilieren Sie Ihren Code, während die Ablaufverfolgung aktiviert ist. Weitere Informationen zu den erforderlichen Compilerschaltern, um die Ablaufverfolgung zu aktivieren, finden Sie unter [How to: Compile Conditionally with Trace and Debug (Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen)](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
--   Geben Sie ein Ziel für Ablaufverfolgungsausgabe an.  
+-   Geben Sie ein Ziel für die Ablaufsverfolgungsausgabe an.  
   
--   Konfigurieren Sie das Verhalten der Netzwerkablaufverfolgung.  Siehe [Gewusst wie: Konfigurieren Sie Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) detaillierte Informationen.  
+-   Konfigurieren Sie das Verhalten der Netzwerkablaufverfolgung. Ausführliche Informationen finden Sie unter [How to: Configure Network Tracing (Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
   
- Die meisten allgemeinen Ablaufverfolgungsziele, auch bezeichnet als Ablaufverfolgungslistener, werden standardmäßig Listener und die Protokolldatei.  
+ Die am häufigsten verwendeten Ziele für die Ablaufverfolgung, die auch als Ablaufverfolgungslistener bezeichnet werden, sind der Standardlistener und die Protokolldatei.  
   
- Die Ablaufverfolgung mithilfe der standardmäßigen Listener, wenn Sie keinen Ablaufverfolgungslistener angeben.  Sie können die Meldungen, die auf dem Listener, gesendet werden, indem Sie den Code in einem verwalteten Code\-aktivierten Debugger wie dem CLR\-Debugger ausführen, der mit dem .NET Framework SDK ausgeliefert wird, oder DBwin32.exe anzeigen, das mit dem Windows SDK enthalten.  Verwenden des CLR\-Debuggers werden die Ablaufverfolgungsmeldungen **Ausgabe** im Fenster.  
+ Die Ablaufverfolgung verwendet den Standardlistener, wenn Sie keinen Ablaufverfolgungslistener angeben. Sie können Nachrichten anzeigen, die an den Standardlistener gesendet werden, indem Sie Ihren Code in einem Debugger für verwalteten Code ausführen, zum Beispiel im CLR-Debugger, der in der .NET Framework SDK enthalten ist oder in „DBwin32.exe“, die in Windows SDK enthalten ist. Verwenden Sie den CLR-Debugger, die Ablaufverfolgungsmeldungen werden im Fenster **Ausgabe** angezeigt.  
   
- Wenn Sie es vorziehen, eine Datei zu verwenden, um Ablaufverfolgungen zu erhalten, können Sie eine Protokolldatei angeben, indem Sie Konfigurationseinstellungen, wie im folgenden Beispiel dargestellt.  \(Eine allgemeine Erläuterung Konfigurationsdateien, finden Sie unter [Konfigurationsdateien](../../../docs/framework/configure-apps/index.md).\)  
+ Wenn Sie es bevorzugen, eine Datei zu verwenden, um Ablaufverfolgungen zu erhalten, können Sie mithilfe der Konfigurationseinstellungen, wie im folgenden Beispiel gezeigt, eine Protokolldatei angeben. (Eine allgemeine Beschreibung der Konfigurationsdateien finden Sie unter [Configuration Files (Konfigurationsdatei)](../../../docs/framework/configure-apps/index.md).)  
   
- Um Ablaufverfolgungen in eine Protokolldatei zu senden, fügen Sie den folgenden Knoten dem `<system.diagnostics>` Knoten der entsprechenden Konfigurationsdatei hinzu \(Anwendung oder Computer\).  Sie können den Namen der Datei \(trace.log\) ändern die jeweiligen Anforderungen anzupassen.  
+ Fügen Sie folgenden Knoten zum `<system.diagnostics>`-Knoten der entsprechenden Konfigurationsdatei (Anwendung oder Computer) hinzu, um Ablaufverfolgungen an eine Protokolldatei zu senden. Sie können den Namen der Datei (trace.log) Ihren Anforderungen entsprechend ändern.  
   
-```  
+```xml  
 <system.diagnostics>  
   <trace autoflush="true" indentsize="4">  
     <listeners>  
@@ -55,7 +60,8 @@ Netzwerkablaufverfolgung bietet Zugriff auf Informationen über Methodenaufrufe 
 </system.diagnostics>  
 ```  
   
-## Siehe auch  
- [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Netzwerkablaufverfolgung in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Introduction to Instrumentation and Tracing](http://msdn.microsoft.com/de-de/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+## <a name="see-also"></a>Siehe auch  
+ [Interpreting Network Tracing (Interpretieren von Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
+ [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)   
+ [Introduction to Instrumentation and Tracing (Einführung in Instrumentation und Ablaufverfolgung)](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+

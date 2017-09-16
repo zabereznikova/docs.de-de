@@ -1,48 +1,54 @@
 ---
-title: "IPv6-Routing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: IPv6-Routing
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6-Routing
-Ein flexibler Routingmechanismus ist ein Vorteil von IPv6.  Aufgrund der Methode, in der Netzwerk IPv4 IDs waren und zugeordnet sind, große Routingtabellenanforderung, von den Routern gespeichert werden, die auf den Internet\-Backbonen sind.  Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet verwiesen werden.  Mit seiner Möglichkeit, Adressen zu aggregieren, können IPv6 das Behandeln und flexible drastisch reduziert die Größe von Routingtabellen.  In dieser neuen adressierenden Architektur müssen zwischen Router nur den lokalen Teil des Netzwerks verfolgen, um die Meldungen entsprechend weiterzuleiten.  
+# <a name="ipv6-routing"></a>IPv6-Routing
+Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf die IPv4-Netzwerk-IDs zugeordnet werden, müssen große Routingtabellen von den Routern verwaltet werden, die sich in den Internetbackbones befinden. Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet weitergeleitet werden. IPv6 ermöglicht flexiblere Adressen durch seine Fähigkeit zum Aggregieren von Adressen und reduziert die Größe von Routingtabellen drastisch. In dieser neuen Adressarchitektur müssen zwischengeschaltete Router nur den lokalen Teil ihres Netzwerks verfolgen, um eine Nachricht korrekt weiterzuleiten.  
   
-## Nachbarsuche  
- Einige der Funktionen, die von den Nachbarsuchen bereitgestellt werden, sind:  
+## <a name="neighbor-discovery"></a>Nachbarsuche  
+ Im Folgenden finden Sie einige der Funktionen, die von der Nachbarsuche bereitgestellt werden:  
   
--   Routersuche.  Dadurch können Hosts, um lokale Router zu identifizieren.  
+-   Routersuche. Dadurch können Hosts lokale Router identifizieren.  
   
--   Address resolution.  Dadurch können Knoten, um eine Link\-Layer\-Adresse für ein entsprechendes Next\-Hop\-Adresse \(ein Ersatz für Address Resolution Protocol \[ARP\]\) aufzulösen.  
+-   Adressauflösung. Dadurch können Knoten eine Verbindungsschichtadresse für eine entsprechende Adresse für den nächsten Hop auflösen (ein Ersatz für das Address Resolution Protocol [ARP]).  
   
--   Adressenautomatische Konfiguration.  Dies ermöglicht Hosts, Site\-Local\- und globale Adressen automatisch zu konfigurieren.  
+-   Automatische Adresskonfiguration. Dadurch können Hosts automatisch standortlokale und globale Adressen konfigurieren.  
   
- Nachbarsuche verwenden Internet Message Control Protocol für Meldungen IPv6 \(ICMPv6\), die Folgendes umfassen:  
+ Die Nachbarsuche verwendet das Internet Control Message-Protokoll für folgende IPv6-Nachrichten (ICMPv6):  
   
--   Routerankündigung.  Gesendet durch einen Router auf einer pseudo\-periodischen Basis oder als Reaktion auf eine Routeranfrage.  Verwendungsrouterankündigungen der Router IPv6, um ihre Verfügbarkeit, der Adressenpräfixe und anderer Parameter vorzulesen.  
+-   Routerankündigungen. Werden von einem Router auf pseudo-periodischer Basis versendet oder als Antwort auf eine Routeranfrage. IPv6-Router verwenden Routerankündigungen, um ihre Verfügbarkeit, ihre Adresspräfixe und andere Parameter anzukündigen.  
   
--   Routeranfrage.  Gesendet durch einen Host, um anzufordern, dass Router im Link eine Routerankündigung sofort senden.  
+-   Routeranfrage. Werden von einem Host gesendet, um von den Routern auf einem Link eine sofortige Routerankündigung anzufordern.  
   
--   Nachbaranfrage.  Gesendet durch Knoten für IP\-Adressen resolution, doppelte Adressenerkennung oder überprüfen, ob ein Nachbar weiterhin erreichbar ist.  
+-   Nachbaranfrage. Wird von Knoten für die Adressauflösung, die Erkennung doppelter Adressen oder die Überprüfung gesendet, ob ein Nachbar weiterhin erreichbar ist.  
   
--   Nachbarankündigung.  Gesendet durch Knoten, um auf eine Nachbaranfrage zu reagieren oder Nachbarn zu einer Änderung der Link\-Layer\-Adresse zu benachrichtigen.  
+-   Nachbarankündigungen. Wird von Knoten gesendet, um auf eine Nachbaranfrage zu reagieren oder um Nachbarn über eine Änderung in der Verbindungsschichtadresse zu benachrichtigen.  
   
--   Umleitung.  Gesendet durch Router, um ein besseres Next\-Hop\-Adresse zu einem bestimmten Ziel für einen sendenden Knoten anzugeben.  
+-   Umleiten. Wird von Routern gesendet, um eine bessere Adresse für den nächsten Hop für ein bestimmtes Ziel eines Sendeknotens anzugeben.  
   
-## Siehe auch  
- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Internet Protocol Version 6 (Internetprotokoll Version 6)](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [Sockets](../../../docs/framework/network-programming/sockets.md)
+

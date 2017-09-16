@@ -1,51 +1,57 @@
 ---
-title: "TCP/UDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Protokolle, TCP/UDP"
-  - "Netzwerkressourcen, TCP/UDP"
-  - "Senden von Daten, TCP/UDP"
-  - "TCP/UDP"
-  - "TcpClient-Klasse, Informationen zur TcpClient-Klasse"
-  - "Anwendungsprotokolle, TCP/UDP"
-  - "Empfangen von Daten, TCP/UDP"
-  - "TcpListener-Klasse, Informationen zur TcpListener-Klasse"
-  - "Socket-Klasse, Informationen zur Socket-Klasse"
-  - "UDP"
-  - "Datenanforderungen, TCP/UDP"
-  - "Anfordern von Daten aus dem Internet, TCP/UDP"
-  - "Internet, TCP/UDP"
+title: TCP-UDP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- protocols, TCP/UDP
+- network resources, TCP/UDP
+- sending data, TCP/UDP
+- TCP/UDP
+- TcpClient class, about TcpClient class
+- application protocols, TCP/UDP
+- receiving data, TCP/UDP
+- TcpListener class, about TcpListener class
+- Socket class, about Socket class
+- UDP
+- data requests, TCP/UDP
+- requesting data from Internet, TCP/UDP
+- Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f067d24b59fbb5b49803605a625cef52d12fdbea
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# TCP/UDP
-Anwendungen können Dienste des TCP \(Transmission Control Protocol\) und UDP \(User Datagram Protocol\) mit <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> und <xref:System.Net.Sockets.UdpClient>\-Klassen verwenden.  Diese Protokollklassen werden auf die <xref:System.Net.Sockets.Socket?displayProperty=fullName>\-Klasse erstellt und um den Details des Übertragens von Daten kümmern.  
+# <a name="tcp-udp"></a>TCP-UDP
+Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Datagram Protocol (UDP) mit den <xref:System.Net.Sockets.TcpClient>-, <xref:System.Net.Sockets.TcpListener>- und <xref:System.Net.Sockets.UdpClient>-Klassen verwenden. Diese Protokollklassen bauen auf der <xref:System.Net.Sockets.Socket?displayProperty=fullName>-Klasse auf und kümmern sich um die Details der Datenübertragung.  
   
- Die Protokollklassen verwenden die synchronen Methoden der Klasse **Socket**, um einfachen und einfachen Zugriff auf den Netzwerkdiensten ohne den Mehraufwand von Wartungszustandsinformationen oder von Verständnis der Details der Einrichtung von protokollspezifischen Sockets zu ermöglichen.  Um **Socket** asynchrone Methoden zu verwenden, können Sie die asynchronen Methoden verwenden, die von der <xref:System.Net.Sockets.NetworkStream>\-Klasse angegeben werden.  Um auf Funktionen **Socket** auf eine Sie nicht verfügbar gemachte durch die Protokollklassen, müssen Sie die **Socket**\-Klasse verwenden.  
+ Die Protokollklassen verwenden die synchronen Methoden der **Socket**-Klasse, um den einfachen und unkomplizierten Zugriff auf Netzwerkdienste bereitzustellen, ohne den Aufwand für die Verwaltung von Statusinformationen oder Kenntnisse der Details zum Einrichten der protokollspezifischen Sockets. Für die Verwendung der asynchronen **Socket**-Methoden können Sie die asynchronen Methoden nutzen, die von der <xref:System.Net.Sockets.NetworkStream>-Klasse bereitgestellt werden. Zum Zugriff auf Funktionen der **Socket**-Klasse, die nicht von den Protokollklassen verfügbar gemacht werden, müsse Sie die **Socket**-Klasse verwenden.  
   
- **TcpClient** und **TcpListener** stellen das Netzwerk mithilfe der **NetworkStream**\-Klasse dar.  Sie verwenden die <xref:System.Net.Sockets.TcpClient.GetStream%2A>\-Methode, um den Netzwerkstream zurückzugeben und dann die <xref:System.Net.Sockets.NetworkStream.Read%2A> und <xref:System.Net.Sockets.NetworkStream.Write%2A>\-Methoden des Streams auf.  **NetworkStream** besitzt nicht den zugrunde liegenden Socket der Protokollklassen und so schließt die, wirkt sich nicht auf den Socket.  
+ **TcpClient** und **TcpListener** stellen das Netzwerk mithilfe der **NetworkStream**-Klasse dar. Verwenden Sie die <xref:System.Net.Sockets.TcpClient.GetStream%2A>-Methode zum Zurückgeben des Netzwerkstreams, und rufen Sie anschließend die <xref:System.Net.Sockets.NetworkStream.Read%2A>- und <xref:System.Net.Sockets.NetworkStream.Write%2A>-Methoden des Streams auf. Der **NetworkStream** besitzt den den Protokollklassen zugrunde liegenden Socket nicht, sodass der Abschluss den Socket nicht betrifft.  
   
- Die **UdpClient**\-Klasse verwendet ein Bytearray, um das UDP\-Datagramm aufzunehmen.  Sie verwenden die <xref:System.Net.Sockets.UdpClient.Send%2A>\-Methode, um die Daten mit dem Netzwerk und zur <xref:System.Net.Sockets.UdpClient.Receive%2A>\-Methode zu senden, um ein eingehendes Datagramm zu empfangen.  
+ Die **UdpClient**-Klasse verwendet ein Array von Bytes zum Speichern des UDP-Datagramms. Verwenden Sie die <xref:System.Net.Sockets.UdpClient.Send%2A>-Methode, um die Daten an das Netzwerk zu senden, und die <xref:System.Net.Sockets.UdpClient.Receive%2A>-Methode, um ein eingehendes Datagramm zu empfangen.  
   
-## Siehe auch  
- [Verwenden von TCP\-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)   
- [Verwenden von UDP\-Diensten](../../../docs/framework/network-programming/using-udp-services.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)   
+ [Verwenden von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)   
  [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
  [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
  [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
+

@@ -1,34 +1,40 @@
 ---
-title: "Gewusst wie: Aktivieren der WIF-Ablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Aktivieren der WIF-Ablaufverfolgung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Aktivieren der WIF-Ablaufverfolgung
-## Gilt für  
+# <a name="how-to-enable-wif-tracing"></a>Gewusst wie: Aktivieren der WIF-Ablaufverfolgung
+## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation \(WIF\)  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
 -   ASP.NET® Web Forms  
   
-## Zusammenfassung  
- In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF\-Ablaufverfolgung in einer ASP.NET\-Anwendung vorgestellt.  Außerdem werden Anweisungen für den Test der Anwendung gegeben, mit dem geprüft wird, ob der Ablaufverfolgungslistener und das Protokoll ordnungsgemäß funktionieren.  Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts \(STS\). Stattdessen wird der Entwicklungs\-STS verwendet, der aus dem Identitäts\- und Zugriffstool stammt.  Der Entwicklungs\-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen.  Sie müssen das Identitäts\- und Zugriffs\-Tool installieren, um diese Vorgehensweise nachzuvollziehen.  Es kann an folgendem Speicherort heruntergeladen werden: [Identitäts\- und Zugriffs\-Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+## <a name="summary"></a>Zusammenfassung  
+ In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF-Ablaufverfolgung in einer ASP.NET-Anwendung vorgestellt. Außerdem werden Anweisungen für den Test der Anwendung gegeben, mit dem geprüft wird, ob der Ablaufverfolgungslistener und das Protokoll ordnungsgemäß funktionieren. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](http://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
->  Wenn die WIF\-Ablaufverfolgung für passive Anwendungen, also Anwendungen, die das WS\-Verbundprotokoll verwenden, aktiviert wird, kann die Anwendung DoS\-Angriffen \(DoS, Denial of Services\) ausgesetzt sein oder Informationen könnten für nicht vertrauenswürdige Seiten mit böswilligen Absichten verfügbar werden.  Dazu gehören auch passive vertrauende Seiten und passive STS.  Aus diesem Grund wird empfohlen, keine WIF\-Ablaufverfolgung für passive vertrauende Seiten oder STS in einer Produktionsumgebung zu aktivieren.  
+>  Wenn die WIF-Ablaufverfolgung für passive Anwendungen, also Anwendungen, die das WS-Verbundprotokoll verwenden, aktiviert wird, kann die Anwendung DoS-Angriffen (DoS, Denial of Services) ausgesetzt sein oder Informationen könnten für nicht vertrauenswürdige Seiten mit böswilligen Absichten verfügbar werden. Dazu gehören auch passive vertrauende Seiten und passive STS. Aus diesem Grund wird empfohlen, keine WIF-Ablaufverfolgung für passive vertrauende Seiten oder STS in einer Produktionsumgebung zu aktivieren.  
   
-## Inhalt  
+## <a name="contents"></a>Inhalt  
   
 -   Ziele  
   
@@ -36,45 +42,45 @@ caps.handback.revision: 3
   
 -   Zusammenfassung von Schritten  
   
--   Schritt 1 – Erstellen einer einfachen ASP.NET\-Web Forms\-Anwendung und Aktivieren der Ablaufverfolgung  
+-   Schritt 1 – Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Ablaufverfolgung  
   
 -   Schritt 2 – Testen der Projektmappe  
   
-## Ziele  
+## <a name="objectives"></a>Ziele  
   
--   Erstellen einer einfachen ASP.NET\-Anwendung, die WIF und den Entwicklungs\-STS aus dem Identitäts\- und Zugriffs\-Tool verwendet  
+-   Erstellen einer einfachen ASP.NET-Anwendung, die WIF und den Entwicklungs-STS aus dem Identitäts- und Zugriffs-Tool verwendet  
   
 -   Aktivieren der Ablaufverfolgung und Überprüfen der Funktion  
   
-## Übersicht  
- Mit Ablaufverfolgung können Sie viele Arten von Problemen mit WIF, einschließlich Token, Cookies, Ansprüche, Protokollmeldungen usw. debuggen und Fehler daran beheben.  WIF\-Ablaufverfolgung ähnelt der WCF\-Ablaufverfolgung; Sie können beispielsweise den Ausführlichkeitsgrad von Ablaufverfolgungen auswählen, um Meldungen von kritischen Meldungen bis hin zu allen Meldungen anzuzeigen.  WIF\-Ablaufverfolgungen können in **XML**\-Dateien oder in **SVCLOG**\-Dateien generiert werden, die mit dem Service Trace Viewer\-Tool angezeigt werden können.  Dieses Tool befindet sich im Verzeichnis **bin** im Windows SDK\-Installationspfad auf dem Computer, beispielsweise: **C:\\Programme\\Microsoft SDKs\\Windows\\v7.1\\Bin\\SvcTraceViewer.exe**.  
+## <a name="overview"></a>Übersicht  
+ Mit Ablaufverfolgung können Sie viele Arten von Problemen mit WIF, einschließlich Token, Cookies, Ansprüche, Protokollmeldungen usw. debuggen und Fehler daran beheben. WIF-Ablaufverfolgung ähnelt der WCF-Ablaufverfolgung; Sie können beispielsweise den Ausführlichkeitsgrad von Ablaufverfolgungen auswählen, um Meldungen von kritischen Meldungen bis hin zu allen Meldungen anzuzeigen. WIF-Ablaufverfolgungen können in **XML**-Dateien oder in **SVCLOG**-Dateien generiert werden, die mit dem Service Trace Viewer-Tool angezeigt werden können. Dieses Tool befindet sich im Verzeichnis **bin** im Windows SDK-Installationspfad auf dem Computer, beispielsweise: **C:\Programme\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
-## Zusammenfassung von Schritten  
+## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1 – Erstellen einer einfachen ASP.NET\-Web Forms\-Anwendung und Aktivieren der Ablaufverfolgung  
+-   Schritt 1 – Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Ablaufverfolgung  
   
 -   Schritt 2 – Testen der Projektmappe  
   
-## Schritt 1 – Erstellen einer einfachen ASP.NET\-Web Forms\-Anwendung und Aktivieren der Ablaufverfolgung  
- In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms\-Anwendung und ändern die Datei *Web.config*, um die Ablaufverfolgung zu aktivieren.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>Schritt 1 – Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Ablaufverfolgung  
+ In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung und ändern die Datei *Web.config*, um die Ablaufverfolgung zu aktivieren.  
   
-#### So erstellen Sie eine einfache ASP.NET\-Anwendung  
+#### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
 1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms\-Anwendung**.  
+2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und klicken Sie auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste unter **Projektmappen\-Explorer** auf das Projekt **TestApp**, und wählen Sie **Identität und Zugriff** aus.  
+4.  Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und klicken Sie auf **Identität und Zugriff**.  
   
-5.  Das Fenster **Identität und Zugriff** wird geöffnet.  Wählen Sie unter **Anbieter** die Option **Anwendung mit dem lokalen Entwicklungs\-STS testen** aus, und klicken Sie auf **Übernehmen**.  
+5.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Anwendung mit dem lokalen Entwicklungs-STS testen**, und klicken Sie auf **Übernehmen**.  
   
-6.  Erstellen Sie im Stamm des Laufwerks **C:** einen neuen Ordner mit dem Namen **logs**, wie hier dargestellt: **C:\\logs**  
+6.  Erstellen Sie wie hier dargestellt im Stamm des Laufwerks **C:** einen neuen Ordner mit dem Namen **logs**: **C:\logs**.  
   
-7.  Fügen Sie der Konfigurationsdatei *Web.config* direkt nach dem schließenden **\<\/configSections\>** das folgende **\<system.diagnostics\>**\-Element hinzu, wie dargestellt:  
+7.  Fügen Sie der Konfigurationsdatei *Web.config* direkt nach dem schließenden **\</configSections>**-Element das folgende **\<system.diagnostics>**-Element wie dargestellt hinzu:  
   
-    ```  
+    ```xml  
     <configuration>  
         <configSections>  
         …  
@@ -92,17 +98,18 @@ caps.handback.revision: 3
     ```  
   
     > [!NOTE]
-    >  Der Verzeichnisspeicherort, der im **initializeData**\-Attribut angegeben wird, muss vorhanden sein, bevor die Protokollierung beginnen kann.  Wenn der Speicherort nicht vorhanden ist, werden keine Protokolle erstellt.  
+    >  Der Verzeichnisspeicherort, der im Attribut **initializeData** angegeben wird, muss vorhanden sein, bevor die Protokollierung beginnen kann. Wenn der Speicherort nicht vorhanden ist, werden keine Protokolle erstellt.  
   
-     Mit den oben erwähnten Konfigurationseinstellungen werden die **Ausführliche** Ablaufverfolgung für WIF aktiviert und das resultierende Protokoll in der Datei **C:\\logs\\WIF.xml** gespeichert.  
+     Mit den oben erwähnten Konfigurationseinstellungen werden die **ausführliche** Ablaufverfolgung für WIF aktiviert und das resultierende Protokoll in der Datei **C:\logs\WIF.xml** gespeichert.  
   
-## Schritt 2 – Testen der Projektmappe  
- In diesem Schritt testen Sie die für WIF aktivierte ASP.NET\-Anwendung, um zu überprüfen, ob Protokolle aufgezeichnet werden.  
+## <a name="step-2--test-your-solution"></a>Schritt 2 – Testen der Projektmappe  
+ In diesem Schritt testen Sie die für WIF aktivierte ASP.NET-Anwendung, um zu überprüfen, ob Protokolle aufgezeichnet werden.  
   
-#### So testen Sie die für WIF aktivierte ASP.NET\-Anwendung auf erfolgreiche Ablaufverfolgung  
+#### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>So testen Sie die für WIF aktivierte ASP.NET-Anwendung auf erfolgreiche Ablaufverfolgung  
   
-1.  Starten Sie die Projektmappe durch Drücken der Taste **F5**.  Die Standard\-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs\-STS zurückgegeben wird.  
+1.  Starten Sie die Projektmappe durch Drücken der Taste **F5**. Die Standard-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs-STS zurückgegeben wird.  
   
-2.  Schließen Sie das Browserfenster, und navigieren Sie dann zum Ordner **C:\\logs**.  Öffnen Sie die Datei **C:\\logs\\WIF.xml** in einem Text\-Editor.  
+2.  Schließen Sie das Browserfenster, und navigieren Sie dann zum Ordner **C:\logs**. Öffnen Sie die Datei **C:\logs\WIF.xml** in einem Text-Editor.  
   
-3.  Überprüfen Sie, ob die Datei **WIF.xml** Einträge enthält, die mit **\<E2ETraceEvent\>** beginnen.  Diese Ablaufverfolgungen enthalten **\<TraceRecord\>**\-Elemente mit Beschreibungen für die aufgezeichnete Aktivität, z. B. **Sicherheitstoken wird überprüft**.
+3.  Überprüfen Sie, ob die Datei **WIF.xml** Einträge enthält, die mit **\<E2ETraceEvent>** beginnen. Diese Ablaufverfolgungen enthalten **\<TraceRecord>**-Elemente mit Beschreibungen für die aufgezeichnete Aktivität, z. B. **Sicherheitstoken wird überprüft**.
+

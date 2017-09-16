@@ -1,56 +1,61 @@
 ---
-title: "Vornehmen von asynchronen Anforderungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet, Asynchroner Zugriff"
-  - "Netzwerk"
-  - "Asynchrone Anforderungen, Internetressourcen"
-  - "Netzwerkressourcen"
-  - "WebRequest-Klasse, Asynchroner Zugriff"
+title: Vornehmen von asynchronen Anforderungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, asynchronous access
+- Networking
+- asynchronous requests, Internet resources
+- Network Resources
+- WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Vornehmen von asynchronen Anforderungen
-Die <xref:System.Net>\-Klassen verwenden das asynchrone StandardProgrammiermodell von .NET Framework für asynchrone Zugriff auf Internetressourcen.  Die <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A>\-Methoden der Klasse <xref:System.Net.WebRequest> starten und schließen asynchrone Anforderung einer Internetressource ab.  
+# <a name="making-asynchronous-requests"></a>Vornehmen von asynchronen Anforderungen
+Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für asynchrones Programmieren für den asynchronen Zugriff auf Internetressourcen. Die Methoden <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A> der Klasse <xref:System.Net.WebRequest> starten asynchrone Anforderungen für eine Internetressource und schließen diese ab.  
   
 > [!NOTE]
->  Verwenden der synchronen Aufrufen in asynchronen Rückrufmethoden kann schwere Leistungseinbußen führen.  Die Internet\-Anforderungen, die mit **WebRequest** gemacht und seine Nachfolger müssen <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> verwenden, um den Stream lesen, der durch die <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>\-Methode zurückgegeben wird.  
+>  Das Verwenden von synchronen Aufrufen in asynchronen Rückrufmethoden kann zu schwerwiegenden Leistungseinbußen führen. Internet-Anforderungen mit **WebRequest** und den direkt untergeordneten Elementen müssen <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> verwenden, um den von der <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>-Methode zurückgegebenen Datenstrom zu lesen.  
   
- Im folgenden Beispielcode wird veranschaulicht, wie asynchrone Aufrufe mit der **WebRequest**\-Klasse verwendet.  Das Beispiel ist ein Konsolenprogramm, das ein URI aus der Befehlszeile akzeptiert, fordert die Ressource am URI und gibt dann Daten an die Konsole, da es aus dem Internet empfangen wird.  
+ Der folgende Beispielcode veranschaulicht, wie asynchrone Aufrufe mit der **WebRequest**-Klasse verwendet werden. Das Beispiel ist ein Konsolenprogramm, das einen URI aus der Befehlszeile verwendet, die Ressource am URI anfordert und dann die Daten auf der Konsole druckt, wenn sie aus dem Internet empfangen werden.  
   
- Das Programm definiert zwei Klassen zur eigenen Verwendung, die **RequestState**\-Klasse, die die Daten für asynchronen Aufrufen übermittelt, und die **ClientGetAsync**\-Klasse, die die asynchrone Anforderung einer Internetressource implementiert.  
+ Das Programm definiert zwei Klassen für die eigene Verwendung. Die **RequestState**-Klasse, die Daten zwischen asynchronen Aufrufen überträgt, und die **ClientGetAsync**-Klasse, die die asynchrone Anforderung in eine Internetressource implementiert.  
   
- Die **RequestState**\-Klasse behält den Zustand der Anforderung zum Aufrufen der asynchronen Methoden bei, die die Anforderung bedienen.  Es enthält **WebRequest** und <xref:System.IO.Stream>\-Instanzen, die die aktuelle Anforderung an die Ressource und den Stream enthalten, die in der Antwort empfangen wird, einen Puffer, der die Daten enthält, die derzeit von einer Internetressource empfangen werden und <xref:System.Text.StringBuilder>, das die vollständige Antwort enthält.  **RequestState** wird als *Zustandsparameter* übergeben, wenn die <xref:System.AsyncCallback>\-Methode mit **WebRequest.BeginGetResponse** registriert wird.  
+ Die **RequestState**-Klasse behält den Status der Anforderung über Aufrufe der asynchronen Methoden für die Anforderung hinweg. Sie enthält **WebRequest**- und <xref:System.IO.Stream>-Instanzen, die die aktuelle Anforderung der Ressource und den als Antwort empfangenen Datenstrom enthalten, einen Puffer, der die aktuell von der Internetressource empfangenen Daten enthält, sowie eine <xref:System.Text.StringBuilder>-Klasse, die die vollständige Antwort enthält. Eine **RequestState**-Klasse wird als *state*-Parameter übergeben, wenn die <xref:System.AsyncCallback>-Methode bei **WebRequest.BeginGetResponse** registriert ist.  
   
- Die **ClientGetAsync**\-Klasse implementiert eine asynchrone Anforderung einer Internetressource und schreibt die resultierende Antwort an der Konsole aus.  Sie enthält die Methoden und Eigenschaften, die in der folgenden Liste beschrieben werden.  
+ Die **ClientGetAsync**-Klasse implementiert eine asynchrone Anforderung einer Internetressource und schreibt die resultierende Antwort in die Konsole. Sie enthält die in der folgenden Liste aufgeführten Methoden und Eigenschaften.  
   
--   Die `allDone`\-Eigenschaft enthält eine Instanz der <xref:System.Threading.ManualResetEvent>\-Klasse, die dem Abschluss der Anforderung signalisiert.  
+-   Die `allDone`-Eigenschaft enthält eine Instanz der <xref:System.Threading.ManualResetEvent>-Klasse, die die Vervollständigung der Anforderung signalisiert.  
   
--   Die `Main()`\-Methode liest die Befehlszeile und startet die Anforderung für die angegebene Internetressource.  Es erstellt **WebRequest**`wreq` und **RequestState**`rs` auf, ruft **BeginGetResponse**, um zu beginnen, die Anforderungsverarbeitung, und ruft dann die `allDone.WaitOne()`\-Methode auf, damit die Anwendung nicht angehalten, bis der Rückruf abgeschlossen ist.  Nachdem die Antwort von einer Internetressource gelesen wurde, schreibt `Main()` sie auf der Konsole und zu dem Beenden der Anwendung.  
+-   Die `Main()`-Methode liest die Befehlszeile und startet die Anforderung für die angegebene Internetressource. Sie erstellt die **WebRequest**-Klasse `wreq` und die **RequestState**-Klasse `rs`, ruft **BeginGetResponse** auf, um die Verarbeitung der Anforderung zu starten, und ruft dann die `allDone.WaitOne()`-Methode auf, sodass die Anwendung nicht beendet wird, bis der Rückruf abgeschlossen ist. Nachdem die Antwort von der Internetressource gelesen wurde, schreibt `Main()` diese in die Konsole, und die Anwendung wird beendet.  
   
--   Die `showusage()`\-Methode schreibt eine Beispielbefehlszeile auf der Konsole.  Sie wird von `Main()` aufgerufen, wenn kein URI in der Befehlszeile bereitgestellt wird.  
+-   Die `showusage()`-Methode schreibt eine Beispielbefehlszeile in die Konsole. Sie wird von `Main()` aufgerufen, wenn in der Befehlszeile kein URI angegeben ist.  
   
--   Die `RespCallBack()`\-Methode implementiert die asynchrone Rückrufmethode für die Internetanforderung.  Es erstellt die **WebResponse**\-Instanz, die die Antwort von einer Internetressource enthält, ruft den Antwortdatenstrom ab und startet dann die Daten aus dem Stream asynchron lesen.  
+-   Die `RespCallBack()`-Methode implementiert die asynchrone Rückrufmethode für die Internetanforderung. Sie erstellt die **WebResponse**-Instanz, die die Antwort der Internetressource enthält, ruft den Antwortdatenstrom ab und startet dann mit dem asynchronen Lesen der Daten aus dem Datenstrom.  
   
--   Die `ReadCallBack()`\-Methode implementiert die asynchrone Rückrufmethode zum Lesen des Antwortstreams.  Es überträgt die Daten, die von einer Internetressource in die **ResponseData**\-Eigenschaft der **RequestState**\-Instanz empfangen werden, dann startet eine anderes asynchrones Lesen des Antwortstreams, bis nicht mehr Daten zurückgegeben.  Sobald alle Daten gelesen wurden, schließt `ReadCallBack()` den Antwortdatenstrom und ruft die `allDone.Set()`\-Methode auf, um anzugeben, dass die gesamte Antwort in **ResponseData** vorhanden ist.  
+-   Die `ReadCallBack()`-Methode implementiert die asynchrone Rückrufmethode zum Lesen des Antwortdatenstroms. Sie überträgt von der Internetressource empfangene Daten in die **ResponseData**-Eigenschaft der **RequestState**-Instanz und startet dann ein weiteres asynchrones Lesen des Antwortdatenstroms, bis keine Daten mehr zurückgegeben werden. Nachdem alle Daten gelesen wurden, schließt `ReadCallBack()` den Antwortdatenstrom und ruft die `allDone.Set()`-Methode auf, um anzugeben, dass sich die gesamte Antwort in **ResponseData** befindet.  
   
     > [!NOTE]
-    >  Es ist wichtig, dass alle Netzwerkstreams geschlossen werden.  Wenn Sie nicht jede Anforderung und B schließen, verfügt die Anwendung kein Verbindungen mit dem Server mehr und ist nicht möglich, zusätzliche Anforderungen zu verarbeiten.  
+    >  Es ist wichtig, dass alle Netzwerkdatenströme geschlossen werden. Wird nicht jede Antwort und jeder Datenstrom geschlossen, verfügt die Anwendung nicht mehr über genügend Verbindungen mit dem Server und kann weitere Anforderungen nicht mehr verarbeiten.  
   
 ```csharp  
 using System;  
@@ -341,5 +346,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
+

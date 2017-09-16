@@ -1,42 +1,47 @@
 ---
-title: "Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie f&#252;r eine Anwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Explizites Definieren von Cacheverhalten"
-  - "Speicherortbasierte Cacherichtlinien"
-  - "Lokaler Cache"
-  - "Anforderung von Cacherichtlinien"
-  - "Cache [.NET Framework], Speicherortbasierte Richtlinien"
+title: "Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- expliciting defining cache behavior
+- location-based cache policies
+- local cache
+- request cache policies
+- cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie f&#252;r eine Anwendung
-Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung auf der Grundlage der Position der angeforderten Ressource explizit zu definieren.  In diesem Thema werden die Cacherichtlinie programmgesteuert festlegen.  Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien, finden Sie unter [\<requestCaching\>\-Element \(Netzwerkeinstellungen\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung
+Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
-### So fügen Sie eine ortsbasierte Cacherichtlinie für eine Anwendung festlegen  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung  
   
-1.  Erstellen Sie ein <xref:System.Net.Cache.RequestCachePolicy> oder <xref:System.Net.Cache.HttpRequestCachePolicy>\-Objekt.  
+1.  Erstellen Sie ein <xref:System.Net.Cache.RequestCachePolicy>- oder <xref:System.Net.Cache.HttpRequestCachePolicy>-Objekt.  
   
 2.  Legen Sie das Richtlinienobjekt als Standard für die Anwendungsdomäne fest.  
   
-### Um eine Richtlinie festzulegen die akzeptiert Anwendungstest Ressourcen von einem Cache an  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Festlegen einer Richtlinie, die angeforderte Ressourcen aus einem Cache abruft  
   
--   Erstellen Sie eine Richtlinie, die angeforderte Ressourcen von einem Cache verwendet, sofern verfügbar und andernfalls, Anforderungen an den Server, indem das Festlegen des Cache sendet, der zu <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  Eine Anforderung kann von jedem Cache zwischen Client und Server, einschließlich Remote Cache erfüllt werden.  
+-   Erstellen Sie eine Richtlinie, die die angeforderten Ressourcen, falls verfügbar, aus einem Cache abruft, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> festlegen. Sind keine Ressourcen verfügbar, sendet die Richtlinie Anforderungen an den Server. Eine Anforderung kann von einem beliebigen Cache zwischen Client und Server erfüllt werden, einschließlich eines Remotecaches.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -45,7 +50,6 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
             (HttpRequestCacheLevel.CacheIfAvailable);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
-  
     ```  
   
     ```vb  
@@ -56,9 +60,9 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-### So fügen Sie eine Richtlinien festlegen, die jeden Cache am Angeben von Ressourcen verhindert  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Festlegen einer Richtlinie, die die Bereitstellung von Ressourcen durch einen Cache verhindert  
   
--   Erstellen Sie eine Richtlinie, die jeden Cache am Angeben von angeforderten Ressourcen verhindert, indem es den Cache festgelegt wird, der zu <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  Diese Richtlinienebene entfernt die Ressource aus dem lokalen Cache, wenn vorhanden ist und gibt an den Cache an, dass die Ressource auch entfernt werden kann.  
+-   Erstellen Sie eine Richtlinie, die verhindert, dass ein beliebiger Cache die angeforderten Ressourcen bereitstellt, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore> festlegen. Diese Richtlinienebene entfernt die Ressource, sofern vorhanden, aus dem lokalen Cache, und gibt den Remotecaches an, dass sie die Ressource auch entfernen sollen.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -77,9 +81,9 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-### Um eine Richtlinie festzulegen die zurückgibt Anwendungstest Ressourcen an nur bei im lokalen Cache sind  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Festlegen einer Richtlinie, die angeforderte Ressourcen nur zurückgibt, wenn sie im lokalen Cache sind  
   
--   Erstellen Sie eine Richtlinie, die angeforderte Ressourcen zurückgibt, wenn sie im lokalen Cache befinden, indem der Cache festlegen, der auf <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  Wenn die angeforderte Ressource nicht im Cache befindet, wird eine Ausnahme ausgelöst. <xref:System.Net.WebException>  
+-   Erstellen Sie eine Richtlinie, die die angeforderten Ressourcen nur zurückgibt, wenn sie sich im lokalen Cache befinden, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly> festlegen. Befindet sich die angeforderte Ressource nicht im Cache, wird eine <xref:System.Net.WebException>-Ausnahme ausgelöst.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -98,9 +102,9 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-### So fügen Sie eine Richtlinien festlegen, die den lokalen Cache am Angeben von Ressourcen verhindert  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Festlegen einer Richtlinie, die die Bereitstellung von Ressourcen durch den lokalen Cache verhindert  
   
--   Erstellen Sie eine Richtlinie, die den lokalen Cache am Angeben von angeforderten Ressourcen verhindert, indem es den Cache festgelegt wird, der zu <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  Wenn die angeforderte Ressource in einem Zwischencachen ist und erfolgreich neu überprüft wird, kann der Zwischencache die angeforderte Ressource bereitstellen.  
+-   Erstellen Sie eine Richtlinie, die verhindert, dass der lokale Cache die angeforderten Ressourcen bereitstellt, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh> festlegen. Befindet sich die angeforderte Ressource in einem Zwischen-Cache und wird erneut erfolgreich überprüft, kann der Zwischen-Cache die angeforderte Ressource bereitstellen.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -119,9 +123,9 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-### So fügen Sie eine Richtlinien festlegen, die jeden Cache am Angeben von angeforderten Ressourcen verhindert  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Festlegen einer Richtlinie, die die Bereitstellung von angeforderten Ressourcen durch einen Cache verhindert  
   
--   Erstellen Sie eine Richtlinie, die jeden Cache am Angeben von angeforderten Ressourcen verhindert, indem es den Cache festgelegt wird, der zu <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  Die Ressource, die vom Server zurückgegeben wird, kann im Cache gespeichert werden.  
+-   Erstellen Sie eine Richtlinie, die verhindert, dass ein beliebiger Cache die angeforderten Ressourcen bereitstellt, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.Reload> festlegen. Die vom Server zurückgegebene Ressource kann im Cache gespeichert werden.  
   
     ```csharp  
     public static void SendToServer()  
@@ -140,9 +144,9 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-### Um eine Richtlinie festzulegen die jeden Cache von werden zulässig sind Ressourcen wenn die Ressourcen auf dem Server nicht neuer ist als die zwischengespeicherte Kopie an  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Festlegen einer Richtlinie, die die Bereitstellung von angeforderten Ressourcen durch einen Cache ermöglicht, wenn die Ressource im Server nicht neuer ist als die zwischengespeicherte Kopie  
   
--   Erstellen Sie eine Richtlinie, die jeden Cache zu Zubehör angeforderten Ressourcen, wenn die Ressource auf dem Server nicht neuer ist als die zwischengespeicherte Kopie können, indem Sie den Cache festgelegt wird, der zu <xref:System.Net.Cache.HttpRequestCacheLevel> einstellen.  
+-   Erstellen Sie eine Richtlinie, die die Bereitstellung von angeforderten Ressourcen durch einen Cache ermöglicht, wenn die Ressource im Server nicht neuer ist als die zwischengespeicherte Kopie, indem Sie die Cacheebene auf <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate> festlegen.  
   
     ```csharp  
     public static void CheckServer()  
@@ -161,9 +165,10 @@ Ortsbasierte Cacherichtlinien können in einer Anwendung, Zwischenspeicherung au
     End Sub  
     ```  
   
-## Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\>\-Element \(Netzwerkeinstellungen\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ [Cache Management for Network Applications (Cacheverwaltung für Netzwerkanwendungen)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+ [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
+ [Location-Based Cache Policies (Speicherortbasierte Cacherichtlinien)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies (Zeitbasierte Cacherichtlinien)](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

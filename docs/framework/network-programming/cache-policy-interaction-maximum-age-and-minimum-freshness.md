@@ -1,47 +1,53 @@
 ---
-title: "Cacherichtlinieninteraktion – maximales Alter und minimale Aktualit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "zeitbasierte Cacherichtlinien"
-  - "Richtlinie zum erneuten Überprüfen"
-  - "Cache [.NET Framework], zeitbasierte Richtlinien"
-  - "Aktualität zwischengespeicherter Ressourcen"
-  - "Richtlinie zum maximalen Alter"
-  - "Richtlinie zur minimalen Aktualität"
-  - "Alter zwischengespeicherter Ressourcen"
+title: "Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- Revalidate policy
+- cache [.NET Framework], time-based policies
+- freshness of cached resources
+- maximum age policy
+- minimum freshness policy
+- age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29bc33db40e396d28347d1fc491b94541eb75f33
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Cacherichtlinieninteraktion – maximales Alter und minimale Aktualit&#228;t
-Um sicherzustellen dass der neuste Inhalt an die Clientanwendung zurückgegeben wird, führt die Interaktion der Clientcacherichtlinie und die Anforderungen der Servererneuten validierung immer die konservativste Cacherichtlinie.  Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert und am 4. Januar abläuft.  
+# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität
+Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cache-Richtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  
   
- Die folgenden Beispiele veranschaulichen die Cacherichtlinie, die von der Interaktion des Höchstalters \(`maxAge`\) und der Mindestwerte der Aktualität \(`minFresh`\) resultiert.  
+ Die folgenden Beispiele veranschaulichen die Cacherichtlinie, die von der Wechselwirkung aus dem maximalen Alter (`maxAge`) und der minimalen Aktualität (`minFresh`) der Werte entsteht.  
   
--   Wenn die Cacherichtlinie `maxAge` \= 2 Tage festgelegt und `minFresh` nicht angegeben wird, wird der Inhalt am 3. Januar neu überprüft.  
+-   Wenn die Cacherichtlinie `maxAge` = 2 Tage festlegt und `minFresh` nicht angegeben ist, wird der Inhalt am 3. Januar erneut überprüft.  
   
--   Wenn die Cacherichtlinie `maxAge` \= 2 Tage und `minFresh` festlegt, 1 \= Tag, entsprechend `maxAge`, ist der Inhalt bis zum 3. Januar neu.  Gemäß `minFresh` ist der Inhalt bis zum 3. Januar neu.  Daher muss der Inhalt am 3. Januar erneut überprüft werden.  
+-   Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 1 Tag festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 3. Januar aktuell. Aus diesem Grund muss der Inhalt am 3. Januar erneut überprüft werden.  
   
--   Wenn die Cacherichtlinie `maxAge`\= festlegt, 2 Tage und `minFresh` \= 2 Tage, entsprechend `maxAge`, ist der Inhalt bis zum 3. Januar neu.  Gemäß `minFresh` ist der Inhalt bis zum 2. Januar neu.  Daher muss der Inhalt am 2. Januar erneut überprüft werden.  
+-   Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 2 Tage festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 2. Januar aktuell. Aus diesem Grund muss der Inhalt am 2. Januar erneut überprüft werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)   
+ [Cacherichtlinien](../../../docs/framework/network-programming/cache-policy.md)   
  [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
  [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
  [Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+

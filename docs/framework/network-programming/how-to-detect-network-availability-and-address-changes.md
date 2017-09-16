@@ -1,30 +1,35 @@
 ---
-title: "Gewusst wie: Erkennen von Netzwerkverf&#252;gbarkeit und Adress&#228;nderungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Netzwerk"
+title: "Gewusst wie: Erkennen von Netzwerkverfügbarkeit und Adressänderungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 52c3bffb204c35d7741d7e4fb35b05a357f3811f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Erkennen von Netzwerkverf&#252;gbarkeit und Adress&#228;nderungen
-Dieses Beispiel zeigt, wie Änderungen in der Netzwerkadresse einer Schnittstelle erkennt.  
+# <a name="how-to-detect-network-availability-and-address-changes"></a>Gewusst wie: Erkennen von Netzwerkverfügbarkeit und Adressänderungen
+In diesem Beispiel wird gezeigt, wie Änderungen in der Netzwerkadresse einer Schnittstelle erkannt werden können.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 using System;  
@@ -55,7 +60,8 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf **System.Net**\-Namespace.
+-   Verweise auf den Namespace **System.Net**.
+

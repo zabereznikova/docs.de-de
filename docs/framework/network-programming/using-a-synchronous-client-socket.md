@@ -1,46 +1,50 @@
 ---
-title: "Verwenden eines synchronen Clientsockets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungsprotokolle, Sockets"
-  - "Senden von Daten, Sockets"
-  - "Datenanforderungen, Sockets"
-  - "Anfordern von Daten aus dem Internet, Sockets"
-  - "Synchrone Clientsockets"
-  - "Socketklasse, Synchrone Clientsockets"
-  - "Empfangen von Daten, Sockets"
-  - "Sockets, Synchrone Clientsockets"
-  - "Protokolle, Sockets"
-  - "Internet, Sockets"
-  - "Clientsockets"
+title: Verwenden eines synchronen Clientsockets
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- synchronous client sockets
+- Socket class, synchronous client sockets
+- receiving data, sockets
+- sockets, synchronous client sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8562670aad8a20a28eddcd2ebbe434a0402aff59
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Verwenden eines synchronen Clientsockets
-Ein synchroner Clientsocket enthält die Anwendung an, während der Netzwerkvorgang abgeschlossen hat.  Synchrone Sockets sind nicht für Anwendungen geeignet, die umfangreichen Gebrauch von Netzwerk für den Vorgang ausführen, aber sie können einfachen Zugriff auf Netzwerkdiensten für andere Anwendungen ermöglichen.  
+# <a name="using-a-synchronous-client-socket"></a>Verwenden eines synchronen Clientsockets
+Ein synchroner Clientsocket hält das Anwendungsprogramm an, während der Netzwerkvorgang abgeschlossen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können einfachen Zugang zu Netzwerkdiensten für andere Anwendungen ermöglichen.  
   
- Um Daten zu senden, übergeben Sie ein Bytearray in eine der Methoden der <xref:System.Net.Sockets.Socket> die SENDDaten Klasse \(<xref:System.Net.Sockets.Socket.Send%2A> und <xref:System.Net.Sockets.Socket.SendTo%2A>\).  Im folgenden Beispiel wird eine Zeichenfolge in einen Bytearraypuffer mithilfe der <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName>\-Eigenschaft und sendet dann den Puffer dem Netzwerkgerät mithilfe der **Send**\-Methode zu.  Die **Send**\-Methode gibt die Anzahl der Bytes zurück, die dem Netzwerkgerät gesendet werden.  
+ Übergeben Sie zum Senden von Daten ein Byte-Array an eine der Methoden zur Datenversendung (<xref:System.Net.Sockets.Socket.Send%2A> und <xref:System.Net.Sockets.Socket.SendTo%2A>) der <xref:System.Net.Sockets.Socket>-Klasse. Im folgenden Beispiel wird eine Zeichenfolge in einen Puffer mit Byte-Array mit der <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName>-Eigenschaft codiert, und anschließend wird der Puffer mit der **Senden**-Methode an das Netzwerkgerät übertragen. Die **Senden**-Methode gibt die Anzahl der Bytes zurück, die an das Netzwerkgerät gesendet werden.  
   
 ```vb  
 Dim msg As Byte() = _  
     System.Text.Encoding.ASCII.GetBytes("This is a test.")  
 Dim bytesSent As Integer = s.Send(msg)  
-  
 ```  
   
 ```csharp  
@@ -48,16 +52,15 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- Die **Send**\-Methode entfernt die Bytes aus dem Puffer und stellt sie mit der in die Warteschlange zum Netzwerkgerät gesendet werden Netzwerkschnittstelle.  Die Netzwerkschnittstelle kann die Daten nicht direkt, sondern sendet sie schließlich, solange die Verbindung normalerweise der <xref:System.Net.Sockets.Socket.Shutdown%2A>\-Methode geschlossen wird.  
+ Die **Senden**-Methode entfernt die Bytes aus dem Puffer und platziert sie mit der Netzwerkschnittstelle in die Warteschlange, um an das Netzwerkgerät gesendet zu werden. Die Netzwerkschnittstelle kann die Daten möglicherweise nicht sofort, aber letztendlich doch senden, solange die Verbindung mit der <xref:System.Net.Sockets.Socket.Shutdown%2A>-Methode normal geschlossen wird.  
   
- Um Daten aus einem Netzwerkgerät zu empfangen, führen Sie einen Puffer an eine der Methoden der **Socket** die RECEIVEDaten Klasse \(<xref:System.Net.Sockets.Socket.Receive%2A> und <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>\).  Synchrone Sockets halten die Anwendung an, bis Bytes vom Netzwerk empfangen sind, oder bis der Socket geschlossen wird.  Im folgenden Beispiel empfängt Daten vom Netzwerk und dann von den angezeigt wird auf der Konsole.  Im Beispiel wird davon ausgegangen, dass die Daten, die vom Netzwerk stammen, ASCII\-codierter Text sind.  Die **Receive**\-Methode gibt die Anzahl von Bytes zurück, die vom Netzwerk empfangen werden.  
+ Um Daten von einem Netzwerkgerät zu empfangen, übergeben Sie einen Puffer an eine der Methoden zum Datenempfang (<xref:System.Net.Sockets.Socket.Receive%2A> und <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>) der **Socket**-Klasse. Synchrone Sockets werden die Anwendung anhalten, bis Bytes aus dem Netzwerk empfangen werden oder bis der Socket geschlossen wird. Im folgenden Beispiel werden Daten aus dem Netzwerk empfangen, und dann auf der Konsole angezeigt. Im Beispiel wird davon ausgegangen, dass die Daten, die aus dem Netzwerk stammen, aus ASCII-codiertem Text bestehen. Die **Empfangen**-Methode gibt die Anzahl der Bytes zurück, die vom Netzwerk empfangen werden.  
   
 ```vb  
 Dim bytes(1024) As Byte  
 Dim bytesRec = s.Receive(bytes)  
 Console.WriteLine("Echoed text = {0}", _  
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec))  
-  
 ```  
   
 ```csharp  
@@ -67,7 +70,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- Wenn der Socket nicht mehr benötigt wird, müssen Sie ihn freigeben, indem Sie die <xref:System.Net.Sockets.Socket.Shutdown%2A>\-Methode aufrufen und dann die **Schließen**\-Methode aufrufen.  Im folgenden Beispiel wird **Socket** frei.  Die <xref:System.Net.Sockets.SocketShutdown>\-Enumeration definiert Konstanten, die angeben, ob der Socket zum Senden, zum Empfangen oder für beides geschlossen werden soll.  
+ Wenn der Socket nicht mehr benötigt wird, müssen Sie ihn freigeben, indem Sie die <xref:System.Net.Sockets.Socket.Shutdown%2A>-Methode und anschließend die **Schließen**-Methode aufrufen. Das folgende Beispiel gibt ein **Socket** frei. Die <xref:System.Net.Sockets.SocketShutdown>-Enumeration definiert Konstanten, die angeben, ob der Socket zum Senden, Empfangen oder für beides geschlossen werden sollte.  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  
@@ -79,7 +82,8 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
  [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)   
- [Synchrone Clientsockets \- Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+ [Synchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+

@@ -1,30 +1,35 @@
 ---
-title: "Asynchroner Serversocket, Beispiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Sockets, asynchrone Serversockets"
-  - "Sockets, Codebeispiele"
-  - "asynchrone Serversockets"
+title: Asynchroner Serversocket, Beispiel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Asynchroner Serversocket, Beispiel
-Das folgende Beispielprogramm stellt einen Server erstellt, der Aufforderungen zum Aufbau einer Verbindung von Clients empfängt.  Der Server wird mit einem asynchronen Socket erstellt, daher wird die Ausführung der Serveranwendung nicht angehalten, während sie auf eine Verbindung von einem Client wartet.  Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge auf der Konsole an und gibt dann die Zeichenfolge zurück an den Client zurückgegeben aus.  Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF\>" enthalten, um dem Ende der Meldung zu signalisieren.  
+# <a name="asynchronous-server-socket-example"></a>Asynchroner Serversocket, Beispiel
+Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an, und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## Siehe auch  
- [Asynchrone Clientsockets \- Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Socketcodebeispiele](../../../docs/framework/network-programming/socket-code-examples.md)
+
