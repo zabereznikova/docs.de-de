@@ -1,24 +1,30 @@
 ---
-title: "Windows Identity Foundation-Konfigurationsschema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Windows Identity Foundation-Konfigurationsschema
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
+ms.contentlocale: de-de
+ms.lasthandoff: 09/05/2017
+
 ---
-# Windows Identity Foundation-Konfigurationsschema
-Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema für die Windows\-Identität\-Foundation \(WIF\).  Sie können auch eine Anwendung durch das Framework verfügbar gemachten Klassen WIF verwenden konfigurieren.  Diese Klassen sind in den Abschnitten beschrieben, die entsprechenden Elemente im Schema zu behandeln.  Im folgenden veranschaulicht die grundlegende XML tag\-Struktur, die das Konfigurationsschema WIF verfügbar gemachten.  Attribute werden ausgelassen.  Markierte Kommentare zeigen die Hauptkomponenten des Schemas.  
+# <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation-Konfigurationsschema
+Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema von Windows Identity Foundation (WIF). Sie können eine Anwendung auch für die Verwendung von WIF konfigurieren, indem Sie die Klassen verwenden, die durch das Framework verfügbar gemacht werden. Diese Klassen sind in den Abschnitten aufgeführt, die die für das Schema relevanten Elemente behandeln. Im Folgenden wird die grundlegende Struktur von XML-Tags dargestellt, die vom WIF-Konfigurationsschema verfügbar gemacht wird. Attribute werden ausgelassen. Hervorgehobene Kommentare zeigen die Hauptkomponenten des Schemas an.  
   
-```  
+```xml  
 <system.identityModel>  
     <!-- Service Configuration -->  
     <identityConfiguration>  
@@ -111,10 +117,11 @@ Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationss
 </system.identityModel.services>  
 ```  
   
-## In diesem Abschnitt  
- [\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)Stellt die Konfiguration für das Aktivieren von WIF\-Optionen in Anwendungen.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Stellt Konfigurationen für das Aktivieren von WIF-Optionen in Anwendungen bereit.  
   
- [\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)Ermöglicht die Konfiguration für den passiven Verbund mit WIF.  Konfiguriert das Modul für die Authentifizierung der Sitzung \(SAM\) und die Verbundauthentifizierung\-Modul \(WSFAM\).  
+ [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Stellt Konfigurationen für den passiven Verbund mit WIF bereit. Konfiguriert das Sitzungsauthentifizierungsmodul (SAM) und das Verbundsauthentifizierungsmodul (WSFAM).  
   
-## Verwandte Abschnitte  
- [Configuration, Administration, And Management](http://msdn.microsoft.com/de-de/1e03c389-de2c-4096-aaff-86b087e1bea0)Beschreibt das Konfigurieren und Verwalten von WIF\-Anwendungen und Dienste.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Configuration, Administration, And Management (Konfiguration, Administration und Verwaltung)](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0) Beschreibt die Konfiguration und Verwaltung von WIF-Anwendungen und -Diensten.
+

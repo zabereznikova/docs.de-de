@@ -1,5 +1,5 @@
 ---
-title: Datei- und Stream-E/A | Microsoft-Dokumentation
+title: Datei- und Stream-E/A
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: de-de
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
@@ -37,22 +37,22 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Im Folgenden sind einige häufig verwendete Datei- und Verzeichnisklassen aufgeführt:  
   
--   <xref:System.IO.File>: Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines <xref:System.IO.FileStream>-Objekts.  
+-   <xref:System.IO.File> – stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines <xref:System.IO.FileStream>-Objekts.  
   
--   <xref:System.IO.FileInfo>: Stellt Instanzmethoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines <xref:System.IO.FileStream>-Objekts.  
+-   <xref:System.IO.FileInfo> – stellt Instanzmethoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines <xref:System.IO.FileStream>-Objekts.  
   
--   <xref:System.IO.Directory>: Stellt statische Methoden zum Erstellen, Verschieben und Auflisten von Verzeichnissen und Unterverzeichnissen zur Verfügung.  
+-   <xref:System.IO.Directory> – stellt statische Methoden zum Erstellen, Verschieben und Auflisten von Verzeichnissen und Unterverzeichnissen zur Verfügung.  
   
--   <xref:System.IO.DirectoryInfo>: Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten von Verzeichnissen und Unterverzeichnissen zur Verfügung.  
+-   <xref:System.IO.DirectoryInfo> – stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten von Verzeichnissen und Unterverzeichnissen zur Verfügung.  
   
--   <xref:System.IO.Path>: Stellt Methoden und Eigenschaften für die plattformübergreifende Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.  
+-   <xref:System.IO.Path> – stellt Methoden und Eigenschaften für die plattformübergreifende Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.  
   
- Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die Methoden und Eigenschaften verwenden, die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName>-Klasse für Datei-E/A-Vorgänge bereitgestellt werden.  
+ Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md), [Gewusst wie: Erstellen einer Verzeichnisauflistung](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) und [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Streams  
- Die abstrakte <xref:System.IO.Stream>-Basisklasse unterstützt das Lesen und Schreiben von Bytes. Alle Klassen, die Streams darstellen, erben von der <xref:System.IO.Stream>-Klasse. Die <xref:System.IO.Stream>-Klasse und die daraus abgeleiteten Klassen stellen eine allgemeine Ansicht von Datenquellen und Repositorys bereit, sodass Programmierer sich nicht mit den Einzelheiten des Betriebssystems und der jeweiligen Geräte befassen müssen.  
+ Die abstrakte <xref:System.IO.Stream>-Basisklasse unterstützt das Lesen und Schreiben von Bytes. Alle Klassen, die Streams darstellen, erben von der <xref:System.IO.Stream>-Klasse. Die <xref:System.IO.Stream>-Klasse und die davon abgeleiteten Klassen stellen eine allgemeine Ansicht von Datenquellen und Repositorys bereit, sodass Programmierer sich nicht mit den Einzelheiten des Betriebssystems und der jeweiligen Geräte befassen müssen.  
   
  Streams umfassen drei grundlegende Vorgänge:  
   
@@ -62,45 +62,45 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
 -   Suchen – Abfragen und bearbeiten der aktuellen Position innerhalb eines Streams.  
   
- Abhängig von der zugrunde liegenden Datenquelle oder vom Repository unterstützt ein Stream möglicherweise nur einige dieser Funktionen. Die <xref:System.IO.Pipes.PipeStream>-Klasse unterstützt beispielsweise keine Suchvorgänge. Die Streameigenschaften <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> und <xref:System.IO.Stream.CanSeek%2A> geben die Operationen an, die der jeweilige Stream unterstützt.  
+ Abhängig von der zugrunde liegenden Datenquelle oder vom Repository unterstützt ein Stream möglicherweise nur einige dieser Funktionen. Die <xref:System.IO.Pipes.PipeStream>-Klasse unterstützt beispielsweise keine Suchvorgänge. Die <xref:System.IO.Stream.CanRead%2A>-, <xref:System.IO.Stream.CanWrite%2A>- und <xref:System.IO.Stream.CanSeek%2A>-Eigenschaften eines Stream geben die Vorgänge an, die vom Stream unterstützt werden.  
   
  Im Folgenden sind einige häufig verwendete Streamklassen aufgeführt:  
   
--   <xref:System.IO.FileStream> – Lesen einer und Schreiben in eine Datei.  
+-   <xref:System.IO.FileStream> – Lesen und Schreiben in einer Datei.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Lesen einer und Schreiben in eine Datei im isolierten Speicher.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Lesen und Schreiben in einer Datei im isolierten Speicher.  
   
--   <xref:System.IO.MemoryStream> – Lesen aus dem und Schreiben in den Arbeitsspeicher als Sicherungsspeicher.  
+-   <xref:System.IO.MemoryStream> – Lesen und Schreiben im Arbeitsspeicher als Sicherungsspeicher.  
   
 -   <xref:System.IO.BufferedStream> – Verbessern der Leistung von Lese- und Schreibvorgängen.  
   
--   <xref:System.Net.Sockets.NetworkStream> –Lesen und Schreiben über Netzwerksockets.  
+-   <xref:System.Net.Sockets.NetworkStream> – Lesen und Schreiben über Netzwerksockets.  
   
--   <xref:System.IO.Pipes.PipeStream> – Lesen und Schreiben über anonyme und benannte Pipes.  
+-   <xref:System.IO.Pipes.PipeStream> – Lesen und Schreiben über anonyme und benannte Pipes.  
   
--   <xref:System.Security.Cryptography.CryptoStream> – Verknüpfen von Datenstreams mit kryptografischen Transformationen.  
+-   <xref:System.Security.Cryptography.CryptoStream> – Verknüpfen von Datenstreams mit kryptografischen Transformationen.  
   
  Ein Beispiel für asynchrones Arbeiten mit Streams finden Sie unter [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="readers-and-writers"></a>Reader und Writer  
- Der <xref:System.IO?displayProperty=fullName>-Namespace stellt außerdem Typen bereit, mit denen codierte Zeichen aus Streams gelesen und in Streams geschrieben werden können. Normalerweise werden Streams für die Eingabe und Ausgabe von Bytes verwendet. Die Reader- und Writer-Typen übernehmen die Konvertierung der codierten Zeichen in Bytes und umgekehrt, sodass der Vorgang im Stream abgeschlossen werden kann. Jede Reader- und Writer-Klasse ist einem Stream zugeordnet, der durch die `BaseStream`-Eigenschaft der Klasse abgerufen werden kann.  
+ Der <xref:System.IO?displayProperty=fullName>-Namespace stellt zudem Typen zum Lesen und Schreiben von codierten Zeichen in Streams bereit. Normalerweise werden Streams für die Eingabe und Ausgabe von Bytes verwendet. Die Reader- und Writer-Typen übernehmen die Konvertierung der codierten Zeichen in Bytes und umgekehrt, sodass der Vorgang im Stream abgeschlossen werden kann. Jede Reader- und Writer-Klasse ist einem Stream zugeordnet, der durch die `BaseStream`-Eigenschaft der Klasse abgerufen werden kann.  
   
  Im Folgenden werden einige häufig verwendete Reader- und Writer-Klassen aufgeführt:  
   
--   <xref:System.IO.BinaryReader> und <xref:System.IO.BinaryWriter> – Lesen und Schreiben von primitiven Datentypen als Binärwerte.  
+-   <xref:System.IO.BinaryReader> und <xref:System.IO.BinaryWriter> – Lesen und Schreiben von primitiven Datentypen als Binärwerte.  
   
--   <xref:System.IO.StreamReader> und <xref:System.IO.StreamWriter> – Lesen und Schreiben von Zeichen über einen Codierungswert, um die Zeichen in und aus Bytes zu konvertieren.  
+-   <xref:System.IO.StreamReader> und <xref:System.IO.StreamWriter> – Lesen und Schreiben von Zeichen mithilfe eines Codierungswerts, der die Zeichen in Bytes konvertiert und umgekehrt.  
   
--   <xref:System.IO.StringReader> und <xref:System.IO.StringWriter> – Lesen und Schreiben von Zeichen in und aus Zeichenfolgen.  
+-   <xref:System.IO.StringReader> und <xref:System.IO.StringWriter> -– Lesen und Schreiben von Zeichen in und aus Zeichenfolgen.  
   
--   <xref:System.IO.TextReader> und <xref:System.IO.TextWriter> – Fungieren als abstrakte Basisklassen für andere Reader und Writer, die Zeichen und Zeichenfolgen, jedoch keine Binärdaten lesen und schreiben.  
+-   <xref:System.IO.TextReader> und <xref:System.IO.TextWriter> – abstrakte Basisklassen für andere Reader und Writer, die Zeichen und Zeichenfolgen, jedoch keine Binärdaten, lesen und schreiben.  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Lesen aus einer Textdatei](../../../docs/standard/io/how-to-read-text-from-a-file.md), [Gewusst wie: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md), [Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../docs/standard/io/how-to-read-characters-from-a-string.md), und [Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../docs/standard/io/how-to-write-characters-to-a-string.md).  
   
 ## <a name="asynchronous-io-operations"></a>Asynchrone E/A-Vorgänge  
  Das Lesen oder Schreiben einer großen Datenmenge kann ressourcenintensiv sein. Damit Ihre Anwendung weiterhin auf Benutzerinteraktionen reagiert, sollten Sie diese Aufgaben asynchron ausführen. Bei synchronen E/A-Vorgängen wird der UI-Thread blockiert, bis der ressourcenintensive Vorgang abgeschlossen ist.  Verwenden Sie beim Entwickeln von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps asynchrone E/A-Vorgänge, damit nicht der Eindruck erweckt wird, dass Ihre App nicht mehr reagiert.  
   
- Die asynchronen Member enthalten `Async` in ihren Namen, z. B. die Methoden <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>. Diese Methoden müssen mit den Schlüsselwörtern `async` und `await` verwendet werden.  
+ Die asynchronen Member enthalten den Begriff `Async` in ihren Namen, z. B. die Methoden <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>,  <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>. Diese Methoden müssen mit den Schlüsselwörtern `async` und `await` verwendet werden.  
   
  Weitere Informationen finden Sie unter [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
@@ -109,17 +109,17 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Die folgenden Klassen werden häufig zum Komprimieren und Dekomprimieren von Dateien und Streams verwendet:  
   
--   <xref:System.IO.Compression.ZipArchive> – Erstellen und Abrufen von Einträgen im ZIP-Archiv.  
+-   <xref:System.IO.Compression.ZipArchive> – Erstellen und Abrufen von Einträgen im ZIP-Archiv.  
   
--   <xref:System.IO.Compression.ZipArchiveEntry> – Darstellen einer komprimierten Datei.  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – Darstellen einer komprimierten Datei.  
   
 -   <xref:System.IO.Compression.ZipFile> – Erstellen, Extrahieren und Öffnen eines komprimierten Pakets.  
   
--   <xref:System.IO.Compression.ZipFileExtensions> – Erstellen, Extrahieren und Öffnen von Einträgen in einem komprimierten Paket.  
+-   <xref:System.IO.Compression.ZipFileExtensions> – Erstellen und Extrahieren von Einträgen in einem komprimierten Paket.  
   
--   <xref:System.IO.Compression.DeflateStream> – Komprimieren und Dekomprimieren von Datenströmen mit dem Deflate-Algorithmus.  
+-   <xref:System.IO.Compression.DeflateStream> – Komprimieren und Dekomprimieren von Streams mit dem Deflate-Algorithmus.  
   
--   <xref:System.IO.Compression.GZipStream> – Komprimieren und Dekomprimieren von Datenströmen im gzip-Datenformat.  
+-   <xref:System.IO.Compression.GZipStream> – Komprimieren und Dekomprimieren von Streams im gzip-Datenformat.  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Komprimieren und Extrahieren von Dateien](../../../docs/standard/io/how-to-compress-and-extract-files.md).  
   
@@ -130,11 +130,11 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorage> – Bereitstellen der Basisklasse für Implementierungen isolierter Speicher.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> – stellt die Basisklasse für Implementierungen isolierter Speicher bereit.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – Bereitstellen eines Bereichs für isolierten Speicher, der Dateien und Verzeichnisse enthält.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – stellt einen Bereich des isolierten Speichers mit Dateien und Verzeichnissen bereit.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Verfügbarmachen einer Datei im isolierten Speicher.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – macht eine Datei im isolierten Speicher verfügbar.  
   
  Weitere Informationen finden Sie unter [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md).  
   
@@ -143,20 +143,20 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
  Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden:  
   
--   In [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] gibt es keine speziell für Dateivorgänge vorgesehene Typen wie <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>. Verwenden Sie stattdessen die Typen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175).  
   
--   Verwenden Sie asynchrone Methoden, etwa <xref:System.IO.Stream.ReadAsync%2A>und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass der UI-Thread blockiert wird.  
+-   Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.  
   
--   Der pfadbasierten Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx)-Namespace.  
+-   Die auf einem Pfad basierenden Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx)-Namespace.  
   
  Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie im Windows Developer Center unter [Schnellstart: Lesen und Schreiben einer Datei](http://go.microsoft.com/fwlink/p/?LinkId=243072).  
   
 ## <a name="io-and-security"></a>E/A und Sicherheit  
- Wenn Sie die Klassen im <xref:System.IO?displayProperty=fullName>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Diese Anforderung gilt zusätzlich zu allen anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Wenn Sie die Klassen im <xref:System.IO?displayProperty=fullName>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
   
