@@ -249,7 +249,7 @@ public class Run
  <xref:System.Xml.Serialization.XmlElementAttribute>   
  <xref:System.Xml.Serialization.XmlAttributes>   
  <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [XML and SOAP Serialization (XML- und SOAP-Serialisierung)](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
+ [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 

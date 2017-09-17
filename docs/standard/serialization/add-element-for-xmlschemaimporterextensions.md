@@ -77,6 +77,6 @@ Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> ver
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Xml.Serialization.XmlSchemaImporter>   
- [\<system.xml.serialization>.Element](../../../docs/standard/serialization/system-xml-serialization-element.md)   
+ [\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)   
  [\<schemaImporterExtensions>-Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)
 

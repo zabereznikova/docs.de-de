@@ -1,45 +1,51 @@
 ---
-title: "Peernamen und PNRP-IDs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Peernamen und PNRP-IDs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 11d20e346bba9ae6300f88c5d5bf48f99ec27904
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Peernamen und PNRP-IDs
-Ein Peer\-Name stellt einen Endpunkt für Kommunikationsarten dar, die ein Computer, ein Benutzer, eine Gruppe, ein Dienst oder aller sein, der kann mit einem Peer zugeordnet ist, der einer IPv6\-Adresse aufgelöst werden kann.  Das Peer Name Resolution\-Protokoll \(PNRP\) akzeptiert den statistisch eindeutigen Peer\-Namen für die Erstellung einer PNRP\-ID, die verwendet wird, um Cloudmember zu identifizieren.  
+# <a name="peer-names-and-pnrp-ids"></a>Peernamen und PNRP-IDs
+Ein Peername steht für einen Endpunkt für die Kommunikation, der ein Computer, ein Benutzer, eine Gruppe, ein Dienst oder alles sein kein, was einem Peer zugeordnet ist, das in eine IPv6-Adresse aufgelöst werden kann. Das Peer Name Resolution-Protokoll (PNRP) nimmt den statistisch eindeutigen Peernamen zur Erstellung einer PNRP-ID an, die zur Identifikation von Cloudelementen verwendet wird.  
   
-## Peer\-Namen  
- Peernamen können als ungesichertes registriert werden oder gesichert werden.  Ungesicherte Namen sind nur Textzeichenfolgen, die abhängig von Spoofing sind, da jeder einen doppelten Namen ungesicherten anmelden kann.  Ungesicherte Namen werden am besten in privaten oder andernfalls geschützten Netzwerken verwendet.  Gesicherte Namen werden mit einem Zertifikat und einer digitalen Signatur geschützt.  Nur der ursprüngliche Herausgeber ist in der Lage, den Besitz einer gesicherten Namens zu überprüfen.  
+## <a name="peer-names"></a>Peernamen  
+ Peernamen können unsicher oder gesichert gespeichert werden. Unsichere Namen sind nur Textzeichenfolgen, die den Gefahren von Spoofing ausgesetzt sind, da jeder einen ungesicherten doppelten Namen registrieren kann. Unsichere Namen werden am besten in privaten oder anderweitig geschützten Netzwerken verwendet. Gesicherte Namen werden durch ein Zertifikat und eine digitale Signatur geschützt. Nur der ursprüngliche Verleger kann den Besitz eines sicheren Namens nachweisen.  
   
- Die Kombination der Cloud und des Bereichs stellt eine relativ sichere Umgebung für Peers bereit, die an PNRP\-Aktivität teilnehmen.  jedoch mit einem sicheren Peernamens stellt nicht die gesamte Sicherheit der Netzwerkfunktionens\-Anwendung sicher.  Die Sicherheit der Anwendung hängt von der Implementierung ab.  
+ Die Kombination von Cloud und Umfang bietet eine angemessen sichere Umgebung für Peers, die an der PNRP-Aktivität beteiligt sind. Die Verwendung eines sicheren Peernamens garantiert jedoch nicht die Gesamtsicherheit der Netzwerkanwendung. Die Sicherheit der Anwendung ist implementierungsabhängig.  
   
- Gesicherte Peernamen kann nur von seinem Besitzer registriert und werden in Kryptografie des öffentlichen Schlüssels geschützt.  Ein gesichertes Peernamen wird als Besitzer durch die Partnerinstanz, die den entsprechenden privaten Schlüssel verfügt.  Besitz kann über die zertifizierte Peeradresse \(CPA\) nachgewiesen werden, die mit dem privaten Schlüssel signiert wird.  Ein böswilliger Benutzer kann den Besitz einer Peernamens nicht ohne den entsprechenden privaten Schlüssel schmieden.  
+ Gesicherte Peernamen werden nur vom Besitzer registriert und mit einem öffentlichen kryptografischen Schlüssel geschützt. Ein gesicherter Peername ist im Besitz der Peerentität, die über den entsprechenden privaten Schlüssel verfügt. Über die zertifizierte Peeradresse (CPA), die mit dem privaten Schlüssel signiert ist, kann der Besitz nachgewiesen werden. Ein böswilliger Benutzer kann den Besitz eines Peernamen ohne den entsprechenden privaten Schlüssel nicht erstellen.  
   
-## PNRP\-IDs  
- ![PNRP&#45;ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.png "fdc9e8a0\-4a1c\-488d\-a019\-bc3a1973220c")  
+## <a name="pnrp-ids"></a>PNRP-IDs  
+ ![PNRP-ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
- PNRP\-IDs werden vom folgenden zusammengesetzt:  
+ PNRP-IDs bestehen aus den folgenden Teilen:  
   
--   Die höherwertigen 128 Bits, ist die gleichberechtigt ID \(P2P\), sind ein Hash eines Peernamens, der dem Endpunkt zugewiesen wird.  Der Peername hat das folgende Format: *Authority.Classifier*.  Für gesicherte Namen ist der *Autorität* Hash des SHA\-Algorithmen 1 \(SHA1\) des öffentlichen Schlüssels des Peernamens in den Hexadezimalzeichen.  Für ungesicherte Namen ist die *Autorität* das einzelne Zeichen "0 ".  *Klassifizierung* ist eine Zeichenfolge, die die Anwendung identifiziert.  Kein Peernameklassifizierer kann als 149 Zeichen, einschließlich `null` Abschlusszeichen größer lang sein.  
+-   Die höherwertigen 128 Bits sind als Peer-to-Peer-ID (P2P) bekannt. Sie sind ein Hash des Peernamens, der dem Endpunkt zugewiesen ist. Der Peername weist das folgende Format auf: *Authority.Classifier*. Für sichere Namen ist *Autorität* der Secure-Hash-Algorithmus 1 (SHA1) des öffentlichen Schlüssels des Peernamens in hexadezimalen Zeichen. Für unsichere Namen ist *Autorität* als einzelnes Zeichen „0“ festgelegt. *Klassifizierung* ist eine Zeichenfolge, die die Anwendung identifiziert. Kein Klassifizierer für Peernamen kann länger als 149 Zeichen sein, einschließlich dem `null`-Abschlusszeichen.  
   
--   Die niederwertigen 128 Bits werden für den Dienst\-Speicherort verwendet, der eine generierte Zahl ist, die verschiedene Instanzen derselben P2P\-ID in derselben Cloud identifiziert.  
+-   Die niederwertigen 128 Bits werden für die Dienstidentifizierung verwendet. Dies ist eine generierte Zahl, die verschiedene Instanzen der gleichen P2P-ID in der gleichen Cloud identifiziert.  
   
- Diese Kombination OF P2P\-ID und von Dienst\-Speicherort können mehrere von einem einzelnen Computer registriert werden PNRP\-IDs.  
+ Diese Kombination von P2P-ID und Dienstidentifizierung ermöglicht die Registrierung mehrerer PNRP-IDs von einem einzelnen Computer aus.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.PeerToPeer.PeerName>   
  <xref:System.Net.PeerToPeer>
+

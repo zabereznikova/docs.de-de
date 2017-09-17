@@ -83,7 +83,7 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML and SOAP Serialization (XML- und SOAP-Serialisierung)](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
+ [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  [Attributes That Control Encoded SOAP Serialization (Attribute zur Steuerung der Serialisierung von codiertem SOAP)](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
  [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)   
  [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   

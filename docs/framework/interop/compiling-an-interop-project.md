@@ -1,57 +1,63 @@
 ---
-title: "Compiling an Interop Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, compiling"
-  - "COM interop, compiling"
-  - "exposing COM components to .NET Framework"
-  - "compiling interop projects"
-  - "interoperation with unmanaged code, exposing COM components"
-  - "COM interop, exposing COM components"
+title: Kompilieren eines Interop-Projekts
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, compiling
+- COM interop, compiling
+- exposing COM components to .NET Framework
+- compiling interop projects
+- interoperation with unmanaged code, exposing COM components
+- COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9851366aeb485f056f801251a488d6e8399bf5a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Compiling an Interop Project
-COM\-Interop\-Projekte, die Assemblys mit einem oder mehreren importierten COM\-Typen verweisen, werden in gleicher Weise kompiliert wie alle anderen verwalteten Projekte.  Sie können Interopassemblys in einer Entwicklungsumgebung wie z. B. Visual Studio, mit Verweisen versehen, oder Sie können sie mit Verweisen versehen, wenn Sie einen Befehlszeilencompiler verwenden.  In jedem Fall muss sich die Interopassembly im selben Verzeichnis wie die anderen Projektdateien befinden, damit die Kompilierung ordnungsgemäß abläuft.  
+# <a name="compiling-an-interop-project"></a>Kompilieren eines Interop-Projekts
+COM-Interop-Projekte, die auf eine oder mehrere Assemblys mit importierten COM-Typen verweisen, werden wie jedes andere verwaltete Projekt kompiliert. Sie können auf Interop-Assemblys in einer Entwicklungsumgebung wie Visual Studio verweisen, oder Sie können darauf verweisen, wenn Sie einen Befehlszeilencompiler verwenden. In beiden Fällen muss die Interop-Assembly zur ordnungsgemäßen Kompilierung im selben Verzeichnis wie die anderen Projektdateien sein.  
   
- Es gibt zwei Möglichkeiten, auf Interopassemblys zu verweisen:  
+ Es gibt zwei Möglichkeiten zur Verweisung auf Interop-Assemblys:  
   
--   Eingebettete Interop\-Typen: Wenn Sie mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] und [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] beginnen, können Sie den Compiler anweisen, Typinformationen von einer Interopassembly in die EXE\-Datei einzubetten.  Dies ist das empfohlene Verfahren.  
+-   Eingebettete Interop-Typen: Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] und [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] können Sie den Compiler anweisen, die Typinformationen aus einer Interop-Assembly in der ausführbaren Datei einzubetten. Dies ist das empfohlene Verfahren.  
   
--   Bereitstellen von Interopassemblys: Sie können einen Standardverweis auf eine Interopassembly erstellen.  In diesem Fall muss die Interopassembly mit der Anwendung bereitgestellt werden.  
+-   Durch die Bereitstellung von Interop-Assemblys können Sie einen Standardverweis auf eine Interop-Assembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden.  
   
- Die Unterschiede zwischen diesen zwei Methoden werden ausführlich in [Using COM Types in Managed Code](http://msdn.microsoft.com/de-de/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) erläutert.  
+ Die Unterschiede zwischen diesen beiden Verfahren werden ausführlich in [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) erläutert.  
   
- Die Einbettung von Interop\-Typen mit Visual Studio wird in [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office\-Assemblys](../Topic/Walkthrough:%20Embedding%20Type%20Information%20from%20Microsoft%20Office%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md) und [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md) veranschaulicht.  
+ Das Einbetten von Interop-Typen mit Visual Studio wird in [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) und [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21) veranschaulicht.  
   
- Um mit einem Befehlszeilencompiler auf eine Interopassembly zu verweisen und Typinformationen in die ausführbaren Dateien einzubetten, verwenden Sie den [\/link \(Link to COM Assembly\)](../Topic/-link%20\(C%23%20Compiler%20Options\).md)\-Compilerschalter oder den [\/link](../Topic/-link%20\(Visual%20Basic\).md)\-Compilerschalter, und geben Sie den Namen der Interopassembly an.  
+ Verwenden Sie zum Verweisen auf eine Interop-Assembly mit einem Befehlszeilencompiler und Einbetten von Typinformationen in Ihre ausführbaren Dateien die Compilerschalter [/Link (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) oder [/Link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md), und geben Sie den Namen der Interop-Assembly an.  
   
 > [!NOTE]
->  Visual C\+\+\-Anwendungen können keine Typinformationen einbetten, doch sie können mit Anwendungen oder Add\-Ins zusammenwirken, die diese Möglichkeit besitzen.  
+>  Visual C++-Anwendungen können keine Typinformationen einbetten, aber sie können mit Anwendungen oder Add-Ins zusammenarbeiten, die dies können.  
   
- Zum Kompilieren einer Anwendung, die eine primäre Interopassembly einschließt, wenn sie bereitgestellt wird, verwenden Sie den **\/reference**\-Compilerschalter, und geben Sie den Namen der Interopassembly an.  
+ Verwenden Sie zum Kompilieren einer Anwendung, die bei der Bereitstellung eine primäre Interop-Assembly enthält, einen **/Referenz**-Compilerschalter, und geben Sie den Namen der Interop-Assembly an.  
   
-## Siehe auch  
- [Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
- [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../docs/standard/language-independence-and-language-independent-components.md)   
- [Using COM Types in Managed Code](http://msdn.microsoft.com/de-de/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office\-Assemblys](../Topic/Walkthrough:%20Embedding%20Type%20Information%20from%20Microsoft%20Office%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
+ [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../docs/standard/language-independence-and-language-independent-components.md)   
+ [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
+ [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
+ [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
+ [Importieren einer Typbibliothek als Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+

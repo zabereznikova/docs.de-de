@@ -48,6 +48,6 @@ Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen,
 -   [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [Using Application Protocols (Verwenden von Anwendungsprotokollen)](../../../docs/framework/network-programming/using-application-protocols.md)   
  [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
 

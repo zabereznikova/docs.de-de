@@ -112,7 +112,7 @@ Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die
 |`Tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`.<br /><br /> Dieses Attribut muss für das Element \<switches> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<source>-Element festgelegt wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Interpreting Network Tracing (Interpretieren von Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
+ [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
  [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)   
  [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md)   
  [Introduction to Instrumentation and Tracing (Einführung in Instrumentation und Ablaufverfolgung)](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

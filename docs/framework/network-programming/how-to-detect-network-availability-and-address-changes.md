@@ -63,5 +63,5 @@ namespace Examples.Net.AddressChanges
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.
+-   Verweise auf den Namespace **System.Net**
 

@@ -70,5 +70,5 @@ COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Regis
     >  Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können. Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [How to: Configure .NET Framework-Based COM Components for Registration-Free Activation (Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung)](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+ [Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
 

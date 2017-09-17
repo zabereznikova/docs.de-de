@@ -1,63 +1,69 @@
 ---
-title: "Identifying Functions in DLLs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, identifying functions"
-  - "COM interop, DLL functions"
-  - "unmanaged functions"
-  - "COM interop, platform invoke"
-  - "interoperation with unmanaged code, DLL functions"
-  - "interoperation with unmanaged code, platform invoke"
-  - "identifying DLL functions"
-  - "DLL functions"
+title: Identifizieren von Funktionen in DLLs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, identifying functions
+- COM interop, DLL functions
+- unmanaged functions
+- COM interop, platform invoke
+- interoperation with unmanaged code, DLL functions
+- interoperation with unmanaged code, platform invoke
+- identifying DLL functions
+- DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b96ef668a8a11794b87d3cbe7c2ba864f8a75e2f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Identifying Functions in DLLs
-Die Identität einer DLL\-Funktion besteht aus folgenden Elementen:  
+# <a name="identifying-functions-in-dlls"></a>Identifizieren von Funktionen in DLLs
+Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:  
   
 -   Funktionsname oder Ordinalzahl  
   
--   Name der DLL\-Datei, in der sich die Implementierung befindet  
+-   Name der DLL-Datei, in der die Implementierung gefunden werden kann  
   
- Wenn Sie z. B. die **MessageBox**\-Funktion in der Datei User32.dll angeben, werden Funktion \(**MessageBox**\) und Position \(User32.dll, User32 oder user32\) identifiziert.  Die Win32\-API \(Microsoft Windows Application Programming Interface\) kann zwei Versionen jeder Funktion enthalten, die Zeichen und Zeichenfolgen behandelt: eine Einzelbytezeichen\-Version \(ANSI\) und eine Doppelbytezeichen\-Version \(Unicode\).  Wenn kein Zeichensatz im <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>\-Feld angegeben ist, wird standardmäßig ANSI verwendet.  Einige Funktionen können mehr als zwei Versionen haben.  
+ Die Angabe der **MessageBox**-Funktion in der „User32.dll“ gibt beispielsweise die Funktion (**MessageBox**) und deren Speicherort (User32.dll, User32 oder user32) an. Die Microsoft Windows-Anwendungsprogrammierschnittstelle (Win32-API) kann zwei Versionen jeder Funktion enthalten, die Zeichen und Zeichenfolgen behandelt: eine ANSI-Version mit 1-Byte-Zeichen und eine Unicode-Version mit 2-Byte-Zeichen. Ohne Angabe wird der Zeichensatz, der durch das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld dargestellt wird, standardmäßig auf ANSI festgelegt. Einige Funktionen können über mehr als zwei Versionen verfügen.  
   
- **MessageBoxA** ist der ANSI\-Einstiegspunkt für die **MessageBox**\-Funktion; **MessageBoxW** ist die Unicode\-Version.  Sie können Funktionsnamen für eine bestimmte DLL \(z. B. user32.dll\) auflisten, indem Sie verschiedene Befehlszeilentools ausführen.  Sie können z. B. `dumpbin /exports user32.dll` oder `link /dump /exports user32.dll` verwenden, um Funktionsnamen abzurufen.  
+ **MessageBoxA** ist der ANSI-Einstiegspunkt für die **MessageBox**-Funktion. **MessageBoxW** ist die Unicode-Version. Sie können Funktionsnamen für eine bestimmte DLL-Datei, z.B. „User32.dll“, auflisten, indem Sie eine Vielzahl von Befehlszeilentools ausführen. Beispielsweise können Sie `dumpbin /exports user32.dll` oder `link /dump /exports user32.dll` verwenden, um Funktionsnamen abzurufen.  
   
- Eine nicht verwaltete Funktion können Sie im Code beliebig umbenennen, solange Sie den neuen Namen zum ursprünglichen Einstiegspunkt in der DLL zuordnen.  Anweisungen zum Umbenennen einer nicht verwalteten DLL\-Funktion in verwaltetem Quellcode finden Sie unter [Angeben eines Einstiegspunkts](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ Sie können eine nicht verwaltete Funktion innerhalb des Codes beliebig umbenennen, solange Sie den neuen Namen für den ursprünglichen Einstiegspunkt in der DLL zuordnen. Anweisungen zur Umbenennung einer nicht verwalteten DLL-Funktion in verwaltetem Quellcode finden Sie unter [Angeben eines Einstiegspunktes](../../../docs/framework/interop/specifying-an-entry-point.md).  
   
- Mithilfe von Plattformaufrufen können Sie einen erheblichen Teil des Betriebssystems steuern, indem Sie Funktionen in der Win32\-API und anderen DLLs aufrufen.  Zusätzlich zur Win32\-API stehen Ihnen durch Plattformaufrufe zahlreiche weitere APIs und DLLs zur Verfügung.  
+ Durch einen Plattformaufruf können Sie einen beträchtlichen Teil des Betriebssystems durch Aufrufen von Funktionen in der Win32-API und anderen DLLs steuern. Zusätzlich zur Win32-API stehen Ihnen über Ihren Plattformaufruf zahlreiche andere APIs und DLLs zur Verfügung.  
   
- In der folgenden Tabelle werden mehrere DLLs beschrieben, die häufig in der Win32\-API verwendet werden.  
+ Die folgende Tabelle beschreibt einige häufig verwendete DLLs in der Win32-API.  
   
 |DLL|Inhaltsbeschreibung|  
-|---------|-------------------------|  
-|GDI32.dll|GDI \(Graphics Device Interface\)\-Funktionen für Geräteausgabe, z. B. Zeichnen und Zeichensatzverwaltung.|  
-|Kernel32.dll|Betriebssystemfunktionen auf niedriger Ebene für Speicherverwaltung und Ressourcenbehandlung.|  
-|User32.dll|Windows\-Verwaltungsfunktionen für Meldungsbehandlung, Timer, Menüs und Kommunikation.|  
+|---------|-----------------------------|  
+|GDI32.dll|Funktionen für Graphics Device Interface (GDI) für Geräteausgaben, wie z.B. die für die Verwaltung der Zeichnung und Schriftart.|  
+|Kernel32.dll|Betriebssystemfunktionen auf niedriger Ebene für die Verwaltung des Arbeitsspeichers und Ressourcenbehandlung.|  
+|User32.dll|Windows-Verwaltungsfunktionen für Meldungsbehandlung, Timer, Menüs und Kommunikation.|  
   
- Eine vollständige Dokumentation der Win32\-API finden Sie unter Platform SDK.  Beispiele für das Erstellen von .NET\-basierten Deklarationen, die mit Plattformaufruf verwendet werden, finden Sie unter [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Eine vollständige Dokumentation für die Win32-API finden Sie im Plattform SDK. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## Siehe auch  
- [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [Specifying an Entry Point](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [Creating a Class to Hold DLL Functions](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Calling a DLL Function](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Siehe auch  
+ [Consuming Unmanaged DLL Functions (Verwenden nicht verwalteter DLL-Funktionen)](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
+ [Specifying an Entry Point (Angeben eines Einstiegspunktes)](../../../docs/framework/interop/specifying-an-entry-point.md)   
+ [Creating a Class to Hold DLL Functions (Erstellen einer Klasse zum Halten von DLL-Funktionen)](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+

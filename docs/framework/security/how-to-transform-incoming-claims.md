@@ -39,7 +39,7 @@ ms.lasthandoff: 08/21/2017
   
 -   Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung  
+-   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
 -   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
@@ -58,13 +58,13 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung  
+-   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
 -   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
 -   Schritt 3: Testen Ihrer Projektmappe  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  

@@ -77,6 +77,6 @@ ms.lasthandoff: 08/21/2017
  <xref:System.Collections.Generic>   
  <xref:System.Web.Services>   
  <xref:System.Xml.Serialization>   
- [Serialisierung](../../../docs/standard/serialization/index.md)   
+ [Serialization (Serialisierung)](../../../docs/standard/serialization/index.md)   
  [Mithilfe von ASP.NET und XML-Webdiensteclients erstellte XML-Webdienste](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)
 

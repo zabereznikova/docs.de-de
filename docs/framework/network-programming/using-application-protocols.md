@@ -39,7 +39,7 @@ ms.lasthandoff: 08/21/2017
 .NET Framework unterstützt häufig verwendete Internetanwendungsprotokolle. Dieser Abschnitt enthält Informationen zur Verwendung der [HTTP](../../../docs/framework/network-programming/http.md)-, „TCP“- und „UDP“-Protokolle sowie Informationen zur Verwendung der [Windows Sockets](../../../docs/framework/network-programming/sockets.md)-Schnittstelle zum Implementieren von benutzerdefinierten Protokollen.  
   
 ## Siehe auch  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)   
+ [Network Programming in the .NET Framework (Netzwerkprogrammierung im .NET Framework)](../../../docs/framework/network-programming/index.md)   
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)   
  [Netzwerkbeispiele für .NET in der MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
 

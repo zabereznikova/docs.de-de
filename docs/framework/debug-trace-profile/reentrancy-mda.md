@@ -1,62 +1,67 @@
 ---
-title: "reentrancy MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unmanaged code, debugging"
-  - "transitioning threads unmanaged to managed code"
-  - "reentrancy MDA"
-  - "reentrancy without an orderly transition"
-  - "managed debugging assistants (MDAs), reentrancy"
-  - "illegal reentrancy"
-  - "MDAs (managed debugging assistants), reentrancy"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "managed code, debugging"
-  - "native debugging, MDAs"
+title: Reentranz-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged code, debugging
+- transitioning threads unmanaged to managed code
+- reentrancy MDA
+- reentrancy without an orderly transition
+- managed debugging assistants (MDAs), reentrancy
+- illegal reentrancy
+- MDAs (managed debugging assistants), reentrancy
+- threading [.NET Framework], managed debugging assistants
+- managed code, debugging
+- native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# reentrancy MDA
-Der `reentrancy`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird bei einem versuchten Übergang von systemeigenem Code zu verwaltetem Code aktiviert, wenn ein vorheriger Wechsel von verwaltetem Code zu systemeigenem Code nicht über einen ordnungsgemäßen Übergang erfolgt ist.  
+# <a name="reentrancy-mda"></a>Reentranz-MDA
+Der `reentrancy`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn versucht wird, von nativem zu verwaltetem Code überzugehen, und wenn ein vorheriger Wechsel von verwaltetem zu nativem Code nicht über einen ordnungsgemäßen Übergang ausgeführt wurde.  
   
-## Symptome  
- Der Objektheap ist beschädigt, oder beim Übergang von systemeigenem Code zu verwaltetem Code treten andere gravierende Fehler auf.  
+## <a name="symptoms"></a>Symptome  
+ Der Objektheap ist beschädigt oder es treten andere schwerwiegende Fehler beim Übergang von nativem zu verwaltetem Code auf.  
   
- Threads, die zwischen systemeigenem und verwaltetem Code oder umgekehrt wechseln, müssen einen ordnungsgemäßen Übergang durchführen.  Einige Erweiterungspunkte des Betriebssystems auf niedriger Ebene, z. B. der vektorielle Ausnahmehandler, erlauben jedoch Wechsel von verwaltetem zu systemeigenem Code ohne ordnungsgemäßen Übergang.  Diese Wechsel werden vom Betriebssystem, nicht von der CLR \(Common Language Runtime\) gesteuert.  Bei systemeigenem Code, der innerhalb diesen Erweiterungspunkte ausgeführt wird, darf kein Rückruf in den verwalteten Code erfolgen.  
+ Threads, die zwischen nativem und verwaltetem Code in beide Richtungen wechseln, müssen einen ordnungsgemäßen Übergang durchführen. Allerdings erlauben bestimmte Erweiterbarkeitspunkte auf niedriger Ebene, wie beispielsweise Ausnahmehandler von Vektoren, dass Schalter ohne ordnungsgemäßen Übergang aus verwaltetem zu nativem Code wechseln.  Diese Schalter werden vom Betriebssystem gesteuert und nicht von der Common Language Runtime (CLR).  Jede native Code, der in diesen Erweiterungspunkten ausgeführt wird, muss Rückrufe in verwaltetem Code vermeiden.  
   
-## Ursache  
- Ein Erweiterungspunkt des Betriebssystems auf niedriger Ebene, z. B. der vektorielle Ausnahmehandler, wurde bei der Ausführung von verwaltetem Code aktiviert.  Der über diesen Erweiterungspunkt aufgerufene Anwendungscode versucht, einen Rückruf in den verwalteten Code durchzuführen.  
+## <a name="cause"></a>Ursache  
+ Ein Erweiterungspunkt auf niedriger Ebene, wie z.B. der Ausnahmehandler für Vektoren, wurde während der Ausführung von verwaltetem Code aktiviert.  Der Anwendungscode, der über diesen Erweiterungspunkt aufgerufen wird, versucht einen Rückruf in verwaltetem Code.  
   
- Dieses Problem wird immer durch Anwendungscode verursacht.  
+ Dieses Problem wird immer durch den Anwendungscode verursacht.  
   
-## Lösung  
- Untersuchen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht ungültigerweise, einen Aufruf in den verwalteten Code durchzuführen.  Aus der Stapelüberwachung sollte ersichtlich sein, welcher Anwendungscode diesen Erweiterungspunkt verwendet, welcher Betriebssystemcode diesen Erweiterungspunkt bereitstellt und welcher verwaltete Code durch diesen Erweiterungspunkt unterbrochen wurde.  
+## <a name="resolution"></a>Auflösung  
+ Überprüfen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht illegal verwalteten Code aufzurufen.  Die Stapelüberwachung sollte den Anwendungscode, der diesen Erweiterungspunkt nutzt, den Code des Betriebssystems, der diesen Erweiterungspunkt bereitstellt, und den verwalteten Code, der durch den Erweiterungspunkt unterbrochen wurde, anzeigen.  
   
- Der MDA wird beispielsweise bei einem Versuch aktiviert, verwalteten Code von innerhalb eines vektoriellen Ausnahmehandlers aufzurufen.  Auf dem Stapel wird der Ausnahmebehandlungscode des Betriebssystems sowie der verwaltete Code angezeigt, der eine Ausnahme wie <xref:System.DivideByZeroException> oder <xref:System.AccessViolationException> auslöst.  
+ Sie sehen beispielsweise, dass der MDA bei einem Versuch aktiviert wird, bei dem verwalteter Code innerhalb eines Ausnahmehandlers für Vektoren aufgerufen wird.  Auf dem Stapel sehen Sie den Code für die Ausnahmebehandlung des Betriebssystems und verwalteten Code wie z.B. <xref:System.DivideByZeroException> oder <xref:System.AccessViolationException>, der eine Ausnahme auslöst.  
   
- In diesem Beispiel ist die richtige Lösung, den vektoriellen Ausnahmehandler vollständig in nicht verwaltetem Code zu implementieren.  
+ In diesem Beispiel ist die richtige Lösung die vollständige Implementierung des Ausnahmehandlers für Vektoren in nicht verwaltetem Code.  
   
-## Auswirkungen auf die Laufzeit  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## Ausgabe  
- Der MDA meldet einen ungültigen Reentranzversuch.  Untersuchen Sie den Stapel des Threads, um zu ermitteln, warum dies geschieht und wie das Problem behoben werden kann.  Im Folgenden finden Sie eine Beispielausgabe.  
+## <a name="output"></a>Ausgabe  
+ Der MDA meldet, dass ungültiges Wiedereintreten versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum dies geschieht und wie Sie das Problem beheben können. Nachfolgend ist die Ausgabe des Beispiels aufgeführt.  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -66,9 +71,9 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <reentrancy />  
@@ -76,8 +81,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Im folgenden Codebeispiel wird eine <xref:System.AccessViolationException> ausgelöst.  In Versionen von Windows, die die vektorielle Ausnahmebehandlung unterstützen, wird dadurch der verwaltete vektorielle Ausnahmehandler aufgerufen.  Wenn der `reentrancy`\-MDA bereitgestellt wurde, wird der MDA beim versuchten Aufruf von `MyHandler` durch den Unterstützungscode für die vektorielle Ausnahmebehandlung des Betriebssystems aktiviert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird eine <xref:System.AccessViolationException> ausgelöst wird.  Bei Windows-Versionen, die Ausnahmebehandlung für Vektoren unterstützen, wird der verwaltete Ausnahmehandler für Vektoren aufgerufen.  Wenn der `reentrancy`-MDA aktiviert ist, wird der MDA beim versuchten Aufruf von `MyHandler` aus dem Unterstützungscode des Ausnahmebehandlers für Vektoren aufgerufen.  
   
 ```  
 using System;  
@@ -114,5 +119,6 @@ public class Reenter
 }  
 ```  
   
-## Siehe auch  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch  
+ [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

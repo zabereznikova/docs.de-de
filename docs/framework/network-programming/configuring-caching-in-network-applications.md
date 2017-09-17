@@ -41,7 +41,7 @@ Um die Zwischenspeicherung zu konfigurieren, müssen Sie eine Cacherichtlinie in
   
 ## <a name="see-also"></a>Siehe auch  
  [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinien](../../../docs/framework/network-programming/cache-policy.md)   
+ [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
  [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
 

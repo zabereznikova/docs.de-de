@@ -113,7 +113,7 @@ Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Network Programming in the .NET Framework (Netzwerkprogrammierung in .NET Framework)](../../../docs/framework/network-programming/index.md)   
+ [Network Programming in the .NET Framework (Netzwerkprogrammierung im .NET Framework)](../../../docs/framework/network-programming/index.md)   
  [Network Settings Schema (Netzwerkeinstellungsschema)](../../../docs/framework/configure-apps/file-schema/network/index.md)   
  [\<system.Net>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
 

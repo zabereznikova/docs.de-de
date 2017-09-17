@@ -181,5 +181,5 @@ End Try
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+ [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
 

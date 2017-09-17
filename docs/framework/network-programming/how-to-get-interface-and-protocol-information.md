@@ -87,5 +87,5 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.
+-   Verweise auf den Namespace **System.Net**
 

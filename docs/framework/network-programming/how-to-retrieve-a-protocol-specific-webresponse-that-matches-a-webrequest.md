@@ -45,5 +45,5 @@ Dim resp As WebResponse = req.GetResponse()
 -   Verweise auf den Namespace **System.Net**  
   
 ## Siehe auch  
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+ [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
 

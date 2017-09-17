@@ -40,5 +40,5 @@ Dim httpreq As HttpWebRequest = _
 ```  
   
 ## Siehe auch  
- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+ [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 

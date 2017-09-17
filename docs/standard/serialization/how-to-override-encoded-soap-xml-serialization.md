@@ -28,7 +28,7 @@ ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung
-[Codebeispiel](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+[Code Example (Codebeispiel)](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
  Das Verfahren zum Überschreiben der XML-Serialisierung von Objekten als SOAP-Nachrichten ist mit dem zum Überschreiben der Standard-XML-Serialisierung vergleichbar. Informationen zum Überschreiben der Standard-XML-Serialisierung finden Sie unter [How to: Specify an Alternate Element Name for an XML Stream (Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream)](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
@@ -294,7 +294,7 @@ public class Run
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML and SOAP Serialization (XML- und SOAP-Serialisierung)](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
+ [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  [Attributes That Control Encoded SOAP Serialization (Attribute zur Steuerung der Serialisierung von codiertem SOAP)](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
  [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)   
  [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   

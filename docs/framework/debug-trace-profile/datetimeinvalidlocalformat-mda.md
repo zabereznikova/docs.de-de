@@ -103,5 +103,5 @@ String serialized = XmlConvert.ToString(myDateTime,
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Globalization.DateTimeFormatInfo>   
- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 

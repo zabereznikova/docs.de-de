@@ -33,7 +33,7 @@ Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vo
  In SQL Server ausgeführter Code unterliegt strengeren Richtlinien zur Zuverlässigkeit als andere Serverumgebungen. Dies liegt daran, dass SQL Server ständig am Rand des Ressourcenverbrauchs betrieben wird.  Die Ausnahmen <xref:System.OutOfMemoryException> und <xref:System.Threading.ThreadAbortException> sind für die SQL Server-Umgebung nicht ungewöhnlich. Diese Richtlinien betreffen im Allgemeinen weniger die Zuverlässigkeit, sondern sind vielmehr darauf ausgerichtet, voll vertrauenswürdigen verwalteten Code bei Wiederverwendung auf <xref:System.AppDomain>-Ebene ordnungsgemäß abzubrechen. So hält der Server auf einfache Weise die Konsistenz und Verfügbarkeit aufrecht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SQL Server-Programmierung und Hostschutzattribute](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
+ [SQL Server Programming and Host Protection Attributes (SQL Server-Programmierung und Hostschutzattribute)](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
  Beschreibt, wie SQL Server das <xref:System.Security.Permissions.HostProtectionAttribute>-Attribut verwendet, um die Ausführung von verwaltetem Code einzuschränken.  
   
  [Empfohlene Vorgehensweisen für die Zuverlässigkeit](../../../docs/framework/performance/reliability-best-practices.md)  

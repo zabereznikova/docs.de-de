@@ -52,6 +52,6 @@ Das vom World Wide Web Consortium (www.w3.org) herausgegebene Dokument mit dem T
  [Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)   
  [Attribute](../../../docs/standard/attributes/index.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   
- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

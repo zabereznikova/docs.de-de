@@ -84,6 +84,6 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
 ## Siehe auch  
  [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [Network Programming in the .NET Framework (Netzwerkprogrammierung in .NET Framework)](../../../docs/framework/network-programming/index.md)   
- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Networking Samples for .NET on MSDN Code Gallery (Netzwerkbeispiele für .NET in der MSDN Code Gallery)](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [Netzwerkbeispiele für .NET in der MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
 

@@ -94,7 +94,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Exception?displayProperty=fullName>   
  <xref:System.TypeAccessException>   
- [MissingInteropDataException Class](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)   
+ [MissingInteropDataException-Klasse](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)   
  [MissingRuntimeArtifactException Class](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)   
  [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 

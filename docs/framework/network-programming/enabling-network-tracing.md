@@ -61,7 +61,7 @@ Die Netzwerkablaufverfolgung bietet Zugriff auf Informationen über den Aufruf v
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Interpreting Network Tracing (Interpretieren von Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
+ [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
  [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)   
  [Introduction to Instrumentation and Tracing (Einführung in Instrumentation und Ablaufverfolgung)](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
 

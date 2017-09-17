@@ -59,6 +59,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  Mittels Standard- und Digestauthentifizierung gesendete Daten sind nicht verschlüsselt und daher für Angreifer sichtbar. Anmeldeinformationen für die Standardauthentifizierung (Benutzername und Kennwort) werden zudem in Klartext gesendet und können abgefangen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [NTLM- und Kerberos-Authentifizierung](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [NTLM and Kerberos Authentication (NTLM- und Kerberos-Authentifizierung)](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
  [Internetauthentifizierung](../../../docs/framework/network-programming/internet-authentication.md)
 

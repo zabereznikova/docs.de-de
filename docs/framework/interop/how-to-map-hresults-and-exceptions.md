@@ -1,45 +1,50 @@
 ---
-title: "How to: Map HRESULTs and Exceptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, HRESULTs"
-  - "exceptions, HRESULTs"
-  - "interoperation with unmanaged code, exceptions"
-  - "HRESULTs"
-  - "COM interop, HRESULTs"
-  - "COM interop, exceptions"
+title: 'Gewusst wie: Zuordnen von HRESULTs und Ausnahmen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, HRESULTs
+- exceptions, HRESULTs
+- interoperation with unmanaged code, exceptions
+- HRESULTs
+- COM interop, HRESULTs
+- COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 842c223d63aafe38e2506d1430ac17ea2051884d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Map HRESULTs and Exceptions
-COM\-Methoden melden Fehler durch die Rückgabe von HRESULTs, .NET\-Methoden dagegen durch das Auslösen von Ausnahmen.  Common Language Runtime verwaltet den Übergang zwischen beiden.  Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
+# <a name="how-to-map-hresults-and-exceptions"></a>Gewusst wie: Zuordnen von HRESULTs und Ausnahmen
+COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
   
- Durch benutzerdefinierte Ausnahmeklassen kann festgelegt werden, welches HRESULT angemessen ist.  Durch diese Ausnahmeklassen kann das HRESULT dynamisch geändert werden, das beim Generieren einer Ausnahme zurückgegeben werden soll, indem das **HResult**\-Feld auf das Ausnahmeobjekt eingestellt wird.  Zusätzliche Informationen über die Ausnahme werden dem Client über die Schnittstelle **IErrorInfo** bereitgestellt, die auf dem .NET\-Objekt im nicht verwalteten Prozess implementiert ist.  
+ Benutzerdefinierte Ausnahmeklassen können jedes angemessene HRESULT angeben. Diese Ausnahmeklassen können durch eine dynamische Änderung einstellen, dass das HRESULT zurückgegeben wird, wenn die Ausnahme durch Festlegen des **HResult**-Felds für das Ausnahmeobjekt generiert wird. Weitere Informationen zur Ausnahme wird dem Client über die **IErrorInfo**-Schnittstelle zur Verfügung gestellt, die auf das .NET-Objekt im nicht verwalteten Prozess implementiert wird.  
   
- Wenn Sie eine Klasse erstellen, die **System.Exception** erweitert, müssen Sie das `HRESULT`\-Feld während der Konstruktion festlegen.  Ansonsten weist die Basisklasse den `HRESULT`\-Wert zu.  Sie können neue Ausnahmeklassen einem vorhandenen HRESULT zuordnen, indem Sie den Wert im Konstruktor der Ausnahme angeben.  
+ Wenn Sie eine Klasse erstellen, die **System.Exception** erweitert, müssen Sie während der Erstellung das HRESULT-Feld festlegen. Ansonsten weist die Basisklasse den HRESULT-Wert zu. Sie können neue Ausnahmeklassen einem vorhandenen HRESULT zuordnen, indem Sie den Wert im Konstruktor der Ausnahme bereitstellen.  
   
- Beachten Sie, dass `HRESULT` von der Laufzeit zeitweise ignoriert werden kann, wenn der Thread `IErrorInfo` enthält.  Dieses Verhalten kann auftreten, wenn `HRESULT` und `IErrorInfo` nicht denselben Fehler darstellen.   ``  
+ Beachten Sie, dass die Common Language Runtime manchmal eine `HRESULT` ignoriert, wenn ein `IErrorInfo` im Thread vorhanden ist.  Dieses Verhalten kann in Fällen auftreten, in denen die `HRESULT` und `IErrorInfo` nicht den gleichen Fehler darstellen.  
   
-### So erstellen Sie eine neue Ausnahmeklasse und ordnen diese einem HRESULT zu  
+### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Erstellen einer neuen Ausnahmeklasse und Zuweisen zu einem HRESULT  
   
-1.  Verwenden Sie den folgenden Code, um eine neue Ausnahmeklasse mit dem Namen `NoAccessException` zu erstellen und diese dem HRESULT `E_ACCESSDENIED` zuzuordnen.  
+1.  Verwenden Sie den folgenden Code zum Erstellen einer neuen Ausnahmeklasse namens `NoAccessException`, und ordnen Sie sie dem HRESULT `E_ACCESSDENIED` zu.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -54,7 +59,7 @@ COM\-Methoden melden Fehler durch die Rückgabe von HRESULTs, .NET\-Methoden dag
     }  
     ```  
   
- Es kann vorkommen, dass ein Programm \(in einer beliebigen Programmiersprache\) gleichzeitig verwalteten und nicht verwalteten Code verwendet.  So verwendet z. B. der benutzerdefinierte Marshaller im folgenden Codebeispiel die **Marshal.ThrowExceptionForHR\(int HResult\)**\-Methode, um eine Ausnahme mit einem spezifischen `HRESULT`\-Wert auszulösen.  Die Methode sucht nach dem HRESULT und generiert den entsprechenden Ausnahmetyp.  Im folgenden Codefragment wird z. B. **ArgumentException** generiert.  
+ Es wird möglicherweise ein Programm (in einer beliebigen Programmiersprache) auftreten, das verwalteten und nicht verwalteten Code gleichzeitig verwendet. Beispielsweise verwendet der benutzerdefinierte Marshaller im folgenden Codebeispiel die Methode **Marshal.ThrowExceptionForHR(Int HResult)**, um eine Ausnahme mit einem bestimmten HRESULT-Wert auszulösen. Die Methode sucht das HRESULT und generiert den entsprechenden Ausnahmetyp. Im folgenden Codefragment generiert HRESULT z.B. **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -63,93 +68,94 @@ CMyClass::MethodThatThrows
 }  
 ```  
   
- In der folgenden Tabelle wird eine vollständige Zuordnung eines jeden HRESULT zur vergleichbaren Ausnahmeklasse in .NET Framework angegeben.  
+ Die folgende Tabelle stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.  
   
-|HRESULT|.NET\-Ausnahme|  
+|HRESULT|.NET-Ausnahme|  
 |-------------|--------------------|  
-|**MSEE\_E\_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
-|**COR\_E\_APPLICATION**|**ApplicationException**|  
-|**COR\_E\_ARGUMENT oder E\_INVALIDARG**|**ArgumentException**|  
-|**COR\_E\_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
-|**COR\_E\_ARITHMETIC oder ERROR\_ARITHMETIC\_OVERFLOW**|**ArithmeticException**|  
-|**COR\_E\_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
-|**COR\_E\_BADIMAGEFORMAT oder ERROR\_BAD\_FORMAT**|**BadImageFormatException**|  
-|**COR\_E\_COMEMULATE\_ERROR**|**COMEmulateException**|  
-|**COR\_E\_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR\_E\_CORE**|**CoreException**|  
-|**NTE\_FAIL**|**CryptographicException**|  
-|**COR\_E\_DIRECTORYNOTFOUND oder ERROR\_PATH\_NOT\_FOUND**|**DirectoryNotFoundException**|  
-|**COR\_E\_DIVIDEBYZERO**|**DivideByZeroException**|  
-|**COR\_E\_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
-|**COR\_E\_ENDOFSTREAM**|**EndOfStreamException**|  
-|**COR\_E\_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR\_E\_EXCEPTION**|**Ausnahme**|  
-|**COR\_E\_EXECUTIONENGINE**|**ExecutionEngineException**|  
-|**COR\_E\_FIELDACCESS**|**FieldAccessException**|  
-|**COR\_E\_FILENOTFOUND oder ERROR\_FILE\_NOT\_FOUND**|**FileNotFoundException**|  
-|**COR\_E\_FORMAT**|**FormatException**|  
-|**COR\_E\_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
-|**COR\_E\_INVALIDCAST oder E\_NOINTERFACE**|**InvalidCastException**|  
-|**COR\_E\_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
-|**COR\_E\_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
-|**COR\_E\_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
-|**COR\_E\_INVALIDOPERATION**|**InvalidOperationException**|  
-|**COR\_E\_IO**|**IOException**|  
-|**COR\_E\_MEMBERACCESS**|**AccessException**|  
-|**COR\_E\_METHODACCESS**|**MethodAccessException**|  
-|**COR\_E\_MISSINGFIELD**|**MissingFieldException**|  
-|**COR\_E\_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
-|**COR\_E\_MISSINGMEMBER**|**MissingMemberException**|  
-|**COR\_E\_MISSINGMETHOD**|**MissingMethodException**|  
-|**COR\_E\_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
-|**COR\_E\_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E\_NOTIMPL**|**NotImplementedException**|  
-|**COR\_E\_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR\_E\_NULLREFERENCE oder E\_POINTER**|**NullReferenceException**|  
-|**COR\_E\_OUTOFMEMORY oder**<br /><br /> **E\_OUTOFMEMORY**|**OutOfMemoryException**|  
-|**COR\_E\_OVERFLOW**|**OverflowException**|  
-|**COR\_E\_PATHTOOLONG oder ERROR\_FILENAME\_EXCED\_RANGE**|**PathTooLongException**|  
-|**COR\_E\_RANK**|**RankException**|  
-|**COR\_E\_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
-|**COR\_E\_REMOTING**|**RemotingException**|  
-|**COR\_E\_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
-|**COR\_E\_SECURITY**|**SecurityException**|  
-|**COR\_E\_SERIALIZATION**|**SerializationException**|  
-|**COR\_E\_STACKOVERFLOW oder ERROR\_STACK\_OVERFLOW**|**StackOverflowException**|  
-|**COR\_E\_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR\_E\_SYSTEM**|**SystemException**|  
-|**COR\_E\_TARGET**|**TargetException**|  
-|**COR\_E\_TARGETINVOCATION**|**TargetInvocationException**|  
-|**COR\_E\_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
-|**COR\_E\_THREADABORTED**|**ThreadAbortException**|  
-|**COR\_E\_THREADINTERRUPTED**|**ThreadInterruptedException**|  
-|**COR\_E\_THREADSTATE**|**ThreadStateException**|  
-|**COR\_E\_THREADSTOP**|**ThreadStopException**|  
-|**COR\_E\_TYPELOAD**|**TypeLoadException**|  
-|**COR\_E\_TYPEINITIALIZATION**|**TypeInitializationException**|  
-|**COR\_E\_VERIFICATION**|**VerificationException**|  
-|**COR\_E\_WEAKREFERENCE**|**WeakReferenceException**|  
-|**COR\_E\_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
+|**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
+|**COR_E_APPLICATION**|**ApplicationException**|  
+|**COR_E_ARGUMENT oder E_INVALIDARG**|**ArgumentException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
+|**COR_E_ARITHMETIC oder ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
+|**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
+|**COR_E_BADIMAGEFORMAT oder ERROR_BAD_FORMAT**|**BadImageFormatException**|  
+|**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
+|**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
+|**COR_E_CORE**|**CoreException**|  
+|**NTE_FAIL**|**CryptographicException**|  
+|**COR_E_DIRECTORYNOTFOUND oder ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
+|**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
+|**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
+|**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
+|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
+|**COR_E_FILENOTFOUND oder ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
+|**COR_E_FORMAT**|**FormatException**|  
+|**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
+|**COR_E_INVALIDCAST oder E_NOINTERFACE**|**InvalidCastException**|  
+|**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
+|**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
+|**COR_E_IO**|**IOException**|  
+|**COR_E_MEMBERACCESS**|**AccessException**|  
+|**COR_E_METHODACCESS**|**MethodAccessException**|  
+|**COR_E_MISSINGFIELD**|**MissingFieldException**|  
+|**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
+|**COR_E_MISSINGMEMBER**|**MissingMemberException**|  
+|**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
+|**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
+|**COR_E_OUTOFMEMORY oder**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_PATHTOOLONG oder ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_RANK**|**RankException**|  
+|**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
+|**COR_E_REMOTING**|**RemotingException**|  
+|**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
+|**COR_E_SECURITY**|**SecurityException**|  
+|**COR_E_SERIALIZATION**|**SerializationException**|  
+|**COR_E_STACKOVERFLOW oder ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
+|**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
+|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_TARGET**|**TargetException**|  
+|**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
+|**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
+|**COR_E_THREADABORTED**|**ThreadAbortException**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
+|**COR_E_THREADSTATE**|**ThreadStateException**|  
+|**COR_E_THREADSTOP**|**ThreadStopException**|  
+|**COR_E_TYPELOAD**|**TypeLoadException**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
+|**COR_E_VERIFICATION**|**VerificationException**|  
+|**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
+|**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
 |**Alle anderen HRESULTs**|**COMException**|  
   
- Um erweiterte Fehlerinformationen abzurufen, muss der verwaltete Client die Felder des generierten Ausnahmeobjekts untersuchen.  Damit das Ausnahmeobjekt nützliche Fehlerinformationen bereitstellen kann, muss die Schnittstelle **IErrorInfo** durch das COM\-Objekt implementiert werden.  Die von **IErrorInfo** bereitgestellte Information wird von der Laufzeit zur Initialisierung des Ausnahmeobjekts verwendet.  
+ Um erweiterte Fehlerinformationen abzurufen, muss der verwaltete Client die Felder des erstellten Ausnahmeobjekts untersuchen. Das COM-Objekt muss die **IErrorInfo**-Schnittstelle implementieren, damit das Ausnahmeobjekt nützliche Informationen zu einem Fehler zur Verfügung stellen kann. Die Common Language Runtime verwendet die von **IErrorInfo** bereitgestellten Informationen zur Initialisierung des Ausnahmeobjekts.  
   
- Wenn das COM\-Objekt **IErrorInfo** nicht unterstützt, wird durch Common Language Runtime ein Ausnahmeobjekt mit Standardwerten initialisiert.  In der folgenden Tabelle wird jedes Feld aufgeführt, das einem Ausnahmeobjekt zugeordnet ist, und die Standardinformationsquelle angegeben, wenn das COM\-Objekt **IErrorInfo** unterstützt.  
+ Wenn das COM-Objekt **IErrorInfo** nicht unterstützt, initialisiert die Common Language Runtime ein Ausnahmeobjekt mit Standardwerten. In der folgenden Tabelle wird jedes Feld aufgeführt, das einem Ausnahmeobjekt zugewiesen ist, und die Quelle der Standardinformationen identifiziert, wenn das COM-Objekt **IErrorInfo** unterstützt.  
   
- Beachten Sie, dass `HRESULT` von der Laufzeit zeitweise ignoriert werden kann, wenn der Thread `IErrorInfo` enthält.  Dieses Verhalten kann auftreten, wenn `HRESULT` und `IErrorInfo` nicht denselben Fehler darstellen.   ``  
+ Beachten Sie, dass die Common Language Runtime manchmal eine `HRESULT` ignoriert, wenn ein `IErrorInfo` im Thread vorhanden ist.  Dieses Verhalten kann in Fällen auftreten, in denen die `HRESULT` und `IErrorInfo` nicht den gleichen Fehler darstellen.  
   
 |Ausnahmefeld|Informationsquelle von COM|  
-|------------------|--------------------------------|  
+|---------------------|------------------------------------|  
 |**ErrorCode**|Vom Aufruf zurückgegebenes HRESULT.|  
-|**HelpLink**|Wenn **IErrorInfo\-\>HelpContext** nicht 0 ist, wird die Zeichenfolge durch Verkettung von **IErrorInfo\-\>GetHelpFile** und "\#" und **IErrorInfo\-\>GetHelpContext** geformt.  Andernfalls wird die Zeichenfolge von **IErrorInfo\-\>GetHelpFile** zurückgegeben.|  
-|**InnerException**|Immer ein NULL\-Verweis \(**Nothing** in Visual Basic\).|  
-|**Nachricht**|Von **IErrorInfo\-\>GetDescription** zurückgegebene Zeichenfolge.|  
-|**Quelle**|Von **IErrorInfo\-\>GetSource** zurückgegebene Zeichenfolge.|  
+|**HelpLink**|Wenn **IErrorInfo->HelpContext** ungleich 0 ist, wird die Zeichenfolge durch Verketten von **IErrorInfo->GetHelpFile** und „#“ sowie **IErrorInfo->GetHelpContext** gebildet. Andernfalls wird die Zeichenfolge aus **IErrorInfo->GetHelpFile** zurückgegeben.|  
+|**InnerException**|Immer ein NULL-Verweis (**Nothing** in Visual Basic).|  
+|**Meldung**|Von **IErrorInfo->GetDescription** zurückgegebene Zeichenfolge.|  
+|**Quelle**|Von **IErrorInfo->GetSource** zurückgegebene Zeichenfolge.|  
 |**StackTrace**|Die Stapelüberwachung.|  
-|**TargetSite**|Name der Methode, die das fehlgeschlagene HRESULT zurückgegeben hat.|  
+|**TargetSite**|Der Name der Methode, die das fehlerhafte HRESULT zurückgegeben hat.|  
   
- Ausnahmefelder wie **Message**, **Source** und **StackTrace** sind für **StackOverflowException** nicht verfügbar.  
+ Ausnahmefelder, wie z.B. **Message**, **Source** und **StackTrace** sind für die **StackOverflowException** nicht verfügbar.  
   
-## Siehe auch  
- [Advanced COM Interoperability](http://msdn.microsoft.com/de-de/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+## <a name="see-also"></a>Siehe auch  
+ [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [Ausnahmen](../../../docs/standard/exceptions/index.md)
+

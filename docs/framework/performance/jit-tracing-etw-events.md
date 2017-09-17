@@ -160,5 +160,5 @@ ms.lasthandoff: 08/21/2017
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR ETW Events (CLR-ETW-Ereignisse)](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
 

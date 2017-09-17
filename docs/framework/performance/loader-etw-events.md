@@ -223,5 +223,5 @@ ms.lasthandoff: 08/21/2017
  Modulbereichereignisse werden bei jeder ETW-Ebene größer oder gleich 4 ausgelöst und werden als Informationsereignisse klassifiziert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR ETW Events (CLR-ETW-Ereignisse)](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
 

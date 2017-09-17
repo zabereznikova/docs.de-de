@@ -99,7 +99,7 @@ Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften ein
  [Advanced Development Technologies (Fortgeschrittene Entwicklungstechnologien)](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Enthält Links zu weiteren Informationen über anspruchsvolle Aufgaben und Verfahren für die Entwicklung in .NET&#160;Framework.  
   
- [Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Mithilfe von ASP.NET und XML-Webdiensteclients erstellte XML-Webdienste](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
  Stellt Themen bereit, in denen beschrieben und erklärt wird, wie XML-Webdienste mit ASP.NET programmiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  

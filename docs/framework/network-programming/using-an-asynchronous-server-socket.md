@@ -274,7 +274,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
+ [Using a Synchronous Server Socket (Verwenden eines synchronen Serversockets)](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Asynchroner Serversocket, Beispiel](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
  [Threading](../../../docs/standard/threading/index.md)   
  [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)

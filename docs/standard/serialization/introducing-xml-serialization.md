@@ -184,7 +184,7 @@ public string MyToken;
  <xref:System.Xml.Serialization.XmlSerializer>   
  <xref:System.Runtime.Serialization.DataContractSerializer>   
  <xref:System.IO.FileStream>   
- [XML and SOAP Serialization (XML- und SOAP-Serialisierung)](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
+ [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  [Binary Serialization (Binäre Serialisierung)](../../../docs/standard/serialization/binary-serialization.md)   
  [Serialization (Serialisierung)](../../../docs/standard/serialization/index.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   

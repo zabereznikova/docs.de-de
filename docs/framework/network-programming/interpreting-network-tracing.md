@@ -60,7 +60,7 @@ Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgun
  `Connection: Close`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Aktivieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/enabling-network-tracing.md)   
  [How to: Configure Network Tracing (Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
  [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
 

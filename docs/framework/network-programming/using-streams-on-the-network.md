@@ -115,6 +115,6 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
+ [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
 

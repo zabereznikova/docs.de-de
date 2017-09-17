@@ -36,6 +36,6 @@ Die Verbindungsgruppierung ordnet bestimmte Anforderungen innerhalb einer einzel
  Sie müssen der <xref:System.Net.WebRequest.ConnectionGroupName%2A>-Eigenschaft Ihrer <xref:System.Net.WebRequest> vor der Anforderung einen Namen zuweisen, um eine Anforderung einer bestimmten Verbindungsgruppe zuzuweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwalten von Verbindungen](../../../docs/framework/network-programming/managing-connections.md)   
+ [Managing Connections (Verwalten von Verbindungen)](../../../docs/framework/network-programming/managing-connections.md)   
  [Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)
 

@@ -40,7 +40,7 @@ Konfliktereignisse werden immer dann ausgelöst, wenn es Konflikte bei <xref:Sys
 |`ContentionStart_V1`|81|Konflikt startet. Dieses Ereignis enthält die Spinzeit vor dem Abruf einer Sperre eines Threads nicht. Dies wird nur ausgelöst, wenn der Thread darauf wartet, eine Sperre abzurufen.|  
 |`ContentionStop`|81|Konflikt endet.|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ In der folgenden Tabelle finden Sie die Ereignisdaten.  
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  

@@ -158,7 +158,7 @@ In diesem Thema wird die Vorgehensweise zum Senden von Daten an einen Server bes
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. Nachdem Sie die Daten der Antwort gelesen haben, schließen Sie entweder den Antwortstream mithilfe der **Stream.Close**-Methode, oder schließen Sie die Antwort mithilfe der **WebResponse.Close**-Methode. Es ist nicht zwar notwendig, die **Close**-Methode für sowohl Antwortstream als auch **WebResponse** aufzurufen, doch es ist auch nicht schädlich.  
+12. Nachdem Sie die Daten der Antwort gelesen haben, schließen Sie entweder den Antwortstream mithilfe der **Stream.Close**-Methode, oder schließen Sie die Antwort mithilfe der **WebResponse.Close**-Methode. Es ist zwar nicht notwendig, die **Close**-Methode für sowohl Antwortdatenstrom als auch **WebResponse** aufzurufen, doch es ist auch nicht schädlich.  
   
     ```csharp  
     response.Close();  

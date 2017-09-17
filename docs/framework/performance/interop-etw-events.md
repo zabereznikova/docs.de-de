@@ -94,5 +94,5 @@ ms.lasthandoff: 08/21/2017
  [Zurück nach oben](#top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR ETW Events (CLR-ETW-Ereignisse)](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
 

@@ -320,11 +320,11 @@ public class Group{
  Es kann vorkommen, dass eine öffentliche Eigenschaft oder ein öffentliches Feld nicht serialisiert werden muss. Zum Beispiel konnte ein Feld oder eine Eigenschaft zum Speichern von Metadaten verwendet werden. Wenden Sie in diesen Fällen <xref:System.Xml.Serialization.XmlIgnoreAttribute> auf das Feld oder die Eigenschaft an. <xref:System.Xml.Serialization.XmlSerializer> überspringt dann das Feld bzw. die Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
+ [Attributes That Control XML Serialization (Attribute zur Steuerung der XML-Serialisierung)](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
  [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
  [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)   
  [Beispiele für die XML-Serialisierung](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
  [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

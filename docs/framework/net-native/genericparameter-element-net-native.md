@@ -69,7 +69,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Runtime Directive Policy Settings (Richtlinieneinstellungen für die Laufzeitanweisungen)](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -100,6 +100,6 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
  [\<Method>-Element](../../../docs/framework/net-native/method-element-net-native.md)   
  [\<Type>-Element](../../../docs/framework/net-native/type-element-net-native.md)   
  [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Runtime Directive Policy Settings (Richtlinieneinstellungen für die Laufzeitanweisung)](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [Runtime Directive Elements (Elemente der Laufzeitanweisung)](../../../docs/framework/net-native/runtime-directive-elements.md)
+ [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 

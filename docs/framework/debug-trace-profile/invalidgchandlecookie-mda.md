@@ -1,53 +1,58 @@
 ---
-title: "invalidGCHandleCookie MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), invalid cookies"
-  - "cookies, invalid"
-  - "managed debugging assistants (MDAs), invalid cookies"
-  - "InvalidGCHandleCookie MDA"
-  - "invalid cookies"
+title: invalidGCHandleCookie-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), invalid cookies
+- cookies, invalid
+- managed debugging assistants (MDAs), invalid cookies
+- InvalidGCHandleCookie MDA
+- invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fca1d010fd206de931cc057bc735179808686b51
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# invalidGCHandleCookie MDA
-Der `invalidGCHandleCookie`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn versucht wird, ein ungültiges <xref:System.IntPtr>\-Cookie in ein <xref:System.Runtime.InteropServices.GCHandle> umzuwandeln.  
+# <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie-MDA
+Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine Konvertierung von einem ungültigen <xref:System.IntPtr>-Cookie in ein <xref:System.Runtime.InteropServices.GCHandle> versucht wird.  
   
-## Symptome  
- Undefiniertes Verhalten wie Zugriffsverletzungen und Speicherschäden beim Versuch, ein <xref:System.Runtime.InteropServices.GCHandle> aus einem <xref:System.IntPtr> zu verwenden oder abzurufen.  
+## <a name="symptoms"></a>Symptome  
+ Ein nicht definiertes Verhalten, z.B. Zugriffsverletzungen und Speicherschäden, beim Versuch <xref:System.Runtime.InteropServices.GCHandle> aus <xref:System.IntPtr> abzurufen oder zu verwenden.  
   
-## Ursache  
- Das Cookie ist wahrscheinlich ungültig, weil es ursprünglich nicht von einem <xref:System.Runtime.InteropServices.GCHandle> erstellt wurde, ein bereits freigegebenes <xref:System.Runtime.InteropServices.GCHandle> darstellt, sich auf ein <xref:System.Runtime.InteropServices.GCHandle> in einer anderen Anwendungsdomäne bezieht oder als <xref:System.Runtime.InteropServices.GCHandle> in systemeigenen Code gemarshallt, jedoch als <xref:System.IntPtr> wieder in die CLR zurückgegeben und dann dort eine Umwandlung versucht wurde.  
+## <a name="cause"></a>Ursache  
+ Das Cookie ist wahrscheinlich ungültig, da es entweder nicht ursprünglich von <xref:System.Runtime.InteropServices.GCHandle> erstellt wurde, <xref:System.Runtime.InteropServices.GCHandle> darstellt, das bereits freigegeben wurde oder ein Cookie für <xref:System.Runtime.InteropServices.GCHandle> in einer anderen Anwendungsdomäne ist. Außerdem könnte es als <xref:System.Runtime.InteropServices.GCHandle> in nativen Code gemarshallt und als <xref:System.IntPtr> in die CLR zurückgegeben worden sein, in der eine Umwandlung versucht wurde.  
   
-## Lösung  
- Geben Sie ein gültiges <xref:System.IntPtr>\-Cookie für das <xref:System.Runtime.InteropServices.GCHandle> an.  
+## <a name="resolution"></a>Auflösung  
+ Geben Sie ein gültiges <xref:System.IntPtr>-Cookie für <xref:System.Runtime.InteropServices.GCHandle> an.  
   
-## Auswirkungen auf die Laufzeit  
- Wenn dieser MDA aktiviert wird, kann der Debugger Wurzeln nicht mehr zu den Objekten zurückverfolgen, da sich die Werte der zurückgegebenen Cookies von denen ohne aktivierten MDA unterscheiden.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Wenn dieser MDA aktiviert ist, kann der Debugger die Stämme nicht länger zu ihren Objekten zurückverfolgen, da die zurückgegebenen Cookiewerte sich von denjenigen unterscheiden, die zurückgegeben werden, wenn der MDA nicht aktiviert ist.  
   
-## Ausgabe  
- Es wird der Wert des ungültigen <xref:System.IntPtr>\-Cookies gemeldet.  
+## <a name="output"></a>Ausgabe  
+ Der ungültige <xref:System.IntPtr>-Cookiewert wird gemeldet.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <invalidGCHandleCookie />  
@@ -55,7 +60,8 @@ Der `invalidGCHandleCookie`\-MDA \(Managed Debugging Assistant, Assistent für v
 </mdaConfig>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>   
  <xref:System.Runtime.InteropServices.GCHandle>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

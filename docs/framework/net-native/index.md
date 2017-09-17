@@ -76,7 +76,7 @@ ms.lasthandoff: 08/21/2017
   
 -   [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)  
   
-    -   [APIs That Rely on Reflection (APIs, die auf Reflektion beruhen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+    -   [APIs That Rely on Reflection (APIs, die die Reflektion benötigen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
     -   [Reflektions-API-Referenz](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/21/2017
   
 -   [Migrating Your Windows Store App to .NET Native (Migrieren der Windows Store-App auf .NET Native)](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [.NET Native General Troubleshooting (Allgemeine Problembehandlung für .NET Native)](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
+-   [.NET Native Allgemeine Problembehandlung](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [.NET systemeigen – häufig gestellte Fragen](http://msdn.microsoft.com/vstudio/dn642499.aspx)

@@ -108,7 +108,7 @@ public class SerializeOverride()
  <xref:System.Xml.Serialization.XmlElementAttribute>   
  <xref:System.Xml.Serialization.XmlAttributes>   
  <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [XML and SOAP Serialization (XML- und SOAP-Serialisierung)](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
+ [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
  [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [How to: Deserialize an Object (Vorgehensweise: Deserialisieren eines Objekts)](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   

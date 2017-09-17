@@ -1,63 +1,69 @@
 ---
-title: "How to: Add References to Type Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "importing type library"
-  - "interop assemblies, generating"
-  - "type libraries"
-  - "COM interop, importing type library"
+title: "Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- importing type library
+- interop assemblies, generating
+- type libraries
+- COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a0c4fc9b96ec310e20839be851cfddbb34e09201
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Add References to Type Libraries
-Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbibliothek einen Verweis hinzufügen.  Wenn eine primäre Interopassembly verfügbar ist, verwendet Visual Studio die bereits vorhandene Assembly, bevor eine neue Interopassembly generiert wird.  
+# <a name="how-to-add-references-to-type-libraries"></a>Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken
+Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbibliothek einen Verweis hinzufügen. Wenn eine primäre Interopassembly verfügbar ist, verwendet Visual Studio die bereits vorhandene Assembly, bevor eine neue Interopassembly generiert wird.  
   
-### So fügen Sie einer Typbibliothek in Visual Studio einen Verweis hinzu  
+### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>So fügen Sie einer Typbibliothek in Visual Studio einen Verweis hinzu  
   
-1.  Installieren Sie die COM DLL\- oder EXE\-Datei auf Ihrem Computer, es sei denn, die Installation wird mithilfe einer Windows Setup.exe\-Datei durchgeführt.  
+1.  Installieren Sie die COM DLL- oder EXE-Datei auf Ihrem Computer, es sei denn, die Installation wird mithilfe einer Windows Setup.exe-Datei durchgeführt.  
   
-2.  Wählen Sie **Projekt**, **Verweis hinzufügen** aus.  
+2.  Wählen Sie **Projekt** > **Verweis hinzufügen** aus.  
   
-3.  Anschließend wählen Sie im Verweis\-Manager **COM** aus.  
+3.  Anschließend wählen Sie im Verweis-Manager **COM** aus.  
   
-4.  Wählen Sie die Typbibliothek aus der Liste aus, oder suchen Sie nach der TLB\-Datei.  
+4.  Wählen Sie die Typbibliothek aus der Liste aus, oder suchen Sie nach der TLB-Datei.  
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Öffnen Sie im Projektmappen\-Explorer das Kontextmenü für den gerade hinzugefügten Verweis, und wählen Sie **Eigenschaften** aus.  
+6.  Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den gerade hinzugefügten Verweis, und wählen Sie **Eigenschaften** aus.  
   
-7.  Vergewissern Sie sich, dass im Fenster **Eigenschaften** die Eigenschaft **Interoptypen einbetten** auf **True** festgelegt ist.  Daraufhin bettet Visual Studio Typinformationen für COM\-Typen in Ihre ausführbaren Dateien ein, sodass keine primären Interopassemblys über Ihre App bereitgestellt werden müssen.  
+7.  Vergewissern Sie sich, dass im Fenster **Eigenschaften** die Eigenschaft **Interop-Typen einbetten** auf **TRUE** festgelegt ist. Daraufhin bettet Visual Studio Typinformationen für COM-Typen in Ihre ausführbaren Dateien ein, sodass keine primären Interopassemblys über Ihre App bereitgestellt werden müssen.  
   
 > [!NOTE]
->  Die Menü\- und Dialogfeldoptionen können abhängig von der verwendeten Visual Studio\-Version variieren.  
+>  Die Menü- und Dialogfeldoptionen können abhängig von der verwendeten Visual Studio-Version variieren.  
   
-### So fügen Sie einer Typbibliothek einen Verweis zur Befehlszeilenkompilierung hinzu  
+### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>So fügen Sie einer Typbibliothek einen Verweis zur Befehlszeilenkompilierung hinzu  
   
-1.  Generieren Sie eine Interopassembly wie in [How to: Generate Interop Assemblies from Type Libraries](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md) beschrieben.  
+1.  Generieren Sie, wie in [Vorgehensweise: Generieren von Interop-Assemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md) beschrieben, eine Interop-Assembly.  
   
-2.  Verwenden Sie die [\/link \(Link to COM Assembly\)](../Topic/-link%20\(C%23%20Compiler%20Options\).md)\- oder [\/link](../Topic/-link%20\(Visual%20Basic\).md)\-Compileroption mit dem Namen der Interopassembly, um Typinformationen für COM\-Typen in Ihre ausführbaren Dateien einzubetten.  
+2.  Verwenden Sie die Compileroption [/link (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) oder [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) mit dem Namen der Interop-Assembly, um Typinformationen für COM-Typen in Ihre ausführbaren Dateien einzubetten.  
   
-## Siehe auch  
- [Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office\-Assemblys](../Topic/Walkthrough:%20Embedding%20Type%20Information%20from%20Microsoft%20Office%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [\/link \(Link to COM Assembly\)](../Topic/-link%20\(C%23%20Compiler%20Options\).md)   
- [\/link](../Topic/-link%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>Siehe auch  
+ [Importieren einer Typbibliothek als Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
+ [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
+ [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
+ [/link (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md)   
+ [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md)
+

@@ -1,54 +1,59 @@
 ---
-title: "raceOnRCWCleanup MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "RCW"
-  - "managed debugging assistants (MDAs), RCWs"
-  - "race on RCW cleanup"
-  - "MDAs (managed debugging assistants), RCWs"
-  - "RaceOnRCWCleanup MDA"
-  - "runtime callable wrappers"
+title: raceOnRCWCleanup-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- RCW
+- managed debugging assistants (MDAs), RCWs
+- race on RCW cleanup
+- MDAs (managed debugging assistants), RCWs
+- RaceOnRCWCleanup MDA
+- runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 16635cd31fcae0005e77d9d55ecf391bc0d79a75
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# raceOnRCWCleanup MDA
-Der `raceOnRCWCleanup`\-Assistent für verwaltetes Debuggen \(Managed Debugging Assistant, MDA\) wird aktiviert, wenn die CLR \(Common Language Runtime\) ermittelt, dass ein [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) \(verwendet wird, wenn ein Aufruf zum Freigeben mithilfe eines Befehls wie etwa der Methode <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName> erfolgt.  
+# <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup-MDA
+Der `raceOnRCWCleanup`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn die CLR (Common Language Runtime) ermittelt, dass ein [RWC (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md) verwendet wird, wenn ein Freigabeaufruf mithilfe eines Befehls wie etwa der <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>-Methode erfolgt.  
   
-## Symptome  
+## <a name="symptoms"></a>Symptome  
  Zugriffsverletzungen oder Speicherschäden während oder nach dem Freigeben eines RCW mithilfe von <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> oder einer ähnlichen Methode.  
   
-## Ursache  
+## <a name="cause"></a>Ursache  
  Der RCW wird in einem anderen Thread oder für den freigebenden Threadstapel verwendet.  Ein RCW, der verwendet wird, kann nicht freigegeben werden.  
   
-## Auflösung  
+## <a name="resolution"></a>Auflösung  
  Geben Sie einen RCW, der im aktuellen Thread oder in anderen Threads verwendet wird, nicht frei.  
   
-## Auswirkungen auf die Laufzeit  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
  Eine Meldung mit einer Beschreibung des Fehlers.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <raceOnRCWCleanup/>  
@@ -56,7 +61,8 @@ Der `raceOnRCWCleanup`\-Assistent für verwaltetes Debuggen \(Managed Debugging 
 </mdaConfig>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)
+

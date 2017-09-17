@@ -72,7 +72,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.  
+-   Verweise auf den Namespace **System.Net**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)   

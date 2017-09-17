@@ -55,7 +55,7 @@ Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifiz
  Einige Authentifizierungsschemas können einen Benutzer authentifizieren, ohne zuvor eine Anforderung für eine Ressource durchzuführen. Eine Anwendung kann Zeit sparen, indem der Benutzer mit der Ressource präauthentifiziert wird. So wird mindestens ein Roundtrip zum Server vermieden. Sie können die Authentifizierung auch während des Programmstarts durchführen, um später besser auf den Benutzer reagieren zu können. Authentifizierungsschemas, die die Präauthentifizierung verwenden können, legen die <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A>-Eigenschaft auf **TRUE** fest.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Basic and Digest Authentication (Standard- und Digestauthentifizierung)](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+ [Standard- und Digestauthentifizierung](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
  [NTLM and Kerberos Authentication (NTLM- und Kerberos-Authentifizierung)](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
  [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)
 

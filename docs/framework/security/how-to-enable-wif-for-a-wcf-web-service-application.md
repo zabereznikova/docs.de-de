@@ -79,7 +79,7 @@ ms.lasthandoff: 08/21/2017
   
 1.  Starten Sie Visual Studio im erweiterten Modus als Administrator.  
   
-2.  Klicken Sie in Visual Studio auf **Datei**, **Neu** und dann auf **Projekt**.  
+2.  Klicken Sie in Visual Studio auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
 3.  Klicken Sie im Fenster **Neues Projekt** auf **WCF-Dienstanwendung**.  
   

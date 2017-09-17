@@ -166,7 +166,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cache Management for Network Applications (Cacheverwaltung für Netzwerkanwendungen)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+ [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
  [Location-Based Cache Policies (Speicherortbasierte Cacherichtlinien)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Time-Based Cache Policies (Zeitbasierte Cacherichtlinien)](../../../docs/framework/network-programming/time-based-cache-policies.md)   

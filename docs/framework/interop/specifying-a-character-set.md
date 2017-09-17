@@ -153,7 +153,7 @@ extern "C" int MessageBox(HWND hWnd,
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Erstellen von Prototypen in verwaltetem Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
  [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)   
  [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
 

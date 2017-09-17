@@ -1,63 +1,68 @@
 ---
-title: "loaderLock MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "deadlocks [.NET Framework]"
-  - "LoaderLock MDA"
-  - "MDAs (managed debugging assistants), loader locks"
-  - "managed debugging assistants (MDAs), loader locks"
-  - "operating system loader locks"
-  - "loader locks"
-  - "locks, threads"
+title: loaderLock-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- deadlocks [.NET Framework]
+- LoaderLock MDA
+- MDAs (managed debugging assistants), loader locks
+- managed debugging assistants (MDAs), loader locks
+- operating system loader locks
+- loader locks
+- locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# loaderLock MDA
-Der `loaderLock`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) erkennt Versuche, verwalteten Code für einen Thread auszuführen, der die Sperre für das Microsoft Windows\-Betriebssystemladeprogramm enthält.  Eine solche Ausführung ist ungültig, weil sie zu Deadlocks und der Verwendung von DLLs führen kann, bevor diese vom Betriebssystemladeprogramm initialisiert wurden.  
+# <a name="loaderlock-mda"></a>loaderLock-MDA
+Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur Ausführung von verwaltetem Code in einem Thread, der die Loadersperre für das Microsoft Windows-Betriebssystem enthält.  Eine solche Ausführung ist ungültig, da sie zu Deadlocks führen und DLLs verwenden kann, bevor sie vom Ladeprogramm des Betriebssystems initialisiert wird.  
   
-## Symptome  
- Der häufigste Fehler beim Ausführen von Code innerhalb der Sperre des Betriebssystemladeprogramms ist ein Deadlock bei Threads, die versuchen, andere Win32\-Funktionen aufzurufen, für die ebenfalls der Sperre des Ladeprogramms erforderlich ist.  Beispiele für diese Funktionen sind `LoadLibrary`, `GetProcAddress`, `FreeLibrary` und `GetModuleHandle`.  Möglicherweise werden diese Funktionen nicht direkt von der Anwendung aufgerufen, sondern von der CLR \(Common Language Runtime\) als Ergebnis eines Aufrufs auf einer höheren Ebene wie <xref:System.Reflection.Assembly.Load%2A> oder des ersten Aufrufs einer Plattformaufrufmethode.  
+## <a name="symptoms"></a>Symptome  
+ Der häufigste Fehler beim Ausführen von Code innerhalb der Loadersperre des Betriebssystems ist, dass Threads beim Versuch, andere Win32-Funktionen aufzurufen, die ebenfalls die Loadersperre erfordern, einen Deadlock auslösen.  Beispiele für solche Funktionen sind `LoadLibrary`, `GetProcAddress`, `FreeLibrary` und `GetModuleHandle`.  Die Anwendung ruft diese Funktionen möglicherweise nicht direkt auf. Die Common Language Runtime (CLR) ruft diese Funktionen möglicherweise als Ergebnis eines Aufrufs der höheren Ebene wie <xref:System.Reflection.Assembly.Load%2A> oder als ersten Aufruf an eine Plattformaufrufmethode auf.  
   
- Deadlocks können auch auftreten, wenn ein Thread auf den Start oder das Ende eines anderen Threads wartet.  Wenn ein Thread mit der Ausführung beginnt oder die Ausführung beendet, muss dieser die Sperre des Betriebssystemladeprogramms erhalten, um Ereignisse an betroffene DLLs zu übermitteln.  
+ Deadlocks können auch auftreten, wenn ein Thread wartet, dass ein anderer Thread startet oder endet.  Wenn ein Thread gestartet oder abgeschlossen wurde, muss die Loadersperre des Betriebssystems Ereignisse an betroffene DLLs übertragen.  
   
- Außerdem gibt es Situationen, in denen Aufrufe in DLLs erfolgen, bevor diese DLLs ordnungsgemäß durch das Betriebssystemladeprogramm initialisiert wurden.  Im Gegensatz zu Fehler aufgrund von Deadlocks, die durch Untersuchen der Stapel aller am Deadlock beteiligten Threads diagnostiziert werden können, kann die Verwendung von nicht initialisierten DLLs ohne diesen MDA nur schwer festgestellt werden.  
+ Schließlich gibt es Fälle, in denen Aufrufe in DLLs auftreten können, bevor diese DLLs ordnungsgemäß vom Ladeprogramm des Betriebssystems initialisiert wurden.  Im Gegensatz zu den Deadlock-Fehlern, die durch Untersuchen der Stapel aller am Deadlock beteiligten Threads diagnostiziert werden können, ist es sehr schwierig, die Verwendung von nicht initialisierten DLLs ohne diesen MDA zu diagnostizieren.  
   
-## Ursache  
- Bei C\+\+\-Assemblys mit einer Mischung aus verwaltetem und nicht verwaltetem Code, die für .NET Framework 1.0 oder 1.1 erstellt wurden, wird im Allgemeinen versucht, verwalteten Code innerhalb der Sperre des Ladeprogramms auszuführen, sofern keine besonderen Vorkehrungen wie eine Verknüpfung mit **\/NOENTRY** getroffen wurden.  Eine ausführliche Beschreibung dieser Probleme finden Sie in "Gemischtem DLL\-Ladenproblem" in der MSDN Library.  
+## <a name="cause"></a>Ursache  
+ Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 1.0 oder 1.1 versucht in der Regel, verwalteten Code innerhalb der Loadersperre auszuführen, es sei denn, es wurde besondere Sorgfalt angewendet und z.B. eine Verknüpfung mit **/NOENTRY** erstellt.  Eine ausführliche Beschreibung dieser Probleme finden Sie unter „Mixed DLL Loading Problem“ (Problem beim Laden gemischter DLLs) in der MSDN Library.  
   
- Bei C\+\+\-Assemblys mit einer Mischung aus verwaltetem und nicht verwaltetem Code, die für .NET Framework 2.0 erstellt wurden, ist das Risiko kleiner, auf diese Probleme zu treffen. Es entspricht dem von Anwendungen, die nicht verwaltete DLLs verwenden und die Regeln des Betriebssystems verletzen.  Wenn beispielsweise im Einstiegspunkt `DllMain` einer nicht verwalteten DLL `CoCreateInstance` aufgerufen wird, um ein verwaltetes Objekt abzurufen, das für COM verfügbar gemacht wurde, führt das zu einem Versuch, verwalteten Code innerhalb der Sperre des Ladeprogramms auszuführen.  Weitere Informationen zu Problemen mit Ladeprogrammsperren in .NET Framework, Version 2.0 und höher, finden Sie unter [Initialisierung gemischter Assemblys](../Topic/Initialization%20of%20Mixed%20Assemblies.md).  
+ Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 2.0 ist weniger anfällig für diese Probleme und hat dasselbe verringerte Risiko wie Anwendungen, die nicht verwaltete DLLs verwenden, die gegen die Regeln des Betriebssystems verstoßen.  Wenn beispielsweise der `DllMain`-Einstiegspunkt einer nicht verwalteten DLL `CoCreateInstance` aufruft, um ein verwaltetes Objekt zu erhalten, das für COM verfügbar gemacht wurde, erhält man einen Versuch, verwalteten Code innerhalb der Loadersperre auszuführen. Weitere Informationen zu Problemen mit Loadersperren in .NET Framework Version 2.0 oder höher finden Sie unter [Initialization of Mixed Assemblies (Initialisierung gemischter Assemblys)](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
-## Lösung  
- In Visual C\+\+ .NET 2002 und Visual C\+\+ .NET 2003 mit der Compileroption `/clr` kompilierte DLLs konnten beim Laden nicht deterministische Deadlocks verursachen. Dieses Problem kann als Ladeprogrammsperre\-Fehler oder Ladefehler einer gemischten DLL bezeichnet werden.  In Visual C\+\+ 2005 und höher wurde nahezu jeglicher Nicht\-Determinismus aus dem Ladeprozess bei gemischten DLLs entfernt.  Es gibt jedoch weiterhin Szenarien, bei denen die Ladeprogrammsperre \(deterministisch\) auftreten kann.  Eine detaillierte Schilderung der Ursachen und Lösungen für die verbleibenden Probleme mit der Ladeprogrammsperre finden Sie unter [Initialisierung gemischter Assemblys](../Topic/Initialization%20of%20Mixed%20Assemblies.md).  Wenn Sie in diesem Thema keine Lösung für Ihr Problem mit einer Ladeprogrammsperre finden, müssen Sie den Stapel des Threads untersuchen, um herauszufinden, warum die Ladeprogrammsperre auftritt und wie dies verhindert werden kann.  Untersuchen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht ungültigerweise, einen Aufruf in den verwalteten Code durchzuführen, während er die Sperre des Betriebssystemladeprogramms hält.  Wahrscheinlich wird auf dem Stapel `DllMain` oder ein entsprechender Einstiegspunkt einer DLL angezeigt.  Die Regeln des Betriebssystems schränken die gültigen Vorgänge nach Erreichen des Einstiegspunkt relativ stark ein.  Diese Regeln schließen jede Ausführung von verwaltetem Code aus.  
+## <a name="resolution"></a>Auflösung  
+ In Visual C++ .NET 2002 und Visual C++ .NET 2003 konnten mit der Compileroption `/clr` kompilierte DLLs beim Laden nicht deterministische Deadlocks laden. Dies wurde als Problem beim Laden gemischter DLLs bzw. Loadersperrenproblem bezeichnet. In Visual C++ 2005 und höher wurde fast der gesamte Nichtdeterminismus aus dem Prozess des Ladens gemischter DLLs entfernt. Es verbleiben jedoch weiterhin ein paar Szenarien, bei denen die Loadersperre (deterministisch) auftreten kann. Eine ausführliche Beschreibung der Ursachen und Lösungen für die verbleibenden Loadersperrenprobleme finden Sie unter [Initialization of Mixed Assemblies (Initialisierung gemischter Assemblys)](/cpp/dotnet/initialization-of-mixed-assemblies). Wenn dieses Thema Ihr Loadersperrenproblem nicht abdeckt, dann überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können. Überprüfen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht, verwalteten Code auf illegale Weise aufzurufen, während die Loadersperre des Betriebssystems gehalten wird.  Sie werden wahrscheinlich ein `DllMain` einer DLL oder den entsprechenden Einstiegspunkt auf dem Stapel sehen.  Die Regeln des Betriebssystems für innerhalb dieses Einstiegspunkts legale Verwendungsmöglichkeiten sind recht eingeschränkt.  Diese Regeln schließen eine nicht verwaltete Ausführung aus.  
   
-## Auswirkungen auf die Laufzeit  
- I. d. R. sind mehrere Threads im Prozess am Deadlock beteiligt.  Einer dieser Threads ist wahrscheinlich ein Thread zum Ausführen einer Garbage Collection. Dieser Deadlock kann also umfangreiche Auswirkungen auf den gesamten Prozess haben.  Außerdem werden dadurch jegliche weiteren Vorgänge verhindert, für die die Sperre des Betriebssystemladeprogramms erforderlich sind, z. B. das Laden und Entladen von Assemblys oder DLLs sowie das Starten oder Beenden von Threads.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ In der Regel wird für mehrere Threads innerhalb des Prozesses ein Deadlock auftreten.  Einer dieser Threads ist wahrscheinlich der Thread, der für die Ausführung einer Garbage Collection verantwortlich ist, sodass dieser Deadlock erhebliche Auswirkungen auf den gesamten Prozess haben kann.  Darüber hinaus werden weitere Vorgänge verhindert, die die Loadersperre des Betriebssystems erfordern, wie das Laden und Entladen von Assemblys oder DLLs und das Starten oder Beenden von Threads.  
   
- In einigen ungewöhnlichen Situationen ist es darüber hinaus möglich, dass Zugriffsverletzungen oder ähnliche Probleme in DLLs auftreten, die aufgerufen werden, bevor sie initialisiert wurden.  
+ In einigen seltenen Fällen ist es auch möglich, dass Zugriffsverletzungen oder ähnlichen Probleme in DLLs ausgelöst werden, die vor ihrer Initialisierung aufgerufen wurden.  
   
-## Ausgabe  
- Dieser MDA meldet, dass eine ungültige Ausführung von verwaltetem Code versucht wird.  Sie müssen den Stapel des Threads untersuchen, um zu ermitteln, warum das Ladeprogramm gesperrt ist und wie das Problem behoben werden kann.  
+## <a name="output"></a>Ausgabe  
+ Dieser MDA meldet, dass eine ungültige verwaltete Ausführung versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <loaderLock/>  
@@ -65,5 +70,6 @@ Der `loaderLock`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes 
 </mdaConfig>  
 ```  
   
-## Siehe auch  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch  
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

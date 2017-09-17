@@ -1,94 +1,100 @@
 ---
-title: "Copying and Pinning | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "pinning, interop marshaling"
-  - "copying, interop marshaling"
-  - "interop marshaling, copying"
-  - "interop marshaling, pinning"
+title: Kopieren und Fixieren
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- pinning, interop marshaling
+- copying, interop marshaling
+- interop marshaling, copying
+- interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Copying and Pinning
-Beim Marshalling von Daten kann der Interop\-Marshaller die gemarshallten Daten kopieren oder fixieren.  Beim Kopieren der Daten wird ein zusätzliches Exemplar der Daten aus einem Speicherplatz an einem anderen Speicherplatz abgelegt.  Die folgende Abbildung zeigt die Unterschiede zwischen dem Kopieren eines Werttyps und dem Kopieren eines Typs, der durch einen Verweis aus verwaltetem an nicht verwalteten Speicher übergeben wird.  
+# <a name="copying-and-pinning"></a>Kopieren und Fixieren
+Beim Marshalling von Daten kann der Interop-Marshaller die gemarshallten Daten kopieren oder fixieren. Beim Kopieren der Daten wird eine Kopie der Daten aus einem Speicherort an einem anderen Speicherort abgelegt. Die folgende Abbildung veranschaulicht die Unterschiede zwischen dem Kopieren eines Werttyps und dem Kopieren eines Typs, der als Verweis von einem verwalteten Speicher zu einem nicht verwalteten Speicher übergeben wird.  
   
  ![Wert und Verweis als übergebener Werttyp](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
-Durch einen Wert und durch einen Verweis übergebene Werttypen  
+Wert und Verweis als übergebener Werttyp  
   
- Durch einen Wert übergebene Methodenargumente werden auf dem Stapel an nicht verwalteten Code gemarshallt.  Der Kopierprozess wird direkt ausgeführt.  Durch einen Verweis übergebene Argumente werden als Zeiger auf dem Stapel übergeben.  Referenztypen werden ebenfalls durch einen Wert und durch einen Verweis übergeben.  Wie die folgende Abbildung zeigt, werden durch einen Wert übergebene Referenztypen entweder kopiert oder fixiert.  
+ Als Wert übergebene Methodenargumente werden in einen nicht verwalteten Code als Werte im Stapel gemarshallt. Der Kopiervorgang wird direkt ausgeführt. Als Verweis übergebene Argumente werden als Zeiger im Stapel übergeben. Auch Verweistypen werden als Wert und als Verweis übergebenen. Die folgende Abbildung zeigt, dass als Wert übergebene Verweistypen entweder kopiert oder fixiert werden.  
   
- ![COM&#45;Interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
-Durch einen Wert und durch einen Verweis übergebene Referenztypen  
+ ![COM-Interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+Wert und Verweis als übergebener Verweistyp  
   
- Beim Fixieren werden die Daten vorübergehend an ihrem aktuellen Speicherplatz gesperrt. Dadurch wird verhindert, dass sie vom Garbage Collector der Common Language Runtime verschoben werden.  Der Marshaller fixiert Daten, um den Kopieraufwand zu reduzieren und die Gesamtleistung zu verbessern.  Ob Daten während des Marshallingprozesses kopiert oder fixiert werden, wird durch den Typ der Daten festgelegt.  Während des Marshallens für Objekte, z. B. <xref:System.String>, werden die Daten automatisch fixiert. Jedoch können Sie mit der <xref:System.Runtime.InteropServices.GCHandle>\-Klasse Daten manuell im Speicher fixieren.  
+ Beim Fixieren werden die Daten vorübergehend an ihrem aktuellen Speicherort gesperrt. Dadurch können sie nicht vom Garbage Collector der Common Language Runtime verschoben werden. Der Marshaller fixiert die Daten, um den Aufwand beim Kopieren zu reduzieren und die Leistung zu verbessern. Ob Daten während des Marshallingvorgangs kopiert oder fixiert werden, wird durch den Datentyp bestimmt.  Beim Marshalling für Objekte, wie z.B. <xref:System.String>, werden die Daten automatisch fixiert. Sie können jedoch mithilfe der <xref:System.Runtime.InteropServices.GCHandle>-Klasse den Speicher auch manuell fixieren.  
   
-## Formatierte blitfähige Klassen  
- Formatierte [blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes \(formatiertes\) Layout sowie über eine gemeinsame Datendarstellung im verwalteten und im nicht verwalteten Speicher.  Wenn diese Typen gemarshallt werden müssen, wird ein Zeiger auf das Objekt im Heap direkt an den Aufgerufenen übergeben.  Der Aufgerufene kann den Inhalt des Speicherplatzes ändern, auf den der Zeiger verweist.  
+## <a name="formatted-blittable-classes"></a>Formatierte blitfähige Klassen  
+ Formatierte [blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert) und eine allgemeine Darstellung der Daten im verwalteten und im nicht verwalteten Speicher. Wenn diese Typen gemarshallt werden müssen, wird ein Zeiger auf das Objekt im Heap direkt an den Aufgerufenen übergeben. Der Aufgerufene kann den Inhalt des Speicherorts ändern, auf den der Zeiger verweist.  
   
 > [!NOTE]
->  Der Speicherinhalt kann durch den Aufgerufenen geändert werden, wenn der Parameter als Out\-Parameter oder In\/Out\-Parameter gekennzeichnet ist.  Dagegen sollte der Aufgerufene Änderungen am Inhalt vermeiden, wenn der Parameter zum Marshallen als In\-Parameter markiert ist. Diese Einstellung wird standardmäßig für formatierte blitfähige Typen verwendet.  Die Änderung eines **In**\-Objekts kann zu Problemen führen, wenn dieselbe Klasse in eine Typbibliothek exportiert und zur Ausführung apartmentübergreifender Aufrufe verwendet wird.  
+>  Der Aufgerufene kann den Speicherinhalt ändern, wenn der Parameter als Ausgabe- oder Ein-/Ausgabeparameter markiert ist. Im Gegensatz dazu sollte der Aufgerufene den Inhalt nicht ändern, wenn der Parameter zum Marshallen als Eingabeparameter festgelegt ist. Dies ist die Standardeinstellung für formatierte blitfähige Typen. Das Ändern von Eingabeobjekten kann zu Problemen führen, wenn die gleiche Klasse in eine Typbibliothek exportiert und auch für apartmentübergreifende Aufrufe verwendet wird.  
   
-## Formatierte nicht blitfähige Klassen  
- Formatierte [nicht blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes \(fortmatiert\) Layout, die Darstellung im verwalteten und nicht verwalteten Speicher ist jedoch unterschiedlich.  Unter den folgenden Bedingungen ist gegebenenfalls eine Datenumwandlung erforderlich:  
+## <a name="formatted-non-blittable-classes"></a>Formatierte nicht blitfähige Klassen  
+ Formatierte [nicht blitfähige](../../../docs/framework/interop/blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert), doch die Daten werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt. Unter den folgenden Bedingungen kann eine Umwandlung der Daten erforderlich sein:  
   
--   Wenn eine nicht blitfähige Klasse durch einen Wert gemarshallt wird, erhält der Aufgerufene einen Zeiger auf eine Kopie der Datenstruktur.  
+-   Wenn eine nicht blitfähige Klasse als Wert gemarshallt wird, erhält der Aufgerufene einen Zeiger auf eine Kopie der Datenstruktur.  
   
--   Wenn eine nicht blitfähige Klasse durch einen Verweis gemarshallt wird, erhält der Aufgerufene einen Zeiger auf einen Zeiger auf eine Kopie der Datenstruktur.  
+-   Wenn eine nicht blitfähige Klasse als Verweis gemarshallt wird, erhält der Aufgerufene einen Zeiger auf einen Zeiger auf eine Kopie der Datenstruktur.  
   
--   Wenn das <xref:System.Runtime.InteropServices.InAttribute>\-Attribut festgelegt ist, wird diese Kopie immer mit dem Status der Instanz initialisiert, und das Marshallen erfolgt nach Bedarf.  
+-   Wenn das <xref:System.Runtime.InteropServices.InAttribute>-Attribut festgelegt ist, wird diese Kopie immer mit dem Zustand der Instanz initialisiert. Das Marshalling erfolgt nach Bedarf.  
   
--   Wenn das <xref:System.Runtime.InteropServices.OutAttribute>\-Attribut festgelegt ist, wird der Status immer bei der Rückgabe zurück in die Instanz kopiert, und das Marshallen erfolgt nach Bedarf.  
+-   Wenn das <xref:System.Runtime.InteropServices.OutAttribute>-Attribut festgelegt ist, wird der Zustand bei der Rückgabe immer zurück in die Instanz kopiert. Das Marshalling erfolgt nach Bedarf.  
   
--   Wenn sowohl **InAttribute** als auch **OutAttribute** festgelegt sind, werden beide Kopien benötigt.  Wenn beide Attribute ausgelassen werden, kann der Marshaller durch Entfernen jeder der beiden Kopien eine Optimierung vornehmen.  
+-   Wenn sowohl **InAttribute** als auch **OutAttribute** festgelegt sind, werden beide Kopien benötigt. Wenn kein Attribut verwendet wird, kann der Marshaller durch Beseitigen beider Kopien eine Optimierung vornehmen.  
   
-## Verweistypen  
- Referenztypen können durch einen Wert oder durch einen Verweis übergeben werden.  Wenn sie durch einen Wert übergeben werden, wird ein Zeiger auf den Typ auf dem Stapel übergeben.  Wenn sie durch einen Verweis übergeben werden, wird ein Zeiger auf einen Zeiger auf den Typ auf dem Stapel übergeben.  
+## <a name="reference-types"></a>Verweistypen  
+ Verweistypen können als Wert oder als Verweis übergeben werden. Werden sie als Wert übergeben, wird ein Zeiger auf den Typ im Stapel übergeben. Werden sie als Verweis übergeben, wird ein Zeiger auf einen Zeiger auf den Typ im Stapel übergeben.  
   
- Referenztypen weisen folgendes bedingtes Verhalten auf:  
+ Verweistypen weisen das folgende bedingte Verhalten auf:  
   
--   Wenn ein Referenztyp durch einen Wert übergeben wird und über Member nicht blitfähiger Typen verfügt, werden die Typen zweimal konvertiert:  
+-   Wird ein Verweistyp als Wert übergeben, und verfügt er über Member nicht blitfähiger Typen, werden die Typen zweimal konvertiert:  
   
-    -   Bei der Übergabe eines Arguments an die nicht verwaltete Seite.  
+    -   bei der Übergabe eines Arguments an die nicht verwaltete Seite  
   
-    -   Bei der Rückgabe aus dem Aufruf.  
+    -   bei der Rückgabe aus dem Aufruf  
   
-     Um unnötiges Kopieren und Konvertieren zu vermeiden, werden diese Typen als In\-Parameter gemarshallt.  Das **InAttribute**\-Attribut  und das **OutAttribute**\-Attribut  müssen explizit auf ein Argument angewendet werden, damit der Aufrufer die durch den Aufgerufenen vorgenommenen Änderungen sehen kann.  
+     Diese Typen werden als Eingabeparameter gemarshallt, um unnötiges Kopieren und Konvertieren zu vermeiden. Damit der Aufrufer die durch den Aufgerufenen vorgenommenen Änderungen sehen kann, müssen Sie die Attribute **InAttribute** und **OutAttribute** explizit auf ein Argument anwenden.  
   
--   Wenn ein Referenztyp durch einen Wert übergeben wird und nur über Member blitfähiger Typen verfügt, kann er während des Marshallens fixiert werden. In diesem Fall können sämtliche durch den Aufgerufenen an den Membern des Typs vorgenommenen Änderungen vom Aufrufer gesehen werden.  Um dieses Verhalten zu erreichen, wenden Sie **InAttribute** und **OutAttribute** explizit an.  Ohne diese direktionalen Attribute exportiert der Interop\-Marshaller keine direktionalen Informationen in die Typbibliothek \(Export erfolgt mit der Standardeinstellung **In**\). Dies kann beim apartmentübergreifenden Marshalling zu Problemen mit COM führen.  
+-   Wird ein Verweistyp als Wert übergeben, und verfügt er nur über Member blitfähiger Typen, kann er während des Marshallings fixiert werden. Alle vom Aufgerufenen an den Membern des Typs vorgenommen Änderungen sind für den Aufrufer sichtbar. Wenn Sie dieses Verhalten wünschen, wenden Sie die Attribute **InAttribute** und **OutAttribute** explizit an. Ohne diese direktionalen Attribute werden keine direktionalen Informationen vom Interop-Marshaller in die Typbibliothek exportiert (der Export erfolgt standardmäßig als Eingabeparameter). Dies kann zu Problemen beim apartmentübergreifenden COM-Marshalling führen.  
   
--   Wenn ein Referenztyp durch einen Verweis übergeben wird, wird er standardmäßig als In\/Out\-Parameter gemarshallt.  
+-   Wird ein Verweistyp als Verweis übergeben, wird er standardmäßig als Ein-/Ausgabeparameter gemarshallt.  
   
-## System.String und System.Text.StringBuilder  
- Wenn Daten durch einen Wert oder einen Verweis an nicht verwalteten Code gemarshallt werden, kopiert der Marshaller die Daten in der Regel in einen sekundären Puffer \(wobei Zeichensätze beim Kopieren gegebenenfalls umgewandelt werden\) und übergibt einen Verweis auf den Puffer an den Aufgerufenen.  Wenn es sich bei dem Verweis nicht um ein mit **SysAllocString** zugeordnetes **BSTR** handelt, wird er immer mit **CoTaskMemAlloc** zugeordnet.  
+## <a name="systemstring-and-systemtextstringbuilder"></a>System.String und System.Text.StringBuilder  
+ Wenn Daten als Wert oder als Verweis in einen nicht verwalteten Code gemarshallt werden, kopiert der Marshaller die Daten in der Regel in einen sekundären Puffer (wobei Zeichensätze während des Kopiervorgangs eventuell konvertiert werden) und übergibt an den Aufgerufenen einen Verweis auf den Puffer. Der Verweis wird immer mit **CoTaskMemAlloc** zugeordnet. Außer es handelt sich um ein **BSTR**, das mit **SysAllocString** zugeordnet wird.  
   
- Wenn beide Zeichenfolgentypen durch einen Wert gemarshallt werden \(z. B. Unicode\-Zeichenfolgen\), übergibt der Marshaller dem Aufgerufenen einen direkten Zeiger auf verwaltete Zeichenfolgen im internen Unicode\-Puffer anstatt diesen in einen neuen Puffer zu kopieren.  
+ Wenn beide Zeichenfolgentypen als Wert gemarshallt werden (wie etwa bei einer Unicode-Zeichenfolge), übergibt der Marshaller dem Aufgerufenen einen direkten Zeiger auf die verwalteten Zeichenfolgen im internen Unicode-Puffer, anstatt sie in einen neuen Puffer zu kopieren.  
   
 > [!CAUTION]
->  Wenn eine Zeichenfolge durch einen Wert übergeben wird, darf der Aufgerufene den durch den Marshaller übergebenen Verweis niemals ändern.  Durch eine solche Änderung kann der verwaltete Heap beschädigt werden.  
+>  Wird eine Zeichenfolge als Wert übergeben, darf der Aufgerufene den vom Marshaller übergebenen Verweis nie ändern. Andernfalls kann der verwaltete Heap beschädigt werden.  
   
- Wenn ein <xref:System.String?displayProperty=fullName> durch einen Verweis übergeben wird, kopiert der Marshaller den Inhalt der Zeichenfolge in einen sekundären Puffer, bevor der Aufruf ausgeführt wird.  Anschließend kopiert er den Inhalt des Puffers bei Rückgabe aus dem Aufruf in eine neue Zeichenfolge.  Durch diese Vorgehensweise wird sichergestellt, dass die unveränderbare verwaltete Zeichenfolge unverändert bleibt.  
+ Wenn ein <xref:System.String?displayProperty=fullName> als Verweis übergeben wird, kopiert der Marshaller den Inhalt der Zeichenfolge vor dem Aufruf in einen sekundären Puffer. Anschließend kopiert er den Inhalt des Puffers bei der Rückgabe aus dem Aufruf in eine neue Zeichenfolge. So wird sichergestellt, dass die unveränderliche verwaltete Zeichenfolge unverändert bleibt.  
   
- Wenn ein <xref:System.Text.StringBuilder?displayProperty=fullName> durch einen Wert übergeben wird, übergibt der Marshaller einen Verweis auf den internen Puffer von **StringBuilder** direkt an den Aufrufer.  Aufrufer und Aufgerufener müssen sich über die Größe des Puffers einig sein.  Der Aufrufer ist für die Erstellung von **StringBuilder** mit der angemessenen Länge verantwortlich.  Der Aufgerufene muss die erforderlichen Sicherheitsvorkehrungen treffen, um Pufferüberläufe zu verhindern.  **StringBuilder** bildet bezüglich der Regel, dass durch einen Wert übergebene Referenztypen standardmäßig als In\-Parameter übergeben werden, eine Ausnahme.  Die Übergabe erfolgt immer als In\/Out\-Parameter.  
+ Wenn ein <xref:System.Text.StringBuilder?displayProperty=fullName> als Wert übergeben wird, übergibt der Marshaller dem Aufrufer direkt einen Verweis auf den internen Puffer von **StringBuilder**. Aufrufer und Aufgerufener müssen bei der Größe des Puffers übereinstimmen. Der Aufrufer ist für das Erstellen von **StringBuilder** in einer angemessenen Länge zuständig. Der Aufgerufene muss die erforderlichen Vorsichtsmaßnahmen treffen, um einen Pufferüberlauf zu verhindern. **StringBuilder** stellt eine Ausnahme zu der Regel dar, dass als Wert übergebene Verweistypen standardmäßig als Eingabeparameter übergeben werden. Es wird immer als Ein-/Ausgabeparameter übergeben.  
   
-## Siehe auch  
- [Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Memory Management with the Interop Marshaler](http://msdn.microsoft.com/de-de/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [Directional Attributes](http://msdn.microsoft.com/de-de/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Siehe auch  
+ [Standardmäßiges Marshallingverhalten](../../../docs/framework/interop/default-marshaling-behavior.md)   
+ [Speicherverwaltung mit dem Interop-Marshaller](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
+ [Direktionale Attribute](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)
+

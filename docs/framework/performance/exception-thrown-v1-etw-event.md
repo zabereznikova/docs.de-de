@@ -39,7 +39,7 @@ Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Eine verwaltete Ausnahme wird ausgelöst.|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ In der folgenden Tabelle finden Sie die Ereignisdaten.  
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
@@ -51,5 +51,5 @@ Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR ETW Events (CLR-ETW-Ereignisse)](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
 

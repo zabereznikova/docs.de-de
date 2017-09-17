@@ -1,55 +1,60 @@
 ---
-title: "Trace Listeners | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Listener object types"
-  - "listeners"
-  - "Trace class, listeners"
-  - "trace listeners, about trace listeners"
-  - "Listeners collection"
-  - "trace listeners"
-  - "tracing [.NET Framework], trace listeners"
-  - "logs, trace listeners"
+title: Ablaufverfolgungslistener
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Listener object types
+- listeners
+- Trace class, listeners
+- trace listeners, about trace listeners
+- Listeners collection
+- trace listeners
+- tracing [.NET Framework], trace listeners
+- logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7dc94602a4bd66d74e7135b03a5d851a0a22754f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Trace Listeners
-Wenn Sie mit  **Ablaufverfolgung**, **Debuggen** und <xref:System.Diagnostics.TraceSource> arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten.  Ablaufverfolgungsmeldungen werden von *Listenern* empfangen.  Der Zweck eines Listeners ist das Sammeln, Speichern und Weiterleiten von Ablaufverfolgungsmeldungen.  Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, beispielsweise ein Protokoll, ein Fenster oder eine Textdatei.  
+# <a name="trace-listeners"></a>Ablaufverfolgungslistener
+Wenn Sie mit **Trace**, **Debug** und <xref:System.Diagnostics.TraceSource> arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten. Ablaufverfolgungsmeldungen werden von *Listenern* empfangen. Der Zweck eines Listeners ist das Sammeln, Speichern und Weiterleiten von Ablaufverfolgungsmeldungen. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, beispielsweise ein Protokoll, ein Fenster oder eine Textdatei.  
   
- Listener stehen für die Klassen **Debuggen**, **Ablaufverfolgung** und <xref:System.Diagnostics.TraceSource> zur Verfügung, von denen jede ihre Ausgabe an eine Vielzahl von Listener\-Objekten senden kann.  Im Folgenden werden die häufig verwendeten vordefinierten Listener aufgeführt:  
+ Listener stehen für die Klassen **Debug**, **Trace** und <xref:System.Diagnostics.TraceSource> zur Verfügung, von denen jede ihre Ausgabe an eine Vielzahl von Listenerobjekten senden kann. Im Folgenden werden die häufig verwendeten vordefinierten Listener aufgeführt:  
   
--   Ein <xref:System.Diagnostics.TextWriterTraceListener> leitet die Ausgabe zu einer Instanz der <xref:System.IO.TextWriter>\-Klasse oder zu einer beliebigen <xref:System.IO.Stream>\-Klasse um.  Das Schreiben in die Konsole oder in eine Datei ist auch möglich, da diese <xref:System.IO.Stream>\-Klassen sind.  
+-   Ein <xref:System.Diagnostics.TextWriterTraceListener> leitet die Ausgabe zu einer Instanz der <xref:System.IO.TextWriter>-Klasse oder zu einer beliebigen <xref:System.IO.Stream>-Klasse um. Das Schreiben in die Konsole oder in eine Datei ist auch möglich, da diese <xref:System.IO.Stream>-Klassen sind.  
   
 -   Ein <xref:System.Diagnostics.EventLogTraceListener> leitet die Ausgabe zu einem Ereignisprotokoll um.  
   
--   Ein <xref:System.Diagnostics.DefaultTraceListener> gibt die Nachrichten **Write** und **WriteLine** an die **OutputDebugString** und die **Debugger.Log**\-Methode aus.  Dies führt in Visual Studio dazu, dass die Debugging\-Meldungen im Ausgabefenster angezeigt werden.  **Fail** und fehlgeschlagene **Assert**\-Meldungen werden auch an die **OutputDebugString**\-Windows\-API und die **Debugger.Log**\-Methode ausgegeben, und darüber hinaus wird auch ein Meldungsfeld angezeigt.  Dieses Verhalten ist das Standardverhalten für Meldungen von **Debuggen** und **Ablaufverfolgung**, da **DefaultTraceListener** automatisch in jeder `Listeners`\-Auflistung enthalten ist und es sich dabei um den einzigen automatisch eingebundenen Listener handelt.  
+-   Ein <xref:System.Diagnostics.DefaultTraceListener> gibt die Nachrichten **Write** und **WriteLine** an die **OutputDebugString**- und die **Debugger.Log**-Methode aus. Dies führt in Visual Studio dazu, dass die Debugging-Meldungen im Ausgabefenster angezeigt werden. **Fail** und fehlgeschlagene **Assert**-Meldungen werden auch an die **OutputDebugString**-Windows-API und die **Debugger.Log**-Methode ausgegeben, und darüber hinaus wird auch ein Meldungsfenster angezeigt. Dieses Verhalten ist das Standardverhalten für Meldungen von **Debug** und **Trace**, da **DefaultTraceListener** automatisch in jeder `Listeners`-Auflistung enthalten ist und es sich dabei um den einzigen automatisch eingebundenen Listener handelt.  
   
--   Ein <xref:System.Diagnostics.ConsoleTraceListener> leitet eine Ablaufverfolgungs\- oder Debuggingausgabe an die Standardausgabe oder den Standardfehlerstream weiter.  
+-   Ein <xref:System.Diagnostics.ConsoleTraceListener> leitet eine Ablaufverfolgungs- oder Debuggingausgabe an die Standardausgabe oder den Standardfehlerstream weiter.  
   
--   Ein <xref:System.Diagnostics.DelimitedListTraceListener> leitet eine Ablaufverfolgungs\- oder Debuggingausgabe an einen Textwriter, z. B. einen Streamwriter, oder an einen Stream, z. B. einen Dateistream, weiter. Die Ablaufverfolgungsausgabe liegt in einem Textformat mit Trennzeichen vor, das das durch die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>\-Eigenschaft angegebene Trennzeichen verwendet.  
+-   Ein <xref:System.Diagnostics.DelimitedListTraceListener> leitet eine Ablaufverfolgungs- oder Debuggingausgabe an einen Textwriter, z. B. einen Streamwriter, oder an einen Stream, z. B. einen Dateistream, weiter. Die Ablaufverfolgungsausgabe liegt in einem Textformat mit Trennzeichen vor, das das durch die <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>-Eigenschaft angegebene Trennzeichen verwendet.  
   
--   Ein <xref:System.Diagnostics.XmlWriterTraceListener> leitet die Ablaufverfolgungs\- oder Debuggingausgabe als XML\-codierte Daten an einen <xref:System.IO.TextWriter> oder einen <xref:System.IO.Stream>, wie z. B. einen <xref:System.IO.FileStream>, weiter.  
+-   Ein <xref:System.Diagnostics.XmlWriterTraceListener> leitet die Ablaufverfolgungs- oder Debuggingausgabe als XML-codierte Daten an einen <xref:System.IO.TextWriter> oder einen <xref:System.IO.Stream>, wie z. B. einen <xref:System.IO.FileStream>, weiter.  
   
- Wenn neben <xref:System.Diagnostics.DefaultTraceListener> jeder Listener die Ausgabe von **Debuggen**, **Ablaufverfolgung** und <xref:System.Diagnostics.TraceSource> empfangen soll, müssen Sie diese der `Listeners`\-Auflistung hinzufügen.  Weitere Informationen finden Sie unter [How to: Create and Initialize Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) und [How to: Use TraceSource and Filters with Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).  Alle Listener in der **Listener**\-Auflistung erhalten die gleichen Meldungen aus den Ablaufverfolgungsausgabemethoden.  Nehmen wir beispielsweise an, dass Sie zwei Listener einrichten: **TextWriterTraceListener** und **EventLogTraceListener**.  Jeder Listener empfängt die gleiche Meldung.  Der Listener **TextWriterTraceListener** leitet seine Ausgabe an einen Stream weiter, und der Listener **EventLogTraceListener** leitet seine Ausgabe an ein Ereignisprotokoll weiter.  
+ Wenn neben <xref:System.Diagnostics.DefaultTraceListener> jeder Listener die Ausgabe von **Debug**, **Trace** und <xref:System.Diagnostics.TraceSource> empfangen soll, müssen Sie diese der `Listeners`-Auflistung hinzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) und [Vorgehensweise: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md). Alle Listener in der **Listeners**-Auflistung erhalten die gleichen Meldungen aus den Ablaufverfolgungsausgabemethoden. Nehmen wir beispielsweise an, dass Sie zwei Listener einrichten: **TextWriterTraceListener** und **EventLogTraceListener**. Jeder Listener empfängt die gleiche Meldung. Der Listener **TextWriterTraceListener** leitet seine Ausgabe an einen Datenstrom weiter, und der Listener **EventLogTraceListener** leitet seine Ausgabe an ein Ereignisprotokoll weiter.  
   
- Das folgende Beispiel zeigt, wie die Ausgabe an die **Listener**\-Auflistung gesendet wird.  
+ Das folgende Beispiel zeigt, wie die Ausgabe an die **Listeners**-Auflistung gesendet wird.  
   
 ```vb  
 ' Use this example when debugging.  
@@ -65,7 +70,7 @@ System.Diagnostics.Debug.WriteLine("Error in Widget 42");
 System.Diagnostics.Trace.WriteLine("Error in Widget 42");  
 ```  
   
- Debuggen und Ablaufverfolgung nutzen die gleiche **Listener**\-Auflistung. Wenn Sie also der **Debug.Listeners**\-Auflistung in Ihrer Anwendung ein Listenerobjekt hinzufügen, wird dieses auch der **Trace.Listeners**\-Auflistung hinzugefügt.  
+ „Debug“ und „Trace“ nutzen die gleiche **Listeners**-Auflistung. Wenn Sie also der **Debug.Listeners**-Auflistung in Ihrer Anwendung ein Listenerobjekt hinzufügen, wird dieses auch der **Trace.Listeners**-Auflistung hinzugefügt.  
   
  Das folgende Beispiel zeigt, wie ein Listener verwendet wird, um Ablaufverfolgungsinformationen an eine Konsole zu senden:  
   
@@ -80,13 +85,14 @@ System.Diagnostics.Trace.Listeners.Add(
    new System.Diagnostics.TextWriterTraceListener(Console.Out));  
 ```  
   
-## Entwicklerdefinierte Listener  
- Sie können eigene Listener durch Erben von der **TraceListener**\-Basisklasse definieren und die dazugehörigen Methoden mit benutzerdefinierten Methoden überschreiben.  Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.  
+## <a name="developer-defined-listeners"></a>Entwicklerdefinierte Listener  
+ Sie können eigene Listener durch Erben von der **TraceListener**-Basisklasse definieren und die dazugehörigen Methoden mit benutzerdefinierten Methoden überschreiben. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.   
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Diagnostics.TextWriterTraceListener>   
  <xref:System.Diagnostics.EventLogTraceListener>   
  <xref:System.Diagnostics.DefaultTraceListener>   
  <xref:System.Diagnostics.TraceListener>   
- [Tracing and Instrumenting Applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Trace Switches](../../../docs/framework/debug-trace-profile/trace-switches.md)
+ [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
+ [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
+

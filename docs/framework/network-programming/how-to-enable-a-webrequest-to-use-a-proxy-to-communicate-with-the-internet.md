@@ -42,7 +42,7 @@ GlobalProxySelection.Select = proxyObject
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.  
+-   Verweise auf den Namespace **System.Net**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Using Application Protocols (Verwenden von Anwendungsprotokollen)](../../../docs/framework/network-programming/using-application-protocols.md)   

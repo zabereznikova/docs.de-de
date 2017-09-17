@@ -49,5 +49,5 @@ response.Close()
 -   Verweise auf die Namespaces <xref:System.IO> und <xref:System.Net>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+ [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
 

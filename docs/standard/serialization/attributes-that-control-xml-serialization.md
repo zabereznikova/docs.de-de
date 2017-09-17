@@ -61,8 +61,8 @@ Sie können die in der folgenden Tabelle aufgeführten Attribute auf Klassen und
 ## <a name="see-also"></a>Siehe auch  
  [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   
- [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
+ [Controlling XML Serialization Using Attributes (Steuern der XML-Serialisierung mit Attributen)](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
  [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

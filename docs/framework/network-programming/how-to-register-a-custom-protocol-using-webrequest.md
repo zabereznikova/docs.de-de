@@ -45,5 +45,5 @@ Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")
  Verweise auf den Namespace <xref:System.Net>  
   
 ## Siehe auch  
- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+ [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 

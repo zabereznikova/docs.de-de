@@ -80,7 +80,7 @@ Dieser Abschnitt enthält Beschreibungen und Links zu herunterladbaren Netzwerkp
  <xref:System.Net.Sockets>  
   
 ## <a name="see-also"></a>Siehe auch  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)   
+ [Network Programming in the .NET Framework (Netzwerkprogrammierung im .NET Framework)](../../../docs/framework/network-programming/index.md)   
  [Network Programming How-to Topics (Themen zur Vorgehensweise zur Netzwerkprogrammierung)](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
  [Netzwerkbeispiele für .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
 

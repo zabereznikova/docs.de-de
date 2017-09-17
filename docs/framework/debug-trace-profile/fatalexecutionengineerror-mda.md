@@ -1,47 +1,52 @@
 ---
-title: "fatalExecutionEngineError MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "corrupted CLR"
-  - "fatal execution error"
-  - "terminated processes"
-  - "unexpected terminations"
-  - "fatal errors"
-  - "MDAs (managed debugging assistants), fatal errors"
-  - "process termination"
-  - "FatalExecutionEngineError MDA"
-  - "managed debugging assistants (MDAs), fatal errors"
+title: fatalExecutionEngineError-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- corrupted CLR
+- fatal execution error
+- terminated processes
+- unexpected terminations
+- fatal errors
+- MDAs (managed debugging assistants), fatal errors
+- process termination
+- FatalExecutionEngineError MDA
+- managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e437f45e6d6ef6d7397c507667426e4dd9860620
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# fatalExecutionEngineError MDA
-Der `fatalExecutionEngine``Error`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn in der Common Language Runtime \(CLR\) ein schwerwiegender Fehler festgestellt wurde.  Der Prozess wird beendet.  
+# <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError-MDA
+Der `fatalExecutionEngine``Error`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn ein schwerwiegender Fehler in der Common Language Runtime (CLR) erkannt wurde. Der Prozess wird beendet.  
   
-## Symptome  
- Unerwartete Prozessbeendigung.  Weitere Symptome können nicht bestimmt werden, da ein CLR\-Fehler aus einer Vielzahl von Gründen auftreten kann.  
+## <a name="symptoms"></a>Symptome  
+ Unerwartete Prozessbeendigung. Andere Symptome können nicht bestimmt werden, weil es eine Vielzahl von Gründen gibt, warum ein CLR Fehler auftritt.  
   
-## Ursache  
- Die CLR wurde schwerwiegend beschädigt.  Dies wird meist durch Datenbeschädigung verursacht, für die wiederum eine Vielzahl von Problemen verantwortlich sein kann, z. B. das Aufrufen falsch formatierter Plattformaufruffunktionen und das Übergeben ungültiger Daten an die CLR.  
+## <a name="cause"></a>Ursache  
+ Die CLR wurde schwerwiegend beschädigt. Dies wird meist durch Datenbeschädigung verursacht, die durch eine Reihe von Problemen verursacht werden kann, wie z.B. das Aufrufen falsch formatierter Plattformfunktionen und die Weitergabe ungültiger Daten an die CLR.  
   
-## Lösung  
- Sie können das Problem möglicherweise schneller ermitteln, wenn Sie zusätzliche MDAs aktivieren.  Die folgenden MDAs können bei der Problemdiagnose besonders hilfreich sein:  
+## <a name="resolution"></a>Auflösung  
+ Das Aktivieren zusätzlicher MDAs kann dabei helfen, das Problem zu identifizieren. Die folgenden MDAs können besonders hilfreich bei der Problemdiagnose sein:  
   
 -   [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
@@ -67,15 +72,15 @@ Der `fatalExecutionEngine``Error`\-MDA \(Managed Debugging Assistant, Assistent 
   
 -   [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
-## Auswirkungen auf die Laufzeit  
- Dieser MDA hat keine Auswirkungen auf das Verhalten der CLR.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Dieser MDA hat keine Auswirkung auf das Verhalten der CLR.  
   
-## Ausgabe  
- Die Adresse der CLR\-Funktion, die den schwerwiegenden Fehler verursacht hat, die ID des Threads, in dem der Fehler aufgetreten ist, sowie der Fehlercode.  
+## <a name="output"></a>Ausgabe  
+ Die Adresse der CLR-Funktion, die den schwerwiegenden Fehler verursacht hat, die ID des Threads, in dem der Fehler aufgetreten ist, und der Fehlercode.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <fatalExecutionEngineError />  
@@ -83,7 +88,8 @@ Der `fatalExecutionEngine``Error`\-MDA \(Managed Debugging Assistant, Assistent 
 </mdaConfig>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution.Cer>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

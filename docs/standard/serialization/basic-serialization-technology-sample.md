@@ -104,6 +104,6 @@ ms.lasthandoff: 08/21/2017
  [Binäre Serialisierung](../../../docs/standard/serialization/binary-serialization.md)   
  [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
  [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Serialisierung](../../../docs/standard/serialization/index.md)   
+ [Serialization (Serialisierung)](../../../docs/standard/serialization/index.md)   
  [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 

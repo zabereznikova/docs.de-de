@@ -86,11 +86,11 @@ ms.lasthandoff: 08/21/2017
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
+1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
 2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und klicken Sie auf **OK**.  
+3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Schritt 3: Aktivieren des lokalen Entwicklungs-STS zur Authentifizierung von Benutzern  
  Dieser Schritt beschreibt die Aktivierung der lokalen Entwicklungs-STS in der Anwendung. Der lokale Entwicklungs-STS wird mithilfe der Identitäts- und Zugriffserweiterung für Visual Studio aktiviert.  
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/21/2017
   
 1.  Klicken Sie in Visual Studio mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie **Identität und Zugriff** aus.  
   
-2.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Anwendung mit dem lokalen Entwicklungs-STS testen**, und klicken Sie auf **Übernehmen**.  
+2.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>Schritt 4: Ändern der ASP.NET-Anwendung zum Anzeigen des Anmeldestatus  
  Dieser Schritt beschreibt die Änderung der ASP.NET-Anwendung, um dynamisch anzuzeigen, ob der aktuelle Benutzer angemeldet ist. Nachdem der STS-Anbieter konfiguriert wurde, behandelt WIF die eingehenden Ansprüche. Jetzt müssen Sie den Code der Anwendung konfigurieren, um das Ergebnis der Authentifizierung anzuzeigen.  

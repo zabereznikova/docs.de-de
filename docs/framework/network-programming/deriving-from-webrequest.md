@@ -107,6 +107,6 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
  <xref:System.Net.WebRequest>   
  <xref:System.Net.HttpWebRequest>   
  <xref:System.Net.FileWebRequest>   
- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 

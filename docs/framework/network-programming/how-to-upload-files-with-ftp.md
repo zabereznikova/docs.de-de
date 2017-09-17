@@ -72,7 +72,7 @@ namespace Examples.System.Net
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.  
+-   Verweise auf den Namespace **System.Net**  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
   

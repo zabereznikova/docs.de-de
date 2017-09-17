@@ -59,7 +59,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den Namespace **System.Net**.  
+-   Verweise auf den Namespace **System.Net**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
