@@ -36,7 +36,7 @@ Der neue Algorithmus behebt mehrere Probleme, die beim alten Algorithmus auftret
 
 1. Die Gesamtzuweisung kann die Breite des Rasters unterschreiten. Dies ist das umgekehrte Problem zu Nr. 1, das beim Zuweisen zu einer Spalte auftritt, deren proportionaler Anteil größer als ihre Maximalgröße ist, wenn keine \*-Spalten zum Ausgleich des Über- oder Untermaßes vorhanden sind.
 
-1. Zwei \*-Spalten können Zuweisungen erhalten, die nicht proportional zu ihren *-Gewichtungen sind. Dies ist eine mildere Version von Nr. 1/Nr. 2, die beim Zuweisen zu den *-Spalten A, B und C (in dieser Reihenfolge) auftritt, wobei der proportionale Anteil von B gegen deren Min- oder Max-Bedingung verstößt. Wie oben ändert sich dadurch der für Spalte C zur Verfügung stehende Platz, die proportional eine kleinere (oder größeren) Zuweisung als A erhält.
+1. Zwei \*-Spalten können Zuweisungen erhalten, die nicht proportional zu ihren -Gewichtungen sind. Dies ist eine mildere Version von Nr. 1/Nr. 2, die beim Zuweisen zu den *-Spalten A, B und C (in dieser Reihenfolge) auftritt, wobei der proportionale Anteil von B gegen deren Min- oder Max-Bedingung verstößt. Wie oben ändert sich dadurch der für Spalte C zur Verfügung stehende Platz, die proportional eine kleinere (oder größeren) Zuweisung als A erhält.
 
 1. Spalten mit extrem hohen Gewichtungen (> 10^298) werden alle behandelt, als ob sie die Gewichtung 10^298 aufwiesen. Proportionale Unterschiede zwischen ihnen (und zwischen Spalten mit erheblich kleineren Gewichtungen) werden nicht berücksichtigt.
 
@@ -50,7 +50,7 @@ Der neue Algorithmus erzeugt Ergebnisse, die den folgenden Kriterien genügen:
 
 A. Die einer *-Spalte zugewiesene Breite ist niemals kleiner als ihre Mindestbreite oder größer als ihre Maximalbreite.
 
-B. Jede *-Spalte, der nicht ihre Mindest- oder Maximalbreite zugewiesen wird, wird eine Breite zugewiesen, die proportional zu ihrer *-Gewichtung ist. Genauer gesagt, wenn zwei Spalten die Breite x bzw. y zugewiesen werden und keine der beiden Spalten ihre Minimal- oder Maximalbreite erhält, stehen die den Spalten zugewiesenen tatsächlichen Breiten v und w im gleichen Verhältnis: v / w == x / y.
+B. Jede -Spalte, der nicht ihre Mindest- oder Maximalbreite zugewiesen wird, wird eine Breite zugewiesen, die proportional zu ihrer -Gewichtung ist. Genauer gesagt, wenn zwei Spalten die Breite x bzw. y zugewiesen werden und keine der beiden Spalten ihre Minimal- oder Maximalbreite erhält, stehen die den Spalten zugewiesenen tatsächlichen Breiten v und w im gleichen Verhältnis: v / w == x / y.
 
 C. Die Gesamtbreite, die den „proportionalen“ \*-Spalten zugewiesen wird, entspricht dem verfügbaren Platz nach der Zuweisung an die Spalten, die Bedingungen unterliegen (feste Spalten, Spalten mit automatischer Breite und \*-Spalten, denen die Minimal- oder Maximalbreite zugewiesen wird). Diese kann Null sein, beispielsweise, wenn die Summe der Mindestbreiten die zur Verfügung stehende Breite des Rasters überschreitet.
 
