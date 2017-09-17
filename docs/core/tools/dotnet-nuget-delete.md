@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-delete-Befehl – .NET Core-CLI"
+title: "dotnet nuget delete-Befehl – .NET Core-CLI"
 description: "Der dotnet-nuget-delete-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf."
-keywords: dotnet-nuget-delete, CLI, CLI-Befehl, .NET Core
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ce6886f2f4cc8cc633cfc61215fe17550f746c91
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 65fe52f07ed823b4f7518c5b1f2da1f7a61b0371
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-# <a name="dotnet-nuget-delete"></a>dotnet-nuget delete
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Name
 
-`dotnet-nuget-delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf.
+`dotnet nuget delete` – Löscht ein Paket vom Server oder hebt dessen Auflistung auf.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -46,7 +44,7 @@ Version des zu löschenden Pakets.
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
+Druckt eine kurze Hilfe für den Befehl.
 
 `-s|--source <SOURCE>`
 
@@ -73,4 +71,3 @@ Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`:
 Löscht Version 1.0 des Pakets `Microsoft.AspNetCore.Mvc`, wobei der Benutzer nicht zur Eingabe von Anmeldeinformationen oder zu anderen Eingaben aufgefordert wird:
 
 `dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
-
