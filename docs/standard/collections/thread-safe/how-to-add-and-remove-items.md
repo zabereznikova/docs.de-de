@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
@@ -36,7 +36,8 @@ Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und vo
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden zwei Instanzen von <xref:System.Threading.Tasks.Task> verwendet, um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> parallel einige Elemente hinzuzufügen und dann den gesamten Inhalt auszugeben, um zu zeigen, dass die Elemente erfolgreich hinzugefügt wurden. Das Beispiel zeigt auch, wie die Methoden <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> zum Hinzufügen, Aktualisieren und Abrufen von Elementen aus der Auflistung verwendet werden.  
   
- [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)] [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
+ [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
+ [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> wurde für Multithread-Szenarios entworfen. Sie müssen keine Sperren in Ihrem Code verwenden, um Elemente zur Auflistung hinzuzufügen oder daraus zu entfernen. Es ist jedoch immer möglich, dass ein Thread einen Wert abruft und ein anderer Thread durch Zuweisen eines neuen Werts zum gleichen Schlüssel die Auflistung unmittelbar danach aktualisiert.  
   
