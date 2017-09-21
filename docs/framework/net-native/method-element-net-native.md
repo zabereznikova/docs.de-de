@@ -1,33 +1,36 @@
 ---
-title: "&lt;Methode&gt; Element (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Methode&gt; Element (.NET Native)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 caps.latest.revision: 22
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 22
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 523ec4fd2c8d19dc9086e417fa99c89a619caa71
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;Methode&gt; Element (.NET Native)
+# <a name="ltmethodgt-element-net-native"></a>&lt;Methode&gt; Element (.NET Native)
 Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-  
 <Method Name="method_name"  
         Signature="method_signature"  
         Browse="policy_type"  
         Dynamic="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -38,7 +41,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode
 |Attribut|Attributtyp|Beschreibung|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen der Methode an.|  
-|`Signature`|Allgemein|Optionales Attribut. Gibt die Methodensignatur an. Wenn mehrere Parameter vorhanden sind, werden sie durch Kommas getrennt. Z. B. die folgenden `<Method>` Element definiert die Richtlinie für die <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> Methode.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Wenn das Attribut nicht vorhanden ist, gilt die Laufzeitanweisung für alle Überladungen der Methode.|  
+|`Signature`|Allgemein|Optionales Attribut. Gibt die Methodensignatur an. Wenn mehrere Parameter vorhanden sind, werden sie durch Kommas getrennt. Das folgende `<Method>`-Element definiert beispielsweise die Richtlinie für die <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Wenn das Attribut nicht vorhanden ist, gilt die Laufzeitanweisung für alle Überladungen der Methode.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über eine Methode oder das Auflisten einer Methode, ermöglicht jedoch keinen dynamischen Aufruf zur Laufzeit.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf einen Konstruktor oder eine Methode, um die dynamische Programmierung zu ermöglichen. Diese Richtlinie stellt sicher, dass ein Member dynamisch zur Laufzeit aufgerufen werden kann.|  
   
@@ -46,7 +49,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*keine Variablenargumentlisten verwenden*|Der Methodenname. Der Typ der Methode wird vom übergeordneten Element definiert [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) oder [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) Element.|  
+|*method_name*|Der Methodenname. Der Typ der Methode wird durch das übergeordnete Element [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) oder [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) definiert.|  
   
 ## <a name="signature-attribute"></a>Signature-Attribut  
   
@@ -58,33 +61,33 @@ Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Laufzeitrichtlinieneinstellungen der Richtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/parameter-element-net-native.md)|Wendet die Richtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.|  
-|[<>\>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.|  
-|[<>\>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet die Richtlinie auf einen Typ an, wenn diese Richtlinie auf die Methode angewendet wurde, die vom enthaltenden `<Method>`-Element dargestellt wird.|  
-|[<>\>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Wendet die Richtlinie auf den Typ als ein <xref:System.Type> Argument an eine Methode übergeben.|  
+|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Wendet die Richtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.|  
+|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.|  
+|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet die Richtlinie auf einen Typ an, wenn diese Richtlinie auf die Methode angewendet wurde, die vom enthaltenden `<Method>`-Element dargestellt wird.|  
+|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Wendet die Richtlinie auf den Typ an, der von einem <xref:System.Type>-Argument dargestellt wird, dass an eine Methode übergeben wird.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein `<Method>`-Element einer generischen Methode wendet seine Richtlinie für alle Instanziierungen an, die keine eigene Richtlinie haben.  
   
  Sie können das `Signature`-Attribut zum Angeben einer Richtlinie für eine bestimmte Methodenüberladung verwenden. Wenn das `Signature`-Attribut aber nicht vorhanden ist, gilt die Laufzeitrichtlinie für alle Überladungen der Methode.  
   
- Sie können die Laufzeitreflektionsrichtlinie für einen Konstruktor nicht mit dem `<Method>`-Element definieren. Instead, use the `Activate` attribute of the  [<>\>](../../../docs/framework/net-native/assembly-element-net-native.md), [<>\>](../../../docs/framework/net-native/namespace-element-net-native.md), [<>\>](../../../docs/framework/net-native/type-element-net-native.md), or [<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.  
+ Sie können die Laufzeitreflektionsrichtlinie für einen Konstruktor nicht mit dem `<Method>`-Element definieren. Verwenden Sie stattdessen das `Activate`-Attribut des Elements [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) oder [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
 ## <a name="example"></a>Beispiel  
- Die `Stringify`-Methode im folgenden Beispiel ist eine allgemeine Formatierungsmethode, die Reflektion verwendet, um ein Objekt in seine Zeichenfolgendarstellung zu konvertieren. Zusätzlich zum Aufrufen des Objekts Standard `ToString` -Methode, die Methode kann erzeugt eine formatierte Ergebniszeichenfolge durch Übergeben eines Objekts `ToString` Methode eine Zeichenfolge, ein <xref:System.IFormatProvider> -Implementierung oder beides. Sie können außerdem Aufrufen eines der <xref:System.Convert.ToString%2A?displayProperty=fullName> -Überladung, die eine Zahl in eine binäre, oktale oder hexadezimale Darstellung konvertiert.  
+ Die `Stringify`-Methode im folgenden Beispiel ist eine allgemeine Formatierungsmethode, die Reflektion verwendet, um ein Objekt in seine Zeichenfolgendarstellung zu konvertieren. Zusätzlich zum Aufrufen der Standard-`ToString`-Methode des Objekts kann die Methode eine formatierte Ergebniszeichenfolge durch Übergeben der `ToString`-Methode eines Objekts an eine Formatzeichenfolge, eine <xref:System.IFormatProvider>-Implementierung oder beides erzeugen. Sie kann auch eine der <xref:System.Convert.ToString%2A?displayProperty=fullName>-Überladungen aufrufen, die eine Zahl in die binäre, oktale oder hexadezimale Zeichenfolgendarstellung konvertiert.  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
@@ -92,12 +95,11 @@ Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
- Allerdings bei der Kompilierung mit .NET Native, im Beispiel eine Anzahl von Ausnahmen zur Laufzeit auslösen, einschließlich <xref:System.NullReferenceException> und [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) Ausnahmen, dies geschieht, da die `Stringify` -Methode dient in erster Linie auf die dynamische Formatierung der primitiven Typen in der Klassenbibliothek von .NET Framework unterstützen. Allerdings werden die Metadaten nicht durch die Standardanweisungsdatei zur Verfügung gestellt. Auch wenn die Metadaten verfügbar gemacht werden, allerdings löst das Beispiel [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) Ausnahmen da die entsprechende `ToString` -Implementierungen nicht im systemeigenen Code eingeschlossen wurden.  
+ Bei der Kompilierung mit .NET Native kann das Beispiel allerdings zur Laufzeit einige Ausnahmen auslösen, einschließlich der <xref:System.NullReferenceException>- und [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahmen. Dies geschieht, da die `Stringify`-Methode in erster Linie die dynamische Formatierung der primitiven Typen in der Klassenbibliothek von .NET Framework unterstützen soll. Allerdings werden die Metadaten nicht durch die Standardanweisungsdatei zur Verfügung gestellt. Auch wenn die Metadaten verfügbar gemacht werden, löst das Beispiel [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahmen aus, da die entsprechenden `ToString`-Implementierungen nicht im nativen Code eingeschlossen wurden.  
   
- Diese Ausnahmen können alle behoben werden, mithilfe der [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) Element, um die Typen definieren, deren Metadaten vorhanden muss, und durch Hinzufügen von sein `<Method>` können Elemente, um sicherzustellen, dass die Implementierung der Methode, die überlädt dynamisch aufgerufen auch vorhanden ist. So sieht die Datei "default.rd.xml" aus, die diese Ausnahmen eliminiert und die Ausführung des Beispiels ohne Fehler ermöglicht.  
+ Diese Ausnahmen können alle mithilfe des [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Elements gelöscht werden, um die Typen zu definieren, deren Metadaten vorhanden sein müssen, und durch Hinzufügen von `<Method>`-Elementen, um sicherzustellen, dass die Implementierung von Methodenüberladungen, die dynamisch aufgerufen werden können, ebenfalls vorhanden ist. So sieht die Datei "default.rd.xml" aus, die diese Ausnahmen eliminiert und die Ausführung des Beispiels ohne Fehler ermöglicht.  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
   <Application>  
      <Assembly Name="*Application*" Dynamic="Required All" />  
@@ -151,11 +153,11 @@ Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode
      </Namespace>  
   </Application>  
 </Directives>  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Laufzeit-Konfigurationsdatei Laufzeitdirektiven (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elemente der Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Richtlinie für die Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [<>\>Element](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+ [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [Element \<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+

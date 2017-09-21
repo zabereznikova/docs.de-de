@@ -1,46 +1,51 @@
 ---
-title: "How to: Use TraceSource and Filters with Trace Listeners | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "initializing trace listeners"
-  - "configuration files [.NET Framework], trace listeners"
-  - "app.config files, trace listeners"
-  - "levels of writing trace messages"
-  - "trace listeners, TraceSource class"
-  - "application configuration files, trace listeners"
-  - "filters, trace listeners"
-  - "TraceSource class, trace listeners"
-  - "trace listeners, creating"
-  - "trace listeners, filters"
-  - "trace listeners, initializing"
+title: "Gewusst wie: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- initializing trace listeners
+- configuration files [.NET Framework], trace listeners
+- app.config files, trace listeners
+- levels of writing trace messages
+- trace listeners, TraceSource class
+- application configuration files, trace listeners
+- filters, trace listeners
+- TraceSource class, trace listeners
+- trace listeners, creating
+- trace listeners, filters
+- trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73a91d081a1e59995d52f3ef6927db12dd7e4599
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Use TraceSource and Filters with Trace Listeners
-Eines der neuen Features in .NET Framework, Version 2.0, ist ein verbessertes System zur Ablaufverfolgung.  Die Grundlage bleibt unverändert: Ablaufverfolgungsmeldungen werden mithilfe von Schaltern an Listener gesendet, die die Daten an das jeweilige zugeordnete Ausgabemedium weiterleiten.  Ein wichtiger Unterschied in Version 2.0 ist, dass die Ablaufverfolgung mithilfe von Instanzen der <xref:System.Diagnostics.TraceSource>\-Klasse eingeleitet werden kann.  <xref:System.Diagnostics.TraceSource> ist als verbessertes System zur Ablaufverfolgung vorgesehen; die Klasse kann statt den statischen Methoden der älteren <xref:System.Diagnostics.Trace>\-Klasse und der <xref:System.Diagnostics.Debug>\-Klasse verwendet werden.  Die vertraute <xref:System.Diagnostics.Trace>\-Klasse und die <xref:System.Diagnostics.Debug>\-Klasse sind immer noch vorhanden, es wird jetzt jedoch empfohlen, die <xref:System.Diagnostics.TraceSource>\-Klasse für die Ablaufverfolgung zu verwenden.  
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Gewusst wie: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener
+Eine der neuen Funktionen in .NET Framework, Version 2.0, ist ein verbessertes Ablaufverfolgungssystem. Die Grundlage bleibt unverändert: Ablaufverfolgungsmeldungen werden mithilfe von Schaltern an Listener gesendet, die die Daten an das jeweilige zugeordnete Ausgabemedium weiterleiten. Ein wichtiger Unterschied in Version 2.0 ist, dass die Ablaufverfolgung mithilfe von Instanzen der <xref:System.Diagnostics.TraceSource>-Klasse eingeleitet werden kann. <xref:System.Diagnostics.TraceSource> ist als verbessertes System zur Ablaufverfolgung vorgesehen; die Klasse kann statt den statischen Methoden der älteren <xref:System.Diagnostics.Trace>-Klasse und der <xref:System.Diagnostics.Debug>-Klasse verwendet werden. Die vertrauten <xref:System.Diagnostics.Trace>- und <xref:System.Diagnostics.Debug>-Klassen sind immer noch vorhanden, es wird jetzt jedoch empfohlen, die <xref:System.Diagnostics.TraceSource>-Klasse für die Ablaufverfolgung zu verwenden.  
   
- In diesem Thema wird die Verwendung von <xref:System.Diagnostics.TraceSource> zusammen mit einer Anwendungskonfigurationsdatei erläutert.  Es möglich, die Ablaufverfolgung unter Verwendung von <xref:System.Diagnostics.TraceSource> ohne Konfigurationsdatei durchzuführen. Dies wird jedoch nicht empfohlen.  Weitere Informationen über die Ablaufverfolgung ohne Konfigurationsdatei finden Sie unter [Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungsquellen](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ In diesem Thema wird die Verwendung von <xref:System.Diagnostics.TraceSource> zusammen mit einer Anwendungskonfigurationsdatei erläutert.  Es ist möglich, die Ablaufverfolgung unter Verwendung von <xref:System.Diagnostics.TraceSource> ohne Konfigurationsdatei durchzuführen. Dies wird jedoch nicht empfohlen. Weitere Informationen über die Ablaufverfolgung ohne Konfigurationsdatei finden Sie unter [How to: Create and Initialize Trace Sources (Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen)](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
-### So erstellen und initialisieren Sie eine Ablaufverfolgungsquelle  
+### <a name="to-create-and-initialize-your-trace-source"></a>Erstellen und Initialisieren von Ablaufverfolgungsquellen  
   
-1.  Der erste Schritt beim Instrumentieren einer Anwendung mit der Ablaufverfolgung ist das Erstellen einer Ablaufverfolgungsquelle.  In umfangreichen Projekten mit verschiedenen Komponenten können Sie für jede Komponente eine separate Ablaufverfolgungsquelle erstellen.  Es empfiehlt sich, den Anwendungsnamen als Namen der Ablaufverfolgungsquelle zu verwenden.  Dies erleichtert es, die unterschiedlichen Ablaufverfolgungen auseinander zu halten.  Im folgenden Codebeispiel wird eine neue Ablaufverfolgungsquelle \(`mySource)` erstellt und eine Methode \(`Activity1`\) aufgerufen, die Ereignisse aufzeichnet.  Die Ablaufverfolgungsmeldungen werden vom Standard\-Ablaufverfolgungslistener geschrieben.  
+1.  Der erste Schritt beim Instrumentieren einer Anwendung mit der Ablaufverfolgung ist das Erstellen einer Ablaufverfolgungsquelle. In umfangreichen Projekten mit verschiedenen Komponenten können Sie für jede Komponente eine separate Ablaufverfolgungsquelle erstellen. Es empfiehlt sich, den Anwendungsnamen als Namen der Ablaufverfolgungsquelle zu verwenden. Dies erleichtert es, die unterschiedlichen Ablaufverfolgungen auseinander zu halten. Im folgenden Codebeispiel wird eine neue Ablaufverfolgungsquelle (`mySource)`) erstellt und eine Methode (`Activity1`) aufgerufen, die Ereignisse aufzeichnet.  Die Ablaufverfolgungsmeldungen werden vom standardmäßigen Ablaufverfolgungslistener geschrieben.  
   
     ```  
     using System;  
@@ -70,11 +75,11 @@ Eines der neuen Features in .NET Framework, Version 2.0, ist ein verbessertes S
     }  
     ```  
   
-### So erstellen und initialisieren Sie Ablaufverfolgungslistener und Filter  
+### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Erstellen und Initialisieren von Ablaufverfolgungslistenern und Filtern  
   
-1.  Im Code in der ersten Prozedur werden weder Ablaufverfolgungslistener noch Filter angegeben.  Die Ablaufverfolgungsmeldungen werden allein durch den Code in den Standard\-Ablaufverfolgungslistener geschrieben.  Um bestimmte Ablaufverfolgungslistener und zugeordnete Filter anzugeben, bearbeiten Sie die Konfigurationsdatei, die dem Namen der Anwendung entspricht.  In dieser Datei können Sie Listener hinzufügen und entfernen sowie die Eigenschaften und Filter für einen Listener festlegen.  In der folgenden Beispielkonfigurationsdatei wird veranschaulicht, wie ein Konsolen\- und ein Textwriter\-Ablaufverfolgungslistener für die Ablaufverfolgungsquelle initialisiert werden, die in der vorausgegangenen Prozedur erstellt wird.  Neben der Konfiguration für die Ablaufverfolgungslistener werden in der Konfigurationsdatei Filter für beide Listener sowie ein Quellenschalter für die Ablaufverfolgungsquelle erstellt.  Es werden zwei Verfahren zum Hinzufügen der Ablaufverfolgungslistener gezeigt: das direkte Hinzufügen des listeners zur Ablaufverfolgungsquelle sowie das Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung der Listener und das anschließende Hinzufügen zur Ablaufverfolgungsquelle nach Namen.  Die für die beiden Listener angegebenen Filter werden mit unterschiedlichen Stufen für die Quelle initialisiert.  Dies führt dazu, dass einige Meldungen nur von einem der beiden Listener geschrieben werden.  
+1.  Im Code in der ersten Prozedur werden weder Ablaufverfolgungslistener noch Filter angegeben. Die Ablaufverfolgungsmeldungen werden allein durch den Code in den standardmäßigen Ablaufverfolgungslistener geschrieben. Um bestimmte Ablaufverfolgungslistener und zugeordnete Filter anzugeben, bearbeiten Sie die Konfigurationsdatei, die dem Namen der Anwendung entspricht. In dieser Datei können Sie Listener hinzufügen und entfernen sowie die Eigenschaften und Filter für einen Listener festlegen. In der folgenden Beispielkonfigurationsdatei wird veranschaulicht, wie ein Konsolen- und ein Textwriter-Ablaufverfolgungslistener für die Ablaufverfolgungsquelle initialisiert werden, die in der vorausgegangenen Prozedur erstellt wurde. Neben der Konfiguration für die Ablaufverfolgungslistener werden in der Konfigurationsdatei Filter für beide Listener sowie ein Quellenschalter für die Ablaufverfolgungsquelle erstellt. Es werden zwei Verfahren zum Hinzufügen der Ablaufverfolgungslistener gezeigt: das direkte Hinzufügen des listeners zur Ablaufverfolgungsquelle sowie das Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung der Listener und das anschließende Hinzufügen zur Ablaufverfolgungsquelle nach Namen. Die für die beiden Listener angegebenen Filter werden mit unterschiedlichen Stufen für die Quelle initialisiert. Dies führt dazu, dass einige Meldungen nur von einem der beiden Listener geschrieben werden.  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.diagnostics>  
         <sources>  
@@ -107,9 +112,9 @@ Eines der neuen Features in .NET Framework, Version 2.0, ist ein verbessertes S
     </configuration>  
     ```  
   
-### So ändern Sie die Stufe, bei der ein Listener eine Ablaufverfolgungsmeldung schreibt  
+### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Ändern der Ebene, bei der ein Listener eine Ablaufverfolgungsmeldung schreibt  
   
-1.  Die Konfigurationsdatei initialisiert die Einstellungen für die Ablaufverfolgungsquelle, wenn die Anwendung initialisiert wird.  Um diese Einstellungen zu ändern, müssen Sie die Konfigurationsdatei ändern und die Anwendung neu starten oder die Anwendung programmgesteuert mithilfe der <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName>\-Methode aktualisieren.  Die Anwendung kann die durch die Konfigurationsdatei festgelegten Eigenschaften dynamisch ändern, um die vom Benutzer angegebenen Einstellungen zu überschreiben.  So können Sie beispielsweise sicherstellen, dass Meldungen für kritische Fehler unabhängig von den aktuellen Konfigurationseinstellungen immer in eine Textdatei geschrieben werden.  
+1.  Die Konfigurationsdatei initialisiert die Einstellungen für die Ablaufverfolgungsquelle, wenn die Anwendung initialisiert wird. Um diese Einstellungen zu ändern, müssen Sie entweder die Konfigurationsdatei ändern und die Anwendung neu starten oder die Anwendung programmgesteuert aktualisieren, indem Sie die <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName>-Methode verwenden. Die Anwendung kann die durch die Konfigurationsdatei festgelegten Eigenschaften dynamisch ändern, um die vom Benutzer angegebenen Einstellungen zu überschreiben.  So können Sie beispielsweise sicherstellen, dass Meldungen für kritische Fehler unabhängig von den aktuellen Konfigurationseinstellungen immer in eine Textdatei geschrieben werden.  
   
     ```  
     using System;  
@@ -173,10 +178,11 @@ Eines der neuen Features in .NET Framework, Version 2.0, ist ein verbessertes S
     }  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Diagnostics.TraceSource>   
  <xref:System.Diagnostics.TextWriterTraceListener>   
  <xref:System.Diagnostics.ConsoleTraceListener>   
  <xref:System.Diagnostics.EventTypeFilter>   
- [Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungsquellen](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [Trace Listeners](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [How to: Create and Initialize Trace Sources (Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen)](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
+ [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+

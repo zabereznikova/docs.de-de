@@ -1,31 +1,37 @@
 ---
-title: "Gewusst wie: Erstellen einer Anspr&#252;che unterst&#252;tzenden ASP.NET-Anwendung mit Windows-Authentifizierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Erstellen einer Anspr&#252;che unterst&#252;tzenden ASP.NET-Anwendung mit Windows-Authentifizierung
-## Gilt für  
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung
+## <a name="applies-to"></a>Gilt für  
   
--   Identitäts\-Grundlage Microsoft® Windows® \(WIF\)  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET®\-Web Forms  
+-   ASP.NET® Web Forms  
   
-## Zusammenfassung  
- In dieser Vorgehensweise wird ausführliche schrittweise Prozeduren zum Erstellen einer einfachen Ansprüche unterstützende ASP.NET Web Forms\-Anwendung vor, die Windows\-Authentifizierung verwendet.  Außerdem werden Anweisungen bereit, wie die Anwendung testen, um zu überprüfen, ob Ansprüche dargestellt werden, wenn ein Benutzer in mithilfe der Windows\-Authentifizierung signiert.  
+## <a name="summary"></a>Zusammenfassung  
+ In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung, die Windows-Authentifizierung verwendet, vorgestellt. Sie enthält auch Anweisungen zum Testen der Anwendung, mit denen überprüft werden kann, ob Ansprüche dargestellt werden, wenn sich ein Benutzer mit der Windows-Authentifizierung anmeldet.  
   
-## Inhalt  
+## <a name="contents"></a>Inhalt  
   
 -   Ziele  
   
@@ -33,53 +39,53 @@ caps.handback.revision: 5
   
 -   Zusammenfassung von Schritten  
   
--   Schritt 1 \- erstellen Sie eine einfache ASP.NET Web Forms\-Anwendung  
+-   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2 \- konfigurieren Sie ASP.NET Web Forms\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung  
+-   Schritt 2: Konfigurieren der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
--   Schritt 3 \- testen Sie die Projektmappe  
+-   Schritt 3: Testen Ihrer Projektmappe  
   
-## Ziele  
+## <a name="objectives"></a>Ziele  
   
--   Konfigurieren Sie eine ASP.NET Web Forms\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung  
+-   Konfigurieren einer ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
--   Testen Sie die ASP.NET Web Forms\-Anwendungen, festzustellen, ob sie ordnungsgemäß funktioniert  
+-   Testen Sie die ASP.NET Web Forms-Anwendung, um festzustellen, ob sie ordnungsgemäß funktioniert.  
   
-## Übersicht  
- In .NET 4.5 sind WIF und die anspruchsbasierte Autorisierung als ganzzahliger Teil des Frameworks eingefügt.  Zuvor wenn Sie Ansprüche von einem ASP.NET\-Benutzer soll, wurden verlangt, WIF zu installieren und dann Schnittstellen zu den Prinzipalobjekten wie `Thread.CurrentPrincipal` oder `HttpContext.Current.User` umwandeln.  Nun werden Ansprüche automatisch durch diese Principalobjekte präsentiert.  
+## <a name="overview"></a>Übersicht  
+ In .NET 4.5 wurden WIF und seine anspruchsbasierte Autorisierung als wesentlicher Bestandteil in das Framework integriert. Wenn Sie zuvor die Ansprüche eines ASP.NET-Benutzers abrufen wollten, war es erforderlich, WIF zu installieren und anschließend Schnittstellen in Principal-Objekte wie `Thread.CurrentPrincipal` oder `HttpContext.Current.User` umzuwandeln. Nun werden Ansprüche automatisch von diesen Principal-Objekten verarbeitet.  
   
- Windows\-Authentifizierung wurde von Aufnahme WIF in .NET 4.5 profitieren, da alle Benutzer, die von Windows\-Anmeldeinformationen authentifiziert werden automatisch, die Ansprüche verfügen, die mit ihnen zugeordnet werden.  Sie können mithilfe dieser Ansprüche unmittelbar in einer ASP.NET\-Anwendung beginnen, die Windows\-Authentifizierung verwendet, da dieses dieser Vorgehensweise werden.  
+ Die Windows-Authentifizierung profitiert von der Integration von WIF in .NET 4.5, da allen Benutzern, die über Windows-Anmeldeinformationen authentifiziert wurden, automatisch Ansprüche zugeordnet sind. Sie können diese Ansprüche sofort in einer ASP.NET-Anwendung verwenden, die die Windows-Authentifizierung verwendet. Dies wird in dieser Vorgehensweise veranschaulicht.  
   
-## Zusammenfassung von Schritten  
+## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1 \- erstellen Sie eine einfache ASP.NET Web Forms\-Anwendung  
+-   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2 \- konfigurieren Sie ASP.NET Web Forms\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung  
+-   Schritt 2: Konfigurieren der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
--   Schritt 3 \- testen Sie die Projektmappe  
+-   Schritt 3: Testen Ihrer Projektmappe  
   
-## Schritt 1 \- erstellen Sie eine einfache ASP.NET Web Forms\-Anwendung  
- In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms\-Anwendung.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+ In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  
   
-#### So fügen Sie eine einfache ASP.NET\-Anwendung erstellen  
+#### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, klicken Sie auf **Datei**, **Neu** und dann auf **Projekt**.  
+1.  Starten Sie Visual Studio, klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  Im **Neues Projekt** Fenster klicken Sie auf **ASP.NET Web Forms\-Anwendung**.  
+2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  In **Name** geben Sie `TestApp` ein und drücken Sie **OK**.  
+3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und klicken Sie auf **OK**.  
   
-4.  Nachdem das **TestApp** Projekt erstellt wurde, klicken Sie in **Projektmappen\-Explorer**.  Die Eigenschaften des Projekts werden im **Eigenschaften** Bereich unter **Projektmappen\-Explorer**.  Legen Sie die **Windows\-Authentifizierung**\-Eigenschaft auf **Aktiviert** fest.  
+4.  Klicken Sie im **Projektmappen-Explorer** auf das Projekt **TestApp**, nachdem Sie dieses erstellt haben. Die Eigenschaften des Projekts werden im Bereich **Eigenschaften** unter dem **Projektmappen-Explorer** angezeigt. Legen Sie die Eigenschaft **Windows-Authentifizierung** auf **Aktiviert** fest.  
   
     > [!WARNING]
-    >  Die Windows\-Authentifizierung wird standardmäßig in neuen ASP.NET\-Anwendungen deaktiviert ist, müssen Sie sie manuell aktivieren.  
+    >  Die Windows-Authentifizierung ist standardmäßig für neue ASP.NET-Anwendungen deaktiviert, sodass Sie sie manuell aktivieren müssen.  
   
-## Schritt 2 \- konfigurieren Sie ASP.NET Web Forms\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung  
- In diesem Schritt fügen Sie einen Konfigurationseintrag der Konfigurationsdatei *Web.config* hinzu und ändern die Datei *Default.aspx*, um Anspruchsinformationen für ein Konto anzuzeigen.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Schritt 2: Konfigurieren der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
+ In diesem Schritt fügen Sie einen Konfigurationseintrag zur Konfigurationsdatei *Web.config* hinzu und ändern die Datei *Default.aspx*, damit diese die Informationen zu den Ansprüchen eines Kontos anzeigt.  
   
-#### So ASP.NET\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung konfigurieren  
+#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
-1.  In der Datei *Default.aspx* des Projekts **TestApp** ersetzen Sie das vorhandene Markup durch Folgendes:  
+1.  Ersetzen Sie in der Datei *Default.aspx* des Projekts **TestApp** das vorhandene Markup durch das folgende Markup:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -97,12 +103,11 @@ caps.handback.revision: 5
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-     In diesem Schritt wird ein GridView\-Steuerelement der Seite *Default.aspx hinzu,*, die den Ansprüchen aufgefüllt wird, die von der Windows\-Authentifizierung abgerufen werden.  
+     In diesem Schritt wird eine „GridView“-Steuerung zu Ihrer Seite *Default.aspx* hinzugefügt, die mit den Ansprüchen aufgefüllt wird, die von der Windows-Authentifizierung abgerufen wurden.  
   
-2.  Speichern Sie die Datei *Default.aspx*, und öffnen Sie dann die Datei mit dem Namen *Default.aspx.cs*.  Ersetzen Sie den vorhandenen Code durch Folgendes:  
+2.  Speichern Sie die Datei *Default.aspx*, und öffnen Sie dann die CodeBehind-Datei *Default.aspx.cs*. Ersetzen Sie den vorhandenen Code durch folgenden Code:  
   
     ```csharp  
     using System;  
@@ -123,25 +128,26 @@ caps.handback.revision: 5
     }  
     ```  
   
-     Der obige Code zeigt Ansprüche über einen authentifizierten Benutzer an.  
+     Der obige Code zeigt die Ansprüche eines authentifizierten Benutzers an.  
   
-3.  Um den Authentifizierungstyp der Anwendung zu ändern, ändern Sie den **\<authentication\>**\-Block im **\<system.web\>**\-Abschnitt der Stammdatei *Web.config* des Projekts damit sie nur folgenden Konfigurationseintrag enthält:  
+3.  Modifizieren Sie zum Ändern des Authentifizierungstyps einer Anwendung den Block **\<authentication>** im Abschnitt **\<system.web>** der Stammdatei des Projekts (*Web.config*), sodass diese nur den folgenden Konfigurationseintrag enthält:  
   
-    ```  
+    ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Ändern Sie abschließend den **\<authorization\>**\-Block im **\<system.web\>**\-Abschnitt dieser *Web.config*\-Datei, um die Authentifizierung zu erzwingen:  
+4.  Ändern Sie abschließend den Block **\<authorization>** im Abschnitt **\<system.web>** derselben *Web.config*-Datei, um die Authentifizierung zu erzwingen:  
   
-    ```  
+    ```xml  
     <authorization>  
         <deny users="?" />  
     </authorization>  
     ```  
   
-## Schritt 3 \- testen Sie die Projektmappe  
- In diesem Schritt testen Sie die ASP.NET Web Forms\-Anwendung und überprüfen, ob Ansprüche dargestellt werden, wenn ein Benutzer im mit Windows\-Authentifizierung signiert.  
+## <a name="step-3--test-your-solution"></a>Schritt 3: Testen Ihrer Projektmappe  
+ In diesem Schritt testen Sie Ihre ASP.NET Web Forms-Anwendung und überprüfen, ob Ansprüche dargestellt werden, wenn sich ein Benutzer mit der Windows-Authentifizierung anmeldet.  
   
-#### Um die ASP.NET Web Forms\-Anwendung für Ansprüche mithilfe der Windows\-Authentifizierung testen  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
-1.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Sie sollten mit *Default.aspx* dargestellt werden, und der Windows\-Kontoname \(einschließlich Domänenname\) sollte als authentifizierter Benutzer oben rechts auf der Seite bereits angezeigt werden.  Der Inhalt der Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt wird, die aus dem Windows\-Konto abgerufen werden.
+1.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ihnen sollte *Default.aspx* angezeigt werden, und Ihr Windows-Kontoname (einschließlich des Domänennamens) sollte bereits als der authentifizierte Benutzer oben rechts auf der Seite angezeigt werden. Die Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt ist, die von Ihrem Windows-Konto abgerufen wurden.
+

@@ -1,36 +1,46 @@
 ---
-title: "dotnet-pack-Befehl – .NET Core-CLI"
-description: "Der dotnet-pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt."
-keywords: dotnet-pack, CLI, CLI-Befehl, .NET Core
-author: blackdwarf
+title: "dotnet pack-Befehl – .NET Core-CLI"
+description: "Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04b967fdf6578098caae8c21604c5d6160eb6775
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-pack"></a>dotnet pack
 
-# <a name="dotnet-pack"></a>dotnet-pack
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Name
 
-`dotnet-pack`: Packt den Code in ein NuGet-Paket
+`dotnet pack`: Packt den Code in ein NuGet-Paket
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet pack [<PROJECT>] [-o|--output] [--no-build] [--include-symbols] [--include-source] [-c|--configuration] [--version-suffix <VERSION_SUFFIX>] [-s|--serviceable] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+---
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket. Wenn die `--include-symbols`-Option vorhanden ist, wird ein anderes Paket mit den Debugsymbolen erstellt. 
+Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket. Wenn die `--include-symbols`-Option vorhanden ist, wird ein anderes Paket mit den Debugsymbolen erstellt.
 
 NuGet-Abhängigkeiten des gepackten Projekts werden der Datei *nuspec* hinzugefügt. Sie werden ordnungsgemäß aufgelöst, wenn das Paket installiert wird. Verweise zwischen Projekten werden innerhalb des Projekts nicht gepackt. Derzeit benötigen Sie ein Paket pro Projekt, wenn Sie Abhängigkeiten zwischen Projekten haben.
 
@@ -40,47 +50,103 @@ Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang 
 
 ## <a name="arguments"></a>Argumente
 
-`PROJECT` 
-    
-Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj.md) oder zu einem Verzeichnis. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben. 
+`PROJECT`
+
+Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj.md) oder zu einem Verzeichnis. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben.
 
 ## <a name="options"></a>Optionen
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+
+`--force` erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen der Datei *project.assets.json*.
+
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Platziert die erstellten Pakete in das angegebene Verzeichnis. 
-
-`--no-build`
-
-Erstellt das Projekt nicht vor dem Packen. 
-
-`--include-symbols`
-
-Generiert die Symbole `nupkg`. 
+Druckt eine kurze Hilfe für den Befehl.
 
 `--include-source`
 
-Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`. 
+Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`.
 
-`-c|--configuration <CONFIGURATION>`
+`--include-symbols`
 
-Konfiguration, die beim Erstellen des Projekts verwendet wird. Wenn nicht angegeben, wird die Konfiguration standardmäßig auf `Debug` festgelegt.
+Generiert die Symbole `nupkg`.
 
-`--version-suffix <VERSION_SUFFIX>`
+`--no-build`
 
-Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
+Erstellt das Projekt nicht vor dem Packen.
+
+`--no-dependencies`
+
+Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her.
+
+`--no-restore`
+
+Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Platziert die erstellten Pakete in das angegebene Verzeichnis.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
 
 `-s|--serviceable`
 
 Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries (.NET Blog: .NET 4.5.1 unterstützt Microsoft Sicherheitsupdates für .NET NuGet-Bibliotheken)](https://aka.ms/nupkgservicing).
 
-`--verbosity <LEVEL>`
+`--version-suffix <VERSION_SUFFIX>`
+
+Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
+
+`-v|--verbosity <LEVEL>`
 
 Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`--include-source`
+
+Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`.
+
+`--include-symbols`
+
+Generiert die Symbole `nupkg`.
+
+`--no-build`
+
+Erstellt das Projekt nicht vor dem Packen.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Platziert die erstellten Pakete in das angegebene Verzeichnis.
+
+`-s|--serviceable`
+
+Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries (.NET Blog: .NET 4.5.1 unterstützt Microsoft Sicherheitsupdates für .NET NuGet-Bibliotheken)](https://aka.ms/nupkgservicing).
+
+`--version-suffix <VERSION_SUFFIX>`
+
+Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
+
+`-v|--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Beispiele
 

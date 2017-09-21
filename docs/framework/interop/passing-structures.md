@@ -1,38 +1,43 @@
 ---
-title: "Passing Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, calling unmanaged functions"
+title: "Übergeben von Strukturen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Passing Structures
-Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen \(benutzerdefinierte Typen in Visual Basic\) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden.  Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten.  Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>\-Attribut, das Sie zum Definieren formatierter Typen verwenden.  Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**\-Enumeration bereitgestellt werden.  
+# <a name="passing-structures"></a>Übergeben von Strukturen
+Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden. Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten. Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden. Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.  
   
- Es gibt einen entscheidenden Unterschied zwischen Struktur\- und Klassentypen, der für die im vorliegenden Thema dargestellten Konzepte eine Schlüsselposition einnimmt.  Strukturen sind Werttypen und Klassen sind Referenztypen, wobei Klassen immer mindestens eine Speicherdereferenzierungsebene \(einen Zeiger auf einen Wert\) bereitstellen.  Dieser Unterschied ist relevant, da nicht verwaltete Funktionen oftmals Dereferenzierung erfordern, was durch die Signaturen in der ersten Spalte der folgenden Tabelle dargestellt wird.  Die verwalteten Struktur\- und Klassendeklarationen in den anderen Spalten geben an, in welchem Ausmaß die Dereferenzierungsebene in der Deklaration angepasst werden kann.  Deklarationen sind für Visual Basic und Visual C\# verfügbar.  
+ Es gibt einen entscheidenden Unterschied zwischen Struktur- und Klassentypen, der für die im vorliegenden Thema dargestellten Konzepte eine Schlüsselposition einnimmt. Strukturen sind Werttypen und Klassen sind Referenztypen, wobei Klassen immer mindestens eine Speicherdereferenzierungsebene (einen Zeiger auf einen Wert) bereitstellen. Dieser Unterschied ist relevant, da nicht verwaltete Funktionen oftmals eine Dereferenzierung erfordern, wie durch die Signaturen in der ersten Spalte der folgenden Tabelle gezeigt. Die verwalteten Struktur- und Klassendeklarationen in den anderen Spalten geben an, in welchem Ausmaß die Dereferenzierungsebene in der Deklaration angepasst werden kann. Es werden Deklarationen für Visual Basic und Visual C# bereitgestellt.  
   
-|Nicht verwaltete Signatur|Verwaltete Deklaration:                <br /> keine Dereferenzierung               <br />  `Structure MyType`  <br />  `struct MyType;`|Verwaltete Deklaration:                <br /> eine Dereferenzierungsebene               <br />  `Class MyType`  <br />  `class MyType;`|  
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Erfordert 0 Dereferenzierungsebenen.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|Nicht möglich, da bereits eine Dereferenzierungsebene besteht.|  
-|`DoWork(MyType* x);`<br /><br /> Erfordert eine Dereferenzierungsebene.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|  
-|`DoWork(MyType** x);`<br /><br /> Erfordert zwei Dereferenzierungsebenen.|Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden kann.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|  
+|Nicht verwaltete Signatur|Verwaltete Deklaration: <br />keine Dereferenzierung<br />`Structure MyType`<br />`struct MyType;`|Verwaltete Deklaration: <br />eine Dereferenzierungsebene<br />`Class MyType`<br />`class MyType;`|  
+|-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
+|`DoWork(MyType x);`<br /><br /> Erfordert 0 Dereferenzierungsebenen.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|Nicht möglich, da bereits eine Dereferenzierungsebene besteht.|  
+|`DoWork(MyType* x);`<br /><br /> Erfordert eine Dereferenzierungsebene.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|  
+|`DoWork(MyType** x);`<br /><br /> Erfordert zwei Dereferenzierungsebenen.|Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden können.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|  
   
  Die Tabelle beschreibt die folgenden Richtlinien für Plattformaufrufdeklarationen:  
   
@@ -42,14 +47,14 @@ Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukture
   
 -   Verwenden Sie eine Klasse, die durch einen Verweis übergeben wird, wenn die nicht verwaltete Funktion zwei Dereferenzierungsebenen erfordert.  
   
-## Deklarieren und Übergeben von Strukturen  
- Im folgenden Beispiel wird gezeigt, wie Sie `Point`\-Strukturen und `Rect`\-Strukturen in verwaltetem Code definieren und die Typen als Parameter an die **PtInRect**\-Funktion in der Datei User32.dll übergeben können.  **PtInRect** hat folgende nicht verwaltete Signatur:  
+## <a name="declaring-and-passing-structures"></a>Deklarieren und Übergeben von Strukturen  
+ Im folgenden Beispiel wird gezeigt, wie Sie `Point`-Strukturen und `Rect`-Strukturen in verwaltetem Code definieren und die Typen als Parameter an die **PtInRect**-Funktion in der Datei „User32.dll“ übergeben können. **PtInRect** hat folgende nicht verwaltete Signatur:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- Hinweis: Sie müssen die Rect\-Struktur durch Verweis übergeben, da von der Funktion ein Zeiger auf einen RECT\-Typ erwartet wird.  
+ Hinweis: Sie müssen die Rect-Struktur durch Verweis übergeben, da von der Funktion ein Zeiger auf einen RECT-Typ erwartet wird.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -70,7 +75,6 @@ Class Win32API
     Declare Auto Function PtInRect Lib "user32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -96,8 +100,8 @@ class Win32API {
 }  
 ```  
   
-## Deklarieren und Übergeben von Klassen  
- Sie können Member einer Klasse an nicht verwaltete DLL\-Funktionen übergeben, solange die Klasse ein festes Layout für Member hat.  Das folgende Beispiel veranschaulicht, wie Sie Member der `MySystemTime`\-Klasse, die sequenziell definiert sind, an **GetSystemTime** in der Datei User32.dll übergeben können.  **GetSystemTime** hat folgende nicht verwaltete Signatur:  
+## <a name="declaring-and-passing-classes"></a>Deklarieren und Übergeben von Klassen  
+ Sie können Member einer Klasse an nicht verwaltete DLL-Funktionen übergeben, solange die Klasse ein festes Layout für Member hat. Das folgende Beispiel veranschaulicht, wie Sie Member der `MySystemTime`-Klasse, die sequenziell definiert sind, an **GetSystemTime** in der Datei „User32.dll“ übergeben können. **GetSystemTime** hat folgende nicht verwaltete Signatur:  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
@@ -142,7 +146,6 @@ Public Class TestPlatformInvoke
         Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -184,8 +187,9 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## Siehe auch  
- [Calling a DLL Function](../../../docs/framework/interop/calling-a-dll-function.md)   
- [StructLayoutAttribute\-Klasse](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [StructLayoutAttribute\-Klasse](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [FieldOffsetAttribute\-Klasse](frlrfSystemRuntimeInteropServicesFieldOffsetAttributeClassTopic)
+## <a name="see-also"></a>Siehe auch  
+ [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+

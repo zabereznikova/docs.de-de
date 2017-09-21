@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1033d7ec64641dd5904372bc05bd2076efe60d39
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
@@ -61,7 +61,8 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
 ## <a name="equality-and-sort-example"></a>Beispiel für Gleichheit und Sortierung  
  Der folgende Code zeigt eine Implementierung von <xref:System.IEquatable%601> und <xref:System.IComparable%601> für ein einfaches Geschäftsobjekt. Wenn das Objekt in einer Liste gespeichert und sortiert wird, sehen Sie darüber hinaus, dass durch den Aufruf der <xref:System.Collections.Generic.List%601.Sort>-Methode der Standardvergleich für den `Part`-Typ verwendet wird und die <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29>-Methode mit einer anonymen Methode implementiert wird.  
   
- [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)] [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
+ [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.IComparer>   

@@ -1,60 +1,66 @@
 ---
-title: "International Resource Identifier-Unterst&#252;tzung in System.Uri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "International Resource Identifier-Unterstützung in System.Uri"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb81ee9db5c4c8dc7dfa9a7a193adf47ee37b604
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# International Resource Identifier-Unterst&#252;tzung in System.Uri
-Die <xref:System.Uri?displayProperty=fullName>\-Klasse wurde mit Unterstützung des \(International Resource Identifier\) und der IDN \(Internationalized Domain Names\) erweitert.  Diese Erweiterungen sind in .NET Framework 3.5, in 3,0 SP1 und 2,0 SP1 verfügbar.  
+# <a name="international-resource-identifier-support-in-systemuri"></a>International Resource Identifier-Unterstützung in System.Uri
+Die Klasse <xref:System.Uri?displayProperty=fullName> wurde um die Unterstützung von International Resource Identifier (IRI) und von internationalen Domänennamen (IDN) erweitert. Diese Erweiterungen sind in .NET Framework 3.5, 3.0 SP1 und 2.0 SP1 verfügbar.  
   
-## IRI\- und IDN\-Unterstützung  
- Webadressen werden in der Regel mithilfe der URI \(Uniform Resource Identifier\) ausgedrückt die einem sehr eingeschränkten Satz aus Zeichen bestehen:  
+## <a name="iri-and-idn-support"></a>IRI- und IDN-Unterstützung  
+ Webadressen werden in der Regel mithilfe von Uniform Resource Identifiers (URI) ausgedrückt, die aus einem sehr eingeschränkten Satz von Zeichen bestehen:  
   
--   ASCII\-Groß\- und Kleinbuchstaben des englischen Alphabets.  
+-   ASCII-Großbuchstaben und -Kleinbuchstaben des englischen Alphabets  
   
--   Ziffern von 0 bis 9.  
+-   Ziffern von 0 bis 9  
   
--   Eine kleine Anzahl anderer ASCII\-Symbole.  
+-   einer kleinen Anzahl weiterer ASCII-Symbole  
   
- Die Spezifikationen für URIs sind in RFC 2396 und RFC 3986 dokumentiert, die von der IETF \(Internet Engineering Task Force\) veröffentlicht wurden.  
+ Die URI-Spezifikationen werden in RFC 2396 und RFC 3986 dokumentiert, die von der Internet Engineering Task Force (IETF) veröffentlicht werden.  
   
- Mit dem stetigen Anwachsen des Internets müssen Ressourcen zunehmend auch in anderen Sprachen als Englisch angegeben werden.  Bezeichner, die dieser Anforderung gerecht werden und Nicht\-ASCII\-Zeichen \(Zeichen im Unicode\/ISO 10646\-Zeichensatz\) zulassen, sind IRIs \(International Resource Identifiers\).  Die Spezifikationen für IRIs sind in RFC 3987 dokumentiert, die von der IETF veröffentlicht wurde.  Wenn IRIs verwendet werden, kann eine URL auch Unicode\-Zeichen enthalten.  
+ Durch das ständige Wachstum des Internets wird es immer notwendiger, Ressourcen in anderen Sprachen als in Englisch zu bezeichnen. Bezeichner, die dies ermöglichen und die Nicht-ASCII-Zeichen (Zeichen des Unicode-/ISO-Zeichensatzes 10646) zulassen, werden als International Resource Identifiers (IRIs) bezeichnet. Die IRI-Spezifikationen werden in RFC 3987 dokumentiert, die von der IETF veröffentlicht wird. Wenn IRIs verwendet werden, kann eine URL Unicode-Zeichen enthalten.  
   
- Die vorhandene <xref:System.Uri?displayProperty=fullName>\-Klasse ist erweitert, um IRI\-Unterstützung auf Grundlage RFC 3987 zu unterstützen.  Aktuelle Benutzer werden keinen Unterschied zum .NET Framework 2.0\-Verhalten feststellen, es sei denn, sie aktivieren IRI explizit.  Damit wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework gewährleistet.  
+ Die vorhandene Klasse <xref:System.Uri?displayProperty=fullName> wurde erweitert und stellt nun IRI-Unterstützung basierend auf RFC 3987 bereit. Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, außer IRI wird explizit aktiviert. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
   
- Eine Anwendung kann angeben, ob IDN\-Analysen \(Internationalized Domain Name\) auf Hostnamen angewendet wird und ob IRI\-Analyseregeln beachtet werden sollen.  Dies können Sie in der Datei machine.config oder in der Datei app.config festlegen.  
+ In einer Anwendung kann angegeben werden, ob die IDN-Analyse auf Domänennamen angewendet werden soll und ob IRI-Analyseregeln anzuwenden sind. Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.  
   
- Durch das Aktivieren von IDN werden alle Unicode\-Bezeichnungen in einem Domänennamen in ihre Punycode\-Entsprechungen konvertiert.  Punycode\-Namen enthalten nur ASCII\-Zeichen und beginnen immer mit dem Präfix xn\-\-.  Der Grund dafür besteht in der Unterstützung vorhandener DNS\-Server im Internet, da die meisten DNS\-Server nur ASCII\-Zeichen unterstützen \(siehe RFC 3940\).  
+ Beim Aktivieren von IDN werden alle Unicode-Bezeichnungen in einem Domänennamen in ihre Punycode-Entsprechungen konvertiert. Punycode-Namen enthalten nur ASCII-Zeichen und beginnen immer mit dem Präfix „xn--“. So werden vorhandene DNS-Server im Internet unterstützt, da die meisten DNS-Server nur ASCII-Zeichen unterstützen (siehe RFC 3940).  
   
- Das Aktivieren von IRI und IDN wirkt sich auf den Wert der <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName>\-Eigenschaft aus.  Das Aktivieren von IRI und IDN kann auch das Verhalten der Methoden <xref:System.Uri.Equals%2A?displayProperty=fullName>, <xref:System.Uri.OriginalString%2A?displayProperty=fullName>, <xref:System.Uri.GetComponents%2A?displayProperty=fullName> und <xref:System.Uri.IsWellFormedOriginalString%2A> ändern.  
+ Das Aktivieren von IRI und IDN wirkt sich auf den Wert der Eigenschaft <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName> aus. Das Aktivieren von IRI und IDN kann auch das Verhalten der Methoden <xref:System.Uri.Equals%2A?displayProperty=fullName>, <xref:System.Uri.OriginalString%2A?displayProperty=fullName>, <xref:System.Uri.GetComponents%2A?displayProperty=fullName> und <xref:System.Uri.IsWellFormedOriginalString%2A> verändern.  
   
- Die <xref:System.GenericUriParser?displayProperty=fullName>\-Klasse wurde außerdem so erweitert, dass das Erstellen eines anpassbaren Parsers möglich ist, der IRI und IDN unterstützt.  Das Verhalten eines <xref:System.GenericUriParser?displayProperty=fullName>\-Objekts wird angegeben, indem eine bitweise Kombination der in der <xref:System.GenericUriParserOptions?displayProperty=fullName>\-Enumeration verfügbaren Werte an den <xref:System.GenericUriParser?displayProperty=fullName>\-Konstruktor übergeben wird.  Der <xref:System.GenericUriParserOptions?displayProperty=fullName>\-Typ gibt an, dass der Parser die in RFC 3987 für IRI \(International Resource Identifiers\) angegebenen Analyseregeln unterstützt.  Ob IRI tatsächlich verwendet wird, hängt davon ab, wenn IRI aktiviert ist.  
+ Die Klasse <xref:System.GenericUriParser?displayProperty=fullName> wurde ebenfalls erweitert, um das Erstellen eines anpassbaren Parsers zu ermöglichen, der IRI und IDN unterstützt. Das Verhalten eines <xref:System.GenericUriParser?displayProperty=fullName>-Objekts wird durch Übergabe einer bitweisen Kombination von Werten angegeben, die in der <xref:System.GenericUriParserOptions?displayProperty=fullName>-Enumeration des <xref:System.GenericUriParser?displayProperty=fullName>-Konstruktors verfügbar sind. Der <xref:System.GenericUriParserOptions.IriParsing?displayProperty=fullName>-Typ gibt an, dass der Parser die in RFC 3987 angegebenen Analyseregeln für International Resource Identifiers (IRI) unterstützt. Ob IRI auch tatsächlich verwendet wird, hängt davon ab, ob es aktiviert ist.  
   
- Der <xref:System.GenericUriParserOptions?displayProperty=fullName>\-Typ gibt an, dass der Parser IDN\-Analysen \(Internationalized Domain Name\) von Hostnamen unterstützt.  Ob IDN tatsächlich verwendet wird, hängt davon ab, wenn IDN aktiviert ist.  
+ Der <xref:System.GenericUriParserOptions.Idn?displayProperty=fullName>-Typ gibt an, dass der Parser die IDN-Analyse von Hostnamen unterstützt. Ob IDN auch tatsächlich verwendet wird, hängt davon ab, ob es aktiviert ist.  
   
- Das Aktivieren von IRI\-Analysen werden Normalisierung und Zeichenüberprüfung gemäß den aktuellen IRI\-Regeln in RFC 3987.  Der Standardwert ist für IRI, das analysiert deaktiviert werden, und sind Normalisierung und Zeichenüberprüfung gemäß RFC 2396 und RFC 3986.  
+ Durch Aktivieren der IRI-Analyse wird die Normalisierung und Zeichenüberprüfung gemäß den neuesten IRI-Regeln in RFC 3987 ausgeführt. Standardmäßig ist die IRI-Analyse deaktiviert, sodass die Normalisierung und Zeichenüberprüfung gemäß RFC 2396 und RFC 3986 durchgeführt wird.  
   
- IRI und IDN konfiguriert, die in der <xref:System.Uri?displayProperty=fullName>\-Klasse verarbeiten, können mit der <xref:System.Configuration.IriParsingElement?displayProperty=fullName> und <xref:System.Configuration.IdnElement?displayProperty=fullName> Konfigurationseinstellungsklassen auch gesteuert werden.  Die Einstellung <xref:System.Configuration.IriParsingElement?displayProperty=fullName> aktiviert oder deaktiviert die IRI\-Verarbeitung in der <xref:System.Uri?displayProperty=fullName>\-Klasse.  Die Einstellung <xref:System.Configuration.IdnElement?displayProperty=fullName> aktiviert oder deaktiviert die IDN\-Verarbeitung in der <xref:System.Uri>\-Klasse.  Mithilfe der Einstellung <xref:System.Configuration.IriParsingElement?displayProperty=fullName> wird IDN auch indirekt gesteuert.  Die IRI\-Verarbeitung muss aktiviert sein, damit IDN\-Verarbeitungsvorgänge ausgeführt werden können.  Wenn die IRI\-Verarbeitung deaktiviert ist, wird die IDN\-Verarbeitung auf die Standardeinstellung festgelegt, in der das .NET Framework 2.0\-Verhalten aus Kompatibilitätsgründen verwendet wird, und es werden keine IDN\-Namen verwendet.  
+ Die Verarbeitung von IRI und IDN in der Klasse <xref:System.Uri?displayProperty=fullName> kann auch mithilfe der Konfigurationseinstellungsklassen <xref:System.Configuration.IriParsingElement?displayProperty=fullName> und <xref:System.Configuration.IdnElement?displayProperty=fullName> gesteuert werden. Die Einstellung <xref:System.Configuration.IriParsingElement?displayProperty=fullName> aktiviert oder deaktiviert die IRI-Verarbeitung in der Klasse <xref:System.Uri?displayProperty=fullName>. Die Einstellung <xref:System.Configuration.IdnElement?displayProperty=fullName> aktiviert oder deaktiviert die IDN-Verarbeitung in der Klasse <xref:System.Uri>. Die Einstellung <xref:System.Configuration.IriParsingElement?displayProperty=fullName> steuert indirekt auch IDN. Die IRI-Verarbeitung muss aktiviert werden, damit die IDN-Verarbeitung überhaupt möglich ist. Ist die IRI-Verarbeitung deaktiviert, wird die IDN-Verarbeitung auf die Standardeinstellung festgelegt. Darin wird aus Kompatibilitätsgründen das .NET Framework 2.0-Verhalten verwendet, und IDN-Namen werden nicht verwendet.  
   
- Die Konfigurationseinstellung für die <xref:System.Configuration.IriParsingElement?displayProperty=fullName> und <xref:System.Configuration.IdnElement?displayProperty=fullName> Konfigurationsklassen wird einmal gelesen, wenn die erste <xref:System.Uri?displayProperty=fullName>\-Klasse erstellt wird.  Änderungen an Konfigurationseinstellungen nach diesem Zeitpunkt werden ignoriert.  
+ Die Konfigurationseinstellung für die Konfigurationsklassen <xref:System.Configuration.IriParsingElement?displayProperty=fullName> und <xref:System.Configuration.IdnElement?displayProperty=fullName> wird beim Erstellen der ersten Klasse <xref:System.Uri?displayProperty=fullName> einmal gelesen. Später vorgenommene Änderungen an den Konfigurationseinstellungen werden anschließend ignoriert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Configuration.IdnElement?displayProperty=fullName>   
  <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
  <xref:System.Uri?displayProperty=fullName>   
  <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName>
+

@@ -1,31 +1,35 @@
 ---
-title: "&lt;Anwendung&gt; Element (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Anwendung&gt; Element (.NET Native)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 106e1ae03a39594aab907e130c139b84f579257d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;Anwendung&gt; Element (.NET Native)
+# <a name="ltapplicationgt-element-net-native"></a>&lt;Anwendung&gt; Element (.NET Native)
 Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind, und wendet Laufzeitreflektionsrichtlinien auf alle Programmelemente in einer App an.  
   
- <>\>Element  
-<>\>-Element (rd.xml)  
+ \<Directives>-Element  
+\<Anwendung>-Element (rd.xml)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-  
 <Application Activate="policy_setting"  
              Browse="policy_setting"  
              Dynamic="policy_setting"  
@@ -36,7 +40,6 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
              MarshalObject="policy_setting"  
              MarshalDelegate="policy_setting"  
              MarshalStructure="policy_setting" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -50,9 +53,9 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über die Typen oder das Auflisten der Typen, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
 |`Serialize`|Serialisierung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.|  
-|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die mithilfe der <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> Klasse.|  
-|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung verwendet die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> Klasse.|  
-|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die verwendet die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> Klasse.|  
+|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
 |`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
@@ -61,39 +64,40 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung für diese Richtlinie, die auf die Typen in der App angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Laufzeitrichtlinieneinstellungen der Richtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung für diese Richtlinie, die auf die Typen in der App angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/assembly-element-net-native.md)|Wendet die Richtlinie auf alle Typen in einer bestimmten Assembly an.|  
-|[<>\>](../../../docs/framework/net-native/namespace-element-net-native.md)|Wendet die Richtlinie auf alle Typen in einem bestimmten Namespace an.|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Richtlinie auf einen bestimmten Typ, z. B. eine Klasse oder Struktur, an.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Richtlinie auf einen konstruierten generischen Typ an. Z. B. eine [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) Element konnte verwendet werden, um die Richtlinie für das Definieren einer `List<String>` Typ.|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Richtlinie auf eine Methode für einen bestimmten Typ an.|  
-|[<>\>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Richtlinie auf eine konstruierte generische Methode an.|  
-|[<>\>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Richtlinie auf eine Eigenschaft für einen bestimmten Typ an.|  
-|[<>\>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Richtlinie auf ein Feld für einen bestimmten Typ an.|  
-|[<>\>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Richtlinie auf ein Ereignis für einen bestimmten Typ an.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Wendet die Richtlinie auf alle Typen in einer bestimmten Assembly an.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Wendet die Richtlinie auf alle Typen in einem bestimmten Namespace an.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Richtlinie auf einen bestimmten Typ, z. B. eine Klasse oder Struktur, an.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Richtlinie auf einen konstruierten generischen Typ an. Zum Beispiel kann ein [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Element verwendet werden, um Richtlinien für einen `List<String>`-Typ zu definieren.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Richtlinie auf eine Methode für einen bestimmten Typ an.|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Richtlinie auf eine konstruierte generische Methode an.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Richtlinie auf eine Eigenschaft für einen bestimmten Typ an.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Richtlinie auf ein Feld für einen bestimmten Typ an.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Richtlinie auf ein Ereignis für einen bestimmten Typ an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/directives-element-net-native.md)|Das Stammelement einer Laufzeitdirektivendatei.|  
+|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|Das Stammelement einer Laufzeitdirektivendatei.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ <> \> ](../../../docs/framework/net-native/directives-element-net-native.md) Element kann NULL oder eins enthalten `<Application>` Element. Mehrere `<Application>`-Elemente in einer einzigen Reflektionsrichtliniendatei werden nicht unterstützt.  
+ Das [\<Richtlinien>](../../../docs/framework/net-native/directives-element-net-native.md)-Element kann null oder ein `<Application>`-Element enthalten. Mehrere `<Application>`-Elemente in einer einzigen Reflektionsrichtliniendatei werden nicht unterstützt.  
   
  Ein `<Application>`-Element kann auf zwei Arten verwendet werden:  
   
--   Als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. In diesem Fall muss das `<Application>`-Element keine Attribute haben. Zum Zeitpunkt der Kompilierung durchsuchen Compilertools alle Bibliotheken, einschließlich der .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des `<Application>`-Elements identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools nur die bezeichnete Bibliothek der [ <> \> ](../../../docs/framework/net-native/library-element-net-native.md) Element nach Programmelementen, die durch die untergeordneten Elemente des [ <> \</> \> ](../../../docs/framework/net-native/library-element-net-native.md).  
+-   Als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. In diesem Fall muss das `<Application>`-Element keine Attribute haben. Zum Zeitpunkt der Kompilierung durchsuchen Compilertools alle Bibliotheken, einschließlich der .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des `<Application>`-Elements identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools nur die vom [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element benannte Bibliothek nach Programmelementen, die durch die untergeordneten Elemente von [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) identifiziert werden.  
   
--   Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute der `<Application>` -Element definieren eine anwendungsweite-Richtlinie, die von den untergeordneten Elementen definiert überschrieben werden kann, die `<Application>` oder [ <> \> ](../../../docs/framework/net-native/library-element-net-native.md) Element.  
+-   Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute des `<Application>`-Elements definieren eine anwendungsweite Richtlinie, die von den durch das `<Application>`- oder [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element definierten untergeordneten Elementen überschrieben werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [<>\>Element](../../../docs/framework/net-native/library-element-net-native.md)   
- [<>\>Element](../../../docs/framework/net-native/directives-element-net-native.md)   
- [Elemente der Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Laufzeit-Konfigurationsdatei Laufzeitdirektiven (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+ [\<Library>-Element](../../../docs/framework/net-native/library-element-net-native.md)   
+ [\<Directives>-Element](../../../docs/framework/net-native/directives-element-net-native.md)   
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+

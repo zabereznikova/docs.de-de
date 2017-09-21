@@ -1,63 +1,81 @@
 ---
-title: "Peer Name Resolution-Protokoll (PNRP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Peer Name Resolution-Protokoll (PNRP)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
 # Peer Name Resolution-Protokoll (PNRP)
-In der gleichberechtigt Umgebung, in bestimmten Namensauflösungssystemen der Peerverwendung, von der jeweils anderen Netzwerkspeicherorten \(Adressen, Protokolle und Ports\) von den Namen oder anderen Typen Bezeichner aufzulösen.  In der Vergangenheit ist Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Stellen innerhalb des \(Domain Name System\) erschwert werden.  
+In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  
   
- Die gleichberechtigt Netzwerkfunktionsplattform Microsoft® Windows® löst dieses Problem mit dem Peer Name Resolution\-Protokoll \(PNRP\), einer sicheren, skalierbarer und dynamischen Nameregistrierung und einem Namensauflösungsprotokoll, das zuerst für Windows XP entwickelt wird und anschließend in Windows Vista ™ aktualisiert wird.  PNRP\-Arbeiten sehr unterschiedlich zu herkömmlichen Namensauflösungssystemen, aufregende neue Möglichkeiten für Anwendungsentwickler erschließend.  
+ Die Microsoft® Windows® Peer-zu-Peer Netwerkplattform löst dieses Problem mit dem Peer Name Resolution-Protokoll (PNRP), ein sicheres, skalierbares und dynamisches Namensregistrierungs- und Namensauflösungsprotokoll, das erstmals für Windows XP entwickelt und dann in Windows Vista™ aktualisiert wurde. Die Funktionsweise des PNRP unterscheidet sich sehr von traditionellen Auflösungssystemen und eröffnet interessante neue Möglichkeiten für Anwendungsentwickler.  
   
- Mit PNRP können Peernamen auf Computer\- oder einzelne Anwendungen oder Dienste auf dem Computer angewendet werden.  Eine Peernamensauflösung enthält eine Adresse, Port und möglicherweise eine erweiterte Nutzlast.  Vorteile dieser Systemeinschliessungsfehlertoleranz, keine Engpässe und der Namensauflösungen, die niemals veraltete Adressen zurückgeben; das Protokoll eine ausgezeichnete Lösung zum Lokalisieren mobiler Benutzer ausführen.  
+ Mit PNRP können Peernamen auf den Computer oder auf einzelne Anwendungen oder Dienste auf dem Computer angewendet werden. Eine Peernamensauflösung enthält eine Adresse, einen Port und möglicherweise eine erweiterte Nutzlast. Die Vorteile dieses Systems sind Fehlertoleranz, keine Engpässe, und Namensauflösungen, die niemals veraltete Adressen zurückgeben; das Protokoll ist somit eine ausgezeichnete Lösung für die Lokalisierung mobiler Benutzer.  
   
- Im Hinblick auf Sicherheit können Peernamen veröffentlicht werden, wie gesichert wurde \(geschützt\) oder ungesichert \(nicht geschützt\).  PNRP verwendet Kryptografie mit öffentlichen Schlüsseln, um sichere Peernamen gegen Spoofing zu schützen, Computer können und Dienste mit PNRP benannt werden.  
+ Im Hinblick auf die Sicherheit können Peernamen als gesichert (geschützt) oder unsicher (ungeschützt) veröffentlicht werden. PNRP verwendet die Kryptografie mit öffentlichem Schlüssel, um Peernamen gegen Spoofing zu schützen. Computer sowie Dienste können mit PNRP benannt werden.  
   
--   Das Peer Name Resolution\-Protokoll werden die folgenden Eigenschaften:  
+-   Das Peer Name Resolution-Protokoll hat die folgenden Eigenschaften:  
   
--   Verteilt und nahezu vollständig serverless.  Server sind für das Bootstrapverfahren nur erforderlich.  
+-   Verteilt und nahezu serverlos. Server werden nur in der Bootstrapping-Phase benötigt.  
   
--   Speichern Sie Nameveröffentlichung ohne die Beteiligung von Drittanbietern.  Anders als DNS\-Nameveröffentlichung ist PNRP\-Nameveröffentlichung und ohne Finanzkosten unmittelbar.  
+-   Speichern Sie die Namensveröffentlichung ohne die Beteiligung Dritter. Im Gegensatz zur DNS-Namensveröffentlichung ist die PNRP-Namensveröffentlichung ohne Verzögerung und kostenlos.  
   
--   PNRP\-Updates in Echtzeit, die die Auflösung von veralteten Adressen verhindert.  
+-   PNRP wird in Echtzeit aktualisiert. Somit wird die Auflösung veralteter Adressen verhindert.  
   
--   Die Auflösung von Namen zu PNRP erstreckt sich über Computern hinaus, indem sie auch Namensauflösung Dienste zulässt.  
+-   Die Auflösung von Namen per PNRP erstreckt sich über Computer hinaus, indem die Namensauflösung für Dienste zugelassen wird.  
   
-## Der System.Net.PeerToPeer\-Namespace  
+-  
   
--   PNRP\-Funktionalität wird durch den <xref:System.Net.PeerToPeer>\-Namespace in .NET Framework 3,5 definiert.  Sie stellt einen Satz von Typen, die verwendet werden können, um Peernamen mit einem verfügbaren PNRP\-Dienst einzutragen und beheben.  
+## Der System.Net.PeerToPeer-Namespace  
   
--   \(PNRP und benutzerdefinierte Peerresolver können mithilfe von Typen erstellt und instanziiert werden, die im <xref:System.ServiceModel.PeerResolvers>\-Namespace bereitgestellt werden\).  
+-   Die PNRP-Funktionalität wird durch den <xref:System.Net.PeerToPeer>-Namespace in .NET Framework, Version 3.5 definiert. Sie stellt eine Reihe von Typen zur Verfügung, die zum Registrieren und Auflösen von Peernamen mit einem verfügbaren PNRP-Dienst verwendet werden können.  
   
--   Die grundlegenden Typen, die verwendet werden, um Namen mit einem verfügbaren PNRP\-Dienst einzutragen und aufzulösen, sind, wie folgt:  
+-  
   
--   <xref:System.Net.PeerToPeer.Cloud>: Definiert die Informationen, die eine verfügbare PNRP\-Cloud, einschließlich des Bereich beschreiben.  
+-   (PNRP und benutzerdefinierte PeerResolver können mithilfe der im <xref:System.ServiceModel.PeerResolvers>-Namespace zur Verfügung gestellten Typen instanziiert und erstellt werden.)  
   
--   <xref:System.Net.PeerToPeer.PeerName>: Definiert einen Peernamen, der verwendet werden kann, um einen Peer innerhalb einer Cloud zu registrieren und nach aufzulösen.  
+-  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: Definiert den Datensatz in PNRP\-Cloud, die die Registrierungsinformationen für einen Peer enthält, der die Verbindungsendpunkte enthält, an denen mit den Peer Kontakt hergestellt werden kann.  
+-   Die grundlegenden Typen, die zum Registrieren und Auflösen von Namen mit einem verfügbaren PNRP-Dienst verwendet werden, sind wie folgt:  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Definiert den Registrierungsvorgang für einen Peernamen, einschließlich Methoden, um Peernameregistrierung starten und beenden.  
+-  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens den Verbindungsendpunkten, einschließlich der synchronen und asynchronen Methoden zur Lösung.  
+-   <xref:System.Net.PeerToPeer.Cloud>: Definiert die Informationen, die eine verfügbare PNRP-Cloud, einschließlich ihres Bereichs beschreiben.  
+  
+-   <xref:System.Net.PeerToPeer.PeerName>: Definiert einen Peernamen, der zum Registrieren und anschließendem Auflösen von einem Peer in einer Cloud verwendet werden kann.  
+  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>: Definiert den Datensatz in der PNRP-Cloud, die die Registrierungsinformationen für einen Peer enthält, der die Netzwerk-Endpunkte mit einschließt, an denen der Peer kontaktiert werden kann.  
+  
+-   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Definiert den Registrierungsvorgang für einen Peernamen, einschließlich der Methoden, um die Peer-Namensregistrierung zu starten oder zu beenden.  
+  
+-   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens in den/die zugehörigen Netzwerk-Endpunkt(e), einschließlich der synchronen und asynchronen Methoden für die Auflösung.  
+  
+-  
+  
+-  
   
 ## Siehe auch  
  <xref:System.ServiceModel.PeerResolvers>   
  <xref:System.Net.PeerToPeer>   
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)   
- [PeerToPeer Technologie\-Beispiel](http://go.microsoft.com/fwlink/?LinkID=179571)
+ [Beispiele für die PeerToPeer-Technologie](http://go.microsoft.com/fwlink/?LinkID=179571)
+

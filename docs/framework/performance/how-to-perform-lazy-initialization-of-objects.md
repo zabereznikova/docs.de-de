@@ -1,28 +1,33 @@
 ---
-title: "How to: Perform Lazy Initialization of Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lazy initialization in .NET, how to perform"
+title: "Gewusst wie: Verzögerte Initialisierung von Objekten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Perform Lazy Initialization of Objects
-Die <xref:System.Lazy%601?displayProperty=fullName>\-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten.  Wenn Sie Objekte verzögert initialisieren, müssen Sie die Objekte ggf. gar nicht erstellen, falls sie nie benötigt werden, oder Sie können ihre Initialisierung bis zum ersten Zugriff verschieben.  Weitere Informationen finden Sie unter [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Gewusst wie: Verzögerte Initialisierung von Objekten
+Die <xref:System.Lazy%601?displayProperty=fullName>-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten. Beim verzögerten Initialisieren von Objekten können Sie die Erstellung vermeiden, wenn diese nie gebraucht werden, oder Sie können die Initialisierung verschieben, bis ein erster Zugriff erfolgt. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird das Initialisieren eines Werts mit <xref:System.Lazy%601> gezeigt.  In diesem Beispiel wird angenommen, dass die verzögerte Variable abhängig von anderem Code, durch den die `someCondition`\-Variable auf true oder false festgelegt wird, möglicherweise nicht benötigt wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie ein Wert mit <xref:System.Lazy%601> initialisiert wird. Gehen wir davon aus, dass die verzögerte Variable abhängig von anderem Code, der die `someCondition`-Variable auf TRUE oder FALSE festlegt, nicht gebraucht wird.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -72,12 +77,12 @@ End Sub
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung der <xref:System.Threading.ThreadLocal%601?displayProperty=fullName>\-Klasse zum Initialisieren eines Typs gezeigt, der nur für die aktuelle Objektinstanz im aktuellen Thread sichtbar ist.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.ThreadLocal%601?displayProperty=fullName>-Klasse verwenden, um die Initialisierung eines Typs durchzuführen, der nur für die aktuelle Objektinstanz für den aktuellen Thread sichtbar ist.  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
- [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
- [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md)
+ [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md)
+

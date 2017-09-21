@@ -1,28 +1,32 @@
 ---
-title: "&lt;TypeInstantiation&gt; Element (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;TypeInstantiation&gt; Element (.NET Native)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;TypeInstantiation&gt; Element (.NET Native)
+# <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Typ an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-  
 <TypeInstantiation Name="type_name"  
                    Arguments="type_arguments"  
                    Activate="policy_type"  
@@ -35,7 +39,6 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
                    MarshalObject="policy_setting"  
                    MarshalDelegate="policy_setting"  
                    MarshalStructure="policy_setting" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -51,9 +54,9 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
 |`Serialize`|Serialisierung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.|  
-|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die mithilfe der <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> Klasse.|  
-|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung verwendet die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> Klasse.|  
-|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die verwendet die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> Klasse.|  
+|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
 |`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
@@ -62,7 +65,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*TYPE_NAME*|Der Typname. Wenn diese `<TypeInstantiation>` Element untergeordnet ist ein [ <> \> ](../../../docs/framework/net-native/namespace-element-net-native.md) -Element, ein [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) Elements oder eines anderen `<TypeInstantiation>` Element, *Type_name* können den Namen des Typs ohne den Namespace angeben. Andernfalls *Type_name* muss den vollqualifizierten Typnamen enthalten. Der Typname wird nicht ergänzt. Z. B. für eine <xref:System.Collections.Generic.List%601?displayProperty=fullName> -Objekt, das `<TypeInstantiation>` Element könnte wie folgt aussehen:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Der Typname. Wenn dieses `<TypeInstantiation>`-Element das untergeordnete Element eines [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)-, [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- oder eines anderen `<TypeInstantiation>`-Elements ist, können *type_name*-Elemente den Namen des Typs ohne dessen Namespace enthalten. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten. Der Typname wird nicht ergänzt. Für ein <xref:System.Collections.Generic.List%601?displayProperty=fullName>-Objekt könnte das `<TypeInstantiation>`-Element z. B. wie folgt aussehen:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Arguments-Attribut  
   
@@ -74,46 +77,45 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für den konstruierten generischen Typ anzuwenden ist. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Laufzeitrichtlinieneinstellungen der Richtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für den konstruierten generischen Typ anzuwenden ist. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
-|[<>\>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
-|[<>\>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie an den Typ angewendet wurde, der vom enthaltenden `<TypeInstantiation>`-Element dargestellt wird.|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
-|[<>\>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine konstruierte generische Methode dieses Typs an.|  
-|[<>\>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen geschachtelten Typ an.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
+|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie an den Typ angewendet wurde, der vom enthaltenden `<TypeInstantiation>`-Element dargestellt wird.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine konstruierte generische Methode dieses Typs an.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen geschachtelten Typ an.|  
 |`<TypeInstantiation>`|Wendet die Reflektionsrichtlinie auf einen geschachtelten konstruierten generischen Typ an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
-|[<>\>](../../../docs/framework/net-native/assembly-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
-|[<>\>](../../../docs/framework/net-native/library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
-|[<>\>](../../../docs/framework/net-native/namespace-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einem Namespace an.|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einem Namespace an.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |`<TypeInstantiation>`|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Reflektions-, Serialisierungs- und Interop-Attribute sind optional. Allerdings muss mindestens eines vorhanden sein.  
   
- Wenn ein `<TypeInstantiation>` Element ist das untergeordnete Element ein [ <> \</> \> ](../../../docs/framework/net-native/assembly-element-net-native.md), [ <> \</> \> ](../../../docs/framework/net-native/namespace-element-net-native.md), oder [ <> \</> \> ](../../../docs/framework/net-native/type-element-net-native.md), Elements ist, überschreibt es die vom übergeordneten Element definierten Richtlinieneinstellungen. Wenn ein [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) Element definiert eine entsprechende generische Typdefinition der `<TypeInstantiation>` -Element überschreibt die laufzeitreflektionsrichtlinie nur für Instanziierungen des angegebenen konstruierten generischen Typs.  
+ Wenn ein `<TypeInstantiation>`-Element ein untergeordnetes Element eines [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-, [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)- oder [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Elements ist, überschreibt es die vom übergeordneten Element definierten Richtlinieneinstellungen. Wenn ein [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Element eine entsprechende generische Typdefinition definiert, überschreibt das `<TypeInstantiation>`-Element die Laufzeitreflektionsrichtlinie nur für Instanziierungen des angegebenen konstruierten generischen Typs.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird Reflektion zum Abrufen der generischen Typdefinition von einem konstruierten <xref:System.Collections.Generic.Dictionary%602> Objekt.</TKey, TValue> Darüber hinaus verwendet Reflektion zum Anzeigen von Informationen über <xref:System.Type> Objekte, die konstruierte generische Typen und generische Typdefinitionen darstellen. Die Variable `b` in diesem Beispiel ist ein [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) Steuerelement.  
+ Im folgenden Beispiel wird Reflektion zum Abrufen der generischen Typdefinition von einem konstruierten <xref:System.Collections.Generic.Dictionary%602>-Objekt verwendet. Außerdem wird Reflektion zum Anzeigen von Informationen über <xref:System.Type>-Objekte verwendet, die konstruierte generische Typen und generische Typdefinitionen darstellen. Die Variable `b` im Beispiel ist ein [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Steuerelement.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Nach der Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)] -toolkette löst das Beispiel eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) Ausnahme in der Zeile, die Aufrufe der <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName> Methode. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitdirektivendatei hinzufügen:  
+ Nach der Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette löst das Beispiel eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme in der Zeile aus, die die <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>-Methode aufruft. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitdirektivendatei hinzufügen:  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
   <Application>  
     <Assembly Name="*Application*" Dynamic="Required All" />  
@@ -122,10 +124,10 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
                         Dynamic="Required Public" />  
   </Application>  
 </Directives>  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Laufzeit-Konfigurationsdatei Laufzeitdirektiven (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elemente der Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Richtlinie für die Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+ [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

@@ -1,51 +1,61 @@
 ---
-title: "Peer-to-Peer-Zusammenarbeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Peer-to-Peer-Zusammenarbeit
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Peer-to-Peer-Zusammenarbeit
-gleichberechtigt Netzwerkfunktionen sind die Auslastung der relativ leistungsstarken Computer \(Personalcomputer\) die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind.  Der moderne Personalcomputer \(PC\) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Speicherplatz und eine große Festplatte, von der keine vollständig verwendet werden, wenn die allgemeine Rechenaufgaben wie E\-Mail und Webbrowsen ausführt.  Das moderne PC kann als Client und Server \(ein Peer\) für viele Typen Anwendungen leicht auftreten.  
+# <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
+Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Der moderne Personalcomputer (PC) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Arbeitsspeicher und eine große Festplatte, die beim Ausführen von allgemeinen Rechenaufgaben, wie z.B. E-Mail und Webbrowsen allesamt nicht voll ausgelastet werden. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  
   
--   Die gleichberechtigt Zusammenarbeits\-Infrastruktur ist eine vereinfachte Implementierung der gleichberechtigt Infrastruktur Microsoft Windows, die die Personen neben mir Dienst in Windows Vista und in späteren Plattformen nutzt.  Sie wird am besten für Peer\-aktivierte Anwendungen in einem Subnetzes verwendet, für das die Personen neben mir Dienst funktionieren, obwohl Internet\-Endpunkte oder \-Kontakte auch verarbeitet werden können.  Sie enthält den allgemeinen Kontakt\-Manager, der durch Live Messenger und andere Liv\-bewusste Anwendungen, Kontaktendpunkte, \-Verfügbarkeit und \-Vorhandensein zu bestimmen verwendet wird.  
+-   Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementierung der Microsoft Windows-Peer-zu-Peer-Infrastruktur, die den Dienst „Personen in meiner Umgebung“ in Windows Vista und späteren Plattformen nutzt. Sie wird am besten für Peer-fähige Anwendungen innerhalb eines Subnetzes verwendet, für die der „Personen in meiner Umgebung“-Dienst ausgeführt wird, obwohl sie auch Internetendpunkte oder Kontakte bedienen kann. Sie beinhaltet den gängigen Contact Manager, der vom Live Messenger und anderen Live-fähigen Anwendungen verwendet wird, um die Kontaktendpunkte, die Verfügbarkeit und die Präsenz zu bestimmen.  
   
-## Zusammenarbeits\-Anwendungen  
- Eine typische gleichberechtigt Zusammenarbeits\-Anwendung wird aus den folgenden Schritten enthalten:  
+-  
   
--   Peer bestimmt die Identität eines Peers, der Bedeutung sind, an, eine Zusammenarbeitssitzung zu hosten  
+## <a name="collaboration-applications"></a>Kollaborationsanwendungen  
+ Eine typische Peer-zu-Peer-Kollaborationsanwendung umfasst die folgenden Schritte:  
   
--   Eine Anforderung, eine Sitzung zu hosten, wird ein gesendet, und der Hostpeer ist darauf, Zusammenarbeitsaktivität zu verwalten.  
+-   Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
   
--   Der Host lädt Kontakte auf dem Subnetz \(einschließlich den anfordernden Benutzer\) zu einer Sitzung ein.  
+-   Eine Anforderung zum Hosten einer Sitzung wird aus irgendeinem Grund gesendet, und der Peer erklärt sich dazu bereit, die Kollaborationstätigkeit zu verwalten.  
   
--   Alle Peers, die zusammenarbeiten möchten, können den Host ihren Kontaktmanagern hinzu.  
+-   Der Host lädt Kontakte im Subnetz (einschließlich des Anforderers) zu einer Sitzung ein.  
   
--   Die meisten Peers senden Einladungsantworten, ob akzeptiert oder, zurück zum Hostpeer rechtzeitig gesunken.  
+-   Alle Peers, die kollaborieren möchten, können den Host zu Ihrem Kontaktmanager hinzufügen.  
   
--   Alle Peers, die zusammenarbeiten möchten, z Hostpeer abonnieren.  
+-   Die meisten Peers senden die Antwort auf die Einladung, ob akzeptiert oder abgelehnt, zeitnah zurück an den Hostpeer.  
   
--   Während die Peers ihre ursprüngliche Zusammenarbeitsaktivität ausführen, wird möglicherweise der Hostpeer Remote Peers seinem Kontaktmanager hinzu.  Er verarbeitet auch alle Einladungsantworten, um zu bestimmen, wer akzeptiert haben, das gesunken ist und nicht geantwortet verfügt.  Es Einladungen auf die abbrechen, die nicht geantwortet haben, oder führt möglicherweise etwas andere Aktivität aus.  
+-   Alle Peers, die kollaborieren möchten, abonnieren den Hostpeer.  
   
--   An diesem Punkt kann der Hostpeer eine Zusammenarbeitssitzung mit allen eingeladenen Peers starten, oder registrieren Sie eine Anwendung mit der Zusammenarbeitsinfrastruktur.  P2P\-Anwendungen verwenden die gleichberechtigt Zusammenarbeits\-Infrastruktur und den <xref:System.Net.PeerToPeer.Collaboration>\-Namespace, um die Kommunikation für Spiele, Anschlagbretter, Konferenz und andere serverless Vorhandenseins\-Anwendungen zu koordinieren.  
+-   Während die Peers ihre anfängliche Kollaborationsaktivität ausführen, kann der Hostpeer Remotepeers zu seinem Kontaktmanager hinzufügen. Er verarbeitet auch alle Antworten auf Einladungen, um zu bestimmen, wer die Einladung akzeptiert, wer sie abgelehnt, und wer nicht geantwortet hat.  Er kann möglicherweise Einladungen an jene, die nicht geantwortet haben, widerrufen oder einige andere Aktivitäten durchführen.  
   
-## gleichberechtigt Netzwerkfunktionens\-Sicherheit  
- In einer Active Directory\-Domäne stellen Domänencontroller Authentifizierungsdienste mithilfe Kerbeross.  In einer serverless Peerumgebung müssen die Peers ihre eigene Authentifizierung bereitstellen.  Für gleichberechtigt Netzwerkfunktionen kann jeder Knoten als ein Zertifizierungsstelle auftreten und die Anforderung eines Stammzertifikats in dessen Sicherheitsauswirkungen Stammspeicher jedes Peers entfernen.  Authentifizierung wird mithilfe der selbstsignierten Zertifikate bereitgestellt, formatiert als X.509\-Zertifikate.  Diese sind Zertifikate, die jedem Peer erstellt werden, der die beiden des öffentlichen Schlüssels\/des privaten Schlüssels und das Zertifikat generiert, das mit dem privaten Schlüssel signiert wird.  Das selbstsignierte Zertifikat für Authentifizierung und Informationen über die Partnerinstanz bereitzustellen verwendet.  Wie X.509\-Authentifizierung erstellt Peernetzwerkfunktionsauthentifizierung auf eine Kette von den Zertifikaten, die zurück auf einen öffentlichen Schlüssel aufzeichnen, der vertrauenswürdig ist.  
+-   An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
   
-## Siehe auch  
+-  
+  
+## <a name="peer-to-peer-networking-security"></a>Peer-zu-Peer-Netzwerksicherheit  
+ In einer Active Directory-Domäne bieten Domänencontroller Kerberos-Authentifizierungsdienste an. In einer serverlosen Peer-Umgebung müssen die Peers ihre eigene Authentifizierung bereitstellen. Für das Peer-zu-Peer-Netzwerk kann jeder beliebige Knoten als Zertifizierungsstelle fungieren, wobei die Anforderung für ein Stammzertifikat in jedem vertrauenswürdigen Stammspeicher des Peers wegfällt. Die Authentifizierung wird unter Verwendung selbstsignierter Zertifikate, formatiert als x. 509-Zertifikate, bereitgestellt. Hierbei handelt es sich um Zertifikate, die von jedem Peer erstellt werden, der den öffentlichen Schlüssel/das private Schlüsselpaar und das Zertifikat, das mit dem privaten Schlüssel signiert ist, generiert. Das selbstsignierte Zertifikat wird zur Authentifizierung und zum Bereitstellen von Informationen über die Peer-Entität verwendet. Wie bei der X.509-Authentifizierung, verlässt sich die Peer-Netzwerkauthentifizierung auf eine Kette von Zertifikaten, die auf einen öffentlichen Schlüssel zurückführen, der als vertrauenswürdig eingestuft wird.  
+  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.PeerToPeer.Collaboration>   
- [Informationen zum System.NET.PeerToPeer.Collaboration\-Namespace](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+ [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+

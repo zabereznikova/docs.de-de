@@ -1,66 +1,72 @@
 ---
-title: "&#196;nderungen an der NTLM-Authentifizierung f&#252;r „HttpWebRequest“ in Version&#160;3.5 SP1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &#196;nderungen an der NTLM-Authentifizierung f&#252;r „HttpWebRequest“ in Version&#160;3.5 SP1
-Sicherheitsänderungen wurden in .NET Framework 3,5 SP1 und später in diesem Auswirkungen vorgenommen, wie die integrierte Windows\-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> und die verknüpften Klassen im System.Net\-Namespace behandelt wird.  Diese Änderungen können Anwendungen auswirken, die diese Klassen verwenden, um Webanforderungen zu stellen und Antworten zu empfangen, in denen die integrierte Windows\-Authentifizierung auf Grundlage NTLM verwendet wird.  Diese Änderung kann Webserver und Clientanwendungen auswirken, die so konfiguriert werden, um die Windows\-Authentifizierung zu verwenden.  
+# <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
+Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> und verwandte Klassen im System.Net-Namespace behandelt wird. Diese Änderungen können sich auf Anwendungen auswirken, die diese Klassen für Webanforderungen und den Empfang der Antworten verwenden, in denen die integrierte Windows-Authentifizierung auf NTLM-Basis verwendet wird. Die Änderung kann sich auf Webserver und Clientanwendungen auswirken, die für die Verwendung der integrierten Windows-Authentifizierung konfiguriert sind.  
   
-## Übersicht  
- Der Entwurf der integrierten Windows\-Authentifizierung darf, damit mehrere Anmeldeinformationen Antworten universell sind und sie bedeuten, können wiederverwendet werden oder weitergeleitet werden.  Wenn diese bestimmte Entwurfsfeature nicht erforderlich ist, sollten die Authentifizierungsprotokolle Informationen sowie Channelbesondereinformationen des Ziels tragen bestimmte.  Dienste können erweiterten Schutz dann bieten, um sicherzustellen, dass Anmeldeinformationen Antworten bestimmte Informationen des Diensts wie ein Dienstprinzipalname \(SPN\) enthalten.  Mit diesen Informationen in den Anmeldeinformationen Austausch, sind Dienste, vor böswilligen Verwendung von Anmeldeinformationen Antworten besser schützen, die möglicherweise nicht ordnungsgemäß abgerufen wurde.  
+## <a name="overview"></a>Übersicht  
+ Durch die Gestaltung der integrierten Windows-Authentifizierung sind einige Abfragerückmeldungen zu Anmeldeinformationen universell, d.h., sie können wiederverwendet oder weitergeleitet werden. Wenn diese bestimmte Entwurfsfunktion nicht erforderlich ist, müssen die Authentifizierungsprotokolle zielspezifische Informationen sowie bestimmte Kanalinformationen enthalten. Der erweiterte Schutz kann dann von Diensten bereitgestellt werden, damit Abfragerückmeldungen zu Anmeldeinformationen auch sicher dienstspezifische Informationen, wie z.B. einen Dienstprinzipalnamen (SPN), enthalten. Enthält der Austausch von Anmeldedaten diese Informationen, können die Dienste besser vor einer böswilligen Verwendung von Abfragerückmeldungen geschützt werden, die möglicherweise nicht ordnungsgemäß verwendet wurden.  
   
- Mehrere Komponenten in <xref:System.Net> und <xref:System.Net.Security>\-Namespaces führen integrierte Windows\-Authentifizierung im Namen eines aufrufende Anwendung aus.  In diesem Abschnitt werden Änderungen an System.Net\-Komponenten, um erweiterten Schutz in ihrem Verwendung von der integrierten Windows\-Authentifizierung hinzuzufügen.  
+ Mehrere Komponenten der Namespaces <xref:System.Net> und <xref:System.Net.Security> führen die integrierte Windows-Authentifizierung für eine aufrufende Anwendung aus. In diesem Abschnitt werden die erforderlichen Änderungen an System.Net-Komponenten beschrieben, um den erweiterten Schutz ihrer Verwendung der integrierten Windows-Authentifizierung hinzuzufügen.  
   
-## Änderungen  
- Der NTLM\-Authentifizierungsprozess, der mit der integrierten Windows\-Authentifizierung verwendet wird, enthält eine Herausforderung, die durch den Zielcomputer und das zurückgeschickte auf den Clientcomputer ausgegeben wird.  Wenn ein Computer eine Herausforderung empfängt, die er sich generierte, schlägt die Authentifizierung aus, es sei denn, die Verbindung Schleifenbetrieb\-Verbindung ist eine IPv4\-Adresse \(127.0.0.1\).  
+## <a name="changes"></a>Änderungen  
+ Der bei der integrierten Windows-Authentifizierung verwendete NTLM-Authentifizierungsvorgang enthält eine Abfrage, die vom Zielcomputer ausgegeben und an den Clientcomputer zurückgesendet wird. Wenn ein Computer eine Abfrage erhält, die er selbst generiert hat, schlägt die Authentifizierung fehl, es sei denn, es handelt sich um eine Schleife (z.B. IPv4-Adresse 127.0.0.1).  
   
- Wenn es auf einen der internen auf einem Webserver zugreift, ist es häufig auf den Dienst, mit einer URL zuzugreifen, die in http:\/\/contoso\/service oder https:\/\/contoso\/service ähnelt.  Der Name "contoso" ist häufig nicht den Computernamen des Computers, auf dem der Dienst bereitgestellt wird.  <xref:System.Net> und verwandte die Namespaceunterstützung mit Active Directory, DNS, NetBIOSs, der Hostdatei des lokalen Computers \(in der Regel WINDOWS\\system32\\drivers\\etc\\hosts\), oder der lmhosts des lokalen Computers Dateien \(in der Regel WINDOWS\\system32\\drivers\\etc\\lmhosts\), um Namen den Adressen aufzulösen.  Der Name "contoso" aufgelöst wird, damit die Anforderungen, die auf "contoso" gesendet werden, zum entsprechenden Servercomputer gesendet werden.  
+ Beim Zugriff auf einen Dienst, der auf einem internen Webserver ausgeführt wird, ist es üblich, mithilfe einer URL ähnlich wie http://contoso/service oder https://contoso/service auf den Dienst zuzugreifen. Der Name „Contoso“ ist häufig nicht der Computername des Computers, auf dem der Dienst bereitgestellt wird. Die <xref:System.Net> und zugehörigen Namespaces unterstützen, mithilfe von Active Directory, DNS, NetBIOS, die Hostdatei des lokalen Computers (in der Regel beispielsweise WINDOWS\system32\drivers\etc\hosts) oder die die LmHostdatei des lokalen Computers (in der Regel beispielsweise WINDOWS\system32\drivers\etc\lmhosts) zum Auflösen von Namen zu Adressen. Der Name „Contoso“ wird aufgelöst, sodass an „Contoso“ gesendete Anforderungen an den entsprechenden Servercomputer gesendet werden.  
   
- Wenn es für große Bereitstellungen konfiguriert ist, ist auch üblich, dass ein einzelner Name des virtuellen Servers zur Bereitstellung mit den zugrunde liegenden Computernamen angegeben werden kann, die nie von Clientanwendungen und von den Endbenutzern verwendet werden.  Beispielsweise könnten Sie den Server www.contoso.com, jedoch auf einer Verwendung "contoso" des internen Netzwerks einfach auf.  Dieser Name wird den Host\-Header in der Clientwebanforderung aufgerufen.  Wie durch das HTTP\-Protokoll angegeben, gibt das Hostanforderungsheaderfeld den Internet\-Host und die Portnummer der Ressource an, die angefordert wird.  Diese Informationen werden aus der Vorlage URI abgerufen, die vom Benutzer oder die verweisende Ressource \(im Allgemeinen ein HTTP\-URL\) angegeben ist.  In .NET Framework, Version 4 können diese Informationen vom Client auch festgelegt werden, der die neue <xref:System.Net.HttpWebRequest.Host%2A>\-Eigenschaft verwendet.  
+ Bei der Konfiguration für große Bereitstellungen erhält die Bereitstellung mit dem zugrunde liegenden Computernamen, die nie von Clientanwendungen und Endbenutzern verwendet werden, in der Regel einen einzelnen virtuellen Servernamen. Sie können den Server z.B. www.contoso.com nennen, jedoch in einem internen Netzwerk einfach „Contoso“ verwenden. Dieser Name ist der Hostheader in der Clientwebanforderung. Das Feld „Host-Anforderungsheader“ gibt gemäß dem HTTP-Protokoll den Internet-Host und die Portanzahl der angeforderten Ressource an. Diese Information wird aus dem ursprünglichen URI abgerufen, der vom Benutzer oder der Referenzressource (in der Regel eine HTTP-URL) angegeben wird. Auf .NET Framework, Version 4, können diese Informationen auch vom Client mit der neuen <xref:System.Net.HttpWebRequest.Host%2A>-Eigenschaft festgelegt werden.  
   
- Die <xref:System.Net.AuthenticationManager>\-Klasse steuert die verwalteten Authentifizierungskomponenten \("Module"\) die von abgeleiteten Klassen <xref:System.Net.WebRequest> und die <xref:System.Net.WebClient>\-Klasse verwendet werden.  Die <xref:System.Net.AuthenticationManager>\-Klasse stellt eine Eigenschaft, die ein <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>\-Objekt verfügbar gemacht wird, indiziert durch URI\-Zeichenfolge, denn Anwendungen, eine während der Authentifizierung zu verwendende Zeichenfolge der benutzerdefinierten SPN anzugeben.  
+ Die <xref:System.Net.AuthenticationManager>-Klasse steuert die verwalteten Authentifizierungskomponenten („Module“), die von abgeleiteten <xref:System.Net.WebRequest>-und den <xref:System.Net.WebClient>-Klassen verwendet werden. Die <xref:System.Net.AuthenticationManager>-Klasse enthält eine Eigenschaft, die ein <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>-Objekt verfügbar macht, das von einer URI-Zeichenfolge indiziert ist, damit Anwendungen eine benutzerdefinierte SPN-Zeichenfolge bereitstellen können, die während der Authentifizierung verwendet wird.  
   
- Version 3.5 SP1 gibt jetzt standardmäßig den in der Anforderungs\-URL verwendeten Hostnamen im SPN im NTLM \(NT LAN\-Manager\)\-Authentifizierungsaustausch an, wenn die <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>\-Eigenschaft nicht festgelegt wird.  Der in der Anforderungs\-URL verwendete Hostname ist möglicherweise anders als der Hostheader, der in <xref:System.Net.HttpRequestHeader?displayProperty=fullName> in der Clientanforderung angegeben wurde.  Der in der Anforderungs\-URL verwendete Hostname unterscheidet sich möglicherweise vom tatsächlichen Hostnamen des Servers, vom Computernamen des Servers, von der IP\-Adresse des Computers oder von der Loopbackadresse.  In diesen Fällen schlägt die Authentifizierungsanforderung unter Windows fehl.  Um das Problem zu beheben, müssen wir Windows benachrichtigen dass der Hostname, der in der Anforderungs\-URL in der Clientanforderung verwendet wird \("contoso"\), tatsächlich ein alternativer Name für den lokalen Computer.  
+ Version 3.5 SP1 gibt jetzt standardmäßig den Hostnamen in der Anforderungs-URL in der SPN im NTLM-Authentifizierungsaustausch (NT LAN Manager) an, wenn die <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>-Eigenschaft nicht festgelegt ist. Der Hostname in der Anforderungs-URL kann vom in <xref:System.Net.HttpRequestHeader?displayProperty=fullName> in der Clientanforderung angegebenen Hostheader abweichen. Der Hostname in der Anforderungs-URL kann vom tatsächlichen Hostnamen des Servers, dem Computernamen des Servers, der IP-Adresse des Computers oder der Loopbackadresse abweichen. In diesen Fällen schlägt die Authentifizierungsanforderung in Windows fehl. Um das Problem zu beheben, müssen wir Windows benachrichtigen, dass der Hostname in der Anforderungs-URL in der Client-Anforderung (z.B. „Contoso“) tatsächlich ein alternativer Name für den lokalen Computer ist.  
   
- Es gibt mehrere Möglichkeiten, damit eine Serveranwendung um diese Änderung funktioniert.  Es empfiehlt sich, den Hostnamen zuzuordnen, der in der Anforderungs\-URL zur `BackConnectionHostNames` Schlüssel in der Registrierung auf dem Server verwendet wird.  Der `BackConnectionHostNames` Registrierungsschlüssel wird normalerweise verwendet, um einen Hostnamen zu einer Loopbackadresse zuzuordnen.  Die Schritte sind nachfolgend aufgeführt.  
+ Es gibt mehrere Methoden, mit denen eine Serveranwendung diese Änderung umgehen kann. Die empfohlene Vorgehensweise ist, den Hostnamen in der Anforderungs-URL zum `BackConnectionHostNames`-Schlüssel in der Registrierung auf dem Server zuzuordnen. Der `BackConnectionHostNames`-Registrierungsschlüssel wird normalerweise verwendet, um einen Hostnamen einer Loopbackadresse zuzuordnen. Die Schritte sind unten aufgeführt.  
   
- Um die Hostnamen anzugeben die zur Loopbackadresse zugeordnet werden und an Websites auf einem lokalen Computer herstellen können, führen Sie folgende Schritte aus:  
+ Um die Hostnamen anzugeben, die der Loopbackadresse zugeordnet sind, und die mit Websites auf einem lokalen Computer verbunden werden können, gehen Sie folgendermaßen vor:  
   
- 1.  Klicken Sie auf Start und auf Ausführen, geben Sie „regedit“ ein, und klicken Sie anschließend auf OK.  
+ 1. Klicken Sie auf „Start“ und auf „Ausführen“, geben Sie „regedit“ ein, und klicken Sie anschließend auf „OK“.  
   
- 2.  Suchen Sie im Registrierungs\-Editor und klicken Sie dann auf den folgenden Registrierungsschlüssel:  
+ 2. Suchen Sie im Registrierungs-Editor den folgenden Registrierungsschlüssel, und klicken Sie darauf:  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0`  
   
- 3.  Klicken Sie auf MSV1\_0 mit der rechten Maustaste, zeigen Sie auf Neu, und klicken Sie dann auf MULTI\-Zeichenfolge Wert.  
+ 3. Klicken Sie mit der rechten Maustaste auf „MSV1_0“, zeigen Sie auf „Neu“, und klicken Sie dann auf „Mehrteilige Zeichenfolge“.  
   
- 4.  Geben Sie `BackConnectionHostNames` ein, und drücken Sie dann die EINGABETASTE.  
+ 4. Geben Sie `BackConnectionHostNames` ein, und drücken Sie dann die EINGABETASTE.  
   
- 5.  Klicken Sie auf `BackConnectionHostNames` mit der rechten Maustaste und dann ändern.  
+ 5. Klicken Sie mit der rechten Maustaste auf `BackConnectionHostNames`, und klicken Sie dann auf „Bearbeiten“.  
   
- 6.  In den Wertsdaten schachtelnde Sie, geben Sie den Hostnamen oder die Hostnamen für die Websites \(der Hostname verwendet in der Anforderungs\-URL\) und auf dem lokalen Computer sind ein, und klicken Sie dann auf OK.  
+ 6. Geben Sie im Feld „Wertdaten“ den Hostnamen oder die Hostnamen für die Standorte an (Hostname, der im Anforderungs-URL verwendet wird), die sich auf dem lokalen Computer befinden, und klicken Sie dann auf „OK“.  
   
- 7.  Lassen Sie den Registrierungs\-Editor und starten Sie den IISAdmin\-Dienst und das ausgeführte IISReset neu.  
+ 7. Beenden Sie den Registrierungs-Editor, starten Sie den IISAdmin-Dienst neu, und führen Sie IISReset aus.  
   
- Eine weniger sichere Arbeit ist ungefähr, die Schleifenbetriebüberprüfung zu deaktivieren, wie in [http:\/\/support.microsoft.com\/kb\/896861](http://go.microsoft.com/fwlink/?LinkID=179657) beschrieben.  Dieses deaktiviert den Schutz gegen Reflektionsangriffe.  Daher ist es besser, den Satz von alternativen Namen auf lediglich die einzuschränken, die Sie den Computer erwarten, dass tatsächlich zu verwenden.  
+ Eine unsicherere Lösung ist die Deaktivierung der Loopbacküberprüfung, die in [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657) beschrieben ist. Der Schutz vor Reflektionsangriffen wird somit deaktiviert. Daher ist es besser, den Satz von alternativen Namen auf jene einzuschränken, von denen Sie erwarten, dass sie tatsächlich vom Computer verwendet werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
  <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
  <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
+

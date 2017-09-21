@@ -1,48 +1,53 @@
 ---
-title: "Verwenden von Streams im Netzwerk | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anfordern von Daten aus dem Internet, Streams"
-  - "Netzwerk"
-  - "Antwort auf Internetanforderung, Streams"
-  - "Netzwerkressourcen, Streamfunktionen"
-  - "Empfangen von Daten, Streamfunktionen"
-  - "Netzwerkressourcen"
-  - "Senden von Daten, Streamfunktionen"
-  - "Herunterladen von Internetressourcen, Streams"
-  - "Streams, Funktionen"
-  - "Internet, Streams"
-  - "Streams"
+title: Verwenden von Streams im Netzwerk
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Verwenden von Streams im Netzwerk
-Netzwerkressourcen werden in .NET Framework als Streams dargestellt.  Durch das generisch Streams behandelt, stellt .NET Framework die folgenden Funktionen:  
+# <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
+Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
   
--   Eine gängige Methode, Internet\-Daten zu senden und zu empfangen.  Was auch immer der tatsächliche Inhalt der Datei \- HTML, XML oder sonstige \- die Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=fullName> und <xref:System.IO.Stream.Read%2A?displayProperty=fullName> verwendet, um Daten zu senden und zu empfangen.  
+-   Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten. Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=fullName> und <xref:System.IO.Stream.Read%2A?displayProperty=fullName> zum Senden und Empfangen von Daten verwenden.  
   
--   Kompatibilität mit Streams zu .NET Framework.  Streams werden beim .NET Framework verwendet, das eine umfassende Infrastruktur zum Behandeln sie verfügt.  Beispielsweise können Sie eine Anwendung ändern, die XML\-Daten aus <xref:System.IO.FileStream> zu den Lesedaten von <xref:System.Net.Sockets.NetworkStream> stattdessen wird, indem Sie nur die wenigen Codezeilen ändert, die den Stream initialisieren.  Die wichtigsten Unterschiede zwischen der **NetworkStream**\-Klasse und anderen Streams sind, dass **NetworkStream** nicht seekable ist, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>\-Eigenschaft gibt stets **false**, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A> und <xref:System.Net.Sockets.NetworkStream.Position%2A>\-Methoden lösen <xref:System.NotSupportedException> aus.  
+-   Kompatibilität mit Streams in .NET Framework. Streams werden überall in .NET Framework verwendet. .NET Framework besitzt eine umfangreiche Infrastruktur für deren Behandlung. Beispielsweise können Sie eine Anwendung ändern, die XML-Daten aus einer <xref:System.IO.FileStream> liest, sodass sie die Daten stattdessen aus einer <xref:System.Net.Sockets.NetworkStream> liest, anstelle einer einfachen Änderung der Codezeilen, die den Stream initialisieren. Die wichtigsten Unterschiede zwischen der **NetworkStream**-Klasse und anderen Streams sind die folgenden: **NetworkStream** ist nicht durchsuchbar, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>-Eigenschaft gibt immer **FALSE** zurück, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A>- und <xref:System.Net.Sockets.NetworkStream.Position%2A>-Methoden lösen eine <xref:System.NotSupportedException> aus.  
   
--   Verarbeiten von Daten, wie sie ankommt.  Streams ermöglichen den Zugriff auf die Daten, während er vom Netzwerk eintrifft, anstatt die Anwendung kein, heruntergeladen werden Dataset zu warten ein.  
+-   Die Verarbeitung der eingehenden Daten. Streams bieten Zugriff auf eingehende Daten über das Netzwerk, anstatt die Anwendung zu zwingen, zu warten, bis der gesamte Datensatz heruntergeladen wurde.  
   
- Der <xref:System.Net.Sockets>\-Namespace **NetworkStream** enthält eine Klasse, die die <xref:System.IO.Stream>\-Klasse speziell für die Verwendung mit Netzwerkressourcen implementiert.  Klassen im <xref:System.Net.Sockets>\-Namespace verwenden, um die **NetworkStream**\-Klasse Streams darzustellen.  
+ Der <xref:System.Net.Sockets>-Namespace enthält eine **NetworkStream**-Klasse, die die <xref:System.IO.Stream>-Klasse speziell zur Verwendung mit Netzwerkressourcen implementiert. Klassen im <xref:System.Net.Sockets>-Namespace verwenden die **NetworkStream**-Klasse, um Streams darzustellen.  
   
- Um Daten im Netzwerk mithilfe des zurückgegebenen Streams zu senden, rufen Sie <xref:System.Net.WebRequest.GetRequestStream%2A> auf dem <xref:System.Net.WebRequest> auf.  **WebRequest** sendet Anforderungsheader an den Server; können Daten zur Netzwerkressource senden, indem Sie <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> oder <xref:System.IO.Stream.Write%2A>\-Methode für den zurückgegebenen Stream aufrufen.  Einige Protokolle, wie HTTP, benötigen Sie möglicherweise, protokollspezifische Eigenschaften festlegt, bevor Daten senden.  Im folgenden Codebeispiel wird gezeigt, wie HTTP\-spezifische Eigenschaften für das Senden von Daten festlegen.  Es wird davon ausgegangen, dass variable `sendData` die Daten enthält, die zum Senden und dass variable `sendLength` die Anzahl von Bytes ist, Daten zu senden.  
+ Rufen Sie zum Senden von Daten an das Netzwerk mit dem zurückgegebenen Streams <xref:System.Net.WebRequest.GetRequestStream%2A> auf Ihrer <xref:System.Net.WebRequest> auf. **WebRequest** wird Anforderungsheader an den Server senden, und dann können Sie Daten an die Netzwerkressource senden, indem Sie die <xref:System.IO.Stream.BeginWrite%2A>-, <xref:System.IO.Stream.EndWrite%2A>- oder <xref:System.IO.Stream.Write%2A>-Methode auf dem zurückgegebenen Stream aufrufen. Für einige Protokolle, z.B. HTTP, müssen Sie möglicherweise protokollspezifische Eigenschaften festlegen, bevor Sie Daten versenden. Das folgende Codebeispiel veranschaulicht, wie die HTTP-spezifischen Eigenschaften zum Versenden von Daten festgelegt werden. Es nimmt an, dass die Variable `sendData` die zu sendenden Daten enthält, und dass die Variable `sendLength` der Anzahl der zu versendenden Datenbytes entspricht.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- Um Daten aus dem Netzwerk empfangen, rufen Sie <xref:System.Net.WebResponse.GetResponseStream%2A> auf dem <xref:System.Net.WebResponse> auf.  Sie können Daten aus der Netzwerkressource dann lesen, indem Sie <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> oder <xref:System.IO.Stream.Read%2A>\-Methode für den zurückgegebenen Stream aufrufen.  
+ Um Daten aus dem Netzwerk zu empfangen, rufen Sie <xref:System.Net.WebResponse.GetResponseStream%2A> auf Ihrer <xref:System.Net.WebResponse> auf. Anschließend können Sie Daten aus der Netzwerkressource lesen, indem Sie die <xref:System.IO.Stream.BeginRead%2A>-, <xref:System.IO.Stream.EndRead%2A>- oder <xref:System.IO.Stream.Read%2A>-Methode auf dem zurückgegebenen Stream aufrufen.  
   
- Bei Verwendung von den Netzwerkressourcen streamt, beachten Sie die folgenden Punkte:  
+ Wenn Sie Streams aus Netzwerkressourcen verwenden, dann beachten Sie die folgenden Punkte:  
   
--   Die **CanSeek** **false**\-Eigenschaft gibt immer zurück, da die **NetworkStream**\-Klasse Position im Stream nicht ändern kann.  Die **Seek** und **Position**\-Methoden lösen **NotSupportedException** aus.  
+-   Die **CanSeek**-Eigenschaft gibt immer **FALSE** zurück, da die **NetworkStream**-Klasse die Position im Stream nicht ändern kann. Die **Seek**- und **Position**-Methoden lösen eine **NotSupportedException** aus.  
   
--   Wenn Sie **WebRequest** und **WebResponse** verwenden, sind die Streaminstanzen, die erstellt werden, indem sie **GetResponseStream** aufrufen, schreibgeschützt und die Streaminstanzen, die erstellt werden, indem sie **GetRequestStream** aufrufen, sind lesegeschützt.  
+-   Wenn Sie **WebRequest** und **WebResponse** verwenden, sind Streaminstanzen, die durch den Aufruf von **GetResponseStream** erstellt wurden, schreibgeschützt und Streaminstanzen, die durch den Aufruf von **GetRequestStream** erstellt wurden, lesegeschützt.  
   
--   Verwenden Sie die <xref:System.IO.StreamReader>\-Klasse, um die Codierung zu vereinfachen.  Im folgenden Codebeispiel wird **StreamReader**, um einen Stream von ASCII\-codierten **WebResponse**  zu lesen \(das Beispiel enthält nicht das Erstellen der Anforderung an\).  
+-   Verwenden Sie die <xref:System.IO.StreamReader>-Klasse, um die Codierung einfacher zu machen. Im folgenden Codebeispiel wird ein ASCII-codierter Stream mit einem **StreamReader** aus einer **WebResponse** gelesen (das Beispiel zeigt die Anforderungserstellung nicht).  
   
--   Der Aufruf **GetResponse** kann blockieren, wenn Netzwerkressourcen nicht verfügbar sind.  Sie sollten eine, asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A>\-Methoden in Erwägung ziehen.  
+-   Der Aufruf von **GetResponse** könnte blockiert werden, wenn Netzwerkressourcen nicht verfügbar sind. Verwenden Sie eine asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A>- und <xref:System.Net.WebRequest.EndGetResponse%2A>-Methoden.  
   
--   Der Aufruf **GetRequestStream** kann blockieren, während die Verbindung zum Server erstellt wird.  Sie sollten eine, asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A> und <xref:System.Net.WebRequest.EndGetRequestStream%2A>\-Methoden in Erwägung ziehen.  
+-   Der Aufruf von **GetRequestStream** könnte blockiert werden während die Verbindung mit dem Server erstellt wird. Verwenden Sie eine asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A>- und <xref:System.Net.WebRequest.EndGetRequestStream%2A>-Methoden.  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## Siehe auch  
- [Gewusst wie: Anfordern von Daten mithilfe der WebRequest\-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Siehe auch  
+ [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+

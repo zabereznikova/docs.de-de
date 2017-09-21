@@ -1,42 +1,47 @@
 ---
-title: "Interpretieren von Netzwerkablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "TraceMode-Attribut"
-  - "Hexadezimale Daten, Netzwerkablaufverfolgungsausgabe"
-  - "Netzwerkablaufverfolgung, Analysieren"
-  - "protocolonly"
-  - "Text, Netzwerkablaufverfolgungsausgabe"
-  - "includehex"
+title: Interpretieren von Netzwerkablaufverfolgung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- TraceMode attribute
+- hexidecimal data, network tracing output
+- network tracing, analyzing
+- protocolonly
+- text, network tracing output
+- includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Interpretieren von Netzwerkablaufverfolgung
-Wenn Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung verwenden, um Aufrufe aufzuzeichnen, die die Anwendung verschiedenem <xref:System.Net>\-Klassenmember erstellt wird.  Die Ausgabe von diesen Aufrufen kann in den folgenden Beispielen ähnlich.  
+# <a name="interpreting-network-tracing"></a>Interpretieren von Netzwerkablaufverfolgung
+Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung zum Erfassen von Aufrufen durch Ihre Anwendung an verschiedene <xref:System.Net>-Klassenmember verwenden. Die Ausgabe dieser Aufrufe ähnelt möglicherweise den folgenden Beispielen.  
   
 ```  
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
 ```  
   
- Im vorherigen Beispiel \[588\] ist der aktuelle eindeutige Bezeichner des Threads.  \(4357\) und \(4387\) sind die Timestamps, die die Anzahl von Millisekunden anzugeben, die abgelaufen sind, seit die Anwendung gestartet hat.  Die Daten, die dem Timestamp folgen, zeigen die Anwendung an, die die Methode **Socket.Send** eingibt und beendet.  Das Objekt, das die **Send**\-Methode ausführt, hat 33574638 als eindeutiger Bezeichner.  Die Methodenbeendigungsablaufverfolgung schließt den Rückgabewert \(61 im vorhergehenden Beispiel\).  
+ Im vorhergehenden Beispiel ist [588] der eindeutige Bezeichner des aktuellen Threads. (4357) und (4387) sind Zeitstempel, die die Anzahl der Millisekunden seit dem Anwendungsstart angeben. Die Daten nach dem Zeitstempel geben an, dass die Methode **Socket.Send** von der Anwendung betreten und beendet wird. Das Objekt, das die Methode **Send** ausführt, besitzt „33574638“ als eindeutigen Bezeichner. Die Ablaufverfolgung zum Beenden der Methode enthält den Rückgabewert (im vorherigen Beispiel 61).  
   
- Netzwerkablaufverfolgungen können Netzwerkverkehr aufzeichnen, dem von gesendet wird oder durch die Anwendung mithilfe der Protokolle auf Anwendungsebene wie HTTP \(Hypertext Transfer Protocol\) empfangen.  Diese Daten können als Text und hexadezimale Daten optional aufgezeichnet werden.  Hexadezimale Daten verfügbar sind, wenn Sie **includehex** als Wert des **tracemode**\-Attributs angeben.  \(Ausführliche Informationen zu diesem Attribut, finden Sie unter [Gewusst wie: Konfigurieren Sie Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).\) Die folgende Beispielsablaufverfolgung wurde mit **includehex** generiert.  
+ Netzwerkablaufverfolgungen können Netzwerkdatenverkehr erfassen, der mithilfe von Protokollen auf Anwendungsebene, wie z.B. HTTP (Hypertext Transfer Protocol), von der Anwendung gesendet oder empfangen wird. Diese Daten können als Text und optional als hexadezimale Daten erfasst werden. Hexadezimale Daten sind verfügbar, wenn **includehex** als Wert des Attributs **tracemode** angegeben wird. (Ausführliche Informationen zu diesem Attribut finden Sie unter [How to: Configure Network Tracing (Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Das folgende Beispiel für eine Ablaufverfolgung wurde mit **includehex** generiert.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,7 +51,7 @@ Wenn Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung ve
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Hexadezimale Daten auszulassen, geben Sie **protocolonly** als Wert für das **tracemode**\-Attribut an.  Im folgenden Beispiel wird die Ablaufverfolgung an, wenn **protocolonly** angegeben wird.  
+ Geben Sie **protocolonly** als Wert des Attributs **tracemode** an, um die hexadezimalen Daten auszulassen. Das folgende Beispiel zeigt die Ablaufverfolgung für **protocolonly**.  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   
@@ -54,7 +59,8 @@ Wenn Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung ve
   
  `Connection: Close`  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Aktivieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Gewusst wie: Konfigurieren Sie Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
- [Netzwerkablaufverfolgung in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+ [How to: Configure Network Tracing (Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
+ [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
+

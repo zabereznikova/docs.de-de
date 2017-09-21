@@ -1,43 +1,49 @@
 ---
-title: "Reliability | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server [.NET Framework]"
-  - "managed code, reliability"
-  - "reliability [.NET Framework]"
-  - "writing reliable code"
-  - "code, reliability"
+title: "Zuverlässigkeit"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server [.NET Framework]
+- managed code, reliability
+- reliability [.NET Framework]
+- writing reliable code
+- code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd13a09e66c865630b9db3210bbd95bab14cb214
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Reliability
-Code, der in Serverumgebungen wie SQL Server ausführt wird, muss unbedingt vor asynchronen Ausnahmen geschützt werden.  Die in diesem Thema erörterte Zuverlässigkeit bezieht sich nicht alleine auf SQL Server, sondern gilt allgemein für das Schreiben von zuverlässigem Code für jeden Host, der in einer Umgebung mit .NET Framework, Version 2.0, ausgeführt wird.  SQL Server ist jedoch der erste Dienst, der die neuen Zuverlässigkeitsfeatures der Version 2.0 ausgiebig nutzt, und wird daher als Beispiel verwendet.  
+# <a name="reliability"></a>Zuverlässigkeit
+Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vor asynchronen Ausnahmen geschützt werden. Die in diesem Thema dargestellte Zuverlässigkeit ist nicht nur für SQL Server relevant, sondern für jeden Host, der in einer .NET Framework-Umgebung Version 2.0 ausgeführt wird. Da jedoch SQL Server der erste Dienst ist, der die neuen Zuverlässigkeitsfunktionen von Version 2.0 umfassend verwendet, dient es hier als Beispiel.  
   
- Code, der in SQL Server ausgeführt wird, unterliegt strengeren Zuverlässigkeitsrichtlinien als in anderen Serverumgebungen.  Dies ist aufgrund SQL Servers stabilen Vorgangs am Rand des Ressourcenverbrauchs. Ausnahmen sind <xref:System.OutOfMemoryException> und <xref:System.Threading.ThreadAbortException> nicht in einer SQL Server\-Umgebung immer wieder auf.  Diese Richtlinien sind weniger auf Zuverlässigkeit ausgerichtet, sondern sollen dafür sorgen, dass vollständig vertrauenswürdiger, verwalteter Code bei Wiederverwendung auf <xref:System.AppDomain>\-Ebene keinen Absturz verursacht. Dies ist das wichtigste Verfahren, mit dem der Server die Konsistenz und Verfügbarkeit aufrecht erhält.  
+ In SQL Server ausgeführter Code unterliegt strengeren Richtlinien zur Zuverlässigkeit als andere Serverumgebungen. Dies liegt daran, dass SQL Server ständig am Rand des Ressourcenverbrauchs betrieben wird.  Die Ausnahmen <xref:System.OutOfMemoryException> und <xref:System.Threading.ThreadAbortException> sind für die SQL Server-Umgebung nicht ungewöhnlich. Diese Richtlinien betreffen im Allgemeinen weniger die Zuverlässigkeit, sondern sind vielmehr darauf ausgerichtet, voll vertrauenswürdigen verwalteten Code bei Wiederverwendung auf <xref:System.AppDomain>-Ebene ordnungsgemäß abzubrechen. So hält der Server auf einfache Weise die Konsistenz und Verfügbarkeit aufrecht.  
   
-## In diesem Abschnitt  
- [SQL Server Programming and Host Protection Attributes](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
- Beschreibt, wie die Ausführung von verwaltetem Code von SQL Server mithilfe des <xref:System.Security.Permissions.HostProtectionAttribute>\-Attribut eingeschränkt wird.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [SQL Server Programming and Host Protection Attributes (SQL Server-Programmierung und Hostschutzattribute)](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
+ Beschreibt, wie SQL Server das <xref:System.Security.Permissions.HostProtectionAttribute>-Attribut verwendet, um die Ausführung von verwaltetem Code einzuschränken.  
   
- [Reliability Best Practices](../../../docs/framework/performance/reliability-best-practices.md)  
- Gibt Richtlinien zum Schreiben von Code an, die die Anforderungen hinsichtlich der Zuverlässigkeit erfüllt.  
+ [Empfohlene Vorgehensweisen für die Zuverlässigkeit](../../../docs/framework/performance/reliability-best-practices.md)  
+ Enthält Richtlinien zum Schreiben von Code, der die Zuverlässigkeitsanforderungen erfüllt.  
   
- [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)  
- Beschreibt die Funktion und das Verhalten eingeschränkter Ausführungsbereiche \(Constrained Execution Region, CER\).  
+ [Eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md)  
+ Beschreibt die Funktion und das Verhalten von eingeschränkten Ausführungsbereichen (Constrained Execution Regions, CERs).  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Security.Permissions.HostProtectionAttribute>  
   
  <xref:System.Security.Permissions.HostProtectionResource>
+

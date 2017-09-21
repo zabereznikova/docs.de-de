@@ -1,33 +1,38 @@
 ---
-title: "Gewusst wie: Senden von Daten mithilfe der WebRequest-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest-Klasse, Senden von Daten an einen Host"
-  - "Senden von Daten an einen Host, mit WebRequest-Klasse"
+title: 'Gewusst wie: Senden von Daten mithilfe der WebRequest-Klasse'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, sending data to a host
+- Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c840792182c012ba74b3ba3ef297748f58e4b92a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Senden von Daten mithilfe der WebRequest-Klasse
-Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu einem Server zu senden.  Diese Prozedur wird häufig verwendet, um Daten an eine Webseite zu senden.  
+# <a name="how-to-send-data-using-the-webrequest-class"></a>Gewusst wie: Senden von Daten mithilfe der WebRequest-Klasse
+In diesem Thema wird die Vorgehensweise zum Senden von Daten an einen Server beschrieben. Die Prozedur wird häufig verwendet, um einer Webseite Daten bereitzustellen.  
   
-### So fügen Sie Daten zu einem Hostserver senden  
+### <a name="to-send-data-to-a-host-server"></a>Senden von Daten an einen Hostserver  
   
-1.  Erstellen Sie eine Instanz <xref:System.Net.WebRequest>, indem Sie <xref:System.Net.WebRequest.Create%2A> mit dem URI der Ressource aufrufen, die Daten, beispielsweise, ein Skript oder Eine ASP.NET\-Seite akzeptiert.  
+1.  Erstellen Sie eine <xref:System.Net.WebRequest>-Instanz, indem Sie <xref:System.Net.WebRequest.Create%2A> mit dem URI der Ressource aufrufen, die Daten akzeptiert, wie z.B. ein Skript oder eine ASP.NET-Seite.  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -35,13 +40,12 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
   
     ```vb  
     Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
-  
     ```  
   
     > [!NOTE]
-    >  . .NET Framework stellt die protokollspezifischen Klassen bereit, die von **WebRequest** und von **WebResponse** für URIs abgeleitet werden, die mit "HTTP beginnen: ", "https:'' ", " Ziel\-FTP\-Site: " und "Datei: ".  Um auf Ressourcen mit anderen Protokolle zuzugreifen, müssen Sie protokollspezifische Klassen implementieren die von **WebRequest** und von **WebResponse** berechnen.  Weitere Informationen finden Sie unter [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+    >  .NET Framework stellt von **WebRequest** und **WebResponse** abgeleitete protokollspezifische Klassen für URIs bereit, die mit „http:“, „https:“, „ftp:“ und „file:“ beginnen. Wenn Sie mit anderen Protokollen auf Ressourcen zugreifen möchten, müssen Sie protokollspezifische Klassen implementieren, die von **WebRequest** und **WebResponse** abgeleitet sind. Weitere Informationen finden Sie unter [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
-2.  Legen Sie alle Eigenschaftswerte fest, die Sie in **WebRequest** erfordern.  Um beispielsweise Authentifizierung zu aktivieren, legen Sie die **Credentials**\-Eigenschaft auf eine Instanz der <xref:System.Net.NetworkCredential>\-Klasse fest.  
+2.  Legen Sie alle Eigenschaftswerte, die Sie brauchen, in **WebRequest** fest. Legen Sie z.B. zum Aktivieren der Authentifizierung die Eigenschaft **Anmeldeinformationen** auf eine Instanz der Klasse <xref:System.Net.NetworkCredential> fest.  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -49,10 +53,9 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
   
     ```vb  
     request.Credentials = CredentialCache.DefaultCredentials  
-  
     ```  
   
-     In den meisten Fällen ist die Instanz selbst **WebRequest** ausreichend, Daten zu senden.  Wenn Sie jedoch protokollspezifische Eigenschaften festlegen müssen, müssen Sie **WebRequest** zum protokollspezifischen Typ umwandeln.  Um beispielsweise auf die HTTP\-spezifische Eigenschaften von <xref:System.Net.HttpWebRequest> zuzugreifen, wandeln Sie **WebRequest** zu einem **HttpWebRequest**\-Verweis um.  Das folgende Codebeispiel veranschaulicht, wie die HTTP\-spezifische <xref:System.Net.HttpWebRequest.UserAgent%2A>\-Eigenschaft festlegt.  
+     In den meisten Fällen ist die **WebRequest**-Instanz selbst ausreichend, um Daten zu senden. Wenn Sie dennoch protokollspezifische Eigenschaften festlegen müssen, wandeln Sie **WebRequest** in einen protokollspezifischen Typ um. Wandeln Sie z.B. **WebRequest** in einen **HttpWebRequest**-Verweis um, wenn Sie auf die HTTP-spezifischen Eigenschaften von <xref:System.Net.HttpWebRequest> zugreifen möchten. Das folgende Codebeispiel veranschaulicht, wie die HTTP-spezifische Eigenschaft <xref:System.Net.HttpWebRequest.UserAgent%2A> festgelegt wird.  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -62,7 +65,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  Geben Sie eine Protokollmethode, die Daten zulässt, mit einer Anforderung gesendet werden, wie der Methode HTTP **POST** an.  
+3.  Geben Sie eine Protokollmethode an, die das Senden von Daten mit einer Anforderung ermöglicht, wie z.B. die HTTP-Methode **POST**.  
   
     ```csharp  
     request.Method = "POST";  
@@ -72,7 +75,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     request.Method = "POST"  
     ```  
   
-4.  Legen Sie die **ContentLength**\-Eigenschaft fest.  
+4.  Legen Sie die **ContentLength**-Eigenschaft fest.  
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -82,7 +85,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Legen Sie die **ContentType**\-Eigenschaft einen geeigneten Wert fest.  
+5.  Legen Sie die **ContentType**-Eigenschaft auf einen geeigneten Wert fest.  
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -92,7 +95,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Rufen Sie den Stream ab, der Daten enthält, indem die <xref:System.Net.WebRequest.GetRequestStream%2A>\-Methode aufruft.  
+6.  Rufen Sie den Datenstrom ab, der die Anforderungsdaten enthält, indem Sie die Methode <xref:System.Net.WebRequest.GetRequestStream%2A> aufrufen.  
   
     ```csharp  
     Stream dataStream = request.GetRequestStream ();  
@@ -102,7 +105,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     Stream dataStream = request.GetRequestStream ()  
     ```  
   
-7.  Schreiben Sie die Daten auf dem <xref:System.IO.Stream>\-Objekt, das dieser Methode zurückgegeben wird.  
+7.  Schreiben Sie die Daten in das von dieser Methode zurückgegebene <xref:System.IO.Stream>-Objekt.  
   
     ```csharp  
     dataStream.Write (byteArray, 0, byteArray.Length);  
@@ -112,7 +115,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     dataStream.Write (byteArray, 0, byteArray.Length)  
     ```  
   
-8.  Schließen Sie den Anforderungsstream, indem Sie die **Stream.Close**\-Methode aufrufen.  
+8.  Schließen Sie den Anforderungsdatenstrom durch Aufrufen der **Stream.Close**-Methode.  
   
     ```csharp  
     dataStream.Close ();  
@@ -122,7 +125,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     dataStream.Close ()  
     ```  
   
-9. Senden Sie die Anforderung dem Server, indem Sie <xref:System.Net.WebRequest.GetResponse%2A> aufrufen.  Diese Methode gibt ein Objekt zurück, das die Antwort des Servers enthält.  Der Typ zurückgegeben <xref:System.Net.WebResponse> wird durch das Schema des URI der Anforderung bestimmt.  
+9. Senden Sie die Anforderung an den Server durch Aufrufen von <xref:System.Net.WebRequest.GetResponse%2A>. Diese Methode gibt ein Objekt zurück, das die Antwort des Servers enthält. Der Typ des zurückgegebenen <xref:System.Net.WebResponse>-Objekts wird durch das URI-Schema der Anforderung bestimmt.  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -130,13 +133,12 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
   
     ```vb  
     Dim response As WebResponse = request.GetResponse()  
-  
     ```  
   
     > [!NOTE]
-    >  Nachdem Sie mit einem <xref:System.Net.WebResponse>\-Objekt abgeschlossen sind, müssen Sie es schließen, indem Sie die <xref:System.Net.WebResponse.Close%2A>\-Methode aufrufen.  Falls Sie den Antwortdatenstrom vom Warteobjekt abgerufen haben, können Sie den Stream schließen, indem Sie die <xref:System.IO.Stream.Close%2A?displayProperty=fullName>\-Methode aufrufen.  Wenn Sie nicht die Antwort oder den Stream schließen, kann die Anwendung kein Verbindungen mit dem Server mehr haben kann, und werden zusätzliche Anforderungen zu verarbeiten.  
+    >  Wenn Sie ein <xref:System.Net.WebResponse>-Objekt nicht mehr benötigen, schließen Sie es durch Aufrufen der <xref:System.Net.WebResponse.Close%2A>-Methode. Wenn Sie den Antwortstream vom Antwortobjekt abgerufen haben, können Sie den Datenstrom alternativ dazu auch durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=fullName>-Methode schließen. Wird die Antwort oder der Datenstrom nicht geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Verbindungen mit dem Server und kann somit weitere Anforderungen nicht mehr verarbeiten.  
   
-10. Sie können auf die Eigenschaften **WebResponse** zugreifen oder **WebResponse** zu einer protokollspezifischen Instanz umwandeln, um protokollspezifische Eigenschaften zu lesen.  Um beispielsweise auf die HTTP\-spezifische Eigenschaften von <xref:System.Net.HttpWebResponse> zuzugreifen, wandeln Sie **WebResponse** zu einem **HttpWebResponse** Verweis um.  
+10. Sie können die protokollspezifischen Eigenschaften lesen, indem Sie auf die Eigenschaften von **WebResponse** zugreifen oder **WebResponse** in eine protokollspezifische Instanz umwandeln. Sie können z.B. auf die HTTP-spezifischen Eigenschaften von <xref:System.Net.HttpWebResponse> zugreifen, indem Sie **WebRequest** in einen **HttpWebRequest**-Verweis umwandeln.  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -146,7 +148,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. Um den Stream abzurufen, der die Antwortdaten gesendet werden vom Server enthält, rufen Sie die <xref:System.Net.WebResponse.GetResponseStream%2A>\-Methode der **WebResponse** auf.  
+11. Zum Abrufen des Datenstroms, der die vom Server gesendeten Antwortdaten enthält, rufen Sie die Methode <xref:System.Net.WebResponse.GetResponseStream%2A> der **WebResponse** auf.  
   
     ```csharp  
     Stream data = response.GetResponseStream;  
@@ -156,7 +158,7 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. Nachdem Sie die Daten aus der Antwort gelesen haben, müssen Sie entweder den Antwortdatenstrom mithilfe der **Stream.Close**\-Methode schließen oder die Antwort mit der **WebResponse.Close**\-Methode schließen.  Es ist nicht erforderlich, die **Schließen**\-Methode auf dem Antwortstream und **WebResponse** aufzurufen, es ist nicht schädlich.  
+12. Nachdem Sie die Daten der Antwort gelesen haben, schließen Sie entweder den Antwortstream mithilfe der **Stream.Close**-Methode, oder schließen Sie die Antwort mithilfe der **WebResponse.Close**-Methode. Es ist zwar nicht notwendig, die **Close**-Methode für sowohl Antwortdatenstrom als auch **WebResponse** aufzurufen, doch es ist auch nicht schädlich.  
   
     ```csharp  
     response.Close();  
@@ -164,10 +166,9 @@ Die folgende Prozedur beschreibt die Schritte, die verwendet werden, um Daten zu
   
     ```vb  
     response.Close()  
-  
     ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```csharp  
 using System;  
@@ -264,12 +265,12 @@ Namespace Examples.System.Net
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## Siehe auch  
- [Erstellen von Internetanforderungen](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)   
- [Gewusst wie: Anfordern von Daten mithilfe der WebRequest\-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Creating Internet Requests (Erstellen von Internetanforderungen)](../../../docs/framework/network-programming/creating-internet-requests.md)   
+ [Using Streams on the Network (Verwenden von Streams im Netzwerk)](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
+ [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)   
+ [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+

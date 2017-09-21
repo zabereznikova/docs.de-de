@@ -1,74 +1,79 @@
 ---
-title: "dateTimeInvalidLocalFormat MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "dates [.NET Framework], formatting"
-  - "invalid date time local format"
-  - "invalid local formats"
-  - "MDAs (managed debugging assistants), invalid local formats"
-  - "managed debugging assistants (MDAs), invalid local formats"
-  - "dateTimeInvalidLocalFormat MDA"
-  - "date formatting"
-  - "time formatting"
-  - "UTC formatting"
+title: DateTimeInvalidLocalFormat-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- dates [.NET Framework], formatting
+- invalid date time local format
+- invalid local formats
+- MDAs (managed debugging assistants), invalid local formats
+- managed debugging assistants (MDAs), invalid local formats
+- dateTimeInvalidLocalFormat MDA
+- date formatting
+- time formatting
+- UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43155bb2eebfd2cd379d245715c100878fb9fb73
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# dateTimeInvalidLocalFormat MDA
-Der `dateTimeInvalidLocalFormat`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn eine <xref:System.DateTime>\-Instanz, die als UTC \(Universal Coordinated Time, koordinierte Weltzeit\) gespeichert ist, mit einem Format formatiert wird, das nur für lokale <xref:System.DateTime>\-Instanzen verwendet werden soll.  Dieser MDA wird nicht für nicht spezifizierte oder <xref:System.DateTime>\-Standardinstanzen aktiviert.  
+# <a name="datetimeinvalidlocalformat-mda"></a>DateTimeInvalidLocalFormat-MDA
+Der `dateTimeInvalidLocalFormat`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine als UTC (Universal Coordinated Time, koordinierte Weltzeit) gespeicherte <xref:System.DateTime>-Instanz mit einem Format formatiert wird, das nur für lokale <xref:System.DateTime>-Instanzen verwendet werden soll. Dieser MDA wird nicht für nicht angegebene oder <xref:System.DateTime>-Standardinstanzen aktiviert.  
   
-## Symptom  
- Eine Anwendung serialisiert manuell eine <xref:System.DateTime>\-UTC\-Instanz unter Verwendung eines lokalen Formats:  
+## <a name="symptom"></a>Symptom  
+ Eine Anwendung führt für eine <xref:System.DateTime>-UTC-Instanz eine manuelle Serialisierung mit einem lokalen Format durch:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
   
-### Ursache  
- Das 'z'\-Format der <xref:System.DateTime.ToString%2A?displayProperty=fullName>\-Methode enthält die Abweichung der lokalen Zeitzone, z. B. "\+10:00" für die australische Zeit.  Daher wird nur ein sinnvolles Ergebnis erzielt, wenn der Wert der <xref:System.DateTime> lokal ist.  Wenn der Wert eine UTC\-Zeit ist, enthält <xref:System.DateTime.ToString%2A?displayProperty=fullName> die Abweichung der lokalen Zeitzone. Die Zeitzoneangabe wird aber weder angezeigt noch angepasst.  
+### <a name="cause"></a>Ursache  
+ Das „z“-Format der <xref:System.DateTime.ToString%2A?displayProperty=fullName>-Methode beinhaltet die Abweichung der lokalen Zeitzone, beispielsweise „+ 10:00“ für Ortszeit Sydney. Daher wird nur ein aussagekräftiges Ergebnis erzielt, wenn der Wert für <xref:System.DateTime> lokal ist. Gibt der Wert die UTC-Zeit an, beinhaltet <xref:System.DateTime.ToString%2A?displayProperty=fullName> zwar die Abweichung der lokalen Zeitzone, der Zeitzonenbezeichner wird aber weder angezeigt noch angepasst.  
   
-### Lösung  
- <xref:System.DateTime>\-UTC\-Instanzen sollten auf eine Weise formatiert werden, aus der ersichtlich ist, dass es sich um UTC handelt.  Es wird empfohlen, ein 'Z' zu verwenden, um die UTC\-Zeit anzugeben:  
+### <a name="resolution"></a>Auflösung  
+ <xref:System.DateTime>-UTC-Instanzen sollten so formatiert werden, dass sie als UTC erkennbar sind. Es wird empfohlen, für die Angabe von UTC-Zeiten ein „Z“ zu verwenden:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- Es ist außerdem ein "o"\-Format vorhanden, mit der eine <xref:System.DateTime> unter Verwendung der <xref:System.DateTime.Kind%2A>\-Eigenschaft serialisiert wird. Unabhängig davon, ob die Instanz lokal, UTC oder nicht spezifiziert ist, wird hierbei sichergestellt, dass die Serialisierung richtig erfolgt:  
+ Zudem existiert ein „o“-Format, mit dem eine <xref:System.DateTime> mithilfe der <xref:System.DateTime.Kind%2A>-Eigenschaft serialisiert werden kann. Diese Eigenschaft führt unabhängig davon, ob die Instanz lokal, UTC oder nicht angegeben ist, eine korrekte Serialisierung durch:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
   
-## Auswirkungen auf die Laufzeit  
- Dieser MDA beeinflusst die Laufzeit nicht.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## Ausgabe  
- Bei der Aktivierung dieses MDA erfolgt keine besondere Ausgabe. Die Aufrufliste kann jedoch verwendet werden, um festzustellen, wo sich der Aufruf von <xref:System.DateTime.ToString%2A> befindet, der den MDA aktiviert hat.  
+## <a name="output"></a>Ausgabe  
+ Das Aktivieren dieses MDA erzeugt keine besondere Ausgabe. Die Aufrufliste kann jedoch zur Bestimmung des Speicherorts für den <xref:System.DateTime.ToString%2A>-Aufruf verwendet werden, der den MDA aktiviert hat.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dateTimeInvalidLocalFormat />  
@@ -76,19 +81,19 @@ Serialize(myDateTime.ToString("o"));
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Beispiel: In einer Anwendung wird wie im Folgenden gezeigt ein <xref:System.DateTime>\-UTC\-Wert indirekt mithilfe der <xref:System.Xml.XmlConvert>\-Klasse oder der <xref:System.Data.DataSet>\-Klasse serialisiert.  
+## <a name="example"></a>Beispiel  
+ In einer Anwendung wird wie im Folgenden gezeigt eine indirekte Serialisierung für einen <xref:System.DateTime>-UTC-Wert mithilfe der Klasse <xref:System.Xml.XmlConvert> oder <xref:System.Data.DataSet> durchgeführt:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
   
- Die Serialisierungen mit <xref:System.Xml.XmlConvert> und <xref:System.Data.DataSet> verwenden in der Standardeinstellung das lokale Format für die Serialisierung.  Zusätzliche Optionen sind erforderlich, um andere Arten von <xref:System.DateTime>\-Werten zu serialisieren, z. B. UTC.  
+ Die Serialisierungen mit <xref:System.Xml.XmlConvert> und <xref:System.Data.DataSet> verwenden standardmäßig lokale Formate zur Serialisierung. Zusätzliche Optionen sind erforderlich, um andere Arten von <xref:System.DateTime>-Werten, z.B. UTC, zu serialisieren.  
   
- Übergeben Sie im vorliegenden Beispiel `XmlDateTimeSerializationMode.RoundtripKind` an den Aufruf von `ToString` für `XmlConvert`.  Dadurch werden die Daten als UTC\-Zeit serialisiert.  
+ Übergeben Sie im vorliegenden Beispiel `XmlDateTimeSerializationMode.RoundtripKind` an den Aufruf von `ToString` für `XmlConvert`. Dadurch werden die Daten als UTC-Zeit serialisiert.  
   
- Wenn Sie ein <xref:System.Data.DataSet> verwenden, legen Sie die <xref:System.Data.DataColumn.DateTimeMode%2A>\-Eigenschaft des <xref:System.Data.DataColumn>\-Objekts auf <xref:System.Data.DataSetDateTime> fest.  
+ Bei Verwendung von <xref:System.Data.DataSet> legen Sie die <xref:System.Data.DataColumn.DateTimeMode%2A>-Eigenschaft des <xref:System.Data.DataColumn>-Objekts auf <xref:System.Data.DataSetDateTime.Utc> fest.  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
@@ -96,6 +101,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Globalization.DateTimeFormatInfo>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

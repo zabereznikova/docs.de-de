@@ -1,79 +1,85 @@
 ---
-title: "zeitbasierte Cacherichtlinien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "zeitbasierte Cacherichtlinien"
-  - "Datumsrichtlinie für die Cachesynchronisierung"
-  - "Cache [.NET Framework], zeitbasierte Richtlinien"
-  - "Aktualität zwischengespeicherter Ressourcen"
-  - "Zeit, zwischengespeicherte Ressourcen"
-  - "Richtlinie zum maximalen Alter"
-  - "Synchronisierung, Cache"
-  - "Überalterung zwischengespeicherter Ressourcen"
-  - "zeitbasierte Standardcacherichtlinie"
-  - "Richtlinie zur maximalen Überalterung"
-  - "Cacherichtlinien für Inhalt"
-  - "Abgelaufener Inhalt"
-  - "Richtlinie zur minimalen Aktualität"
-  - "Alter zwischengespeicherter Ressourcen"
+title: zeitbasierte Cacherichtlinien
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- cache synchronization date policy
+- cache [.NET Framework], time-based policies
+- freshness of cached resources
+- time, cached resources
+- maximum age policy
+- synchronization, cache
+- staleness of cached resources
+- default time-based cache policy
+- maximum staleness policy
+- content cache policies
+- expired content
+- minimum freshness policy
+- age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2915139d6a3c46de06bd2bdb0cb12f95f611af3b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# zeitbasierte Cacherichtlinien
-Eine zeitbasierte Cacherichtlinie definiert die Aktualität von zwischengespeicherten Einträgen mit der Zeit, die die Ressource abgerufen wurde, verwenden die Header mit der Ressource und der aktuellen Uhrzeit zurück.  Wenn Sie eine zeitbasierte Cacherichtlinie festlegen, können Sie entweder die zeitbasierte Richtlinie <xref:System.Net.Cache.HttpRequestCacheLevel> verwenden oder eine benutzerdefinierte zeitbasierte Richtlinie erstellen.  Als, die zeitgebundenen Richtlinie für Ressourcen verwenden, mithilfe des HTTP \(Hypertext Transfer Protocol\) entspricht, wird das genaue Cacheverhalten durch die Header bestimmt, die in der zwischengespeicherten Antwort eingeschlossen und durch das Verhalten, das in Abschnitten 13 und 14 von RFC 2616 angegeben ist, verfügbar an [http:\/\/www.ietf.org](http://www.ietf.org/).  Ein Codebeispiel, das Festlegen der standardmäßige zeitbasierten Richtlinie für HTTP\-Ressourcen veranschaulicht, finden Sie unter [Gewusst wie: Legen Sie die zeitgebundenen Cache\-Richtlinie für eine Anwendung fest](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md).  Codebeispiele, die das Erstellen und Verwenden von Cachepolitischen Planerrichtlinien veranschaulicht werden, finden Sie unter [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+# <a name="time-based-cache-policies"></a>zeitbasierte Cacherichtlinien
+Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, der Header, die mit der Ressource zurückgegeben wurden und der aktuellen Uhrzeit. Wenn Sie eine zeitbasierte Cacherichtlinie festlegen, können Sie entweder die zeitbasierte Richtlinie <xref:System.Net.Cache.HttpRequestCacheLevel.Default> verwenden, oder eine benutzerdefinierte zeitbasierte Richtlinie erstellen. Bei Verwendung der zeitbasierten Standardrichtlinie für Ressourcen, die mithilfe des Hypertext Transfer Protocol (HTTP) abgerufen wurde, wird das exakte Cacheverhalten von den Headern bestimmt, die in der zwischengespeicherten Antwort enthalten sind, und von den Verhaltensweisen in den Abschnitten 13 und 14 des RFC 2616, verfügbar unter [http://www.ietf.org](http://www.ietf.org/). Ein Codebeispiel, das das Festlegen der zeitbasierten Standardrichtlinie für HTTP-Ressourcen veranschaulicht, finden Sie unter [Vorgehensweise: Festlegen der standardmäßigen zeitbasierten Cacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
-## Kriterien, um von Aktualität von zwischengespeicherten Einträge zu bestimmen  
- Um eine zeitbasierte Cacherichtlinie anpassen können Sie angeben, dass eine oder mehrere der folgenden Kriterien verwendet werden um die Aktualität von zwischengespeicherten Einträge zu bestimmen:  
+## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Kriterien zum Bestimmen der Aktualität der zwischengespeicherten Einträge  
+ Zum Anpassen einer zeitbasierten Cacherichtlinie können Sie angeben, dass eine oder mehrere der folgenden Kriterien verwendet werden, um die Aktualität der zwischengespeicherten Einträge zu bestimmen:  
   
--   Höchstalter  
+-   Maximales Alter  
   
--   Maximale Abgestandenheit  
+-   Maximale Überalterung  
   
 -   Minimale Aktualität  
   
--   Cachesynchronisierungsdatum  
+-   Datum für die Cachesynchronisierung  
   
 > [!NOTE]
->  Verwenden der standardmäßigen zeitbasierten Cacherichtlinie sollte nicht mit dem Festlegen einer standardmäßigen Cacherichtlinie für die Anwendung verwechselt werden.  Die zeitgebundenen Richtlinie ist eine bestimmte Richtlinie, die auf Anforderung verwendet werden kann oder Anwendungsebene.  Die standardmäßige Cacherichtlinie für die Anwendung ist eine Richtlinie \(ortsbasiert oder zeitbasiert\) diese wirksam wird, wenn keine Richtlinien auf einer Anforderung festgelegt ist.  Ausführliche Informationen zum Festlegen einer standardmäßigen Cacherichtlinie für die Anwendung, finden Sie unter <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
+>  Die Verwendung der zeitbasierten Standardcacherichtlinie darf nicht mit dem Festlegen einer Standardcacherichtlinie für Ihre Anwendung verwechselt werden. Die zeitbasierte Standardrichtlinie ist eine bestimmte Richtlinie, die auf Ebene der Anforderung oder einer Anwendung verwendet werden kann. Die Standardcacherichtlinie für Ihre Anwendung ist eine Richtlinie (standortbasiert oder zeitbasiert), die wirksam wird, wenn keine Richtlinie für eine Anforderung festgelegt ist. Weitere Informationen zum Festlegen einer Standardcacherichtlinie für Ihre Anwendung finden Sie unter <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
-### Höchstalter  
- Das Höchstalterrichtlinienkriterium gibt die Zeit an, die eine zwischengespeicherte Kopie einer Ressource verwendet werden kann.  Wenn die zwischengespeicherte Kopie der Ressource älter als die angegebene Zeit ist, muss die Ressource erneut überprüft werden, indem sie für den Inhalt auf dem Server überprüft.  Wenn der Höchstalter die zu verwendende Ressource zulässig ist, nachdem er abläuft, wird dieses Kriterien nicht berücksichtigt, es sei denn, ein maximaler Abgestandenheitswert ebenfalls angegeben wird.  
+### <a name="maximum-age"></a>Maximales Alter  
+ Das Kriterium der Richtlinie zum maximalen Alter gibt die Zeitspanne an, in der eine zwischengespeicherte Kopie einer Ressource verwendet werden kann. Wenn die zwischengespeicherte Kopie der Ressource älter als die angegebene Zeitspanne ist, muss die Ressource anhand der Inhalte auf dem Server erneut überprüft werden. Wenn das maximale Alter erlauben würde, dass die Ressource nach dem Ablaufdatum verwendet werden könnte, wird dieses Kriterium nicht berücksichtigt, außer es ist auch ein Wert für die maximale Überalterung angegeben.  
   
-### Maximale Abgestandenheit  
- Das Abgestandenheitsrichtlinienkriterium gibt die maximale Zeitspanne nach zufriedenem Ablaufzeit an, dass die zwischengespeicherte Kopie der Ressource verwendet werden kann.  Dies ist das einzige Cacherichtlinienkriterium, das Ressourcen ermöglicht, verwendet werden, nachdem sie abgelaufen sind.  
+### <a name="maximum-staleness"></a>Maximale Überalterung  
+ Das Kriterium der Richtlinie zur maximalen Überalterung gibt die Zeitdauer nach dem Ablauf von Inhalten an, in der die zwischengespeicherte Kopie der Ressource verwendet werden kann. Dies ist das einzige Kriterium der Cacherichtlinie, mit dem Ressourcen verwendet werden können, nachdem sie abgelaufen sind.  
   
-### Minimale Aktualität  
- Das minimale Aktualitätsrichtlinienkriterium gibt die Zeitspanne vor zufriedenem Ablaufzeit an, dass die zwischengespeicherte Kopie der Ressource verwendet werden kann.  Diese Richtlinie verfügt die Auswirkung der Beenden eines Cacheeintrags, vor dem Ablaufdatum ungültig; Daher sind die minimale Aktualität und das Maximum Abgestandenheitseinstellung gegenseitig aus.  
+### <a name="minimum-freshness"></a>Minimale Aktivität  
+ Das Kriterium der Richtlinie zur minimalen Aktualität gibt die Zeitdauer vor dem Ablauf von Inhalten an, in der die zwischengespeicherte Kopie der Ressource verwendet werden kann. Diese Richtlinie bewirkt, dass ein Cacheeintrag vor seinem Ablaufdatum abläuft. Daher schließen sich die Einstellungen für die minimale Aktualität und maximale Überalterung gegenseitig aus.  
   
-## Cache\-Synchronisierungs\-Datum  
- Das Cachesynchronisierungsdatums\-Richtlinienkriterium bestimmt, wann eine zwischengespeicherte Kopie einer Ressource erneut überprüft werden muss, indem Sie sie für den Inhalt auf dem Server überprüft.  Wenn der Inhalt geändert hat, seit das Element zwischengespeichert wurde, wird es vom Server abgerufen, im Cache gespeichert und an die Anwendung zurückgegeben.  Wenn der Inhalt nicht geändert hat, wird der Timestamp aktualisiert und die Anwendung ruft den zwischengespeicherten Inhalt ab.  
+## <a name="cache-synchronization-date"></a>Datum für die Cachesynchronisierung  
+ Das Kriterium der Richtlinie zum Datum für die Cachesynchronisierung bestimmt anhand der Inhalte auf dem Server, wann eine zwischengespeicherte Kopie einer Ressource erneut überprüft werden muss. Wenn der Inhalt seit der Zwischenspeicherung des Elements geändert wurde, wird er vom Server abgerufen, im Cache gespeichert und an die Anwendung zurückgegeben. Wenn der Inhalt nicht geändert wurde, wird stattdessen der Zeitstempel aktualisiert, und die Anwendung ruft den zwischengespeicherten Inhalt ab.  
   
- Mithilfe des Cachesynchronisierungsdatums können Sie ein absolutes Datum angeben, zu dem zwischengespeicherte Inhalte erneut überprüft werden müssen.  Wenn ein neuer Cacheeintrag zuletzt vor dem Cachesynchronisierungsdatum erneut überprüft wurde, tritt die erneute Validierung mit dem Server noch auf.  Wenn der Cacheeintrag erneut überprüft wurde, nachdem das Cachesynchronisierungsdatum und dort keine zusätzlichen Anforderungen der Aktualitäts\- oder Servererneuten validierung sind, die den zwischengespeicherten Eintrag ungültig wird, wird der Eintrag im Cache verwendet.  Wenn das Cachesynchronisierungsdatum auf ein zukünftiges Datum festgelegt wurde, wird der Eintrag bei jeder Anforderung dieses Eintrags erneut überprüft, bis das Cachesynchronisierungsdatum verstrichen ist.  
+ Durch das Datum der Cachesynchronisierung können Sie ein absolutes Datum angeben, an dem die zwischengespeicherten Inhalte erneut überprüft werden müssen. Wenn ein neuer Cacheeintrag zuletzt vor dem Datum der Cachesynchronisierung erneut überprüft wurde, wird die erneute Überprüfung mit dem Server weiterhin ausgeführt. Wenn der Cacheeintrag nach dem Datum der Cachesynchronisierung erneut überprüft wurde, und es keine zusätzlichen Anforderungen an die Aktualität oder erneute Überprüfung gibt, die den zwischengespeicherten Eintrag ungültig machen, wird der Eintrag aus dem Cache verwendet. Wenn das Datum der Cachesynchronisierung auf ein Datum in der Zukunft festgelegt ist, wird der Eintrag bei jedem Aufruf erneut überprüft, bis das Datum der Cachesynchronisierung vorüber ist.  
   
- Die folgenden Themen enthalten Informationen über die Auswirkungen der Kombination von zeitbasierten Cacherichtlinienkriterien:  
+ Die folgenden Themen enthalten Informationen zu den Auswirkungen einer Kombination der Kriterien der zeitbasierten Cacherichtlinie:  
   
 -   [Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
 -   [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)   
+ [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
  [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [\<requestCaching\>\-Element \(Netzwerkeinstellungen\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

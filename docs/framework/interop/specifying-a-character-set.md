@@ -1,78 +1,83 @@
 ---
-title: "Specifying a Character Set | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, attribute fields"
-  - "attribute fields in platform invoke, CharSet"
-  - "CharSet field"
+title: Angeben eines Zeichensatzes
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, attribute fields
+- attribute fields in platform invoke, CharSet
+- CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Specifying a Character Set
-Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>\-Feld steuert das Marshalling von Zeichenfolgen und bestimmt, wie Funktionsnamen durch Plattformaufruf in einer DLL gesucht werden.  In diesem Abschnitt werden beide Verhaltensweisen beschrieben.  
+# <a name="specifying-a-character-set"></a>Angeben eines Zeichensatzes
+Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld steuert das Marshallen von Zeichenfolgen und bestimmt, wie Plattformaufrufe Funktionsnamen in einer DLL finden. In diesem Abschnitt werden beide Verhaltensweisen beschrieben.  
   
- Einige APIs exportieren zwei Versionen von Funktionen, die Zeichenfolgenargumente verwenden: eng \(ANSI\) und weit \(Unicode\).  Die Win32\-API z. B. enthält folgende Einstiegspunktnamen für die **MessageBox**\-Funktion:  
+ Einige APIs exportieren zwei Versionen von Funktionen, die Zeichenfolgenargumente verwenden: schmal (ANSI) und breit (Unicode). Die Win32-API enthält z.B. die folgenden Einstiegspunktnamen für die **MessageBox**-Funktion:  
   
 -   **MessageBoxA**  
   
-     Stellt eine Einzelbytezeichen\-Formatierung \(ANSI\) bereit, die durch ein an den Einstiegspunktnamen angehängtes "A" gekennzeichnet ist.  Aufrufe an **MessageBoxA** marshallen Zeichenfolgen immer im ANSI\-Format, das auf Windows 95\- und Windows 98\-Plattformen üblich ist.  
+     Stellt einen 1-Byte-Zeichensatz im ANSI-Format zur Verfügung, der durch ein zum Namen des Einstiegspunkts hinzugefügten „A“ unterschieden wird. Aufrufe von **MessageBoxA** marshallen Zeichenfolgen immer im ANSI-Format, was auf Windows 95- und Windows 98-Plattformen üblich ist.  
   
 -   **MessageBoxW**  
   
-     Stellt eine Doppelbytezeichen\-Formatierung \(Unicode\) bereit. Zur Unterscheidung ist ein "W" an den Einstiegspunktnamen angehängt.  Aufrufe an **MessageBoxW** marshallen Zeichenfolgen immer im Unicode\-Format, das auf Windows NT\-, Windows 2000\- und Windows XP\-Plattformen üblich ist.  
+     Stellt einen 2-Byte-Zeichensatz im Unicode-Format zur Verfügung, der durch ein zum Namen des Einstiegspunkts hinzugefügten „W“ unterschieden wird. Aufrufe von **MessageBoxA** marshallen Zeichenfolgen immer im Unicode-Format, was auf Windows NT-, Windows 2000- und Windows XP-Plattformen üblich ist.  
   
-## Marshallen von Zeichenfolgen und Namensvergleich  
- Das **CharSet**\-Feld lässt folgende Werte zu:  
+## <a name="string-marshaling-and-name-matching"></a>Marshallen von Zeichenfolgen und Namensübereinstimmung  
+ Das **CharSet**-Feld akzeptiert die folgenden Werte:  
   
- **CharSet.Ansi** \(Standardwert\)  
+ **CharSet.Ansi** (Standardwert)  
   
 -   Marshallen von Zeichenfolgen  
   
-     Durch Plattformaufruf werden Zeichenfolgen aus dem verwalteten Format \(Unicode\) ins ANSI\-Format gemarshallt.  
+     Plattformaufruf marshallt Zeichenfolgen aus dem verwalteten Format (Unicode) in das ANSI-Format.  
   
--   Namensvergleich  
+-   Namensübereinstimmung  
   
-     Wenn das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName>\-Feld den Wert **true** aufweist, also den Standardwert in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], sucht der Plattformaufruf nur nach dem angegebenen Namen.  Wenn Sie z. B. **MessageBox** angeben, schlägt die Suche durch den Plattformaufruf fehl, wenn keine exakte Übereinstimmung mit der Schreibweise von **MessageBox** gefunden werden kann.  
+     Wenn das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName>-Feld **TRUE**entspricht, wie es standardmäßig in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
   
-     Wenn das **ExactSpelling**\-Feld den Wert **false** aufweist, also den Standardwert in C\+\+ und C\#, wird vom Plattformaufruf zunächst nach dem nicht zerlegten Alias \(**MessageBox**\) gesucht. Wird dieser nicht gefunden, wird anschließend nach dem zerlegten Namen \(**MessageBoxA**\) gesucht.  Beachten Sie, dass das ANSI\-Namenvergleichsverhalten nicht mit dem Unicode\-Namenvergleichsverhalten übereinstimmt.  
+     Wenn das **ExactSpelling**-Feld **FALSE** ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem zerlegten Alias (**MessageBox**), und dann nach dem ergänzten Namen (**MessageBoxA**), wenn der zerlegte Alias nicht gefunden wird. Beachten Sie, dass die Namensübereinstimmung des ANSI-Verhaltens sich von der Namensübereinstimmung des Unicode-Verhaltens unterscheidet.  
   
  **CharSet.Unicode**  
   
 -   Marshallen von Zeichenfolgen  
   
-     Durch Plattformaufruf werden Zeichenfolgen aus dem verwalteten Format \(Unicode\) ins Unicode\-Format kopiert.  
+     Der Plattformaufruf kopiert Zeichenfolgen aus dem verwalteten Format (Unicode) in Unicode-Format.  
   
--   Namensvergleich  
+-   Namensübereinstimmung  
   
-     Wenn das **ExactSpelling**\-Feld den Wert **true** besitzt, also den Standardwert in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], sucht der Plattformaufruf nur nach dem angegebenen Namen.  Wenn Sie z. B. **MessageBox** angeben, schlägt die Suche durch den Plattformaufruf fehl, wenn keine exakte Übereinstimmung mit der Schreibweise von **MessageBox** gefunden werden kann.  
+     Wenn das Feld **ExactSpelling** **TRUE** ist, wie es standardmäßig in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
   
-     Wenn das **ExactSpelling**\-Feld den Wert **false** aufweist, also den Standardwert in C\+\+ und C\#, wird vom Plattformaufruf zunächst nach dem zerlegten Namen \(**MessageBoxW**\) gesucht. Wird dieser nicht gefunden, wird anschließend nach dem nicht zerlegten Alias \(**MessageBox**\) gesucht.  Beachten Sie, dass das Unicode\-Namenvergleichsverhalten nicht mit dem ANSI\-Namenvergleichsverhalten übereinstimmt.  
+     Wenn das **ExactSpelling**-Feld **FALSE** ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem ergänzten Namen (**MessageBoxW**), und dann nach dem zerlegten Alias (**MessageBox**), wenn der ergänzte Name nicht gefunden wird. Beachten Sie, dass das Verhalten der Namensübereinstimmung von Unicode sich vom Verhalten der Namensübereinstimmung von ANSI unterscheidet.  
   
  **CharSet.Auto**  
   
--   Abhängig von der Zielplattform wählt der Plattformaufruf zur Laufzeit zwischen ANSI\-Format und Unicode\-Format aus.  
+-   Der Plattformaufruf basierend auf der Zielplattform zur Laufzeit wählt zwischen ANSI- und Unicode-Formaten.  
   
-## Festlegen eines Zeichensatzes in Visual Basic  
- Im folgenden Beispiel wird die **MessageBox**\-Funktion dreimal mit jeweils unterschiedlichem Zeichensatzverhalten deklariert.  Sie können das Zeichensatzverhalten in Visual Basic festlegen, indem Sie der Deklarationsanweisung das **Ansi**\-Schlüsselwort, das **Unicode**\-Schlüsselwort oder das **Auto**\-Schlüsselwort hinzufügen.  
+## <a name="specifying-a-character-set-in-visual-basic"></a>Festlegen eines Zeichensatzes in Visual Basic  
+ Das folgende Beispiel deklariert die **MessageBox**-Funktion dreimal, wobei der Zeichensatz sich jedes Mal unterschiedlich verhält. Sie können das Verhalten des Zeichensatzes in Visual Basic angeben, indem Sie die Schlüsselwörter **Ansi**, **Unicode** oder **Auto** zur Deklarationsanweisung hinzufügen.  
   
- Wenn Sie kein Schlüsselwort für den Zeichensatz festlegen, wie dies in der ersten Deklarationsanweisung der Fall ist, wird für das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>\-Feld standardmäßig der ANSI\-Zeichensatz verwendet.  In der zweiten und dritten Anweisung in diesem Beispiel wird mittels eines Schlüsselworts explizit ein Zeichensatz festgelegt.  
+ Wenn Sie das Zeichensatzschlüsselwort weglassen, wie es in der ersten Deklarationsanweisung der Fall ist, erfolgt das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld standardmäßig im ANSI-Zeichensatz. Die zweite und dritte Anweisung in diesem Beispiel geben einen Zeichensatz explizit mit einem Schlüsselwort an.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -92,14 +97,13 @@ Public Class Win32
 End Class  
 ```  
   
-## Festlegen eines Zeichensatzes in C\# and C\+\+  
- Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>\-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode.  Der Zeichensatz steuert, wie Zeichenfolgenargumente für die Methode gemarshallt werden sollen.  Verwenden Sie eine der folgenden Formen, um den Zeichensatz anzugeben:  
+## <a name="specifying-a-character-set-in-c-and-c"></a>Festlegen eines Zeichensatzes in C# und C++  
+ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode. Der Zeichensatz steuert, wie die Zeichenfolgenargumente an eine Methode gemarshallt werden sollen. Verwenden Sie eines der folgenden Formate, um den Zeichensatz anzugeben:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
 [DllImport("dllname", CharSet=CharSet.Unicode)]  
 [DllImport("dllname", CharSet=CharSet.Auto)]  
-  
 ```  
   
 ```cpp  
@@ -108,7 +112,7 @@ End Class
 [DllImport("dllname", CharSet=CharSet::Auto)]  
 ```  
   
- Im folgenden Beispiel werden drei verwaltete Definitionen der **MessageBox**\-Funktion mit Attributen angezeigt, um den Zeichensatz anzugeben.  In der ersten Definition wird durch Auslassen des **CharSet**\-Felds standardmäßig der ANSI\-Zeichensatz übernommen.  
+ Im folgenden Beispiel werden drei verwaltete Definitionen der **MessageBox**-Funktion angezeigt, die einen Zeichensatz anzeigen. Durch die Auslassung wird das **CharSet**-Feld in der ersten Definition standardmäßig in ANSI-Zeichensatz verwandelt.  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -120,7 +124,6 @@ End Class
 [DllImport("user32.dll", CharSet=CharSet.Auto)]  
     public static extern int MessageBox(int hWnd, String text,   
         String caption, uint type);  
-  
 ```  
   
 ```cpp  
@@ -148,8 +151,9 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Platform Invoke Examples](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)   
+ [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+

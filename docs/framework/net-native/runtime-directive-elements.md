@@ -1,77 +1,83 @@
 ---
-title: "Elemente der Laufzeitrichtlinie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemente der Laufzeitanweisung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3143c6b78749f3339e7e7195b551b5a5c31fad12
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemente der Laufzeitrichtlinie
-Das Dateiformat der Laufzeitdirektiven \(rd.xml\) unterstützt die folgenden Laufzeitdirektivenelemente.  Eine hierarchische Darstellung finden Sie unter [Laufzeitdirektiven\-Konfigurationsdatei \(rd.xml\) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+# <a name="runtime-directive-elements"></a>Elemente der Laufzeitanweisung
+Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Laufzeitanweisungselemente. Eine hierarchische Darstellung finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
- [\<Application\>](../../../docs/framework/net-native/application-element-net-native.md)  
- Wendet die Laufzeitreflektionsrichtlinie auf alle von der Anwendung verwendeten Typen an und dient als Container für anwendungsweite Typen und Typmember, deren Metadaten für die Reflektion zur Laufzeit verfügbar sind.  Dies ist ein untergeordnetes Element des [\<Directives\>](../../../docs/framework/net-native/directives-element-net-native.md)\-Elements.  
+ [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)  
+ Wendet die Laufzeitreflektionsrichtlinie auf alle von der Anwendung verwendeten Typen an und dient als Container für anwendungsweite Typen und Typmember, deren Metadaten für die Reflektion zur Laufzeit verfügbar sind. Dies ist ein untergeordnetes Element des [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)-Elements.  
   
- [\<Assembly\>](../../../docs/framework/net-native/assembly-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf alle Typen in einer Assembly an.  Dies ist ein untergeordnetes Element der [\<Application\>](../../../docs/framework/net-native/application-element-net-native.md)\- und [\<Library\>](../../../docs/framework/net-native/library-element-net-native.md)\-Elemente.  
+ [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf alle Typen in einer Assembly an. Dies ist ein untergeordnetes Element der [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)- und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Elemente.  
   
- [\<AttributeImplies\>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
- Wenn die enthaltende [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\-Direktive ein Attribut ist, wird eine Laufzeitrichtlinie auf Codeelemente angewendet, auf die dieses Attribut angewendet wird.  
+ [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
+ Wenn die enthaltende [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Anweisung ein Attribut ist, wird eine Laufzeitrichtlinie auf Codeelemente angewendet, auf die dieses Attribut angewendet wird.  
   
- [\<Directives\>](../../../docs/framework/net-native/directives-element-net-native.md)  
- Das Stammelement in jeder Laufzeitdirektivendatei für [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Die untergeordneten Elemente sind [\<Application\>](../../../docs/framework/net-native/application-element-net-native.md) und [\<Library\>](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
+ Das Stammelement in jeder Laufzeitdirektivendatei für [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Die untergeordneten Elemente sind [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
- [\<Event\>](../../../docs/framework/net-native/event-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf ein Ereignis an.  Dies ist ein untergeordnetes Element der [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\- und [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)\-Elemente.  
+ [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf ein Ereignis an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<Field\>](../../../docs/framework/net-native/field-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf ein Feld an.  Dies ist ein untergeordnetes Element der [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\- und [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)\-Elemente.  
+ [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf ein Feld an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<GenericParameter\>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
+ [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.  
   
- [\<ImpliesType\>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
+ [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
   
- [\<Library\>](../../../docs/framework/net-native/library-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf alle Typen in einer Assembly an.  Dies ist ein untergeordnetes Element der [\<Application\>](../../../docs/framework/net-native/application-element-net-native.md)\- und [\<Library\>](../../../docs/framework/net-native/library-element-net-native.md)\-Elemente.  
+ [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf alle Typen in einer Assembly an. Dies ist ein untergeordnetes Element der [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)- und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Elemente.  
   
- [\<Method\>](../../../docs/framework/net-native/method-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf eine Methode an.  Dies ist ein untergeordnetes Element der [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\- und [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)\-Elemente.  
+ [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf eine Methode an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<MethodInstantiation\>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf eine konstruierte generische Methode an.  Dies ist ein untergeordnetes Element der [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\- und [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)\-Elemente.  
+ [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf eine konstruierte generische Methode an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md)  
+ [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf alle Typen in einem Namespace an.  
   
- [\<Parameter\>](../../../docs/framework/net-native/parameter-element-net-native.md)  
+ [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.  
   
- [\<Property\>](../../../docs/framework/net-native/property-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf eine Eigenschaft an.  Dies ist ein untergeordnetes Element der [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)\- und [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)\-Elemente.  
+ [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf eine Eigenschaft an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<Subtypes\>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
+ [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an.  
   
- [\<Type\>](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf einen Typ an.  
   
- [\<TypeInstantiation\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
+ [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf einen konstruierten generischen Typ an.  
   
- [\<TypeParameter\>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
- Wendet eine Laufzeitrichtlinie auf den Typ an, der durch ein <xref:System.Type>\-Argument, das an eine Methode übergeben wird, dargestellt wird.  
+ [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
+ Wendet eine Laufzeitrichtlinie auf den Typ an, der durch ein <xref:System.Type>-Argument, das an eine Methode übergeben wird, dargestellt wird.  
   
-## Siehe auch  
- ["rd.xml"\-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [„rd.xml“-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+

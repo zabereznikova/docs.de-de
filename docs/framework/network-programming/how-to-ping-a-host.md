@@ -1,30 +1,35 @@
 ---
-title: "Gewusst wie: Pingen eines Hosts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Pingen"
+title: 'Gewusst wie: Pingen eines Hosts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Pingen eines Hosts
-Dieses Beispiel zeigt, wie ein Remotehost das Pingen.  
+# <a name="how-to-ping-a-host"></a>Gewusst wie: Pingen eines Hosts
+In diesem Beispiel wird gezeigt, wie Sie einen Ping für einen Remotehost durchführen können.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 using System;  
@@ -130,7 +135,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf **System.Net**\-Namespace.
+-   Verweise auf den Namespace **System.Net**
+

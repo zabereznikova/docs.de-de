@@ -1,50 +1,56 @@
 ---
-title: "Cacheverwaltung f&#252;r Netzwerkanwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Cache [.NET Framework], Netzwerkanwendungen"
-  - "Netzwerkressourcen, Zwischenspeichern"
-  - "Internet, Zwischenspeichern"
+title: "Cacheverwaltung für Netzwerkanwendungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- cache [.NET Framework], network applications
+- network resources, caching
+- Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Cacheverwaltung f&#252;r Netzwerkanwendungen
-Dieses Thema und die zugehörigen Abschnitten werden, für Ressourcen zwischenzuspeichern abgerufen mithilfe <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> und <xref:System.Net.FtpWebRequest>\-Klassen.  
+# <a name="cache-management-for-network-applications"></a>Cacheverwaltung für Netzwerkanwendungen
+Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicherung von Ressourcen, die mithilfe der <xref:System.Net.WebClient>-, <xref:System.Net.WebRequest>-, <xref:System.Net.HttpWebRequest>- und <xref:System.Net.FtpWebRequest>-Klassen erhalten werden.  
   
- Ein Cache ermöglicht eine temporäre Speicherung von Ressourcen, die von einer Anwendung angefordert wurden.  Wenn dieselbe Ressource mehrmals anfordert, kann diese aus dem Cache zurückgegeben werden und den Aufwand von wieder\-fordernd vermeiden es vom Server.  Zwischenspeichern kann die Anwendungsleistung verbessern, indem die Zeit reduziert, die erforderlich ist, um eine angeforderte Ressource abzurufen.  Zwischenspeichern kann auch Netzwerkverkehr verringern, indem die Anzahl der Reisen zum Server reduziert.  Während das Zwischenspeichern Leistung verbessert, erhöht er das Risiko, dass die Ressource, die der Anwendung zurückgegeben wird, veraltet ist und bedeutet, dass es nicht zur Ressource identisch ist, die vom Server gesendet wäre, beim Zwischenspeichern nicht verwendet wurden.  
+ Ein Zwischenspeicher dient als temporärer Speicher von Ressourcen, die von einer Anwendung angefordert wurden. Wenn eine Anwendung mehrere Male die gleiche Ressource anfordert, kann die Ressource aus dem Zwischenspeicher zurückgegeben werden. Der Mehraufwand einer erneuten Aufforderung vom Server wird somit verhindert. Zwischenspeichern kann die Anwendungsleistung durch Verringern des Zeitaufwands für den Abruf einer angeforderten Ressource verbessern. Zwischenspeichern kann auch den Netzwerkverkehr verringern, indem die Anzahl der Roundtrips zum Server reduziert werden. Bei der Zwischenspeicherung wird die Leistung verbessert, aber sie erhöht auch das Risiko, dass die an die Anwendung zurückgegebene Ressource veraltet ist, was bedeutet, dass sie nicht identisch zu der Ressource ist, die vom Server gesendet worden wäre, wenn das Zwischenspeichern nicht in Gebrauch wäre.  
   
- Zwischenspeichern erlaubt möglicherweise unbefugte Benutzer oder Prozesse zu den Lesesensiblen Daten.  Eine authentifizierte Antwort, die zwischengespeichert wird, wird aus dem Cache ohne eine zusätzliche Autorisierung abgerufen werden.  Wenn die Zwischenspeicherung aktiviert ist, Änderung an <xref:System.Net.WebRequest.CachePolicy%2A> zu <xref:System.Net.Cache.RequestCacheLevel> oder zu <xref:System.Net.Cache.RequestCacheLevel>, um das Zwischenspeichern für diese Anforderung zu deaktivieren.  
+ Durch Zwischenspeichern können nicht autorisierte Benutzer vertrauliche Daten lesen oder verarbeiten. Eine authentifizierte Antwort, die zwischengespeichert ist, kann möglicherweise ohne eine zusätzliche Autorisierung aus dem Zwischenspeicher abgerufen werden. Wenn das Zwischenspeichern aktiviert wurde, ändern Sie <xref:System.Net.WebRequest.CachePolicy%2A> auf <xref:System.Net.Cache.RequestCacheLevel.BypassCache> oder <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore>, um es für diese Anforderung zu deaktivieren.  
   
- Aufgrund der Sicherheitsaspekte ist das Zwischenspeichern **not**, das für die mittlere Ebenenszenarien empfohlen wird.  
+ Aus Sicherheitsgründen wird das Zwischenspeichern **nicht** für Szenarios der mittleren Ebene empfohlen.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
- Erklärt, was eine Cacherichtlinie ist und wie ein definiert.  
+ Erläutert, was eine Cacherichtlinie ist und wie sie definiert werden kann.  
   
  [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- Definiert jeden Typ ortsbasierte Cacherichtlinie, die für Ressourcen verfügbar ist des Hypertext Transfer Protocol \(HTTP und https\).  
+ Definiert jeden Typ von verfügbaren speicherortbasierten Cacherichtlinien für Ressourcen von Hypertext Transfer Protocol (http und https).  
   
- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- Beschreibt die Kriterien, die verwendet werden können, um eine zeitbasierte Cacherichtlinie anzupassen.  
+ [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ Beschreibt die Kriterien, die zum Anpassen einer zeitbasierten Cacherichtlinie verwendet werden können.  
   
  [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- Beschreibt, wie programmgesteuert Cacherichtlinien und \-anforderungen erstellt, die Zwischenspeicherung verwenden.  
+ Beschreibt, wie Sie programmgesteuert Cacherichtlinien und Anforderungen erstellen, die Zwischenspeicher verwenden.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Net.Cache>  
- Definiert die Typen und die Enumerationen, die verwendet wurden, um Cacherichtlinien für Ressourcen zu definieren, werden mithilfe <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> und <xref:System.Net.FtpWebRequest>\-Klassen.
+ Definiert die Typen und Enumerationen, mit denen Cacherichtlinien für Ressourcen definiert werden, die mithilfe der Klassen <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> und <xref:System.Net.FtpWebRequest> abgerufen werden.
+

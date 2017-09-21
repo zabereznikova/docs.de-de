@@ -1,57 +1,62 @@
 ---
-title: "openGenericCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "open generic CER calls"
-  - "constrained execution regions"
-  - "openGenericCERCall MDA"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
-  - "generics [.NET Framework], open generic CER calls"
+title: OpenGenericCERCall-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- open generic CER calls
+- constrained execution regions
+- openGenericCERCall MDA
+- CER calls
+- managed debugging assistants (MDAs), CER calls
+- generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# openGenericCERCall MDA
-Der `openGenericCERCall`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, um davor zu warnen, dass ein Diagramm eines eingeschränkten Ausführungsbereichs \(Constrained Execution Region, CER\) mit generischen Typvariablen in der Stammmethode bei der JIT \(Just\-in\-Time\)\-Kompilierung oder der Generierung systemeigener Abbilder verarbeitet wird und mindestens eine der generischen Typvariablen ein ObjektReferenztyp ist.  
+# <a name="opengenericcercall-mda"></a>OpenGenericCERCall-MDA
+Der `openGenericCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, um zu warnen, dass ein CER-Diagramm mit generischen Typvariablen in der Stammmethode zum Zeitpunkt der JIT-Kompilierung oder der nativen Imagegenerierung verarbeitet wird und mindestens eine der generischen Typvariablen ein Objektverweistyp ist.  
   
-## Symptome  
- CER\-Code wird nicht ausgeführt, wenn ein Thread abgebrochen oder eine Anwendungsdomäne entladen wird.  
+## <a name="symptoms"></a>Symptome  
+ CER-Code, der nicht ausgeführt wird, wenn ein Thread abgebrochen oder eine Anwendungsdomäne entladen wird.  
   
-## Ursache  
- Bei der JIT\-Kompilierung ist eine Instanziierung mit einem ObjektReferenztyp nur repräsentativ, weil der resultierende Code gemeinsam genutzt wird, und jede der ObjektReferenztyp\-Variablen kann ein beliebiger ObjektReferenztyp sein.  Dies kann die Vorbereitung einiger Laufzeitressourcen im Voraus verhindern.  
+## <a name="cause"></a>Ursache  
+ Zum Zeitpunkt der JIT-Kompilierung ist eine Instanziierung, die einen Objektverweistyp enthält, nur repräsentativ, da der resultierende Code freigegeben wird und jede Variable des Objektverweistyps ggf. ein beliebiger Objektverweistyp sein kann. Dies kann die Vorbereitung einiger Laufzeitressourcen im Voraus verhindern.  
   
- Insbesondere gilt, dass die Zuordnung von Ressourcen durch Methoden mit generischen Typvariablen träge im Hintergrund erfolgen kann.  Diese werden als generische Wörterbucheinträge bezeichnet.  So muss die Laufzeit beispielsweise für die Anweisung `List<T> list = new List<T>();` \(wobei `T` eine generische Typvariable ist\) die genaue Instanziierung zur Laufzeit suchen und möglicherweise erstellen, z. B. `List<Object>, List<String>`, ``  usw.  Dies kann aus verschiedenen Gründen fehlschlagen, die bei der Entwicklung nicht beeinflusst werden können, z. B., weil nicht genügend Speicherplatz verfügbar ist.  
+ Methoden mit generischen Typvariablen können Ressourcen im Hintergrund verzögert zuordnen. Diese werden als generische Wörterbucheinträge bezeichnet. Bei der `List<T> list = new List<T>();` ist `T` eine generische Typvariable. Hier muss die Runtime die genaue Instanziierung zur Laufzeit nachschlagen und möglicherweise erstellen, z.B. `List<Object>, List<String>` usw. Dies kann aus einer Vielzahl von Gründen fehlschlagen, die außerhalb der Kontrolle des Entwicklers liegen, z.B. fehlendem Arbeitsspeicher.  
   
- Dieser MDA sollte nur bei der JIT\-Kompilierung aktiviert werden, nicht jedoch, wenn eine genaue Instanziierung vorhanden ist.  
+ Dieser MDA sollte nur zum Zeitpunkt der JIT-Kompilierung aktiviert werden, und nicht bei einer genauen Instanziierung.  
   
- Wenn dieser MDA aktiviert wird, werden Sie als Symptom wahrscheinlich bemerken, dass CERs nicht funktionieren, weil fehlerhafte Instanziierungen vorliegen.  Die Laufzeit hat unter den Bedingungen, aufgrund derer der MDA aktiviert wurde, tatsächlich nicht versucht, eine CER zu implementieren.  Wenn ein Entwickler also eine gemeinsam genutzte Instanziierung der CER verwendet, werden Fehler bei der JIT\-Kompilierung, Fehler beim Laden von generischen Typen und Threadabbrüche im Bereich der vorgesehenen CER nicht abgefangen.  
+ Wenn dieser MDA aktiviert wird, ist es wahrscheinlich, dass die CERs für fehlerhafte Instanziierungen nicht funktionsfähig sind. Die Common Language Runtime hat in der Tat nicht versucht, einen CER unter den Umständen zu implementieren, die zur Aktivierung der MDA geführt haben. Wenn der Entwickler eine freigegebene Instanziierung des CER verwendet, dann werden JIT-Kompilierungsfehler, Fehler beim Laden von generischen Typen oder Threadabbrüche innerhalb des Bereichs des vorgesehenen CERs nicht abgefangen.  
   
-## Lösung  
- Verwenden Sie keine generischen Typvariablen vom ObjektReferenztyp in Methoden, die möglicherweise eine CER enthalten.  
+## <a name="resolution"></a>Auflösung  
+ Verwenden Sie keine generischen Typvariablen, die Objektverweistypen für Methoden sind, die möglicherweise eine CER enthalten.  
   
-## Auswirkungen auf die Laufzeit  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## Ausgabe  
- Im Folgenden finden Sie ein Beispiel für Ausgabe dieses MDA.  
+## <a name="output"></a>Ausgabe  
+ Im Folgenden finden Sie ein Beispiel für die Ausgabe dieses MDA.  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -61,9 +66,9 @@ Der `openGenericCERCall`\-MDA \(Managed Debugging Assistant, Assistent für verw
   
  `declaringType name="OpenGenericCERCall"`  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <openGenericCERCall/>  
@@ -71,8 +76,8 @@ Der `openGenericCERCall`\-MDA \(Managed Debugging Assistant, Assistent für verw
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Der CER\-Code wird nicht ausgeführt.  
+## <a name="example"></a>Beispiel  
+ Der CER-Code wird nicht ausgeführt.  
   
 ```  
 using System;  
@@ -116,7 +121,8 @@ class Program
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

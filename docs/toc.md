@@ -66,7 +66,6 @@
 ## [Neuigkeiten in .NET Core](core/whats-new/index.md)
 ## [Tutorials](core/tutorials/index.md)
 ### [Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
-### [Erste Schritte mit C# und Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Erste Schritte mit .NET Core unter macOS](core/tutorials/using-on-macos.md)
 ### [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs.md)
 ### [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,7 +95,10 @@
 ## [Komponententests](core/testing/index.md)
 ### [Komponententests mit dotnet-Test und xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Komponententests mit dotnet-Test und MSTest](core/testing/unit-testing-with-mstest.md)
+### [F#-Komponententests mit dotnet-Test und xUnit]()
+### [F#-Komponententests mit dotnet-Test und MSTest]()
 ### [Ausführen von selektiven Komponententests](core/testing/selective-unit-tests.md)
+### [Live unit testing .NET Core projects with Visual Studio]() (Live-Komponententests von .NET Core-Projekten mit Visual Studio)
 ## [Versionskontrolle](core/versions/index.md)
 ### [.NET Core-Unterstützung](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->

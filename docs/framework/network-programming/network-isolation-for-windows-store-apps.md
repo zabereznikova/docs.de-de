@@ -1,44 +1,50 @@
 ---
-title: "Netzwerkisolation f&#252;r Windows Store-Apps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Netzwerkisolation für Windows Store-Apps"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Netzwerkisolation f&#252;r Windows Store-Apps
-Klassen in <xref:System.Net>, in <xref:System.Net.Http> und in <xref:System.Net.Http.Headers>\-Namespaces können verwendet werden, um Windows Store\-Apps oder \-Desktop\-Apps zu entwickeln.  Wenn sie in einer Windows Store\-App verwendet werden, werden Klassen in diesen Namespaces von Netzwerkisolation, Teil des Anwendungssicherheitskonzepts verwendeten durch [!INCLUDE[win8](../../../includes/win8-md.md)] beeinflusst.  Die entsprechenden Netzwerkfunktionen müssen im Anwendungsmanifest für eine Windows Store\-App aktiviert werden, damit das System Netzwerkzugriff zulässig.  
+# <a name="network-isolation-for-windows-store-apps"></a>Netzwerkisolation für Windows Store-Apps
+Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> können verwendet werden, um Windows Store-Apps oder Desktop-Apps zu entwickeln. Bei Verwendung in einer Windows Store-App sind Klassen in diesen Namespaces von Netzwerkisolation betroffen, als Teil des Anwendungssicherheitsmodells, das von [!INCLUDE[win8](../../../includes/win8-md.md)] verwendet wird. Die entsprechenden Netzwerkfunktionen müssen im App-Manifest für eine Windows Store-App aktiviert sein, damit das System den Netzwerkzugriff erlaubt.  
   
-## Prüfliste für die Netzwerkisolation  
- Verwenden Sie diese Prüfliste sicherstellen, dass Netzwerkisolation für die Windows Store\-App konfiguriert ist.  
+## <a name="checklist-for-network-isolation"></a>Prüfliste für die Netzwerkisolation  
+ Verwenden Sie diese Prüfliste, um sicherzustellen, dass die Netzwerkisolation für Ihre Windows Store-App konfiguriert ist.  
   
-1.  Bestimmen Sie die Richtung von den Netzzuganganforderungen, die durch die Anwendung benötigt werden.  Diese kann entweder Client\-initiierte ausgehende Anforderungen sein, oder unverlangte eingehende Anforderungen oder es könnten eine Kombination beider Netzwerkanforderungstypen sein.  
+1.  Bestimmen Sie die Richtung der Netzwerkzugriffsanforderungen, die von der App benötigt werden. Dies können entweder ausgehende, vom Client initiierte Anforderungen sein oder eingehende, unaufgeforderte Anforderungen, oder es könnte möglicherweise eine Kombination aus beiden Netzwerkanforderungstypen sein.  
   
-2.  Bestimmen Sie den Typ von Netzwerkressourcen, die diese App ist.  Eine Anwendung muss möglicherweise vertrauenswürdige Ressourcen auf POS1 oder einem Arbeitsplatznetzwerk kommunizieren.  Eine Anwendung muss möglicherweise Ressourcen im Internet kommunizieren.  Eine Anwendung könnte benötigt Zugriff auf beide Typen Netzwerkressourcen.  
+2.  Bestimmen Sie den Typ der Netzwerkressourcen, mit denen diese App kommunizieren wird. Eine App muss möglicherweise mit vertrauenswürdigen Ressourcen in einem Heimnetzwerk oder einem Arbeitsplatznetzwerk kommunizieren. Eine App muss möglicherweise mit Ressourcen im Internet kommunizieren. Eine App benötigt möglicherweise den Zugriff auf beide Netzwerkressourcentypen.  
   
-3.  Konfigurieren Sie MinimumREQUIRED, das Isolationsfunktionen im Anwendungsmanifest vernetzt.  
+3.  Konfigurieren Sie die minimal erforderlichen Netzwerkisolationsfunktionen im App-Manifest.  
   
-4.  Erstellen Sie die Anwendung bereit aus, um sie mit der Netzwerkisolationstools zu testen, die für die Problembehandlung bereitgestellt werden.  
+4.  Stellen Sie Ihre App bereit, und führen Sie diese zu Testzwecken aus, indem Sie die Netzwerkisolationstools für die Problembehandlung verwenden.  
   
- Ausführlichere Informationen dazu, wie Netzwerk\- und \-Isolation bearbeitet verwendet für die Problembehandlung der Netzwerkisolation, [Erstellen Netzwerkisolationsfunktionen konfiguriert](http://go.microsoft.com/fwlink/?LinkID=228265) finden Sie unter in der [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Entwicklerdokumentation konfiguriert.  
+ Weitere ausführliche Informationen zum Konfigurieren der Netzwerkfunktionen und der Isolationstools zur Problembehandlung im Rahmen der Netzwerkisolation finden Sie unter [How to configure network isolation capabilities (Vorgehensweise beim Konfigurieren von Netzwerkisolierungseigenschaften)](http://go.microsoft.com/fwlink/?LinkID=228265) in der [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Entwicklerdokumentation.  
   
-## Siehe auch  
- [Verbindung mit einem Webdienst](http://go.microsoft.com/fwlink/?LinkID=245696)   
+## <a name="see-also"></a>Siehe auch  
+ [Connecting to a web service (Herstellen einer Verbindung zu einem Webdienst)](http://go.microsoft.com/fwlink/?LinkID=245696)   
  [Richtlinien und Prüfliste für die Netzwerkisolation](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [Mobile\-Schnellstart\-Lernprogrammen: Verbindung mit HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [Erstellen HttpClient\-Handler verwendet](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [Erstellen HttpClient\-Verbindungen gespeichert werden](http://go.microsoft.com/fwlink/?LinkId=245698)   
- [HttpClient\-Beispiel](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Quickstart: Connecting using HttpClient (Schnellstart: Verbindungsherstellung mithilfe von „HttpClient“)](http://go.microsoft.com/fwlink/?LinkId=245697)   
+ [How to use HttpClient handlers (Verwenden des Handlers für „HttpClient“)](http://go.microsoft.com/fwlink/?LinkId=245699)   
+ [How to secure HttpClient connections (Sichern von „HttpClient“-Verbindungen)](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [HttpClient Sample (HttpClient-Beispiel)](http://go.microsoft.com/fwlink/?LinkId=242550)
+

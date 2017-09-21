@@ -1,73 +1,79 @@
 ---
-title: "Internetprotokoll Version 6 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "IPv6, Verbesserungen"
-  - "IPv4"
-  - "IPv6"
-  - "Internetprotokoll Version 6, Verbesserungen"
-  - "Internetprotokoll Version 6"
+title: Internetprotokoll Version 6
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- IPv6, improvements
+- IPv4
+- IPv6
+- Internet Protocol version 6, improvements
+- Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
 # Internetprotokoll Version 6
-Das Internetprotokoll, Version 6 \(IPv6\) ist eine neue Suite von Standardprotokollen für die Vermittlungsschicht Web.  IPv6 ist so konzipiert, dass viele der Probleme der aktuellen Version von der Internetprotokollsuite \(bekannt als IPv4\) hinsichtlich der Adressenentleerung, Sicherheit, automatische Konfiguration, Erweiterbarkeit zu lösen, u. a.  IPv6 erweitert die Funktionen mit dem, neue Arten von Anwendungen, einschließlich gleichberechtigt und mobilen Anwendungen zu ermöglichen.  Die folgenden ist die Kernfragen des Protokolls des aktuellen IPv4:  
+Das Internetprotokoll Version 6 (IPv6) ist eine neue Standardprotokollsammlung für die Netzwerkebene des Internets. IPv6 wurde entwickelt, um viele Probleme der aktuellen Version der Internetprotokollsammlung (IPv4) hinsichtlich Adressenknappheit, Sicherheit, automatischer Konfiguration, Bedarf an Erweiterbarkeit usw., zu lösen. IPv6 erweitert die Funktionen des Internets, um neue Arten von Anwendungen zu ermöglichen, einschließlich Peer-zu-Peer-Anwendungen und mobile Anwendungen. Nachfolgend sind die Hauptprobleme des aktuellen IPv4-Protokolls aufgelistet:  
   
--   Schnelle Entleerung des Speicherbereichs.  
+-   Schnelle Erschöpfung des Adressraums  
   
-     Dies hat zur Verwendung von Endsystemadresse\-Übersetzern \(Netzwerkadressübersetzung\) mehrere Privatanschriften dieser Zuordnung zu einer einzelnen IP\-Adresse öffentlichen übernommen.  Die wichtigsten Probleme, die von diesen Mechanismus erstellt werden, verarbeiten Aufwand und mangelnder Verbindungsfähigkeit.  
+     Dies hat zur Verwendung von Netzwerkadressübersetzungen (NATs, Network Address Translators) geführt, wodurch mehrere private Adressen einer einzelnen IP-Adresse zugeordnet werden. Die wichtigsten dadurch entstandenen Probleme sind Mehraufwand und Verlust von End-to-End-Verbindungen.  
   
--   Fehlende Hierarchienunterstützung.  
+-   Fehlende hierarchische Unterstützung  
   
-     Aufgrund der inhärenten vordefinierten Klassenorganisation fehlt IPv4 echte hierarchische Unterstützung.  Es ist nicht möglich, die IP\-Adressen auf eine Weise zu strukturieren, die eigentlich die Netzwerktopologie zuordnet.  Dieser endgültige Konstruktionsfehler erstellt die Anforderung, damit große Routingtabellen Pakete IPv4 an einem beliebigen Speicherort auf dem Internet bereitstellen.  
+     Aufgrund seiner inhärenten Organisation in vordefinierte Klassen verfügt IPv4 über keine echte hierarchische Unterstützung. Die IP-Adressen können unmöglich so strukturiert werden, dass sie der tatsächlichen Netzwerktopologie entsprechen. Durch diesen entscheidenden Entwurfsfehler sind umfangreiche Routingtabellen notwendig, um IPv4-Pakete an einem beliebigen Speicherort im Internet bereitzustellen.  
   
--   Komplexe Netzkonfiguration.  
+-   Komplexe Netzwerkkonfiguration  
   
-     Mit IPv4 müssen Adressen statisch zugewiesen werden oder mit einem Konfigurationsprotokoll wie DHCP.  Unter optimalen Umständen nehmen Hosts nicht auf der Verwaltung einer DHCP\-Infrastruktur verwenden müssen.  Stattdessen werden sie sein, auf dem Netzwerksegment zu konfigurieren, in dem sie sind.  
+     Mit IPv4 müssen Adressen statisch oder mithilfe eines Configuration-Protokolls, wie z.B. DHCP, zugewiesen werden. Idealerweise sollten Hosts nicht auf die Verwaltung einer DHCP-Infrastruktur vertrauen müssen. Sie sollten stattdessen selbst Konfigurationen basierend auf dem Netzwerksegment, in dem sie sich befinden, vornehmen können.  
   
--   Fehlende integrierter Authentifizierung und Vertraulichkeit.  
+-   Fehlende integrierte Authentifizierung und Vertraulichkeit  
   
-     IPv4 erfordert die Unterstützung nicht für einen Mechanismus, der Authentifizierung oder Verschlüsselung der ausgetauschten Daten bereitstellt.  Dadurch wird mit IPv6.  Internetprotokollsicherheit \(IPSec\) ist eine Anforderung der Unterstützungs IPv6.  
+     IPv4 erfordert keine Unterstützung für jedweden Mechanismus zur Authentifizierung oder Verschlüsselung der ausgetauschten Daten. Dies ändert sich mit IPv6. Internetprotokollsicherheit (IPSec, Internet Protocol Security) ist eine Supportanforderung von IPv6.  
   
- Eine neue Protokollsuite muss den folgenden grundlegenden Anforderungen erfüllen:  
+ Eine neue Protokollsammlung muss die folgenden grundlegenden Anforderungen erfüllen:  
   
--   Umfangreiches Routing und Behandeln mit niedrigem Mehraufwand.  
+-   umfangreiches Routing und Adressierung mit geringem Mehraufwand  
   
--   Automatische Konfiguration für verschiedene Verbindungssituationen.  
+-   automatische Konfiguration für verschiedene Verbindungssituationen  
   
--   Integrierte Authentifizierung und Vertraulichkeit.  
+-   integrierte Authentifizierung und Vertraulichkeit  
   
- Weitere Informationen finden Sie unter [IPv6\-Adressierung](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6\-Routing](../../../docs/framework/network-programming/ipv6-routing.md), [Automatische IPv6\-Konfiguration](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Aktivieren und Deaktivieren von IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) und [Gewusst wie: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6\-Unterstützung](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ Weitere Informationen finden Sie unter [IPv6-Adressierung](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6-Routing](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 Auto-Configuration (Automatische IPv6-Konfiguration)](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Enabling and Disabling IPv6 (Aktivieren und Deaktivieren von IPv6)](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) und [How to: Modify the Computer Configuration File to Enable IPv6 Support (Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung)](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## Verweise  
- Die folgenden ist ausgewählte RFC\-Dokumente, die an der Internet Engineering Task Force\-Site finden \([http:\/\/www.ietf.org](http://www.ietf.org/)\):  
+ Nachfolgend eine Auswahl von RFC-Dokumenten, die Sie auf der Internetseite der „Engineering Task Force“ finden können ([http://www.ietf.org](http://www.ietf.org/)):  
   
--   RFC 1287, und zur zukünftigen Internet\-Architektur.  
+-   RFC 1287: Towards the Future Internet Architecture (Internetarchitektur der Zukunft)  
   
--   RFC 1454, Vergleich der Zugriff für nachfolgende Version von IP\-Adressen.  
+-   RFC 1454: Comparison of Proposals for Next Version of IP (Vergleich von Vorschlägen für die nächste IP-Version)  
   
--   RFC 2373, IP\-Version 6\-Adressarchitektur.  
+-   RFC 2373: IP Version 6 Addressing Architecture (Adressierungsarchitektur von IP Version 6)  
   
--   RFC 2374, Ein IPv6\-aggregierbares globales Unicastadressformat.  
+-   RFC 2374: An IPv6 Aggregatable Global Unicast Address Format (Ein globales aggregierbares Unicast-Adressenformat in IPv6)  
   
- Sie können IPv6\-related auch Informationen zu [Bereich IPv6 auf Technet](http://go.microsoft.com/fwlink/?LinkID=179658) suchen.  
+ Informationen zu IPv6 finden Sie auch im [IPv6-Bereich auf TechNet](http://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## Siehe auch  
- [Beispiel für Socket\-IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [IPv6 Sockets Sample (Beispiel für IPv6-Sockets)](http://go.microsoft.com/fwlink/?LinkID=179568)   
+ [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](../../../docs/framework/network-programming/network-programming-samples.md)   
  [Sockets](../../../docs/framework/network-programming/sockets.md)
+

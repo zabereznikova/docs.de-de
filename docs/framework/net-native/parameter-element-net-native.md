@@ -1,28 +1,32 @@
 ---
-title: "&lt;Parameter&gt; Element (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Parameter&gt; Element (.NET Native)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 87d2e08ece2f3a2f6f366d5b93fa75e2330d854d
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;Parameter&gt; Element (.NET Native)
+# <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt; Element (.NET Native)
 Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-  
 <Parameter Name="parameter_name"  
            Activate="policy_type"  
            Browse="policy_type"  
@@ -34,7 +38,6 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
            MarshalObject="policy_type"  
            MarshalDelegate="policy_type"  
            MarshalStructure="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -49,9 +52,9 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
 |`Serialize`|Serialisierung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.|  
-|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die mithilfe der <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> Klasse.|  
-|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung verwendet die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> Klasse.|  
-|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die verwendet die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> Klasse.|  
+|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
 |`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Werttypen zu systemeigenem Code.|  
@@ -60,13 +63,13 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*Parametername*|Der Name des Methodenparameters, auf den die Richtlinie angewendet wird. Für die Methodensignatur `String.CompareTo(Object value)` ist der Wert des `Name`-Attributs beispielsweise "value".|  
+|*parameter_name*|Der Name des Methodenparameters, auf den die Richtlinie angewendet wird. Für die Methodensignatur `String.CompareTo(Object value)` ist der Wert des `Name`-Attributs beispielsweise "value".|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Laufzeitrichtlinieneinstellungen der Richtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -75,13 +78,14 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<Parameter>` Element ist ein untergeordnetes Element von der [ <> \> ](../../../docs/framework/net-native/method-element-net-native.md) Element und wird verwendet, um die Richtlinie auf einen bestimmten Methodenparameter anzuwenden. Der entsprechende Methodenparameter wird durch den Namen und nicht durch den Typ angegeben. Mindestens ein Attribut, das einen Richtlinientyp wie `Activate` oder `Dynamic` darstellt, muss vorhanden sein.  
+ Das `<Parameter>`-Element ist ein untergeordnetes Element des [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)-Elements und wird verwendet, um eine Richtlinie auf einen bestimmten Methodenparameter anzuwenden. Der entsprechende Methodenparameter wird durch den Namen und nicht durch den Typ angegeben. Mindestens ein Attribut, das einen Richtlinientyp wie `Activate` oder `Dynamic` darstellt, muss vorhanden sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [<>\>Element](../../../docs/framework/net-native/method-element-net-native.md)   
- [Laufzeit-Konfigurationsdatei Laufzeitdirektiven (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Richtlinie für die Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [Elemente der Laufzeitrichtlinie](../../../docs/framework/net-native/runtime-directive-elements.md)
+ [\<Method>-Element](../../../docs/framework/net-native/method-element-net-native.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+

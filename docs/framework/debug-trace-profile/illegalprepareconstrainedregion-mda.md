@@ -1,53 +1,58 @@
 ---
-title: "illegalPrepareConstrainedRegion MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrepareConstrainedRegions method"
-  - "managed debugging assistants (MDAs), illegal PrepareConstrainedRegions"
-  - "try/catch exception handling, managed debugging assistants"
-  - "IllegalPrepareConstrainedRegions MDA"
-  - "MDAs (managed debugging assistants), illegal PrepareConstrainedRegions"
+title: illegalPrepareConstrainedRegion-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- PrepareConstrainedRegions method
+- managed debugging assistants (MDAs), illegal PrepareConstrainedRegions
+- try/catch exception handling, managed debugging assistants
+- IllegalPrepareConstrainedRegions MDA
+- MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 15
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6cc4e8f1ff53288206aae8f6bafe5784bbab18d8
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# illegalPrepareConstrainedRegion MDA
-Der `illegalPrepareConstrainedRegion`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn der `try`\-Anweisung des Ausnahmehandlers nicht unmittelbar ein Aufruf der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=fullName>\-Methode vorangestellt ist.  Diese Einschränkung gilt auf MSIL\-Ebene. Es ist deshalb zulässig, dass sich zwischen dem Aufruf und der `try`\-Anweisung Quellcode befindet, der keinen Code generiert \(z. B. Kommentare\).  
+# <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion-MDA
+Der `illegalPrepareConstrainedRegion`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=fullName>-Methodenaufruf der `try`-Anweisung des Ausnahmehandlers nicht direkt vorausgeht. Diese Einschränkung befindet sich auf MSIL-Ebene, daher ist es zulässig, über nicht codeerzeugende Datenquellen zwischen dem Aufruf und `try`, beispielsweise Kommentare, zu verfügen.  
   
-## Symptome  
- Ein eingeschränkter Ausführungsbereich \(Constrained Execution Region, CER\), der nicht als solcher behandelt wird, sondern als einfacher Ausnahmehandlerblock \(`finally` oder `catch`\).  Als Folge davon wird dieser Bereich bei nicht ausreichendem Speicherplatz oder im Fall eines Threadabbruchs nicht ausgeführt.  
+## <a name="symptoms"></a>Symptome  
+ Ein eingeschränkter Ausführungsbereich (CER), der nie als solcher behandelt wird, sondern als ein einfacher Block zur Ausnahmebehandlung (`finally` oder `catch`). Daher wird der Bereich nicht im Fall einer Out-of-Memory-Bedingung oder eines Threadabbruchs ausgeführt.  
   
-## Ursache  
- Die Regeln zum Vorbereiten eines CER wurden nicht ordnungsgemäß befolgt.  Es handelt sich hierbei um ein Fehlerereignis.  Der Aufruf der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>\-Methode, der zum Kennzeichnen des Beginns eines CER in den `catch`\/`finally`\/`fault`\/`filter`\-Blöcken von Ausnahmehandlern verwendet wird, muss direkt vor der `try`\-Anweisung erfolgen.  
+## <a name="cause"></a>Ursache  
+ Das Muster zur Vorbereitung für einen CER wird nicht richtig befolgt.  Dies ist ein Fehlerereignis. Der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methodenaufruf, der verwendet wird, um Ausnahmehandler als Einführung in einen CER in den `catch`/`finally`/`fault`/`filter`-Blöcken zu markieren, muss direkt vor der `try`-Anweisung verwendet werden.  
   
-## Lösung  
- Stellen Sie sicher, dass der Aufruf von <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direkt vor der `try` `` \-Anweisung erfolgt.  
+## <a name="resolution"></a>Auflösung  
+ Stellen Sie sicher, dass der Aufruf von <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> unmittelbar vor der `try`-Anweisung geschieht.  
   
-## Auswirkungen auf die Laufzeit  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## Ausgabe  
- Der MDA zeigt den Namen der Methode an, die die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>\-Methode aufgerufen hat, den MSIL\-Offset und eine Meldung, die darauf hinweist, dass der Aufruf dem try\-Block nicht unmittelbar vorangestellt ist.  
+## <a name="output"></a>Ausgabe  
+ Der MDA zeigt den Namen der Methode an, die die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methode, den MSIL-Offset und eine Meldung aufruft, die angibt, dass der Aufruf dem Beginn des Try-Blocks nicht direkt vorausgeht.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <illegalPrepareConstrainedRegion/>  
@@ -55,8 +60,8 @@ Der `illegalPrepareConstrainedRegion`\-MDA \(Managed Debugging Assistant, Assist
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Im folgenden Codebeispiel ist der Ablauf dargestellt, der zum Aktivieren dieses MDA führt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel veranschaulicht das Muster, das bewirkt, dass dieser MDA aktiviert wird.  
   
 ```  
 void MethodWithInvalidPCR()  
@@ -74,8 +79,9 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+

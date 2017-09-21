@@ -1,57 +1,62 @@
 ---
-title: "jitCompilationStart MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "JIT compilation"
-  - "MDAs (managed debugging assistants), JIT compilation"
-  - "JitCompilationStart MDA"
-  - "managed debugging assistants (MDAs), JIT compilation"
+title: jitCompilationStart-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- JIT compilation
+- MDAs (managed debugging assistants), JIT compilation
+- JitCompilationStart MDA
+- managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb6a36b9427c7d55aceba226a865cd51d076f448
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# jitCompilationStart MDA
-Der `jitCompilationStart`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird für die Berichterstellung aktiviert, wenn der Just\-In\-Time\-Compiler \(JIT\) mit dem Kompilieren einer Funktion beginnt.  
+# <a name="jitcompilationstart-mda"></a>jitCompilationStart-MDA
+Der Assistent für verwaltetes Debuggen (MDA) `jitCompilationStart` berichtet, wann der JIT-Compiler mit der Kompilierung einer Funktion beginnt.  
   
-## Symptome  
- Die Größe des WorkingSets vergrößert sich für ein Programm, das bereits im Format für das systemeigene Abbild vorliegt, da mscorjit.dll in den Prozess geladen wird.  
+## <a name="symptoms"></a>Symptome  
+ Die Größe der Arbeitssätze vergrößert sich für ein Programm, das bereits im nativen Bildformat vorhanden ist, da „mscorjit.dll“ in den Prozess geladen wird.  
   
-## Ursache  
- Nicht alle Assemblys, von denen das Programm abhängt, wurden im systemeigenen Format generiert, oder sie wurden nicht ordnungsgemäß registriert.  
+## <a name="cause"></a>Ursache  
+ Nicht alle Assemblys, von denen die Anwendung abhängt, wurden im nativen Format generiert, oder die, für die das der Fall ist, wurden nicht korrekt registriert.  
   
-## Lösung  
- Durch das Aktivieren dieses MDA können Sie ermitteln, welche Funktion gerade vom JIT\-Compiler verarbeitet wird.  Ermitteln Sie, ob die Assembly, die diese Funktion enthält, im systemeigenen Format generiert und ordnungsgemäß registriert wurde.  
+## <a name="resolution"></a>Auflösung  
+ Durch die Aktivierung dieses MDA können Sie bestimmen, welche Funktion JIT-kompiliert wird. Bestimmen Sie, ob die Assembly mit der Funktion im nativen Format generiert und ordnungsgemäß registriert wird.  
   
-## Auswirkungen auf die Laufzeit  
- Dieser MDA protokolliert eine Meldung, bevor eine Methode vom JIT\-Compiler verarbeitet wird. Das Aktivieren dieses MDA wirkt sich somit erheblich auf die Leistung aus.  Beachten Sie, dass dieser MDA keine separate Meldung generiert, wenn es sich um eine Inlinemethode handelt.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Dieser MDA protokolliert eine Meldung, kurz bevor eine Methode JIT-kompiliert wird. Deshalb hat die Aktivierung dieses MDA erhebliche Auswirkungen auf die Leistung. Beachten Sie, dass dieser MDA keine separate Nachricht generiert, wenn eine Methode inline ist.  
   
-## Ausgabe  
- Das folgende Codebeispiel zeigt eine Beispielausgabe.  In vorliegenden Fall geht aus der Ausgabe hervor, dass in Assembly Test die Methode "m" für die Klasse "ns2.CO" vom JIT\-Compiler kompiliert wurde.  
+## <a name="output"></a>Ausgabe  
+ Das folgende Codebeispiel zeigt eine Beispielausgabe. In diesem Fall zeigt die Ausgabe an, dass in der Assembly „Die M-Methode testen“ der Klasse „ns2.CO“ JIT-kompiliert wurde.  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
-## Konfiguration  
- Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die angewendet werden können, um die Methoden einzugrenzen, deren erstmalige Verarbeitung durch den JIT\-Compiler gemeldet werden soll.  Sie können angeben, dass Meldungen zu allen Methoden erstellt werden, indem Sie als Wert des Namensattributs \* festlegen.  
+## <a name="configuration"></a>Konfiguration  
+ Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die filtern können, welche Methoden gemeldet werden, wenn sie zuerst JIT-kompiliert werden. Sie können angeben, dass alle Methoden gemeldet werden müssen, indem Sie den Wert des Namensattributs auf * festlegen.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <jitCompilationStart>  
@@ -69,8 +74,8 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Das folgende Codebeispiel bezieht sich auf die vorangehende Konfigurationsdatei.  
+## <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel ist dazu vorgesehen, mit der vorangegangenen Konfigurationsdatei verwendet zu werden.  
   
 ```  
 using System;  
@@ -167,7 +172,8 @@ namespace ns2
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+

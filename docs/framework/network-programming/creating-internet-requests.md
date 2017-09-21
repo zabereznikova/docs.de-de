@@ -1,42 +1,48 @@
 ---
-title: "Erstellen von Internetanforderungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest-Klasse, Senden und Empfangen von Daten"
-  - "Netzwerk"
-  - "HttpWebResponse-Klasse, Senden und Empfangen von Daten"
-  - "Anfordern von Daten aus dem Internet, Erstellen von Anforderungen"
-  - "Netzwerkressourcen"
-  - "Internet, Anfordern von Daten"
-  - "Datenanforderungen, Erstellen von Anforderungen"
+title: Erstellen von Internetanforderungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, sending and receiving data
+- Networking
+- HttpWebResponse class, sending and receiving data
+- requesting data from Internet, creating requests
+- Network Resources
+- Internet, requesting data
+- data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5bc99f08542718ccd449c069c91082d8227f9a4
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Erstellen von Internetanforderungen
-Anwendungen erstellen <xref:System.Net.WebRequest>\-Instanzen durch die <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>\-Methode.  Dies ist eine statische Methode, die eine Klasse erstellt, die von **WebRequest** auf dem URI\-Schema berechnet wird, das an ihne übergeben wird.  
+# <a name="creating-internet-requests"></a>Erstellen von Internetanforderungen
+Anwendungen erstellen mithilfe der <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>-Methode <xref:System.Net.WebRequest>-Instanzen. Diese statische Methode erstellt eine von **WebRequest** abgeleitete Klasse basierend auf dem URI-Schema, das an sie übergeben wurde.  
   
-## Internet, Datei\- und FTP\-Anforderungen  
- . .NET Framework stellt die <xref:System.Net.HttpWebRequest>\-Klasse, die von **WebRequest** abgeleitet ist, dass HTTP und HTTPS\-Anforderungen zu bearbeiten.  In den meisten Fällen stellt die **WebRequest**\-Klasse alle Eigenschaften, die Sie einen Anwendung um müssen; jedoch ggf., können Sie **WebRequest**\-Objekte umwandeln, die durch die **WebRequest.Create**\-Methode zum **HttpWebRequest**\-Typ erstellt werden, um auf die HTTP\-spezifische Eigenschaften der Anforderung zuzugreifen.  Entsprechend die **HttpWebResponse**\-Objekthandles die Antworten von HTTP und HTTPS\-Anforderungen.  Um auf die HTTP\-spezifische Eigenschaften **HttpWebResponse** wenden Sie zuzugreifen, müssen Sie **WebResponse**\-Objekte in den Typ umwandeln **HttpWebResponse**  ein.  
+## <a name="web-file-and-ftp-requests"></a>Web-, Datei- und FTP-Anforderungen  
+ .NET Framework stellt die von **WebRequest** abgeleitete <xref:System.Net.HttpWebRequest>-Klasse bereit, um HTTP- und HTTPS-Anforderungen zu verarbeiten. In den meisten Fällen stellt die **WebRequest**-Klasse alle für eine Anforderung erforderlichen Eigenschaften bereit. Bei Bedarf können Sie jedoch mit der **WebRequest.Create**-Methode erstellte **WebRequest**-Objekte in den Typ **HttpWebRequest** umwandeln, um auf die HTTP-spezifischen Eigenschaften der Anforderung zuzugreifen. Auf ähnliche Weise werden die Antworten von HTTP- und HTTPS-Anforderungen durch das **HttpWebResponse**-Objekt verarbeitet. Wenn Sie auf die HTTP-spezifischen Eigenschaften des **HttpWebResponse**-Objekts zugreifen möchten, müssen Sie **WebResponse**-Objekte in den Typ **HttpWebResponse** umwandeln.  
   
- . .NET Framework stellt auch die <xref:System.Net.FileWebRequest> und <xref:System.Net.FileWebResponse> für Klassen Clientanforderungen für Ressourcen bereit, die die "Datei verwenden: " URI\-Schema.  Entsprechend werden <xref:System.Net.FtpWebRequest> und die <xref:System.Net.FtpWebResponse> für Klassen Clientanforderungen für Ressourcen bereitgestellt, die das "FTP verwenden: " Schema.  Wenn die Anforderung für eine Ressource ist, die alle Schemas verwendet, können Sie die **WebRequest.Create**\-Methode verwenden, um ein Objekt abzurufen, mit dem die Anwendung um.  
+ .NET Framework stellt außerdem die Klassen <xref:System.Net.FileWebRequest> und <xref:System.Net.FileWebResponse> zum Verarbeiten von Anforderungen für Ressourcen bereit, die das URI-Schema „file:“ verwenden. Dementsprechend werden die Klassen <xref:System.Net.FtpWebRequest> und <xref:System.Net.FtpWebResponse> zur Verarbeitung von Anforderungen für Ressourcen bereitgestellt, die das Schema „ftp:“ verwenden. Bei Anforderungen für eine Ressource, die eines dieser Schemas verwendet, können Sie mithilfe der **WebRequest.Create**-Methode ein Objekt abrufen, mit dem Sie die Anforderung erstellen können.  
   
- Um Anforderungen zu behandeln die andere Protokolle auf Anwendungsebene verwenden, müssen Sie die protokollspezifischen Klassen implementieren, die von **WebRequest**  und von  **WebResponse** abgeleitet werden.  Weitere Informationen finden Sie unter [Programmieren von austauschbare Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+ Bei Anforderungen, die andere Protokolle auf Anwendungsebene verwenden, müssen Sie von **WebRequest** und **WebResponse** abgeleitete protokollspezifische Klassen implementieren. Weitere Informationen finden Sie unter [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
-## Siehe auch  
- [Gewusst wie: Anfordern von Daten mithilfe der WebRequest\-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Siehe auch  
+ [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+

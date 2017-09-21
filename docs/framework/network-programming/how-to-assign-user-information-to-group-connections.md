@@ -1,30 +1,35 @@
 ---
-title: "Gewusst wie: Zuweisen von Benutzerinformationen zu Gruppenverbindungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: 'Gewusst wie: Zuweisen von Benutzerinformationen zu Gruppenverbindungen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Zuweisen von Benutzerinformationen zu Gruppenverbindungen
-[Codebeispiel](#tskhowtoassignuserinformationtogroupconnectionsanchor1)  
+# <a name="how-to-assign-user-information-to-group-connections"></a>Gewusst wie: Zuweisen von Benutzerinformationen zu Gruppenverbindungen
+
   
- Im folgenden Beispiel wird veranschaulicht, wie Benutzerinformationen zu den Gruppen\-Verbindungen zuweist und ausgegangen wird, dass die Anwendung Variablen den *Benutzernamen*, *das SecurelyStoredPassword* und *die Domäne* festlegen, bevor dieser Codeabschnitt aufgerufen wird und dass *Benutzername* eindeutig ist.  
+ Das folgende Beispiel demonstriert, wie Benutzerinformationen zu Gruppenverbindungen zugewiesen werden können. Dabei wird angenommen, dass die Anwendung die Variablen *UserName*, *SecurelyStoredPassword* und *Domain* vor dem Aufrufen dieses Codeabschnitts festgelegt hat und dass *UserName* eindeutig ist.  
   
-### So Benutzerinformationen zu einer Gruppen\-Verbindung zuweisen  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Zuweisen von Benutzerinformationen zu Gruppenverbindungen  
   
 1.  Erstellen Sie einen Verbindungsgruppennamen.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Erstellen Sie eine Anforderung für eine bestimmte URL.  Beispielsweise erstellt der folgende Code eine Anforderung für die URL `http://www.contoso.com.`  
+2.  Erstellen Sie eine Anforderung für eine bestimmte URL. Im folgenden Code wird z.B. eine Anforderung für die URL `http://www.contoso.com.` erstellt.  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Legen Sie die Anmeldeinformationen und die Verbindung GroupName für die Webanforderung fest, und rufen **GetResponse** , ein **WebResponse**\-Objekt abzurufen.  
+3.  Legen Sie die Anmeldeinformationen und den Verbindungsgruppennamen für die Web-Anforderung fest, und rufen Sie **GetResponse** auf, um ein **WebResponse**-Objekt abzurufen.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -64,14 +69,12 @@ caps.handback.revision: 8
     myWebRequest.ConnectionGroupName = secureGroupName  
   
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
-  
     ```  
   
-4.  Nach Verwendung des WebRespose\-Objekts schließen Sie den Antwortdatenstrom.  
+4.  Schließen Sie den Antwortstream nach dem Verwenden des „WebResponse“-Objekts.  
   
     ```csharp  
     MyWebResponse.Close();  
-  
     ```  
   
     ```vb  
@@ -97,7 +100,6 @@ WebResponse myWebResponse=myWebRequest.GetResponse();
 // Insert the code that uses myWebResponse.  
   
 MyWebResponse.Close();  
-  
 ```  
   
 ```vb  
@@ -118,6 +120,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## Siehe auch  
- [Verwalten von Verbindungen](../../../docs/framework/network-programming/managing-connections.md)   
- [Verbindungsgruppierung](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>Siehe auch  
+ [Managing Connections (Verwalten von Verbindungen)](../../../docs/framework/network-programming/managing-connections.md)   
+ [Connection Grouping (Verbindungsgruppierung)](../../../docs/framework/network-programming/connection-grouping.md)
+

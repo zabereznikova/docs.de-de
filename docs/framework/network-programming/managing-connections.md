@@ -1,51 +1,56 @@
 ---
-title: "Verwalten von Verbindungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet, Verbindungen"
-  - "HTTP, Klassen für Verbindungsherstellung"
-  - "Anfordern von Daten aus dem Internet, Verbindungen"
-  - "Senden von Daten, Verbindungen"
-  - "Empfangen von Daten, Verbindungen"
-  - "ServicePoint-Klasse, Infos über ServicePoint-Klasse"
-  - "Antwort auf Internetanforderung, Verbindungen"
-  - "Verbindungen [.NET Framework], Klassen"
-  - "Netzwerkressourcen, Verbindungen"
-  - "Downloaden von Internetressourcen, Verbindungen"
-  - "ServicePointManager-Klasse, Infos über ServicePointManager-Klasse"
+title: Verwalten von Verbindungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, connections
+- HTTP, classes for connecting
+- requesting data from Internet, connections
+- sending data, connections
+- receiving data, connections
+- ServicePoint class, about ServicePoint class
+- response to Internet request, connections
+- connections [.NET Framework], classes
+- network resources, connections
+- downloading Internet resources, connections
+- ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53170432e108a6d866bc2b96ef1ebf8b5bee6f28
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Verwalten von Verbindungen
-Anwendungen, die HTTP verwenden, um an Datenressourcen herzustellen, können die <xref:System.Net.ServicePoint>\- und <xref:System.Net.ServicePointManager>\-Klassen von .NET Framework verwenden, um Verbindungen zum Internet zu verwalten und zu reproduzieren, optimalen Umfang und Leistung zu erzielen.  
+# <a name="managing-connections"></a>Verwalten von Verbindungen
+Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  
   
- Die **ServicePoint**\-Klasse bietet eine Anwendung mit einem Endpunkt, an den die Anwendung Zugriff auf Internetressourcen herstellen kann.  Jedes **ServicePoint** enthält Informationen, mit deren Hilfe Verbindungen mit einem Internetserver optimieren, indem sie Optimierungsinformationen zwischen Verbindungen gemeinsam, um die Leistung zu verbessern.  
+ Die **ServicePoint**-Klasse stellt eine Anwendung mit einem Endpunkt bereit, mit der sich die Anwendung verbinden kann, um auf Internetressourcen zuzugreifen. Jede **ServicePoint**-Klasse enthält Informationen, die dabei helfen, Verbindungen mit einem Internetserver zu optimieren, indem Optimierungsinformationen zwischen Verbindungen geteilt werden, um die Leistung zu verbessern.  
   
- Jedes **ServicePoint** wird durch einen URI \(Uniform Resource Identifier\) identifiziert und wird entsprechend den Schemabezeichner\- und \-Hostfragmenten des URI kategorisiert.  Beispielsweise würde dieselbe Instanz **ServicePoint** Anforderungen an den URI http:\/\/www.contoso.com\/index.htm und http:\/\/www.contoso.com\/news.htm?date\=today bereitstellen, da sie den gleichen Schemabezeichner \(HTTP\) und die Hostfragmente \(www.contoso.com\).  Wenn die Anwendung bereits eine dauerhafte Verbindung zum Server www.contoso.com verfügt, wird diese Verbindung, um beide Anforderungen abzurufen und wird vermieden, zwei Verbindungen zu erstellen.  
+ Jede **ServicePoint**-Klasse wird durch einen URI (Uniform Resource Identifier) identifiziert und gemäß dem Schemabezeichner und Hostfragmenten des URI kategorisiert. Beispielsweise würde die gleiche **ServicePoint**-Instanz Anforderungen für die URIs http://www.contoso.com/index.htm und http://www.contoso.com/news.htm?date=today bereitstellen, da sie über den gleichen Schemabezeichner (HTTP) und die gleichen Hostfragmente (www.contoso.com) verfügen. Wenn die Anwendung bereits über eine persistente Verbindung mit dem Server www.contoso.com verfügt, verwendet sie diese Verbindung zum Abrufen beider Anforderungen, wobei vermieden wird, dass zwei Verbindungen erstellt werden müssen.  
   
- **ServicePointManager** ist eine statische Klasse, die die Erstellung und Zerstörung von **ServicePoint**\-Instanzen verwaltet.  **ServicePointManager** erstellt **ServicePoint**, wenn die Anwendung um eine Internetressource anfordert, die nicht in der Auflistung vorhandener **ServicePoint**\-Instanzen ist.  **ServicePoint**\-Instanzen werden zerstört, wenn sie ihre maximale Leerlaufzeit überschritten haben, oder wenn die Anzahl der vorhandenen **ServicePoint**\-Instanzen die maximale Anzahl von Instanzen **ServicePoint** für die Anwendung überschreitet.  Sie können die standardmäßige maximale Leerlaufzeit und die maximale Anzahl von **ServicePoint** \-Instanzen steuern, indem Sie die <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> und <xref:System.Net.ServicePointManager.MaxServicePoints%2A>\-Eigenschaften auf **ServicePointManager** festlegen.  
+ **ServicePointManager** ist eine statische Klasse, die die Erstellung und Zerstörung von **ServicePoint**-Instanzen verwaltet. Die **ServicePointManager**-Klasse erstellt eine **ServicePoint**-Klasse, wenn die Anwendung eine Internetressource anfordert, die nicht in der Auflistung der vorhandenen **ServicePoint**-Instanzen enthalten ist. **ServicePoint**-Instanzen werden zerstört, wenn sie die maximale Leerlaufzeit überschritten haben oder wenn die Anzahl der vorhandenen **ServicePoint**-Instanzen die maximale Anzahl von **ServicePoint**-Instanzen für die Anwendung überschreitet. Sie können sowohl die maximale Standardleerlaufzeit als auch die maximale Anzahl von **ServicePoint**-Instanzen steuern, indem Sie die <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A>- und <xref:System.Net.ServicePointManager.MaxServicePoints%2A>-Eigenschaften für die **ServicePointManager**-Klasse festlegen.  
   
- Die Anzahl von Verbindungen zwischen einem Client und einem Server kann dramatische Auswirkungen auf Anwendungsdurchsatz haben.  Standardmäßig verwendet eine Anwendung mithilfe der <xref:System.Net.HttpWebRequest>\-Klasse maximal zwei persistenten Verbindungen zu einem angegebenen Server, aber Sie können die maximale Anzahl von Verbindungen pro Anwendung festlegen.  
+ Die Anzahl der Verbindungen zwischen einem Client und einem Server kann sich drastisch auf den Anwendungsdurchsatz auswirken. Standardmäßig verwendet eine Anwendung, die die <xref:System.Net.HttpWebRequest>-Klasse verwendet, maximal zwei persistente Verbindungen. Sie können die maximale Anzahl von Verbindungen jedoch je nach Anwendung festlegen.  
   
 > [!NOTE]
->  Die Grenzen der Spezifikation HTTP\/1.1 die Anzahl von Verbindungen von Anwendung zu Anwendung zwei Verbindungen pro Server.  
+>  Die HTTP/1.1-Spezifikation beschränkt die Anzahl der Verbindungen von einer Anwendung auf zwei Verbindungen pro Server.  
   
- Die optimale Anzahl von Verbindungen hängt von den Istzuständen ab, in der die Anwendung ausgeführt wird.  Die Erhöhung der Anzahl von Verbindungen, die für die Anwendung verfügbar sind, wirkt sich möglicherweise nicht die Anwendungsleistung.  Sie die Auswirkungen von mehr Verbindungen bestimmen, Ausführungsleistungsnachweise beim variierenden Anzahl der Verbindungen.  Sie können die Anzahl von Verbindungen, die eine Anwendung mit, die statische <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>\-Eigenschaft auf der **ServicePointManager**\-Klasse an der Anwendungsinitialisierung ändert, wie im folgenden Codebeispiel gezeigt ändern.  
+ Die optimale Anzahl von Verbindungen hängt von den tatsächlichen Bedingungen ab, unter denen die Anwendung ausgeführt wird. Das Erhöhen der Anzahl der verfügbaren Verbindungen für die Anwendung wirkt sich möglicherweise nicht auf die Leistung der Anwendung aus. Um zu ermitteln, wie sich mehr Verbindungen auswirken, führen Sie Leistungstests durch, wobei Sie die Anzahl von Verbindungen variieren. Sie können die Anzahl der Verbindungen ändern, die von einer Anwendung verwendet werden, indem Sie, wie im folgenden Codebeispiel gezeigt, die statische <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>-Eigenschaft für die **ServicePointManager**-Klasse bei der Anwendungsinitialisierung ändern.  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -57,7 +62,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Das Ändern der **ServicePointManager.DefaultConnectionLimit**\-Eigenschaft beeinflusst nicht zuvor **ServicePoint** initialisierte Instanzen.  Im folgenden Code wird das Ändern des Verbindungslimits auf vorhandenen **ServicePoint** für den Server http:\/\/www.contoso.com zum Wert, der in `newLimit` gespeichert wird.  
+ Das Ändern der **ServicePointManager.DefaultConnectionLimit**-Eigenschaft wirkt sich nicht auf zuvor initialisierte **ServicePoint**-Instanzen aus. Der folgende Code zeigt das Ändern der Verbindungsbeschränkung für eine vorhandene **ServicePoint**-Klasse für den Server http://www.contoso.com in den in `newLimit` gespeicherten Wert.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  
@@ -71,6 +76,7 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## Siehe auch  
- [Verbindungsgruppierung](../../../docs/framework/network-programming/connection-grouping.md)   
- [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>Siehe auch  
+ [Connection Grouping (Verbindungsgruppierung)](../../../docs/framework/network-programming/connection-grouping.md)   
+ [Using Application Protocols (Verwenden von Anwendungsprotokollen)](../../../docs/framework/network-programming/using-application-protocols.md)
+

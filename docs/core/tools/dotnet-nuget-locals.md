@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-locals-Befehl – .NET Core-CLI"
-description: "Der dotnet-nuget-locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf."
-keywords: dotnet-nuget-locals, CLI, CLI-Befehl, .NET Core
+title: "dotnet nuget locals-Befehl – .NET Core-CLI"
+description: "Der dotnet nuget locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf."
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Name
 
-`dotnet-nuget locals`: Löscht lokale NuGet-Ressourcen oder listet diese auf. 
+`dotnet nuget locals`: Löscht lokale NuGet-Ressourcen oder listet diese auf.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -38,27 +36,16 @@ Der `dotnet nuget locals`-Befehl löscht lokale NuGet-Ressourcen im http-Anforde
 
 Einer der folgenden Werte:
 
-`all`
-
-Gibt an, dass der angegebene Vorgang auf alle Cachetypen angewendet wird: Auf den http-Anforderungscache, den Cache für globale Pakete und den temporären Cache.
-
-`http-cache`
-
-Gibt an, dass der angegebene Vorgang nur auf den http-Anforderungscache angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
-
-`global-packages`
-
-Gibt an, dass der angegebene Vorgang nur auf den Cache für globale Pakete angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
-
-`temp`
-
-Gibt an, dass der angegebene Vorgang nur auf den temporären Cache angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
+* `all`: gibt an, dass der angegebene Vorgang auf alle Cachetypen angewendet wird: Auf den http-Anforderungscache, den Cache für globale Pakete und den temporären Cache.
+* `http-cache`: gibt an, dass der angegebene Vorgang nur auf den http-Anforderungscache angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
+* `global-packages`: gibt an, dass der angegebene Vorgang nur auf den Cache für globale Pakete angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
+* `temp`: gibt an, dass der angegebene Vorgang nur auf den temporären Cache angewendet wird. Die anderen Cachespeicherorte sind nicht betroffen.
 
 ## <a name="options"></a>Optionen
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl.  
+Druckt eine kurze Hilfe für den Befehl.
 
 `-c|--clear`
 
@@ -97,4 +84,3 @@ Löscht alle Dateien im lokalen temporären Cacheverzeichnis:
 ## <a name="troubleshooting"></a>Problembehandlung
 
 Weitere Informationen zu häufig auftretenden Problemen und Fehlern bei der Verwendung des `dotnet nuget locals`-Befehls finden Sie unter [Managing the NuGet cache (Verwalten des NuGet-Caches)](/nuget/consume-packages/managing-the-nuget-cache).
-

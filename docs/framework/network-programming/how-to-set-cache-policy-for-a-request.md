@@ -1,31 +1,36 @@
 ---
-title: "Gewusst wie: Festlegen einer Cacherichtlinie f&#252;r eine Anforderung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anforderung von Cacherichtlinien"
+title: "Gewusst wie: Festlegen einer Cacherichtlinie für eine Anforderung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Festlegen einer Cacherichtlinie f&#252;r eine Anforderung
-Im folgenden Beispiel wird das Festlegen einer Cacherichtlinie für eine Anforderung.  Die Beispielseingabe ist ein URI wie http:\/\/www.contoso.com\/.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>Gewusst wie: Festlegen einer Cacherichtlinie für eine Anforderung
+Das folgende Beispiel veranschaulicht das Festlegen einer Cacherichtlinie für eine Anforderung. Die Beispieleingabe ist eine URI wie „http://www.contoso.com/“.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird eine Cacherichtlinie, die die angeforderte können vom Cache verwendet werden, Ressource, wenn er nicht im Cache für mehr als einen Tag war.  Im Beispiel wird eine Meldung angezeigt, die, ob die Ressource aus Cache\-für Beispiel verwendet wurde, `"The response was retrieved from the cache : False."`\- angibt und dann die Ressource anzeigt.  Eine Anforderung kann von jedem Cache zwischen Client und Server erfüllt werden.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird eine Cacherichtlinie erstellt, die es ermöglicht, dass die angeforderte Ressource aus dem Cache verwendet wird, sofern diese sich nicht seit mehr als einem Tag im Cache befindet. Das Beispiel zeigt eine Meldung an, die angibt, ob die Ressource aus dem Cache verwendet wurde (z.B. `"The response was retrieved from the cache : False."`). Anschließend wird die Ressource angezeigt. Eine Anforderung kann von einem beliebigen Cache zwischen Client und Server erfüllt werden.  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\>\-Element \(Netzwerkeinstellungen\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
+ [Location-Based Cache Policies (Speicherortbasierte Cacherichtlinien)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies (Zeitbasierte Cacherichtlinien)](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

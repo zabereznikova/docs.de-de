@@ -1,65 +1,71 @@
 ---
-title: "Qualifying .NET Types for Interoperation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "exposing .NET Framework components to COM"
-  - "COM interop, qualifying .NET types"
-  - "qualifying .NET types for interoperation"
-  - "interoperation with unmanaged code, qualifying .NET types"
-  - "interoperation with unmanaged code, exposing .NET Framework components"
-  - "COM interop, exposing COM components"
+title: "Qualifizieren von .NET-Typen für die Interoperation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- exposing .NET Framework components to COM
+- COM interop, qualifying .NET types
+- qualifying .NET types for interoperation
+- interoperation with unmanaged code, qualifying .NET types
+- interoperation with unmanaged code, exposing .NET Framework components
+- COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Qualifying .NET Types for Interoperation
-Wenn Sie Typen in einer Assembly für COM\-Anwendungen verfügbar machen möchten, müssen die Voraussetzungen von COM\-Interop zur Entwurfszeit erfüllt sein.  Verwaltete Typen \(Klasse, Schnittstelle, Struktur und Enumeration\) können nahtlos in COM\-Typen integriert werden, wenn Sie folgende Richtlinien beachten:  
+# <a name="qualifying-net-types-for-interoperation"></a>Qualifizieren von .NET-Typen für die Interoperation
+Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügbar zu machen, beachten Sie zur Entwurfszeit die Anforderungen von Com-Interop. Verwaltete Typen (Klassen, Schnittstellen, Strukturen und Enumerationen) lassen sich nahtlos in COM-Typen integrieren, wenn Sie die folgenden Richtlinien einhalten:  
   
--   Klassen müssen Schnittstellen explizit implementieren.  
+-   Klassen sollten Schnittstellen explizit implementieren.  
   
-     Obwohl in COM\-Interop die Möglichkeit besteht, automatisch eine Schnittstelle zu generieren, die alle Member der Klasse und die der Basisklasse enthält, empfiehlt sich die Verwendung expliziter Schnittstellen.  Die automatisch generierte Schnittstelle wird als Klassenschnittstelle bezeichnet.  Die Richtlinien finden Sie unter [Einführung in die Klassenschnittstelle](http://msdn.microsoft.com/de-de/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     COM-Interop stellt zwar einen Mechanismus bereit, mit dem automatisch eine Schnittstelle generiert wird, die alle Member einer Klasse und die Member der dazugehörigen Basisklasse enthält, dennoch ist es besser, explizite Schnittstellen bereitzustellen. Die automatisch generierte Schnittstelle wird als Klassenschnittstelle bezeichnet. Informationen zu Richtlinien finden Sie unter [Einführung in die Klassenschnittstelle](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
-     Zum Einbinden von Schnittstellendefinitionen in den Code können Sie [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C\# und C\+\+ verwenden und müssen nicht IDL \(Interface Definition Language\) oder eine Entsprechung verwenden.  Detaillierte Informationen zur Syntax finden Sie in der Dokumentation zur Sprache.  
+     Sie können [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# und C++ verwenden, um Schnittstellendefinitionen in Ihren Code einzuschließen. So müssen Sie nicht die Interface Definition Language (IDL) oder eine ähnliche Sprache verwenden. Einzelheiten zur Syntax finden Sie in der Dokumentation zur Sprache.  
   
 -   Verwaltete Typen müssen öffentlich sein.  
   
-     Nur öffentliche Typen in einer Assembly werden registriert und in die Typbibliothek exportiert.  Daher werden auch nur öffentliche Typen in COM angezeigt.  
+     Nur öffentliche Typen in einer Assembly werden registriert und in die Typbibliothek exportiert. Dies hat zur Folge, dass nur öffentliche Typen für das COM sichtbar sind.  
   
-     Verwaltete Typen machen Funktionen für anderen verwalteten Code verfügbar, der möglicherweise nicht für COM verfügbar ist.  Beispielsweise werden parametisierte Konstruktoren, statische Methoden und konstante Felder nicht für COM\-Clients verfügbar gemacht.  Da Daten von Common Language Runtime innerhalb und außerhalb eines Typs gemarshallt werden, können diese auch kopiert oder umgewandelt werden.  
+     Dank verwalteter Typen stehen Funktionen auch in anderem verwaltetem Code zur Verfügung, der möglicherweise nicht für COM verfügbar ist. COM-Clients haben z.B. keinen Zugriff auf parametrisierte Konstruktoren, statische Methoden und Konstantenfelder. Wenn die Runtime Daten in einen Typ hinein und aus einem Typ heraus marshallt, werden diese Daten möglicherweise kopiert oder umgewandelt.  
   
--   Alle Methoden, Eigenschaften, Felder und Ereignisse müssen öffentlich sein.  
+-   Methoden, Eigenschaften, Felder und Ereignisse müssen öffentlich sein.  
   
-     Die Member öffentlicher Typen müssen ebenfalls öffentlich sein, damit sie in COM angezeigt werden können.  Sie können die Sichtbarkeit einer Assembly, eines öffentlichen Typs oder dessen öffentlicher Member mit <xref:System.Runtime.InteropServices.ComVisibleAttribute> einschränken.  Standardmäßig werden alle öffentlichen Typen und Member angezeigt.  
+     Member öffentlicher Typen müssen ebenfalls öffentlich sein, wenn sie im COM sichtbar sein sollen. Sie können die Sichtbarkeit einer Assembly, eines öffentlichen Typs oder öffentlicher Member eines öffentlichen Typs einschränken, indem Sie die Klasse <xref:System.Runtime.InteropServices.ComVisibleAttribute> anwenden. Standardmäßig sind alle öffentlichen Typen und Member sichtbar.  
   
--   Der Standardkonstruktor der Typen muss öffentlich sein und in COM aktiviert werden.  
+-   Typen müssen über einen öffentlichen Standardkonstruktor verfügen, der sich über das COM aktivieren lässt.  
   
-     Verwaltete, öffentliche Typen sind in COM sichtbar.  Allerdings können COM\-Clients den Typ ohne öffentlichen Standardkonstruktor \(ein Konstruktor ohne Argumente\) nicht erstellen.  COM\-Clients können den Typ aber trotzdem verwenden, wenn er auf andere Weise aktiviert wird.  
+     Verwaltete, öffentliche Typen sind im COM sichtbar. Ohne einen öffentlichen Standardkonstruktor (d.h. einen Konstruktor ohne Argumente) können COM-Clients den Typ nicht erstellen. Wenn er auf andere Art und Weise aktiviert wird, können sie den Typ aber dennoch verwenden.  
   
 -   Typen können nicht abstrakt sein.  
   
-     Weder COM\-Clients noch .NET\-Clients können abstrakte Typen erstellen.  
+     Weder COM-Clients noch .NET-Clients können abstrakte Typen erstellen.  
   
- Die Vererbungshierarchie eines verwalteten Typs wird beim Exportieren in COM vereinfacht.  Zwischen verwalteten und nicht verwalteten Umgebungen bestehen außerdem Unterschiede im Versioning.  In COM verfügbar gemachte Typen haben andere Charakteristiken beim Versioning als andere verwaltete Typen.  
+ Beim Export eines verwalteten Typs in das COM wird seine Vererbungshierarchie vereinfacht. Auch die Versionsverwaltung läuft bei verwalteten und nicht verwalteten Umgebungen unterschiedlich ab. Im COM verfügbare Typen haben nicht dieselben Versionsverwaltungseigenschaften wie andere verwaltete Typen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Introducing the Class Interface](http://msdn.microsoft.com/de-de/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Applying Interop Attributes](../../../docs/framework/interop/applying-interop-attributes.md)   
- [Packaging an Assembly for COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
+ [Einführung in die Klassenschnittstelle](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
+ [Applying Interop Attributes (Anwenden von Interop-Attributen)](../../../docs/framework/interop/applying-interop-attributes.md)   
+ [Packaging an Assembly for COM (Verpacken einer Assembly für das COM)](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+

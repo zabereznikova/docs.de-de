@@ -1,46 +1,51 @@
 ---
-title: "Verwenden von asynchronen Clientsockets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungsprotokolle, Sockets"
-  - "Senden von Daten, Sockets"
-  - "Datenanforderungen, Sockets"
-  - "Asynchrone Clientsockets"
-  - "Socket-Klasse, Asynchrone Clientsockets"
-  - "Anfordern von Daten aus dem Internet, Sockets"
-  - "Sockets, Asynchrone Clientsockets"
-  - "Empfangen von Daten, Sockets"
-  - "Protokolle, Sockets"
-  - "Internet, Sockets"
-  - "Clientsockets"
+title: Verwenden von asynchronen Clientsockets
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- asynchronous client sockets
+- Socket class, asynchronous client sockets
+- requesting data from Internet, sockets
+- sockets, asynchronous client sockets
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Verwenden von asynchronen Clientsockets
-Ein asynchroner Clientsocket enthält nicht die Anwendung während des Wartens auf Netzwerkoperationen an abzuschließen.  Stattdessen wird das Standard\-asynchrone Programmiermodell .NET Framework, um die Netzwerkverbindung auf einem Thread zu verarbeiten, während die Anwendung wird, sie auf den ursprünglichen Thread ausgeführt werden.  Asynchrone Sockets sind für Anwendungen geeignet, die umfangreichen Gebrauch von Netzwerk ausführen, oder die nicht auf Netzwerkoperationen warten können, um abzuschließen, bevor sie weiterhin.  
+# <a name="using-an-asynchronous-client-socket"></a>Verwenden von asynchronen Clientsockets
+Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewartet wird, dass Netzwerkvorgänge abgeschlossen werden. Stattdessen wird das standardmäßige asynchrone Programmiermodell von .NET Framework verwendet, um die Netzwerkverbindung in einem Thread zu verarbeiten, während die Anwendung weiterhin auf dem ursprünglichen Thread ausgeführt wird. Asynchrone Sockets eignen sich für Anwendungen, die das Netzwerk stark nutzen, oder die nicht warten können, bis Netzwerkvorgänge vor dem Fortsetzen abgeschlossen werden.  
   
- Die <xref:System.Net.Sockets.Socket>\-Klasse folgt dem .NET Framework\-Benennungsmuster für asynchrone Methoden; entspricht beispielsweise die synchrone <xref:System.Net.Sockets.Socket.Receive%2A>\-Methode zu asynchronen <xref:System.Net.Sockets.Socket.BeginReceive%2A> und zu den <xref:System.Net.Sockets.Socket.EndReceive%2A>\-Methoden.  
+ Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem Benennungsmuster von .NET Framework für asynchrone Methoden, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Receive%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginReceive%2A>- und <xref:System.Net.Sockets.Socket.EndReceive%2A>-Methoden.  
   
- Asynchrone Vorgänge erfordern eine Rückrufmethode, das Ergebnis des Vorgangs zurückzugeben.  Wenn die Anwendung ist nicht erforderlich, um das Ergebnis zu kennen, ist keine Rückrufmethode erforderlich.  Der Beispielcode in diesem Abschnitt werden mit einer Methode, um die Verbindung zu beginnen, an ein Netzwerkgerät und eine Rückrufmethode, um die Verbindung, die Methode, um das Senden von Daten und der Rückrufmethode zu starten, um das übertragene abzuschließen und der Methode zu vervollständigen, um das Empfangen von Daten und der Rückrufmethode zu starten, um das Empfangen von Daten zu beenden.  
+ Asynchrone Vorgänge erfordern eine Rückrufmethode, die das Ergebnis des Vorgangs zurückgibt. Wenn Ihre Anwendung das Ergebnis nicht wissen muss, ist keine Rückrufmethode erforderlich. Der Beispielcode in diesem Abschnitt veranschaulicht die Verwendung einer Methode zum Start einer Verbindung mit einem Netzwerkgerät und einer Rückrufmethode zum Abschließen der Verbindung, einer Methode zum Start des Datenversands und einer Rückrufmethode zum Abschließen des Versands, einer Methode zum Start des Datenempfangs und einer Rückrufmethode zum Abschließen des Datenempfangs.  
   
- Asynchrone Sockets verwenden mehrere Threads vom Systemthreadpool, um Netzwerkverbindungen zu verarbeiten.  Ein Thread ist zum Initiieren des Senden oder Empfangen von Daten verantwortlich; andere Threads schließen die Verbindung zum Netzwerkgerät ab und senden oder empfangen die Daten.  In den folgenden Beispielen werden Instanzen der <xref:System.Threading.ManualResetEvent?displayProperty=fullName>\-Klasse verwendet, um die Ausführung des Hauptthreads angehalten und an, wenn die Ausführung fortgesetzt werden kann.  
+ Asynchrone Sockets verwenden mehrere Threads aus dem Systemthreadpool, um Netzwerkverbindungen zu bearbeiten. Ein Thread ist verantwortlich für das Initiieren des Datenversands oder Datenempfangs. Andere Threads schließen die Verbindung zum Netzwerkgerät ab und senden oder empfangen Daten. In den folgenden Beispielen werden Instanzen der <xref:System.Threading.ManualResetEvent?displayProperty=fullName>-Klasse verwendet, um die Ausführung des Hauptthreads anzuhalten und zu signalisieren, wann die Ausführung fortgesetzt werden kann.  
   
- Im folgenden Beispiel einen asynchronen Socket an ein Netzwerkgerät herzustellen, initialisiert die `Connect`\-Methode **Socket** und ruft dann die [BeginConnect](frlrfsystemnetsocketssocketclassconnecttopic)\-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Verbindungsrückrufmethode und ein Zustandsobjekt \(Clients **Socket**\) darstellt, die verwendet wird, um Zustandsinformationen zwischen asynchrone Aufrufe zu übergeben.  Das Beispiel implementiert die `Connect`\-Methode, um angegebene **Socket** an angegebenen Endpunkt herzustellen.  Sie akzeptiert globales **ManualResetEvent** an, das `connectDone` genannt wird.  
+ Zur Verbindung eines asynchronen Sockets mit einem Netzwerkgerät initialisiert die `Connect`-Methode im folgenden Beispiel ein **Socket**, ruft dann die <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Rückrufmethode „Connect“ und ein Zustandsobjekt (der Client-**Socket**), darstellt. Dieses wird verwendet, um Zustandsinformationen zwischen asynchronen Aufrufen zu übergeben. Das Beispiel implementiert die `Connect`-Methode zur Verbindung des angegebenen **Socket** mit dem angegebenen Endpunkt. Ein globales **ManualResetEvent** mit dem Namen `connectDone` wird vorausgesetzt.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -60,7 +65,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- Die Verbindungsrückrufmethode `ConnectCallback` implementiert den <xref:System.AsyncCallback> Delegaten.  Es wird an das Remotegerät, wenn das Remotegerät verfügbar ist an und signalisieren das Anwendungsthread, dass die Verbindung abgeschlossen ist, indem **ManualResetEvent**`connectDone` festgelegt wird.  Der folgende Code implementiert die `ConnectCallback`\-Methode.  
+ Die Rückrufmethode „Connect“ `ConnectCallback` implementiert den <xref:System.AsyncCallback>-Delegaten. Sie stellt eine Verbindung mit dem Remotegerät her, wenn das Remotegerät verfügbar ist, und signalisiert dem Thread der Anwendung, dass die Verbindung abgeschlossen ist, indem **ManualResetEvent** auf `connectDone` festgelegt wird. Im folgenden Code wird die `ConnectCallback`-Methode implementiert.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -80,7 +85,6 @@ Private Shared Sub ConnectCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ConnectCallback  
-  
 ```  
   
 ```csharp  
@@ -103,7 +107,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- Die Beispielmethode zeigt `Send` codiert die angegebenen Zeichenfolgendaten in ASCII\-Format und sendet es asynchron zum Netzwerkgerät, das durch den angegebenen Socket dargestellt wird.  Im folgenden Beispiel wird die `Send`\-Methode implementiert.  
+ Die Beispielmethode `Send` codiert die angegebenen Zeichenfolgendaten im ASCII-Format und sendet sie asynchron an das Netzwerkgerät, dargestellt durch den angegebenen Socket. Das folgende Beispiel implementiert die `Send`-Methode.  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -114,7 +118,6 @@ Private Shared Sub Send(client As Socket, data As [String])
     client.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, _  
         AddressOf SendCallback, client)  
 End Sub 'Send  
-  
 ```  
   
 ```csharp  
@@ -128,7 +131,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- Die sendensrückrufmethode `SendCallback` implementiert den <xref:System.AsyncCallback> Delegaten.  Sie sendet die Daten, wenn das Netzwerkgerät bereit ist zu empfangen.  Im folgenden Beispiel wird die Implementierung der `SendCallback`\-Methode veranschaulicht.  Sie akzeptiert globales **ManualResetEvent** an, das `sendDone` genannt wird.  
+ Die Rückrufmethode „Send“ `SendCallback` implementiert den <xref:System.AsyncCallback>-Delegaten. Die Daten werden gesendet, wenn das Netzwerkgerät für den Empfang bereit ist. Im folgenden Beispiel wird eine Implementierung der `SendCallback`-Methode veranschaulicht. Ein globales **ManualResetEvent** mit dem Namen `sendDone` wird vorausgesetzt.  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -146,7 +149,6 @@ Private Shared Sub SendCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'SendCallback  
-  
 ```  
   
 ```csharp  
@@ -167,7 +169,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- Das Lesen von Daten von einem Clientsocket erfordert ein Zustandsobjekt, das Werte zwischen asynchrone Aufrufe übergibt.  Die folgende Klasse ist ein Beispielszustandsobjekt zum Empfangen von Daten von einem Clientsocket.  Sie enthält ein Feld, um den Clientsocket, einen Puffer für die empfangenen Daten und <xref:System.Text.StringBuilder> die Zeichenfolge der eingehenden Daten enthält.  Das Einfügen dieser Felder im Zustandsobjekt können ihre, um Daten über mehrere beibehalten werden Werte, im Clientsocket zu lesen.  
+ Das Lesen von Daten aus einem Clientsocket erfordert ein Zustandsobjekt, das Werte zwischen asynchronen Aufrufen übergibt. Die folgende Klasse ist ein Beispielstatusobjekt zum Empfangen von Daten von einem Clientsocket. Sie enthält ein Feld für den Clientsocket, einen Puffer für die empfangenen Daten und eine <xref:System.Text.StringBuilder>, die die eingehende Datenzeichenfolge enthält. Wenn Sie diese Felder in das Statusobjekt platzieren, können ihre Werte über mehrere Aufrufe gespeichert werden, damit Daten aus dem Clientsocket gelesen werden können.  
   
 ```vb  
 Public Class StateObject  
@@ -180,7 +182,6 @@ Public Class StateObject
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
-  
 ```  
   
 ```csharp  
@@ -196,7 +197,7 @@ public class StateObject {
 }  
 ```  
   
- Die `Receive`\-Beispielmethode richtet das Zustandsobjekt ein und ruft dann die **BeginReceive**\-Methode auf, um die Daten vom Clientsocket asynchron zu lesen.  Im folgenden Beispiel wird die `Receive`\-Methode implementiert.  
+ Die Beispielmethode `Receive` richtet das Statusobjekt ein, und ruft dann die **BeginReceive**-Methode auf, um die Daten asynchron aus dem Clientsocket zu lesen. Das folgende Beispiel implementiert die `Receive`-Methode.  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -212,7 +213,6 @@ Private Shared Sub Receive(client As Socket)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'Receive  
-  
 ```  
   
 ```csharp  
@@ -231,9 +231,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- Die empfangensrückrufmethode `ReceiveCallback` implementiert den **AsyncCallback** Delegaten.  Sie werden die Daten vom Netzwerkgerät und erstellt eine Meldungszeichenfolge.  Es wird eine oder mehrere Bytes Daten vom Netzwerk in den Datenpuffer und ruft dann die **BeginReceive**\-Methode erneut auf, bis die Daten, die vom Client gesendet werden, abgeschlossen sind.  Sobald alle Daten vom Client gelesen werden, signalisiert `ReceiveCallback` Anwendungsthread, dass die Daten vollständig sind, indem **ManualResetEvent** `sendDone` festlegen.  
+ Die Rückruffunktion „Receive“ `ReceiveCallback` implementiert den **AsyncCallback**-Delegaten. Sie erhält die Daten aus dem Netzwerkgerät und erstellt eine Meldungszeichenfolge. Diese Methode liest ein oder mehrere Bytes vom Netzwerk in den Datenpuffer und ruft dann die **BeginReceive**-Methode erneut auf, sobald die vom Client gesendeten Daten vollständig sind. Nachdem alle Daten vom Client gelesen wurden, signalisiert `ReceiveCallback` dem Thread der Anwendung, dass die Daten vollständig sind, indem **ManualResetEvent** auf `sendDone` festgelegt wurde.  
   
- Im folgenden Beispielcode wird `ReceiveCallback`\-Methode implementiert.  Es wird eine globale Zeichenfolge an, die `response` genannt wird, die die empfangene Zeichenfolge und globales **ManualResetEvent** mit `receiveDone` enthält.  Der Server muss den Clientsocket ordnungsgemäß beenden, um die Netzwerksitzung zu beenden.  
+ Der folgende Beispielcode implementiert die `ReceiveCallback`-Methode. Es wird eine globale Zeichenfolge mit dem Namen `response` vorausgesetzt, die die empfangene Zeichenfolge und ein globales **ManualResetEvent** mit dem Namen `receiveDone` enthält. Der Server muss den Clientsocket ordnungsgemäß beenden, um die Netzwerksitzung herunterzufahren.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -266,7 +266,6 @@ Private Shared Sub ReceiveCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ReceiveCallback  
-  
 ```  
   
 ```csharp  
@@ -298,7 +297,8 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)   
- [Asynchrone Clientsockets \- Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+ [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+

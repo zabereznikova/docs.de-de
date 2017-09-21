@@ -1,46 +1,51 @@
 ---
-title: "streamWriterBufferedDataLost MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "StreamWriter class, data buffering problems"
-  - "managed debugging assistants (MDAs), StreamWriter data buffering"
-  - "buffers, StreamWriter problems"
-  - "MDAs (managed debugging assistants), StreamWriter data buffering"
-  - "StreamWriter buffered data lost"
-  - "data buffering problems"
-  - "streamWriterBufferedDataLost MDA"
+title: streamWriterBufferedDataLost-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- StreamWriter class, data buffering problems
+- managed debugging assistants (MDAs), StreamWriter data buffering
+- buffers, StreamWriter problems
+- MDAs (managed debugging assistants), StreamWriter data buffering
+- StreamWriter buffered data lost
+- data buffering problems
+- streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3903e2814cc15ac2678a0a5102046445d332ce75
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# streamWriterBufferedDataLost MDA
-Der `streamWriterBufferedDataLost`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn in einen <xref:System.IO.StreamWriter> geschrieben wird, jedoch anschließend kein Aufruf der <xref:System.IO.StreamWriter.Flush%2A>\-Methode oder der <xref:System.IO.StreamWriter.Close%2A>\-Methode erfolgt, bevor die Instanz von <xref:System.IO.StreamWriter> zerstört wird.  Wenn dieser MDA bereitgestellt wurde, bestimmt die Laufzeit, ob im <xref:System.IO.StreamWriter> immer noch gepufferten Daten vorhanden sind.  Wenn gepufferte Daten vorhanden sind, wird der MDA aktiviert.  Durch Aufrufen der <xref:System.GC.Collect%2A>\-Methode und der <xref:System.GC.WaitForPendingFinalizers%2A>\-Methode kann das Ausführen von Finalizern erzwungen werden.  Andernfalls werden Finalizer zu scheinbar beliebigen Zeiten und beim Prozessende möglicherweise gar nicht ausgeführt.  Um diese Art von Problem zuverlässiger zu reproduzieren, ist es nützlich, Finalizer ausdrücklich aufzurufen und diesen MDA bereitzustellen.  
+# <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost-MDA
+Der `streamWriterBufferedDataLost`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine <xref:System.IO.StreamWriter> geschrieben wird, aber die <xref:System.IO.StreamWriter.Flush%2A>- oder <xref:System.IO.StreamWriter.Close%2A>-Methode wird anschließend nicht aufgerufen, bevor die Instanz der <xref:System.IO.StreamWriter> zerstört wird. Wenn dieser MDA aktiviert ist, überprüft die Common Language Runtime, ob gepufferte Daten immer noch in <xref:System.IO.StreamWriter> vorhanden sind. Wenn die gepufferten Daten vorhanden sind, wird der MDA aktiviert. Ein Aufruf der <xref:System.GC.Collect%2A>- und <xref:System.GC.WaitForPendingFinalizers%2A>-Methoden kann erzwingen, dass Finalizer ausgeführt werden. Finalizer werden andernfalls zu scheinbar willkürlichen Zeiten und beim Beenden des Prozesses möglicherweise gar nicht ausgeführt. Wenn Finalizer explizit mit diesem aktiven MDA ausgeführt werden, wird diese Art von Problemen zuverlässiger reproduziert werden können.  
   
-## Symptome  
- Ein <xref:System.IO.StreamWriter> schreibt die letzten 1\-4 KB Daten nicht in eine Datei.  
+## <a name="symptoms"></a>Symptome  
+ Ein <xref:System.IO.StreamWriter> schreibt die letzten 1 bis 4 KB Daten nicht in eine Datei.  
   
-## Ursache  
- Der <xref:System.IO.StreamWriter> puffert die Daten intern. Daher ist es erforderlich, die <xref:System.IO.StreamWriter.Close%2A>\-Methode oder die <xref:System.IO.StreamWriter.Flush%2A>\-Methode aufzurufen, damit die gepufferten Daten in den zugrunde liegenden Datenspeicher geschrieben werden.  Wenn kein entsprechender Aufruf von <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> erfolgt, werden die in der <xref:System.IO.StreamWriter>\-Instanz gepufferten Daten möglicherweise nicht erwartungsgemäß geschrieben.  
+## <a name="cause"></a>Ursache  
+ Die <xref:System.IO.StreamWriter> puffert Daten intern. Dies erfordert, dass die <xref:System.IO.StreamWriter.Close%2A>- oder <xref:System.IO.StreamWriter.Flush%2A>-Methode aufgerufen wird, um die gepufferten Daten in den zugrunde liegenden Datenspeicher zu schreiben. Wenn <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> nicht richtig aufgerufen werden, können gepufferte Daten in der <xref:System.IO.StreamWriter>-Instanz nicht wie erwartet geschrieben werden.  
   
- Das folgende Beispiel stellt schlecht geschriebenen Code dar, der von diesem MDA abgefangen werden sollte.  
+ Das folgende Beispiel zeigt schlecht geschriebenen Code, den dieser MDA abfangen sollte.  
   
-```  
+```csharp  
 // Poorly written code.  
 void Write()   
 {  
@@ -50,26 +55,26 @@ void Write()
 }  
 ```  
   
- Der Code im vorausgegangenen Beispiel aktiviert diesen MDA zuverlässiger, wenn eine Garbage Collection ausgelöst und dann unterbrochen wird, bis die Finalizer beendet wurden.  Um dieser Art von Problem auf die Spur zu kommen, können Sie in einem Debugbuild den Code aus dem folgenden Beispiel an das Ende der Methode aus dem vorausgegangenen Beispiel anhängen.  Dadurch wird der MDA zuverlässiger aktiviert \(aber natürlich nicht die Ursache des Problems behoben\).  
+ Der vorangehende Code wird diesen MDA zuverlässiger aktivieren, wenn eine Garbage Collection ausgelöst und dann angehalten wurde, bis die Finalizer beendet wurden. Um diese Art von Problemen aufzufinden, können Sie den folgenden Code am Ende der vorherigen Methode in einem Debugbuild hinzufügen. Dies hilft dabei, den MDA zuverlässig zu aktivieren, aber natürlich wird die Ursache des Problems somit nicht behoben.  
   
-```  
+```csharp
 GC.Collect();  
 GC.WaitForPendingFinalizers();  
 ```  
   
-## Lösung  
- Stellen Sie sicher, dass ein Aufruf von <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> für den <xref:System.IO.StreamWriter> erfolgt, bevor die Anwendung bzw. jeder Codeblock geschlossen wird, in der bzw. dem eine Instanz eines <xref:System.IO.StreamWriter> verwendet wird.  Am besten erreichen Sie dies, indem Sie die Instanz mit einem `using`\-Block von C\# erstellen \(`Using` in Visual Basic\). Dadurch wird sichergestellt, dass die <xref:System.IO.StreamWriter.Dispose%2A>\-Methode für den Writer aufgerufen und die Instanz somit ordnungsgemäß geschlossen wird.  
+## <a name="resolution"></a>Auflösung  
+ Stellen Sie sicher, dass Sie <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> der <xref:System.IO.StreamWriter> oder eines beliebigen Codeblocks abrufen, der eine <xref:System.IO.StreamWriter>-Instanz enthält, bevor Sie eine Anwendung schließen. Eine der besten Mechanismen, um dies zu erreichen, ist das Erstellen der Instanz mithilfe des `using`-C#-Blocks (`Using` in Visual Basic), was sicherstellt, dass die <xref:System.IO.StreamWriter.Dispose%2A>-Methode für den Writer aufgerufen wurde, wodurch die Instanz ordnungsgemäß geschlossen wird.  
   
-```  
+```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))   
 {  
     sw.WriteLine("Data");  
 }  
 ```  
   
- Im folgenden Codebeispiel wird dieselbe Lösung veranschaulicht, jedoch mit `try/finally` statt mit `using`.  
+ Der folgende Code zeigt dieselbe Projektmappe mithilfe von `try/finally` anstelle von `using` an.  
   
-```  
+```csharp
 StreamWriter sw;  
 try   
 {  
@@ -83,9 +88,9 @@ finally
 }  
 ```  
   
- Wenn keine dieser Lösungen verwendet werden kann, z. B. weil ein <xref:System.IO.StreamWriter> in einer statischen Variablen gespeichert ist und am Ende seiner Lebensdauer nicht einfach Code ausgeführt werden kann, rufen Sie nach dessen letzter Verwendung <xref:System.IO.StreamWriter.Flush%2A> für den <xref:System.IO.StreamWriter> auf, oder legen Sie vor dessen erster Verwendung die <xref:System.IO.StreamWriter.AutoFlush%2A>\-Eigenschaft auf `true` fest, um dieses Problem zu vermeiden.  
+ Wenn keine dieser Lösungen verwendet werden kann (z.B. wenn sich ein <xref:System.IO.StreamWriter> in einer statischen Variablen befindet und Sie den Code am Ende der Lebenszeit nicht problemlos ausführen können), sollte der Aufruf von <xref:System.IO.StreamWriter.Flush%2A> auf <xref:System.IO.StreamWriter> nach der letzten Verwendung oder die Einstellung der <xref:System.IO.StreamWriter.AutoFlush%2A>-Eigenschaft auf `true` vor der ersten Verwendung dieses Problem vermeiden.  
   
-```  
+```csharp
 private static StreamWriter log;  
 // static class constructor.  
 static WriteToFile()   
@@ -98,15 +103,15 @@ static WriteToFile()
 }  
 ```  
   
-## Auswirkungen auf die Laufzeit  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## Ausgabe  
- Eine Meldung, die angibt, dass diese Verletzung aufgetreten ist.  
+## <a name="output"></a>Ausgabe  
+ Eine Meldung, die angibt, dass diese Überschreitung aufgetreten ist.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <streamWriterBufferedDataLost />  
@@ -114,6 +119,7 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.IO.StreamWriter>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

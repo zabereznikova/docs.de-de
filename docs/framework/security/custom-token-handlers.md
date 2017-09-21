@@ -1,28 +1,34 @@
 ---
-title: "Benutzerdefinierte Tokenhandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierte Tokenhandler
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Benutzerdefinierte Tokenhandler
-In diesem Thema werden Scheinhandler in WIF und wie diese verwendet werden, um Token zu verarbeiten.  Im Thema werden auch ab, was erforderlich ist, um benutzerdefinierte Scheinhandler für Tokentypen zu erstellen, die nicht standardmäßig in WIF unterstützt werden.  
+# <a name="custom-token-handlers"></a>Benutzerdefinierte Tokenhandler
+In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung von Token erläutert. Das Thema behandelt auch die Vorgehensweise zum Erstellen von benutzerdefinierten Tokenhandlern für Tokentypen, die nicht standardmäßig in WIF unterstützt werden.  
   
-## Einführung in den Scheinhandlern in WIF  
- WIF beruht auf Sicherheitstokenhandlern, um Token für eine Anwendung des vertrauender Seite \(RP\) oder einen Sicherheitstokendienst \(STS\) zum Erstellen, Lesen, Schreiben und zu überprüfen.  Scheinhandler sind Erweiterungspunkte, damit Sie einen benutzerdefinierten Scheinhandler in der WIF\-Pipeline hinzufügen oder die Methode anpassen, der ein vorhandener Scheinhandler Token verwaltet.  WIF stellt neun integrierte Sicherheitstokenhandler, die geändert oder vollständig überschrieben werden können, um die Funktionalität bei Bedarf zu ändern.  
+## <a name="introduction-to-token-handlers-in-wif"></a>Einführung in Tokenhandler in WIF  
+ WIF verwendet Sicherheitstokenhandler zum Erstellen, Lesen, Schreiben und Überprüfen von Token für eine Anwendung der vertrauenden Seite (Relying Party, RP) oder einen Sicherheitstokendienst (Security Token Service, STS). Tokenhandler sind Erweiterungspunkte, um der WIF-Pipeline einen benutzerdefinierten Tokenhandler hinzuzufügen oder die Tokenverwaltung eines vorhandenen Tokenhandlers anzupassen. WIF stellt neun integrierte Sicherheitstokenhandler bereit, deren Funktionen nach Bedarf geändert oder vollständig überschrieben werden können.  
   
-## Integrierte Sicherheitstoken\-Handler in WIF  
- WIF 4.5 enthält neun Sicherheitstokenhandlerklassen ein, die von der abstrakten Basisklasse <xref:System.IdentityModel.Tokens.SecurityTokenHandler> berechnen:  
+## <a name="built-in-security-token-handlers-in-wif"></a>Integrierte Sicherheitstokenhandler in WIF  
+ WIF 4.5 beinhaltet neun Klassen für Sicherheitstokenhandler, die von der abstrakten Basisklasse <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet werden:  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -42,14 +48,14 @@ In diesem Thema werden Scheinhandler in WIF und wie diese verwendet werden, um T
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## Hinzufügen eines benutzerdefinierten Scheinhandlers  
- Eine Tokentypen, wie einfache Token der Internet\-Token\-\(SWT\) und JSON\-Internets \(JWT\) verfügen nicht über die integrierten Scheinhandler, die von WIF bereitgestellt werden.  Für diese Tokentypen und für andere, die keinen integrierten Handler verfügen, müssen Sie die folgenden Schritte ausführen, um einen benutzerdefinierten Scheinhandler zu erstellen.  
+## <a name="adding-a-custom-token-handler"></a>Hinzufügen eines benutzerdefinierten Tokenhandlers  
+ Einige Tokentypen, wie z.B. einfache Webtoken (Simple Web Tokens, SWT) und JSON-Webtoken (JWT), verfügen über keine integrierten WIF-Sicherheitstokenhandler. Bei diesen Tokentypen und bei Typen, die nicht über einen integrierten Handler verfügen, müssen Sie folgendermaßen vorgehen, um einen benutzerdefinierten Tokenhandler zu erstellen.  
   
-#### Hinzufügen eines benutzerdefinierten Scheinhandlers  
+#### <a name="adding-a-custom-token-handler"></a>Hinzufügen eines benutzerdefinierten Tokenhandlers  
   
-1.  Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet.  
+1.  Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet wird.  
   
-2.  Überschreiben Sie die folgenden Methoden und stellen Sie eine eigene Implementierung bereit:  
+2.  Überschreiben Sie die folgenden Methoden, und stellen Sie Ihre eigene Implementierung bereit:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -63,9 +69,9 @@ In diesem Thema werden Scheinhandler in WIF und wie diese verwendet werden, um T
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Fügen Sie einen Verweis auf den neuen benutzerdefinierten Scheinhandler in die Datei *Web.config* oder *App.configfile* innerhalb des **\<system.identityModel\>**\-Abschnitts hinzu, der für WIF gilt.  Beispielsweise gibt die folgende Konfigurationsmarkup einen neuen Scheinhandler an, der **MyCustomTokenHandler** genannt wird, der im **CustomToken**\-Namespace befinden.  
+3.  Fügen Sie im **\<system.identityModel>**-Abschnitt für WIF in der Datei *Web.config* oder der Datei *App.config* dem neuen benutzerdefinierten Tokenhandler einen Verweis hinzu. Das folgende Konfigurationsmarkup gibt z.B. einen neuen Tokenhandler mit dem Namen **MyCustomTokenHandler** an, der sich im Namespace **CustomToken** befindet.  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
@@ -75,15 +81,16 @@ In diesem Thema werden Scheinhandler in WIF und wie diese verwendet werden, um T
     </system.identityModel>  
     ```  
   
-     Beachten Sie, dass, wenn Sie Ihren eigenen Scheinhandler bereitstellen, um einen Tokentyp zu behandeln, der bereits einen integrierten Scheinhandler verfügt, Sie ein **\<remove\>**\-Element hinzufügen müssen, um den Standardhandler abzulegen und den benutzerdefinierten Handler stattdessen zu verwenden.  Beispielsweise ersetzt die folgende Konfiguration Standard <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> vom benutzerdefinierten Scheinhandler:  
+     Beachten Sie, dass Sie beim Bereitstellen Ihres eigenen Tokenhandlers zur Behandlung eines Tokentyps mit integriertem Tokenhandler ein **\<remove>**-Element hinzufügen müssen, um den Standardhandler zu löschen und dafür den benutzerdefinierten Handler zu verwenden. Die folgende Konfiguration ersetzt beispielsweise den standardmäßigen <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> durch den benutzerdefinierten Tokenhandler:  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type=”System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789”>  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
     ```
+

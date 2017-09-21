@@ -1,45 +1,50 @@
 ---
-title: "Gewusst wie: Konfigurieren Sie Netzwerkablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "app.config-Dateien, Sie vernetzen Ablaufverfolgung"
-  - "Anwendungskonfigurationsdateien, Sie vernetzen Ablaufverfolgung"
-  - "Konfigurationsdateien [.NET Framework], Sie vernetzen Ablaufverfolgung"
-  - "Formatieren [.NET Framework], Sie vernetzen Ablaufverfolgung"
-  - "lassen Sie Attribut"
-  - "Sie vernetzen Ablaufverfolgung, Konfigurieren"
-  - "ProtokollEbene Ablaufverfolgungsausgabe"
-  - "Sockets, Ablaufverfolgungsausgabe"
+title: 'Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- formatting [.NET Framework], network tracing
+- network tracing, configuring
+- level attribute
+- app.config files, network tracing
+- configuration files [.NET Framework], network tracing
+- protocol-level trace output
+- application configuration files, network tracing
+- sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 caps.latest.revision: 23
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 23
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Gewusst wie: Konfigurieren Sie Netzwerkablaufverfolgung
-Die Anwendungs\- oder Computerkonfigurationsdatei enthält die Einstellungen, die das Format und die Inhalte von Netzwerkablaufverfolgungen bestimmen. Bevor Sie diese Verfahren ausführen, stellen Sie sicher, dass die Ablaufverfolgung aktiviert ist. Weitere Informationen zur Aktivierung der Ablaufverfolgung finden Sie unter [Aktivieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/enabling-network-tracing.md).  
+# <a name="how-to-configure-network-tracing"></a>Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung
+Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die das Format und die Inhalte von Netzwerkablaufverfolgungen bestimmen. Bevor Sie diese Verfahren ausführen, stellen Sie sicher, dass die Ablaufverfolgung aktiviert ist. Weitere Informationen zur Aktivierung der Netzwerkablaufverfolgung finden Sie unter [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Die Computerkonfigurationsdatei "machine.config" ist im Ordner "%Windir%\\Microsoft.NET\\Framework" in dem Verzeichnis gespeichert, in dem Windows installiert wurde. Es gibt für jede Version von .NET Framework, die auf dem Computer installiert ist, eine eigene Datei "Machine.config" in den Unterordnern von "%Windir%\\Microsoft.NET\\Framework" \(beispielsweise, C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\machine.config\).  
+ Die Computerkonfigurationsdatei "machine.config" ist im Ordner "%Windir%\Microsoft.NET\Framework" in dem Verzeichnis gespeichert, in dem Windows installiert wurde. Es gibt für jede Version von .NET Framework, die auf dem Computer installiert ist, eine eigene Datei "Machine.config" in den Unterordnern von "%Windir%\Microsoft.NET\Framework" (beispielsweise, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config).  
   
  Diese Einstellungen können auch in der Konfigurationsdatei für die Anwendung vorgenommen werden. Die Anwendungskonfigurationsdatei hat Vorrang vor der Computerkonfigurationsdatei.  
   
-### So konfigurieren Sie die Netzwerkablaufverfolgung  
+### <a name="to-configure-network-tracing"></a>So konfigurieren Sie die Netzwerkablaufverfolgung  
   
 -   Fügen Sie der jeweiligen Konfigurationsdatei die folgenden Zeilen hinzu. Die Werte und Optionen für diese Einstellungen sind in den folgenden Tabellen beschrieben.  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.diagnostics>  
         <sources>  
@@ -87,12 +92,12 @@ Die Anwendungs\- oder Computerkonfigurationsdatei enthält die Einstellungen, di
     </configuration>  
     ```  
   
- Wenn Sie einen Namen im `<switches>`\-Block hinzufügen, enthält die Ausgabe der Ablaufverfolgung Informationen von einigen zu diesem Namen gehörenden Methoden. Die Ausgabe wird in der folgenden Tabelle beschrieben.  
+ Wenn Sie einen Namen im `<switches>`-Block hinzufügen, enthält die Ausgabe der Ablaufverfolgung Informationen von einigen zu diesem Namen gehörenden Methoden. Die Ausgabe wird in der folgenden Tabelle beschrieben.  
   
 |Name|Ausgabe von|  
 |----------|-----------------|  
 |`System.Net.Sockets`|Einige öffentliche Methoden der Klassen <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient> und <xref:System.Net.Dns>|  
-|`System.Net`|Einige öffentliche Methoden der Klassen <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FtpWebResponse> sowie SSL\-Debuginformationen \(Ungültige Zertifikate, fehlende Ausstellerliste und Clientzertifikatsfehler.\)|  
+|`System.Net`|Einige öffentliche Methoden der Klassen <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FtpWebResponse> sowie SSL-Debuginformationen (Ungültige Zertifikate, fehlende Ausstellerliste und Clientzertifikatsfehler.)|  
 |`System.Net.HttpListener`|Einige öffentliche Methoden der Klassen <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest> und <xref:System.Net.HttpListenerResponse>.|  
 |`System.Net.Cache`|Einige private und interne Methoden in `System.Net.Cache`.|  
 |`System.Net.Http`|Einige öffentliche Methoden der Klassen <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler> und <xref:System.Net.Http.WebRequestHandler>.|  
@@ -101,13 +106,14 @@ Die Anwendungs\- oder Computerkonfigurationsdatei enthält die Einstellungen, di
  Die in der folgenden Tabelle aufgeführten Attribute konfigurieren die Ablaufverfolgungsausgabe.  
   
 |Attributname|Attributwert|  
-|------------------|------------------|  
-|`Value`|Erforderliches <xref:System.String>\-Attribut. Legt den Ausführlichkeitsgrad der Ausgabe fest. Zulässige Werte sind `Critical`, `Error`, `Verbose`, `Warning` und `Information`.<br /><br /> Dieses Attribut muss für das Element \<add name\> des \<switches\>\-Elements wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn das Attribut für das \<source\>\-Element festgelegt wird.|  
-|`maxdatasize`|Optionales <xref:System.Int32>\-Attribut. Legt die maximale Anzahl von Netzwerkdatenbytes für jede Ablaufverfolgungszeile fest. Der Standardwert ist 1024.<br /><br /> Dieses Attribut muss für das Element \<source\> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<switches\>\-Element festgelegt wird.|  
-|`Tracemode`|Optionales <xref:System.String>\-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`.<br /><br /> Dieses Attribut muss für das Element \<switches\> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<source\>\-Element festgelegt wird.|  
+|--------------------|---------------------|  
+|`Value`|Erforderliches <xref:System.String>-Attribut. Legt den Ausführlichkeitsgrad der Ausgabe fest. Zulässige Werte sind `Critical`, `Error`, `Verbose`, `Warning` und `Information`.<br /><br /> Dieses Attribut muss für das Element \<add name> des \<switches>-Elements wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn das Attribut für das \<source>-Element festgelegt wird.|  
+|`maxdatasize`|Optionales <xref:System.Int32>-Attribut. Legt die maximale Anzahl von Netzwerkdatenbytes für jede Ablaufverfolgungszeile fest. Der Standardwert ist 1024.<br /><br /> Dieses Attribut muss für das Element \<source> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<switches>-Element festgelegt wird.|  
+|`Tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`.<br /><br /> Dieses Attribut muss für das Element \<switches> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<source>-Element festgelegt wird.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Netzwerkablaufverfolgung in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Aktivieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Einführung in Instrumentation und Ablaufverfolgung](http://msdn.microsoft.com/de-de/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Network Tracing in the .NET Framework (Netzwerkablaufverfolgung in .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)   
+ [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Introduction to Instrumentation and Tracing (Einführung in Instrumentation und Ablaufverfolgung)](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+

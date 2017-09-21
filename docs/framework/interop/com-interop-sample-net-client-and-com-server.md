@@ -1,36 +1,41 @@
 ---
-title: "COM Interop Sample: .NET Client and COM Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, samples"
-  - "COM interop, samples"
+title: 'COM-Interop-Beispiel: .NET-Client und COM-Server'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop Sample: .NET Client and COM Server
-In diesem Beispiel wird veranschaulicht, wie ein [.NET\-Client](#cpconcominteropsamplenetclientcomserveranchor1), der auf einen [COM\-Server](#cpconcominteropsamplenetclientcomserveranchor2) zugreifen kann, eine Instanz einer COM\-Co\-Klasse erstellt und Klassenmember aufruft, um Hypothekenberechnungen durchzuführen.  
+# <a name="com-interop-sample-net-client-and-com-server"></a>COM-Interop-Beispiel: .NET-Client und COM-Server
+In diesem Beispiel wird veranschaulicht, wie ein [.NET Client](#cpconcominteropsamplenetclientcomserveranchor1), der für den Zugriff auf einen [COM-Server](#cpconcominteropsamplenetclientcomserveranchor2) erstellt wurde, eine Instanz einer COM-Co-Klasse erstellt und Klassenmember aufruft, um Hypothekenberechnungen durchzuführen.  
   
- In diesem Beispiel wird eine Instanz der **Loan**\-Co\-Klasse vom Client erstellt und aufgerufen. Anschließend werden vier Argumente \(eines davon mit dem Wert 0\) an die Instanz weitergeleitet und schließlich die Berechnungen angezeigt.  Codefragmente aus diesem Beispiel werden im gesamten Abschnitt angezeigt.  
+ In diesem Beispiel erstellt der Client eine Instanz der **Loan**-Co-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codefragmente aus diesem Beispiel angezeigt.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## .NET\-Client  
+## <a name="net-client"></a>.NET-Client  
   
 ```vb  
 Imports System  
@@ -101,7 +106,6 @@ Public Class LoanApp
         End While  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -161,7 +165,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## COM Server  
+## <a name="com-server"></a>COM-Server  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -306,5 +310,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## Siehe auch  
- [Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+

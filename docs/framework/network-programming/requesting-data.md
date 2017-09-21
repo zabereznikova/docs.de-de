@@ -1,58 +1,62 @@
 ---
-title: "Anfordern von Daten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Senden von Daten"
-  - "WebRequest-Klasse, Senden und Empfangen von Daten"
-  - "Anfordern von Daten aus dem Internet, Informationen zum Anfordern von Daten"
-  - "WebClient-Klasse, Senden und Empfangen von Daten"
-  - "Netzwerk, Anfordern von Daten"
-  - "Empfangen von Daten"
-  - "Senden von Daten, Informationen zum Senden von Daten"
-  - "Antwort auf Internetanforderung, Informationen zum Reagieren auf Internetanforderungen"
-  - "Datenanforderungen"
-  - "Empfangen von Daten, Informationen zum Empfangen von Daten"
-  - "Internet, Anfordern von Daten"
+title: Anfordern von Daten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data
+- WebRequest class, sending and receiving data
+- requesting data from Internet, about requesting data
+- WebClient class, sending and receiving data
+- network, requesting data
+- receiving data
+- sending data, about sending data
+- response to Internet request, about responding to Internet requests
+- data requests
+- receiving data, about receiving data
+- Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c492390eb4cb27973652cc6d62f8c1da2bd1121e
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# Anfordern von Daten
-Die Entwicklung von Anwendungen, die in die verteilte Betriebsumgebung für heute Internet ausgeführt werden, erfordert eine effiziente, benutzerfreundliche Methode für das Abrufen von Daten von Ressourcen aller Typen.  Austauschbare Protokolle können Sie Anwendungen entwickeln, die eine einzelne Schnittstelle verwenden, um Daten aus mehreren Internetprotokollen abzurufen.  
+# <a name="requesting-data"></a>Anfordern von Daten
+Um Anwendungen zu entwickeln, die in der verteilten Betriebssystemumgebung des heutigen Internets ausgeführt werden können, benötigen Sie eine effiziente und einfach zu nutzende Methode für das Abrufen von Daten aus Ressourcen aller Art. Mithilfe austauschbarer Protokolle lassen sich Anwendungen entwickeln, in denen über eine einzige Schnittstelle Daten aus mehreren Internetprotokollen abgerufen werden.  
   
-## Daten aus einem Internetserver Hochladen und Herunterladen von  
- Für einfache Anforderungen und Wartetransaktionen stellt die <xref:System.Net.WebClient>\-Klasse die einfachste Methode zum Hochladen von Daten zu und Herunterladen von Daten von einem Internetserver bereit.  **WebClient** stellt Methoden zum Hochladen und Herunterladen von Dateien, das Senden und Empfangen von Streams und das Senden eines Datenpuffers zum Server und Empfangen einer Antwort bereit.  **WebClient** verwendet die <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse>\-Klassen, um die tatsächlichen Beziehungen zur Internetressource zu erstellen, sodass jedes registrierte austauschbare Protokoll zur Verwendung verfügbar.  
+## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Hochladen und Herunterladen von Daten aus einem Internetserver  
+ Für eine einfache Transaktion mit Anforderung und Antwort lassen sich mit der Klasse <xref:System.Net.WebClient> am einfachsten Daten auf einen Internetserver hoch- oder von ihm herunterzuladen. Die Klasse **WebClient** bietet Methoden für das Hoch- und Herunterladen von Dateien, für das Senden und Empfangen von Streams und für das Senden eines Datenpuffers an den Server und den Empfang einer Antwort. **WebClient** verwendet die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse>, um die tatsächlichen Verbindungen zu den Internetressourcen herzustellen, damit jedes registrierte, austauschbare Protokoll genutzt werden kann.  
   
- Clientanwendungen, die komplexere Transaktionen ausführen müssen, benötigen Daten von den Servern mithilfe der **WebRequest**\-Klasse und seiner Nachfolger.  **WebRequest** kapselt die Details der Verbindung zum Server, Senden der Anforderung und des Empfangens der Antwort.  **WebRequest** ist eine abstrakte Klasse, die einen Satz von Eigenschaften und Methoden definiert, die für alle Anwendungen verfügbar sind, die austauschbare Protokolle verwenden.  Nachfolger von **WebRequest**, wie <xref:System.Net.HttpWebRequest>, implementieren die Eigenschaften und Methoden, die von **WebRequest** so definiert werden, die mit dem zugrunde liegenden Protokoll konsistent ist.  
+ Clientanwendungen, für die komplexere Transaktionen ausgeführt werden, fordern Daten mithilfe der Klasse **WebRequest** und ihren Nachfolgern von den Servern an. **WebRequest** kapselt die Details zum Aufbau der Serververbindung, zum Senden der Anforderung und zum Empfang der Nachricht ein. **WebRequest** ist eine abstrakte Klasse, die eine Reihe von Eigenschaften und Methoden definiert. Diese sind für alle Anwendungen verfügbar, die austauschbare Protokolle nutzen. Nachfolger von **WebRequest**, z.B. <xref:System.Net.HttpWebRequest>, implementieren die von **WebRequest** definierten Eigenschaften und Methoden konsistent zum zu Grunde liegenden Protokoll.  
   
- Die **WebRequest**\-Klasse erstellt protokollspezifische Instanzen von **WebRequest** Nachfolgern, mit dem Wert des URI, das auf die <xref:System.Net.WebRequest.Create%2A>\-Methode übergeben wird, um bestimmte Instanz der abgeleiteten Klasse festzulegen, um zu erstellen.  Anwendungen geben an, die **WebRequest** Nachfolger verwendet werden soll, um eine Anforderung zu bearbeiten, indem Sie den Konstruktor des Nachfolgers mit der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>\-Methode registriert.  
+ **WebRequest** erstellt protokollspezifische Instanzen von **WebRequest**-Nachfolgern. Hierfür wird mit den an die Methode <xref:System.Net.WebRequest.Create%2A> übergebenen Werten bestimmt, welche Instanz der abgeleiteten Klasse erstellt werden muss. Anwendungen geben an, welcher **WebRequest**-Nachfolger verwendet werden sollte, um eine Anforderung zu handeln. Dies geschieht durch die Registrierung des Nachfolgerkonstruktors mithilfe der Methode <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
   
- Eine Anforderung an die Internetressource gemacht, indem die <xref:System.Net.WebRequest.GetResponse%2A>\-Methode auf **WebRequest** aufgerufen wird.  Die **GetResponse**\-Methode erstellt die protokollspezifische Anforderung von Eigenschaften **WebRequest**, stellt das TCP oder die UDP\-Socket\-Beziehung zum Server erstellt und sendet die Anforderung.  Für Anforderungen, die Daten auf dem Server, wie Anforderungen **Post** HTTP oder FTP **Put** senden, stellt die <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName>\-Methode einen Netzwerkstream, in dem die Daten senden.  
+ Für eine Anforderung an eine Internetressource wird die Methode <xref:System.Net.WebRequest.GetResponse%2A> der Klasse **WebRequest** aufgerufen. Die Methode **GetResponse** konstruiert die protokollspezifische Anforderung aus den Eigenschaften der **WebRequest**-Klasse, stellt die TCP- oder UDP-Socketverbindung zum Server her und sendet die Anforderung. Bei Anforderungen, im Rahmen derer Daten an einen Server gesendet werden, z.B. HTTP **Post** oder FTP **Put**, stellt die Methode <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> dafür einen Netzwerkstream bereit.  
   
- Die **GetResponse**\-Methode gibt eine protokollspezifische **WebResponse** zurück, die **WebRequest.** übereinstimmt  
+ Die Methode **GetResponse** gibt eine protokollspezifische **WebResponse** zurück, die mit **WebRequest** übereinstimmt.  
   
- Die **WebResponse**\-Klasse ist auch eine abstrakte Klasse, die Eigenschaften und Methoden definiert, die für alle Anwendungen verfügbar sind, die austauschbare Protokolle verwenden.  **WebResponse** Nachfolger implementieren diese Eigenschaften und Methoden für das zugrunde liegende Protokoll.  Die <xref:System.Net.HttpWebResponse>\-Klasse beispielsweise implementiert die Klasse **WebResponse** für HTTP.  
+ Die Klasse **WebResponse** ist ebenfalls eine abstrakte Klasse, die Eigenschaften und Methoden definiert, die für alle Anwendungen mit austauschbaren Protokollen verfügbar sind. **WebResponse**-Nachfolger implementieren diese Eigenschaften und Methoden für das zu Grunde liegende Protokoll. Beispielsweise implementiert die Klasse <xref:System.Net.HttpWebResponse> die **WebResponse**-Klasse für HTTP.  
   
- Die Daten, die vom Server zurückgegeben werden, werden der Anwendung im Stream präsentiert, der durch die <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>\-Methode zurückgegeben wird.  Sie können diesen Stream wie jeder andere, wie im folgenden Beispiel gezeigt.  
+ Die vom Server zurückgegebenen Daten sind für die Anwendung über den von der Methode <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> zurückgegebenen Stream verfügbar. Wie in den folgenden Beispielen gezeigt, lässt sich dieser Stream wie alle anderen auch verwenden.  
   
 ```csharp  
 StreamReader sr =  
    new StreamReader(resp.GetResponseStream(), Encoding.ASCII);  
-  
 ```  
   
 ```vb  
@@ -60,7 +64,8 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## Siehe auch  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Gewusst wie: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
- [Gewusst wie: Abrufen eines protokollspezifischen WebResponse, das einem WebRequest entspricht](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+## <a name="see-also"></a>Siehe auch  
+ [Network Programming in the .NET Framework (Netzwerkprogrammierung im .NET Framework)](../../../docs/framework/network-programming/index.md)   
+ [How to: Request a Web Page and Retrieve the Results as a Stream (Vorgehensweise: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream)](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
+ [How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest (Vorgehensweise: Abrufen einer protokollspezifischen WebResponse, die einem WebRequest entspricht)](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+

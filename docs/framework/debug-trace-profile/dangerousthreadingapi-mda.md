@@ -1,59 +1,64 @@
 ---
-title: "dangerousThreadingAPI MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "suspending threads"
-  - "DangerousThreadingAPI MDA"
-  - "managed debugging assistants (MDAs), dangerous threading operations"
-  - "threading [.NET Framework], suspending"
-  - "MDAs (managed debugging assistants), dangerous threading operations"
-  - "Suspend method"
-  - "threading [.NET Framework], managed debugging assistants"
+title: dangerousThreadingAPI-MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- suspending threads
+- DangerousThreadingAPI MDA
+- managed debugging assistants (MDAs), dangerous threading operations
+- threading [.NET Framework], suspending
+- MDAs (managed debugging assistants), dangerous threading operations
+- Suspend method
+- threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd0d8b8a4a96e1e92aa8cf58ee49adf7b51857ab
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# dangerousThreadingAPI MDA
-Der `dangerousThreadingAPI`\-MDA \(Managed Debugging Assistant, Assistent für verwaltetes Debuggen\) wird aktiviert, wenn für einen anderen als den aktuellen Thread die <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>\-Methode aufgerufen wird.  
+# <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI-MDA
+Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>-Methode für einen anderen Thread als den aktuellen Thread aufgerufen wird.  
   
-## Symptome  
- Eine Anwendung reagiert nicht mehr.  System\- oder Anwendungsdaten befinden sich vorübergehend oder selbst nach dem Beenden der Anwendung in einem nicht vorhersagbaren Zustand.  Einige Vorgänge werden nicht wie erwartet abgeschlossen.  
+## <a name="symptoms"></a>Symptome  
+ Eine Anwendung reagiert nicht oder bleibt auf unbestimmte Zeit hängen. Die System- oder Anwendungsdaten befinden sich vorübergehend oder selbst nach Herunterfahren der Anwendung in einem unvorhersehbaren Zustand. Einige Vorgänge werden nicht wie erwartet abgeschlossen.  
   
  Aufgrund des willkürlichen Auftretens dieses Problems ist ein breites Spektrum unterschiedlicher Symptome möglich.  
   
-## Ursache  
- Ein Thread wird asynchron von einem anderen Thread mit der <xref:System.Threading.Thread.Suspend%2A>\-Methode unterbrochen.  Es gibt keine Möglichkeit festzustellen, wann ein anderer Thread gefahrlos unterbrochen werden kann, der möglicherweise gerade einen Vorgang ausführt.  Das Unterbrechen des Threads kann zur Beschädigung von Daten oder Invarianten führen.  Wenn ein Thread in einen Unterbrechungszustand versetzt und niemals mit der <xref:System.Threading.Thread.Resume%2A>\-Methode fortgesetzt wird, reagiert die Anwendung nicht mehr, und es kommt möglicherweise zur Beschädigung von Anwendungsdaten.  Diese Methoden wurden als veraltet gekennzeichnet.  
+## <a name="cause"></a>Ursache  
+ Ein Thread wird von einem anderen Thread mit der <xref:System.Threading.Thread.Suspend%2A>-Methode asynchron angehalten. Es gibt keine Möglichkeit festzustellen, wann ein anderer Thread sicher angehalten werden kann, der sich möglicherweise gerade mitten in einem Vorgang befindet. Das Anhalten eines Threads kann zur Beschädigung von Daten oder Invarianten führen. Befindet sich ein Thread in angehaltenem Zustand und wird nicht mit der <xref:System.Threading.Thread.Resume%2A>-Methode fortgesetzt, kann die Anwendung auf unbestimmte Zeit hängen bleiben und Anwendungsdaten beschädigen. Diese Methoden wurden als veraltet markiert.  
   
- Wenn Synchronisierungsgrundelemente vom Zielthread angehalten wurden, bleiben sie während der Unterbrechung in diesem Zustand.  Dies kann zu Deadlocks führen, wenn ein anderer Thread \(z. B. der Thread für das <xref:System.Threading.Thread.Suspend%2A>\) versucht, das Grundelement zu sperren.  In dieser Situation macht sich das Problem als Deadlock bemerkbar.  
+ Für den Zielthread reservierte Synchronisierungsprimitiven bleiben während der Unterbrechung reserviert. Dies kann zu Deadlocks führen, sollte ein anderer Thread versuchen, die Primitive zu sperren (z.B. der Thread, der <xref:System.Threading.Thread.Suspend%2A> ausführt). In diesem Fall wird das Problem als Deadlock sichtbar.  
   
-## Lösung  
- Vermeiden Sie Entwürfe, die die Verwendung von <xref:System.Threading.Thread.Suspend%2A> und <xref:System.Threading.Thread.Resume%2A> erfordern.  Verwenden Sie für die Interaktion zwischen Threads Synchronisierungsgrundelemente wie <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> oder die C\#\-Anweisung `lock`.  Wenn Sie diese Methoden unbedingt einsetzen müssen, verringern Sie das Zeitfenster und die Menge des Codes, der während der Unterbrechung des Threads ausgeführt wird.  
+## <a name="resolution"></a>Auflösung  
+ Vermeiden Sie Entwürfe, die die Verwendung von <xref:System.Threading.Thread.Suspend%2A> und <xref:System.Threading.Thread.Resume%2A> erfordern. Verwenden Sie für die Zusammenarbeit zwischen Threads Synchronisierungsprimitiven wie beispielsweise <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> oder die C#-Anweisung `lock`. Wenn Sie diese Methoden verwenden müssen, verringern Sie das Zeitfenster, und minimieren Sie die Codemenge, die ausgeführt wird, während sich der Thread in angehaltenem Zustand befindet.  
   
-## Auswirkungen auf die Laufzeit  
- Dieser MDA hat keine Auswirkungen auf die CLR.  Es werden nur Angaben zu risikobehafteten Threadingvorgängen gemeldet.  
+## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+ Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über problematische Threadoperationen gemeldet.  
   
-## Ausgabe  
- Der MDA meldet die risikobehaftete Threadingmethode, die zur Aktivierung des Assistenten führte.  
+## <a name="output"></a>Ausgabe  
+ Der MDA identifiziert die problematische Threadmethode, die zu seiner Aktivierung führte.  
   
-## Konfiguration  
+## <a name="configuration"></a>Konfiguration  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dangerousThreadingAPI />  
@@ -61,14 +66,14 @@ Der `dangerousThreadingAPI`\-MDA \(Managed Debugging Assistant, Assistent für v
 </mdaConfig>  
 ```  
   
-## Beispiel  
- Im folgenden Codebeispiel wird ein Aufruf der <xref:System.Threading.Thread.Suspend%2A>\-Methode veranschaulicht, der zur Aktivierung des `dangerousThreadingAPI`\-MDA führt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel veranschaulicht einen Aufruf der <xref:System.Threading.Thread.Suspend%2A>-Methode, der zur Aktivierung des `dangerousThreadingAPI` führt.  
   
 ```  
 using System.Threading;  
 void FireMda()  
 {  
-    Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
+Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
     t.Suspend();   
@@ -77,7 +82,8 @@ void FireMda()
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Threading.Thread>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [lock\-Anweisung](../Topic/lock%20Statement%20\(C%23%20Reference\).md)
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [lock-Anweisung](~/docs/csharp/language-reference/keywords/lock-statement.md)
+

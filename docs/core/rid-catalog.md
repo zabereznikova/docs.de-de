@@ -1,126 +1,181 @@
 ---
 title: .NET Core Runtime-ID-Katalog (RID)
 description: "Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden."
-keywords: .NET, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/22/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3490fb639efd223dc36190324bdf3a06bc23c10e
+ms.sourcegitcommit: 2943cc58d29323afb81f1c9ae7fc71b538851186
+ms.openlocfilehash: e1cb22d78ab9a28cbcd28a99b0b44415b5c46a4d
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/09/2017
 
 ---
+# <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
-# <a name="net-core-runtime-identifier-rid-catalog"></a>.NET Core Runtime-ID-Katalog (RID)
+RID ist die Kurzform für *Runtime-ID* (Laufzeitbezeichner). Mithilfe von RID-Werten werden Zielplattformen identifiziert, unter der die Anwendung ausgeführt wird.
+Sie werden von .NET-Paketen verwendet, um plattformspezifische Ressourcen in NuGet-Paketen darzustellen. Die folgenden Werte sind Beispiele für RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` oder `osx.10.12-x64`.
+Für die Pakete mit nativen Abhängigkeiten legt die RID fest, auf welchen Plattformen das Paket wiederhergestellt werden kann.
 
-## <a name="what-are-rids"></a>Was sind RIDs?
-RID ist die Kurzform für *Runtime-ID* (Laufzeitbezeichner). RIDs dienen zur Identifizierung von Zielbetriebssystemen, in denen eine Anwendung oder ein Objekt (d.h. eine Assembly) ausgeführt wird. Sie sehen folgendermaßen aus: „ubuntu.14.04 x64“, „win7-x64“, „osx.10.11-x64“. Für die Pakete mit nativen Abhängigkeiten legt er fest, auf welchen Plattformen das Paket wiederhergestellt werden kann. 
+RIDs können im `<RuntimeIdentifier>`-Element der Projektdatei festgelegt werden. Sie können auch über die Option `--runtime` mit den folgenden [.NET Core-CLI-Befehlen](./tools/index.md) verwendet werden:
 
-Es ist wichtig zu beachten, dass die RIDs tatsächlich opake Zeichenfolgen sind. Dies bedeutet, dass sie für Vorgänge, die mit ihnen arbeiten, genau übereinstimmen müssen. Als Beispiel betrachten wir [Elementary OS](https://elementary.io/), welches ein einfacher Klon von Ubuntu 14.04 ist. Obwohl .NET Core und CLI zusätzlich zu dieser Version von Ubuntu funktionieren, schlägt der Wiederherstellungsvorgang für jedes Paket fehl, wenn Sie versuchen, Elementary OS ohne Änderungen zu verwenden. Dies liegt daran, dass wir momentan keine RID haben, die Elementary OS als Plattform festlegt. 
+- [dotnet build](./tools/dotnet-build.md)
+- [dotnet clean](./tools/dotnet-clean.md)
+- [dotnet pack](./tools/dotnet-pack.md)
+- [dotnet publish](./tools/dotnet-publish.md)
+- [dotnet restore](./tools/dotnet-restore.md)
+- [dotnet run](./tools/dotnet-run.md)
+- [dotnet store](./tools/dotnet-store.md)
 
-RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[arch]`, wobei:
-- `[os]` ist der Moniker des Betriebssystems, z.B. `ubuntu`.
-- `[version]` die Version des Betriebssystems in Form einer mit Punkt (`.`) getrennten Versionsnummer ist, z.B. `15.10`, die genau genug ist, um Ressourcen den Zugriff auf Betriebssystems- APIs, die diese Versionskennung verwenden, zu ermöglichen.
-  - Dies sollten **keine** Marketingversionen sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellen.
-- `[arch]` ist die Prozessorarchitektur, z.B. `x86`, `x64`, `arm`, `arm64` usw.
+RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[architecture]-[additional qualifiers]`, wobei:
 
-Das RID-Diagramm wird in einem Paket namens `Microsoft.NETCore.Platforms` in einer Datei namens `runtime.json` definiert, die Sie dem [CoreFX-Repository](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) entnehmen können. Wenn Sie diese Datei verwenden, werden Sie feststellen, dass einige der RIDs eine `"#import"`-Anweisung beinhalten. Diese Anweisungen sind Kompatibilitätsanweisungen. Das bedeutet, dass eine RID, die eine importierte RID enthält, als Ziel für das Wiederherstellen von Paketen für diese RID verwendet werden kann. Das erscheint etwas verwirrend, aber sehen wir uns ein Beispiel an. Betrachten wir macOS:
+- `[os]` ist der Moniker des Betriebs-/Plattformsystems. Beispielsweise `ubuntu`.
+
+- `[version]` ist die Version des Betriebssystems in Form einer durch Punkte getrennten (`.`) Versionsnummer. Beispielsweise `15.10`.
+
+  - Die Version sollte **keine** Marketingversion sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellt.
+
+- `[architecture]` ist die Prozessorarchitektur. Beispielsweise `x86`, `x64`, `arm` oder `arm64`.
+
+- `[additional qualifiers]` differenziert die verschiedenen Plattformen noch stärker. Beispiel: `aot` oder `corert`.
+
+## <a name="rid-graph"></a>RID-Diagramm
+
+Das RID-Diagramm oder Runtimefallbackdiagramm ist eine Liste von RIDs, die miteinander kompatibel sind. Die RIDs werden im Paket [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) definiert. Die Liste der unterstützten RIDs und das RID-Diagramm finden Sie in der Datei [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository. In dieser Datei können Sie sehen, dass alle RIDs außer der Basis-RID eine `"#import"`-Anweisung enthalten. Diese Anweisungen geben kompatible RIDs an.
+
+Bei NuGet-Wiederherstellungspaketen wird versucht, eine genaue Übereinstimmung für die angegebene Runtime zu finden.
+Wenn keine genaue Übereinstimmung gefunden wird, durchläuft das NuGet erneut das Diagramm, bis es das System mit der größten Kompatibilität gemäß dem RID-Diagramm findet.
+
+Im Folgenden wird ein Beispiel für den tatsächlichen Eintrag für die `osx.10.12-x64`-RID vorgestellt:
 
 ```json
-"osx.10.11-x64": {
-    "#import": [ "osx.10.11", "osx.10.10-x64" ]
+"osx.10.12-x64": {
+    "#import": [ "osx.10.12", "osx.10.11-x64" ]
 }
 ```
-Die oben genannte RID gibt an, dass `osx.10.11-x64` `osx.10.10-x64` importiert. Dies bedeutet, dass NuGet beim Wiederherstellen von Paketen in der Lage ist, Pakete wiederherzustellen, die angeben, dass sie `osx.10.11-x64` unter `osx.10.10-x64` benötigen.
 
-Ein etwas größeres Beispiel-RID-Diagramm:  
+Die oben genannte RID gibt an, dass `osx.10.12-x64` `osx.10.11-x64` importiert. Bei NuGet-Wiederherstellungspaketen wird daher versucht, eine genaue Übereinstimmung für `osx.10.12-x64` im Paket zu finden. Wenn das NuGet die angegebene Runtime nicht finden kann, kann es beispielsweise Wiederherstellungspakete mit den Runtimes `osx.10.11-x64` finden.
 
-- `win10-arm`
-  - `win10`
-  - `win81-arm`
-    - `win81`
-    - `win8-arm`
-      - `win8`
-        - `win7`
-          - `win`
-            - `any`
+Das folgende Beispiel zeigt, wie ein etwas größeres RID-Diagramm auch in der Datei *runtime.json* definiert wird:
+
+```
+    win7-x64    win7-x86
+       |   \   /    |
+       |   win7     |
+       |     |      |
+    win-x64  |  win-x86
+          \  |  /
+            win
+             |
+            any
+```
 
 Alle RIDs bilden schließlich wieder den Stamm `any`-RID ab.
 
-Obwohl ihre Anwendung einfach scheint, gibt es bei RIDs einige Besonderheiten, die Sie bedenken sollten, wenn Sie mit ihnen arbeiten:
+Es gibt einige Aspekte zu RIDs, die Sie bei der Verwendung bedenken müssen:
 
-* Sie sind **opake Zeichenfolgen** und sollten als Blackbox behandelt werden
-    * Sie sollten keine RIDs programmgesteuert erstellen
-* Sie müssen die RIDs verwenden, die bereits für die Plattform definiert sind, was diesem Dokument zu entnehmen ist
-* Die RIDs müssen nicht spezifisch sein, gehen Sie daher nicht von dem tatsächlichen RID-Wert aus. Anhand der Informationen in diesem Dokument können Sie bestimmen, welche RID(s) Sie für eine bestimmte Plattform benötigen
+- RIDs sind **opake Zeichenfolgen** und sollten als Blackboxes behandelt werden.
+- Erstellen Sie RIDs nicht programmgesteuert.
+- Verwenden Sie RIDs, die bereits für die Plattform definiert sind.
+- Die RIDs müssen spezifisch sein. Leiten Sie daher keine Annahmen anhand des tatsächlichen RID-Werts ab.
 
 ## <a name="using-rids"></a>Die Verwendung von RIDs
-Um RIDs zu verwenden, müssen Sie wissen, welche RIDs es gibt. Zur Plattform werden regelmäßig neue RIDs hinzugefügt. Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository auf die neueste Version.
 
-> [!NOTE]
-> Wir arbeiten daran, diese Informationen in eine interaktivere Form zu bringen. Sobald dies der Fall ist, wird diese Seite aktualisiert werden und Sie auf dieses Tool bzw. die Dokumentation zur Verwendung hinweisen. 
+Um RIDs verwenden zu können, müssen Sie wissen, welche RIDs es gibt. Zur Plattform werden regelmäßig neue Werte hinzugefügt.
+Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository auf die neueste und vollständige Version.
+
+Mit dem .NET Core 2.0 SDK wird das Konzept von portablen RIDs eingeführt. Dabei handelt es sich um neue zum RID-Diagramm hinzugefügte Werte, die nicht an eine bestimmte Version oder Betriebssystemverteilung gebunden sind. Sie sind besonders bei mehreren Linux-Distributionen nützlich.
+
+Die folgende Liste enthält die am häufigsten verwendeten RIDs für jedes Betriebssystem. Die Werte `arm` oder `corert` werden nicht behandelt.
 
 ## <a name="windows-rids"></a>RIDs für Windows
 
-* Windows 7 / Windows Server 2008 R2
-    * `win7-x64`
-    * `win7-x86`
-* Windows 8 / Windows Server 2012
-    * `win8-x64`
-    * `win8-x86`
-    * `win8-arm`
-* Windows 8.1 / Windows Server 2012 R2
-    * `win81-x64`
-    * `win81-x86`
-    * `win81-arm`
-* Windows 10 / Windows Server 2016
-    * `win10-x64`
-    * `win10-x86`
-    * `win10-arm`
-    * `win10-arm64`
+- Portabel
+  - `win-x86`
+  - `win-x64`
+- Windows 7 / Windows Server 2008 R2
+  - `win7-x64`
+  - `win7-x86`
+- Windows 8 / Windows Server 2012
+  - `win8-x64`
+  - `win8-x86`
+  - `win8-arm`
+- Windows 8.1 / Windows Server 2012 R2
+  - `win81-x64`
+  - `win81-x86`
+  - `win81-arm`
+- Windows 10 / Windows Server 2016
+  - `win10-x64`
+  - `win10-x86`
+  - `win10-arm`
+  - `win10-arm64`
 
 ## <a name="linux-rids"></a>RIDs für Linux
 
-* Red Hat Enterprise Linux
-    * `rhel.7-x64`
-* Ubuntu
-    * `ubuntu.14.04-x64`
-    * `ubuntu.14.10-x64`
-    * `ubuntu.15.04-x64`
-    * `ubuntu.15.10-x64`
-    * `ubuntu.16.04-x64`
-    * `ubuntu.16.10-x64`
-* CentOS
-    * `centos.7-x64`
-* Debian
-    * `debian.8-x64`
-* Fedora
-    * `fedora.23-x64`
-    * `fedora.24-x64`
-* OpenSUSE
-    * `opensuse.13.2-x64`
-    * `opensuse.42.1-x64`
-* Oracle Linux
-    * `ol.7-x64`
-    * `ol.7.0-x64`
-    * `ol.7.1-x64`
-    * `ol.7.2-x64`
-* Derzeit unterstützte Derivate von Ubuntu 
-    * `linuxmint.17-x64`
-    * `linuxmint.17.1-x64`
-    * `linuxmint.17.2-x64`
-    * `linuxmint.17.3-x64`
-    * `linuxmint.18-x64`
+- Portabel
+  - `linux-x64`
+- CentOS
+  - `centos-x64`
+  - `centos.7-x64`
+- Debian
+  - `debian-x64`
+  - `debian.8-x64`
+- Fedora
+  - `fedora-x64`
+  - `fedora.24-x64`
+  - `fedora.25-x64` (.NET Core 2.0 oder höher)
+  - `fedora.26-x64` (.NET Core 2.0 oder höher)
+- Gentoo (.NET Core 2.0 oder höher)
+  - `gentoo-x64`
+- openSUSE
+  - `opensuse-x64`
+  - `opensuse.42.1-x64`
+- Oracle Linux
+  - `ol-x64`
+  - `ol.7-x64`
+  - `ol.7.0-x64`
+  - `ol.7.1-x64`
+  - `ol.7.2-x64`
+- Red Hat Enterprise Linux
+  - `rhel-x64`
+  - `rhel.6-x64` (.NET Core 2.0 oder höher)
+  - `rhel.7-x64`
+  - `rhel.7.1-x64`
+  - `rhel.7.2-x64`
+  - `rhel.7.3-x64` (.NET Core 2.0 oder höher)
+  - `rhel.7.4-x64` (.NET Core 2.0 oder höher)
+- Tizen (.NET Core 2.0 oder höher)
+  - `tizen`
+- Ubuntu
+  - `ubuntu-x64`
+  - `ubuntu.14.04-x64`
+  - `ubuntu.14.10-x64`
+  - `ubuntu.15.04-x64`
+  - `ubuntu.15.10-x64`
+  - `ubuntu.16.04-x64`
+  - `ubuntu.16.10-x64`
+- Ubuntu-Ableitungen
+  - `linuxmint.17-x64`
+  - `linuxmint.17.1-x64`
+  - `linuxmint.17.2-x64`
+  - `linuxmint.17.3-x64`
+  - `linuxmint.18-x64`
+  - `linuxmint.18.1-x64` (.NET Core 2.0 oder höher)
 
 ## <a name="os-x-rids"></a>RIDs für OS X
 
-* `osx.10.10-x64`
-* `osx.10.11-x64`
-* `osx.10.12-x64`
+- `osx-x64` (.NET Core 2.0 oder höher)
+- `osx.10.10-x64`
+- `osx.10.11-x64`
+- `osx.10.12-x64` (.NET Core 1.1 oder höher)
+
+## <a name="android-rids-net-core-20-or-later-versions"></a>Android-RIDs (.NET Core 2.0 oder höher)
+
+- `android`
+- `android.21`
+
+## <a name="see-also"></a>Siehe auch
+ [Runtime-IDs](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
 

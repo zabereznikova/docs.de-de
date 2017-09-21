@@ -1,34 +1,39 @@
 ---
-title: "COM Interop Sample: COM Client and .NET Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, samples"
-  - "COM interop, samples"
+title: 'COM-Interop-Beispiel: COM-Client und .NET-Server'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
+ms.contentlocale: de-de
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop Sample: COM Client and .NET Server
-Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM\-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.Net\-Server](#cpconcominteropsamplecomclientnetserveranchor2), der Hypothekenberechnungen durchführt.  Zunächst wird vom Client eine Instanz der verwalteten `Loan`\-Klasse erstellt und aufgerufen. Anschließend werden vier Argumente \(eines davon mit dem Wert 0\) an die Instanz übergeben und schließlich die Berechnungen angezeigt.  Die Codebeispiele im gesamten folgenden Abschnitt beziehen sich auf dieses Fallbeispiel.  
+# <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interop-Beispiel: COM-Client und .NET-Server
+Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt. In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## COM\-Client  
+## <a name="com-client"></a>COM-Client  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -95,7 +100,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## .NET\-Server  
+## <a name="net-server"></a>.NET-Server  
   
 ```vb  
 Imports System  
@@ -270,7 +275,6 @@ Namespace LoanLib
     End Class  
   
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -397,5 +401,6 @@ namespace LoanLib {
 }  
 ```  
   
-## Siehe auch  
- [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+

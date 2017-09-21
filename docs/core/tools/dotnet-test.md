@@ -1,32 +1,44 @@
 ---
-title: "dotnet-test-Befehl – .NET Core-CLI"
-description: "Der Befehl „dotnet-Test“ wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet."
-keywords: Dotnet-Test, CLI, CLI-Befehl, .NET Core
-author: blackdwarf
+title: "dotnet test-Befehl – .NET Core-CLI"
+description: "Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/25/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3308488672df2621c04de40f642c732f81284019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-test"></a>dotnet test
 
-#<a name="dotnet-test"></a>Dotnet-Test
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Name
 
-`dotnet-test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
+`dotnet test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+dotnet test [-h|--help]
+```
+---
 
 ## <a name="description"></a>Beschreibung
 
@@ -36,65 +48,133 @@ Testprojekte müssen auch den Test Runner angeben. Dieser wird mit einem normale
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>Optionen
+## <a name="arguments"></a>Argumente
 
 `PROJECT`
-    
+
 Gibt den Pfad des Testprojekts an. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis angegeben.
 
-`-h|--help`
+## <a name="options"></a>Optionen
 
-Druckt eine kurze Hilfe für den Befehl.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Einstellungen, die beim Ausführen von Tests verwendet werden. 
-
-`-t|--list-tests`
-
-Listen Sie alle ermittelten Tests im aktuellen Projekt auf. 
-
-`--filter <EXPRESSION>`
-
-Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf. 
+Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
 
-`-l|--logger <LoggerUri/FriendlyName>`
+`-c|--configuration {Debug|Release}`
 
-Gibt eine Protokollierung für die Testergebnisse an. 
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
-`-c|--configuration <CONFIGURATION>`
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-Konfiguration für die Erstellung. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
+Aktiviert den Datensammler für den Testlauf. Weitere Informationen finden Sie unter [Monitor and analyze test run (Überwachen und Analysieren eines Testlaufs)](https://aka.ms/vstest-collect).
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
 
 `-f|--framework <FRAMEWORK>`
 
 Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
 
+`--filter <EXPRESSION>`
+
+Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Gibt eine Protokollierung für die Testergebnisse an.
+
+`--no-build`
+
+Erstellt das Testprojekt nicht vor der Ausführung.
+
+`--no-restore`
+
+Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
+
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+`-r|--results-directory <PATH>`
 
-Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei. 
+Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Das angegebene Verzeichnis wird erstellt, wenn es noch nicht vorhanden ist.
 
-`--no-build` 
+`-s|--settings <SETTINGS_FILE>`
 
-Erstellt das Testprojekt nicht vor der Ausführung.
+Einstellungen, die beim Ausführen von Tests verwendet werden.
+
+`-t|--list-tests`
+
+Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
 
 `-v|--verbosity <LEVEL>`
 
 Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
+
+`-c|--configuration {Debug|Release}`
+
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
+
+`-f|--framework <FRAMEWORK>`
+
+Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
+
+`--filter <EXPRESSION>`
+
+Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Druckt eine kurze Hilfe für den Befehl.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Gibt eine Protokollierung für die Testergebnisse an.
+
+`--no-build`
+
+Erstellt das Testprojekt nicht vor der Ausführung.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
+
+`-s|--settings <SETTINGS_FILE>`
+
+Einstellungen, die beim Ausführen von Tests verwendet werden.
+
+`-t|--list-tests`
+
+Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
+
+`-v|--verbosity <LEVEL>`
+
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+---
+
 ## <a name="examples"></a>Beispiele
 
 Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
-`dotnet test` 
+`dotnet test`
 
 Führen Sie die Tests im Projekt `test1` durch:
 
@@ -138,6 +218,6 @@ Weitere Informationen und Beispiele für die Verwendung der selektiven Komponent
 
 ## <a name="see-also"></a>Siehe auch
 
-[Frameworks und Ziele](../../standard/frameworks.md)   
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+ [Frameworks und Ziele](../../standard/frameworks.md)   
+ [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
 
