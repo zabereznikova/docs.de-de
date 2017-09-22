@@ -371,3 +371,4 @@ Ihre Version sollte nun der [abgeschlossenen Version](https://github.com/dotnet/
 In diesem Tutorial wurde gezeigt, wie Sie Webanforderungen ausführen, das Ergebnis analysieren und Eigenschaften dieser Ergebnisse anzeigen. Sie haben außerdem neue Pakete als abhängige Komponenten in Ihr Projekt eingefügt. Sie haben einige der Features von C# kennengelernt, die objektorientierte Verfahren unterstützen.
 
 
+<!--aaa-->
