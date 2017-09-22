@@ -45,13 +45,13 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 ## <a name="trace-levels"></a>Ablaufverfolgungsebenen  
  Bei Verwendung von **TraceSwitch**sind noch weitere Aspekte zu beachten. Ein **TraceSwitch** -Objekt hat vier Eigenschaften, die Werte vom Typ **Boolean** zurückgeben und angeben, ob der Schalter für mindestens eine bestimmte Ebene festgelegt ist:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Mit Ebenen können Sie die Menge der empfangenen Ablaufverfolgungsinformationen auf die zur Lösung eines Problems benötigten Informationen einschränken. Sie geben die gewünschte Detailstufe für die Ablaufverfolgungsausgabe an, indem Sie Ablaufverfolgungsschalter für die entsprechende Ablaufverfolgungsebene festlegen und konfigurieren. Sie können Fehlermeldungen, Warnmeldungen, Informationsmeldungen, ausführliche Ablaufverfolgungsmeldungen oder gar keine Meldungen erhalten.  
   

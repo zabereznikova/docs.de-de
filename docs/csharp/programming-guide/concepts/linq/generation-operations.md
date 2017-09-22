@@ -35,10 +35,10 @@ Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.
   
 |Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|DefaultIfEmpty|Ersetzt eine leere Auflistung durch eine Standardwert-Singeltonauflistung.|Nicht zutreffend.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
-|Empty|Gibt eine leere Auflistung zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Bereich|Generiert eine Auflistung, die eine Sequenz von Zahlen enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Wiederholen|Generiert eine Auflistung, die einen wiederholten Wert enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|DefaultIfEmpty|Ersetzt eine leere Auflistung durch eine Standardwert-Singeltonauflistung.|Nicht zutreffend.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Empty|Gibt eine leere Auflistung zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Bereich|Generiert eine Auflistung, die eine Sequenz von Zahlen enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Wiederholen|Generiert eine Auflistung, die einen wiederholten Wert enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq>   

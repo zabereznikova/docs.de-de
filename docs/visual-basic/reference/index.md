@@ -52,10 +52,10 @@ Dieser Abschnitt enthält Links zu Referenzinformationen, die sich auf verschied
  Enthält Links zur vollständigen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Sprachspezifikation, in der ausführliche Informationen zu allen Aspekten der Sprache enthalten sind.  
   
 ## <a name="reference"></a>Verweis  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Dieser Namespace enthält Klassen für die Visual Basic Power Packs-Steuerelemente. Visual Basic Power Packs-Steuerelemente sind zusätzliche Windows Forms-Steuerelemente.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  Dieser Namespace stellt eine Komponente bereit, mit der das auf dem Bildschirm anzeigte Formular gedruckt werden kann.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

@@ -76,10 +76,10 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|Stellt eine Windows NT-Leistungsindikatorkomponente dar. Verwenden Sie diese Klasse, um vordefinierte oder benutzerdefinierte Leistungsindikatoren zu lesen und Leistungsdaten für benutzerdefinierte Indikatoren zu veröffentlichen (schreiben).|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|Bietet verschiedene Methoden für die Interaktion mit Indikatoren und Kategorien von Indikatoren auf dem Computer.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|Gibt einen Installer für die `PerformanceCounter` -Komponente an.|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|Gibt die Formel zum Berechnen der `NextValue` -Methode für eine `PerformanceCounter`an.|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Stellt eine Windows NT-Leistungsindikatorkomponente dar. Verwenden Sie diese Klasse, um vordefinierte oder benutzerdefinierte Leistungsindikatoren zu lesen und Leistungsdaten für benutzerdefinierte Indikatoren zu veröffentlichen (schreiben).|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Bietet verschiedene Methoden für die Interaktion mit Indikatoren und Kategorien von Indikatoren auf dem Computer.|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Gibt einen Installer für die `PerformanceCounter` -Komponente an.|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Gibt die Formel zum Berechnen der `NextValue` -Methode für eine `PerformanceCounter`an.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

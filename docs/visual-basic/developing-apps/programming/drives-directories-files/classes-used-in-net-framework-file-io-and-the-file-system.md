@@ -47,40 +47,40 @@ In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Fr
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.IO.Directory?displayProperty=fullName>|Stellt statische Methoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
-|<xref:System.IO.DirectoryInfo?displayProperty=fullName>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
-|<xref:System.IO.DriveInfo?displayProperty=fullName>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Laufwerke hinweg zur Verfügung.|  
-|<xref:System.IO.File?displayProperty=fullName>|Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines `FileStream`.|  
-|<xref:System.IO.FileAccess?displayProperty=fullName>|Definiert Konstanten für den Lese-, Schreib- oder Lese-/Schreibzugriff auf eine Datei.|  
-|<xref:System.IO.FileAttributes?displayProperty=fullName>|Stellt Attribute für Dateien und Verzeichnisse wie `Archive`, `Hidden` und `ReadOnly` bereit.|  
-|<xref:System.IO.FileInfo?displayProperty=fullName>|Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=fullName>|Steuert, wie eine Datei geöffnet wird. Dieser Parameter wird in vielen der Konstruktoren für `FileStream` und `IsolatedStorageFileStream` sowie für die `Open`-Methoden von <xref:System.IO.File> und <xref:System.IO.FileInfo> angegeben.|  
-|<xref:System.IO.FileShare?displayProperty=fullName>|Definiert Konstanten für das Steuern des Zugriffstyps von anderen Dateistreams auf dieselbe Datei.|  
-|<xref:System.IO.Path?displayProperty=fullName>|Stellt Methoden und Eigenschaften für die Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Steuert den Zugriff von Dateien und Ordnern durch Definieren der Berechtigungen <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> und <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
+|<xref:System.IO.Directory?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
+|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
+|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Laufwerke hinweg zur Verfügung.|  
+|<xref:System.IO.File?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines `FileStream`.|  
+|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Definiert Konstanten für den Lese-, Schreib- oder Lese-/Schreibzugriff auf eine Datei.|  
+|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Stellt Attribute für Dateien und Verzeichnisse wie `Archive`, `Hidden` und `ReadOnly` bereit.|  
+|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Kopieren, Löschen, Verschieben und Öffnen von Dateien zur Verfügung und unterstützt das Erstellen eines `FileStream`.|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|Steuert, wie eine Datei geöffnet wird. Dieser Parameter wird in vielen der Konstruktoren für `FileStream` und `IsolatedStorageFileStream` sowie für die `Open`-Methoden von <xref:System.IO.File> und <xref:System.IO.FileInfo> angegeben.|  
+|<xref:System.IO.FileShare?displayProperty=nameWithType>|Definiert Konstanten für das Steuern des Zugriffstyps von anderen Dateistreams auf dieselbe Datei.|  
+|<xref:System.IO.Path?displayProperty=nameWithType>|Stellt Methoden und Eigenschaften für die Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Steuert den Zugriff von Dateien und Ordnern durch Definieren der Berechtigungen <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> und <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Klassen zum Erstellen von Streams  
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.IO.BufferedStream?displayProperty=fullName>|Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu.|  
-|<xref:System.IO.FileStream?displayProperty=fullName>|Unterstützt den zufälligen Zugriff auf Dateien über die <xref:System.IO.FileStream.Seek%2A>-Methode. <xref:System.IO.FileStream> öffnet Dateien standardmäßig synchron, unterstützt aber auch den asynchronen Vorgang.|  
-|<xref:System.IO.MemoryStream?displayProperty=fullName>|Erstellt einen Stream, der den Arbeitsspeicher anstatt einer Datei als Sicherungsspeicher verwendet.|  
-|<xref:System.Net.Sockets.NetworkStream?displayProperty=fullName>|Stellt den zugrunde liegenden Datenstrom für den Netzwerkzugriff bereit.|  
-|<xref:System.Security.Cryptography.CryptoStream?displayProperty=fullName>|Definiert einen Stream, der Datenstreams mit kryptografischen Transformationen verknüpft.|  
+|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|Unterstützt den zufälligen Zugriff auf Dateien über die <xref:System.IO.FileStream.Seek%2A>-Methode. <xref:System.IO.FileStream> öffnet Dateien standardmäßig synchron, unterstützt aber auch den asynchronen Vorgang.|  
+|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Erstellt einen Stream, der den Arbeitsspeicher anstatt einer Datei als Sicherungsspeicher verwendet.|  
+|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Stellt den zugrunde liegenden Datenstrom für den Netzwerkzugriff bereit.|  
+|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Definiert einen Stream, der Datenstreams mit kryptografischen Transformationen verknüpft.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Klassen, die zum Lesen aus und Schreiben an Streams verwendet werden  
  Die folgende Tabelle zeigt die spezifischen Klassen, die zum Lesen aus und Schreiben an Dateien mit Streams verwendet werden.  
   
 |**Klasse**|**Beschreibung**|  
 |---------------|---------------------|  
-|<xref:System.IO.BinaryReader?displayProperty=fullName>|Liest codierte Zeichenfolgen und primitive Datentypen aus einem <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=fullName>|Schreibt codierte Zeichenfolgen und primitive Datentypen in einen <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|Liest Zeichen aus einem <xref:System.IO.FileStream>, wobei <xref:System.IO.StreamReader.CurrentEncoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird. <xref:System.IO.StreamReader> verfügt über einen Konstruktor, der basierend auf dem Vorhandensein einer <xref:System.IO.StreamReader.CurrentEncoding%2A>-spezifischen Präambel (z.B. einer Bytereihenfolge-Marke) versucht, die richtige <xref:System.IO.StreamReader.CurrentEncoding%2A> für einen bestimmten Stream zu ermitteln.|  
-|<xref:System.IO.StreamWriter?displayProperty=fullName>|Schreibt Zeichen in einen `FileStream`, wobei <xref:System.IO.StreamWriter.Encoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird.|  
-|<xref:System.IO.StringReader?displayProperty=fullName>|Liest Zeichen aus einem `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
-|<xref:System.IO.StringWriter?displayProperty=fullName>|Schreibt Zeichen an einen `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
+|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Liest codierte Zeichenfolgen und primitive Datentypen aus einem <xref:System.IO.FileStream>.|  
+|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Schreibt codierte Zeichenfolgen und primitive Datentypen in einen <xref:System.IO.FileStream>.|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Liest Zeichen aus einem <xref:System.IO.FileStream>, wobei <xref:System.IO.StreamReader.CurrentEncoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird. <xref:System.IO.StreamReader> verfügt über einen Konstruktor, der basierend auf dem Vorhandensein einer <xref:System.IO.StreamReader.CurrentEncoding%2A>-spezifischen Präambel (z.B. einer Bytereihenfolge-Marke) versucht, die richtige <xref:System.IO.StreamReader.CurrentEncoding%2A> für einen bestimmten Stream zu ermitteln.|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Schreibt Zeichen in einen `FileStream`, wobei <xref:System.IO.StreamWriter.Encoding%2A> zum Konvertieren von Zeichen in und aus Bytes verwendet wird.|  
+|<xref:System.IO.StringReader?displayProperty=nameWithType>|Liest Zeichen aus einem `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
+|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Schreibt Zeichen an einen `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Datenströmen](https://msdn.microsoft.com/library/e4y2dch9)   
