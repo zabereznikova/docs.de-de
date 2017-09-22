@@ -39,7 +39,7 @@ Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.
   
 |Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|Verkettet zwei Sequenzen zu einer einzigen Sequenz.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|Verkettet zwei Sequenzen zu einer einzigen Sequenz.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq>   

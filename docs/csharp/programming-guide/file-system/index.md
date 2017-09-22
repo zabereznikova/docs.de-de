@@ -62,5 +62,5 @@ Die folgenden Themen zeigen die Verwendung von C# und dem .NET Framework zum Aus
   
  [Dateien, Ordner und Laufwerke](../../../csharp/programming-guide/file-system/index.md)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
 

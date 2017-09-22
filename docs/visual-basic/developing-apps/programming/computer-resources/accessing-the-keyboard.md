@@ -58,5 +58,5 @@ Das `My.Computer.Keyboard`-Objekt bietet Eigenschaften für den Zugriff auf den 
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.VisualBasic.Devices.Keyboard>   
- <xref:System.Windows.Forms.Keys?displayProperty=fullName>
+ <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
 

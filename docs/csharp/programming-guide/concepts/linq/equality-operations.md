@@ -33,7 +33,7 @@ Zwei Sequenzen, deren entsprechende Elemente gleich sind und die gleiche Anzahl 
   
 |Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|Bestimmt, ob zwei Sequenzen gleich sind, indem Elemente paarweise verglichen werden.|Nicht zutreffend.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|Bestimmt, ob zwei Sequenzen gleich sind, indem Elemente paarweise verglichen werden.|Nicht zutreffend.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Linq>   
