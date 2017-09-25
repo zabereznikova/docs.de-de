@@ -34,11 +34,11 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: fe6740fa68f44506fcfdc72b5b172aff0a8d9609
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="null-c-reference"></a>null (C#-Referenz)
-Das Schlüsselwort `null` ist ein Literal, das einen NULL-Verweis darstellt, der auf kein Objekt verweist. `null` ist der Standardwert einer Verweistypvariablen. Normale Werttypen dürfen nicht NULL sein. C# 2.0 hat jedoch auf NULL festlegbare Werttypen eingeführt. Siehe [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).  
+Das Schlüsselwort `null` ist ein Literal, das einen NULL-Verweis darstellt, der auf kein Objekt verweist. `null` ist der Standardwert einer Verweistypvariablen. Normale Verweistypen dürfen nicht NULL sein. C# 2.0 hat jedoch auf NULL festlegbare Werttypen eingeführt. Siehe [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).  
   
  Im folgenden Beispiel werden einige Verhalten des NULL-Schlüsselworts gezeigt:  
   

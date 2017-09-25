@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 41b07af83faa6af23695f3719aae29183c35a417
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
@@ -138,7 +138,7 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
 ### <a name="code"></a>Code  
  [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
-## <a name="example-2"></a>Beispiel 2  
+## <a name="example-2"></a>Beispiel 2  
   
 ### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird gezeigt, dass Sie auch partielle Strukturen und Schnittstellen entwickeln können.  
