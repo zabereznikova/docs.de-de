@@ -82,7 +82,7 @@ dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> -
 **Beispiel**
 
 ```console
-dotnet store --manifest packages.csproj --runtime win10-x64 --framework netstandard2.0 --framework-version 2.0.0
+dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
 Sie können mehrere Zielpfade von Paketspeichermanifesten an einen einzigen [`dotnet store`](../tools/dotnet-store.md)-Befehl übergeben, indem Sie die Option und den Pfad im Befehl wiederholen.

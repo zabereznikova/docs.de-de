@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="new-operator-c-reference"></a>new-Operator (C#-Referenz)
@@ -66,7 +66,7 @@ int i = 0;
   
  Werttypobjekte wie Strukturen werden auf einem Stapel erstellt, während Verweistypobjekte auf einem Heap erstellt werden. Beide Objekttypen werden automatisch zerstört. Allerdings werden auf Werttypen basierende Objekte zerstört, wenn sie den gültigen Bereich verlassen. Auf Verweistypen basierende Objekte hingegen werden zu einem unbestimmten Zeitpunkt zerstört, nachdem der letzte Verweis auf sie entfernt wurde. Für Verweistypen, die feste Ressourcen wie große Mengen an Speicher, Dateihandles oder Netzwerkverbindungen verbrauchen, ist es manchmal wünschenswert, einen deterministischen Abschluss zu nutzen, um sicherzustellen, dass das Objekt sobald wie möglich zerstört wird. Weitere Informationen finden Sie unter [using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md).  
   
- Der Operator `new` kann nicht überladen werden.  
+ Operator `new` kann nicht überladen werden.  
   
  Wenn der `new`-Operator bei der Zuweisung von Arbeitsspeicher scheitert, löst er die Ausnahme <xref:System.OutOfMemoryException> aus.  
   

@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: ea3104b1850fd2014ef0d4b8fcd31098d2c4b9d4
 ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch)
@@ -73,7 +73,7 @@ Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Prog
   
 -   Ausnahmen dürfen nicht als Rückgabewert oder Parameter zurückgegeben werden, anstatt ausgelöst zu werden.  
   
--   Lösen Sie <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> oder <xref:System.IndexOutOfRangeException?displayProperty=fullName> nicht mit Absicht über Ihren eigenen Quellcode aus.  
+-   Lösen Sie <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> oder <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> nicht mit Absicht über Ihren eigenen Quellcode aus.  
   
 -   Erstellen Sie keine Ausnahmen, die im Debugmodus, aber nicht im Releasemodus ausgelöst werden können. Um Laufzeitfehler während der Entwicklungsphase zu identifizieren, verwenden Sie stattdessen die Debugassertion.  
   
