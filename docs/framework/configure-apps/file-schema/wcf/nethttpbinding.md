@@ -1,32 +1,41 @@
 ---
-title: "&lt;netHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;netHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
 caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a6712035c5502d56ac9d67a334fe3e47365027de
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
+
 ---
-# &lt;netHttpBinding&gt;
-Stellt eine Bindung dar, die ein [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienst verwenden kann, um Endpunkte zu konfigurieren und verfügbar zu machen, die über HTTP kommunizieren können.  Bei Verwendung mit einem Duplexvertrag wird WebSockets verwendet; andernfalls wird HTTP verwendet.  
+# <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
+Stellt eine Bindung dar, die ein [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst verwenden kann, um Endpunkte zu konfigurieren und verfügbar zu machen, die über HTTP kommunizieren können. Bei Verwendung mit einem Duplexvertrag wird WebSockets verwendet; andernfalls wird HTTP verwendet.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Bindungen >  
+\<NetHttpBinding >  
   
+## <a name="syntax"></a>Syntax  
+
+<!-- todo: missing sample  
 ```vb  
-  
 ```  
+-->
   
 ```csharp  
-  
 <netHttpBinding>  
    <binding   
        allowCookies="Boolean"  
@@ -56,62 +65,60 @@ Stellt eine Bindung dar, die ein [!INCLUDE[indigo1](../../../../../includes/indi
        <readerQuotas   
             maxArrayLength="Integer"  
             maxBytesPerRead="Integer"  
-            maxDepth="Integer"   
-            maxNameTableCharCount="Integer"      
-            maxStringContentLength="Integer" />  
+            maxDepth="Integer"             maxNameTableCharCount="Integer"                maxStringContentLength="Integer" />  
    </binding>  
 </netHttpBinding>  
 ```  
   
-## Typ  
+## <a name="type"></a>Typ  
  `Type`  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|`allowCookies`|Ein boolescher Wert, der angibt, ob der Client Cookies akzeptiert und für zukünftige Anfragen propagiert.  Die Standardeinstellung ist `false`.<br /><br /> Sie können diese Eigenschaft verwenden, wenn Sie mit ASMX\-Webdiensten interagieren, die Cookies verwenden.  Auf diese Weise können Sie sicherstellen, dass die vom Server zurückgegebenen Cookies automatisch bei allen zukünftigen Clientanforderungen für diesen Dienst kopiert werden.|  
-|`bypassProxyOnLocal`|Ein boolescher Wert, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll.  Die Standardeinstellung ist `false`.<br /><br /> Eine Internetressource gilt als lokal, wenn sie über eine lokale Adresse verfügt.  Eine lokale Adresse befindet sich auf dem gleichen Computer, im LAN oder Intranet und kann anhand des fehlenden Punkts \(.\) erkannt werden, wie bei den URIs "http:\/\/webserver\/" und "http:\/\/localhost\/".<br /><br /> Durch dieses Attribut wird festgelegt, ob mit BasicHttpBinding konfigurierte Endpunkte den Proxyserver zum Zugreifen auf lokale Ressourcen verwenden.  Wenn dieses Attribut `true` ist, wird bei Anforderungen lokaler Internetressourcen der Proxyserver nicht verwendet.  Ist dieses Attribut auf `true` festgelegt, sollten Sie den Hostnamen anstatt localhost verwenden, wenn die Clients bei der Kommunikation mit Diensten auf demselben Computer einen Proxy nutzen sollen.<br /><br /> Wenn dieses Attribut `false` ist, werden alle Internetanforderungen über den Proxyserver ausgeführt.|  
-|`closeTimeout`|Ein <xref:System.TimeSpan>\-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt.  Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.  Der Standardwert ist 00:01:00.|  
-|`hostnameComparisonMode`|Gibt den HTTP\-Hostnamen\-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.HostnameComparisonMode> und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird.  Der Standardwert lautet <xref:System.ServiceModel.HostnameComparisonMode.StrongWildcard>, wodurch der Hostname beim Abgleich ignoriert wird.|  
-|`maxBufferPoolSize`|Eine ganze Zahl, die die maximale Speicherkapazität der Nachrichtenpuffer angibt, die Nachrichten aus dem Kanal empfangen.  Der Standardwert ist 524288 \(0x80000\) Bytes.<br /><br /> Der Puffer\-Manager reduziert den Pufferaufwand durch Verwendung eines Pufferpools.  Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen.  Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der Puffer\-Manager zusätzliche Speicherkapazität aus dem CLR\-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht.  Eine umfangreiche Zuweisung aus dem CLR\-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der des maximalen Grenzwerts, der durch dieses Attribut angegeben wird, verbessert werden kann.|  
-|`maxBufferSize`|Eine ganze Zahl, die die maximale Größe eines Puffers in Bytes angibt, in dem Nachrichten gespeichert werden, während sie für einen mit dieser Bindung konfigurierten Endpunkt verarbeitet werden.  Der Standardwert ist 65.536 Bytes.|  
-|`maxReceivedMessageSize`|Eine positive ganze Zahl, die die maximale Nachrichtengröße in Bytes einschließlich Header definiert, die in einem für diese Bindung konfigurierten Kanal beim Nachrichtenempfang zulässig ist.  Der Absender erhält einen SOAP\-Fehler, wenn die Nachricht zu groß für den Empfänger ist.  Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll.  Der Standardwert beträgt 65.536 Bytes.|  
-|`messageEncoding`|Definiert den Encoder, der verwendet wird, um die SOAP\-Nachricht zu codieren.  Folgende Werte sind gültig:<br /><br /> -   Text: Verwenden Sie einen Textnachrichtenencoder.<br />-   Mtom: Verwendung eines MTOM\-Encoders \(Message Transmission Organisation Mechanism 1.0\).<br /><br /> Der Standardwert ist Text.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
-|`name`|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält.  Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird.  Jede Bindung hat ein `name`\-Attribut und ein `namespace`\-Attribut, die die Bindung in den Metadaten des Diensts eindeutig identifizieren.  Außerdem kommt dieser Name bei den Bindungen eines Typs nur einmal vor.  Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.  Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhalten finden Sie unter [Vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`namespace`|Gibt den XML\-Namespace der Bindung an.  Der Standardwert ist "http:\/\/tempuri.org\/Bindings".  Jede Bindung hat ein `name`\-Attribut und ein `namespace`\-Attribut, die die Bindung in den Metadaten des Diensts eindeutig identifizieren.|  
-|`openTimeout`|Ein <xref:System.TimeSpan>\-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt.  Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.  Der Standardwert ist 00:01:00.|  
-|`proxyAddress`|Ein URI, der die Adresse des HTTP\-Proxys enthält.  Wenn `useSystemWebProxy` auf `true` festgelegt ist, muss diese Einstellung `null` lauten.  Die Standardeinstellung ist `null`.|  
-|`receiveTimeout`|Ein <xref:System.TimeSpan>\-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt.  Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.  Der Standardwert ist 00:10:00.|  
-|`sendTimeout`|Ein <xref:System.TimeSpan>\-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt.  Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.  Der Standardwert ist 00:01:00.|  
-|`textEncoding`|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll.  Folgende Werte sind gültig:<br /><br /> -   BigEndianUnicode: Unicode BigEndian\-Kodierung.<br />-   Unicode: 16\-Bit\-Codierung.<br />-   UTF8: 8\-Bit\-Codierung<br /><br /> Der Standard ist UTF8.  Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
-|`transferMode`|Ein gültiger <xref:System.ServiceModel.TransferMode>\-Wert, der angibt, ob Nachrichten bei einer Anforderung oder Antwort gepuffert oder per Stream übertragen werden.|  
-|`useDefaultWebProxy`|Ein boolescher Wert, der angibt, ob der automatisch konfigurierte HTTP\-Proxy des Systems bei Verfügbarkeit verwendet werden soll.  Die Standardeinstellung ist `true`.|  
+|---------------|-----------------|  
+|`allowCookies`|Ein boolescher Wert, der angibt, ob der Client Cookies akzeptiert und für zukünftige Anfragen propagiert. Die Standardeinstellung ist `false`.<br /><br /> Sie können diese Eigenschaft verwenden, wenn Sie mit ASMX-Webdiensten interagieren, die Cookies verwenden. Auf diese Weise können Sie sicherstellen, dass die vom Server zurückgegebenen Cookies automatisch bei allen zukünftigen Clientanforderungen für diesen Dienst kopiert werden.|  
+|`bypassProxyOnLocal`|Ein boolescher Wert, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll. Die Standardeinstellung ist `false`.<br /><br /> Eine Internetressource gilt als lokal, wenn sie über eine lokale Adresse verfügt. Eine lokale Adresse befindet sich auf dem gleichen Computer, im LAN oder Intranet und kann anhand des fehlenden Punkts (.) erkannt werden, wie bei den URIs "http://webserver/" und "http://localhost/".<br /><br /> Durch dieses Attribut wird festgelegt, ob mit BasicHttpBinding konfigurierte Endpunkte den Proxyserver zum Zugreifen auf lokale Ressourcen verwenden. Wenn dieses Attribut `true` ist, wird bei Anforderungen lokaler Internetressourcen der Proxyserver nicht verwendet. Ist dieses Attribut auf `true` festgelegt, sollten Sie den Hostnamen anstatt localhost verwenden, wenn die Clients bei der Kommunikation mit Diensten auf demselben Computer einen Proxy nutzen sollen.<br /><br /> Wenn dieses Attribut `false` ist, werden alle Internetanforderungen über den Proxyserver ausgeführt.|  
+|`closeTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
+|`hostnameComparisonMode`|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Dieses Attribut ist vom Typ `System.ServiceModel.HostnameComparisonMode` und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird. Der Standardwert ist `StrongWildcard`>, wodurch der Hostname beim Abgleich ignoriert.|  
+|`maxBufferPoolSize`|Eine ganze Zahl, die die maximale Speicherkapazität der Nachrichtenpuffer angibt, die Nachrichten aus dem Kanal empfangen. Der Standardwert ist 524288 (0x80000) Bytes.<br /><br /> Der Puffer-Manager reduziert den Pufferaufwand durch Verwendung eines Pufferpools. Puffer sind zur Verarbeitung von Nachrichten durch den Dienst erforderlich, wenn sie aus dem Kanal eintreffen. Wenn die Speicherkapazität des Pufferpools zur Verarbeitung der Nachrichten nicht ausreicht, muss der Puffer-Manager zusätzliche Speicherkapazität aus dem CLR-Heap zuweisen. Dadurch wird die Auslastung der Garbage Collection erhöht. Eine umfangreiche Zuweisung aus dem CLR-Heap der Garbage Collection weist darauf hin, dass die Größe des Pufferpools nicht ausreichend ist und dass die Leistung durch eine größere Zuweisung infolge einer Erhöhung der des maximalen Grenzwerts, der durch dieses Attribut angegeben wird, verbessert werden kann.|  
+|`maxBufferSize`|Eine ganze Zahl, die die maximale Größe eines Puffers in Bytes angibt, in dem Nachrichten gespeichert werden, während sie für einen mit dieser Bindung konfigurierten Endpunkt verarbeitet werden. Der Standardwert ist 65.536 Bytes.|  
+|`maxReceivedMessageSize`|Eine positive ganze Zahl, die die maximale Nachrichtengröße in Bytes einschließlich Header definiert, die in einem für diese Bindung konfigurierten Kanal beim Nachrichtenempfang zulässig ist. Der Absender erhält einen SOAP-Fehler, wenn die Nachricht zu groß für den Empfänger ist. Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll. Der Standardwert beträgt 65.536 Bytes.|  
+|`messageEncoding`|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Folgende Werte sind gültig:<br /><br /> -Text: Verwenden Sie einen textnachrichtenencoder.<br />-Mtom: Verwendung eines Encoders Message Transmission Organisation Mechanism 1.0 (MTOM).<br /><br /> Der Standardwert ist Text. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
+|`name`|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Jede Bindung hat ein `name`-Attribut und ein `namespace`-Attribut, die die Bindung in den Metadaten des Diensts eindeutig identifizieren. Außerdem kommt dieser Name bei den Bindungen eines Typs nur einmal vor. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`namespace`|Gibt den XML-Namespace der Bindung an. Der Standardwert ist "http://tempuri.org/Bindings". Jede Bindung hat ein `name`-Attribut und ein `namespace`-Attribut, die die Bindung in den Metadaten des Diensts eindeutig identifizieren.|  
+|`openTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
+|`proxyAddress`|Ein URI, der die Adresse des HTTP-Proxys enthält. Wenn `useSystemWebProxy` auf `true` festgelegt ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
+|`receiveTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:10:00.|  
+|`sendTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
+|`textEncoding`|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -BigEndianUnicode: Unicode BigEndian-Codierung.<br />– Unicode: 16-Bit-Codierung.<br />-UTF8: 8-Bit-Codierung<br /><br /> Der Standard ist UTF8. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
+|`transferMode`|Ein gültiger <xref:System.ServiceModel.TransferMode>-Wert, der angibt, ob Nachrichten bei einer Anforderung oder Antwort gepuffert oder per Stream übertragen werden.|  
+|`useDefaultWebProxy`|Ein boolescher Wert, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems bei Verfügbarkeit verwendet werden soll. Die Standardeinstellung ist `true`.|  
 |||  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Sicherheit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.NetHttpSecurityElement>.|  
-|[\<readerQuotas\>](../Topic/%3CreaderQuotas%3E.md)|Definiert die Beschränkungen der Komplexität von SOAP\-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|-------------|-----------------|  
+|[\<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ `NetHttpSecurityElement`.|  
+|[\<ReaderQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Bindungen\>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|-------------|-----------------|  
+|[\<Bindungen >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
-## Hinweise  
- NetHttpBinding verwendet HTTP als Transport für das Senden von Nachrichten.  Bei Verwendung mit einem Duplexvertrag wird WebSockets verwendet.  Bei Verwendung mit einem Anforderungs\-Antwort\-Vertrag verhält sich NetHttpBinding wie BasicHttpBinding mit einem binären Encoder.  
+## <a name="remarks"></a>Hinweise  
+ NetHttpBinding verwendet HTTP als Transport für das Senden von Nachrichten. Bei Verwendung mit einem Duplexvertrag wird WebSockets verwendet.  Bei Verwendung mit einem Anforderungs-Antwort-Vertrag verhält sich NetHttpBinding wie BasicHttpBinding mit einem binären Encoder.  
   
- Sicherheitsfunktionen sind standardmäßig deaktiviert, können aber durch Festlegen des Modusattributs des untergeordneten [\<Sicherheit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)\-Elements auf einen anderen Wert als `None` hinzugefügt werden.  Standardmäßig wird "Text"\-Nachrichtencodierung und UTF\-8\-Textcodierung verwendet.  
+ Sicherheit ist standardmäßig deaktiviert, jedoch können hinzugefügt werden, Festlegen der Mode-Attribut der [ \<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) einen anderen Wert als untergeordnetes Element `None`. Standardmäßig wird "Text"-Nachrichtencodierung und UTF-8-Textcodierung verwendet.  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung von <xref:System.ServiceModel.NetHttpBinding> veranschaulicht, bei der HTTP\-Kommunikation und maximale Interoperabilität mit Webdiensten der ersten und zweiten Generation sichergestellt wird.  Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeben.  Der Bindungstyp wird im `binding`\-Attribut des `<endpoint>`\-Elements angegeben.  Wenn Sie die Standardbindung konfigurieren und einige der Einstellungen ändern möchten, müssen Sie eine Bindungskonfiguration definieren.  Der Endpunkt muss auf die Bindungskonfiguration anhand des Namens und des `bindingConfiguration`\-Attributs des `<endpoint>`\-Elements verweisen, wie im folgenden Konfigurationscode für den Dienst gezeigt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Verwendung von <xref:System.ServiceModel.NetHttpBinding> veranschaulicht, bei der HTTP-Kommunikation und maximale Interoperabilität mit Webdiensten der ersten und zweiten Generation sichergestellt wird. Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeben. Der Bindungstyp wird im `binding`-Attribut des `<endpoint>`-Elements angegeben. Wenn Sie die Standardbindung konfigurieren und einige der Einstellungen ändern möchten, müssen Sie eine Bindungskonfiguration definieren. Der Endpunkt muss auf die Bindungskonfiguration anhand des Namens und des `bindingConfiguration`-Attributs des `<endpoint>`-Elements verweisen, wie im folgenden Konfigurationscode für den Dienst gezeigt.  
   
 ```xml  
 <system.serviceModel>   
@@ -148,8 +155,8 @@ Stellt eine Bindung dar, die ein [!INCLUDE[indigo1](../../../../../includes/indi
 </system.serviceModel>  
 ```  
   
-## Beispiel  
- Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.  Die Funktionalität aus dem vorherigen Beispiel kann erreicht werden, indem  bindingConfiguration aus der Endpunktadresse und der Name aus der Bindung entfernt wird.  
+## <a name="example"></a>Beispiel  
+ Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Die Funktionalität aus dem vorherigen Beispiel kann erreicht werden, indem bindingConfiguration aus der Endpunktadresse und der Name aus der Bindung entfernt wird.  
   
 ```xml  
 <system.serviceModel>   
@@ -185,14 +192,15 @@ Stellt eine Bindung dar, die ein [!INCLUDE[indigo1](../../../../../includes/indi
 </system.serviceModel>  
 ```  
   
- Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhalten finden Sie unter [Vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.Binding>   
  <xref:System.ServiceModel.Channels.BindingElement>   
  <xref:System.ServiceModel.BasicHttpBinding>   
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)
+
