@@ -1,4 +1,4 @@
-# [<requiredRuntime>-Element](requiredruntime-element.md)
-# [<startup>-Element](startup-element.md)
-# [<supportedRuntime>-Element](supportedruntime-element.md)
-# [Schema für Starteinstellungen](index.md)
+# [Startup Settings Schema (Schema für Starteinstellungen)](index.md)
+## [<startup>-Element](startup-element.md)
+### [<requiredRuntime>-Element](requiredruntime-element.md)
+### [<supportedRuntime>-Element](supportedruntime-element.md)
