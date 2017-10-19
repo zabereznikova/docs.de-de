@@ -1,0 +1,214 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Verzweigungen und Schleifen
+metadata:
+  title: Verzweigungen und Schleifen
+  description: 'In diesem Lernprogramm zu Verzweigungen und Schleifen verwenden Sie Ihren Browser um C#-interaktiv zu erhalten. Sie sind im Begriff C#-Code schreiben und die Ergebnisse der kompilieren und Ausführen von Code direkt im Browser angezeigt.'
+  audience: Developer
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: arrays-and-collections
+  nextTutorialTitle: 'Arrays and colletions in C#'
+items:
+  - durationInMinutes: 1
+    content: |
+      In diesem Lernprogramm erfahren Sie, über das Schreiben von Code, der Variablen untersucht und Ausführungspfad basierend auf diese Variablen ändert. C#-schreiben interaktiv verwenden, Sie mithilfe des Browsers zum Schreiben von C#- und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen, in denen untersuchen, Verzweigungen und Schleifenkonstrukte in C# geschrieben. In diesen Lektionen erfahren Sie die Grundlagen der Programmiersprache c#.
+  - title: Verwenden des If Entscheidungen Anweisung
+    durationInMinutes: 4
+    content: |
+      Führen Sie den folgenden Code in das interactive-Fenster. Zu diesem Zweck geben Sie den folgenden Codeblock in das interactive-Fenster, und klicken Sie auf die **ausführen** Schaltfläche:
+
+      ```csharp
+      int a = 5;
+      int b = 6;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10.");
+      ```
+
+      Ändern Sie die Deklaration von `b` , damit die Summe kleiner als 10 ist: 
+
+      ```csharp
+      int b = 3;
+      ```
+
+      Klicken Sie auf die **ausführen** erneut. Da die Antwort auf weniger als 10 ist, wird nichts ausgegeben. Die **Bedingung** du Test ist "false". Sie verfügen nicht über keinen Code für die ausgeführt werden, da Sie nur eine der möglichen Verzweigungen für geschrieben haben eine `if` Anweisung: die Verzweigung "true".
+
+      > [!TIP]
+      > Wie Sie c# (oder einer beliebigen Programmiersprache) durchsuchen, müssen Sie Supportcenter beim Schreiben von Code. Die **Compiler** findet diese Fehler und melden Sie diese für Sie. Wenn die Ausgabe Fehlermeldungen enthält, sehen Sie sich den Beispielcode, und den Code in das interactive-Fenster zu sehen, zu beheben.
+      > Diese Übung hilft die Struktur der C#-Code vertraut zu machen.     
+
+      Dieses erste Beispiel veranschaulicht die Leistungsfähigkeit von `if` und booleschen Typen. Ein *booleschen* ist eine Variable, die einen von zwei Werten haben kann: `true` oder `false`. C# definiert eine Sonderform `bool` für boolesche Variablen. Die `if` Anweisung überprüft den Wert von einem `bool`. Wenn der Wert ist `true`, die folgende Anweisung die `if` ausgeführt wird. Andernfalls wird sie übersprungen. 
+
+      Dieser Prozess der Überprüfung von Bedingungen und Ausführen von Anweisungen, die anhand dieser Bedingungen ist sehr leistungsfähig. Lassen Sie uns mehr.
+
+      > [!NOTE]
+      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
+  - title: 'Erstellen Sie, wenn und andere arbeiten Sie zusammen'
+    durationInMinutes: 10
+    content: |
+
+      Um anderen Code, der in den Verzweigungen "true" und "false" auszuführen, erstellen Sie eine `else` Verzweigung, die ausgeführt wird, wenn die Bedingung "false" ist. Versuchen Sie Folgendes:
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10");
+      else
+          Console.WriteLine("The answer is not greater than 10");
+      ```
+
+      Die Anweisung nach der `else` Schlüsselwort führt nur, wenn die getestete Bedingung ist `false`. Kombinieren von `if` und `else` mit einem booleschen Operator Bedingungen bietet die Leistungsfähigkeit, die Sie benötigen.
+
+      > [!IMPORTANT]
+      > Der Einzug gilt unter der `if` und `else` Anweisungen ist für interaktive Workflowdienste-Reader.
+      > Die C#-Sprache behandeln nicht Einzug oder Leerräume als signifikant. Die Anweisung nach der `if` oder `else` Schlüsselwort wird basierend auf der Bedingung ausgeführt werden. Alle Beispiele in diesem Lernprogramm führen Sie üblicherweise um die Zeilen basierend auf Ausführung einen Einzug festzulegen.
+
+      Da Einzug nicht relevant ist, müssen Sie verwenden `{` und `}` , um anzugeben, wenn Sie möchten mehr als eine Anweisung als Teil des Blocks, die bedingt ausgeführt wird. C#-Programmierer in der Regel verwenden Sie die geschweiften Klammern, auf allen `if` und `else` Klauseln. Das folgende Beispiel ist identisch mit, was Sie gerade erstellt haben. Versuch es.
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+      {
+          Console.WriteLine("The answer is greater than 10");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+      }
+      ```
+
+      > [!TIP]
+      > Über den Rest dieses Lernprogramms, enthalten alle Codebeispiele geschweifte Klammern folgen Methoden akzeptiert.
+
+      Sie können etwas kompliziertere Bedingungen testen:
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) && (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("And the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("Or the first number is not greater than the second");
+      }
+      ```
+
+      Die `&&` stellt "und". Dies bedeutet, dass beide Bedingungen zum Ausführen der Anweisung in der "true" Verzweigung "true" sein müssen.  In diesen Beispielen auch anzeigen, können Sie mehrere Anweisungen in jede bedingte Verzweigung verwenden, sofern Sie sie in Klammern einschließen `{` und `}`.
+
+      Sie können auch `||` zur Darstellung "oder":
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) || (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("Or the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("And the first number is not greater than the second");
+      }
+      ```
+
+      > [!NOTE]
+      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
+  - title: 'Verwenden Sie Schleifen, um Vorgänge zu wiederholen.'
+    durationInMinutes: 6
+    content: |
+      Ist ein weiteres wichtiges Konzept größere Programme erstellen **Schleifen**. Schleifen verwenden, wiederholen die Anweisungen, die Sie mehr als einmal ausgeführt. Wiederholen Sie diesen Code im interactive-Fenster aus:
+
+      ```csharp
+      int counter = 0;
+      while (counter < 10)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      }
+      ```
+
+      Die `while` -Anweisung überprüft eine Bedingung und führt die Anweisung nach der `while`. Es wird wiederholt, überprüfen die Bedingung, und diese Anweisungen ausführen, bis die Bedingung "false" ist.
+
+      In diesem Beispiel ist eine andere new-Operator. Die `++` nach der `counter` Variable ist die **Inkrement** Operator. Es fügt 1 auf den Wert des Leistungsindikators und speichert diesen Wert in der Indikatorvariable.
+
+      > [!IMPORTANT]
+      > Stellen Sie sicher, dass die `while` schleifenbedingung auf "false" wechseln, wenn Sie den Code ausführen. Erstellen Sie andernfalls eine **Endlosschleife** , in dem das Programm nie endet. Wir führen, da das Modul ausgeführt, die Ihren Code wird einen Timeout beendet, und Sie keine Ausgabe von Ihrem Programm sehen werden nicht vor.
+
+      Die `while` Schleife überprüft die Bedingung vor dem Ausführen folgender Code die `while`. Die `do` ... `while` Schleife im Code zuerst ausgeführt und anschließend überprüft die Bedingung. Es sieht wie folgt:
+
+      ```csharp
+      int counter = 0;
+      do
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      } while (counter < 10);
+      ```
+
+      Dies `do` Schleife und die frühere `while` Schleife funktionieren identisch. 
+
+      Betrachten wir nun eine letzte Loop-Anweisung.
+
+      > [!NOTE]
+      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
+  - title: Arbeiten mit der for-Schleife
+    durationInMinutes: 5
+    content: |
+      Ist eine andere häufige Loop-Anweisung, die Sie in C#-Code sehen die `for` Schleife. Wiederholen Sie diesen Code im interactive-Fenster aus:
+
+      ```csharp
+      for(int counter = 0; counter < 10; counter++)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+      } 
+      ```
+
+      Dies hat die gleiche Aufgaben wie das `while` Schleife und die `do` Schleife, die Sie bereits verwendet haben. Die `for` Anweisung besteht aus drei Teilen, die steuern, wie es funktioniert. 
+
+      Der erste Teil ist die **für Initialisierer**: `for counter = 0;` deklariert, `counter` Schleifenvariablen ist, und legt den Anfangswert auf `0`.
+
+      Der mittlere Teil ist die **für Bedingung**: `counter < 10` deklariert, die von diesem `for` Schleife so lange weiter ausgeführt, solange der Wert des Leistungsindikators kleiner als 10 ist.
+
+      Der letzte Teil ist der **für Iterator**: `counter++` gibt an, wie Schleifenvariablen zu ändern, nachdem die Ausführung der folgenden Block der `for` Anweisung. Es gibt hier an, dass `counter` inkrementiert um 1 jedes Mal der Block wird ausgeführt.
+
+      Experimentieren Sie mit diesen selbst. Wiederholen Sie dann die folgenden:
+
+      - Ändern Sie den Initialisierer an einen anderen Wert zu starten.
+      - Ändern Sie die Bedingung zum Beenden an einen anderen Wert ein.
+
+      Wenn Sie fertig sind, fahren wir bei schreiben code einige selbst um Gelernte zu verwenden.
+
+      > [!NOTE]
+      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
+  - title: Kombinieren von Verzweigungen und Schleifen
+    durationInMinutes: 12
+    content: |
+      Nun, dass Sie gesehen haben die `if` -Anweisung und die Schleifenkonstrukte in der C#-Sprache, zu ermitteln, ob Sie C#-Code, um die Summe der alle ganzen Zahlen 1 bis 20 suchen, die durch 3 teilbar sind schreiben können.  Hier sind einige Tipps:
+
+      - Die `%` -Operator gibt den Rest einer Division.
+      - Die `if` Anweisung Givesx Sie die Bedingung aus, um festzustellen, ob eine Zahl Teilen der Summe sein darf.
+      - Die `for` Schleife ermöglicht Ihnen eine Reihe von Schritten für alle Zahlen 1 bis 20 wiederholen.
+
+      Probieren Sie es selbst. Überprüfen Sie, wie Sie verwendet haben.
+
+      > [!NOTE]
+      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
+  - title: Vollständige Herausforderung
+    durationInMinutes: 1
+    content: |
+      Sie haben das Lernprogramm "Verzweigungen und Schleifen" abgeschlossen. Erfahren Sie mehr über diese Konzepte in den folgenden Themen:
+
+      [Wenn und else-Anweisung](../language-reference/keywords/if-else.md)   
+      [While-Anweisung](../language-reference/keywords/while.md)   
+      [Do-Anweisung](../language-reference/keywords/do.md)   
+      [Für die Anweisung](../language-reference/keywords/for.md)
