@@ -53,7 +53,7 @@
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": [
+  "branches_to_filter": ["live",
     "live-sxs"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.de-de",
