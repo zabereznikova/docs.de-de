@@ -330,7 +330,7 @@ Im letzten Schritt fügen wir jetzt die Informationen für den letzten Pushvorga
 2016-02-08T21:27:00Z
 ```
 
-Dieses Format entspricht nicht den standardmäßigen .NET-@System.DateTime -Formaten. Deshalb müssen Sie eine benutzerdefinierte Konvertierungsmethode schreiben. Darüber hinaus möchten Sie wahrscheinlich nicht, dass die unformatierte Zeichenfolge für Benutzer der `Repository`-Klasse verfügbar gemacht wird. Dies kann ebenfalls mithilfe von Attributen gesteuert werden. Definieren Sie zunächst eine `private`-Eigenschaft, die die Zeichenfolgendarstellung des DateTime-Werts in Ihrer `Repository`-Klasse enthält:
+Dieses Format entspricht nicht den standardmäßigen .NET- @System.DateTime -Formaten. Deshalb müssen Sie eine benutzerdefinierte Konvertierungsmethode schreiben. Darüber hinaus möchten Sie wahrscheinlich nicht, dass die unformatierte Zeichenfolge für Benutzer der `Repository`-Klasse verfügbar gemacht wird. Dies kann ebenfalls mithilfe von Attributen gesteuert werden. Definieren Sie zunächst eine `private`-Eigenschaft, die die Zeichenfolgendarstellung des DateTime-Werts in Ihrer `Repository`-Klasse enthält:
 
 ```csharp
 [DataMember(Name="pushed_at")]
