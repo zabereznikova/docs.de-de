@@ -1,7 +1,7 @@
 ---
-title: Schnellstarts - C#-Handbuch
-description: Erlernen von c# in Ihrem Browser, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
-keywords: C#-, erste Schritte, Lektionen, interaktive
+title: "Schnellstarts – C#-Handbuch"
+description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
+keywords: C#, Erste Schritte, Lektionen, Interaktiv
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/18/2017
@@ -17,37 +17,37 @@ ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-quick-starts"></a>C#-Schnellstarts #
 
-Willkommen bei der C#-schnelle wird gestartet. Diese beginnen mit interaktiven Lektionen, in denen Sie in Ihrem Browser ausführen können.
+Willkommen bei den C#-Schnellstarts. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können.
 
-Die erste Lektionen wird erläutert, kleine Codeausschnitte mit c#-Konzepte. Erfahren Sie die Grundlagen von C#-Syntax und zum Arbeiten mit Datentypen wie Zeichenfolgen, Zahlen und boolesche Werte ein. Es ist alle interaktiven, und Sie werden Sie innerhalb von Minuten müssen Code schreiben. Diese erste Lektionen angenommen keine Vorkenntnisse der Programmierung oder die C#-Sprache.
+In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläutert. Sie lernen die Grundlagen der C#-Syntax kennen und wie Sie mit Datentypen wie Zeichenfolgen, Zahlen und booleschen Werten arbeiten. Alles ist interaktiv, und innerhalb von Minuten schreiben Sie Code. Diese erste Lektionen setzen keine Vorkenntnisse in der Programmierung oder C#-Sprache voraus.
 
-## <a name="hello-worldhello-worldyml"></a>[Hallo Welt](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
 
-In der [Hello World](hello-world.yml) Lektion erstellen Sie die grundlegendsten c#. Untersuchen Sie die `string` Typ und zum Arbeiten mit Text.
+In Lektion [Hello World](hello-world.yml) erstellen Sie das grundlegendste C#-Programm. Sie untersuchen den `string`-Typ und lernen, mit Text zu arbeiten.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Zahlen in c#](numbers-in-csharp.yml)
+## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Zahlen in C#](numbers-in-csharp.yml)
 
-In der [Zahlen in c#](numbers-in-csharp.yml) Lektion erfahren Sie, wie Computer Nummern zu speichern und zum Ausführen von Berechnungen mit verschiedenen Number-Typen. Erfahren Sie die Grundlagen der Rundung und zum Ausführen von mathematischer Berechnungen mithilfe von c#.
+In der Lektion [Zahlen in C#](numbers-in-csharp.yml) erfahren Sie, wie Computer Zahlen speichern und Berechnungen mit verschiedenen Zahlentypen durchführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#.
 
-In dieser Lektion wird davon ausgegangen, dass Sie haben die [Hello World](hello-world.yml) Lernprogramm.
+Diese Lektion setzt voraus, dass Sie das Tutorial [Hello World](hello-world.yml) abgeschlossen haben.
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Verzweigungen und Schleifen](branches-and-loops.yml)
 
-Die [Verzweigungen und Schleifen](branches-and-loops.yml) Lektion erläutert die Grundlagen der Auswahl mit verschiedenen Ausführungspfaden des Codes auf Grundlage der Werte in Variablen gespeichert. Sie lernen die Grundlagen der ablaufsteuerung, also die Grundlagen des wie Programme Entscheidungen zu treffen, und wählen Sie verschiedene Aktionen.
+Die Lektion [Verzweigungen und Schleifen](branches-and-loops.yml) erläutert die Grundlagen der Auswahl verschiedener Codepfade auf Basis der in Variablen gespeicherten Werte. Sie lernen die Grundlagen der Ablaufsteuerung können, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen.
 
-In dieser Lektion Anfang wird davon ausgegangen, dass Sie haben die [Hello World](hello-world.yml) und [Zahlen in c#](numbers-in-csharp.yml) Lektionen.
+In dieser ersten Lektion wird vorausgesetzt, dass Sie die Lektionen [Hello World](hello-world.yml) und [Zahlen in C#](numbers-in-csharp.yml) abgeschlossen haben.
 
-## <a name="list-collectionlist-collectionyml"></a>[Listenauflistung](list-collection.yml)
+## <a name="list-collectionlist-collectionyml"></a>[Listensammlung](list-collection.yml)
 
-Die [Auflistung](list-collection.yml) Lektion bietet Ihnen einen Überblick über die Liste "Sammlung", die Sequenzen der Daten speichert. Sie erfahren, wie hinzufügen und Entfernen von Elementen, Suchen nach Elementen, und Entfernen von Elementen und die Listen zu sortieren. Untersuchen Sie verschiedene Arten von Listen.
+Die Lektion [Listensammlung](list-collection.yml) bietet Ihnen einen Überblick über den Listensammlungstyp, in dem Datensequenzen speichert werden. Sie erfahren, wie Sie Elemente hinzufügen und entfernen, nach Elementen suchen, Elemente entfernen und die Listen sortieren. Sie werden verschiedene Arten von Listen erforschen.
 
-In dieser Lektion Anfang wird davon ausgegangen, dass Sie die oben aufgeführten Schnellstarts abgeschlossen haben.
+In dieser ersten Lektion wird vorausgesetzt, dass Sie die oben aufgeführten Schnellstarts abgeschlossen haben.
 
-Sie können auch in dieser Lektion versuchen [Develoment-Umgebung auf dem Computer mit](arrays-and-collections.md).
+Sie können diese Lektion auch [unter Verwendung der Entwicklungsumgebung auf Ihrem Computer](arrays-and-collections.md) durcharbeiten.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Einführung in Klassen](introduction-to-classes.md)
 
-Dieser letzte Schnellstart wird auf dem Computer, die mit Ihrem eigenen lokalen Entwicklungsumgebung und .NET Core ausgeführt.
-Sie erstellen eine Konsolenanwendung und die grundlegenden objektorientierte Funktionen, die Teil der C#-Sprache angezeigt.
+Dieser letzte Schnellstart wird auf Ihrem Computer unter Verwendung Ihrer eigenen lokalen Entwicklungsumgebung und von .NET Core ausgeführt.
+Sie erstellen eine Konsolenanwendung und die grundlegenden objektorientierten Funktionen, die Teil der C#-Sprache sind.
 
-In dieser Lektion wird davon ausgegangen, die online-Schnellstarts ist abgeschlossen, und installiert haben [.NET Core SDK](http://dot.net/core) und [Visual Studio Code](https://code.visualstudio.com/).
+In dieser Lektion wird vorausgesetzt, dass Sie die Onlineschnellstarts abgeschlossen und [.NET Core SDK](http://dot.net/core) und [Visual Studio Code](https://code.visualstudio.com/) installiert haben.
