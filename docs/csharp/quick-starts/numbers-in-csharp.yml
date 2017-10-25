@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: Tutorial
-title: 'Zahlen in c#'
+title: 'Zahlen in C#'
 metadata:
-  title: 'Zahlen in c#'
-  description: 'In diesem Lernprogramm zu numerischen Typen verwenden Sie Ihren Browser um C#-interaktiv zu erhalten. Sie sind im Begriff C#-Code schreiben und die Ergebnisse der kompilieren und Ausführen von Code direkt im Browser angezeigt.'
+  title: 'Zahlen in C#'
+  description: 'In diesem Tutorial zu numerischen Typen verwenden Sie Ihren Browser, um sich interaktiv mit C# vertraut zu machen. Sie schreiben direkt im Browser einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes.'
   audience: Developer
   level: Beginner
   nextTutorialHref: branches-and-loops
@@ -13,11 +13,11 @@ metadata:
 items:
   - durationInMinutes: 1
     content: |
-      Diesem Lernprogramm erfahren Sie über die Number-Typen in c# interaktiv mithilfe Ihres Browsers zum Schreiben von C#- und die Ergebnisse der Kompilierung und Ausführung des Codes angezeigt. Es enthält eine Reihe von Lektionen, in denen Zahlen und mathematische Operationen in c# zu untersuchen. In diesen Lektionen erfahren Sie die Grundlagen der Programmiersprache c#.
-  - title: Ganze Zahl mathematische Funktionen durchsuchen
+      In diesem Tutorial erlernen Sie interaktiv die Zahlentypen in C#, indem Sie mit Ihrem Browser einen C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung Ihres Codes sehen. Es enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
+  - title: Erkunden von arithmetischen Operationen mit ganzen Zahlen
     durationInMinutes: 4
     content: |
-      Führen Sie den folgenden Code in das interactive-Fenster. Zu diesem Zweck geben Sie den folgenden Codeblock in das interactive-Fenster, und klicken Sie auf die **ausführen** Schaltfläche:
+      Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein, und klicken Sie auf die Schaltfläche **Ausführen**:
 
       ```csharp
       int a = 18;
@@ -26,16 +26,16 @@ items:
       Console.WriteLine(c);
       ```
 
-      Sie haben soeben eine der grundlegende mathematische Operationen mit ganzen Zahlen gesehen werden. Die `int` geben stellt eine **Ganzzahl**, eine positive oder negative ganze Zahl. Sie verwenden die `+` Symbol zum Hinzufügen. Andere geläufigen mathematischen Operationen für ganze Zahlen enthalten:
+      Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:
 
-      - `-`für die Subtraktion
-      - `*`für Multiplikation
-      - `/`für die division
+      - `-` zur Subtraktion
+      - `*` zur Multiplikation
+      - `/` zur Division
 
       > [!TIP]
-      > In diesem Lernprogramm können Sie selbst untersuchen, durch Ändern des Codes, den Sie im interactive-Fenster geschrieben haben. Dieses Lernprogramm enthält Beispiele, die Sie bei jedem Schritt ausprobieren können.
+      > Im Rahmen dieses Tutorials können Sie sich selbst mit dieser Operationen vertraut machen, indem Sie den Code, den Sie in das interaktive Fenster geschrieben haben, ändern. Dieses Tutorial stellt bei jedem Schritt Beispiele zur Verfügung, die Sie testen können.
 
-      Starten Sie von anderen Vorgängen zu untersuchen. Ändern Sie die dritte Zeile, um diese Vorgänge zu versuchen. Klicken Sie nach jeder Änderung auf die **ausführen** Schaltfläche.
+      Erkunden Sie zunächst die anderen Operationen. Ändern Sie die dritte Zeile, um die einzelnen Operationen zu testen. Klicken Sie nach jeder Änderung auf die Schaltfläche **Ausführen**.
 
       Subtraktion:
 
@@ -55,20 +55,20 @@ items:
       int c = a / b;
       ```
 
-      Sie können auch experimentieren, indem Sie mehrere mathematische Vorgänge in der gleichen Zeile ausführen möchten.
+      Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen.
 
       > [!TIP]
-      > Wie Sie c# (oder einer beliebigen Programmiersprache) durchsuchen, müssen Sie Supportcenter beim Schreiben von Code. Die **Compiler** findet diese Fehler und melden Sie diese für Sie. Wenn die Ausgabe Fehlermeldungen enthält, sehen Sie sich den Beispielcode, und den Code in das interactive-Fenster zu sehen, zu beheben.
-      > Diese Übung hilft die Struktur der C#-Code vertraut zu machen.     
+      > Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code im interaktiven Fenster genau an, um herauszufinden, was korrigiert werden muss.
+      > Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.     
 
       > [!NOTE]
-      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
-  - title: Untersuchen Sie die Reihenfolge der Vorgänge
+      > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+  - title: Erkunden der Reihenfolge der Operationen
     durationInMinutes: 7
     content: |
-      Die C#-Sprache definiert die Rangfolge der verschiedenen mathematische Vorgänge mit Regeln konsistent mit den Regeln in der Mathematik haben Sie gelernt.
-      Multiplikation und Division haben Vorrang vor Addition und Subtraktion.
-      Prüfen Sie, indem Sie den folgenden Code im interactive-Fenster ausführen:
+      Die Programmiersprache C# definiert anhand von Regeln, die Sie aus der Mathematik kennen, die Rangfolge verschiedener arithmetischer Operationen.
+      Multiplikation und Division haben gegenüber der Addition und Subtraktion Vorrang.
+      Erkunden Sie dies, indem Sie den folgenden Code im interaktiven Fenster ausführen:
 
       ```csharp
       int a = 5;
@@ -78,9 +78,9 @@ items:
       Console.WriteLine(d);
       ```
 
-      Die Ausgabe zeigt, dass vor dem Hinzufügen die Multiplikation ausgeführt wird.
+      Die Ausgabe zeigt, dass vor der Addition die Multiplikation ausgeführt wurde.
 
-      Sie können eine andere Reihenfolge des Vorgangs erzwingen, durch Hinzufügen von Klammern um den Vorgang, oder Vorgänge, die gewünschten zuerst ausgeführt:
+      Sie können eine andere Operationsreihenfolge erzwingen, indem Sie die Operation bzw. die Operationen, die zuerst ausgeführt werden soll bzw. sollen, mit Klammern umschließen:
 
       ```csharp
       int a = 5;
@@ -90,15 +90,15 @@ items:
       Console.WriteLine(d);
       ```
 
-      Mehr untersuchen Sie, indem Sie viele verschiedene Vorgänge zu kombinieren. Ersetzen Sie in der vierten Zeile oben mit etwa so aussehen:
+      Machen Sie sich damit vertraut, indem Sie viele verschiedene Operationen kombinieren. Ersetzen Sie die vierte Zeile oben durch eine Zeile wie etwa Folgende:
 
       ```csharp
       int d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
       ```
 
-      Sie haben möglicherweise eine interessante Verhalten für ganze Zahlen festgestellt. Ganzzahldivision immer erzeugt ein Ganzzahlergebnis, selbst wenn im mathematische Ergebnis ein Teils Dezimalstellen oder Bruch enthalten würde.
+      Vielleicht haben Sie bereits ein interessantes Verhalten bei den ganzen Zahlen bemerkt. Bei der Division ganzer Zahlen kommt immer ein ganzzahliges Ergebnis heraus, selbst wenn das mathematische Ergebnis eine Dezimal- oder Bruchzahl enthalten müsste.
 
-      Wenn Sie dieses Verhalten gesehen haben, versuchen Sie Folgendes:
+      Wenn Sie dieses Verhalten noch nicht beobachtet haben, testen Sie Folgendes:
 
       ```csharp
       int a = 7;
@@ -108,15 +108,15 @@ items:
       Console.WriteLine(d);
       ```
 
-      Klicken Sie auf **führen** erneut aus, um die Ergebnisse anzuzeigen.
+      Klicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen.
 
       > [!NOTE]
-      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
-  - title: Ganze Zahl mit einfacher Genauigkeit und Grenzwerte durchsuchen
+      > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+  - title: Erkunden der Genauigkeit und Grenzwerte ganzer Zahlen
     durationInMinutes: 5
     content: |
-      Letzte Beispiel wurde gezeigt, dass Ganzzahldivision schneidet das Ergebnis ab.
-      Erhalten Sie die **Rest** mithilfe der **modulo** -Operator, der `%` Zeichen:
+      Im vorherigen Beispiel haben Sie gesehen, dass das Ergebnis bei der Division ganzer Zahlen abgeschnitten wird.
+      Sie erhalten den Restwert **remainder** mithilfe des **Modulo**-Operators, dem `%`-Zeichen:
 
       ```csharp
       int a = 7;
@@ -128,7 +128,7 @@ items:
       Console.WriteLine("remainder: " + e);
       ```
 
-      Der ganzzahlige Typ in c# unterscheidet sich von mathematischen Ganzzahlen in einem anderen Punkt: die `int` Typ hat den minimalen und maximalen Grenzwerte. Führen Sie diesen Code in das interactive-Fenster zu diesen Limits finden Sie unter:
+      Der integer-C#-Typ unterscheidet sich noch in einem weiteren Punkt von einer mathematischen ganzen Zahl: Der `int`-Typ ist mit minimalen und maximalen Grenzwerten versehen. Führen Sie den folgenden Code im interaktiven Fenster aus, um diese Grenzwerte anzuzeigen:
 
       ```csharp
       int max = int.MaxValue;
@@ -136,25 +136,25 @@ items:
       Console.WriteLine("The range of integers is " + min + " to " + max);
       ```
 
-      Wenn Sie eine Berechnung einen Wert erzeugt, die diese Grenzen überschreitet, haben Sie ein **Unterlauf** oder **Überlauf** Bedingung. Die Antwort wird angezeigt, um eine Begrenzung in den anderen zu umschließen. Fügen Sie diese zwei Zeilen für das interaktive Fenster, ein Beispiel finden Sie unter:
+      Wenn bei einer Berechnung ein Wert herauskommt, der diese Grenzwerte überschreitet, liegt eine **Unterlauf-** oder **Überlaufbedingung** vor. Die Antwort gibt dann den Bereich der Grenzwerte an. Fügen Sie im interaktiven Fenster die folgenden beiden Zeilen hinzu, um ein Beispiel anzuzeigen:
 
       ```csharp
       int what = max + 3;
       Console.WriteLine("An example of overflow: " + what);
       ```
 
-      Beachten Sie, dass die Antwort sehr nahe die minimale (negativ) ganze Zahl ist. Es entspricht dem `min + 2`. Die Additionsoperation **führte zum Überlauf** den zulässigen Werten für ganze Zahlen.
-      Die Antwort ist eine sehr hohe negative Zahl, da der Überlauf "aus der größte mögliche ganzzahlige Wert, der die kleinste umfließt".
+      Beachten Sie, dass die Antwort sehr nah an der minimalen (negativen) ganzen Zahl liegt. Sie entspricht `min + 2`. Die Additionsoperation hat die zulässigen Werte für ganze Zahlen **überlaufen**.
+      Die Antwort enthält eine sehr große negative Zahl, da ein Überlauf den größtmöglichen ganzzahligen Wert bis zum kleinstmöglichen Wert umschließt.
 
-      Es gibt andere numerischen Typen mit verschiedene Grenzwerte und Genauigkeit, die Sie verwenden würden, wenn die `int` Typ nicht Ihren Anforderungen entsprechen. Betrachten Sie diese weiter an.
+      Wenn der `int`-Typ nicht Ihren Anforderungen entspricht, so gibt es verschiedene numerische Typen mit anderen Grenzwerten und Genauigkeitsgraden, die Sie verwenden können. Werfen wir im Folgenden einmal einen Blick auf diese.
 
       > [!NOTE]
-      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
-  - title: Arbeiten Sie mit Typ "double"
+      > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+  - title: Arbeiten mit dem Double-Typ
     durationInMinutes: 5
     content: |
-      Die `double` numerischer Typ stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Diese Wörter möglicherweise neu für Sie. Ein **Gleitkomma** Anzahl eignet sich nicht ganzzahligen Ziffern dargestellt, die möglicherweise sehr große oder kleine Wert ohne Vorzeichen. **Mit doppelter Genauigkeit** bedeutet, dass diese Zahlen gespeichert werden mit größerer Genauigkeit als **mit einfacher Genauigkeit**. In modernen Computers ist es eher üblich, dass doppelten Genauigkeit als Zahlen mit einfacher Genauigkeit verwenden.
-      Lassen Sie uns. Wiederholen Sie den folgenden Code in das interactive-Fenster, und anzuzeigen Sie das Ergebnis:
+      Der numerische Typ `double` stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Falls Ihnen diese Benennungen nichts sagen, beachten Sie die folgenden Erläuterungen: Eine **Gleitkommazahl** wird verwendet, um sehr große oder sehr kleine Zahlen, die keine ganzen Zahlen sind, darzustellen. **Doppelte Genauigkeit** bedeutet, dass diese Zahlen mit einer höheren Genauigkeit gespeichert werden als mit **einfacher Genauigkeit**. Bei modernen Computern werden häufiger Zahlen mit doppelter Genauigkeit verwendet statt mit einfacher Genauigkeit.
+      Sehen wir uns dies einmal genauer an. Testen Sie den folgenden Code im interaktiven Fenster, und sehen Sie sich das Ergebnis an:
 
       ```csharp
       double a = 5;
@@ -164,7 +164,7 @@ items:
       Console.WriteLine(d);
       ```
 
-      Beachten Sie, dass die Antwort die Nachkommastellen des Quotienten enthält. Versuchen Sie einen etwas komplizierteren Ausdruck mit Double-Werte aus:
+      Beachten Sie, dass die Antwort die Dezimalzahl des Quotienten enthält. Testen Sie einen etwas komplizierteren Ausdruck mit Werten vom Typ „double“:
 
       ```csharp
       double a = 19;
@@ -174,7 +174,7 @@ items:
       Console.WriteLine(d);
       ```
 
-      Der Wertebereich einen double-Wert ist weitaus größer als ganzzahlige Werte. Wiederholen Sie den folgenden Code in das interactive-Fenster aus:
+      Der Bereich eines Werts vom Typ „double“ ist weitaus größer als bei ganzzahligen Werten. Testen Sie den folgenden Code im interaktiven Fenster:
 
       ```csharp
       double max = double.MaxValue;
@@ -182,28 +182,28 @@ items:
       Console.WriteLine("The range of double is " + min + " to " + max);
       ```
 
-      Diese Werte werden zur Darstellung der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links neben der `E` der spielt. Die Zahl rechts ist der Exponent, als eine Potenz von 10. Diese Nummern werden intern auf ähnliche Weise aber in einer binären Form dargestellt. Ein Teil stellt bedeutende Binärzahlen dar.
-      Ein anderer Teil stellt binäre Punkt relativ zu diesen signifikante Ziffern (analog zu einem Dezimaltrennzeichen) platzieren.
+      Diese Werte werden zur Darstellung der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die signifikante Stelle. Die Zahl rechts ist der Exponent als Potenz von 10. Diese Zahlen werden im Wesentlichen auf ähnliche Weise dargestellt, liegen jedoch im Binärformat vor. Ein Teil stellt die signifikanten Binärziffern dar.
+      Der andere Teil stellt die Stelle dar, an der der Binärpunkt (analog zu einem Dezimalkomma) relativ zu diesen signifikanten Ziffern platziert wird.
 
-      Genau wie Dezimalzahlen im Mathematik kann die Double-Werte in c# Rundungsfehler verfügen. Versuchen Sie diesen Code aus:
+      Wie bei Dezimalzahlen in der Mathematik können double-Werte in C# Rundungsfehler aufweisen. Testen Sie den folgenden Code:
 
       ```csharp
       double third = 1.0 / 3.0;
       Console.WriteLine(third);
       ```
 
-      Sie kennen, `0.3` wiederholte ist nicht genau identisch mit `1/3`.
+      Denken Sie daran, dass `0.3` nicht exakt `1/3` entspricht.
 
-      ***Herausforderung***
+      ***Übung***
 
-      Wiederholen Sie den anderen Berechnungen mit großen Zahlen, kleine Zahlen, Multiplikation und Division mit dem `double` Typ.  Versuchen Sie es etwas kompliziertere Berechnungen.
+      Testen Sie für den `double`-Typ andere Berechnungen mit großen und kleinen Zahlen sowie mit Multiplikation und Division.  Testen Sie kompliziertere Berechnungen.
 
       > [!NOTE]
-      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
-  - title: Arbeiten Sie mit festen Verbindungspunkttypen
+      > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+  - title: Arbeiten mit Festkommatypen
     durationInMinutes: 8
     content: |
-      Sie haben gesehen, dass die grundlegenden numerischen Typen in c#: ganze Zahlen und Double-Werte.  Es gibt einen weiteren Typ, um zu erfahren: die `decimal` Typ. Die `decimal` Typ hat einen kleineren Bereich, aber größere Genauigkeit als `double`. Der Begriff **fester Punkt** Mittel, mit dessen Hilfe die Dezimaltrennzeichen (oder binäre Punkt) nicht. Sehen wir uns:
+      Sie haben die grundlegenden numerischen Typen in C# – „integer“ und „double“ – kennengelernt.  Es gibt einen weiteren Typ, den Sie kennen sollten: den `decimal`-Typ. Der `decimal`-Typ weist einen kleineren Bereich als `double` auf, aber eine höhere Genauigkeit. Die Benennung **Festkomma** bedeutet, dass die Position des Dezimalkommas (hier Dezimalpunkts bzw. Binärpunkts) unveränderlich ist. Sehen wir uns das einmal genauer an:
 
       ```csharp
       decimal min = decimal.MinValue;
@@ -211,7 +211,7 @@ items:
       Console.WriteLine("The range of the decimal type is " + min + " to " + max);
       ```
 
-      Beachten Sie, dass der Bereich liegt zwischen kleiner als die `double` Typ. Sie können die höhere Genauigkeit mit dem decimal-Datentyp anzeigen, indem Sie versuchen, den folgenden Code:
+      Beachten Sie, dass der Bereich kleiner ist als beim `double`-Typ. Sie können sehen, dass die Genauigkeit beim Typ „decimal“ höher ist, wenn Sie den folgenden Code testen:
 
       ```csharp
       double a = 1.0;
@@ -223,20 +223,20 @@ items:
       Console.WriteLine(c / d);
       ```
 
-      Die `M` Suffix für die Zahlen ist, wie Sie angeben, dass eine Konstante verwendet werden soll die `decimal` Typ.
+      Mit dem Suffix `M` neben einer Zahl geben Sie an, dass eine Konstante den `decimal`-Typ verwenden soll.
 
-      Beachten Sie, dass die Dezimaltyps mit mathematischen rechts vom Dezimaltrennzeichen mehr Ziffern verfügt. 
+      Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vom Typ „decimal“ rechts neben dem Dezimalpunkt mehr Ziffern enthält. 
 
-      ***Herausforderung***
+      ***Übung***
 
-      Nun, dass Sie die verschiedenen numerischen Typen gesehen haben, Schreiben Sie Code, der die Fläche eines Kreises wird berechnet, deren Radius 2,50 Zoll ist. Denken Sie daran, dass die Fläche eines Kreises Quadrat ist PI multipliziert. Einen Hinweis: c# enthält eine Konstante PI: `Math.PI` , die Sie für diesen Wert verwenden können. 
+      Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie einen Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 Zoll berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Tipp: C# bietet eine Konstante für Pi (`Math.PI`), die Sie für die Berechnung dieses Werts verwenden können. 
 
       > [!NOTE]
-      > Diese Codierung online-Umgebung ist im Vorschaumodus. Wenn Probleme auftreten, Bitte melden Sie diese [auf das Repository Dotnet/Try](https://github.com/dotnet/try/issues).
-  - title: Vollständige Herausforderung
+      > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+  - title: Übung abgeschlossen
     durationInMinutes: 1
     content: |
-      Sie haben das Lernprogramm "Zahlen in c#" abgeschlossen. Erfahren Sie mehr über die Zahlen in c# in den folgenden Themen:
+      Sie haben das Tutorial „Zahlen in C#“ abgeschlossen. Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 
       [Tabelle ganzzahliger Typen](../language-reference/keywords/integral-types-table.md)   
       [Tabelle für Gleitkommatypen](../language-reference/keywords/floating-point-types-table.md)   
